@@ -28,9 +28,15 @@
 
     //Maps
     #include "Maps/MasterMapInstaller.event"
+	#include "Maps/Tileset Installer.event"
 	
 	//Music
 	#include "Music/Music Installer.event"
+	
+	PUSH
+	ORG $2FEC6
+	BYTE 0x14
+	POP
 	
     MESSAGE Used free space ends at currentOffset
 #else

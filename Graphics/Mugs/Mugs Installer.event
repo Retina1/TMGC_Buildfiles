@@ -11,6 +11,11 @@ ArinMug:
 setMugEntry(0x4,ArinMug,3,5,3,3)
 
 ALIGN 4
+KennethMug:
+#incext PortraitFormatter "Kenneth.png"
+setMugEntry(0x7,KennethMug,3,5,3,3)
+
+ALIGN 4
 StefanMug:
 #incext PortraitFormatter "Stefan.png"
 setMugEntry(0x6,StefanMug,3,5,3,3)

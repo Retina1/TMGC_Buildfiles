@@ -1,0 +1,101 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x7,ThisChapter)
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,HereIsKenneth,4)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Seize(13,1)
+Village(0x8,NVillage,8,2)
+Village(0x9,SVillage,4,6)
+Door(12,6)
+Door(13,6)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [5,0] 0x0 0x0 0x0 0x0 [Fire, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(1,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [IronSword, Heal, Lockpick] NoAI
+UNIT
+
+Enemies:
+UNIT 0x80 Deserter 0x0 Level(1,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT 0x80 Bruiser 0x0 Level(1,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT 0x80 Brigand 0x0 Level(1,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT 0x80 Fighter 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT 0x80 Bruiser 0x0 Level(1,Enemy,1) [8,2] 0x0 0x0 0x0 0x0 [IronSword] NeverMoveAI
+UNIT 0x80 Brigand 0x0 Level(1,Enemy,1) [4,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT 0x80 Archer 0x0 Level(1,Enemy,1) [14,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT 0x80 Archer 0x0 Level(1,Enemy,1) [12,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT 0x80 Brigand 0x0 Level(1,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT 0x80 Deserter 0x0 Level(1,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT 0x80 Bruiser 0x0 Level(1,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT 0x80 Brigand 0x0 Level(1,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT ONeill Deserter 0x0 Level(1,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+Reinforce:
+UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [0,5] 0x0 0x0 0x0 0x0 [Flux, Vulnerary] NoAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 Units
+ENUN
+LOAD1 0x1 Enemies
+ENUN
+Text(0x903)
+ENDA
+
+EndingScene:
+MoveToChapter(1)
+ENDA
+
+HereIsKenneth:
+ReinforcementEvent(Reinforce)
+
+NVillage:
+	VillageEventItem(VillageText, Village, GoddessIcon)
+	
+SVillage:
+	VillageEventItem(VillageText, Village, SteelSword)
+
+MESSAGE Events end at offset CURRENTOFFSET

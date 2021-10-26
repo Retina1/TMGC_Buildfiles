@@ -1,0 +1,26 @@
+#include "Tools/Tool Helpers.txt"
+//(mouthx,mouthy,eyesx,eyesy)
+ALIGN 4
+BlairMug:
+#incext PortraitFormatter "Blair.png"
+setMugEntry(0x2,BlairMug,3,5,3,3)
+
+ALIGN 4
+ArinMug:
+#incext PortraitFormatter "Arin.png"
+setMugEntry(0x4,ArinMug,3,5,3,3)
+
+ALIGN 4
+StefanMug:
+#incext PortraitFormatter "Stefan.png"
+setMugEntry(0x6,StefanMug,3,5,3,3)
+
+ALIGN 4
+SamMug:
+#incext PortraitFormatter "Sam.png"
+setMugEntry(0x5,SamMug,2,6,3,4)
+
+ALIGN 4
+CassiusMug:
+#incext PortraitFormatter "Cassius.png"
+setMugEntry(0x3,CassiusMug,4,5,4,3)

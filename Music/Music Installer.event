@@ -1,0 +1,41 @@
+#ifdef _FE6_
+  #define SongTableOffset  0x3994D8
+  voicegroup000:
+  //include your voicemap here, FE6 has no native instrument map at this time
+#endif
+
+#ifdef _FE7_
+  #define SongTableOffset  0x69d6E0
+  voicegroup000:
+  #include "FE7_NI_Map.bin"
+#endif
+
+#ifdef _FE8_
+  #define SongTableOffset  0x224470
+  //2263B0 is the end maybe?
+  #include "drumfix_fe8.event"
+  voicegroup000:
+  #incbin "FE8_NI_2.bin"
+#endif
+
+#define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+#define BattleMusicGroup 0
+#define MapMusicGroup 1
+#define SFXGroup 6
+
+#include "TOJ.event"
+SongTable(0x9,TOJ,1)
+
+
+
+
+FE8SoundMixer:
+#incbin "FE8_Improved_Sound_Mixer.bin"
+PUSH
+ORG $D01CC 
+POIN FE8SoundMixer
+ORG $D01D0
+BYTE $B0 $6C $00 $03 $18 $02
+ORG $CF53C
+BYTE $B1 $6C $00 $03
+POP

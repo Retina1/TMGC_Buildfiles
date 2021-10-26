@@ -1,0 +1,38 @@
+#ifdef _FE8_
+    #include "EAstdlib.event"
+    #include "CustomDefinitions.event"
+    #include "NonEngineDef.event"	
+//PROTECT $25224
+    ORG FreeSpace
+
+    #include "repointedTextTable.event"
+
+    //Text first for Text ID definitions
+    #include "Text/InstallTextData.event"
+    MESSAGE Used text space ends at currentOffset
+
+	//Graphics
+	#include "Graphics/Graphics Installer.event"
+	
+    //CSV tables
+    #include "Tables/TableInstaller.event"
+    MESSAGE Used table space ends at currentOffset
+
+    //Engine Hacks
+    #include "EngineHacks/_MasterHackInstaller.event"
+    MESSAGE Used hax space ends at currentOffset
+
+    //Events
+    #include "Events/Chapter Events Installer.event"
+    #include "Events/WorldMapEvents.event"
+
+    //Maps
+    #include "Maps/MasterMapInstaller.event"
+	
+	//Music
+	#include "Music/Music Installer.event"
+	
+    MESSAGE Used free space ends at currentOffset
+#else
+    ERROR "You are not assembling FE8 events!"
+#endif

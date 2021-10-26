@@ -1,0 +1,28 @@
+#ifndef ClassAnimTable
+  #ifdef _FE8_
+    #define ClassAnimTable (0xc00008-0x20)
+  #endif
+  #ifdef _FE7_
+    #define ClassAnimTable (0xe00008-0x20)
+  #endif
+#endif
+
+#define AnimTableEntry(index) "ORG ClassAnimTable + (index * 0x20)"
+#include "animationpatches.event"
+#define animSword 0
+#define animLance 1
+#define animAxe 2
+#define animBow 3
+#define animStaff 4
+#define animAnima 5
+#define animLight 6
+#define animDark 7
+#define animNone 9
+#define weaponTypeAnim(weaponType, ID) "BYTE weaponType 1 ID 0;"
+#define weaponAnim(weaponID, ID) "BYTE weaponID 0 ID 0;"
+#define weaponAnimEnd "WORD 0"
+#define SetAnimationPointers(class, pointer) "PUSH; ORG 0x807110 + (class*84) + 52; POIN pointer; POP"
+
+//////////////Installed animations go here:
+
+  #include "SalvCav\Sword Installer.event"

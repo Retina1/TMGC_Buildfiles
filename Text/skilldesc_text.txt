@@ -5,7 +5,7 @@ without penalties.[X]
 
 ## SD_Adept
 Adept: Gain a consecutive attack.[N]
-(Speed % activation)[X]
+(Cost: 3 Durability/Hit)[X]
 
 ## SD_Acrobat
 Acrobat: All traversable[N]
@@ -26,7 +26,7 @@ double or be doubled.[X]
 ## SD_SureShot
 Sure Shot: A precision attack that[N]
 always hits and does 1.5x damage.[N]
-(Skill % activation)[X]
+(Cost: 4 Durability/Hit)[X]
 
 ## SD_Provoke
 Provoke: Enemies are more[N]
@@ -58,20 +58,20 @@ Bane: Leave the opponent at 1 HP.[N]
 
 ## SD_Luna
 Luna: Negates enemy defenses.[N]
-+5 MT. (Cost: 3 Durability/Hit)[X]
+(Cost: 3 Durability/Hit)[X]
 
 ## SD_Sol
 Sol: Restore damage dealt as HP.[N]
-(Skill % activation)[X]
+(Cost: 3 Durability/Hit)[X]
 
 ## SD_Aether
 Aether: First strike absorbs HP,[N]
 second strike negates defenses.[N]
-(Skill/2 % activation)[X]
+(Cost: 4 Durability/Hit)[X]
 
 ## SD_Astra
 Astra: 5 attacks at half damage.[N]
-(Skill % activation)[X]
+(Cost: 1 Durability/Hit)[X]
 
 ## SD_Discipline
 Discipline: Weapon experience[N]
@@ -328,7 +328,7 @@ an ally, also heals self.[X]
 ## SD_Ignis
 Ignis: Add Def/2 and Res/2[N]
 to damage dealt.[N]
-(Skill % activation)[X]
+(Cost: 3 Durability/Hit)[X]
 
 ## SD_LifeAndDeath
 Life and Death: +10 to[N]
@@ -1036,7 +1036,7 @@ Skill% chance to inflict sleep.[X]
 
 ## SD_DragonFang
 Dragon Fang: 1.5x damage.[N]
-(Skill% activation)[X]
+(Cost: 3 Durability/Hit)[X]
 
 ## SD_Fortune
 Fortune: This unit[N]
@@ -1188,8 +1188,8 @@ Amische: This unit's religion prevents[N]
 them from using non-Iron weaponry.[X]
 
 ## SD_Glacies
-Glacies: Add unit's Resistance[N]
-to damage dealt. (Skill % activation)[X]
+Glacies: Add unit's Resistance to[N]
+damage dealt. (Cost: 3 Durability/Hit)[X]
 
 ## SD_Gridmaster
 Gridmaster: Movement skills[N]

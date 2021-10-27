@@ -18,9 +18,9 @@ mov	r14,r2
 add	r4,#0x66	@pointer to crit
 cmp	r0,#0x00
 beq	End		@if skill not found do nothing
-mov	r0,#0x0F	@crit that will be added
+mov	r0,#0x1E	@crit that will be added
 ldrb	r1,[r4]		@get crit
-add	r1,r0		@add 15
+add	r1,r0		@add 30
 strb	r1,[r4]		@store crit
 
 End:

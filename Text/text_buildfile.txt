@@ -32,18 +32,16 @@ Supply[X]
 
 #include "Bosses.txt"
 
-# 0x0793
-FF3 Sea[.][X]
+#include "ChapterNames.txt"
 
-# 0x0794
-A Taste of Justice[X]
+#include "Objectives.txt"
+
+#include "SongRoom.txt"
 
 # 0x0903
-[OpenMidLeft][LoadFace][0x02][0x01]
-This is the first piece of[NL]
-story text.[A][NL]
-Be warned that the chapter is[NL]
-impossible to finish.[A][NL][X]
+[OpenMidLeft][LoadBlair]
+...It's an opening map.[A] Of course[N]
+there's bandit-y rebels.[A][NL][X]
 
 ## 
 [OpenMidRight][LoadFace][0x04][0x01]

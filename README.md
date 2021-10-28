@@ -8,7 +8,7 @@ This is an in-development buildfiles hack for Fire Emblem 8 by Retina.
 
 ## How obtain patch
 
-Download the repo, run MAKE_HACK_full, obtain ups file. I'll upload ups files in releases when the time comes.
+Download the repo, throw in a vanilla FE8U rom named FE8_clean.gba, run MAKE_HACK_full, obtain ups file. I'll upload ups files in releases when the time comes.
 
 ## I found a bug! What can I do about it?
 

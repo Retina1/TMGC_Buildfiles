@@ -1,0 +1,25 @@
+#define setCardEntry(cardEntry,cardLocation,cardPaletteLocation) "PUSH; ORG PortraitTable+cardEntry*0x1C; POIN 0 0 cardPaletteLocation 0 cardLocation; POP"
+#define HunterCard 0x99
+#define BruiserCard 0x9A
+#define DeserterCard 0x9B
+
+ALIGN 4
+
+HunterPortrait:
+#incbin "Hunter.dmp"
+HunterPortraitPalette:
+#incbin "HunterPalette.dmp"
+
+DeserterPortrait:
+#incbin "Deserter.dmp"
+DeserterPortraitPalette:
+#incbin "DeserterPalette.dmp"
+
+BruiserPortrait:
+#incbin "Bruiser.dmp"
+BruiserPortraitPalette:
+#incbin "BruiserPalette.dmp"
+
+setCardEntry(HunterCard,HunterPortrait,HunterPortraitPalette)
+setCardEntry(DeserterCard,DeserterPortrait,DeserterPortraitPalette)
+setCardEntry(BruiserCard,BruiserPortrait,BruiserPortraitPalette)

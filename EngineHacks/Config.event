@@ -138,7 +138,7 @@
 // Go to "Biorhythm/Biorhythm.event" to edit settings.
 // This adds an entry to the Pre-Battle loop and edits the status screen. 
 // There is currently no stat screen template that contains both Leadership Stars and Biorhythm, but they do function in tandem if you wish to make one.
-#define BIORHYTHM
+// #define BIORHYTHM
 
 //If uncommented, Reaver Split will be implemented.
 //Makes weapon ability 2 reaver bit just triangle reversal and weapon ability 3 bit 0x80 triple triangle effect.
@@ -218,7 +218,7 @@
 #define DRAGON_VEIN_SKILL_REQUIRED
 
 //If commented, Heroes Movement skills will use class checks and will not require their respective skills. Configure lists for each skill in 'SkillSystem/Skills/UnitMenuSkills/HeroesMovement/HeroesMovement.event', at the bottom of the file.
-#define HEROES_MOVEMENT_SKILL_REQUIRED
+//#define HEROES_MOVEMENT_SKILL_REQUIRED
 
 // If uncommented, the Charge mechanic will be disabled and Moonbow will use a skill% activation rate. This will not change Moonbow's description.
 // #define DISABLE_CHARGE

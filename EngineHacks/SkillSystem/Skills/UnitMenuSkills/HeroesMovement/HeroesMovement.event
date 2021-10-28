@@ -117,27 +117,27 @@ prSmite_TargetLegality:
 #ifndef HEROES_MOVEMENT_SKILL_REQUIRED
 
 PivotClassList:
-BYTE EirikaLord EphraimLord 
+BYTE Sniper SniperF  Assass AssassF SwdGen LncGen AxeGen BowGen ZekeLordX
 BYTE 0
 
 RepositionClassList:
-BYTE Mage Mage_F Sage Sage_F Monk Shaman Shaman_F Druid Druid_F
+BYTE Halberdier HalberdierF Dismount Rune RuneMast Trickster ViridianLord
 BYTE 0
 
 SwapClassList:
-BYTE Cavalier Cavalier_F Paladin Paladin_F GreatKnight GreatKnight_F
+BYTE Hero HeroF SwMast SwMastF Assass AssassF Rune RuneMast Trickster
 BYTE 0
 
 ShoveClassList:
-BYTE Mercenary Mercenary_F Fighter Brigand Pirate Berserker Warrior
+BYTE BlairLord ZekeLord ZekeLordX ViridianLord Dismount SwdArm LncArm AxeArm BowArm SwdGen LncGen AxeGen BowGen Merc MercF Hero HeroF Myrm MyrmF SwMast SwMastF Assass AssassF Archer ArcherF Sniper SniperF Mage MageF Sage SageF Bishop BishopF DarkM Sorc Rune RuneMast Trickster Hunter Deserter Bruiser Fighter Warrior FighterF WarriorF Brigand Pirate Berserker PirateF BerserkerF LightM Priest Bard BardF Cleric Soldier Halberdier SoldierF HalberdierF CivilM
 BYTE 0
 
 SmiteClassList:
-BYTE Knight Knight_F General General_F
+BYTE Warrior WarriorF Berserker BerserkerF SwdGen LncGen AxeGen BowGen
 BYTE 0
 
 SwarpClassList:
-BYTE Priest Cleric Bishop Bishop_F Summoner Summoner_F
+BYTE 0
 BYTE 0
 
 #endif // HEROES_MOVEMENT_SKILL_REQUIRED

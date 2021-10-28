@@ -13,9 +13,17 @@
 #define Cassius 0x0B
 #define Rachael 0x0C
 
+//generic defs
+#define DalstRebel 0x80
+
+//boss defs
+#define Davelarn 0x68
+
 //class defs
 #define BlairLord 0x2
 #define ZekeLord 0x1
+#define BlairLordX 0x4
+#define ZekeLordX 0x3
 #define ViridianLord 0x3E
 #define SwdCav 0x05
 #define LncCav 0x06
@@ -74,6 +82,7 @@
 #define Rune 0x31
 #define RuneMast 0x32
 #define Trickster 0x35
+#define Hunter 0x36
 #define Deserter 0x37
 #define Bruiser 0x38
 #define Fighter 0x3F
@@ -86,7 +95,7 @@
 #define PirateF 0x5D
 #define BerserkerF 0x5E
 #define LightM 0x44
-#define Pirest 0x45
+#define Priest 0x45
 #define Bard 0x46
 #define LncPeg 0x48
 #define SwdPeg 0x47

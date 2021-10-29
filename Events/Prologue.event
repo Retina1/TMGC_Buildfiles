@@ -20,7 +20,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0x0,HereIsKenneth,4)
+TurnEventPlayer(0x0,KennethCometh,4)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -77,7 +77,9 @@ UNIT
 
 ALIGN 4
 
-BeginningScene:
+BeginningScene: 
+Text(0x1,0x904)
+REMA
 LOAD1 0x1 Units
 ENUN
 ENUT 0xEF
@@ -91,7 +93,7 @@ EndingScene:
 MoveToChapter(1)
 ENDA
 
-HereIsKenneth:
+KennethCometh:
 ReinforcementEvent(Reinforce)
 
 NVillage:

@@ -1,0 +1,4 @@
+#define ConvoBackgroundTable $95DD1C
+#define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG ConvoBackgroundTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
+
+ALIGN 4

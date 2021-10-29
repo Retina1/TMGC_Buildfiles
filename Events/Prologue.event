@@ -77,9 +77,17 @@ UNIT
 
 ALIGN 4
 
-BeginningScene: 
-Text(0x1,0x904)
-REMA
+BeginningScene:
+MUSC 0x4
+SetBackground(0x34)
+STAL 120
+CGTEXTSTART
+TEXTSHOW Prologue_Narration
+TEXTEND
+MUSC 0x0
+FADI 0x3c
+CLEAN
+FADU 0x3c
 LOAD1 0x1 Units
 ENUN
 ENUT 0xEF

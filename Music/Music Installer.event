@@ -35,7 +35,8 @@ SongTable(0xB,Water,1)
 #include "Premonition.event"
 SongTable(0xC,Premonition,1)
 
-
+#include "Glory.event"
+SongTable(0x4,Glory,1)
 
 FE8SoundMixer:
 #incbin "FE8_Improved_Sound_Mixer.bin"

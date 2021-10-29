@@ -1,23 +1,30 @@
 #define ItemIconEntry(ItemIconID) "ORG NewItemIcons + (ItemIconID*128)"
 
 #define IronSwordIcon 0x0
-#define SteelSwordIcon 0x1
-#define SilverSwordIcon 0x2
-#define IronLanceIcon 0x3
-#define SteelLanceIcon 0x4
-#define SilverLanceIcon 0x5
-#define IronAxeIcon 0x6
-#define SteelAxeIcon 0x7
-#define SilverAxeIcon 0x8
-#define IronBowIcon 0x9
-#define SteelBowIcon 0xa
-#define SilverBowIcon 0xb
-#define FireIcon 0xc
-#define ThunderIcon 0xd
-#define LightningIcon 0xe
-#define ShineIcon 0xf
-#define FluxIcon 0x10
-#define HealIcon 0x11
+#define SteelSwordIcon 0x2
+#define SilverSwordIcon 0x3
+
+#define IronLanceIcon 0x13
+#define SteelLanceIcon 0x15
+#define SilverLanceIcon 0x16
+
+#define IronAxeIcon 0x1e
+#define SteelAxeIcon 0x1f
+#define SilverAxeIcon 0x20
+
+#define IronBowIcon 0x2b
+#define SteelBowIcon 0x2c
+#define SilverBowIcon 0x2d
+
+#define FireIcon 0x36
+#define ThunderIcon 0x37
+
+#define LightningIcon 0x3d
+#define ShineIcon 0x3e
+
+#define FluxIcon 0x43
+
+#define HealIcon 0x49
 
 ALIGN 4
 NewItemIcons:

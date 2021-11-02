@@ -3,14 +3,17 @@
 #define IronSwordIcon 0x0
 #define SteelSwordIcon 0x2
 #define SilverSwordIcon 0x3
+#define LevinSwordIcon 0x9
 
 #define IronLanceIcon 0x13
 #define SteelLanceIcon 0x15
 #define SilverLanceIcon 0x16
+#define JavelinIcon 0x1C
 
 #define IronAxeIcon 0x1e
 #define SteelAxeIcon 0x1f
 #define SilverAxeIcon 0x20
+#define HandAxeIcon 0x27
 
 #define IronBowIcon 0x2b
 #define SteelBowIcon 0x2c
@@ -25,6 +28,8 @@
 #define FluxIcon 0x43
 
 #define HealIcon 0x49
+
+#define AwakenIcon 0xb3
 
 ALIGN 4
 NewItemIcons:
@@ -42,6 +47,9 @@ ItemIconEntry(SteelSwordIcon)
 ALIGN 4
 ItemIconEntry(SilverSwordIcon)
 #incbin "Swords/Silver Sword.dmp"
+ALIGN 4
+ItemIconEntry(LevinSwordIcon)
+#incbin "{Zelix} LevinSword.dmp"
 
 ALIGN 4
 ItemIconEntry(IronLanceIcon)
@@ -52,6 +60,9 @@ ItemIconEntry(SteelLanceIcon)
 ALIGN 4
 ItemIconEntry(SilverLanceIcon)
 #incbin "Lances/Silver Lance.dmp"
+ALIGN 4
+ItemIconEntry(JavelinIcon)
+#incbin "Lances/Javelin.dmp"
 
 ALIGN 4
 ItemIconEntry(IronAxeIcon)
@@ -62,6 +73,9 @@ ItemIconEntry(SteelAxeIcon)
 ALIGN 4
 ItemIconEntry(SilverAxeIcon)
 #incbin "Axes/Silver Axe.dmp"
+ALIGN 4
+ItemIconEntry(HandAxeIcon)
+#incbin "Axes/Hand Axe.dmp"
 
 ALIGN 4
 ItemIconEntry(IronBowIcon)
@@ -95,6 +109,9 @@ ALIGN 4
 ItemIconEntry(HealIcon)
 #incbin "Staves/Old(bad)/Heal.dmp"
 
+ALIGN 4
+ItemIconEntry(AwakenIcon)
+#incbin "Tomes/Light/Nova.dmp"
 
 // End of icons 
 POP 

@@ -28,6 +28,8 @@ Supply[X]
 
 #include "ClassDescs.txt"
 
+#include "Items.txt"
+
 #include "Generics.txt"
 
 #include "Bosses.txt"
@@ -38,12 +40,18 @@ Supply[X]
 
 #include "SongRoom.txt"
 
-# 0x0903
-[OpenMidLeft][LoadBlair]
-...It's an opening map.[A] Of course[N]
-there's bandit-y rebels.[A][NL][X]
+# 0x08DA
+You don't have the money![.][NL]
+Try again later.[A][X]
 
 #include "ChapterNarrations.txt"
+
+# 0x0902
+[OpenFarRight][LoadFace][0x2B][0x01][OpenFarRight]Behold, the secret strike of[NL]
+Frelia's pegasus knights![.][A][NL]
+Triangle attack![A][X]
+
+#include "Chapter Text/Prologue.txt"
 
 #0x3A LearnedSkillText
 //first text ID in the free block

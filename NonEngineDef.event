@@ -1,4 +1,6 @@
 
+
+#define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN"
 //unit defs
 #define Blair 0x01
 #define Arin 0x02
@@ -18,6 +20,10 @@
 
 //boss defs
 #define Davelarn 0x68
+
+//item defs
+#define LevinSword 0xA
+#define Awaken 0x78
 
 //class defs
 #define BlairLord 0x2

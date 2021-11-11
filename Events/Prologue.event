@@ -57,8 +57,8 @@ UNIT
 
 PEasy:
 UNIT DalstRebel Deserter 0x0 Level(1,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
-UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [IronSword] NoAI
-UNIT DalstRebel Fighter 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
+UNIT DalstRebel Fighter 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
 UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [8,2] 0x0 0x0 0x0 0x0 [IronSword] NeverMoveAI
 UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [4,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT DalstRebel Hunter 0x0 Level(1,Enemy,1) [14,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
@@ -70,9 +70,9 @@ UNIT
 
 PNormal:
 UNIT DalstRebel Deserter 0x0 Level(1,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
-UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [IronSword] NoAI
-UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT DalstRebel Fighter 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Fighter 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
 UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [8,2] 0x0 0x0 0x0 0x0 [IronSword] NeverMoveAI
 UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [4,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT DalstRebel Hunter 0x0 Level(1,Enemy,1) [14,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
@@ -85,20 +85,20 @@ UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, J
 UNIT
 
 PHard:
-UNIT DalstRebel Deserter 0x0 Level(3,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
-UNIT DalstRebel Bruiser 0x0 Level(3,Enemy,1) [12,8] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
-UNIT DalstRebel Brigand 0x0 Level(3,Enemy,1) [2,7] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT DalstRebel Fighter 0x0 Level(2,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT DalstRebel Bruiser 0x0 Level(3,Enemy,1) [8,2] 0x0 0x0 0x0 0x0 [IronSword] NoAI
-UNIT DalstRebel Bruiser 0x0 Level(3,Enemy,1) [9,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT DalstRebel Deserter 0x0 Level(2,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT DalstRebel Bruiser 0x0 Level(3,Enemy,1) [12,8] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [2,7] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT DalstRebel Fighter 0x0 Level(2,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Bruiser 0x0 Level(3,Enemy,1) [8,2] 0x0 0x0 0x0 0x0 [IronSword] NeverMoveAI
+UNIT DalstRebel Bruiser 0x0 Level(2,Enemy,1) [9,3] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
 UNIT DalstRebel Brigand 0x0 Level(3,Enemy,1) [4,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
-UNIT DalstRebel Hunter 0x0 Level(3,Enemy,1) [14,2] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
+UNIT DalstRebel Hunter 0x0 Level(2,Enemy,1) [14,2] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
 UNIT DalstRebel Hunter 0x0 Level(3,Enemy,1) [12,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
-UNIT DalstRebel Brigand 0x0 Level(3,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
 UNIT DalstRebel Deserter 0x0 Level(2,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT DalstRebel Bruiser 0x0 Level(2,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Davelarn Deserter 0x0 Level(7,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [SteelLance, Javelin] NeverMoveAI
+UNIT Davelarn Deserter 0x0 Level(6,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [SteelLance, Javelin] NeverMoveAI
 UNIT
 
 PKenneth:
@@ -128,16 +128,23 @@ Text(0x3,Prologue_Opening)
 ENDA
 
 EndingScene:
+MUSC 0x5
+Text(0x3,Prologue_Ending)
+MUSC 0x0
 MoveToChapter(1)
 ENDA
 
 KennethCometh:
 ReinforcementEvent(PKenneth)
+MUSC 0x6
+Text(PKenneth)
+MUSC 0x0
+ENDA
 
 PNVillage:
-	VillageEventItem(VillageText, Village, GoddessIcon)
+	VillageEventItem(PNVillage, Village, GoddessIcon)
 	
 PSVillage:
-	VillageEventItem(VillageText, Village, SteelSword)
+	VillageEventItem(PSVillage, Village, SteelSword)
 
 MESSAGE Events end at offset CURRENTOFFSET

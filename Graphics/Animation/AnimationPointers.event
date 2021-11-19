@@ -8,7 +8,7 @@
 #endif
 
 #define AnimTableEntry(index) "ORG ClassAnimTable + ((index) * 0x20)"
-/*#define animSword 0
+#define animSword 0
 #define animLance 1
 #define animAxe 2
 #define animBow 3
@@ -20,7 +20,7 @@
 #define weaponTypeAnim(weaponType, ID) "BYTE weaponType 1 ID 0;"
 #define weaponAnim(weaponID, ID) "BYTE weaponID 0 ID 0;"
 #define weaponAnimEnd "WORD 0"
-#define SetAnimationPointers(class, pointer) "PUSH; ORG 0x807110 + (class*84) + 52; POIN pointer; POP"*/
+#define SetAnimationPointers(class, pointer) "PUSH; ORG 0x807110 + (class*84) + 52; POIN pointer; POP"
 
 #define SwordAnim(Animation) "BYTE 0x00 0x01 ; SHORT Animation"
 #define LanceAnim(Animation) "BYTE 0x01 0x01 ; SHORT Animation"
@@ -55,15 +55,38 @@
 #include "Bruiser(MonkeyBard)\Sword Installer.event"
 #include "Bruiser(MonkeyBard)\Unarmed Installer.event"
 
-/*ALIGN 4
+#include "CavM(SALVAGED)\Sword Installer.event"
+#include "CavM(SALVAGED)\Lance Installer.event"
+#include "CavM(SALVAGED)\Axe Installer.event"
+#include "CavM(SALVAGED)\Handaxe Installer.event"
+#include "CavM(SALVAGED)\Bow Installer.event"
+#include "CavM(SALVAGED)\Unarmed Installer.event"
+#include "CavF(SALVAGED)\Sword Installer.event"
+#include "CavF(SALVAGED)\Lance Installer.event"
+#include "CavF(SALVAGED)\Axe Installer.event"
+#include "CavF(SALVAGED)\Handaxe Installer.event"
+#include "CavF(SALVAGED)\Bow Installer.event"
+#include "CavF(SALVAGED)\Unarmed Installer.event"
+
+ALIGN 4
 CavMAnims:
-SwordAnim()
-LanceAnim()
-AxeAnim()
-HandAxeAnim()
-BowAnim()
-UnarmedAnim()
-EndAnim*/
+SwordAnim(0x2E)
+LanceAnim(0x2F)
+AxeAnim(0x30)
+HandAxeAnim(0x31)
+BowAnim(0x32)
+UnarmedAnim(0x33)
+EndAnim
+
+ALIGN 4
+CavFAnims:
+SwordAnim(0x34)
+LanceAnim(0x35)
+AxeAnim(0x36)
+HandAxeAnim(0x37)
+BowAnim(0x38)
+UnarmedAnim(0x39)
+EndAnim
 
 ALIGN 4
 BlairAnims:

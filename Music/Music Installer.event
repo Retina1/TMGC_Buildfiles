@@ -38,6 +38,9 @@ SongTable(0xC,Premonition,1)
 #include "Glory.event"
 SongTable(0x4,Glory,1)
 
+#include "SMT_V_Battle_theme.event"
+SongTable(0x19,SMT_V_Battle_theme,0)
+
 FE8SoundMixer:
 #incbin "FE8_Improved_Sound_Mixer.bin"
 PUSH

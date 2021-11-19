@@ -7,12 +7,26 @@
 C03                                     #Start attack animation; should be followed by 0x07
 C07                                     #Start attack animation; should be preceeded by 0x03
 6 p- Staff_000.png
+6 p- Staff_001.png
+5 p- Staff_002.png
+C05                                     #Call spell associated with equipped weapon
+6 p- Staff_003.png
+C01                                     #NOP
+6 p- Staff_001.png
+6 p- Staff_000.png
 C06                                     #Begin opponent's turn after hit.next code 0D.
 C0D                                     #End of dodge animation. preceeded by 0x06
 ~~~
 /// - Mode 3                            #Melee Critical Animation
 C03                                     #Start attack animation; should be followed by 0x07
 C07                                     #Start attack animation; should be preceeded by 0x03
+6 p- Staff_000.png
+6 p- Staff_001.png
+5 p- Staff_002.png
+C05                                     #Call spell associated with equipped weapon
+6 p- Staff_003.png
+C01                                     #NOP
+6 p- Staff_001.png
 6 p- Staff_000.png
 C06                                     #Begin opponent's turn after hit.next code 0D.
 C0D                                     #End of dodge animation. preceeded by 0x06

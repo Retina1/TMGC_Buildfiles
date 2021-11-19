@@ -1,0 +1,106 @@
+#ifndef ClassAnimTable
+  #ifdef _FE8_
+    #define ClassAnimTable (0xc00008-0x20)
+  #endif
+  #ifdef _FE7_
+    #define ClassAnimTable (0xe00008-0x20)
+  #endif
+#endif
+
+#define AnimTableEntry(index) "ORG ClassAnimTable + ((index) * 0x20)"
+/*#define animSword 0
+#define animLance 1
+#define animAxe 2
+#define animBow 3
+#define animStaff 4
+#define animAnima 5
+#define animLight 6
+#define animDark 7
+#define animNone 9
+#define weaponTypeAnim(weaponType, ID) "BYTE weaponType 1 ID 0;"
+#define weaponAnim(weaponID, ID) "BYTE weaponID 0 ID 0;"
+#define weaponAnimEnd "WORD 0"
+#define SetAnimationPointers(class, pointer) "PUSH; ORG 0x807110 + (class*84) + 52; POIN pointer; POP"*/
+
+#define SwordAnim(Animation) "BYTE 0x00 0x01 ; SHORT Animation"
+#define LanceAnim(Animation) "BYTE 0x01 0x01 ; SHORT Animation"
+#define AxeAnim(Animation) "BYTE 0x02 0x01 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation ; BYTE Hatchet 0x00 ; SHORT Animation"
+#define BowAnim(Animation) "BYTE 0x03 0x01 ; SHORT Animation"
+#define StaffAnim(Animation) "BYTE 0x04 0x01 ; SHORT Animation"
+#define AnimaAnim(Animation) "BYTE 0x05 0x01 ; SHORT Animation"
+#define LightAnim(Animation) "BYTE 0x06 0x01 ; SHORT Animation"
+#define DarkAnim(Animation) "BYTE 0x07 0x01 ; SHORT Animation"
+#define MagicAnim(Animation) "BYTE 0x05 0x01 ; SHORT Animation ; BYTE 0x06 0x01 ; SHORT Animation ; BYTE 0x07 0x01 ; SHORT Animation ; BYTE 0x09 0x01 ; SHORT Animation"
+#define UnarmedAnim(Animation) "BYTE 0x09 0x01 ; SHORT Animation"
+#define MonsterAnim(Animation) "BYTE 0x0B 0x01 ; SHORT Animation"
+#define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
+#define EndAnim "WORD 0x0 0x0"
+
+#include "FighterM(GlenWing)\Axe Installer.event"
+#include "FighterM(GlenWing)\Handaxe Installer.event"
+#include "FighterM(GlenWing)\Unarmed Installer.event"
+
+#include "Blair(L95)\Magic Installer.event"
+
+#include "Hunter(MeatOfJustice)\Bow Installer.event"
+#include "Hunter(MeatOfJustice)\Unarmed Installer.event"
+
+#include "Trickster(Aruka)\Staff Installer.event"
+#include "Trickster(Aruka)\Sword Installer.event"
+
+#include "Deserter(Alusq)\Lance Installer.event"
+#include "Deserter(Alusq)\Unarmed Installer.event"
+
+#include "Bruiser(MonkeyBard)\Sword Installer.event"
+#include "Bruiser(MonkeyBard)\Unarmed Installer.event"
+
+/*ALIGN 4
+CavMAnims:
+SwordAnim()
+LanceAnim()
+AxeAnim()
+HandAxeAnim()
+BowAnim()
+UnarmedAnim()
+EndAnim*/
+
+ALIGN 4
+BlairAnims:
+AnimaAnim(0x03)
+LightAnim(0x03)
+DarkAnim(0x03)
+UnarmedAnim(0x03)
+EndAnim
+
+ALIGN 4
+TricksterAnims:
+SwordAnim(0xAC)
+StaffAnim(0xAD)
+UnarmedAnim(0xAD)
+EndAnim
+
+ALIGN 4
+BruiserAnims:
+SwordAnim(0xB1)
+UnarmedAnim(0xB2)
+EndAnim
+
+ALIGN 4
+DeserterAnims:
+LanceAnim(0xAA)
+UnarmedAnim(0xAB)
+EndAnim
+
+ALIGN 4
+FighterMAnims:
+AxeAnim(0x19)
+HandAxeAnim(0x1A)
+UnarmedAnim(0x1B)
+EndAnim
+
+ALIGN 4
+HunterAnims:
+BowAnim(0xA5)
+UnarmedAnim(0xA6)
+EndAnim

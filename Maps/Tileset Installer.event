@@ -1,0 +1,16 @@
+
+ALIGN 4
+DalstTownObjects:
+#incext Png2Dmp "Tilesets/DalstTown.png" --lz77
+
+ALIGN 4
+DalstTownPalette:
+#incext Png2Dmp "Tilesets/DalstTown.png" --palette-only
+
+ALIGN 4
+DalstTownTiles:
+#incext compress "Tilesets/DalstTown.mapchip_config"
+
+EventPointerTable(0x8b, DalstTownObjects)
+EventPointerTable(0x8c, DalstTownPalette)
+EventPointerTable(0x8d, DalstTownTiles)

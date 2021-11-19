@@ -1,0 +1,33 @@
+#define ClassAnimTable NewAnimTable
+#define AnimTableMaxEntries 0x200
+
+ALIGN 4
+NewAnimTable:
+	#incbin "NewAnimTable.bin"
+	ORG NewAnimTable + (AnimTableMaxEntries * 32)
+
+PUSH
+	ORG $59BD8
+	POIN NewAnimTable
+
+	ORG $5A600
+	POIN NewAnimTable
+
+	ORG $5A694
+	POIN NewAnimTable
+
+	ORG $5A82C
+	POIN NewAnimTable
+
+	ORG $6F6A8
+	POIN NewAnimTable
+
+	ORG $70940
+	POIN NewAnimTable
+
+	ORG $70A60
+	POIN NewAnimTable
+	
+POP
+
+PROTECT NewAnimTable

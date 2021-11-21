@@ -1,0 +1,32 @@
+#ifndef HAX_FIXEDAUTOLEVELS
+#define HAX_FIXEDAUTOLEVELS
+
+// Make autoleveled stats fixed, following the formula ((growth * level_count) + 50) / 100
+// hack by Stan
+
+PUSH
+
+	// replace GetAutoleveledStatIncrease with asm below
+	ORG $02B9C4
+		WORD $30324348 $4B012164 $46C04718 $80D167D
+
+POP
+
+/*
+
+Source:
+
+	.thumb
+
+	mul r0, r1
+	add r0, #50
+	mov r1, #100
+	ldr r3, =Div
+	bx  r3
+
+	.align
+	.pool
+
+*/
+
+#endif // HAX_FIXEDAUTOLEVELS

@@ -102,21 +102,43 @@ UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [SteelLance, 
 UNIT
 
 PKenneth:
-UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [0,5] 0x0 0x0 0x0 0x0 [Flux, Vulnerary] NoAI
+UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [0,9] 0x0 0x0 0x0 0x0 [Flux, Vulnerary] NoAI
 UNIT
 
 ALIGN 4
 
 BeginningScene:
+EVBIT_MODIFY 4
 LOAD1 0x1 PUnits
 ENUN
 LoadUnitsByDifficulty(PEasy,PNormal,PHard)
+SetBackground(0x35)
+ASMC 0x864CD
+BEQ 0x9998 0xC 0x0
+SVAL 0x1 0x1
+BEQ 0x9997 0xC 0x1
+SVAL 0x1 0x1
+BEQ 0x9999 0xC 0x1
+LABEL 0x9998
+ENUT 0xEF
+GOTO 0x9999
+LABEL 0x9997
+ENUT 0xEE
+//one day i'll make 0% growths. you'll see.
+GOTO 0x9999
+/*SystemText(Fixed_Growths_Choice)
+BEQ 0x9999 0xC 0x0
+ENUT 0xEF*/
+LABEL 0x9999
+SVAL 0x1 0x0
+FADI 0x3c
+CLEAN
+EVBIT_MODIFY 0
 MUSC 0x4
 SetBackground(0x34)
+FADU 0x3c
 STAL 120
-CGTEXTSTART
-TEXTSHOW Prologue_Narration
-TEXTEND
+CGText(Prologue_Narration)
 MUSC 0x0
 FADI 0x3c
 CLEAN
@@ -133,6 +155,8 @@ ENDA
 
 KennethCometh:
 LOAD1 0x1 PKenneth
+MOVE 0x1E Kenneth [1,5]
+ENUN
 MUSC 0x6
 Text(PKennethText)
 MUSC 0x0

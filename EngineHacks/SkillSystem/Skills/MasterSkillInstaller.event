@@ -13,6 +13,7 @@ SHORT 0x46C0
 
 POP
 
+#include "RallySkills/RallySkills.event"
 #include "ActivationRateSkills/ActivationRateSkills.event"
 #include "AISkills/AISkills.event"
 #include "AuraSkills/AuraSkills.event"
@@ -28,7 +29,6 @@ POP
 #include "PostBattleSkills/PostBattleSkills.event"
 #include "PreBattleSkills/PreBattleSkills.event"
 #include "ProcSkills/ProcSkills.event"
-#include "RallySkills/RallySkills.event"
 #include "RangeSkills/RangeSkills.event"
 #include "RoundsSkills/RoundsSkills.event"
 #include "StandaloneSkills/StandaloneSkills.event"

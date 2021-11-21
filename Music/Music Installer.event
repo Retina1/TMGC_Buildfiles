@@ -47,6 +47,9 @@ SongTable(0x92,SMT4B2,0)
 #include "SMT4Tokyo.event"
 SongTable(0x93,SMT4Tokyo,1)
 
+#include "FE4Victory.event"
+SongTable(0x10,FE4Victory,1)
+
 FE8SoundMixer:
 #incbin "FE8_Improved_Sound_Mixer.bin"
 PUSH

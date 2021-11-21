@@ -1,6 +1,9 @@
 
 
-#define LoadUnitsByDifficulty(easy,normal,hard) "ENUT 0xEF; CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN; ENUF 0xEF"
+#define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
+#define SystemText(textid) "TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
+#define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND;"
+
 //unit defs
 #define Blair 0x01
 #define Arin 0x02

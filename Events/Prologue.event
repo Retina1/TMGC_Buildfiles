@@ -110,10 +110,7 @@ ALIGN 4
 BeginningScene:
 LOAD1 0x1 PUnits
 ENUN
-ENUT 0xEF
 LoadUnitsByDifficulty(PEasy,PNormal,PHard)
-ENUN
-ENUF 0xEF
 MUSC 0x4
 SetBackground(0x34)
 STAL 120
@@ -131,7 +128,7 @@ EndingScene:
 MUSC 0x5
 Text(0x3,Prologue_Ending)
 MUSC 0x0
-MoveToChapter(1)
+MNC2 0x1
 ENDA
 
 KennethCometh:

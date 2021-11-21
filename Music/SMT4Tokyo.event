@@ -1,0 +1,6800 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	SMT4Tokyo_grp  voicegroup000
+	#define	SMT4Tokyo_pri  0
+	#define	SMT4Tokyo_rev  0
+	#define	SMT4Tokyo_mvl  127
+	#define	SMT4Tokyo_key  0
+	#define	SMT4Tokyo_tbs  1
+	#define	SMT4Tokyo_exg  0
+	#define	SMT4Tokyo_cmp  1
+
+	// .rodata
+	//	SMT4Tokyo
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+SMT4Tokyo_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_0_0100A5E6:
+ BYTE   TEMPO   80*SMT4Tokyo_tbs/2
+ BYTE   VOICE   88
+ BYTE   VOL   68*SMT4Tokyo_mvl/mxv
+ BYTE   N06  Gn3  v096
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+// 001   ----------------------------------------
+Label_0_0100A60E:
+ BYTE   N06  An3  v096
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_0_0100A631:
+ BYTE   N06  Gn3  v096
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Gn2
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_0_0100A654:
+ BYTE   N06  An3  v096
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   An3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Cn3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   An2
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+// 005   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0_0100A60E
+// 006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0_0100A631
+// 007   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0_0100A654
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0_0100A5E6
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+SMT4Tokyo_002:
+// 000   ----------------------------------------
+ BYTE   VOL   59*SMT4Tokyo_mvl/mxv
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_1_011EFFB0:
+ BYTE   VOICE   33
+ BYTE   N06  An0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+// 001   ----------------------------------------
+Label_1_011EFFCA:
+ BYTE   N12  En0  v096
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_1_011EFFE3:
+ BYTE   N12  Gn0  v096
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_1_011EFFF8:
+ BYTE   N12  Bn0  v096
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   N06  An0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+// 005   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011EFFCA
+// 006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011EFFE3
+// 007   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011EFFF8
+// 008   ----------------------------------------
+Label_1_011F0039:
+ BYTE   N06  An0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W42
+ BYTE   N12
+ BYTE   W12
+ BYTE   PEND 
+// 009   ----------------------------------------
+ BYTE   N06  En0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W54
+// 010   ----------------------------------------
+ BYTE   Gn0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W30
+ BYTE   N24
+ BYTE   W24
+// 011   ----------------------------------------
+Label_1_011F0065:
+ BYTE   N06  Bn0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W54
+ BYTE   PEND 
+// 012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011F0039
+// 013   ----------------------------------------
+ BYTE   N06  En0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N03  Bn0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   N12  Bn0
+ BYTE   W12
+ BYTE   N06  Fs0
+ BYTE   W06
+// 014   ----------------------------------------
+ BYTE   Gn0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W18
+ BYTE   N12
+ BYTE   W18
+ BYTE   N06
+ BYTE   W06
+ BYTE   An0
+ BYTE   W06
+ BYTE   As0
+ BYTE   W06
+// 015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011F0065
+// 016   ----------------------------------------
+ BYTE   N06  An0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   En0
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   Gn0
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06  An0
+ BYTE   W06
+ BYTE   As0
+ BYTE   W06
+// 019   ----------------------------------------
+ BYTE   N12  Bn0
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   Bn1
+ BYTE   W12
+ BYTE   An1
+ BYTE   W12
+ BYTE   N06  Gn1
+ BYTE   W06
+ BYTE   N12  Dn1
+ BYTE   W12
+// 020   ----------------------------------------
+ BYTE   N06  An0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W72
+// 021   ----------------------------------------
+Label_1_011F0110:
+ BYTE   N06  En0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W72
+ BYTE   PEND 
+// 022   ----------------------------------------
+Label_1_011F011D:
+ BYTE   N06  Gn0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W72
+ BYTE   PEND 
+// 023   ----------------------------------------
+Label_1_011F012A:
+ BYTE   N06  Bn0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W72
+ BYTE   PEND 
+// 024   ----------------------------------------
+ BYTE   An0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W72
+// 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011F0110
+// 026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011F011D
+// 027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_011F012A
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_1_011EFFB0
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+SMT4Tokyo_003:
+// 000   ----------------------------------------
+ BYTE   VOL   59*SMT4Tokyo_mvl/mxv
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_2_0100A6C4:
+ BYTE   VOICE   41
+ BYTE   PAN   c_v+36
+ BYTE   N96  An0  v096
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   En0
+ BYTE   W96
+// 002   ----------------------------------------
+Label_2_0100A6CE:
+ BYTE   N96  Gn0  v100
+ BYTE   W92
+ BYTE   W03
+ BYTE   Bn0
+ BYTE   W01
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_2_0100A6D6:
+ BYTE   W92
+ BYTE   W03
+ BYTE   N96  An0  v100
+ BYTE   W01
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_2_0100A6DD:
+ BYTE   W92
+ BYTE   W03
+ BYTE   N96  En0  v096
+ BYTE   W01
+ BYTE   PEND 
+// 005   ----------------------------------------
+Label_2_0100A6E4:
+ BYTE   W92
+ BYTE   W03
+ BYTE   N96  Gn0  v096
+ BYTE   W01
+ BYTE   PEND 
+// 006   ----------------------------------------
+Label_2_0100A6EB:
+ BYTE   W92
+ BYTE   W03
+ BYTE   N96  Bn0  v096
+ BYTE   W01
+ BYTE   PEND 
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   PAN   c_v+36
+ BYTE   N96  An0
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   En0
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_2_0100A6CE
+// 023   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_2_0100A6D6
+// 024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_2_0100A6DD
+// 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_2_0100A6E4
+// 026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_2_0100A6EB
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_2_0100A6C4
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+SMT4Tokyo_004:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_3_010097AE:
+ BYTE   VOICE   41
+ BYTE   VOL   35*SMT4Tokyo_mvl/mxv
+ BYTE   PAN   c_v-31
+ BYTE   VOL   35*SMT4Tokyo_mvl/mxv
+ BYTE   PAN   c_v-31
+ BYTE   N96  An1  v104
+ BYTE   W92
+ BYTE   W03
+ BYTE   En1  v096
+ BYTE   W01
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   Gn1  v100
+ BYTE   W96
+// 003   ----------------------------------------
+Label_3_010097C4:
+ BYTE   W01
+ BYTE   N96  Bn1  v096
+ BYTE   W92
+ BYTE   W02
+ BYTE   An1  v100
+ BYTE   W01
+ BYTE   PEND 
+// 004   ----------------------------------------
+Label_3_010097CE:
+ BYTE   W92
+ BYTE   W03
+ BYTE   N96  En1  v096
+ BYTE   W01
+ BYTE   PEND 
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   Gn1
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   Bn1  v100
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   VOL   35*SMT4Tokyo_mvl/mxv
+ BYTE   PAN   c_v-31
+ BYTE   VOL   35*SMT4Tokyo_mvl/mxv
+ BYTE   PAN   c_v-31
+ BYTE   N96  An1  v104
+ BYTE   W92
+ BYTE   W03
+ BYTE   En1  v096
+ BYTE   W01
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   Gn1  v100
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_3_010097C4
+// 024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_3_010097CE
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   N96  Gn1  v096
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   Bn1  v100
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_3_010097AE
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+SMT4Tokyo_005:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_4_01009816:
+ BYTE   VOICE   62
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   PAN   c_v+48
+ BYTE   VOL   13*SMT4Tokyo_mvl/mxv
+ BYTE   PAN   c_v+48
+ BYTE   N06  An0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W42
+ BYTE   N12
+ BYTE   W12
+// 009   ----------------------------------------
+Label_4_01009836:
+ BYTE   N06  En0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W54
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_4_01009845:
+ BYTE   N06  Gn0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W54
+ BYTE   PEND 
+// 011   ----------------------------------------
+Label_4_01009854:
+ BYTE   N06  Bn0  v096
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W54
+ BYTE   PEND 
+// 012   ----------------------------------------
+ BYTE   An0
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W42
+ BYTE   N12
+ BYTE   W12
+// 013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01009836
+// 014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01009845
+// 015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_01009854
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_4_01009816
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+SMT4Tokyo_006:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_5_011F015A:
+ BYTE   VOICE   81
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+Label_5_011F0164:
+ BYTE   PAN   c_v-20
+ BYTE   VOL   12*SMT4Tokyo_mvl/mxv
+ BYTE   PAN   c_v-20
+ BYTE   N12  Dn3  v096
+ BYTE   W01
+ BYTE   PAN   c_v-19
+ BYTE   W02
+ BYTE   PAN   c_v-18
+ BYTE   W03
+ BYTE   PAN   c_v-17
+ BYTE   W02
+ BYTE   PAN   c_v-16
+ BYTE   W02
+ BYTE   PAN   c_v-15
+ BYTE   W02
+ BYTE   PAN   c_v-14
+ BYTE   N12
+ BYTE   W02
+ BYTE   PAN   c_v-13
+ BYTE   W02
+ BYTE   PAN   c_v-12
+ BYTE   W02
+ BYTE   PAN   c_v-11
+ BYTE   W03
+ BYTE   PAN   c_v-10
+ BYTE   W02
+ BYTE   PAN   c_v-9
+ BYTE   W01
+ BYTE   N12  Gn3
+ BYTE   W01
+ BYTE   PAN   c_v-8
+ BYTE   W02
+ BYTE   PAN   c_v-7
+ BYTE   W03
+ BYTE   PAN   c_v-6
+ BYTE   W02
+ BYTE   PAN   c_v-5
+ BYTE   W02
+ BYTE   PAN   c_v-4
+ BYTE   W02
+ BYTE   PAN   c_v-3
+ BYTE   N12  An3
+ BYTE   W02
+ BYTE   PAN   c_v-2
+ BYTE   W02
+ BYTE   PAN   c_v-1
+ BYTE   W02
+ BYTE   PAN   c_v+0
+ BYTE   W03
+ BYTE   PAN   c_v+1
+ BYTE   W02
+ BYTE   PAN   c_v+2
+ BYTE   W01
+ BYTE   N12  Dn3
+ BYTE   W01
+ BYTE   PAN   c_v+3
+ BYTE   W02
+ BYTE   PAN   c_v+4
+ BYTE   W03
+ BYTE   PAN   c_v+5
+ BYTE   W02
+ BYTE   PAN   c_v+6
+ BYTE   W02
+ BYTE   PAN   c_v+7
+ BYTE   W02
+ BYTE   PAN   c_v+8
+ BYTE   N12  Gn3
+ BYTE   W02
+ BYTE   PAN   c_v+9
+ BYTE   W02
+ BYTE   PAN   c_v+10
+ BYTE   W02
+ BYTE   PAN   c_v+11
+ BYTE   W03
+ BYTE   PAN   c_v+12
+ BYTE   W02
+ BYTE   PAN   c_v+13
+ BYTE   W01
+ BYTE   N12  Dn3
+ BYTE   W01
+ BYTE   PAN   c_v+14
+ BYTE   W02
+ BYTE   PAN   c_v+15
+ BYTE   W03
+ BYTE   PAN   c_v+16
+ BYTE   W02
+ BYTE   PAN   c_v+17
+ BYTE   W02
+ BYTE   PAN   c_v+18
+ BYTE   W02
+ BYTE   PAN   c_v+19
+ BYTE   N12  Gn3
+ BYTE   W02
+ BYTE   PAN   c_v+20
+ BYTE   W02
+ BYTE   PAN   c_v+21
+ BYTE   W02
+ BYTE   PAN   c_v+22
+ BYTE   W03
+ BYTE   PAN   c_v+23
+ BYTE   W02
+ BYTE   PAN   c_v+24
+ BYTE   W01
+ BYTE   PEND 
+// 009   ----------------------------------------
+Label_5_011F01DF:
+ BYTE   PAN   c_v+24
+ BYTE   N12  An3  v096
+ BYTE   W01
+ BYTE   PAN   c_v+23
+ BYTE   W02
+ BYTE   PAN   c_v+22
+ BYTE   W03
+ BYTE   PAN   c_v+21
+ BYTE   W01
+ BYTE   PAN   c_v+20
+ BYTE   W02
+ BYTE   PAN   c_v+19
+ BYTE   W03
+ BYTE   PAN   c_v+18
+ BYTE   N12  Dn4
+ BYTE   W02
+ BYTE   PAN   c_v+17
+ BYTE   W02
+ BYTE   PAN   c_v+16
+ BYTE   W02
+ BYTE   PAN   c_v+15
+ BYTE   W02
+ BYTE   PAN   c_v+14
+ BYTE   W02
+ BYTE   PAN   c_v+13
+ BYTE   W02
+ BYTE   PAN   c_v+12
+ BYTE   N12  Gn3
+ BYTE   W03
+ BYTE   PAN   c_v+11
+ BYTE   W01
+ BYTE   PAN   c_v+10
+ BYTE   W02
+ BYTE   PAN   c_v+9
+ BYTE   W03
+ BYTE   PAN   c_v+8
+ BYTE   W02
+ BYTE   PAN   c_v+7
+ BYTE   W01
+ BYTE   N12  An3
+ BYTE   W01
+ BYTE   PAN   c_v+6
+ BYTE   W02
+ BYTE   PAN   c_v+5
+ BYTE   W02
+ BYTE   PAN   c_v+4
+ BYTE   W02
+ BYTE   PAN   c_v+3
+ BYTE   W02
+ BYTE   PAN   c_v+2
+ BYTE   W03
+ BYTE   PAN   c_v+1
+ BYTE   N12  Dn3
+ BYTE   W02
+ BYTE   PAN   c_v+0
+ BYTE   W01
+ BYTE   PAN   c_v-1
+ BYTE   W03
+ BYTE   PAN   c_v-2
+ BYTE   W02
+ BYTE   PAN   c_v-3
+ BYTE   W02
+ BYTE   PAN   c_v-4
+ BYTE   W02
+ BYTE   PAN   c_v-5
+ BYTE   N12  Gn3
+ BYTE   W02
+ BYTE   PAN   c_v-6
+ BYTE   W02
+ BYTE   PAN   c_v-7
+ BYTE   W02
+ BYTE   PAN   c_v-8
+ BYTE   W03
+ BYTE   PAN   c_v-9
+ BYTE   W02
+ BYTE   PAN   c_v-10
+ BYTE   W01
+ BYTE   PAN   c_v-11
+ BYTE   N12  Dn3
+ BYTE   W03
+ BYTE   PAN   c_v-12
+ BYTE   W02
+ BYTE   PAN   c_v-13
+ BYTE   W02
+ BYTE   PAN   c_v-14
+ BYTE   W02
+ BYTE   PAN   c_v-15
+ BYTE   W02
+ BYTE   PAN   c_v-16
+ BYTE   W01
+ BYTE   N12  An3
+ BYTE   W01
+ BYTE   PAN   c_v-17
+ BYTE   W02
+ BYTE   PAN   c_v-18
+ BYTE   W03
+ BYTE   PAN   c_v-19
+ BYTE   W02
+ BYTE   PAN   c_v-20
+ BYTE   W01
+ BYTE   PAN   c_v-21
+ BYTE   W03
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_5_011F0258:
+ BYTE   PAN   c_v-22
+ BYTE   N12  Dn3  v096
+ BYTE   W02
+ BYTE   PAN   c_v-23
+ BYTE   W01
+ BYTE   PAN   c_v-23
+ BYTE   W09
+ BYTE   N12
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W02
+ BYTE   PAN   c_v-22
+ BYTE   W10
+ BYTE   N12  Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   PEND 
+// 011   ----------------------------------------
+Label_5_011F0276:
+ BYTE   N12  Gn3  v096
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W01
+ BYTE   PAN   c_v-22
+ BYTE   W11
+ BYTE   N12  Gn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W12
+ BYTE   PEND 
+// 012   ----------------------------------------
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   Gn3
+ BYTE   W07
+ BYTE   PAN   c_v-22
+ BYTE   W02
+ BYTE   PAN   c_v-21
+ BYTE   W03
+ BYTE   PAN   c_v-20
+ BYTE   N12  An3
+ BYTE   W03
+ BYTE   PAN   c_v-19
+ BYTE   W03
+ BYTE   PAN   c_v-18
+ BYTE   W03
+ BYTE   PAN   c_v-17
+ BYTE   W03
+ BYTE   PAN   c_v-16
+ BYTE   N12  Dn3
+ BYTE   W03
+ BYTE   PAN   c_v-15
+ BYTE   W03
+ BYTE   PAN   c_v-14
+ BYTE   W03
+ BYTE   PAN   c_v-13
+ BYTE   W03
+ BYTE   PAN   c_v-12
+ BYTE   N12  Gn3
+ BYTE   W03
+ BYTE   PAN   c_v-11
+ BYTE   W03
+ BYTE   PAN   c_v-10
+ BYTE   W03
+ BYTE   PAN   c_v-9
+ BYTE   W03
+ BYTE   PAN   c_v-8
+ BYTE   N12  Dn3
+ BYTE   W03
+ BYTE   PAN   c_v-7
+ BYTE   W03
+ BYTE   PAN   c_v-6
+ BYTE   W03
+ BYTE   PAN   c_v-5
+ BYTE   W03
+ BYTE   PAN   c_v-4
+ BYTE   N12  Gn3
+ BYTE   W03
+ BYTE   PAN   c_v-3
+ BYTE   W03
+ BYTE   PAN   c_v-2
+ BYTE   W03
+ BYTE   PAN   c_v-1
+ BYTE   W03
+// 013   ----------------------------------------
+ BYTE   PAN   c_v+0
+ BYTE   N12  An3
+ BYTE   W03
+ BYTE   PAN   c_v+1
+ BYTE   W03
+ BYTE   PAN   c_v+2
+ BYTE   W03
+ BYTE   PAN   c_v+3
+ BYTE   W03
+ BYTE   PAN   c_v+4
+ BYTE   N12  Dn4
+ BYTE   W03
+ BYTE   PAN   c_v+5
+ BYTE   W03
+ BYTE   PAN   c_v+6
+ BYTE   W03
+ BYTE   PAN   c_v+7
+ BYTE   W03
+ BYTE   PAN   c_v+8
+ BYTE   N12  Gn3
+ BYTE   W03
+ BYTE   PAN   c_v+9
+ BYTE   W03
+ BYTE   PAN   c_v+10
+ BYTE   W03
+ BYTE   PAN   c_v+11
+ BYTE   W03
+ BYTE   PAN   c_v+12
+ BYTE   N12  An3
+ BYTE   W03
+ BYTE   PAN   c_v+13
+ BYTE   W01
+ BYTE   PAN   c_v+13
+ BYTE   W02
+ BYTE   PAN   c_v+12
+ BYTE   W03
+ BYTE   PAN   c_v+11
+ BYTE   W03
+ BYTE   PAN   c_v+10
+ BYTE   N12  Dn3
+ BYTE   W03
+ BYTE   PAN   c_v+9
+ BYTE   W02
+ BYTE   PAN   c_v+8
+ BYTE   W03
+ BYTE   PAN   c_v+7
+ BYTE   W03
+ BYTE   PAN   c_v+6
+ BYTE   W01
+ BYTE   N12  Gn3
+ BYTE   W02
+ BYTE   PAN   c_v+5
+ BYTE   W02
+ BYTE   PAN   c_v+4
+ BYTE   W03
+ BYTE   PAN   c_v+3
+ BYTE   W03
+ BYTE   PAN   c_v+2
+ BYTE   W02
+ BYTE   N12  Dn3
+ BYTE   W01
+ BYTE   PAN   c_v+1
+ BYTE   W02
+ BYTE   PAN   c_v+0
+ BYTE   W03
+ BYTE   PAN   c_v-1
+ BYTE   W03
+ BYTE   PAN   c_v-2
+ BYTE   W03
+ BYTE   PAN   c_v-3
+ BYTE   N12  An3
+ BYTE   W03
+ BYTE   PAN   c_v-4
+ BYTE   W03
+ BYTE   PAN   c_v-5
+ BYTE   W03
+ BYTE   PAN   c_v-6
+ BYTE   W03
+// 014   ----------------------------------------
+ BYTE   PAN   c_v-7
+ BYTE   N12  Dn3
+ BYTE   W03
+ BYTE   PAN   c_v-8
+ BYTE   W02
+ BYTE   PAN   c_v-9
+ BYTE   W03
+ BYTE   PAN   c_v-10
+ BYTE   W03
+ BYTE   PAN   c_v-11
+ BYTE   W01
+ BYTE   N12
+ BYTE   W02
+ BYTE   PAN   c_v-12
+ BYTE   W02
+ BYTE   PAN   c_v-13
+ BYTE   W03
+ BYTE   PAN   c_v-14
+ BYTE   W03
+ BYTE   PAN   c_v-15
+ BYTE   W02
+ BYTE   N12  Dn4
+ BYTE   W01
+ BYTE   PAN   c_v-16
+ BYTE   W02
+ BYTE   PAN   c_v-17
+ BYTE   W03
+ BYTE   PAN   c_v-18
+ BYTE   W03
+ BYTE   PAN   c_v-19
+ BYTE   W03
+ BYTE   PAN   c_v-20
+ BYTE   N12  Gn3
+ BYTE   W01
+ BYTE   PAN   c_v-20
+ BYTE   W02
+ BYTE   PAN   c_v-19
+ BYTE   W03
+ BYTE   PAN   c_v-18
+ BYTE   W03
+ BYTE   PAN   c_v-17
+ BYTE   W03
+ BYTE   PAN   c_v-16
+ BYTE   N12  An3
+ BYTE   W03
+ BYTE   PAN   c_v-15
+ BYTE   W02
+ BYTE   PAN   c_v-14
+ BYTE   W03
+ BYTE   PAN   c_v-13
+ BYTE   W03
+ BYTE   PAN   c_v-12
+ BYTE   W01
+ BYTE   N12  Dn3
+ BYTE   W02
+ BYTE   PAN   c_v-11
+ BYTE   W02
+ BYTE   PAN   c_v-10
+ BYTE   W03
+ BYTE   PAN   c_v-9
+ BYTE   W03
+ BYTE   PAN   c_v-8
+ BYTE   W02
+ BYTE   N12  Gn3
+ BYTE   W01
+ BYTE   PAN   c_v-7
+ BYTE   W03
+ BYTE   PAN   c_v-6
+ BYTE   W02
+ BYTE   PAN   c_v-5
+ BYTE   W03
+ BYTE   PAN   c_v-4
+ BYTE   W03
+ BYTE   PAN   c_v-3
+ BYTE   N12  An3
+ BYTE   W03
+ BYTE   PAN   c_v-2
+ BYTE   W03
+ BYTE   PAN   c_v-1
+ BYTE   W03
+ BYTE   PAN   c_v+0
+ BYTE   W03
+// 015   ----------------------------------------
+ BYTE   PAN   c_v+1
+ BYTE   N12  Gn3
+ BYTE   W03
+ BYTE   PAN   c_v+2
+ BYTE   W03
+ BYTE   PAN   c_v+3
+ BYTE   W02
+ BYTE   PAN   c_v+4
+ BYTE   W03
+ BYTE   PAN   c_v+5
+ BYTE   W01
+ BYTE   N12  An3
+ BYTE   W02
+ BYTE   PAN   c_v+6
+ BYTE   W03
+ BYTE   PAN   c_v+7
+ BYTE   W03
+ BYTE   PAN   c_v+8
+ BYTE   W02
+ BYTE   PAN   c_v+9
+ BYTE   W02
+ BYTE   N12  Dn3
+ BYTE   W01
+ BYTE   PAN   c_v+10
+ BYTE   W03
+ BYTE   PAN   c_v+11
+ BYTE   W03
+ BYTE   PAN   c_v+12
+ BYTE   W02
+ BYTE   PAN   c_v+13
+ BYTE   W03
+ BYTE   PAN   c_v+14
+ BYTE   N12  Gn3
+ BYTE   W03
+ BYTE   PAN   c_v+15
+ BYTE   W03
+ BYTE   PAN   c_v+16
+ BYTE   W03
+ BYTE   PAN   c_v+17
+ BYTE   W01
+ BYTE   PAN   c_v+17
+ BYTE   W02
+ BYTE   N12  Dn3
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W11
+ BYTE   PAN   c_v+18
+ BYTE   W01
+ BYTE   N12  Gn3
+ BYTE   W12
+ BYTE   An3
+ BYTE   W11
+ BYTE   PAN   c_v+18
+ BYTE   W01
+// 016   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_011F0164
+// 017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_011F01DF
+// 018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_011F0258
+// 019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_011F0276
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_5_011F015A
+ BYTE   FINE
+
+//**************** Track 7 (Midi-Chn.6) ****************//
+
+SMT4Tokyo_007:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_6_0144B17A:
+ BYTE   VOICE   89
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+Label_6_0144B184:
+ BYTE   VOL   13*SMT4Tokyo_mvl/mxv
+ BYTE   BEND   c_v-1
+ BYTE   TIE  Bn5  v044
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   PEND 
+// 009   ----------------------------------------
+Label_6_0144B24C:
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_6_0144B30E:
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   PEND 
+// 011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B24C
+// 012   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn5
+ BYTE   BEND   c_v-1
+ BYTE   TIE  Bn5  v044
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+// 013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B24C
+// 014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B30E
+// 015   ----------------------------------------
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W23
+// 016   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn5
+// 017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B184
+// 018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B24C
+// 019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B30E
+// 020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B24C
+// 021   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn5
+Label_6_0144B553:
+ BYTE   VOL   13*SMT4Tokyo_mvl/mxv
+ BYTE   BEND   c_v-1
+ BYTE   TIE  Bn5  v052
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-16
+ BYTE   W01
+ BYTE   BEND   c_v-38
+ BYTE   W01
+ BYTE   BEND   c_v-50
+ BYTE   W01
+ BYTE   BEND   c_v-42
+ BYTE   W01
+ BYTE   PEND 
+// 022   ----------------------------------------
+Label_6_0144B61B:
+ BYTE   BEND   c_v-27
+ BYTE   W01
+ BYTE   BEND   c_v-19
+ BYTE   W01
+ BYTE   BEND   c_v-11
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-9
+ BYTE   W01
+ BYTE   BEND   c_v-10
+ BYTE   W01
+ BYTE   BEND   c_v-11
+ BYTE   W01
+ BYTE   BEND   c_v-12
+ BYTE   W01
+ BYTE   BEND   c_v-12
+ BYTE   W01
+ BYTE   BEND   c_v-14
+ BYTE   W01
+ BYTE   BEND   c_v-15
+ BYTE   W01
+ BYTE   BEND   c_v-15
+ BYTE   W01
+ BYTE   BEND   c_v-17
+ BYTE   W01
+ BYTE   BEND   c_v-17
+ BYTE   W01
+ BYTE   BEND   c_v-18
+ BYTE   W01
+ BYTE   BEND   c_v-19
+ BYTE   W01
+ BYTE   BEND   c_v-20
+ BYTE   W01
+ BYTE   BEND   c_v-21
+ BYTE   W01
+ BYTE   BEND   c_v-22
+ BYTE   W01
+ BYTE   BEND   c_v-23
+ BYTE   W01
+ BYTE   BEND   c_v-24
+ BYTE   W01
+ BYTE   BEND   c_v-25
+ BYTE   W01
+ BYTE   BEND   c_v-26
+ BYTE   W01
+ BYTE   BEND   c_v-28
+ BYTE   W01
+ BYTE   BEND   c_v-31
+ BYTE   W01
+ BYTE   BEND   c_v-33
+ BYTE   W01
+ BYTE   BEND   c_v-35
+ BYTE   W01
+ BYTE   BEND   c_v-38
+ BYTE   W01
+ BYTE   BEND   c_v-40
+ BYTE   W01
+ BYTE   BEND   c_v-42
+ BYTE   W01
+ BYTE   BEND   c_v-45
+ BYTE   W01
+ BYTE   BEND   c_v-47
+ BYTE   W01
+ BYTE   BEND   c_v-49
+ BYTE   W01
+ BYTE   BEND   c_v-52
+ BYTE   W01
+ BYTE   BEND   c_v-54
+ BYTE   W01
+ BYTE   BEND   c_v-56
+ BYTE   W01
+ BYTE   BEND   c_v-59
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-51
+ BYTE   W01
+ BYTE   BEND   c_v-31
+ BYTE   W01
+ BYTE   BEND   c_v-21
+ BYTE   W01
+ BYTE   BEND   c_v-11
+ BYTE   W01
+ BYTE   PEND 
+// 023   ----------------------------------------
+Label_6_0144B6DD:
+ BYTE   BEND   c_v-1
+ BYTE   TIE  Bn4  v052
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Bn5
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+// 024   ----------------------------------------
+Label_6_0144B7A5:
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Bn4
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+// 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B553
+// 026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B61B
+// 027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B6DD
+// 028   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn5
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+// 029   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_0144B7A5
+// 030   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn4
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   GoTo
+  POIN2 Label_6_0144B17A
+ BYTE   FINE
+
+//**************** Track 8 (Midi-Chn.7) ****************//
+
+SMT4Tokyo_008:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_7_0144B97A:
+ BYTE   VOICE   89
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+Label_7_0144B984:
+ BYTE   PAN   c_v+15
+ BYTE   VOL   18*SMT4Tokyo_mvl/mxv
+ BYTE   PAN   c_v+15
+ BYTE   BEND   c_v+0
+ BYTE   TIE  Bn5  v048
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   PEND 
+// 009   ----------------------------------------
+Label_7_0144BA50:
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_7_0144BB12:
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W21
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W24
+ BYTE   PEND 
+// 011   ----------------------------------------
+Label_7_0144BB7E:
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   PEND 
+// 012   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn5
+ BYTE   BEND   c_v+0
+ BYTE   TIE  Bn5  v048
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+// 013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144BA50
+// 014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144BB12
+// 015   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W23
+// 016   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn5
+// 017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144B984
+// 018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144BA50
+// 019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144BB12
+// 020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144BB7E
+// 021   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn5
+Label_7_0144BDBE:
+ BYTE   VOL   13*SMT4Tokyo_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   TIE  Bn5  v048
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W01
+ BYTE   BEND   c_v+8
+ BYTE   W01
+ BYTE   BEND   c_v+8
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-9
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-8
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-9
+ BYTE   W01
+ BYTE   BEND   c_v-17
+ BYTE   W01
+ BYTE   BEND   c_v-25
+ BYTE   W01
+ BYTE   BEND   c_v-41
+ BYTE   W01
+ BYTE   BEND   c_v-50
+ BYTE   W01
+ BYTE   BEND   c_v-42
+ BYTE   W01
+ BYTE   PEND 
+// 022   ----------------------------------------
+Label_7_0144BE86:
+ BYTE   BEND   c_v-27
+ BYTE   W01
+ BYTE   BEND   c_v-19
+ BYTE   W01
+ BYTE   BEND   c_v-11
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-7
+ BYTE   W01
+ BYTE   BEND   c_v-9
+ BYTE   W01
+ BYTE   BEND   c_v-11
+ BYTE   W01
+ BYTE   BEND   c_v-12
+ BYTE   W01
+ BYTE   BEND   c_v-14
+ BYTE   W01
+ BYTE   BEND   c_v-15
+ BYTE   W01
+ BYTE   BEND   c_v-16
+ BYTE   W01
+ BYTE   BEND   c_v-18
+ BYTE   W01
+ BYTE   BEND   c_v-19
+ BYTE   W01
+ BYTE   BEND   c_v-20
+ BYTE   W01
+ BYTE   BEND   c_v-23
+ BYTE   W01
+ BYTE   BEND   c_v-24
+ BYTE   W01
+ BYTE   BEND   c_v-25
+ BYTE   W01
+ BYTE   BEND   c_v-27
+ BYTE   W01
+ BYTE   BEND   c_v-28
+ BYTE   W01
+ BYTE   BEND   c_v-30
+ BYTE   W01
+ BYTE   BEND   c_v-32
+ BYTE   W01
+ BYTE   BEND   c_v-34
+ BYTE   W01
+ BYTE   BEND   c_v-35
+ BYTE   W01
+ BYTE   BEND   c_v-38
+ BYTE   W01
+ BYTE   BEND   c_v-39
+ BYTE   W01
+ BYTE   BEND   c_v-40
+ BYTE   W01
+ BYTE   BEND   c_v-43
+ BYTE   W01
+ BYTE   BEND   c_v-44
+ BYTE   W01
+ BYTE   BEND   c_v-46
+ BYTE   W01
+ BYTE   BEND   c_v-50
+ BYTE   W01
+ BYTE   BEND   c_v-52
+ BYTE   W01
+ BYTE   BEND   c_v-54
+ BYTE   W01
+ BYTE   BEND   c_v-58
+ BYTE   W01
+ BYTE   BEND   c_v-60
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-63
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-62
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v-51
+ BYTE   W01
+ BYTE   BEND   c_v-31
+ BYTE   W01
+ BYTE   BEND   c_v-21
+ BYTE   W01
+ BYTE   BEND   c_v-11
+ BYTE   W01
+ BYTE   PEND 
+// 023   ----------------------------------------
+Label_7_0144BF48:
+ BYTE   BEND   c_v+0
+ BYTE   TIE  Bn4  v064
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Bn5
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+// 024   ----------------------------------------
+Label_7_0144C010:
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Bn4
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+// 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144BDBE
+// 026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144BE86
+// 027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144BF48
+// 028   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn5
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-6
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-5
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-3
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-2
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v-1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+// 029   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_0144C010
+// 030   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn4
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+7
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+6
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   GoTo
+  POIN2 Label_7_0144B97A
+ BYTE   FINE
+
+//**************** Track 9 (Midi-Chn.8) ****************//
+
+SMT4Tokyo_009:
+// 000   ----------------------------------------
+ BYTE   VOL   21*SMT4Tokyo_mvl/mxv
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_8_5470C0:
+ BYTE   VOICE   80
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N48  Cn5  v096
+ BYTE   W48
+ BYTE   N18  Bn4
+ BYTE   W18
+ BYTE   An4
+ BYTE   W18
+ BYTE   N12  Gn4
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   N18  An4
+ BYTE   W18
+ BYTE   N54  Bn4
+ BYTE   W42
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-10
+ BYTE   W01
+ BYTE   BEND   c_v-13
+ BYTE   W01
+ BYTE   BEND   c_v-16
+ BYTE   W01
+ BYTE   BEND   c_v-22
+ BYTE   W01
+ BYTE   BEND   c_v-25
+ BYTE   W01
+ BYTE   BEND   c_v-28
+ BYTE   W01
+ BYTE   BEND   c_v-31
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   N12  Fs4
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   N18  An4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   N60  Bn4
+ BYTE   W54
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-16
+ BYTE   W01
+ BYTE   BEND   c_v-48
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W02
+// 019   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N18  An4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   N24  Dn5
+ BYTE   W17
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-9
+ BYTE   W01
+ BYTE   BEND   c_v-17
+ BYTE   W01
+ BYTE   BEND   c_v-34
+ BYTE   W01
+ BYTE   BEND   c_v-42
+ BYTE   W01
+ BYTE   BEND   c_v-51
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   N18  En5
+ BYTE   W18
+ BYTE   An4
+ BYTE   W18
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_8_5470C0
+ BYTE   FINE
+
+//**************** Track 10 (Midi-Chn.9) ****************//
+
+SMT4Tokyo_010:
+// 000   ----------------------------------------
+ BYTE   VOL   59*SMT4Tokyo_mvl/mxv
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_9_0144C1E8:
+ BYTE   VOICE   121
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N01  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+// 001   ----------------------------------------
+Label_9_0144C215:
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N01  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_9_0144C215
+// 003   ----------------------------------------
+Label_9_0144C246:
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N01  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W06
+ BYTE   Gs1  v032
+ BYTE   W06
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W06
+ BYTE   N04  Gs1  v060
+ BYTE   W06
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v052
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v044
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W06
+ BYTE   Gs1  v060
+ BYTE   W06
+// 005   ----------------------------------------
+Label_9_0144C2A6:
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v052
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v044
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v060
+ BYTE   W12
+ BYTE   N03  Gs1  v084
+ BYTE   W06
+ BYTE   Gs1  v044
+ BYTE   W06
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W06
+ BYTE   Gs1  v060
+ BYTE   W06
+ BYTE   PEND 
+// 006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_9_0144C2A6
+// 007   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v052
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v044
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v060
+ BYTE   W12
+ BYTE   N03  Gs1  v084
+ BYTE   W06
+ BYTE   Gs1  v044
+ BYTE   W06
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W24
+ BYTE   Bn1  v096
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+// 008   ----------------------------------------
+ BYTE   N06  Cn1
+ BYTE   N03  Gs1  v068
+ BYTE   N09  Cs2
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N01  As1  v068
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+// 009   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N01  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N07  Dn1  v096
+ BYTE   N03  Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+// 010   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N01  As1  v068
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_9_0144C246
+// 012   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v052
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  As1  v044
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N03
+ BYTE   W06
+ BYTE   Gs1  v060
+ BYTE   W06
+// 013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_9_0144C2A6
+// 014   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v052
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  As1  v044
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v060
+ BYTE   W12
+ BYTE   N03  Gs1  v084
+ BYTE   W06
+ BYTE   Gs1  v044
+ BYTE   W06
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N03
+ BYTE   W06
+ BYTE   Gs1  v060
+ BYTE   W06
+// 015   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v052
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v044
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v060
+ BYTE   W12
+ BYTE   N03  Gs1  v084
+ BYTE   W06
+ BYTE   Gs1  v044
+ BYTE   W06
+ BYTE   N06  Cn1  v096
+ BYTE   N03  Gs1  v068
+ BYTE   W12
+ BYTE   Gs1  v084
+ BYTE   W12
+ BYTE   N06  En1  v096
+ BYTE   W12
+ BYTE   N03  Bn1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+// 016   ----------------------------------------
+ BYTE   N06  Cn1
+ BYTE   N10  As1  v064
+ BYTE   N32  Cs2
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   Dn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   N04
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N10  As1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Dn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   N04
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N10  As1  v064
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   Dn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   N04
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N10  As1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Dn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   N07  Dn1  v096
+ BYTE   N04  As1  v064
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N10  As1  v064
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   Dn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   N04
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N10  As1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Dn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   N04
+ BYTE   W12
+// 019   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N10  As1  v064
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   Dn1  v096
+ BYTE   N06  As1  v064
+ BYTE   W12
+ BYTE   N07  Dn1  v096
+ BYTE   N04  As1  v064
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N10  As1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   N04  Cn2  v096
+ BYTE   W06
+ BYTE   An1
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   N04  As1  v064
+ BYTE   W12
+// 020   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   N21  Cs2  v064
+ BYTE   W12
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Cn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v064
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+// 021   ----------------------------------------
+Label_9_0144C4E2:
+ BYTE   N06  Cn1  v096
+ BYTE   W12
+ BYTE   N06
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N03  Gs1  v044
+ BYTE   W06
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W06
+ BYTE   Gs1  v040
+ BYTE   W06
+ BYTE   N03  Gs1  v064
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v064
+ BYTE   W12
+ BYTE   N03
+ BYTE   W06
+ BYTE   Gs1  v056
+ BYTE   W06
+ BYTE   PEND 
+// 022   ----------------------------------------
+Label_9_0144C513:
+ BYTE   N06  Cn1  v096
+ BYTE   W12
+ BYTE   N06
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W12
+ BYTE   Cn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N03  Gs1  v064
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   PEND 
+// 023   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   W12
+ BYTE   N06
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N03  Gs1  v044
+ BYTE   W06
+ BYTE   N06  Cn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W06
+ BYTE   Gs1  v040
+ BYTE   W06
+ BYTE   N03  Gs1  v064
+ BYTE   W12
+ BYTE   Dn1  v096
+ BYTE   N03  Gs1  v064
+ BYTE   W12
+ BYTE   N03
+ BYTE   W06
+ BYTE   Gs1  v056
+ BYTE   W06
+// 024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_9_0144C513
+// 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_9_0144C4E2
+// 026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_9_0144C513
+// 027   ----------------------------------------
+ BYTE   N06  Cn1  v096
+ BYTE   W12
+ BYTE   N06
+ BYTE   N04  As1  v064
+ BYTE   W12
+ BYTE   N06  Dn1  v096
+ BYTE   N04  Gs1  v064
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N03  En1  v048
+ BYTE   N03  Gs1  v044
+ BYTE   W03
+ BYTE   En1  v064
+ BYTE   W03
+ BYTE   N06  Cn1  v096
+ BYTE   N03  En1  v060
+ BYTE   N04  Gs1  v064
+ BYTE   W06
+ BYTE   Gs1  v040
+ BYTE   W06
+ BYTE   N03  Gs1  v064
+ BYTE   W12
+ BYTE   N03
+ BYTE   W12
+ BYTE   N03
+ BYTE   N03  Bn1  v096
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   N03  Gs1  v056
+ BYTE   W06
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_9_0144C1E8
+ BYTE   FINE
+
+//**************** Track 11 (Midi-Chn.10) ****************//
+
+SMT4Tokyo_011:
+// 000   ----------------------------------------
+ BYTE   VOL   59*SMT4Tokyo_mvl/mxv
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_10_546FEC:
+ BYTE   VOICE   4
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+Label_10_546FF6:
+ BYTE   N36  Dn4  v096
+ BYTE   W36
+ BYTE   N06  Cn4
+ BYTE   W06
+ BYTE   Bn3
+ BYTE   W06
+ BYTE   N24  Cn4
+ BYTE   W24
+ BYTE   Fs4
+ BYTE   W24
+ BYTE   PEND 
+// 009   ----------------------------------------
+ BYTE   N18
+ BYTE   W18
+ BYTE   N66  Bn3
+ BYTE   W66
+ BYTE   N06
+ BYTE   W06
+ BYTE   Cn4
+ BYTE   W06
+// 010   ----------------------------------------
+ BYTE   N36  Dn4
+ BYTE   W36
+ BYTE   N06  En4
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   N18  Gn4
+ BYTE   W18
+ BYTE   An4
+ BYTE   W18
+ BYTE   N12  Gn4
+ BYTE   W12
+// 011   ----------------------------------------
+ BYTE   N48  Bn4
+ BYTE   W48
+ BYTE   N18  Cn5
+ BYTE   W18
+ BYTE   Bn4
+ BYTE   W18
+ BYTE   N12  Gn4
+ BYTE   W12
+// 012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_10_546FF6
+// 013   ----------------------------------------
+ BYTE   N18  Fs4  v096
+ BYTE   W18
+ BYTE   N66  Bn3
+ BYTE   W66
+ BYTE   N06  Fs3
+ BYTE   W06
+ BYTE   Gn3
+ BYTE   W06
+// 014   ----------------------------------------
+ BYTE   N18  An3
+ BYTE   W18
+ BYTE   Bn3
+ BYTE   W18
+ BYTE   Cn4
+ BYTE   W18
+ BYTE   N42  Dn4
+ BYTE   W42
+// 015   ----------------------------------------
+ BYTE   N18  En4
+ BYTE   W18
+ BYTE   Fs4
+ BYTE   W18
+ BYTE   N24  Gn4
+ BYTE   W24
+ BYTE   N36  An4
+ BYTE   W36
+// 016   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N48  Cn5  v084
+ BYTE   W48
+ BYTE   N18  Bn4
+ BYTE   W18
+ BYTE   An4
+ BYTE   W18
+ BYTE   N12  Gn4
+ BYTE   W12
+// 017   ----------------------------------------
+ BYTE   N18  An4
+ BYTE   W18
+ BYTE   N54  Bn4
+ BYTE   W42
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-4
+ BYTE   W01
+ BYTE   BEND   c_v-10
+ BYTE   W01
+ BYTE   BEND   c_v-13
+ BYTE   W01
+ BYTE   BEND   c_v-16
+ BYTE   W01
+ BYTE   BEND   c_v-22
+ BYTE   W01
+ BYTE   BEND   c_v-25
+ BYTE   W01
+ BYTE   BEND   c_v-28
+ BYTE   W01
+ BYTE   BEND   c_v-31
+ BYTE   W03
+ BYTE   BEND   c_v+0
+ BYTE   N12  Fs4
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+// 018   ----------------------------------------
+ BYTE   N18  An4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   N60  Bn4
+ BYTE   W54
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-16
+ BYTE   W01
+ BYTE   BEND   c_v-48
+ BYTE   W01
+ BYTE   BEND   c_v-64
+ BYTE   W02
+// 019   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N18  An4
+ BYTE   W18
+ BYTE   Gn4
+ BYTE   W18
+ BYTE   N24  Dn5
+ BYTE   W17
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v-9
+ BYTE   W01
+ BYTE   BEND   c_v-17
+ BYTE   W01
+ BYTE   BEND   c_v-34
+ BYTE   W01
+ BYTE   BEND   c_v-42
+ BYTE   W01
+ BYTE   BEND   c_v-51
+ BYTE   W01
+ BYTE   BEND   c_v-61
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   N18  En5
+ BYTE   W18
+ BYTE   An4
+ BYTE   W18
+// 020   ----------------------------------------
+ BYTE   W96
+// 021   ----------------------------------------
+ BYTE   W96
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_10_546FEC
+ BYTE   FINE
+
+//**************** Track 12 (Midi-Chn.11) ****************//
+
+SMT4Tokyo_012:
+// 000   ----------------------------------------
+ BYTE   KEYSH   SMT4Tokyo_key+0
+Label_11_546E4E:
+ BYTE   VOICE   4
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+ BYTE   W96
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W96
+// 019   ----------------------------------------
+ BYTE   W96
+// 020   ----------------------------------------
+ BYTE   VOL   40*SMT4Tokyo_mvl/mxv
+ BYTE   N12  An2  v096
+ BYTE   N12  Dn3
+ BYTE   N12  An3
+ BYTE   W18
+ BYTE   N06  An2
+ BYTE   N06  Dn3
+ BYTE   N06  An3
+ BYTE   W54
+ BYTE   N12  An2
+ BYTE   N12  Dn3
+ BYTE   N12  An3
+ BYTE   W24
+// 021   ----------------------------------------
+Label_11_546E7C:
+ BYTE   N12  An2  v096
+ BYTE   N12  Dn3
+ BYTE   N12  Gn3
+ BYTE   W18
+ BYTE   N06  An2
+ BYTE   N06  Dn3
+ BYTE   N06  Gn3
+ BYTE   W54
+ BYTE   N12  An2
+ BYTE   N12  Dn3
+ BYTE   N12  An3
+ BYTE   W24
+ BYTE   PEND 
+// 022   ----------------------------------------
+Label_11_546E93:
+ BYTE   N12  Bn2  v096
+ BYTE   N12  En3
+ BYTE   N12  Bn3
+ BYTE   W18
+ BYTE   N06  Bn2
+ BYTE   N06  En3
+ BYTE   N06  Bn3
+ BYTE   W54
+ BYTE   N12  Gn2
+ BYTE   N12  Dn3
+ BYTE   N12  Gn3
+ BYTE   W24
+ BYTE   PEND 
+// 023   ----------------------------------------
+Label_11_546EAA:
+ BYTE   N12  En2  v096
+ BYTE   N12  An2
+ BYTE   N12  En3
+ BYTE   W18
+ BYTE   N06  En2
+ BYTE   N06  An2
+ BYTE   N06  En3
+ BYTE   W18
+ BYTE   N12  Dn2
+ BYTE   N12  An2
+ BYTE   N12  Dn3
+ BYTE   W24
+ BYTE   Dn2
+ BYTE   N12  An2
+ BYTE   N12  Dn3
+ BYTE   W36
+ BYTE   PEND 
+// 024   ----------------------------------------
+ BYTE   An2
+ BYTE   N12  Dn3
+ BYTE   N12  An3
+ BYTE   W18
+ BYTE   N06  An2
+ BYTE   N06  Dn3
+ BYTE   N06  An3
+ BYTE   W54
+ BYTE   N12  An2
+ BYTE   N12  Dn3
+ BYTE   N12  An3
+ BYTE   W24
+// 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_11_546E7C
+// 026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_11_546E93
+// 027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_11_546EAA
+// 028   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_11_546E4E
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+SMT4Tokyo:
+	BYTE	12	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	SMT4Tokyo_pri	// Priority
+	BYTE	SMT4Tokyo_rev	// Reverb.
+    
+	POIN2	SMT4Tokyo_grp
+    
+	POIN2	SMT4Tokyo_001
+	POIN2	SMT4Tokyo_002
+	POIN2	SMT4Tokyo_003
+	POIN2	SMT4Tokyo_004
+	POIN2	SMT4Tokyo_005
+	POIN2	SMT4Tokyo_006
+	POIN2	SMT4Tokyo_007
+	POIN2	SMT4Tokyo_008
+	POIN2	SMT4Tokyo_009
+	POIN2	SMT4Tokyo_010
+	POIN2	SMT4Tokyo_011
+	POIN2	SMT4Tokyo_012
+
+	

@@ -1,9 +1,29 @@
+BlairSkillList:
+BYTE 09 VoiceOfPeaceID
+BYTE 26 InspirationID
+BYTE 36 AetherID
+BYTE 00 00
+ALIGN 4
+
+ArinSkillList:
+BYTE 06 RallyResID
+BYTE 14 RallyDefID
+BYTE 00 00
+ALIGN 4
+
+KennethSkillList:
+BYTE 13 PerfectionistID
+BYTE 22 MageSlayerID
+BYTE 28 PragmaticID
+BYTE 00 00
+ALIGN 4
 
 EphraimLordSkillList:
 BYTE 00 00
 ALIGN 4
 
 EirikaLordSkillList:
+BYTE 1 SupplyID
 BYTE 00 00
 ALIGN 4
 

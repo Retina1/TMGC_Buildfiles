@@ -1,4 +1,9 @@
 .thumb
+.macro blh to, reg
+    ldr \reg, =\to
+    mov lr, \reg
+    .short 0xF800
+.endm
 .org 0x0
 
 .equ Item_Table, Growth_Options+4
@@ -14,6 +19,13 @@ mov		r4,r0
 mov		r5,r1		@growth
 mov		r8,r1		@save the base stat again
 mov		r6,r2
+mov r1, r0
+push {r1,r3} 
+mov r0, #0xEE @zero percent growths check
+blh 0x8083DA9, r3
+pop {r1,r3}
+cmp r0,#1
+beq Terminate
 ldr		r7,Growth_Options
 mov		r0,#0x1		@is fixed mode even allowed
 tst		r0,r7
@@ -42,6 +54,7 @@ ScrollCheck:
 mov		r3,#0
 mov		r0,#0x4
 and		r7,r0			@bit is set if scrolls stack
+
 ScrollLoop:
 mov		r0,r4
 add		r0,#0x1E
@@ -66,6 +79,7 @@ ldsb	r0,[r0,r6]
 add		r5,r0
 cmp		r7,#0x0
 beq		BlossomCheck
+
 NextItem:
 add		r3,#0x2
 cmp		r3,#0x8
@@ -96,12 +110,17 @@ bne		GoBack
 AptitudeEffect:
 add		r5,#20 @growth +20%
 
+Terminate:
+mov r5,#0
+b   GoBack
+
 GoBack:
 mov		r1,r8
 mov		r0,r5
 cmp		r0,#0x0
 bge		Label1
 mov		r0,#0
+
 Label1:
 pop		{r7}
 mov		r8,r7

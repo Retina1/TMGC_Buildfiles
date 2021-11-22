@@ -1,4 +1,9 @@
 .thumb
+.macro blh to, reg
+    ldr \reg, =\to
+    mov lr, \reg
+    .short 0xF800
+.endm
 .org 0x0
 
 .equ Item_Table, Growth_Options+4
@@ -14,6 +19,17 @@ mov		r4,r0
 mov		r5,r1		@growth
 mov		r8,r1		@save the base stat again
 mov		r6,r2
+mov r1, r0
+push {r1} 
+mov r0, #0xEE @zero percent growths check
+blh 0x8083DA9, r3
+pop {r1}
+cmp r0,#0
+beq Continue
+mov r5,#0
+b   GoBack
+
+Continue:
 ldr		r7,Growth_Options
 mov		r0,#0x1		@is fixed mode even allowed
 tst		r0,r7

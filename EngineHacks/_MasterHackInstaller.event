@@ -94,6 +94,8 @@ PUSH
 	ORG $0ab90e
 	BYTE 0x00 0x00 0x00 0x20
 POP
+
+
   //MMB
   #include "ModularMinimugBox/Installers/MMBInstallerREDFE.event"
   //Free Movement
@@ -108,9 +110,6 @@ POP
   
   //Text Rework
   #include "FE8-Text_Engine_Rework/_FE8-Text_Engine_Rework_EA.event"
-
-  //Base Convos
-  //#include "BaseConversations/BaseConvos.event"
 
   //HP Bars (and effective weapon warning)
   #include "QualityOfLife/HpBars/HpBars.event"
@@ -295,3 +294,6 @@ POP
     #include "Necessary/SuspendDebuffs/SuspendExpansion.event"
 
   #endif // USE_SAVE_EXPANSION
+  
+  //support rework, base convos
+#include "Support Rework Rework/SupportRework.event"

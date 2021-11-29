@@ -47,7 +47,7 @@
 		CLEAN
 		BEQ 0x0 0x0 0x7
 			SADD 0x072 // Move slot 0x7 into 0x2.
-			SMOV 0x1 0x2 // LOLWUT this actually loads from slot 0x2!
+			LOAD_S2 0x1 // LOLWUT this actually loads from slot 0x2!
 			ENUN
 		LABEL 0x0
 		SVAL 0xB 0x1 // Used by the base support proc to see if the events are finished running.

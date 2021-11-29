@@ -114,10 +114,10 @@
       // We'll use this for stuff that needs to
       // be in BL range
 
-    RText_Page4_ladder:
+  /*  RText_Page4_ladder:
       // page 4 helptext hook
       #incbin "asm/rtext_page4.dmp"
-      POIN RText_Page4
+      POIN RText_Page4*/
 
   POP
   
@@ -168,8 +168,10 @@
 	#include "pages/mss_page3_original.lyn.event"
   
   #endif  // ONLY_SHOW_USED_RANKS
-  
-  #ifdef ENABLE_PERSONAL_INFO
+  	ALIGN 4
+    PageNumberCheck:
+      #include "asm/mss_threepageconditional.lyn.event"
+/*  #ifdef ENABLE_PERSONAL_INFO
   
       #include "pages/mss_page4_runa.lyn.event"
 	  
@@ -189,7 +191,7 @@
 
     setText(0x0D4B,TxtData0x0D4B)
   
-  #endif // ENABLE_PERSONAL_INFO
+  #endif // ENABLE_PERSONAL_INFO*/
   
   
   #include "pages/mss_leftstatscreen.lyn.event"

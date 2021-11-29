@@ -12,27 +12,14 @@
 	{
 	#include "ConvoTableDefs.event"
 	PUSH
-
-	/*Chapter(MilitaryAccept3) // Here are a couple example generic base support convos.
+	Chapter(Chapter1)
 		Entry
-			bg(0x18)
-			text(Military3AcceptTactDerekSupportText)
-			baseSupport(0xFF,Derek,BSupport)
-			eventID(0x07)
-		Entry
-			bg(0x18)
-			text(Military3AcceptTactJasperSupportText)
-			baseSupport(0xFF,Jasper,BSupport)
-			eventID(0x08)
-	*/
-	POP
-	PUSH
-	Chapter(1)
-		Entry
+			name(C1_Blair_Arin_Base_Select)
 			bg(0x3)
 			text(C1_Blair_Arin_Base)
 			baseSupport(Blair,Arin,CSupport)
 			eventID(0x27)
+	POP
 	}
 #endif // BASE_CONVO_TABLE
 

@@ -28,6 +28,4 @@ draw_weapon_rank_at 9, 3, Bow, 3
 
 EndRanks:
 
-blh      DrawSupports
-
 page_end

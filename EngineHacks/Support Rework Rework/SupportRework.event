@@ -8,28 +8,33 @@
 		
 		#include "MasterCalculations.lyn.event" // Compiled C code.
 		
-		// TODO: Integrate the contents of this file here with your own MSS stuff.
 		#include "StatScreenStuff.event" // Praise Hypergammaspaces! Installation stuff for R text on support stat screen display and other stat screen drawing stuff.
 		
 		#include "SupportReworkBonusTable.event" // Go here to define your individual support bonuses.
 		
 		// 2 required hacks for functionality. (3 if you count Base Convos using the prep screen hack.)
-		#include "CBaseConvos/BaseConvos.event" // Just comment this line if you don't care about base conversations.
+		#include "CBaseConvos/BaseConvos.event"
 		
 		#include "CHARASM/CHARASM.event" // If a CHARASM function returns 2, the convo is useable independent of other fields. Used for making suppor convos appear with talk bubbles.
 		
+		ALIGN 4
+		SupportReworkShouldUse0xFFBehavior:
+		BYTE False // Set this to true if you want character ID 0xFF passed into support rework fields to equate to the first character struct.
 		
 		ALIGN 4
 		SupportLevelNameTable: // Each entry is a pointer to a string. i.e. A, B, B+, whatever. Indexed by level from 0 to 7.
 		// Any fields higher than the defined max support will never be referenced, so they can just not exist or be null.
-		POIN CSupportName // 0
+		/*POIN CSupportName // 0
 		POIN CPlusSupportName // 1
 		POIN BMinusSupportName // 2
 		POIN BSupportName // 3
 		POIN BPlusSupportName // 4
 		POIN AMinusSupportName // 5
 		POIN ASupportName // 6
-		POIN APlusSupportName // 7
+		POIN APlusSupportName // 7*/
+		POIN CSupportName
+		POIN BSupportName
+		POIN ASupportName
 		
 		CSupportName: // Change these to your heart's desire along with the table!
 		String("C") ; BYTE 0x00
@@ -135,9 +140,6 @@
 		SHORT 0x7922 // ldrb r2, [ r4, #0x04 ].
 		ORG $2AA2E
 		SHORT 0x7964 // ldrb r4, [ r4, #0x05 ].
-		
-		ORG $281C8 // Make GetROMUnitSupportCount always return zero, effectively removing vanilla support initialization for units.
-		SHORT 0x2000 0x4770 // mov r0, #0x00 ; bx lr.
 		POP
 		
 	#endif // SUPPORT_REWORK

@@ -26,7 +26,7 @@ ALIGN 4
 MapData:
   #incbin "Prologue_data.dmp"
 
-SetChapterData(0, 0x8b, 0, 0x8c, 0x8d, 4, MapData, 0, 0, 6)
+SetChapterData(0, 0x3, 0, 0x2, 0x1, 4, MapData, 0, 0, 6)
 
 ALIGN 4
 Map_Change_0:

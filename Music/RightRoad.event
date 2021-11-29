@@ -1,0 +1,8038 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	RightRoad_grp  voicegroup000
+	#define	RightRoad_pri  0
+	#define	RightRoad_rev  0
+	#define	RightRoad_mvl  127
+	#define	RightRoad_key  0
+	#define	RightRoad_tbs  1
+	#define	RightRoad_exg  0
+	#define	RightRoad_cmp  1
+
+	// .rodata
+	//	RightRoad
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+RightRoad_001:
+// 000   ----------------------------------------
+ BYTE   KEYSH   RightRoad_key+0
+Label_0_01ACC322:
+ BYTE   TEMPO   106*RightRoad_tbs/2
+ BYTE   VOICE   73
+ BYTE   PAN   c_v+0
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+Label_0_01ACC33A:
+ BYTE   W48
+ BYTE   N68  Gn1  v060
+ BYTE   W12
+ BYTE   N23  Dn2  v072
+ BYTE   W12
+ BYTE   N44  Gn2
+ BYTE   W12
+ BYTE   N32  An2
+ BYTE   W01
+ BYTE   Dn3
+ BYTE   W11
+ BYTE   PEND 
+// 017   ----------------------------------------
+Label_0_01ACC34C:
+ BYTE   W24
+ BYTE   N68  An1  v036
+ BYTE   W01
+ BYTE   N44  An2  v052
+ BYTE   N44  Fn3  v064
+ BYTE   W01
+ BYTE   Cn3  v052
+ BYTE   W44
+ BYTE   W03
+ BYTE   N21  Gn2  v036
+ BYTE   N21  En3  v064
+ BYTE   W01
+ BYTE   Cn3  v036
+ BYTE   W22
+ BYTE   PEND 
+// 018   ----------------------------------------
+ BYTE   N68  As1  v056
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W68
+ BYTE   W02
+ BYTE   Cn2  v040
+ BYTE   W01
+ BYTE   Fn2  v024
+ BYTE   N68  Dn3  v032
+ BYTE   W01
+ BYTE   Gn2  v024
+ BYTE   W22
+// 019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0_01ACC33A
+// 020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0_01ACC34C
+// 021   ----------------------------------------
+ BYTE   N68  As1  v056
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W68
+ BYTE   W02
+ BYTE   Cn2  v040
+ BYTE   W01
+ BYTE   Fn2  v048
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   Gn2  v048
+ BYTE   W22
+// 022   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0_01ACC33A
+// 023   ----------------------------------------
+ BYTE   W24
+ BYTE   N68  An1  v036
+ BYTE   W01
+ BYTE   An2  v052
+ BYTE   N68  Fn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v052
+ BYTE   W48
+ BYTE   N21  Cn3  v036
+ BYTE   W22
+// 024   ----------------------------------------
+ BYTE   N68  As1  v056
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W68
+ BYTE   W02
+ BYTE   Cn2
+ BYTE   W01
+ BYTE   N32  Fn2  v048
+ BYTE   N56  Dn3  v064
+ BYTE   W01
+ BYTE   N44  Gn2  v048
+ BYTE   W22
+// 025   ----------------------------------------
+ BYTE   W12
+ BYTE   N36  Fn2
+ BYTE   W12
+ BYTE   N24  Gn2
+ BYTE   W12
+ BYTE   N12  Dn3  v044
+ BYTE   W12
+ BYTE   N68  Ds2  v056
+ BYTE   W01
+ BYTE   N32  As2  v048
+ BYTE   N56  Gn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v048
+ BYTE   W32
+ BYTE   W02
+ BYTE   N36  As2  v060
+ BYTE   W12
+// 026   ----------------------------------------
+ BYTE   N24  Cn3
+ BYTE   W12
+ BYTE   N12  Gn3  v064
+ BYTE   W12
+ BYTE   N68  Dn2  v056
+ BYTE   W01
+ BYTE   N21  An2  v048
+ BYTE   N68  Fn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v048
+ BYTE   W22
+ BYTE   N48  An2  v060
+ BYTE   W24
+ BYTE   N24  Cn3
+ BYTE   W24
+// 027   ----------------------------------------
+ BYTE   N68  Cn2  v056
+ BYTE   W01
+ BYTE   N21  Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   N56  As2  v052
+ BYTE   W22
+ BYTE   N48  Fn2  v060
+ BYTE   W36
+ BYTE   N11  As2  v052
+ BYTE   W12
+ BYTE   N68  Dn2  v056
+ BYTE   W01
+ BYTE   N09  En2  v040
+ BYTE   N32  Cn3  v064
+ BYTE   W01
+ BYTE   N21  Gn2  v052
+ BYTE   W10
+ BYTE   N60  En2  v048
+ BYTE   W12
+// 028   ----------------------------------------
+ BYTE   N48  Gn2  v060
+ BYTE   W12
+ BYTE   N36  Cn3  v064
+ BYTE   W36
+ BYTE   N68  Ds2  v056
+ BYTE   W01
+ BYTE   N21  As2  v048
+ BYTE   N68  Gn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v048
+ BYTE   W22
+ BYTE   N48  As2  v060
+ BYTE   W24
+// 029   ----------------------------------------
+ BYTE   N24  Cn3
+ BYTE   W24
+ BYTE   N68  Fn2  v056
+ BYTE   W01
+ BYTE   N21  An2  v048
+ BYTE   N68  Fn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v048
+ BYTE   W22
+ BYTE   N48  An2  v060
+ BYTE   W24
+ BYTE   N24  Cn3
+ BYTE   W24
+// 030   ----------------------------------------
+ BYTE   N68  Gn1  v068
+ BYTE   W12
+ BYTE   N23  Dn2  v072
+ BYTE   W12
+ BYTE   N44  Gn2
+ BYTE   W12
+ BYTE   N32  An2
+ BYTE   W01
+ BYTE   Dn3
+ BYTE   W32
+ BYTE   W03
+ BYTE   N68  An1  v044
+ BYTE   W01
+ BYTE   N44  An2  v052
+ BYTE   N44  Fn3  v064
+ BYTE   W01
+ BYTE   Cn3  v052
+ BYTE   W22
+// 031   ----------------------------------------
+ BYTE   W24
+ BYTE   W01
+ BYTE   N21  Gn2  v036
+ BYTE   N21  En3
+ BYTE   W01
+ BYTE   Cn3
+ BYTE   W22
+ BYTE   N68  As1  v044
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W44
+ BYTE   W02
+// 032   ----------------------------------------
+ BYTE   W24
+ BYTE   TIE  Cn2  v040
+ BYTE   W02
+ BYTE   Fn2
+ BYTE   W01
+ BYTE   Gn2
+ BYTE   W01
+ BYTE   Dn3  v036
+ BYTE   W68
+// 033   ----------------------------------------
+ BYTE   W66
+ BYTE   EOT
+ BYTE   Gn2
+ BYTE   W05
+ BYTE   Cn2
+ BYTE   W01
+ BYTE   Fn2  v062
+ BYTE   N32  Gn2  v052
+ BYTE   N32  As2
+ BYTE   N12  Dn4  v040
+ BYTE   W01
+ BYTE   N32  Dn2  v032
+ BYTE   N32  Ds2  v036
+ BYTE   W11
+ BYTE   N07  Gn3  v048
+ BYTE   W12
+// 034   ----------------------------------------
+ BYTE   N11  Gn3  v060
+ BYTE   W12
+ BYTE   N32  Ds2  v036
+ BYTE   N11  Dn4  v048
+ BYTE   W01
+ BYTE   N32  Fn2  v044
+ BYTE   N32  An2  v052
+ BYTE   N32  Cn3  v048
+ BYTE   W11
+ BYTE   N07  Gn3
+ BYTE   W11
+ BYTE   N10
+ BYTE   W12
+ BYTE   N23  Cn2  v028
+ BYTE   N24  Dn2  v032
+ BYTE   N24  An2  v052
+ BYTE   N12  Dn4  v040
+ BYTE   W01
+ BYTE   N23  Fn2  v036
+ BYTE   W11
+ BYTE   N13  Gn3  v032
+ BYTE   W13
+ BYTE   N80  Dn2  v028
+ BYTE   N80  Ds2  v032
+ BYTE   W01
+ BYTE   Gn2
+ BYTE   N80  As2  v048
+ BYTE   N11  Dn4  v036
+ BYTE   W11
+ BYTE   N10  Gn3
+ BYTE   W12
+// 035   ----------------------------------------
+ BYTE   Dn4  v044
+ BYTE   W11
+ BYTE   N09  Gn3
+ BYTE   W13
+ BYTE   N11  Dn4  v052
+ BYTE   W13
+ BYTE   N07  Gn3  v064
+ BYTE   W11
+ BYTE   N10  Gn3  v048
+ BYTE   W11
+ BYTE   N36  Ds2  v028
+ BYTE   W01
+ BYTE   N32  Fn2  v032
+ BYTE   N32  Cn3  v048
+ BYTE   N10  Dn4  v052
+ BYTE   W01
+ BYTE   N32  An2
+ BYTE   W10
+ BYTE   N07  Gn3  v064
+ BYTE   W12
+ BYTE   N11  Gn3  v052
+ BYTE   W11
+ BYTE   N12  Dn4  v048
+ BYTE   W01
+ BYTE   N22  Dn2  v020
+ BYTE   N23  Fn2  v032
+ BYTE   N24  An2  v048
+ BYTE   W01
+// 036   ----------------------------------------
+ BYTE   N22  Cn2  v032
+ BYTE   W11
+ BYTE   N11  Gn3  v044
+ BYTE   W12
+ BYTE   N44  Ds2  v032
+ BYTE   N44  Gn2  v048
+ BYTE   W01
+ BYTE   Dn2  v040
+ BYTE   N44  As2  v044
+ BYTE   N10  Dn4  v048
+ BYTE   W11
+ BYTE   N13  Gn3  v044
+ BYTE   W14
+ BYTE   N11  Dn4  v056
+ BYTE   W11
+ BYTE   Gn4  v060
+ BYTE   W12
+ BYTE   N32  Cn3  v052
+ BYTE   N32  Ds3
+ BYTE   W01
+ BYTE   Gn2  v032
+ BYTE   N32  Gs2  v036
+ BYTE   W01
+ BYTE   N11  Gn4  v048
+ BYTE   W12
+ BYTE   N06  Cn4  v056
+ BYTE   W10
+// 037   ----------------------------------------
+ BYTE   N11
+ BYTE   W12
+ BYTE   N32  Gs2  v036
+ BYTE   N10  Gn4  v052
+ BYTE   W01
+ BYTE   N32  As2  v044
+ BYTE   N32  Dn3  v052
+ BYTE   N32  Fn3  v048
+ BYTE   W10
+ BYTE   N07  Cn4
+ BYTE   W12
+ BYTE   N11  Cn4  v052
+ BYTE   W11
+ BYTE   N12  Gn4  v036
+ BYTE   W01
+ BYTE   N23  Fn2  v028
+ BYTE   N24  Gn2  v032
+ BYTE   N24  Dn3  v052
+ BYTE   W01
+ BYTE   N23  As2  v036
+ BYTE   W11
+ BYTE   N13  Cn4  v060
+ BYTE   W13
+ BYTE   N80  Gn2  v028
+ BYTE   N80  Gs2  v032
+ BYTE   W01
+ BYTE   Cn3
+ BYTE   N80  Ds3  v048
+ BYTE   N09  Gn4  v056
+ BYTE   W10
+ BYTE   N12  Cn4  v048
+ BYTE   W12
+ BYTE   N10  Gn4  v060
+ BYTE   W01
+// 038   ----------------------------------------
+ BYTE   W10
+ BYTE   N12  Cn4  v036
+ BYTE   W13
+ BYTE   Gn4  v048
+ BYTE   W12
+ BYTE   N07  Cn4  v036
+ BYTE   W12
+ BYTE   N12  Cn4  v048
+ BYTE   W12
+ BYTE   N36  Gs2  v028
+ BYTE   W01
+ BYTE   N32  As2  v032
+ BYTE   N32  Fn3  v048
+ BYTE   N11  Gn4
+ BYTE   W01
+ BYTE   N32  Dn3  v052
+ BYTE   W10
+ BYTE   N07  Cn4
+ BYTE   W12
+ BYTE   N11  Cn4  v056
+ BYTE   W12
+ BYTE   N22  Gn2  v032
+ BYTE   N23  As2  v056
+ BYTE   N24  Dn3  v052
+ BYTE   N11  Gn4  v044
+ BYTE   W01
+// 039   ----------------------------------------
+ BYTE   N22  Fn2  v036
+ BYTE   W11
+ BYTE   N12  Cn4  v044
+ BYTE   W12
+ BYTE   N44  Gs2  v032
+ BYTE   N44  Cn3  v048
+ BYTE   W01
+ BYTE   Gn2  v040
+ BYTE   N44  Ds3  v044
+ BYTE   N11  Gn4  v052
+ BYTE   W12
+ BYTE   N09  Cn4
+ BYTE   W12
+ BYTE   N12  Gn4  v064
+ BYTE   W13
+ BYTE   N11  Cn4  v072
+ BYTE   W11
+ BYTE   N68  Gn1
+ BYTE   TIE  Gn4  v056
+ BYTE   W12
+ BYTE   N23  Dn2  v072
+ BYTE   W12
+// 040   ----------------------------------------
+ BYTE   N44  Gn2
+ BYTE   W12
+ BYTE   N32  An2
+ BYTE   W01
+ BYTE   Dn3
+ BYTE   W32
+ BYTE   W03
+ BYTE   N68  An1  v044
+ BYTE   W01
+ BYTE   N44  An2  v052
+ BYTE   N44  Fn3  v064
+ BYTE   W01
+ BYTE   Cn3  v052
+ BYTE   W36
+ BYTE   W03
+ BYTE   EOT
+ BYTE   Gn4
+ BYTE   W07
+// 041   ----------------------------------------
+ BYTE   W01
+ BYTE   N21  Gn2  v036
+ BYTE   N21  En3  v064
+ BYTE   W01
+ BYTE   Cn3  v036
+ BYTE   W22
+ BYTE   N68  As1  v068
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W68
+ BYTE   W02
+// 042   ----------------------------------------
+ BYTE   N92  Cn2  v032
+ BYTE   W02
+ BYTE   Fn2
+ BYTE   W01
+ BYTE   Gn2
+ BYTE   W02
+ BYTE   Dn3
+ BYTE   W90
+ BYTE   W01
+// 043   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0_01ACC322
+// 044   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+RightRoad_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   RightRoad_key+0
+Label_1_01ACD6DE:
+ BYTE   VOICE   73
+ BYTE   PAN   c_v+0
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W96
+// 007   ----------------------------------------
+ BYTE   W96
+// 008   ----------------------------------------
+ BYTE   W96
+// 009   ----------------------------------------
+ BYTE   W96
+// 010   ----------------------------------------
+ BYTE   W96
+// 011   ----------------------------------------
+ BYTE   W96
+// 012   ----------------------------------------
+ BYTE   W96
+// 013   ----------------------------------------
+ BYTE   W96
+// 014   ----------------------------------------
+ BYTE   W96
+// 015   ----------------------------------------
+ BYTE   W96
+// 016   ----------------------------------------
+Label_1_01ACD6F4:
+ BYTE   W56
+ BYTE   W01
+ BYTE   N68  Gn1  v060
+ BYTE   W12
+ BYTE   N23  Dn2  v072
+ BYTE   W12
+ BYTE   N44  Gn2
+ BYTE   W12
+ BYTE   N32  An2
+ BYTE   W01
+ BYTE   Dn3
+ BYTE   W02
+ BYTE   PEND 
+// 017   ----------------------------------------
+Label_1_01ACD707:
+ BYTE   W32
+ BYTE   W01
+ BYTE   N68  An1  v036
+ BYTE   W01
+ BYTE   N44  An2  v052
+ BYTE   N44  Fn3  v064
+ BYTE   W01
+ BYTE   Cn3  v052
+ BYTE   W44
+ BYTE   W03
+ BYTE   N21  Gn2  v036
+ BYTE   N21  En3  v064
+ BYTE   W01
+ BYTE   Cn3  v036
+ BYTE   W13
+ BYTE   PEND 
+// 018   ----------------------------------------
+ BYTE   W09
+ BYTE   N68  As1  v056
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W68
+ BYTE   W02
+ BYTE   Cn2  v040
+ BYTE   W01
+ BYTE   Fn2  v024
+ BYTE   N68  Dn3  v032
+ BYTE   W01
+ BYTE   Gn2  v024
+ BYTE   W13
+// 019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_01ACD6F4
+// 020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_1_01ACD707
+// 021   ----------------------------------------
+ BYTE   W09
+ BYTE   N68  As1  v056
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W68
+ BYTE   W02
+ BYTE   Cn2  v040
+ BYTE   W01
+ BYTE   Fn2  v048
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   Gn2  v048
+ BYTE   W13
+// 022   ----------------------------------------
+ BYTE   W68
+ BYTE   W01
+ BYTE   N23  Dn2  v072
+ BYTE   W12
+ BYTE   N44  Gn2
+ BYTE   W12
+ BYTE   N32  An2
+ BYTE   W01
+ BYTE   Dn3
+ BYTE   W02
+// 023   ----------------------------------------
+ BYTE   W32
+ BYTE   W02
+ BYTE   N68  An2  v052
+ BYTE   N68  Fn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v052
+ BYTE   W48
+ BYTE   N21  Cn3  v036
+ BYTE   W13
+// 024   ----------------------------------------
+ BYTE   W10
+ BYTE   N68  Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W68
+ BYTE   W03
+ BYTE   N32  Fn2  v048
+ BYTE   N56  Dn3  v064
+ BYTE   W01
+ BYTE   N44  Gn2  v048
+ BYTE   W13
+// 025   ----------------------------------------
+ BYTE   W21
+ BYTE   N36  Fn2
+ BYTE   W12
+ BYTE   N24  Gn2
+ BYTE   W12
+ BYTE   N12  Dn3  v044
+ BYTE   W13
+ BYTE   N32  As2  v048
+ BYTE   N56  Gn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v048
+ BYTE   W32
+ BYTE   W02
+ BYTE   N36  As2  v060
+ BYTE   W03
+// 026   ----------------------------------------
+ BYTE   W09
+ BYTE   N24  Cn3
+ BYTE   W12
+ BYTE   N12  Gn3  v064
+ BYTE   W13
+ BYTE   N21  An2  v048
+ BYTE   N68  Fn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v048
+ BYTE   W22
+ BYTE   N48  An2  v060
+ BYTE   W24
+ BYTE   N24  Cn3
+ BYTE   W15
+// 027   ----------------------------------------
+ BYTE   W10
+ BYTE   N21  Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   N56  As2  v052
+ BYTE   W22
+ BYTE   N48  Fn2  v060
+ BYTE   W36
+ BYTE   N11  As2  v052
+ BYTE   W13
+ BYTE   N09  En2  v040
+ BYTE   N32  Cn3  v064
+ BYTE   W01
+ BYTE   N21  Gn2  v052
+ BYTE   W10
+ BYTE   N60  En2  v048
+ BYTE   W03
+// 028   ----------------------------------------
+ BYTE   W09
+ BYTE   N48  Gn2  v060
+ BYTE   W12
+ BYTE   N36  Cn3  v064
+ BYTE   W36
+ BYTE   W01
+ BYTE   N21  As2  v048
+ BYTE   N68  Gn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v048
+ BYTE   W22
+ BYTE   N48  As2  v060
+ BYTE   W15
+// 029   ----------------------------------------
+ BYTE   W09
+ BYTE   N24  Cn3
+ BYTE   W24
+ BYTE   W01
+ BYTE   N21  An2  v048
+ BYTE   N68  Fn3  v064
+ BYTE   W01
+ BYTE   N44  Cn3  v048
+ BYTE   W22
+ BYTE   N48  An2  v060
+ BYTE   W24
+ BYTE   N24  Cn3
+ BYTE   W15
+// 030   ----------------------------------------
+ BYTE   W09
+ BYTE   N68  Gn1  v068
+ BYTE   W12
+ BYTE   N23  Dn2  v072
+ BYTE   W12
+ BYTE   N44  Gn2
+ BYTE   W12
+ BYTE   N32  An2
+ BYTE   W01
+ BYTE   Dn3
+ BYTE   W32
+ BYTE   W03
+ BYTE   N68  An1  v044
+ BYTE   W01
+ BYTE   N44  An2  v052
+ BYTE   N44  Fn3  v064
+ BYTE   W01
+ BYTE   Cn3  v052
+ BYTE   W13
+// 031   ----------------------------------------
+ BYTE   W32
+ BYTE   W02
+ BYTE   N21  Gn2  v036
+ BYTE   N21  En3
+ BYTE   W01
+ BYTE   Cn3
+ BYTE   W22
+ BYTE   N68  As1  v048
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W36
+ BYTE   W01
+// 032   ----------------------------------------
+ BYTE   W32
+ BYTE   W01
+ BYTE   TIE  Cn2  v032
+ BYTE   W01
+ BYTE   Fn2
+ BYTE   TIE  Dn3  v028
+ BYTE   W01
+ BYTE   Gn2  v032
+ BYTE   W60
+ BYTE   W01
+// 033   ----------------------------------------
+ BYTE   W76
+ BYTE   EOT
+ BYTE   W04
+ BYTE   EOT
+ BYTE   Cn2
+ BYTE   W01
+ BYTE   Fn2  v062
+ BYTE   N32  Gn2  v052
+ BYTE   N32  As2
+ BYTE   N12  Dn4  v040
+ BYTE   W01
+ BYTE   N32  Dn2  v032
+ BYTE   N32  Ds2  v036
+ BYTE   W11
+ BYTE   N07  Gn3  v048
+ BYTE   W03
+// 034   ----------------------------------------
+ BYTE   W09
+ BYTE   N11  Gn3  v060
+ BYTE   W12
+ BYTE   N32  Ds2  v036
+ BYTE   N11  Dn4  v048
+ BYTE   W01
+ BYTE   N32  Fn2  v044
+ BYTE   N32  An2  v052
+ BYTE   N32  Cn3  v048
+ BYTE   W11
+ BYTE   N07  Gn3
+ BYTE   W11
+ BYTE   N10
+ BYTE   W12
+ BYTE   N23  Cn2  v028
+ BYTE   N24  Dn2  v032
+ BYTE   N24  An2  v052
+ BYTE   N12  Dn4  v040
+ BYTE   W01
+ BYTE   N23  Fn2  v036
+ BYTE   W11
+ BYTE   N13  Gn3  v032
+ BYTE   W13
+ BYTE   N80  Dn2  v028
+ BYTE   N80  Ds2  v032
+ BYTE   W01
+ BYTE   Gn2
+ BYTE   N80  As2  v048
+ BYTE   N11  Dn4  v036
+ BYTE   W11
+ BYTE   N10  Gn3
+ BYTE   W03
+// 035   ----------------------------------------
+ BYTE   W09
+ BYTE   Dn4  v044
+ BYTE   W11
+ BYTE   N09  Gn3
+ BYTE   W13
+ BYTE   N11  Dn4  v052
+ BYTE   W13
+ BYTE   N07  Gn3  v064
+ BYTE   W11
+ BYTE   N10  Gn3  v048
+ BYTE   W11
+ BYTE   N36  Ds2  v028
+ BYTE   W01
+ BYTE   N32  Fn2  v032
+ BYTE   N32  Cn3  v048
+ BYTE   N10  Dn4  v052
+ BYTE   W01
+ BYTE   N32  An2
+ BYTE   W10
+ BYTE   N07  Gn3  v064
+ BYTE   W12
+ BYTE   N11  Gn3  v052
+ BYTE   W04
+// 036   ----------------------------------------
+ BYTE   W07
+ BYTE   N12  Dn4  v048
+ BYTE   W01
+ BYTE   N22  Dn2  v020
+ BYTE   N23  Fn2  v032
+ BYTE   N24  An2  v048
+ BYTE   W01
+ BYTE   N22  Cn2  v032
+ BYTE   W11
+ BYTE   N11  Gn3  v044
+ BYTE   W12
+ BYTE   N44  Ds2  v032
+ BYTE   N44  Gn2  v048
+ BYTE   W01
+ BYTE   Dn2  v040
+ BYTE   N44  As2  v044
+ BYTE   N10  Dn4  v048
+ BYTE   W11
+ BYTE   N13  Gn3  v044
+ BYTE   W14
+ BYTE   N11  Dn4  v056
+ BYTE   W11
+ BYTE   Gn4  v060
+ BYTE   W12
+ BYTE   N32  Cn3  v052
+ BYTE   N32  Ds3
+ BYTE   W01
+ BYTE   Gn2  v032
+ BYTE   N32  Gs2  v036
+ BYTE   W01
+ BYTE   N11  Gn4  v048
+ BYTE   W12
+ BYTE   N06  Cn4  v056
+ BYTE   W01
+// 037   ----------------------------------------
+ BYTE   W09
+ BYTE   N11
+ BYTE   W12
+ BYTE   N32  Gs2  v036
+ BYTE   N10  Gn4  v052
+ BYTE   W01
+ BYTE   N32  As2  v044
+ BYTE   N32  Dn3  v052
+ BYTE   N32  Fn3  v048
+ BYTE   W10
+ BYTE   N07  Cn4
+ BYTE   W12
+ BYTE   N11  Cn4  v052
+ BYTE   W11
+ BYTE   N12  Gn4  v036
+ BYTE   W01
+ BYTE   N23  Fn2  v028
+ BYTE   N24  Gn2  v032
+ BYTE   N24  Dn3  v052
+ BYTE   W01
+ BYTE   N23  As2  v036
+ BYTE   W11
+ BYTE   N13  Cn4  v060
+ BYTE   W13
+ BYTE   N80  Gn2  v028
+ BYTE   N80  Gs2  v032
+ BYTE   W01
+ BYTE   Cn3
+ BYTE   N80  Ds3  v048
+ BYTE   N09  Gn4  v056
+ BYTE   W10
+ BYTE   N12  Cn4  v048
+ BYTE   W04
+// 038   ----------------------------------------
+ BYTE   W08
+ BYTE   N10  Gn4  v060
+ BYTE   W11
+ BYTE   N12  Cn4  v036
+ BYTE   W13
+ BYTE   Gn4  v048
+ BYTE   W12
+ BYTE   N07  Cn4  v036
+ BYTE   W12
+ BYTE   N12  Cn4  v048
+ BYTE   W12
+ BYTE   N36  Gs2  v028
+ BYTE   W01
+ BYTE   N32  As2  v032
+ BYTE   N32  Fn3  v048
+ BYTE   N11  Gn4
+ BYTE   W01
+ BYTE   N32  Dn3  v052
+ BYTE   W10
+ BYTE   N07  Cn4
+ BYTE   W12
+ BYTE   N11  Cn4  v056
+ BYTE   W04
+// 039   ----------------------------------------
+ BYTE   W08
+ BYTE   N22  Gn2  v032
+ BYTE   N23  As2  v056
+ BYTE   N24  Dn3  v052
+ BYTE   N11  Gn4  v044
+ BYTE   W01
+ BYTE   N22  Fn2  v036
+ BYTE   W11
+ BYTE   N12  Cn4  v044
+ BYTE   W12
+ BYTE   N44  Gs2  v032
+ BYTE   N44  Cn3  v048
+ BYTE   W01
+ BYTE   Gn2  v040
+ BYTE   N44  Ds3  v044
+ BYTE   N11  Gn4  v052
+ BYTE   W12
+ BYTE   N09  Cn4
+ BYTE   W12
+ BYTE   N12  Gn4  v064
+ BYTE   W13
+ BYTE   N11  Cn4  v072
+ BYTE   W11
+ BYTE   N68  Gn1
+ BYTE   W12
+ BYTE   N23  Dn2
+ BYTE   W03
+// 040   ----------------------------------------
+ BYTE   W09
+ BYTE   N44  Gn2
+ BYTE   W12
+ BYTE   N32  An2
+ BYTE   W01
+ BYTE   Dn3
+ BYTE   W32
+ BYTE   W03
+ BYTE   N68  An1  v044
+ BYTE   W01
+ BYTE   N44  An2  v052
+ BYTE   N44  Fn3  v064
+ BYTE   W01
+ BYTE   Cn3  v052
+ BYTE   W36
+ BYTE   W01
+// 041   ----------------------------------------
+ BYTE   W10
+ BYTE   N21  Gn2  v036
+ BYTE   N21  En3  v064
+ BYTE   W01
+ BYTE   Cn3  v036
+ BYTE   W22
+ BYTE   N68  As1  v068
+ BYTE   W01
+ BYTE   Fn2  v052
+ BYTE   N68  Dn3  v064
+ BYTE   W01
+ BYTE   As2  v052
+ BYTE   W60
+ BYTE   W01
+// 042   ----------------------------------------
+ BYTE   W96
+// 043   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_1_01ACD6DE
+// 044   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+RightRoad_003:
+// 000   ----------------------------------------
+ BYTE   KEYSH   RightRoad_key+0
+Label_2_01ACEC62:
+ BYTE   VOICE   41
+ BYTE   PAN   c_v+0
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   N92  GnM1  v100
+ BYTE   N68  An2
+ BYTE   W03
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   N68  Cn3
+ BYTE   W04
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W04
+// 001   ----------------------------------------
+ BYTE   N23  AnM1
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   TIE  GnM1
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   TIE  An2
+ BYTE   W15
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W10
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W10
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W10
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+// 002   ----------------------------------------
+ BYTE   W06
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W10
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   GnM1  v057
+ BYTE   W01
+// 003   ----------------------------------------
+ BYTE   N92  GnM1
+ BYTE   N68  An2
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   N68  Cn3
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W02
+// 004   ----------------------------------------
+ BYTE   N23  AnM1
+ BYTE   W05
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   TIE  GnM1
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   TIE  An2
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+// 005   ----------------------------------------
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   12*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   GnM1  v057
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+// 006   ----------------------------------------
+ BYTE   N92  GnM1
+ BYTE   N68  An2
+ BYTE   W01
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N68  Cn3
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W04
+// 007   ----------------------------------------
+ BYTE   N23  AnM1
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   TIE  GnM1
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   TIE  An2
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W09
+// 008   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   12*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   GnM1  v057
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+// 009   ----------------------------------------
+ BYTE   N92  GnM1
+ BYTE   N68  An2
+ BYTE   W01
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   12*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   N68  Cn3
+ BYTE   W08
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+// 010   ----------------------------------------
+ BYTE   N23  AnM1
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   TIE  GnM1
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   TIE  An2
+ BYTE   W14
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+// 011   ----------------------------------------
+ BYTE   W06
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   EOT
+ BYTE   GnM1  v057
+ BYTE   W01
+// 012   ----------------------------------------
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   N68  AsM1
+ BYTE   TIE  Cn3
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N44  AnM1
+ BYTE   W04
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+// 013   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   EOT
+ BYTE   Cn3
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N92  FnM1
+ BYTE   N23  AnM1
+ BYTE   N23  Cn3
+ BYTE   W24
+ BYTE   N68  As2
+ BYTE   W07
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+// 014   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N68  EnM1
+ BYTE   TIE  Gn2
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W02
+// 015   ----------------------------------------
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   N68  FnM1
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   EOT
+ BYTE   Gn2
+ BYTE   W01
+ BYTE   N68  GnM1
+ BYTE   N68  An2
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+// 016   ----------------------------------------
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W21
+// 017   ----------------------------------------
+ BYTE   W96
+// 018   ----------------------------------------
+ BYTE   W72
+ BYTE   W02
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W22
+// 019   ----------------------------------------
+ BYTE   W15
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   N11  Gn2  v116
+ BYTE   W12
+ BYTE   Cn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   N32  Gn3
+ BYTE   W02
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+// 020   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn3
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   N23  Cn3
+ BYTE   W04
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   N11  En3
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W04
+// 021   ----------------------------------------
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   TIE  Dn3
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W02
+// 022   ----------------------------------------
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   N11  Gn2
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W11
+ BYTE   N11  Cn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   N32  Gn3
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+// 023   ----------------------------------------
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   N32  Fn3
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  An3
+ BYTE   W12
+ BYTE   Fn3
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   N11  An3
+ BYTE   W05
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W07
+// 024   ----------------------------------------
+ BYTE   TIE  Gn3
+ BYTE   W01
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+// 025   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   EOT
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   N11  GnM1  v096
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   N11  Cn0
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   N11  Dn0
+ BYTE   W12
+ BYTE   N32  Gn0
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+// 026   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn0
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   N23  Cn0
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   N11  En0
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+// 027   ----------------------------------------
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   TIE  Dn0
+ BYTE   W01
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+// 028   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   N11  GnM1
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  Cn0
+ BYTE   W12
+ BYTE   Dn0
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W10
+ BYTE   N32  Gn0
+ BYTE   W05
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+// 029   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn0
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  An0
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   N11  Fn0
+ BYTE   W12
+ BYTE   An0
+ BYTE   W12
+// 030   ----------------------------------------
+ BYTE   TIE  Gn0
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+// 031   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   12*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+// 032   ----------------------------------------
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W03
+// 033   ----------------------------------------
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W10
+ BYTE   EOT
+ BYTE   W30
+ BYTE   W01
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W72
+ BYTE   TIE  Gn2  v092
+ BYTE   W06
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+// 040   ----------------------------------------
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+// 041   ----------------------------------------
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W11
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+// 042   ----------------------------------------
+ BYTE   W04
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   EOT
+// 043   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_2_01ACEC62
+// 044   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+RightRoad_004:
+// 000   ----------------------------------------
+ BYTE   KEYSH   RightRoad_key+0
+Label_3_01ACF6CA:
+ BYTE   VOICE   52
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   N68  Gn0  v108
+ BYTE   N68  Gn1  v060
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   N68  An0  v108
+ BYTE   N68  An1  v060
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W01
+// 001   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   N68  As0  v108
+ BYTE   N68  As1  v060
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+// 002   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   N68  Cn1  v108
+ BYTE   N68  Cn2  v060
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W02
+// 003   ----------------------------------------
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   N68  Gn0  v108
+ BYTE   N68  Gn1  v060
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   N68  An0  v108
+ BYTE   N68  An1  v060
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+// 004   ----------------------------------------
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   N68  As0  v108
+ BYTE   N68  As1  v060
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W04
+// 005   ----------------------------------------
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   N68  Cn1  v108
+ BYTE   N68  Cn2  v060
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+// 006   ----------------------------------------
+ BYTE   N68  Gn0  v108
+ BYTE   N68  Gn1  v060
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   N68  An0  v108
+ BYTE   N68  An1  v060
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W04
+// 007   ----------------------------------------
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   N68  As0  v108
+ BYTE   N68  As1  v060
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W13
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W06
+// 008   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N68  Cn1  v108
+ BYTE   N68  Cn2  v060
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+// 009   ----------------------------------------
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   N68  Gn0  v108
+ BYTE   N68  Gn1  v060
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   N68  An0  v108
+ BYTE   N68  An1  v060
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W02
+// 010   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N68  As0  v108
+ BYTE   N68  As1  v060
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+// 011   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N68  Cn1  v108
+ BYTE   N68  Cn2  v060
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+// 012   ----------------------------------------
+ BYTE   N68  Ds0  v108
+ BYTE   N68  Ds1  v060
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   N68  Dn0  v108
+ BYTE   N68  Dn1  v060
+ BYTE   W02
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W04
+// 013   ----------------------------------------
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   N68  Cn0  v108
+ BYTE   N68  Cn1  v060
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W01
+// 014   ----------------------------------------
+ BYTE   W04
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   N68  Dn0  v108
+ BYTE   N68  Dn1  v060
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   69*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   70*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W02
+// 015   ----------------------------------------
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   N68  Ds0  v108
+ BYTE   N68  Ds1  v060
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N68  Fn0  v108
+ BYTE   N68  Fn1  v060
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+// 016   ----------------------------------------
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   TIE  GnM1  v127
+ BYTE   TIE  Gn0  v080
+ BYTE   W01
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   69*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   70*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   69*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W04
+// 017   ----------------------------------------
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W13
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+// 018   ----------------------------------------
+ BYTE   W05
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+// 019   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   GnM1  v031
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   N68  GnM1  v120
+ BYTE   N68  Gn0  v072
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+// 020   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   N68  AnM1  v120
+ BYTE   N68  An0  v072
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+// 021   ----------------------------------------
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   N68  AsM1  v120
+ BYTE   N68  As0  v072
+ BYTE   W02
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W12
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   N68  Cn0  v120
+ BYTE   N68  Cn1  v072
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W11
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W05
+// 022   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   N68  GnM1  v120
+ BYTE   N68  Gn0  v072
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+// 023   ----------------------------------------
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   N68  AnM1  v120
+ BYTE   N68  An0  v072
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+// 024   ----------------------------------------
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   N68  AsM1  v120
+ BYTE   N68  As0  v072
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   N68  Cn0  v120
+ BYTE   N68  Cn1  v072
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W02
+// 025   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   N68  Ds0  v120
+ BYTE   N68  Ds1  v072
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+// 026   ----------------------------------------
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   N68  Dn0  v120
+ BYTE   N68  Dn1  v072
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+// 027   ----------------------------------------
+ BYTE   N68  Cn0  v120
+ BYTE   N68  Cn1  v072
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N68  Dn0  v120
+ BYTE   N68  Dn1  v072
+ BYTE   W01
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W02
+// 028   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   69*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N68  Ds0  v120
+ BYTE   N68  Ds1  v072
+ BYTE   W01
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   71*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   70*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   69*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W01
+// 029   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   N68  Fn0  v120
+ BYTE   N68  Fn1  v072
+ BYTE   W01
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   68*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W01
+// 030   ----------------------------------------
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   TIE  GnM1  v127
+ BYTE   TIE  Gn0  v080
+ BYTE   W02
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   66*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   64*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W04
+// 031   ----------------------------------------
+ BYTE   W04
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   42*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   38*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+// 032   ----------------------------------------
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+// 033   ----------------------------------------
+ BYTE   VOL   12*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   EOT
+ BYTE   GnM1  v031
+ BYTE   W01
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W12
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W72
+ BYTE   TIE  GnM1  v127
+ BYTE   TIE  Gn0  v080
+ BYTE   W06
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   0*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   1*RightRoad_mvl/mxv
+ BYTE   W03
+// 040   ----------------------------------------
+ BYTE   VOL   2*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   3*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   4*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   5*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   39*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   43*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W03
+// 041   ----------------------------------------
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   63*RightRoad_mvl/mxv
+ BYTE   W11
+ BYTE   VOL   62*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   61*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   59*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   57*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   56*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   55*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   54*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   53*RightRoad_mvl/mxv
+ BYTE   W02
+// 042   ----------------------------------------
+ BYTE   W03
+ BYTE   VOL   52*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   51*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   50*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   49*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   48*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   47*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   46*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   45*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   VOL   44*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   41*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   EOT
+// 043   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_3_01ACF6CA
+// 044   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+RightRoad_005:
+// 000   ----------------------------------------
+ BYTE   KEYSH   RightRoad_key+0
+Label_4_0134AF32:
+ BYTE   VOICE   13
+ BYTE   PAN   c_v+10
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   N05  Gn4  v052
+ BYTE   W12
+ BYTE   Gn5  v064
+ BYTE   W12
+ BYTE   Gn4  v032
+ BYTE   W12
+ BYTE   Cn5  v044
+ BYTE   W12
+ BYTE   Dn5  v028
+ BYTE   W12
+ BYTE   Gn4  v036
+ BYTE   W12
+ BYTE   Gn5  v040
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+// 001   ----------------------------------------
+Label_4_0134AF50:
+ BYTE   N05  Cn5  v040
+ BYTE   W12
+ BYTE   Dn5  v052
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Cn5  v028
+ BYTE   W12
+ BYTE   Gn4  v052
+ BYTE   W12
+ BYTE   Gn5  v064
+ BYTE   W12
+ BYTE   Gn4  v032
+ BYTE   W12
+ BYTE   Cn5  v044
+ BYTE   W12
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_4_0134AF69:
+ BYTE   N05  Dn5  v028
+ BYTE   W12
+ BYTE   Gn4  v036
+ BYTE   W12
+ BYTE   Gn5  v040
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   W12
+ BYTE   Dn5  v052
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Cn5  v028
+ BYTE   W12
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_4_0134AF80:
+ BYTE   N05  Gn4  v052
+ BYTE   W12
+ BYTE   Gn5  v064
+ BYTE   W12
+ BYTE   Gn4  v032
+ BYTE   W12
+ BYTE   Cn5  v044
+ BYTE   W12
+ BYTE   Dn5  v028
+ BYTE   W12
+ BYTE   Gn4  v036
+ BYTE   W12
+ BYTE   Gn5  v040
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 005   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 007   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 009   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 016   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 021   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 022   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 023   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 028   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 029   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 030   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 031   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 032   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 033   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 034   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 035   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 036   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 037   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 038   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 039   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 040   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF50
+// 041   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF69
+// 042   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_4_0134AF80
+// 043   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_4_0134AF32
+// 044   ----------------------------------------
+ BYTE   N05  Cn5  v040
+ BYTE   W12
+ BYTE   Dn5  v052
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Cn5  v028
+ BYTE   W05
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+RightRoad_006:
+// 000   ----------------------------------------
+ BYTE   KEYSH   RightRoad_key+0
+Label_5_01ACD536:
+ BYTE   VOICE   13
+ BYTE   PAN   c_v-31
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W06
+ BYTE   N05  Gn4  v052
+ BYTE   W12
+ BYTE   Gn5  v064
+ BYTE   W12
+ BYTE   Gn4  v032
+ BYTE   W12
+ BYTE   Cn5  v044
+ BYTE   W12
+ BYTE   Dn5  v028
+ BYTE   W12
+ BYTE   Gn4  v036
+ BYTE   W12
+ BYTE   Gn5  v040
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W06
+// 001   ----------------------------------------
+Label_5_01ACD555:
+ BYTE   W06
+ BYTE   N05  Cn5  v040
+ BYTE   W12
+ BYTE   Dn5  v052
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Cn5  v028
+ BYTE   W12
+ BYTE   Gn4  v052
+ BYTE   W12
+ BYTE   Gn5  v064
+ BYTE   W12
+ BYTE   Gn4  v032
+ BYTE   W12
+ BYTE   Cn5  v044
+ BYTE   W06
+ BYTE   PEND 
+// 002   ----------------------------------------
+Label_5_01ACD56F:
+ BYTE   W06
+ BYTE   N05  Dn5  v028
+ BYTE   W12
+ BYTE   Gn4  v036
+ BYTE   W12
+ BYTE   Gn5  v040
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Cn5
+ BYTE   W12
+ BYTE   Dn5  v052
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Cn5  v028
+ BYTE   W06
+ BYTE   PEND 
+// 003   ----------------------------------------
+Label_5_01ACD587:
+ BYTE   W06
+ BYTE   N05  Gn4  v052
+ BYTE   W12
+ BYTE   Gn5  v064
+ BYTE   W12
+ BYTE   Gn4  v032
+ BYTE   W12
+ BYTE   Cn5  v044
+ BYTE   W12
+ BYTE   Dn5  v028
+ BYTE   W12
+ BYTE   Gn4  v036
+ BYTE   W12
+ BYTE   Gn5  v040
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   PEND 
+// 004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 005   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 007   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 009   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 016   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 021   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 022   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 023   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 028   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 029   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 030   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 031   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 032   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 033   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 034   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 035   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 036   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 037   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 038   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 039   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 040   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD555
+// 041   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD56F
+// 042   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_5_01ACD587
+// 043   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_5_01ACD536
+// 044   ----------------------------------------
+ BYTE   W06
+ BYTE   N05  Cn5  v040
+ BYTE   W12
+ BYTE   Dn5  v052
+ BYTE   W12
+ BYTE   Gn4
+ BYTE   W12
+ BYTE   Cn5  v028
+ BYTE   W05
+ BYTE   FINE
+
+//**************** Track 7 (Midi-Chn.6) ****************//
+
+RightRoad_007:
+// 000   ----------------------------------------
+ BYTE   KEYSH   RightRoad_key+0
+Label_6_01ACC9CE:
+ BYTE   VOICE   73
+ BYTE   PAN   c_v-12
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   N11  Gn3  v084
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   N11  Cn4  v068
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W09
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   N32  Gn4  v092
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn4  v076
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+// 007   ----------------------------------------
+Label_6_01ACCA33:
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   N23  Cn4  v076
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  En4
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   TIE  Dn4
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   PEND 
+// 008   ----------------------------------------
+Label_6_01ACCA81:
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   12*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Dn4
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W30
+// 009   ----------------------------------------
+Label_6_01ACCACF:
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   N11  Gn3  v084
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   N11  Cn4  v068
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W09
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   N32  Gn4  v092
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn4  v080
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_6_01ACCB29:
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   N11  An4  v068
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  Fn4
+ BYTE   W02
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  An4  v084
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   TIE  Gn4  v080
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   15*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   PEND 
+// 011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_01ACCA81
+// 012   ----------------------------------------
+ BYTE   EOT
+ BYTE   Gn4
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W30
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   N11  Gn3  v084
+ BYTE   W02
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   8*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   N11  Cn4  v068
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W09
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   N32  Gn4  v092
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W01
+// 013   ----------------------------------------
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn4  v076
+ BYTE   W01
+ BYTE   VOL   17*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+// 014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_01ACCA33
+// 015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_01ACCA81
+// 016   ----------------------------------------
+ BYTE   EOT
+ BYTE   Dn4
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W30
+// 017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_01ACCACF
+// 018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_6_01ACCB29
+// 019   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   13*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   12*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   11*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   10*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   7*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+// 020   ----------------------------------------
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W02
+// 021   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   EOT
+ BYTE   Gn4
+ BYTE   W66
+ BYTE   W01
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W96
+// 040   ----------------------------------------
+ BYTE   W96
+// 041   ----------------------------------------
+ BYTE   W96
+// 042   ----------------------------------------
+ BYTE   W96
+// 043   ----------------------------------------
+ BYTE   W96
+// 044   ----------------------------------------
+ BYTE   W96
+// 045   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_6_01ACC9CE
+// 046   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 8 (Midi-Chn.7) ****************//
+
+RightRoad_008:
+// 000   ----------------------------------------
+ BYTE   KEYSH   RightRoad_key+0
+Label_7_01ACE14E:
+ BYTE   VOICE   73
+ BYTE   PAN   c_v+26
+ BYTE   VOL   40*RightRoad_mvl/mxv
+ BYTE   W96
+// 001   ----------------------------------------
+ BYTE   W96
+// 002   ----------------------------------------
+ BYTE   W96
+// 003   ----------------------------------------
+ BYTE   W96
+// 004   ----------------------------------------
+ BYTE   W96
+// 005   ----------------------------------------
+ BYTE   W96
+// 006   ----------------------------------------
+ BYTE   W06
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   N11  Gn3  v084
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   N11  Cn4  v068
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W09
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   N32  Gn4  v092
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn4  v076
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W02
+// 007   ----------------------------------------
+Label_7_01ACE1B0:
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   N23  Cn4  v076
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  En4
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   TIE  Dn4
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   PEND 
+// 008   ----------------------------------------
+Label_7_01ACE1FE:
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Dn4
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W24
+// 009   ----------------------------------------
+Label_7_01ACE250:
+ BYTE   W06
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   N11  Gn3  v084
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   N11  Cn4  v068
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W09
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   N32  Gn4  v092
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn4  v080
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   PEND 
+// 010   ----------------------------------------
+Label_7_01ACE2A7:
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   N11  An4  v068
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   37*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  Fn4
+ BYTE   W02
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N11  An4  v084
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   TIE  Gn4  v080
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   PEND 
+// 011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_01ACE1FE
+// 012   ----------------------------------------
+ BYTE   EOT
+ BYTE   Gn4
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W24
+ BYTE   W06
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   N11  Gn3  v084
+ BYTE   W02
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   N11  Cn4  v068
+ BYTE   W12
+ BYTE   Dn4
+ BYTE   W09
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   N32  Gn4  v092
+ BYTE   W01
+ BYTE   VOL   36*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W01
+// 013   ----------------------------------------
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   N32  Fn4  v076
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   35*RightRoad_mvl/mxv
+ BYTE   W02
+// 014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_01ACE1B0
+// 015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_01ACE1FE
+// 016   ----------------------------------------
+ BYTE   EOT
+ BYTE   Dn4
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W24
+// 017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_01ACE250
+// 018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_7_01ACE2A7
+// 019   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   33*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   32*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   31*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   30*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   29*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   28*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   27*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   25*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W03
+// 020   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   24*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   23*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   22*RightRoad_mvl/mxv
+ BYTE   W05
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   21*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W02
+// 021   ----------------------------------------
+ BYTE   W01
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*RightRoad_mvl/mxv
+ BYTE   W03
+ BYTE   EOT
+ BYTE   Gn4
+ BYTE   W60
+ BYTE   W01
+// 022   ----------------------------------------
+ BYTE   W96
+// 023   ----------------------------------------
+ BYTE   W96
+// 024   ----------------------------------------
+ BYTE   W96
+// 025   ----------------------------------------
+ BYTE   W96
+// 026   ----------------------------------------
+ BYTE   W96
+// 027   ----------------------------------------
+ BYTE   W96
+// 028   ----------------------------------------
+ BYTE   W96
+// 029   ----------------------------------------
+ BYTE   W96
+// 030   ----------------------------------------
+ BYTE   W96
+// 031   ----------------------------------------
+ BYTE   W96
+// 032   ----------------------------------------
+ BYTE   W96
+// 033   ----------------------------------------
+ BYTE   W96
+// 034   ----------------------------------------
+ BYTE   W96
+// 035   ----------------------------------------
+ BYTE   W96
+// 036   ----------------------------------------
+ BYTE   W96
+// 037   ----------------------------------------
+ BYTE   W96
+// 038   ----------------------------------------
+ BYTE   W96
+// 039   ----------------------------------------
+ BYTE   W96
+// 040   ----------------------------------------
+ BYTE   W96
+// 041   ----------------------------------------
+ BYTE   W96
+// 042   ----------------------------------------
+ BYTE   W96
+// 043   ----------------------------------------
+ BYTE   W96
+// 044   ----------------------------------------
+ BYTE   W96
+// 045   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_7_01ACE14E
+// 046   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+RightRoad:
+	BYTE	8	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	RightRoad_pri	// Priority
+	BYTE	RightRoad_rev	// Reverb.
+    
+	POIN2	RightRoad_grp
+    
+	POIN2	RightRoad_001
+	POIN2	RightRoad_002
+	POIN2	RightRoad_003
+	POIN2	RightRoad_004
+	POIN2	RightRoad_005
+	POIN2	RightRoad_006
+	POIN2	RightRoad_007
+	POIN2	RightRoad_008
+
+	

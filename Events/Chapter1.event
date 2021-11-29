@@ -1,0 +1,252 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0xd,ThisChapter)
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C1Units C1Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,C1Turn2,2)
+TurnEventPlayer(0x0,C1Turn3,3)
+TurnEventPlayer(0x0,C1Turn4,4)
+TurnEventPlayer(0x0,C1Turn5,5)
+TurnEventPlayer(0x0,C1Turn6,6)
+TurnEventPlayer(0x3,EndingScene,7)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Village(0x8,C1WVillage,1,9)
+Village(0x9,C1EVillage,17,13)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C1Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [9,4] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(1,Ally,0) [8,5] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [10,5] 0x0 0x0 0x0 0x0 [Flux, Vulnerary] NoAI
+UNIT
+
+C1Easy:
+UNIT Mevion AxeArm 0x0 Level(2,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Mevion LncArm 0x0 Level(2,Enemy,1) [18,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [10,12] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Mevion SoldierF 0x0 Level(3,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [17,7] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion MercF 0x0 Level(2,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe] NeverMoveAI
+UNIT
+
+C1Normal:
+UNIT Mevion AxeArm 0x0 Level(2,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Mevion LncArm 0x0 Level(2,Enemy,1) [18,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [9,12] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Mevion SoldierF 0x0 Level(3,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [17,7] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion MercF 0x0 Level(2,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion SwdArm 0x0 Level(3,Enemy,1) [4,1] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion SwdCav 0x0 Level(3,Enemy,1) [17,15] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
+UNIT Mevion LncCav 0x0 Level(2,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [SteelAxe, HandAxe] NeverMoveAI
+UNIT
+
+C1Hard:
+UNIT Mevion AxeArm 0x0 Level(2,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Mevion LncArm 0x0 Level(2,Enemy,1) [18,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Mevion AxeArm 0x0 Level(4,Enemy,1) [6,10] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Mevion LncArm 0x0 Level(4,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [9,12] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Mevion SoldierF 0x0 Level(3,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [16,7] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion MercF 0x0 Level(2,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion SwdArm 0x0 Level(3,Enemy,1) [4,1] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion SwdCav 0x0 Level(3,Enemy,1) [17,15] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
+UNIT Mevion LncCav 0x0 Level(2,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [SteelAxe, HandAxe] NeverMoveAI
+UNIT
+
+C1T3:
+UNIT Mevion Merc 0x0 Level(2,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion MercF 0x0 Level(2,Enemy,1) [0,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(2,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT
+
+C1T4:
+UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [1,0] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Mevion Fighter 0x0 Level(3,Enemy,1) [2,0] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [3,0] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT
+
+C1T5:
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [14,15] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Mevion SoldierF 0x0 Level(3,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [16,15] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT
+
+C1T6:
+UNIT Mevion SwdCav 0x0 Level(3,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion LncCav 0x0 Level(3,Enemy,1) [7,0] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion AxeCav 0x0 Level(3,Enemy,1) [8,0] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Mevion BowCav 0x0 Level(3,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT
+
+NatasiaRecruitment:
+UNIT Natasia FighterF 0x0 Level(4,Ally,0) [1,10] 0x0 0x0 0x0 0x0 [IronAxe,HandAxe] NoAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+LoadUnitsByDifficulty(C1Easy,C1Normal,C1Hard)
+LOAD1 0x0 C1Units
+ENUN
+MUSC 0x4
+SetBackground(0x34)
+FADU 0x3c
+STAL 120
+CGText(Ch1_Narration)
+MUSC 0x0
+FADI 0x3c
+CLEAN
+FADU 0x3c
+CHECK_ALIVE Kenneth
+BNE 0x1 0xC 0x0
+Text(0x3,Ch1_Opening_Dead_Kenneth)
+GOTO 0x2
+LABEL 0x1
+Text(0x3,Ch1_Opening)
+LABEL 0x2
+GotoPrepScreen
+EndEvent
+
+EndingScene:
+MUSC 0x5
+CHECK_EXISTS Natasia
+BNE 0x1 0xC 0x0
+Text(0x3, You_Almost_Forgot_Natasia_Dummy)
+LOAD1 0x0 NatasiaRecruitment
+ENUN
+LABEL 0x1
+CHECK_ALIVE Kenneth
+BNE 0x2 0xC 0x0
+CHECK_ALIVE Natasia
+BNE 0x3 0xC 0x0
+Text(0x3,Ch1_Ending_Dead_Kenneth_and_Natasia)
+GOTO 0x5
+LABEL 0x3
+Text(0x3,Ch1_Ending_Dead_Kenneth)
+GOTO 0x5
+LABEL 0x2
+CHECK_ALIVE Natasia
+BNE 0x4 0xC 0x0
+Text(0x3,Ch1_Ending_Dead_Natasia)
+GOTO 0x5
+LABEL 0x4
+Text(0x3,Ch1_Ending)
+LABEL 0x5
+MUSC 0x0
+MNC2 0x2
+EndEvent
+
+C1Turn2:
+FlashCursor(Marque,60)
+TEXTSTART
+TEXT C1Warning
+TEXTEND
+EndEvent
+
+C1Turn3:
+EVBIT_T 9
+CHECK_TUTORIAL
+BNE 0x1 0xC 0x0
+LOAD1 0x0 C1T3
+LABEL 0x1
+ENUN
+EndEvent
+
+C1Turn4:
+EVBIT_T 9
+LOAD1 0x0 C1T4
+ENUN
+EndEvent
+
+C1Turn5:
+EVBIT_T 9
+LOAD1 0x0 C1T5
+ENUN
+EndEvent
+
+C1Turn6:
+EVBIT_T 9
+CHECK_HARD
+BEQ 0x1 0xC 0x0
+LOAD1 0x0 C1T6
+LABEL 0x1
+ENUN
+EndEvent
+
+C1WVillage:
+	CHECK_ACTIVEID Blair
+	BNE 0x1 0xC 0x0
+	CHECK_ACTIVEID Arin
+	BNE 0x2 0xC 0x0
+	Text(0x3, Natasia_Verbally_Abuses_Kenneth_Then_Joins_The_Party)
+	GOTO 0x3
+	LABEL 0x2
+	Text(0x3, Arin_Recruits_Natasia)
+	GOTO 0x3
+	LABEL 0x1
+	Text(0x3, Blair_Recruits_Natasia)
+	LABEL 0x3
+	LOAD1 0x0 NatasiaRecruitment
+	ENUN
+	EndEvent
+	
+C1EVillage:
+	VillageEventItem(C1EVillageText, 0x3, SecretBook)
+
+MESSAGE Events end at offset CURRENTOFFSET

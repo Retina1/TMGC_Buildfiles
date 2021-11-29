@@ -49,6 +49,57 @@
 	BYTE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 	POP
 	
+	//cap changing
+	PUSH
+	/*luck cap- may change
+	ORG $872ae
+	BYTE 0x24
+	ORG $2c016
+	BYTE 0x24
+	ORG $2c01c
+	BYTE 0x24
+	ORG $18250
+	BYTE 0x24
+	ORG $18254
+	BYTE 0x24
+	ORG $926fc
+	BYTE 0x24
+	ORG $9c154
+	BYTE 0x24
+	ORG $9c31c
+	BYTE 0x24
+	*/
+	ORG $87132
+	BYTE 0x24
+	ORG $87142
+	BYTE 0x24
+	ORG $870fe
+	BYTE 0x24
+	ORG $87102
+	BYTE 0x24
+	//player hp
+	ORG $181e2
+	BYTE 0x50
+	ORG $181ee
+	BYTE 0x50
+	ORG $2bf4c
+	BYTE 0x50
+	ORG $2bf64
+	BYTE 0x50
+	ORG $9c0e4
+	BYTE 0x50
+	ORG $9c278
+	BYTE 0x50
+	//foe hp
+	ORG $181dc
+	BYTE 0x78
+	ORG $181f4
+	BYTE 0x78
+	ORG $2bf46
+	BYTE 0x78
+	ORG $2bf60
+	BYTE 0x78
+	POP
 	ALIGN 4
 	WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes
 

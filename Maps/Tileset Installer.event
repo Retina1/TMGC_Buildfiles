@@ -8,9 +8,25 @@ DalstTownPalette:
 #incext Png2Dmp "Tilesets/DalstTown.png" --palette-only
 
 ALIGN 4
-DalstTownTiles:
-#incext compress "Tilesets/DalstTown.mapchip_config"
+TownTiles:
+#incext compress "Tilesets/Town.mapchip_config"
 
-EventPointerTable(0x8b, DalstTownObjects)
-EventPointerTable(0x8c, DalstTownPalette)
-EventPointerTable(0x8d, DalstTownTiles)
+ALIGN 4
+DalstFieldObjects:
+#incext Png2Dmp "Tilesets/DalstField.png" --lz77
+
+ALIGN 4
+DalstFieldPalette:
+#incext Png2Dmp "Tilesets/DalstField.png" --palette-only
+
+ALIGN 4
+FieldTiles:
+#incext compress "Tilesets/Field.mapchip_config"
+
+EventPointerTable(0x3, DalstTownObjects)
+EventPointerTable(0x2, DalstTownPalette)
+EventPointerTable(0x1, TownTiles)
+
+EventPointerTable(0xA, DalstFieldObjects)
+EventPointerTable(0x9, DalstFieldPalette)
+EventPointerTable(0x8, FieldTiles)

@@ -2,6 +2,23 @@
 #define HunterCard 0x99
 #define BruiserCard 0x9A
 #define DeserterCard 0x9B
+#define BrigandCard 0x8b
+#define SwdCavCard 0x80
+#define LncCavCard 0x9c
+#define AxeCavCard 0x9d
+#define BowCavCard 0x9e
+#define SwdArmCard 0x76
+#define LncArmCard 0x9f
+#define AxeArmCard 0xa0
+#define BowArmCard 0xa1
+#define MercMCard 0x90
+#define MercFCard 0xa2
+#define SoldierMCard 0x8a
+#define SoldierFCard 0xa3
+#define FighterMCard 0x74
+#define FighterFCard 0xa6
+#define ArcherMCard 0x78
+#define ArcherFCard 0xa7
 
 ALIGN 4
 
@@ -20,6 +37,108 @@ BruiserPortrait:
 BruiserPortraitPalette:
 #incbin "BruiserPalette.dmp"
 
+BrigandPortrait:
+#incbin "Brigand.dmp"
+BrigandPortraitPalette:
+#incbin "BrigandPalette.dmp"
+
+SwdCavPortrait:
+#incbin "SwdCav.dmp"
+SwdCavPortraitPalette:
+#incbin "SwdCavPalette.dmp"
+
+LncCavPortrait:
+#incbin "LncCav.dmp"
+LncCavPortraitPalette:
+#incbin "LncCavPalette.dmp"
+
+AxeCavPortrait:
+#incbin "AxeCav.dmp"
+AxeCavPortraitPalette:
+#incbin "AxeCavPalette.dmp"
+
+BowCavPortrait:
+#incbin "BowCav.dmp"
+BowCavPortraitPalette:
+#incbin "BowCavPalette.dmp"
+
+SwdArmPortrait:
+#incbin "SwdArm.dmp"
+SwdArmPortraitPalette:
+#incbin "SwdArmPalette.dmp"
+
+LncArmPortrait:
+#incbin "LncArm.dmp"
+LncArmPortraitPalette:
+#incbin "LncArmPalette.dmp"
+
+AxeArmPortrait:
+#incbin "AxeArm.dmp"
+AxeArmPortraitPalette:
+#incbin "AxeArmPalette.dmp"
+
+BowArmPortrait:
+#incbin "BowArm.dmp"
+BowArmPortraitPalette:
+#incbin "BowArmPalette.dmp"
+
+MercMPortrait:
+#incbin "MercM.dmp"
+MercMPortraitPalette:
+#incbin "MercMPalette.dmp"
+
+MercFPortrait:
+#incbin "MercF.dmp"
+MercFPortraitPalette:
+#incbin "MercFPalette.dmp"
+
+SoldierMPortrait:
+#incbin "SoldierM.dmp"
+SoldierMPortraitPalette:
+#incbin "SoldierMPalette.dmp"
+
+SoldierFPortrait:
+#incbin "SoldierF.dmp"
+SoldierFPortraitPalette:
+#incbin "SoldierFPalette.dmp"
+
+FighterMPortrait:
+#incbin "FighterM.dmp"
+FighterMPortraitPalette:
+#incbin "FighterMPalette.dmp"
+
+FighterFPortrait:
+#incbin "FighterF.dmp"
+FighterFPortraitPalette:
+#incbin "FighterFPalette.dmp"
+
+ArcherMPortrait:
+#incbin "ArcherM.dmp"
+ArcherMPortraitPalette:
+#incbin "ArcherMPalette.dmp"
+
+ArcherFPortrait:
+#incbin "ArcherF.dmp"
+ArcherFPortraitPalette:
+#incbin "ArcherFPalette.dmp"
+
 setCardEntry(HunterCard,HunterPortrait,HunterPortraitPalette)
 setCardEntry(DeserterCard,DeserterPortrait,DeserterPortraitPalette)
 setCardEntry(BruiserCard,BruiserPortrait,BruiserPortraitPalette)
+setCardEntry(BrigandCard,BrigandPortrait,BrigandPortraitPalette)
+setCardEntry(SwdCavCard,SwdCavPortrait,SwdCavPortraitPalette)
+setCardEntry(LncCavCard,LncCavPortrait,LncCavPortraitPalette)
+setCardEntry(AxeCavCard,AxeCavPortrait,AxeCavPortraitPalette)
+setCardEntry(BowCavCard,BowCavPortrait,BowCavPortraitPalette)
+setCardEntry(SwdArmCard,SwdArmPortrait,SwdArmPortraitPalette)
+setCardEntry(LncArmCard,LncArmPortrait,LncArmPortraitPalette)
+setCardEntry(AxeArmCard,AxeArmPortrait,AxeArmPortraitPalette)
+setCardEntry(BowArmCard,BowArmPortrait,BowArmPortraitPalette)
+setCardEntry(MercMCard,MercMPortrait,MercMPortraitPalette)
+setCardEntry(MercFCard,MercFPortrait,MercFPortraitPalette)
+setCardEntry(SoldierMCard,SoldierMPortrait,SoldierMPortraitPalette)
+setCardEntry(SoldierFCard,SoldierFPortrait,SoldierFPortraitPalette)
+setCardEntry(FighterMCard,FighterMPortrait,FighterMPortraitPalette)
+setCardEntry(FighterFCard,FighterFPortrait,FighterFPortraitPalette)
+setCardEntry(ArcherMCard,ArcherMPortrait,ArcherMPortraitPalette)
+setCardEntry(ArcherFCard,ArcherFPortrait,ArcherFPortraitPalette)

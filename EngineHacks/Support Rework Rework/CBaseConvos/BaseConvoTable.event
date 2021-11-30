@@ -14,6 +14,13 @@
 	PUSH
 	Chapter(Chapter1)
 		Entry
+			name(C1_Base_Convo_Intro_Select)
+			bg(0x3)
+			importance(3)
+			text(C1_Base_Convo_Intro)
+			item(Vulnerary,Blair)
+			eventID(0x128)
+		Entry
 			name(C1_Blair_Arin_Base_Select)
 			bg(0x3)
 			text(C1_Blair_Arin_Base)

@@ -24,17 +24,14 @@
 		ALIGN 4
 		SupportLevelNameTable: // Each entry is a pointer to a string. i.e. A, B, B+, whatever. Indexed by level from 0 to 7.
 		// Any fields higher than the defined max support will never be referenced, so they can just not exist or be null.
-		/*POIN CSupportName // 0
+		POIN CSupportName // 0
 		POIN CPlusSupportName // 1
 		POIN BMinusSupportName // 2
 		POIN BSupportName // 3
 		POIN BPlusSupportName // 4
 		POIN AMinusSupportName // 5
 		POIN ASupportName // 6
-		POIN APlusSupportName // 7*/
-		POIN CSupportName
-		POIN BSupportName
-		POIN ASupportName
+		POIN APlusSupportName // 7
 		
 		CSupportName: // Change these to your heart's desire along with the table!
 		String("C") ; BYTE 0x00
@@ -140,7 +137,12 @@
 		SHORT 0x7922 // ldrb r2, [ r4, #0x04 ].
 		ORG $2AA2E
 		SHORT 0x7964 // ldrb r4, [ r4, #0x05 ].
+		
+		ORG $281C8 // Make GetROMUnitSupportCount always return zero, effectively removing vanilla support initialization for units.
+		SHORT 0x2000 0x4770 // mov r0, #0x00 ; bx lr.
 		POP
+		
+
 		
 	#endif // SUPPORT_REWORK
 

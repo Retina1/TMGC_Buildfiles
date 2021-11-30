@@ -59,6 +59,9 @@ SongTable(0x44,Ameno,1)
 #include "BabaIsYou.event"
 SongTable(0x34,BabaIsYou,1)
 
+#include "Stick.event"
+SongTable(0x37,Stick,1)
+
 //sound room completion rate
 PUSH
 ORG $AF69C

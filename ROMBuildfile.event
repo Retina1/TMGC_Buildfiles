@@ -49,6 +49,12 @@
 	BYTE 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
 	POP
 	
+	//ephsupplykiller
+	PUSH
+	ORG $23F94
+	BYTE 0x01
+	POP
+	
 	//cap changing
 	PUSH
 	/*luck cap- may change

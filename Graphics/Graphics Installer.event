@@ -26,8 +26,65 @@ ORG $88590
 SHORT 0x0000 0x0000
 POP
 
+PUSH
+ORG $AC188
+POIN LevelSelect
+POP
+
+PUSH
+ORG $A8EDC
+POIN MainMenu
+//ORG $A8EE4
+//POIN MainMenuPal
+POP
+
+PUSH
+ORG $8E088
+POIN ChapterTitle
+//ORG $8E090
+//POIN ChapterTitlePal
+POP
+
+PUSH
+ORG $896A4
+POIN SaveSlot
+POP
+
+PUSH
+ORG $C5830
+POIN Title
+ORG $C5790
+POIN TitlePal
+POP
+
 ALIGN 4
 NewStatScreen:
 #incext Png2Dmp "StatScreen.png" --lz77
 NewStatScreenPal:
 #incext Png2Dmp "StatScreen.png" --palette-only
+
+ALIGN 4
+LevelSelect:
+#incext Png2Dmp "Level Select.png" --lz77
+
+ALIGN 4
+SaveSlot:
+#incext Png2Dmp "Save Slot.png" --lz77
+
+ALIGN 4
+MainMenu:
+#incext Png2Dmp "Main Menu.png" --lz77
+MainMenuPal:
+#incext Png2Dmp "Main Menu.png" --palette-only
+
+ALIGN 4
+ChapterTitle:
+#incext Png2Dmp "Chapter Title.png" --lz77
+ChapterTitlePal:
+#incext Png2Dmp "Chapter Title.png" --palette-only
+
+ALIGN 4
+Title:
+#incext Png2Dmp "Game Title.png" --lz77
+TitlePal:
+#incext Png2Dmp "Game Title.png" --palette-only

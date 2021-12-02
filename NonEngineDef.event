@@ -19,6 +19,13 @@
 #define Cassius 0x0B
 #define Rachael 0x0C
 
+//item defs
+#define Nightfall 0x46
+#define GildedSword 0x81
+#define GildedLance 0x82
+#define GildedAxe 0x83
+#define GildedBow 0x84
+
 //generic defs
 #define DalstRebel 0x80
 #define Mevion 0x81
@@ -32,7 +39,7 @@
 #define Awaken 0x78
 
 //Chapter defs
-#define Prologue 0x0
+//#define Prologue 0x0
 #define Chapter1 0x1
 #define Chapter2 0x2
 
@@ -69,7 +76,7 @@
 #define BowGen 0x59
 #define Merc 0x0F
 #define MercF 0x10
-#define Hero 0x11
+//#define Hero 0x11
 #define HeroF 0x12
 #define Myrm 0x13
 #define MyrmF 0x14
@@ -77,22 +84,22 @@
 #define SwMastF 0x16
 #define Assass 0x17
 #define AssassF 0x18
-#define Archer 0x19
+//#define Archer 0x19
 #define ArcherF 0x1A
-#define Sniper 0x1B
+//#define Sniper 0x1B
 #define SniperF 0x1C
 #define LncWyv 0x1F
 #define AxeWyv 0x20
 #define WyvLord 0x21
 #define BowWyv 0x22
 #define Draco 0x23
-#define Mage 0x25
+//#define Mage 0x25
 #define MageF 0x26
-#define Sage 0x27
+//#define Sage 0x27
 #define SageF 0x28
 #define Valk 0x29
 #define ValkF 0x2A
-#define Bishop 0x2B
+//#define Bishop 0x2B
 #define BishopF 0x2C
 #define DarkM 0x2D
 #define Sorc 0x2F
@@ -102,26 +109,26 @@
 #define Hunter 0x36
 #define Deserter 0x37
 #define Bruiser 0x38
-#define Fighter 0x3F
-#define Warrior 0x40
+//#define Fighter 0x3F
+//#define Warrior 0x40
 #define FighterF 0x5B
 #define WarriorF 0x5C
-#define Brigand 0x41
-#define Pirate 0x42
-#define Berserker 0x43
+//#define Brigand 0x41
+//#define Pirate 0x42
+//#define Berserker 0x43
 #define PirateF 0x5D
 #define BerserkerF 0x5E
 #define LightM 0x44
-#define Priest 0x45
+//#define Priest 0x45
 #define Bard 0x46
 #define LncPeg 0x48
 #define SwdPeg 0x47
 #define Falco 0x49
-#define Cleric 0x4A
+//#define Cleric 0x4A
 #define Troub 0x4C
 #define TroubF 0x4B
 #define BardF 0x4D
-#define Soldier 0x4E
+//#define Soldier 0x4E
 #define Halberdier 0x4F
 #define SoldierF 0x63
 #define HalberdierF 0x64

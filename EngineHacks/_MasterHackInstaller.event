@@ -27,6 +27,12 @@ POP
 
 ////////////////////////////////FREE SPACE WITHIN BL RANGE
 
+//enemy hmb
+PUSH
+ORG $F818
+BYTE 0x01
+POP
+
 PUSH
 ORG FreeSpaceBLRange //defined in custom definitions
 #define inBLRange
@@ -95,6 +101,16 @@ PUSH
 	BYTE 0x00 0x00 0x00 0x20
 POP
 
+//title screen BG
+#include "256 colors Title background Installer/titlebackgroundinstaller.event"
+
+//take action when bumping into fog enemy
+#include "Less Annoying Fog/Less Annoying Fog Installer.event"
+
+//walking sounds
+PUSH
+#include "FE8-Walking Sounds Fix/FE8-Walking Sounds EA.txt"
+POP
 
   //MMB
   #include "ModularMinimugBox/Installers/MMBInstallerREDFE.event"

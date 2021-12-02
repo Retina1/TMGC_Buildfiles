@@ -29,14 +29,8 @@ ItemEffectivenessPtr(Longbow, FlierEffectiveness)
 ItemEffectivenessPtr(Ballista, FlierEffectiveness)
 ItemEffectivenessPtr(IronBallista, FlierEffectiveness)
 ItemEffectivenessPtr(KillerBallista, FlierEffectiveness)
-ItemEffectivenessPtr(Excalibur, SacredWeaponEffectiveness)
-ItemEffectivenessPtr(Luce, SacredWeaponEffectiveness)
 ItemEffectivenessPtr(DragonAxe, DragonEffectiveness)
-ItemEffectivenessPtr(Reginleif, LordWeaponEffectiveness)
-ItemEffectivenessPtr(ShadowKiller, MonsterEffectiveness)
-ItemEffectivenessPtr(BrightLance, MonsterEffectiveness)
-ItemEffectivenessPtr(Fiendcleaver, MonsterEffectiveness)
-ItemEffectivenessPtr(BeaconBow, FlierAndMonster1)
+ItemEffectivenessPtr(BeaconBow, FlierEffectiveness)
 ItemEffectivenessPtr(Sieglinde, SacredWeaponEffectiveness)
 ItemEffectivenessPtr(Ivaldi, SacredWeaponEffectiveness)
 ItemEffectivenessPtr(DragonSpear, DragonEffectiveness)
@@ -59,6 +53,9 @@ SetWeaponEffectiveness(ArmorType|HorseType, 6)
 WORD 0 //terminator
 ArmorEffectiveness:
 SetWeaponEffectiveness(ArmorType, 6)
+WORD 0
+SuperArmorEffectiveness:
+SetWeaponEffectiveness(ArmorType, 12)
 WORD 0
 HorseEffectiveness:
 SetWeaponEffectiveness(HorseType, 6)

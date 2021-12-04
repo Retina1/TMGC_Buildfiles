@@ -68,6 +68,14 @@
 #include "CavF(SALVAGED)\Bow Installer.event"
 #include "CavF(SALVAGED)\Unarmed Installer.event"
 
+#include "Knight\Sword Installer.event"
+#include "Knight\Lance Installer.event"
+#include "Knight\Axe Installer.event"
+#include "Knight\Handaxe Installer.event"
+#include "Knight\Bow Installer.event"
+#include "Knight\Staff Installer.event"
+#include "Knight\Unarmed Installer.event"
+
 ALIGN 4
 CavMAnims:
 SwordAnim(0x2E)
@@ -86,6 +94,17 @@ AxeAnim(0x36)
 HandAxeAnim(0x37)
 BowAnim(0x38)
 UnarmedAnim(0x39)
+EndAnim
+
+ALIGN 4
+KnightAnims:
+SwordAnim(0x40)
+LanceAnim(0x41)
+AxeAnim(0x42)
+HandAxeAnim(0x43)
+BowAnim(0x4e)
+StaffAnim(0x50)
+UnarmedAnim(0x4f)
 EndAnim
 
 ALIGN 4

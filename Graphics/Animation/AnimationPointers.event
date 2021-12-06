@@ -40,6 +40,9 @@
 #include "FighterM(GlenWing)\Axe Installer.event"
 #include "FighterM(GlenWing)\Handaxe Installer.event"
 #include "FighterM(GlenWing)\Unarmed Installer.event"
+#include "FighterF(Pikmin)\Axe Installer.event"
+#include "FighterF(Pikmin)\Handaxe Installer.event"
+#include "FighterF(Pikmin)\Unarmed Installer.event"
 
 #include "Blair(L95)\Magic Installer.event"
 
@@ -75,6 +78,76 @@
 #include "Knight\Bow Installer.event"
 #include "Knight\Staff Installer.event"
 #include "Knight\Unarmed Installer.event"
+
+#include "ArcherM(Der)\Bow Installer.event"
+#include "ArcherM(Der)\Unarmed Installer.event"
+#include "ArcherF(Der)\Bow Installer.event"
+#include "ArcherF(Der)\Unarmed Installer.event"
+
+#include "SoldierM(Flasuban)\Lance Installer.event"
+#include "SoldierM(Flasuban)\Unarmed Installer.event"
+#include "SoldierF(Flasuban)\Lance Installer.event"
+#include "SoldierF(Flasuban)\Unarmed Installer.event"
+
+#include "MercM(SALVAGED)\Sword Installer.event"
+#include "MercM(SALVAGED)\Unarmed Installer.event"
+#include "MercF(SALVAGED)\Sword Installer.event"
+#include "MercF(SALVAGED)\Unarmed Installer.event"
+
+#include "DarkM(Temp)\Magic Installer.event"
+#include "DarkF(MarkyJoe)\Magic Installer.event"
+
+ALIGN 4
+DarkMAnims:
+AnimaAnim(0x75)
+LightAnim(0x75)
+DarkAnim(0x75)
+UnarmedAnim(0x75)
+EndAnim
+
+ALIGN 4
+DarkFAnims:
+AnimaAnim(0x76)
+LightAnim(0x76)
+DarkAnim(0x76)
+UnarmedAnim(0x76)
+EndAnim
+
+ALIGN 4
+MercMAnims:
+SwordAnim(0xB)
+UnarmedAnim(0xC)
+EndAnim
+
+ALIGN 4
+MercFAnims:
+SwordAnim(0xBD)
+UnarmedAnim(0xBE)
+EndAnim
+
+ALIGN 4
+SoldierMAnims:
+LanceAnim(0x98)
+UnarmedAnim(0x99)
+EndAnim
+
+ALIGN 4
+SoldierFAnims:
+LanceAnim(0x96)
+UnarmedAnim(0x97)
+EndAnim
+
+ALIGN 4
+ArcherMAnims:
+BowAnim(0x26)
+UnarmedAnim(0x27)
+EndAnim
+
+ALIGN 4
+ArcherFAnims:
+BowAnim(0x28)
+UnarmedAnim(0x29)
+EndAnim
 
 ALIGN 4
 CavMAnims:
@@ -139,6 +212,13 @@ FighterMAnims:
 AxeAnim(0x19)
 HandAxeAnim(0x1A)
 UnarmedAnim(0x1B)
+EndAnim
+
+ALIGN 4
+FighterFAnims:
+AxeAnim(0x92)
+HandAxeAnim(0x93)
+UnarmedAnim(0x94)
 EndAnim
 
 ALIGN 4

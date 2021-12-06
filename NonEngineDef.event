@@ -1,4 +1,5 @@
-
+//PROTECT 0x2BD50
+//PROTECT 0x736DA
 
 #define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
 #define SystemText(textid) "TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"

@@ -137,23 +137,28 @@ STAL 120
 CGText(Prologue_Narration)
 MUSC 0x0
 FADI 0x3c
-CLEAN
-FADU 0x3c
-Text(0x3,Prologue_Opening)
+CleanText(0x3,Prologue_Opening)
 EndEvent
 
 EndingScene:
-MUSC 0x5
+CHECK_ALIVE Kenneth
+BNE 0x1 0xC 0x0
+MUSC 0x32
+Text(0x3,Prologue_Ending_Dead_Kenneth)
+GOTO 0x2
+LABEL 0x1
+MUSC 0x31
 Text(0x3,Prologue_Ending)
+LABEL 0x2
 MUSC 0x0
-MNC2 0x1
+MNC2 Chapter1
 EndEvent
 
 KennethCometh:
 LOAD1 0x1 PKenneth
 MOVE 0xF Kenneth [1,5]
 ENUN
-MUSC 0x6
+MUSC 0x30
 Text(PKennethText)
 MUSC 0x0
 EndEvent

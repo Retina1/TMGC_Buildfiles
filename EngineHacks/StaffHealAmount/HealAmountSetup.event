@@ -1,0 +1,23 @@
+#ifndef HealValueSetup
+	#define HealValueSetup
+	
+	#ifdef _FE8_
+		PUSH
+		ORG 0x16FB8
+		#incbin "StaffHealFormula.dmp"
+		//stuff that modifies the heal amount
+		POIN 0x80175DC //get item stat to add to heal value
+		POIN 0x80191B8 //get unit stat to add to heal value
+		WORD 0x0 //for stuff like skills
+		POP
+	#endif
+	
+#endif
+
+/*
+The first POIN is for the item amount to add to the heal value
+The second POIN is for the character stat to add to the heal value
+The third POIN (set to WORD 0 because nothing is there atm) points to a routine that modifies
+	the end heal value. so if you wanted something like an ability that makes you heal 
+	10 more hp or something the check for it would be here
+*/

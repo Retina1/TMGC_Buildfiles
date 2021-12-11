@@ -65,6 +65,11 @@ POP
 
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 
+//minimug palette buffer
+#include "Minimug Palette/MinimugPalette.event"
+//staff heal
+#include "StaffHealAmount/HealAmountSetup.event"
+
 PUSH
 ORG 0x9F36A0
 	BYTE 7 6 16 0    
@@ -120,7 +125,11 @@ POP
   //hit bonus
   #include "hit_mashimashi/hit_mashimashi_installer.event"
   
-  #include "FixedAutolevels.event"
+//  #include "FixedAutolevels.event"
+PUSH
+ORG $2B9C4
+BYTE 0x48 0x43 0x32 0x30 0x64 0x21 0x01 0x4B 0x18 0x47 0xC0 0x46 0x7D 0x16 0x0D 0x08
+POP
   
   #include "CritChange/CritChange.txt"
   

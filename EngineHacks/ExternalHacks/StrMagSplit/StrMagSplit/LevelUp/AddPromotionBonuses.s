@@ -3,11 +3,18 @@
 
 @r4 has unit's new class data ptr, r5 = ram char ptr
 ldrb	r2,[r4,#0x4]	@new class id
+ldrb	r3,[r5,#0x4]	@old class id
 lsl		r2,#0x2
+lsl		r3,#0x2
 ldr		r1,MagClassTable
 add		r2,r1
-mov		r1,#0x3
-ldsb	r1,[r2,r1]		@mag promo bonus
+mov		r1,#0x0			
+ldsb	r2,[r2,r1]		@base mag
+ldr		r1,MagClassTable
+add		r3,r1
+mov		r1,#0x0			
+ldsb	r3,[r3,r1]		@old class base mag
+sub		r1,r2,r3
 mov		r0,r5
 add		r0,#0x3A
 ldrb	r7,[r0]			@char mag

@@ -23,6 +23,18 @@ ALIGN 4
 FieldTiles:
 #incext compress "Tilesets/Field.mapchip_config"
 
+ALIGN 4
+LowlandsCastleObjects:
+#incext Png2Dmp "Tilesets/LowlandsCastle.png" --lz77
+
+ALIGN 4
+LowlandsCastlePalette:
+#incext Png2Dmp "Tilesets/LowlandsCastle.png" --palette-only
+
+ALIGN 4
+CastleTiles:
+#incext compress "Tilesets/Castle.mapchip_config"
+
 EventPointerTable(0x3, DalstTownObjects)
 EventPointerTable(0x2, DalstTownPalette)
 EventPointerTable(0x1, TownTiles)
@@ -30,3 +42,7 @@ EventPointerTable(0x1, TownTiles)
 EventPointerTable(0xA, DalstFieldObjects)
 EventPointerTable(0x9, DalstFieldPalette)
 EventPointerTable(0x8, FieldTiles)
+
+EventPointerTable(0x11, LowlandsCastleObjects)
+EventPointerTable(0x12, LowlandsCastlePalette)
+EventPointerTable(0x13, CastleTiles)

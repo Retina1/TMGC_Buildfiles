@@ -59,6 +59,12 @@ UNIT Arin Trickster 0x0 Level(1,Ally,0) [8,5] 0x0 0x0 0x0 0x0 [IronSword, Heal, 
 UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [10,5] 0x0 0x0 0x0 0x0 [Flux, Vulnerary] NoAI
 UNIT
 
+C1CutsceneUnits:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [18,8] 0x0 0x0 0x1 REDA9R4 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(1,Ally,0) [18,8] 0x0 0x0 0x1 REDA8R5 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [18,8] 0x0 0x0 0x1 REDA10R5 [Flux, Vulnerary] NoAI
+UNIT
+
 C1Easy:
 UNIT Mevion AxeArm 0x0 Level(2,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Mevion LncArm 0x0 Level(2,Enemy,1) [18,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
@@ -129,8 +135,8 @@ UNIT
 
 C1T6:
 UNIT Mevion SwdCav 0x0 Level(3,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [IronSword] NoAI
-UNIT Mevion LncCav 0x0 Level(3,Enemy,1) [7,1] 0x0 0x0 0x0 0x0 [IronLance] NoAI
-UNIT Mevion AxeCav 0x0 Level(3,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Mevion LncCav 0x0 Level(3,Enemy,1) [9,0] 0x0 0x0 0x1 REDA7R1 [IronLance] NoAI
+UNIT Mevion AxeCav 0x0 Level(3,Enemy,1) [8,0] 0x0 0x0 0x1 REDA6R1 [IronAxe] NoAI
 UNIT Mevion BowCav 0x0 Level(3,Enemy,1) [7,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT
 
@@ -141,9 +147,8 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+CleanText(0x10,Ch1_Opening)
 LoadUnitsByDifficulty(C1Easy,C1Normal,C1Hard)
-LOAD1 0x0 C1Units
-ENUN
 MUSC 0x4
 SetBackground(0x34)
 FADU 0x3c
@@ -153,15 +158,16 @@ MUSC 0x0
 FADI 0x3c
 CLEAN
 FADU 0x3c
+LOAD1 0x0 C1CutsceneUnits
+ENUN
 CHECK_ALIVE Kenneth
 BNE 0x1 0xC 0x0
-Text(0x10,Ch1_Opening_Dead_Kenneth)
-Text(0x3,Ch1_Opening_2_Dead_Kenneth)
+CleanText(0x3,Ch1_Opening_2_Dead_Kenneth)
 GOTO 0x2
 LABEL 0x1
-Text(0x10,Ch1_Opening)
 Text(0x3,Ch1_Opening_2)
 LABEL 0x2
+LOAD1 0x0 C1Units
 GotoPrepScreen
 EndEvent
 
@@ -169,7 +175,7 @@ EndingScene:
 MUSC 0x5
 CHECK_EXISTS Natasia
 BNE 0x1 0xC 0x0
-Text(0x3, You_Almost_Forgot_Natasia_Dummy)
+CleanText(0x3, You_Almost_Forgot_Natasia_Dummy)
 LOAD1 0x0 NatasiaRecruitment
 ENUN
 LABEL 0x1
@@ -177,21 +183,21 @@ CHECK_ALIVE Kenneth
 BNE 0x2 0xC 0x0
 CHECK_ALIVE Natasia
 BNE 0x3 0xC 0x0
-Text(0x3,Ch1_Ending_Dead_Kenneth_and_Natasia)
+CleanText(0x3,Ch1_Ending_Dead_Kenneth_and_Natasia)
 GOTO 0x5
 LABEL 0x3
-Text(0x3,Ch1_Ending_Dead_Kenneth)
+CleanText(0x3,Ch1_Ending_Dead_Kenneth)
 GOTO 0x5
 LABEL 0x2
 CHECK_ALIVE Natasia
 BNE 0x4 0xC 0x0
-Text(0x3,Ch1_Ending_Dead_Natasia)
+CleanText(0x3,Ch1_Ending_Dead_Natasia)
 GOTO 0x5
 LABEL 0x4
-Text(0x3,Ch1_Ending)
+CleanText(0x3,Ch1_Ending)
 LABEL 0x5
 MUSC 0x0
-MNC2 0x2
+MNC2 Chapter2
 EndEvent
 
 C1Turn2:

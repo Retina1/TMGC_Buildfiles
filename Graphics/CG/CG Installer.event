@@ -1,4 +1,13 @@
 #define ConvoBackgroundTable $95DD1C
 #define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG ConvoBackgroundTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
-
 ALIGN 4
+SetConvoBackground(0x34,MapImage,MapTSA,MapPalette)
+ALIGN 4
+MapImage:
+#incbin "map for real.png.dmp"
+ALIGN 4
+MapTSA:
+#incbin "map for real.png.tsa.dmp"
+ALIGN 4
+MapPalette:
+#incbin "map for real.png.pal.dmp"

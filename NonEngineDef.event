@@ -5,6 +5,10 @@
 #define SystemText(textid) "TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
 #define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND;"
 #define EndEvent "EVBIT_T 0x7; ENDA"
+#define CleanText(bgid,textid) "CLEAN; SetBackground(bgid); FADU 0x3c; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+
+#define StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB) "BYTE HPB StrB SklB SpdB DefB ResB LckB MovB ConB MagB 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0"
+#define GrowthBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB) "BYTE 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 HPB StrB SklB SpdB DefB ResB LckB MagB 0x0 0x0"
 
 //unit defs
 #define Blair 0x01
@@ -26,10 +30,13 @@
 #define GildedLance 0x82
 #define GildedAxe 0x83
 #define GildedBow 0x84
+#define Yoink 0x5
+#define MiniBallista 0x37
 
 //generic defs
 #define DalstRebel 0x80
 #define Mevion 0x81
+#define Ygstra 0x82
 
 //boss defs
 #define Davelarn 0x68
@@ -43,6 +50,8 @@
 //#define Prologue 0x0
 #define Chapter1 0x1
 #define Chapter2 0x2
+#define Chapter3 0x3
+#define Chapter4 0x4
 
 //class defs
 #define BlairLord 0x2
@@ -123,7 +132,7 @@
 #define BerserkerF 0x5E
 #define LightM 0x44
 //#define Priest 0x45
-#define Bard 0x46
+//#define Bard 0x46
 #define LncPeg 0x48
 #define SwdPeg 0x47
 #define Falco 0x49
@@ -142,21 +151,12 @@
 
 //movement types- will figure out later
 /*#define LordMovement 0x80B808
-POIN LordMovement
 #define BrigandMovement 0x80b90c
-POIN BrigandMovement
 #define ArmorMovement 0x80B88A
-POIN ArmorMovement
 #define CavMovement 0x80BA92
-POIN CavMovement
 #define PalMovement 0x90BAD3
-POIN PalMovement
-#define InfantryMove 0x80B808
-POIN InfantryMove
+#define InfantryMovement 0x80B808
 #define MageMovement 0x80BA10
-POIN MageMovement
 #define FlierMovement 0x80BB96
-POIN FlierMovement
 #define ThiefMovement 0x80B9CF
-POIN ThiefMovement
 */

@@ -6,6 +6,8 @@
     ORG FreeSpace
 
     #include "repointedTextTable.event"
+	
+	#include "ASMCCheckSuite/ASMC Check Installer.event"
 
     //Text first for Text ID definitions
     #include "Text/InstallTextData.event"
@@ -16,6 +18,7 @@
 	
     //CSV tables
 	#include "Tables/StatBoosts.event"
+	#include "Tables/PromoUsability.event"
     #include "Tables/TableInstaller.event"
     MESSAGE Used table space ends at currentOffset
 

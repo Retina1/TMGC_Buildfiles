@@ -65,6 +65,15 @@ POP
 
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 
+//promo rework stuff
+#include "SplitPromoItems/SplitPromoItems.event"
+
+//this part is maybe dumb and not cooperating yet
+PUSH
+ORG $2BE38
+#incbin "LoseRanksOnPromo.dmp"
+POP
+
 //minimug palette buffer
 #include "Minimug Palette/MinimugPalette.event"
 //staff heal
@@ -94,7 +103,7 @@ EventMenuCommandEnd
 prEventMenuCommandEffect:
 	SHORT 0xB500 0x203C 0x5C08 0x4B03 0x469E 0xF800 0x2017 0xBC02 0x4708 0x0000 0xD1F8 0x0800
 	
-//Remove fog
+//Remove save menu fog
 PUSH
     ORG $a26380
 	#incbin "no_fog_comp.dmp"

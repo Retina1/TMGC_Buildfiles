@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C2Turn3,3)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -28,6 +29,8 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Seize(14,1)
+Chest(RedGem,15,2)
 END_MAIN
 
 MiscBasedEvents:
@@ -50,6 +53,11 @@ UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,7] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vu
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,7] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,6] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,8] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C2StefanDesmondJoin:
+UNIT Stefan SwdCav 0x0 Level(3,Ally,0) [18,13] 0x0 0x0 0x1 REDA17R12 [IronSword, Vulnerary] NoAI
+UNIT Desmond Dismount 0x0 Level(1,Ally,0) [18,14] 0x0 0x0 0x1 REDA16R13 [SilverLance, SteelAxe] NoAI
 UNIT
 
 C2Easy:
@@ -75,6 +83,15 @@ LOAD1 0x0 C2Units
 ENUN
 GotoPrepScreen
 ENDA
+
+C2Turn3:
+EVBIT_T 12
+LOAD1 0x1 C2StefanDesmondJoin
+ENUN
+MUSC 0x30
+Text(C2StefanDesmond)
+MUSC 0x0
+EndEvent
 
 EndingScene:
 MNC2 Chapter3

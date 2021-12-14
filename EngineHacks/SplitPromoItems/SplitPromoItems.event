@@ -1,0 +1,154 @@
+#ifdef _FE8_
+#ifndef SPLIT_PROMO_ITEMS
+
+//hide weapons
+PUSH
+ORG $2F6A0
+BYTE 0x00 0x20 0x00 0x20
+ORG $CD0EC
+BYTE 0x00 0x20 0x00 0x20
+POP
+
+PUSH
+ORG $CC5F6
+SHORT 0x46C0 //nop
+jumpToHack(SplitPromoItems)
+ORG $CC5DE
+SHORT 0x46C0 //nop
+jumpToHack(SplitPromoItemsPrep)
+POP
+
+#include "SplitPromoItems.lyn.event"
+#include "SplitPromoPrepScreen.lyn.event"
+
+
+#define PromoItemEntry(itemID,promoList) "BYTE itemID 0 0 0; POIN promoList"
+#define PromoItemsEnd "WORD 0 0"
+
+ALIGN 4
+PromoItemsList:
+PromoItemEntry(MasterSeal,MasterSealPromoList)
+PromoItemEntry(AnimusSeal,AnimusSealPromoList)
+PromoItemEntry(LunarBrace,LunarBracePromoList)
+PromoItemEntry(SolarBrace,SolarBracePromoList)
+PromoItemsEnd
+
+ALIGN 4
+SplitPromoItemsList:
+BYTE OceanSeal
+BYTE 0
+
+#define PromoListEntry(baseClass,promoClass) "BYTE baseClass promoClass"
+#define PromoListEnd "SHORT 0"
+
+ALIGN 4
+MasterSealPromoList:
+PromoListEntry(Thief,Assass)
+PromoListEntry(Rune,RuneMast)
+PromoListEntry(Merc,Hero)
+PromoListEntry(MercF,HeroF)
+PromoListEntry(Myrm,SwMast)
+PromoListEntry(MyrmF,SwMastF)
+PromoListEntry(Archer,Sniper)
+PromoListEntry(ArcherF,SniperF)
+PromoListEntry(Fighter,Warrior)
+PromoListEntry(FighterF,WarriorF)
+PromoListEntry(Pirate,Berserker)
+PromoListEntry(PirateF,BerserkerF)
+PromoListEntry(Soldier,Halberdier)
+PromoListEntry(SoldierF,HalberdierF)
+
+PromoListEntry(SwdCav,SwdPal)
+PromoListEntry(LncCav,LncPal)
+PromoListEntry(AxeCav,AxePal)
+PromoListEntry(BowCav,BowPal)
+PromoListEntry(SwdCavF,SwdPalF)
+PromoListEntry(LncCavF,LncPalF)
+PromoListEntry(AxeCavF,AxePalF)
+PromoListEntry(BowCavF,BowPalF)
+PromoListEntry(SwdArm,SwdGen)
+PromoListEntry(LncArm,LncGen)
+PromoListEntry(AxeArm,AxeGen)
+PromoListEntry(BowArm,BowWyv)
+
+PromoListEntry(Mage,Sage)
+PromoListEntry(MageF,SageF)
+PromoListEntry(Troub,Valk)
+PromoListEntry(TroubF,ValkF)
+PromoListEntry(Priest,Bishop)
+PromoListEntry(Cleric,BishopF)
+PromoListEntry(LightM,Bishop)
+PromoListEntry(DarkM,Sorc)
+PromoListEntry(Bigle,Bigerle)
+PromoListEntry(DarkF,SorcF)
+
+PromoListEntry(LncWyv,WyvLord)
+PromoListEntry(AxeWyv,WyvLord)
+PromoListEntry(LncPeg,Falco)
+PromoListEntry(SwdPeg,Falco)
+
+PromoListEnd
+
+ALIGN 4
+AnimusSealPromoList:
+PromoListEntry(Thief,LncCav)
+PromoListEntry(LncCav,Pirate)
+PromoListEntry(Pirate,Soldier)
+PromoListEntry(Soldier,Merc)
+PromoListEntry(Merc,Fighter)
+PromoListEntry(Fighter,SwdCav)
+PromoListEntry(SwdCav,Archer)
+PromoListEntry(Archer,AxeCav)
+PromoListEntry(AxeCav,Myrm)
+PromoListEntry(Myrm,BowCav)
+PromoListEntry(BowCav,Thief)
+
+PromoListEntry(LncArm,AxeWyv)
+PromoListEntry(AxeWyv,SwdArm)
+PromoListEntry(SwdArm,LncWyv)
+PromoListEntry(LncWyv,AxeArm)
+PromoListEntry(AxeArm,BowArm)
+PromoListEntry(BowArm,LncArm)
+
+PromoListEntry(LncCavF,TroubF)
+PromoListEntry(TroubF,MercF)
+PromoListEntry(MercF,ArcherF)
+PromoListEntry(ArcherF,LncPeg)
+PromoListEntry(LncPeg,AxeCavF)
+PromoListEntry(AxeCavF,MageF)
+PromoListEntry(MageF,LncCavF)
+
+PromoListEntry(MyrmF,FighterF)
+PromoListEntry(FighterF,SoldierF)
+PromoListEntry(SoldierF,SwdCavF)
+PromoListEntry(SwdCavF,DarkF)
+PromoListEntry(DarkF,PirateF)
+PromoListEntry(PirateF,SwdPeg)
+PromoListEntry(SwdPeg,BowCavF)
+PromoListEntry(BowCavF,Cleric)
+PromoListEntry(Cleric,MyrmF)
+
+PromoListEntry(Mage,DarkM)
+PromoListEntry(DarkM,Troub)
+PromoListEntry(Troub,Bigle)
+PromoListEntry(Bigle,LightM)
+PromoListEntry(LightM,Rune)
+PromoListEntry(Rune,Priest)
+PromoListEntry(Priest,Mage)
+
+PromoListEnd
+
+ALIGN 4
+LunarBracePromoList:
+PromoListEntry(BlairLord,BlairLordX)
+PromoListEnd
+
+ALIGN 4
+SolarBracePromoList:
+PromoListEntry(ZekeLord,ZekeLordX)
+PromoListEnd
+
+#endif // SPLIT_PROMO_ITEMS
+#else
+ERROR Split Promo Items is only for FE8!
+#endif // _FE8_

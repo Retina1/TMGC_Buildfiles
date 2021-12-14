@@ -25,7 +25,7 @@ TurnEventPlayer(0x0,C1Turn3,3)
 TurnEventPlayer(0x0,C1Turn4,4)
 TurnEventPlayer(0x0,C1Turn5,5)
 TurnEventPlayer(0x0,C1Turn6,6)
-TurnEventPlayer(0x3,EndingScene,7)
+TurnEventPlayer(0x3,EndingScene,8)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -75,8 +75,8 @@ UNIT Mevion MercF 0x0 Level(2,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
 UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
-UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe] NeverMoveAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] DropItem 0x0 0x0 0x0 [IronAxe, HandAxe, RedGem] NeverMoveAI
 UNIT
 
 C1Normal:
@@ -92,8 +92,8 @@ UNIT Mevion LncCav 0x0 Level(2,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [Javelin] ChaseO
 UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
 UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
-UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [SteelAxe, HandAxe] NeverMoveAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] DropItem 0x0 0x0 0x0 [SteelAxe, HandAxe, RedGem] NeverMoveAI
 UNIT
 
 C1Hard:
@@ -111,8 +111,8 @@ UNIT Mevion LncCav 0x0 Level(2,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [Javelin] ChaseO
 UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
 UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
-UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [SteelAxe, HandAxe] NeverMoveAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] DropItem 0x0 0x0 0x0 [SteelAxe, HandAxe, RedGem] NeverMoveAI
 UNIT
 
 C1T3:

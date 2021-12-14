@@ -21,13 +21,21 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C3Turn1,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,C3JosefRecruitment,Blair,Josef)
 END_MAIN
 
 LocationBasedEvents:
+Seize(16,1)
+Door(6,9)
+Door(4,11)
+Chest(Speedwings,14,0)
+Chest(Axereaver,3,12)
+Chest(AnimusSeal,18,12)
 END_MAIN
 
 MiscBasedEvents:
@@ -54,6 +62,14 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,21] 0x0 0x0 0x0 0x0 [IronSword, Heal,
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT
 
+C3SamJoins:
+UNIT Sam ArcherF 0x0 Level(2,Ally,0) [6,21] 0x0 0x0 0x1 REDA6R18 [IronBow, Dracoshield] NoAI
+UNIT
+
+C3JosefNPC:
+UNIT Josef LncArm 0x0 Level(7,NPC,0) [9,10] 0x0 0x0 0x0 0x0 [SteelLance, Javelin, Talisman] [0x03,0x03,0x0,0x0]
+UNIT
+
 C3Easy:
 UNIT Ygstra Ballistician 0x0 Level(5,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Ygstra Ballistician 0x0 Level(5,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
@@ -74,9 +90,24 @@ ALIGN 4
 BeginningScene:
 LoadUnitsByDifficulty(C3Easy,C3Normal,C3Hard)
 LOAD1 0x0 C3Units
+LOAD1 0x0 C3JosefNPC
 ENUN
 GotoPrepScreen
 ENDA
+
+C3Turn1:
+EVBIT_T 12
+LOAD1 0x0 C3SamJoins
+ENUN
+MUSC 0x30
+Text(Ch3_Sam_Joins)
+EndEvent
+
+C3JosefRecruitment:
+MUSC 0x30
+Text(Ch3_Josef_Talk)
+TurnAlly(Josef)
+EndEvent
 
 EndingScene:
 MNC2 Chapter4

@@ -74,6 +74,9 @@ SongTable(0x2D,Conversation,1)
 #include "HiddenVillage.event"
 SongTable(0x2C,MachinaVillage,1)
 
+#include "Palace.event"
+SongTable(0x2B,Palace,1)
+
 //sound room completion rate
 PUSH
 ORG $AF69C

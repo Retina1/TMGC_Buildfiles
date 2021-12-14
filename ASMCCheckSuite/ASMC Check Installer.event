@@ -1,0 +1,120 @@
+//All of these expect a char ID in memory slot 1. You can use 0xFFFF to use the active unit's ID.
+//Check item looks for item ID in memory slot 2.
+
+ALIGN 4
+//check level
+MESSAGE check_level at currentOffset
+CheckLevelASMC:
+#incbin "check_level.dmp"
+ALIGN 4
+//check experience
+CheckExperienceASMC:
+#incbin "check_experience.dmp"
+ALIGN 4
+//check max hp
+CheckMaxHPASMC:
+#incbin "check_maxhp.dmp"
+ALIGN 4
+//check current hp
+CheckCurrentHPASMC:
+#incbin "check_currenthp.dmp"
+ALIGN 4
+//check strength
+CheckStrengthASMC:
+#incbin "check_strength.dmp"
+ALIGN 4
+//check skill
+CheckSkillASMC:
+#incbin "check_skill.dmp"
+ALIGN 4
+//check speed
+CheckSpeedASMC:
+#incbin "check_speed.dmp"
+ALIGN 4
+//check defense
+CheckDefenseASMC:
+#incbin "check_defense.dmp"
+ALIGN 4
+//check resistance
+CheckResistanceASMC:
+#incbin "check_resistance.dmp"
+ALIGN 4
+//check constitution
+CheckConstitutionASMC:
+#incbin "check_constitution.dmp"
+ALIGN 4
+//check movement
+CheckMovementASMC:
+#incbin "check_movement.dmp"
+ALIGN 4
+//check for having item
+CheckHasItemASMC:
+#incbin "check_hasitem.dmp"
+ALIGN 4
+//check sword rank
+CheckSwordRankASMC:
+#incbin "check_swordrank.dmp"
+ALIGN 4
+//check lance rank
+CheckLanceRankASMC:
+#incbin "check_lancerank.dmp"
+ALIGN 4
+//check axe rank
+CheckAxeRankASMC:
+#incbin "check_axerank.dmp"
+ALIGN 4
+//check bow rank
+CheckBowRankASMC:
+#incbin "check_bowrank.dmp"
+ALIGN 4
+//check staff rank
+CheckStaffRankASMC:
+#incbin "check_staffrank.dmp"
+ALIGN 4
+//check anima rank
+CheckAnimaRankASMC:
+#incbin "check_animarank.dmp"
+ALIGN 4
+//check light rank
+CheckLightRankASMC:
+#incbin "check_lightrank.dmp"
+ALIGN 4
+//check dark rank
+CheckDarkRankASMC:
+#incbin "check_darkrank.dmp"
+ALIGN 4
+//check status effect
+CheckStatusEffectASMC:
+#incbin "check_statuseffect.dmp"
+ALIGN 4
+//check status effect duration
+CheckStatusDurationASMC:
+#incbin "check_statusduration.dmp"
+ALIGN 4
+//check mag (str/mag split; 0x3A)
+CheckMagicASMC:
+#incbin "check_mag.dmp"
+
+#define CheckLevel(Character) "SVAL 0x1 Character; ASMC CheckLevelASMC|1"
+#define CheckExperience(Character) "SVAL 0x1 Character; ASMC CheckExperienceASMC|1"
+#define CheckMaxHP(Character) "SVAL 0x1 Character; ASMC CheckMaxHPASMC|1"
+#define CheckCurrentHP(Character) "SVAL 0x1 Character; ASMC CheckCurrentHPASMC|1"
+#define CheckStrength(Character) "SVAL 0x1 Character; ASMC CheckLStrengthASMC|1"
+#define CheckSkill(Character) "SVAL 0x1 Character; ASMC CheckSkillASMC|1"
+#define CheckSpeed(Character) "SVAL 0x1 Character; ASMC CheckSpeedASMC|1"
+#define CheckDefense(Character) "SVAL 0x1 Character; ASMC CheckDefenseASMC|1"
+#define CheckResistance(Character) "SVAL 0x1 Character; ASMC CheckResistanceASMC|1"
+#define CheckConstitution(Character) "SVAL 0x1 Character; ASMC CheckConstitutionASMC|1"
+#define CheckMovement(Character) "SVAL 0x1 Character; ASMC CheckMovementASMC|1"
+#define CheckInventory(Character,Item) "SVAL 0x1 Character; SVAL 0x2 Item; ASMC CheckHasItemASMC|1"
+#define CheckSwordRank(Character) "SVAL 0x1 Character; ASMC CheckSwordRankASMC|1"
+#define CheckLanceRank(Character) "SVAL 0x1 Character; ASMC CheckLanceRankASMC|1"
+#define CheckAxeRank(Character) "SVAL 0x1 Character; ASMC CheckAxeRankASMC|1"
+#define CheckBowRank(Character) "SVAL 0x1 Character; ASMC CheckBowRankASMC|1"
+#define CheckStaffRank(Character) "SVAL 0x1 Character; ASMC CheckStaffRankASMC|1"
+#define CheckAnimaRank(Character) "SVAL 0x1 Character; ASMC CheckAnimaRankASMC|1"
+#define CheckLightRank(Character) "SVAL 0x1 Character; ASMC CheckLightRankASMC|1"
+#define CheckDarkRank(Character) "SVAL 0x1 Character; ASMC CheckDarkRankASMC|1"
+#define CheckStatusEffect(Character) "SVAL 0x1 Character; ASMC CheckStatusEffectASMC|1"
+#define CheckStatusDuration(Character) "SVAL 0x1 Character; ASMC CheckStatusDurationASMC|1"
+//#define CheckMagic(Character) "SVAL 0x1 Character; ASMC CheckMagicASMC|1"

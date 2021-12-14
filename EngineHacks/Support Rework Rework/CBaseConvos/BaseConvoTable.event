@@ -25,6 +25,38 @@
 			bg(0x3)
 			text(C1_Blair_Arin_Base)
 			baseSupport(Blair,Arin,CSupport)
+	Chapter(Chapter2)
+		Entry
+			name(C2_Companions_Select)
+			bg(0x3)
+			importance(3)
+			text(C2_Companions)
+			item(Vulnerary,Blair)
+			eventID(0x127)
+		Entry
+			name(C2_Blair_Kenneth_Base_Select)
+			bg(0x3)
+			text(C2_Blair_Kenneth)
+			baseSupport(Blair,Kenneth,CSupport)
+	Chapter(Chapter3)
+		Entry
+			name(C3_Captured_Select)
+			bg(0x3)
+			importance(3)
+			text(C1_Base_Convo_Intro)
+			item(Vulnerary,Stefan)
+			eventID(0x126)
+		Entry
+			name(C3_Horse_Select)
+			bg(0x3)
+			importance(1)
+			text(C3_Horses)
+			eventID(0x125)
+		Entry
+			name(C3_Kenneth_Natasia_Base_Select)
+			bg(0x3)
+			text(C3_Kenneth_Natasia)
+			baseSupport(Kenneth,Natasia,CSupport)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

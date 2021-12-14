@@ -1,3 +1,6 @@
+#ifndef tilesetAnimation
+    #define tilesetAnimation(speed, size, pointer)    "BYTE speed 0; SHORT size; POIN pointer"
+#endif
 
 ALIGN 4
 DalstTownObjects:
@@ -35,6 +38,43 @@ ALIGN 4
 CastleTiles:
 #incext compress "Tilesets/Castle.mapchip_config"
 
+ALIGN 4
+CastleFrame1:
+#incbin "CastleAnim/CastleFrame1.dmp"
+ALIGN 4
+CastleFrame2:
+#incbin "CastleAnim/CastleFrame2.dmp"
+ALIGN 4
+CastleFrame3:
+#incbin "CastleAnim/CastleFrame3.dmp"
+ALIGN 4
+CastleFrame4:
+#incbin "CastleAnim/CastleFrame4.dmp"
+ALIGN 4
+CastleFrame5:
+#incbin "CastleAnim/CastleFrame5.dmp"
+ALIGN 4
+CastleFrame6:
+#incbin "CastleAnim/CastleFrame6.dmp"
+ALIGN 4
+CastleFrame7:
+#incbin "CastleAnim/CastleFrame7.dmp"
+ALIGN 4
+CastleFrame8:
+#incbin "CastleAnim/CastleFrame8.dmp"
+ALIGN 4
+CastleAnims:
+tilesetAnimation(0xB,0x800,CastleFrame1)
+tilesetAnimation(0xB,0x800,CastleFrame2)
+tilesetAnimation(0xB,0x800,CastleFrame3)
+tilesetAnimation(0xB,0x800,CastleFrame4)
+tilesetAnimation(0xB,0x800,CastleFrame5)
+tilesetAnimation(0xB,0x800,CastleFrame6)
+tilesetAnimation(0xB,0x800,CastleFrame7)
+tilesetAnimation(0xB,0x800,CastleFrame8)
+WORD 0 0
+
+
 EventPointerTable(0x3, DalstTownObjects)
 EventPointerTable(0x2, DalstTownPalette)
 EventPointerTable(0x1, TownTiles)
@@ -46,3 +86,4 @@ EventPointerTable(0x8, FieldTiles)
 EventPointerTable(0x11, LowlandsCastleObjects)
 EventPointerTable(0x12, LowlandsCastlePalette)
 EventPointerTable(0x13, CastleTiles)
+EventPointerTable(0x17, CastleAnims)

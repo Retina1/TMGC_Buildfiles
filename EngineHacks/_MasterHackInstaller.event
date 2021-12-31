@@ -65,6 +65,35 @@ POP
 
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 
+// thief vision set to 0
+PUSH
+ORG 0x0178C2
+BYTE 0x00
+POP
+
+//no extramap display, no creature campaign
+PUSH
+ORG $96B46
+BYTE 0x00 0x00 0x00 0x20
+ORG $AB944
+BYTE 0x00 0x00 0x00 0x20
+POP
+
+//multiple s ranks
+PUSH
+ORG $2C150
+BYTE 0x11 0xE0
+POP
+
+//prep store pricing
+PUSH
+ORG $B5237
+BYTE 0xE0
+POP
+
+//hand axe anims
+#include "handaxs_wildcard/Installer.event"
+
 //promo rework stuff
 #include "SplitPromoItems/SplitPromoItems.event"
 
@@ -134,11 +163,7 @@ POP
   //hit bonus
   #include "hit_mashimashi/hit_mashimashi_installer.event"
   
-//  #include "FixedAutolevels.event"
-PUSH
-ORG $2B9C4
-BYTE 0x48 0x43 0x32 0x30 0x64 0x21 0x01 0x4B 0x18 0x47 0xC0 0x46 0x7D 0x16 0x0D 0x08
-POP
+   #include "FixedAutolevels.event"
   
   #include "CritChange/CritChange.txt"
   
@@ -331,3 +356,11 @@ POP
   
   //support rework, base convos
 #include "Support Rework Rework/SupportRework.event"
+
+//aid calcs
+PUSH
+ORG $11Ce50c
+BYTE 0x18
+ORG $11ce560
+BYTE 0x00
+POP

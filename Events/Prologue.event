@@ -138,6 +138,8 @@ CGText(Prologue_Narration)
 MUSC 0x0
 FADI 0x3c
 CleanText(0x3,Prologue_Opening)
+ENUT AllUnitsMustEscapeFlag
+ENUT LordMustEscapeLastFlag
 EndEvent
 
 EndingScene:
@@ -151,7 +153,7 @@ MUSC 0x31
 Text(0x3,Prologue_Ending)
 LABEL 0x2
 MUSC 0x0
-MNC2 Chapter1
+MoveToChapter(Chapter1)
 EndEvent
 
 KennethCometh:

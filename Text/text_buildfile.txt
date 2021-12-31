@@ -29,6 +29,9 @@ the faint of heart.[N]
 Enemies are stronger[N]
 and more plentiful.[X]
 
+# 0x01CD
+Swamp[X]
+
 # 0x0211
 3 years ago[.][X]
 
@@ -80,11 +83,19 @@ Triangle attack![A][X]
 
 #include "Chapter Text/Chapter3.txt"
 
+#include "Chapter Text/Chapter4.txt"
+
+#include "Chapter Text/Chapter5.txt"
+
 #include "Base Convos and Supports/C1BaseConvos.txt"
 
 #include "Base Convos and Supports/C2BaseConvos.txt"
 
 #include "Base Convos and Supports/C3BaseConvos.txt"
+
+#include "Base Convos and Supports/C4BaseConvos.txt"
+
+#include "Base Convos and Supports/C5BaseConvos.txt"
 
 #0x3A LearnedSkillText
 //first text ID in the free block
@@ -95,11 +106,39 @@ Learned  [X]
 #0x577
 Base[X]
 
+# 0x057A ^
+Select who to deploy.[N]
+Blair must always be deployed,[N]
+and certain maps require[N]
+other units to be deployed.[X]
+
+# 0x057C ^
+Manage your units' items.[N]
+An armory with some basic[N]
+equipment is also available.[X]
+
+# 0x057D ^
+No new base conversations are[N]
+available at this time.[X]
+
 # 0x057E ^
 Read any Base Conversations.[N]
 These can have many effects,[N]
 such as increasing support[N]
 levels and granting items.[X]
+
+# 0x0580
+View the map and[N]
+reposition allies.[N]
+You can also check[N]
+enemy formations and[N]
+shop inventories.[X]
+
+# 0x0581
+Save any changes.[.][NL]
+Choose Restart Chapter[NL]
+from the main menu to[N]
+continue your game.[X]
 
 #include "statscreen_text.txt"
 
@@ -212,3 +251,10 @@ a skill when used.[X]
 #include "ChapterNarrations.txt"
 
 #include "DeathQuotes.txt"
+
+##TorchName
+ Torch[X]
+
+##TorchDesc
+Light or extinguish[N]
+a torch's flame.[X]

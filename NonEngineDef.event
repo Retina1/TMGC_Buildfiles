@@ -1,6 +1,3 @@
-//PROTECT 0x2BD50
-//PROTECT 0x736DA
-
 #define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
 #define SystemText(textid) "TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
 #define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND;"
@@ -24,27 +21,50 @@
 #define Cassius 0x0B
 #define Rachael 0x0C
 
+#define Johan 0x26
+
+#define JohanC2 0x95
+
 //item defs
 #define Nightfall 0x46
 #define GildedSword 0x81
 #define GildedLance 0x82
 #define GildedAxe 0x83
 #define GildedBow 0x84
+#define MasterSword 0xad
+#define MasterLance 0xae
+#define MasterAxe 0xaf
+#define MasterBow 0xb0
 #define Yoink 0x5
 #define MiniBallista 0x37
 #define LevinSword 0xA
 #define Awaken 0x78
 #define AnimusSeal 0x64
+#define WrathStaff 0x6
 
 
 //generic defs
 #define DalstRebel 0x80
 #define Mevion 0x81
 #define Ygstra 0x82
+#define ElbaCor 0x83
+#define Opistia 0x84
+#define Holanis 0x87
+#define Lowlands 0x85
+#define Loile 0x89
+#define Pirates 0x86
+#define Dalst 0x88
+#define Aercolyn 0x8a
 
 //boss defs
+#define Lazarus 0x43
+
 #define Davelarn 0x68
 #define Marque 0x46
+#define Brentson 0x47
+#define Helga 0x48
+#define Starque 0x49
+#define Mitchell 0x4a
 
 
 //Chapter defs
@@ -53,6 +73,9 @@
 #define Chapter2 0x2
 #define Chapter3 0x3
 #define Chapter4 0x4
+#define Chapter5 0x5
+#define Interlude1 0x26
+#define Chapter6 0x6
 
 //class defs
 #define BlairLord 0x2

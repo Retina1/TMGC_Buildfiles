@@ -1,0 +1,112 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x19,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C4Units C4Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,C4Turn2,2)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Escape(0,2)
+Escape(0,3)
+Escape(0,4)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C4Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [24,8] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,6] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,7] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,9] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,7] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,8] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,9] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,10] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C4Peggy:
+UNIT Peggy Cleric 0x0 Level(4,Ally,0) [15,5] 0x0 0x0 0x1 REDA17R6 [Heal, WrathStaff] NoAI
+UNIT
+
+C4Easy:
+UNIT Mevion Merc 0x0 Level(3,Enemy,0) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT
+
+C4Normal:
+UNIT Mevion Merc 0x0 Level(3,Enemy,0) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT
+
+C4Hard:
+UNIT Mevion Merc 0x0 Level(3,Enemy,0) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+LoadUnitsByDifficulty(C4Easy,C4Normal,C4Hard)
+LOAD1 0x0 C4Units
+GotoPrepScreen
+ENDA
+
+EndingScene:
+MoveToChapter(0x5)
+ENDA
+
+C4Turn2:
+EVBIT_T 9
+LOAD1 0x1 C4Peggy
+ENUN
+MUSC 0x30
+Text(C4PeggyJoin)
+MUSC 0x0
+EndEvent
+
+/*keeping this here for future reference until comfortable with torch based stuff
+C4TurnTorchTrap:
+GetTrapExt1At(21,7)
+BEQ 0x1 0xC 0x0
+Text(C4PeggyJoin)
+LOAD1 0x0 C4TorchTrapUnits
+GOTO 0x2
+LABEL 0x1
+ENUF 0xA
+LABEL 0x2
+EndEvent*/
+
+MESSAGE Events end at offset CURRENTOFFSET

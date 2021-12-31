@@ -4,24 +4,39 @@
 #define SteelSwordIcon 0x2
 #define SilverSwordIcon 0x3
 #define GildedSwordIcon 0x93
+#define MasterSwordIcon 0xd1
 #define LevinSwordIcon 0x9
+#define LancereaverIcon 0x11
+#define ArmorslayerIcon 0xd
+#define WyrmslayerIcon 0xe
+#define ZanbatoIcon 0x12
 
 #define IronLanceIcon 0x13
 #define SteelLanceIcon 0x15
 #define SilverLanceIcon 0x16
 #define GildedLanceIcon 0x94
+#define MasterLanceIcon 0xd2
 #define JavelinIcon 0x1C
+#define AxereaverIcon 0x1d
+#define HorseslayerIcon 0x1a
 
 #define IronAxeIcon 0x1e
 #define SteelAxeIcon 0x1f
 #define SilverAxeIcon 0x20
 #define GildedAxeIcon 0x95
+#define MasterAxeIcon 0xd3
 #define HandAxeIcon 0x27
+#define HammerIcon 0x25
+#define SwordreaverIcon 0x29
+#define HalberdIcon 0x24
 
 #define IronBowIcon 0x2b
 #define SteelBowIcon 0x2c
 #define SilverBowIcon 0x2d
 #define GildedBowIcon 0x96
+#define MasterBowIcon 0xd4
+
+#define MiniBallistaIcon 0x35
 
 #define FireIcon 0x36
 #define ThunderIcon 0x37
@@ -33,8 +48,14 @@
 #define NightfallIcon 0x44
 
 #define HealIcon 0x49
+#define WrathStaffIcon 0xd6
 
 #define AwakenIcon 0xb3
+
+#define MasterSealIcon 0xd9
+#define AnimusSealIcon 0x62
+
+#define SpiritDustIcon 0xc9
 
 ALIGN 4
 NewItemIcons:
@@ -51,13 +72,28 @@ ItemIconEntry(SteelSwordIcon)
 #incbin "Swords/Steel Sword.dmp"
 ALIGN 4
 ItemIconEntry(SilverSwordIcon)
-#incbin "Swords/Silver Sword.dmp"
+#incbin "Swords/Silver Sword(new).dmp"
 ALIGN 4
 ItemIconEntry(GildedSwordIcon)
 #incbin "Swords/Crystal Sword.dmp"
 ALIGN 4
 ItemIconEntry(LevinSwordIcon)
 #incbin "{Zelix} LevinSword.dmp"
+ALIGN 4
+ItemIconEntry(LancereaverIcon)
+#incbin "Swords/Lancereaver.dmp"
+ALIGN 4
+ItemIconEntry(ArmorslayerIcon)
+#incbin "Swords/Armorslayer.dmp"
+ALIGN 4
+ItemIconEntry(WyrmslayerIcon)
+#incbin "Swords/Wyrmslayer 2.dmp"
+ALIGN 4
+ItemIconEntry(ZanbatoIcon)
+#incbin "Swords/Zanbato.dmp"
+ALIGN 4
+ItemIconEntry(MasterSwordIcon)
+#incbin "MasterSword(LisandraBrave).dmp"
 
 ALIGN 4
 ItemIconEntry(IronLanceIcon)
@@ -74,6 +110,15 @@ ItemIconEntry(GildedLanceIcon)
 ALIGN 4
 ItemIconEntry(JavelinIcon)
 #incbin "Lances/Javelin.dmp"
+ALIGN 4
+ItemIconEntry(AxereaverIcon)
+#incbin "Lances/Axereaver.dmp"
+ALIGN 4
+ItemIconEntry(MasterLanceIcon)
+#incbin "MasterLance(LisandraBrave).dmp"
+ALIGN 4
+ItemIconEntry(HorseslayerIcon)
+#incbin "Lances/Horseslayer.dmp"
 
 ALIGN 4
 ItemIconEntry(IronAxeIcon)
@@ -90,6 +135,18 @@ ItemIconEntry(GildedAxeIcon)
 ALIGN 4
 ItemIconEntry(HandAxeIcon)
 #incbin "Axes/Hand Axe.dmp"
+ALIGN 4
+ItemIconEntry(HammerIcon)
+#incbin "Axes/Hammer.dmp"
+ALIGN 4
+ItemIconEntry(HalberdIcon)
+#incbin "Axes/Halberd.dmp"
+ALIGN 4
+ItemIconEntry(SwordreaverIcon)
+#incbin "Axes/Swordreaver.dmp"
+ALIGN 4
+ItemIconEntry(MasterAxeIcon)
+#incbin "MasterAxe(LisandraBrave).dmp"
 
 ALIGN 4
 ItemIconEntry(IronBowIcon)
@@ -103,6 +160,9 @@ ItemIconEntry(SilverBowIcon)
 ALIGN 4
 ItemIconEntry(GildedBowIcon)
 #incbin "Bows/Crystal Longbow.dmp"
+ALIGN 4
+ItemIconEntry(MasterBowIcon)
+#incbin "MasterBow(LisandraBrave).dmp"
 
 ALIGN 4
 ItemIconEntry(FireIcon)
@@ -131,8 +191,28 @@ ItemIconEntry(HealIcon)
 #incbin "Staves/Old(bad)/Heal.dmp"
 
 ALIGN 4
+ItemIconEntry(WrathStaffIcon)
+#incbin "WrathStaff.dmp"
+
+ALIGN 4
 ItemIconEntry(AwakenIcon)
 #incbin "Tomes/Light/Nova.dmp"
+
+ALIGN 4
+ItemIconEntry(MiniBallistaIcon)
+#incbin "MiniBallista.dmp"
+
+ALIGN 4
+ItemIconEntry(MasterSealIcon)
+#incbin "{Purple} Master Seal.dmp"
+
+ALIGN 4
+ItemIconEntry(AnimusSealIcon)
+#incbin "{Seal} {SacredWar} Item 65.dmp"
+
+ALIGN 4
+ItemIconEntry(SpiritDustIcon)
+#incbin "{Zelix} icon 135.dmp"
 
 // End of icons 
 POP 

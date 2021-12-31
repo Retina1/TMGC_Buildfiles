@@ -39,6 +39,26 @@ CastleTiles:
 #incext compress "Tilesets/Castle.mapchip_config"
 
 ALIGN 4
+MevionSwampObjects:
+#incbin "Tilesets/Swamps.dmp"
+
+ALIGN 4
+MevionSwampPalette:
+#incbin "Tilesets/Swamps.pal.bin"
+
+/*ALIGN 4
+MevionSwampObjects:
+#incext Png2Dmp "Tilesets/MevionSwamp.png" --lz77
+
+ALIGN 4
+MevionSwampPalette:
+#incext Png2Dmp "Tilesets/MevionSwamp.png" --palette-only old palette stuff?*/
+
+ALIGN 4
+SwampTiles:
+#incext compress "Tilesets/Swamp.mapchip_config"
+
+ALIGN 4
 CastleFrame1:
 #incbin "CastleAnim/CastleFrame1.dmp"
 ALIGN 4
@@ -83,7 +103,46 @@ EventPointerTable(0xA, DalstFieldObjects)
 EventPointerTable(0x9, DalstFieldPalette)
 EventPointerTable(0x8, FieldTiles)
 
+EventPointerTable(0x1A, MevionSwampObjects)
+EventPointerTable(0x1B, MevionSwampPalette)
+EventPointerTable(0x1C, SwampTiles)
+
 EventPointerTable(0x11, LowlandsCastleObjects)
 EventPointerTable(0x12, LowlandsCastlePalette)
 EventPointerTable(0x13, CastleTiles)
 EventPointerTable(0x17, CastleAnims)
+
+#define MinimapTileTable $A7A38
+#define TileHandler_Plain $A7B3C
+#define TileHandler_Road $A7B40
+#define TileHandler_VillageHouse $A7B4C
+#define TileHandler_ArmoryVendor $A7B50
+#define TileHandler_Arena $A7B54
+#define TileHandler_Fort $A7B58
+#define TileHandler_Gate $A7B5C
+#define TileHandler_Forest $A7B60
+#define TileHandler_Thicket $A7B64
+#define TileHandler_SandDesert $A7B68
+#define TileHandler_River $A7B6C
+#define TileHandler_Mntn $A7B78
+#define TileHandler_Peak $A7B7C
+#define TileHandler_Bridge $A7B80
+#define TileHandler_Water $A7B8A
+#define TileHandler_SeaLake $A7B96
+#define TileHandler_Floor $A7BA2
+#define TileHandler_Pillar $A7BA6
+#define TileHandler_Door $A7BAA
+#define TileHandler_Throne $A7BB4
+#define TileHandler_Chest $A7BB8
+#define TileHandler_StoneRuins $A7BBC
+#define TileHandler_Cliff $A7BC4
+#define TileHandler_Ballista $A7BD0
+#define TileHandler_Flat $A7BD4
+#define TileHandler_Stairs $A7BD8
+#define TileHandler_Walls $A7BE2
+#define TileHandler_Valley $A7BEE
+#define TileHandler_Blank $A7BF2
+
+#define SetMinimapTileHandler(tileType, pointer) "PUSH; ORG MinimapTileTable+(tileType*4); POIN pointer; POP"
+
+SetMinimapTileHandler(0x9,TileHandler_Water)

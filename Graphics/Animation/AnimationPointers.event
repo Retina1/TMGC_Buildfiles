@@ -37,14 +37,17 @@
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define EndAnim "WORD 0x0 0x0"
 
-#include "FighterM(GlenWing)\Axe Installer.event"
-#include "FighterM(GlenWing)\Handaxe Installer.event"
-#include "FighterM(GlenWing)\Unarmed Installer.event"
-#include "FighterF(Pikmin)\Axe Installer.event"
-#include "FighterF(Pikmin)\Handaxe Installer.event"
-#include "FighterF(Pikmin)\Unarmed Installer.event"
+#include "FighterM(LeoLink)\Axe Installer.event"
+#include "FighterM(LeoLink)\Handaxe Installer.event"
+#include "FighterM(LeoLink)\Unarmed Installer.event"
+#include "FighterF(BlackMage)\Axe Installer.event"
+#include "FighterF(BlackMage)\Handaxe Installer.event"
+#include "FighterF(BlackMage)\Unarmed Installer.event"
 
 #include "Blair(L95)\Magic Installer.event"
+
+#include "MageF(LisandraBrave)\Magic Installer.event"
+#include "MageM(GabrielKnight)\Magic Installer.event"
 
 #include "Hunter(MeatOfJustice)\Bow Installer.event"
 #include "Hunter(MeatOfJustice)\Unarmed Installer.event"
@@ -97,20 +100,36 @@
 #include "DarkM(Temp)\Magic Installer.event"
 #include "DarkF(MarkyJoe)\Magic Installer.event"
 
+#include "Desmond(Nuramon)\Lance Installer.event"
+#include "Desmond(Nuramon)\Axe Installer.event"
+#include "Desmond(Nuramon)\Handaxe Installer.event"
+#include "Desmond(Nuramon)\Unarmed Installer.event"
+
+#include "Wyvern\Lance Installer.event"
+#include "Wyvern\Axe Installer.event"
+#include "Wyvern\Handaxe Installer.event"
+#include "Wyvern\Unarmed Installer.event"
+
+#include "Ballista(Spud)\Bow Installer.event"
+
+ALIGN 4
+MageMAnims:
+MagicAnim(0x6b)
+EndAnim
+
+ALIGN 4
+MageFAnims:
+MagicAnim(0x6c)
+EndAnim
+
 ALIGN 4
 DarkMAnims:
-AnimaAnim(0x75)
-LightAnim(0x75)
-DarkAnim(0x75)
-UnarmedAnim(0x75)
+MagicAnim(0x75)
 EndAnim
 
 ALIGN 4
 DarkFAnims:
-AnimaAnim(0x76)
-LightAnim(0x76)
-DarkAnim(0x76)
-UnarmedAnim(0x76)
+MagicAnim(0x76)
 EndAnim
 
 ALIGN 4
@@ -182,10 +201,7 @@ EndAnim
 
 ALIGN 4
 BlairAnims:
-AnimaAnim(0x03)
-LightAnim(0x03)
-DarkAnim(0x03)
-UnarmedAnim(0x03)
+MagicAnim(0x03)
 EndAnim
 
 ALIGN 4
@@ -199,6 +215,27 @@ ALIGN 4
 BruiserAnims:
 SwordAnim(0xB1)
 UnarmedAnim(0xB2)
+EndAnim
+
+ALIGN 4
+DesmondAnims:
+LanceAnim(0x62)
+AxeAnim(0x63)
+HandAxeAnim(0x64)
+UnarmedAnim(0x65)
+EndAnim
+
+ALIGN 4
+WyvernAnims:
+LanceAnim(0x58)
+AxeAnim(0x59)
+HandAxeAnim(0x5a)
+UnarmedAnim(0x5b)
+EndAnim
+
+ALIGN 4
+BallistaAnims:
+BowAnim(0xA0)
 EndAnim
 
 ALIGN 4

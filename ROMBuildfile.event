@@ -59,6 +59,12 @@
 	BYTE 0x01
 	POP
 	
+	//stronger nm promoted dudes
+	PUSH
+	ORG $37B51
+	BYTE 0xE0
+	POP
+	
 	//cap changing
 	PUSH
 	/*luck cap- may change

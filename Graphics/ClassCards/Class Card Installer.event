@@ -19,6 +19,11 @@
 #define FighterFCard 0xa6
 #define ArcherMCard 0x78
 #define ArcherFCard 0xa7
+#define BallistCard 0x92
+#define AxeWyvCard 0x93
+#define MageMCard 0x7c
+#define MageFCard 0xa8
+#define TroubCard 0x83
 
 ALIGN 4
 
@@ -122,6 +127,31 @@ ArcherFPortrait:
 ArcherFPortraitPalette:
 #incbin "ArcherFPalette.dmp"
 
+BallistPortrait:
+#incbin "Ballist.dmp"
+BallistPortraitPalette:
+#incbin "BallistPalette.dmp"
+
+AxeWyvPortrait:
+#incbin "AxeWyv.dmp"
+AxeWyvPortraitPalette:
+#incbin "AxeWyvPalette.dmp"
+
+MageMPortrait:
+#incbin "MageM.dmp"
+MageMPortraitPalette:
+#incbin "MageMPalette.dmp"
+
+MageFPortrait:
+#incbin "MageF.dmp"
+MageFPortraitPalette:
+#incbin "MageFPalette.dmp"
+
+TroubPortrait:
+#incbin "Troub.dmp"
+TroubPortraitPalette:
+#incbin "TroubPalette.dmp"
+
 setCardEntry(HunterCard,HunterPortrait,HunterPortraitPalette)
 setCardEntry(DeserterCard,DeserterPortrait,DeserterPortraitPalette)
 setCardEntry(BruiserCard,BruiserPortrait,BruiserPortraitPalette)
@@ -142,3 +172,8 @@ setCardEntry(FighterMCard,FighterMPortrait,FighterMPortraitPalette)
 setCardEntry(FighterFCard,FighterFPortrait,FighterFPortraitPalette)
 setCardEntry(ArcherMCard,ArcherMPortrait,ArcherMPortraitPalette)
 setCardEntry(ArcherFCard,ArcherFPortrait,ArcherFPortraitPalette)
+setCardEntry(BallistCard,BallistPortrait,BallistPortraitPalette)
+setCardEntry(AxeWyvCard,AxeWyvPortrait,AxeWyvPortraitPalette)
+setCardEntry(MageMCard,MageMPortrait,MageMPortraitPalette)
+setCardEntry(MageFCard,MageFPortrait,MageFPortraitPalette)
+setCardEntry(TroubCard,TroubPortrait,TroubPortraitPalette)

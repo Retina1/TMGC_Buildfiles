@@ -22,6 +22,10 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C3Turn1,1)
+TurnEventPlayer(0x0,C3Turn6,6)
+TurnEventPlayer(0x0,C3Turn13,13)
+TurnEventPlayer(0x15,C3DoorTrap2,1,255)
+TurnEventPlayer(0x14,C3DoorTrap,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -31,12 +35,26 @@ END_MAIN
 
 LocationBasedEvents:
 Seize(16,1)
-Door(6,9)
+Door(0x13,6,9)
 Door(4,11)
 Chest(Speedwings,14,0)
 Chest(Axereaver,3,12)
 Chest(AnimusSeal,18,12)
+Village(0x8,C3Village,16,16)
+Armory(C3Armory,15,19)
+Vendor(C3Vendor,14,18)
 END_MAIN
+
+ALIGN 4
+C3Armory:
+SHLI IronSword SteelSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow
+BYTE 0x0 0x0
+ALIGN 4
+
+C3Vendor:
+SHLI Fire Thunder Flux Nightfall Heal Mend Vulnerary PureWater
+BYTE 0x0 0x0
+ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
@@ -73,16 +91,111 @@ UNIT
 C3Easy:
 UNIT Ygstra Ballistician 0x0 Level(5,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Ygstra Ballistician 0x0 Level(5,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
+UNIT Ygstra LncCavF 0x0 Level(3,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronLance,Vulnerary] NoAI
+UNIT Ygstra Soldier 0x0 Level(4,Enemy,1) [8,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra Soldier 0x0 Level(4,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra SwdArm 0x0 Level(4,Enemy,1) [8,14] 0x0 0x0 0x0 0x0 [SteelSword] NeverMoveAI
+UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [9,14] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra SwdArm 0x0 Level(4,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [SteelSword] NeverMoveAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [18,18] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Swordreaver] ChaseOnceApproachedAI
+UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
+UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [16,4] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
+UNIT Ygstra SwdCav 0x0 Level(3,Enemy,1) [0,2] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Ygstra AxeCav 0x0 Level(3,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
+UNIT Ygstra AxeArm 0x0 Level(3,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [6,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra DarkM 0x0 Level(4,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Lowlands Brigand 0x0 Level(4,Enemy,1) [18,21] 0x0 0x0 0x0 0x0 [HandAxe] BrigandAI
+UNIT Helga FighterF 0x0 Level(12,Enemy,1) [16,1] DropItem 0x0 0x0 0x0 [IronAxe,HandAxe,AngelicRobe] NeverMoveAI
 UNIT
 
 C3Normal:
 UNIT Ygstra Ballistician 0x0 Level(5,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Ygstra Ballistician 0x0 Level(5,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
+UNIT Ygstra LncCav 0x0 Level(3,Enemy,1) [1,16] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Ygstra LncCavF 0x0 Level(3,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [SteelLance,Vulnerary] NoAI
+UNIT Ygstra LncArm 0x0 Level(4,Enemy,1) [8,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra LncArm 0x0 Level(4,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra SwdArm 0x0 Level(4,Enemy,1) [8,14] 0x0 0x0 0x0 0x0 [SteelSword] NeverMoveAI
+UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [9,14] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra SwdArm 0x0 Level(4,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [SteelSword] NeverMoveAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [18,18] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT Ygstra LncWyv 0x0 Level(3,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
+UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Swordreaver] ChaseOnceApproachedAI
+UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [16,4] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
+UNIT Ygstra SwdCav 0x0 Level(3,Enemy,1) [0,2] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Ygstra SwdCavF 0x0 Level(3,Enemy,1) [0,4] 0x0 0x0 0x0 0x0 [Lancereaver] ChaseOnceApproachedAI
+UNIT Ygstra AxeCav 0x0 Level(3,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
+UNIT Ygstra AxeArm 0x0 Level(3,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [6,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra DarkM 0x0 Level(4,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Ygstra DarkF 0x0 Level(3,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Lowlands Brigand 0x0 Level(4,Enemy,1) [18,21] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
+UNIT Helga FighterF 0x0 Level(12,Enemy,1) [16,1] DropItem 0x0 0x0 0x0 [SteelAxe,HandAxe,AngelicRobe] NeverMoveAI
 UNIT
 
 C3Hard:
 UNIT Ygstra Ballistician 0x0 Level(5,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Ygstra Ballistician 0x0 Level(5,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
+UNIT Ygstra LncCav 0x0 Level(3,Enemy,1) [1,16] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Ygstra LncCavF 0x0 Level(3,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [SteelLance,Vulnerary] NoAI
+UNIT Ygstra LncArm 0x0 Level(4,Enemy,1) [8,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra LncArm 0x0 Level(4,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra SwdArm 0x0 Level(4,Enemy,1) [8,14] 0x0 0x0 0x0 0x0 [SteelSword] NeverMoveAI
+UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [9,14] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra SwdArm 0x0 Level(4,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [SteelSword] NeverMoveAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [18,18] 0x0 0x0 0x0 0x0 [Halberd] AttackInRangeAI
+UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT Ygstra LncWyv 0x0 Level(3,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
+UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Swordreaver] ChaseOnceApproachedAI
+UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [SteelSword,Lancereaver] ChaseOnceApproachedAI
+UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [16,4] 0x0 0x0 0x0 0x0 [HandAxe,Hammer] ChaseOnceApproachedAI
+UNIT Ygstra SwdCav 0x0 Level(3,Enemy,1) [0,2] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Ygstra SwdCavF 0x0 Level(3,Enemy,1) [0,4] 0x0 0x0 0x0 0x0 [Lancereaver] ChaseOnceApproachedAI
+UNIT Ygstra AxeCav 0x0 Level(3,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
+UNIT Ygstra AxeArm 0x0 Level(3,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [6,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Ygstra DarkM 0x0 Level(4,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Ygstra DarkF 0x0 Level(3,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [Nightfall] ChaseOnceApproachedAI
+UNIT Lowlands Brigand 0x0 Level(4,Enemy,1) [18,21] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
+UNIT Helga FighterF 0x0 Level(12,Enemy,1) [16,1] DropItem 0x0 0x0 0x0 [HandAxe,SteelAxe,AngelicRobe] NeverMoveAI
+UNIT
+
+C3Thief:
+UNIT Ygstra Thief 0x0 Level(3,Enemy,1) [1,12] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
+UNIT
+
+C3Thief2:
+UNIT Ygstra Thief 0x0 Level(3,Enemy,1) [18,0] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
+UNIT
+
+C3TopHalf:
+UNIT Ygstra BowCav 0x0 Level(4,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Ygstra BowCav 0x0 Level(4,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
+UNIT Ygstra Mage 0x0 Level(4,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [Fire] ChaseOnceApproachedAI
+UNIT Ygstra Myrm 0x0 Level(4,Enemy,1) [18,3] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Ygstra MercF 0x0 Level(4,Enemy,1) [7,15] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Ygstra Soldier 0x0 Level(4,Enemy,1) [11,15] 0x0 0x0 0x0 0x0 [Axereaver] NoAI
+UNIT
+
+C3TopHalf2:
+UNIT Ygstra LncPeg 0x0 Level(4,Enemy,1) [16,12] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Ygstra SwdPeg 0x0 Level(4,Enemy,1) [18,10] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Ygstra LncCav 0x0 Level(4,Enemy,1) [5,21] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra AxeCav 0x0 Level(4,Enemy,1) [6,21] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT
 
 ALIGN 4
@@ -92,15 +205,65 @@ LoadUnitsByDifficulty(C3Easy,C3Normal,C3Hard)
 LOAD1 0x0 C3Units
 LOAD1 0x0 C3JosefNPC
 ENUN
+MUSC 0x4
+SetBackground(0x34)
+FADU 0x3c
+STAL 120
+CGText(Ch3_Narration)
+MUSC 0x0
+FADI 0x3c
+CLEAN
+CHECK_ALIVE Stefan
+BEQ 0x11 0xC 0x0
+CHECK_ALIVE Desmond
+BNE 0x22 0xC 0x0
+LABEL 0x11
+ENUT 0x125
+LABEL 0x22
+CHECK_ALIVE Desmond
+BNE 0x33 0xC 0x0
+ENUT 0x124
+LABEL 0x33
 GotoPrepScreen
 ENDA
 
 C3Turn1:
-EVBIT_T 12
+EVBIT_T 9
 LOAD1 0x0 C3SamJoins
 ENUN
 MUSC 0x30
 Text(Ch3_Sam_Joins)
+EndEvent
+
+C3Turn6:
+LOAD1 0x1 C3Thief
+ENUN
+EndEvent
+
+C3Turn13:
+LOAD1 0x1 C3Thief2
+ENUN
+EndEvent
+
+C3DoorTrap:
+CHECK_EVENTID 0x13
+BNE 0x1 0xC 0x0
+ENUF 0x14
+GOTO 0x2
+LABEL 0x1
+LOAD1 0x1 C3TopHalf
+ENUT 0x16
+LABEL 0x2
+EndEvent
+
+C3DoorTrap2:
+CHECK_EVENTID 0x16
+BNE 0x1 0xC 0x0
+ENUF 0x15
+GOTO 0x2
+LABEL 0x1
+LOAD1 0x1 C3TopHalf2
+LABEL 0x2
 EndEvent
 
 C3JosefRecruitment:
@@ -109,8 +272,20 @@ Text(Ch3_Josef_Talk)
 TurnAlly(Josef)
 EndEvent
 
+C3Village:
+	VillageEventItem(C3VillageText, 0x1, Thunder)
+
 EndingScene:
-MNC2 Chapter4
+MoveToChapter(Chapter4)
 ENDA
+
+ALIGN 4
+EscapePointPointerTable(Chapter3,C3Escape)
+
+ALIGN 4
+C3Escape:
+EscapePoint(1,12, NoMove)
+EscapePoint(18,0, NoMove)
+EscapePointEnd
 
 MESSAGE Events end at offset CURRENTOFFSET

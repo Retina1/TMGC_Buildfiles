@@ -74,7 +74,7 @@
 #define SecretShop(offset,shopX,shopY)          "SHOP 0 offset [shopX,shopY] 0x15"
 #define Chest(item,chestX,chestY)               "CHES 0 item [chestX,chestY] 0x12"
 #define ChestMoney(amountOfMoney,chestX,villY)  "CHES 0 0x76+amountOfMoney*0x10000 [chestX,chestY] 0x12"
-#define Door(doorX,doorY)                       "DOOR 0 [doorX,doorY] 0x10"
+#define Door(doorX,doorY)                   		"DOOR 0 [doorX,doorY] 0x10"
 #define Seize(seizeX,seizeY)                        "LOCA 3 [seizeX,seizeY] 0xF"
 #define Seize(eventID,offset,seizeX,seizeY)         "LOCA eventID offset [seizeX,seizeY] 0xF"
 #endif
@@ -88,6 +88,7 @@
 #define Chest(item,chestX,chestY)               "CHES 0 item [chestX,chestY] 0x14"
 #define ChestMoney(amountOfMoney,chestX,chestY)     "CHES 0 0x77+amountOfMoney*0x10000 [chestX,chestY] 0x14"
 #define Door(doorX,doorY)                       "DOOR 0 [doorX,doorY] 0x12"
+#define Door(eventID,doorX,doorY)               "DOOR eventID [doorX,doorY] 0x12"
 #define Seize(seizeX,seizeY)                        "LOCA 3 [seizeX,seizeY] 0x11"
 #define Seize(eventID,offset,seizeX,seizeY)         "LOCA eventID offset [seizeX,seizeY] 0x11"
 #endif

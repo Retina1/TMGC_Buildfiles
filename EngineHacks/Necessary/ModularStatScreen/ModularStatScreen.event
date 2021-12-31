@@ -90,8 +90,8 @@
     ORG $2BA28
       jumpToHack(Write_Growths_To_Battle_Struct)
 
-    ORG $2B9C4
-      jumpToHack(Enemy_Autolevel)
+  /*  ORG $2B9C4
+      jumpToHack(Enemy_Autolevel)*/
 
     ORG $17E98
       callHack_r3(New_Unit_Exp)
@@ -268,10 +268,10 @@
   Class_Level_Cap_Table:
     #incbin "Display Growths Options/Class_Level_Cap_Table.dmp"
 */
-  ALIGN 4
+  /*ALIGN 4
   Enemy_Autolevel:
     #incbin "asm/Enemy_Autolevel.dmp"
-    WORD Growth_Options
+    WORD Growth_Options*/
 
   ALIGN 4
   New_Unit_Exp:

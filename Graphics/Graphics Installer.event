@@ -9,8 +9,12 @@
 #include "Animation/AnimationPointers.event"
 //#include "Animation/RepointedTable.event"
 	
-#include "CG/CG Installer.event"	
-	
+#include "CG/CG Installer.event"
+
+#include "Spells/_Master Spell Installer.event"	
+
+#include "Assorted Palettes.event"	
+
 //This file will not exist until you use Pal2EA to generate the file. Go check out the thread https://feuniverse.us/t/pal2ea-the-buildfile-palette-inserter/2646 . Alternatives exist but I found this was the easiest to start with.
 //#include "Palettes/Palette Setup.event"
 
@@ -57,6 +61,17 @@ ORG $C5790
 POIN TitlePal
 POP
 
+PUSH
+ORG $73d88
+POIN LevelUpScreen
+ORG $73d90
+POIN LevelUpScreenTSA
+ORG $7eb84
+POIN LevelUpScreen
+ORG $7eb8c
+POIN LevelUpScreenTSA
+POP
+
 ALIGN 4
 NewStatScreen:
 #incext Png2Dmp "StatScreen.png" --lz77
@@ -88,3 +103,11 @@ Title:
 #incext Png2Dmp "Game Title.png" --lz77
 TitlePal:
 #incext Png2Dmp "Game Title.png" --palette-only
+
+ALIGN 4
+LevelUpScreen:
+#incext Png2Dmp "Level Up Screen.png" --lz77
+LevelUpScreenTSA:
+#incbin "Level Up Screen.png.tsa.dmp"
+LevelUpScreenPal:
+#incbin "Level Up Screen.png.pal.dmp"

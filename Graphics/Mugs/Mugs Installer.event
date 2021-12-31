@@ -21,6 +21,11 @@ StefanMug:
 setMugEntry(0x6,StefanMug,3,5,3,3)
 
 ALIGN 4
+JohanMug:
+#incext PortraitFormatter "Johan.png"
+setMugEntry(0x3f,JohanMug,3,4,3,2)
+
+ALIGN 4
 SamMug:
 #incext PortraitFormatter "Sam.png"
 setMugEntry(0x5,SamMug,2,6,3,4)
@@ -31,6 +36,26 @@ CassiusMug:
 setMugEntry(0x3,CassiusMug,4,5,4,3)
 
 ALIGN 4
+DesmondMug:
+#incext PortraitFormatter "Desmond.png"
+setMugEntry(0x8,DesmondMug,3,5,3,3)
+
+ALIGN 4
+JosefMug:
+#incext PortraitFormatter "Josef.png"
+setMugEntry(0xa,JosefMug,2,4,2,2)
+
+ALIGN 4
 NatasiaMug:
 #incext PortraitFormatter "Natasia.png"
 setMugEntry(0x9,NatasiaMug,3,6,3,4)
+
+ALIGN 4
+LazarusMug:
+#incext PortraitFormatter "Lazarus.png"
+setMugEntry(0x42,LazarusMug,3,5,3,3)
+
+ALIGN 4
+BrentsonMug:
+#incext PortraitFormatter "Brentson.png"
+setMugEntry(0x32,BrentsonMug,3,5,3,3)

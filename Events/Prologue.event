@@ -109,9 +109,6 @@ ALIGN 4
 
 BeginningScene:
 EVBIT_MODIFY 4
-LOAD1 0x1 PUnits
-ENUN
-LoadUnitsByDifficulty(PEasy,PNormal,PHard)
 SetBackground(0x35)
 ASMC 0x864CD
 BEQ 0x1 0xC 0x0
@@ -130,6 +127,9 @@ SVAL 0x1 0x0
 FADI 0x3c
 CLEAN
 EVBIT_MODIFY 0
+LOAD1 0x1 PUnits
+ENUN
+LoadUnitsByDifficulty(PEasy,PNormal,PHard)
 MUSC 0x4
 SetBackground(0x34)
 FADU 0x3c

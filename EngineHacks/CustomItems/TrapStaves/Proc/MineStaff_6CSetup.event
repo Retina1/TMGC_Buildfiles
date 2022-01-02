@@ -1,0 +1,22 @@
+ALIGN 4
+
+// #include "Freeselect/FreeSelect6C.event"
+#include "../../_Staff6C_BasicCases.event"
+
+MineStaff_FreeSelect:
+{
+POIN MineStaff6C_Start | 1			//on create
+POIN Staff6C_fsDelete | 1 			//on delete
+POIN FS6C_ValidCursorCheck | 1		//on Cursor Movement?
+POIN FS6C_ButtonPress_Confirm | 1	//on APress
+POIN FS6C_ButtonPress_Cancel | 1 	//on BPress
+WORD 0		//on RPress?
+//consider other button presses later if needed for other things
+
+ALIGN 4
+MineStaff6C_Start:
+StaffTargetInit(MineHelpText, rsGreen, Staff6C_fsStart)
+//#incbin "_6C_Basic_Cases/Staff_fsStart.dmp"
+//POIN MineStaff_RangeSetup
+//WORD MineHelpText
+}

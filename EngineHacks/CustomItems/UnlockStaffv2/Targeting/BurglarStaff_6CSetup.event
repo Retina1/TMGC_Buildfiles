@@ -1,0 +1,19 @@
+ALIGN 4
+
+#include "../../_Staff6C_BasicCases.event"
+
+BurglarStaff_TargetSelect:
+{
+POIN BurglarStaff6C_Start | 1
+POIN 0x29D28 | 1
+WORD 0
+WORD 0
+WORD 0
+POIN 0x298D4 | 1	//on A_Press
+POIN 0x22748 | 1	//on B_Press
+WORD 0		//on R_Press?
+
+ALIGN 4
+BurglarStaff6C_Start:
+StaffTargetInit(BurglarStaffHelpText, rsGreen, Staff6C_fsStart)
+}

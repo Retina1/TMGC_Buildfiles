@@ -1,0 +1,44 @@
+#ifndef STAFF_TEMPLATES
+	#define STAFF_TEMPLATES
+	
+	#include "ItemTargeting/_ItemEffectTargeting.event"
+	#include "asm/Freeselect/FreeSelect6C.event"
+	#include "asm/ItemSlotBitmap/ItemSlotBitmap.event"
+	#include "StaffAI/_StaffAI_Setup.event"
+	
+	//#define TargetSelection 0x0804FA3C
+	
+	#define rfStaffUsability(UseCheck, Condition, RangeBuilder) "SHORT 0x1C20 0x1C29; SHORT 0x4A03 0x4B04; BL(UseCheck); jumpToHack(0x28C06); POIN (Condition | 1) (RangeBuilder | 1)"
+	//#define rfStaffTargeting(routine, pointer) "SHORT 0x1C28 0x1C22 0x2300 0x4903; BL(routine); jumpToHack(0x29062); POIN pointer"
+	#define rfStaffTargeting(routine, rangefunc, procpoin) "SHORT 0x1C28 0x1C22 0x4903 0x4B04; BL(routine); SHORT 0xBC30 0xBC01 0x4700 0x0; POIN (rangefunc|1) procpoin"
+	#define rfStaffEffect(routine, pointer) "SHORT 0x1C30 0x4903; BL(routine); jumpToHack(0x2FF76); POIN (pointer | 1)"
+
+	#define rfItemRangeSetup(TConditon, RangeBuilder) "SHORT 0xB500 0x4902; BL(RangeBuilder); SHORT 0xBC08 0x4718; POIN (TConditon | 1)"
+
+	Staff_UETemplate: //template for staff effects
+	#include "asm/StaffEffect.lyn.event"
+	
+	Staff_IETemplate: //template for item effects
+	#include "asm/ItemEffect.lyn.event"
+	ALIGN 4
+	
+	Staff_FSTargeting:
+	#incbin "ItemTargeting/Staff_Targeting.dmp"
+	POIN prNewFreeSelect|1
+	
+	Staff_TSTargeting:
+	#incbin "ItemTargeting/Staff_Targeting.dmp"
+	POIN 0x04FA3C|1
+	
+	Staff_FSUsability:	//usability routine for free select staves
+	#incbin "ItemTargeting/Staff_FSUsability.dmp"
+	
+	Staff_TSUsability:	//usability routine for staves with target selection
+	#incbin "ItemTargeting/Staff_TSUsability.dmp"
+	
+	rfTrueCheck:
+	SHORT 0x2001 0x4770
+
+	// #include "asm/_6C_Basic_Cases/_Staff6C_BasicCases.event"
+	#include "asm/StaffMapAnim/_MapAnim_6CRoutines.event"
+#endif

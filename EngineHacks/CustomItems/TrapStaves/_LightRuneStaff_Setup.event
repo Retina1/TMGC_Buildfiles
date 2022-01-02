@@ -1,0 +1,66 @@
+#ifndef FreeSpace
+	#ifdef _FE8_
+		#define FreeSpace $B50000
+	#endif
+	ORG FreeSpace
+#endif
+
+#include "../_StaffTemplates.event"
+
+#ifndef ItemEffectRevamp
+	#include "../_ItemArrayMacros.event"
+	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#ifndef LightRuneStaffItemID
+		#define LightRuneStaffItemID 0x7D
+	#endif
+	//Add new staff effect to tables
+	PUSH
+	SetIUPointer((LightRuneStaffItemID - 0x4B), LightRuneStaff_Usability)
+	SetITPointer((LightRuneStaffItemID - 0x4B), LightRuneStaff_Targeting)
+	SetIEPointer((LightRuneStaffItemID - 0x4B), LightRuneStaff_Effect)
+
+//	Set staff AI so that staff can be used my NPCs
+//	SetStaffAI(0xB, LightRuneStaffItemID, Staff_LightRune_AI | 1)
+	POP
+#endif
+
+//Help text displayed during targeting
+#ifndef LightRuneHelpText
+	#define LightRuneHelpText 0x87E	//placeholder, replace with different text id later
+#endif
+
+#ifndef LightRuneTerrainTable
+	#define LightRuneTerrainTable 0x80BB96 
+#endif
+
+//creates the staff's map animation
+#include "Animation/LightRune_MapAnim_Setup.event"
+ALIGN 4
+#include "Proc/LightRuneStaff_6CSetup.event"
+ALIGN 4
+
+LightRuneStaff_TCondition:
+#include "Targeting/LightRuneStaff_TCondition.lyn.event"
+POIN LightRuneTerrainTable
+
+LightRuneStaff_RangeSetup:
+rfItemRangeSetup(LightRuneStaff_TCondition, Item_TTRange)
+
+ALIGN 4
+
+LightRuneStaff_Usability:
+rfStaffUsability(Staff_FSUsability, rfTrueCheck, rfTrueCheck)
+
+ALIGN 4
+
+LightRuneStaff_Targeting:
+rfStaffTargeting(Staff_FSTargeting, LightRuneStaff_RangeSetup, LightRuneStaff_FreeSelect)
+
+//Staff Effect ASM
+LightRuneStaff_Effect:
+rfStaffEffect(Staff_UETemplate, Staff_LightRuneSummon)
+ALIGN 4
+Staff_LightRuneSummon:
+	#include "Effect/LightRuneStaff_Effect.lyn.event"
+
+//AI stuff here

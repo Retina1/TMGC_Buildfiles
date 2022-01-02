@@ -1,0 +1,10 @@
+#ifndef ITEMSLOTBITMAP
+	#define ITEMSLOTBITMAP
+	
+	GetItemSlotBitmap:
+	#include "ItemSlotBitmapCalc.lyn.event"
+	
+	ISB_IgnoreEquippedWeapon:
+	#include "CalcRoutines/ISB_BanEquippedWeapon.lyn.event"
+	
+#endif

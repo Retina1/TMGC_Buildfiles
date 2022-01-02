@@ -65,15 +65,18 @@ UNIT Peggy Cleric 0x0 Level(4,Ally,0) [15,5] 0x0 0x0 0x1 REDA17R6 [Heal, WrathSt
 UNIT
 
 C4Easy:
-UNIT Mevion Merc 0x0 Level(3,Enemy,0) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Starque SwdCav 0x0 Level(13,Enemy,1) [1,9] DropItem 0x0 0x0 0x0 [SteelSword,Elixir] ChaseOnceApproachedAI
 UNIT
 
 C4Normal:
-UNIT Mevion Merc 0x0 Level(3,Enemy,0) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Starque SwdCav 0x0 Level(13,Enemy,1) [1,9] DropItem 0x0 0x0 0x0 [SteelSword,Elixir] ChaseOnceApproachedAI
 UNIT
 
 C4Hard:
-UNIT Mevion Merc 0x0 Level(3,Enemy,0) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [21,5] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Starque SwdCav 0x0 Level(13,Enemy,1) [1,9] DropItem 0x0 0x0 0x0 [SteelSword,Elixir] ChaseOnceApproachedAI
 UNIT
 
 ALIGN 4

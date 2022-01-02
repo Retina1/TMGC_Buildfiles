@@ -8,6 +8,7 @@
 	#include "src/FreeMU_Event.lyn.event"
 	#include "src/FreeMU_ButtonPress.lyn.event"
 	#include "asm/FreeMU.lyn.event"
+	#include "src/FreeMU_SaveData.lyn.event"
 	#include "MU6Cfix/_MU6Cfix.event"
 
 
@@ -76,7 +77,7 @@ ALIGN 4
 	_6C_YIELD
 	_6C_GOTO(0xE)
 	
-	_6C_LABEL(5)	//Press B
+/*	_6C_LABEL(5)	//Press B
 	_6C_CALL_ROUTINE(pFMU_PressB|1)
 	_6C_GOTO(0)
 	
@@ -95,7 +96,7 @@ ALIGN 4
 	
 	_6C_LABEL(9)	//Press Start
 	_6C_CALL_ROUTINE(pFMU_PressStart|1)
-	_6C_GOTO(0)
+	_6C_GOTO(0)*/
 	
 	_6C_LABEL(0xE)	//Save
 	_6C_YIELD

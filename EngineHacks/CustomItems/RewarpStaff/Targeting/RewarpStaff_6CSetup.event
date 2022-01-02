@@ -1,0 +1,21 @@
+ALIGN 4
+
+#include "../../_Staff6C_BasicCases.event"
+
+RewarpStaff_FreeSelect:
+{
+POIN RewarpStaff6C_Start | 1		//on create
+POIN Staff6C_fsDelete | 1 			//on delete
+POIN FS6C_ValidCursorCheck | 1		//on Cursor Movement?
+POIN FS6C_ButtonPress_Confirm | 1	//on APress
+POIN FS6C_ButtonPress_Cancel | 1 	//on BPress
+WORD 0		//on RPress?
+//consider other button presses later if needed for other things
+
+ALIGN 4
+RewarpStaff6C_Start:
+StaffTargetInit(RewarpStaffHelpText, rsBlue, Staff6C_fsStart)
+//#incbin "_6C_Basic_Cases/Staff_fsStart.dmp"
+//POIN RewarpStaff_RangeSetup
+//WORD RewarpStaffHelpText
+}

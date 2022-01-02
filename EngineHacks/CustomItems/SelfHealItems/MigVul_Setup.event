@@ -1,0 +1,49 @@
+//Might Vulnerary Setup
+
+#ifndef FreeSpace
+	#ifdef _FE8_
+		#define FreeSpace $B30000
+	#endif
+	ORG FreeSpace
+#endif
+
+#include "Extensions\Hack Installation.txt"
+
+ALIGN 4
+#ifdef _FE8_
+	#include "SelfHealingItems_Setup.event"
+	
+	#ifndef ItemEffectRevamp
+		#define MigVulItemID 0x6C
+		PUSH
+		SetIUPointer((MigVulItemID - 0x4B),$8028b60)
+		SetITPointer((MigVulItemID - 0x4B),ITNull)
+		SetIEPointer((MigVulItemID - 0x4B),MigVul_Effect)
+		POP
+	#endif
+	
+	MigVul_Effect:
+{
+	rfStaffEffect(Staff_UETemplate, MigVul_Healing)
+	
+	MigVul_Healing:
+	SelfHealing_Effect(HealCalc_ItemMight|1)
+	
+	HealCalc_ItemMight:
+	#include "HealFormulas/HealCalc_ItemMight.lyn.event"
+	
+	ALIGN 4
+	
+/*
+	#include "..\_ItemStatMacros.event"
+	#incbin "MigvulEffect.dmp"
+	POIN 0x2FF76 | 1 			//return address
+	POIN 0x2F380 | 1 			//restore hp routine
+	POIN 0x19430 | 1			//get ram character pointer
+	POIN Item_GetStat_EffectID | 1
+*/
+}
+
+#else
+	ERROR "This is for FE8 only"
+#endif

@@ -1,0 +1,48 @@
+//Make the map spell animation for Ballista Staff
+// #include "FreeSelect/_6CDefinitions.event"
+
+#ifndef REWARP_MAPANIM
+	#define REWARP_MAPANIM
+	// #include "StaffMapAnim\_MapAnim_6CRoutines.event"
+	
+	ALIGN 4
+	
+	PUSH
+	//being lazy and reusing the warp animation
+	ORG $9A5214
+	Staff_Rewarp_Anim:
+	POP
+	
+/*	
+	_6C_CALL_ROUTINE(0x80815C1)	//focus camera on target; also makes them face the attacker?
+	_6C_SLEEP(0x2)
+	_6C_CALL_ROUTINE(0x8081279)	//change from normal to active map sprite
+	_6C_SLEEP(0x1E)
+	_6C_CALL_ROUTINE(0x8081B71)	//plays warping sound effect; make light surround targeted unit?
+	_6C_SLEEP(0xA)
+	_6C_CALL_ROUTINE(0x8081CD5)	//targeted unit glow white?
+	_6C_SLEEP(0x14)
+	_6C_CALL_ROUTINE(0x8081D41)	//not sure yet
+	_6C_SLEEP(0x2)
+	_6C_CALL_ROUTINE(0x8081D1D)	//make targeted unit disappear?
+	_6C_SLEEP(0x8)
+	_6C_CALL_ROUTINE(0x8081E05)	//repositions unit intween disappearance and reappearance
+	_6C_SLEEP(0x1E)
+	_6C_CALL_ROUTINE(0x80815ED)	//positioning stuff for warping anim based on defender, also makes camera focus on defender
+	_6C_SLEEP(0x2)
+	_6C_CALL_ROUTINE(0x8081D85)	//circles fly back in towards warp destination
+	_6C_SLEEP(0x28)
+	_6C_CALL_ROUTINE(0x8081BCD)	//small spinning thing before unit reappears
+	_6C_SLEEP(0xA)
+	_6C_CALL_ROUTINE(0x8081DE1)	//
+	_6C_CALL_ROUTINE(0x8081CF9)	//unit reappears
+	_6C_SLEEP(0x10)
+	_6C_SLEEP(0xA)
+	_6C_CALL_ROUTINE(0x8081595)	//
+	_6C_SLEEP(0x2)
+	_6C_CALL_ROUTINE(0x808129D)	//revert from active to normal map sprite
+	_6C_SLEEP(0x1E)
+	_6C_END	
+*/
+
+#endif

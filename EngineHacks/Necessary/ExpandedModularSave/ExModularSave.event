@@ -197,6 +197,8 @@ gSuspendSaveChunks:
 	// Permanent eids (moved here because of a mistake in the previous allocation)
 	DeclSaveChunk($2DA8, $0019, $0A3150+1, $0A3198+1)
 
+	DeclSaveChunk($2DC2, $001, MsuSave_FMUbit, MsuLoad_FMUbit)
+
 	// ends at $2DC1
 	// free up to $2E78 ($B7 free bytes)
 

@@ -1,0 +1,48 @@
+// #include "FreeSelect/_6CDefinitions.event"
+//REDO WHOLE THING
+#ifndef UNLOCK_MAPANIM
+	#define UNLOCK_MAPANIM
+{
+	
+	// Unlock_FadingTileChange:
+	// #incbin "UnlockStaff_TileChange.dmp"
+	// POIN TargetTile_TileChange //ASRewardFromChestAt
+	
+	ALIGN 4
+	PUSH
+	ORG $9A4C3C //unlock anim
+	_6C_CALL_ROUTINE(0x8030C25)
+	_6C_CALL_ROUTINE(0x8081E49)
+	_6C_SLEEP(0x1)
+	_6C_CALL_ROUTINE(0x80815ED)	//positioning stuff for warping anim based on defender, also makes camera focus on defender
+	_6C_SLEEP(0x2)
+	_6C_CALL_ROUTINE(0x8081279)	//change from normal to active map sprite
+	_6C_SLEEP(0x1E)
+	_6C_CALL_ROUTINE(0x8081C19)
+	_6C_SLEEP(0x2)
+	_6C_SLEEP(0x8C)
+	_6C_SLEEP(0xA)
+	_6C_CALL_ROUTINE(0x808129D)	//revert from active to normal map sprite
+	_6C_SLEEP(0x1E)
+	_6C_CALL_ROUTINE(0x8081E55)
+	_6C_SLEEP(0x1)
+	_6C_CALL_ROUTINE(0x8030C41)
+	_6C_END
+	
+	ORG $9A3E6C //child 6C of unlock anim
+	_6C_SLEEP(0x1)
+	_6C_CALL_ROUTINE(0x807E7E1)
+	_6C_LOOP_ROUTINE(0x807E8B1)
+	_6C_SLEEP(0x50)
+	_6C_LOOP_ROUTINE(0x807E935)	//does glowy orb thing for the unlock animation
+	_6C_SLEEP(0x1)
+	_6C_CALL_ROUTINE(0x807DA69)	//clears out bg layer used by glowy orb thing
+	_6C_CALL_ROUTINE(Unlock_FadingTileChange|1)
+	//_6C_CALL_ROUTINE(0x807E79D)	//does fading tile change?
+	_6C_SLEEP(0x4)
+	_6C_CALL_ROUTINE(0x807E7C5)
+	_6C_END
+	POP
+	
+}
+#endif

@@ -5,7 +5,15 @@
  </tileset>
  <layer id="1" name="Tile Layer 1" width="27" height="18">
   <properties>
+   <property name="Anims1" value="0"/>
+   <property name="Anims2" value="0"/>
+   <property name="ChapterID" value="0x26"/>
    <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x0"/>
+   <property name="MapID" value="0x22"/>
+   <property name="ObjectType" value="0x1f"/>
+   <property name="PaletteID" value="0x20"/>
+   <property name="TileConfig" value="0x21"/>
   </properties>
   <data>
    <tile gid="865"/>
@@ -14,8 +22,8 @@
    <tile gid="866"/>
    <tile gid="867"/>
    <tile gid="902"/>
-   <tile gid="897"/>
-   <tile gid="898"/>
+   <tile gid="961"/>
+   <tile gid="866"/>
    <tile gid="866"/>
    <tile gid="866"/>
    <tile gid="866"/>
@@ -42,8 +50,8 @@
    <tile gid="867"/>
    <tile gid="900"/>
    <tile gid="805"/>
-   <tile gid="805"/>
-   <tile gid="865"/>
+   <tile gid="806"/>
+   <tile gid="961"/>
    <tile gid="866"/>
    <tile gid="866"/>
    <tile gid="866"/>
@@ -151,7 +159,7 @@
    <tile gid="831"/>
    <tile gid="831"/>
    <tile gid="831"/>
-   <tile gid="898"/>
+   <tile gid="866"/>
    <tile gid="980"/>
    <tile gid="853"/>
    <tile gid="982"/>

@@ -1,0 +1,35 @@
+//Make the map spell animation for Ballista Staff
+// #include "FreeSelect/_6CDefinitions.event"
+
+#ifndef LIGHTRUNE_MAPANIM
+	#define LIGHTRUNE_MAPANIM
+	// #include "StaffMapAnim\_MapAnim_6CRoutines.event"
+	
+	ALIGN 4
+	
+	Staff_LightRune_Anim:
+	//always at the start?
+	_6C_CALL_ROUTINE(0x815C0 | 1)	//focus camera on target
+	_6C_SLEEP(0x2)			//value varies depending on anim?
+	_6C_CALL_ROUTINE(0x81278 | 1)	//change from normal to active map sprite
+	_6C_SLEEP(0x1E)			//value varies depending on anim?
+
+	_6C_CALL_ROUTINE(TargetTileFocus | 1)
+	_6C_SLEEP(0x2)
+	_6C_CALL_ROUTINE(LightRuneAnim_TileFocus | 1)
+
+	//copied from light rune anim
+	_6C_CALL_ROUTINE(0x2153C | 1)
+	_6C_LOOP_ROUTINE(0x215F0 | 1)
+	_6C_CALL_ROUTINE(0x21668 | 1)
+
+	//always at the end?
+
+	//_6C_LOOP_ROUTINE(0x81914 | 1)	//wait for hp bar to change? (if true seems it to do nothing if no hp bar)
+	//_6C_SLEEP(0xA)			//value varies depending on anim?
+	_6C_CALL_ROUTINE(0x8129C | 1)	//revert from active to normal map sprite
+	_6C_SLEEP(0x1E)			//value varies depending on anim?
+
+	_6C_END
+#endif
+

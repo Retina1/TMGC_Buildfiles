@@ -91,6 +91,7 @@ ORG $B5237
 BYTE 0xE0
 POP
 
+
 //hand axe anims
 #include "handaxs_wildcard/Installer.event"
 
@@ -363,4 +364,30 @@ ORG $11Ce50c
 BYTE 0x18
 ORG $11ce560
 BYTE 0x00
+POP
+
+//save in former tower/ruins maps
+PUSH
+ORG $9500C
+BYTE 0xC0 0x46 0x05 0xE0
+POP
+
+PUSH
+ORG $96b18
+BYTE 0x36
+POP
+
+//staves
+#include "CustomItems/_CustomItemSetup.event"
+
+//thracia trading
+PUSH
+ORG $22f50
+BYTE 0xc0 0x46
+ORG $2D772
+BYTE 0x1B
+ORG $9E3B8
+BYTE 0x1C
+ORG $9E8F2
+BYTE 0x1C
 POP

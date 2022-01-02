@@ -1,0 +1,48 @@
+
+#ifndef MAPANIM_6CStuff
+	#define MAPANIM_6CStuff
+	ALIGN 4
+	
+//Camera Positioning
+	TargetTileFocus:
+	#include "TargetTile_Focus.lyn.event"
+	
+	LightRuneAnim_TileFocus:
+	#include "TargetTile_AnimFocus.lyn.event"
+	POIN LightRune_AnimPosition | 1
+	
+	MineAnim_TargetTileFocus:
+	#include "TargetTile_AnimFocus.lyn.event"
+	POIN 0x8022300 | 1
+	
+	//focus camera on where unit will be after action
+	BattleActingUnit_DestFocus:
+	#include "BActingUnit_Focus.lyn.event"
+
+	BattleTargetUnit_DestFocus:
+	#include "BTargetUnit_Focus.lyn.event"
+	
+//Animation Positioning
+	AnimBG0_UnitFocus:
+	#include "APUnit_Focus.lyn.event"
+	POIN SetAnimPosition_BG0
+	
+	SetAnimPosition_BG0:
+	#include "SetAnimPositionBG0.lyn.event"
+	
+	LightRune_AnimPosition:
+	#include "LightRune_AnimPositionSet.lyn.event"
+
+	RingGlow_TargetUnitFocus:
+	#include "RingGlowAnimFocus_TargetUnit.lyn.event"
+	POIN AnimBG0_UnitFocus
+
+//Tile changes
+	TargetTile_TileChange:
+	#include "TileChange.lyn.event"
+
+	Unlock_FadingTileChange:
+	#include "UnlockStaff_TileChange.lyn.event"
+	POIN TargetTile_TileChange
+	
+#endif

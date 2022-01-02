@@ -69,8 +69,7 @@
 			name(C4_Honor_Select)
 			bg(0x3)
 			importance(3)
-			text(C4_Honor)
-			item(RedGem,Blair)
+			event(C4HonorEvent)
 			eventID(0x122)
 		Entry
 			name(C4_Pursuit_Select)
@@ -98,4 +97,16 @@
 	POP
 	}
 #endif // BASE_CONVO_TABLE
+
+ALIGN 4
+C4HonorEvent:
+SetBackground(0x3)
+Text(C4_Honor)
+GiveItemWithDurability(SkillScroll,DisciplineID,Blair)
+FADI 0x5
+CLEAN
+NoFade
+ENDA
+ALIGN 4
+
 

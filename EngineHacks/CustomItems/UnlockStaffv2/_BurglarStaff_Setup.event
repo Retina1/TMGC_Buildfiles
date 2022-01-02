@@ -1,0 +1,99 @@
+#ifndef FreeSpace
+	#ifdef _FE8_
+		#define FreeSpace $B50000
+	#endif
+	ORG FreeSpace
+#endif
+
+#include "../_StaffTemplates.event"
+
+#ifndef ItemEffectRevamp
+	#include "../_ItemArrayMacros.event"
+	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#ifndef BurglarStaffItemID
+		#define BurglarStaffItemID 0x58
+	#endif
+	//Add new staff effect to item effect tables
+	PUSH
+	SetIUPointer((BurglarStaffItemID - 0x4B), BurglarStaff_Usability)
+	SetITPointer((BurglarStaffItemID - 0x4B), BurglarStaff_Targeting)
+	SetIEPointer((BurglarStaffItemID - 0x4B), BurglarStaff_Effect)
+
+	//Set staff AI so that staff can be used by NPCs
+	//SetStaffAI(0x2, BurglarStaffItemID, Staff_Burglar_AI | 1)
+	POP
+#endif
+
+//Help text displayed during targeting
+#ifndef BurglarStaffHelpText
+	#define BurglarStaffHelpText 0x881 //placeholder text id
+#endif
+
+ALIGN 4
+#include "Targeting/BurglarStaff_6CSetup.event"
+ALIGN 4
+#include "Animation/BurglarStaff_MapAnim_Setup.event"
+ALIGN 4
+
+BurglarStaff_TCondition:
+	#include "Targeting/BurglarStaff_TCondition.lyn.event"
+	
+BurglarStaff_RangeSetup:
+	rfItemRangeSetup(BurglarStaff_TCondition, Item_TTRange)
+
+BurglarStaff_Usability:
+	rfStaffUsability(Staff_TSUsability, rfTrueCheck, BurglarStaff_RangeSetup)
+
+BurglarStaff_Targeting:
+	rfStaffTargeting(Staff_TSTargeting, BurglarStaff_RangeSetup, BurglarStaff_TargetSelect)
+
+BurglarStaff_Effect:
+	rfStaffEffect(Staff_UETemplate, BurglarStaff_Unlock)
+	
+BurglarStaff_Unlock:
+	#include "Effect/BurglarStaff_Effect.lyn.event"
+	POIN Unlock_ChestEvent //ASRewardFromChestAt
+	ALIGN 4
+
+#include "EAstdlib.event"
+
+//Event Stuff
+	
+	Unlock_ChestEvent:
+	//_6C_WHILE_EXISTS(0x8591AC0)
+	//_6C_SLEEP(0x20)
+	//_6C_WHILE_EXISTS(0x85921C8)
+	_6C_SLEEP(0x8)
+	_6C_CALL_ROUTINE(ASRewardFromChestAt|1)
+	_6C_WHILE_ROUTINE(0x0800D198|1)	//while map event engine exists
+	_6C_END
+
+ASRewardFromChestAt:
+#include "Effect/GiveItemFromChestAt.lyn.event"
+POIN ASGiveCashEvent ASGiveItemEvent
+
+ALIGN 4
+ASGiveItemEvent:
+{
+//CAM1 0xFFFF
+//CUMO 0xFFFF
+//STAL 0x24
+//CURE
+GIVEITEMTO 0xFFFF
+NoFade 
+ENDA
+}
+ALIGN 4
+ASGiveCashEvent:
+{
+//CAM1 0xFFFF
+//CUMO 0xFFFF
+//STAL 0x24
+//CURE
+GIVEITEMTO 0x0
+NoFade 
+ENDA
+}
+ALIGN 4
+
+//AI Stuff here

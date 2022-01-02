@@ -1,0 +1,30 @@
+#ifdef _FE8_
+
+	#ifndef FreeSpace
+		#define FreeSpace $B2A610
+		ORG FreeSpace
+	#endif
+
+#include "_ItemArrayMacros.event"
+
+//fancy staves
+#include "TrapStaves/_BallistaStaff_Setup.event"
+
+#include "TrapStaves/_LightruneStaff_Setup.event"
+
+#include "TrapStaves/_MineStaff_Setup.event"
+
+#include "RewarpStaff/_RewarpStaff_Setup.event"
+
+#include "StealStaff/_StealStaff_Setup.event"
+
+#include "RefreshStaves/_AgainStaff_Setup.event"
+
+#include "UnlockStaffv2/_BurglarStaff_Setup.event"	//unlock staff but it opens both doors and chests
+
+//custom items
+#include "SelfHealItems/MigVul_Setup.event"
+
+#else
+	ERROR "You are not assembling FE8 events!"
+#endif

@@ -1,0 +1,116 @@
+ALIGN 4
+#include "../../_Staff6C_BasicCases.event"
+
+//list of pointers here
+StealStaff_TargetSelect: //0x59D318 (Steal) 0x59D3B8 (hammerne)
+POIN	StealStaff6C_tsStart |1 //0x2421C
+WORD	0x0
+WORD	0x0
+POIN	StealStaff6C_OnTargetChange |1 //0x2423C
+WORD	0x0
+POIN	StealStaff6C_APress|1 //0x24260 |1
+POIN	0x22748 |1
+WORD	0x0
+
+//0x2421C 
+StealStaff6C_tsStart:
+StaffTargetInit(StealStaffHelpText, rsGreen, Staff6C_tsStart2)
+//#incbin "StealStaff_tsStart.dmp"
+//WORD StealStaffHelpText
+
+StealStaff6C_APress:
+#include "StealStaff_APress.lyn.event"
+POIN StealStaff_6CMenu 
+POIN GetItemSlotBitmap
+POIN StealStaff_ItemCalcLoop
+
+StealStaff6C_OnTargetChange:
+#include "tsUpdateOnSwitch.lyn.event"
+POIN TS6C_ItemMenuUpdate 
+POIN GetItemSlotBitmap
+POIN StealStaff_ItemCalcLoop
+
+StealStaff6C_MenuPortrait:
+#include "StealStaff_MenuStart.lyn.event"
+
+StealStaff_MenuItemSelect:
+#include "StealStaff_MenuItemSelect.lyn.event"
+//text of message to display if you cannot select item
+WORD ItemMenuGrayStealText
+
+// 0x59D088 is Steal command's 6Cmenu's pointer list
+StealStaff_6CMenu: 
+BYTE 0xE 0x4 0xE 0x0 // default geometry settings: x; y; width; height
+WORD 0x0 //idk
+POIN StealStaff_6CCommand //pointer to command pointer list?
+POIN StealStaff6C_MenuPortrait|1 //constructor
+WORD 0x0 //called by generic rtext?
+WORD 0x0 //idk what this does yet
+POIN 0x22860|1 //Bpress routine
+POIN 0x4F520|1 //Rpress routine
+POIN 0x245E0|1 // called by generic Rtext at end?
+
+StealStaff_6CCommand: //0x59C278 is the Steal command's 6C command pointer list
+POIN 0xD7CB8 //raw text pointer
+SHORT 0x0 0x0 //name text id; rmenu text id
+BYTE 0x0 0x1F //color index; idk
+SHORT 0x0 //idk
+POIN ItemMenu_IsCommandUsable|1 // 29A4C 0x24304 usability routine {parameters:(r0 = 6Cmenu pointer; r1= item id)?}
+POIN ItemMenu_DrawCommand|1 //0x24348 draw routine
+POIN StealStaff_MenuItemSelect|1 //0x2439C effect routine
+WORD 0x0 //idle routine
+WORD 0x0 0x0 //hover routine; opposite of hover?
+
+POIN 0xD7CB8 //raw text pointer
+SHORT 0x0 0x0 //name text id; rmenu text id
+BYTE 0x0 0x20 //color index; idk
+SHORT 0x0 //idk
+POIN ItemMenu_IsCommandUsable|1 //usability routine {parameters:(r0 = 6Cmenu pointer; r1= item id)?}
+POIN ItemMenu_DrawCommand|1 //draw routine
+POIN StealStaff_MenuItemSelect|1 //effect routine
+WORD 0x0 //idle routine
+WORD 0x0 0x0 //hover routine; opposite of hover?
+
+POIN 0xD7CB8 //raw text pointer
+SHORT 0x0 0x0 //name text id; rmenu text id
+BYTE 0x0 0x21 //color index; idk
+SHORT 0x0 //idk
+POIN ItemMenu_IsCommandUsable|1 //usability routine {parameters:(r0 = 6Cmenu pointer; r1= item id)?}
+POIN ItemMenu_DrawCommand|1 //draw routine
+POIN StealStaff_MenuItemSelect|1 //effect routine
+WORD 0x0 //idle routine
+WORD 0x0 0x0 //hover routine; opposite of hover?
+
+POIN 0xD7CB8 //raw text pointer
+SHORT 0x0 0x0 //name text id; rmenu text id
+BYTE 0x0 0x22 //color index; idk
+SHORT 0x0 //idk
+POIN ItemMenu_IsCommandUsable|1 //usability routine {parameters:(r0 = 6Cmenu pointer; r1= item id)?}
+POIN ItemMenu_DrawCommand|1 //draw routine
+POIN StealStaff_MenuItemSelect|1 //effect routine
+WORD 0x0 //idle routine
+WORD 0x0 0x0 //hover routine; opposite of hover?
+
+POIN 0xD7CB8 //raw text pointer
+SHORT 0x0 0x0 //name text id; rmenu text id
+BYTE 0x0 0x23 //color index; idk
+SHORT 0x0 //idk
+POIN ItemMenu_IsCommandUsable|1 //usability routine {parameters:(r0 = 6Cmenu pointer; r1= item id)?}
+POIN ItemMenu_DrawCommand|1 //draw routine
+POIN StealStaff_MenuItemSelect|1 //effect routine
+WORD 0x0 //idle routine
+WORD 0x0 0x0 //hover routine; opposite of hover?
+
+CommandDefEnd
+
+//asm for free select pointers here
+
+/*
+pointer 	purpose 			routine
+0x0 		constructor 		make bottom text box
+0x8 		constructor2 		
+0xC 		construct&tsSwitch	parameters: r0 = 6C pointer; r1 = target select pointer
+
+
+A Button Press routine parameters: r0 = 6c pointer, r1 = target selection entry pointer
+*/

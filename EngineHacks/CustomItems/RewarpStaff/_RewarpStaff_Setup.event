@@ -1,0 +1,61 @@
+#ifndef FreeSpace
+	#ifdef _FE8_
+		#define FreeSpace $B50000
+	#endif
+	ORG FreeSpace
+#endif
+
+#include "../_StaffTemplates.event"
+
+#ifndef ItemEffectRevamp
+	#include "../_ItemArrayMacros.event"
+	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#ifndef RewarpStaffItemID
+		#define RewarpStaffItemID 0x7F	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#endif
+	//Add new staff effect for to tables
+	PUSH
+	SetIUPointer((RewarpStaffItemID - 0x4B), RewarpStaff_Usability)
+	SetIEPointer((RewarpStaffItemID - 0x4B), RewarpStaff_UseEffect)
+	SetITPointer((RewarpStaffItemID - 0x4B), RewarpStaff_Targeting)
+
+//	Set staff AI so that staff can be used my NPCs
+//	SetStaffAI(0xB, RewarpStaffItemID, Staff_Rewarp_AI | 1)
+	POP
+#endif
+
+//Help text displayed during targeting
+#ifndef RewarpStaffHelpText
+	#define RewarpStaffHelpText 0x871	//placeholder, replace with different text id later
+#endif
+
+//creates the staff's map animation
+#include "Animation/Rewarp_MapAnim_Setup.event"
+ALIGN 4
+#include "Targeting/RewarpStaff_6CSetup.event"
+ALIGN 4
+
+RewarpStaff_TCondition:
+#include "Targeting/RewarpStaff_TCondition.lyn.event"
+
+RewarpStaff_RangeSetup:
+rfItemRangeSetup(RewarpStaff_TCondition,Item_TTRange)
+
+ALIGN 4
+
+RewarpStaff_Usability:
+rfStaffUsability(Staff_FSUsability, rfTrueCheck, rfTrueCheck)
+
+ALIGN 4
+
+RewarpStaff_Targeting: 	//the hard part
+rfStaffTargeting(Staff_FSTargeting, RewarpStaff_RangeSetup, RewarpStaff_FreeSelect)
+
+//Staff Effect ASM
+RewarpStaff_UseEffect:
+rfStaffEffect(Staff_UETemplate, Staff_Rewarp)
+ALIGN 4
+Staff_Rewarp:
+#include "Effect/RewarpStaff_Effect.lyn.event"
+
+//AI stuff here

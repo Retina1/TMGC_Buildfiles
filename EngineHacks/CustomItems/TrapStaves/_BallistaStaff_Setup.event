@@ -1,0 +1,79 @@
+#ifndef FreeSpace
+	#ifdef _FE8_
+		#define FreeSpace $B50000
+	#endif
+	ORG FreeSpace
+#endif
+
+#include "../_StaffTemplates.event"
+
+#ifndef ItemEffectRevamp
+	#include "../_ItemArrayMacros.event"
+	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#ifndef BallistaStaffItemID
+		#define BallistaStaffItemID 0x79	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#endif
+	//Add new staff effect to tables
+	PUSH
+	SetIUPointer((BallistaStaffItemID - 0x4B), BallistaStaff_Usability)
+	SetIEPointer((BallistaStaffItemID - 0x4B), BallistaStaff_ItemEffect)
+	SetITPointer((BallistaStaffItemID - 0x4B), BallistaStaff_Targeting)
+
+	// Set staff AI so that staff can be used by NPCs
+	SetStaffAI(0xB, BallistaStaffItemID, Staff_Ballista_AI | 1)
+	POP
+#endif
+
+//Help text displayed during targeting
+#ifndef BallistaStaffHelpText
+	#define BallistaStaffHelpText 0x880	//placeholder, replace with different text id later
+#endif
+
+#ifndef BallistaTerrainTable
+	#define BallistaTerrainTable 0x80BC18
+#endif
+
+//creates the staff's map animation
+#include "Animation/LightRune_MapAnim_Setup.event"
+ALIGN 4
+#include "Proc/BallistaStaff_6CSetup.event"
+ALIGN 4
+
+BallistaStaff_TCondition:
+	#include "Targeting/BallistaStaff_TCondition.lyn.event"
+	POIN BallistaTerrainTable
+
+BallistaStaff_RangeSetup:
+rfItemRangeSetup(BallistaStaff_TCondition, Item_TTRange)
+
+ALIGN 4
+
+BallistaStaff_Usability:
+rfStaffUsability(Staff_FSUsability, rfTrueCheck, rfTrueCheck)
+
+ALIGN 4
+
+BallistaStaff_Targeting: 	//the hard part
+rfStaffTargeting(Staff_FSTargeting, BallistaStaff_RangeSetup, BallistaStaff_FreeSelect)
+
+//Staff Effect ASM
+BallistaStaff_ItemEffect:
+rfStaffEffect(Staff_UETemplate, Staff_BallistaSummon)
+/*
+	SHORT 0x1C30 	//mov r0, r6
+	SHORT 0x4903
+	BL(StaffEffectTemplate)
+	jumpToHack(0x2FF76)
+	POIN Staff_BallistaSummon
+*/
+ALIGN 4
+Staff_BallistaSummon:
+	#incbin "Effect/BallistaStaff_Effect.dmp"
+
+//AI stuff here
+Staff_Ballista_AI:
+ALIGN 4
+StaffAI_TUnits(AIC_BallistaStaff)
+
+AIC_BallistaStaff:
+#include "StaffAI/BallistaStaff_AIC.lyn.event"

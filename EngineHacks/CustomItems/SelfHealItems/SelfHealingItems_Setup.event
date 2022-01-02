@@ -1,0 +1,28 @@
+#ifndef SELFHEALINGITEMS
+	#define SELFHEALINGITEMS
+	
+	ALIGN 4
+/*	SelfHealanim:
+//	_6C_CALL_ROUTINE(0x802CA15)
+	_6C_CALL_ROUTINE(0x8081279)	//change from normal to active map sprite
+	_6C_SLEEP(0x1E)
+	_6C_CALL_ROUTINE(0x8081B41)
+	_6C_SLEEP(0x1E)
+	_6C_CALL_ROUTINE(0x808161D)
+	_6C_SLEEP(0x1E)
+	_6C_LOOP_ROUTINE(0x8081915)
+	_6C_SLEEP(0xA)
+	_6C_CALL_ROUTINE(0x808129D)	//revert from active to normal map sprite
+	_6C_SLEEP(0x1E)
+	_6C_END*/
+	ALIGN 4
+	//plays whatever animation is set for item 0x6C (vulnerary)
+	SelfHealingItem:
+		#include "SelfHealing.lyn.event"
+	
+	#define SelfHealing_Effect(healcalc) "ALIGN 4; SHORT 0x4902 0; jumpToHack(SelfHealingItem); POIN healcalc"
+	
+	Heal10HP:
+	SHORT 0x200A 0x4770
+	
+#endif

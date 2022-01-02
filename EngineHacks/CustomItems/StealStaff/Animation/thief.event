@@ -1,0 +1,320 @@
+#ifndef waitFrame
+	#define waitFrame "WORD 0 0 0"
+#endif
+#ifndef terminatorFrame
+	#define terminatorFrame "WORD 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF"
+#endif
+
+#ifndef installThf
+#define installThf
+
+#include "_6CDefinitions.event"
+//#include "StaffMapAnim/_MapAnim_6CRoutines.event"
+
+	ALIGN 4
+	Staff_Thief_Anim:
+		//always at the start?
+	_6C_CALL_ROUTINE(0x815C0 | 1)	//focus camera on target
+	_6C_SLEEP(0x2)			//value varies depending on anim?
+	_6C_CALL_ROUTINE(0x81278 | 1)	//change from normal to active map sprite
+	_6C_SLEEP(0x1E)			//value varies depending on anim?
+	
+	_6C_CALL_ROUTINE(TargetTileFocus | 1)
+	_6C_SLEEP(0x2)
+	_6C_CALL_ROUTINE(LightRuneAnim_TileFocus | 1)
+		_6C_CALL_ROUTINE(ThiefAnim_Setup | 1)
+		_6C_LOOP_ROUTINE(ThiefAnim_LoadFrames | 1)
+		_6C_SLEEP(10)
+		_6C_CALL_ROUTINE(ThiefFadeAnim_Setup | 1)
+		_6C_LOOP_ROUTINE(ThiefFadeAnim_Do | 1)
+		_6C_SLEEP(10)
+		_6C_CALL_ROUTINE(ThiefChangeTarget | 1)
+		_6C_CALL_ROUTINE(TargetTileFocus | 1)
+		_6C_SLEEP(0x2)
+		_6C_CALL_ROUTINE(LightRuneAnim_TileFocus | 1)
+		_6C_CALL_ROUTINE(ThiefDropAnim_Setup | 1)
+		_6C_CALL_ROUTINE(ThiefFadeInAnim_Setup | 1)
+		_6C_LOOP_ROUTINE(ThiefFadeInAnim_Do | 1)
+		_6C_CALL_ROUTINE(ThiefRemoveFade | 1)
+		_6C_SLEEP(32)
+		_6C_CALL_ROUTINE(ThiefDropAnim_Setup2 | 1)
+		_6C_LOOP_ROUTINE(ThiefAnim_LoadFrames | 1)
+		_6C_CALL_ROUTINE(ThiefFadeAnim_Setup | 1)
+		_6C_LOOP_ROUTINE(ThiefFadeAnim_Do | 1)
+	_6C_CALL_ROUTINE(0x21668 | 1)
+	
+	//always at the end?
+
+	//_6C_LOOP_ROUTINE(0x81914 | 1)	//wait for hp bar to change? (if true seems it to do nothing if no hp bar)
+	//_6C_SLEEP(0xA)			//value varies depending on anim?
+	_6C_CALL_ROUTINE(0x8129C | 1)	//revert from active to normal map sprite
+	_6C_SLEEP(0x1E)			//value varies depending on anim?
+
+	_6C_END
+
+ALIGN 4
+
+ThiefChangeTarget:
+#incbin "thiefchangetarget.dmp"
+ALIGN 4
+
+ThiefAnim_LoadFrames:
+#incbin "looproutine.dmp"
+ALIGN 4
+
+ThiefAnim_Setup:
+#incbin "setup.dmp"
+POIN ThfAnimation
+
+ThiefDropAnim_Setup:
+#incbin "setup.dmp"
+POIN ThfDropAnimation
+
+ThiefDropAnim_Setup2:
+#incbin "setup2.dmp"
+POIN ThfDropAnimation
+
+ThiefFadeAnim_Setup:
+#incbin "setupfade.dmp"
+ALIGN 4
+
+ThiefFadeAnim_Do:
+#incbin "fadelooproutine.dmp"
+ALIGN 4
+
+ThiefFadeInAnim_Setup:
+#incbin "setupfadein.dmp"
+ALIGN 4
+
+ThiefFadeInAnim_Do:
+#incbin "fadeinlooproutine.dmp"
+ALIGN 4
+
+ThiefRemoveFade:
+#incbin "thiefremovefade.dmp"
+ALIGN 4
+
+//WIDTH * HEIGHT must not be bigger than 372
+//edit the SHORT value to add sound effects
+ThfAnimation:
+BYTE 10 10; SHORT 0; POIN Thf01image Thf01palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf02image Thf02palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf03image Thf03palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf04image Thf04palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf05image Thf05palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf06image Thf06palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf07image Thf07palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf08image Thf08palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf09image Thf09palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf10image Thf10palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf11image Thf11palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf12image Thf12palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf13image Thf13palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf14image Thf14palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf15image Thf15palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf16image Thf16palette
+waitFrame
+waitFrame
+terminatorFrame
+
+ThfDropAnimation:
+BYTE 10 10; SHORT 0; POIN Thf17image Thf17palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf18image Thf18palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf19image Thf19palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf20image Thf20palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf21image Thf21palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf22image Thf22palette
+waitFrame
+waitFrame
+BYTE 10 10; SHORT 0; POIN Thf23image Thf23palette
+waitFrame
+waitFrame
+waitFrame
+waitFrame
+waitFrame
+waitFrame
+waitFrame
+waitFrame
+waitFrame
+waitFrame
+waitFrame
+terminatorFrame
+ALIGN 4
+Thf01image:
+#incext png2dmp "Thf1.png"
+ALIGN 4
+Thf01palette:
+#incext png2dmp "Thf1.png" --palette-only
+ALIGN 4
+Thf02image:
+#incext png2dmp "Thf2.png"
+ALIGN 4
+Thf02palette:
+#incext png2dmp "Thf2.png" --palette-only
+ALIGN 4
+Thf03image:
+#incext png2dmp "Thf3.png"
+ALIGN 4
+Thf03palette:
+#incext png2dmp "Thf3.png" --palette-only
+ALIGN 4
+Thf04image:
+#incext png2dmp "Thf4.png"
+ALIGN 4
+Thf04palette:
+#incext png2dmp "Thf4.png" --palette-only
+ALIGN 4
+Thf05image:
+#incext png2dmp "Thf5.png"
+ALIGN 4
+Thf05palette:
+#incext png2dmp "Thf5.png" --palette-only
+ALIGN 4
+Thf06image:
+#incext png2dmp "Thf6.png"
+ALIGN 4
+Thf06palette:
+#incext png2dmp "Thf6.png" --palette-only
+ALIGN 4
+Thf07image:
+#incext png2dmp "Thf7.png"
+ALIGN 4
+Thf07palette:
+#incext png2dmp "Thf7.png" --palette-only
+ALIGN 4
+Thf08image:
+#incext png2dmp "Thf8.png"
+ALIGN 4
+Thf08palette:
+#incext png2dmp "Thf8.png" --palette-only
+ALIGN 4
+Thf09image:
+#incext png2dmp "Thf9.png"
+ALIGN 4
+Thf09palette:
+#incext png2dmp "Thf9.png" --palette-only
+ALIGN 4
+Thf10image:
+#incext png2dmp "Thf10.png"
+ALIGN 4
+Thf10palette:
+#incext png2dmp "Thf10.png" --palette-only
+ALIGN 4
+Thf11image:
+#incext png2dmp "Thf11.png"
+ALIGN 4
+Thf11palette:
+#incext png2dmp "Thf11.png" --palette-only
+ALIGN 4
+Thf12image:
+#incext png2dmp "Thf12.png"
+ALIGN 4
+Thf12palette:
+#incext png2dmp "Thf12.png" --palette-only
+ALIGN 4
+Thf13image:
+#incext png2dmp "Thf13.png"
+ALIGN 4
+Thf13palette:
+#incext png2dmp "Thf13.png" --palette-only
+ALIGN 4
+Thf14image:
+#incext png2dmp "Thf14.png"
+ALIGN 4
+Thf14palette:
+#incext png2dmp "Thf14.png" --palette-only
+ALIGN 4
+Thf15image:
+#incext png2dmp "Thf15.png"
+ALIGN 4
+Thf15palette:
+#incext png2dmp "Thf15.png" --palette-only
+ALIGN 4
+Thf16image:
+#incext png2dmp "Thf16.png"
+ALIGN 4
+Thf16palette:
+#incext png2dmp "Thf16.png" --palette-only
+ALIGN 4
+Thf17image:
+#incext png2dmp "Thf17.png"
+ALIGN 4
+Thf17palette:
+#incext png2dmp "Thf17.png" --palette-only
+ALIGN 4
+Thf18image:
+#incext png2dmp "Thf18.png"
+ALIGN 4
+Thf18palette:
+#incext png2dmp "Thf18.png" --palette-only
+ALIGN 4
+Thf19image:
+#incext png2dmp "Thf19.png"
+ALIGN 4
+Thf19palette:
+#incext png2dmp "Thf19.png" --palette-only
+ALIGN 4
+Thf20image:
+#incext png2dmp "Thf20.png"
+ALIGN 4
+Thf20palette:
+#incext png2dmp "Thf20.png" --palette-only
+ALIGN 4
+Thf21image:
+#incext png2dmp "Thf21.png"
+ALIGN 4
+Thf21palette:
+#incext png2dmp "Thf21.png" --palette-only
+ALIGN 4
+Thf22image:
+#incext png2dmp "Thf22.png"
+ALIGN 4
+Thf22palette:
+#incext png2dmp "Thf22.png" --palette-only
+ALIGN 4
+Thf23image:
+#incext png2dmp "Thf23.png"
+ALIGN 4
+Thf23palette:
+#incext png2dmp "Thf23.png" --palette-only
+#endif

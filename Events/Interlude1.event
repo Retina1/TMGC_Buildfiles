@@ -3,7 +3,7 @@
 
 #include EAstdlib.event
 
-EventPointerTable(EventTableID,ThisChapter)
+EventPointerTable(0x23,ThisChapter)
 
 
 ALIGN 4
@@ -16,7 +16,7 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
-POIN Units Units
+POIN I1Units I1Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -41,20 +41,48 @@ Tutorial:
 END_MAIN
 
 TrapData:
+TelliusTorchOn(22,8,1)
 ENDTRAP
 
 ALIGN 4
 
-Units:
+I1Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [12,12] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
+I1NPC:
+UNIT Ptolemy BowArm 0x0 Level(14,NPC,0) [2,12] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Peter WyvLord 0x0 Level(8,NPC,0) [19,3] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Rift SwMast 0x0 Level(6,NPC,0) [17,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Estelle BowCavF 0x0 Level(13,NPC,0) [21,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Merchant Sage 0x0 Level(5,NPC,0) [6,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen CivilM 0x0 Level(1,NPC,0) [13,1] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen2 CivilM 0x0 Level(1,NPC,0) [16,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Mevion MercF 0x0 Level(7,NPC,0) [25,7] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Mevion LncCav 0x0 Level(8,NPC,0) [3,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Mevion Halberdier 0x0 Level(2,NPC,0) [23,5] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 ALIGN 4
 
 BeginningScene:
+EnableFreeMovement
+LOAD1 0x0 I1Units
+LOAD1 0x0 I1NPC
+ENUN
+MUSC 0x4
+SetBackground(0x34)
+FADU 0x3c
+STAL 120
+CGText(Base1_Narration)
+MUSC 0x0
+FADI 0x3c
+CLEAN
+GotoPrepScreen
 ENDA
 
 EndingScene:
-MoveToChapter(NextChapter)
+MoveToChapter(Chapter6)
 ENDA
 
 MESSAGE Events end at offset CURRENTOFFSET

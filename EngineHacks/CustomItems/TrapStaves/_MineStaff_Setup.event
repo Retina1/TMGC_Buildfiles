@@ -1,0 +1,74 @@
+#ifndef FreeSpace
+	#ifdef _FE8_
+		#define FreeSpace $B50000
+	#endif
+	ORG FreeSpace
+#endif
+
+#include "../_StaffTemplates.event"
+
+#ifndef ItemEffectRevamp
+	#include "../_ItemArrayMacros.event"
+	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#ifndef MineStaffItemID
+		#define MineStaffItemID 0x7E	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#endif
+	//Add new staff effect to item effect tables
+	PUSH
+	SetIUPointer((MineStaffItemID - 0x4B), MineStaff_Usability)
+	SetITPointer((MineStaffItemID - 0x4B), MineStaff_Targeting)
+	SetIEPointer((MineStaffItemID - 0x4B), MineStaff_Effect)
+
+	//Set staff AI so that staff can be used by NPCs
+	SetStaffAI(0x2, MineStaffItemID, Staff_Mine_AI | 1)
+	POP
+#endif
+
+//Help text displayed during targeting
+#ifndef MineHelpText
+	#define MineHelpText 0x87D	//placeholder, replace with different text id later
+#endif
+
+#ifndef MineTerrainTable
+	#define MineTerrainTable 0x80B90C 
+#endif
+
+//creates the staff's map animation
+#include "Animation/Mine_MapAnim_Setup.event"
+ALIGN 4
+#include "Proc/MineStaff_6CSetup.event" //fix this later
+ALIGN 4
+
+MineStaff_TCondition:
+	#include "Targeting/LightRuneStaff_TCondition.lyn.event"
+	POIN MineTerrainTable
+
+MineStaff_RangeSetup:
+	rfItemRangeSetup(MineStaff_TCondition, Item_TTRange)
+	
+MineStaff_Usability:
+	rfStaffUsability(Staff_FSUsability, rfTrueCheck, rfTrueCheck)
+
+MineStaff_Targeting:
+	rfStaffTargeting(Staff_FSTargeting, MineStaff_RangeSetup, MineStaff_FreeSelect)
+
+//Staff Effect ASM
+MineStaff_Effect:
+	rfStaffEffect(Staff_UETemplate, Staff_CreateMine)
+ALIGN 4
+Staff_CreateMine:
+	#include "Effect/MineStaff_Effect.lyn.event"
+
+//AI stuff here
+#include "../_TerrainIDList.event"
+Staff_Mine_AI:
+
+StaffAI_TTiles(AIC_MineStaff)
+
+AIC_MineStaff:	//Ai Targeting condition
+#include "StaffAI/MineStaff_AIC.lyn.event"
+POIN MineAI_TerrainList
+
+MineAI_TerrainList:
+BYTE _tThrone _tChest _tPillar _tStairs 0x0
+ALIGN 4

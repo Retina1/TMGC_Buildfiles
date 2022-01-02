@@ -1,0 +1,64 @@
+#ifndef FreeSpace
+	#ifdef _FE8_
+		#define FreeSpace $B50000
+	#endif
+	ORG FreeSpace
+#endif
+//Dance refresh staff
+
+#include "../_StaffTemplates.event"
+
+#ifndef ItemEffectRevamp
+	#include "../_ItemArrayMacros.event"
+	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#ifndef AgainStaffItemID
+		#define AgainStaffItemID 0x4D //replaces Recover staff
+	#endif
+	//Add new staff effect for to tables
+	PUSH
+	SetIUPointer((AgainStaffItemID - 0x4B), AgainStaff_Usability)
+	SetIEPointer((AgainStaffItemID - 0x4B), AgainStaff_Effect)
+	SetITPointer((AgainStaffItemID - 0x4B), AgainStaff_Targeting)
+
+	//Set staff AI so that staff can be used my NPCs
+	//SetStaffAI(0xA, AgainStaffItemID, Staff_AgainStaff_AI | 1)
+	POP
+#endif
+
+/* reuses dance command help text instead
+#ifndef AgainStaffHelpText
+	#define AgainStaffHelpText 0x86E	//placeholder, replace with different text id later
+#endif
+*/
+AgainStaff_RangeSetup:
+	rfItemRangeSetup($25B19, Item_TURange)
+
+ALIGN 4
+
+AgainStaff_TargetSelect:
+	POIN	0x247F4 |1	//display bottom help text
+	POIN 	0x4E884 |1
+	WORD 	0x0
+	POIN 	0x24814 |1
+	WORD 	0x0
+	POIN 	0x29550 | 1	//staff a press routine?
+	POIN 	0x22748 | 1	//
+	WORD 	0x0
+
+ALIGN 4
+#include "Animation/AgainStaff_MapAnim_Setup.event"
+ALIGN 4
+
+AgainStaff_Usability:
+	rfStaffUsability(Staff_TSUsability, rfTrueCheck, AgainStaff_RangeSetup)
+AgainStaff_Targeting:
+	rfStaffTargeting(Staff_TSTargeting, AgainStaff_RangeSetup, AgainStaff_TargetSelect)
+
+//Staff Effect
+AgainStaff_Effect:
+	rfStaffEffect(Staff_UETemplate, Staff_RefreshUnit)
+Staff_RefreshUnit:
+	#include "Effect/AgainStaff_Effect.lyn.event"
+ALIGN 4
+
+//AI stuff here

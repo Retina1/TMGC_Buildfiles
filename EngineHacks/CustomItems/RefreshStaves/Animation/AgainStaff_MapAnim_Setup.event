@@ -1,0 +1,33 @@
+#ifndef RINGGLOW_MAPANIM
+	#define RINGGLOW_MAPANIM
+	#include "../../_Staff6C_BasicCases.event"
+	ALIGN 4
+	RingGlow_StaffAnim:
+	
+	_6C_CALL_ROUTINE(0x815C0 | 1)	//focus camera on target
+	_6C_SLEEP(0x2)			//value varies depending on anim?
+	_6C_CALL_ROUTINE(0x81278 | 1)	//change from normal to active map sprite
+	_6C_SLEEP(0x1E)			//value varies depending on anim?
+	
+	//_6C_CALL_ROUTINE(BattleTargetUnit_DestFocus | 1)
+	_6C_SLEEP(0x2)
+	_6C_CALL_ROUTINE(RingGlow_TargetUnitFocus | 1)
+	
+	//copied from dancer ring map anim
+	_6C_CALL_ROUTINE(0x80219F9)
+	_6C_LOOP_ROUTINE(0x8021A95)
+	_6C_SLEEP(0x19)
+	_6C_CALL_ROUTINE(0x8021AFD)
+	_6C_LOOP_ROUTINE(0x8021B05)
+	_6C_CALL_ROUTINE(0x8021669)
+	
+	//always at the end?
+	
+	//_6C_LOOP_ROUTINE(0x81914 | 1)	//wait for hp bar to change? (if true seems it to do nothing if no hp bar)
+	//_6C_SLEEP(0xA)			//value varies depending on anim?
+	_6C_CALL_ROUTINE(0x8129C | 1)	//revert from active to normal map sprite
+	_6C_SLEEP(0x1E)			//value varies depending on anim?
+
+	_6C_END
+	ALIGN 4
+#endif

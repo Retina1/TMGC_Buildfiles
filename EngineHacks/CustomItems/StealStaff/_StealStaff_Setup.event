@@ -1,0 +1,88 @@
+#ifndef FreeSpace
+	#ifdef _FE8_
+		#define FreeSpace $B50000
+	#endif
+	ORG FreeSpace
+#endif
+
+//Steal Staff cannot steal items with given attributes
+//set to 0 to let everything be stolen
+#define StealStaff_BanAttributes "IsWeapon|IsStaff"
+
+#include "../_StaffTemplates.event"
+
+#ifndef ItemEffectRevamp
+	#include "../_ItemArrayMacros.event"
+	//Used to set the item effect to an item for you if you're not using the Item Effect revamp
+	#ifndef StealStaffItemID
+		#define StealStaffItemID 0x80
+	#endif
+	//Add new staff effect for to tables
+	PUSH
+	SetIUPointer((StealStaffItemID - 0x4B), StealStaff_Usability)
+	SetIEPointer((StealStaffItemID - 0x4B), StealStaff_ItemEffect)
+	SetITPointer((StealStaffItemID - 0x4B), StealStaff_Targeting)
+
+	//Set staff AI so that staff can be used my NPCs
+	//SetStaffAI(0xB, StealStaffItemID, Staff_Steal_AI | 1)
+	POP
+#endif
+
+//Help text displayed during targeting
+#ifndef StealStaffHelpText
+	#define StealStaffHelpText 0x86D	//placeholder, replace with different text id later
+#endif
+
+//list of routines that determine
+// which items can be stolen
+StealStaff_ItemCalcLoop:
+POIN ISB_IgnoreEquippedWeapon
+POIN StealStaff_IgnoreItems
+WORD 0 //end of list
+
+//comment out the line below to prevent the steal staff from taking weapons
+// #define StealStaff_TakeWeapons
+
+//creates the staff's map animation
+ALIGN 4
+#include "Menu/StealStaff_6CSetup.event"
+ALIGN 4
+#include "Animation/thief.event"
+
+ALIGN 4
+StealStaff_IgnoreItems:
+#include "../asm/ItemSlotBitmap/CalcRoutines/ISB_RemoveItemWithAttributes.lyn.event"
+WORD StealStaff_BanAttributes
+
+StealStaff_TCondition:
+	#include "Usability/StealStaff_TCondition.lyn.event"
+	POIN 0x24D8C //allegience routine
+	POIN GetItemSlotBitmap
+	POIN StealStaff_ItemCalcLoop
+/* 	#ifdef StealStaff_TakeWeapons
+		POIN rfTrueCheck
+	#else
+		POIN 0x17054
+	#endif
+ */
+
+StealStaff_RangeSetup:
+rfItemRangeSetup(StealStaff_TCondition, Item_TURange) //based on Steal 0x25BA0
+
+StealStaff_Usability:
+rfStaffUsability(Staff_TSUsability, StealStaff_UseCondition, StealStaff_RangeSetup)
+ALIGN 4
+
+StealStaff_UseCondition:
+#include "Usability/IsUnitInventoryFull.lyn.event"
+ALIGN 4
+
+StealStaff_Targeting: 	//the hard part
+rfStaffTargeting(Staff_TSTargeting, StealStaff_RangeSetup, StealStaff_TargetSelect)
+
+//Staff Effect ASM
+StealStaff_ItemEffect:
+rfStaffEffect(Staff_UETemplate, Staff_StealItem)
+
+Staff_StealItem:
+#include "Effect/StealStaff_Effect.lyn.event"

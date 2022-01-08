@@ -81,6 +81,7 @@ UnitMenuTable:
   MenuCommand(0x67b, 0x6c0, NormalText, $249ac, AttackEffect, $22c31, $22c99) //to clear flags
   // UM_Attack_B
   MenuCommand(0x67b, 0x6c0, NormalText, $24a28, AttackEffect, $22c31, $22c99)
+  UM_Staff
   #ifdef GAIDEN_MAGIC
 	MenuCommand(UM_GaidenBlackMagic,UM_GaidenMagicDesc,NormalText,GaidenBlackMagicUMUsability,GaidenBlackMagicUMEffect,GaidenBlackMagicUMHover,GaidenMagicUMUnhover)
 	MenuCommand(UM_GaidenWhiteMagic,UM_GaidenMagicDesc,NormalText,GaidenWhiteMagicUMUsability,GaidenWhiteMagicUMEffect,GaidenWhiteMagicUMHover,GaidenMagicUMUnhover)
@@ -101,7 +102,7 @@ UnitMenuTable:
 	MenuCommand(UM_Capture, UM_CaptureDesc, NormalText, Capture_Usability, Capture_Effect_Func, $22c31, $22c99)
   #endif // COMBAT_ARTS
 	MenuCommand(TorchName, TorchDesc, OrangeText, TelliusTorchUsability, TelliusTorchEffect)
-  UM_Staff
+
   UM_Ride
   UM_Exit
   UM_Play

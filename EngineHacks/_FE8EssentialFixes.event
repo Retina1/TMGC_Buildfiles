@@ -23,6 +23,10 @@ POP
 //Fix MNC2 Freezing glitch (breaks skirmishes!)
   ORG $BD070
   SHORT $E0B8
+  ORG $897B2
+  SHORT $0 $0
+  ORG $897C4
+  SHORT $200E $5620
 
 //Set Default Options
   ORG $30d8a  //animations type 2

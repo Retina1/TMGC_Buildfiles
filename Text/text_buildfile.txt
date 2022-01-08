@@ -52,20 +52,6 @@ Supply[X]
 
 #include "ClassDescs.txt"
 
-#include "Items.txt"
-
-#include "ItemDescs.txt"
-
-#include "Generics.txt"
-
-#include "Bosses.txt"
-
-#include "ChapterNames.txt"
-
-#include "Objectives.txt"
-
-#include "SongRoom.txt"
-
 # 0x08DA
 You don't have the money![.][NL]
 Try again later.[A][X]
@@ -74,30 +60,6 @@ Try again later.[A][X]
 [OpenFarRight][LoadFace][0x2B][0x01][OpenFarRight]Behold, the secret strike of[NL]
 Frelia's pegasus knights![.][A][NL]
 Triangle attack![A][X]
-
-#include "Chapter Text/Prologue.txt"
-
-#include "Chapter Text/Chapter1.txt"
-
-#include "Chapter Text/Chapter2.txt"
-
-#include "Chapter Text/Chapter3.txt"
-
-#include "Chapter Text/Chapter4.txt"
-
-#include "Chapter Text/Chapter5.txt"
-
-#include "Base Convos and Supports/C1BaseConvos.txt"
-
-#include "Base Convos and Supports/C2BaseConvos.txt"
-
-#include "Base Convos and Supports/C3BaseConvos.txt"
-
-#include "Base Convos and Supports/C4BaseConvos.txt"
-
-#include "Base Convos and Supports/C5BaseConvos.txt"
-
-#include "stafftext/StaffText.txt"
 
 #0x3A LearnedSkillText
 //first text ID in the free block
@@ -253,6 +215,48 @@ a skill when used.[X]
 #include "ChapterNarrations.txt"
 
 #include "DeathQuotes.txt"
+
+#include "PassiveItems.txt"
+
+#include "Items.txt"
+
+#include "ItemDescs.txt"
+
+#include "Generics.txt"
+
+#include "Bosses.txt"
+
+#include "ChapterNames.txt"
+
+#include "Objectives.txt"
+
+#include "SongRoom.txt"
+
+#include "Chapter Text/Prologue.txt"
+
+#include "Chapter Text/Chapter1.txt"
+
+#include "Chapter Text/Chapter2.txt"
+
+#include "Chapter Text/Chapter3.txt"
+
+#include "Chapter Text/Chapter4.txt"
+
+#include "Chapter Text/Chapter5.txt"
+
+#include "Chapter Text/Interlude1.txt"
+
+#include "Base Convos and Supports/C1BaseConvos.txt"
+
+#include "Base Convos and Supports/C2BaseConvos.txt"
+
+#include "Base Convos and Supports/C3BaseConvos.txt"
+
+#include "Base Convos and Supports/C4BaseConvos.txt"
+
+#include "Base Convos and Supports/C5BaseConvos.txt"
+
+#include "stafftext/StaffText.txt"
 
 ##TorchName
  Torch[X]

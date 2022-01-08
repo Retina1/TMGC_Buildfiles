@@ -21,14 +21,36 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,I1Open,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,I1Peter,Blair,Peter)
+CharacterEvent(0xb,I1Ptolemy,Blair,Ptolemy)
+CharacterEvent(0xc,I1Estelle,Blair,Estelle)
+CharacterEvent(0xd,I1Rift,Blair,Rift)
+CharacterEvent(0xe,I1Merchant,Blair,Merchant)
+CharacterEvent(0xf,I1Cit,Blair,Citizen)
+CharacterEvent(0x10,I1Cit2,Blair,Citizen2)
+CharacterEvent(0x0,I1ReadyToEnd,Blair,IntArin)
 END_MAIN
 
 LocationBasedEvents:
+Armory(I1Armory,10,10)
+Vendor(I1Vendor,13,10)
 END_MAIN
+
+ALIGN 4
+I1Armory:
+SHLI IronSword SteelSword Lancereaver IronLance SteelLance Axereaver Javelin IronAxe SteelAxe Swordreaver HandAxe IronBow SteelBow
+BYTE 0x0 0x0
+ALIGN 4
+
+I1Vendor:
+SHLI Fire Thunder Lightning Shine Flux Nightfall Heal Mend Restore Vulnerary PureWater
+BYTE 0x0 0x0
+ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
@@ -41,7 +63,10 @@ Tutorial:
 END_MAIN
 
 TrapData:
-TelliusTorchOn(22,8,1)
+TelliusTorchOn(21,7,1)
+TelliusTorchOn(23,7,1)
+TelliusTorchOn(21,9,1)
+TelliusTorchOn(23,9,1)
 ENDTRAP
 
 ALIGN 4
@@ -55,12 +80,16 @@ UNIT Ptolemy BowArm 0x0 Level(14,NPC,0) [2,12] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Peter WyvLord 0x0 Level(8,NPC,0) [19,3] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Rift SwMast 0x0 Level(6,NPC,0) [17,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Estelle BowCavF 0x0 Level(13,NPC,0) [21,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Merchant Sage 0x0 Level(5,NPC,0) [6,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Citizen CivilM 0x0 Level(1,NPC,0) [13,1] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Citizen2 CivilM 0x0 Level(1,NPC,0) [16,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Mevion MercF 0x0 Level(7,NPC,0) [25,7] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Mevion LncCav 0x0 Level(8,NPC,0) [3,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Mevion Halberdier 0x0 Level(2,NPC,0) [23,5] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Merchant Sage 0x0 Level(5,NPC,1) [6,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen CivilM 0x0 Level(1,NPC,1) [13,1] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen2 CivilM 0x0 Level(1,NPC,1) [16,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Mevion MercF 0x0 Level(7,NPC,1) [25,7] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Mevion LncCav 0x0 Level(8,NPC,1) [3,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Mevion Halberdier 0x0 Level(2,NPC,1) [23,5] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT
+
+I1Arin:
+UNIT IntArin Trickster 0x0 Level(3,NPC,0) [12,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 ALIGN 4
@@ -84,5 +113,43 @@ ENDA
 EndingScene:
 MoveToChapter(Chapter6)
 ENDA
+
+I1Open:
+LOAD1 0x0 I1Arin
+ENUN
+Text(IntExplanation)
+EndEvent
+
+I1Peter:
+Text(I1PeterTalk)
+EndEvent
+
+I1Ptolemy:
+Text(I1PtolemyTalk)
+EndEvent
+
+I1Estelle:
+Text(I1EstelleTalk)
+EndEvent
+
+I1Rift:
+Text(I1RiftTalk)
+EndEvent
+
+I1Merchant:
+Text(I1MerchantTalk)
+EndEvent
+
+I1Cit:
+Text(I1CitTalk)
+EndEvent
+
+I1Cit2:
+Text(I1Cit2Talk)
+EndEvent
+
+I1ReadyToEnd:
+Text(I1ConfirmLeave)
+EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

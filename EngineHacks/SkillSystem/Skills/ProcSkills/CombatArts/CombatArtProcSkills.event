@@ -53,4 +53,10 @@ CombatArt_SureShot:
 POIN SkillTester
 WORD SureShotID
 
+ALIGN 4
+CombatArt_Vengeance:
+#incbin "Vengeance/proc_vengeance.dmp"
+POIN SkillTester
+WORD VengeanceID
+
 

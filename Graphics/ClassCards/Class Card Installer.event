@@ -24,6 +24,8 @@
 #define MageMCard 0x7c
 #define MageFCard 0xa8
 #define TroubCard 0x83
+#define CivilianCard 0xad
+#define HalberdierCard 0xae
 
 ALIGN 4
 
@@ -152,6 +154,16 @@ TroubPortrait:
 TroubPortraitPalette:
 #incbin "TroubPalette.dmp"
 
+CivilianPortrait:
+#incbin "Civilian.dmp"
+CivilianPortraitPalette:
+#incbin "CivilianPalette.dmp"
+
+HalberdierPortrait:
+#incbin "Halberdier.dmp"
+HalberdierPortraitPalette:
+#incbin "HalberdierPalette.dmp"
+
 setCardEntry(HunterCard,HunterPortrait,HunterPortraitPalette)
 setCardEntry(DeserterCard,DeserterPortrait,DeserterPortraitPalette)
 setCardEntry(BruiserCard,BruiserPortrait,BruiserPortraitPalette)
@@ -177,3 +189,5 @@ setCardEntry(AxeWyvCard,AxeWyvPortrait,AxeWyvPortraitPalette)
 setCardEntry(MageMCard,MageMPortrait,MageMPortraitPalette)
 setCardEntry(MageFCard,MageFPortrait,MageFPortraitPalette)
 setCardEntry(TroubCard,TroubPortrait,TroubPortraitPalette)
+setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
+setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)

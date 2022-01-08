@@ -7,14 +7,18 @@
 .equ GaleforceEvent, GaleforceID+4
 .thumb
 push	{lr}
-@check if dead
+@check if user alive and WTA exploited
 ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
 
-ldrb    r0, [r5,#0x13]
-cmp    r0, #0x00
-bne    End
+push {r2}
+ldr r2,=#0x203A4EC
+mov r0,#0x53
+ldsb r1,[r2,r0]
+pop {r2}
+cmp r1,#0x0
+ble End
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn

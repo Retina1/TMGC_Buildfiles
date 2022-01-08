@@ -32,8 +32,8 @@ After each set of module options are definitions that you can use to adjust the 
 // Tilemap options
 
 	// In 8x8 pixel tiles
-	#define MMBHeight 8
-	#define MMBWidth 18
+	#define MMBHeight 9
+	#define MMBWidth 14
 	#define MMBTilemapPaletteIndex 3
 
 	ALIGN 4
@@ -45,14 +45,15 @@ After each set of module options are definitions that you can use to adjust the 
 	// The tilemap is 'upside-down' with the bottom row being first
 	// and the top row being last
 
-	SHORT $28 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $29 $2A // Row 8 (Bottom)
-	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0F // Row 7
-	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0F // Row 6
-	SHORT $0B $0E $0E $0E $0E $63 $64 $64 $64 $64 $64 $64 $65 $0E $0E $0E $0E $0F // Row 5
-	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0F // Row 4
-	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0F // Row 3
-	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0F // Row 2
-	SHORT $61 $62 $03 $03 $03 $03 $03 $03 $03 $03 $03 $03 $03 $03 $03 $03 $04 $05 // Row 1 (Top)
+	SHORT $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 // Row 9 (bottom)
+	SHORT $1a $1b $1c $1c $1c $1c $1c $1c $1c $1c $1c $1c $1e $1f // Row 8
+	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0F // Row 7
+	SHORT $0B $0E $0E $0E $0E $0e $0E $0E $0E $0E $0E $0E $0E $0F // Row 6
+	SHORT $06 $09 $09 $09 $09 $2f $0E $0E $0E $0E $0E $0E $0E $0F // Row 5
+	SHORT $06 $09 $09 $09 $09 $2f $0E $0E $0E $0E $0E $0E $0E $0F // Row 4
+	SHORT $06 $09 $09 $09 $09 $2f $0E $0E $0E $0E $0E $0E $0E $0F // Row 3
+	SHORT $06 $09 $09 $09 $09 $2f $0E $0E $0E $0E $0E $0E $0E $0F // Row 2
+	SHORT $61 $62 $03 $03 $03 $03 $03 $03 $03 $03 $03 $03 $04 $05 // Row 1 (Top)
 
 	ALIGN 4
 
@@ -64,14 +65,14 @@ After each set of module options are definitions that you can use to adjust the 
 		 * using MMBNameColor.
 		 */
 
-	//#define MMBNameCentered
+	#define MMBNameCentered
 		/*
 		 * Draws the unit's name to [MMBNameX, MMBNameY]
 		 * using MMBNameColor, centering it within the
 		 * number of tiles specified by MMBNameWidth.
 		 */
 
-	#define MMBNameAffinityShifted
+	//#define MMBNameAffinityShifted
 		/*
 		 * Draws the unit's name to [MMBNameX, MMBNameY]
 		 * using MMBNameColor. If the unit has an affinity,
@@ -82,18 +83,18 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// Coordinates and widths are in 8x8 pixel tiles
 	#define MMBNameWidth 7
-	#define MMBNameColor TextBlack
-	#define MMBNameX 5
-	#define MMBNameY 3
+	#define MMBNameColor TextWhite
+	#define MMBNameX 6
+	#define MMBNameY 1
 
 // Minimug modules
 
-	//#define MMBMinimug
+	#define MMBMinimug
 		/*
 		 * Draws the unit's minimug to [MMBMinimugX, MMBMinimugY].
 		 */
 
-	#define MMBMinimugEnemyFlip
+	//#define MMBMinimugEnemyFlip
 		/*
 		 * Draws the unit's minimug to [MMBMinimugX, MMBMinimugY].
 		 * Enemies have thier minimugs horizontally flipped.
@@ -113,7 +114,7 @@ After each set of module options are definitions that you can use to adjust the 
 	// at a time. Incompatible with the individual
 	// item modules.
 
-	//#define MMBFullInventory
+	#define MMBFullInventory
 		/*
 		 * Draws the unit's full inventory starting at
 		 * [MMBInventoryX, MMBInventoryY] and drawing
@@ -337,7 +338,7 @@ After each set of module options are definitions that you can use to adjust the 
 		 * #define MMBEquippedWeaponIfPlayerOrInventory
 		 */
 
-	#define MMBEquippedWeaponOrFirstStaffAndNameIfPlayerOrInventory
+	//#define MMBEquippedWeaponOrFirstStaffAndNameIfPlayerOrInventory
 		/*
 		 * Shorthand for:
 		 * #define MMBEquippedWeaponOrFirstStaffNameIfPlayer
@@ -393,23 +394,23 @@ After each set of module options are definitions that you can use to adjust the 
 	#define MMBInventoryTileIndex 0x300
 
 	// Coordinates are in pixels
-	#define MMBInventoryX 40
-	#define MMBInventoryY 8
+	#define MMBInventoryX 12
+	#define MMBInventoryY 56
 
-	#define MMBItem1X 40
-	#define MMBItem1Y 8
+	#define MMBItem1X 12
+	#define MMBItem1Y 56
 
-	#define MMBItem2X 56
-	#define MMBItem2Y 8
+	#define MMBItem2X 28
+	#define MMBItem2Y 56
 
-	#define MMBItem3X 72
-	#define MMBItem3Y 8
+	#define MMBItem3X 44
+	#define MMBItem3Y 56
 
-	#define MMBItem4X 88
-	#define MMBItem4Y 8
+	#define MMBItem4X 60
+	#define MMBItem4Y 56
 
-	#define MMBItem5X 104
-	#define MMBItem5Y 8
+	#define MMBItem5X 76
+	#define MMBItem5Y 56
 
 	#define MMBInventoryAlternateX 40
 	#define MMBInventoryAlternateY 8
@@ -434,14 +435,14 @@ After each set of module options are definitions that you can use to adjust the 
 		 * to [MMBHPStatusX, MMBHPStatusY] every 64 frames.
 		 */
 
-	#define MMBDEFRES
+	//#define MMBDEFRES
 		/*
 		 * Alternates between drawing DEF ## and
 		 * RES ## to [MMBDEFRESX, MMBDEFRESY] every 64
 		 * frames.
 		 */
 
-	#define MMBAVODOD
+	//#define MMBAVODOD
 		/*
 		 * Alternates between drawing AVO ## and
 		 * DOD ## to [MMBAVODODX, MMBAVODODY] every 64
@@ -458,12 +459,12 @@ After each set of module options are definitions that you can use to adjust the 
 	// Coordinates are in 8x8 pixel tiles
 
 	// HP/Status options
-	#define MMBHPStatusX 1
+	#define MMBHPStatusX 2
 	#define MMBHPStatusY 5
 
 	// HP options
-	#define MMBHPX 1
-	#define MMBHPY 5
+	#define MMBHPX 6
+	#define MMBHPY 4
 
 	// DEF/RES options
 	#define MMBDEFRESX 9
@@ -504,7 +505,7 @@ After each set of module options are definitions that you can use to adjust the 
 
 // Affinity modules
 
-	#define MMBAffinity
+	//#define MMBAffinity
 		/*
 		 * Draws the unit's affinity, if they
 		 * have one, to [MMBAffinityX, MMBAffinityY].
@@ -540,12 +541,12 @@ After each set of module options are definitions that you can use to adjust the 
 		 * that slot.
 		 */
 
-	//#define MMBSkill1Alternate
-	//#define MMBSkill2Alternate
-	//#define MMBSkill3Alternate
-	//#define MMBSkill4Alternate
-	//#define MMBSkill5Alternate
-	//#define MMBSkill6Alternate
+	#define MMBSkill1Alternate
+	#define MMBSkill2Alternate
+	#define MMBSkill3Alternate
+	#define MMBSkill4Alternate
+	#define MMBSkill5Alternate
+	#define MMBSkill6Alternate
 		/*
 		 * Draws an icon to [MMBSkillsAlternateX, MMBSkillsAlternateY]
 		 * cycling between all selected skills. Each is shown for 64 frames.
@@ -586,13 +587,13 @@ After each set of module options are definitions that you can use to adjust the 
 	#define MMBSkill6X 180
 	#define MMBSkill6Y 8
 
-	#define MMBSkillsAlternateX 120
-	#define MMBSkillsAlternateY 8
+	#define MMBSkillsAlternateX 92
+	#define MMBSkillsAlternateY 56
 
 	#define MMBEquippedItemSkillTileIndex 0x318
 
-	#define MMBEquippedItemSkillX 8
-	#define MMBEquippedItemSkillY 8
+	#define MMBEquippedItemSkillX 108
+	#define MMBEquippedItemSkillY 56
 
 // Number modules
 
@@ -601,12 +602,12 @@ After each set of module options are definitions that you can use to adjust the 
 	//#define MMBAVONumber
 	//#define MMBCHRNumber // Useless without skill system
 	#define MMBCRTNumber
-	//#define MMBDEFNumber
-	//#define MMBDODNumber
+	#define MMBDEFNumber
+	#define MMBDODNumber
 	#define MMBEXPNumber
-	#define MMBHITNumber
+	//#define MMBHITNumber
 	#define MMBLevelNumber
-	//#define MMBRESNumber
+	#define MMBRESNumber
 	//#define MMBRTGNumber
 	//#define MMBCurrentHPNumber
 	//#define MMBMaxHPNumber
@@ -621,51 +622,51 @@ After each set of module options are definitions that you can use to adjust the 
 	// Coordinates are for the rightmost digit
 
 	// AS Number
-	#define MMBASX 128
+	#define MMBASX 32
 	#define MMBASY 48
 
 	// ATK Number
-	#define MMBATKX 128
-	#define MMBATKY 24
+	#define MMBATKX 32
+	#define MMBATKY 40
 
 	// AVO Number
-	#define MMBAVOX 96
-	#define MMBAVOY 8
+	#define MMBAVOX 91
+	#define MMBAVOY 40
 
 	// CHR Number
-	#define MMBCHRX 96
+	#define MMBCHRX 10
 	#define MMBCHRY 16
 
 	// CRT Number
-	#define MMBCRTX 128
+	#define MMBCRTX 98
 	#define MMBCRTY 40
 
 	// DEF Number
-	#define MMBDEFX 128
-	#define MMBDEFY 16
+	#define MMBDEFX 64
+	#define MMBDEFY 40
 
 	// DOD Number
-	#define MMBDODX 128
-	#define MMBDODY 24
+	#define MMBDODX 98
+	#define MMBDODY 48
 
 	// EXP number
-	#define MMBEXPX 57
-	#define MMBEXPY 48
+	#define MMBEXPX 97
+	#define MMBEXPY 24
 
 	// HIT Number
-	#define MMBHITX 128
-	#define MMBHITY 32
+	#define MMBHITX 10
+	#define MMBHITY 10
 
 	// Level number
-	#define MMBLevelX 32
-	#define MMBLevelY 48
+	#define MMBLevelX 72
+	#define MMBLevelY 24
 
 	// RES number
-	#define MMBRESX 96
-	#define MMBRESY 40
+	#define MMBRESX 64
+	#define MMBRESY 48
 
 	// RTG number
-	#define MMBRTGX 103
+	#define MMBRTGX 10
 	#define MMBRTGY 48
 
 	// Current HP number
@@ -683,12 +684,12 @@ After each set of module options are definitions that you can use to adjust the 
 	//#define MMBAVOLabel
 	//#define MMBCHRLabel
 	#define MMBCRTLabel
-	//#define MMBDEFLabel
-	//#define MMBDODLabel
+	#define MMBDEFLabel
+	#define MMBDODLabel
 	#define MMBEXPLabel
-	#define MMBHITLabel
+	//#define MMBHITLabel
 	#define MMBLevelLabel
-	//#define MMBRESLabel
+	#define MMBRESLabel
 	//#define MMBRTGLabel
 	//#define MMBHPLabel
 		/*
@@ -702,22 +703,22 @@ After each set of module options are definitions that you can use to adjust the 
 	// Coordinates are in 8x8 pixel tiles
 
 	// AS label
-	#define MMBASLabelX 13
+	#define MMBASLabelX 1
 	#define MMBASLabelY 6
 	#define MMBASLabelVRAMTile 0x100
 	#define MMBASLabelPaletteIndex 2
 	#define MMBASLabelTileCount 2
 
 	// ATK label
-	#define MMBATKLabelX 13
-	#define MMBATKLabelY 3
+	#define MMBATKLabelX 1
+	#define MMBATKLabelY 5
 	#define MMBATKLabelVRAMTile 0x102
 	#define MMBATKLabelPaletteIndex 2
 	#define MMBATKLabelTileCount 2
 
 	// AVO label
-	#define MMBAVOLabelX 9
-	#define MMBAVOLabelY 1
+	#define MMBAVOLabelX 8
+	#define MMBAVOLabelY 5
 	#define MMBAVOLabelVRAMTile 0x104
 	#define MMBAVOLabelPaletteIndex 2
 	#define MMBAVOLabelTileCount 2
@@ -730,56 +731,56 @@ After each set of module options are definitions that you can use to adjust the 
 	#define MMBCHRLabelTileCount 2
 
 	// CRT label
-	#define MMBCRTLabelX 13
+	#define MMBCRTLabelX 9
 	#define MMBCRTLabelY 5
 	#define MMBCRTLabelVRAMTile 0x108
 	#define MMBCRTLabelPaletteIndex 2
 	#define MMBCRTLabelTileCount 2
 
 	// DEF label
-	#define MMBDEFLabelX 13
-	#define MMBDEFLabelY 2
+	#define MMBDEFLabelX 5
+	#define MMBDEFLabelY 5
 	#define MMBDEFLabelVRAMTile 0x10A
 	#define MMBDEFLabelPaletteIndex 2
 	#define MMBDEFLabelTileCount 2
 
 	// DOD label
-	#define MMBDODLabelX 13
-	#define MMBDODLabelY 3
+	#define MMBDODLabelX 9
+	#define MMBDODLabelY 6
 	#define MMBDODLabelVRAMTile 0x10C
 	#define MMBDODLabelPaletteIndex 2
 	#define MMBDODLabelTileCount 2
 
 	// EXP label
-	#define MMBEXPLabelX 5
-	#define MMBEXPLabelY 6
+	#define MMBEXPLabelX 10
+	#define MMBEXPLabelY 3
 	#define MMBEXPLabelVRAMTile 0x160
 	#define MMBEXPLabelPaletteIndex 2
 	#define MMBEXPLabelTileCount 2
 
 	// HIT label
-	#define MMBHITLabelX 13
-	#define MMBHITLabelY 4
+	#define MMBHITLabelX 9
+	#define MMBHITLabelY 5
 	#define MMBHITLabelVRAMTile 0x10E
 	#define MMBHITLabelPaletteIndex 2
 	#define MMBHITLabelTileCount 2
 
 	// Level label
-	#define MMBLevelLabelX 1
-	#define MMBLevelLabelY 6
+	#define MMBLevelLabelX 6
+	#define MMBLevelLabelY 3
 	#define MMBLevelLabelVRAMTile 0x162
 	#define MMBLevelLabelPaletteIndex 2
 	#define MMBLevelLabelTileCount 2
 
 	// RES label
-	#define MMBRESLabelX 9
-	#define MMBRESLabelY 5
+	#define MMBRESLabelX 5
+	#define MMBRESLabelY 6
 	#define MMBRESLabelVRAMTile 0x164
 	#define MMBRESLabelPaletteIndex 2
 	#define MMBRESLabelTileCount 2
 
 	// RTG label
-	#define MMBRTGLabelX 9
+	#define MMBRTGLabelX 1
 	#define MMBRTGLabelY 6
 	#define MMBRTGLabelVRAMTile 0x166
 	#define MMBRTGLabelPaletteIndex 2

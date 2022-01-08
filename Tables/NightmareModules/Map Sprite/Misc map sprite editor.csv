@@ -9,8 +9,8 @@ Sword Pal.,SwdPalMMv|IsPointer,AP1|IsPointer
 Lance Pal.,LncPalMMv|IsPointer,AP1|IsPointer
 Sword Armor,SwdArmMv|IsPointer,AP1|IsPointer
 Lance Armor,LncArmMv|IsPointer,AP1|IsPointer
-Sword Gen.,SwdGenMv|IsPointer,AP2|IsPointer
-Lance Gen.,LncGenMv|IsPointer,AP2|IsPointer
+Sword Gen.,SwdGenMv|IsPointer,AP1|IsPointer
+Lance Gen.,LncGenMv|IsPointer,AP1|IsPointer
 Thief,0x81c8be0,0x81c945c
 Manakete,0x81c95b4,0x81ca124
 Mercenary,MercMMv|IsPointer,AP1|IsPointer
@@ -19,7 +19,7 @@ Hero,HeroMMv|IsPointer,AP2|IsPointer
 Hero (F),HeroFMv|IsPointer,AP2|IsPointer
 Myrmidon,MyrmMMv|IsPointer,AP1|IsPointer
 Myrmidon (F),0x81cd314,0x81cdb58
-Swordmaster,SwordmasterMv|IsPointer,AP1|IsPointer
+Swordmaster,SwordmasterMv|IsPointer,AP2Swordmaster|IsPointer
 Swordmaster (F),0x81ce65c,0x81ceee0
 Assassin,0x81cf040,0x81cf7e8
 Assassin (F),AssFMv|IsPointer,AP1|IsPointer
@@ -29,9 +29,9 @@ Sniper,SniperMMv|IsPointer,AP1|IsPointer
 Sniper (F),SniperFMv|IsPointer,AP1|IsPointer
 unused,0x81d286c,0x81d3194
 unused,0x81d286c,0x81d3194
-Lnc Wyv,LncWyvMv|IsPointer,AP2|IsPointer
-Axe Wyv,AxeWyvMv|IsPointer,AP2|IsPointer
-Wyv Lord,WyvLordMv|IsPointer,AP2|IsPointer
+Lnc Wyv,LncWyvMv|IsPointer,AP2Wyvern|IsPointer
+Axe Wyv,AxeWyvMv|IsPointer,AP2Wyvern|IsPointer
+Wyv Lord,WyvLordMv|IsPointer,AP4WyvernLord|IsPointer
 Bow Wyv,BowWyvMv|IsPointer,AP2|IsPointer
 Dracopope,DracoMv|IsPointer,AP2|IsPointer
 unused,0x81d6ec4,0x81d7cc8
@@ -85,7 +85,7 @@ Axe Pal.,AxePalMMv|IsPointer,AP1|IsPointer
 Bow Cavalier,BowCavMMv|IsPointer,AP1|IsPointer
 Axe Armor,AxeArmMv|IsPointer,AP1|IsPointer
 Bow Pal.,BowPalMMv|IsPointer,AP1|IsPointer
-Axe Gen.,AxeGenMv|IsPointer,AP2|IsPointer
+Axe Gen.,AxeGenMv|IsPointer,AP1|IsPointer
 Bow Armor,BowArmMv|IsPointer,AP1|IsPointer
 Bow Gen.,BowGenMv|IsPointer,AP2|IsPointer
 Dismounted Pal.,DesmondMv|IsPointer,AP1|IsPointer

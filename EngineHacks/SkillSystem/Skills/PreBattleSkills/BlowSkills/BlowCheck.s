@@ -130,8 +130,12 @@ QuickDrawSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.
 add     r0,#0x5a    @Move to the attacker's dmg.
 ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r3,#4    @Add 4 to the attacker's dmg.
+add     r3,#3    @Add 3 to the attacker's dmg.
 strh    r3,[r0]     @Store attacker dmg.
+add     r0,#4    @Move to the attacker's AS.
+ldrh    r3,[r0]     @Load the attacker's AS into r3.
+add     r3,#3    @Add 3 to the attacker's AS.
+strh    r3,[r0]     @Store attacker AS.
 b       SkillReturn
 
 ChivalrySkill:

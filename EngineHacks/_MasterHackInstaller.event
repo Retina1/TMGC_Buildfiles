@@ -27,12 +27,6 @@ POP
 
 ////////////////////////////////FREE SPACE WITHIN BL RANGE
 
-//enemy hmb
-PUSH
-ORG $F818
-BYTE 0x01
-POP
-
 PUSH
 ORG FreeSpaceBLRange //defined in custom definitions
 #define inBLRange
@@ -69,6 +63,13 @@ POP
 PUSH
 ORG 0x0178C2
 BYTE 0x00
+POP
+
+
+//enemy hmb
+PUSH
+ORG $F818
+BYTE 0x01
 POP
 
 //no extramap display, no creature campaign
@@ -123,7 +124,7 @@ POP
 
 #define EventMenuCommand(aTextId) "WORD 0; SHORT aTextId 0; WORD 0; POIN (0x04F448+1); WORD 0; POIN (prEventMenuCommandEffect+1); WORD 0 0 0"
 #define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
-	
+
 pNewLordSplitMenuCommands:
 	EventMenuCommand(FixedGrowths)
 	EventMenuCommand(ZeroGrowths)
@@ -156,8 +157,6 @@ PUSH
 #include "FE8-Walking Sounds Fix/FE8-Walking Sounds EA.txt"
 POP
 
-  //MMB
-  #include "ModularMinimugBox/Installers/MMBInstallerREDFE.event"
   //Free Movement
   #include "ExternalHacks/cFreeMU/FreeMovement.event"
   
@@ -391,3 +390,7 @@ BYTE 0x1C
 ORG $9E8F2
 BYTE 0x1C
 POP
+
+ALIGN 4
+  //MMB
+#include "ModularMinimugBox/Installers/MMBInstallerDefault.event"

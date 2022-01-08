@@ -50,6 +50,7 @@ SetCombatArtCost(11,2) //Ignis
 SetCombatArtCost(12,2) //Luna
 SetCombatArtCost(13,2) //Sol
 SetCombatArtCost(14,3) //Sure Shot
+SetCombatArtCost(15,3) //Vengeance
 
 ALIGN 4
 CombatArtsMenu:
@@ -72,6 +73,8 @@ MenuCommand(UM_Luna, UM_LunaDesc, NormalText, LunaUsability, LunaEffect, $22c31,
 MenuCommand(UM_Sol, UM_SolDesc, NormalText, SolUsability, SolEffect, $22c31, $22c99)
 
 MenuCommand(UM_SureShot, UM_SureShotDesc, NormalText, SureShotUsability, SureShotEffect, $22c31, $22c99)
+
+MenuCommand(UM_Vengeance, UM_VengeanceDesc, NormalText, VengeanceUsability, VengeanceEffect, $22c31, $22c99)
 
 
 
@@ -231,3 +234,15 @@ SureShotEffect:
 #incbin "CombatArtEffect.dmp"
 WORD 14 //Sure Shot art ID
 
+ALIGN 4
+VengeanceUsability:
+#incbin "CombatArtUsability.dmp"
+POIN SkillTester
+WORD VengeanceID
+WORD 15 //Vengeance art ID
+POIN CombatArtCostTable
+
+ALIGN 4
+VengeanceEffect:
+#incbin "CombatArtEffect.dmp"
+WORD 15 //Vengeance art ID

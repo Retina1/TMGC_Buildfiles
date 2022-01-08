@@ -48,14 +48,43 @@
 #define NightfallIcon 0x44
 
 #define HealIcon 0x49
+#define MendIcon 0x4a
+#define RecoverIcon 0x4b
+#define PhysicIcon 0x4c
+#define FortifyIcon 0x4d
+#define RestoreIcon 0x4e
+#define SilenceIcon 0x4f
+#define SleepIcon 0x50
+#define BerserkIcon 0x51
+#define WarpIcon 0x52
+#define RescueIcon 0x53
+#define TorchStaffIcon 0x54
+#define HammerneIcon 0x55
+#define UnlockIcon 0x56
+#define BarrierIcon 0x57
 #define WrathStaffIcon 0xd6
+
+#define YoinkIcon 0x63
+#define RunestaffIcon 0x64
+#define RewarpIcon 0x65
+#define ThiefStaffIcon 0x66
+#define AgainIcon 0x04
 
 #define AwakenIcon 0xb3
 
 #define MasterSealIcon 0xd9
 #define AnimusSealIcon 0x62
 
+#define SeraphRobeIcon 0x59
 #define SpiritDustIcon 0xc9
+#define EnergyRingIcon 0x5a
+#define SecretBookIcon 0x5b
+#define SpeedwingIcon 0x5c
+#define GoddessIconIcon 0x5d
+#define DracoshieldIcon 0x5e
+#define TalismanIcon 0x5f
+#define BootsIcon 0x60
+#define BodyRingIcon 0x61
 
 ALIGN 4
 NewItemIcons:
@@ -191,8 +220,85 @@ ItemIconEntry(HealIcon)
 #incbin "Staves/Old(bad)/Heal.dmp"
 
 ALIGN 4
+ItemIconEntry(MendIcon)
+#incbin "Staves/Old(bad)/Mend.dmp"
+
+ALIGN 4
+ItemIconEntry(RecoverIcon)
+#incbin "Staves/Old(bad)/Recover.dmp"
+
+ALIGN 4
+ItemIconEntry(PhysicIcon)
+#incbin "Staves/Old(bad)/Physic.dmp"
+
+ALIGN 4
+ItemIconEntry(FortifyIcon)
+#incbin "Staves/Old(bad)/Fortify.dmp"
+
+ALIGN 4
+ItemIconEntry(RestoreIcon)
+#incbin "Staves/Old(bad)/Restore.dmp"
+
+ALIGN 4
+ItemIconEntry(SilenceIcon)
+#incbin "Staves/Old(bad)/Silence.dmp"
+
+ALIGN 4
+ItemIconEntry(SleepIcon)
+#incbin "Staves/Old(bad)/Sleep.dmp"
+
+ALIGN 4
+ItemIconEntry(BerserkIcon)
+#incbin "Staves/Old(bad)/Berserk.dmp"
+
+ALIGN 4
+ItemIconEntry(WarpIcon)
+#incbin "Staves/Old(bad)/Warp.dmp"
+
+ALIGN 4
+ItemIconEntry(RescueIcon)
+#incbin "Staves/Old(bad)/Rescue2.dmp"
+
+ALIGN 4
+ItemIconEntry(TorchStaffIcon)
+#incbin "Staves/Old(bad)/Torch.dmp"
+
+ALIGN 4
+ItemIconEntry(HammerneIcon)
+#incbin "Staves/Old(bad)/Hammerne.dmp"
+
+ALIGN 4
+ItemIconEntry(UnlockIcon)
+#incbin "Staves/Old(bad)/Unlock.dmp"
+
+ALIGN 4
+ItemIconEntry(BarrierIcon)
+#incbin "Staves/Old(bad)/Barrier.dmp"
+
+ALIGN 4
+ItemIconEntry(RewarpIcon)
+#incbin "Staves/Old(bad)/Harm.dmp"
+
+ALIGN 4
+ItemIconEntry(AgainIcon)
+#incbin "Staves/Old(bad)/Devil Staff.dmp"
+
+ALIGN 4
+ItemIconEntry(RunestaffIcon)
+#incbin "Staves/Old(bad)/Ease.dmp"
+
+ALIGN 4
+ItemIconEntry(ThiefStaffIcon)
+#incbin "Staves/Old(bad)/Thief.dmp"
+
+ALIGN 4
+ItemIconEntry(YoinkIcon)
+#incbin "Staves/Old(bad)/Yoink.dmp"
+
+ALIGN 4
 ItemIconEntry(WrathStaffIcon)
 #incbin "WrathStaff.dmp"
+
 
 ALIGN 4
 ItemIconEntry(AwakenIcon)
@@ -211,8 +317,44 @@ ItemIconEntry(AnimusSealIcon)
 #incbin "{Seal} {SacredWar} Item 65.dmp"
 
 ALIGN 4
+ItemIconEntry(SeraphRobeIcon)
+#incbin "statboosters/{Seal} {SacredWar} Item 16.dmp"
+
+ALIGN 4
+ItemIconEntry(EnergyRingIcon)
+#incbin "statboosters/{Seal} {SacredWar} Item 17.dmp"
+
+ALIGN 4
 ItemIconEntry(SpiritDustIcon)
 #incbin "{Zelix} icon 135.dmp"
+
+ALIGN 4
+ItemIconEntry(SecretBookIcon)
+#incbin "statboosters/{Seal} {SacredWar} Item 18.dmp"
+
+ALIGN 4
+ItemIconEntry(SpeedwingIcon)
+#incbin "statboosters/{Zelix} icon 137.dmp"
+
+ALIGN 4
+ItemIconEntry(GoddessIconIcon)
+#incbin "statboosters/{Seal} {SacredWar} Item 20.dmp"
+
+ALIGN 4
+ItemIconEntry(DracoshieldIcon)
+#incbin "statboosters/{Seal} {SacredWar} Item 21.dmp"
+
+ALIGN 4
+ItemIconEntry(TalismanIcon)
+#incbin "statboosters/{Seal} {SacredWar} Item 22.dmp"
+
+ALIGN 4
+ItemIconEntry(BootsIcon)
+#incbin "statboosters/{Zarg} Item 8.dmp"
+
+ALIGN 4
+ItemIconEntry(BodyRingIcon)
+#incbin "statboosters/{Beansy} Heavy Band.dmp"
 
 // End of icons 
 POP 

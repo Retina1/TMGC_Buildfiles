@@ -1,0 +1,19 @@
+PUSH
+ORG $846AC
+POIN BattleQuoteTable
+POP
+
+#define SpecifiedBattleConvo(Character1,Character2,Chapter,EventID,TextID) "SHORT Character1 Character2 Chapter EventID TextID 0x0 0x0 0x0; SHORT Character2 Character1 Chapter EventID TextID 0x0 0x0 0x0"
+#define UnspecifiedBattleConvo(Character,Chapter,EventID,TextID) "SHORT Character 0x0 Chapter EventID TextID 0x0 0x0 0x0; SHORT 0x0 Character Chapter EventID TextID 0x0 0x0 0x0"
+
+ALIGN 4
+BattleQuoteTable: // This is in free space
+UnspecifiedBattleConvo(Davelarn,Prologue,0x1,PDavelarnBattle)
+UnspecifiedBattleConvo(Blair,Prologue,0x11,PBlairBattle)
+UnspecifiedBattleConvo(Marque,Chapter1,0x1,C1MarqueBattle)
+UnspecifiedBattleConvo(Brentson,Chapter2,0x1,C2BrentsonBattle)
+UnspecifiedBattleConvo(Helga,Chapter3,0x1,C3HelgaBattle)
+UnspecifiedBattleConvo(Starque,Chapter4,0x1,C4StarqueBattle)
+SpecifiedBattleConvo(Butch,Mitchell,Chapter5,0x18,C5MitchellButchBattle)
+UnspecifiedBattleConvo(Mitchell,Chapter5,0x1,C5MitchellBattle)
+BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 

@@ -280,9 +280,10 @@
 //By circleseverywhere
 #define FuryID 128
 
-//Galeforce: Move again after attacking and defeating an enemy.
+//Press Turn: Move again after attacking with WTA.
 //Author Unknown (Initial Commit)
 #define GaleforceID 117
+#define PressTurnID GaleforceID
 
 //Lifetaker: Restore up to 25% HP after attacking and defeating an enemy.
 //Author Unknown (Initial Commit)
@@ -562,7 +563,7 @@
 //Author Unknown (Initial Commit)
 #define WrathID 150
 
-//Quick Draw: +4 Damage when initiating battle.
+//Quick Draw: +3 Damage/AS when initiating battle.
 //Author Unknown (Initial Commit)
 #define QuickDrawID 244
 

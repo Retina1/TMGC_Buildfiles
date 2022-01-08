@@ -56,6 +56,8 @@ ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AreaEvent(0x23,C4AreaTrigger,9,0,15,12)
+AreaEvent(0x24,C4AreaTrigger2,0,0,4,12)
 END_MAIN
 
 Dunno:
@@ -140,6 +142,8 @@ ALIGN 4
 BeginningScene:
 LoadUnitsByDifficulty(C4Easy,C4Normal,C4Hard)
 LOAD1 0x0 C4Units
+ENUT 0x21
+ENUT 0x22
 GotoPrepScreen
 ENDA
 
@@ -194,6 +198,26 @@ C4AreaTrap2:
 EVBIT_T 9
 LOAD1 0x1 C4Mevion2
 ENUN
+EndEvent
+
+C4AreaTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x21
+GOTO 0x2
+LABEL 0x1
+ENUF 0x23
+LABEL 0x2
+EndEvent
+
+C4AreaTrigger2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x22
+GOTO 0x2
+LABEL 0x1
+ENUF 0x24
+LABEL 0x2
 EndEvent
 
 /*keeping this here for future reference until comfortable with torch based stuff

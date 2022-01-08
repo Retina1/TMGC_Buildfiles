@@ -6,8 +6,6 @@
     ORG FreeSpace
 
     #include "repointedTextTable.event"
-	
-	#include "ASMCCheckSuite/ASMC Check Installer.event"
 
     //Text first for Text ID definitions
     #include "Text/InstallTextData.event"
@@ -27,6 +25,7 @@
     MESSAGE Used hax space ends at currentOffset
 
     //Events
+	#include "ASMCCheckSuite/ASMC Check Installer.event"
     #include "Events/Chapter Events Installer.event"
     #include "Events/WorldMapEvents.event"
 

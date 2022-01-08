@@ -16,7 +16,8 @@
 #define SilverLanceIcon 0x16
 #define GildedLanceIcon 0x94
 #define MasterLanceIcon 0xd2
-#define JavelinIcon 0x1C
+#define JavelinIcon 0x1b
+#define SpearIcon 0x1c
 #define AxereaverIcon 0x1d
 #define HorseslayerIcon 0x1a
 
@@ -26,6 +27,7 @@
 #define GildedAxeIcon 0x95
 #define MasterAxeIcon 0xd3
 #define HandAxeIcon 0x27
+#define TomahawkIcon 0x28
 #define HammerIcon 0x25
 #define SwordreaverIcon 0x29
 #define HalberdIcon 0x24
@@ -86,6 +88,8 @@
 #define BootsIcon 0x60
 #define BodyRingIcon 0x61
 
+#define ArkhinalIcon 0xb7
+
 ALIGN 4
 NewItemIcons:
 // Sheet with all icons goes here 
@@ -140,6 +144,9 @@ ALIGN 4
 ItemIconEntry(JavelinIcon)
 #incbin "Lances/Javelin.dmp"
 ALIGN 4
+ItemIconEntry(SpearIcon)
+#incbin "Lances/Spear.dmp"
+ALIGN 4
 ItemIconEntry(AxereaverIcon)
 #incbin "Lances/Axereaver.dmp"
 ALIGN 4
@@ -164,6 +171,9 @@ ItemIconEntry(GildedAxeIcon)
 ALIGN 4
 ItemIconEntry(HandAxeIcon)
 #incbin "Axes/Hand Axe.dmp"
+ALIGN 4
+ItemIconEntry(TomahawkIcon)
+#incbin "Axes/Tomahawk.dmp"
 ALIGN 4
 ItemIconEntry(HammerIcon)
 #incbin "Axes/Hammer.dmp"
@@ -355,6 +365,11 @@ ItemIconEntry(BootsIcon)
 ALIGN 4
 ItemIconEntry(BodyRingIcon)
 #incbin "statboosters/{Beansy} Heavy Band.dmp"
+
+
+ALIGN 4
+ItemIconEntry(ArkhinalIcon)
+#incbin "Axes/Arectaris.dmp"
 
 // End of icons 
 POP 

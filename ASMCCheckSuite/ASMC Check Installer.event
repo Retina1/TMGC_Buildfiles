@@ -117,4 +117,4 @@ CheckMagicASMC:
 #define CheckDarkRank(Character) "SVAL 0x1 Character; ASMC CheckDarkRankASMC|1"
 #define CheckStatusEffect(Character) "SVAL 0x1 Character; ASMC CheckStatusEffectASMC|1"
 #define CheckStatusDuration(Character) "SVAL 0x1 Character; ASMC CheckStatusDurationASMC|1"
-//#define CheckMagic(Character) "SVAL 0x1 Character; ASMC CheckMagicASMC|1"
+#define CheckMagic(Character) "SVAL 0x1 Character; ASMC CheckMagicASMC|1"

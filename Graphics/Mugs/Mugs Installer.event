@@ -51,6 +51,16 @@ NatasiaMug:
 setMugEntry(0x9,NatasiaMug,3,6,3,4)
 
 ALIGN 4
+PeggyMug:
+#incext PortraitFormatter "Peggy.png"
+setMugEntry(0xc,PeggyMug,3,6,3,4)
+
+ALIGN 4
+EstelleMug:
+#incext PortraitFormatter "Estelle.png"
+setMugEntry(0x2e,EstelleMug,3,5,3,3)
+
+ALIGN 4
 LazarusMug:
 #incext PortraitFormatter "Lazarus.png"
 setMugEntry(0x42,LazarusMug,3,5,3,3)

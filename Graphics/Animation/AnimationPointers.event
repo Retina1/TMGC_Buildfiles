@@ -110,7 +110,27 @@
 #include "Wyvern\Handaxe Installer.event"
 #include "Wyvern\Unarmed Installer.event"
 
+#include "Peg(Flasuban)\Lance Installer.event"
+#include "Peg(Flasuban)\Sword Installer.event"
+#include "Peg(Flasuban)\Unarmed Installer.event"
+
+#include "Cleric(BatimaTheBat)\Staff Installer.event"
+#include "Cleric(BatimaTheBat)\Unarmed Installer.event"
+
 #include "Ballista(Spud)\Bow Installer.event"
+
+ALIGN 4
+PegAnims:
+SwordAnim(0xa1)
+LanceAnim(0x66)
+UnarmedAnim(0x67)
+EndAnim
+
+ALIGN 4
+ClericAnims:
+StaffAnim(0x80)
+UnarmedAnim(0xc8)
+EndAnim
 
 ALIGN 4
 MageMAnims:

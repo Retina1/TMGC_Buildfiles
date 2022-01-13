@@ -22,6 +22,9 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C5Turn2,2)
+TurnEventPlayer(0x0,C5Turn5,5)
+TurnEventPlayer(0x0,C5Turn7,7)
+TurnEventPlayer(0x0,C5Turn9,9)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -79,8 +82,47 @@ UNIT
 
 C5Hard:
 UNIT Mevion Merc 0x0 Level(5,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [SteelSword,Vulnerary] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Fighter 0x0 Level(5,Enemy,1) [3,1] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Mevion SwdCav 0x0 Level(5,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Mevion LncCav 0x0 Level(5,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Mevion SoldierF 0x0 Level(5,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [KillerLance] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [12,16] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion DarkM 0x0 Level(5,Enemy,1) [13,16] 0x0 0x0 0x0 0x0 [Flux] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion Merc 0x0 Level(5,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion SwdPeg 0x0 Level(5,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion LncPeg 0x0 Level(5,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Butch Merc 0x0 Level(6,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Zanbato,SteelSword,Vulnerary] ChaseOnceApproachedAI
 UNIT Mitchell Hero 0x0 Level(2,Enemy,1) [0,4] DropItem 0x0 0x0 0x0 [HandAxe,MasterSeal] AttackInRangeAI
+UNIT
+
+C5Ygstra:
+UNIT Ygstra FighterF 0x0 Level(7,Enemy,1) [25,9] 0x0 0x0 0x1 REDA22R9 [SteelAxe] NoAI
+UNIT Ygstra Merc 0x0 Level(8,Enemy,1) [25,10] 0x0 0x0 0x1 REDA21R10  [IronSword] NoAI
+UNIT Ygstra Warrior 0x0 Level(1,Enemy,1) [25,11] DropItem 0x0 0x1 REDA23R11  [IronAxe,Physic] NoAI
+UNIT Ygstra Merc 0x0 Level(8,Enemy,1) [25,12] 0x0 0x0 0x1 REDA21R12  [SteelSword] NoAI
+UNIT Ygstra FighterF 0x0 Level(7,Enemy,1) [25,13] 0x0 0x0 0x1 REDA22R13  [IronAxe] NoAI
+UNIT
+
+C5Reinforce:
+UNIT Mevion SoldierF 0x0 Level(5,Enemy,1) [0,6] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Mevion MercF 0x0 Level(5,Enemy,1) [0,7] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion LncPeg 0x0 Level(5,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion SwdPeg 0x0 Level(5,Enemy,1) [22,16] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Mevion SwdPeg 0x0 Level(5,Enemy,1) [24,16] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT
 
 C5Cutscene:
@@ -92,6 +134,14 @@ ALIGN 4
 BeginningScene:
 LoadUnitsByDifficulty(C5Easy,C5Normal,C5Hard)
 LOAD1 0x0 C5Units
+MUSC 0x4
+SetBackground(0x34)
+FADU 0x3c
+STAL 120
+CGText(Ch5_Narration)
+MUSC 0x0
+FADI 0x3c
+CLEAN
 GotoPrepScreen
 EndEvent
 
@@ -107,6 +157,24 @@ Text(Ch5_Rachael_Cassius)
 MOVE 0x10 ElbaCor [21,0]
 ENUN
 REMOVEUNIT ElbaCor
+EndEvent
+
+C5Turn5:
+CAM1 Mitchell
+FlashCursor(Mitchell,60)
+Text(C5Warning)
+EndEvent
+
+C5Turn7:
+EVBIT_T 9
+LOAD1 0x0 C5Reinforce
+ENUN
+EndEvent
+
+C5Turn9:
+EVBIT_T 9
+LOAD1 0x0 C5Ygstra
+ENUN
 EndEvent
 
 C5ButchRecruitment:

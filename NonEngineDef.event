@@ -1,8 +1,10 @@
 #define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
-#define SystemText(textid) "TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
+#define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
 #define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND;"
 #define EndEvent "EVBIT_T 0x7; ENDA"
 #define CleanText(bgid,textid) "CLEAN; SetBackground(bgid); FADU 0x3c; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define GiveItem(item) "SMOV 0x3 item; GIVEITEMTO 0xFFFF;"
+#define GiveItem(item,character) "SMOV 0x3 item; GIVEITEMTO character;"
 
 #define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
 
@@ -52,6 +54,15 @@
 #define Runeward 0x66
 #define LegRing 0xbd
 #define ParagonRing 0xbe
+#define KnightRing 0xbf
+#define HoneyCharm 0xc0
+
+#define Kagutsuchi 0xb1
+#define Nuboko 0xb2
+#define Ukonvasara 0xb3
+#define Trisagion 0xb4
+#define JavelinRain 0xb5
+#define Freikugel 0xb6
 
 #define Arkhinal 0x93
 
@@ -193,13 +204,12 @@
 #define CivilM 0x6D
 
 //movement types- will figure out later
-/*#define LordMovement 0x80B808
-#define BrigandMovement 0x80b90c
-#define ArmorMovement 0x80B88A
-#define CavMovement 0x80BA92
-#define PalMovement 0x90BAD3
-#define InfantryMovement 0x80B808
-#define MageMovement 0x80BA10
-#define FlierMovement 0x80BB96
-#define ThiefMovement 0x80B9CF
-*/
+#define LordMovement 0x880B808
+#define BrigandMovement 0x880b90c
+#define ArmorMovement 0x880B88A
+#define CavMovement 0x880BA92
+#define PalMovement 0x880BAD3
+#define InfantryMovement 0x880B849 
+#define MageMovement 0x880BA10
+#define FlierMovement 0x880BB96
+#define ThiefMovement 0x880B9CF

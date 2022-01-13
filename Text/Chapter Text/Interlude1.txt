@@ -13,33 +13,100 @@ This is second nature to you![A][N]
 different.[A] Almost makes peace seem[N]
 unnatural by comparison![A][N]
 [OpenMidRight]Heh... I guess you're right.[A][N]
-Well, when you're done, come find me.[A][A]
-...Oh! One more thing. I found this[N]
-strange note on the ground.[A][N]
-It says [OpenQuote]If you'd rather control Blair[N]
-normally, press B to end Free Movement.[CloseQuote][A][N]
-...No idea what it means, but it has your[N]
-name, so it's probably important.[A][X]
+Well, when you're done, come find me.[A][X]
 
 ##I1PeterTalk
-[OpenMidLeft][LoadBlair]
-placeholder moment[A][X]
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadPtolemy]
+Well, what do we have here?[N]
+A young lass new to the city?[A][N]
+Don't worry- I don't bite.[A][N]
+..Can't say the same about[N]
+old Darahan, here.[A][N]
+I'd stand back if I were you.[A][X]
 
 ##I1PtolemyTalk
-[OpenMidLeft][LoadBlair]
-placeholder moment[A][X]
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadPtolemy]
+H-Hello there... I'm Ptolemy...[N]
+The flowers here a-are quite lovely.[A][N]
+I wonder what my bee friends would[N]
+think of them...[A][N]
+You don't see them out here in Mevion much...[N]
+Where I'm from, the bees are everywhere.[A][N]
+it's something truly delightful to behold.[A][N]
+Maybe if I spread more flowers, the bees[N]
+will come here, too.[A][N]
+Oh... Sorry for going on like that.[N]
+Here, have this.[A] One of my bee friends[N]
+gave it to me...[A] You seem like a[N]
+bee enjoyer, too.[A][X]
 
 ##I1EstelleTalk
-[OpenMidLeft][LoadBlair]
-placeholder moment[A][X]
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadEstelle][CloseEyes]
+...Alas, mine life is but a...[N]
+But a... No, that won't...[A][N][OpenEyes]
+Oh, hello there. Didn't see you.[A][N]
+My name's Estelle, though if you've been[N]
+to the playhouse,[A] you may know me by[N]
+a different name.[A][N]
+[OpenMidLeft]Theatre? We don't have many[N]
+theatres in my homeland.[A][N]
+[OpenMidRight]I suppose our political revolution sparked[N]
+somewhat of an artistic rebirth as well.[A][N]
+Anyway, if you'll be in the city a while,[N]
+come by and see our production-[A][N]
+it's a modern classic called [OpenQuote]Dawn's Maiden[N]
+and the Champion of Radiance.[CloseQuote][A][N]
+My role is that of a humble young noblelady,[N]
+who wishes for a life of freedom...[A][N]
+She eventually ends up in the company[N]
+of a mercenary troupe, and, well...[A][N]
+Look, I don't want to ruin the show for you![A][N]
+Anyway, I've been feeling... off, with my role.[N]
+Normally, I just [OpenQuote]become[CloseQuote] another person...[A][N]
+That's what acting is, ain't it?[A][N]
+But for some reason, I feel like I'm[N]
+missing a connection...[A][N]
+Maybe what I need is to join a mercenary[N]
+troupe myself...[A][N]
+Rift over there's been talking about finding[N]
+work... I can probably trust him. I think.[A][N]
+Anyway, sorry for rambling there.[N]
+And welcome to Mevion.[A][X]
 
 ##I1RiftTalk
-[OpenMidLeft][LoadBlair]
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadRift]
 placeholder moment[A][X]
 
 ##I1MerchantTalk
-[OpenMidLeft][LoadBlair]
-placeholder moment[A][X]
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan4]
+Greetings, young woman! Might I interest[N]
+you in a relic beyond compare?[A][N]
+For a mere 1500 gold, I'll give you[N]
+a truly incredible staff![A][N]
+What do you say?[A][X]
+
+##I1NoMoneyHa
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan4]
+Wait... You don't have enough money![N]
+What a shame.[A] Come back if you[N]
+scrounge up enough cash.[A][X]
+
+##I1StaffBuy
+Purchase an [OpenQuote]incredible[CloseQuote] staff?[N]
+[Yes][X]
+
+##I1StaffPurchased
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan4][OpenMidLeft]
+...Sure! Here you go.[A][N]
+[OpenMidRight]Delightful... Absolutely delightful![A][N]
+...Now's a good time to mention that I will,[N]
+under ZERO circumstances, take refunds.[A][X]
+
+##I1StaffDenied
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan4][OpenMidLeft]
+...No thank you.[A][N]
+[OpenMidRight]What a shame. If you change your[N]
+mind, I'll be right here.[A][X]
 
 ##I1CitTalk
 [OpenMidLeft][LoadBlair]
@@ -52,3 +119,19 @@ placeholder moment[A][X]
 ##I1ConfirmLeave
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadArin]
 Are you finished here, Blair?[A][X]
+
+##I1LeavePrompt
+Conclude exploration?[N]
+[Yes][X]
+
+##I1NotYet
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadArin][OpenMidLeft]
+Hm... I still have a few things[N]
+I'd like to do here.[A][N]
+[OpenMidRight]Understandable. Take your time.[A][X]
+
+##I1ReleaseMe
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadArin][OpenMidLeft]
+I believe I'm done![N]
+Let us proceed.[A][N]
+[OpenMidRight]Very well. Prepare to advance.[A][X]

@@ -357,13 +357,6 @@ POP
   //support rework, base convos
 #include "Support Rework Rework/SupportRework.event"
 
-//aid calcs
-PUSH
-ORG $11f5b10
-BYTE 0x18
-ORG $11f5b64
-BYTE 0x00
-POP
 
 //save in former tower/ruins maps
 PUSH

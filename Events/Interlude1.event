@@ -111,6 +111,7 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
+DisableFreeMovement
 MoveToChapter(Chapter6)
 ENDA
 
@@ -126,6 +127,7 @@ EndEvent
 
 I1Ptolemy:
 Text(I1PtolemyTalk)
+GiveItem(HoneyCharm,Blair)
 EndEvent
 
 I1Estelle:
@@ -138,6 +140,25 @@ EndEvent
 
 I1Merchant:
 Text(I1MerchantTalk)
+CHECK_MONEY
+SVAL 0x1 0x5DC
+BGE 0x1 0xc 0x1
+Text(I1NoMoneyHa)
+ENUF 0xe
+GOTO 0x2
+LABEL 0x1
+SystemText(I1StaffBuy)
+SVAL 0x1 0x1
+BNE 0x3 0xc 0x1
+Text(I1StaffPurchased)
+SVAL 0x3 0x5dc
+TAKEMONEY
+GiveItem(Yoink,Blair)
+GOTO 0x2
+LABEL 0x3
+Text(I1StaffDenied)
+ENUF 0xe
+LABEL 0x2
 EndEvent
 
 I1Cit:
@@ -150,6 +171,15 @@ EndEvent
 
 I1ReadyToEnd:
 Text(I1ConfirmLeave)
+SystemText(I1LeavePrompt)
+SVAL 0x1 0x1
+BNE 0x2 0xc 0x1
+Text(I1ReleaseMe)
+CALL EndingScene
+GOTO 0x1
+LABEL 0x2
+Text(I1NotYet)
+LABEL 0x1
 EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

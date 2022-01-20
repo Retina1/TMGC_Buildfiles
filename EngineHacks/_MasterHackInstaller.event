@@ -65,6 +65,12 @@ ORG $178C2
 BYTE 0x00
 POP
 
+//fix hardcoded exp class
+PUSH
+ORG $2C3FE
+BYTE 0x65
+POP
+
 
 //enemy hmb
 PUSH
@@ -387,3 +393,27 @@ POP
 ALIGN 4
   //MMB
 #include "ModularMinimugBox/Installers/MMBInstallerDefault.event"
+
+//bardly stuff
+ALIGN 4
+{
+#include "MultiDancer/Installer.event"
+}
+ALIGN 4
+{
+#include "MultiDancerForMap/Installer.event"
+}
+ALIGN 4
+{
+#include "MultiDancerForBattleAnime/Installer.event"
+}
+/*PUSH
+//install base stat promos
+ORG 0x2BD50
+#incbin "Class Base Promotion Gains.dmp"
+
+//This is the graphic that resets the level.
+//Change to ping to the new level (usually the same)
+ORG 0x736DA
+SHORT 0x7A18
+POP*/

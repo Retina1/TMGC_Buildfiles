@@ -16,7 +16,6 @@ ALIGN 4
 
 NatasiaSkillList:
 BYTE 21 WrathID
-BYTE 21 TrampleID
 BYTE 00 00
 ALIGN 4
 
@@ -39,6 +38,7 @@ ALIGN 4
 
 JosefSkillList:
 BYTE 21 PuissanceID
+BYTE 21 DespoilID
 BYTE 00 00
 ALIGN 4
 
@@ -54,6 +54,7 @@ ALIGN 4
 
 
 EphraimLordSkillList:
+BYTE 1 SupplyID
 BYTE 00 00
 ALIGN 4
 

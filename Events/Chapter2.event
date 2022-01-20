@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C2Turn2,2)
 TurnEventPlayer(0x0,C2Turn3,3)
 TurnEventPlayer(0x0,C2Turn4,4)
 TurnEventPlayer(0x0,C2Turn9,9)
@@ -52,10 +53,10 @@ ENDTRAP
 ALIGN 4
 
 C2Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,7] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,7] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,6] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,8] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [0,7] 0x0 0x0 0x1 REDA2R7 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,7] 0x0 0x0 0x1 REDA0R7 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Kenneth DarkM 0x0 Level(3,Ally,0) [0,6] 0x0 0x0 0x1 REDA1R6 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Natasia FighterF 0x0 Level(3,Ally,0) [0,8] 0x0 0x0 0x1 REDA1R8 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT
 
 C2StefanDesmondJoin:
@@ -134,10 +135,10 @@ UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,Silver
 UNIT
 
 C2Allies:
-UNIT Aercolyn LncArm 0x0 Level(5,NPC,1) [2,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Aercolyn MageF 0x0 Level(5,NPC,1) [3,2] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Aercolyn Troub 0x0 Level(5,NPC,1) [6,1] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT JohanC2 LncCav 0x0 Level(8,NPC,0) [8,3] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Aercolyn LncArm 0x0 Level(5,NPC,1) [2,0] 0x0 0x0 0x0 0x0 [SilverLance,Elixir] NeverMoveAI
+UNIT Aercolyn MageF 0x0 Level(5,NPC,1) [3,2] 0x0 0x0 0x0 0x0 [Thunder,Elixir] NeverMoveAI
+UNIT Aercolyn Troub 0x0 Level(5,NPC,1) [6,1] 0x0 0x0 0x0 0x0 [Mend,Elixir] NeverMoveAI
+UNIT JohanC2 LncCav 0x0 Level(8,NPC,0) [8,3] 0x0 0x0 0x0 0x0 [SteelLance,Javelin,Elixir] NeverMoveAI
 UNIT
 
 C2Thief:
@@ -156,8 +157,8 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+CleanText(0x10,Ch2_ColdOpen)
 LoadUnitsByDifficulty(C2Easy,C2Normal,C2Hard)
-LOAD1 0x0 C2Units
 LOAD1 0x0 C2Allies
 ENUN
 MUSC 0x4
@@ -168,6 +169,11 @@ CGText(Ch2_Narration)
 MUSC 0x0
 FADI 0x3c
 CLEAN
+FADU 0x3c
+LOAD1 0x0 C2Units
+ENUN
+FlashCursor(Blair,30)
+MUSC 0x25
 CHECK_ALIVE Kenneth
 BEQ 0x11 0xC 0x0
 CHECK_ALIVE Natasia
@@ -194,6 +200,12 @@ CleanText(0x3,Ch2_Opening)
 LABEL 0x5
 GotoPrepScreen
 ENDA
+
+C2Turn2:
+CAM1 JohanC2
+FlashCursor(JohanC2,60)
+Text(C2JohanT2)
+EndEvent
 
 C2Turn3:
 EVBIT_T 9
@@ -234,7 +246,7 @@ ENUN
 EndEvent
 
 EndingScene:
-MUSC 0x31 
+MUSC 0x32 
 CHECK_ALIVE Stefan
 BNE 0x2 0xC 0x0
 CHECK_ALIVE Desmond

@@ -8,7 +8,7 @@ setMugEntry(0x2,BlairMug,3,5,3,3)
 ALIGN 4
 ArinMug:
 #incext PortraitFormatter "Arin.png"
-setMugEntry(0x4,ArinMug,3,5,3,3)
+setMugEntry(0x4,ArinMug,3,6,3,4)
 
 ALIGN 4
 KennethMug:
@@ -56,9 +56,29 @@ PeggyMug:
 setMugEntry(0xc,PeggyMug,3,6,3,4)
 
 ALIGN 4
+ButchMug:
+#incext PortraitFormatter "Butch.png"
+setMugEntry(0xe,ButchMug,3,5,3,3)
+
+ALIGN 4
+RachaelMug:
+#incext PortraitFormatter "Rachael.png"
+setMugEntry(0x10,RachaelMug,3,5,3,3)
+
+ALIGN 4
 EstelleMug:
 #incext PortraitFormatter "Estelle.png"
 setMugEntry(0x2e,EstelleMug,3,5,3,3)
+
+ALIGN 4
+RiftMug:
+#incext PortraitFormatter "Rift.png"
+setMugEntry(0x2d,RiftMug,4,6,4,4)
+
+ALIGN 4
+PeterMug:
+#incext PortraitFormatter "Peter.png"
+setMugEntry(0x44,PeterMug,2,5,2,3)
 
 ALIGN 4
 LazarusMug:
@@ -69,3 +89,28 @@ ALIGN 4
 BrentsonMug:
 #incext PortraitFormatter "Brentson.png"
 setMugEntry(0x32,BrentsonMug,3,5,3,3)
+
+ALIGN 4
+DavelarnMug:
+#incext PortraitFormatter "Davelarn.png"
+setMugEntry(0x30,DavelarnMug,2,6,3,4)
+
+ALIGN 4
+MarqueMug:
+#incext PortraitFormatter "Marque.png"
+setMugEntry(0x31,MarqueMug,3,5,3,3)
+
+ALIGN 4
+StarqueMug:
+#incext PortraitFormatter "Starque.png"
+setMugEntry(0x41,StarqueMug,3,5,3,3)
+
+ALIGN 4
+HelgaMug:
+#incext PortraitFormatter "Helga.png"
+setMugEntry(0x33,HelgaMug,3,5,3,3)
+
+ALIGN 4
+MitchellMug:
+#incext PortraitFormatter "Mitchell.png"
+setMugEntry(0x34,MitchellMug,2,5,2,3)

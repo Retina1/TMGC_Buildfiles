@@ -1,0 +1,4556 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	LastBibleField_grp  voicegroup000
+	#define	LastBibleField_pri  0
+	#define	LastBibleField_rev  0
+	#define	LastBibleField_mvl  47
+	#define	LastBibleField_key  0
+	#define	LastBibleField_tbs  1
+	#define	LastBibleField_exg  0
+	#define	LastBibleField_cmp  1
+
+	// .rodata
+	//	LastBibleField
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+LastBibleField_1:
+	BYTE		VOL     127*LastBibleField_mvl/mxv
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   100*LastBibleField_tbs/2
+	BYTE		VOICE   11
+	BYTE		PAN     c_v+16
+	BYTE	W03
+	BYTE		N42     Dn4   v100
+	BYTE		N42     Dn5   v072
+	BYTE	W48
+	BYTE		        Cn4   v100
+	BYTE		N42     Cn5   v072
+	BYTE	W44
+	BYTE	W01
+// 001   ----------------------------------------
+LastBibleField_1_001:
+	BYTE	W03
+	BYTE		N48     Fn4   v100
+	BYTE		N48     Fn5   v072
+	BYTE	W48
+	BYTE		        Cn4   v100
+	BYTE		N48     Cn5   v072
+	BYTE	W44
+	BYTE	W01
+	BYTE	PEND
+// 002   ----------------------------------------
+LastBibleField_1_002:
+	BYTE	W03
+	BYTE		N48     Dn4   v100
+	BYTE		N48     Dn5   v072
+	BYTE	W48
+	BYTE		        Cn4   v100
+	BYTE		N48     Cn5   v072
+	BYTE	W44
+	BYTE	W01
+	BYTE	PEND
+// 003   ----------------------------------------
+LastBibleField_1_003:
+	BYTE	W03
+	BYTE		N48     An3   v100
+	BYTE		N48     An4   v072
+	BYTE	W92
+	BYTE	W01
+	BYTE	PEND
+LastBibleField_1_B1:
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		PAN     c_v+16
+	BYTE	W03
+	BYTE		N42     Dn4   v100
+	BYTE		N42     Dn5   v072
+	BYTE	W48
+	BYTE		        Cn4   v100
+	BYTE		N42     Cn5   v072
+	BYTE	W44
+	BYTE	W01
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_1_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_1_002
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_1_003
+	BYTE	GoTo
+	 POIN2	LastBibleField_1_B1
+LastBibleField_1_B2:
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE		VOL     100*LastBibleField_mvl/mxv
+	BYTE		PAN     c_v+16
+	BYTE	W03
+	BYTE		N42     Dn4   v100
+	BYTE		N42     Dn5   v072
+	BYTE	W01
+	BYTE		VOL     99*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        98*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        97*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        96*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        95*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        94*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        93*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        92*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        91*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        90*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        89*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        88*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N42     Cn4   v100
+	BYTE		N42     Cn5   v072
+	BYTE	W01
+	BYTE		VOL     87*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        86*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        85*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        84*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        83*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        82*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        81*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        80*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        79*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        78*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        77*LastBibleField_mvl/mxv
+	BYTE	W05
+// 057   ----------------------------------------
+	BYTE		        76*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N48     Fn4   v100
+	BYTE		N48     Fn5   v072
+	BYTE	W01
+	BYTE		VOL     75*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        74*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        73*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        72*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        71*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        70*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        69*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        68*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        67*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        66*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        65*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        64*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        63*LastBibleField_mvl/mxv
+	BYTE		N48     Cn4   v100
+	BYTE		N48     Cn5   v072
+	BYTE	W04
+	BYTE		VOL     62*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        61*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        60*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        59*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        58*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        57*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        56*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        55*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        54*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        53*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        52*LastBibleField_mvl/mxv
+	BYTE	W02
+// 058   ----------------------------------------
+	BYTE	W03
+	BYTE		        51*LastBibleField_mvl/mxv
+	BYTE		N48     Dn4   v100
+	BYTE		N48     Dn5   v072
+	BYTE	W04
+	BYTE		VOL     50*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        49*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        48*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        47*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        46*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        45*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        44*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        43*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        42*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        41*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        40*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        39*LastBibleField_mvl/mxv
+	BYTE		N48     Cn4   v100
+	BYTE		N48     Cn5   v072
+	BYTE	W03
+	BYTE		VOL     38*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        37*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        36*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        35*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        34*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        33*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        32*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        31*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        30*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        29*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        28*LastBibleField_mvl/mxv
+	BYTE	W02
+// 059   ----------------------------------------
+	BYTE	W01
+	BYTE		        27*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N48     An3   v100
+	BYTE		N48     An4   v072
+	BYTE	W03
+	BYTE		VOL     26*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        25*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        24*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        23*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        22*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        21*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        20*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        19*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        18*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        17*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        16*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        15*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        14*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        13*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        12*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        11*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        10*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        9*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        8*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        7*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        6*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        5*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        4*LastBibleField_mvl/mxv
+	BYTE	W03
+// 060   ----------------------------------------
+	BYTE	W01
+	BYTE		        3*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        2*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        1*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        0*LastBibleField_mvl/mxv
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+LastBibleField_2:
+	BYTE		VOL     127*LastBibleField_mvl/mxv
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   34
+	BYTE		PAN     c_v+6
+	BYTE		N36     Ds1   v100
+	BYTE	W36
+	BYTE		N12     Ds1   v088
+	BYTE	W12
+	BYTE		N24     Dn1   v092
+	BYTE	W24
+	BYTE		        An0   v088
+	BYTE	W24
+// 001   ----------------------------------------
+LastBibleField_2_001:
+	BYTE		N36     Ds1   v100
+	BYTE	W36
+	BYTE		N12     Ds1   v088
+	BYTE	W12
+	BYTE		N48     Dn1   v092
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+LastBibleField_2_002:
+	BYTE		N36     Ds1   v100
+	BYTE	W36
+	BYTE		N12     Ds1   v088
+	BYTE	W12
+	BYTE		N24     Dn1   v092
+	BYTE	W24
+	BYTE		        An0   v088
+	BYTE	W24
+	BYTE	PEND
+// 003   ----------------------------------------
+LastBibleField_2_003:
+	BYTE		N36     Gn0   v100
+	BYTE	W36
+	BYTE		N12     Gn0   v088
+	BYTE	W12
+	BYTE		N48     Gn0   v092
+	BYTE	W48
+	BYTE	PEND
+LastBibleField_2_B1:
+// 004   ----------------------------------------
+LastBibleField_2_004:
+	BYTE		N36     Gn0   v100
+	BYTE	W36
+	BYTE		N12     Gn0   v088
+	BYTE	W12
+	BYTE		N48     As0   v092
+	BYTE	W48
+	BYTE	PEND
+// 005   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 006   ----------------------------------------
+LastBibleField_2_006:
+	BYTE		N36     Cn1   v100
+	BYTE	W36
+	BYTE		N12     Cn1   v088
+	BYTE	W12
+	BYTE		N24     Fn0   v092
+	BYTE	W24
+	BYTE		        An0   v088
+	BYTE	W24
+	BYTE	PEND
+// 007   ----------------------------------------
+LastBibleField_2_007:
+	BYTE		N36     Dn0   v100
+	BYTE	W36
+	BYTE		N12     Dn0   v088
+	BYTE	W12
+	BYTE		N24     An0   v092
+	BYTE	W24
+	BYTE		        Fs0   v088
+	BYTE	W24
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_006
+// 011   ----------------------------------------
+LastBibleField_2_011:
+	BYTE		N36     As0   v100
+	BYTE	W36
+	BYTE		N12     As0   v088
+	BYTE	W12
+	BYTE		N48     As0   v092
+	BYTE	W48
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_007
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_006
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_011
+// 020   ----------------------------------------
+LastBibleField_2_020:
+	BYTE		N36     Ds0   v100
+	BYTE	W36
+	BYTE		N12     Ds0   v088
+	BYTE	W12
+	BYTE		N24     Fn0   v092
+	BYTE	W24
+	BYTE		        An0   v088
+	BYTE	W24
+	BYTE	PEND
+// 021   ----------------------------------------
+LastBibleField_2_021:
+	BYTE		N36     As0   v100
+	BYTE	W36
+	BYTE		N12     As0   v088
+	BYTE	W12
+	BYTE		N48     Dn0   v092
+	BYTE	W48
+	BYTE	PEND
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_020
+// 023   ----------------------------------------
+LastBibleField_2_023:
+	BYTE		N36     Dn0   v100
+	BYTE	W36
+	BYTE		N12     Dn0   v088
+	BYTE	W12
+	BYTE		N48     Dn0   v092
+	BYTE	W48
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_020
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_011
+// 028   ----------------------------------------
+	BYTE		PAN     c_v+6
+	BYTE		N36     Ds1   v100
+	BYTE	W36
+	BYTE		N12     Ds1   v088
+	BYTE	W12
+	BYTE		N24     Dn1   v092
+	BYTE	W24
+	BYTE		        An0   v088
+	BYTE	W24
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_003
+	BYTE	GoTo
+	 POIN2	LastBibleField_2_B1
+LastBibleField_2_B2:
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_004
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_006
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_007
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_006
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_011
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_004
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_006
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_007
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_004
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_002
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_006
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_011
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_020
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_021
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_020
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_023
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_020
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_021
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_020
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_2_011
+// 056   ----------------------------------------
+	BYTE		VOL     100*LastBibleField_mvl/mxv
+	BYTE		PAN     c_v+6
+	BYTE		N36     Ds1   v100
+	BYTE	W04
+	BYTE		VOL     99*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        98*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        97*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        96*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        95*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        94*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        93*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        92*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        91*LastBibleField_mvl/mxv
+	BYTE		N12     Ds1   v088
+	BYTE	W04
+	BYTE		VOL     90*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        89*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        88*LastBibleField_mvl/mxv
+	BYTE		N24     Dn1   v092
+	BYTE	W04
+	BYTE		VOL     87*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        86*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        85*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        84*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        83*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        82*LastBibleField_mvl/mxv
+	BYTE		N24     An0   v088
+	BYTE	W03
+	BYTE		VOL     81*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        80*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        79*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        78*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        77*LastBibleField_mvl/mxv
+	BYTE	W05
+// 057   ----------------------------------------
+	BYTE		        76*LastBibleField_mvl/mxv
+	BYTE		N36     Ds1   v100
+	BYTE	W03
+	BYTE		VOL     75*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        74*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        73*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        72*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        71*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        70*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        69*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        68*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        67*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N12     Ds1   v088
+	BYTE	W03
+	BYTE		VOL     66*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        65*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        64*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N48     Dn1   v092
+	BYTE	W03
+	BYTE		VOL     63*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        62*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        61*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        60*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        59*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        58*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        57*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        56*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        55*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        54*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        53*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        52*LastBibleField_mvl/mxv
+	BYTE	W02
+// 058   ----------------------------------------
+	BYTE		N36     Ds1   v100
+	BYTE	W01
+	BYTE		VOL     51*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        50*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        49*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        48*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        47*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        46*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        45*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        44*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        43*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N12     Ds1   v088
+	BYTE	W01
+	BYTE		VOL     42*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        41*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        40*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N24     Dn1   v092
+	BYTE	W01
+	BYTE		VOL     39*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        38*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        37*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        36*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        35*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        34*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N24     An0   v088
+	BYTE	W01
+	BYTE		VOL     33*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        32*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        31*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        30*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        29*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        28*LastBibleField_mvl/mxv
+	BYTE	W03
+// 059   ----------------------------------------
+	BYTE		        27*LastBibleField_mvl/mxv
+	BYTE		N36     Gn0   v100
+	BYTE	W04
+	BYTE		VOL     26*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        25*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        24*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        23*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        22*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        21*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        20*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        19*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        18*LastBibleField_mvl/mxv
+	BYTE		N12     Gn0   v088
+	BYTE	W04
+	BYTE		VOL     17*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        16*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        15*LastBibleField_mvl/mxv
+	BYTE		N48     Gn0   v092
+	BYTE	W04
+	BYTE		VOL     14*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        13*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        12*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        11*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        10*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        9*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        8*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        7*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        6*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        5*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        4*LastBibleField_mvl/mxv
+	BYTE	W05
+// 060   ----------------------------------------
+	BYTE		        3*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        2*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        1*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        0*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+LastBibleField_3:
+	BYTE		VOL     127*LastBibleField_mvl/mxv
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   40
+	BYTE		PAN     c_v-24
+	BYTE		N10     Dn3   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Fn3   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		N05     As2 
+	BYTE	W06
+	BYTE		        Cn3   v088
+	BYTE	W06
+// 001   ----------------------------------------
+LastBibleField_3_001:
+	BYTE		N10     Dn3   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Fn3   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		        Cn3   v088
+	BYTE	W12
+	BYTE	PEND
+// 002   ----------------------------------------
+LastBibleField_3_002:
+	BYTE		N10     Dn3   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Fn3   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE	PEND
+// 003   ----------------------------------------
+LastBibleField_3_003:
+	BYTE		N10     An2   v100
+	BYTE	W12
+	BYTE		        Dn2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        As2   v100
+	BYTE	W12
+	BYTE		        Cn3   v088
+	BYTE	W12
+	BYTE		        Fn2   v092
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE	PEND
+LastBibleField_3_B1:
+// 004   ----------------------------------------
+LastBibleField_3_004:
+	BYTE		N10     Gn2   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Fn2   v100
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+LastBibleField_3_005:
+	BYTE		N10     Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Fn3   v100
+	BYTE	W12
+	BYTE		        Dn3   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE	PEND
+// 006   ----------------------------------------
+LastBibleField_3_006:
+	BYTE		N10     Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE		        Ds2   v088
+	BYTE	W12
+	BYTE	PEND
+// 007   ----------------------------------------
+LastBibleField_3_007:
+	BYTE		N10     Dn2   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        Fs2   v100
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Cn3   v092
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_005
+// 010   ----------------------------------------
+LastBibleField_3_010:
+	BYTE		N10     Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Ds2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE		        Ds2   v088
+	BYTE	W12
+	BYTE	PEND
+// 011   ----------------------------------------
+LastBibleField_3_011:
+	BYTE		N10     As2   v100
+	BYTE	W12
+	BYTE		        As1   v088
+	BYTE	W12
+	BYTE		        Dn2   v092
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE		        Fn3   v088
+	BYTE	W12
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_007
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_005
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_011
+// 020   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_006
+// 021   ----------------------------------------
+LastBibleField_3_021:
+	BYTE		N10     As1   v100
+	BYTE	W12
+	BYTE		        Dn2   v088
+	BYTE	W12
+	BYTE		        Fn2   v092
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Dn3   v100
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Fn2   v092
+	BYTE	W12
+	BYTE		        Dn2   v088
+	BYTE	W12
+	BYTE	PEND
+// 022   ----------------------------------------
+LastBibleField_3_022:
+	BYTE		N10     Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE	PEND
+// 023   ----------------------------------------
+LastBibleField_3_023:
+	BYTE		N10     Dn2   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		        Dn3   v088
+	BYTE	W12
+	BYTE		        Fn3   v100
+	BYTE	W12
+	BYTE		        Dn3   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_022
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_006
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_011
+// 028   ----------------------------------------
+	BYTE		PAN     c_v-24
+	BYTE		N10     Dn3   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Fn3   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		N05     As2 
+	BYTE	W06
+	BYTE		        Cn3   v088
+	BYTE	W06
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_002
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_003
+	BYTE	GoTo
+	 POIN2	LastBibleField_3_B1
+LastBibleField_3_B2:
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_004
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_005
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_006
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_007
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_010
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_011
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_004
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_005
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_006
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_007
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_004
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_005
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_010
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_011
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_006
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_021
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_022
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_023
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_022
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_021
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_006
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_3_011
+// 056   ----------------------------------------
+	BYTE		VOL     100*LastBibleField_mvl/mxv
+	BYTE		PAN     c_v-24
+	BYTE		N10     Dn3   v100
+	BYTE	W04
+	BYTE		VOL     99*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        98*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        97*LastBibleField_mvl/mxv
+	BYTE		N10     Gn2   v088
+	BYTE	W04
+	BYTE		VOL     96*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        95*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        94*LastBibleField_mvl/mxv
+	BYTE		N10     As2   v092
+	BYTE	W04
+	BYTE		VOL     93*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        92*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        91*LastBibleField_mvl/mxv
+	BYTE		N10     Fn3   v088
+	BYTE	W04
+	BYTE		VOL     90*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        89*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        88*LastBibleField_mvl/mxv
+	BYTE		N10     Cn3   v100
+	BYTE	W04
+	BYTE		VOL     87*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        86*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        85*LastBibleField_mvl/mxv
+	BYTE		N10     Fn2   v088
+	BYTE	W04
+	BYTE		VOL     84*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        83*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        82*LastBibleField_mvl/mxv
+	BYTE		N10     An2   v092
+	BYTE	W03
+	BYTE		VOL     81*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        80*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        79*LastBibleField_mvl/mxv
+	BYTE		N05     As2 
+	BYTE	W03
+	BYTE		VOL     78*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N05     Cn3   v088
+	BYTE	W01
+	BYTE		VOL     77*LastBibleField_mvl/mxv
+	BYTE	W05
+// 057   ----------------------------------------
+	BYTE		        76*LastBibleField_mvl/mxv
+	BYTE		N10     Dn3   v100
+	BYTE	W03
+	BYTE		VOL     75*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        74*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        73*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Gn2   v088
+	BYTE	W03
+	BYTE		VOL     72*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        71*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        70*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     As2   v092
+	BYTE	W03
+	BYTE		VOL     69*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        68*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        67*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Fn3   v088
+	BYTE	W03
+	BYTE		VOL     66*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        65*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        64*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Cn3   v100
+	BYTE	W03
+	BYTE		VOL     63*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        62*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        61*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Fn2   v088
+	BYTE	W03
+	BYTE		VOL     60*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        59*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        58*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     An2   v092
+	BYTE	W03
+	BYTE		VOL     57*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        56*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        55*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Cn3   v088
+	BYTE	W01
+	BYTE		VOL     54*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        53*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        52*LastBibleField_mvl/mxv
+	BYTE	W02
+// 058   ----------------------------------------
+	BYTE		N10     Dn3   v100
+	BYTE	W01
+	BYTE		VOL     51*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        50*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        49*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Gn2   v088
+	BYTE	W01
+	BYTE		VOL     48*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        47*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        46*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     As2   v092
+	BYTE	W01
+	BYTE		VOL     45*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        44*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        43*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     Fn3   v088
+	BYTE	W01
+	BYTE		VOL     42*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        41*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        40*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     Cn3   v100
+	BYTE	W01
+	BYTE		VOL     39*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        38*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        37*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     Fn2   v088
+	BYTE	W01
+	BYTE		VOL     36*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        35*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        34*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     An2   v092
+	BYTE	W01
+	BYTE		VOL     33*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        32*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        31*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     As2   v088
+	BYTE	W01
+	BYTE		VOL     30*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        29*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        28*LastBibleField_mvl/mxv
+	BYTE	W03
+// 059   ----------------------------------------
+	BYTE		        27*LastBibleField_mvl/mxv
+	BYTE		N10     An2   v100
+	BYTE	W04
+	BYTE		VOL     26*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        25*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        24*LastBibleField_mvl/mxv
+	BYTE		N10     Dn2   v088
+	BYTE	W04
+	BYTE		VOL     23*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        22*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        21*LastBibleField_mvl/mxv
+	BYTE		N10     Gn2   v092
+	BYTE	W04
+	BYTE		VOL     20*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        19*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        18*LastBibleField_mvl/mxv
+	BYTE		N10     An2   v088
+	BYTE	W04
+	BYTE		VOL     17*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        16*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        15*LastBibleField_mvl/mxv
+	BYTE		N10     As2   v100
+	BYTE	W04
+	BYTE		VOL     14*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        13*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        12*LastBibleField_mvl/mxv
+	BYTE		N10     Cn3   v088
+	BYTE	W03
+	BYTE		VOL     11*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        10*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        9*LastBibleField_mvl/mxv
+	BYTE		N10     Fn2   v092
+	BYTE	W03
+	BYTE		VOL     8*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        7*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        6*LastBibleField_mvl/mxv
+	BYTE		N10     An2   v088
+	BYTE	W03
+	BYTE		VOL     5*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        4*LastBibleField_mvl/mxv
+	BYTE	W05
+// 060   ----------------------------------------
+	BYTE		        3*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        2*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        1*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        0*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+LastBibleField_4:
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   11
+	BYTE		PAN     c_v-34
+	BYTE		VOL     64*LastBibleField_mvl/mxv
+	BYTE	W24
+	BYTE		N42     Dn4   v100
+	BYTE		N42     Dn5   v072
+	BYTE	W48
+	BYTE		        Cn4   v100
+	BYTE		N42     Cn5   v072
+	BYTE	W24
+// 001   ----------------------------------------
+LastBibleField_4_001:
+	BYTE	W24
+	BYTE		N48     Fn4   v100
+	BYTE		N48     Fn5   v072
+	BYTE	W48
+	BYTE		        Cn4   v100
+	BYTE		N48     Cn5   v072
+	BYTE	W24
+	BYTE	PEND
+// 002   ----------------------------------------
+LastBibleField_4_002:
+	BYTE	W24
+	BYTE		N48     Dn4   v100
+	BYTE		N48     Dn5   v072
+	BYTE	W48
+	BYTE		        Cn4   v100
+	BYTE		N48     Cn5   v072
+	BYTE	W24
+	BYTE	PEND
+// 003   ----------------------------------------
+LastBibleField_4_003:
+	BYTE	W24
+	BYTE		N48     An3   v100
+	BYTE		N48     An4   v072
+	BYTE	W72
+	BYTE	PEND
+LastBibleField_4_B1:
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		VOL     64*LastBibleField_mvl/mxv
+	BYTE		PAN     c_v-34
+	BYTE	W24
+	BYTE		N42     Dn4   v100
+	BYTE		N42     Dn5   v072
+	BYTE	W48
+	BYTE		        Cn4   v100
+	BYTE		N42     Cn5   v072
+	BYTE	W24
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_4_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_4_002
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_4_003
+	BYTE	GoTo
+	 POIN2	LastBibleField_4_B1
+LastBibleField_4_B2:
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE		VOL     63*LastBibleField_mvl/mxv
+	BYTE		PAN     c_v-34
+	BYTE	W07
+	BYTE		VOL     62*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        61*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        60*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		N42     Dn4   v100
+	BYTE		N42     Dn5   v072
+	BYTE	W01
+	BYTE		VOL     59*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        58*LastBibleField_mvl/mxv
+	BYTE	W08
+	BYTE		        57*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        56*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        55*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        54*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        53*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        52*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N42     Cn4   v100
+	BYTE		N42     Cn5   v072
+	BYTE	W04
+	BYTE		VOL     51*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        50*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        49*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        48*LastBibleField_mvl/mxv
+	BYTE	W02
+// 057   ----------------------------------------
+	BYTE	W04
+	BYTE		        47*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        46*LastBibleField_mvl/mxv
+	BYTE	W08
+	BYTE		        45*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        44*LastBibleField_mvl/mxv
+	BYTE		N48     Fn4   v100
+	BYTE		N48     Fn5   v072
+	BYTE	W06
+	BYTE		VOL     43*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        42*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        41*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        40*LastBibleField_mvl/mxv
+	BYTE	W07
+	BYTE		        39*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        38*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        37*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		N48     Cn4   v100
+	BYTE		N48     Cn5   v072
+	BYTE	W01
+	BYTE		VOL     36*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        35*LastBibleField_mvl/mxv
+	BYTE	W08
+	BYTE		        34*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        33*LastBibleField_mvl/mxv
+	BYTE	W03
+// 058   ----------------------------------------
+	BYTE	W03
+	BYTE		        32*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        31*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        30*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        29*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N48     Dn4   v100
+	BYTE		N48     Dn5   v072
+	BYTE	W04
+	BYTE		VOL     28*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        27*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        26*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        25*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        24*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        23*LastBibleField_mvl/mxv
+	BYTE	W08
+	BYTE		        22*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        21*LastBibleField_mvl/mxv
+	BYTE		N48     Cn4   v100
+	BYTE		N48     Cn5   v072
+	BYTE	W06
+	BYTE		VOL     20*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        19*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        18*LastBibleField_mvl/mxv
+	BYTE	W06
+// 059   ----------------------------------------
+	BYTE		        17*LastBibleField_mvl/mxv
+	BYTE	W07
+	BYTE		        16*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        15*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        14*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		N48     An3   v100
+	BYTE		N48     An4   v072
+	BYTE	W01
+	BYTE		VOL     13*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        12*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        11*LastBibleField_mvl/mxv
+	BYTE	W08
+	BYTE		        10*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        9*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        8*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        7*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        6*LastBibleField_mvl/mxv
+	BYTE	W07
+	BYTE		        5*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        4*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        3*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        2*LastBibleField_mvl/mxv
+	BYTE	W02
+// 060   ----------------------------------------
+	BYTE	W04
+	BYTE		        1*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        0*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+LastBibleField_5:
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   11
+	BYTE		PAN     c_v+41
+	BYTE		VOL     85*LastBibleField_mvl/mxv
+	BYTE		N42     As3   v072
+	BYTE		N42     As4   v100
+	BYTE	W48
+	BYTE		        An3   v072
+	BYTE		N42     An4   v100
+	BYTE	W48
+// 001   ----------------------------------------
+LastBibleField_5_001:
+	BYTE		N48     As3   v072
+	BYTE		N48     As4   v100
+	BYTE	W48
+	BYTE		        Fn3   v072
+	BYTE		N48     Fn4   v100
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+LastBibleField_5_002:
+	BYTE		N48     Gn3   v072
+	BYTE		N48     Gn4   v100
+	BYTE	W48
+	BYTE		        Fn3   v072
+	BYTE		N48     Fn4   v100
+	BYTE	W48
+	BYTE	PEND
+// 003   ----------------------------------------
+LastBibleField_5_003:
+	BYTE		N48     As3   v072
+	BYTE		N48     As4   v100
+	BYTE	W96
+	BYTE	PEND
+LastBibleField_5_B1:
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		PAN     c_v+41
+	BYTE		VOL     85*LastBibleField_mvl/mxv
+	BYTE		N42     As3   v072
+	BYTE		N42     As4   v100
+	BYTE	W48
+	BYTE		        An3   v072
+	BYTE		N42     An4   v100
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_5_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_5_002
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_5_003
+	BYTE	GoTo
+	 POIN2	LastBibleField_5_B1
+LastBibleField_5_B2:
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE		VOL     85*LastBibleField_mvl/mxv
+	BYTE		PAN     c_v+41
+	BYTE		N42     As3   v072
+	BYTE		N42     As4   v100
+	BYTE	W06
+	BYTE		VOL     84*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        83*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        82*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        81*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        80*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        79*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        78*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        77*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        76*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        75*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N42     An3   v072
+	BYTE		N42     An4   v100
+	BYTE	W04
+	BYTE		VOL     74*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        73*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        72*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        71*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        70*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        69*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        68*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        67*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        66*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        65*LastBibleField_mvl/mxv
+	BYTE	W03
+// 057   ----------------------------------------
+	BYTE		N48     As3   v072
+	BYTE		N48     As4   v100
+	BYTE	W03
+	BYTE		VOL     64*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        63*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        62*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        61*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        60*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        59*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        58*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        57*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        56*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        55*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		N48     Fn3   v072
+	BYTE		N48     Fn4   v100
+	BYTE	W01
+	BYTE		VOL     54*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        53*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        52*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        51*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        50*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        49*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        48*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        47*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        46*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        45*LastBibleField_mvl/mxv
+	BYTE	W06
+// 058   ----------------------------------------
+	BYTE		        44*LastBibleField_mvl/mxv
+	BYTE		N48     Gn3   v072
+	BYTE		N48     Gn4   v100
+	BYTE	W04
+	BYTE		VOL     43*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        42*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        41*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        40*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        39*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        38*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        37*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        36*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        35*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        34*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N48     Fn3   v072
+	BYTE		N48     Fn4   v100
+	BYTE	W03
+	BYTE		VOL     33*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        32*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        31*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        30*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        29*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        28*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        27*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        26*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        25*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        24*LastBibleField_mvl/mxv
+	BYTE	W05
+// 059   ----------------------------------------
+	BYTE		N48     As3   v072
+	BYTE		N48     As4   v100
+	BYTE	W01
+	BYTE		VOL     23*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        22*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        21*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        20*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        19*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        18*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        17*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        16*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        15*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        14*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        13*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        12*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        11*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        10*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        9*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        8*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        7*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        6*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        5*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        4*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        3*LastBibleField_mvl/mxv
+	BYTE	W02
+// 060   ----------------------------------------
+	BYTE	W03
+	BYTE		        2*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        1*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        0*LastBibleField_mvl/mxv
+	BYTE	W01
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+LastBibleField_6:
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   11
+	BYTE		PAN     c_v-14
+	BYTE		VOL     85*LastBibleField_mvl/mxv
+	BYTE		N42     Gn3   v072
+	BYTE		N42     Gn4   v100
+	BYTE	W48
+	BYTE		        Fn3   v072
+	BYTE		N42     Fn4   v100
+	BYTE	W48
+// 001   ----------------------------------------
+LastBibleField_6_001:
+	BYTE		N48     Gn3   v072
+	BYTE		N48     Gn4   v100
+	BYTE	W48
+	BYTE		        Dn3   v072
+	BYTE		N48     Dn4   v100
+	BYTE	W48
+	BYTE	PEND
+// 002   ----------------------------------------
+LastBibleField_6_002:
+	BYTE		N48     Ds3   v072
+	BYTE		N48     Ds4   v100
+	BYTE	W48
+	BYTE		        Dn3   v072
+	BYTE		N48     Dn4   v100
+	BYTE	W48
+	BYTE	PEND
+// 003   ----------------------------------------
+LastBibleField_6_003:
+	BYTE		N48     Dn3   v072
+	BYTE		N48     Dn4   v100
+	BYTE	W96
+	BYTE	PEND
+LastBibleField_6_B1:
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		PAN     c_v-14
+	BYTE		VOL     85*LastBibleField_mvl/mxv
+	BYTE		N42     Gn3   v072
+	BYTE		N42     Gn4   v100
+	BYTE	W48
+	BYTE		        Fn3   v072
+	BYTE		N42     Fn4   v100
+	BYTE	W48
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_6_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_6_002
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_6_003
+	BYTE	GoTo
+	 POIN2	LastBibleField_6_B1
+LastBibleField_6_B2:
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE		VOL     85*LastBibleField_mvl/mxv
+	BYTE		PAN     c_v-14
+	BYTE		N42     Gn3   v072
+	BYTE		N42     Gn4   v100
+	BYTE	W06
+	BYTE		VOL     84*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        83*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        82*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        81*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        80*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        79*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        78*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        77*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        76*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        75*LastBibleField_mvl/mxv
+	BYTE		N42     Fn3   v072
+	BYTE		N42     Fn4   v100
+	BYTE	W04
+	BYTE		VOL     74*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        73*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        72*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        71*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        70*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        69*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        68*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        67*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        66*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        65*LastBibleField_mvl/mxv
+	BYTE	W02
+// 057   ----------------------------------------
+	BYTE		N48     Gn3   v072
+	BYTE		N48     Gn4   v100
+	BYTE	W03
+	BYTE		VOL     64*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        63*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        62*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        61*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        60*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        59*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        58*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        57*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        56*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        55*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N48     Dn3   v072
+	BYTE		N48     Dn4   v100
+	BYTE	W01
+	BYTE		VOL     54*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        53*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        52*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        51*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        50*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        49*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        48*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        47*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        46*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        45*LastBibleField_mvl/mxv
+	BYTE	W05
+// 058   ----------------------------------------
+	BYTE		        44*LastBibleField_mvl/mxv
+	BYTE		N48     Ds3   v072
+	BYTE		N48     Ds4   v100
+	BYTE	W04
+	BYTE		VOL     43*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        42*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        41*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        40*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        39*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        38*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        37*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        36*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        35*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        34*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N48     Dn3   v072
+	BYTE		N48     Dn4   v100
+	BYTE	W03
+	BYTE		VOL     33*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        32*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        31*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        30*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        29*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        28*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        27*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        26*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        25*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        24*LastBibleField_mvl/mxv
+	BYTE	W03
+// 059   ----------------------------------------
+	BYTE		N48     Dn3   v072
+	BYTE		N48     Dn4   v100
+	BYTE	W01
+	BYTE		VOL     23*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        22*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        21*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        20*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        19*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        18*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        17*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        16*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        15*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        14*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        13*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        12*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        11*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        10*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        9*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        8*LastBibleField_mvl/mxv
+	BYTE	W06
+	BYTE		        7*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        6*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        5*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        4*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        3*LastBibleField_mvl/mxv
+	BYTE	W02
+// 060   ----------------------------------------
+	BYTE	W03
+	BYTE		        2*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        1*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        0*LastBibleField_mvl/mxv
+	BYTE	W01
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+LastBibleField_7:
+	BYTE		VOL     127*LastBibleField_mvl/mxv
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   40
+	BYTE		PAN     c_v+8
+	BYTE	W12
+	BYTE		N10     Dn3   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Fn3   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+// 001   ----------------------------------------
+LastBibleField_7_001:
+	BYTE		N10     Cn3   v088
+	BYTE	W12
+	BYTE		        Dn3   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Fn3   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE	PEND
+// 002   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_001
+// 003   ----------------------------------------
+LastBibleField_7_003:
+	BYTE		N10     As2   v088
+	BYTE	W12
+	BYTE		        An2   v100
+	BYTE	W12
+	BYTE		        Dn2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        As2   v100
+	BYTE	W12
+	BYTE		        Cn3   v088
+	BYTE	W12
+	BYTE		        Fn2   v092
+	BYTE	W12
+	BYTE	PEND
+LastBibleField_7_B1:
+// 004   ----------------------------------------
+LastBibleField_7_004:
+	BYTE		N10     An2   v088
+	BYTE	W12
+	BYTE		        Gn2   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Fn2   v100
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+LastBibleField_7_005:
+	BYTE		N10     An2   v088
+	BYTE	W12
+	BYTE		        Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Fn3   v100
+	BYTE	W12
+	BYTE		        Dn3   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE	PEND
+// 006   ----------------------------------------
+LastBibleField_7_006:
+	BYTE		N10     Fn2   v088
+	BYTE	W12
+	BYTE		        Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE	PEND
+// 007   ----------------------------------------
+LastBibleField_7_007:
+	BYTE		N10     Ds2   v088
+	BYTE	W12
+	BYTE		        Dn2   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        Fs2   v100
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Cn3   v092
+	BYTE	W12
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_005
+// 010   ----------------------------------------
+LastBibleField_7_010:
+	BYTE		N10     Fn2   v088
+	BYTE	W12
+	BYTE		        Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Ds2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE	PEND
+// 011   ----------------------------------------
+LastBibleField_7_011:
+	BYTE		N10     Ds2   v088
+	BYTE	W12
+	BYTE		        As2   v100
+	BYTE	W12
+	BYTE		        As1   v088
+	BYTE	W12
+	BYTE		        Dn2   v092
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE	PEND
+// 012   ----------------------------------------
+LastBibleField_7_012:
+	BYTE		N10     Fn3   v088
+	BYTE	W12
+	BYTE		        Gn2   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Fn2   v100
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Dn3   v092
+	BYTE	W12
+	BYTE	PEND
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_007
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_005
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_010
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_011
+// 020   ----------------------------------------
+LastBibleField_7_020:
+	BYTE		N10     Fn3   v088
+	BYTE	W12
+	BYTE		        Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE	PEND
+// 021   ----------------------------------------
+LastBibleField_7_021:
+	BYTE		N10     Ds2   v088
+	BYTE	W12
+	BYTE		        As1   v100
+	BYTE	W12
+	BYTE		        Dn2   v088
+	BYTE	W12
+	BYTE		        Fn2   v092
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Dn3   v100
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Fn2   v092
+	BYTE	W12
+	BYTE	PEND
+// 022   ----------------------------------------
+LastBibleField_7_022:
+	BYTE		N10     Dn2   v088
+	BYTE	W12
+	BYTE		        Ds2   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        As2   v088
+	BYTE	W12
+	BYTE		        Gn2   v092
+	BYTE	W12
+	BYTE	PEND
+// 023   ----------------------------------------
+LastBibleField_7_023:
+	BYTE		N10     As2   v088
+	BYTE	W12
+	BYTE		        Dn2   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE		        Dn3   v088
+	BYTE	W12
+	BYTE		        Fn3   v100
+	BYTE	W12
+	BYTE		        Dn3   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_006
+// 025   ----------------------------------------
+LastBibleField_7_025:
+	BYTE		N10     As2   v088
+	BYTE	W12
+	BYTE		        As1   v100
+	BYTE	W12
+	BYTE		        Dn2   v088
+	BYTE	W12
+	BYTE		        Fn2   v092
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Dn3   v100
+	BYTE	W12
+	BYTE		        An2   v088
+	BYTE	W12
+	BYTE		        Fn2   v092
+	BYTE	W12
+	BYTE	PEND
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_022
+// 027   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_011
+// 028   ----------------------------------------
+	BYTE		PAN     c_v+8
+	BYTE		N10     Fn3   v088
+	BYTE	W12
+	BYTE		        Dn3   v100
+	BYTE	W12
+	BYTE		        Gn2   v088
+	BYTE	W12
+	BYTE		        As2   v092
+	BYTE	W12
+	BYTE		        Fn3   v088
+	BYTE	W12
+	BYTE		        Cn3   v100
+	BYTE	W12
+	BYTE		        Fn2   v088
+	BYTE	W12
+	BYTE		        An2   v092
+	BYTE	W12
+// 029   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_001
+// 030   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_001
+// 031   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_003
+	BYTE	GoTo
+	 POIN2	LastBibleField_7_B1
+LastBibleField_7_B2:
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_004
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_005
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_006
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_007
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_010
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_011
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_012
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_005
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_006
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_007
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_004
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_005
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_010
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_011
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_020
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_021
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_022
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_023
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_006
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_025
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_022
+// 055   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_7_011
+// 056   ----------------------------------------
+	BYTE		VOL     100*LastBibleField_mvl/mxv
+	BYTE		PAN     c_v+8
+	BYTE		N10     Fn3   v088
+	BYTE	W04
+	BYTE		VOL     99*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        98*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        97*LastBibleField_mvl/mxv
+	BYTE		N10     Dn3   v100
+	BYTE	W04
+	BYTE		VOL     96*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        95*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        94*LastBibleField_mvl/mxv
+	BYTE		N10     Gn2   v088
+	BYTE	W04
+	BYTE		VOL     93*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        92*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        91*LastBibleField_mvl/mxv
+	BYTE		N10     As2   v092
+	BYTE	W04
+	BYTE		VOL     90*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        89*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        88*LastBibleField_mvl/mxv
+	BYTE		N10     Fn3   v088
+	BYTE	W04
+	BYTE		VOL     87*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        86*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        85*LastBibleField_mvl/mxv
+	BYTE		N10     Cn3   v100
+	BYTE	W04
+	BYTE		VOL     84*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        83*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        82*LastBibleField_mvl/mxv
+	BYTE		N10     Fn2   v088
+	BYTE	W04
+	BYTE		VOL     81*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        80*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        79*LastBibleField_mvl/mxv
+	BYTE		N10     An2   v092
+	BYTE	W03
+	BYTE		VOL     78*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        77*LastBibleField_mvl/mxv
+	BYTE	W05
+// 057   ----------------------------------------
+	BYTE		        76*LastBibleField_mvl/mxv
+	BYTE		N10     Cn3   v088
+	BYTE	W03
+	BYTE		VOL     75*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        74*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        73*LastBibleField_mvl/mxv
+	BYTE		N10     Dn3   v100
+	BYTE	W03
+	BYTE		VOL     72*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        71*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        70*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Gn2   v088
+	BYTE	W03
+	BYTE		VOL     69*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        68*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        67*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     As2   v092
+	BYTE	W03
+	BYTE		VOL     66*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        65*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        64*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Fn3   v088
+	BYTE	W03
+	BYTE		VOL     63*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        62*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        61*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Cn3   v100
+	BYTE	W03
+	BYTE		VOL     60*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        59*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        58*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Fn2   v088
+	BYTE	W03
+	BYTE		VOL     57*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        56*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        55*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     An2   v092
+	BYTE	W03
+	BYTE		VOL     54*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        53*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        52*LastBibleField_mvl/mxv
+	BYTE	W02
+// 058   ----------------------------------------
+	BYTE		N10     Cn3   v088
+	BYTE	W03
+	BYTE		VOL     51*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        50*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        49*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Dn3   v100
+	BYTE	W01
+	BYTE		VOL     48*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        47*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        46*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     Gn2   v088
+	BYTE	W01
+	BYTE		VOL     45*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        44*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        43*LastBibleField_mvl/mxv
+	BYTE	W02
+	BYTE		N10     As2   v092
+	BYTE	W01
+	BYTE		VOL     42*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        41*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        40*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     Fn3   v088
+	BYTE	W01
+	BYTE		VOL     39*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        38*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        37*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     Cn3   v100
+	BYTE	W01
+	BYTE		VOL     36*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        35*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        34*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     Fn2   v088
+	BYTE	W01
+	BYTE		VOL     33*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        32*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        31*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     An2   v092
+	BYTE	W01
+	BYTE		VOL     30*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        29*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        28*LastBibleField_mvl/mxv
+	BYTE	W03
+// 059   ----------------------------------------
+	BYTE		N10     As2   v088
+	BYTE	W01
+	BYTE		VOL     27*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        26*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        25*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     An2   v100
+	BYTE	W01
+	BYTE		VOL     24*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        23*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        22*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		N10     Dn2   v088
+	BYTE	W01
+	BYTE		VOL     21*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        20*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        19*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        18*LastBibleField_mvl/mxv
+	BYTE		N10     Gn2   v092
+	BYTE	W04
+	BYTE		VOL     17*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        16*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        15*LastBibleField_mvl/mxv
+	BYTE		N10     An2   v088
+	BYTE	W04
+	BYTE		VOL     14*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        13*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        12*LastBibleField_mvl/mxv
+	BYTE		N10     As2   v100
+	BYTE	W04
+	BYTE		VOL     11*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        10*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        9*LastBibleField_mvl/mxv
+	BYTE		N10     Cn3   v088
+	BYTE	W04
+	BYTE		VOL     8*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        7*LastBibleField_mvl/mxv
+	BYTE	W05
+	BYTE		        6*LastBibleField_mvl/mxv
+	BYTE		N10     Fn2   v092
+	BYTE	W04
+	BYTE		VOL     5*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        4*LastBibleField_mvl/mxv
+	BYTE	W05
+// 060   ----------------------------------------
+	BYTE		        3*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        2*LastBibleField_mvl/mxv
+	BYTE	W03
+	BYTE		        1*LastBibleField_mvl/mxv
+	BYTE	W04
+	BYTE		        0*LastBibleField_mvl/mxv
+	BYTE	W01
+	BYTE	FINE
+
+//**************** Track 8 (Midi-Chn.8) ****************//
+
+LastBibleField_8:
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   4
+	BYTE		PAN     c_v-9
+	BYTE		VOL     120*LastBibleField_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+LastBibleField_8_B1:
+// 004   ----------------------------------------
+LastBibleField_8_004:
+	BYTE		N24     Gn4   v100
+	BYTE	W24
+	BYTE		        As4   v088
+	BYTE	W24
+	BYTE		        An4   v092
+	BYTE	W24
+	BYTE		N09     Dn5   v088
+	BYTE	W12
+	BYTE		N76     Gn4   v092
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+LastBibleField_8_005:
+	BYTE	W72
+	BYTE		N10     Gn4   v100
+	BYTE	W12
+	BYTE		        An4   v088
+	BYTE	W12
+	BYTE	PEND
+// 006   ----------------------------------------
+LastBibleField_8_006:
+	BYTE		N24     As4   v100
+	BYTE	W24
+	BYTE		N10     An4   v092
+	BYTE	W12
+	BYTE		        As4   v088
+	BYTE	W12
+	BYTE		N24     An4   v100
+	BYTE	W24
+	BYTE		        Fn4   v088
+	BYTE	W24
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE		N96     Dn4   v092
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_005
+// 010   ----------------------------------------
+LastBibleField_8_010:
+	BYTE		N24     As4   v100
+	BYTE	W24
+	BYTE		N10     An4   v092
+	BYTE	W12
+	BYTE		        As4   v088
+	BYTE	W12
+	BYTE		N24     Cn5   v100
+	BYTE	W24
+	BYTE		        An4   v088
+	BYTE	W24
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE		N96     As4   v092
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_006
+// 015   ----------------------------------------
+	BYTE		N96     Dn4   v092
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_005
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_010
+// 019   ----------------------------------------
+	BYTE		N96     As4   v092
+	BYTE	W96
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		PAN     c_v-9
+	BYTE		VOL     120*LastBibleField_mvl/mxv
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	LastBibleField_8_B1
+LastBibleField_8_B2:
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_004
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_005
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_006
+// 035   ----------------------------------------
+	BYTE		N96     Dn4   v092
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_010
+// 039   ----------------------------------------
+	BYTE		N96     As4   v092
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_004
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_005
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_006
+// 043   ----------------------------------------
+	BYTE		N96     Dn4   v092
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_004
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_005
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_8_010
+// 047   ----------------------------------------
+	BYTE		N96     As4   v092
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W96
+// 058   ----------------------------------------
+	BYTE	W96
+// 059   ----------------------------------------
+	BYTE	W96
+// 060   ----------------------------------------
+	BYTE	W12
+	BYTE	FINE
+
+//**************** Track 9 (Midi-Chn.9) ****************//
+
+LastBibleField_9:
+	BYTE		VOL     127*LastBibleField_mvl/mxv
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   4
+	BYTE		PAN     c_v+21
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+LastBibleField_9_B1:
+// 004   ----------------------------------------
+LastBibleField_9_004:
+	BYTE	W12
+	BYTE		N24     Gn4   v100
+	BYTE	W24
+	BYTE		        As4   v088
+	BYTE	W24
+	BYTE		        An4   v092
+	BYTE	W24
+	BYTE		N09     Dn5   v088
+	BYTE	W12
+	BYTE	PEND
+// 005   ----------------------------------------
+LastBibleField_9_005:
+	BYTE		N76     Gn4   v092
+	BYTE	W84
+	BYTE		N10     Gn4   v100
+	BYTE	W12
+	BYTE	PEND
+// 006   ----------------------------------------
+LastBibleField_9_006:
+	BYTE		N10     An4   v088
+	BYTE	W12
+	BYTE		N24     As4   v100
+	BYTE	W24
+	BYTE		N10     An4   v092
+	BYTE	W12
+	BYTE		        As4   v088
+	BYTE	W12
+	BYTE		N24     An4   v100
+	BYTE	W24
+	BYTE		        Fn4   v088
+	BYTE	W12
+	BYTE	PEND
+// 007   ----------------------------------------
+	BYTE	W12
+	BYTE		N96     Dn4   v092
+	BYTE	W84
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_005
+// 010   ----------------------------------------
+LastBibleField_9_010:
+	BYTE		N10     An4   v088
+	BYTE	W12
+	BYTE		N24     As4   v100
+	BYTE	W24
+	BYTE		N10     An4   v092
+	BYTE	W12
+	BYTE		        As4   v088
+	BYTE	W12
+	BYTE		N24     Cn5   v100
+	BYTE	W24
+	BYTE		        An4   v088
+	BYTE	W12
+	BYTE	PEND
+// 011   ----------------------------------------
+	BYTE	W12
+	BYTE		N96     As4   v092
+	BYTE	W84
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_006
+// 015   ----------------------------------------
+	BYTE	W12
+	BYTE		N96     Dn4   v092
+	BYTE	W84
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_005
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_010
+// 019   ----------------------------------------
+	BYTE	W12
+	BYTE		N96     As4   v092
+	BYTE	W84
+// 020   ----------------------------------------
+	BYTE	W96
+// 021   ----------------------------------------
+	BYTE	W96
+// 022   ----------------------------------------
+	BYTE	W96
+// 023   ----------------------------------------
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	W96
+// 025   ----------------------------------------
+	BYTE	W96
+// 026   ----------------------------------------
+	BYTE	W96
+// 027   ----------------------------------------
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		PAN     c_v+21
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	LastBibleField_9_B1
+LastBibleField_9_B2:
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_004
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_005
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_006
+// 035   ----------------------------------------
+	BYTE	W12
+	BYTE		N96     Dn4   v092
+	BYTE	W84
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_010
+// 039   ----------------------------------------
+	BYTE	W12
+	BYTE		N96     As4   v092
+	BYTE	W84
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_004
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_005
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_006
+// 043   ----------------------------------------
+	BYTE	W12
+	BYTE		N96     Dn4   v092
+	BYTE	W84
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_004
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_005
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_9_010
+// 047   ----------------------------------------
+	BYTE	W12
+	BYTE		N96     As4   v092
+	BYTE	W84
+// 048   ----------------------------------------
+	BYTE	W96
+// 049   ----------------------------------------
+	BYTE	W96
+// 050   ----------------------------------------
+	BYTE	W96
+// 051   ----------------------------------------
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	W96
+// 053   ----------------------------------------
+	BYTE	W96
+// 054   ----------------------------------------
+	BYTE	W96
+// 055   ----------------------------------------
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W96
+// 058   ----------------------------------------
+	BYTE	W96
+// 059   ----------------------------------------
+	BYTE	W96
+// 060   ----------------------------------------
+	BYTE	W12
+	BYTE	FINE
+
+//**************** Track 10 (Midi-Chn.11) ****************//
+
+LastBibleField_10:
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   41
+	BYTE		PAN     c_v+31
+	BYTE		VOL     80*LastBibleField_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+LastBibleField_10_B1:
+// 004   ----------------------------------------
+LastBibleField_10_004:
+	BYTE		N48     As2   v100
+	BYTE	W48
+	BYTE		        An2 
+	BYTE	W48
+	BYTE	PEND
+// 005   ----------------------------------------
+LastBibleField_10_005:
+	BYTE		N48     Gn2   v100
+	BYTE	W48
+	BYTE		        Fn2 
+	BYTE	W48
+	BYTE	PEND
+// 006   ----------------------------------------
+LastBibleField_10_006:
+	BYTE		N48     Ds2   v100
+	BYTE	W48
+	BYTE		        Fn2 
+	BYTE	W48
+	BYTE	PEND
+// 007   ----------------------------------------
+LastBibleField_10_007:
+	BYTE		N48     Fn2   v100
+	BYTE	W48
+	BYTE		        Fs2 
+	BYTE	W48
+	BYTE	PEND
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_005
+// 010   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_006
+// 011   ----------------------------------------
+	BYTE		TIE     As2   v100
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT   
+	BYTE		N48     An2 
+	BYTE	W48
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_005
+// 014   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_006
+// 015   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_007
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_005
+// 018   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_006
+// 019   ----------------------------------------
+	BYTE		N96     As2   v100
+	BYTE	W96
+// 020   ----------------------------------------
+LastBibleField_10_020:
+	BYTE		N48     Gn2   v100
+	BYTE	W48
+	BYTE		N24     As2   v092
+	BYTE	W24
+	BYTE		        Cn3   v088
+	BYTE	W24
+	BYTE	PEND
+// 021   ----------------------------------------
+LastBibleField_10_021:
+	BYTE		N48     Dn3   v100
+	BYTE	W48
+	BYTE		N24     An2   v092
+	BYTE	W24
+	BYTE		        Fn2   v088
+	BYTE	W24
+	BYTE	PEND
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_020
+// 023   ----------------------------------------
+LastBibleField_10_023:
+	BYTE		N48     An2   v100
+	BYTE	W48
+	BYTE		N42     Fn2 
+	BYTE	W48
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_021
+// 026   ----------------------------------------
+LastBibleField_10_026:
+	BYTE		N48     Gn2   v100
+	BYTE	W48
+	BYTE		TIE     As2 
+	BYTE	W48
+	BYTE	PEND
+// 027   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT   
+// 028   ----------------------------------------
+	BYTE		PAN     c_v+31
+	BYTE		VOL     80*LastBibleField_mvl/mxv
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	LastBibleField_10_B1
+LastBibleField_10_B2:
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_004
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_005
+// 034   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_006
+// 035   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_007
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_005
+// 038   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_006
+// 039   ----------------------------------------
+	BYTE		TIE     As2   v100
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W48
+	BYTE		EOT   
+	BYTE		N48     An2 
+	BYTE	W48
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_005
+// 042   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_006
+// 043   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_007
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_004
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_005
+// 046   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_006
+// 047   ----------------------------------------
+	BYTE		N96     As2   v100
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_020
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_021
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_020
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_023
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_020
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_021
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_10_026
+// 055   ----------------------------------------
+	BYTE	W96
+	BYTE		EOT     As2 
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W96
+// 058   ----------------------------------------
+	BYTE	W96
+// 059   ----------------------------------------
+	BYTE	W96
+// 060   ----------------------------------------
+	BYTE	W12
+	BYTE	FINE
+
+//**************** Track 11 (Midi-Chn.12) ****************//
+
+LastBibleField_11:
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   41
+	BYTE		PAN     c_v+31
+	BYTE		VOL     80*LastBibleField_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+LastBibleField_11_B1:
+// 004   ----------------------------------------
+LastBibleField_11_004:
+	BYTE		N48     Gn2   v100
+	BYTE	W48
+	BYTE		        Fn2 
+	BYTE	W48
+	BYTE	PEND
+// 005   ----------------------------------------
+LastBibleField_11_005:
+	BYTE		N48     Ds2   v100
+	BYTE	W48
+	BYTE		        Dn2 
+	BYTE	W48
+	BYTE	PEND
+// 006   ----------------------------------------
+	BYTE		N96     Cn2 
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_004
+// 009   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_005
+// 010   ----------------------------------------
+	BYTE		N96     Cn2   v100
+	BYTE	W96
+// 011   ----------------------------------------
+LastBibleField_11_011:
+	BYTE		N24     Fn2   v100
+	BYTE	W24
+	BYTE		        Ds2 
+	BYTE	W24
+	BYTE		        Dn2 
+	BYTE	W24
+	BYTE		        As1 
+	BYTE	W24
+	BYTE	PEND
+// 012   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_004
+// 013   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_005
+// 014   ----------------------------------------
+	BYTE		N96     Cn2   v100
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_004
+// 017   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_005
+// 018   ----------------------------------------
+	BYTE		N96     Cn2   v100
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_011
+// 020   ----------------------------------------
+LastBibleField_11_020:
+	BYTE		N48     Ds2   v100
+	BYTE	W48
+	BYTE		        Gn2 
+	BYTE	W48
+	BYTE	PEND
+// 021   ----------------------------------------
+LastBibleField_11_021:
+	BYTE		N48     An2   v100
+	BYTE	W48
+	BYTE		N24     Fn2   v092
+	BYTE	W24
+	BYTE		        Dn2   v088
+	BYTE	W24
+	BYTE	PEND
+// 022   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_020
+// 023   ----------------------------------------
+LastBibleField_11_023:
+	BYTE		N48     Fn2   v100
+	BYTE	W48
+	BYTE		        Dn2 
+	BYTE	W48
+	BYTE	PEND
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_020
+// 027   ----------------------------------------
+	BYTE		N96     Fn2   v100
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		PAN     c_v+31
+	BYTE		VOL     80*LastBibleField_mvl/mxv
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	LastBibleField_11_B1
+LastBibleField_11_B2:
+// 032   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_004
+// 033   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_005
+// 034   ----------------------------------------
+	BYTE		N96     Cn2   v100
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_004
+// 037   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_005
+// 038   ----------------------------------------
+	BYTE		N96     Cn2   v100
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_011
+// 040   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_004
+// 041   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_005
+// 042   ----------------------------------------
+	BYTE		N96     Cn2   v100
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE		        Dn2 
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_004
+// 045   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_005
+// 046   ----------------------------------------
+	BYTE		N96     Cn2   v100
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_011
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_020
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_021
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_020
+// 051   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_023
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_020
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_021
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_11_020
+// 055   ----------------------------------------
+	BYTE		N96     Fn2   v100
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W96
+// 058   ----------------------------------------
+	BYTE	W96
+// 059   ----------------------------------------
+	BYTE	W96
+// 060   ----------------------------------------
+	BYTE	W12
+	BYTE	FINE
+
+//**************** Track 12 (Midi-Chn.13) ****************//
+
+LastBibleField_12:
+	BYTE		VOL     127*LastBibleField_mvl/mxv
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   73
+	BYTE		PAN     c_v-16
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+LastBibleField_12_B1:
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+LastBibleField_12_020:
+	BYTE		N12     Gn3   v100
+	BYTE	W12
+	BYTE		        An3   v092
+	BYTE	W12
+	BYTE		N24     As3   v088
+	BYTE	W24
+	BYTE		N12     An3   v100
+	BYTE	W12
+	BYTE		        As3   v092
+	BYTE	W12
+	BYTE		N24     Cn4   v088
+	BYTE	W24
+	BYTE	PEND
+// 021   ----------------------------------------
+LastBibleField_12_021:
+	BYTE		N24     Fn4   v100
+	BYTE	W24
+	BYTE		N12     Dn4   v092
+	BYTE	W12
+	BYTE		        An3   v088
+	BYTE	W12
+	BYTE		N36     Fn3   v100
+	BYTE	W36
+	BYTE		N12     An3   v088
+	BYTE	W12
+	BYTE	PEND
+// 022   ----------------------------------------
+LastBibleField_12_022:
+	BYTE		N12     Gn3   v100
+	BYTE	W12
+	BYTE		        An3   v088
+	BYTE	W12
+	BYTE		        As3   v092
+	BYTE	W12
+	BYTE		        Cn4   v088
+	BYTE	W12
+	BYTE		        As3   v100
+	BYTE	W12
+	BYTE		        An3   v088
+	BYTE	W12
+	BYTE		        Gn3   v092
+	BYTE	W12
+	BYTE		        An3   v088
+	BYTE	W12
+	BYTE	PEND
+// 023   ----------------------------------------
+	BYTE		N96     Fn3   v092
+	BYTE	W96
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_022
+// 027   ----------------------------------------
+	BYTE		N96     As3   v092
+	BYTE	W96
+// 028   ----------------------------------------
+	BYTE		PAN     c_v-16
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	LastBibleField_12_B1
+LastBibleField_12_B2:
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_020
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_021
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_022
+// 051   ----------------------------------------
+	BYTE		N96     Fn3   v092
+	BYTE	W96
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_020
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_021
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_12_022
+// 055   ----------------------------------------
+	BYTE		N96     As3   v092
+	BYTE	W96
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W96
+// 058   ----------------------------------------
+	BYTE	W96
+// 059   ----------------------------------------
+	BYTE	W96
+// 060   ----------------------------------------
+	BYTE	W12
+	BYTE	FINE
+
+//**************** Track 13 (Midi-Chn.14) ****************//
+
+LastBibleField_13:
+	BYTE	KEYSH   LastBibleField_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   73
+	BYTE		PAN     c_v+26
+	BYTE		VOL     64*LastBibleField_mvl/mxv
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE	W96
+// 002   ----------------------------------------
+	BYTE	W96
+// 003   ----------------------------------------
+	BYTE	W96
+LastBibleField_13_B1:
+// 004   ----------------------------------------
+	BYTE	W96
+// 005   ----------------------------------------
+	BYTE	W96
+// 006   ----------------------------------------
+	BYTE	W96
+// 007   ----------------------------------------
+	BYTE	W96
+// 008   ----------------------------------------
+	BYTE	W96
+// 009   ----------------------------------------
+	BYTE	W96
+// 010   ----------------------------------------
+	BYTE	W96
+// 011   ----------------------------------------
+	BYTE	W96
+// 012   ----------------------------------------
+	BYTE	W96
+// 013   ----------------------------------------
+	BYTE	W96
+// 014   ----------------------------------------
+	BYTE	W96
+// 015   ----------------------------------------
+	BYTE	W96
+// 016   ----------------------------------------
+	BYTE	W96
+// 017   ----------------------------------------
+	BYTE	W96
+// 018   ----------------------------------------
+	BYTE	W96
+// 019   ----------------------------------------
+	BYTE	W96
+// 020   ----------------------------------------
+LastBibleField_13_020:
+	BYTE	W06
+	BYTE		N12     Gn3   v100
+	BYTE	W12
+	BYTE		        An3   v092
+	BYTE	W12
+	BYTE		N24     As3   v088
+	BYTE	W24
+	BYTE		N12     An3   v100
+	BYTE	W12
+	BYTE		        As3   v092
+	BYTE	W12
+	BYTE		N24     Cn4   v088
+	BYTE	W18
+	BYTE	PEND
+// 021   ----------------------------------------
+LastBibleField_13_021:
+	BYTE	W06
+	BYTE		N24     Fn4   v100
+	BYTE	W24
+	BYTE		N12     Dn4   v092
+	BYTE	W12
+	BYTE		        An3   v088
+	BYTE	W12
+	BYTE		N36     Fn3   v100
+	BYTE	W36
+	BYTE		N12     An3   v088
+	BYTE	W06
+	BYTE	PEND
+// 022   ----------------------------------------
+LastBibleField_13_022:
+	BYTE	W06
+	BYTE		N12     Gn3   v100
+	BYTE	W12
+	BYTE		        An3   v088
+	BYTE	W12
+	BYTE		        As3   v092
+	BYTE	W12
+	BYTE		        Cn4   v088
+	BYTE	W12
+	BYTE		        As3   v100
+	BYTE	W12
+	BYTE		        An3   v088
+	BYTE	W12
+	BYTE		        Gn3   v092
+	BYTE	W12
+	BYTE		        An3   v088
+	BYTE	W06
+	BYTE	PEND
+// 023   ----------------------------------------
+	BYTE	W06
+	BYTE		N96     Fn3   v092
+	BYTE	W90
+// 024   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_020
+// 025   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_021
+// 026   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_022
+// 027   ----------------------------------------
+	BYTE	W06
+	BYTE		N96     As3   v092
+	BYTE	W90
+// 028   ----------------------------------------
+	BYTE		PAN     c_v+26
+	BYTE		VOL     64*LastBibleField_mvl/mxv
+	BYTE	W96
+// 029   ----------------------------------------
+	BYTE	W96
+// 030   ----------------------------------------
+	BYTE	W96
+// 031   ----------------------------------------
+	BYTE	W96
+	BYTE	GoTo
+	 POIN2	LastBibleField_13_B1
+LastBibleField_13_B2:
+// 032   ----------------------------------------
+	BYTE	W96
+// 033   ----------------------------------------
+	BYTE	W96
+// 034   ----------------------------------------
+	BYTE	W96
+// 035   ----------------------------------------
+	BYTE	W96
+// 036   ----------------------------------------
+	BYTE	W96
+// 037   ----------------------------------------
+	BYTE	W96
+// 038   ----------------------------------------
+	BYTE	W96
+// 039   ----------------------------------------
+	BYTE	W96
+// 040   ----------------------------------------
+	BYTE	W96
+// 041   ----------------------------------------
+	BYTE	W96
+// 042   ----------------------------------------
+	BYTE	W96
+// 043   ----------------------------------------
+	BYTE	W96
+// 044   ----------------------------------------
+	BYTE	W96
+// 045   ----------------------------------------
+	BYTE	W96
+// 046   ----------------------------------------
+	BYTE	W96
+// 047   ----------------------------------------
+	BYTE	W96
+// 048   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_020
+// 049   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_021
+// 050   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_022
+// 051   ----------------------------------------
+	BYTE	W06
+	BYTE		N96     Fn3   v092
+	BYTE	W90
+// 052   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_020
+// 053   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_021
+// 054   ----------------------------------------
+	BYTE	PATT
+	 POIN2	LastBibleField_13_022
+// 055   ----------------------------------------
+	BYTE	W06
+	BYTE		N96     As3   v092
+	BYTE	W90
+// 056   ----------------------------------------
+	BYTE	W96
+// 057   ----------------------------------------
+	BYTE	W96
+// 058   ----------------------------------------
+	BYTE	W96
+// 059   ----------------------------------------
+	BYTE	W96
+// 060   ----------------------------------------
+	BYTE	W12
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+LastBibleField:
+	BYTE	13	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	LastBibleField_pri	// Priority
+	BYTE	LastBibleField_rev	// Reverb.
+
+	POIN2	LastBibleField_grp
+
+	POIN2	LastBibleField_1
+	POIN2	LastBibleField_2
+	POIN2	LastBibleField_3
+	POIN2	LastBibleField_4
+	POIN2	LastBibleField_5
+	POIN2	LastBibleField_6
+	POIN2	LastBibleField_7
+	POIN2	LastBibleField_8
+	POIN2	LastBibleField_9
+	POIN2	LastBibleField_10
+	POIN2	LastBibleField_11
+	POIN2	LastBibleField_12
+	POIN2	LastBibleField_13
+
+	

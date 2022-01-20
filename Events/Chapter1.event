@@ -243,21 +243,22 @@ ENUN
 EndEvent
 
 C1WVillage:
-	CHECK_ACTIVEID Blair
-	BNE 0x1 0xC 0x0
-	CHECK_ACTIVEID Arin
-	BNE 0x2 0xC 0x0
-	Text(0x3, Natasia_Verbally_Abuses_Kenneth_Then_Joins_The_Party)
-	GOTO 0x3
-	LABEL 0x2
-	Text(0x3, Arin_Recruits_Natasia)
-	GOTO 0x3
-	LABEL 0x1
-	Text(0x3, Blair_Recruits_Natasia)
-	LABEL 0x3
-	LOAD1 0x0 NatasiaRecruitment
-	ENUN
-	EndEvent
+MUSC 0x30
+CHECK_ACTIVEID Blair
+BNE 0x1 0xC 0x0
+CHECK_ACTIVEID Arin
+BNE 0x2 0xC 0x0
+Text(0x3, Natasia_Verbally_Abuses_Kenneth_Then_Joins_The_Party)
+GOTO 0x3
+LABEL 0x2
+Text(0x3, Arin_Recruits_Natasia)
+GOTO 0x3
+LABEL 0x1
+Text(0x3, Blair_Recruits_Natasia)
+LABEL 0x3
+LOAD1 0x0 NatasiaRecruitment
+ENUN
+EndEvent
 	
 C1EVillage:
 	VillageEventItem(C1EVillageText, 0x3, SecretBook)

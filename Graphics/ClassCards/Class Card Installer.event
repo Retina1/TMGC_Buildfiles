@@ -3,29 +3,62 @@
 #define BruiserCard 0x9A
 #define DeserterCard 0x9B
 #define BrigandCard 0x8b
+
 #define SwdCavCard 0x80
 #define LncCavCard 0x9c
 #define AxeCavCard 0x9d
 #define BowCavCard 0x9e
+#define SwdPalCard 0x81
+#define LncPalCard 0x96
+#define AxePalCard 0xaa
+#define BowPalCard 0x97
+
 #define SwdArmCard 0x76
 #define LncArmCard 0x9f
 #define AxeArmCard 0xa0
 #define BowArmCard 0xa1
+#define SwdGenCard 0x77
+#define LncGenCard 0xaf
+#define AxeGenCard 0xb0
+#define BowGenCard 0xb1
+
 #define MercMCard 0x90
 #define MercFCard 0xa2
+#define HeroMCard 0x91
+#define HeroFCard 0x85
+
+#define MyrmMCard 0x72
+#define MyrmFCard 0xb2
+#define SwordmasterMCard 0x73
+#define SwordmasterFCard 0xb3
+
 #define SoldierMCard 0x8a
 #define SoldierFCard 0xa3
+#define HalberdierCard 0xae
+
 #define FighterMCard 0x74
 #define FighterFCard 0xa6
+#define WarriorMCard 0x75
+#define WarriorFCard 0x8f
+
 #define ArcherMCard 0x78
 #define ArcherFCard 0xa7
 #define BallistCard 0x92
+
 #define AxeWyvCard 0x93
+#define SwdPegCard 0xA9
+#define LncPegCard 0x86
+
 #define MageMCard 0x7c
 #define MageFCard 0xa8
+
+#define DarkMCard 0x7e
+#define DarkFCard 0x84
+
 #define TroubCard 0x83
+
 #define CivilianCard 0xad
-#define HalberdierCard 0xae
+
 
 ALIGN 4
 
@@ -69,6 +102,26 @@ BowCavPortrait:
 BowCavPortraitPalette:
 #incbin "BowCavPalette.dmp"
 
+SwdPalPortrait:
+#incbin "SwdPal.dmp"
+SwdPalPortraitPalette:
+#incbin "SwdPalPalette.dmp"
+
+LncPalPortrait:
+#incbin "LncPal.dmp"
+LncPalPortraitPalette:
+#incbin "LncPalPalette.dmp"
+
+AxePalPortrait:
+#incbin "AxePal.dmp"
+AxePalPortraitPalette:
+#incbin "AxePalPalette.dmp"
+
+BowPalPortrait:
+#incbin "BowPal.dmp"
+BowPalPortraitPalette:
+#incbin "BowPalPalette.dmp"
+
 SwdArmPortrait:
 #incbin "SwdArm.dmp"
 SwdArmPortraitPalette:
@@ -89,6 +142,26 @@ BowArmPortrait:
 BowArmPortraitPalette:
 #incbin "BowArmPalette.dmp"
 
+SwdGenPortrait:
+#incbin "SwdGen.dmp"
+SwdGenPortraitPalette:
+#incbin "SwdGenPalette.dmp"
+
+LncGenPortrait:
+#incbin "LncGen.dmp"
+LncGenPortraitPalette:
+#incbin "LncGenPalette.dmp"
+
+AxeGenPortrait:
+#incbin "AxeGen.dmp"
+AxeGenPortraitPalette:
+#incbin "AxeGenPalette.dmp"
+
+BowGenPortrait:
+#incbin "BowGen.dmp"
+BowGenPortraitPalette:
+#incbin "BowGenPalette.dmp"
+
 MercMPortrait:
 #incbin "MercM.dmp"
 MercMPortraitPalette:
@@ -98,6 +171,36 @@ MercFPortrait:
 #incbin "MercF.dmp"
 MercFPortraitPalette:
 #incbin "MercFPalette.dmp"
+
+HeroMPortrait:
+#incbin "HeroM.dmp"
+HeroMPortraitPalette:
+#incbin "HeroMPalette.dmp"
+
+HeroFPortrait:
+#incbin "HeroF.dmp"
+HeroFPortraitPalette:
+#incbin "HeroFPalette.dmp"
+
+MyrmMPortrait:
+#incbin "MyrmM.dmp"
+MyrmMPortraitPalette:
+#incbin "MyrmMPalette.dmp"
+
+MyrmFPortrait:
+#incbin "MyrmF.dmp"
+MyrmFPortraitPalette:
+#incbin "MyrmFPalette.dmp"
+
+SwordmasterMPortrait:
+#incbin "SwordmasterM.dmp"
+SwordmasterMPortraitPalette:
+#incbin "SwordmasterMPalette.dmp"
+
+SwordmasterFPortrait:
+#incbin "SwordmasterF.dmp"
+SwordmasterFPortraitPalette:
+#incbin "SwordmasterFPalette.dmp"
 
 SoldierMPortrait:
 #incbin "SoldierM.dmp"
@@ -118,6 +221,16 @@ FighterFPortrait:
 #incbin "FighterF.dmp"
 FighterFPortraitPalette:
 #incbin "FighterFPalette.dmp"
+
+WarriorMPortrait:
+#incbin "WarriorM.dmp"
+WarriorMPortraitPalette:
+#incbin "WarriorMPalette.dmp"
+
+WarriorFPortrait:
+#incbin "WarriorF.dmp"
+WarriorFPortraitPalette:
+#incbin "WarriorFPalette.dmp"
 
 ArcherMPortrait:
 #incbin "ArcherM.dmp"
@@ -149,6 +262,16 @@ MageFPortrait:
 MageFPortraitPalette:
 #incbin "MageFPalette.dmp"
 
+DarkMPortrait:
+#incbin "DarkM.dmp"
+DarkMPortraitPalette:
+#incbin "DarkMPalette.dmp"
+
+DarkFPortrait:
+#incbin "DarkF.dmp"
+DarkFPortraitPalette:
+#incbin "DarkFPalette.dmp"
+
 TroubPortrait:
 #incbin "Troub.dmp"
 TroubPortraitPalette:
@@ -164,30 +287,73 @@ HalberdierPortrait:
 HalberdierPortraitPalette:
 #incbin "HalberdierPalette.dmp"
 
+SwdPegPortrait:
+#incbin "SwdPeg.dmp"
+SwdPegPortraitPalette:
+#incbin "SwdPegPalette.dmp"
+
+LncPegPortrait:
+#incbin "LncPeg.dmp"
+LncPegPortraitPalette:
+#incbin "LncPegPalette.dmp"
+
 setCardEntry(HunterCard,HunterPortrait,HunterPortraitPalette)
 setCardEntry(DeserterCard,DeserterPortrait,DeserterPortraitPalette)
 setCardEntry(BruiserCard,BruiserPortrait,BruiserPortraitPalette)
 setCardEntry(BrigandCard,BrigandPortrait,BrigandPortraitPalette)
+
 setCardEntry(SwdCavCard,SwdCavPortrait,SwdCavPortraitPalette)
 setCardEntry(LncCavCard,LncCavPortrait,LncCavPortraitPalette)
 setCardEntry(AxeCavCard,AxeCavPortrait,AxeCavPortraitPalette)
 setCardEntry(BowCavCard,BowCavPortrait,BowCavPortraitPalette)
+setCardEntry(SwdPalCard,SwdPalPortrait,SwdPalPortraitPalette)
+setCardEntry(LncPalCard,LncPalPortrait,LncPalPortraitPalette)
+setCardEntry(AxePalCard,AxePalPortrait,AxePalPortraitPalette)
+setCardEntry(BowPalCard,BowPalPortrait,BowPalPortraitPalette)
+
 setCardEntry(SwdArmCard,SwdArmPortrait,SwdArmPortraitPalette)
 setCardEntry(LncArmCard,LncArmPortrait,LncArmPortraitPalette)
 setCardEntry(AxeArmCard,AxeArmPortrait,AxeArmPortraitPalette)
 setCardEntry(BowArmCard,BowArmPortrait,BowArmPortraitPalette)
+setCardEntry(SwdGenCard,SwdGenPortrait,SwdGenPortraitPalette)
+setCardEntry(LncGenCard,LncGenPortrait,LncGenPortraitPalette)
+setCardEntry(AxeGenCard,AxeGenPortrait,AxeGenPortraitPalette)
+setCardEntry(BowGenCard,BowGenPortrait,BowGenPortraitPalette)
+
 setCardEntry(MercMCard,MercMPortrait,MercMPortraitPalette)
 setCardEntry(MercFCard,MercFPortrait,MercFPortraitPalette)
+setCardEntry(HeroMCard,HeroMPortrait,HeroMPortraitPalette)
+setCardEntry(HeroFCard,HeroFPortrait,HeroFPortraitPalette)
+
+setCardEntry(MyrmMCard,MyrmMPortrait,MyrmMPortraitPalette)
+setCardEntry(MyrmFCard,MyrmFPortrait,MyrmFPortraitPalette)
+setCardEntry(SwordmasterMCard,SwordmasterMPortrait,SwordmasterMPortraitPalette)
+setCardEntry(SwordmasterFCard,SwordmasterFPortrait,SwordmasterFPortraitPalette)
+
 setCardEntry(SoldierMCard,SoldierMPortrait,SoldierMPortraitPalette)
 setCardEntry(SoldierFCard,SoldierFPortrait,SoldierFPortraitPalette)
+setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)
+
 setCardEntry(FighterMCard,FighterMPortrait,FighterMPortraitPalette)
 setCardEntry(FighterFCard,FighterFPortrait,FighterFPortraitPalette)
+setCardEntry(WarriorMCard,WarriorMPortrait,WarriorMPortraitPalette)
+setCardEntry(WarriorFCard,WarriorFPortrait,WarriorFPortraitPalette)
+
 setCardEntry(ArcherMCard,ArcherMPortrait,ArcherMPortraitPalette)
 setCardEntry(ArcherFCard,ArcherFPortrait,ArcherFPortraitPalette)
+
 setCardEntry(BallistCard,BallistPortrait,BallistPortraitPalette)
+
 setCardEntry(AxeWyvCard,AxeWyvPortrait,AxeWyvPortraitPalette)
+setCardEntry(SwdPegCard,SwdPegPortrait,SwdPegPortraitPalette)
+setCardEntry(LncPegCard,LncPegPortrait,LncPegPortraitPalette)
+
 setCardEntry(MageMCard,MageMPortrait,MageMPortraitPalette)
 setCardEntry(MageFCard,MageFPortrait,MageFPortraitPalette)
+
+setCardEntry(DarkMCard,DarkMPortrait,DarkMPortraitPalette)
+setCardEntry(DarkFCard,DarkFPortrait,DarkFPortraitPalette)
+
 setCardEntry(TroubCard,TroubPortrait,TroubPortraitPalette)
+
 setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
-setCardEntry(HalberdierCard,HalberdierPortrait,HalberdierPortraitPalette)

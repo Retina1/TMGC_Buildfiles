@@ -235,6 +235,12 @@ MUSC 0x30
 Text(Ch3_Sam_Joins)
 EndEvent
 
+C3Turn2:
+CAM1 Helga
+FlashCursor(Helga,60)
+Text(C3Hint)
+EndEvent
+
 C3Turn6:
 LOAD1 0x1 C3Thief
 ENUN
@@ -273,9 +279,23 @@ TurnAlly(Josef)
 EndEvent
 
 C3Village:
-	VillageEventItem(C3VillageText, 0x1, Thunder)
+VillageEventItem(C3VillageText, 0x1, Thunder)
 
 EndingScene:
+MUSC 0x32
+CLEAN
+SetBackground(0x10)
+FADU 0x3c
+TEXTSTART
+TEXTSHOW Ch3_Ending
+TEXTEND
+MUSC 0x0
+TEXTCONT
+TEXTEND
+MUSC 0x24
+TEXTCONT
+TEXTEND
+FADI 0x3c
 MoveToChapter(Chapter4)
 ENDA
 

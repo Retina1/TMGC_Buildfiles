@@ -1,0 +1,85 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x26,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C6Units C6Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C6Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [12,12] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
+C6Easy:
+UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT
+
+C6Normal:
+UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT
+
+C6Hard:
+UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+LoadUnitsByDifficulty(C6Easy,C6Normal,C6Hard)
+LOAD1 0x0 C6Units
+MUSC 0x4
+SetBackground(0x34)
+FADU 0x3c
+STAL 120
+CGText(Ch6_Narration)
+MUSC 0x0
+FADI 0x3c
+CLEAN
+GotoPrepScreen
+GameOver
+EndEvent
+
+EndingScene:
+MoveToChapter(Chapter7)
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

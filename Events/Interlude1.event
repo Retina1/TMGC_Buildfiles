@@ -139,6 +139,7 @@ Text(I1RiftTalk)
 EndEvent
 
 I1Merchant:
+EVBIT_MODIFY 4
 Text(I1MerchantTalk)
 CHECK_MONEY
 SVAL 0x1 0x5DC
@@ -170,6 +171,7 @@ Text(I1Cit2Talk)
 EndEvent
 
 I1ReadyToEnd:
+EVBIT_MODIFY 4
 Text(I1ConfirmLeave)
 SystemText(I1LeavePrompt)
 SVAL 0x1 0x1

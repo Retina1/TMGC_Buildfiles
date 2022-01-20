@@ -36,44 +36,96 @@
 #define MonsterAnim(Animation) "BYTE 0x0B 0x01 ; SHORT Animation"
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define EndAnim "WORD 0x0 0x0"
-
+{
 #include "FighterM(LeoLink)\Axe Installer.event"
 #include "FighterM(LeoLink)\Handaxe Installer.event"
 #include "FighterM(LeoLink)\Unarmed Installer.event"
+}
+{
 #include "FighterF(BlackMage)\Axe Installer.event"
 #include "FighterF(BlackMage)\Handaxe Installer.event"
 #include "FighterF(BlackMage)\Unarmed Installer.event"
-
+}
+{
+#include "WarriorM(Pushwall)\Axe Installer.event"
+#include "WarriorM(Pushwall)\Handaxe Installer.event"
+#include "WarriorM(Pushwall)\Bow Installer.event"
+#include "WarriorM(Pushwall)\Unarmed Installer.event"
+}
+{
+#include "WarriorF(Temp)\Axe Installer.event"
+#include "WarriorF(Temp)\Handaxe Installer.event"
+#include "WarriorF(Temp)\Bow Installer.event"
+#include "WarriorF(Temp)\Unarmed Installer.event"
+}
+{
+#include "PirateM(Der)\Axe Installer.event"
+#include "PirateM(Der)\Handaxe Installer.event"
+#include "PirateM(Der)\Unarmed Installer.event"
+}
+{
+#include "PirateF(Nuramon)\Axe Installer.event"
+#include "PirateF(Nuramon)\Handaxe Installer.event"
+#include "PirateF(Nuramon)\Unarmed Installer.event"
+}
+{
 #include "Blair(L95)\Magic Installer.event"
-
+}
+{
 #include "MageF(LisandraBrave)\Magic Installer.event"
+}
+{
 #include "MageM(GabrielKnight)\Magic Installer.event"
-
+}
+{
 #include "Hunter(MeatOfJustice)\Bow Installer.event"
 #include "Hunter(MeatOfJustice)\Unarmed Installer.event"
-
+}
+{
 #include "Trickster(Aruka)\Staff Installer.event"
 #include "Trickster(Aruka)\Sword Installer.event"
-
+}
+{
 #include "Deserter(Alusq)\Lance Installer.event"
 #include "Deserter(Alusq)\Unarmed Installer.event"
-
+}
+{
 #include "Bruiser(MonkeyBard)\Sword Installer.event"
 #include "Bruiser(MonkeyBard)\Unarmed Installer.event"
-
+}
+{
 #include "CavM(SALVAGED)\Sword Installer.event"
 #include "CavM(SALVAGED)\Lance Installer.event"
 #include "CavM(SALVAGED)\Axe Installer.event"
 #include "CavM(SALVAGED)\Handaxe Installer.event"
 #include "CavM(SALVAGED)\Bow Installer.event"
 #include "CavM(SALVAGED)\Unarmed Installer.event"
+}
+{
 #include "CavF(SALVAGED)\Sword Installer.event"
 #include "CavF(SALVAGED)\Lance Installer.event"
 #include "CavF(SALVAGED)\Axe Installer.event"
 #include "CavF(SALVAGED)\Handaxe Installer.event"
 #include "CavF(SALVAGED)\Bow Installer.event"
 #include "CavF(SALVAGED)\Unarmed Installer.event"
-
+}
+{
+#include "PalM(SALVAGED)\Sword Installer.event"
+#include "PalM(SALVAGED)\Lance Installer.event"
+#include "PalM(SALVAGED)\Axe Installer.event"
+#include "PalM(SALVAGED)\Handaxe Installer.event"
+#include "PalM(SALVAGED)\Bow Installer.event"
+#include "PalM(SALVAGED)\Unarmed Installer.event"
+}
+{
+#include "PalF(SALVAGED)\Sword Installer.event"
+#include "PalF(SALVAGED)\Lance Installer.event"
+#include "PalF(SALVAGED)\Axe Installer.event"
+#include "PalF(SALVAGED)\Handaxe Installer.event"
+#include "PalF(SALVAGED)\Bow Installer.event"
+#include "PalF(SALVAGED)\Unarmed Installer.event"
+}
+{
 #include "Knight\Sword Installer.event"
 #include "Knight\Lance Installer.event"
 #include "Knight\Axe Installer.event"
@@ -81,43 +133,127 @@
 #include "Knight\Bow Installer.event"
 #include "Knight\Staff Installer.event"
 #include "Knight\Unarmed Installer.event"
-
+}
+{
+#include "General\Sword Installer.event"
+#include "General\Lance Installer.event"
+#include "General\Axe Installer.event"
+#include "General\Handaxe Installer.event"
+#include "General\Bow Installer.event"
+#include "General\Magic Installer.event"
+#include "General\Unarmed Installer.event"
+}
+{
 #include "ArcherM(Der)\Bow Installer.event"
 #include "ArcherM(Der)\Unarmed Installer.event"
+}
+{
 #include "ArcherF(Der)\Bow Installer.event"
 #include "ArcherF(Der)\Unarmed Installer.event"
-
+}
+{
 #include "SoldierM(Flasuban)\Lance Installer.event"
 #include "SoldierM(Flasuban)\Unarmed Installer.event"
+}
+{
+#include "HalberdierM(TBA)\Lance Installer.event"
+#include "HalberdierM(TBA)\Unarmed Installer.event"
+}
+{
 #include "SoldierF(Flasuban)\Lance Installer.event"
 #include "SoldierF(Flasuban)\Unarmed Installer.event"
-
+}
+{
+#include "HalberdierF(Black Mage)\Lance Installer.event"
+#include "HalberdierF(Black Mage)\Unarmed Installer.event"
+}
+{
 #include "MercM(SALVAGED)\Sword Installer.event"
 #include "MercM(SALVAGED)\Unarmed Installer.event"
+}
+{
 #include "MercF(SALVAGED)\Sword Installer.event"
 #include "MercF(SALVAGED)\Unarmed Installer.event"
-
+}
+{
+#include "MyrmM\Sword Installer.event"
+#include "MyrmM\Unarmed Installer.event"
+}
+{
+#include "MyrmF(epicer)\Sword Installer.event"
+#include "MyrmF(epicer)\Unarmed Installer.event"
+}
+{
 #include "DarkM(Temp)\Magic Installer.event"
+}
+{
 #include "DarkF(MarkyJoe)\Magic Installer.event"
-
+}
+{
+#include "SorcM(Eldritch)\Magic Installer.event"
+#include "SorcM(Eldritch)\Staff Installer.event"
+}
+{
+#include "SorcF(TytheBub)\magic Installer.event"
+#include "SorcF(TytheBub)\staff Installer.event"
+}
+{
 #include "Desmond(Nuramon)\Lance Installer.event"
 #include "Desmond(Nuramon)\Axe Installer.event"
 #include "Desmond(Nuramon)\Handaxe Installer.event"
 #include "Desmond(Nuramon)\Unarmed Installer.event"
-
+}
+{
 #include "Wyvern\Lance Installer.event"
 #include "Wyvern\Axe Installer.event"
 #include "Wyvern\Handaxe Installer.event"
 #include "Wyvern\Unarmed Installer.event"
-
+}
+{
 #include "Peg(Flasuban)\Lance Installer.event"
 #include "Peg(Flasuban)\Sword Installer.event"
 #include "Peg(Flasuban)\Unarmed Installer.event"
-
+}
+{
 #include "Cleric(BatimaTheBat)\Staff Installer.event"
 #include "Cleric(BatimaTheBat)\Unarmed Installer.event"
-
+}
+{
+#include "HeroM(Nuramon)\Sword Installer.event"
+#include "HeroM(Nuramon)\Axe Installer.event"
+#include "HeroM(Nuramon)\Handaxe Installer.event"
+#include "HeroM(Nuramon)\Unarmed Installer.event"
+}
+{
+#include "HeroF(Nuramon)\Sword Installer.event"
+#include "HeroF(Nuramon)\Axe Installer.event"
+#include "HeroF(Nuramon)\Handaxe Installer.event"
+#include "HeroF(Nuramon)\Unarmed Installer.event"
+}
+{
 #include "Ballista(Spud)\Bow Installer.event"
+}
+{
+#include "BardM\Magic Installer.event"
+#include "BardM\Refresh Installer.event"
+}
+{
+#include "BardF\Refresh Installer.event"
+}
+ALIGN 4
+BardMAnims:
+AnimaAnim(0x9d)
+LightAnim(0x9d)
+DarkAnim(0x9d)
+StaffAnim(0x9d)
+UnarmedAnim(0x9e)
+EndAnim
+
+ALIGN 4
+BardFAnims:
+MagicAnim(0x91)
+StaffAnim(0x91)
+EndAnim
 
 ALIGN 4
 PegAnims:
@@ -153,15 +289,43 @@ MagicAnim(0x76)
 EndAnim
 
 ALIGN 4
+SorcMAnims:
+MagicAnim(0x77)
+StaffAnim(0x78)
+EndAnim
+
+ALIGN 4
+SorcFAnims:
+MagicAnim(0x79)
+StaffAnim(0x7a)
+EndAnim
+
+ALIGN 4
 MercMAnims:
 SwordAnim(0xB)
 UnarmedAnim(0xC)
 EndAnim
 
 ALIGN 4
+HeroMAnims:
+SwordAnim(0xd)
+AxeAnim(0xe)
+HandAxeAnim(0xf)
+UnarmedAnim(0x10)
+EndAnim
+
+ALIGN 4
 MercFAnims:
 SwordAnim(0xBD)
 UnarmedAnim(0xBE)
+EndAnim
+
+ALIGN 4
+HeroFAnims:
+SwordAnim(0x51)
+AxeAnim(0x52)
+HandAxeAnim(0x53)
+UnarmedAnim(0x54)
 EndAnim
 
 ALIGN 4
@@ -174,6 +338,18 @@ ALIGN 4
 SoldierFAnims:
 LanceAnim(0x96)
 UnarmedAnim(0x97)
+EndAnim
+
+ALIGN 4
+HalberdierMAnims:
+LanceAnim(0xb6)
+UnarmedAnim(0xb7)
+EndAnim
+
+ALIGN 4
+HalberdierFAnims:
+LanceAnim(0xb8)
+UnarmedAnim(0xb9)
 EndAnim
 
 ALIGN 4
@@ -209,14 +385,51 @@ UnarmedAnim(0x39)
 EndAnim
 
 ALIGN 4
+PalMAnims:
+SwordAnim(0x3a)
+LanceAnim(0x3b)
+AxeAnim(0x3c)
+HandAxeAnim(0x3d)
+BowAnim(0x3e)
+UnarmedAnim(0x3f)
+EndAnim
+
+ALIGN 4
+PalFAnims:
+SwordAnim(0x4b)
+LanceAnim(0x4c)
+AxeAnim(0x4d)
+HandAxeAnim(0x55)
+BowAnim(0x56)
+UnarmedAnim(0x57)
+EndAnim
+
+ALIGN 4
 KnightAnims:
 SwordAnim(0x40)
 LanceAnim(0x41)
 AxeAnim(0x42)
 HandAxeAnim(0x43)
 BowAnim(0x4e)
+AnimaAnim(0x50)
+LightAnim(0x50)
+DarkAnim(0x50)
 StaffAnim(0x50)
 UnarmedAnim(0x4f)
+EndAnim
+
+ALIGN 4
+GeneralAnims:
+SwordAnim(0x44)
+LanceAnim(0x45)
+AxeAnim(0x46)
+HandAxeAnim(0x47)
+BowAnim(0x48)
+AnimaAnim(0x49)
+LightAnim(0x49)
+DarkAnim(0x49)
+StaffAnim(0x49)
+UnarmedAnim(0x4a)
 EndAnim
 
 ALIGN 4
@@ -279,7 +492,49 @@ UnarmedAnim(0x94)
 EndAnim
 
 ALIGN 4
+WarriorMAnims:
+AxeAnim(0x1c)
+HandAxeAnim(0x1d)
+BowAnim(0x1e)
+UnarmedAnim(0x1f)
+EndAnim
+
+ALIGN 4
+WarriorFAnims:
+AxeAnim(0xb3)
+HandAxeAnim(0xb4)
+BowAnim(0xb5)
+UnarmedAnim(0xbc)
+EndAnim
+
+ALIGN 4
+PirateMAnims:
+AxeAnim(0x9a)
+HandAxeAnim(0x9b)
+UnarmedAnim(0x9c)
+EndAnim
+
+ALIGN 4
+PirateFAnims:
+AxeAnim(0xa2)
+HandAxeAnim(0xa3)
+UnarmedAnim(0xa4)
+EndAnim
+
+ALIGN 4
 HunterAnims:
 BowAnim(0xA5)
 UnarmedAnim(0xA6)
+EndAnim
+
+ALIGN 4
+MyrmMAnims:
+SwordAnim(0x11)
+UnarmedAnim(0x12)
+EndAnim
+
+ALIGN 4
+MyrmFAnims:
+SwordAnim(0x13)
+UnarmedAnim(0x14)
 EndAnim

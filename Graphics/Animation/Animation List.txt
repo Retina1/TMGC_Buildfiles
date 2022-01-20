@@ -1,50 +1,50 @@
 256
 0x00 None (map animation)
 0x01 Ephraim
-0x02 Ephraim Disarmed
+0x02 Ephraim Unarmed
 0x03 Blair
-0x04 Eirika Disarmed
+0x04 Eirika Unarmed
 0x05 Great Lord Ephraim
 0x06 Eirika
-0x07 Great Lord Ephraim Disarmed
+0x07 Great Lord Ephraim Unarmed
 0x08 Great Lord Eirika
 0x09 Eirika
-0x0A Great Lord Eirika Disarmed
+0x0A Great Lord Eirika Unarmed
 0x0B MercM
 0x0C MercM Unarmed
-0x0D Hero w/ Sword
-0x0E Hero w/ Axe
-0x0F Hero w/ Hand Axe
-0x10 Hero Disarmed
-0x11 Swordfighter
-0x12 Swordfighter Disarmed
-0x13 Swordfighter (F)
-0x14 Swordfighter (F) Disarmed
+0x0D HeroM Sword
+0x0E HeroM Axe
+0x0F HeroM Hand Axe
+0x10 HeroM Unarmed
+0x11 MyrmM
+0x12 MyrmM Unarmed
+0x13 MyrmF
+0x14 MyrmF Unarmed
 0x15 Swordmaster
-0x16 Swordmaster Disarmed
+0x16 Swordmaster Unarmed
 0x17 Swordmaster (F)
-0x18 Swordmaster (F) Disarmed
+0x18 Swordmaster (F) Unarmed
 0x19 FighterM
 0x1A FighterM w/ Hand Axe
-0x1B FighterM Disarmed
-0x1C Warrior
-0x1D Warrior w/ Hand Axe
-0x1E Warrior w/ Bow
-0x1F Warrior Disarmed
+0x1B FighterM Unarmed
+0x1C WarriorM
+0x1D WarriorM Hand Axe
+0x1E WarriorM Bow
+0x1F WarriorM Unarmed
 0x20 Mountain Thief
 0x21 Mountain Thief w/ Hand Axe
-0x22 Mountain Thief Disarmed
+0x22 Mountain Thief Unarmed
 0x23 Berserker
 0x24 Berserker w/ Hand Axe
-0x25 Berserker Disarmed
+0x25 Berserker Unarmed
 0x26 Archer
-0x27 Archer Disarmed
+0x27 Archer Unarmed
 0x28 Archer (F)
-0x29 Archer (F) Disarmed
+0x29 Archer (F) Unarmed
 0x2A Sniper
-0x2B Sniper Disarmed
+0x2B Sniper Unarmed
 0x2C Sniper (F)
-0x2D Sniper (F) Disarmed
+0x2D Sniper (F) Unarmed
 0x2E CavM Sword
 0x2F CavM Lance
 0x30 CavM Axe
@@ -57,46 +57,46 @@
 0x37 CavF Handaxe
 0x38 CavF Bow
 0x39 CavF Unarmed
-0x3A Paladin w/ Sword
-0x3B Paladin w/ Spear
-0x3C Paladin Disarmed
-0x3D Paladin (F) w/ Sword
-0x3E Paladin (F) w/ Spear
-0x3F Paladin (F) Disarmed
+0x3A PalM Swd
+0x3B PalM Lnc
+0x3C PalM Axe
+0x3D PalM Hand
+0x3E PalM Bow
+0x3F PalM Unarmed
 0x40 Armour Knight Sword
 0x41 Armour Knight Lance
 0x42 Armour Knight Axe
 0x43 Armour Knight Handaxe
-0x44 General w/ Sword
-0x45 General w/ Spear
-0x46 General w/ Axe
-0x47 General w/ Hand Axe
-0x48 General Disarmed
-0x49 General (F) w/ Sword
-0x4A General (F) w/ Spear
-0x4B General (F) w/ Axe
-0x4C General (F) w/ Hand Axe
-0x4D General (F) Disarmed
+0x44 General Sword
+0x45 General Spear
+0x46 General Axe
+0x47 General Hand Axe
+0x48 General Bow
+0x49 General Magic
+0x4A General Unarmed
+0x4B PalF Swd
+0x4C PalF Lnc
+0x4D PalF Axe
 0x4E Armor Knight Bow
 0x4F Armor Knight Unarmed
 0x50 Armor Knight Staff
-0x51 Great Knight w/ Hand AXe
-0x52 Great Knight Disarmed
-0x53 Great Knight (F) w/ Sword
-0x54 Great Knight (F) w/ Spear
-0x55 Great Knight (F) w/ Axe
-0x56 Great Knight (F) w/ Hand Axe
-0x57 Great Knight (F) Disarmed
+0x51 HeroF Swd
+0x52 HeroF Axe
+0x53 HeroF Handaxe
+0x54 HeroF Unarmed
+0x55 PalF Hand
+0x56 PalF Bow
+0x57 PalF Unarmed
 0x58 Lance Wyvern
 0x59 Axe Wyvern
 0x5A Hand Axe Wyvern
 0x5B Unarmed Wyvern
 0x5C Dragon Master w/ Sword
 0x5D Dragon Master w/ Spear
-0x5E Dragon Master Disarmed
+0x5E Dragon Master Unarmed
 0x5F Dragon Master (F) w/ Sword
 0x60 Dragon Master (F) w/ Spear
-0x61 Dragon Master (F) Disarmed
+0x61 Dragon Master (F) Unarmed
 0x62 Desmond Lance
 0x63 Desmond Axe
 0x64 Desmond Handaxe
@@ -105,7 +105,7 @@
 0x67 Unamred Peg
 0x68 Falcon Knight w/ Sword
 0x69 Falcon Knight w/ Spear
-0x6A Falcon Knight Disarmed
+0x6A Falcon Knight Unarmed
 0x6B Mage
 0x6C Mage (F)
 0x6D Sage
@@ -118,88 +118,88 @@
 0x74 Mage Knight w/ Staff
 0x75 Dark Mage
 0x76 Dark Mage (F)
-0x77 Druid
-0x78 Druid w/ Staff
-0x79 Druid (F)
-0x7A Druid (F) w/ Staff
+0x77 SorcM
+0x78 SorcM Staff
+0x79 SorcF
+0x7A SorcF Staff
 0x7B Summoner
 0x7C Summoner w/ Staff
 0x7D Monk
-0x7E Priest Disarmed
+0x7E Priest Unarmed
 0x7F Priest
 0x80 Sister
-0x81 Bishop Disarmed
+0x81 Bishop Unarmed
 0x82 Bishop
 0x83 Bishop (F)
 0x84 Bishop (F) w/ Staff
-0x85 Troubadour Disarmed
+0x85 Troubadour Unarmed
 0x86 Troubadour
 0x87 Valkyrie
 0x88 Valkyrie w/ Staff
 0x89 Thief
-0x8A Thief Disarmed
+0x8A Thief Unarmed
 0x8B Assassin
-0x8C Assassin Disarmed
+0x8C Assassin Unarmed
 0x8D Assassin (F)
-0x8E Assassin (F) Disarmed
+0x8E Assassin (F) Unarmed
 0x8F Rogue
-0x90 Rogue Disarmed
-0x91 Dancer
+0x90 Rogue Unarmed
+0x91 BardF
 0x92 FighterF Axe
 0x93 FighterF Handaxe
 0x94 FighterF Unarmed
 0x95 Trainee Mage
 0x96 SoldierF
-0x97 SoldierF Disarmed
+0x97 SoldierF Unarmed
 0x98 Soldier
-0x99 Soldier Disarmed
-0x9A Pirate
-0x9B Pirate w/ Hand Axe
-0x9C Pirate Disarmed
-0x9D Necromancer
-0x9E Necromancer w/ Staff
+0x99 Soldier Unarmed
+0x9A PirateM
+0x9B PirateM Hand Axe
+0x9C PirateM Unarmed
+0x9D BardM Magic
+0x9E BardM Dance
 0x9F Archer on Ballista (unused)
 0xA0 Ballista
 0xA1 Sword Peg
-0xA2 Skeleton w/ Sword
-0xA3 Skeleton w/ Spear
-0xA4 Skeleton Disarmed
+0xA2 PirateF
+0xA3 PirateF Hand
+0xA4 PirateF Unarmed
 0xA5 Hunter Bow
-0xA6 Hunter Disarmed
+0xA6 Hunter Unarmed
 0xA7 Hellbone w/ Sword
 0xA8 Hellbone w/ Spear
-0xA9 Hellbone Disarmed
+0xA9 Hellbone Unarmed
 0xAA Deserter Lnc
 0xAB Deserter Unarmed
 0xAC Trickster Swd
 0xAD Trickster Stf
 0xAE Cyclops
 0xAF Cyclops w/ Hand Axe
-0xB0 Cyclops Disarmed
+0xB0 Cyclops Unarmed
 0xB1 Bruiser Swd
 0xB2 Bruiser Unarmed
-0xB3 Tarvos
-0xB4 Tarvos w/ Hand Axe
-0xB5 Tarvos Disarmed
-0xB6 Macdaire w/ Axe
-0xB7 Macdaire w/ Hand Axe
-0xB8 Macdaire w/ Bow
-0xB9 Macdaire Disarmed
+0xB3 WarriorF
+0xB4 WarriorF Hand Axe
+0xB5 WarriorF Bow
+0xB6 HalberdierM
+0xB7 HalberdierM Unarmed
+0xB8 HalberdierF
+0xB9 HalberdierF Unarmed
 0xBA Bigl
 0xBB Arch Bigl
-0xBC Gorgon
+0xBC WarriorF Unarmed
 0xBD MercF
 0xBE MercF Unarmed
 0xBF Death Gargoyle
-0xC0 Death Gargoyle Disarmed
+0xC0 Death Gargoyle Unarmed
 0xC1 Zombie Dragon
 0xC2 Demon King w/ Ravager
 0xC3 Demon King w/ Demon Light
 0xC4 Mamkute (F)
-0xC5 Myrra Disarmed
-0xC6 White Mamkute Disarmed
-0xC7 Myrra Disarmed
-0xC8 Sister Disarmed
+0xC5 Myrra Unarmed
+0xC6 White Mamkute Unarmed
+0xC7 Myrra Unarmed
+0xC8 Sister Unarmed
 0xC9 Mamkute
 0xCA 
 0xCB 

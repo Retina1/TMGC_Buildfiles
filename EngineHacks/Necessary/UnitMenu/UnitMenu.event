@@ -82,6 +82,12 @@ UnitMenuTable:
   // UM_Attack_B
   MenuCommand(0x67b, 0x6c0, NormalText, $24a28, AttackEffect, $22c31, $22c99)
   UM_Staff
+  
+  //UM_Dance
+  MenuCommand(0x67E,0x6C2,NormalText,NewDanceUsability,0x231D0)
+  
+  UM_Steal
+  
   #ifdef GAIDEN_MAGIC
 	MenuCommand(UM_GaidenBlackMagic,UM_GaidenMagicDesc,NormalText,GaidenBlackMagicUMUsability,GaidenBlackMagicUMEffect,GaidenBlackMagicUMHover,GaidenMagicUMUnhover)
 	MenuCommand(UM_GaidenWhiteMagic,UM_GaidenMagicDesc,NormalText,GaidenWhiteMagicUMUsability,GaidenWhiteMagicUMEffect,GaidenWhiteMagicUMHover,GaidenMagicUMUnhover)
@@ -106,11 +112,6 @@ UnitMenuTable:
   UM_Ride
   UM_Exit
   UM_Play
-  
-  //UM_Dance
-  MenuCommand(0x67E,0x6C2,NormalText,NewDanceUsability,0x231D0)
-
-  UM_Steal
   
   //UM_Summon
   MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)

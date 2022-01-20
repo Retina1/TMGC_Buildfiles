@@ -24,106 +24,151 @@
 #define SFXGroup 6
 
 
-
+{
 #include "Glory.event"
 SongTable(0x4,Glory,1)
+}
 
 
-
+{
 #include "TOJ.event"
 SongTable(0x9,TOJ,1)
-
+}
+{
 #include "Elf.event"
 SongTable(0xA,Elf,1)
-
+}
+{
 #include "Water.event"
 SongTable(0xB,Water,1)
-
+}
+{
 #include "Premonition.event"
 SongTable(0xC,Premonition,1)
-
+}
+{
 #include "Liberation.event"
 SongTable(0xD,Liberation,1)
+}
 
 //might keep E- Land of Promise
-
+{
+#include "LastBibleField.event"
+SongTable(0xf,LastBibleField,1)
+}
+{
 #include "FE4Victory.event"
 SongTable(0x10,FE4Victory,1)
-
-#include "DarkWastes.event"
-SongTable(0x11,DarkWastes,1)
-
+}
+{
+#include "LongRoad.event"
+SongTable(0x11,LongRoad,1)
+}
+{
 #include "Shackled.event"
 SongTable(0x12,Shackled,1)
-
+}
+{
 #include "Metamorphosis.event"
 SongTable(0x13,Metamorphosis,1)
+}
+{
+#include "PirateMan.event"
+SongTable(0x14,PirateMan,1)
+}
+{
+#include "TearsOfResolution.event"
+SongTable(0x15,TearsOfResolution,1)
+}
 
-
-
+{
 #include "SMT_V_Battle_theme.event"
 SongTable(0x19,SMT_V_Battle_theme,0)
-
+}
+{
 #include "FE5Battle.event"
 SongTable(0x1A,FE5Battle,0)
+}
 
-
-
+{
 #include "Paths.event"
 SongTable(0x1c,Paths,0)
-
+}
+{
 #include "FaceMyself.event"
 SongTable(0x1d,FaceMyself,0)
-
+}
+{
 #include "Roar.event"
 SongTable(0x1E,Roar,1)
+}
 
-
-
+{
+#include "SMTLevelUp.event"
+SongTable(0x24,SMTLevelUp,1)
+}
+{
+#include "Crisis.event"
+SongTable(0x25,Crisis,1)
+}
+{
 #include "Stick.event"
 SongTable(0x26,Stick,1)
+}
 
 
-
+{
 #include "Palace.event"
 SongTable(0x2B,Palace,1)
-
+}
+{
 #include "HiddenVillage.event"
 SongTable(0x2C,MachinaVillage,1)
-
+}
+{
 #include "Conversation.event"
 SongTable(0x2D,Conversation,1)
-
+}
+{
 #include "questbattle.event"
 SongTable(0x2E,questbattle,1)
+}
 
+{
+#include "MythicQuestBattle.event"
+SongTable(0x30,MythicQuestBattle,1)
+}
 
-
+{
 #include "BabaIsYou.event"
 SongTable(0x34,BabaIsYou,1)
-
+}
+{
 #include "Forest.event"
 SongTable(0x37,ForestInt,1)
-
+}
+{
 #include "Unfulfilled.event"
 SongTable(0x3F,Unfulfilled,0)
+}
 
-
-
+{
 #include "RightRoad.event"
 SongTable(0x43,RightRoad,1)
-
+}
+{
 #include "Ameno.event"
 SongTable(0x44,Ameno,1)
+}
 
-
-
+{
 #include "SMT4B2.event"
 SongTable(0x92,SMT4B2,0)
-
+}
+{
 #include "SMT4Tokyo.event"
 SongTable(0x93,SMT4Tokyo,1)
-
+}
 
 //sound room completion rate
 PUSH

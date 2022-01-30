@@ -102,6 +102,13 @@
 
 #define ArkhinalIcon 0xb7
 
+#define DivineBreathIcon 0xca
+#define EarthBreathIcon 0xcb
+#define FireBreathIcon 0xcc
+#define IceBreathIcon 0xcd
+#define DemonBreathIcon 0xce
+#define WyvernBreathIcon 0xcf
+
 ALIGN 4
 NewItemIcons:
 // Sheet with all icons goes here 
@@ -397,6 +404,30 @@ ItemIconEntry(BodyRingIcon)
 ALIGN 4
 ItemIconEntry(ArkhinalIcon)
 #incbin "Axes/Arectaris.dmp"
+
+ALIGN 4
+ItemIconEntry(DivineBreathIcon)
+#incbin "Manakete/Thunderstone.dmp"
+
+ALIGN 4
+ItemIconEntry(EarthBreathIcon)
+#incbin "Manakete/Earthstone.dmp"
+
+ALIGN 4
+ItemIconEntry(FireBreathIcon)
+#incbin "Manakete/Firestone.dmp"
+
+ALIGN 4
+ItemIconEntry(IceBreathIcon)
+#incbin "Manakete/Waterstone.dmp"
+
+ALIGN 4
+ItemIconEntry(DemonBreathIcon)
+#incbin "Manakete/Magestone.dmp"
+
+ALIGN 4
+ItemIconEntry(WyvernBreathIcon)
+#incbin "Manakete/Airstone.dmp"
 
 // End of icons 
 POP 

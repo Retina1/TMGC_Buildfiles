@@ -33,8 +33,9 @@ Provoke: Enemies are more[N]
 likely to target this unit.[X]
 
 ## SD_Mercy
-Mercy: Enemies are left[N]
-with at least 1 HP.[X]
+Mercy: Attack with[N]
+a nonlethal strike.[N]
+(Cost: 3 Durability/Hit)[X]
 
 ## SD_Frenzy
 Frenzy: For every 4 damage[N]
@@ -294,7 +295,7 @@ Rally Speed: +4 Spd to[N]
 allies within 2 tiles.[X]
 
 ## SD_RallyLuk
-Rally Luck: +4 Luck to[N]
+Rally Luck: +8 Luck to[N]
 allies within 2 tiles.[X]
 
 ## SD_RallyDef
@@ -339,9 +340,9 @@ Locktouch: Can open locks[N]
 without keys or picks.[X]
 
 ## SD_Lunge
-Lunge: Swap places with the[N]
-opponent after combat.[N]
-(No effect if Move is --)[X]
+Lunge: Swap spaces with enemy[N]
+after combat. (N/A if Mov. is --)[N]
+(Cost: 3 Durability/Hit)[X]
 
 ## SD_Intimidate
 Intimidate: -10 Avoid to[N]
@@ -1149,7 +1150,7 @@ Shade: Enemies are less[N]
 likely to target this unit.[X]
 
 ## SD_ShadePlus
-Shade+: Enemies won't[N]
+Stillness: Enemies won't[N]
 target this unit.[X]
 
 ## SD_Imbue

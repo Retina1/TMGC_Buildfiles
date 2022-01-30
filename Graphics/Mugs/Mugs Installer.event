@@ -66,6 +66,11 @@ RachaelMug:
 setMugEntry(0x10,RachaelMug,3,5,3,3)
 
 ALIGN 4
+HyperiusMug:
+#incext PortraitFormatter "Hyperius.png"
+setMugEntry(0x22,HyperiusMug,3,5,3,3)
+
+ALIGN 4
 EstelleMug:
 #incext PortraitFormatter "Estelle.png"
 setMugEntry(0x2e,EstelleMug,3,5,3,3)
@@ -79,6 +84,16 @@ ALIGN 4
 PeterMug:
 #incext PortraitFormatter "Peter.png"
 setMugEntry(0x44,PeterMug,2,5,2,3)
+
+ALIGN 4
+PtolemyMug:
+#incext PortraitFormatter "Ptolemy.png"
+setMugEntry(0x4b,PtolemyMug,3,4,3,2)
+
+ALIGN 4
+ElcorianMug:
+#incext PortraitFormatter "Elcorian.png"
+setMugEntry(0xB,ElcorianMug,4,5,4,3)
 
 ALIGN 4
 LazarusMug:
@@ -114,3 +129,13 @@ ALIGN 4
 MitchellMug:
 #incext PortraitFormatter "Mitchell.png"
 setMugEntry(0x34,MitchellMug,2,5,2,3)
+
+ALIGN 4
+BrandlMug:
+#incext PortraitFormatter "Brandl.png"
+setMugEntry(0x49,BrandlMug,2,5,2,2)
+
+ALIGN 4
+ValdenMug:
+#incext PortraitFormatter "Valden.png"
+setMugEntry(0x47,ValdenMug,2,5,2,3)

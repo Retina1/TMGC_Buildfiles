@@ -201,6 +201,7 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+ENUT GuideChpt3
 LoadUnitsByDifficulty(C3Easy,C3Normal,C3Hard)
 LOAD1 0x0 C3Units
 LOAD1 0x0 C3JosefNPC
@@ -218,12 +219,13 @@ BEQ 0x11 0xC 0x0
 CHECK_ALIVE Desmond
 BNE 0x22 0xC 0x0
 LABEL 0x11
-ENUT 0x125
+ENUT BaseFlag1
 LABEL 0x22
 CHECK_ALIVE Desmond
 BNE 0x33 0xC 0x0
-ENUT 0x124
+ENUT BaseFlag2
 LABEL 0x33
+CleanTextNoMap(0x3,Ch3_Opening)
 GotoPrepScreen
 ENDA
 
@@ -282,6 +284,7 @@ C3Village:
 VillageEventItem(C3VillageText, 0x1, Thunder)
 
 EndingScene:
+ResetBaseFlags
 MUSC 0x32
 CLEAN
 SetBackground(0x10)

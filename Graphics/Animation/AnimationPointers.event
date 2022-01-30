@@ -240,6 +240,31 @@
 {
 #include "BardF\Refresh Installer.event"
 }
+{
+#include "_Dragons\FireDragon.event"
+}
+{
+#include "_Dragons\IceDragon.event"
+}
+{
+#include "_Dragons\DemonDragon.event"
+}
+{
+#include "_Dragons\EarthDragon.event"
+}
+{
+#include "_Dragons\DivineDragon.event"
+}
+ALIGN 4
+DragonAnims:
+SpecialAnim(0xc4,FireBreath)
+SpecialAnim(0xc5,IceBreath)
+SpecialAnim(0xc6,WyvernBreath)
+SpecialAnim(0xc7,DemonBreath)
+SpecialAnim(0xc8,EarthBreath)
+SpecialAnim(0xc9,DivineBreath)
+EndAnim
+
 ALIGN 4
 BardMAnims:
 AnimaAnim(0x9d)

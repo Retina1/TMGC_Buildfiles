@@ -43,11 +43,15 @@
 
 #define ArcherMCard 0x78
 #define ArcherFCard 0xa7
+#define SniperMCard 0x79
+#define SniperFCard 0xb4
 #define BallistCard 0x92
 
 #define AxeWyvCard 0x93
+#define WyvLordCard 0x89
 #define SwdPegCard 0xA9
 #define LncPegCard 0x86
+#define FalcoCard 0x87
 
 #define MageMCard 0x7c
 #define MageFCard 0xa8
@@ -59,8 +63,44 @@
 
 #define CivilianCard 0xad
 
+#define FireDragonCard 0xb5
+#define IceDragonCard 0xb6
+#define WyvernCard 0xb7
+#define DemonDragonCard 0xb8
+#define EarthDragonCard 0xb9
+#define DivineDragonCard 0xba
 
 ALIGN 4
+
+FireDragonPortrait:
+#incbin "FireDragon.dmp"
+FireDragonPortraitPalette:
+#incbin "FireDragonPalette.dmp"
+
+IceDragonPortrait:
+#incbin "IceDragon.dmp"
+IceDragonPortraitPalette:
+#incbin "IceDragonPalette.dmp"
+
+WyvernPortrait:
+#incbin "Wyvern.dmp"
+WyvernPortraitPalette:
+#incbin "WyvernPalette.dmp"
+
+DemonDragonPortrait:
+#incbin "DemonDragon.dmp"
+DemonDragonPortraitPalette:
+#incbin "DemonDragonPalette.dmp"
+
+EarthDragonPortrait:
+#incbin "EarthDragon.dmp"
+EarthDragonPortraitPalette:
+#incbin "EarthDragonPalette.dmp"
+
+DivineDragonPortrait:
+#incbin "DivineDragon.dmp"
+DivineDragonPortraitPalette:
+#incbin "DivineDragonPalette.dmp"
 
 HunterPortrait:
 #incbin "Hunter.dmp"
@@ -242,6 +282,16 @@ ArcherFPortrait:
 ArcherFPortraitPalette:
 #incbin "ArcherFPalette.dmp"
 
+SniperMPortrait:
+#incbin "SniperM.dmp"
+SniperMPortraitPalette:
+#incbin "SniperMPalette.dmp"
+
+SniperFPortrait:
+#incbin "SniperF.dmp"
+SniperFPortraitPalette:
+#incbin "SniperFPalette.dmp"
+
 BallistPortrait:
 #incbin "Ballist.dmp"
 BallistPortraitPalette:
@@ -297,6 +347,16 @@ LncPegPortrait:
 LncPegPortraitPalette:
 #incbin "LncPegPalette.dmp"
 
+WyvLordPortrait:
+#incbin "WyvLord.dmp"
+WyvLordPortraitPalette:
+#incbin "WyvLordPalette.dmp"
+
+FalcoPortrait:
+#incbin "Falco.dmp"
+FalcoPortraitPalette:
+#incbin "FalcoPalette.dmp"
+
 setCardEntry(HunterCard,HunterPortrait,HunterPortraitPalette)
 setCardEntry(DeserterCard,DeserterPortrait,DeserterPortraitPalette)
 setCardEntry(BruiserCard,BruiserPortrait,BruiserPortraitPalette)
@@ -341,12 +401,16 @@ setCardEntry(WarriorFCard,WarriorFPortrait,WarriorFPortraitPalette)
 
 setCardEntry(ArcherMCard,ArcherMPortrait,ArcherMPortraitPalette)
 setCardEntry(ArcherFCard,ArcherFPortrait,ArcherFPortraitPalette)
+setCardEntry(SniperMCard,SniperMPortrait,SniperMPortraitPalette)
+setCardEntry(SniperFCard,SniperFPortrait,SniperFPortraitPalette)
 
 setCardEntry(BallistCard,BallistPortrait,BallistPortraitPalette)
 
 setCardEntry(AxeWyvCard,AxeWyvPortrait,AxeWyvPortraitPalette)
+setCardEntry(WyvLordCard,WyvLordPortrait,WyvLordPortraitPalette)
 setCardEntry(SwdPegCard,SwdPegPortrait,SwdPegPortraitPalette)
 setCardEntry(LncPegCard,LncPegPortrait,LncPegPortraitPalette)
+setCardEntry(FalcoCard,FalcoPortrait,FalcoPortraitPalette)
 
 setCardEntry(MageMCard,MageMPortrait,MageMPortraitPalette)
 setCardEntry(MageFCard,MageFPortrait,MageFPortraitPalette)
@@ -357,3 +421,10 @@ setCardEntry(DarkFCard,DarkFPortrait,DarkFPortraitPalette)
 setCardEntry(TroubCard,TroubPortrait,TroubPortraitPalette)
 
 setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
+
+setCardEntry(FireDragonCard,FireDragonPortrait,FireDragonPortraitPalette)
+setCardEntry(IceDragonCard,IceDragonPortrait,IceDragonPortraitPalette)
+setCardEntry(WyvernCard,WyvernPortrait,WyvernPortraitPalette)
+setCardEntry(DemonDragonCard,DemonDragonPortrait,DemonDragonPortraitPalette)
+setCardEntry(EarthDragonCard,EarthDragonPortrait,EarthDragonPortraitPalette)
+setCardEntry(DivineDragonCard,DivineDragonPortrait,DivineDragonPortraitPalette)

@@ -91,7 +91,7 @@ UNIT Mevion Soldier 0x0 Level(5,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [Javelin] C
 UNIT Mevion FighterF 0x0 Level(5,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [HandAxe] AttackInRangeAI
 UNIT Mevion Archer 0x0 Level(5,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [Longbow] NoAI
 UNIT Mevion ArcherF 0x0 Level(5,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [Longbow] NoAI
-UNIT Butch Merc 0x0 Level(6,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Zanbato,SteelSword,Vulnerary] ChaseOnceApproachedAI
+UNIT Butch Merc 0x0 Level(6,Enemy,0) [3,9] 0x0 0x0 0x0 0x0 [Zanbato,SteelSword,Vulnerary] ChaseOnceApproachedAI
 UNIT Mitchell Hero 0x0 Level(2,Enemy,1) [1,5] DropItem 0x0 0x0 0x0 [HandAxe,MasterSeal] NeverMoveAI
 UNIT
 
@@ -117,7 +117,7 @@ UNIT Mevion Soldier 0x0 Level(5,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [Javelin] C
 UNIT Mevion FighterF 0x0 Level(5,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [HandAxe] AttackInRangeAI
 UNIT Mevion SwdPeg 0x0 Level(5,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT Mevion LncPeg 0x0 Level(5,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [IronLance] NoAI
-UNIT Butch Merc 0x0 Level(6,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Zanbato,SteelSword,Vulnerary] ChaseOnceApproachedAI
+UNIT Butch Merc 0x0 Level(6,Enemy,0) [3,9] 0x0 0x0 0x0 0x0 [Zanbato,SteelSword,Vulnerary] ChaseOnceApproachedAI
 UNIT Mitchell Hero 0x0 Level(2,Enemy,1) [1,5] DropItem 0x0 0x0 0x0 [SteelAxe,MasterSeal] AttackInRangeAI
 UNIT
 
@@ -146,7 +146,7 @@ UNIT Mevion Soldier 0x0 Level(5,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [SteelLance
 UNIT Mevion AxeCav 0x0 Level(5,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [HandAxe] AttackInRangeAI
 UNIT Mevion SwdPeg 0x0 Level(5,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Mevion LncPeg 0x0 Level(5,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
-UNIT Butch Merc 0x0 Level(6,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Zanbato,SteelSword,Vulnerary] ChaseOnceApproachedAI
+UNIT Butch Merc 0x0 Level(6,Enemy,0) [3,9] 0x0 0x0 0x0 0x0 [Zanbato,SteelSword,Vulnerary] ChaseOnceApproachedAI
 UNIT Mitchell Hero 0x0 Level(2,Enemy,1) [0,4] DropItem 0x0 0x0 0x0 [HandAxe,MasterSeal] AttackInRangeAI
 UNIT
 
@@ -173,6 +173,7 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+ENUT GuideChpt5
 LoadUnitsByDifficulty(C5Easy,C5Normal,C5Hard)
 LOAD1 0x0 C5Units
 MUSC 0x4
@@ -182,11 +183,27 @@ STAL 120
 CGText(Ch5_Narration)
 MUSC 0x0
 FADI 0x3c
-CLEAN
+CHECK_ALIVE Peggy
+BNE 0x1 0xC 0x0
+CleanText(0x20,Ch5_Opening_Dead_Peggy)
+GOTO 0x2
+LABEL 0x1
+CleanText(0x20,Ch5_Opening)
+LABEL 0x2
 GotoPrepScreen
 EndEvent
 
 EndingScene:
+ResetBaseFlags
+MUSC 0x2d
+CHECK_ALIVE Peggy
+BNE 0x1 0xC 0x0
+CleanTextNoMap(0x20,Ch5_Ending_Dead_Peggy)
+GOTO 0x2
+LABEL 0x1
+CleanTextNoMap(0x20,Ch5_Ending)
+LABEL 0x2
+CleanTextNoMap(0x11,Ch5_Ending2)
 MoveToChapter(0x26)
 EndEvent
 

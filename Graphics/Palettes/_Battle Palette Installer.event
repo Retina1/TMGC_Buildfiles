@@ -1,0 +1,147 @@
+
+//#define PaletteTable 0xEF8004
+ALIGN 4
+PaletteTable:
+FILL 0xFF *0x10 // Allocate 0xFF entries for the PaletteTable.
+
+ALIGN 4
+CharPaletteTable:
+FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharPaletteTable.
+
+ALIGN 4
+CharClassTable:
+FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
+
+#define BattleSpriteTable 0xC00008
+
+#define setPalette(index, palette) "PUSH; ORG (PaletteTable + index * 0x10); POIN palette; POP"
+//set the generic palette to a class animation
+#define setGenericPalette(index, genpal) "PUSH; ORG ((BattleSpriteTable - 0x4) + (index * 0x20)); POIN genpal; POP"
+
+//For FE8 palette Association
+//#define CharClassTable $95E0A4
+//#define CharPaletteTable $95EEA4
+//Set the palettes for the classes that with the same label in setCharPalette
+#define setCharPalette(char_id, trainee, base1, base2, promo1, promo2, promo3, promo4) "PUSH; ORG (CharPaletteTable + (char_id -1) * 7); BYTE trainee base1 base2; BYTE promo1 promo2 promo3 promo4; POP"
+//Set the classes for a character that will have character palettes, if in a class outside of this list, the generic palette will be used
+#define setCharClass(char_id, trainee, base1, base2, promo1, promo2, promo3, promo4) "PUSH; ORG (CharClassTable + (char_id - 1) * 7); BYTE trainee base1 base2; BYTE promo1 promo2 promo3 promo4; POP"
+
+#define SetPaletteFull(Character,UnpromotedPalette,UnpromotedClass,FirstPromotionPalette,FirstPromotionClass,SecondPromotionPalette,SecondPromotionClass) "setCharPalette(Character,0x00,UnpromotedPalette,0x00,FirstPromotionPalette,SecondPromotionPalette,0x00,0x00) ; setCharClass(Character,0x00,UnpromotedClass,0x00,FirstPromotionClass,SecondPromotionClass,0x00,0x00)"
+#define SetPaletteFuller(Character,UnpromotedPalette,UnpromotedClass,UnpromotedPalette2,UnpromotedClass2,FirstPromotionPalette,FirstPromotionClass,SecondPromotionPalette,SecondPromotionClass,ThirdPromotionPalette,ThirdPromotionClass,FourthPromotionPalette,FourthPromotionClass) "setCharPalette(Character,0x00,UnpromotedPalette,UnpromotedPalette2,FirstPromotionPalette,SecondPromotionPalette,ThirdPromotionPalette,FourthPromotionPalette) ; setCharClass(Character,0x00,UnpromotedClass,UnpromotedClass2,FirstPromotionClass,SecondPromotionClass,ThirdPromotionClass,FourthPromotionClass)"
+
+#define BlairUPaletteID 0x1
+#define NatasiaUPaletteID 0x2
+#define StefanUPaletteID 0x3
+#define DesmondPaletteID 0x4
+#define PeggyUPaletteID 0x5
+#define ButchUPaletteID 0x6
+#define CassiusUPaletteID 0x7
+#define SamUPaletteID 0x8
+#define KennethUPaletteID 0x9
+
+setPalette(BlairUPaletteID,BlairUPalette)
+
+setPalette(NatasiaUPaletteID,NatasiaUPalette)
+
+setPalette(StefanUPaletteID,StefanUPalette)
+
+setPalette(DesmondPaletteID,DesmondPalette)
+
+setPalette(PeggyUPaletteID,PeggyUPalette)
+
+setPalette(ButchUPaletteID,ButchUPalette)
+
+setPalette(CassiusUPaletteID,CassiusUPalette)
+
+setPalette(SamUPaletteID,SamUPalette)
+
+setPalette(KennethUPaletteID,KennethUPalette)
+
+SetPaletteFull(Blair,BlairUPaletteID,BlairLord,0x0,BlairLordX,0x0,0x0)
+SetPaletteFull(Arin,0x0,Trickster,0x0,0x0,0x0,0x0)
+SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,0x0,Sorc,0x0,0x0)
+SetPaletteFull(Natasia,NatasiaUPaletteID,FighterF,0x0,WarriorF,0x0,0x0)
+SetPaletteFull(Stefan,StefanUPaletteID,SwdCav,0x0,SwdPal,0x0,0x0)
+SetPaletteFull(Desmond,0x0,0x0,DesmondPaletteID,Dismount,0x0,0x0)
+SetPaletteFull(Sam,SamUPaletteID,ArcherF,0x0,SniperF,0x0,0x0)
+SetPaletteFull(Josef,0x0,LncArm,0x0,LncGen,0x0,0x0)
+SetPaletteFull(Peggy,PeggyUPaletteID,Cleric,0x0,BishopF,0x0,0x0)
+SetPaletteFull(Butch,ButchUPaletteID,Merc,0x0,Hero,0x0,0x0)
+SetPaletteFull(Cassius,CassiusUPaletteID,AxeCav,0x0,AxePal,0x0,0x0)
+SetPaletteFull(Rachael,0x0,LncPeg,0x0,Falco,0x0,0x0)
+
+
+// I'm commenting the classes out that don't have palettes yet.
+
+ALIGN 4
+BlairUPalette:
+#incbin "BlairUnpromoted.dmp"
+
+ALIGN 4
+NatasiaUPalette:
+#incbin "NatasiaUnpromoted.dmp"
+
+ALIGN 4
+StefanUPalette:
+#incbin "StefanUnpromoted.dmp"
+
+ALIGN 4
+DesmondPalette:
+#incbin "DesmondCommander.dmp"
+
+ALIGN 4
+PeggyUPalette:
+#incbin "PeggyUnpromoted.dmp"
+
+ALIGN 4
+ButchUPalette:
+#incbin "ButchUnpromoted.dmp"
+
+ALIGN 4
+CassiusUPalette:
+#incbin "CassiusUnpromoted.dmp"
+
+ALIGN 4
+SamUPalette:
+#incbin "SamUnpromoted.dmp"
+
+ALIGN 4
+KennethUPalette:
+#incbin "KennethUnpromoted.dmp"
+
+PUSH
+ORG $59BFC
+POIN PaletteTable + 4
+ORG $59CD0
+POIN PaletteTable + 4
+ORG $59D24
+POIN PaletteTable + 4
+ORG $5A7AC
+POIN PaletteTable + 4
+ORG $5A928
+POIN PaletteTable + 4
+
+ORG $57394
+POIN CharPaletteTable
+ORG $573AC
+POIN CharPaletteTable
+ORG $59C40
+POIN CharPaletteTable
+ORG $59CCC
+POIN CharPaletteTable
+ORG $59D20
+POIN CharPaletteTable
+ORG $CD088
+POIN CharPaletteTable
+
+ORG $575B4
+POIN CharClassTable
+ORG $59C3C
+POIN CharClassTable
+ORG $59CC4
+POIN CharClassTable
+ORG $59D18
+POIN CharClassTable
+ORG $CD1A0
+POIN CharClassTable
+POP

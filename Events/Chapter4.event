@@ -203,9 +203,14 @@ UNIT Mevion Merc 0x0 Level(3,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT
 
+C4Ending:
+UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [13,6] DropItem 0x0 0x0 0x0 [Arkhinal,Tomahawk,LegRing] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
+ENUT GuideChpt4
 LoadUnitsByDifficulty(C4Easy,C4Normal,C4Hard)
 LOAD1 0x0 C4Units
 MUSC 0x4
@@ -220,11 +225,11 @@ ENUT 0x21
 ENUT 0x22
 CHECK_ALIVE Sam
 BNE 0x11 0xC 0x0
-ENUT 0x123
+ENUT BaseFlag1
 LABEL 0x11
 CHECK_ALIVE Josef
 BNE 0x12 0xC 0x0
-ENUT 0x122
+ENUT BaseFlag2
 LABEL 0x12
 MUSC 0x24
 CleanText(0x3,Ch4_Opening)
@@ -232,8 +237,23 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
+ResetBaseFlags
 MUSC 0x2d
+CHECK_ALIVE Peggy
+BNE 0x1 0xC 0x0
+CleanText(0x3,Ch4_Ending_Dead_Peggy)
+GOTO 0x2
+LABEL 0x1
 CleanText(0x3,Ch4_Ending)
+LABEL 0x2
+CLEAN
+FADU 0x30
+DISA Lazarus
+LOAD1 0x0 C4Ending
+CAM1 Lazarus
+FlashCursor(Lazarus,60)
+Text(Ch4_Ending_2)
+CleanTextNoMap(0x2e,Ch4_Ending_3)
 MoveToChapter(0x5)
 ENDA
 
@@ -244,6 +264,12 @@ ENUN
 MUSC 0x30
 Text(C4PeggyJoin)
 MUSC 0x0
+EndEvent
+
+C4Turn3:
+CAM1 Starque
+FlashCursor(Starque,60)
+Text(C4Warning)
 EndEvent
 
 C4Turn5:

@@ -1,0 +1,40 @@
+#define AlwaysDeathQuote(arg000,arg001,arg002) "BYTE arg000 0x0 0xff 0xff arg001 0x0 ;SHORT arg002 ;WORD 0x0 "
+#define ChapterDeathQuote(arg000,arg001,arg002,arg003) "BYTE arg000 0x0 0xff arg001 arg002 0x0 ;SHORT arg003 ;WORD 0x0 "
+#define EndDeathQuote "BYTE 0xff 0xff 0x0 0x0 0x0 0x0 ;SHORT 0x0 ;WORD 0x0 "
+#define DefeatBossFlag 0x2
+#define GameOverFlag 0x65
+
+ALIGN 4
+DeathQuoteTable:
+// Prologue
+ChapterDeathQuote(Davelarn,Prologue,DefeatBossFlag,PDavelarnDeath)
+// Ch1
+ChapterDeathQuote(Marque,Chapter1,DefeatBossFlag,C1MarqueDeath)
+// Ch2
+ChapterDeathQuote(Brentson,Chapter2,DefeatBossFlag,C2BrentsonDeath)
+// Ch3
+ChapterDeathQuote(Helga,Chapter3,DefeatBossFlag,C3HelgaDeath)
+// Ch4
+ChapterDeathQuote(Starque,Chapter4,DefeatBossFlag,C4StarqueDeath)
+ChapterDeathQuote(Lazarus,Chapter4,0x0,C4LazarusDeath)
+// Ch5
+ChapterDeathQuote(Mitchell,Chapter5,DefeatBossFlag,C5MitchellDeath)
+// Always
+AlwaysDeathQuote(Blair,GameOverFlag,BlairDeath)
+AlwaysDeathQuote(Arin,0x0,ArinDeath)
+AlwaysDeathQuote(Kenneth,0x0,KennethDeath)
+AlwaysDeathQuote(Natasia,0x0,NatasiaDeath)
+AlwaysDeathQuote(Stefan,0x0,StefanDeath)
+AlwaysDeathQuote(Desmond,0x0,DesmondDeath)
+AlwaysDeathQuote(Sam,0x0,SamDeath)
+AlwaysDeathQuote(Josef,0x0,JosefDeath)
+AlwaysDeathQuote(Peggy,0x0,PeggyDeath)
+AlwaysDeathQuote(Butch,0x0,ButchDeath)
+AlwaysDeathQuote(Rachael,0x0,RachaelDeath)
+AlwaysDeathQuote(Cassius,0x0,CassiusDeath)
+EndDeathQuote
+
+PUSH
+ORG $8472C
+POIN DeathQuoteTable
+POP

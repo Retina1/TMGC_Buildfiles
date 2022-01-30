@@ -1,0 +1,53 @@
+#ifdef _FE8_
+
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+#define jumpToHack_r1(offset) "BYTE 0x00 0x49 0x08 0x47; POIN (offset|0x1)"
+
+PUSH
+ORG $99E48		//FE8U
+//jumpToHack(prep_shop_each_chapter2)
+jumpToHack_r1(prep_shop_each_chapter2)  //バージョン違いを見分けるためにr1でフックする
+POP
+
+
+ALIGN 4
+prep_shop_each_chapter2:
+#incbin "prep_shop_each_chapter2.dmp"
+POIN prep_shop_each_chapter2_table
+
+
+ALIGN 4
+prep_shop_each_chapter2_table:
+#include "prep_shop_each_chapter2_table.event"
+
+ALIGN 4
+PrepShop1:
+SHLI IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop2:
+SHLI IronSword SteelSword IronLance SteelLance IronAxe SteelAxe IronBow SteelBow Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop3:
+SHLI SteelSword SilverSword SteelLance SilverLance Javelin SteelAxe SilverAxe HandAxe SteelBow SilverBow Thunder Elfire Shine Divine Flux Nightfall Mend Recover Vulnerary Elixir
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop4:
+SHLI SilverSword Wyrmslayer SilverLance Horseslayer Javelin SilverAxe Hammer HandAxe SilverBow Longbow Elfire Fimbulvetr Divine Aura Nightfall Fenrir Mend Recover Vulnerary Elixir
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop5:
+SHLI SilverSword GildedSword SilverLance GildedLance Spear SilverAxe GildedAxe Tomahawk SilverBow GildedBow Fimbulvetr Flare Aura Radiance Fenrir Nocturne Recover Physic Vulnerary Elixir
+BYTE 0x0 0x0
+
+
+
+#else
+    ERROR This version of Selection Quotes is for FE8!
+#endif

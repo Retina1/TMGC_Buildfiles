@@ -2,11 +2,24 @@
 #define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
 #define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND;"
 #define EndEvent "EVBIT_T 0x7; ENDA"
-#define CleanText(bgid,textid) "CLEAN; SetBackground(bgid); FADU 0x3c; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define CleanTextNoMap(bgid,textid) "CLEAN; SetBackground(bgid); FADU 0x3c; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define CleanText(bgid,textid) "CLEAN; SetBackground(bgid); FADU 0x3c; TEXTSTART; TEXTSHOW textid; TEXTEND; ClearBackgroundSmooth"
 #define GiveItem(item) "SMOV 0x3 item; GIVEITEMTO 0xFFFF;"
 #define GiveItem(item,character) "SMOV 0x3 item; GIVEITEMTO character;"
 
 #define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
+
+#define ResetBaseFlags "ENUF BaseFlag1;ENUF BaseFlag2;ENUF BaseFlag3;ENUF BaseFlag4;ENUF BaseFlag5;ENUF BaseFlag6;ENUF BaseFlag7;ENUF BaseFlag8;"
+
+//base flags
+#define BaseFlag1 0x120
+#define BaseFlag2 0x121
+#define BaseFlag3 0x122
+#define BaseFlag4 0x123
+#define BaseFlag5 0x124
+#define BaseFlag6 0x125
+#define BaseFlag7 0x126
+#define BaseFlag8 0x127
 
 //unit defs
 #define Blair 0x01
@@ -21,6 +34,8 @@
 #define Butch 0x0A
 #define Cassius 0x0B
 #define Rachael 0x0C
+
+#define Zeke 0x18
 
 #define Ptolemy 0x25
 #define Johan 0x26
@@ -57,6 +72,9 @@
 #define KnightRing 0xbf
 #define HoneyCharm 0xc0
 #define Arbitrate 0xc1
+#define Flare 0x3d
+#define Radiance 0x44
+#define Nocturne 0x4a
 
 #define Kagutsuchi 0xb1
 #define Nuboko 0xb2
@@ -67,6 +85,12 @@
 
 #define Arkhinal 0x93
 
+#define DivineBreath 0x9a
+#define EarthBreath 0x9b
+#define FireBreath 0x9c
+#define IceBreath 0x9d
+#define DemonBreath 0x9e
+#define WyvernBreath 0x9f
 
 //generic defs
 #define DalstRebel 0x80
@@ -87,6 +111,7 @@
 #define Merchant3 0x8f
 #define Citizen3 0x90
 #define Banditt 0x91
+#define Simulacrum 0x92
 
 //boss defs
 #define Lazarus 0x43
@@ -205,6 +230,12 @@
 #define Bigle 0x5F
 #define Bigerle 0x60
 #define CivilM 0x6D
+#define DivineDragon 0x67
+#define EarthDragon 0x68
+#define FireDragon 0x69
+#define IceDragon 0x6A
+#define DemonDragon 0x6B
+#define Wyvern 0x6C
 
 //movement types- will figure out later
 #define LordMovement 0x880B808

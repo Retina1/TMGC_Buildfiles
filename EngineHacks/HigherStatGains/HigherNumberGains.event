@@ -1,0 +1,32 @@
+#ifdef _FE8_
+	#include "Extensions/Hack Installation.txt"
+	#include EAstdlib.event
+	#include "Tools/Tool Helpers.txt"
+#ifndef Free_Space
+#define Free_Space $EFC000 //Free space, switch to where you want the hack to be
+#endif
+ORG Free_Space
+
+PUSH
+ORG $9ACC98
+#incext Png2Dmp "SmallNumber.png"
+
+ORG $74C10
+jumpToHack(BigNumberGet)
+POP
+
+ALIGN 4
+POIN BigNumber2
+POIN BigNumber
+BigNumberGet:
+#incbin "Numberproc.dmp"
+
+ALIGN 4
+BigNumber:
+#incext Png2Dmp "BigNumber.png"
+ALIGN 4
+BigNumber2:
+#incext Png2Dmp "BigNumber2.png"
+#else
+	ERROR "Select FE8"
+#endif

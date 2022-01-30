@@ -1,0 +1,154 @@
+//Guide data is a series of lists; contained within these lists are the flags to use for unlock and read for each entry
+//This sets all of those flags to the same flag, effectively freeing up all of the guide flags for other uses
+#define UnlockGuideFlag 0xCB
+#define GuideChpt1 0xCC
+#define GuideChpt2 0xCD
+#define GuideChpt3 0xCE
+#define GuideChpt4 0xCF
+#define GuideChpt5 0xD0
+#define GuideChpt6 0xD1
+
+// entry table: 0xB19E0C
+// pointers: CDF5C, CE380, CE40C, CE480, CE57C, CE618, CE6C4, CE998, CEB5C, CEC20, CF090, CF468, CF488
+// BYTE Category Chapter SHORT TitleText BodyText Flag ReadFlag BYTE 0 0
+
+// chapter table: 0xB12AE0
+// pointers: CE1FC
+// SHORT ChapterText BYTE 0 0
+
+// category table: 0xB12B04
+// pointers: CE23C, CE1BC
+// SHORT CategoryText
+
+// By Pikmin, Huichelaar 
+#define PageCount 1 // This must be less than or equal to the number of entries you have in GuideCategoryTable
+
+//Disable guide sort for glitchiness reasons
+PUSH
+  // Guide Menu
+    // Disable guide Sort2 for glitchiness reasons
+    // Credit to Pikmin1211
+    ORG 0xCEF7C
+    SHORT 0xE001
+    
+	// This section by Huichelaar 
+    // Don't draw "Sort" sprite
+    ORG 0xCDFB8
+    SHORT 0x46C0 0x46C0
+    // Draw "Back" where "Sort" used to be
+    ORG 0xCDFC4
+    SHORT 0x2203
+    	
+/*    // Increase Sort1 page limit
+    ORG 0xCEB26
+    BYTE PageCount+1
+    ORG 0xCEBEA
+    BYTE PageCount+1
+    ORG 0xCE4B4
+    BYTE PageCount+1
+    ORG 0xCEB96
+    BYTE PageCount
+    ORG 0xCF476
+    BYTE PageCount+1*/
+POP
+
+#define GuideTerminator "ALIGN 4; WORD 0 0 0 0 0 0 0 0 0 0"
+
+#define GuideEntry(Category, Chapter, TitleText, BodyText, Flag, ReadFlag) "BYTE Category Chapter; SHORT TitleText BodyText Flag ReadFlag 0x0"
+/*
+
+Catagory - Catagory sorting (see cataogry table)
+Chapter - Chapter sorting (see chapter table)
+Title Text - entry name
+Body Text - entry body
+Flag - eid to activate this guide entry
+ReadFlag - eid set when the entry has been read
+
+*/
+
+#define GuideChapterEntry(ChapterText) "SHORT ChapterText 0x0"
+
+#define GuideCategoryEntry(CategoryText) "SHORT CategoryText"
+
+
+ALIGN 4
+GuideEntryTable:
+GuideEntry(1, 0, GuideChanges, GuideChangesDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(1, 0, GuideMovementSkills, GuideMovementSkillsDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(1, 0, GuideBase, GuideBaseDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideAercolyn, GuideAercolynDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideDalst, GuideDalstDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideMevion, GuideMevionDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideYgstra, GuideYgstraDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideElbaCor, GuideElbaCorDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideOpistia, GuideOpistiaDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideHolanis, GuideHolanisDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideLowlands, GuideLowlandsDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(2, 1, GuideLoile, GuideLoileDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(4, 3, GuideBlair, GuideBlairDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(4, 3, GuideArin, GuideArinDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(4, 3, GuideKenneth, GuideKennethDesc, GuideChpt1, GuideChpt1)
+GuideEntry(4, 3, GuideNatasia, GuideNatasiaDesc, GuideChpt2, GuideChpt2)
+GuideEntry(4, 3, GuideStefan, GuideStefanDesc, GuideChpt3, GuideChpt3)
+GuideEntry(4, 3, GuideDesmond, GuideDesmondDesc, GuideChpt3, GuideChpt3)
+GuideEntry(4, 3, GuideSam, GuideSamDesc, GuideChpt4, GuideChpt4)
+GuideEntry(4, 3, GuideJosef, GuideJosefDesc, GuideChpt4, GuideChpt4)
+GuideEntry(4, 3, GuidePeggy, GuidePeggyDesc, GuideChpt5, GuideChpt5)
+GuideEntry(4, 3, GuideButch, GuideButchDesc, GuideChpt6, GuideChpt6)
+GuideEntry(0xC,0,0,0,0,0) //terminator?
+GuideTerminator
+
+ALIGN 4
+GuideChapterTable:
+GuideChapterEntry(GuideSection1)
+GuideChapterEntry(GuideSection2)
+GuideChapterEntry(GuideSection3)
+GuideChapterEntry(GuideSection4)
+BYTE 0x0 0x0 0xC9 0x5 //terminator?
+GuideTerminator
+
+ALIGN 4
+GuideCategoryTable:
+GuideCategoryEntry(0x0)
+GuideCategoryEntry(GuideSection1)
+GuideCategoryEntry(GuideSection2)
+GuideCategoryEntry(GuideSection3)
+GuideCategoryEntry(GuideSection4)
+GuideEntry(PageCount,0,0,0,0,0) //terminator?
+GuideTerminator
+
+
+PUSH
+ORG 0xCE380
+POIN GuideEntryTable
+ORG 0xCDF5C
+POIN GuideEntryTable
+ORG 0xCE40C
+POIN GuideEntryTable
+ORG 0xCE480
+POIN GuideEntryTable
+ORG 0xCE57C
+POIN GuideEntryTable
+ORG 0xCE618
+POIN GuideEntryTable
+ORG 0xCE6C4
+POIN GuideEntryTable
+ORG 0xCE998
+POIN GuideEntryTable
+ORG 0xCEB5C
+POIN GuideEntryTable
+ORG 0xCEC20
+POIN GuideEntryTable
+ORG 0xCF090
+POIN GuideEntryTable
+ORG 0xCF468
+POIN GuideEntryTable
+ORG 0xCF488
+POIN GuideEntryTable
+ORG 0xCE1FC
+POIN GuideChapterTable
+ORG 0xCE23C
+POIN GuideCategoryTable
+ORG 0xCE1BC
+POIN GuideCategoryTable
+POP

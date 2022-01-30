@@ -27,7 +27,7 @@ mov r0, #0x20
 and r0, r1
 cmp r0, #0x0
 beq noLuckRally
-add r4, #0x4
+add r4, #0x8
 noLuckRally:
 @Rally Spectrum
 mov r0, #0x80

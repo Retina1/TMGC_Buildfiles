@@ -37,6 +37,9 @@ Swamp[X]
 
 #include "UnitNames.txt"
 
+# 0x026B ^
+Dragon[X]
+
 # 0x026D
 Summon[X]
 
@@ -52,21 +55,39 @@ Supply[X]
 
 #include "ClassDescs.txt"
 
+
+
 # 0x067E
  Play[X]
  
- # 0x06C2
+# 0x069C
+ Journal[X]
+ 
+# 0x06C2
 Perform a song that allows[.][NL]
 your allies to move again.[X]
+
+# 0x06E5
+Read up on new mechanics and[N]
+the lore of Ulmaron.[X]
 
 # 0x08DA
 You don't have the money![.][NL]
 Try again later.[A][X]
 
-# 0x0902
-[OpenFarRight][LoadFace][0x2B][0x01][OpenFarRight]Behold, the secret strike of[NL]
-Frelia's pegasus knights![.][A][NL]
-Triangle attack![A][X]
+#include "Chapter Text/Prologue.txt"
+
+#include "Chapter Text/Chapter1.txt"
+
+#include "Chapter Text/Chapter2.txt"
+
+#include "Chapter Text/Chapter3.txt"
+
+#include "Chapter Text/Chapter4.txt"
+
+#include "Chapter Text/Chapter5.txt"
+
+#include "Chapter Text/Interlude1.txt"
 
 #include "EscapeQuotes.txt"
 
@@ -241,20 +262,6 @@ a skill when used.[X]
 
 #include "SongRoom.txt"
 
-#include "Chapter Text/Prologue.txt"
-
-#include "Chapter Text/Chapter1.txt"
-
-#include "Chapter Text/Chapter2.txt"
-
-#include "Chapter Text/Chapter3.txt"
-
-#include "Chapter Text/Chapter4.txt"
-
-#include "Chapter Text/Chapter5.txt"
-
-#include "Chapter Text/Interlude1.txt"
-
 #include "Base Convos and Supports/C1BaseConvos.txt"
 
 #include "Base Convos and Supports/C2BaseConvos.txt"
@@ -266,6 +273,8 @@ a skill when used.[X]
 #include "Base Convos and Supports/C5BaseConvos.txt"
 
 #include "stafftext/StaffText.txt"
+
+#include "Guide.txt"
 
 ##TorchName
  Torch[X]

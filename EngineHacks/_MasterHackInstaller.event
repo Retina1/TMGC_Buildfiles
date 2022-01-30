@@ -59,46 +59,6 @@ POP
 
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 
-// thief vision set to 0
-PUSH
-ORG $178C2
-BYTE 0x00
-POP
-
-//fix hardcoded exp class
-PUSH
-ORG $2C3FE
-BYTE 0x65
-POP
-
-
-//enemy hmb
-PUSH
-ORG $F818
-BYTE 0x01
-POP
-
-//no extramap display, no creature campaign
-PUSH
-ORG $96B46
-BYTE 0x00 0x00 0x00 0x20
-ORG $AB944
-BYTE 0x00 0x00 0x00 0x20
-POP
-
-//multiple s ranks
-PUSH
-ORG $2C150
-BYTE 0x11 0xE0
-POP
-
-//prep store pricing
-PUSH
-ORG $B5237
-BYTE 0xE0
-POP
-
-
 //hand axe anims
 #include "handaxs_wildcard/Installer.event"
 
@@ -132,9 +92,9 @@ POP
 #define EventMenuCommandEnd "WORD 0 0 0 0 0 0 0 0 0"
 
 pNewLordSplitMenuCommands:
+	EventMenuCommand(UnchangedGrowths)
 	EventMenuCommand(FixedGrowths)
 	EventMenuCommand(ZeroGrowths)
-	EventMenuCommand(UnchangedGrowths)
 EventMenuCommandEnd
 
 prEventMenuCommandEffect:
@@ -144,12 +104,6 @@ prEventMenuCommandEffect:
 PUSH
     ORG $a26380
 	#incbin "no_fog_comp.dmp"
-POP
-	
-//remove link arena
-PUSH
-	ORG $0ab90e
-	BYTE 0x00 0x00 0x00 0x20
 POP
 
 //title screen BG
@@ -363,32 +317,8 @@ POP
   //support rework, base convos
 #include "Support Rework Rework/SupportRework.event"
 
-
-//save in former tower/ruins maps
-PUSH
-ORG $9500C
-BYTE 0xC0 0x46 0x05 0xE0
-POP
-
-PUSH
-ORG $96b18
-BYTE 0x36
-POP
-
 //staves
 #include "CustomItems/_CustomItemSetup.event"
-
-//thracia trading
-PUSH
-ORG $22f50
-BYTE 0xc0 0x46
-ORG $2D772
-BYTE 0x1B
-ORG $9E3B8
-BYTE 0x1C
-ORG $9E8F2
-BYTE 0x1C
-POP
 
 ALIGN 4
   //MMB
@@ -407,13 +337,23 @@ ALIGN 4
 {
 #include "MultiDancerForBattleAnime/Installer.event"
 }
-/*PUSH
-//install base stat promos
-ORG 0x2BD50
-#incbin "Class Base Promotion Gains.dmp"
 
-//This is the graphic that resets the level.
-//Change to ping to the new level (usually the same)
-ORG 0x736DA
-SHORT 0x7A18
-POP*/
+
+//install base stat promos
+#include "NewPromoGains.lyn.event"
+
+
+//various pushnpops
+#include "AddressPatches.event"
+
+//guide stuff- credit to Pikmin and Huichelaar
+#include "GuideFlags.event"
+
+//prepstores
+#include "PrepShops/Installer.event"
+
+//higher promo values
+#include "HigherStatGains/HigherNumberGains.event"
+
+//reverse mode
+#include "ReverseInstaller/ReverseInstaller.txt"

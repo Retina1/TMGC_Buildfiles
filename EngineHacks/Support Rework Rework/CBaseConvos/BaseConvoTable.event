@@ -19,7 +19,7 @@
 			importance(3)
 			text(C1_Base_Convo_Intro)
 			item(Vulnerary,Blair)
-			eventID(0x127)
+			eventID(BaseFlag1)
 		Entry
 			name(Blair_Arin_Base_Select)
 			bg(0x3)
@@ -32,7 +32,7 @@
 			importance(3)
 			text(C2_Companions)
 			item(PureWater,Kenneth)
-			eventID(0x126)
+			eventID(BaseFlag1)
 		Entry
 			name(Blair_Kenneth_Base_Select)
 			bg(0x3)
@@ -45,13 +45,13 @@
 			importance(3)
 			text(C3_Captured)
 			item(Armorslayer,Stefan)
-			eventID(0x125)
+			eventID(BaseFlag1)
 		Entry
 			name(C3_Horse_Select)
 			bg(0x3)
 			importance(1)
 			text(C3_Horses)
-			eventID(0x124)
+			eventID(BaseFlag2)
 		Entry
 			name(Kenneth_Natasia_Base_Select)
 			bg(0x3)
@@ -64,19 +64,19 @@
 			importance(3)
 			text(C4_Solitude)
 			item(SteelBow,Sam)
-			eventID(0x123)
+			eventID(BaseFlag1)
 		Entry
 			name(C4_Honor_Select)
 			bg(0x3)
 			importance(3)
 			event(C4HonorEvent)
-			eventID(0x122)
+			eventID(BaseFlag2)
 		Entry
 			name(C4_Pursuit_Select)
 			bg(0x3)
 			importance(2)
 			text(C4_Pursuit)
-			eventID(0x121)
+			eventID(BaseFlag3)
 		Entry
 			name(Blair_Natasia_Base_Select)
 			bg(0x3)
@@ -93,7 +93,7 @@
 			bg(0x3)
 			importance(2)
 			text(C5_Fog_Primer)
-			eventID(0x120)
+			eventID(BaseFlag1)
 		Entry
 			name(Blair_Arin_Base_Select)
 			bg(0x3)

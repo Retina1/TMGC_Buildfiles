@@ -1,0 +1,39 @@
+//use braces here to avoid name conflicts. If you don't know what that means, surround all #includes in this files in braces like done below.
+#include "REDAs.event"
+	PUSH
+	ORG $A39768
+	EVBIT_MODIFY 0x1
+	SKIPWN
+	ENDA
+	POP
+	
+#include "_BattleQuotes.event"
+#include "_DeathQuotes.event"
+#include "_BossMusic.event"
+#include "_ForceDeployer.event"
+
+ALIGN 4
+{
+#include "Prologue.event"
+}
+{
+#include "Chapter1.event"
+}
+{
+#include "Chapter2.event"
+}
+{
+#include "Chapter3.event"
+}
+{
+#include "Chapter4.event"
+}
+{
+#include "Chapter5.event"
+}
+{
+#include "Interlude1.event"
+}
+{
+#include "Chapter6.event"
+}

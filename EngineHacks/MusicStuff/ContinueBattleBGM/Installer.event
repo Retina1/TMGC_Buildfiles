@@ -1,0 +1,7 @@
+Cbbgm:
+#incbin "ContinueBattleBGM.dmp"
+
+PUSH
+ORG $71A68
+jumpToHack_r3(Cbbgm)
+POP

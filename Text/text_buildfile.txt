@@ -71,23 +71,23 @@ your allies to move again.[X]
 Read up on new mechanics and[N]
 the lore of Ulmaron.[X]
 
-# 0x08DA
-You don't have the money![.][NL]
-Try again later.[A][X]
+# 0x08FF
+[OpenLeft]Next time, choose Resume[NL]
+Chapter to finish this battle.[A][X]
 
 #include "Chapter Text/Prologue.txt"
-
 #include "Chapter Text/Chapter1.txt"
-
 #include "Chapter Text/Chapter2.txt"
-
 #include "Chapter Text/Chapter3.txt"
-
 #include "Chapter Text/Chapter4.txt"
-
 #include "Chapter Text/Chapter5.txt"
-
 #include "Chapter Text/Interlude1.txt"
+#include "Chapter Text/Chapter6.txt"
+#include "Chapter Text/Chapter7.txt"
+#include "Chapter Text/Chapter8.txt"
+#include "Chapter Text/Interlude2.txt"
+#include "Chapter Text/Chapter9.txt"
+#include "Chapter Text/Interlude3.txt"
 
 #include "EscapeQuotes.txt"
 
@@ -263,14 +263,12 @@ a skill when used.[X]
 #include "SongRoom.txt"
 
 #include "Base Convos and Supports/C1BaseConvos.txt"
-
 #include "Base Convos and Supports/C2BaseConvos.txt"
-
 #include "Base Convos and Supports/C3BaseConvos.txt"
-
 #include "Base Convos and Supports/C4BaseConvos.txt"
-
 #include "Base Convos and Supports/C5BaseConvos.txt"
+#include "Base Convos and Supports/C6BaseConvos.txt"
+#include "Base Convos and Supports/C7BaseConvos.txt"
 
 #include "stafftext/StaffText.txt"
 

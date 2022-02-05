@@ -12,6 +12,11 @@
 #define ZanbatoIcon 0x12
 #define KagutsuchiIcon 0xd5
 #define KillingEdgeIcon 0xc
+#define LightBrandIcon 0xf
+#define RapierIcon 0x8
+#define RuneswordIcon 0x10
+#define BraveSwordIcon 0xa
+#define ShamshirIcon 0xb2
 
 #define IronLanceIcon 0x13
 #define SteelLanceIcon 0x15
@@ -24,6 +29,7 @@
 #define HorseslayerIcon 0x1a
 #define KillerLanceIcon 0x19
 #define NubokoIcon 0xc4
+#define BraveLanceIcon 0x18
 
 #define IronAxeIcon 0x1e
 #define SteelAxeIcon 0x1f
@@ -37,6 +43,9 @@
 #define HalberdIcon 0x24
 #define KillerAxeIcon 0x23
 #define UkonvasaraIcon 0xbe
+#define BraveAxeIcon 0x22
+#define DevilAxeIcon 0x26
+#define SwordslayerIcon 0x2a
 
 #define IronBowIcon 0x2b
 #define SteelBowIcon 0x2c
@@ -45,6 +54,7 @@
 #define MasterBowIcon 0xd4
 #define KillerBowIcon 0x2f
 #define LongbowIcon 0x32
+#define BraveBowIcon 0x30
 
 #define MiniBallistaIcon 0x35
 
@@ -58,6 +68,7 @@
 
 #define FluxIcon 0x43
 #define NightfallIcon 0x44
+#define NosferatuIcon 0x45
 #define FenrirIcon 0x47
 #define FreikugelIcon 0xc1
 
@@ -152,6 +163,21 @@ ItemIconEntry(KagutsuchiIcon)
 ALIGN 4
 ItemIconEntry(KillingEdgeIcon)
 #incbin "Swords/Killing Blade.dmp"
+ALIGN 4
+ItemIconEntry(LightBrandIcon)
+#incbin "Swords/Light Brand.dmp"
+ALIGN 4
+ItemIconEntry(RapierIcon)
+#incbin "Swords/Rapier.dmp"
+ALIGN 4
+ItemIconEntry(RuneswordIcon)
+#incbin "Swords/Runesword.dmp"
+ALIGN 4
+ItemIconEntry(ShamshirIcon)
+#incbin "Swords/Shamshir.dmp"
+ALIGN 4
+ItemIconEntry(BraveSwordIcon)
+#incbin "Swords/Brave Sword.dmp"
 
 ALIGN 4
 ItemIconEntry(IronLanceIcon)
@@ -186,6 +212,9 @@ ItemIconEntry(NubokoIcon)
 ALIGN 4
 ItemIconEntry(KillerLanceIcon)
 #incbin "Lances/Killer Lance.dmp"
+ALIGN 4
+ItemIconEntry(BraveLanceIcon)
+#incbin "Lances/Brave Lance.dmp"
 
 ALIGN 4
 ItemIconEntry(IronAxeIcon)
@@ -223,6 +252,15 @@ ItemIconEntry(UkonvasaraIcon)
 ALIGN 4
 ItemIconEntry(KillerAxeIcon)
 #incbin "Axes/Killer Axe.dmp"
+ALIGN 4
+ItemIconEntry(BraveAxeIcon)
+#incbin "Axes/Brave Axe.dmp"
+ALIGN 4
+ItemIconEntry(DevilAxeIcon)
+#incbin "Axes/Devil Axe.dmp"
+ALIGN 4
+ItemIconEntry(SwordslayerIcon)
+#incbin "Axes/Swordslayer.dmp"
 
 ALIGN 4
 ItemIconEntry(IronBowIcon)
@@ -245,6 +283,9 @@ ItemIconEntry(LongbowIcon)
 ALIGN 4
 ItemIconEntry(KillerBowIcon)
 #incbin "Bows/Killer Bow.dmp"
+ALIGN 4
+ItemIconEntry(BraveBowIcon)
+#incbin "Bows/Brave Bow.dmp"
 
 ALIGN 4
 ItemIconEntry(FireIcon)
@@ -272,6 +313,9 @@ ItemIconEntry(FluxIcon)
 ALIGN 4
 ItemIconEntry(NightfallIcon)
 #incbin "Tomes/Dark/Elluna.dmp"
+ALIGN 4
+ItemIconEntry(NosferatuIcon)
+#incbin "Tomes/Dark/Nosferatu.dmp"
 ALIGN 4
 ItemIconEntry(FenrirIcon)
 #incbin "Tomes/Dark/Fenrir.dmp"

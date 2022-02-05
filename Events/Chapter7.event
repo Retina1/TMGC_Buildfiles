@@ -1,0 +1,125 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x29,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C7Units C7Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C7Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [4,18] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,17] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,17] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,18] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,18] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C7Allies:
+UNIT Emile Sage 0x0 Level(2,NPC,0) [10,15] 0x0 0x0 0x0 0x0 [Fire, Mend, Elixir] NoAI
+UNIT C7Hyperius SwdGen 0x0 Level(12,NPC,0) [20,7] 0x0 0x0 0x0 0x0 [SilverSword, Elixir] AttackInRangeAI
+UNIT Brandl Sniper 0x0 Level(11,NPC,0) [20,5] 0x0 0x0 0x0 0x0 [SilverBow, Longbow, Elixir] NeverMoveAI
+UNIT C7Wilhelm Soldier 0x0 Level(16,NPC,0) [14,7] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NeverMoveAI
+UNIT C7Alexis AxeArm 0x0 Level(8,NPC,0) [14,8] 0x0 0x0 0x0 0x0 [SteelAxe, HandAxe, Elixir] NeverMoveAI
+UNIT ElbaCor LncArm 0x0 Level(15,NPC,1) [24,9] 0x0 0x0 0x0 0x0 [SilverLance, Javelin] NeverMoveAI
+UNIT ElbaCor AxeArm 0x0 Level(15,NPC,1) [21,11] 0x0 0x0 0x0 0x0 [SilverAxe, HandAxe] NeverMoveAI
+UNIT ElbaCor SwdPeg 0x0 Level(15,NPC,1) [19,6] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT ElbaCor LncPeg 0x0 Level(15,NPC,1) [21,6] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT ElbaCor Falco 0x0 Level(1,NPC,1) [20,6] 0x0 0x0 0x0 0x0 [Rapier,BraveLance] NoAI
+UNIT
+
+//C7Jeff: Refer to his entry in the base convo table
+//UNIT Jeff Thief 0x0 Level(7,Ally,0) [3,18] 0x0 0x0 0x0 0x0 [Lancereaver, Lockpick] NoAI
+//UNIT
+
+C7Easy:
+UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT
+
+C7Normal:
+UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT
+
+C7Hard:
+UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [11,13] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Ygstra AxeCav 0x0 Level(10,Enemy,1) [26,15] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Ygstra LncCav 0x0 Level(10,Enemy,1) [26,16] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra SwdCav 0x0 Level(10,Enemy,1) [26,17] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Ygstra SwdPal 0x0 Level(1,Enemy,1) [26,18] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
+UNIT Ygstra AxeCavF 0x0 Level(10,Enemy,1) [27,15] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Ygstra LncCavF 0x0 Level(10,Enemy,1) [27,16] 0x0 0x0 0x0 0x0 [Javelin] NoAI
+UNIT Ygstra SwdCavF 0x0 Level(10,Enemy,1) [27,17] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Ygstra LncPalF 0x0 Level(1,Enemy,1) [27,18] 0x0 0x0 0x0 0x0 [SteelLance] DelayedAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt7
+LoadUnitsByDifficulty(C7Easy,C7Normal,C7Hard)
+LOAD1 0x0 C7Units
+LOAD1 0x0 C7Allies
+MUSC 0x4
+SetBackground(0x34)
+FADU 0x3c
+STAL 120
+CGText(Ch7_Narration)
+MUSC 0x0
+FADI 0x3c
+CLEAN
+SystemText(ResetNotice)
+GotoPrepScreen
+EndEvent
+
+EndingScene:
+MoveToChapter(Chapter8)
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

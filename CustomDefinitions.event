@@ -37,3 +37,9 @@
 #include "EngineHacks/SkillSystem/skill_definitions.event"
 
 //#define __DEBUG__ // Uncomment to get the Debug startup menu :p
+
+//JumpToHack
+#define jumpToHack_r0(offset) "SHORT 0x4800 0x4700 ; POIN (offset|1)"
+//#define jumpToHack_r1(offset) "SHORT 0x4900 0x4708 ; POIN (offset|1)"
+#define jumpToHack_r2(offset) "SHORT 0x4A00 0x4710 ; POIN (offset|1)"
+#define jumpToHack_r3(offset) "SHORT 0x4B00 0x4718 ; POIN (offset|1)"

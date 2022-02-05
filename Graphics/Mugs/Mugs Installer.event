@@ -91,6 +91,11 @@ PtolemyMug:
 setMugEntry(0x4b,PtolemyMug,3,4,3,2)
 
 ALIGN 4
+TobiasMug:
+#incext PortraitFormatter "Tobias.png"
+setMugEntry(0x51,TobiasMug,2,5,3,3)
+
+ALIGN 4
 ElcorianMug:
 #incext PortraitFormatter "Elcorian.png"
 setMugEntry(0xB,ElcorianMug,4,5,4,3)
@@ -139,3 +144,28 @@ ALIGN 4
 ValdenMug:
 #incext PortraitFormatter "Valden.png"
 setMugEntry(0x47,ValdenMug,2,5,2,3)
+
+ALIGN 4
+JakeMug:
+#incext PortraitFormatter "Jake.png"
+setMugEntry(0x64,JakeMug,2,5,3,3)
+
+ALIGN 4
+ArenaGuyMug:
+#incext PortraitFormatter "ArenaGuy.png"
+setMugEntry(0x67,ArenaGuyMug,3,2,2,0)
+
+ALIGN 4
+ArmoryGuyMug:
+#incext PortraitFormatter "ArmoryGuy.png"
+setMugEntry(0x65,ArmoryGuyMug,3,2,2,0)
+
+ALIGN 4
+ShopGirlMug:
+#incext PortraitFormatter "ShopGirl.png"
+setMugEntry(0x66,ShopGirlMug,3,3,2,0)
+
+ALIGN 4
+SSAnnaMug:
+#incext PortraitFormatter "SSAnna.png"
+setMugEntry(0x68,SSAnnaMug,3,3,2,0)

@@ -2,8 +2,9 @@ ALIGN 4
 MasterSealClassList:
 BYTE Thief Rune Merc MercF Myrm MyrmF Archer ArcherF Fighter FighterF Pirate PirateF Soldier SoldierF
 BYTE SwdCav LncCav AxeCav BowCav SwdCavF LncCavF AxeCavF BowCavF SwdArm LncArm AxeArm BowArm
-BYTE Mage MageF Troub TroubF Priest Cleric LightM DarkM Bigle DarkF
+BYTE Mage MageF Troub TroubF Priest Cleric LightM DarkM DarkF
 BYTE LncWyv AxeWyv LncPeg SwdPeg
+BYTE 0x00 0x00
 
 ALIGN 4
 AnimusSealClassList:
@@ -11,3 +12,8 @@ BYTE Thief Rune Merc MercF Myrm MyrmF Archer ArcherF Fighter FighterF Pirate Pir
 BYTE SwdCav LncCav AxeCav BowCav SwdCavF LncCavF AxeCavF BowCavF SwdArm LncArm AxeArm BowArm
 BYTE Mage MageF Troub TroubF Priest Cleric LightM DarkM Bigle DarkF
 BYTE LncWyv AxeWyv LncPeg SwdPeg
+BYTE Assass AssassF RuneMast Hero HeroF SwMast SwMastF Sniper SniperF Warrior WarriorF Berserker BerserkerF Halberdier HalberdierF
+BYTE SwdPal LncPal AxePal BowPal SwdPalF LncPalF AxePalF BowPalF SwdGen LncGen AxeGen BowGen
+BYTE Sage SageF Sorc SorcF Valk ValkF Bishop BishopF
+BYTE WyvLord BowWyv Falco
+BYTE 0x00 0x00

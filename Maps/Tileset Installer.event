@@ -3,7 +3,7 @@
 #endif
 
 ALIGN 4
-DalstTownObjects:
+TownObjects:
 #incext Png2Dmp "Tilesets/DalstTown.png" --lz77
 
 ALIGN 4
@@ -15,7 +15,7 @@ TownTiles:
 #incext compress "Tilesets/Town.mapchip_config"
 
 ALIGN 4
-DalstFieldObjects:
+FieldObjects:
 #incext Png2Dmp "Tilesets/DalstField.png" --lz77
 
 ALIGN 4
@@ -23,11 +23,15 @@ DalstFieldPalette:
 #incext Png2Dmp "Tilesets/DalstField.png" --palette-only
 
 ALIGN 4
+ElbaCorFieldPalette:
+#incext Png2Dmp "Tilesets/ElbaCorField.png" --palette-only
+
+ALIGN 4
 FieldTiles:
 #incext compress "Tilesets/Field.mapchip_config"
 
 ALIGN 4
-LowlandsCastleObjects:
+CastleObjects:
 #incext Png2Dmp "Tilesets/LowlandsCastle.png" --lz77
 
 ALIGN 4
@@ -39,7 +43,7 @@ CastleTiles:
 #incext compress "Tilesets/Castle.mapchip_config"
 
 ALIGN 4
-MevionSwampObjects:
+SwampObjects:
 #incbin "Tilesets/Swamps.dmp"
 
 ALIGN 4
@@ -59,7 +63,7 @@ SwampTiles:
 #incext compress "Tilesets/Swamp.mapchip_config"
 
 ALIGN 4
-MevionCityObjects:
+CityObjects:
 #incext Png2Dmp "Tilesets/MevionCity.png" --lz77
 
 ALIGN 4
@@ -175,24 +179,25 @@ tilesetAnimation(0x1a,0x1000,FieldFrame16)
 WORD 0 0
 
 
-EventPointerTable(0x3, DalstTownObjects)
+EventPointerTable(0x3, TownObjects)
 EventPointerTable(0x2, DalstTownPalette)
 EventPointerTable(0x1, TownTiles)
 
-EventPointerTable(0xA, DalstFieldObjects)
+EventPointerTable(0xA, FieldObjects)
 EventPointerTable(0x9, DalstFieldPalette)
+EventPointerTable(0x27, ElbaCorFieldPalette)
 EventPointerTable(0x8, FieldTiles)
 EventPointerTable(0x5, FieldAnims)
 
-EventPointerTable(0x1A, MevionSwampObjects)
+EventPointerTable(0x1A, SwampObjects)
 EventPointerTable(0x1B, MevionSwampPalette)
 EventPointerTable(0x1C, SwampTiles)
 
-EventPointerTable(0x1f, MevionCityObjects)
+EventPointerTable(0x1f, CityObjects)
 EventPointerTable(0x20, MevionCityPalette)
 EventPointerTable(0x21, CityTiles)
 
-EventPointerTable(0x11, LowlandsCastleObjects)
+EventPointerTable(0x11, CastleObjects)
 EventPointerTable(0x12, LowlandsCastlePalette)
 EventPointerTable(0x13, CastleTiles)
 EventPointerTable(0x17, CastleAnims)

@@ -104,6 +104,48 @@
 			bg(0x3)
 			text(C5_Kenneth_Stefan_Base)
 			baseSupport(Kenneth,Stefan,CSupport)
+	Chapter(Chapter6)
+		Entry
+			name(C6_Old_Friends_Select)
+			bg(0x3)
+			importance(3)
+			text(C6_Old_Friends)
+			item(GoddessIcon,Butch)
+			eventID(BaseFlag1)
+		Entry
+			name(C6_Elba_Cor_Select)
+			bg(0x3)
+			importance(1)
+			text(C6_Elba_Cor)
+			eventID(BaseFlag2)
+		Entry
+			name(Natasia_Peggy_Base_Select)
+			bg(0x3)
+			text(C6_Natasia_Peggy_Base)
+			baseSupport(Natasia,Peggy,CSupport)
+		Entry
+			name(Sam_Josef_Base_Select)
+			bg(0x3)
+			text(C6_Sam_Josef_Base)
+			baseSupport(Sam,Josef,CSupport)
+		Entry
+			name(Sam_Arin_Base_Select)
+			bg(0x3)
+			text(C6_Sam_Arin_Base)
+			baseSupport(Sam,Arin,CSupport)
+		Entry
+			name(Stefan_Josef_Base_Select)
+			bg(0x3)
+			text(C6_Stefan_Josef_Base)
+			baseSupport(Stefan,Josef,CSupport)
+	Chapter(Chapter7)
+		Entry
+			name(C7_Mugger_Select)
+			bg(0x3)
+			importance(3)
+			text(C7_Mugger)
+			unit(C7Jeff)
+			eventID(BaseFlag1)
 	POP
 	}
 #endif // BASE_CONVO_TABLE
@@ -118,5 +160,9 @@ CLEAN
 NoFade
 ENDA
 ALIGN 4
+
+C7Jeff:
+UNIT Jeff Thief 0x0 Level(7,Ally,0) [3,18] 0x0 0x0 0x0 0x0 [Lancereaver, Lockpick] NoAI
+UNIT
 
 

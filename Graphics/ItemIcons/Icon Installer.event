@@ -30,6 +30,8 @@
 #define KillerLanceIcon 0x19
 #define NubokoIcon 0xc4
 #define BraveLanceIcon 0x18
+#define ShatterspearIcon 0xa7
+#define DragonpikeIcon 0xb6
 
 #define IronAxeIcon 0x1e
 #define SteelAxeIcon 0x1f
@@ -46,6 +48,7 @@
 #define BraveAxeIcon 0x22
 #define DevilAxeIcon 0x26
 #define SwordslayerIcon 0x2a
+#define DracoaxeIcon 0x58
 
 #define IronBowIcon 0x2b
 #define SteelBowIcon 0x2c
@@ -55,6 +58,7 @@
 #define KillerBowIcon 0x2f
 #define LongbowIcon 0x32
 #define BraveBowIcon 0x30
+#define ShiningBowIcon 0xa8
 
 #define MiniBallistaIcon 0x35
 
@@ -119,6 +123,8 @@
 #define IceBreathIcon 0xcd
 #define DemonBreathIcon 0xce
 #define WyvernBreathIcon 0xcf
+
+#define HoneyCharmIcon 0x6f
 
 ALIGN 4
 NewItemIcons:
@@ -215,6 +221,12 @@ ItemIconEntry(KillerLanceIcon)
 ALIGN 4
 ItemIconEntry(BraveLanceIcon)
 #incbin "Lances/Brave Lance.dmp"
+ALIGN 4
+ItemIconEntry(ShatterspearIcon)
+#incbin "Lances/Heavy Spear.dmp"
+ALIGN 4
+ItemIconEntry(DragonpikeIcon)
+#incbin "Lances/Dragonspear.dmp"
 
 ALIGN 4
 ItemIconEntry(IronAxeIcon)
@@ -261,6 +273,9 @@ ItemIconEntry(DevilAxeIcon)
 ALIGN 4
 ItemIconEntry(SwordslayerIcon)
 #incbin "Axes/Swordslayer.dmp"
+ALIGN 4
+ItemIconEntry(DracoaxeIcon)
+#incbin "Axes/Dragon Axe.dmp"
 
 ALIGN 4
 ItemIconEntry(IronBowIcon)
@@ -286,6 +301,9 @@ ItemIconEntry(KillerBowIcon)
 ALIGN 4
 ItemIconEntry(BraveBowIcon)
 #incbin "Bows/Brave Bow.dmp"
+ALIGN 4
+ItemIconEntry(ShiningBowIcon)
+#incbin "Bows/Magic Bow.dmp"
 
 ALIGN 4
 ItemIconEntry(FireIcon)
@@ -472,6 +490,10 @@ ItemIconEntry(DemonBreathIcon)
 ALIGN 4
 ItemIconEntry(WyvernBreathIcon)
 #incbin "Manakete/Airstone.dmp"
+
+ALIGN 4
+ItemIconEntry(HoneyCharmIcon)
+#incbin "HoneyCharm.dmp"
 
 // End of icons 
 POP 

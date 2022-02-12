@@ -148,14 +148,7 @@ ENUT GuideChpt1
 CleanTextNoMap(0x10,Ch1_Opening)
 LoadUnitsByDifficulty(C1Easy,C1Normal,C1Hard)
 MUSC 0x4
-SetBackground(0x34)
-FADU 0x3c
-STAL 120
-CGText(Ch1_Narration)
-MUSC 0x0
-FADI 0x3c
-CLEAN
-FADU 0x3c
+Narration(Ch1_Narration)
 LOAD1 0x0 C1CutsceneUnits
 ENUN
 CHECK_ALIVE Kenneth
@@ -179,7 +172,7 @@ ResetBaseFlags
 CHECK_EXISTS Natasia
 BNE 0x1 0xC 0x0
 MUSC 0x31
-CleanText(0x3, You_Almost_Forgot_Natasia_Dummy)
+CleanTextNoMap(0x3, You_Almost_Forgot_Natasia_Dummy)
 LOAD1 0x0 NatasiaRecruitment
 ENUN
 LABEL 0x1

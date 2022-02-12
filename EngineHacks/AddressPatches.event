@@ -1,3 +1,17 @@
+//s rank bonuses
+//first, swap crit for attack
+PUSH
+ORG $2AD82
+BYTE 0x5a 0x22 0xA0 0x5a
+ORG $2AD88
+BYTE 0xA0 0x52
+//now, change hit to +10 and atk to +3
+ORG $2AD7E
+BYTE 0xa
+ORG $2AD86
+BYTE 0x3
+POP
+
 //5x fixes
 PUSH
 ORG $024DF2

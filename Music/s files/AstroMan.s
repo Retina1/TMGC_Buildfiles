@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song09_grp, voicegroup000
-	.equ	song09_pri, 0
-	.equ	song09_rev, 0
-	.equ	song09_mvl, 127
-	.equ	song09_key, 0
-	.equ	song09_tbs, 1
-	.equ	song09_exg, 0
-	.equ	song09_cmp, 1
+	.equ	AstroMan_grp, voicegroup000
+	.equ	AstroMan_pri, 0
+	.equ	AstroMan_rev, 0
+	.equ	AstroMan_mvl, 127
+	.equ	AstroMan_key, 0
+	.equ	AstroMan_tbs, 1
+	.equ	AstroMan_exg, 0
+	.equ	AstroMan_cmp, 1
 
 	.section .rodata
-	.global	song09
+	.global	AstroMan
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song09_001:
+AstroMan_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
- .byte   TEMPO , 140*song09_tbs/2
+ .byte   KEYSH , AstroMan_key+0
+ .byte   TEMPO , 140*AstroMan_tbs/2
  .byte   VOICE , 80
- .byte   VOL , 20*song09_mvl/mxv
+ .byte   VOL , 20*AstroMan_mvl/mxv
  .byte   PAN , c_v-44
  .byte   W12
  .byte   N06 ,Gs3 ,v127
@@ -605,11 +605,11 @@ Label_0100A7DD:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song09_002:
+AstroMan_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 80
- .byte   VOL , 12*song09_mvl/mxv
+ .byte   VOL , 12*AstroMan_mvl/mxv
  .byte   PAN , c_v+11
  .byte   W24
  .byte   N06 ,Gs3 ,v127
@@ -1268,11 +1268,11 @@ Label_0100AB39:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song09_003:
+AstroMan_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 94
- .byte   VOL , 20*song09_mvl/mxv
+ .byte   VOL , 20*AstroMan_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N84 ,Gs2 ,v127
  .byte   N84 ,Cs3
@@ -1887,11 +1887,11 @@ Label_0100B0E9:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song09_004:
+AstroMan_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 63
- .byte   VOL , 35*song09_mvl/mxv
+ .byte   VOL , 35*AstroMan_mvl/mxv
  .byte   PAN , c_v-9
  .byte   N12 ,Ds0 ,v127
  .byte   W12
@@ -2364,11 +2364,11 @@ Label_0100B3FC:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song09_005:
+AstroMan_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 39
- .byte   VOL , 30*song09_mvl/mxv
+ .byte   VOL , 30*AstroMan_mvl/mxv
  .byte   PAN , c_v+11
  .byte   N12 ,Ds0 ,v127
  .byte   W12
@@ -2841,11 +2841,11 @@ Label_0100B6C8:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song09_006:
+AstroMan_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 33
- .byte   VOL , 24*song09_mvl/mxv
+ .byte   VOL , 24*AstroMan_mvl/mxv
  .byte   PAN , c_v+31
  .byte   N04 ,Ds2 ,v127
  .byte   W12
@@ -3222,11 +3222,11 @@ Label_0100A139:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song09_007:
+AstroMan_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 4
- .byte   VOL , 28*song09_mvl/mxv
+ .byte   VOL , 28*AstroMan_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -3711,11 +3711,11 @@ Label_0100A507:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song09_008:
+AstroMan_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 85
- .byte   VOL , 14*song09_mvl/mxv
+ .byte   VOL , 14*AstroMan_mvl/mxv
  .byte   PAN , c_v+46
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -4114,11 +4114,11 @@ Label_0100AD8F:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song09_009:
+AstroMan_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 85
- .byte   VOL , 14*song09_mvl/mxv
+ .byte   VOL , 14*AstroMan_mvl/mxv
  .byte   PAN , c_v-44
  .byte   W96
 @  #09 @001   ----------------------------------------
@@ -4549,11 +4549,11 @@ Label_0100B948:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song09_010:
+AstroMan_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , AstroMan_key+0
  .byte   VOICE , 127
- .byte   VOL , 35*song09_mvl/mxv
+ .byte   VOL , 35*AstroMan_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N06 ,Cn1 ,v127
  .byte   N06 ,Cn1
@@ -5784,23 +5784,23 @@ Label_0100C097:
 @******************************************************@
 	.align	2
 
-song09:
+AstroMan:
 	.byte	10	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song09_pri	@ Priority
-	.byte	song09_rev	@ Reverb.
+	.byte	AstroMan_pri	@ Priority
+	.byte	AstroMan_rev	@ Reverb.
     
-	.word	song09_grp
+	.word	AstroMan_grp
     
-	.word	song09_001
-	.word	song09_002
-	.word	song09_003
-	.word	song09_004
-	.word	song09_005
-	.word	song09_006
-	.word	song09_007
-	.word	song09_008
-	.word	song09_009
-	.word	song09_010
+	.word	AstroMan_001
+	.word	AstroMan_002
+	.word	AstroMan_003
+	.word	AstroMan_004
+	.word	AstroMan_005
+	.word	AstroMan_006
+	.word	AstroMan_007
+	.word	AstroMan_008
+	.word	AstroMan_009
+	.word	AstroMan_010
 
 	.end

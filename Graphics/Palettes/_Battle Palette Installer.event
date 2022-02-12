@@ -38,6 +38,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define CassiusUPaletteID 0x7
 #define SamUPaletteID 0x8
 #define KennethUPaletteID 0x9
+#define RachaelUPaletteID 0xa
 
 setPalette(BlairUPaletteID,BlairUPalette)
 
@@ -57,6 +58,8 @@ setPalette(SamUPaletteID,SamUPalette)
 
 setPalette(KennethUPaletteID,KennethUPalette)
 
+setPalette(RachaelUPaletteID,RachaelUPalette)
+
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,0x0,BlairLordX,0x0,0x0)
 SetPaletteFull(Arin,0x0,Trickster,0x0,0x0,0x0,0x0)
 SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,0x0,Sorc,0x0,0x0)
@@ -68,7 +71,7 @@ SetPaletteFull(Josef,0x0,LncArm,0x0,LncGen,0x0,0x0)
 SetPaletteFull(Peggy,PeggyUPaletteID,Cleric,0x0,BishopF,0x0,0x0)
 SetPaletteFull(Butch,ButchUPaletteID,Merc,0x0,Hero,0x0,0x0)
 SetPaletteFull(Cassius,CassiusUPaletteID,AxeCav,0x0,AxePal,0x0,0x0)
-SetPaletteFull(Rachael,0x0,LncPeg,0x0,Falco,0x0,0x0)
+SetPaletteFull(Rachael,RachaelUPaletteID,LncPeg,0x0,Falco,0x0,0x0)
 
 
 // I'm commenting the classes out that don't have palettes yet.
@@ -108,6 +111,10 @@ SamUPalette:
 ALIGN 4
 KennethUPalette:
 #incbin "KennethUnpromoted.dmp"
+
+ALIGN 4
+RachaelUPalette:
+#incbin "RachaelUnpromoted.dmp"
 
 PUSH
 ORG $59BFC

@@ -21,17 +21,33 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C7Turn2,2)
+TurnEventPlayer(0x0,C7Turn5,5)
+TurnEventPlayer(0x0,C7Turn7,7)
+TurnEventPlayer(0x0,C7Turn9,9)
+TurnEventPlayer(0x0,C7Turn12,12)
+TurnEventPlayer(0x0,C7Turn14,14)
+TurnEventPlayer(0x0,C7Turn16,16)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,C7EmileTalk,Blair,Emile)
+CharacterEvent(0xb,C7BrandlTalk,Blair,Brandl)
+CharacterEvent(0xb,C7BrandlTalk,Rachael,Brandl)
+CharacterEvent(0xb,C7BrandlTalk,Cassius,Brandl)
 END_MAIN
 
 LocationBasedEvents:
+House(0x0,C7North,6,1)
+House(0x0,C7Mid1,16,6)
+House(0x0,C7Mid2,9,13)
+House(0x0,C7South,20,22)
 END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
 END_MAIN
 
 Dunno:
@@ -62,16 +78,21 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,20] 0x0 0x0 0x0 0x0 [IronSword, Heal,
 UNIT
 
 C7Allies:
-UNIT Emile Sage 0x0 Level(2,NPC,0) [10,15] 0x0 0x0 0x0 0x0 [Fire, Mend, Elixir] NoAI
-UNIT C7Hyperius SwdGen 0x0 Level(12,NPC,0) [20,7] 0x0 0x0 0x0 0x0 [SilverSword, Elixir] AttackInRangeAI
-UNIT Brandl Sniper 0x0 Level(11,NPC,0) [20,5] 0x0 0x0 0x0 0x0 [SilverBow, Longbow, Elixir] NeverMoveAI
-UNIT C7Wilhelm Soldier 0x0 Level(16,NPC,0) [14,7] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NeverMoveAI
-UNIT C7Alexis AxeArm 0x0 Level(8,NPC,0) [14,8] 0x0 0x0 0x0 0x0 [SteelAxe, HandAxe, Elixir] NeverMoveAI
-UNIT ElbaCor LncArm 0x0 Level(15,NPC,1) [24,9] 0x0 0x0 0x0 0x0 [SilverLance, Javelin] NeverMoveAI
-UNIT ElbaCor AxeArm 0x0 Level(15,NPC,1) [21,11] 0x0 0x0 0x0 0x0 [SilverAxe, HandAxe] NeverMoveAI
-UNIT ElbaCor SwdPeg 0x0 Level(15,NPC,1) [19,6] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
-UNIT ElbaCor LncPeg 0x0 Level(15,NPC,1) [21,6] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
-UNIT ElbaCor Falco 0x0 Level(1,NPC,1) [20,6] 0x0 0x0 0x0 0x0 [Rapier,BraveLance] NoAI
+UNIT ElbaCor Priest 0x0 Level(15,NPC,1) [21,8] 0x0 0x0 0x0 0x0 [Reblow] StationaryHeal
+UNIT ElbaCor Cleric 0x0 Level(15,NPC,1) [18,7] 0x0 0x0 0x0 0x0 [Reblow] StationaryHeal
+UNIT C7Hyperius SwdGen 0x0 Level(12,NPC,0) [20,7] 0x0 0x0 0x0 0x0 [SilverSword, Elixir] GreenRangeAI
+UNIT Brandl Sniper 0x0 Level(11,NPC,0) [20,5] 0x0 0x0 0x0 0x0 [Longbow, Elixir] GreenStationaryAI
+UNIT C7Wilhelm Soldier 0x0 Level(16,NPC,0) [14,7] 0x0 0x0 0x0 0x0 [SteelLance, Javelin, Elixir] GreenStationaryAI
+UNIT C7Alexis AxeArm 0x0 Level(8,NPC,0) [14,8] 0x0 0x0 0x0 0x0 [SteelAxe, HandAxe, Elixir] GreenStationaryAI
+UNIT ElbaCor LncArm 0x0 Level(15,NPC,1) [24,9] 0x0 0x0 0x0 0x0 [SilverLance, Javelin] GreenStationaryAI
+UNIT ElbaCor AxeArm 0x0 Level(15,NPC,1) [21,11] 0x0 0x0 0x0 0x0 [SilverAxe, HandAxe] GreenStationaryAI
+UNIT ElbaCor SwdPeg 0x0 Level(15,NPC,1) [19,6] 0x0 0x0 0x0 0x0 [SilverSword] GreenAI
+UNIT ElbaCor LncPeg 0x0 Level(15,NPC,1) [21,6] 0x0 0x0 0x0 0x0 [SilverLance] GreenAI
+UNIT ElbaCor Falco 0x0 Level(1,NPC,1) [20,6] 0x0 0x0 0x0 0x0 [Rapier,BraveLance] GreenAI
+UNIT
+
+C7Emile:
+UNIT Emile Sage 0x0 Level(2,NPC,0) [9,13] 0x0 0x0 0x1 REDA10R15 [Fire, Mend, Elixir] GreenAI
 UNIT
 
 //C7Jeff: Refer to his entry in the base convo table
@@ -79,16 +100,45 @@ UNIT
 //UNIT
 
 C7Easy:
-UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Bandit Bruiser 0x0 Level(8,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT
 
 C7Normal:
-UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Bandit Bruiser 0x0 Level(8,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT
 
 C7Hard:
-UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
-UNIT Banditt Bruiser 0x0 Level(8,Enemy,1) [11,13] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [10,17] DropItem 0x0 0x0 0x0 [Javelin,Vulnerary] NoAI
+UNIT Bandit Bruiser 0x0 Level(9,Enemy,1) [9,11] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Bandit Bruiser 0x0 Level(9,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Bandit Bruiser 0x0 Level(9,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT Bandit Bruiser 0x0 Level(9,Enemy,1) [3,12] 0x0 0x0 0x0 0x0 [IronSword] NoAI
+UNIT Bandit Merc 0x0 Level(9,Enemy,1) [14,15] 0x0 0x0 0x0 0x0 [Armorslayer] ChaseOnceApproachedAI
+UNIT Bandit DarkM 0x0 Level(9,Enemy,1) [15,16] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [4,13] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [2,4] DropItem 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
+UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [Javelin] ChaseOnceApproachedAI
+UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [Swordreaver,Vulnerary] ChaseOnceApproachedAI
+UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [4,4] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
+UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [8,1] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
+UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [7,2] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Ygstra SwdArm 0x0 Level(10,Enemy,1) [15,18] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Ygstra LncArm 0x0 Level(10,Enemy,1) [16,17] 0x0 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT Ygstra AxeArm 0x0 Level(10,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
+UNIT Bandit DarkM 0x0 Level(9,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI
+UNIT Bandit DarkM 0x0 Level(9,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Nosferatu] NeverMoveAI
+UNIT Bandit Hunter 0x0 Level(9,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [SteelBow] ChaseOnceApproachedAI
+UNIT Bandit Hunter 0x0 Level(9,Enemy,1) [7,0] 0x0 0x0 0x0 0x0 [Longbow,Vulnerary] ChaseOnceApproachedAI
+UNIT Ygstra AxeArm 0x0 Level(10,Enemy,1) [20,18] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Ygstra LncArm 0x0 Level(10,Enemy,1) [20,19] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit Thief 0x0 Level(10,Enemy,1) [6,13] DropItem 0x0 0x0 0x0 [SilverSword,Physic] LootingThiefAI
+//green unit food
+UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [Javelin] DelayedAI
+UNIT Bandit SwdArm 0x0 Level(9,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
+UNIT Bandit LncArm 0x0 Level(9,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [SteelLance] DelayedAI
+UNIT Bandit Fighter 0x0 Level(9,Enemy,1) [8,3] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Bandit Fighter 0x0 Level(9,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
 UNIT Ygstra AxeCav 0x0 Level(10,Enemy,1) [26,15] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT Ygstra LncCav 0x0 Level(10,Enemy,1) [26,16] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Ygstra SwdCav 0x0 Level(10,Enemy,1) [26,17] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
@@ -99,6 +149,48 @@ UNIT Ygstra SwdCavF 0x0 Level(10,Enemy,1) [27,17] 0x0 0x0 0x0 0x0 [SteelSword] N
 UNIT Ygstra LncPalF 0x0 Level(1,Enemy,1) [27,18] 0x0 0x0 0x0 0x0 [SteelLance] DelayedAI
 UNIT
 
+C7BanditBolster:
+UNIT Bandit Bruiser 0x0 Level(9,Enemy,1) [0,6] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [0,7] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [0,8] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT
+
+C7YgstraBolster:
+UNIT Ygstra AxeCav 0x0 Level(8,Enemy,1) [16,20] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Ygstra SwdCav 0x0 Level(8,Enemy,1) [17,20] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Ygstra LncCav 0x0 Level(8,Enemy,1) [27,16] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra LncCavF 0x0 Level(8,Enemy,1) [27,17] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT
+
+C7YgstraAirBolster:
+UNIT Ygstra AxeWyv 0x0 Level(8,Enemy,1) [13,20] 0x0 0x0 0x1 REDA12R19 [IronAxe] NoAI
+UNIT Ygstra LncPeg 0x0 Level(8,Enemy,1) [13,20] 0x0 0x0 0x1 REDA14R19 [IronLance] NoAI
+UNIT Ygstra LncWyv 0x0 Level(10,Enemy,1) [27,0] 0x0 0x0 0x1 REDA25R1 [IronLance] NoAI
+UNIT Ygstra SwdPeg 0x0 Level(10,Enemy,1) [27,0] 0x0 0x0 0x1 REDA26R2 [SteelSword] NoAI
+UNIT
+
+C7UhOh:
+UNIT Ygstra AxeCav 0x0 Level(15,Enemy,1) [27,16] 0x0 0x0 0x1 REDA25R15 [SteelAxe] NoAI
+UNIT Ygstra SwdCav 0x0 Level(15,Enemy,1) [27,16] 0x0 0x0 0x1 REDA26R15 [SteelSword] NoAI
+UNIT Ygstra SwdCavF 0x0 Level(15,Enemy,1) [27,17] 0x0 0x0 0x1 REDA26R16 [SteelSword] NoAI
+UNIT Ygstra LncCavF 0x0 Level(15,Enemy,1) [27,17] 0x0 0x0 0x1 REDA27R16 [SteelLance] NoAI
+UNIT
+
+C7OhDear:
+UNIT Ygstra AxePal 0x0 Level(5,Enemy,1) [27,16] 0x0 0x0 0x1 REDA25R15 [Tomahawk] NoAI
+UNIT Ygstra SwdPal 0x0 Level(5,Enemy,1) [27,16] 0x0 0x0 0x1 REDA26R15 [LightBrand] NoAI
+UNIT Ygstra SwdPalF 0x0 Level(5,Enemy,1) [27,17] 0x0 0x0 0x1 REDA26R16 [LightBrand] NoAI
+UNIT Ygstra LncPalF 0x0 Level(5,Enemy,1) [27,17] 0x0 0x0 0x1 REDA27R16 [Spear] NoAI
+UNIT
+
+C7BossGroup:
+UNIT Zaine Sorc 0x0 Level(2,Enemy,1) [8,0] DropItem 0x0 0x1 REDA8R2 [Nightfall,MasterSeal] GroupTenAI
+UNIT Ygstra BowCavF 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA7R1 [Longbow] GroupTenAI
+UNIT Ygstra Archer 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA9R1 [Longbow] GroupTenAI
+UNIT Ygstra Archer 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA7R3 [Longbow] GroupTenAI
+UNIT
+
+
 ALIGN 4
 
 BeginningScene:
@@ -107,19 +199,121 @@ LoadUnitsByDifficulty(C7Easy,C7Normal,C7Hard)
 LOAD1 0x0 C7Units
 LOAD1 0x0 C7Allies
 MUSC 0x4
-SetBackground(0x34)
-FADU 0x3c
-STAL 120
-CGText(Ch7_Narration)
-MUSC 0x0
-FADI 0x3c
+Narration(Ch7_Narration)
 CLEAN
-SystemText(ResetNotice)
+CleanTextNoMap(0x10,Ch7_Opening)
+SetBackground(0x33)
+SystemText(BaseJoinNotice)
 GotoPrepScreen
 EndEvent
 
 EndingScene:
+ResetBaseFlags
 MoveToChapter(Chapter8)
 ENDA
+
+C7Turn2:
+EVBIT_T 9
+LOAD1 0x0 C7Emile
+ENUN
+CAM1 Emile
+FlashCursor(Emile,60)
+Text(Ch7_Emile_Spawn)
+EndEvent
+
+C7Turn5:
+EVBIT_T 9
+LOAD1 0x0 C7YgstraBolster
+ENUN
+EndEvent
+
+C7Turn7:
+EVBIT_T 9
+LOAD1 0x0 C7BanditBolster
+ENUN
+EndEvent
+
+C7Turn9:
+CHECK_HARD
+BEQ 0x1 0xC 0x0
+EVBIT_T 9
+LOAD1 0x0 C7YgstraAirBolster
+ENUN
+LABEL 0x1
+EndEvent
+
+C7Turn12:
+EVBIT_T 9
+LOAD1 0x0 C7BanditBolster
+LOAD1 0x0 C7YgstraBolster
+CHECK_HARD
+BEQ 0x1 0xc 0x0
+LOAD1 0x0 C7YgstraAirBolster
+LABEL 0x1
+ENUN
+EndEvent
+
+C7Turn14:
+EVBIT_T 9
+LOAD1 0x0 C7UhOh
+ENUN
+EndEvent
+
+C7Turn16:
+EVBIT_T 9
+LOAD1 0x0 C7OhDear
+ENUN
+EndEvent
+
+C7EmileTalk:
+EVBIT_MODIFY 3
+MUSC 0x30
+Text(Ch7_Emile_Talk)
+TurnAlly(Emile)
+EndEvent
+
+C7BrandlTalk:
+MUSC 0x2e
+CHECK_ACTIVEID Cassius
+BNE 0x1 0xC 0x0
+CHECK_ACTIVEID Rachael
+BNE 0x2 0xC 0x0
+Text(BrandlBlairTalk)
+GOTO 0x3
+LABEL 0x2
+Text(BrandlRachaelTalk)
+GOTO 0x3
+LABEL 0x1
+Text(BrandlCassiusTalk)
+LABEL 0x3
+EVBIT_T 9
+LOAD1 0x0 C7BossGroup
+ENUN
+CAM1 Zaine
+FlashCursor(Zaine,60)
+Text(Ch7_Zaine_Spawn)
+EndEvent
+
+C7North:
+HouseEvent(Ch7_NorthHouse,0x0)
+
+C7Mid1:
+HouseEvent(Ch7_Mid1House,0x0)
+
+C7Mid2:
+HouseEvent(Ch7_Mid2House,0x0)
+
+C7South:
+HouseEvent(Ch7_SouthHouse,0x0)
+
+ALIGN 4
+EscapePointPointerTable(Chapter7,C7Escape)
+
+ALIGN 4
+C7Escape:
+EscapePoint(27,16, MoveRight)
+EscapePoint(27,17, MoveRight)
+EscapePointEnd
+
 
 MESSAGE Events end at offset CURRENTOFFSET

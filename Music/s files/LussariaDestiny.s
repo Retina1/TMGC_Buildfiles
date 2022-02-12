@@ -1,37 +1,37 @@
 	.include "MPlayDef.s"
 
-	.equ	songC5_grp, voicegroup000
-	.equ	songC5_pri, 0
-	.equ	songC5_rev, 0
-	.equ	songC5_mvl, 127
-	.equ	songC5_key, 0
-	.equ	songC5_tbs, 1
-	.equ	songC5_exg, 0
-	.equ	songC5_cmp, 1
+	.equ	LussariaDestiny_grp, voicegroup000
+	.equ	LussariaDestiny_pri, 0
+	.equ	LussariaDestiny_rev, 0
+	.equ	LussariaDestiny_mvl, 127
+	.equ	LussariaDestiny_key, 0
+	.equ	LussariaDestiny_tbs, 1
+	.equ	LussariaDestiny_exg, 0
+	.equ	LussariaDestiny_cmp, 1
 
 	.section .rodata
-	.global	songC5
+	.global	LussariaDestiny
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-songC5_001:
+LussariaDestiny_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , songC5_key+0
+ .byte   KEYSH , LussariaDestiny_key+0
 Label_0180196E:
- .byte   TEMPO , 124*songC5_tbs/2
+ .byte   TEMPO , 124*LussariaDestiny_tbs/2
  .byte   VOICE , 1
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -170,14 +170,14 @@ Label_018019B6:
  .byte   N92
  .byte   N92 ,An4
  .byte   W24
- .byte   VOL , 23*songC5_mvl/mxv
+ .byte   VOL , 23*LussariaDestiny_mvl/mxv
  .byte   W24
- .byte   VOL , 18*songC5_mvl/mxv
+ .byte   VOL , 18*LussariaDestiny_mvl/mxv
  .byte   W24
- .byte   VOL , 14*songC5_mvl/mxv
+ .byte   VOL , 14*LussariaDestiny_mvl/mxv
  .byte   W24
 @  #01 @032   ----------------------------------------
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   W96
 @  #01 @033   ----------------------------------------
  .byte   W72
@@ -281,7 +281,7 @@ Label_01801A27:
  .byte   N11 ,Dn4
  .byte   W12
  .byte   VOICE , 48
- .byte   VOL , 23*songC5_mvl/mxv
+ .byte   VOL , 23*LussariaDestiny_mvl/mxv
  .byte   N11 ,Bn3
  .byte   N11 ,En4
  .byte   W12
@@ -406,7 +406,7 @@ Label_01801AB6:
  .byte   Dn4 ,v081
  .byte   W01
  .byte   VOICE , 40
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   N92 ,Bn2
  .byte   N92 ,Dn3
  .byte   W48
@@ -450,31 +450,31 @@ Label_01801AB6:
  .byte   W06
  .byte   CsM2
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-songC5_002:
+LussariaDestiny_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , songC5_key+0
+ .byte   KEYSH , LussariaDestiny_key+0
 Label_01801B92:
  .byte   VOICE , 52
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W12
  .byte   N11 ,Dn3 ,v100
@@ -873,7 +873,7 @@ Label_01801C6B:
  .byte   An3
  .byte   W24
  .byte   VOICE , 73
- .byte   VOL , 15*songC5_mvl/mxv
+ .byte   VOL , 15*LussariaDestiny_mvl/mxv
  .byte   N80 ,Fs4
  .byte   N80 ,Fs5
  .byte   W48
@@ -910,48 +910,48 @@ Label_01801C6B:
  .byte   W48
 @  #02 @058   ----------------------------------------
  .byte   W24
- .byte   VOL , 13*songC5_mvl/mxv
+ .byte   VOL , 13*LussariaDestiny_mvl/mxv
  .byte   W24
- .byte   VOL , 10*songC5_mvl/mxv
+ .byte   VOL , 10*LussariaDestiny_mvl/mxv
  .byte   W24
- .byte   VOL , 6*songC5_mvl/mxv
+ .byte   VOL , 6*LussariaDestiny_mvl/mxv
  .byte   W24
 @  #02 @059   ----------------------------------------
- .byte   VOL , 0*songC5_mvl/mxv
+ .byte   VOL , 0*LussariaDestiny_mvl/mxv
  .byte   W48
  .byte   GOTO
   .word Label_01801B92
 @  #02 @060   ----------------------------------------
  .byte   W42
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   W06
  .byte   VOICE , 73
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-songC5_003:
+LussariaDestiny_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , songC5_key+0
+ .byte   KEYSH , LussariaDestiny_key+0
 Label_0170A45E:
  .byte   VOICE , 19
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N32 ,An1 ,v100
  .byte   N32 ,Dn2
@@ -1234,31 +1234,31 @@ Label_0170A481:
  .byte   W48
  .byte   VOICE , 19
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-songC5_004:
+LussariaDestiny_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , songC5_key+0
+ .byte   KEYSH , LussariaDestiny_key+0
 Label_01801DB2:
  .byte   VOICE , 14
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N32 ,Dn3 ,v100
  .byte   W36
@@ -1435,7 +1435,7 @@ Label_01801DD0:
  .byte   N56 ,Gn4
  .byte   W60
  .byte   VOICE , 68
- .byte   VOL , 23*songC5_mvl/mxv
+ .byte   VOL , 23*LussariaDestiny_mvl/mxv
  .byte   N11 ,An4
  .byte   N11 ,Fn5
  .byte   W12
@@ -1447,7 +1447,7 @@ Label_01801DD0:
  .byte   W12
 @  #04 @024   ----------------------------------------
  .byte   VOICE , 48
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   W96
 @  #04 @025   ----------------------------------------
  .byte   W96
@@ -1558,31 +1558,31 @@ Label_01801DD0:
  .byte   W48
  .byte   VOICE , 14
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-songC5_005:
+LussariaDestiny_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , songC5_key+0
+ .byte   KEYSH , LussariaDestiny_key+0
 Label_01801F32:
  .byte   VOICE , 33
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -1806,31 +1806,31 @@ Label_01801FCA:
  .byte   W48
  .byte   VOICE , 33
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-songC5_006:
+LussariaDestiny_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , songC5_key+0
+ .byte   KEYSH , LussariaDestiny_key+0
 Label_0170A662:
  .byte   VOICE , 121
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N92 ,An2 ,v100
  .byte   W96
@@ -1965,31 +1965,31 @@ Label_0170A662:
  .byte   W48
  .byte   VOICE , 121
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 29*songC5_mvl/mxv
+ .byte   VOL , 29*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-songC5_007:
+LussariaDestiny_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , songC5_key+0
+ .byte   KEYSH , LussariaDestiny_key+0
 Label_01802026:
  .byte   VOICE , 122
  .byte   PAN , c_v+0
- .byte   VOL , 40*songC5_mvl/mxv
+ .byte   VOL , 40*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*songC5_mvl/mxv
+ .byte   VOL , 40*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*songC5_mvl/mxv
+ .byte   VOL , 40*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*songC5_mvl/mxv
+ .byte   VOL , 40*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*songC5_mvl/mxv
+ .byte   VOL , 40*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -2350,31 +2350,31 @@ Label_018021AF:
  .byte   W48
  .byte   VOICE , 122
  .byte   PAN , c_v+0
- .byte   VOL , 40*songC5_mvl/mxv
+ .byte   VOL , 40*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*songC5_mvl/mxv
+ .byte   VOL , 40*LussariaDestiny_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*songC5_mvl/mxv
+ .byte   VOL , 40*LussariaDestiny_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-songC5:
+LussariaDestiny:
 	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	songC5_pri	@ Priority
-	.byte	songC5_rev	@ Reverb.
+	.byte	LussariaDestiny_pri	@ Priority
+	.byte	LussariaDestiny_rev	@ Reverb.
     
-	.word	songC5_grp
+	.word	LussariaDestiny_grp
     
-	.word	songC5_001
-	.word	songC5_002
-	.word	songC5_003
-	.word	songC5_004
-	.word	songC5_005
-	.word	songC5_006
-	.word	songC5_007
+	.word	LussariaDestiny_001
+	.word	LussariaDestiny_002
+	.word	LussariaDestiny_003
+	.word	LussariaDestiny_004
+	.word	LussariaDestiny_005
+	.word	LussariaDestiny_006
+	.word	LussariaDestiny_007
 
 	.end

@@ -75,6 +75,18 @@ CityTiles:
 #incext compress "Tilesets/City.mapchip_config"
 
 ALIGN 4
+LavaCavePalette:
+#incbin "Tilesets/FE8LavaCave.pal.bin"
+
+ALIGN 4
+LavaCaveObjects:
+#incbin "Tilesets/FE8LavaCave.img.bin"
+
+ALIGN 4
+LavaCaveConfig:
+#incbin "Tilesets/Volcano_comp.dmp"
+
+ALIGN 4
 CastleFrame1:
 #incbin "CastleAnim/CastleFrame1.dmp"
 ALIGN 4
@@ -202,6 +214,11 @@ EventPointerTable(0x12, LowlandsCastlePalette)
 EventPointerTable(0x13, CastleTiles)
 EventPointerTable(0x17, CastleAnims)
 
+EventPointerTable(0x2a, LavaCaveObjects) 
+EventPointerTable(0x2b, LavaCavePalette) 
+EventPointerTable(0x2c, LavaCaveConfig) 
+EventPointerTable(0x2d, 0x59D800)
+
 #define MinimapTileTable $A7A38
 #define TileHandler_Plain $A7B3C
 #define TileHandler_Road $A7B40
@@ -237,3 +254,4 @@ EventPointerTable(0x17, CastleAnims)
 
 SetMinimapTileHandler(0x9,TileHandler_Water)
 SetMinimapTileHandler(0x24,TileHandler_ArmoryVendor)
+SetMinimapTileHandler(0x2a,TileHandler_Road)

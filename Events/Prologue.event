@@ -138,12 +138,7 @@ LOAD1 0x1 PUnits
 ENUN
 LoadUnitsByDifficulty(PEasy,PNormal,PHard)
 MUSC 0x4
-SetBackground(0x34)
-FADU 0x3c
-STAL 120
-CGText(Prologue_Narration)
-MUSC 0x0
-FADI 0x3c
+Narration(Prologue_Narration)
 CleanText(0x3,Prologue_Opening)
 ENUT AllUnitsMustEscapeFlag
 ENUT LordMustEscapeLastFlag

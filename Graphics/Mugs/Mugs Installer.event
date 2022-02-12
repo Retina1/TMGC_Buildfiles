@@ -71,6 +71,11 @@ HyperiusMug:
 setMugEntry(0x22,HyperiusMug,3,5,3,3)
 
 ALIGN 4
+AlexisMug:
+#incext PortraitFormatter "Alexis.png"
+setMugEntry(0x23,AlexisMug,3,6,3,4)
+
+ALIGN 4
 EstelleMug:
 #incext PortraitFormatter "Estelle.png"
 setMugEntry(0x2e,EstelleMug,3,5,3,3)
@@ -79,6 +84,11 @@ ALIGN 4
 RiftMug:
 #incext PortraitFormatter "Rift.png"
 setMugEntry(0x2d,RiftMug,4,6,4,4)
+
+ALIGN 4
+WilhelmMug:
+#incext PortraitFormatter "Wilhelm.png"
+setMugEntry(0x0d,WilhelmMug,3,5,3,3)
 
 ALIGN 4
 PeterMug:
@@ -99,6 +109,17 @@ ALIGN 4
 ElcorianMug:
 #incext PortraitFormatter "Elcorian.png"
 setMugEntry(0xB,ElcorianMug,4,5,4,3)
+
+
+
+
+
+
+
+
+
+
+
 
 ALIGN 4
 LazarusMug:

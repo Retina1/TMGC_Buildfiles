@@ -10,10 +10,90 @@ sex[A][X]
 [OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
 sex[A][X]
 
-##C7AmundsenBattle
-[OpenMidLeft][LoadDavelarn]
+##Ch7_Emile_Spawn
+[OpenMidLeft][LoadEmile]
+How fascinating... So that's[N]
+what that frequency was...[A][N]
+Where to next?[A][N]
+Preferably, somewhere without[N]
+a raging battle.[A] After all,[N]
+there's research to be done.[A][X]
+
+##Ch7_Emile_Talk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadEmile][OpenMidLeft]
+Emile? Is that you?[A][N]
+[OpenMidRight][MoveMidRight]Blair?! What are you doing here?[N]
+This conversation isn't finished yet![A][X]
+
+##Ch7_NorthHouse
+[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
+sex[A][X]
+
+##Ch7_Mid1House
+[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
+sex[A][X]
+
+##Ch7_Mid2House
+[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
+sex[A][X]
+
+##Ch7_SouthHouse
+[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
+sex[A][X]
+
+##BrandlBlairTalk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadBrandl]
+Ah, you must be Blair.[A][X]
+
+##BrandlRachaelTalk
+[OpenMidLeft][LoadRachael][OpenMidRight][LoadBrandl]
+Good to see you well, Rachael.[A][X]
+
+##BrandlCassiusTalk
+[OpenMidLeft][LoadCassius][OpenMidRight][LoadBrandl]
+...Cassius.[A][X]
+
+##Ch7_Zaine_Spawn
+[OpenMidLeft][LoadZaine]
+Well, they've converged.[N]
+That's not ideal.[A][N]
+...No matter. We can fell[N]
+them all at once.[A][N]
+Archers, cover me. We'll[N]
+wait for them to approach.[A][X]
+
+
+##C7ZaineBattle
+[OpenMidLeft][LoadZaine]
 die in pain[A][X]
 
-##C7AmundsenDeath
-[OpenMidLeft][LoadDavelarn]
+##C7ZaineDeath
+[OpenMidLeft][LoadZaine]
 now i... die in pain...[A][X]
+
+##C7BrandlDeath
+[OpenMidRight][LoadBrandl]
+So... this is it...[N]
+I'm sorry, everyone...[A][N]
+[CloseEyes][ToggleSmile]...But now... I can see...[N]
+him again...[A][X]
+
+##C7HyperiusDeath
+[OpenMidRight][LoadHyperius]
+Urgh...! Your majesty,[N]
+my sincerest apologies.[A][N]
+I must retreat... so I can[N]
+live to serve another day.[A][X]
+
+##C7AlexisDeath
+[OpenMidRight][LoadAlexis]
+Oof! That was... quite painful.[N]
+Sorry, everyone.[A][N]
+I can't die like this.[A][X]
+
+##C7WilhelmDeath
+[OpenMidRight][LoadWilhelm]
+Ooh... That's gonna be sore[N]
+as hell tomorrow.[A][N]
+Welp, I'm packing up.[N]
+Sorry, guys.[A][X]

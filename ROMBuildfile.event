@@ -120,6 +120,7 @@
 	WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes
 
     MESSAGE Used free space ends at currentOffset
+	MESSAGE "Now I am become sleepy, the goer to bed. - J. Robert Oppenheimer, fathers of the pjs after drinking warm milk"
 #else
     ERROR "You are not assembling FE8 events!"
 #endif

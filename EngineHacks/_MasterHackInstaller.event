@@ -132,6 +132,9 @@ POP
 
   //HP Bars (and effective weapon warning)
   #include "QualityOfLife/HpBars/HpBars.event"
+  
+  //Staff Heal Display
+  #include "QualityOfLife/ShowHealAmount/ShowHealAmount.txt"
 
   //Improved Sound Mixer
   #include "QualityOfLife/ImprovedSoundMixer/SoundMixer.event"
@@ -363,3 +366,12 @@ ALIGN 4
 
 //music stuff
 #include "MusicStuff/Installer.event"
+
+//100 Crit Cap
+#include "ExternalHacks/CritCap/CritCap.event"
+	
+//anim numbers- not working yet
+#include "ExternalHacks/AnimNumbers/AnimNumbers.event"
+
+//group AI
+#include "GroupAI/GroupAI.event" 

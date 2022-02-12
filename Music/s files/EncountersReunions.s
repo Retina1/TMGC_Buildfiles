@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song2F_grp, voicegroup000
-	.equ	song2F_pri, 0
-	.equ	song2F_rev, 0
-	.equ	song2F_mvl, 127
-	.equ	song2F_key, 0
-	.equ	song2F_tbs, 1
-	.equ	song2F_exg, 0
-	.equ	song2F_cmp, 1
+	.equ	EncountersReunions_grp, voicegroup000
+	.equ	EncountersReunions_pri, 0
+	.equ	EncountersReunions_rev, 0
+	.equ	EncountersReunions_mvl, 127
+	.equ	EncountersReunions_key, 0
+	.equ	EncountersReunions_tbs, 1
+	.equ	EncountersReunions_exg, 0
+	.equ	EncountersReunions_cmp, 1
 
 	.section .rodata
-	.global	song2F
+	.global	EncountersReunions
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song2F_001:
+EncountersReunions_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song2F_key+0
- .byte   TEMPO , 118*song2F_tbs/2
+ .byte   KEYSH , EncountersReunions_key+0
+ .byte   TEMPO , 118*EncountersReunions_tbs/2
  .byte   VOICE , 41
- .byte   VOL , 62*song2F_mvl/mxv
+ .byte   VOL , 62*EncountersReunions_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
 Label_014DD303:
@@ -137,7 +137,7 @@ Label_014DD366:
 @  #01 @025   ----------------------------------------
  .byte   W92
  .byte   W03
- .byte   TEMPO , 118*song2F_tbs/2
+ .byte   TEMPO , 118*EncountersReunions_tbs/2
  .byte   W01
 @  #01 @026   ----------------------------------------
  .byte   GOTO
@@ -207,60 +207,60 @@ Label_014DD366:
  .byte   PATT
   .word Label_014DD366
 @  #01 @051   ----------------------------------------
- .byte   TEMPO , 118*song2F_tbs/2
+ .byte   TEMPO , 118*EncountersReunions_tbs/2
  .byte   W96
 @  #01 @052   ----------------------------------------
  .byte   W24
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W24
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W12
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W06
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W12
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W06
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W03
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W06
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W03
 @  #01 @053   ----------------------------------------
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W12
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W12
- .byte   TEMPO , 116*song2F_tbs/2
+ .byte   TEMPO , 116*EncountersReunions_tbs/2
  .byte   W24
- .byte   TEMPO , 114*song2F_tbs/2
+ .byte   TEMPO , 114*EncountersReunions_tbs/2
  .byte   W12
- .byte   TEMPO , 114*song2F_tbs/2
+ .byte   TEMPO , 114*EncountersReunions_tbs/2
  .byte   W06
- .byte   TEMPO , 112*song2F_tbs/2
+ .byte   TEMPO , 112*EncountersReunions_tbs/2
  .byte   W06
- .byte   TEMPO , 112*song2F_tbs/2
+ .byte   TEMPO , 112*EncountersReunions_tbs/2
  .byte   W12
- .byte   TEMPO , 110*song2F_tbs/2
+ .byte   TEMPO , 110*EncountersReunions_tbs/2
  .byte   W12
 @  #01 @054   ----------------------------------------
- .byte   TEMPO , 108*song2F_tbs/2
+ .byte   TEMPO , 108*EncountersReunions_tbs/2
  .byte   W24
- .byte   TEMPO , 104*song2F_tbs/2
+ .byte   TEMPO , 104*EncountersReunions_tbs/2
  .byte   W24
- .byte   TEMPO , 98*song2F_tbs/2
+ .byte   TEMPO , 98*EncountersReunions_tbs/2
  .byte   W44
  .byte   W03
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song2F_002:
+EncountersReunions_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song2F_key+0
+ .byte   KEYSH , EncountersReunions_key+0
  .byte   VOICE , 62
- .byte   VOL , 62*song2F_mvl/mxv
+ .byte   VOL , 62*EncountersReunions_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
 Label_56AB25:
@@ -471,11 +471,11 @@ Label_56AB92:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song2F_003:
+EncountersReunions_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song2F_key+0
+ .byte   KEYSH , EncountersReunions_key+0
  .byte   VOICE , 60
- .byte   VOL , 62*song2F_mvl/mxv
+ .byte   VOL , 62*EncountersReunions_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
 Label_014DD009:
@@ -749,11 +749,11 @@ Label_014DD0BA:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song2F_004:
+EncountersReunions_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song2F_key+0
+ .byte   KEYSH , EncountersReunions_key+0
  .byte   VOICE , 40
- .byte   VOL , 62*song2F_mvl/mxv
+ .byte   VOL , 62*EncountersReunions_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
 Label_014DD175:
@@ -1060,11 +1060,11 @@ Label_014DD24C:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song2F_005:
+EncountersReunions_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song2F_key+0
+ .byte   KEYSH , EncountersReunions_key+0
  .byte   VOICE , 40
- .byte   VOL , 62*song2F_mvl/mxv
+ .byte   VOL , 62*EncountersReunions_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
 Label_56A579:
@@ -1246,11 +1246,11 @@ Label_56A5C7:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song2F_006:
+EncountersReunions_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song2F_key+0
+ .byte   KEYSH , EncountersReunions_key+0
  .byte   VOICE , 121
- .byte   VOL , 62*song2F_mvl/mxv
+ .byte   VOL , 62*EncountersReunions_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
 Label_56A669:
@@ -1467,11 +1467,11 @@ Label_56A687:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song2F_007:
+EncountersReunions_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song2F_key+0
+ .byte   KEYSH , EncountersReunions_key+0
  .byte   VOICE , 40
- .byte   VOL , 62*song2F_mvl/mxv
+ .byte   VOL , 62*EncountersReunions_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
 Label_56A33D:
@@ -1655,11 +1655,11 @@ Label_56A38A:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song2F_008:
+EncountersReunions_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song2F_key+0
+ .byte   KEYSH , EncountersReunions_key+0
  .byte   VOICE , 47
- .byte   VOL , 62*song2F_mvl/mxv
+ .byte   VOL , 62*EncountersReunions_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,Gn1 ,v080
  .byte   W12
@@ -1962,21 +1962,21 @@ Label_014DD548:
 @******************************************************@
 	.align	2
 
-song2F:
+EncountersReunions:
 	.byte	8	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song2F_pri	@ Priority
-	.byte	song2F_rev	@ Reverb.
+	.byte	EncountersReunions_pri	@ Priority
+	.byte	EncountersReunions_rev	@ Reverb.
     
-	.word	song2F_grp
+	.word	EncountersReunions_grp
     
-	.word	song2F_001
-	.word	song2F_002
-	.word	song2F_003
-	.word	song2F_004
-	.word	song2F_005
-	.word	song2F_006
-	.word	song2F_007
-	.word	song2F_008
+	.word	EncountersReunions_001
+	.word	EncountersReunions_002
+	.word	EncountersReunions_003
+	.word	EncountersReunions_004
+	.word	EncountersReunions_005
+	.word	EncountersReunions_006
+	.word	EncountersReunions_007
+	.word	EncountersReunions_008
 
 	.end

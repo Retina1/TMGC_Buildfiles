@@ -22,6 +22,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C3Turn1,1)
+TurnEventPlayer(0x0,C3Turn2,2)
 TurnEventPlayer(0x0,C3Turn6,6)
 TurnEventPlayer(0x0,C3Turn13,13)
 TurnEventPlayer(0x15,C3DoorTrap2,1,255)
@@ -154,11 +155,11 @@ UNIT Ygstra LncArm 0x0 Level(4,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Ygstra SwdArm 0x0 Level(4,Enemy,1) [8,14] 0x0 0x0 0x0 0x0 [SteelSword] NeverMoveAI
 UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [9,14] DropItem 0x0 0x0 0x0 [Javelin,DoorKey] NeverMoveAI
 UNIT Ygstra SwdArm 0x0 Level(4,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [SteelSword] NeverMoveAI
-UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
-UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [18,18] 0x0 0x0 0x0 0x0 [Halberd] AttackInRangeAI
-UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT Ygstra LncWyv 0x0 Level(3,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
-UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Swordreaver] ChaseOnceApproachedAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
+UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [18,18] 0x0 0x0 0x0 0x0 [Halberd] GroupOneAI
+UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [IronAxe] GroupTwoPaceAI
+UNIT Ygstra LncWyv 0x0 Level(3,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [SteelLance] GroupTwoPaceAI
+UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Swordreaver] GroupTwoPaceAI
 UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [SteelSword,Lancereaver] ChaseOnceApproachedAI
@@ -207,12 +208,7 @@ LOAD1 0x0 C3Units
 LOAD1 0x0 C3JosefNPC
 ENUN
 MUSC 0x4
-SetBackground(0x34)
-FADU 0x3c
-STAL 120
-CGText(Ch3_Narration)
-MUSC 0x0
-FADI 0x3c
+Narration(Ch3_Narration)
 CLEAN
 CHECK_ALIVE Stefan
 BEQ 0x11 0xC 0x0

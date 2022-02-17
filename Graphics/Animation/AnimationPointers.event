@@ -25,7 +25,7 @@
 #define SwordAnim(Animation) "BYTE 0x00 0x01 ; SHORT Animation"
 #define LanceAnim(Animation) "BYTE 0x01 0x01 ; SHORT Animation"
 #define AxeAnim(Animation) "BYTE 0x02 0x01 ; SHORT Animation"
-#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation ; BYTE Hatchet 0x00 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation"
 #define BowAnim(Animation) "BYTE 0x03 0x01 ; SHORT Animation"
 #define StaffAnim(Animation) "BYTE 0x04 0x01 ; SHORT Animation"
 #define AnimaAnim(Animation) "BYTE 0x05 0x01 ; SHORT Animation"
@@ -64,9 +64,19 @@
 #include "PirateM(Der)\Unarmed Installer.event"
 }
 {
+#include "BerserkerM(Blue Druid)\Axe Installer.event"
+#include "BerserkerM(Blue Druid)\Handaxe Installer.event"
+#include "BerserkerM(Blue Druid)\Unarmed Installer.event"
+}
+{
 #include "PirateF(Nuramon)\Axe Installer.event"
 #include "PirateF(Nuramon)\Handaxe Installer.event"
 #include "PirateF(Nuramon)\Unarmed Installer.event"
+}
+{
+#include "BerserkerF(eCut)\Axe Installer.event"
+#include "BerserkerF(eCut)\Handaxe Installer.event"
+#include "BerserkerF(eCut)\Unarmed Installer.event"
 }
 {
 #include "Blair(L95)\Magic Installer.event"
@@ -82,8 +92,9 @@
 #include "Hunter(MeatOfJustice)\Unarmed Installer.event"
 }
 {
-#include "Trickster(Aruka)\Staff Installer.event"
-#include "Trickster(Aruka)\Sword Installer.event"
+#include "Trickster\Staff Installer.event"
+#include "Trickster\Sword Installer.event"
+#include "Trickster\Unarmed Installer.event"
 }
 {
 #include "Deserter(Alusq)\Lance Installer.event"
@@ -152,6 +163,14 @@
 #include "ArcherF(Der)\Unarmed Installer.event"
 }
 {
+#include "SniperM(Nuramon)\Bow Installer.event"
+#include "SniperM(Nuramon)\Unarmed Installer.event"
+}
+{
+#include "SniperF(Nuramon)\Bow Installer.event"
+#include "SniperF(Nuramon)\Unarmed Installer.event"
+}
+{
 #include "SoldierM(Flasuban)\Lance Installer.event"
 #include "SoldierM(Flasuban)\Unarmed Installer.event"
 }
@@ -198,6 +217,14 @@
 #include "SorcF(TytheBub)\staff Installer.event"
 }
 {
+#include "SageM(Greentea)\Magic Installer.event"
+#include "SageM(Greentea)\Staff Installer.event"
+}
+{
+#include "SageF(LisandraBrave)\Magic Installer.event"
+#include "SageF(LisandraBrave)\Staff Installer.event"
+}
+{
 #include "Desmond(Nuramon)\Lance Installer.event"
 #include "Desmond(Nuramon)\Axe Installer.event"
 #include "Desmond(Nuramon)\Handaxe Installer.event"
@@ -215,8 +242,20 @@
 #include "Peg(Flasuban)\Unarmed Installer.event"
 }
 {
+#include "Falco\Lance Installer.event"
+#include "Falco\Sword Installer.event"
+#include "Falco\Unarmed Installer.event"
+}
+{
 #include "Cleric(BatimaTheBat)\Staff Installer.event"
 #include "Cleric(BatimaTheBat)\Unarmed Installer.event"
+}
+{
+#include "Priest(Eldritch)\Staff Installer.event"
+#include "Priest(Eldritch)\Unarmed Installer.event"
+}
+{
+#include "LightM(Eldritch)\Magic Installer.event"
 }
 {
 #include "HeroM(Nuramon)\Sword Installer.event"
@@ -288,9 +327,22 @@ UnarmedAnim(0x67)
 EndAnim
 
 ALIGN 4
+FalcoAnims:
+SwordAnim(0x68)
+LanceAnim(0x69)
+UnarmedAnim(0x6a)
+EndAnim
+
+ALIGN 4
 ClericAnims:
 StaffAnim(0x80)
 UnarmedAnim(0xca)
+EndAnim
+
+ALIGN 4
+PriestAnims:
+StaffAnim(0x7f)
+UnarmedAnim(0x7e)
 EndAnim
 
 ALIGN 4
@@ -301,6 +353,23 @@ EndAnim
 ALIGN 4
 MageFAnims:
 MagicAnim(0x6c)
+EndAnim
+
+ALIGN 4
+SageMAnims:
+MagicAnim(0x6d)
+StaffAnim(0x6e)
+EndAnim
+
+ALIGN 4
+SageFAnims:
+MagicAnim(0x6f)
+StaffAnim(0x70)
+EndAnim
+
+ALIGN 4
+LightMAnims:
+MagicAnim(0x7d)
 EndAnim
 
 ALIGN 4
@@ -390,6 +459,18 @@ UnarmedAnim(0x29)
 EndAnim
 
 ALIGN 4
+SniperMAnims:
+BowAnim(0x2a)
+UnarmedAnim(0x2b)
+EndAnim
+
+ALIGN 4
+SniperFAnims:
+BowAnim(0x2c)
+UnarmedAnim(0x2d)
+EndAnim
+
+ALIGN 4
 CavMAnims:
 SwordAnim(0x2E)
 LanceAnim(0x2F)
@@ -466,7 +547,7 @@ ALIGN 4
 TricksterAnims:
 SwordAnim(0xAC)
 StaffAnim(0xAD)
-UnarmedAnim(0xAD)
+UnarmedAnim(0xcb)
 EndAnim
 
 ALIGN 4
@@ -544,6 +625,20 @@ PirateFAnims:
 AxeAnim(0xa2)
 HandAxeAnim(0xa3)
 UnarmedAnim(0xa4)
+EndAnim
+
+ALIGN 4
+BerserkerMAnims:
+AxeAnim(0x23)
+HandAxeAnim(0x24)
+UnarmedAnim(0x25)
+EndAnim
+
+ALIGN 4
+BerserkerFAnims:
+AxeAnim(0xa7)
+HandAxeAnim(0xa8)
+UnarmedAnim(0xa9)
 EndAnim
 
 ALIGN 4

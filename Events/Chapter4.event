@@ -226,7 +226,7 @@ BNE 0x12 0xC 0x0
 ENUT BaseFlag2
 LABEL 0x12
 MUSC 0x24
-CleanText(0x3,Ch4_Opening)
+CleanTextNoMap(0x3,Ch4_Opening)
 GotoPrepScreen
 ENDA
 

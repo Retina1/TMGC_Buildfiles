@@ -49,6 +49,7 @@
 #define DevilAxeIcon 0x26
 #define SwordslayerIcon 0x2a
 #define DracoaxeIcon 0x58
+#define FrypanIcon 0xb9
 
 #define IronBowIcon 0x2b
 #define SteelBowIcon 0x2c
@@ -64,17 +65,36 @@
 
 #define FireIcon 0x36
 #define ThunderIcon 0x37
+#define ElfireIcon 0x38
+#define BoltingIcon 0x39
+#define FimbulvetrIcon 0x3a
+#define FlareIcon 0x3b
+#define CaliburIcon 0x3c
+#define GalewindIcon 0x5
+#define InversionIcon 0x6
 #define TrisagionIcon 0xbf
 
 #define LightningIcon 0x3d
 #define ShineIcon 0x3e
+#define DivineIcon 0x3f
+#define PurgeIcon 0x40
+#define AuraIcon 0x41
+#define RadianceIcon 0x42
+#define PierceIcon 0xb
+#define SmiteIcon 0x14
+#define BanishIcon 0x17
 #define JavelinRainIcon 0xc0
 
 #define FluxIcon 0x43
 #define NightfallIcon 0x44
 #define NosferatuIcon 0x45
 #define FenrirIcon 0x47
+#define JormungandrIcon 0x7
+#define KnoggelviIcon 0x21
+#define CorruptionIcon 0x2e
 #define FreikugelIcon 0xc1
+#define HellIcon 0x46
+#define NocturneIcon 0xbc
 
 #define HealIcon 0x49
 #define MendIcon 0x4a
@@ -276,6 +296,9 @@ ItemIconEntry(SwordslayerIcon)
 ALIGN 4
 ItemIconEntry(DracoaxeIcon)
 #incbin "Axes/Dragon Axe.dmp"
+ALIGN 4
+ItemIconEntry(FrypanIcon)
+#incbin "Frypan.dmp"
 
 ALIGN 4
 ItemIconEntry(IronBowIcon)
@@ -312,6 +335,27 @@ ALIGN 4
 ItemIconEntry(ThunderIcon)
 #incbin "Tomes/Anima/Thunder/Thunder.dmp"
 ALIGN 4
+ItemIconEntry(ElfireIcon)
+#incbin "Tomes/Anima/Fire/Elfire.dmp"
+ALIGN 4
+ItemIconEntry(BoltingIcon)
+#incbin "Tomes/Anima/Thunder/Bolting.dmp"
+ALIGN 4
+ItemIconEntry(FimbulvetrIcon)
+#incbin "Tomes/Anima/Ice/Fimbulvetr.dmp"
+ALIGN 4
+ItemIconEntry(FlareIcon)
+#incbin "Tomes/Anima/Fire/Solar Flare.dmp"
+ALIGN 4
+ItemIconEntry(CaliburIcon)
+#incbin "Tomes/Anima/Wind/Excalibur-2.dmp"
+ALIGN 4
+ItemIconEntry(GalewindIcon)
+#incbin "Tomes/Anima/Wind/Eye of the Storm.dmp"
+ALIGN 4
+ItemIconEntry(InversionIcon)
+#incbin "Tomes/Anima/Ice/Icebolt.dmp"
+ALIGN 4
 ItemIconEntry(TrisagionIcon)
 #incbin "Tomes/Anima/Fire/Fissure(Devil Tome).dmp"
 
@@ -322,8 +366,29 @@ ALIGN 4
 ItemIconEntry(ShineIcon)
 #incbin "Tomes/Light/Shine.dmp"
 ALIGN 4
+ItemIconEntry(PierceIcon)
+#incbin "Tomes/Light/Halo.dmp"
+ALIGN 4
+ItemIconEntry(SmiteIcon)
+#incbin "Tomes/Light/Prism.dmp"
+ALIGN 4
+ItemIconEntry(BanishIcon)
+#incbin "Tomes/Light/Elaura.dmp"
+ALIGN 4
 ItemIconEntry(JavelinRainIcon)
 #incbin "Tomes/Light/Sunbeam.dmp"
+ALIGN 4
+ItemIconEntry(DivineIcon)
+#incbin "Tomes/Light/Divine.dmp"
+ALIGN 4
+ItemIconEntry(PurgeIcon)
+#incbin "Tomes/Light/Purge.dmp"
+ALIGN 4
+ItemIconEntry(AuraIcon)
+#incbin "Tomes/Light/Aura.dmp"
+ALIGN 4
+ItemIconEntry(RadianceIcon)
+#incbin "Tomes/Light/Aurora.dmp"
 
 ALIGN 4
 ItemIconEntry(FluxIcon)
@@ -338,8 +403,23 @@ ALIGN 4
 ItemIconEntry(FenrirIcon)
 #incbin "Tomes/Dark/Fenrir.dmp"
 ALIGN 4
+ItemIconEntry(JormungandrIcon)
+#incbin "Tomes/Dark/Jormungandr.dmp"
+ALIGN 4
+ItemIconEntry(KnoggelviIcon)
+#incbin "Tomes/Dark/Collapse.dmp"
+ALIGN 4
+ItemIconEntry(CorruptionIcon)
+#incbin "Tomes/Dark/Miasma.dmp"
+ALIGN 4
 ItemIconEntry(FreikugelIcon)
 #incbin "Tomes/Dark/Acks.dmp"
+ALIGN 4
+ItemIconEntry(HellIcon)
+#incbin "Tomes/Dark/Mire.dmp"
+ALIGN 4
+ItemIconEntry(NocturneIcon)
+#incbin "Tomes/Dark/Dark Prism.dmp"
 
 ALIGN 4
 ItemIconEntry(HealIcon)

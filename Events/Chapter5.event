@@ -180,10 +180,10 @@ MUSC 0x4
 Narration(Ch5_Narration)
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0
-CleanText(0x20,Ch5_Opening_Dead_Peggy)
+CleanTextNoMap(0x20,Ch5_Opening_Dead_Peggy)
 GOTO 0x2
 LABEL 0x1
-CleanText(0x20,Ch5_Opening)
+CleanTextNoMap(0x20,Ch5_Opening)
 LABEL 0x2
 GotoPrepScreen
 EndEvent

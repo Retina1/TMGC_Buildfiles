@@ -52,6 +52,36 @@ BYTE 15 OpportunistID
 BYTE 00 00
 ALIGN 4
 
+RachaelSkillList:
+BYTE 15 ChivalryID
+BYTE 00 00
+ALIGN 4
+
+CassiusSkillList:
+BYTE 15 ChargeID
+BYTE 00 00
+ALIGN 4
+
+EmileSkillList:
+BYTE 26 InsightID
+BYTE 31 TomebreakerID
+BYTE 00 00
+ALIGN 4
+
+JeffSkillList:
+BYTE 15 LocktouchID
+BYTE 00 00
+ALIGN 4
+
+ApolloSkillList:
+BYTE 15 AnathemaID
+BYTE 00 00
+ALIGN 4
+
+BechamelSkillList:
+BYTE 15 HeavyStrikesID
+BYTE 00 00
+ALIGN 4
 
 EphraimLordSkillList:
 BYTE 1 SupplyID

@@ -8,15 +8,27 @@ POP
 
 ALIGN 4
 BattleQuoteTable: // This is in free space
+//prologue
 UnspecifiedBattleConvo(Davelarn,Prologue,0x1,PDavelarnBattle)
 UnspecifiedBattleConvo(Blair,Prologue,0x11,PBlairBattle)
+//ch 1
 UnspecifiedBattleConvo(Marque,Chapter1,0x1,C1MarqueBattle)
+//ch 2
 UnspecifiedBattleConvo(Brentson,Chapter2,0x1,C2BrentsonBattle)
+//ch 3
 UnspecifiedBattleConvo(Helga,Chapter3,0x1,C3HelgaBattle)
+//ch 4
 UnspecifiedBattleConvo(Starque,Chapter4,0x1,C4StarqueBattle)
 UnspecifiedBattleConvo(Lazarus,Chapter4,0x1A,C4LazarusBattle)
+//ch 5
 SpecifiedBattleConvo(Butch,Mitchell,Chapter5,0x18,C5MitchellButchBattle)
 UnspecifiedBattleConvo(Mitchell,Chapter5,0x1,C5MitchellBattle)
+//ch 6 (generic first for reinforcment event)
 UnspecifiedBattleConvo(Amundsen,Chapter6,0x1,C6AmundsenBattle)
+SpecifiedBattleConvo(Butch,Amundsen,Chapter6,0x18,C6AmundsenButchBattle)
+SpecifiedBattleConvo(Peggy,Amundsen,Chapter6,0x19,C6AmundsenPeggyBattle)
+//ch 7
+SpecifiedBattleConvo(Emile,Zaine,Chapter7,0x18,C7ZaineEmileBattle)
+SpecifiedBattleConvo(Kenneth,Zaine,Chapter7,0x19,C7ZaineKennethBattle)
 UnspecifiedBattleConvo(Zaine,Chapter7,0x1,C7ZaineBattle)
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 

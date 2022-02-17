@@ -157,6 +157,21 @@ MitchellMug:
 setMugEntry(0x34,MitchellMug,2,5,2,3)
 
 ALIGN 4
+AmundsenMug:
+#incext PortraitFormatter "Amundsen.png"
+setMugEntry(0x36,AmundsenMug,2,5,2,3)
+
+ALIGN 4
+ZaineMug:
+#incext PortraitFormatter "Zaine.png"
+setMugEntry(0x37,ZaineMug,2,5,2,3)
+
+ALIGN 4
+CidMug:
+#incext PortraitFormatter "Cid.png"
+setMugEntry(0x57,CidMug,2,5,2,3)
+
+ALIGN 4
 BrandlMug:
 #incext PortraitFormatter "Brandl.png"
 setMugEntry(0x49,BrandlMug,2,5,2,2)

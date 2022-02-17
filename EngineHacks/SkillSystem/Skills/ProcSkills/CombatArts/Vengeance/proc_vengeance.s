@@ -76,13 +76,22 @@ mov r1,r4
 add r1,#0x5A
 ldrb r2,[r1]
 add r2,r0 @add half damage taken to attack
-cmp r2,#0x7f @damage cap of 127
-ble NotCap
-mov r0, #0x7f
-NotCap:
 strb r2,[r1]
-strh r2,[r7,#6] @final damage
-
+ldrh r3, [r7, #8] @final def
+sub r2,r3
+ldr r0, [r6]
+mov r3, #1
+tst r0, r3
+beq NoCrit
+@if crit, multiply by 3
+lsl r3, r2, #1
+add r2, r3
+NoCrit:
+cmp r2, #0x7f @damage cap of 127
+ble NotCap
+mov r2, #0x7f
+NotCap:
+strh r2,[r7,#4] @final damage
 
 End:
 pop {r4-r7}

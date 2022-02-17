@@ -39,39 +39,65 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define SamUPaletteID 0x8
 #define KennethUPaletteID 0x9
 #define RachaelUPaletteID 0xa
+#define NatasiaPPaletteID 0xb
+#define CassiusPPaletteID 0xc
+#define KennethPPaletteID 0xd
+#define StefanPPaletteID 0xe
+#define PeggyPPaletteID 0xf
+#define RachaelPPaletteID 0x10
+#define SamPPaletteID 0x11
+#define JosefUPaletteID 0x12
+#define JosefPPaletteID 0x13
+#define ArinPaletteID 0x14
 
 setPalette(BlairUPaletteID,BlairUPalette)
 
+setPalette(ArinPaletteID,ArinPalette)
+
 setPalette(NatasiaUPaletteID,NatasiaUPalette)
+setPalette(NatasiaPPaletteID,NatasiaPPalette)
 
 setPalette(StefanUPaletteID,StefanUPalette)
+setPalette(StefanPPaletteID,StefanPPalette)
 
 setPalette(DesmondPaletteID,DesmondPalette)
 
 setPalette(PeggyUPaletteID,PeggyUPalette)
+setPalette(PeggyPPaletteID,PeggyPPalette)
 
 setPalette(ButchUPaletteID,ButchUPalette)
 
 setPalette(CassiusUPaletteID,CassiusUPalette)
+setPalette(CassiusPPaletteID,CassiusPPalette)
 
 setPalette(SamUPaletteID,SamUPalette)
+setPalette(SamPPaletteID,SamPPalette)
 
 setPalette(KennethUPaletteID,KennethUPalette)
+setPalette(KennethPPaletteID,KennethPPalette)
 
 setPalette(RachaelUPaletteID,RachaelUPalette)
+setPalette(RachaelPPaletteID,RachaelPPalette)
+
+setPalette(JosefUPaletteID,JosefUPalette)
+setPalette(JosefPPaletteID,JosefPPalette)
 
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,0x0,BlairLordX,0x0,0x0)
-SetPaletteFull(Arin,0x0,Trickster,0x0,0x0,0x0,0x0)
-SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,0x0,Sorc,0x0,0x0)
-SetPaletteFull(Natasia,NatasiaUPaletteID,FighterF,0x0,WarriorF,0x0,0x0)
-SetPaletteFull(Stefan,StefanUPaletteID,SwdCav,0x0,SwdPal,0x0,0x0)
+SetPaletteFull(Arin,ArinPaletteID,Trickster,0x0,0x0,0x0,0x0)
+SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,0x0,0x0)
+SetPaletteFull(Natasia,NatasiaUPaletteID,FighterF,NatasiaPPaletteID,WarriorF,0x0,0x0)
+SetPaletteFull(Stefan,StefanUPaletteID,SwdCav,StefanPPaletteID,SwdPal,0x0,0x0)
 SetPaletteFull(Desmond,0x0,0x0,DesmondPaletteID,Dismount,0x0,0x0)
-SetPaletteFull(Sam,SamUPaletteID,ArcherF,0x0,SniperF,0x0,0x0)
-SetPaletteFull(Josef,0x0,LncArm,0x0,LncGen,0x0,0x0)
-SetPaletteFull(Peggy,PeggyUPaletteID,Cleric,0x0,BishopF,0x0,0x0)
-SetPaletteFull(Butch,ButchUPaletteID,Merc,0x0,Hero,0x0,0x0)
-SetPaletteFull(Cassius,CassiusUPaletteID,AxeCav,0x0,AxePal,0x0,0x0)
-SetPaletteFull(Rachael,RachaelUPaletteID,LncPeg,0x0,Falco,0x0,0x0)
+SetPaletteFull(Sam,SamUPaletteID,ArcherF,SamPPaletteID,SniperF,0x0,0x0)
+SetPaletteFull(Josef,JosefUPaletteID,LncArm,JosefPPaletteID,LncGen,0x0,0x0)
+SetPaletteFull(Peggy,PeggyUPaletteID,Cleric,PeggyPPaletteID,BishopF,0x0,0x0)
+SetPaletteFull(Butch,ButchUPaletteID,Merc,ButchUPaletteID,Hero,0x0,0x0)
+SetPaletteFull(Cassius,CassiusUPaletteID,AxeCav,CassiusPPaletteID,AxePal,0x0,0x0)
+SetPaletteFull(Rachael,RachaelUPaletteID,LncPeg,RachaelPPaletteID,Falco,0x0,0x0)
+SetPaletteFull(Emile,0x0,0x0,0x0,Sage,0x0,0x0)
+SetPaletteFull(Jeff,0x0,Thief,0x0,Assass,0x0,0x0)
+SetPaletteFull(Apollo,0x0,LightM,0x0,Bishop,0x0,0x0)
+SetPaletteFull(Bechamel,0x0,Pirate,0x0,Berserker,0x0,0x0)
 
 
 // I'm commenting the classes out that don't have palettes yet.
@@ -81,12 +107,22 @@ BlairUPalette:
 #incbin "BlairUnpromoted.dmp"
 
 ALIGN 4
+ArinPalette:
+#incbin "ArinTrickster.dmp"
+
+ALIGN 4
 NatasiaUPalette:
 #incbin "NatasiaUnpromoted.dmp"
+ALIGN 4
+NatasiaPPalette:
+#incbin "NatasiaPromoted.dmp"
 
 ALIGN 4
 StefanUPalette:
 #incbin "StefanUnpromoted.dmp"
+ALIGN 4
+StefanPPalette:
+#incbin "StefanPromoted.dmp"
 
 ALIGN 4
 DesmondPalette:
@@ -95,6 +131,9 @@ DesmondPalette:
 ALIGN 4
 PeggyUPalette:
 #incbin "PeggyUnpromoted.dmp"
+ALIGN 4
+PeggyPPalette:
+#incbin "PeggyPromoted.dmp"
 
 ALIGN 4
 ButchUPalette:
@@ -103,18 +142,37 @@ ButchUPalette:
 ALIGN 4
 CassiusUPalette:
 #incbin "CassiusUnpromoted.dmp"
+ALIGN 4
+CassiusPPalette:
+#incbin "CassiusPromoted.dmp"
 
 ALIGN 4
 SamUPalette:
 #incbin "SamUnpromoted.dmp"
+ALIGN 4
+SamPPalette:
+#incbin "SamPromoted.dmp"
 
 ALIGN 4
 KennethUPalette:
 #incbin "KennethUnpromoted.dmp"
+ALIGN 4
+KennethPPalette:
+#incbin "KennethPromoted.dmp"
 
 ALIGN 4
 RachaelUPalette:
 #incbin "RachaelUnpromoted.dmp"
+ALIGN 4
+RachaelPPalette:
+#incbin "RachaelPromoted.dmp"
+
+ALIGN 4
+JosefUPalette:
+#incbin "JosefUnpromoted.dmp"
+ALIGN 4
+JosefPPalette:
+#incbin "JosefPromoted.dmp"
 
 PUSH
 ORG $59BFC

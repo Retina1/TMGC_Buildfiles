@@ -4,36 +4,79 @@ ruins.[X]
 
 ##Ch6_Opening
 [OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+here we go[A][X]
 
 ##Ch6_Ending
 [OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+we did it boys[A][X]
+
+##Ch6_Ending_Dead_Cassius
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadRachael][OpenMidLeft]
+we did it boys[A][X]
+
+##Ch6_Ending_Dead_Rachael
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadCassius][OpenMidLeft]
+we did it boys[A][X]
+
+##Ch6_Ending_Dead_Rachael_and_Cassius
+[OpenMidLeft][LoadBlair]
+we did it boys[A][X]
 
 ##Ch6_NorthHouse
-[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan1]
+i live[A][X]
 
 ##Ch6_MidHouse
-[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan1]
+i live[A][X]
 
 ##Ch6_SouthHouse
-[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan1]
+i live[A][X]
 
 ##Ch6_NorthVillage
-[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan1]
+i live[A][X]
 
 ##Ch6_SouthVillage
-[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan1]
+i live[A][X]
 
 ##C6AmundsenBattle
 [OpenMidLeft][LoadAmundsen]
-die in pain[A][X]
+The mountains or the swamps.[N]
+Where would you rather die?[A][N]
+Either way, you're gonna[N]
+die in pain![A][X]
+
+##C6AmundsenPeggyBattle
+[OpenMidLeft][LoadAmundsen]
+My... You're certainly[N]
+something... fetching.[A][N]
+A fine hostage,[N]
+if nothing else.[A][N][ClearFace][OpenMidRight][LoadPeggy]
+And you still seem to have[N]
+two too many eyeballs.[A][N]
+Come closer, and I'll fix[N]
+that, you pinkly bastard![A][X]
+
+##C6AmundsenButchBattle
+[OpenMidLeft][LoadAmundsen]
+I recognize those colors...[N]
+You're from Mevion![A][N]
+Thought we had some unspoken[N]
+agreement here![A][N]
+We shoo off bordergoers,[N]
+you look the other way![A][N][ClearFace][OpenMidRight][LoadButch]
+Those days are behind me.[A][N]
+You're a dangerous criminal,[N]
+AND you're in our way.[A][N]
+At least with any luck,[N]
+you'll meet a swift end.[A][X]
 
 ##C6AmundsenDeath
 [OpenMidLeft][LoadAmundsen]
-now i... die in pain...[A][X]
+Well... then...[N]
+Damn shame... for me...[A][N]
+But what other...[N]
+choice... was there...?[A][X]

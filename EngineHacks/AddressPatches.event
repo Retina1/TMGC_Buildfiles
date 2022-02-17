@@ -1,3 +1,9 @@
+//eclipse effect
+PUSH
+ORG $2AE28
+BYTE 0x02 0x38
+POP
+
 //s rank bonuses
 //first, swap crit for attack
 PUSH

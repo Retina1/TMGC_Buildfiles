@@ -108,14 +108,7 @@ LOAD1 0x0 I1Units
 LOAD1 0x0 I1NPC
 ENUN
 MUSC 0x4
-SetBackground(0x34)
-FADU 0x3c
-STAL 120
-CGText(Base1_Narration)
-MUSC 0x0
-FADI 0x3c
-CLEAN
-FADU 0x3c
+Narration(Base1_Narration)
 CleanTextNoMap(0x3,I1_Opening)
 GotoPrepScreen
 ENDA
@@ -173,8 +166,7 @@ ENUF 0xe
 GOTO 0x2
 LABEL 0x1
 SystemText(I1StaffBuy)
-SVAL 0x1 0x1
-BNE 0x3 0xc 0x1
+IfNoSelectedGoto(0x3)
 Text(I1StaffPurchased)
 SVAL 0x3 0x5dc
 TAKEMONEY
@@ -207,8 +199,7 @@ I1ReadyToEnd:
 EVBIT_MODIFY 4
 Text(I1ConfirmLeave)
 SystemText(I1LeavePrompt)
-SVAL 0x1 0x1
-BNE 0x2 0xc 0x1
+IfNoSelectedGoto(0x2)
 CALL EndingScene
 GOTO 0x1
 LABEL 0x2

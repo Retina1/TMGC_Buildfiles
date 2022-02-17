@@ -1,0 +1,124 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x30,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C8Units C8Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+TelliusTorchOff(0,4,8)
+TelliusTorchOff(6,4,8)
+TelliusTorchOff(2,14,6)
+TelliusTorchOff(9,16,6)
+TelliusTorchOff(17,18,6)
+ENDTRAP
+
+ALIGN 4
+
+C8Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [11,24] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C8Easy:
+UNIT Loile Fighter 0x0 Level(3,Enemy,1) [15,4] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT
+
+C8Normal:
+UNIT Loile Fighter 0x0 Level(3,Enemy,1) [15,4] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT
+
+C8Hard:
+UNIT Loile Fighter 0x0 Level(8,Enemy,1) [15,4] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
+UNIT Loile Fighter 0x0 Level(8,Enemy,1) [3,4] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
+UNIT Loile Fighter 0x0 Level(8,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
+UNIT Loile Fighter 0x0 Level(8,Enemy,1) [2,3] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
+UNIT Loile Warrior 0x0 Level(2,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Longbow,SteelAxe] NeverMoveAI
+UNIT
+
+C8Ally:
+UNIT Cid Berserker 0x0 Level(9,NPC,0) [10,21] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NoAI
+UNIT
+
+C8Thieves:
+UNIT Loile Thief 0x0 Level(5,Enemy,1) [11,6] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] LootingThiefAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt8
+LoadUnitsByDifficulty(C8Easy,C8Normal,C8Hard)
+LOAD1 0x0 C8Ally
+ENUN
+MUSC 0x4
+Narration(Ch8_Narration)
+CleanText(0x3,Ch8_Opening)
+LOAD1 0x0 C8Units
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+ResetBaseFlags
+MUSC 0x31 
+CleanTextNoMap(0x10,Ch8_Ending)
+MoveToChapter(Interlude2)
+ENDA
+
+ALIGN 4
+EscapePointPointerTable(Chapter8,C8Escape)
+
+ALIGN 4
+C8Escape:
+EscapePoint(8,11, NoMove)
+EscapePoint(16,16, NoMove)
+EscapePoint(16,21, NoMove)
+EscapePointEnd
+
+MESSAGE Events end at offset CURRENTOFFSET

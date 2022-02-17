@@ -129,15 +129,10 @@
 			text(C6_Sam_Josef_Base)
 			baseSupport(Sam,Josef,CSupport)
 		Entry
-			name(Sam_Arin_Base_Select)
+			name(Blair_Kenneth_Base_Select)
 			bg(0x3)
-			text(C6_Sam_Arin_Base)
-			baseSupport(Sam,Arin,CSupport)
-		Entry
-			name(Stefan_Josef_Base_Select)
-			bg(0x3)
-			text(C6_Stefan_Josef_Base)
-			baseSupport(Stefan,Josef,CSupport)
+			text(C6_Blair_Kenneth_Base)
+			baseSupport(Blair,Kenneth,CPSupport)
 	Chapter(Chapter7)
 		Entry
 			name(C7_Mugger_Select)
@@ -146,6 +141,21 @@
 			text(C7_Mugger)
 			unit(C7Jeff)
 			eventID(BaseFlag1)
+		Entry
+			name(Sam_Arin_Base_Select)
+			bg(0x3)
+			text(C7_Sam_Arin_Base)
+			baseSupport(Sam,Arin,CSupport)
+		Entry
+			name(Stefan_Josef_Base_Select)
+			bg(0x3)
+			text(C7_Stefan_Josef_Base)
+			baseSupport(Stefan,Josef,CSupport)
+		Entry
+			name(Rachael_Cassius_Base_Select)
+			bg(0x3)
+			text(C7_Rachael_Cassius_Base)
+			baseSupport(Rachael,Cassius,CSupport)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

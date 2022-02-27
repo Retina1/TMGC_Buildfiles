@@ -1,3 +1,7 @@
+##_Ch8Rout
+Defeat all[N]
+enemies.[X]
+
 ##Ch8_Opening
 [OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
 sex[A][X]
@@ -6,10 +10,25 @@ sex[A][X]
 [OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
 sex[A][X]
 
-##C8AmundsenBattle
-[OpenMidLeft][LoadDavelarn]
+##C8EsmeBattle
+[OpenMidLeft][LoadEsme]
 die in pain[A][X]
 
-##C8AmundsenDeath
-[OpenMidLeft][LoadDavelarn]
+##C8EsmeRachaelBattle
+[OpenMidLeft][LoadEsme]
+die in pain[A][X]
+
+##C8EsmeCassiusBattle
+[OpenMidLeft][LoadEsme]
+die in pain[A][X]
+
+##C8EsmeDeath
+[OpenMidLeft][LoadEsme]
 now i... die in pain...[A][X]
+
+##C8CidDeath
+[OpenMidLeft][LoadCid]
+Urgh! Yer... really...[N]
+something...[A][N]
+Sorry, lassie... I gotta be[N]
+retreatin' now...[A][X]

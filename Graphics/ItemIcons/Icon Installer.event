@@ -145,6 +145,7 @@
 #define WyvernBreathIcon 0xcf
 
 #define HoneyCharmIcon 0x6f
+#define MiniGemIcon 0x89
 
 ALIGN 4
 NewItemIcons:
@@ -574,6 +575,9 @@ ItemIconEntry(WyvernBreathIcon)
 ALIGN 4
 ItemIconEntry(HoneyCharmIcon)
 #incbin "HoneyCharm.dmp"
+ALIGN 4
+ItemIconEntry(MiniGemIcon)
+#incbin "MiniGem.dmp"
 
 // End of icons 
 POP 

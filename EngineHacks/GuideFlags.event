@@ -9,6 +9,9 @@
 #define GuideChpt6 0xD1
 #define GuideChpt7 0xD2
 #define GuideChpt8 0xD3
+#define GuideChpt9 0xD4
+#define GuideChpt10 0xD5
+#define GuideChpt11 0xD6
 
 // entry table: 0xB19E0C
 // pointers: CDF5C, CE380, CE40C, CE480, CE57C, CE618, CE6C4, CE998, CEB5C, CEC20, CF090, CF468, CF488
@@ -97,6 +100,12 @@ GuideEntry(4, 3, GuideSam, GuideSamDesc, GuideChpt4, GuideChpt4)
 GuideEntry(4, 3, GuideJosef, GuideJosefDesc, GuideChpt4, GuideChpt4)
 GuideEntry(4, 3, GuidePeggy, GuidePeggyDesc, GuideChpt5, GuideChpt5)
 GuideEntry(4, 3, GuideButch, GuideButchDesc, GuideChpt6, GuideChpt6)
+GuideEntry(4, 3, GuideCassius, GuideCassiusDesc, GuideChpt7, GuideChpt7)
+GuideEntry(4, 3, GuideRachael, GuideRachaelDesc, GuideChpt7, GuideChpt7)
+GuideEntry(4, 3, GuideEmile, GuideEmileDesc, GuideChpt8, GuideChpt8)
+GuideEntry(4, 3, GuideJeff, GuideJeffDesc, GuideChpt8, GuideChpt8)
+GuideEntry(4, 3, GuideApollo, GuideApolloDesc, GuideChpt10, GuideChpt10)
+GuideEntry(4, 3, GuideBechamel, GuideBechamelDesc, GuideChpt10, GuideChpt10)
 GuideEntry(0xC,0,0,0,0,0) //terminator?
 GuideTerminator
 

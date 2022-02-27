@@ -1,3 +1,17 @@
+//fog enemy count? -thx contro ily
+PUSH
+ORG $8D378
+SHORT $E010 //Always branch even if there's fog
+POP
+
+//hatchet stuff
+PUSH
+ORG 0x58324
+BYTE 0x00
+ORG 0x58310
+BYTE 0x00
+POP
+
 //eclipse effect
 PUSH
 ORG $2AE28

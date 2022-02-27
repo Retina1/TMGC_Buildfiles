@@ -8,17 +8,23 @@ POP*/
 PUSH
 ORG $5b6bb4
 BYTE $0E $52 $FF $7F $9C $73 $8C $31 $A5 $14 $FD $7F $BB $7F $99 $7F $F3 $7A $AF $76 $CA $65 $89 $61 $47 $5D $06 $59 $C5 $54 $84 $50
+ORG $a1738c
+BYTE $0E $52 $FF $7F $9C $73 $8C $31 $A5 $14 $FD $7F $BB $7F $99 $7F $F3 $7A $AF $76 $CA $65 $89 $61 $47 $5D $06 $59 $C5 $54 $84 $50
 POP
 
 //redpalette
 PUSH
 ORG $5b6bd4
 BYTE $0E $52 $FF $7F $9C $73 $8C $31 $A5 $14 $9F $73 $7F $6B $3F $63 $1E $5F $9D $4E $1D $11 $FC $0C $DA $0C $B8 $08 $95 $08 $74 $08
+ORG $a173ac
+BYTE $0E $52 $FF $7F $9C $73 $8C $31 $A5 $14 $9F $73 $7F $6B $3F $63 $1E $5F $9D $4E $1D $11 $FC $0C $DA $0C $B8 $08 $95 $08 $74 $08
 POP
 
 //greenpalette
 PUSH
 ORG $5b6bf4
+BYTE $0E $52 $FF $7F $9C $73 $8C $31 $A5 $14 $FD $77 $FA $6B $D9 $67 $D7 $5F $B4 $57 $0B $2F $CA $2E $89 $2A $26 $22 $E5 $19 $A4 $15
+ORG $a173cc
 BYTE $0E $52 $FF $7F $9C $73 $8C $31 $A5 $14 $FD $77 $FA $6B $D9 $67 $D7 $5F $B4 $57 $0B $2F $CA $2E $89 $2A $26 $22 $E5 $19 $A4 $15
 POP
 

@@ -116,7 +116,7 @@ UNIT Bandit Bruiser 0x0 Level(9,Enemy,1) [3,12] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT Bandit Merc 0x0 Level(9,Enemy,1) [14,15] 0x0 0x0 0x0 0x0 [Armorslayer] ChaseOnceApproachedAI
 UNIT Bandit DarkM 0x0 Level(9,Enemy,1) [15,16] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
 UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [4,13] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [4,13] 0x0 0x0 0x0 0x0 [SteelAxe,MiniGem] NoAI
 UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [2,4] DropItem 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
 UNIT Bandit Deserter 0x0 Level(9,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [Javelin] ChaseOnceApproachedAI
 UNIT Bandit Brigand 0x0 Level(9,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [Swordreaver,Vulnerary] ChaseOnceApproachedAI
@@ -184,10 +184,10 @@ UNIT Ygstra LncPalF 0x0 Level(5,Enemy,1) [27,17] 0x0 0x0 0x1 REDA27R16 [Spear] N
 UNIT
 
 C7BossGroup:
-UNIT Zaine Sorc 0x0 Level(2,Enemy,1) [8,0] DropItem 0x0 0x1 REDA8R2 [Nightfall,MasterSeal] GroupTenAI
-UNIT Ygstra BowCavF 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA7R1 [Longbow] GroupTenAI
-UNIT Ygstra Archer 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA9R1 [Longbow] GroupTenAI
-UNIT Ygstra Archer 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA7R3 [Longbow] GroupTenAI
+UNIT Zaine Sorc 0x0 Level(2,Enemy,1) [8,0] DropItem 0x0 0x1 REDA8R2 [Nightfall,MasterSeal] GroupSixAI
+UNIT Ygstra BowCavF 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA7R1 [Longbow] GroupSixAI
+UNIT Ygstra Archer 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA9R1 [Longbow] GroupSixAI
+UNIT Ygstra Archer 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA7R3 [Longbow] GroupSixAI
 UNIT
 
 
@@ -209,6 +209,7 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
+GiveMoney(0x1d4c)
 MoveToChapter(Chapter8)
 ENDA
 

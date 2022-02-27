@@ -100,7 +100,10 @@ SongTable(0x19,SMT_V_Battle_theme,0)
 #include "FE5Battle.event"
 SongTable(0x1A,FE5Battle,0)
 }
-
+{
+#include "ItHasToBeThisWay.event"
+SongTable(0x1B,ItHasToBeThisWay,1)
+}
 {
 #include "Paths.event"
 SongTable(0x1c,Paths,0)
@@ -178,6 +181,10 @@ SongTable(0x43,RightRoad,1)
 {
 #include "Ameno.event"
 SongTable(0x44,Ameno,1)
+}
+{
+#include "ShinjukuUnderground.event"
+SongTable(0x45,ShinjukuUnderground,1)
 }
 
 {

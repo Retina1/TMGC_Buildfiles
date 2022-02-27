@@ -2,12 +2,13 @@
 #define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
 #define SystemText(bgid,textid) "CenterTutorialTextBox; SetBackground(bgid); TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
 #define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND;"
+#define NarrationText(textid) "SVAL 0xB 0x00B4FFFF; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
 #define EndEvent "EVBIT_T 0x7; ENDA"
 #define CleanTextNoMap(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
 #define CleanText(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; ClearBackgroundSmooth"
 #define GiveItem(item) "SMOV 0x3 item; GIVEITEMTO 0xFFFF;"
 #define GiveItem(item,character) "SMOV 0x3 item; GIVEITEMTO character;"
-#define Narration(textid) "SetBackground(0x34); STAL 120; CGText(textid); MUSC 0x0; FADI 0x3c"
+#define Narration(textid) "SetBackground(0x34); STAL 120; NarrationText(textid); MUSC 0x0; FADI 0x3c"
 
 #define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
 
@@ -124,6 +125,7 @@
 #define ShiningBow 0x96
 
 #define Reblow 0x8b
+#define MiniGem 0x77
 
 #undef Bandit
 //generic defs
@@ -158,6 +160,21 @@
 #define Mitchell 0x4a
 #define Amundsen 0x4b
 #define Zaine 0x4c
+#define Esme 0x4d
+
+#define DL1 0xE2
+#define DL2 0xE3
+#define DL3 0xE4
+#define DL4 0xE5
+#define DL5 0xE6
+#define DL6 0xE7
+#define DL7 0xE8
+#define DL8 0xE9
+#define DL9 0xEa
+#define DL10 0xEb
+#define DL11 0xEc
+#define DL12 0xEd
+#define DL13 0xEe
 
 
 //Chapter defs

@@ -74,6 +74,7 @@ POP
 ALIGN 4
 NewStatScreen:
 #incext Png2Dmp "StatScreen.png" --lz77
+ALIGN 4
 NewStatScreenPal:
 #incext Png2Dmp "StatScreen.png" --palette-only
 
@@ -88,25 +89,49 @@ SaveSlot:
 ALIGN 4
 MainMenu:
 #incext Png2Dmp "Main Menu.png" --lz77
+ALIGN 4
 MainMenuPal:
 #incext Png2Dmp "Main Menu.png" --palette-only
 
 ALIGN 4
 ChapterTitle:
 #incext Png2Dmp "Chapter Title.png" --lz77
+ALIGN 4
 ChapterTitlePal:
 #incext Png2Dmp "Chapter Title.png" --palette-only
 
 ALIGN 4
 Title:
 #incext Png2Dmp "Game Title.png" --lz77
+ALIGN 4
 TitlePal:
 #incext Png2Dmp "Game Title.png" --palette-only
 
 ALIGN 4
 LevelUpScreen:
 #incext Png2Dmp "Level Up Screen.png" --lz77
+ALIGN 4
 LevelUpScreenTSA:
 #incbin "Level Up Screen.png.tsa.dmp"
+ALIGN 4
 LevelUpScreenPal:
 #incbin "Level Up Screen.png.pal.dmp"
+
+
+/*PUSH
+ORG $5b65c0
+POIN MenuTiles
+ORG $a1b730
+POIN DeployMenuTiles
+ORG $a1d7dc
+POIN ConvoyMenuTiles
+POP
+ALIGN 4
+MenuTiles:
+#incext Png2Dmp "MenuTiles.png"
+ALIGN 4
+DeployMenuTiles:
+#incext Png2Dmp "DeployMenuTiles.png" 
+ALIGN 4
+ConvoyMenuTiles:
+#incext Png2Dmp "ConvoyMenuTiles.png"*/

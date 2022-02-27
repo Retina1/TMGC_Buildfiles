@@ -269,3 +269,15 @@ WORD Mov_Text_ID
 ALIGN 4
 LevelUpWriteBackMag:
 #include "LevelUpWriteBackMag.event"
+
+//fix cap level up issue- not working god damn it
+/*PUSH
+    //Check Mag Cap
+    ORG $2C008
+    jumpToHack(LevelupMagCap)
+POP
+
+ALIGN 4
+LevelupMagCap:
+#incbin "LevelupMagCap.dmp"
+POIN MagClassTable*/

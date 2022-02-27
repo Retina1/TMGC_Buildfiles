@@ -105,9 +105,9 @@ draw_aid_icon_at 26, 5
 
 draw_status_text_at 21, 7
 
-draw_textID_at 21, 9, textID=0x4f1 @affin
+draw_textID_at 21, 9, textID=0x4f9 @traveler
 
-draw_affinity_icon_at 24, 9
+draw_trv_text_at 21, 9
 
 
 ldr r0,=TalkTextIDLink

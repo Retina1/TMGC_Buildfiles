@@ -63,18 +63,46 @@ WORD 0
 SwordEffectiveness:
 SetWeaponEffectiveness(SwordType, 6)
 WORD 0
-MonsterEffectiveness:
-SetWeaponEffectiveness(MonsterType, 6)
+LanceEffectiveness:
+SetWeaponEffectiveness(LanceType, 6)
 WORD 0
-SacredWeaponEffectiveness:
-SetWeaponEffectiveness(MonsterType, 4)
+AxeEffectiveness:
+SetWeaponEffectiveness(AxeType, 6)
 WORD 0
-FlierAndMonster1: //Beacon bow
-SetWeaponEffectiveness(FlierType|MonsterType, 6)
+BowEffectiveness:
+SetWeaponEffectiveness(BowType, 6)
 WORD 0
-FlierAndMonster2: //Nidhogg
+StaffEffectiveness:
+SetWeaponEffectiveness(StaffType, 6)
+WORD 0
+AnimaEffectiveness:
+SetWeaponEffectiveness(AnimaType, 6)
+WORD 0
+LightEffectiveness:
+SetWeaponEffectiveness(LightType, 6)
+WORD 0
+DarkEffectiveness:
+SetWeaponEffectiveness(DarkType, 6)
+WORD 0
+MagicEffectiveness:
+SetWeaponEffectiveness(AnimaType, 6)
+SetWeaponEffectiveness(LightType, 6)
+SetWeaponEffectiveness(DarkType, 6)
+SetWeaponEffectiveness(StaffType, 6)
+WORD 0
+UberEffectiveness:
+SetWeaponEffectiveness(ArmorType, 6)
+SetWeaponEffectiveness(HorseType, 6)
+SetWeaponEffectiveness(DragonType, 6)
 SetWeaponEffectiveness(FlierType, 6)
-SetWeaponEffectiveness(MonsterType, 4)
+SetWeaponEffectiveness(SwordType, 6)
+SetWeaponEffectiveness(LanceType, 6)
+SetWeaponEffectiveness(AxeType, 6)
+SetWeaponEffectiveness(BowType, 6)
+SetWeaponEffectiveness(AnimaType, 6)
+SetWeaponEffectiveness(LightType, 6)
+SetWeaponEffectiveness(DarkType, 6)
+SetWeaponEffectiveness(StaffType, 6)
 WORD 0
 
 #define SetProtection(type_list) "SHORT 0 type_list"

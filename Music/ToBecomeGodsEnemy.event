@@ -1,0 +1,4715 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	ToBecomeGodsEnemy_grp  voicegroup000
+	#define	ToBecomeGodsEnemy_pri  0
+	#define	ToBecomeGodsEnemy_rev  0
+	#define	ToBecomeGodsEnemy_mvl  127
+	#define	ToBecomeGodsEnemy_key  0
+	#define	ToBecomeGodsEnemy_tbs  1
+	#define	ToBecomeGodsEnemy_exg  0
+	#define	ToBecomeGodsEnemy_cmp  1
+
+	// .rodata
+	//	ToBecomeGodsEnemy
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+ToBecomeGodsEnemy_001:
+//  #01 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   TEMPO   88*ToBecomeGodsEnemy_tbs/2
+ BYTE   VOICE   63
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   18*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   18*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   N96  En1  v127
+ BYTE   W01
+ BYTE   VOL   23*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W42
+ BYTE   W01
+ BYTE   VOL   49*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   48*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   46*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   44*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+//  #01 //001   ----------------------------------------
+Label_01004520:
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  En1  v127
+ BYTE   W01
+ BYTE   VOL   23*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W42
+ BYTE   W01
+ BYTE   VOL   49*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   48*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   47*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   46*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   45*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   44*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   PEND 
+//  #01 //002   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //003   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //005   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //007   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //009   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //014   ----------------------------------------
+Label_010045CF:
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W96
+//  #01 //015   ----------------------------------------
+ BYTE   W96
+//  #01 //016   ----------------------------------------
+ BYTE   W96
+//  #01 //017   ----------------------------------------
+ BYTE   W96
+//  #01 //018   ----------------------------------------
+ BYTE   W96
+//  #01 //019   ----------------------------------------
+ BYTE   W96
+//  #01 //020   ----------------------------------------
+ BYTE   W96
+//  #01 //021   ----------------------------------------
+ BYTE   W96
+//  #01 //022   ----------------------------------------
+ BYTE   W96
+//  #01 //023   ----------------------------------------
+ BYTE   W96
+//  #01 //024   ----------------------------------------
+ BYTE   W96
+//  #01 //025   ----------------------------------------
+ BYTE   W96
+//  #01 //026   ----------------------------------------
+ BYTE   W96
+//  #01 //027   ----------------------------------------
+ BYTE   W96
+//  #01 //028   ----------------------------------------
+ BYTE   W96
+//  #01 //029   ----------------------------------------
+ BYTE   W96
+//  #01 //030   ----------------------------------------
+ BYTE   W96
+//  #01 //031   ----------------------------------------
+ BYTE   W96
+//  #01 //032   ----------------------------------------
+ BYTE   W96
+//  #01 //033   ----------------------------------------
+ BYTE   W96
+//  #01 //034   ----------------------------------------
+ BYTE   W96
+//  #01 //035   ----------------------------------------
+ BYTE   W96
+//  #01 //036   ----------------------------------------
+ BYTE   W96
+//  #01 //037   ----------------------------------------
+ BYTE   W96
+//  #01 //038   ----------------------------------------
+ BYTE   TIE  En4  v100
+ BYTE   W96
+//  #01 //039   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   N48  Fs4
+ BYTE   W48
+//  #01 //040   ----------------------------------------
+ BYTE   N96  En4
+ BYTE   W96
+//  #01 //041   ----------------------------------------
+ BYTE   N48  Gn4
+ BYTE   W48
+ BYTE   Fs4
+ BYTE   W48
+//  #01 //042   ----------------------------------------
+ BYTE   N96  Dn4
+ BYTE   W96
+//  #01 //043   ----------------------------------------
+ BYTE   Fs4
+ BYTE   W96
+//  #01 //044   ----------------------------------------
+ BYTE   En4
+ BYTE   W96
+//  #01 //045   ----------------------------------------
+ BYTE   An4
+ BYTE   W96
+//  #01 //046   ----------------------------------------
+ BYTE   W96
+//  #01 //047   ----------------------------------------
+ BYTE   W96
+//  #01 //048   ----------------------------------------
+ BYTE   W96
+//  #01 //049   ----------------------------------------
+ BYTE   W96
+//  #01 //050   ----------------------------------------
+ BYTE   W96
+//  #01 //051   ----------------------------------------
+ BYTE   W96
+//  #01 //052   ----------------------------------------
+ BYTE   W96
+//  #01 //053   ----------------------------------------
+ BYTE   W96
+//  #01 //054   ----------------------------------------
+ BYTE   W96
+//  #01 //055   ----------------------------------------
+ BYTE   W96
+//  #01 //056   ----------------------------------------
+ BYTE   W96
+//  #01 //057   ----------------------------------------
+ BYTE   W96
+//  #01 //058   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //059   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //060   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //061   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //062   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //063   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //064   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //065   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //066   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //067   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //068   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //069   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //070   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //071   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //072   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //073   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //074   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004520
+//  #01 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_010045CF
+//  #01 //076   ----------------------------------------
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+ToBecomeGodsEnemy_002:
+//  #02 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   52
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #02 //001   ----------------------------------------
+ BYTE   W96
+//  #02 //002   ----------------------------------------
+ BYTE   W96
+//  #02 //003   ----------------------------------------
+ BYTE   W96
+//  #02 //004   ----------------------------------------
+ BYTE   W96
+//  #02 //005   ----------------------------------------
+ BYTE   W96
+//  #02 //006   ----------------------------------------
+Label_010046A4:
+ BYTE   VOL   19*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  Gn1  v100
+ BYTE   N96  Bn1
+ BYTE   N96  En2
+ BYTE   W01
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W48
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   PEND 
+//  #02 //007   ----------------------------------------
+Label_0100470F:
+ BYTE   VOL   19*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  Gs1  v100
+ BYTE   N96  Cs2
+ BYTE   N96  Fs2
+ BYTE   W01
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W48
+ BYTE   W01
+ BYTE   VOL   40*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   PEND 
+//  #02 //008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010046A4
+//  #02 //009   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100470F
+//  #02 //010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010046A4
+//  #02 //011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100470F
+//  #02 //012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010046A4
+//  #02 //013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100470F
+//  #02 //014   ----------------------------------------
+Label_01004798:
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N48  En3  v100
+ BYTE   N48  Gn3
+ BYTE   N48  Bn3
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W36
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N48  Dn3
+ BYTE   N48  Fs3
+ BYTE   N48  An3
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W36
+ BYTE   W01
+ BYTE   PEND 
+//  #02 //015   ----------------------------------------
+Label_010047DB:
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N48  Bn2  v100
+ BYTE   N48  Dn3
+ BYTE   N48  Fs3
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W36
+ BYTE   W01
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N48  As2
+ BYTE   N48  En3
+ BYTE   N48  Gn3
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W36
+ BYTE   W01
+ BYTE   PEND 
+//  #02 //016   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004798
+//  #02 //017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010047DB
+//  #02 //018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004798
+//  #02 //019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010047DB
+//  #02 //020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004798
+//  #02 //021   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010047DB
+//  #02 //022   ----------------------------------------
+Label_0100483C:
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  En2  v100
+ BYTE   N96  Fs3  v127
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W84
+ BYTE   W01
+ BYTE   PEND 
+//  #02 //023   ----------------------------------------
+Label_0100485E:
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  Fs2  v100
+ BYTE   N96  Dn3  v127
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W84
+ BYTE   W01
+ BYTE   PEND 
+//  #02 //024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100483C
+//  #02 //025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100485E
+//  #02 //026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100483C
+//  #02 //027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100485E
+//  #02 //028   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100483C
+//  #02 //029   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100485E
+//  #02 //030   ----------------------------------------
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   TIE  En3  v100
+ BYTE   W96
+//  #02 //031   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   N48  Fs3
+ BYTE   W48
+//  #02 //032   ----------------------------------------
+ BYTE   N96  En3
+ BYTE   W96
+//  #02 //033   ----------------------------------------
+Label_010048AC:
+ BYTE   N48  Gn3  v100
+ BYTE   W48
+ BYTE   Fs3
+ BYTE   W48
+ BYTE   PEND 
+//  #02 //034   ----------------------------------------
+ BYTE   N96  Dn3
+ BYTE   W96
+//  #02 //035   ----------------------------------------
+ BYTE   Fs3
+ BYTE   W96
+//  #02 //036   ----------------------------------------
+ BYTE   En3
+ BYTE   W96
+//  #02 //037   ----------------------------------------
+ BYTE   An3
+ BYTE   W96
+//  #02 //038   ----------------------------------------
+ BYTE   TIE  En3
+ BYTE   W96
+//  #02 //039   ----------------------------------------
+ BYTE   W48
+ BYTE   EOT
+ BYTE   N48  Fs3
+ BYTE   W48
+//  #02 //040   ----------------------------------------
+ BYTE   N96  En3
+ BYTE   W96
+//  #02 //041   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010048AC
+//  #02 //042   ----------------------------------------
+ BYTE   N96  Dn3  v100
+ BYTE   W96
+//  #02 //043   ----------------------------------------
+ BYTE   Fs3
+ BYTE   W96
+//  #02 //044   ----------------------------------------
+ BYTE   En3
+ BYTE   W96
+//  #02 //045   ----------------------------------------
+ BYTE   An3
+ BYTE   W96
+//  #02 //046   ----------------------------------------
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  Fn2  v112
+ BYTE   N96  Gs2
+ BYTE   N96  Cn3
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W84
+ BYTE   W01
+//  #02 //047   ----------------------------------------
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  Gn2
+ BYTE   N96  As2
+ BYTE   N96  Ds3
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W84
+ BYTE   W01
+//  #02 //048   ----------------------------------------
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  Fn2
+ BYTE   N96  An2
+ BYTE   N96  Dn3
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W84
+ BYTE   W01
+//  #02 //049   ----------------------------------------
+ BYTE   VOL   22*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   N96  Ds2
+ BYTE   N96  Gs2
+ BYTE   N96  Cs3
+ BYTE   W01
+ BYTE   VOL   24*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W84
+ BYTE   W01
+//  #02 //050   ----------------------------------------
+ BYTE   VOL   45*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   W96
+//  #02 //051   ----------------------------------------
+ BYTE   W96
+//  #02 //052   ----------------------------------------
+ BYTE   W96
+//  #02 //053   ----------------------------------------
+ BYTE   W96
+//  #02 //054   ----------------------------------------
+ BYTE   W96
+//  #02 //055   ----------------------------------------
+ BYTE   W96
+//  #02 //056   ----------------------------------------
+ BYTE   W96
+//  #02 //057   ----------------------------------------
+ BYTE   W96
+//  #02 //058   ----------------------------------------
+Label_01004961:
+ BYTE   N12  Dn3  v112
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   PEND 
+//  #02 //059   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004961
+//  #02 //060   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004961
+//  #02 //061   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004961
+//  #02 //062   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004961
+//  #02 //063   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004961
+//  #02 //064   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004961
+//  #02 //065   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004961
+//  #02 //066   ----------------------------------------
+ BYTE   W96
+//  #02 //067   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010046A4
+//  #02 //068   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100470F
+//  #02 //069   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010046A4
+//  #02 //070   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100470F
+//  #02 //071   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010046A4
+//  #02 //072   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100470F
+//  #02 //073   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010046A4
+//  #02 //074   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100470F
+//  #02 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_01004798
+//  #02 //076   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004798
+//  #02 //077   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+ToBecomeGodsEnemy_003:
+//  #03 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   10
+ BYTE   PAN   c_v+0
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   39*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #03 //001   ----------------------------------------
+ BYTE   W96
+//  #03 //002   ----------------------------------------
+ BYTE   W96
+//  #03 //003   ----------------------------------------
+ BYTE   W96
+//  #03 //004   ----------------------------------------
+ BYTE   W96
+//  #03 //005   ----------------------------------------
+ BYTE   W96
+//  #03 //006   ----------------------------------------
+Label_F61C18:
+ BYTE   N06  Bn2  v100
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+//  #03 //007   ----------------------------------------
+Label_F61C3B:
+ BYTE   N06  Bn2  v100
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   En3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   En3
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   En3
+ BYTE   W06
+ BYTE   PEND 
+//  #03 //008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C18
+//  #03 //009   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C3B
+//  #03 //010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C18
+//  #03 //011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C3B
+//  #03 //012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C18
+//  #03 //013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C3B
+//  #03 //014   ----------------------------------------
+Label_F61C7C:
+ BYTE   W96
+//  #03 //015   ----------------------------------------
+ BYTE   W96
+//  #03 //016   ----------------------------------------
+ BYTE   W96
+//  #03 //017   ----------------------------------------
+ BYTE   W96
+//  #03 //018   ----------------------------------------
+ BYTE   W96
+//  #03 //019   ----------------------------------------
+ BYTE   W96
+//  #03 //020   ----------------------------------------
+ BYTE   W96
+//  #03 //021   ----------------------------------------
+ BYTE   W96
+//  #03 //022   ----------------------------------------
+ BYTE   W96
+//  #03 //023   ----------------------------------------
+ BYTE   W96
+//  #03 //024   ----------------------------------------
+ BYTE   W96
+//  #03 //025   ----------------------------------------
+ BYTE   W96
+//  #03 //026   ----------------------------------------
+ BYTE   W96
+//  #03 //027   ----------------------------------------
+ BYTE   W96
+//  #03 //028   ----------------------------------------
+ BYTE   W96
+//  #03 //029   ----------------------------------------
+ BYTE   W96
+//  #03 //030   ----------------------------------------
+ BYTE   W96
+//  #03 //031   ----------------------------------------
+ BYTE   W96
+//  #03 //032   ----------------------------------------
+ BYTE   W96
+//  #03 //033   ----------------------------------------
+ BYTE   W96
+//  #03 //034   ----------------------------------------
+ BYTE   W96
+//  #03 //035   ----------------------------------------
+ BYTE   W96
+//  #03 //036   ----------------------------------------
+ BYTE   W96
+//  #03 //037   ----------------------------------------
+ BYTE   W96
+//  #03 //038   ----------------------------------------
+ BYTE   W96
+//  #03 //039   ----------------------------------------
+ BYTE   W96
+//  #03 //040   ----------------------------------------
+ BYTE   W96
+//  #03 //041   ----------------------------------------
+ BYTE   W96
+//  #03 //042   ----------------------------------------
+ BYTE   W96
+//  #03 //043   ----------------------------------------
+ BYTE   W96
+//  #03 //044   ----------------------------------------
+ BYTE   W96
+//  #03 //045   ----------------------------------------
+ BYTE   W96
+//  #03 //046   ----------------------------------------
+ BYTE   W96
+//  #03 //047   ----------------------------------------
+ BYTE   W96
+//  #03 //048   ----------------------------------------
+ BYTE   W96
+//  #03 //049   ----------------------------------------
+ BYTE   W96
+//  #03 //050   ----------------------------------------
+ BYTE   W96
+//  #03 //051   ----------------------------------------
+ BYTE   W96
+//  #03 //052   ----------------------------------------
+ BYTE   W96
+//  #03 //053   ----------------------------------------
+ BYTE   W96
+//  #03 //054   ----------------------------------------
+ BYTE   W96
+//  #03 //055   ----------------------------------------
+ BYTE   W96
+//  #03 //056   ----------------------------------------
+ BYTE   W96
+//  #03 //057   ----------------------------------------
+ BYTE   W96
+//  #03 //058   ----------------------------------------
+ BYTE   W96
+//  #03 //059   ----------------------------------------
+ BYTE   W96
+//  #03 //060   ----------------------------------------
+ BYTE   W96
+//  #03 //061   ----------------------------------------
+ BYTE   W96
+//  #03 //062   ----------------------------------------
+ BYTE   W96
+//  #03 //063   ----------------------------------------
+ BYTE   W96
+//  #03 //064   ----------------------------------------
+ BYTE   W96
+//  #03 //065   ----------------------------------------
+ BYTE   W96
+//  #03 //066   ----------------------------------------
+ BYTE   W96
+//  #03 //067   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C18
+//  #03 //068   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C3B
+//  #03 //069   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C18
+//  #03 //070   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C3B
+//  #03 //071   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C18
+//  #03 //072   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C3B
+//  #03 //073   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C18
+//  #03 //074   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61C3B
+//  #03 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_F61C7C
+//  #03 //076   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+ToBecomeGodsEnemy_004:
+//  #04 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   33
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #04 //001   ----------------------------------------
+ BYTE   W96
+//  #04 //002   ----------------------------------------
+ BYTE   W96
+//  #04 //003   ----------------------------------------
+ BYTE   W96
+//  #04 //004   ----------------------------------------
+ BYTE   W96
+//  #04 //005   ----------------------------------------
+ BYTE   W96
+//  #04 //006   ----------------------------------------
+ BYTE   W96
+//  #04 //007   ----------------------------------------
+ BYTE   W96
+//  #04 //008   ----------------------------------------
+ BYTE   W96
+//  #04 //009   ----------------------------------------
+ BYTE   W96
+//  #04 //010   ----------------------------------------
+ BYTE   W96
+//  #04 //011   ----------------------------------------
+ BYTE   W96
+//  #04 //012   ----------------------------------------
+ BYTE   W96
+//  #04 //013   ----------------------------------------
+ BYTE   W96
+//  #04 //014   ----------------------------------------
+Label_01004A0C:
+ BYTE   N06  En0  v127
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   En0
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   PEND 
+//  #04 //015   ----------------------------------------
+Label_01004A2B:
+ BYTE   N06  En0  v127
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   Bn0
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   Dn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   N12  Dn1
+ BYTE   W12
+ BYTE   PEND 
+//  #04 //016   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A0C
+//  #04 //017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A2B
+//  #04 //018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A0C
+//  #04 //019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A2B
+//  #04 //020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A0C
+//  #04 //021   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A2B
+//  #04 //022   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A0C
+//  #04 //023   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A2B
+//  #04 //024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A0C
+//  #04 //025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A2B
+//  #04 //026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A0C
+//  #04 //027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A2B
+//  #04 //028   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A0C
+//  #04 //029   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A2B
+//  #04 //030   ----------------------------------------
+Label_01004A8E:
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  An1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   PEND 
+//  #04 //031   ----------------------------------------
+Label_01004AAC:
+ BYTE   N06  En1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  An1
+ BYTE   W12
+ BYTE   Gn1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   PEND 
+//  #04 //032   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A8E
+//  #04 //033   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004AAC
+//  #04 //034   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A8E
+//  #04 //035   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004AAC
+//  #04 //036   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A8E
+//  #04 //037   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004AAC
+//  #04 //038   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A8E
+//  #04 //039   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004AAC
+//  #04 //040   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A8E
+//  #04 //041   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004AAC
+//  #04 //042   ----------------------------------------
+ BYTE   N06  Cn1  v127
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   Dn1
+ BYTE   W12
+//  #04 //043   ----------------------------------------
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  Gn1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+//  #04 //044   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A8E
+//  #04 //045   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004AAC
+//  #04 //046   ----------------------------------------
+ BYTE   N06  Fn1  v112
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+//  #04 //047   ----------------------------------------
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  As1
+ BYTE   W12
+ BYTE   N18  Gs1
+ BYTE   W18
+//  #04 //048   ----------------------------------------
+ BYTE   N06  Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gn1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Ds1
+ BYTE   W06
+ BYTE   Fn1
+ BYTE   W06
+//  #04 //049   ----------------------------------------
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Gs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   As1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Cn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Ds2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   Fn2
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+//  #04 //050   ----------------------------------------
+Label_01004BBA:
+ BYTE   N18  En1  v112
+ BYTE   W18
+ BYTE   Bn0
+ BYTE   W18
+ BYTE   Cn1
+ BYTE   W18
+ BYTE   Gn1
+ BYTE   W18
+ BYTE   N12  An0
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   PEND 
+//  #04 //051   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004BBA
+//  #04 //052   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004BBA
+//  #04 //053   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004BBA
+//  #04 //054   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004BBA
+//  #04 //055   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004BBA
+//  #04 //056   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004BBA
+//  #04 //057   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004BBA
+//  #04 //058   ----------------------------------------
+ BYTE   W96
+//  #04 //059   ----------------------------------------
+ BYTE   W96
+//  #04 //060   ----------------------------------------
+ BYTE   W96
+//  #04 //061   ----------------------------------------
+ BYTE   W96
+//  #04 //062   ----------------------------------------
+ BYTE   W96
+//  #04 //063   ----------------------------------------
+ BYTE   W96
+//  #04 //064   ----------------------------------------
+ BYTE   W96
+//  #04 //065   ----------------------------------------
+ BYTE   W96
+//  #04 //066   ----------------------------------------
+ BYTE   W96
+//  #04 //067   ----------------------------------------
+ BYTE   W96
+//  #04 //068   ----------------------------------------
+ BYTE   W96
+//  #04 //069   ----------------------------------------
+ BYTE   W96
+//  #04 //070   ----------------------------------------
+ BYTE   W96
+//  #04 //071   ----------------------------------------
+ BYTE   W96
+//  #04 //072   ----------------------------------------
+ BYTE   W96
+//  #04 //073   ----------------------------------------
+ BYTE   W96
+//  #04 //074   ----------------------------------------
+ BYTE   W96
+//  #04 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_01004A0C
+//  #04 //076   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004A0C
+//  #04 //077   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+ToBecomeGodsEnemy_005:
+//  #05 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   38
+ BYTE   PAN   c_v+0
+ BYTE   VOL   43*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   43*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   43*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   43*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   43*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   43*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #05 //001   ----------------------------------------
+ BYTE   W96
+//  #05 //002   ----------------------------------------
+ BYTE   W96
+//  #05 //003   ----------------------------------------
+ BYTE   W96
+//  #05 //004   ----------------------------------------
+ BYTE   W96
+//  #05 //005   ----------------------------------------
+ BYTE   W96
+//  #05 //006   ----------------------------------------
+ BYTE   W96
+//  #05 //007   ----------------------------------------
+ BYTE   W96
+//  #05 //008   ----------------------------------------
+ BYTE   W96
+//  #05 //009   ----------------------------------------
+ BYTE   W96
+//  #05 //010   ----------------------------------------
+ BYTE   W96
+//  #05 //011   ----------------------------------------
+ BYTE   W96
+//  #05 //012   ----------------------------------------
+ BYTE   W96
+//  #05 //013   ----------------------------------------
+ BYTE   W96
+//  #05 //014   ----------------------------------------
+Label_F6208C:
+ BYTE   W96
+//  #05 //015   ----------------------------------------
+ BYTE   W96
+//  #05 //016   ----------------------------------------
+ BYTE   W96
+//  #05 //017   ----------------------------------------
+ BYTE   W96
+//  #05 //018   ----------------------------------------
+Label_F62090:
+ BYTE   N03  Bn1  v127
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N12
+ BYTE   W12
+ BYTE   N03  En2
+ BYTE   W03
+ BYTE   N09
+ BYTE   W24
+ BYTE   W03
+ BYTE   N03  Bn1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   En2
+ BYTE   W03
+ BYTE   N09
+ BYTE   W09
+ BYTE   N03  Dn2
+ BYTE   W03
+ BYTE   N09
+ BYTE   W09
+ BYTE   N03  Cn2
+ BYTE   W03
+ BYTE   N09
+ BYTE   W09
+ BYTE   N03  Bn1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   PEND 
+//  #05 //019   ----------------------------------------
+ BYTE   N06
+ BYTE   W06
+ BYTE   N03
+ BYTE   W03
+ BYTE   N09
+ BYTE   W09
+ BYTE   N03  En2
+ BYTE   W03
+ BYTE   N09
+ BYTE   W68
+ BYTE   W01
+ BYTE   N06  Bn1
+ BYTE   W06
+//  #05 //020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F62090
+//  #05 //021   ----------------------------------------
+ BYTE   N06  Bn1  v127
+ BYTE   W06
+ BYTE   N03
+ BYTE   W03
+ BYTE   N09
+ BYTE   W09
+ BYTE   N03  En2
+ BYTE   W03
+ BYTE   N09
+ BYTE   W09
+ BYTE   BEND   c_v+0
+ BYTE   W66
+//  #05 //022   ----------------------------------------
+ BYTE   W96
+//  #05 //023   ----------------------------------------
+ BYTE   W96
+//  #05 //024   ----------------------------------------
+ BYTE   W96
+//  #05 //025   ----------------------------------------
+ BYTE   W96
+//  #05 //026   ----------------------------------------
+ BYTE   W96
+//  #05 //027   ----------------------------------------
+ BYTE   W96
+//  #05 //028   ----------------------------------------
+ BYTE   W96
+//  #05 //029   ----------------------------------------
+ BYTE   W96
+//  #05 //030   ----------------------------------------
+ BYTE   W96
+//  #05 //031   ----------------------------------------
+ BYTE   W96
+//  #05 //032   ----------------------------------------
+ BYTE   W96
+//  #05 //033   ----------------------------------------
+ BYTE   W96
+//  #05 //034   ----------------------------------------
+ BYTE   W96
+//  #05 //035   ----------------------------------------
+ BYTE   W96
+//  #05 //036   ----------------------------------------
+ BYTE   W96
+//  #05 //037   ----------------------------------------
+ BYTE   W96
+//  #05 //038   ----------------------------------------
+ BYTE   W96
+//  #05 //039   ----------------------------------------
+ BYTE   W96
+//  #05 //040   ----------------------------------------
+ BYTE   W96
+//  #05 //041   ----------------------------------------
+ BYTE   W96
+//  #05 //042   ----------------------------------------
+ BYTE   W96
+//  #05 //043   ----------------------------------------
+ BYTE   W96
+//  #05 //044   ----------------------------------------
+ BYTE   W96
+//  #05 //045   ----------------------------------------
+ BYTE   W96
+//  #05 //046   ----------------------------------------
+ BYTE   W96
+//  #05 //047   ----------------------------------------
+ BYTE   W96
+//  #05 //048   ----------------------------------------
+ BYTE   W96
+//  #05 //049   ----------------------------------------
+ BYTE   W96
+//  #05 //050   ----------------------------------------
+ BYTE   W96
+//  #05 //051   ----------------------------------------
+ BYTE   W96
+//  #05 //052   ----------------------------------------
+ BYTE   W96
+//  #05 //053   ----------------------------------------
+ BYTE   W96
+//  #05 //054   ----------------------------------------
+ BYTE   W96
+//  #05 //055   ----------------------------------------
+ BYTE   W96
+//  #05 //056   ----------------------------------------
+ BYTE   W96
+//  #05 //057   ----------------------------------------
+ BYTE   W96
+//  #05 //058   ----------------------------------------
+ BYTE   W96
+//  #05 //059   ----------------------------------------
+ BYTE   W96
+//  #05 //060   ----------------------------------------
+ BYTE   W96
+//  #05 //061   ----------------------------------------
+ BYTE   W96
+//  #05 //062   ----------------------------------------
+ BYTE   W96
+//  #05 //063   ----------------------------------------
+ BYTE   W96
+//  #05 //064   ----------------------------------------
+ BYTE   W96
+//  #05 //065   ----------------------------------------
+ BYTE   W96
+//  #05 //066   ----------------------------------------
+ BYTE   W96
+//  #05 //067   ----------------------------------------
+ BYTE   W96
+//  #05 //068   ----------------------------------------
+ BYTE   W96
+//  #05 //069   ----------------------------------------
+ BYTE   W96
+//  #05 //070   ----------------------------------------
+ BYTE   W96
+//  #05 //071   ----------------------------------------
+ BYTE   W96
+//  #05 //072   ----------------------------------------
+ BYTE   W96
+//  #05 //073   ----------------------------------------
+ BYTE   W96
+//  #05 //074   ----------------------------------------
+ BYTE   W96
+//  #05 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_F6208C
+//  #05 //076   ----------------------------------------
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+ToBecomeGodsEnemy_006:
+//  #06 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   28
+ BYTE   PAN   c_v+0
+ BYTE   VOL   48*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   48*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   48*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   48*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   48*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   48*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #06 //001   ----------------------------------------
+ BYTE   W96
+//  #06 //002   ----------------------------------------
+ BYTE   W96
+//  #06 //003   ----------------------------------------
+ BYTE   W96
+//  #06 //004   ----------------------------------------
+ BYTE   W96
+//  #06 //005   ----------------------------------------
+ BYTE   W96
+//  #06 //006   ----------------------------------------
+ BYTE   W96
+//  #06 //007   ----------------------------------------
+ BYTE   W96
+//  #06 //008   ----------------------------------------
+ BYTE   W96
+//  #06 //009   ----------------------------------------
+ BYTE   W96
+//  #06 //010   ----------------------------------------
+ BYTE   W96
+//  #06 //011   ----------------------------------------
+ BYTE   W96
+//  #06 //012   ----------------------------------------
+ BYTE   W96
+//  #06 //013   ----------------------------------------
+ BYTE   W96
+//  #06 //014   ----------------------------------------
+Label_F61EE4:
+ BYTE   W96
+//  #06 //015   ----------------------------------------
+ BYTE   W96
+//  #06 //016   ----------------------------------------
+ BYTE   W96
+//  #06 //017   ----------------------------------------
+ BYTE   W96
+//  #06 //018   ----------------------------------------
+ BYTE   W96
+//  #06 //019   ----------------------------------------
+ BYTE   W96
+//  #06 //020   ----------------------------------------
+ BYTE   W96
+//  #06 //021   ----------------------------------------
+ BYTE   W96
+//  #06 //022   ----------------------------------------
+Label_F61EEC:
+ BYTE   N09  En4  v100
+ BYTE   W09
+ BYTE   N06  An3
+ BYTE   W15
+ BYTE   N09  Dn4
+ BYTE   W09
+ BYTE   N06  An3
+ BYTE   W36
+ BYTE   W03
+ BYTE   N09  Dn4
+ BYTE   W12
+ BYTE   N06  An3
+ BYTE   W12
+ BYTE   PEND 
+//  #06 //023   ----------------------------------------
+Label_F61F01:
+ BYTE   W12
+ BYTE   N09  En4  v100
+ BYTE   W18
+ BYTE   N06  An3
+ BYTE   W09
+ BYTE   Gn3
+ BYTE   W09
+ BYTE   Fs3
+ BYTE   W48
+ BYTE   PEND 
+//  #06 //024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61EEC
+//  #06 //025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61F01
+//  #06 //026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61EEC
+//  #06 //027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61F01
+//  #06 //028   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_F61EEC
+//  #06 //029   ----------------------------------------
+ BYTE   W12
+ BYTE   N09  En4  v100
+ BYTE   W18
+ BYTE   N06  An3
+ BYTE   W09
+ BYTE   Gn3
+ BYTE   W09
+ BYTE   Fs3
+ BYTE   W06
+ BYTE   BEND   c_v+0
+ BYTE   W42
+//  #06 //030   ----------------------------------------
+ BYTE   W96
+//  #06 //031   ----------------------------------------
+ BYTE   W96
+//  #06 //032   ----------------------------------------
+ BYTE   W96
+//  #06 //033   ----------------------------------------
+ BYTE   W96
+//  #06 //034   ----------------------------------------
+ BYTE   W96
+//  #06 //035   ----------------------------------------
+ BYTE   W96
+//  #06 //036   ----------------------------------------
+ BYTE   W96
+//  #06 //037   ----------------------------------------
+ BYTE   W96
+//  #06 //038   ----------------------------------------
+ BYTE   W96
+//  #06 //039   ----------------------------------------
+ BYTE   W96
+//  #06 //040   ----------------------------------------
+ BYTE   W96
+//  #06 //041   ----------------------------------------
+ BYTE   W96
+//  #06 //042   ----------------------------------------
+ BYTE   W96
+//  #06 //043   ----------------------------------------
+ BYTE   W96
+//  #06 //044   ----------------------------------------
+ BYTE   W96
+//  #06 //045   ----------------------------------------
+ BYTE   W96
+//  #06 //046   ----------------------------------------
+ BYTE   W96
+//  #06 //047   ----------------------------------------
+ BYTE   W96
+//  #06 //048   ----------------------------------------
+ BYTE   W96
+//  #06 //049   ----------------------------------------
+ BYTE   W96
+//  #06 //050   ----------------------------------------
+ BYTE   W96
+//  #06 //051   ----------------------------------------
+ BYTE   W96
+//  #06 //052   ----------------------------------------
+ BYTE   W96
+//  #06 //053   ----------------------------------------
+ BYTE   W96
+//  #06 //054   ----------------------------------------
+ BYTE   W96
+//  #06 //055   ----------------------------------------
+ BYTE   W96
+//  #06 //056   ----------------------------------------
+ BYTE   W96
+//  #06 //057   ----------------------------------------
+ BYTE   W96
+//  #06 //058   ----------------------------------------
+ BYTE   W96
+//  #06 //059   ----------------------------------------
+ BYTE   W96
+//  #06 //060   ----------------------------------------
+ BYTE   W96
+//  #06 //061   ----------------------------------------
+ BYTE   W96
+//  #06 //062   ----------------------------------------
+ BYTE   W96
+//  #06 //063   ----------------------------------------
+ BYTE   W96
+//  #06 //064   ----------------------------------------
+ BYTE   W96
+//  #06 //065   ----------------------------------------
+ BYTE   W96
+//  #06 //066   ----------------------------------------
+ BYTE   W96
+//  #06 //067   ----------------------------------------
+ BYTE   W96
+//  #06 //068   ----------------------------------------
+ BYTE   W96
+//  #06 //069   ----------------------------------------
+ BYTE   W96
+//  #06 //070   ----------------------------------------
+ BYTE   W96
+//  #06 //071   ----------------------------------------
+ BYTE   W96
+//  #06 //072   ----------------------------------------
+ BYTE   W96
+//  #06 //073   ----------------------------------------
+ BYTE   W96
+//  #06 //074   ----------------------------------------
+ BYTE   W96
+//  #06 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_F61EE4
+//  #06 //076   ----------------------------------------
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 7 (Midi-Chn.6) ****************//
+
+ToBecomeGodsEnemy_007:
+//  #07 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   28
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #07 //001   ----------------------------------------
+ BYTE   W96
+//  #07 //002   ----------------------------------------
+ BYTE   W96
+//  #07 //003   ----------------------------------------
+ BYTE   W96
+//  #07 //004   ----------------------------------------
+ BYTE   W96
+//  #07 //005   ----------------------------------------
+ BYTE   W96
+//  #07 //006   ----------------------------------------
+ BYTE   W96
+//  #07 //007   ----------------------------------------
+ BYTE   W96
+//  #07 //008   ----------------------------------------
+ BYTE   W96
+//  #07 //009   ----------------------------------------
+ BYTE   W96
+//  #07 //010   ----------------------------------------
+ BYTE   W96
+//  #07 //011   ----------------------------------------
+ BYTE   W96
+//  #07 //012   ----------------------------------------
+ BYTE   W96
+//  #07 //013   ----------------------------------------
+ BYTE   W96
+//  #07 //014   ----------------------------------------
+Label_01004C48:
+ BYTE   W96
+//  #07 //015   ----------------------------------------
+ BYTE   W96
+//  #07 //016   ----------------------------------------
+ BYTE   W96
+//  #07 //017   ----------------------------------------
+ BYTE   W96
+//  #07 //018   ----------------------------------------
+ BYTE   W96
+//  #07 //019   ----------------------------------------
+ BYTE   W96
+//  #07 //020   ----------------------------------------
+ BYTE   W96
+//  #07 //021   ----------------------------------------
+ BYTE   W96
+//  #07 //022   ----------------------------------------
+Label_01004C50:
+ BYTE   W06
+ BYTE   N09  En4  v100
+ BYTE   W09
+ BYTE   N06  An3
+ BYTE   W15
+ BYTE   N09  Dn4
+ BYTE   W09
+ BYTE   N06  An3
+ BYTE   W36
+ BYTE   W03
+ BYTE   N09  Dn4
+ BYTE   W12
+ BYTE   N06  An3
+ BYTE   W06
+ BYTE   PEND 
+//  #07 //023   ----------------------------------------
+Label_01004C66:
+ BYTE   W18
+ BYTE   N09  En4  v100
+ BYTE   W18
+ BYTE   N06  An3
+ BYTE   W09
+ BYTE   Gn3
+ BYTE   W09
+ BYTE   Fs3
+ BYTE   W42
+ BYTE   PEND 
+//  #07 //024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004C50
+//  #07 //025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004C66
+//  #07 //026   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004C50
+//  #07 //027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004C66
+//  #07 //028   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004C50
+//  #07 //029   ----------------------------------------
+ BYTE   W18
+ BYTE   N09  En4  v100
+ BYTE   W18
+ BYTE   N06  An3
+ BYTE   W09
+ BYTE   Gn3
+ BYTE   W09
+ BYTE   Fs3
+ BYTE   W06
+ BYTE   BEND   c_v+0
+ BYTE   W36
+//  #07 //030   ----------------------------------------
+ BYTE   W96
+//  #07 //031   ----------------------------------------
+ BYTE   W96
+//  #07 //032   ----------------------------------------
+ BYTE   W96
+//  #07 //033   ----------------------------------------
+ BYTE   W96
+//  #07 //034   ----------------------------------------
+ BYTE   W96
+//  #07 //035   ----------------------------------------
+ BYTE   W96
+//  #07 //036   ----------------------------------------
+ BYTE   W96
+//  #07 //037   ----------------------------------------
+ BYTE   W96
+//  #07 //038   ----------------------------------------
+ BYTE   W96
+//  #07 //039   ----------------------------------------
+ BYTE   W96
+//  #07 //040   ----------------------------------------
+ BYTE   W96
+//  #07 //041   ----------------------------------------
+ BYTE   W96
+//  #07 //042   ----------------------------------------
+ BYTE   W96
+//  #07 //043   ----------------------------------------
+ BYTE   W96
+//  #07 //044   ----------------------------------------
+ BYTE   W96
+//  #07 //045   ----------------------------------------
+ BYTE   W96
+//  #07 //046   ----------------------------------------
+ BYTE   W96
+//  #07 //047   ----------------------------------------
+ BYTE   W96
+//  #07 //048   ----------------------------------------
+ BYTE   W96
+//  #07 //049   ----------------------------------------
+ BYTE   W96
+//  #07 //050   ----------------------------------------
+ BYTE   W96
+//  #07 //051   ----------------------------------------
+ BYTE   W96
+//  #07 //052   ----------------------------------------
+ BYTE   W96
+//  #07 //053   ----------------------------------------
+ BYTE   W96
+//  #07 //054   ----------------------------------------
+ BYTE   W96
+//  #07 //055   ----------------------------------------
+ BYTE   W96
+//  #07 //056   ----------------------------------------
+ BYTE   W96
+//  #07 //057   ----------------------------------------
+ BYTE   W96
+//  #07 //058   ----------------------------------------
+ BYTE   W96
+//  #07 //059   ----------------------------------------
+ BYTE   W96
+//  #07 //060   ----------------------------------------
+ BYTE   W96
+//  #07 //061   ----------------------------------------
+ BYTE   W96
+//  #07 //062   ----------------------------------------
+ BYTE   W96
+//  #07 //063   ----------------------------------------
+ BYTE   W96
+//  #07 //064   ----------------------------------------
+ BYTE   W96
+//  #07 //065   ----------------------------------------
+ BYTE   W96
+//  #07 //066   ----------------------------------------
+ BYTE   W96
+//  #07 //067   ----------------------------------------
+ BYTE   W96
+//  #07 //068   ----------------------------------------
+ BYTE   W96
+//  #07 //069   ----------------------------------------
+ BYTE   W96
+//  #07 //070   ----------------------------------------
+ BYTE   W96
+//  #07 //071   ----------------------------------------
+ BYTE   W96
+//  #07 //072   ----------------------------------------
+ BYTE   W96
+//  #07 //073   ----------------------------------------
+ BYTE   W96
+//  #07 //074   ----------------------------------------
+ BYTE   W96
+//  #07 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_01004C48
+//  #07 //076   ----------------------------------------
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 8 (Midi-Chn.7) ****************//
+
+ToBecomeGodsEnemy_008:
+//  #08 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   4
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #08 //001   ----------------------------------------
+ BYTE   W96
+//  #08 //002   ----------------------------------------
+ BYTE   W96
+//  #08 //003   ----------------------------------------
+ BYTE   W96
+//  #08 //004   ----------------------------------------
+ BYTE   W96
+//  #08 //005   ----------------------------------------
+ BYTE   W96
+//  #08 //006   ----------------------------------------
+ BYTE   W96
+//  #08 //007   ----------------------------------------
+ BYTE   W96
+//  #08 //008   ----------------------------------------
+ BYTE   W96
+//  #08 //009   ----------------------------------------
+ BYTE   W96
+//  #08 //010   ----------------------------------------
+ BYTE   W96
+//  #08 //011   ----------------------------------------
+ BYTE   W96
+//  #08 //012   ----------------------------------------
+ BYTE   W96
+//  #08 //013   ----------------------------------------
+ BYTE   W96
+//  #08 //014   ----------------------------------------
+Label_01004D0C:
+ BYTE   W96
+//  #08 //015   ----------------------------------------
+ BYTE   W96
+//  #08 //016   ----------------------------------------
+ BYTE   W96
+//  #08 //017   ----------------------------------------
+ BYTE   W96
+//  #08 //018   ----------------------------------------
+ BYTE   W96
+//  #08 //019   ----------------------------------------
+ BYTE   W96
+//  #08 //020   ----------------------------------------
+ BYTE   W96
+//  #08 //021   ----------------------------------------
+ BYTE   W96
+//  #08 //022   ----------------------------------------
+ BYTE   W96
+//  #08 //023   ----------------------------------------
+ BYTE   W96
+//  #08 //024   ----------------------------------------
+ BYTE   W96
+//  #08 //025   ----------------------------------------
+ BYTE   W96
+//  #08 //026   ----------------------------------------
+ BYTE   W96
+//  #08 //027   ----------------------------------------
+ BYTE   W96
+//  #08 //028   ----------------------------------------
+ BYTE   W96
+//  #08 //029   ----------------------------------------
+ BYTE   W96
+//  #08 //030   ----------------------------------------
+Label_01004D1C:
+ BYTE   N06  Bn2  v100
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Fs2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Gn3
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Dn3
+ BYTE   N06  Gn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   N06  Gn3
+ BYTE   W06
+ BYTE   Cs3
+ BYTE   N06  Fs3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   PEND 
+//  #08 //031   ----------------------------------------
+Label_01004D4F:
+ BYTE   N06  Bn2  v100
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  An3
+ BYTE   W12
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  An3
+ BYTE   W12
+ BYTE   En3
+ BYTE   N06  An3
+ BYTE   W06
+ BYTE   Fs3
+ BYTE   N06  Bn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   N06  Gn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   N06  Gn3
+ BYTE   W06
+ BYTE   PEND 
+//  #08 //032   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D1C
+//  #08 //033   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D4F
+//  #08 //034   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D1C
+//  #08 //035   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D4F
+//  #08 //036   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D1C
+//  #08 //037   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D4F
+//  #08 //038   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D1C
+//  #08 //039   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D4F
+//  #08 //040   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D1C
+//  #08 //041   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D4F
+//  #08 //042   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D1C
+//  #08 //043   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D4F
+//  #08 //044   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D1C
+//  #08 //045   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004D4F
+//  #08 //046   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #08 //047   ----------------------------------------
+ BYTE   W96
+//  #08 //048   ----------------------------------------
+ BYTE   W96
+//  #08 //049   ----------------------------------------
+ BYTE   W96
+//  #08 //050   ----------------------------------------
+ BYTE   W96
+//  #08 //051   ----------------------------------------
+ BYTE   W96
+//  #08 //052   ----------------------------------------
+ BYTE   W96
+//  #08 //053   ----------------------------------------
+ BYTE   W96
+//  #08 //054   ----------------------------------------
+ BYTE   W96
+//  #08 //055   ----------------------------------------
+ BYTE   W96
+//  #08 //056   ----------------------------------------
+ BYTE   W96
+//  #08 //057   ----------------------------------------
+ BYTE   W96
+//  #08 //058   ----------------------------------------
+ BYTE   W96
+//  #08 //059   ----------------------------------------
+ BYTE   W96
+//  #08 //060   ----------------------------------------
+ BYTE   W96
+//  #08 //061   ----------------------------------------
+ BYTE   W96
+//  #08 //062   ----------------------------------------
+ BYTE   W96
+//  #08 //063   ----------------------------------------
+ BYTE   W96
+//  #08 //064   ----------------------------------------
+ BYTE   W96
+//  #08 //065   ----------------------------------------
+ BYTE   W96
+//  #08 //066   ----------------------------------------
+ BYTE   W96
+//  #08 //067   ----------------------------------------
+ BYTE   W96
+//  #08 //068   ----------------------------------------
+ BYTE   W96
+//  #08 //069   ----------------------------------------
+ BYTE   W96
+//  #08 //070   ----------------------------------------
+ BYTE   W96
+//  #08 //071   ----------------------------------------
+ BYTE   W96
+//  #08 //072   ----------------------------------------
+ BYTE   W96
+//  #08 //073   ----------------------------------------
+ BYTE   W96
+//  #08 //074   ----------------------------------------
+ BYTE   W96
+//  #08 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_01004D0C
+//  #08 //076   ----------------------------------------
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 9 (Midi-Chn.8) ****************//
+
+ToBecomeGodsEnemy_009:
+//  #09 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   4
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   35*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #09 //001   ----------------------------------------
+ BYTE   W96
+//  #09 //002   ----------------------------------------
+ BYTE   W96
+//  #09 //003   ----------------------------------------
+ BYTE   W96
+//  #09 //004   ----------------------------------------
+ BYTE   W96
+//  #09 //005   ----------------------------------------
+ BYTE   W96
+//  #09 //006   ----------------------------------------
+ BYTE   W96
+//  #09 //007   ----------------------------------------
+ BYTE   W96
+//  #09 //008   ----------------------------------------
+ BYTE   W96
+//  #09 //009   ----------------------------------------
+ BYTE   W96
+//  #09 //010   ----------------------------------------
+ BYTE   W96
+//  #09 //011   ----------------------------------------
+ BYTE   W96
+//  #09 //012   ----------------------------------------
+ BYTE   W96
+//  #09 //013   ----------------------------------------
+ BYTE   W96
+//  #09 //014   ----------------------------------------
+Label_01004E2C:
+ BYTE   W96
+//  #09 //015   ----------------------------------------
+ BYTE   W96
+//  #09 //016   ----------------------------------------
+ BYTE   W96
+//  #09 //017   ----------------------------------------
+ BYTE   W96
+//  #09 //018   ----------------------------------------
+ BYTE   W96
+//  #09 //019   ----------------------------------------
+ BYTE   W96
+//  #09 //020   ----------------------------------------
+ BYTE   W96
+//  #09 //021   ----------------------------------------
+ BYTE   W96
+//  #09 //022   ----------------------------------------
+ BYTE   W96
+//  #09 //023   ----------------------------------------
+ BYTE   W96
+//  #09 //024   ----------------------------------------
+ BYTE   W96
+//  #09 //025   ----------------------------------------
+ BYTE   W96
+//  #09 //026   ----------------------------------------
+ BYTE   W96
+//  #09 //027   ----------------------------------------
+ BYTE   W96
+//  #09 //028   ----------------------------------------
+ BYTE   W96
+//  #09 //029   ----------------------------------------
+ BYTE   W96
+//  #09 //030   ----------------------------------------
+Label_01004E3C:
+ BYTE   W06
+ BYTE   N06  Bn2  v100
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Fs2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Gn3
+ BYTE   W30
+ BYTE   Dn3
+ BYTE   N06  Gn3
+ BYTE   W18
+ BYTE   Cs3
+ BYTE   N06  Fs3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W12
+ BYTE   PEND 
+//  #09 //031   ----------------------------------------
+Label_01004E5C:
+ BYTE   N06  An2  v100
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  An3
+ BYTE   W30
+ BYTE   En3
+ BYTE   N06  An3
+ BYTE   W18
+ BYTE   Fs3
+ BYTE   N06  Bn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   N06  Gn3
+ BYTE   W12
+ BYTE   PEND 
+//  #09 //032   ----------------------------------------
+Label_01004E7F:
+ BYTE   N06  Dn3  v100
+ BYTE   N06  Gn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   Fs2
+ BYTE   N06  Bn2
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  Gn3
+ BYTE   W30
+ BYTE   Dn3
+ BYTE   N06  Gn3
+ BYTE   W18
+ BYTE   Cs3
+ BYTE   N06  Fs3
+ BYTE   W12
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W12
+ BYTE   PEND 
+//  #09 //033   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E5C
+//  #09 //034   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E3C
+//  #09 //035   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E5C
+//  #09 //036   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E7F
+//  #09 //037   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E5C
+//  #09 //038   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E3C
+//  #09 //039   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E5C
+//  #09 //040   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E7F
+//  #09 //041   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E5C
+//  #09 //042   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E3C
+//  #09 //043   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E5C
+//  #09 //044   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004E7F
+//  #09 //045   ----------------------------------------
+ BYTE   N06  An2  v100
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   An2
+ BYTE   N06  Dn3
+ BYTE   W06
+ BYTE   Bn2
+ BYTE   N06  En3
+ BYTE   W06
+ BYTE   N06
+ BYTE   N06  An3
+ BYTE   W30
+ BYTE   En3
+ BYTE   N06  An3
+ BYTE   W18
+ BYTE   Fs3
+ BYTE   N06  Bn3
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   N06  Gn3
+ BYTE   W06
+ BYTE   BEND   c_v+0
+ BYTE   W06
+//  #09 //046   ----------------------------------------
+ BYTE   W96
+//  #09 //047   ----------------------------------------
+ BYTE   W96
+//  #09 //048   ----------------------------------------
+ BYTE   W96
+//  #09 //049   ----------------------------------------
+ BYTE   W96
+//  #09 //050   ----------------------------------------
+ BYTE   W96
+//  #09 //051   ----------------------------------------
+ BYTE   W96
+//  #09 //052   ----------------------------------------
+ BYTE   W96
+//  #09 //053   ----------------------------------------
+ BYTE   W96
+//  #09 //054   ----------------------------------------
+ BYTE   W96
+//  #09 //055   ----------------------------------------
+ BYTE   W96
+//  #09 //056   ----------------------------------------
+ BYTE   W96
+//  #09 //057   ----------------------------------------
+ BYTE   W96
+//  #09 //058   ----------------------------------------
+ BYTE   W96
+//  #09 //059   ----------------------------------------
+ BYTE   W96
+//  #09 //060   ----------------------------------------
+ BYTE   W96
+//  #09 //061   ----------------------------------------
+ BYTE   W96
+//  #09 //062   ----------------------------------------
+ BYTE   W96
+//  #09 //063   ----------------------------------------
+ BYTE   W96
+//  #09 //064   ----------------------------------------
+ BYTE   W96
+//  #09 //065   ----------------------------------------
+ BYTE   W96
+//  #09 //066   ----------------------------------------
+ BYTE   W96
+//  #09 //067   ----------------------------------------
+ BYTE   W96
+//  #09 //068   ----------------------------------------
+ BYTE   W96
+//  #09 //069   ----------------------------------------
+ BYTE   W96
+//  #09 //070   ----------------------------------------
+ BYTE   W96
+//  #09 //071   ----------------------------------------
+ BYTE   W96
+//  #09 //072   ----------------------------------------
+ BYTE   W96
+//  #09 //073   ----------------------------------------
+ BYTE   W96
+//  #09 //074   ----------------------------------------
+ BYTE   W96
+//  #09 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_01004E2C
+//  #09 //076   ----------------------------------------
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 10 (Midi-Chn.9) ****************//
+
+ToBecomeGodsEnemy_010:
+//  #10 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   30
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #10 //001   ----------------------------------------
+ BYTE   W96
+//  #10 //002   ----------------------------------------
+ BYTE   W96
+//  #10 //003   ----------------------------------------
+ BYTE   W96
+//  #10 //004   ----------------------------------------
+ BYTE   W96
+//  #10 //005   ----------------------------------------
+ BYTE   W96
+//  #10 //006   ----------------------------------------
+ BYTE   W96
+//  #10 //007   ----------------------------------------
+ BYTE   W96
+//  #10 //008   ----------------------------------------
+ BYTE   W96
+//  #10 //009   ----------------------------------------
+ BYTE   W96
+//  #10 //010   ----------------------------------------
+ BYTE   W96
+//  #10 //011   ----------------------------------------
+ BYTE   W96
+//  #10 //012   ----------------------------------------
+ BYTE   W96
+//  #10 //013   ----------------------------------------
+ BYTE   W96
+//  #10 //014   ----------------------------------------
+Label_01004F64:
+ BYTE   W96
+//  #10 //015   ----------------------------------------
+ BYTE   W96
+//  #10 //016   ----------------------------------------
+ BYTE   W96
+//  #10 //017   ----------------------------------------
+ BYTE   W96
+//  #10 //018   ----------------------------------------
+ BYTE   W96
+//  #10 //019   ----------------------------------------
+ BYTE   W96
+//  #10 //020   ----------------------------------------
+ BYTE   W96
+//  #10 //021   ----------------------------------------
+ BYTE   W96
+//  #10 //022   ----------------------------------------
+ BYTE   W96
+//  #10 //023   ----------------------------------------
+ BYTE   W96
+//  #10 //024   ----------------------------------------
+ BYTE   W96
+//  #10 //025   ----------------------------------------
+ BYTE   W96
+//  #10 //026   ----------------------------------------
+ BYTE   W96
+//  #10 //027   ----------------------------------------
+ BYTE   W96
+//  #10 //028   ----------------------------------------
+ BYTE   W96
+//  #10 //029   ----------------------------------------
+ BYTE   W96
+//  #10 //030   ----------------------------------------
+Label_01004F74:
+ BYTE   N06  En2  v127
+ BYTE   W06
+ BYTE   Bn1
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   N18  Gn2
+ BYTE   W18
+ BYTE   N12  En2
+ BYTE   W12
+ BYTE   N18  Gn2
+ BYTE   W18
+ BYTE   Fs2
+ BYTE   W18
+ BYTE   N12  Dn2
+ BYTE   W12
+ BYTE   PEND 
+//  #10 //031   ----------------------------------------
+Label_01004F8B:
+ BYTE   N06  En2  v127
+ BYTE   W06
+ BYTE   Dn2
+ BYTE   W06
+ BYTE   En2
+ BYTE   W06
+ BYTE   N18  An2
+ BYTE   W18
+ BYTE   N12  En2
+ BYTE   W12
+ BYTE   N18  An2
+ BYTE   W18
+ BYTE   Bn2
+ BYTE   W18
+ BYTE   N12  Gn2
+ BYTE   W12
+ BYTE   PEND 
+//  #10 //032   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F74
+//  #10 //033   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F8B
+//  #10 //034   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F74
+//  #10 //035   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F8B
+//  #10 //036   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F74
+//  #10 //037   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F8B
+//  #10 //038   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F74
+//  #10 //039   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F8B
+//  #10 //040   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F74
+//  #10 //041   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F8B
+//  #10 //042   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F74
+//  #10 //043   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F8B
+//  #10 //044   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F74
+//  #10 //045   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004F8B
+//  #10 //046   ----------------------------------------
+Label_01004FE8:
+ BYTE   N12  Fn1  v112
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   N24  Fn1
+ BYTE   W24
+ BYTE   N18  Gs1
+ BYTE   W18
+ BYTE   Gn1
+ BYTE   W18
+ BYTE   N12  Ds1
+ BYTE   W12
+ BYTE   PEND 
+//  #10 //047   ----------------------------------------
+ BYTE   Fn1
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   N24  Fn1
+ BYTE   W24
+ BYTE   N06  Gs1
+ BYTE   W06
+ BYTE   N12  Fn1
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   N18  Gs1
+ BYTE   W18
+//  #10 //048   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004FE8
+//  #10 //049   ----------------------------------------
+ BYTE   N12  Fn1  v112
+ BYTE   W12
+ BYTE   N18  Gs1
+ BYTE   W18
+ BYTE   As1
+ BYTE   W18
+ BYTE   Cn2
+ BYTE   W18
+ BYTE   Ds2
+ BYTE   W18
+ BYTE   N12  Fn2
+ BYTE   W12
+//  #10 //050   ----------------------------------------
+Label_01005021:
+ BYTE   N18  En2  v112
+ BYTE   W18
+ BYTE   Bn1
+ BYTE   W18
+ BYTE   Cn2
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   W18
+ BYTE   N12  An1
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   W12
+ BYTE   PEND 
+//  #10 //051   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005021
+//  #10 //052   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005021
+//  #10 //053   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005021
+//  #10 //054   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005021
+//  #10 //055   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005021
+//  #10 //056   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005021
+//  #10 //057   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005021
+//  #10 //058   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #10 //059   ----------------------------------------
+ BYTE   W96
+//  #10 //060   ----------------------------------------
+ BYTE   W96
+//  #10 //061   ----------------------------------------
+ BYTE   W96
+//  #10 //062   ----------------------------------------
+ BYTE   W96
+//  #10 //063   ----------------------------------------
+ BYTE   W96
+//  #10 //064   ----------------------------------------
+ BYTE   W96
+//  #10 //065   ----------------------------------------
+ BYTE   W96
+//  #10 //066   ----------------------------------------
+ BYTE   W96
+//  #10 //067   ----------------------------------------
+ BYTE   W96
+//  #10 //068   ----------------------------------------
+ BYTE   W96
+//  #10 //069   ----------------------------------------
+ BYTE   W96
+//  #10 //070   ----------------------------------------
+ BYTE   W96
+//  #10 //071   ----------------------------------------
+ BYTE   W96
+//  #10 //072   ----------------------------------------
+ BYTE   W96
+//  #10 //073   ----------------------------------------
+ BYTE   W96
+//  #10 //074   ----------------------------------------
+ BYTE   W96
+//  #10 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_01004F64
+//  #10 //076   ----------------------------------------
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 11 (Midi-Chn.10) ****************//
+
+ToBecomeGodsEnemy_011:
+//  #11 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   40
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #11 //001   ----------------------------------------
+ BYTE   W96
+//  #11 //002   ----------------------------------------
+ BYTE   W96
+//  #11 //003   ----------------------------------------
+ BYTE   W96
+//  #11 //004   ----------------------------------------
+ BYTE   W96
+//  #11 //005   ----------------------------------------
+ BYTE   W96
+//  #11 //006   ----------------------------------------
+ BYTE   W96
+//  #11 //007   ----------------------------------------
+ BYTE   W96
+//  #11 //008   ----------------------------------------
+ BYTE   W96
+//  #11 //009   ----------------------------------------
+ BYTE   W96
+//  #11 //010   ----------------------------------------
+ BYTE   W96
+//  #11 //011   ----------------------------------------
+ BYTE   W96
+//  #11 //012   ----------------------------------------
+ BYTE   W96
+//  #11 //013   ----------------------------------------
+ BYTE   W96
+//  #11 //014   ----------------------------------------
+Label_010050AC:
+ BYTE   W96
+//  #11 //015   ----------------------------------------
+ BYTE   W96
+//  #11 //016   ----------------------------------------
+ BYTE   W96
+//  #11 //017   ----------------------------------------
+ BYTE   W96
+//  #11 //018   ----------------------------------------
+ BYTE   W96
+//  #11 //019   ----------------------------------------
+ BYTE   W96
+//  #11 //020   ----------------------------------------
+ BYTE   W96
+//  #11 //021   ----------------------------------------
+ BYTE   W96
+//  #11 //022   ----------------------------------------
+ BYTE   W96
+//  #11 //023   ----------------------------------------
+ BYTE   W96
+//  #11 //024   ----------------------------------------
+ BYTE   W96
+//  #11 //025   ----------------------------------------
+ BYTE   W96
+//  #11 //026   ----------------------------------------
+ BYTE   W96
+//  #11 //027   ----------------------------------------
+ BYTE   W96
+//  #11 //028   ----------------------------------------
+ BYTE   W96
+//  #11 //029   ----------------------------------------
+ BYTE   W96
+//  #11 //030   ----------------------------------------
+ BYTE   W96
+//  #11 //031   ----------------------------------------
+ BYTE   W96
+//  #11 //032   ----------------------------------------
+ BYTE   W96
+//  #11 //033   ----------------------------------------
+ BYTE   W96
+//  #11 //034   ----------------------------------------
+ BYTE   W96
+//  #11 //035   ----------------------------------------
+ BYTE   W96
+//  #11 //036   ----------------------------------------
+ BYTE   W96
+//  #11 //037   ----------------------------------------
+ BYTE   W96
+//  #11 //038   ----------------------------------------
+ BYTE   W96
+//  #11 //039   ----------------------------------------
+ BYTE   W96
+//  #11 //040   ----------------------------------------
+ BYTE   W96
+//  #11 //041   ----------------------------------------
+ BYTE   W96
+//  #11 //042   ----------------------------------------
+ BYTE   W96
+//  #11 //043   ----------------------------------------
+ BYTE   W96
+//  #11 //044   ----------------------------------------
+ BYTE   W96
+//  #11 //045   ----------------------------------------
+ BYTE   W96
+//  #11 //046   ----------------------------------------
+ BYTE   N96  As3  v112
+ BYTE   W96
+//  #11 //047   ----------------------------------------
+ BYTE   Gn3
+ BYTE   W96
+//  #11 //048   ----------------------------------------
+ BYTE   Fn3
+ BYTE   W96
+//  #11 //049   ----------------------------------------
+ BYTE   Ds3
+ BYTE   W96
+//  #11 //050   ----------------------------------------
+Label_010050D6:
+ BYTE   N18  En1  v112
+ BYTE   N18  En2
+ BYTE   W18
+ BYTE   Bn0
+ BYTE   N18  Bn1
+ BYTE   W18
+ BYTE   Cn1
+ BYTE   N18  Cn2
+ BYTE   W18
+ BYTE   Gn1
+ BYTE   N18  Gn2
+ BYTE   W18
+ BYTE   N12  An0
+ BYTE   N12  An1
+ BYTE   W12
+ BYTE   Fn1
+ BYTE   N12  Fn2
+ BYTE   W12
+ BYTE   PEND 
+//  #11 //051   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010050D6
+//  #11 //052   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010050D6
+//  #11 //053   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010050D6
+//  #11 //054   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010050D6
+//  #11 //055   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010050D6
+//  #11 //056   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010050D6
+//  #11 //057   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010050D6
+//  #11 //058   ----------------------------------------
+Label_01005115:
+ BYTE   N12  Dn3  v112
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   PEND 
+//  #11 //059   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005115
+//  #11 //060   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005115
+//  #11 //061   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005115
+//  #11 //062   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005115
+//  #11 //063   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005115
+//  #11 //064   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005115
+//  #11 //065   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005115
+//  #11 //066   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #11 //067   ----------------------------------------
+ BYTE   W96
+//  #11 //068   ----------------------------------------
+ BYTE   W96
+//  #11 //069   ----------------------------------------
+ BYTE   W96
+//  #11 //070   ----------------------------------------
+ BYTE   W96
+//  #11 //071   ----------------------------------------
+ BYTE   W96
+//  #11 //072   ----------------------------------------
+ BYTE   W96
+//  #11 //073   ----------------------------------------
+ BYTE   W96
+//  #11 //074   ----------------------------------------
+ BYTE   W96
+//  #11 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_010050AC
+//  #11 //076   ----------------------------------------
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 12 (Midi-Chn.11) ****************//
+
+ToBecomeGodsEnemy_012:
+//  #12 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   40
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   41*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #12 //001   ----------------------------------------
+ BYTE   W96
+//  #12 //002   ----------------------------------------
+ BYTE   W96
+//  #12 //003   ----------------------------------------
+ BYTE   W96
+//  #12 //004   ----------------------------------------
+ BYTE   W96
+//  #12 //005   ----------------------------------------
+ BYTE   W96
+//  #12 //006   ----------------------------------------
+ BYTE   W96
+//  #12 //007   ----------------------------------------
+ BYTE   W96
+//  #12 //008   ----------------------------------------
+ BYTE   W96
+//  #12 //009   ----------------------------------------
+ BYTE   W96
+//  #12 //010   ----------------------------------------
+ BYTE   W96
+//  #12 //011   ----------------------------------------
+ BYTE   W96
+//  #12 //012   ----------------------------------------
+ BYTE   W96
+//  #12 //013   ----------------------------------------
+ BYTE   W96
+//  #12 //014   ----------------------------------------
+Label_0100519C:
+ BYTE   W96
+//  #12 //015   ----------------------------------------
+ BYTE   W96
+//  #12 //016   ----------------------------------------
+ BYTE   W96
+//  #12 //017   ----------------------------------------
+ BYTE   W96
+//  #12 //018   ----------------------------------------
+ BYTE   W96
+//  #12 //019   ----------------------------------------
+ BYTE   W96
+//  #12 //020   ----------------------------------------
+ BYTE   W96
+//  #12 //021   ----------------------------------------
+ BYTE   W96
+//  #12 //022   ----------------------------------------
+ BYTE   W96
+//  #12 //023   ----------------------------------------
+ BYTE   W96
+//  #12 //024   ----------------------------------------
+ BYTE   W96
+//  #12 //025   ----------------------------------------
+ BYTE   W96
+//  #12 //026   ----------------------------------------
+ BYTE   W96
+//  #12 //027   ----------------------------------------
+ BYTE   W96
+//  #12 //028   ----------------------------------------
+ BYTE   W96
+//  #12 //029   ----------------------------------------
+ BYTE   W96
+//  #12 //030   ----------------------------------------
+ BYTE   W96
+//  #12 //031   ----------------------------------------
+ BYTE   W96
+//  #12 //032   ----------------------------------------
+ BYTE   W96
+//  #12 //033   ----------------------------------------
+ BYTE   W96
+//  #12 //034   ----------------------------------------
+ BYTE   W96
+//  #12 //035   ----------------------------------------
+ BYTE   W96
+//  #12 //036   ----------------------------------------
+ BYTE   W96
+//  #12 //037   ----------------------------------------
+ BYTE   W96
+//  #12 //038   ----------------------------------------
+ BYTE   W96
+//  #12 //039   ----------------------------------------
+ BYTE   W96
+//  #12 //040   ----------------------------------------
+ BYTE   W96
+//  #12 //041   ----------------------------------------
+ BYTE   W96
+//  #12 //042   ----------------------------------------
+ BYTE   W96
+//  #12 //043   ----------------------------------------
+ BYTE   W96
+//  #12 //044   ----------------------------------------
+ BYTE   W96
+//  #12 //045   ----------------------------------------
+ BYTE   W96
+//  #12 //046   ----------------------------------------
+ BYTE   N96  As3  v127
+ BYTE   W96
+//  #12 //047   ----------------------------------------
+ BYTE   Gn3
+ BYTE   W96
+//  #12 //048   ----------------------------------------
+ BYTE   Fn3
+ BYTE   W96
+//  #12 //049   ----------------------------------------
+ BYTE   Ds3
+ BYTE   W96
+//  #12 //050   ----------------------------------------
+Label_010051C6:
+ BYTE   N18  En2  v112
+ BYTE   N18  En3
+ BYTE   W18
+ BYTE   Bn1
+ BYTE   N18  Bn2
+ BYTE   W18
+ BYTE   Cn2
+ BYTE   N18  Cn3
+ BYTE   W18
+ BYTE   Gn2
+ BYTE   N18  Gn3
+ BYTE   W18
+ BYTE   N12  An1
+ BYTE   N12  An2
+ BYTE   W12
+ BYTE   Fn2
+ BYTE   N12  Fn3
+ BYTE   W12
+ BYTE   PEND 
+//  #12 //051   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010051C6
+//  #12 //052   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010051C6
+//  #12 //053   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010051C6
+//  #12 //054   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010051C6
+//  #12 //055   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010051C6
+//  #12 //056   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010051C6
+//  #12 //057   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010051C6
+//  #12 //058   ----------------------------------------
+Label_01005205:
+ BYTE   N12  Dn3  v112
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W12
+ BYTE   As2
+ BYTE   W12
+ BYTE   PEND 
+//  #12 //059   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005205
+//  #12 //060   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005205
+//  #12 //061   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005205
+//  #12 //062   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005205
+//  #12 //063   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005205
+//  #12 //064   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005205
+//  #12 //065   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005205
+//  #12 //066   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #12 //067   ----------------------------------------
+ BYTE   W96
+//  #12 //068   ----------------------------------------
+ BYTE   W96
+//  #12 //069   ----------------------------------------
+ BYTE   W96
+//  #12 //070   ----------------------------------------
+ BYTE   W96
+//  #12 //071   ----------------------------------------
+ BYTE   W96
+//  #12 //072   ----------------------------------------
+ BYTE   W96
+//  #12 //073   ----------------------------------------
+ BYTE   W96
+//  #12 //074   ----------------------------------------
+ BYTE   W96
+//  #12 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0100519C
+//  #12 //076   ----------------------------------------
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 13 (Midi-Chn.12) ****************//
+
+ToBecomeGodsEnemy_013:
+//  #13 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   18
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   50*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #13 //001   ----------------------------------------
+ BYTE   W96
+//  #13 //002   ----------------------------------------
+ BYTE   W96
+//  #13 //003   ----------------------------------------
+ BYTE   W96
+//  #13 //004   ----------------------------------------
+ BYTE   W96
+//  #13 //005   ----------------------------------------
+ BYTE   W96
+//  #13 //006   ----------------------------------------
+ BYTE   W96
+//  #13 //007   ----------------------------------------
+ BYTE   W96
+//  #13 //008   ----------------------------------------
+ BYTE   W96
+//  #13 //009   ----------------------------------------
+ BYTE   W96
+//  #13 //010   ----------------------------------------
+ BYTE   W96
+//  #13 //011   ----------------------------------------
+ BYTE   W96
+//  #13 //012   ----------------------------------------
+ BYTE   W96
+//  #13 //013   ----------------------------------------
+ BYTE   W96
+//  #13 //014   ----------------------------------------
+Label_0100528C:
+ BYTE   W96
+//  #13 //015   ----------------------------------------
+ BYTE   W96
+//  #13 //016   ----------------------------------------
+ BYTE   W96
+//  #13 //017   ----------------------------------------
+ BYTE   W96
+//  #13 //018   ----------------------------------------
+ BYTE   W96
+//  #13 //019   ----------------------------------------
+ BYTE   W96
+//  #13 //020   ----------------------------------------
+ BYTE   W96
+//  #13 //021   ----------------------------------------
+ BYTE   W96
+//  #13 //022   ----------------------------------------
+ BYTE   W96
+//  #13 //023   ----------------------------------------
+ BYTE   W96
+//  #13 //024   ----------------------------------------
+ BYTE   W96
+//  #13 //025   ----------------------------------------
+ BYTE   W96
+//  #13 //026   ----------------------------------------
+ BYTE   W96
+//  #13 //027   ----------------------------------------
+ BYTE   W96
+//  #13 //028   ----------------------------------------
+ BYTE   W96
+//  #13 //029   ----------------------------------------
+ BYTE   W96
+//  #13 //030   ----------------------------------------
+ BYTE   W96
+//  #13 //031   ----------------------------------------
+ BYTE   W96
+//  #13 //032   ----------------------------------------
+ BYTE   W96
+//  #13 //033   ----------------------------------------
+ BYTE   W96
+//  #13 //034   ----------------------------------------
+ BYTE   W96
+//  #13 //035   ----------------------------------------
+ BYTE   W96
+//  #13 //036   ----------------------------------------
+ BYTE   W96
+//  #13 //037   ----------------------------------------
+ BYTE   W96
+//  #13 //038   ----------------------------------------
+ BYTE   W96
+//  #13 //039   ----------------------------------------
+ BYTE   W96
+//  #13 //040   ----------------------------------------
+ BYTE   W96
+//  #13 //041   ----------------------------------------
+ BYTE   W96
+//  #13 //042   ----------------------------------------
+ BYTE   W96
+//  #13 //043   ----------------------------------------
+ BYTE   W96
+//  #13 //044   ----------------------------------------
+ BYTE   W96
+//  #13 //045   ----------------------------------------
+ BYTE   W96
+//  #13 //046   ----------------------------------------
+ BYTE   W96
+//  #13 //047   ----------------------------------------
+ BYTE   W96
+//  #13 //048   ----------------------------------------
+ BYTE   W96
+//  #13 //049   ----------------------------------------
+ BYTE   W96
+//  #13 //050   ----------------------------------------
+Label_010052B0:
+ BYTE   N96  Fs4  v127
+ BYTE   N96  As4
+ BYTE   N96  Cs5
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+0
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+1
+ BYTE   W02
+ BYTE   BEND   c_v+1
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W02
+ BYTE   BEND   c_v+2
+ BYTE   W01
+ BYTE   BEND   c_v+2
+ BYTE   W02
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W01
+ BYTE   BEND   c_v+3
+ BYTE   W02
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+4
+ BYTE   W02
+ BYTE   BEND   c_v+4
+ BYTE   W01
+ BYTE   BEND   c_v+5
+ BYTE   W02
+ BYTE   BEND   c_v+5
+ BYTE   W72
+ BYTE   W01
+ BYTE   PEND 
+//  #13 //051   ----------------------------------------
+Label_010052DB:
+ BYTE   BEND   c_v+0
+ BYTE   N96  Gn4  v127
+ BYTE   N96  Bn4
+ BYTE   N96  Dn5
+ BYTE   W96
+ BYTE   PEND 
+//  #13 //052   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010052B0
+//  #13 //053   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010052DB
+//  #13 //054   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010052B0
+//  #13 //055   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010052DB
+//  #13 //056   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010052B0
+//  #13 //057   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010052DB
+//  #13 //058   ----------------------------------------
+ BYTE   W96
+//  #13 //059   ----------------------------------------
+ BYTE   W96
+//  #13 //060   ----------------------------------------
+ BYTE   W96
+//  #13 //061   ----------------------------------------
+ BYTE   W96
+//  #13 //062   ----------------------------------------
+ BYTE   W96
+//  #13 //063   ----------------------------------------
+ BYTE   W96
+//  #13 //064   ----------------------------------------
+ BYTE   W96
+//  #13 //065   ----------------------------------------
+ BYTE   W96
+//  #13 //066   ----------------------------------------
+ BYTE   W96
+//  #13 //067   ----------------------------------------
+ BYTE   W96
+//  #13 //068   ----------------------------------------
+ BYTE   W96
+//  #13 //069   ----------------------------------------
+ BYTE   W96
+//  #13 //070   ----------------------------------------
+ BYTE   W96
+//  #13 //071   ----------------------------------------
+ BYTE   W96
+//  #13 //072   ----------------------------------------
+ BYTE   W96
+//  #13 //073   ----------------------------------------
+ BYTE   W96
+//  #13 //074   ----------------------------------------
+ BYTE   W96
+//  #13 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_0100528C
+//  #13 //076   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   W96
+ BYTE   FINE
+
+//**************** Track 14 (Midi-Chn.13) ****************//
+
+ToBecomeGodsEnemy_014:
+//  #14 //000   ----------------------------------------
+ BYTE   KEYSH   ToBecomeGodsEnemy_key+0
+ BYTE   VOICE   124
+ BYTE   PAN   c_v+0
+ BYTE   VOL   44*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   44*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   44*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   44*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   44*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   VOL   44*ToBecomeGodsEnemy_mvl/mxv
+ BYTE   BEND   c_v+0
+ BYTE   W96
+//  #14 //001   ----------------------------------------
+ BYTE   W96
+//  #14 //002   ----------------------------------------
+ BYTE   W96
+//  #14 //003   ----------------------------------------
+ BYTE   W96
+//  #14 //004   ----------------------------------------
+ BYTE   W96
+//  #14 //005   ----------------------------------------
+ BYTE   W96
+//  #14 //006   ----------------------------------------
+Label_01005354:
+ BYTE   N12  Cn1  v100
+ BYTE   W24
+ BYTE   En1
+ BYTE   W24
+ BYTE   Cn1
+ BYTE   W24
+ BYTE   En1
+ BYTE   W24
+ BYTE   PEND 
+//  #14 //007   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005354
+//  #14 //008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005354
+//  #14 //009   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005354
+//  #14 //010   ----------------------------------------
+Label_0100536E:
+ BYTE   N12  Cn1  v100
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   PEND 
+//  #14 //011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //014   ----------------------------------------
+Label_01005390:
+ BYTE   N12  Cn1  v100
+ BYTE   W12
+ BYTE   As1
+ BYTE   W12
+ BYTE   En1
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  As1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  As1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+//  #14 //015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005390
+//  #14 //016   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005390
+//  #14 //017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005390
+//  #14 //018   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005390
+//  #14 //019   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //020   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //021   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005390
+//  #14 //022   ----------------------------------------
+Label_010053D7:
+ BYTE   N12  Cn1  v100
+ BYTE   W12
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   N06  Fs1
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   En1
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+//  #14 //023   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010053D7
+//  #14 //024   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010053D7
+//  #14 //025   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010053D7
+//  #14 //026   ----------------------------------------
+Label_01005403:
+ BYTE   N12  Cn1  v100
+ BYTE   N12  Fs1
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   En1
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  Cn1
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  En1
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   PEND 
+//  #14 //027   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005403
+//  #14 //028   ----------------------------------------
+ BYTE   N12  Cn1  v100
+ BYTE   N12  Fs1
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   En1
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N12  Cn1
+ BYTE   N12  Fs1
+ BYTE   W12
+ BYTE   N12
+ BYTE   W12
+ BYTE   En1
+ BYTE   N06  Fs1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+//  #14 //029   ----------------------------------------
+ BYTE   N12  Cn1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   Fs1
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   W06
+ BYTE   N06
+ BYTE   W06
+ BYTE   En1
+ BYTE   W12
+//  #14 //030   ----------------------------------------
+Label_01005468:
+ BYTE   N06  Cn1  v100
+ BYTE   W12
+ BYTE   En1
+ BYTE   W18
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W18
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W12
+ BYTE   PEND 
+//  #14 //031   ----------------------------------------
+Label_0100547B:
+ BYTE   N06  Cn1  v100
+ BYTE   W12
+ BYTE   En1
+ BYTE   W18
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W06
+ BYTE   N12  Fs2
+ BYTE   W12
+ BYTE   N06  Cn1
+ BYTE   N12  Fs2
+ BYTE   W06
+ BYTE   N06  En1
+ BYTE   W12
+ BYTE   PEND 
+//  #14 //032   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005468
+//  #14 //033   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100547B
+//  #14 //034   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005468
+//  #14 //035   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100547B
+//  #14 //036   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005468
+//  #14 //037   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100547B
+//  #14 //038   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005468
+//  #14 //039   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100547B
+//  #14 //040   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005468
+//  #14 //041   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100547B
+//  #14 //042   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005468
+//  #14 //043   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100547B
+//  #14 //044   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005468
+//  #14 //045   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100547B
+//  #14 //046   ----------------------------------------
+Label_010054DB:
+ BYTE   N06  Cn1  v100
+ BYTE   N06  Fs1  v112
+ BYTE   W06
+ BYTE   N03
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  En1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   N03  Fs1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  As1
+ BYTE   W06
+ BYTE   Cn1  v100
+ BYTE   N03  Fs1  v112
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  En1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   N03  Fs1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  Cn1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   N03  Fs1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  En1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   N03  Fs1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  As1
+ BYTE   W06
+ BYTE   Cn1  v100
+ BYTE   N03  Fs1  v112
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  En1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   Fs1
+ BYTE   W06
+ BYTE   PEND 
+//  #14 //047   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010054DB
+//  #14 //048   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010054DB
+//  #14 //049   ----------------------------------------
+ BYTE   N06  Cn1  v100
+ BYTE   N06  Fs1  v112
+ BYTE   W06
+ BYTE   N03
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  En1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   N03  Fs1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  As1
+ BYTE   W06
+ BYTE   Cn1  v100
+ BYTE   N03  Fs1  v112
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  En1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   N03  Fs1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  Cn1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   N03  Fs1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W03
+ BYTE   N06  En1  v100
+ BYTE   N06  As1  v112
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   N03  Fs1
+ BYTE   W03
+ BYTE   N03
+ BYTE   W09
+ BYTE   N06  En1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W06
+ BYTE   En1
+ BYTE   W06
+//  #14 //050   ----------------------------------------
+Label_0100558E:
+ BYTE   N06  Cn1  v112
+ BYTE   W12
+ BYTE   En1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   En1
+ BYTE   W12
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   En1
+ BYTE   W06
+ BYTE   Cn1
+ BYTE   W12
+ BYTE   N06
+ BYTE   W06
+ BYTE   En1
+ BYTE   W12
+ BYTE   PEND 
+//  #14 //051   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100558E
+//  #14 //052   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100558E
+//  #14 //053   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100558E
+//  #14 //054   ----------------------------------------
+Label_010055B4:
+ BYTE   N12  Cn1  v100
+ BYTE   W12
+ BYTE   N06  As1  v112
+ BYTE   W12
+ BYTE   N12  En1  v100
+ BYTE   W12
+ BYTE   N06  As1  v112
+ BYTE   W12
+ BYTE   N12  Cn1  v100
+ BYTE   W24
+ BYTE   En1
+ BYTE   W12
+ BYTE   N06  As1  v112
+ BYTE   W12
+ BYTE   PEND 
+//  #14 //055   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010055B4
+//  #14 //056   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010055B4
+//  #14 //057   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_010055B4
+//  #14 //058   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //059   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //060   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //061   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //062   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //063   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //064   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //065   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //066   ----------------------------------------
+ BYTE   W96
+//  #14 //067   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005354
+//  #14 //068   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005354
+//  #14 //069   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005354
+//  #14 //070   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005354
+//  #14 //071   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //072   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //073   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //074   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_0100536E
+//  #14 //075   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_01005390
+//  #14 //076   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005390
+//  #14 //077   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+ToBecomeGodsEnemy:
+	BYTE	14	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	ToBecomeGodsEnemy_pri	// Priority
+	BYTE	ToBecomeGodsEnemy_rev	// Reverb.
+    
+	POIN2	ToBecomeGodsEnemy_grp
+    
+	POIN2	ToBecomeGodsEnemy_001
+	POIN2	ToBecomeGodsEnemy_002
+	POIN2	ToBecomeGodsEnemy_003
+	POIN2	ToBecomeGodsEnemy_004
+	POIN2	ToBecomeGodsEnemy_005
+	POIN2	ToBecomeGodsEnemy_006
+	POIN2	ToBecomeGodsEnemy_007
+	POIN2	ToBecomeGodsEnemy_008
+	POIN2	ToBecomeGodsEnemy_009
+	POIN2	ToBecomeGodsEnemy_010
+	POIN2	ToBecomeGodsEnemy_011
+	POIN2	ToBecomeGodsEnemy_012
+	POIN2	ToBecomeGodsEnemy_013
+	POIN2	ToBecomeGodsEnemy_014
+
+	

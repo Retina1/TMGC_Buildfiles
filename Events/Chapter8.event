@@ -21,6 +21,9 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C8Turn7,7)
+TurnEventPlayer(0x10,C8TorchTrapA,1,255)
+TurnEventPlayer(0x11,C8TorchTrapB,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -47,9 +50,9 @@ END_MAIN
 TrapData:
 TelliusTorchOff(0,4,8)
 TelliusTorchOff(6,4,8)
-TelliusTorchOff(2,14,6)
-TelliusTorchOff(9,16,6)
-TelliusTorchOff(17,18,6)
+TelliusTorchOff(2,14,8)
+TelliusTorchOff(9,16,8)
+TelliusTorchOff(17,18,8)
 ENDTRAP
 
 ALIGN 4
@@ -67,6 +70,8 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,23] 0x0 0x0 0x0 0x0 [IronSword, Heal
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT
 
 C8Easy:
@@ -81,18 +86,50 @@ C8Hard:
 UNIT Loile LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Loile AxeArm 0x0 Level(8,Enemy,1) [9,18] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Loile LncArm 0x0 Level(8,Enemy,1) [10,18] DropItem 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Loile Fighter 0x0 Level(8,Enemy,1) [3,4] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
+UNIT Loile PirateF 0x0 Level(9,Enemy,1) [15,18] 0x0 0x0 0x0 0x0 [KillerAxe] NoAI
+UNIT Loile Pirate 0x0 Level(8,Enemy,1) [15,19] 0x0 0x0 0x0 0x0 [Hammer] NoAI
+UNIT Loile Merc 0x0 Level(8,Enemy,1) [5,15] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Loile Pirate 0x0 Level(8,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Loile Merc 0x0 Level(9,Enemy,1) [5,17] DropItem 0x0 0x0 0x0 [SteelSword,IronSword] NoAI
+UNIT Loile Myrm 0x0 Level(12,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [LightBrand] ChaseOnceApproachedAI
+UNIT Loile Pirate 0x0 Level(8,Enemy,1) [2,13] 0x0 0x0 0x0 0x0 [IronAxe] GroupOneAI
+UNIT Loile ArcherF 0x0 Level(9,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
+UNIT Loile Merc 0x0 Level(8,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
+UNIT Loile SoldierF 0x0 Level(8,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [SteelLance] GroupOneAI
+UNIT Loile Archer 0x0 Level(8,Enemy,1) [1,8] 0x0 0x0 0x0 0x0 [ShiningBow] GroupTwoAI
+UNIT Loile Brigand 0x0 Level(9,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [SteelAxe,Vulnerary] GroupTwoAI
+UNIT Loile Archer 0x0 Level(9,Enemy,1) [5,8] 0x0 0x0 0x0 0x0 [IronBow] GroupTwoAI
+UNIT Loile Merc 0x0 Level(8,Enemy,1) [20,17] 0x0 0x0 0x0 0x0 [SteelSword] GroupThreeAI
+UNIT Loile MercF 0x0 Level(8,Enemy,1) [20,20] 0x0 0x0 0x0 0x0 [SteelSword] GroupThreeAI
+UNIT Loile Pirate 0x0 Level(8,Enemy,1) [3,4] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
 UNIT Loile Fighter 0x0 Level(8,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
 UNIT Loile Fighter 0x0 Level(8,Enemy,1) [2,3] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
-UNIT Esme WyvLord 0x0 Level(2,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Javelin,SilverAxe,] NeverMoveAI
+UNIT Loile SwdCav 0x0 Level(10,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Loile LncCav 0x0 Level(10,Enemy,1) [6,3] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Esme WyvLord 0x0 Level(2,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Javelin,SilverAxe] NeverMoveAI
+UNIT Loile Thief 0x0 Level(10,Enemy,1) [16,16] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
+UNIT Loile Thief 0x0 Level(10,Enemy,1) [16,21] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
 UNIT
 
 C8Ally:
 UNIT Cid Berserker 0x0 Level(9,NPC,0) [10,21] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NoAI
 UNIT
 
-C8Thieves:
-UNIT Loile Thief 0x0 Level(5,Enemy,1) [11,6] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] LootingThiefAI
+C8Thief:
+UNIT Loile Thief 0x0 Level(10,Enemy,1) [8,11] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
+UNIT
+
+C8TorchTrapAUnits:
+UNIT Loile SoldierF 0x0 Level(9,Enemy,1) [0,10] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Loile Halberdier 0x0 Level(1,Enemy,1) [0,11] DropItem 0x0 0x0 0x0 [IronLance,Rapier] NoAI
+UNIT Loile Soldier 0x0 Level(9,Enemy,1) [0,12] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT
+
+C8TorchTrapBUnits:
+UNIT Loile Fighter 0x0 Level(9,Enemy,1) [21,16] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Loile MercF 0x0 Level(9,Enemy,1) [21,18] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Loile Merc 0x0 Level(9,Enemy,1) [21,19] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Loile FighterF 0x0 Level(9,Enemy,1) [21,21] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT
 
 ALIGN 4
@@ -116,6 +153,34 @@ MUSC 0x31
 CleanTextNoMap(0x10,Ch8_Ending)
 MoveToChapter(Interlude2)
 ENDA
+
+C8Turn7:
+EVBIT_T 9
+LOAD1 0x0 C8Thief
+ENUN
+EndEvent
+
+C8TorchTrapA:
+GetTrapExt1At(2,14)
+BEQ 0x1 0xC 0x0
+EVBIT_T 9
+LOAD1 0x0 C8TorchTrapAUnits
+GOTO 0x2
+LABEL 0x1
+ENUF 0x10
+LABEL 0x2
+EndEvent
+
+C8TorchTrapB:
+GetTrapExt1At(17,18)
+BEQ 0x1 0xC 0x0
+EVBIT_T 9
+LOAD1 0x0 C8TorchTrapBUnits
+GOTO 0x2
+LABEL 0x1
+ENUF 0x11
+LABEL 0x2
+EndEvent
 
 ALIGN 4
 EscapePointPointerTable(Chapter8,C8Escape)

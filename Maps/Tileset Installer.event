@@ -190,10 +190,78 @@ tilesetAnimation(0x1a,0x1000,FieldFrame15)
 tilesetAnimation(0x1a,0x1000,FieldFrame16)
 WORD 0 0
 
+ALIGN 4
+TownFrame1:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_000.dmp"
+ALIGN 4
+TownFrame2:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_001.dmp"
+ALIGN 4
+TownFrame3:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_002.dmp"
+ALIGN 4
+TownFrame4:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_003.dmp"
+ALIGN 4
+TownFrame5:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_004.dmp"
+ALIGN 4
+TownFrame6:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_005.dmp"
+ALIGN 4
+TownFrame7:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_006.dmp"
+ALIGN 4
+TownFrame8:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_007.dmp"
+ALIGN 4
+TownFrame9:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_008.dmp"
+ALIGN 4
+TownFrame10:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_009.dmp"
+ALIGN 4
+TownFrame11:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_010.dmp"
+ALIGN 4
+TownFrame12:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_011.dmp"
+ALIGN 4
+TownFrame13:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_012.dmp"
+ALIGN 4
+TownFrame14:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_013.dmp"
+ALIGN 4
+TownFrame15:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_014.dmp"
+ALIGN 4
+TownFrame16:
+#incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_015.dmp"
+ALIGN 4
+TownAnims:
+tilesetAnimation(0x1a,0x1000,TownFrame1)
+tilesetAnimation(0x1a,0x1000,TownFrame2)
+tilesetAnimation(0x1a,0x1000,TownFrame3)
+tilesetAnimation(0x1a,0x1000,TownFrame4)
+tilesetAnimation(0x1a,0x1000,TownFrame5)
+tilesetAnimation(0x1a,0x1000,TownFrame6)
+tilesetAnimation(0x1a,0x1000,TownFrame7)
+tilesetAnimation(0x1a,0x1000,TownFrame8)
+tilesetAnimation(0x1a,0x1000,TownFrame9)
+tilesetAnimation(0x1a,0x1000,TownFrame10)
+tilesetAnimation(0x1a,0x1000,TownFrame11)
+tilesetAnimation(0x1a,0x1000,TownFrame12)
+tilesetAnimation(0x1a,0x1000,TownFrame13)
+tilesetAnimation(0x1a,0x1000,TownFrame14)
+tilesetAnimation(0x1a,0x1000,TownFrame15)
+tilesetAnimation(0x1a,0x1000,TownFrame16)
+WORD 0 0
 
 EventPointerTable(0x3, TownObjects)
 EventPointerTable(0x2, DalstTownPalette)
 EventPointerTable(0x1, TownTiles)
+EventPointerTable(0x32,TownAnims)
 
 EventPointerTable(0xA, FieldObjects)
 EventPointerTable(0x9, DalstFieldPalette)
@@ -218,6 +286,7 @@ EventPointerTable(0x2a, LavaCaveObjects)
 EventPointerTable(0x2b, LavaCavePalette) 
 EventPointerTable(0x2c, LavaCaveConfig) 
 EventPointerTable(0x2d, 0x59D800)
+
 
 #define MinimapTileTable $A7A38
 #define TileHandler_Plain $A7B3C
@@ -255,3 +324,4 @@ EventPointerTable(0x2d, 0x59D800)
 SetMinimapTileHandler(0x9,TileHandler_Water)
 SetMinimapTileHandler(0x24,TileHandler_ArmoryVendor)
 SetMinimapTileHandler(0x2a,TileHandler_Road)
+SetMinimapTileHandler(0x32,TileHandler_Walls)

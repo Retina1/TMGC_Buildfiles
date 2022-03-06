@@ -150,12 +150,19 @@
 //Relating to Tequila's slayer/effectiveness rework
 //Used in the class editor and item editor tables
 //To understand how this works, check out Engine Hacks/Skill System/Teq Skills/FE8-Nullify/_README.txt
-#define ArmorType	0x01
-#define HorseType	0x02
-#define FlierType	0x04
-#define DragonType	0x08
-#define MonsterType	0x10
-#define SwordType	0x20
+#define ArmorType	0x001
+#define HorseType	0x002
+#define FlierType	0x004
+#define DragonType	0x008
+#define MonsterType	DragonType
+#define StaffType	0x010
+#define SwordType	0x020
+#define LanceType	0x040
+#define AxeType		0x080
+#define BowType		0x100
+#define AnimaType	0x200
+#define LightType	0x400
+#define DarkType	0x800
 
 //Status Effects
 #define NoStatusID 0

@@ -29,6 +29,11 @@ the faint of heart.[N]
 Enemies are stronger[N]
 and more plentiful.[X]
 
+# 0x15f
+Total Turns[X]
+
+#include "ChapterNames.txt"
+
 # 0x01CD
 Swamp[X]
 
@@ -91,8 +96,8 @@ Chapter to finish this battle.[A][X]
 
 #include "EscapeQuotes.txt"
 
-#0x3A LearnedSkillText
-//first text ID in the free block
+## LearnedSkillText
+//first text ID in the free block- was 3D
 Learned  [X]
 
 #include "MenuStuff.txt"
@@ -133,10 +138,6 @@ Save any changes.[.][NL]
 Choose Restart Chapter[NL]
 from the main menu to[N]
 continue your game.[X]
-
-#include "statscreen_text.txt"
-
-#include "unitmenu_text.txt"
 
 #0xd4c LikesText
 //first text ID in the free block
@@ -256,8 +257,6 @@ a skill when used.[X]
 
 #include "Bosses.txt"
 
-#include "ChapterNames.txt"
-
 #include "Objectives.txt"
 
 #include "SongRoom.txt"
@@ -280,3 +279,6 @@ a skill when used.[X]
 ##TorchDesc
 Light or extinguish[N]
 a torch's flame.[X]
+
+#include "statscreen_text.txt"
+#include "unitmenu_text.txt"

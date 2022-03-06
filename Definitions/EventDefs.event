@@ -1,0 +1,15 @@
+#define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
+#define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
+#define SystemText(bgid,textid) "CenterTutorialTextBox; SetBackground(bgid); TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND;"
+#define NarrationText(textid) "SVAL 0xB 0x00B4FFFF; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
+#define EndEvent "EVBIT_T 0x7; ENDA"
+#define CleanTextNoMap(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define CleanText(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; ClearBackgroundSmooth"
+#define GiveItem(item) "SMOV 0x3 item; GIVEITEMTO 0xFFFF;"
+#define GiveItem(item,character) "SMOV 0x3 item; GIVEITEMTO character;"
+#define Narration(textid) "SetBackground(0x34); STAL 120; NarrationText(textid); MUSC 0x0; FADI 0x3c"
+
+#define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
+
+#define ResetBaseFlags "ENUF BaseFlag1;ENUF BaseFlag2;ENUF BaseFlag3;ENUF BaseFlag4;ENUF BaseFlag5;ENUF BaseFlag6;ENUF BaseFlag7;ENUF BaseFlag8;"

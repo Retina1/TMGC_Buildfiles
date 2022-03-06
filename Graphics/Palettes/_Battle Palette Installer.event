@@ -49,6 +49,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define JosefUPaletteID 0x12
 #define JosefPPaletteID 0x13
 #define ArinPaletteID 0x14
+#define BechamelUPaletteID 0x15
+#define BechamelPPaletteID 0x16
 
 setPalette(BlairUPaletteID,BlairUPalette)
 
@@ -82,6 +84,9 @@ setPalette(RachaelPPaletteID,RachaelPPalette)
 setPalette(JosefUPaletteID,JosefUPalette)
 setPalette(JosefPPaletteID,JosefPPalette)
 
+setPalette(BechamelUPaletteID,BechamelUPalette)
+setPalette(BechamelPPaletteID,BechamelPPalette)
+
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,0x0,BlairLordX,0x0,0x0)
 SetPaletteFull(Arin,ArinPaletteID,Trickster,0x0,0x0,0x0,0x0)
 SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,0x0,0x0)
@@ -97,7 +102,7 @@ SetPaletteFull(Rachael,RachaelUPaletteID,LncPeg,RachaelPPaletteID,Falco,0x0,0x0)
 SetPaletteFull(Emile,0x0,0x0,0x0,Sage,0x0,0x0)
 SetPaletteFull(Jeff,0x0,Thief,0x0,Assass,0x0,0x0)
 SetPaletteFull(Apollo,0x0,LightM,0x0,Bishop,0x0,0x0)
-SetPaletteFull(Bechamel,0x0,Pirate,0x0,Berserker,0x0,0x0)
+SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
 
 
 // I'm commenting the classes out that don't have palettes yet.
@@ -173,6 +178,13 @@ JosefUPalette:
 ALIGN 4
 JosefPPalette:
 #incbin "JosefPromoted.dmp"
+
+ALIGN 4
+BechamelUPalette:
+#incbin "BechamelUnpromoted.dmp"
+ALIGN 4
+BechamelPPalette:
+#incbin "BechamelPromoted.dmp"
 
 PUSH
 ORG $59BFC

@@ -17,6 +17,7 @@
 #define RuneswordIcon 0x10
 #define BraveSwordIcon 0xa
 #define ShamshirIcon 0xb2
+#define LancesnapperIcon 0x78
 
 #define IronLanceIcon 0x13
 #define SteelLanceIcon 0x15
@@ -32,6 +33,7 @@
 #define BraveLanceIcon 0x18
 #define ShatterspearIcon 0xa7
 #define DragonpikeIcon 0xb6
+#define AxebusterIcon 0x79
 
 #define IronAxeIcon 0x1e
 #define SteelAxeIcon 0x1f
@@ -171,7 +173,7 @@ ItemIconEntry(LevinSwordIcon)
 #incbin "{Zelix} LevinSword.dmp"
 ALIGN 4
 ItemIconEntry(LancereaverIcon)
-#incbin "Swords/Lancereaver.dmp"
+#incbin "Swords/Axeblade.dmp"
 ALIGN 4
 ItemIconEntry(ArmorslayerIcon)
 #incbin "Swords/Armorslayer.dmp"
@@ -205,6 +207,9 @@ ItemIconEntry(ShamshirIcon)
 ALIGN 4
 ItemIconEntry(BraveSwordIcon)
 #incbin "Swords/Brave Sword.dmp"
+ALIGN 4
+ItemIconEntry(LancesnapperIcon)
+#incbin "Swords/Lancereaver.dmp"
 
 ALIGN 4
 ItemIconEntry(IronLanceIcon)
@@ -226,6 +231,9 @@ ItemIconEntry(SpearIcon)
 #incbin "Lances/Spear.dmp"
 ALIGN 4
 ItemIconEntry(AxereaverIcon)
+#incbin "Lances/Bladelance.dmp"
+ALIGN 4
+ItemIconEntry(AxebusterIcon)
 #incbin "Lances/Axereaver.dmp"
 ALIGN 4
 ItemIconEntry(MasterLanceIcon)

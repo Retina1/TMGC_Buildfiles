@@ -1,0 +1,156 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x36,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN I2Units I2Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+CharacterEvent(0xe,I2Merchant,Blair,Merchant)
+CharacterEvent(0xf,I2Cit,Blair,Citizen)
+CharacterEvent(0x10,I2Cit2,Blair,Citizen2)
+CharacterEvent(0x0,I2ReadyToEnd,Blair,Cid)
+END_MAIN
+
+LocationBasedEvents:
+Armory(I2Armory,12,1)
+Vendor(I2Vendor,8,7)
+Armory(I2Armory2,5,8)
+Vendor(I2Vendor2,10,13)
+END_MAIN
+
+ALIGN 4
+I2Armory:
+SHLI IronSword SteelSword Lancereaver IronLance SteelLance Axereaver Javelin
+BYTE 0x0 0x0
+ALIGN 4
+I2Armory2:
+SHLI IronAxe SteelAxe Swordreaver HandAxe IronBow SteelBow ShiningBow
+BYTE 0x0 0x0
+ALIGN 4
+I2Vendor:
+SHLI Fire Thunder Elfire Lightning Shine Divine Flux Nightfall
+BYTE 0x0 0x0
+ALIGN 4
+I2Vendor2:
+SHLI Heal Mend Restore Barrier Vulnerary Elixir PureWater DoorKey ChestKey
+BYTE 0x0 0x0
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+I2Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [10,15] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
+I2NPC:
+UNIT Cid Berserker 0x0 Level(9,NPC,0) [25,1] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
+UNIT C7Wilhelm Soldier 0x0 Level(16,NPC,0) [0,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Manfred DarkM 0x0 Level(18,NPC,0) [0,7] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Charley SniperF 0x0 Level(2,NPC,0) [6,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Alexis AxeArm 0x0 Level(8,NPC,0) [8,11] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Hyperius SwdGen 0x0 Level(12,NPC,0) [6,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Merchant Sage 0x0 Level(5,NPC,1) [21,13] 0x0 0x0 0x0 0x0 [Yoink] NeverMoveAI
+UNIT Citizen CivilM 0x0 Level(1,NPC,1) [21,17] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen2 CivilM 0x0 Level(1,NPC,1) [10,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor MageF 0x0 Level(14,NPC,1) [9,20] 0x0 0x0 0x0 0x0 [Elfire,Elixir] NeverMoveAI
+UNIT ElbaCor LightM 0x0 Level(18,NPC,1) [4,21] 0x0 0x0 0x0 0x0 [Smite,Elixir] NeverMoveAI
+UNIT ElbaCor Falco 0x0 Level(17,NPC,1) [15,15] 0x0 0x0 0x0 0x0 [GildedLance,Elixir] NeverMoveAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+EnableFreeMovement
+LOAD1 0x0 I2Units
+LOAD1 0x0 I2NPC
+ENUN
+MUSC 0x4
+Narration(Base2_Narration)
+CleanTextNoMap(0x3,I1_Opening)
+GotoPrepScreen
+ENDA
+
+EndingScene:
+DisableFreeMovement
+Text(I1_Opening)
+MoveToChapter(Chapter9)
+ENDA
+
+I2Merchant:
+EVBIT_MODIFY 4
+Text(I1MerchantTalk)
+CHECK_MONEY
+SVAL 0x1 0x5DC
+BGE 0x1 0xc 0x1
+Text(I1NoMoneyHa)
+ENUF 0xe
+GOTO 0x2
+LABEL 0x1
+SystemText(I1StaffBuy)
+IfNoSelectedGoto(0x3)
+Text(I1StaffPurchased)
+SVAL 0x3 0x5dc
+TAKEMONEY
+GiveItem(Yoink,Blair)
+GOTO 0x2
+LABEL 0x3
+Text(I1StaffDenied)
+ENUF 0xe
+LABEL 0x2
+EndEvent
+
+I2Cit:
+Text(I1CitTalk)
+EndEvent
+
+I2Cit2:
+Text(I1Cit2Talk)
+EndEvent
+
+
+I2ReadyToEnd:
+EVBIT_MODIFY 4
+Text(I1ConfirmLeave)
+SystemText(I1LeavePrompt)
+IfNoSelectedGoto(0x2)
+CALL EndingScene
+GOTO 0x1
+LABEL 0x2
+Text(I1NotYet)
+LABEL 0x1
+EndEvent
+
+MESSAGE Events end at offset CURRENTOFFSET

@@ -1,0 +1,102 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x38,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN I3Units I3Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+CharacterEvent(0x0,I3ReadyToEnd,Blair,Cid)
+END_MAIN
+
+LocationBasedEvents:
+Armory(I3Armory,12,1)
+Vendor(I3Vendor,8,7)
+END_MAIN
+
+ALIGN 4
+I3Armory:
+SHLI IronSword SteelSword Lancereaver IronLance SteelLance Axereaver Javelin
+BYTE 0x0 0x0
+ALIGN 4
+I3Vendor:
+SHLI IronAxe SteelAxe Swordreaver HandAxe IronBow SteelBow ShiningBow
+BYTE 0x0 0x0
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+I3Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [10,15] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
+I3NPC:
+UNIT Cid Berserker 0x0 Level(9,NPC,0) [25,1] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+EnableFreeMovement
+LOAD1 0x0 I3Units
+LOAD1 0x0 I3NPC
+ENUN
+MUSC 0x4
+Narration(Base3_Narration)
+CleanTextNoMap(0x3,I3_Opening)
+GotoPrepScreen
+ENDA
+
+EndingScene:
+DisableFreeMovement
+Text(I1_Opening)
+MoveToChapter(Chapter10)
+ENDA
+
+I3ReadyToEnd:
+EVBIT_MODIFY 4
+Text(I1ConfirmLeave)
+SystemText(I1LeavePrompt)
+IfNoSelectedGoto(0x2)
+CALL EndingScene
+GOTO 0x1
+LABEL 0x2
+Text(I1NotYet)
+LABEL 0x1
+EndEvent
+
+ALIGN 4
+
+MESSAGE Events end at offset CURRENTOFFSET

@@ -24,8 +24,29 @@
 
 ALIGN 4
 MapData:
-  #incbin "Chapter9_data.dmp"
+  #incbin "Interlude2_data.dmp"
 
-SetChapterData(9, 0x3, 0, 0x2, 0x1, 0x31, MapData, 0x32, 0, 0)
+SetChapterData(0x27, 0x3, 0, 0x2, 0x1, 0x34, MapData, 0x32, 0, 0x35)
+
+ALIGN 4
+Map_Change_0:
+  SHORT $80
+
+ALIGN 4
+Map_Change_1:
+  SHORT $80
+
+ALIGN 4
+Map_Change_2:
+  SHORT $80
+
+ALIGN 4
+MapChangesData:
+  TileMap(0, 1, 5, 1, 1, Map_Change_0)
+  TileMap(1, 6, 2, 1, 1, Map_Change_1)
+  TileMap(2, 15, 12, 1, 1, Map_Change_2)
+  TileMapEnd
+
+EventPointerTable(0x35, MapChangesData)
 
 }

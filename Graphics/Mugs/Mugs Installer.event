@@ -116,6 +116,11 @@ WilhelmMug:
 setMugEntry(0x0d,WilhelmMug,3,5,3,3)
 
 ALIGN 4
+ManfredMug:
+#incext PortraitFormatter "Manfred.png"
+setMugEntry(0x50,ManfredMug,3,5,3,3)
+
+ALIGN 4
 PeterMug:
 #incext PortraitFormatter "Peter.png"
 setMugEntry(0x44,PeterMug,2,5,2,3)

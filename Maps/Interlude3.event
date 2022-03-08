@@ -24,8 +24,8 @@
 
 ALIGN 4
 MapData:
-  #incbin "Chapter9_data.dmp"
+  #incbin "Interlude3_data.dmp"
 
-SetChapterData(9, 0x3, 0, 0x2, 0x1, 0x31, MapData, 0x32, 0, 0)
+SetChapterData(0x28, 0x3, 0, 0x2, 0x1, 0x37, MapData, 0x32, 0, 0)
 
 }

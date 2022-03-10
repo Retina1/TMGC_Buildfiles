@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C9Turn2,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -46,20 +47,20 @@ ENDTRAP
 ALIGN 4
 
 C9Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [11,24] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [18,5] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [21,5] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [20,8] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [21,10] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,9] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [19,11] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,11] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,11] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,14] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [21,14] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,16] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,16] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,15] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,15] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT
 
 C9Easy:
@@ -71,17 +72,25 @@ UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverM
 UNIT
 
 C9Hard:
-UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Bechamel Pirate 0x0 Level(9,Enemy,0) [9,20] 0x0 0x0 0x0 0x0 [SteelAxe,KillerAxe,Vulnerary] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Bechamel Pirate 0x0 Level(9,Enemy,0) [9,20] 0x0 0x0 0x0 0x0 [SteelAxe,KillerAxe,Vulnerary] [0x06,0x03,0x04,0x00]
+UNIT Pete Berserker 0x0 Level(3,Enemy,1) [2,0] DropItem 0x0 0x0 0x0 [BraveAxe,HandAxe,MasterSeal] NeverMoveAI
 UNIT
 
 C9Ally:
-UNIT Cid Berserker 0x0 Level(9,NPC,0) [10,21] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NoAI
-UNIT Pirates Pirate 0x0 Level(18,NPC,1) [9,20] 0x0 0x0 0x0 0x0 [SilverAxe,Elixir] NoAI
-UNIT Pirates Pirate 0x0 Level(18,NPC,1) [11,20] 0x0 0x0 0x0 0x0 [Hammer,Elixir] NoAI
-UNIT Pirates Pirate 0x0 Level(18,NPC,1) [9,22] 0x0 0x0 0x0 0x0 [Halberd,Elixir] NoAI
-UNIT Pirates Pirate 0x0 Level(18,NPC,1) [11,22] 0x0 0x0 0x0 0x0 [Swordslayer,Elixir] NoAI
-UNIT Apollo LightM 0x0 Level(10,NPC,0) [10,23] 0x0 0x0 0x0 0x0 [Divine,Banish,Elixir] NoAI
+UNIT Cid Berserker 0x0 Level(9,NPC,0) [19,4] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NoAI
+UNIT Pirates Pirate 0x0 Level(18,NPC,1) [18,8] 0x0 0x0 0x0 0x0 [SilverAxe,Elixir] NoAI
+UNIT Pirates Pirate 0x0 Level(18,NPC,1) [21,8] 0x0 0x0 0x0 0x0 [Hammer,Elixir] NoAI
+UNIT Pirates Pirate 0x0 Level(18,NPC,1) [17,14] 0x0 0x0 0x0 0x0 [Halberd,Elixir] NoAI
+UNIT Pirates Pirate 0x0 Level(18,NPC,1) [22,14] 0x0 0x0 0x0 0x0 [Swordslayer,Elixir] NoAI
+UNIT Apollo LightM 0x0 Level(10,NPC,0) [6,13] 0x0 0x0 0x0 0x0 [Shine,Banish,Elixir] [0x03,0x03,0x00,0x00]
+UNIT Opistia LightM 0x0 Level(15,NPC,1) [4,13] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
+UNIT Opistia LightM 0x0 Level(15,NPC,1) [5,14] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
+UNIT
+
+C9T2Spawns:
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [3,0] 0x0 0x0 0x1 REDA4R0 [IronAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [3,0] 0x0 0x0 0x1 REDA3R1 [IronAxe] NoAI
 UNIT
 
 ALIGN 4
@@ -105,5 +114,12 @@ MUSC 0x31
 CleanTextNoMap(0x10,Ch9_Ending)
 MoveToChapter(Interlude3)
 ENDA
+
+C9Turn2:
+CAM1 Pete
+FlashCursor(Pete,60)
+Text(C9BarrelWarning)
+LOAD1 0x0 C9T2Spawns
+EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

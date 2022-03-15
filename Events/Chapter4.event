@@ -252,9 +252,7 @@ MoveToChapter(0x5)
 ENDA
 
 C4Turn2:
-EVBIT_T 9
-LOAD1 0x1 C4Peggy
-ENUN
+Reinforcements(C4Peggy)
 MUSC 0x30
 Text(C4PeggyJoin)
 MUSC 0x0
@@ -271,15 +269,11 @@ Text(Ch4_Get_Moving)
 EndEvent
 
 C4Turn7:
-EVBIT_T 9
-LOAD1 0x1 C4Ygstra1
-ENUN
+Reinforcements(C4Ygstra1)
 EndEvent
 
 C4Turn9:
-EVBIT_T 9
-LOAD1 0x1 C4Ygstra2
-ENUN
+Reinforcements(C4Ygstra2)
 EndEvent
 
 C4Turn10:
@@ -287,29 +281,21 @@ Text(Ch4_Get_Out)
 EndEvent
 
 C4Turn11:
-EVBIT_T 9
-LOAD1 0x1 C4YgstraOof
-ENUN
+Reinforcements(C4YgstraOof)
 Text(Ch4_Lazarus_Arrives)
 ENUT 0x4
 EndEvent
 
 C4OhGodOhFuck:
-EVBIT_T 9
-LOAD1 0x1 C4YgstraOhGod
-ENUN
+Reinforcements(C4YgstraOhGod)
 EndEvent
 
 C4AreaTrap:
-EVBIT_T 9
-LOAD1 0x1 C4Mevion1
-ENUN
+Reinforcements(C4Mevion1)
 EndEvent
 
 C4AreaTrap2:
-EVBIT_T 9
-LOAD1 0x1 C4Mevion2
-ENUN
+Reinforcements(C4Mevion2)
 EndEvent
 
 C4AreaTrigger:

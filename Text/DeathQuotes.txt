@@ -37,6 +37,11 @@ I am... sorry...[A][X]
 Am I... going to die...?[N]
 I'm so... afraid...[A][CloseEyes][X]
 
+##AllyJosefDeath
+[OpenMidRight][LoadJosef]
+I... held... them off...[N]
+Where is... everyone...?[A][CloseEyes][X]
+
 ##JosefDeath
 [OpenMidRight][LoadJosef][ToggleSmile]
 If my death brings you victory...[N]
@@ -46,6 +51,11 @@ I'll have had... no regrets...[A][CloseEyes][X]
 [OpenMidRight][LoadPeggy]
 Ow! You bastard... Come[N]
 closer... so I can...[A][CloseEyes][X]
+
+##EnemyButchDeath
+[OpenMidLeft][LoadButch]
+Damn... Maybe it wasn't...[N]
+meant... to be...[A][CloseEyes][X]
 
 ##ButchDeath
 [OpenMidRight][LoadButch]
@@ -63,6 +73,10 @@ Your Majesty... I am...[N]
 finished...[A][N]
 Please... forgive me...[A][CloseEyes][X]
 
+##AllyEmileDeath
+[OpenMidRight][LoadEmile]
+I am... unwell...[A][CloseEyes][X]
+
 ##EmileDeath
 [OpenMidRight][LoadEmile]
 So much remains... that I...[N]
@@ -73,11 +87,21 @@ will never understand...[A][CloseEyes][X]
 At last... my just reward.[N]
 It all built up... to this...[A][CloseEyes][X]
 
+##AllyApolloDeath
+[OpenMidRight][LoadApollo]
+Twas... a grim...[N]
+fate... indeed...[A][CloseEyes][X]
+
 ##ApolloDeath
 [OpenMidRight][LoadApollo]
 Alas... This is...[N]
 Opistus's will...[A][N]
 Who am I... to deny it...?[A][CloseEyes][X]
+
+##EnemyBechamelDeath
+[OpenMidLeft][LoadBechamel]
+Arr... Too late...[N]
+to change... now...[A][CloseEyes][X]
 
 ##BechamelDeath
 [OpenMidRight][LoadBechamel]
@@ -98,10 +122,20 @@ a true... hero...[A][CloseEyes][X]
 What's all this...?[N]
 Blood? My... blood...?[A][CloseEyes][X]
 
+##EnemyMikeyDeath
+[OpenMidLeft][LoadStefan]
+I thought... I did...[N]
+everything... right...[A][CloseEyes][X]
+
 ##MikeyDeath
 [OpenMidRight][LoadStefan]
 I never... wanted this...[N]
 And now I...[A][CloseEyes][X]
+
+##EnemyCarbonDeath
+[OpenMidLeft][LoadStefan]
+Damn it... Let's hope...[N]
+nobody... saw that...[CloseEyes][X]
 
 ##CarbonDeath
 [OpenMidRight][LoadStefan][ToggleSmile]
@@ -178,7 +212,7 @@ May the light... of Opistus...[N]
 shine... for eternity...[A][CloseEyes][X]
 
 ##HoratioDeath
-[OpenMidRight][LoadStefan]
+[OpenMidRight][LoadHoratio]
 Now I ascend... to an ever[N]
 grander... apex...[A][CloseEyes][X]
 
@@ -190,17 +224,35 @@ It's all... so clear...[A][CloseEyes][X]
 ##PtolemyDeath
 [OpenMidRight][LoadPtolemy]
 I'm sorry... friends...[N]
-I won't be... coming... home...[A][CloseEyes][X]
+I won't be... coming home...[A][CloseEyes][X]
 
 ##JohanDeath
 [OpenMidRight][LoadJohan]
 What was... the point... of[N]
 it all... anyway...?[A][CloseEyes][X]
 
+##EnemyPeterDeath
+[OpenMidLeft][LoadPeter]
+Damn... Got too careless...[N]
+Guess... that's... it...[A][CloseEyes][X]
+
 ##PeterDeath
 [OpenMidRight][LoadPeter]
 Guess we're both free, pal...[N]
 Thanks for everything...[A][CloseEyes][X]
+
+##EnemySoniaDeath
+[OpenMidLeft][LoadStefan]
+Absolutely... splendid...[A][CloseEyes][X]
+
+##EnemyJoanDeath
+[OpenMidLeft][LoadJoan]
+Glory... to Ygstra...[A][CloseEyes][X]
+
+##EnemyTobiasDeath
+[OpenMidLeft][LoadTobias]
+I guess... my time's...[N]
+finally come...[A][CloseEyes][X]
 
 ##SoniaDeath
 [OpenMidRight][LoadStefan]
@@ -228,6 +280,14 @@ Why do... I feel... so...[A][CloseEyes][X]
 Easy come... Easy go...[A][N]
 And, frankly...[N]
 I deserve this...[A][CloseEyes][X]
+
+##EnemyElcorianDeath
+[OpenMidLeft][LoadElcorian]
+So... That is... your[N]
+answer... So be it...[A][N]
+Know that... our choice...[A][N]
+was... made in the name...[N]
+of the future...[A][CloseEyes][X]
 
 ##ElcorianDeath
 [OpenMidRight][LoadElcorian]

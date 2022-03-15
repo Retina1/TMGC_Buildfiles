@@ -226,9 +226,7 @@ GotoPrepScreen
 ENDA
 
 C3Turn1:
-EVBIT_T 9
-LOAD1 0x0 C3SamJoins
-ENUN
+Reinforcements(C3SamJoins)
 MUSC 0x30
 Text(Ch3_Sam_Joins)
 EndEvent
@@ -240,13 +238,11 @@ Text(C3Hint)
 EndEvent
 
 C3Turn6:
-LOAD1 0x1 C3Thief
-ENUN
+Reinforcements(C3Thief)
 EndEvent
 
 C3Turn13:
-LOAD1 0x1 C3Thief2
-ENUN
+Reinforcements(C3Thief2)
 EndEvent
 
 C3DoorTrap:
@@ -255,7 +251,7 @@ BNE 0x1 0xC 0x0
 ENUF 0x14
 GOTO 0x2
 LABEL 0x1
-LOAD1 0x1 C3TopHalf
+Reinforcements(C3TopHalf)
 ENUT 0x16
 LABEL 0x2
 EndEvent
@@ -266,7 +262,7 @@ BNE 0x1 0xC 0x0
 ENUF 0x15
 GOTO 0x2
 LABEL 0x1
-LOAD1 0x1 C3TopHalf2
+Reinforcements(C3TopHalf2)
 LABEL 0x2
 EndEvent
 

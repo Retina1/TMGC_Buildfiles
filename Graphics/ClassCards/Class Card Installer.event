@@ -55,11 +55,30 @@
 
 #define MageMCard 0x7c
 #define MageFCard 0xa8
+#define SageMCard 0x7d
+#define SageFCard 0x94
 
 #define DarkMCard 0x7e
 #define DarkFCard 0x84
+#define SorcMCard 0xBD
+#define SorcFCard 0xBE
 
 #define TroubCard 0x83
+#define ValkMCard 0x95
+#define ValkFCard 0xc7
+
+#define PriestCard 0xbf
+#define ClericCard 0xc0
+#define LightMCard 0x7a
+#define BishopMCard 0x7b
+#define BishopFCard 0xc1
+
+#define PirateFCard 0xc2
+#define BerserkFCard 0xc3
+
+#define AssassMCard 0xc6
+#define AssassFCard 0xc5
+#define TricksterCard 0xc4
 
 #define CivilianCard 0xad
 
@@ -312,6 +331,16 @@ MageFPortrait:
 MageFPortraitPalette:
 #incbin "MageFPalette.dmp"
 
+SageMPortrait:
+#incbin "SageM.dmp"
+SageMPortraitPalette:
+#incbin "SageMPalette.dmp"
+
+SageFPortrait:
+#incbin "SageF.dmp"
+SageFPortraitPalette:
+#incbin "SageFPalette.dmp"
+
 DarkMPortrait:
 #incbin "DarkM.dmp"
 DarkMPortraitPalette:
@@ -322,10 +351,30 @@ DarkFPortrait:
 DarkFPortraitPalette:
 #incbin "DarkFPalette.dmp"
 
+SorcMPortrait:
+#incbin "SorcM.dmp"
+SorcMPortraitPalette:
+#incbin "SorcMPalette.dmp"
+
+SorcFPortrait:
+#incbin "SorcF.dmp"
+SorcFPortraitPalette:
+#incbin "SorcFPalette.dmp"
+
 TroubPortrait:
 #incbin "Troub.dmp"
 TroubPortraitPalette:
 #incbin "TroubPalette.dmp"
+
+ValkMPortrait:
+#incbin "ValkM.dmp"
+ValkMPortraitPalette:
+#incbin "ValkMPalette.dmp"
+
+ValkFPortrait:
+#incbin "ValkF.dmp"
+ValkFPortraitPalette:
+#incbin "ValkFPalette.dmp"
 
 CivilianPortrait:
 #incbin "Civilian.dmp"
@@ -356,6 +405,56 @@ FalcoPortrait:
 #incbin "Falco.dmp"
 FalcoPortraitPalette:
 #incbin "FalcoPalette.dmp"
+
+ClericPortrait:
+#incbin "Cleric.dmp"
+ClericPortraitPalette:
+#incbin "ClericPalette.dmp"
+
+PriestPortrait:
+#incbin "Priest.dmp"
+PriestPortraitPalette:
+#incbin "PriestPalette.dmp"
+
+LightMPortrait:
+#incbin "LightM.dmp"
+LightMPortraitPalette:
+#incbin "LightMPalette.dmp"
+
+BishopMPortrait:
+#incbin "BishopM.dmp"
+BishopMPortraitPalette:
+#incbin "BishopMPalette.dmp"
+
+BishopFPortrait:
+#incbin "BishopF.dmp"
+BishopFPortraitPalette:
+#incbin "BishopFPalette.dmp"
+
+PirateFPortrait:
+#incbin "PirateF.dmp"
+PirateFPortraitPalette:
+#incbin "PirateFPalette.dmp"
+
+BerserkFPortrait:
+#incbin "BerserkF.dmp"
+BerserkFPortraitPalette:
+#incbin "BerserkFPalette.dmp"
+
+AssassMPortrait:
+#incbin "AssassM.dmp"
+AssassMPortraitPalette:
+#incbin "AssassMPalette.dmp"
+
+AssassFPortrait:
+#incbin "AssassF.dmp"
+AssassFPortraitPalette:
+#incbin "AssassFPalette.dmp"
+
+TricksterPortrait:
+#incbin "Trickster.dmp"
+TricksterPortraitPalette:
+#incbin "TricksterPalette.dmp"
 
 setCardEntry(HunterCard,HunterPortrait,HunterPortraitPalette)
 setCardEntry(DeserterCard,DeserterPortrait,DeserterPortraitPalette)
@@ -414,11 +513,30 @@ setCardEntry(FalcoCard,FalcoPortrait,FalcoPortraitPalette)
 
 setCardEntry(MageMCard,MageMPortrait,MageMPortraitPalette)
 setCardEntry(MageFCard,MageFPortrait,MageFPortraitPalette)
+setCardEntry(SageMCard,SageMPortrait,SageMPortraitPalette)
+setCardEntry(SageFCard,SageFPortrait,SageFPortraitPalette)
 
 setCardEntry(DarkMCard,DarkMPortrait,DarkMPortraitPalette)
 setCardEntry(DarkFCard,DarkFPortrait,DarkFPortraitPalette)
+setCardEntry(SorcMCard,SorcMPortrait,SorcMPortraitPalette)
+setCardEntry(SorcFCard,SorcFPortrait,SorcFPortraitPalette)
 
 setCardEntry(TroubCard,TroubPortrait,TroubPortraitPalette)
+setCardEntry(ValkMCard,ValkMPortrait,ValkMPortraitPalette)
+setCardEntry(ValkFCard,ValkFPortrait,ValkFPortraitPalette)
+
+setCardEntry(PriestCard,PriestPortrait,PriestPortraitPalette)
+setCardEntry(LightMCard,LightMPortrait,LightMPortraitPalette)
+setCardEntry(ClericCard,ClericPortrait,ClericPortraitPalette)
+setCardEntry(BishopMCard,BishopMPortrait,BishopMPortraitPalette)
+setCardEntry(BishopFCard,BishopFPortrait,BishopFPortraitPalette)
+
+setCardEntry(AssassMCard,AssassMPortrait,AssassMPortraitPalette)
+setCardEntry(AssassFCard,AssassFPortrait,AssassFPortraitPalette)
+setCardEntry(TricksterCard,TricksterPortrait,TricksterPortraitPalette)
+
+setCardEntry(PirateFCard,PirateFPortrait,PirateFPortraitPalette)
+setCardEntry(BerserkFCard,BerserkFPortrait,BerserkFPortraitPalette)
 
 setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
 

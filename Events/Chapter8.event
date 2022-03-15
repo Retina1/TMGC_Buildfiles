@@ -198,16 +198,13 @@ MoveToChapter(Interlude2)
 ENDA
 
 C8Turn7:
-EVBIT_T 9
-LOAD1 0x0 C8Thief
-ENUN
+Reinforcements(C8Thief)
 EndEvent
 
 C8TorchTrapA:
 GetTrapExt1At(2,14)
 BEQ 0x1 0xC 0x0
-EVBIT_T 9
-LOAD1 0x0 C8TorchTrapAUnits
+Reinforcements(C8TorchTrapAUnits)
 GOTO 0x2
 LABEL 0x1
 ENUF 0x10
@@ -217,8 +214,7 @@ EndEvent
 C8TorchTrapB:
 GetTrapExt1At(17,18)
 BEQ 0x1 0xC 0x0
-EVBIT_T 9
-LOAD1 0x0 C8TorchTrapBUnits
+Reinforcements(C8TorchTrapBUnits)
 GOTO 0x2
 LABEL 0x1
 ENUF 0x11

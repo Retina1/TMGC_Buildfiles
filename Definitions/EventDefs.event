@@ -9,6 +9,9 @@
 #define GiveItem(item) "SMOV 0x3 item; GIVEITEMTO 0xFFFF;"
 #define GiveItem(item,character) "SMOV 0x3 item; GIVEITEMTO character;"
 #define Narration(textid) "SetBackground(0x34); STAL 120; NarrationText(textid); MUSC 0x0; FADI 0x3c"
+#define CamOn "EVBIT_T 9"
+#define CamOff "EVBIT_F 9"
+#define Reinforcements(pointer) "CamOn ; LOAD1 0x0 pointer; ENUN; CamOff"
 
 #define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
 

@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C9Turn1,1)
 TurnEventPlayer(0x0,C9Turn2,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -115,11 +116,17 @@ CleanTextNoMap(0x10,Ch9_Ending)
 MoveToChapter(Interlude3)
 ENDA
 
+C9Turn1:
+CAM1 Pete
+FlashCursor(3,0,60)
+SystemText(BarrelHint)
+EndEvent
+
 C9Turn2:
 CAM1 Pete
 FlashCursor(Pete,60)
 Text(C9BarrelWarning)
-LOAD1 0x0 C9T2Spawns
+Reinforcements(C9T2Spawns)
 EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

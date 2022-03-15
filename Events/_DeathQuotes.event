@@ -13,15 +13,18 @@ ChapterDeathQuote(Marque,Chapter1,DefeatBossFlag,C1MarqueDeath)
 // Ch2
 ChapterDeathQuote(Brentson,Chapter2,DefeatBossFlag,C2BrentsonDeath)
 // Ch3
+ChapterDeathQuote(Josef,Chapter3,0xa,AllyJosefDeath)
 ChapterDeathQuote(Helga,Chapter3,DefeatBossFlag,C3HelgaDeath)
 // Ch4
 ChapterDeathQuote(Starque,Chapter4,DefeatBossFlag,C4StarqueDeath)
 ChapterDeathQuote(Lazarus,Chapter4,0x0,C4LazarusDeath)
 // Ch5
+ChapterDeathQuote(Butch,Chapter5,0xa,EnemyButchDeath)
 ChapterDeathQuote(Mitchell,Chapter5,DefeatBossFlag,C5MitchellDeath)
 // Ch6
 ChapterDeathQuote(Amundsen,Chapter6,DefeatBossFlag,C6AmundsenDeath)
 // Ch7
+ChapterDeathQuote(Emile,Chapter7,0xa,AllyEmileDeath)
 ChapterDeathQuote(Zaine,Chapter7,DefeatBossFlag,C7ZaineDeath)
 ChapterDeathQuote(Brandl,Chapter7,GameOverFlag,C7BrandlDeath)
 ChapterDeathQuote(C7Hyperius,Chapter7,0x0,C7HyperiusDeath)
@@ -31,8 +34,10 @@ ChapterDeathQuote(C7Wilhelm,Chapter7,0x0,C7WilhelmDeath)
 ChapterDeathQuote(Esme,Chapter8,DefeatBossFlag,C8EsmeDeath)
 ChapterDeathQuote(Cid,Chapter8,0x0,C8CidDeath)
 // Ch9
+ChapterDeathQuote(Apollo,Chapter9,0xa,AllyApolloDeath)
+ChapterDeathQuote(Bechamel,Chapter9,0xb,EnemyBechamelDeath)
 ChapterDeathQuote(Pete,Chapter9,DefeatBossFlag,C9PeteDeath)
-ChapterDeathQuote(Cid,Chapter9,0x0,C8CidDeath)
+ChapterDeathQuote(Cid,Chapter9,0x0,C9CidDeath)
 // Always
 AlwaysDeathQuote(Blair,GameOverFlag,BlairDeath)
 AlwaysDeathQuote(Arin,0x0,ArinDeath)

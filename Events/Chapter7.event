@@ -284,9 +284,7 @@ MoveToChapter(Chapter8)
 ENDA
 
 C7Turn2:
-EVBIT_T 9
-LOAD1 0x0 C7Emile
-ENUN
+Reinforcements(C7Emile)
 CAM1 Emile
 FlashCursor(Emile,60)
 Text(Ch7_Emile_Spawn)
@@ -297,47 +295,35 @@ Text(C7WilhelmAlexisTalk)
 EndEvent
 
 C7Turn5:
-EVBIT_T 9
-LOAD1 0x0 C7YgstraBolster
-ENUN
+Reinforcements(C7YgstraBolster)
 EndEvent
 
 C7Turn7:
-EVBIT_T 9
-LOAD1 0x0 C7BanditBolster
-ENUN
+Reinforcements(C7BanditBolster)
 EndEvent
 
 C7Turn9:
 CHECK_HARD
 BEQ 0x1 0xC 0x0
-EVBIT_T 9
-LOAD1 0x0 C7YgstraAirBolster
-ENUN
+Reinforcements(C7YgstraAirBolster)
 LABEL 0x1
 EndEvent
 
 C7Turn12:
-EVBIT_T 9
-LOAD1 0x0 C7BanditBolster
-LOAD1 0x0 C7YgstraBolster
+Reinforcements(C7YgstraBolster)
+Reinforcements(C7BanditBolster)
 CHECK_HARD
 BEQ 0x1 0xc 0x0
-LOAD1 0x0 C7YgstraAirBolster
+Reinforcements(C7YgstraAirBolster)
 LABEL 0x1
-ENUN
 EndEvent
 
 C7Turn14:
-EVBIT_T 9
-LOAD1 0x0 C7UhOh
-ENUN
+Reinforcements(C7UhOh)
 EndEvent
 
 C7Turn16:
-EVBIT_T 9
-LOAD1 0x0 C7OhDear
-ENUN
+Reinforcements(C7OhDear)
 EndEvent
 
 C7EmileTalk:
@@ -361,9 +347,7 @@ GOTO 0x3
 LABEL 0x1
 Text(BrandlCassiusTalk)
 LABEL 0x3
-EVBIT_T 9
-LOAD1 0x0 C7BossGroup
-ENUN
+Reinforcements(C7BossGroup)
 CAM1 Zaine
 FlashCursor(Zaine,60)
 Text(Ch7_Zaine_Spawn)

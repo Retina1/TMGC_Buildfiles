@@ -209,9 +209,7 @@ Text(C5Hint)
 EndEvent
 
 C5Turn2:
-EVBIT_T 9
-LOAD1 0x0 C5Cutscene
-ENUN
+Reinforcements(C5Cutscene)
 Text(Ch5_Rachael_Cassius)
 MOVE 0x10 ElbaCor [21,0]
 ENUN
@@ -225,15 +223,11 @@ Text(C5Warning)
 EndEvent
 
 C5Turn7:
-EVBIT_T 9
-LOAD1 0x0 C5Reinforce
-ENUN
+Reinforcements(C5Reinforce)
 EndEvent
 
 C5Turn9:
-EVBIT_T 9
-LOAD1 0x0 C5Ygstra
-ENUN
+Reinforcements(C5Ygstra)
 EndEvent
 
 C5North:

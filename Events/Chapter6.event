@@ -201,12 +201,11 @@ MoveToChapter(Chapter7)
 ENDA
 
 C6Turn6:
-EVBIT_T 9
 CHECK_TUTORIAL
 BNE 0x1 0xC 0x0
-LOAD1 0x0 C6MevionRevengeSquad2
+Reinforcements(C6MevionRevengeSquad2)
 LABEL 0x1
-LOAD1 0x0 C6MevionRevengeSquad1
+Reinforcements(C6MevionRevengeSquad1)
 ENUN
 EndEvent
 
@@ -227,7 +226,7 @@ CHECK_HARD
 BEQ 0x10 0xc 0x0
 CHECK_EVENTID 0x1
 BEQ 0x1 0xc 0x0
-LOAD1 0x1 C6BossDudes
+Reinforcements(C6BossDudes)
 ENUN
 GOTO 0x10
 LABEL 0x1

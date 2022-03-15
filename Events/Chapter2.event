@@ -201,9 +201,7 @@ Text(C2JohanT2)
 EndEvent
 
 C2Turn3:
-EVBIT_T 9
-LOAD1 0x1 C2StefanDesmondJoin
-ENUN
+Reinforcements(C2StefanDesmondJoin)
 MUSC 0x30
 Text(C2StefanDesmond)
 MUSC 0x0
@@ -234,8 +232,7 @@ MUSC 0x0
 EndEvent
 
 C2Turn9:
-LOAD1 0x1 C2Thief
-ENUN
+Reinforcements(C2Thief)
 EndEvent
 
 EndingScene:

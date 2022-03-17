@@ -3,8 +3,28 @@
 
 ALIGN 4
 ForceDeployList:
+//main force deploys
 ForceDeployEntry(Blair,0xFF)
 ForceDeployEntry(Zeke,0xFF)
+ForceDeployEntry(Viridian,0xff)
+ForceDeployEntry(Chartreuse,0xff)
+//one off force deploys
+ForceDeployEntry(Rachael,Chapter6)
+ForceDeployEntry(Cassius,Chapter6)
+ForceDeployEntry(Rachael,Chapter7)
+ForceDeployEntry(Cassius,Chapter7)
+//V5 force deploys
+ForceDeployEntry(Freddric,ChapterV5)
+ForceDeployEntry(Dean,ChapterV5)
+ForceDeployEntry(Dawn,ChapterV5)
+ForceDeployEntry(Rift,ChapterV5)
+ForceDeployEntry(Estelle,ChapterV5)
+ForceDeployEntry(Rose,ChapterV5)
+ForceDeployEntry(Dirk,ChapterV5)
+ForceDeployEntry(Callum,ChapterV5)
+ForceDeployEntry(Manfred,ChapterV5)
+ForceDeployEntry(Wilhelm,ChapterV5)
+ForceDeployEntry(Argent,ChapterV5)
 EndForceDeploy
 
 PUSH

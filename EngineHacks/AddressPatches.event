@@ -4,6 +4,14 @@ ORG $8D378
 SHORT $E010 //Always branch even if there's fog
 POP
 
+//rearrange force deploys
+PUSH
+ORG $33750
+BYTE 0x00 0x20 0x00 0x00
+ORG $9543E
+BYTE 0x00 0x20 0x00 0x00
+POP
+
 //hatchet stuff
 PUSH
 ORG 0x58324

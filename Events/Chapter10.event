@@ -1,0 +1,125 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x3b,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C10Units C10Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,C10GameOver,16)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Escape(26,0)
+Escape(26,1)
+Escape(26,2)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C10Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [15,22] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C10Easy:
+UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT
+
+C10Normal:
+UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT
+
+C10Hard:
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Ygstra Sniper 0x0 Level(5,Enemy,1) [1,23] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT Ygstra LncGen 0x0 Level(5,Enemy,1) [1,25] 0x0 0x0 0x0 0x0 [SilverLance,Spear] NoAI
+UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [1,29] DropItem 0x0 0x0 0x0 [Arkhinal,Tomahawk,LegRing] NoAI
+UNIT
+
+C10Ally:
+UNIT Cid Berserker 0x0 Level(9,NPC,0) [7,24] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NoAI
+UNIT Pirates Pirate 0x0 Level(18,NPC,1) [6,23] 0x0 0x0 0x0 0x0 [SilverAxe,Elixir] NoAI
+UNIT Pirates Pirate 0x0 Level(18,NPC,1) [6,25] 0x0 0x0 0x0 0x0 [Hammer,Elixir] NoAI
+UNIT Pirates Pirate 0x0 Level(18,NPC,1) [8,23] 0x0 0x0 0x0 0x0 [Halberd,Elixir] NoAI
+UNIT Pirates Pirate 0x0 Level(18,NPC,1) [8,25] 0x0 0x0 0x0 0x0 [Swordslayer,Elixir] NoAI
+UNIT Opistia LightM 0x0 Level(15,NPC,1) [14,19] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
+UNIT Opistia LightM 0x0 Level(15,NPC,1) [15,18] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
+UNIT Opistia LightM 0x0 Level(15,NPC,1) [16,18] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
+UNIT Opistia LightM 0x0 Level(15,NPC,1) [17,19] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt10
+LoadUnitsByDifficulty(C10Easy,C10Normal,C10Hard)
+LOAD1 0x0 C10Ally
+ENUN
+MUSC 0x4
+Narration(Ch10_Narration)
+CleanText(0x3,Ch9_Opening)
+LOAD1 0x0 C10Units
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+ResetBaseFlags
+MUSC 0x31 
+CleanTextNoMap(0x10,Ch9_Ending)
+MoveToChapter(Chapter11)
+ENDA
+
+C10GameOver:
+Text(C10GameOverMessage)
+GameOver
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

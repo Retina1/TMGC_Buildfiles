@@ -192,11 +192,33 @@ LOAD1 0x0 C6Units
 MUSC 0x4
 Narration(Ch6_Narration)
 CLEAN
+CleanTextNoMap(0x3,Ch6_Opening)
 GotoPrepScreen
 EndEvent
 
 EndingScene:
 ResetBaseFlags
+CHECK_ALIVE Rachael
+BNE 0x2 0xC 0x0
+CHECK_ALIVE Cassius
+BNE 0x3 0xC 0x0
+MUSC 0x32
+CleanTextNoMap(0x3,Ch6_Ending_Dead_Rachael_and_Cassius)
+GOTO 0x5
+LABEL 0x3
+MUSC 0x32
+CleanTextNoMap(0x3,Ch6_Ending_Dead_Rachael)
+GOTO 0x5
+LABEL 0x2
+CHECK_ALIVE Cassius
+BNE 0x4 0xC 0x0
+MUSC 0x32
+CleanTextNoMap(0x3,Ch6_Ending_Dead_Cassius)
+GOTO 0x5
+LABEL 0x4
+MUSC 0x31
+CleanTextNoMap(0x3,Ch6_Ending)
+LABEL 0x5
 MoveToChapter(Chapter7)
 ENDA
 

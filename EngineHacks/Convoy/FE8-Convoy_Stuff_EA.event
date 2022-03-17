@@ -10,7 +10,7 @@
 
 #define ConvoyPartition(start_slot, length, function) "BYTE start_slot length 0 0; POIN function"
 
-
+//blair gets convoy of size 150, zeke doesn't get his own convoy for his maps, viridian gets his own size 50 convoy (maybe merge it in ch. 24)
 
 ConvoyPartitionTable:
 ConvoyPartition(0, 150, 0) //blair

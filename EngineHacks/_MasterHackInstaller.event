@@ -60,10 +60,10 @@ POP
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 
 //hand axe anims
-#include "handaxs_wildcard/Installer.event"
+#include "TMGC/handaxs_wildcard/Installer.event"
 
 //promo rework stuff
-#include "SplitPromoItems/SplitPromoItems.event"
+#include "TMGC/SplitPromoItems/SplitPromoItems.event"
 
 //this part is maybe dumb and not cooperating yet
 PUSH
@@ -72,9 +72,9 @@ ORG $2BE38
 POP
 
 //minimug palette buffer
-#include "Minimug Palette/MinimugPalette.event"
+#include "TMGC/Minimug Palette/MinimugPalette.event"
 //staff heal
-#include "StaffHealAmount/HealAmountSetup.event"
+#include "TMGC/StaffHealAmount/HealAmountSetup.event"
 
 PUSH
 ORG 0x9F36A0
@@ -107,28 +107,28 @@ PUSH
 POP
 
 //title screen BG
-#include "256 colors Title background Installer/titlebackgroundinstaller.event"
+#include "TMGC/TitleBG/titlebackgroundinstaller.event"
 
 //take action when bumping into fog enemy
-#include "Less Annoying Fog/Less Annoying Fog Installer.event"
+#include "TMGC/Less Annoying Fog/Less Annoying Fog Installer.event"
 
 //walking sounds
 PUSH
-#include "FE8-Walking Sounds Fix/FE8-Walking Sounds EA.txt"
+#include "TMGC/FE8-Walking Sounds Fix/FE8-Walking Sounds EA.txt"
 POP
 
   //Free Movement
   #include "ExternalHacks/cFreeMU/FreeMovement.event"
   
   //hit bonus
-  #include "hit_mashimashi/hit_mashimashi_installer.event"
+  #include "TMGC/hit_mashimashi/hit_mashimashi_installer.event"
   
    #include "FixedAutolevels.event"
   
-  #include "CritChange/CritChange.txt"
+  #include "TMGC/CritChange/CritChange.txt"
   
   //Text Rework
-  #include "FE8-Text_Engine_Rework/_FE8-Text_Engine_Rework_EA.event"
+  #include "TMGC/FE8-Text_Engine_Rework/_FE8-Text_Engine_Rework_EA.event"
 
   //HP Bars (and effective weapon warning)
   #include "QualityOfLife/HpBars/HpBars.event"
@@ -330,15 +330,15 @@ ALIGN 4
 //bardly stuff
 ALIGN 4
 {
-#include "MultiDancer/Installer.event"
+#include "TMGC/MultiDancer/Installer.event"
 }
 ALIGN 4
 {
-#include "MultiDancerForMap/Installer.event"
+#include "TMGC/MultiDancerForMap/Installer.event"
 }
 ALIGN 4
 {
-#include "MultiDancerForBattleAnime/Installer.event"
+#include "TMGC/MultiDancerForBattleAnime/Installer.event"
 }
 
 
@@ -356,13 +356,13 @@ ALIGN 4
 #include "PrepShops/Installer.event"
 
 //higher promo values
-#include "HigherStatGains/HigherNumberGains.event"
+#include "TMGC/HigherStatGains/HigherNumberGains.event"
 
 //reverse mode
-#include "ReverseInstaller/ReverseInstaller.txt"
+#include "TMGC/ReverseInstaller/ReverseInstaller.txt"
 
 //item drops- mkol/huichelaar
-#include "ItemDropIcon/Display Droppable Item.event"
+#include "TMGC/ItemDropIcon/Display Droppable Item.event"
 
 //music stuff
 #include "MusicStuff/Installer.event"
@@ -374,9 +374,9 @@ ALIGN 4
 //#include "ExternalHacks/AnimNumbers/AnimNumbers.event"
 
 //group AI
-#include "GroupAI/GroupAI.event"
+#include "TMGC/GroupAI/GroupAI.event"
 //dance Ai
-#include "DanceAi/DanceAi.event" 
+#include "TMGC/DanceAi/DanceAi.event" 
 
 //convoy stuff- and of course it crashes
-//#include "Convoy/FE8-Convoy_Stuff_EA.event"
+#include "Convoy/FE8-Convoy_Stuff_EA.event"

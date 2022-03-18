@@ -207,7 +207,7 @@ LoadUnitsByDifficulty(C3Easy,C3Normal,C3Hard)
 LOAD1 0x0 C3Units
 LOAD1 0x0 C3JosefNPC
 ENUN
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Ch3_Narration)
 CLEAN
 CHECK_ALIVE Stefan
@@ -227,7 +227,7 @@ ENDA
 
 C3Turn1:
 Reinforcements(C3SamJoins)
-MUSC 0x30
+MUSC RecruitmentTheme
 Text(Ch3_Sam_Joins)
 EndEvent
 
@@ -267,7 +267,7 @@ LABEL 0x2
 EndEvent
 
 C3JosefRecruitment:
-MUSC 0x30
+MUSC RecruitmentTheme
 Text(Ch3_Josef_Talk)
 TurnAlly(Josef)
 EndEvent
@@ -277,7 +277,7 @@ VillageEventItem(C3VillageText, 0x1, Thunder)
 
 EndingScene:
 ResetBaseFlags
-MUSC 0x32
+MUSC VictoryMinor
 CLEAN
 SetBackground(0x10)
 FADU 0x3c
@@ -287,7 +287,7 @@ TEXTEND
 MUSC 0x0
 TEXTCONT
 TEXTEND
-MUSC 0x24
+MUSC S_SMTLevelUp
 TEXTCONT
 TEXTEND
 FADI 0x3c

@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	StickSecond_grp, voicegroup000
+	.equ	StickSecond_pri, 0
+	.equ	StickSecond_rev, 0
+	.equ	StickSecond_mvl, 127
+	.equ	StickSecond_key, 0
+	.equ	StickSecond_tbs, 1
+	.equ	StickSecond_exg, 0
+	.equ	StickSecond_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	StickSecond
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+StickSecond_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 100*song04_tbs/2
+ .byte   KEYSH , StickSecond_key+0
+ .byte   TEMPO , 100*StickSecond_tbs/2
  .byte   VOICE , 40
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
  .byte   TIE ,Gn3 ,v036
  .byte   TIE ,Cn4
@@ -253,7 +253,7 @@ Label_F63957:
  .byte   N92 ,Gn3
  .byte   W96
 @  #01 @052   ----------------------------------------
- .byte   TEMPO , 100*song04_tbs/2
+ .byte   TEMPO , 100*StickSecond_tbs/2
  .byte   TIE
  .byte   TIE ,Cn4
  .byte   W96
@@ -301,11 +301,11 @@ Label_F63957:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+StickSecond_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , StickSecond_key+0
  .byte   VOICE , 41
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
  .byte   TIE ,An2 ,v016
  .byte   TIE ,En3
@@ -574,11 +574,11 @@ Label_01004597:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+StickSecond_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , StickSecond_key+0
  .byte   VOICE , 42
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
  .byte   TIE ,An1 ,v052
  .byte   W96
@@ -805,13 +805,13 @@ Label_F63473:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+StickSecond_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , StickSecond_key+0
  .byte   VOICE , 123
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -1144,11 +1144,11 @@ Label_010046CC:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+StickSecond_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   VOICE , 68
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   KEYSH , StickSecond_key+0
+ .byte   VOICE , 74
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -1342,11 +1342,11 @@ Label_F63767:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+StickSecond_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   VOICE , 73
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   KEYSH , StickSecond_key+0
+ .byte   VOICE , 74
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -1873,11 +1873,11 @@ Label_01004A1F:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+StickSecond_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   VOICE , 13
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   KEYSH , StickSecond_key+0
+ .byte   VOICE , 105
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
  .byte   N05 ,Bn3 ,v064
@@ -2105,11 +2105,11 @@ Label_01004B7B:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+StickSecond_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , StickSecond_key+0
  .byte   VOICE , 33
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*StickSecond_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -3151,21 +3151,21 @@ Label_01004FD5:
 @******************************************************@
 	.align	2
 
-song04:
+StickSecond:
 	.byte	8	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	StickSecond_pri	@ Priority
+	.byte	StickSecond_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	StickSecond_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
+	.word	StickSecond_001
+	.word	StickSecond_002
+	.word	StickSecond_003
+	.word	StickSecond_004
+	.word	StickSecond_005
+	.word	StickSecond_006
+	.word	StickSecond_007
+	.word	StickSecond_008
 
 	.end

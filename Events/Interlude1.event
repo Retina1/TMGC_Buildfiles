@@ -107,7 +107,7 @@ EnableFreeMovement
 LOAD1 0x0 I1Units
 LOAD1 0x0 I1NPC
 ENUN
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Base1_Narration)
 CleanTextNoMap(0x3,I1_Opening)
 GotoPrepScreen
@@ -124,7 +124,7 @@ LOAD1 0x0 I1ElbaCorians
 ENUN
 TEXTCONT
 TEXTEND
-MUSC 0x30
+MUSC RecruitmentTheme
 TurnAlly(Rachael)
 TurnAlly(Cassius)
 TEXTCONT

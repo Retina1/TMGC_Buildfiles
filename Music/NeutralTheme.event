@@ -1,0 +1,499 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	NeutralTheme_grp  voicegroup000
+	#define	NeutralTheme_pri  10
+	#define	NeutralTheme_rev  128
+	#define	NeutralTheme_mvl  127
+	#define	NeutralTheme_key  0
+	#define	NeutralTheme_tbs  1
+	#define	NeutralTheme_exg  0
+	#define	NeutralTheme_cmp  1
+
+	// .rodata
+	//	NeutralTheme
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+NeutralTheme_001:
+//  #01 //000   ----------------------------------------
+ BYTE   KEYSH   NeutralTheme_key+0
+ BYTE   TEMPO   144*NeutralTheme_tbs/2
+ BYTE   VOICE   89
+ BYTE   VOL   34*NeutralTheme_mvl/mxv
+ BYTE   BENDR  8
+ BYTE   TIE  Dn0  v072
+ BYTE   TIE  Dn1  v092
+ BYTE   TIE  Fn1  v080
+ BYTE   W96
+//  #01 //001   ----------------------------------------
+ BYTE   W92
+ BYTE   W03
+ BYTE   EOT
+ BYTE   Dn0  v038
+ BYTE   Fn1
+Label_014E58DA:
+ BYTE   W01
+//  #01 //002   ----------------------------------------
+Label_014E58DB:
+ BYTE   TIE  En0  v072
+ BYTE   TIE  En1  v092
+ BYTE   TIE  Gn1  v080
+ BYTE   W96
+//  #01 //003   ----------------------------------------
+ BYTE   W92
+ BYTE   W03
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   En0  v040
+ BYTE   Gn1
+ BYTE   W01
+//  #01 //004   ----------------------------------------
+Label_014E58ED:
+ BYTE   TIE  Dn0  v072
+ BYTE   TIE  Dn1  v092
+ BYTE   TIE  Fn1  v080
+ BYTE   W96
+//  #01 //005   ----------------------------------------
+ BYTE   W92
+ BYTE   W03
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Dn0  v038
+ BYTE   Fn1
+ BYTE   W01
+//  #01 //006   ----------------------------------------
+ BYTE   TIE  Cn0  v072
+ BYTE   TIE  Cn1  v092
+ BYTE   TIE  En1  v080
+ BYTE   W96
+//  #01 //007   ----------------------------------------
+ BYTE   W92
+ BYTE   W03
+ BYTE   EOT
+ BYTE   Cn0  v036
+ BYTE   En1
+ BYTE   W01
+//  #01 //008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_014E58ED
+//  #01 //009   ----------------------------------------
+ BYTE   EOT
+ BYTE   Dn0  v038
+ BYTE   Fn1
+ BYTE   W01
+//  #01 //010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_014E58DB
+//  #01 //011   ----------------------------------------
+ BYTE   EOT
+ BYTE   En0  v040
+ BYTE   Gn1
+ BYTE   W01
+ BYTE   N92  AsM1  v072
+ BYTE   N92  As0  v092
+ BYTE   N92  Fn1  v080
+ BYTE   W96
+//  #01 //012   ----------------------------------------
+ BYTE   Cn0  v072
+ BYTE   N92  Cn1  v092
+ BYTE   N92  En1  v080
+ BYTE   W96
+//  #01 //013   ----------------------------------------
+ BYTE   TIE  AsM1  v072
+ BYTE   TIE  As0  v092
+ BYTE   TIE  Dn1  v080
+ BYTE   W96
+//  #01 //014   ----------------------------------------
+ BYTE   W92
+ BYTE   W03
+ BYTE   EOT
+ BYTE   AsM1  v034
+ BYTE   Dn1
+ BYTE   W01
+//  #01 //015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_014E58ED
+//  #01 //016   ----------------------------------------
+ BYTE   EOT
+ BYTE   Dn0  v038
+ BYTE   Fn1
+ BYTE   GoTo
+  POIN2 Label_014E58DA
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+NeutralTheme_002:
+//  #02 //000   ----------------------------------------
+ BYTE   KEYSH   NeutralTheme_key+0
+ BYTE   VOICE   52
+ BYTE   VOL   36*NeutralTheme_mvl/mxv
+ BYTE   BENDR  8
+ BYTE   BEND   c_v+0
+ BYTE   TIE  An1  v080
+ BYTE   TIE  An2  v100
+ BYTE   W90
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-9
+ BYTE   W02
+ BYTE   BEND   c_v-18
+ BYTE   W02
+//  #02 //001   ----------------------------------------
+ BYTE   BEND   c_v-28
+ BYTE   W02
+ BYTE   BEND   c_v-37
+ BYTE   W02
+ BYTE   BEND   c_v-47
+ BYTE   W02
+ BYTE   BEND   c_v-56
+ BYTE   W36
+ BYTE   BEND   c_v-56
+ BYTE   W02
+ BYTE   BEND   c_v-43
+ BYTE   W02
+ BYTE   BEND   c_v-30
+ BYTE   W02
+ BYTE   BEND   c_v-17
+ BYTE   W02
+ BYTE   BEND   c_v-4
+ BYTE   W02
+ BYTE   BEND   c_v+10
+ BYTE   W02
+ BYTE   BEND   c_v+24
+ BYTE   W40
+ BYTE   W01
+ BYTE   EOT
+ BYTE   An1  v057
+Label_014E5D5B:
+ BYTE   W01
+//  #02 //002   ----------------------------------------
+Label_014E5D5C:
+ BYTE   BEND   c_v+0
+ BYTE   TIE  Bn1  v080
+ BYTE   N92  Bn2  v100
+ BYTE   W96
+//  #02 //003   ----------------------------------------
+ BYTE   N68  An2
+ BYTE   W72
+ BYTE   N23  Gn2
+ BYTE   W23
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   Bn1
+ BYTE   W01
+//  #02 //004   ----------------------------------------
+ BYTE   TIE  An1  v080
+ BYTE   TIE  An2  v100
+ BYTE   W90
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+7
+ BYTE   W02
+ BYTE   BEND   c_v+13
+ BYTE   W02
+//  #02 //005   ----------------------------------------
+ BYTE   BEND   c_v+20
+ BYTE   W02
+ BYTE   BEND   c_v+27
+ BYTE   W02
+ BYTE   BEND   c_v+33
+ BYTE   W02
+ BYTE   BEND   c_v+40
+ BYTE   W88
+ BYTE   W01
+ BYTE   EOT
+ BYTE   An1  v057
+ BYTE   W01
+//  #02 //006   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   TIE  Gn1  v080
+ BYTE   N92  Cn3  v100
+ BYTE   W96
+//  #02 //007   ----------------------------------------
+ BYTE   Bn2
+ BYTE   W92
+ BYTE   W03
+ BYTE   EOT
+ BYTE   Gn1
+ BYTE   W01
+//  #02 //008   ----------------------------------------
+Label_014E5D9F:
+ BYTE   TIE  An1  v080
+ BYTE   TIE  An2  v100
+ BYTE   W90
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-9
+ BYTE   W02
+ BYTE   BEND   c_v-18
+ BYTE   W02
+//  #02 //009   ----------------------------------------
+ BYTE   BEND   c_v-28
+ BYTE   W02
+ BYTE   BEND   c_v-37
+ BYTE   W02
+ BYTE   BEND   c_v-47
+ BYTE   W02
+ BYTE   BEND   c_v-56
+ BYTE   W36
+ BYTE   BEND   c_v-56
+ BYTE   W02
+ BYTE   BEND   c_v-43
+ BYTE   W02
+ BYTE   BEND   c_v-30
+ BYTE   W02
+ BYTE   BEND   c_v-17
+ BYTE   W02
+ BYTE   BEND   c_v-4
+ BYTE   W02
+ BYTE   BEND   c_v+10
+ BYTE   W02
+ BYTE   BEND   c_v+24
+ BYTE   W40
+ BYTE   W01
+ BYTE   PEND 
+ BYTE   EOT
+ BYTE   An1  v057
+ BYTE   W01
+//  #02 //010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_014E5D5C
+//  #02 //011   ----------------------------------------
+ BYTE   EOT
+ BYTE   Bn1
+ BYTE   W01
+ BYTE   N92  An1  v080
+ BYTE   N30  An2  v100
+ BYTE   W32
+ BYTE   Dn2
+ BYTE   W32
+ BYTE   Gn2
+ BYTE   W32
+//  #02 //012   ----------------------------------------
+ BYTE   N92  Gn1  v080
+ BYTE   N92  En2  v100
+ BYTE   W96
+//  #02 //013   ----------------------------------------
+ BYTE   TIE  Fn1  v080
+ BYTE   TIE  Fn2  v100
+ BYTE   W96
+//  #02 //014   ----------------------------------------
+ BYTE   W92
+ BYTE   W03
+ BYTE   EOT
+ BYTE   Fn1  v053
+ BYTE   W01
+//  #02 //015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_014E5D9F
+//  #02 //016   ----------------------------------------
+ BYTE   EOT
+ BYTE   An1  v057
+ BYTE   GoTo
+  POIN2 Label_014E5D5B
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+NeutralTheme_003:
+//  #03 //000   ----------------------------------------
+ BYTE   KEYSH   NeutralTheme_key+0
+ BYTE   W24
+ BYTE   VOICE   52
+ BYTE   VOL   25*NeutralTheme_mvl/mxv
+ BYTE   BENDR  8
+ BYTE   BEND   c_v+0
+ BYTE   TIE  An2  v100
+ BYTE   W90
+//  #03 //001   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-9
+ BYTE   W02
+ BYTE   BEND   c_v-18
+ BYTE   W02
+ BYTE   BEND   c_v-28
+ BYTE   W02
+ BYTE   BEND   c_v-37
+ BYTE   W02
+ BYTE   BEND   c_v-47
+ BYTE   W02
+ BYTE   BEND   c_v-56
+ BYTE   W36
+ BYTE   BEND   c_v-56
+ BYTE   W02
+ BYTE   BEND   c_v-43
+ BYTE   W02
+ BYTE   BEND   c_v-30
+ BYTE   W02
+ BYTE   BEND   c_v-17
+ BYTE   W02
+ BYTE   BEND   c_v-4
+ BYTE   W02
+ BYTE   BEND   c_v+10
+ BYTE   W02
+ BYTE   BEND   c_v+24
+ BYTE   W18
+ BYTE   W23
+//  #03 //002   ----------------------------------------
+ BYTE   EOT
+Label_014E5AB7:
+ BYTE   W01
+ BYTE   BEND   c_v+0
+ BYTE   N92  Bn2  v100
+ BYTE   W96
+//  #03 //003   ----------------------------------------
+ BYTE   N68  An2
+ BYTE   W72
+ BYTE   N23  Gn2
+ BYTE   W24
+//  #03 //004   ----------------------------------------
+ BYTE   TIE  An2
+ BYTE   W90
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v+7
+ BYTE   W02
+ BYTE   BEND   c_v+13
+ BYTE   W02
+//  #03 //005   ----------------------------------------
+ BYTE   BEND   c_v+20
+ BYTE   W02
+ BYTE   BEND   c_v+27
+ BYTE   W02
+ BYTE   BEND   c_v+33
+ BYTE   W02
+ BYTE   BEND   c_v+40
+ BYTE   W66
+ BYTE   W23
+ BYTE   EOT
+ BYTE   W01
+//  #03 //006   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N92  Cn3
+ BYTE   W96
+//  #03 //007   ----------------------------------------
+ BYTE   Bn2
+ BYTE   W72
+ BYTE   W24
+//  #03 //008   ----------------------------------------
+ BYTE   TIE  An2
+ BYTE   W90
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-9
+ BYTE   W02
+ BYTE   BEND   c_v-18
+ BYTE   W02
+//  #03 //009   ----------------------------------------
+ BYTE   BEND   c_v-28
+ BYTE   W02
+ BYTE   BEND   c_v-37
+ BYTE   W02
+ BYTE   BEND   c_v-47
+ BYTE   W02
+ BYTE   BEND   c_v-56
+ BYTE   W36
+ BYTE   BEND   c_v-56
+ BYTE   W02
+ BYTE   BEND   c_v-43
+ BYTE   W02
+ BYTE   BEND   c_v-30
+ BYTE   W02
+ BYTE   BEND   c_v-17
+ BYTE   W02
+ BYTE   BEND   c_v-4
+ BYTE   W02
+ BYTE   BEND   c_v+10
+ BYTE   W02
+ BYTE   BEND   c_v+24
+ BYTE   W18
+ BYTE   W23
+ BYTE   EOT
+ BYTE   W01
+//  #03 //010   ----------------------------------------
+ BYTE   BEND   c_v+0
+ BYTE   N92  Bn2
+ BYTE   W96
+//  #03 //011   ----------------------------------------
+ BYTE   N68  An2
+ BYTE   W72
+ BYTE   N23  Gn2
+ BYTE   W24
+//  #03 //012   ----------------------------------------
+ BYTE   N30  An2
+ BYTE   W32
+ BYTE   Dn2
+ BYTE   W32
+ BYTE   Gn2
+ BYTE   W32
+//  #03 //013   ----------------------------------------
+ BYTE   N92  En2
+ BYTE   W72
+ BYTE   W24
+//  #03 //014   ----------------------------------------
+ BYTE   TIE  Fn2
+ BYTE   W96
+//  #03 //015   ----------------------------------------
+ BYTE   W72
+ BYTE   W23
+ BYTE   EOT
+ BYTE   W01
+//  #03 //016   ----------------------------------------
+ BYTE   TIE  An2
+ BYTE   W90
+ BYTE   BEND   c_v+0
+ BYTE   W02
+ BYTE   BEND   c_v-9
+ BYTE   W02
+ BYTE   BEND   c_v-18
+ BYTE   W02
+//  #03 //017   ----------------------------------------
+ BYTE   BEND   c_v-28
+ BYTE   W02
+ BYTE   BEND   c_v-37
+ BYTE   W02
+ BYTE   BEND   c_v-47
+ BYTE   W02
+ BYTE   BEND   c_v-56
+ BYTE   W36
+ BYTE   BEND   c_v-56
+ BYTE   W02
+ BYTE   BEND   c_v-43
+ BYTE   W02
+ BYTE   BEND   c_v-30
+ BYTE   W02
+ BYTE   BEND   c_v-17
+ BYTE   W02
+ BYTE   BEND   c_v-4
+ BYTE   W02
+ BYTE   BEND   c_v+10
+ BYTE   W02
+ BYTE   BEND   c_v+24
+ BYTE   W18
+ BYTE   W23
+ BYTE   EOT
+ BYTE   GoTo
+  POIN2 Label_014E5AB7
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+NeutralTheme:
+	BYTE	3	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	NeutralTheme_pri	// Priority
+	BYTE	NeutralTheme_rev	// Reverb.
+    
+	POIN2	NeutralTheme_grp
+    
+	POIN2	NeutralTheme_001
+	POIN2	NeutralTheme_002
+	POIN2	NeutralTheme_003
+
+	

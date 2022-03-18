@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song37_grp, voicegroup000
-	.equ	song37_pri, 0
-	.equ	song37_rev, 0
-	.equ	song37_mvl, 127
-	.equ	song37_key, 0
-	.equ	song37_tbs, 1
-	.equ	song37_exg, 0
-	.equ	song37_cmp, 1
+	.equ	Condor_grp, voicegroup000
+	.equ	Condor_pri, 0
+	.equ	Condor_rev, 0
+	.equ	Condor_mvl, 127
+	.equ	Condor_key, 0
+	.equ	Condor_tbs, 1
+	.equ	Condor_exg, 0
+	.equ	Condor_cmp, 1
 
 	.section .rodata
-	.global	song37
+	.global	Condor
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song37_001:
+Condor_001:
 @ 000   ----------------------------------------
- .byte   VOL , 60*song37_mvl/mxv
- .byte   KEYSH , song37_key+0
+ .byte   VOL , 60*Condor_mvl/mxv
+ .byte   KEYSH , Condor_key+0
 Label_0_011F3900:
- .byte   TEMPO , 194*song37_tbs/2
+ .byte   TEMPO , 194*Condor_tbs/2
  .byte   VOICE , 24
  .byte   N24 ,En3 ,v100
  .byte   N36 ,Gn3
@@ -270,12 +270,12 @@ Label_0_011F3A12:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song37_002:
+Condor_002:
 @ 000   ----------------------------------------
- .byte   KEYSH , song37_key+0
+ .byte   KEYSH , Condor_key+0
 Label_1_011F3A62:
  .byte   VOICE , 75
- .byte   VOL , 60*song37_mvl/mxv
+ .byte   VOL , 60*Condor_mvl/mxv
  .byte   N12 ,Bn3 ,v100
  .byte   W12
  .byte   En4
@@ -484,10 +484,10 @@ Label_1_011F3B18:
  .byte   Dn5
  .byte   W12
 @ 026   ----------------------------------------
- .byte   VOL , 60*song37_mvl/mxv
+ .byte   VOL , 60*Condor_mvl/mxv
  .byte   TIE ,En5
  .byte   W01
- .byte   VOL , 59*song37_mvl/mxv
+ .byte   VOL , 59*Condor_mvl/mxv
  .byte   W02
  .byte   Bn2
  .byte   W02
@@ -714,7 +714,7 @@ Label_1_011F3B18:
  .byte   W02
 @ 028   ----------------------------------------
  .byte   EOT
- .byte   VOL , 6*song37_mvl/mxv
+ .byte   VOL , 6*Condor_mvl/mxv
  .byte   W01
  .byte   FsM2
  .byte   W02
@@ -754,10 +754,10 @@ Label_1_011F3B18:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song37_003:
+Condor_003:
 @ 000   ----------------------------------------
- .byte   VOL , 60*song37_mvl/mxv
- .byte   KEYSH , song37_key+0
+ .byte   VOL , 60*Condor_mvl/mxv
+ .byte   KEYSH , Condor_key+0
 Label_2_011F3C7C:
  .byte   VOICE , 127
  .byte   N48 ,Fn1 ,v100
@@ -930,16 +930,16 @@ Label_2_011F3D29:
 @******************************************************@
 	.align	2
 
-song37:
+Condor:
 	.byte	3	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song37_pri	@ Priority
-	.byte	song37_rev	@ Reverb.
+	.byte	Condor_pri	@ Priority
+	.byte	Condor_rev	@ Reverb.
     
-	.word	song37_grp
+	.word	Condor_grp
     
-	.word	song37_001
-	.word	song37_002
-	.word	song37_003
+	.word	Condor_001
+	.word	Condor_002
+	.word	Condor_003
 
 	.end

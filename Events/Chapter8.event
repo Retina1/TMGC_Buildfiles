@@ -182,7 +182,7 @@ ENUT GuideChpt8
 LoadUnitsByDifficulty(C8Easy,C8Normal,C8Hard)
 LOAD1 0x0 C8Ally
 ENUN
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Ch8_Narration)
 CleanText(0x3,Ch8_Opening)
 LOAD1 0x0 C8Units
@@ -192,7 +192,7 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC 0x31 
+MUSC VictoryTheme
 CleanTextNoMap(0x10,Ch8_Ending)
 MoveToChapter(Interlude2)
 ENDA

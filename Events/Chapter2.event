@@ -162,9 +162,9 @@ CleanTextNoMap(0x10,Ch2_ColdOpen)
 LoadUnitsByDifficulty(C2Easy,C2Normal,C2Hard)
 LOAD1 0x0 C2Allies
 ENUN
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Ch2_Narration)
-MUSC 0x25
+MUSC S_Crisis
 CHECK_ALIVE Kenneth
 BEQ 0x11 0xC 0x0
 CHECK_ALIVE Natasia
@@ -202,7 +202,7 @@ EndEvent
 
 C2Turn3:
 Reinforcements(C2StefanDesmondJoin)
-MUSC 0x30
+MUSC RecruitmentTheme
 Text(C2StefanDesmond)
 MUSC 0x0
 EndEvent
@@ -211,7 +211,7 @@ C2Turn4:
 CAM1 Brentson
 LOAD1 0x1 C2Cutscene1
 ENUN
-MUSC 0x44
+MUSC S_Ameno
 Text(C2Spooky)
 LOAD1 0x1 C2Cutscene2
 ENUN
@@ -237,7 +237,7 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
-MUSC 0x32 
+MUSC VictoryMinor
 CHECK_ALIVE Stefan
 BNE 0x2 0xC 0x0
 CHECK_ALIVE Desmond

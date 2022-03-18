@@ -137,7 +137,7 @@ EVBIT_MODIFY 0
 LOAD1 0x1 PUnits
 ENUN
 LoadUnitsByDifficulty(PEasy,PNormal,PHard)
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Prologue_Narration)
 CleanText(0x3,Prologue_Opening)
 ENUT AllUnitsMustEscapeFlag
@@ -147,11 +147,11 @@ EndEvent
 EndingScene:
 CHECK_ALIVE Kenneth
 BNE 0x1 0xC 0x0
-MUSC 0x32
+MUSC VictoryMinor
 Text(0x3,Prologue_Ending_Dead_Kenneth)
 GOTO 0x2
 LABEL 0x1
-MUSC 0x31
+MUSC VictoryTheme
 Text(0x3,Prologue_Ending)
 LABEL 0x2
 MUSC 0x0
@@ -161,7 +161,7 @@ EndEvent
 KennethCometh:
 LOAD1 0x1 PKenneth
 ENUN
-MUSC 0x30
+MUSC RecruitmentTheme
 Text(PKennethText)
 MUSC 0x0
 EndEvent

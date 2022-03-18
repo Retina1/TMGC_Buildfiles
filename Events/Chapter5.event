@@ -176,7 +176,7 @@ BeginningScene:
 ENUT GuideChpt5
 LoadUnitsByDifficulty(C5Easy,C5Normal,C5Hard)
 LOAD1 0x0 C5Units
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Ch5_Narration)
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0
@@ -190,7 +190,7 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
-MUSC 0x2d
+MUSC S_FE4Conversation
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0
 CleanTextNoMap(0x20,Ch5_Ending_Dead_Peggy)
@@ -238,7 +238,7 @@ HouseEvent(Ch5_SouthHouse,0x0)
 
 C5ButchRecruitment:
 EVBIT_MODIFY 3
-MUSC 0x30
+MUSC RecruitmentTheme
 Text(Ch5_Butch_Talk)
 TurnAlly(Butch)
 AddSupport(Peggy,Butch,1)

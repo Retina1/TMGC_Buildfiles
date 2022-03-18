@@ -1,43 +1,47 @@
 INLINE newMusicTable,Song ID,Song Length (Only Used for Shuffle Mode),Song Unlock ASM Condition (Unused in FE8),Song Name Text ID
-Right Road,0x43,2640,0,SR_RightRoad
-Baba Is You,0x34,2640,0,SR_Baba
-Taste of Justice,0x9,2640,0,SR_TOJ
-Tears of Resolution,0x15,2640,0,SR_TOR
-Lussaria's Destiny,0x16,2640,0,SR_LD
-Elf Field,0xA,4140,0,SR_Elf
-Master of Water,0xB,4560,0,SR_Water
-Premonition,0xC,3840,0,SR_Premonition
-Roar,0x1E,3840,0,SR_Roar
-Liberation,0xd,3840,0,SR_Liberation
-Footsteps of Fate,0x17,2640,0,SR_Footsteps
-Glory,0x4,3840,0,SR_Glory
-Wastes,0x11,3840,0,SR_Wastes
-FieldBible,0xf,3840,0,SR_LBField
-PirateMan,0x14,3840,0,SR_PirateMan
-Astroman,0x18,2640,0,SR_AstroMan
-Shackled,0x12,3840,0,SR_Shackled
-Metamorphosis,0x13,3840,0,SR_Metamorphosis
-Forest,0x37,3840,0,SR_Forest
-Stick,0x26,3840,0,SR_Stick
-SMT5Battle,0x19,3840,0,SR_SMTVBattle
-FE5Battle,0x1A,3840,0,SR_FE5Battle
-SMT4Tokyo,0x93,3840,0,SR_SMT4Tokyo
-SMT4Shinjuku,0x45,3840,0,SR_SMT4Shinjuku
-SMT4B2,0x92,3840,0,SR_SMT4Boss
-SMT4B4,0x1f,3840,0,SR_SMT4Boss4
-Paths,0x1C,3840,0,SR_Paths
-ItHasToBeThisWay,0x1b,3840,0,SR_ItHasToBeThisWay
-MythicQuestBattle,0x30,3840,0,SR_FFMQBattle
-FaceMyself,0x1d,3840,0,SR_FaceMyself
-FE4Victory,0x10,3840,0,SR_FE4Victory
-LevelUp,0x24,3840,0,SR_SMTLevelUp
-Crisis,0x25,3840,0,SR_Crisis
-Palace,0x2B,3840,0,SR_Palace
-Ameno,0x44,3840,0,SR_Ameno
-Conversation,0x2d,3840,0,SR_Conversation1
-Encounters and Reunions,0x27,2640,0,SR_EncountersReunions
-HiddenVillage,0x2c,3840,0,SR_MachinaVillage
-QuestBattle,0x2e,3840,0,SR_QuestBattle
-YHVHBattle,0x94,3840,0,SR_YHVH
-Unfulfilled,0x3f,3840,0,SR_Unfulfilled
+Right Road,S_RightRoad,2640,0,SR_RightRoad
+Baba Is You,S_BabaIsYou,2640,0,SR_Baba
+Taste of Justice,S_TasteOfJustice,2640,0,SR_TOJ
+Tears of Resolution,S_TearsOfResolution,2640,0,SR_TOR
+Lussaria's Destiny,S_LussariasDestiny,2640,0,SR_LD
+Elf Field,S_ElfField,4140,0,SR_Elf
+Master of Water,S_MasterOfWater,4560,0,SR_Water
+Premonition,S_Premonition,3840,0,SR_Premonition
+Roar,S_RoarOfDominion,3840,0,SR_Roar
+Liberation,S_Liberation,3840,0,SR_Liberation
+Footsteps of Fate,S_FootstepsOfFate,2640,0,SR_Footsteps
+Glory,S_GloryToGrann,3840,0,SR_Glory
+Long Road,S_LongRoad,3840,0,SR_Wastes
+FieldBible,S_LastBibleField,3840,0,SR_LBField
+PirateMan,S_PirateMan,3840,0,SR_PirateMan
+Astroman,S_AstroMan,2640,0,SR_AstroMan
+Shackled,S_ShackledWolves,3840,0,SR_Shackled
+Metamorphosis,S_Metamorphosis,3840,0,SR_Metamorphosis
+Forest,S_ForestInterlude,3840,0,SR_Forest
+Stick,S_StickerbrushSymphony,3840,0,SR_Stick
+SMT5Battle,S_SMTVBattle,3840,0,SR_SMTVBattle
+FE5Battle,S_FE5Battle,3840,0,SR_FE5Battle
+SMT4Tokyo,S_SMT4Tokyo,3840,0,SR_SMT4Tokyo
+SMT4Shinjuku,S_SMT4ShinjukuUnderground,3840,0,SR_SMT4Shinjuku
+SMT4B2,S_SMT4B2,3840,0,SR_SMT4Boss
+SMT4B4,S_SMT4B4,3840,0,SR_SMT4Boss4
+Paths,S_PathsThatWillNeverCross,3840,0,SR_Paths
+ItHasToBeThisWay,S_ItHasToBeThisWay,3840,0,SR_ItHasToBeThisWay
+MythicQuestBattle,S_MythicQuestBattle,3840,0,SR_FFMQBattle
+FaceMyself,S_FaceMyself,3840,0,SR_FaceMyself
+FE4Victory,S_FE4Victory,3840,0,SR_FE4Victory
+LevelUp,S_SMTLevelUp,3840,0,SR_SMTLevelUp
+Crisis,S_Crisis,3840,0,SR_Crisis
+Palace,S_DenpaMenPalace,3840,0,SR_Palace
+Ameno,S_Ameno,3840,0,SR_Ameno
+Conversation,S_FE4Conversation,3840,0,SR_Conversation1
+Encounters and Reunions,S_EncountersAndReunions,2640,0,SR_EncountersReunions
+HiddenVillage,S_MachinaVillage,3840,0,SR_MachinaVillage
+QuestBattle,S_TMSQuestBattle,3840,0,SR_QuestBattle
+Neutral,S_Neutral,3840,0,SR_Neutral
+Chaos,S_Chaos,3840,0,SR_Chaos
+Condor,S_KKCondor,3840,0,SR_Condor
+YHVHBattle,S_ToBecomeGodsEnemy,3840,0,SR_YHVH
+Unfulfilled,S_Unfulfilled,3840,0,SR_Unfulfilled
+GameOver,S_GameOver,3840,0,SR_GameOver
 ,0xFFFFFFFF,0,0,0x0

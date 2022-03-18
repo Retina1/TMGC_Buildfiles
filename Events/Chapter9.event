@@ -27,6 +27,8 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,C9ApolloRecruitment,Blair,Apollo)
+CharacterEvent(0xb,C9BechamelRecruitment,Apollo,Bechamel)
 END_MAIN
 
 LocationBasedEvents:
@@ -101,7 +103,7 @@ ENUT GuideChpt9
 LoadUnitsByDifficulty(C9Easy,C9Normal,C9Hard)
 LOAD1 0x0 C9Ally
 ENUN
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Ch9_Narration)
 CleanText(0x3,Ch9_Opening)
 LOAD1 0x0 C9Units
@@ -111,7 +113,7 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC 0x31 
+MUSC VictoryTheme
 CleanTextNoMap(0x10,Ch9_Ending)
 MoveToChapter(Interlude3)
 ENDA
@@ -127,6 +129,18 @@ CAM1 Pete
 FlashCursor(Pete,60)
 Text(C9BarrelWarning)
 Reinforcements(C9T2Spawns)
+EndEvent
+
+C9ApolloRecruitment:
+MUSC RecruitmentTheme
+Text(Ch5_Butch_Talk)
+TurnAlly(Apollo)
+EndEvent
+
+C9BechamelRecruitment:
+MUSC RecruitmentTheme
+Text(Ch5_Butch_Talk)
+TurnAlly(Bechamel)
 EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

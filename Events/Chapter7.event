@@ -268,7 +268,7 @@ ENUT GuideChpt7
 LoadUnitsByDifficulty(C7Easy,C7Normal,C7Hard)
 LOAD1 0x0 C7Units
 LOAD1 0x0 C7Allies
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Ch7_Narration)
 CLEAN
 CleanTextNoMap(0x10,Ch7_Opening)
@@ -327,14 +327,14 @@ Reinforcements(C7OhDear)
 EndEvent
 
 C7EmileTalk:
-EVBIT_MODIFY 3
-MUSC 0x30
+MUSC RecruitmentTheme
 Text(Ch7_Emile_Talk)
 TurnAlly(Emile)
 EndEvent
 
 C7BrandlTalk:
-MUSC 0x2e
+EVBIT_MODIFY 3
+MUSC S_TMSQuestBattle
 CHECK_ACTIVEID Cassius
 BNE 0x1 0xC 0x0
 CHECK_ACTIVEID Rachael

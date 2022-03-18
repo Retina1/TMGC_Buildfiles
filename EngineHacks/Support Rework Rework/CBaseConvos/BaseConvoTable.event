@@ -156,6 +156,38 @@
 			bg(0x3)
 			text(C7_Rachael_Cassius_Base)
 			baseSupport(Rachael,Cassius,CSupport)
+	Chapter(Chapter8)
+		Entry
+			name(C8_Loile_Select)
+			bg(0x3)
+			importance(2)
+			text(C8_Loile)
+			eventID(BaseFlag1)
+		Entry
+			name(Blair_Emile_Base_Select)
+			bg(0x3)
+			text(C8_Blair_Emile_Base)
+			baseSupport(Blair,Emile,CSupport)
+		Entry
+			name(Kenneth_Natasia_Base_Select)
+			bg(0x3)
+			text(C8_Kenneth_Natasia_Base)
+			baseSupport(Kenneth,Natasia,CPSupport)
+		Entry
+			name(Blair_Natasia_Base_Select)
+			bg(0x3)
+			text(C8_Blair_Natasia_Base)
+			baseSupport(Blair,Natasia,CPSupport)
+		Entry
+			name(Stefan_Desmond_Base_Select)
+			bg(0x3)
+			text(C8_Stefan_Desmond_Base)
+			baseSupport(Stefan,Desmond,CSupport)
+		Entry
+			name(Butch_Cassius_Base_Select)
+			bg(0x3)
+			text(C8_Butch_Cassius_Base)
+			baseSupport(Butch,Cassius,CSupport)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

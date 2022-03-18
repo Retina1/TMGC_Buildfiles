@@ -213,7 +213,7 @@ BeginningScene:
 ENUT GuideChpt4
 LoadUnitsByDifficulty(C4Easy,C4Normal,C4Hard)
 LOAD1 0x0 C4Units
-MUSC 0x4
+MUSC NarrationTheme
 Narration(Ch4_Narration)
 ENUT 0x21
 ENUT 0x22
@@ -225,14 +225,14 @@ CHECK_ALIVE Josef
 BNE 0x12 0xC 0x0
 ENUT BaseFlag2
 LABEL 0x12
-MUSC 0x24
+MUSC S_SMTLevelUp
 CleanTextNoMap(0x3,Ch4_Opening)
 GotoPrepScreen
 ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC 0x2d
+MUSC S_FE4Conversation
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0
 CleanText(0x3,Ch4_Ending_Dead_Peggy)
@@ -253,7 +253,7 @@ ENDA
 
 C4Turn2:
 Reinforcements(C4Peggy)
-MUSC 0x30
+MUSC RecruitmentTheme
 Text(C4PeggyJoin)
 MUSC 0x0
 EndEvent

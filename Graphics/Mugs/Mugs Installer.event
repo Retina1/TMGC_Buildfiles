@@ -202,6 +202,11 @@ EsmeMug:
 setMugEntry(0x38,EsmeMug,3,5,3,3)
 
 ALIGN 4
+PeteMug:
+#incext PortraitFormatter "Pete.png"
+setMugEntry(0x39,PeteMug,3,5,3,3)
+
+ALIGN 4
 CidMug:
 #incext PortraitFormatter "Cid.png"
 setMugEntry(0x57,CidMug,2,5,2,3)
@@ -220,6 +225,10 @@ ALIGN 4
 ValdenMug:
 #incext PortraitFormatter "Valden.png"
 setMugEntry(0x47,ValdenMug,2,5,2,3)
+
+
+
+
 
 ALIGN 4
 JakeMug:

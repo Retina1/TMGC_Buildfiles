@@ -5,15 +5,15 @@
  </tileset>
  <layer id="1" name="Tile Layer 1" width="26" height="17">
   <properties>
-   <property name="Anims1" value="5"/>
+   <property name="Anims1" value="ANIField"/>
    <property name="Anims2" value="0"/>
-   <property name="ChapterID" value="5"/>
+   <property name="ChapterID" value="Chapter5"/>
    <property name="Main" value=""/>
-   <property name="MapChangesID" value="0x0"/>
-   <property name="MapID" value="0x1d"/>
-   <property name="ObjectType" value="0x1a"/>
-   <property name="PaletteID" value="0x1b"/>
-   <property name="TileConfig" value="0x1c"/>
+   <property name="MapChangesID" value="MapChange5"/>
+   <property name="MapID" value="Map5"/>
+   <property name="ObjectType" value="OBJSwamp"/>
+   <property name="PaletteID" value="PALMevionSwamp"/>
+   <property name="TileConfig" value="TILSwamp"/>
   </properties>
   <data>
    <tile gid="123"/>

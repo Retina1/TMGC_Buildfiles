@@ -148,6 +148,7 @@
 
 #define HoneyCharmIcon 0x6f
 #define MiniGemIcon 0x89
+#define SkillScrollIcon 0x7a
 
 ALIGN 4
 NewItemIcons:
@@ -156,6 +157,9 @@ NewItemIcons:
  
 PUSH 
 // Individual Icons go here
+ALIGN 4
+ItemIconEntry(SkillScrollIcon)
+#incbin "SkillBook.dmp"
 ALIGN 4
 ItemIconEntry(IronSwordIcon)
 #incbin "Swords/Iron Sword.dmp"

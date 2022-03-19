@@ -26,7 +26,7 @@ ALIGN 4
 MapData:
   #incbin "Chapter1_data.dmp"
 
-SetChapterData(1, 0xA, 0, 0x9, 0x8, 0xB, MapData, 5, 0, 0xC)
+SetChapterData(Chapter1, OBJField, 0, PALDalstField, TILField, Map1, MapData, ANIField, 0, MapChange1)
 
 ALIGN 4
 Map_Change_0:
@@ -52,6 +52,6 @@ MapChangesData:
   TileMap(3, 17, 13, 1, 1, Map_Change_3)
   TileMapEnd
 
-EventPointerTable(0xC, MapChangesData)
+EventPointerTable(MapChange1, MapChangesData)
 
 }

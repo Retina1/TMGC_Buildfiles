@@ -26,7 +26,7 @@ ALIGN 4
 MapData:
   #incbin "Interlude2_data.dmp"
 
-SetChapterData(0x27, 0x3, 0, 0x2, 0x1, 0x34, MapData, 0x32, 0, 0x35)
+SetChapterData(Interlude2, OBJTown, 0, PALDalstTown, TILTown, MapI2, MapData, ANITown, 0, MapChangeI2)
 
 ALIGN 4
 Map_Change_0:
@@ -47,6 +47,6 @@ MapChangesData:
   TileMap(2, 15, 12, 1, 1, Map_Change_2)
   TileMapEnd
 
-EventPointerTable(0x35, MapChangesData)
+EventPointerTable(MapChangeI2, MapChangesData)
 
 }

@@ -26,6 +26,6 @@ ALIGN 4
 MapData:
   #incbin "Interlude3_data.dmp"
 
-SetChapterData(0x28, 0x3, 0, 0x2, 0x1, 0x37, MapData, 0x32, 0, 0)
+SetChapterData(Interlude3, OBJTown, 0, PALDalstTown, TILTown, MapI3, MapData, ANITown, 0, 0)
 
 }

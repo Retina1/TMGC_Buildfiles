@@ -3,7 +3,7 @@
 
 #include EAstdlib.event
 
-EventPointerTable(0x30,ThisChapter)
+EventPointerTable(Events8,ThisChapter)
 
 
 ALIGN 4
@@ -31,9 +31,9 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Chest(SilverAxe,9,11)
+Chest(SilverAxe,18,17)
 Chest(Runeward,8,12)
-Chest(RedGem,18,17)
+DurabilityChest(SkillScroll,CantoID,9,11)
 Chest(Inversion,18,20)
 END_MAIN
 

@@ -237,6 +237,13 @@
 #include "Wyvern\Unarmed Installer.event"
 }
 {
+#include "WyvLord(Nuramon)\Lance Installer.event"
+#include "WyvLord(Nuramon)\Axe Installer.event"
+#include "WyvLord(Nuramon)\Handaxe Installer.event"
+#include "WyvLord(Nuramon)\Bow Installer.event"
+#include "WyvLord(Nuramon)\Unarmed Installer.event"
+}
+{
 #include "Peg(Flasuban)\Lance Installer.event"
 #include "Peg(Flasuban)\Sword Installer.event"
 #include "Peg(Flasuban)\Unarmed Installer.event"
@@ -294,6 +301,24 @@
 {
 #include "_Dragons\DivineDragon.event"
 }
+{
+#include "ThiefM(Der)\Sword Installer.event"
+#include "ThiefM(Der)\Unarmed Installer.event"
+}
+{
+#include "ThiefF(Eldritch)\Sword Installer.event"
+#include "ThiefF(Eldritch)\Unarmed Installer.event"
+}
+{
+#include "AssassM\Sword Installer.event"
+#include "AssassM\Bow Installer.event"
+#include "AssassM\Unarmed Installer.event"
+}
+{
+#include "AssassF\Sword Installer.event"
+#include "AssassF\Bow Installer.event"
+#include "AssassF\Unarmed Installer.event"
+}
 ALIGN 4
 DragonAnims:
 SpecialAnim(0xc4,FireBreath)
@@ -302,6 +327,32 @@ SpecialAnim(0xc6,WyvernBreath)
 SpecialAnim(0xc7,DemonBreath)
 SpecialAnim(0xc8,EarthBreath)
 SpecialAnim(0xc9,DivineBreath)
+EndAnim
+
+ALIGN 4
+ThiefMAnims:
+SwordAnim(0x89)
+UnarmedAnim(0x8a)
+EndAnim
+
+ALIGN 4
+ThiefFAnims:
+SwordAnim(0xbf)
+UnarmedAnim(0xc0)
+EndAnim
+
+ALIGN 4
+AssassMAnims:
+SwordAnim(0x8b)
+BowAnim(0x8c)
+UnarmedAnim(0x8f)
+EndAnim
+
+ALIGN 4
+AssassFAnims:
+SwordAnim(0x8d)
+BowAnim(0x8e)
+UnarmedAnim(0x90)
 EndAnim
 
 ALIGN 4
@@ -570,6 +621,15 @@ LanceAnim(0x58)
 AxeAnim(0x59)
 HandAxeAnim(0x5a)
 UnarmedAnim(0x5b)
+EndAnim
+
+ALIGN 4
+WyvLordAnims:
+LanceAnim(0x5c)
+AxeAnim(0x5d)
+HandAxeAnim(0x5e)
+BowAnim(0x5f)
+UnarmedAnim(0x60)
 EndAnim
 
 ALIGN 4

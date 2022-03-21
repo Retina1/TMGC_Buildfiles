@@ -78,7 +78,7 @@ POP
 
 PUSH
 ORG 0x9F36A0
-	BYTE 7 6 16 0    
+	BYTE 7 5 16 0    
 	WORD 1           
 	POIN 0x9F3634    
 	WORD 0 0 0 0 0 0 
@@ -95,6 +95,7 @@ pNewLordSplitMenuCommands:
 	EventMenuCommand(UnchangedGrowths)
 	EventMenuCommand(FixedGrowths)
 	EventMenuCommand(ZeroGrowths)
+	EventMenuCommand(MaximumGrowths)
 EventMenuCommandEnd
 
 prEventMenuCommandEffect:

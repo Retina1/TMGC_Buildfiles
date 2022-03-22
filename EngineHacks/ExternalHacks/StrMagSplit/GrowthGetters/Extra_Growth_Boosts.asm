@@ -108,10 +108,26 @@ ldr		r2,SkillTester
 mov		r14,r2
 .short	0xF800
 cmp		r0,#1
-bne		GoBack
+bne		MaxGrowthsCheck
 
 AptitudeEffect:
 add		r5,#20 @growth +20%
+
+MaxGrowthsCheck:
+ldr		r0,Check_Event_ID
+mov		r14,r0
+mov		r0,#0xED	@event id
+.short	0xF800
+cmp r0,#0
+beq GoBack
+mov r0, r5 
+mov r1, #100 
+swi 6 
+mov r1, #100 
+mul r0, r1 
+add r0, #100 
+mov r5, r0 @ remove remainer (modulo)
+
 
 GoBack:
 mov		r1,r8
@@ -125,6 +141,7 @@ mov		r8,r7
 pop		{r4-r7}
 pop		{r2}
 bx		r2
+
 
 .align
 Check_Event_ID:

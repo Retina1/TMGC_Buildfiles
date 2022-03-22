@@ -51,8 +51,10 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ArinPaletteID 0x14
 #define BechamelUPaletteID 0x15
 #define BechamelPPaletteID 0x16
+#define BlairPPaletteID 0x17
 
 setPalette(BlairUPaletteID,BlairUPalette)
+setPalette(BlairPPaletteID,BlairPPalette)
 
 setPalette(ArinPaletteID,ArinPalette)
 
@@ -87,7 +89,7 @@ setPalette(JosefPPaletteID,JosefPPalette)
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
 
-SetPaletteFull(Blair,BlairUPaletteID,BlairLord,0x0,BlairLordX,0x0,0x0)
+SetPaletteFull(Blair,BlairUPaletteID,BlairLord,BlairPPaletteID,BlairLordX,0x0,0x0)
 SetPaletteFull(Arin,ArinPaletteID,Trickster,0x0,0x0,0x0,0x0)
 SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Natasia,NatasiaUPaletteID,FighterF,NatasiaPPaletteID,WarriorF,0x0,0x0)
@@ -110,6 +112,9 @@ SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0
 ALIGN 4
 BlairUPalette:
 #incbin "BlairUnpromoted.dmp"
+ALIGN 4
+BlairPPalette:
+#incbin "BlairPromoted.dmp"
 
 ALIGN 4
 ArinPalette:

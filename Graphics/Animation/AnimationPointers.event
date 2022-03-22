@@ -82,6 +82,10 @@
 #include "Blair(L95)\Magic Installer.event"
 }
 {
+#include "BlairDx(EA)\Sword Installer.event"
+#include "BlairDx(EA)\Magic Installer.event"
+}
+{
 #include "MageF(LisandraBrave)\Magic Installer.event"
 }
 {
@@ -592,6 +596,13 @@ EndAnim
 ALIGN 4
 BlairAnims:
 MagicAnim(0x03)
+EndAnim
+
+ALIGN 4
+BlairDxAnims:
+SwordAnim(0x04)
+MagicAnim(0x06)
+StaffAnim(0x06)
 EndAnim
 
 ALIGN 4

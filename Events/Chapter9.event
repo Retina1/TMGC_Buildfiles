@@ -23,6 +23,20 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x0,C9Turn1,1)
 TurnEventPlayer(0x0,C9Turn2,2)
+TurnEventPlayer(0x0,C9Turn3,3)
+TurnEventPlayer(0x0,C9Turn4,4)
+TurnEventPlayer(0x0,C9Turn5,5)
+TurnEventPlayer(0x0,C9Turn6,6)
+TurnEventPlayer(0x0,C9Turn7,7)
+TurnEventPlayer(0x0,C9Turn8,8)
+TurnEventPlayer(0x0,C9Turn9,9)
+TurnEventPlayer(0x0,C9Turn10,10)
+TurnEventPlayer(0x0,C9Turn11,11)
+TurnEventPlayer(0x0,C9Turn12,12)
+TurnEventPlayer(0x0,C9Turn13,13)
+TurnEventPlayer(0x0,C9Turn14,14)
+TurnEventPlayer(0x0,C9Turn15,15)
+TurnEventPlayer(0x0,C9Turn16,16)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -75,8 +89,29 @@ UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverM
 UNIT
 
 C9Hard:
-UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Bechamel Pirate 0x0 Level(9,Enemy,0) [9,20] 0x0 0x0 0x0 0x0 [SteelAxe,KillerAxe,Vulnerary] [0x06,0x03,0x04,0x00]
+UNIT Pirates Fighter 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Pirates FighterF 0x0 Level(9,Enemy,1) [7,21] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Pirates Merc 0x0 Level(9,Enemy,1) [5,22] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [7,22] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Pirates PirateF 0x0 Level(9,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [8,0] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [11,7] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [10,8] 0x0 0x0 0x0 0x0 [Hammer] DelayedAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [Halberd] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [14,6] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [11,22] 0x0 0x0 0x0 0x0 [Swordreaver] NoAI
+UNIT Pirates PirateF 0x0 Level(9,Enemy,1) [12,24] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Pirates Warrior 0x0 Level(1,Enemy,1) [10,17] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Pirates SoldierF 0x0 Level(9,Enemy,1) [13,17] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Pirates SoldierF 0x0 Level(9,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [Javelin] NoAI
+UNIT Pirates Sniper 0x0 Level(1,Enemy,1) [12,20] 0x0 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT Pirates DarkM 0x0 Level(9,Enemy,1) [11,13] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI
+UNIT Pirates Mage 0x0 Level(9,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [Inversion] NeverMoveAI
+UNIT Pirates AxeArm 0x0 Level(9,Enemy,1) [8,3] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Pirates AxeArm 0x0 Level(9,Enemy,1) [9,3] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Bechamel Pirate 0x0 Level(9,Enemy,0) [8,8] 0x0 0x0 0x0 0x0 [SteelAxe,KillerAxe,Vulnerary] [0x06,0x03,0x04,0x00]
 UNIT Pete Berserker 0x0 Level(3,Enemy,1) [2,0] DropItem 0x0 0x0 0x0 [BraveAxe,HandAxe,MasterSeal] NeverMoveAI
 UNIT
 
@@ -94,6 +129,76 @@ UNIT
 C9T2Spawns:
 UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [3,0] 0x0 0x0 0x1 REDA4R0 [IronAxe] NoAI
 UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [3,0] 0x0 0x0 0x1 REDA3R1 [IronAxe] NoAI
+UNIT
+
+C9T4Spawns:
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [17,17] 0x0 0x0 0x1 REDA16R17 [IronAxe] NoAI
+UNIT Pirates Merc 0x0 Level(9,Enemy,1) [17,17] 0x0 0x0 0x1 REDA17R16 [SteelSword] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [17,17] 0x0 0x0 0x1 REDA18R17 [IronAxe] NoAI
+UNIT
+
+C9T6Spawns:
+UNIT Pirates SoldierF 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA4R19 [SteelLance] NoAI
+UNIT Pirates SoldierF 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R18 [IronLance] NoAI
+UNIT Pirates SoldierF 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R20 [Javelin] NoAI
+UNIT
+
+C9T8Spawns:
+UNIT Pirates AxeWyv 0x0 Level(9,Enemy,1) [9,7] 0x0 0x0 0x1 REDA8R6 [SteelAxe] NoAI
+UNIT Pirates LncWyv 0x0 Level(9,Enemy,1) [9,7] 0x0 0x0 0x1 REDA8R8 [IronLance] NoAI
+UNIT Pirates LncWyv 0x0 Level(9,Enemy,1) [9,7] 0x0 0x0 0x1 REDA10R6 [SteelLance] NoAI
+UNIT Pirates AxeWyv 0x0 Level(9,Enemy,1) [9,7] 0x0 0x0 0x1 REDA10R8 [IronAxe] NoAI
+UNIT
+
+C9T10Spawns:
+UNIT Pirates Merc 0x0 Level(9,Enemy,1) [18,10] 0x0 0x0 0x1 REDA18R9 [IronSword] NoAI
+UNIT Pirates Soldier 0x0 Level(9,Enemy,1) [18,10] 0x0 0x0 0x1 REDA17R10 [IronLance] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [18,10] 0x0 0x0 0x1 REDA19R11 [IronAxe] NoAI
+UNIT Pirates PirateF 0x0 Level(9,Enemy,1) [22,11] 0x0 0x0 0x1 REDA21R11 [SteelAxe] NoAI
+UNIT Pirates MercF 0x0 Level(9,Enemy,1) [22,11] 0x0 0x0 0x1 REDA22R10 [SteelSword] NoAI
+UNIT Pirates SoldierF 0x0 Level(9,Enemy,1) [22,11] 0x0 0x0 0x1 REDA23R11 [SteelLance] NoAI
+UNIT
+
+C9T12Spawns:
+UNIT Pirates MageF 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA4R19 [Thunder] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R18 [IronAxe] NoAI
+UNIT Pirates MageF 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R20 [Fire] NoAI
+UNIT Pirates Archer 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x1 REDA8R17 [SteelBow] NoAI
+UNIT Pirates PirateF 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x1 REDA7R18 [IronAxe] NoAI
+UNIT Pirates Archer 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x1 REDA8R19 [SteelBow] NoAI
+UNIT
+
+C9T14Spawns:
+UNIT Pirates AxeArm 0x0 Level(9,Enemy,1) [17,17] 0x0 0x0 0x1 REDA18R17 [SilverAxe] NoAI
+UNIT Pirates WarriorF 0x0 Level(1,Enemy,1) [17,17] 0x0 0x0 0x1 REDA16R17 [IronAxe] NoAI
+UNIT Pirates BowArm 0x0 Level(9,Enemy,1) [21,15] 0x0 0x0 0x1 REDA22R15 [SilverBow] NoAI
+UNIT Pirates SniperF 0x0 Level(1,Enemy,1) [21,15] 0x0 0x0 0x1 REDA20R15 [IronBow] NoAI
+UNIT
+
+C9T16Spawns:
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [3,0] 0x0 0x0 0x1 REDA4R0 [SteelAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [3,0] 0x0 0x0 0x1 REDA3R1 [SteelAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [3,0] 0x0 0x0 0x1 REDA2R0 [SteelAxe] NoAI
+UNIT Pirates DarkM 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA4R19 [Nightfall] NoAI
+UNIT Pirates PirateF 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R18 [KillerAxe] NoAI
+UNIT Pirates MageF 0x0 Level(9,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R20 [Elfire] NoAI
+UNIT Pirates ArcherF 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x1 REDA8R17 [ShiningBow] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x1 REDA7R18 [IronAxe] NoAI
+UNIT Pirates ArcherF 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x1 REDA8R19 [KillerBow] NoAI
+UNIT Pirates LncArm 0x0 Level(9,Enemy,1) [17,17] 0x0 0x0 0x1 REDA18R17 [SilverLance] NoAI
+UNIT Pirates HalberdierF 0x0 Level(1,Enemy,1) [17,17] 0x0 0x0 0x1 REDA16R17 [IronLance] NoAI
+UNIT Pirates SwdArm 0x0 Level(9,Enemy,1) [21,15] 0x0 0x0 0x1 REDA22R15 [SilverSword] NoAI
+UNIT Pirates HeroF 0x0 Level(1,Enemy,1) [21,15] 0x0 0x0 0x1 REDA20R15 [IronSword] NoAI
+UNIT Pirates Myrm 0x0 Level(9,Enemy,1) [18,10] 0x0 0x0 0x1 REDA18R9 [SteelSword] NoAI
+UNIT Pirates Myrm 0x0 Level(9,Enemy,1) [18,10] 0x0 0x0 0x1 REDA17R10 [Horseslayer] NoAI
+UNIT Pirates Myrm 0x0 Level(9,Enemy,1) [20,9] 0x0 0x0 0x1 REDA21R9 [SteelSword] NoAI
+UNIT Pirates FighterF 0x0 Level(9,Enemy,1) [20,9] 0x0 0x0 0x1 REDA19R9 [SteelAxe] NoAI
+UNIT Pirates MercF 0x0 Level(9,Enemy,1) [22,11] 0x0 0x0 0x1 REDA22R10 [SteelSword] NoAI
+UNIT Pirates SoldierF 0x0 Level(9,Enemy,1) [22,11] 0x0 0x0 0x1 REDA23R11 [SteelLance] NoAI
+UNIT Pirates SwdPeg 0x0 Level(9,Enemy,1) [9,7] 0x0 0x0 0x1 REDA8R6 [SteelSword] NoAI
+UNIT Pirates LncPeg 0x0 Level(9,Enemy,1) [9,7] 0x0 0x0 0x1 REDA8R8 [IronLance] NoAI
+UNIT Pirates LncPeg 0x0 Level(9,Enemy,1) [9,7] 0x0 0x0 0x1 REDA10R6 [SteelLance] NoAI
+UNIT Pirates SwdPeg 0x0 Level(9,Enemy,1) [9,7] 0x0 0x0 0x1 REDA10R8 [SilverSword] NoAI
 UNIT
 
 ALIGN 4
@@ -130,6 +235,85 @@ FlashCursor(Pete,60)
 Text(C9BarrelWarning)
 Reinforcements(C9T2Spawns)
 EndEvent
+
+C9Turn3:
+CAM1 [14,15]
+FlashCursor(17,17,60)
+EndEvent
+
+C9Turn4:
+Reinforcements(C9T4Spawns)
+EndEvent
+
+C9Turn5:
+CAM1 [1,17]
+FlashCursor(3,19,60)
+EndEvent
+
+C9Turn6:
+Reinforcements(C9T6Spawns)
+EndEvent
+
+C9Turn7:
+CAM1 [7,5]
+FlashCursor(9,7,60)
+EndEvent
+
+C9Turn8:
+Reinforcements(C9T8Spawns)
+EndEvent
+
+C9Turn9:
+CAM1 [17,8]
+FlashCursor(18,10,60)
+FlashCursor(22,11,60)
+EndEvent
+
+C9Turn10:
+Reinforcements(C9T10Spawns)
+EndEvent
+
+C9Turn11:
+CAM1 [2,16]
+FlashCursor(3,19,60)
+FlashCursor(8,18,60)
+EndEvent
+
+C9Turn12:
+Reinforcements(C9T12Spawns)
+EndEvent
+
+C9Turn13:
+CAM1 [14,15]
+FlashCursor(17,17,60)
+FlashCursor(21,15,60)
+EndEvent
+
+C9Turn14:
+Reinforcements(C9T14Spawns)
+EndEvent
+
+C9Turn15:
+CAM1 Pete
+FlashCursor(3,0,25)
+CAM1 [7,5]
+FlashCursor(9,7,25)
+CAM1 [17,8]
+FlashCursor(18,10,25)
+FlashCursor(22,11,25)
+FlashCursor(20,9,25)
+CAM1 [14,15]
+FlashCursor(17,17,25)
+FlashCursor(21,15,25)
+CAM1 [2,16]
+FlashCursor(3,19,25)
+FlashCursor(8,18,25)
+EndEvent
+
+C9Turn16:
+Reinforcements(C9T16Spawns)
+EndEvent
+
 
 C9ApolloRecruitment:
 MUSC RecruitmentTheme

@@ -114,7 +114,9 @@ UnitMenuTable:
   UM_Play
   
   //UM_Summon
-  MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)
+  //MenuCommand(0x693,0x6DD,NormalText,NewSummonUsability,0x244B8)
+  
+  MenuCommand(0x693,0x6DD,NormalText,ModularSummonUsability,ModularSummonEffect)
   
   UM_Summon_DK
   UM_Pick

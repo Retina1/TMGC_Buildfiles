@@ -1,0 +1,143 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(Events11,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C11Units C11Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+CharacterEvent(0xa,C11HilbertRecruitment,Blair,Hilbert)
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+AreaEvent(0x21,C11Treasure1,24,4,24,4)
+AreaEvent(0x22,C11Treasure2,2,9,2,9)
+AreaEvent(0x23,C11Treasure3,1,21,1,21)
+AreaEvent(0x24,C11Treasure4,12,16,12,16)
+AreaEvent(0x25,C11Treasure5,22,15,22,15)
+AreaEvent(0x1a,C11HiddenTreasure1,4,14,5,15)
+AreaEvent(0x1b,C11HiddenTreasure2,0,0,12,0)
+AreaEvent(0x1c,C11HiddenTreasure3,24,7,24,7)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C11Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [19,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [21,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [20,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [21,18] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,18] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,17] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C11Easy:
+UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT
+
+C11Normal:
+UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT
+
+C11Hard:
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [9,19] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT
+
+C11Ally:
+UNIT Hilbert Mage 0x0 Level(2,NPC,0) [11,17] 0x0 0x0 0x0 0x0 [Fire,Thunder,Vulnerary,Vulnerary] NoAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt11
+LoadUnitsByDifficulty(C11Easy,C11Normal,C11Hard)
+LOAD1 0x0 C11Ally
+ENUN
+MUSC NarrationTheme
+Narration(Ch11_Narration)
+CleanText(0x3,Ch9_Opening)
+LOAD1 0x0 C11Units
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+ResetBaseFlags
+MUSC S_FE4Conversation
+CleanTextNoMap(0x10,Ch9_Ending)
+MoveToChapter(Chapter12)
+ENDA
+
+C11HilbertRecruitment:
+EVBIT_MODIFY 3
+MUSC RecruitmentTheme
+Text(Ch5_Butch_Talk)
+TurnAlly(Hilbert)
+EndEvent
+
+
+C11Treasure1:
+DesertItem(Kagutsuchi,0x21)
+
+C11Treasure2:
+DesertScroll(CertainBlowID,0x22)
+
+C11Treasure3:
+DesertItem(BlueGem,0x23)
+
+C11Treasure4:
+DesertItem(Shatterspear,0x24)
+
+C11Treasure5:
+DesertItem(Calibur,0x25)
+
+C11HiddenTreasure1:
+DesertItem(Purge,0x1a)
+
+C11HiddenTreasure2:
+DesertItem(FoggyGlasses,0x1b)
+
+C11HiddenTreasure3:
+DesertItem(AnimusSeal,0x1c)
+
+MESSAGE Events end at offset CURRENTOFFSET

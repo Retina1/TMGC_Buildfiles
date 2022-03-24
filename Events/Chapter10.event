@@ -22,10 +22,14 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C10GameOver,16)
+TurnEventPlayer(0x0,C10EnemyArrives,5)
+TurnEventPlayer(0x0,C10LazarusEngages,9)
+TurnEventPlayer(0x0,C10HeSpawns,3)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,C10SveltzalusRecruitment,Blair,Sveltzalus)
 END_MAIN
 
 LocationBasedEvents:
@@ -36,6 +40,7 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AreaEvent(0x21,C10LowerDeck,18,0,21,3)
 END_MAIN
 
 Dunno:
@@ -80,7 +85,7 @@ C10Hard:
 UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Ygstra Sniper 0x0 Level(5,Enemy,1) [1,23] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
 UNIT Ygstra LncGen 0x0 Level(5,Enemy,1) [1,25] 0x0 0x0 0x0 0x0 [SilverLance,Spear] NoAI
-UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [1,29] DropItem 0x0 0x0 0x0 [Arkhinal,Tomahawk,LegRing] NoAI
+UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [1,29] DropItem 0x0 0x0 0x0 [Arkhinal,Tomahawk,LegRing] NeverMoveAI
 UNIT
 
 C10Ally:
@@ -93,6 +98,21 @@ UNIT Opistia LightM 0x0 Level(15,NPC,1) [14,19] 0x0 0x0 0x0 0x0 [Divine] NeverMo
 UNIT Opistia LightM 0x0 Level(15,NPC,1) [15,18] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
 UNIT Opistia LightM 0x0 Level(15,NPC,1) [16,18] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
 UNIT Opistia LightM 0x0 Level(15,NPC,1) [17,19] 0x0 0x0 0x0 0x0 [Divine] NeverMoveAI
+UNIT
+
+C10OtherCrew:
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [25,20] 0x0 0x0 0x1 REDA23R17 [IronAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [25,20] 0x0 0x0 0x1 REDA23R20 [IronAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [25,20] 0x0 0x0 0x1 REDA24R18 [IronAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [25,20] 0x0 0x0 0x1 REDA24R19 [IronAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [25,20] 0x0 0x0 0x1 REDA26R17 [IronAxe] NoAI
+UNIT Pirates Pirate 0x0 Level(9,Enemy,1) [25,20] 0x0 0x0 0x1 REDA26R20 [IronAxe] NoAI
+UNIT Pirates AxeWyv 0x0 Level(9,Enemy,1) [25,20] 0x0 0x0 0x1 REDA21R21 [IronAxe] NoAI
+UNIT Pirates LncWyv 0x0 Level(9,Enemy,1) [25,20] 0x0 0x0 0x1 REDA24R13 [SteelLance] NoAI
+UNIT
+
+C10He:
+UNIT Sveltzalus Bigle 0x0 Level(13,NPC,0) [0,0] 0x0 0x0 0x1 REDA3R5 [EvilEye,Slam] [0x6,0xa,0x4,0x0]
 UNIT
 
 ALIGN 4
@@ -121,5 +141,39 @@ C10GameOver:
 Text(C10GameOverMessage)
 GameOver
 ENDA
+
+C10SveltzalusRecruitment:
+EVBIT_MODIFY 3
+MUSC RecruitmentTheme
+Text(Ch5_Butch_Talk)
+TurnAlly(Sveltzalus)
+EndEvent
+
+C10LowerDeck:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+TILECHANGE 0x0
+Text(C10DeckLowering)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x21
+LABEL 0x2
+EndEvent
+
+C10HeSpawns:
+Reinforcements(C10He)
+EndEvent
+
+C10EnemyArrives:
+TILECHANGE 0x1
+Reinforcements(C10OtherCrew)
+Text(C10OthersArrive)
+EndEvent
+
+C10LazarusEngages:
+Text(C10_LazThreat)
+SVAL 0x1 0x00040000
+CHAI Lazarus
+EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

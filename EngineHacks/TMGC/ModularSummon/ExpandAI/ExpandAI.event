@@ -1,0 +1,207 @@
+#ifndef EXPAND_AI 
+#define EXPAND_AI
+
+#include "ExpandAI_Internals.event"
+
+#include "MakeAIWait.lyn.event" 
+
+// Expands AI1 and AI2 lists to 254 entries 
+// 0xFF is reserved as do not change AI 
+// Add new ones here 
+
+// AI 1 list 
+// Vanilla entries take up 0 - 20 
+//NewAI1Entry(0, AttackInRangeExceptF0toFF) // Do not target units 0xF0 - 0xFD 
+NewAI1Entry(0, 0x085A8870) // Vanilla 
+NewAI1Entry(21, DoNothingAI1)
+NewAI1Entry(22, AttackIfEnemyInRange)
+NewAI1Entry(23, AttackIfEnemyInRange)
+NewAI1Entry(24, AttackIfEnemyInRange)
+NewAI1Entry(25, AttackIfEnemyInRange)
+NewAI1Entry(26, MakeAIWaitLabel)
+NewAI1Entry(27, RunAwayLabel)
+
+NewAI1Entry(28, PursueAndSummonOrAttackLabel)
+NewAI1Entry(29, RunAwayAndSummonLabel)
+NewAI1Entry(30, SummonOrAttackInRangeLabel)
+
+// AI 2 list
+// Vanilla entries take up 0 - 18
+NewAI2Entry(21, DoNothingAI2)
+NewAI2Entry(22, Within_2_Safest_Zoning_AI2)
+NewAI2Entry(23, Safest_Zoning_AI2)
+NewAI2Entry(24, Less_Safe_Zoning_AI2)
+NewAI2Entry(25, BeedrilAI_2)
+
+NewAI2Entry(26, MakeAIWaitLabel)
+NewAI2Entry(27, RunAwayLabel)
+NewAI2Entry(28, PursueAndSummonOrAttackLabel)
+NewAI2Entry(29, RunAwayAndSummonLabel)
+NewAI2Entry(30, SummonOrAttackInRangeLabel)
+
+#define SafeZoneAI2 23 
+#define BushAI [21,21]
+#define WithinTwoZoningAI [22,22]
+#define SafeZoningAI [23,23]
+#define LessSafeZoningAI [24,24]
+#define ZoningAI [24,24]
+#define BeedrillAI [25,25]
+#define AttackOrWaitAI [0,26] // If nobody in range, wait 
+#define WaitAI [26,3] // Wait. Do nothing else. 
+#define RunAwayAI [27,27]
+#define ApproachEnemySummonAI [28,0,0,0] 
+#define RunAwayAndSummonAI [29,27] 
+#define SummonOrAttackInRangeAI [30,30] 
+#define SummonOrAttackIfAdjacentAI [30,30,0,32]
+
+
+
+
+
+ALIGN 4 
+PursueAndSummonOrAttackLabel:
+Routine_AI(PursueAndSummonOrAttackFunc, 0)
+Goto(0)
+ALIGN 4 
+
+ALIGN 4
+RunAwayAndSummonLabel:
+Routine_AI(RunAwayAndSummonFunc, 0)
+Goto(0)
+ALIGN 4 
+
+ALIGN 4 
+SummonOrAttackInRangeLabel:
+Routine_AI(SummonOrAttackInRangeFunc, 0)
+Goto(0)
+ALIGN 4
+
+
+ALIGN 4
+MakeAIWaitLabel:
+Routine_AI(MakeAIWait, 0)
+Goto(0)
+ALIGN 4 
+
+
+RunAwayLabel:
+RunAway 
+Goto(0)
+ALIGN 4 
+
+
+
+ALIGN 4
+AttackInRangeExceptF0toFF:
+ActionInRangeExcept(DoNotAttackTheseUnits)
+Goto(0)
+
+ALIGN 4
+DoNotAttackTheseUnits:
+SHORT 0xF0 // Unit IDs to not move towards / target 
+SHORT 0xF1
+SHORT 0xF2
+SHORT 0xF3
+SHORT 0xF4
+SHORT 0xF5
+SHORT 0xF6
+SHORT 0xF7
+SHORT 0xF8
+SHORT 0xF9
+SHORT 0xFA
+SHORT 0xFB
+SHORT 0xFC
+SHORT 0xFD
+BYTE 0 //byte + align as terminator
+ALIGN 4 
+
+
+ALIGN 4
+Safest_Zoning_AI2:
+SafestMoveTowardsOpponentsExcept(DoNotApproachTheseUnits)
+Goto(0)
+
+ALIGN 4
+Less_Safe_Zoning_AI2:
+LessSafeMoveTowardsOpponentsExcept(DoNotApproachTheseUnits)
+Goto(0)
+
+ALIGN 4
+AttackIfEnemyInRange:
+ActionInRange
+Goto(0)
+
+ALIGN 4
+DoNothingAI1: 
+Nop_2
+Goto(0)
+
+// This has a whole bunch of Nops so that AI_2_Counter will increment 
+ALIGN 4
+DoNothingAI2:
+Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop ; Nop 
+Goto(0)
+
+// New entries 
+
+#define MoveToCoordRoutine 0x0803F9A9
+#define WithinTwoActionsRoutine 0x0803F019 
+
+// Curly brackets { } keep Locat_X as defined only within the brackets 
+ALIGN 4
+BeedrilAI_2:
+{ ; Routine_AI(MoveToCoordRoutine, Locat_1) 
+	Routine_AI(MoveToCoordRoutine, Locat_2) 
+	Routine_AI(MoveToCoordRoutine, Locat_3) 
+	Routine_AI(MoveToCoordRoutine, Locat_4) 
+	Routine_AI(MoveToCoordRoutine, Locat_5) 
+	Routine_AI(MoveToCoordRoutine, Locat_6) 
+
+Goto(0)
+
+ALIGN 4; Locat_1: 
+defLocation(18,11)
+ALIGN 4; Locat_2: 
+defLocation(15,15) 
+ALIGN 4; Locat_3: 
+defLocation(16,21)
+ALIGN 4; Locat_4: 
+defLocation(23,21) 
+ALIGN 4; Locat_5: 
+defLocation(25,17)
+ALIGN 4; Locat_6: 
+defLocation(25,11) ; }
+
+
+ALIGN 4
+Within_2_Safest_Zoning_AI2:
+{ ; Routine_AI(WithinTwoActionsRoutine, DoNotApproachTheseUnits) 
+GotoIfLT(1)
+Nop 
+Goto(0)
+Label(1)
+ChangeAI(0xFF, SafeZoneAI2)
+Goto(1)
+ALIGN 4 
+}
+
+ALIGN 4
+DoNotApproachTheseUnits:
+SHORT 0xF0 // Unit IDs to not move towards / target 
+SHORT 0xF1
+SHORT 0xF2
+SHORT 0xF3
+SHORT 0xF4
+SHORT 0xF5
+SHORT 0xF6
+SHORT 0xF7
+SHORT 0xF8
+SHORT 0xF9
+SHORT 0xFA
+SHORT 0xFB
+SHORT 0xFC
+SHORT 0xFD
+BYTE 0 //byte + align as terminator
+ALIGN 4 
+
+#endif 

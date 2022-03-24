@@ -53,14 +53,8 @@ Summon[X]
 # 0x02BF
 Lord[X]
 
-#include "ClassNames.txt"
-
 # 0x0308
 Supply[X]
-
-#include "ClassDescs.txt"
-
-
 
 # 0x067E
  Play[X]
@@ -281,6 +275,9 @@ a skill when used.[X]
 ##TorchDesc
 Light or extinguish[N]
 a torch's flame.[X]
+
+#include "ClassDescs.txt"
+#include "ClassNames.txt"
 
 #include "statscreen_text.txt"
 #include "unitmenu_text.txt"

@@ -379,5 +379,14 @@ ALIGN 4
 //dance Ai
 #include "TMGC/DanceAi/DanceAi.event" 
 
-//convoy stuff- and of course it crashes
+//convoy stuff
 #include "Convoy/FE8-Convoy_Stuff_EA.event"
+
+//chai improvement
+#include "TMGC/CHAI_Fix/FE8-New_CHAI_EA.event"
+
+//prevent trade (for sveltzalus)
+#include "TMGC/PreventTrade/Installer.event"
+
+//modular summon (for addington)
+#include "TMGC/ModularSummon/Installer.event"

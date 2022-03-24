@@ -87,6 +87,18 @@ LavaCaveConfig:
 #incbin "Tilesets/Volcano_comp.dmp"
 
 ALIGN 4
+DesertObjects:
+#incext Png2Dmp "Tilesets/Desert.png" --lz77
+
+ALIGN 4
+DesertPalette:
+#incext Png2Dmp "Tilesets/Desert.png" --palette-only
+
+ALIGN 4
+DesertTiles:
+#incext compress "Tilesets/Desert.mapchip_config"
+
+ALIGN 4
 CastleFrame1:
 #incbin "CastleAnim/CastleFrame1.dmp"
 ALIGN 4
@@ -238,10 +250,10 @@ TownFrame15:
 ALIGN 4
 TownFrame16:
 #incbin "Tilesets/Updated Village Animations/Anim.mapanime 1_015.dmp"
-ALIGN 4
+ALIGN 4		//trying something to remove annoyance in frame2
 TownAnims:
 tilesetAnimation(0x1a,0x1000,TownFrame1)
-tilesetAnimation(0x1a,0x1000,TownFrame2)
+//tilesetAnimation(0x1a,0x1000,TownFrame2)
 tilesetAnimation(0x1a,0x1000,TownFrame3)
 tilesetAnimation(0x1a,0x1000,TownFrame4)
 tilesetAnimation(0x1a,0x1000,TownFrame5)
@@ -286,6 +298,10 @@ EventPointerTable(OBJVolcano, LavaCaveObjects)
 EventPointerTable(PALVolcano, LavaCavePalette) 
 EventPointerTable(TILVolcano, LavaCaveConfig) 
 EventPointerTable(ANILava, 0x59D800)
+
+EventPointerTable(OBJDesert, DesertObjects) 
+EventPointerTable(PALDesert, DesertPalette) 
+EventPointerTable(TILDesert, DesertTiles) 
 
 
 #define MinimapTileTable $A7A38

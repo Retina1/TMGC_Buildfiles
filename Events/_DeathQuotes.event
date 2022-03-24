@@ -41,6 +41,8 @@ ChapterDeathQuote(Cid,Chapter9,0x0,C9CidDeath)
 // Ch10
 ChapterDeathQuote(Lazarus,Chapter10,0x0,C10LazarusDeath)
 ChapterDeathQuote(Cid,Chapter10,0x0,C10CidDeath)
+// Ch11
+ChapterDeathQuote(Hilbert,Chapter11,0xa,AllyHilbertDeath)
 // Always (mainly player units)
 AlwaysDeathQuote(Blair,GameOverFlag,BlairDeath)
 AlwaysDeathQuote(Arin,0x0,ArinDeath)
@@ -58,6 +60,9 @@ AlwaysDeathQuote(Emile,0x0,EmileDeath)
 AlwaysDeathQuote(Jeff,0x0,JeffDeath)
 AlwaysDeathQuote(Apollo,0x0,ApolloDeath)
 AlwaysDeathQuote(Bechamel,0x0,BechamelDeath)
+AlwaysDeathQuote(Sveltzalus,0x0,SveltzalusDeath)
+AlwaysDeathQuote(Hilbert,0x0,HilbertDeath)
+AlwaysDeathQuote(Addington,0x0,AddingtonDeath)
 EndDeathQuote
 
 PUSH

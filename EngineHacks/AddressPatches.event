@@ -223,3 +223,11 @@ PUSH
 ORG $B5237
 BYTE 0xE0
 POP
+
+//base 15 autolevels for enemy prepromotes instead of 20
+PUSH
+ORG $37b5c
+BYTE 0x0e
+ORG $37b52
+BYTE 0x0e
+POP

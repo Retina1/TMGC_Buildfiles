@@ -1,5 +1,6 @@
 //StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB)
 //GrowthBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB)
+//(-1), not -1
 
 ALIGN 4
 SeraphRobeBoost:
@@ -52,3 +53,23 @@ StatBonus(0,0,0,0,0,0,0,0,1,0)
 ALIGN 4
 HoneyCharmBoost:
 GrowthBonus(0,0,0,30,0,0,0,30)
+
+ALIGN 4
+AnkleWeightBoost:
+GrowthBonus(0,50,0,0,0xec,0xf6,0xf6,0)
+
+ALIGN 4
+FoggyGlassesBoost:
+GrowthBonus(0,0,50,0xe2,0xec,0,0,0)
+
+ALIGN 4
+MercuryBootsBoost:
+GrowthBonus(0xf6,0xf6,0xf6,10,50,0xf6,0xf6,0)
+
+ALIGN 4
+LiveGooseBoost:
+GrowthBonus(70,0,0,0xf6,0xf6,0,0,0xec)
+
+ALIGN 4
+WardwoodBoost:
+GrowthBonus(0xf6,0xf6,0xf6,0,0xf6,30,30,10)

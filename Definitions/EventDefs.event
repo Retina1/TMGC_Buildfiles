@@ -16,3 +16,6 @@
 #define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
 
 #define ResetBaseFlags "ENUF BaseFlag1;ENUF BaseFlag2;ENUF BaseFlag3;ENUF BaseFlag4;ENUF BaseFlag5;ENUF BaseFlag6;ENUF BaseFlag7;ENUF BaseFlag8;"
+
+#define DesertItem(itemid,flag) "CHECK_ALLEGIANCE 0xFFFF; BNE 0x1 0xC 0x0; GiveItem(itemid); GOTO 0x2; LABEL 0x1; ENUF flag; LABEL 0x2; EndEvent"
+#define DesertScroll(skillid,flag) "CHECK_ALLEGIANCE 0xFFFF; BNE 0x1 0xC 0x0; GiveItemWithDurability(SkillScroll,skillid,0xFFFF); GOTO 0x2; LABEL 0x1; ENUF flag; LABEL 0x2; EndEvent"

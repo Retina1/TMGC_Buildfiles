@@ -117,27 +117,27 @@ prSmite_TargetLegality:
 #ifndef HEROES_MOVEMENT_SKILL_REQUIRED
 
 PivotClassList:
-BYTE Sniper SniperF  Assass AssassF SwdGen LncGen AxeGen BowGen ZekeLordX
+BYTE Sniper SniperF  Assass AssassF SwdGen LncGen AxeGen BowGen ZekeLordX Automaton
 BYTE 0
 
 RepositionClassList:
-BYTE Halberdier HalberdierF Dismount Rune RuneMast Trickster ViridianLord
+BYTE Halberdier HalberdierF Dismount Rune RuneMast Trickster ViridianLord Automaton
 BYTE 0
 
 SwapClassList:
-BYTE Hero HeroF SwMast SwMastF Assass AssassF Rune RuneMast Trickster
+BYTE Hero HeroF SwMast SwMastF Assass AssassF Rune RuneMast Trickster Automaton
 BYTE 0
 
 ShoveClassList:
-BYTE BlairLord ZekeLord ZekeLordX ViridianLord Dismount SwdArm LncArm AxeArm BowArm SwdGen LncGen AxeGen BowGen Merc MercF Hero HeroF Myrm MyrmF SwMast SwMastF Thief Assass AssassF Archer ArcherF Sniper SniperF Mage MageF Sage SageF Bishop BishopF DarkM DarkF Sorc SorcF Rune RuneMast Trickster Hunter Deserter Bruiser Fighter Warrior FighterF WarriorF Brigand Pirate Berserker PirateF BerserkerF LightM Priest Bard BardF Cleric Soldier Halberdier SoldierF HalberdierF CivilM
+BYTE BlairLord BlairLordX ZekeLord ZekeLordX ViridianLord Dismount Automaton SwdArm LncArm AxeArm BowArm SwdGen LncGen AxeGen BowGen Merc MercF Hero HeroF Myrm MyrmF SwMast SwMastF Thief Assass AssassF Archer ArcherF Sniper SniperF Mage MageF Sage SageF Bishop BishopF DarkM DarkF Sorc SorcF Rune RuneMast Trickster Hunter Deserter Bruiser Fighter Warrior FighterF WarriorF Brigand Pirate Berserker PirateF BerserkerF LightM Priest Bard BardF Cleric Soldier Halberdier SoldierF HalberdierF CivilM
 BYTE 0
 
 SmiteClassList:
-BYTE Warrior WarriorF Berserker BerserkerF SwdGen LncGen AxeGen BowGen
+BYTE Warrior WarriorF Berserker BerserkerF SwdGen LncGen AxeGen BowGen Automaton
 BYTE 0
 
 SwarpClassList:
-BYTE 0
+BYTE Automaton
 BYTE 0
 
 #endif // HEROES_MOVEMENT_SKILL_REQUIRED

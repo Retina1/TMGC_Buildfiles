@@ -89,7 +89,16 @@
 #define EarthDragonCard 0xb9
 #define DivineDragonCard 0xba
 
+#define CrateCard 0xc9
+
+//including addington, current next entry is 0xca
+
 ALIGN 4
+
+CratePortrait:
+#incbin "CrateCard.dmp"
+CratePortraitPalette:
+#incbin "CrateCardPalette.dmp"
 
 FireDragonPortrait:
 #incbin "FireDragon.dmp"
@@ -540,6 +549,7 @@ setCardEntry(BerserkFCard,BerserkFPortrait,BerserkFPortraitPalette)
 
 setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
 
+setCardEntry(CrateCard,CratePortrait,CratePortraitPalette)
 setCardEntry(FireDragonCard,FireDragonPortrait,FireDragonPortraitPalette)
 setCardEntry(IceDragonCard,IceDragonPortrait,IceDragonPortraitPalette)
 setCardEntry(WyvernCard,WyvernPortrait,WyvernPortraitPalette)

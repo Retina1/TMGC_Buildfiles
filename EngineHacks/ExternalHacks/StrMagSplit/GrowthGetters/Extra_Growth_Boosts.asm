@@ -120,6 +120,8 @@ mov		r0,#0xED	@event id
 .short	0xF800
 cmp r0,#0
 beq GoBack
+cmp r5,#0
+ble GoBack
 mov r0, r5 
 mov r1, #100 
 swi 6 

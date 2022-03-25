@@ -1,25 +1,25 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	CampIchigaya_grp, voicegroup000
+	.equ	CampIchigaya_pri, 0
+	.equ	CampIchigaya_rev, 0
+	.equ	CampIchigaya_mvl, 127
+	.equ	CampIchigaya_key, 0
+	.equ	CampIchigaya_tbs, 1
+	.equ	CampIchigaya_exg, 0
+	.equ	CampIchigaya_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	CampIchigaya
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+CampIchigaya_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 116*song04_tbs/2
+ .byte   KEYSH , CampIchigaya_key+0
+ .byte   TEMPO , 116*CampIchigaya_tbs/2
  .byte   VOICE , 34
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -28,7 +28,7 @@ song04_001:
  .byte   W96
 @  #01 @003   ----------------------------------------
  .byte   W48
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*CampIchigaya_mvl/mxv
  .byte   W06
  .byte   N06 ,Gs1 ,v096
  .byte   W06
@@ -325,10 +325,10 @@ Label_0100469F:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+CampIchigaya_002:
 @  #02 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 50*CampIchigaya_mvl/mxv
+ .byte   KEYSH , CampIchigaya_key+0
  .byte   VOICE , 63
  .byte   W96
 @  #02 @001   ----------------------------------------
@@ -634,11 +634,11 @@ Label_01004833:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+CampIchigaya_003:
 @  #03 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
- .byte   VOICE , 4
+ .byte   VOL , 50*CampIchigaya_mvl/mxv
+ .byte   KEYSH , CampIchigaya_key+0
+ .byte   VOICE , 77
  .byte   W24
  .byte   N12 ,Cn2 ,v096
  .byte   W12
@@ -790,11 +790,11 @@ Label_F646EE:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+CampIchigaya_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , CampIchigaya_key+0
  .byte   VOICE , 52
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*CampIchigaya_mvl/mxv
  .byte   TIE ,Cn1 ,v084
  .byte   TIE ,Cn2
  .byte   W96
@@ -977,9 +977,9 @@ Label_F64413:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+CampIchigaya_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , CampIchigaya_key+0
  .byte   VOICE , 40
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -1005,7 +1005,7 @@ Label_F6485C:
  .byte   W96
 @  #05 @011   ----------------------------------------
  .byte   W48
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*CampIchigaya_mvl/mxv
  .byte   N36 ,Cn4 ,v096
  .byte   W36
  .byte   N06 ,As3
@@ -1183,9 +1183,9 @@ Label_F648A1:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+CampIchigaya_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , CampIchigaya_key+0
  .byte   VOICE , 52
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -1248,7 +1248,7 @@ Label_F6492C:
 @  #06 @029   ----------------------------------------
  .byte   W96
 @  #06 @030   ----------------------------------------
- .byte   VOL , 33*song04_mvl/mxv
+ .byte   VOL , 33*CampIchigaya_mvl/mxv
  .byte   TIE ,Dn3 ,v096
  .byte   TIE ,Gs3
  .byte   W96
@@ -1313,10 +1313,10 @@ Label_F64952:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+CampIchigaya_007:
 @  #07 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 50*CampIchigaya_mvl/mxv
+ .byte   KEYSH , CampIchigaya_key+0
  .byte   VOICE , 124
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -1822,20 +1822,20 @@ Label_01004B3C:
 @******************************************************@
 	.align	2
 
-song04:
+CampIchigaya:
 	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	CampIchigaya_pri	@ Priority
+	.byte	CampIchigaya_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	CampIchigaya_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
+	.word	CampIchigaya_001
+	.word	CampIchigaya_002
+	.word	CampIchigaya_003
+	.word	CampIchigaya_004
+	.word	CampIchigaya_005
+	.word	CampIchigaya_006
+	.word	CampIchigaya_007
 
 	.end

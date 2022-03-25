@@ -52,6 +52,12 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define BechamelUPaletteID 0x15
 #define BechamelPPaletteID 0x16
 #define BlairPPaletteID 0x17
+#define DavelarnPaletteID 0x18
+#define MarqueStarquePaletteID 0x19
+#define BrentsonPaletteID 0x1a
+#define HelgaPaletteID 0x1b
+#define MitchellPaletteID 0x1c
+
 
 setPalette(BlairUPaletteID,BlairUPalette)
 setPalette(BlairPPaletteID,BlairPPalette)
@@ -89,6 +95,12 @@ setPalette(JosefPPaletteID,JosefPPalette)
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
 
+setPalette(DavelarnPaletteID,DavelarnPalette)
+setPalette(MarqueStarquePaletteID,MarqueStarquePalette)
+setPalette(BrentsonPaletteID,BrentsonPalette)
+setPalette(HelgaPaletteID,HelgaPalette)
+setPalette(MitchellPaletteID,MitchellPalette)
+
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,BlairPPaletteID,BlairLordX,0x0,0x0)
 SetPaletteFull(Arin,ArinPaletteID,Trickster,0x0,0x0,0x0,0x0)
 SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,0x0,0x0)
@@ -105,6 +117,13 @@ SetPaletteFull(Emile,0x0,0x0,0x0,Sage,0x0,0x0)
 SetPaletteFull(Jeff,0x0,Thief,0x0,Assass,0x0,0x0)
 SetPaletteFull(Apollo,0x0,LightM,0x0,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
+
+SetPaletteFull(Davelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
+SetPaletteFull(Marque,MarqueStarquePaletteID,AxeCav,0x0,0x0,0x0,0x0)
+SetPaletteFull(Brentson,BrentsonPaletteID,LncArm,0x0,0x0,0x0,0x0)
+SetPaletteFull(Helga,HelgaPaletteID,FighterF,0x0,0x0,0x0,0x0)
+SetPaletteFull(Starque,MarqueStarquePaletteID,SwdCav,0x0,0x0,0x0,0x0)
+SetPaletteFull(Mitchell,0x0,0x0,MitchellPaletteID,Hero,0x0,0x0)
 
 
 // I'm commenting the classes out that don't have palettes yet.
@@ -190,6 +209,22 @@ BechamelUPalette:
 ALIGN 4
 BechamelPPalette:
 #incbin "BechamelPromoted.dmp"
+
+ALIGN 4
+DavelarnPalette:
+#incbin "Davelarn.dmp"
+ALIGN 4
+MarqueStarquePalette:
+#incbin "MarqueStarque.dmp"
+ALIGN 4
+BrentsonPalette:
+#incbin "Brentson.dmp"
+ALIGN 4
+HelgaPalette:
+#incbin "Helga.dmp"
+ALIGN 4
+MitchellPalette:
+#incbin "Mitchell.dmp"
 
 PUSH
 ORG $59BFC

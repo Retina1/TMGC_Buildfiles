@@ -209,6 +209,10 @@ SongTable(S_Chaos,ChaosTheme,1)
 #include "Condor.event"
 SongTable(S_KKCondor,Condor,1)
 }
+{
+#include "CampIchigaya.event"
+SongTable(S_CampIchigaya,CampIchigaya,1)
+}
 //sound room completion rate
 PUSH
 ORG $AF69C

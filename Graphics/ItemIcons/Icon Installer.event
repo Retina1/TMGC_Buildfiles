@@ -149,6 +149,7 @@
 #define HoneyCharmIcon 0x6f
 #define FoggyGlassesIcon 0x7b
 #define MiniGemIcon 0x89
+#define AngelWingsIcon 0x76
 #define SkillScrollIcon 0x7a
 
 #define EvilEyeIcon 0x77
@@ -604,6 +605,9 @@ ItemIconEntry(MiniGemIcon)
 ALIGN 4
 ItemIconEntry(FoggyGlassesIcon)
 #incbin "FoggyGlasses.dmp"
+ALIGN 4
+ItemIconEntry(AngelWingsIcon)
+#incbin "AngelWings.dmp"
 
 // End of icons 
 POP 

@@ -2,6 +2,32 @@
 Everyone escapes[N]
 in 15 turns.[X]
 
+##Ch10_Sveltzalus_Talk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadSveltzalus]
+......[N][A][MoveMidRight][MoveLeft][OpenLeft][MoveLeft][MoveRight][OpenMidLeft]
+...What exactly... are you supposed to be?[N]
+You're just... a floating eye![A][N]
+That can't be real... This doesn't[N]
+make any sense![A] And yet it's[N]
+clearly here in front of me.[A][N]
+Well... Let's assume this is perfectly[N]
+normal and nothing is wrong.[A][N]
+Assume that people-sized eyes exist.[A][N]
+It seems... friendly?[N]
+Are you a friend, eye?[A][N][OpenRight][MoveRight][MoveMidRight][OpenMidRight][MoveMidRight][MoveLeft][OpenMidLeft][MoveFarLeft][OpenFarLeft]
+...I'll take that as a yes.[N]
+So it seems to understand me.[A][N]
+We're in quite a precarious situation,[N]
+whatever your name is.[A][N]
+Could you help us out?[A][N]
+[OpenLeft][MoveLeft][OpenFarLeft]
+Wonderful! Though I guess I should[N]
+give you some kind of name...[A][N]
+How about... Sveltzalus?[N]
+It feels... right, I guess.[A][N]
+[OpenLeft][MoveLeft][OpenFarLeft]
+Glad to hear! Thanks, Sveltzalus.[A][X]
+
 ##C10GameOverMessage
 [OpenMidLeft][LoadLazarus]
 That's it. Time to end this.[A][N][ClearFace]
@@ -50,6 +76,27 @@ DAMN IT![A][N]
 Let them go no further.[N]
 Kill them where they stand.[A][X]
 
+##C10GregoriasBattle
+[OpenMidLeft][LoadGregorias]
+Bwah hah hah! There be no[N]
+escape for ye![A][X]
+
+##C10GregoriasDeath
+[OpenMidLeft][LoadGregorias]
+Arrr...[N]
+Damn... ye...[A][X]
+
+##C10JonasBattle
+[OpenMidLeft][LoadJonas]
+Sorry about this.[N]
+I'll make it quick.[A][X]
+
+##C10JonasDeath
+[OpenMidLeft][LoadJonas]
+Well... done...[A][N]
+But your victory...[N]
+is... for naught...[A][X]
+
 ##C10_LazThreat
 [OpenMidLeft][LoadLazarus]
 That's it. No more waiting[N]
@@ -59,7 +106,7 @@ I'm charging. Time to end[N]
 this right now.[A][X]
 
 ##C10OthersArrive
-[OpenMidLeft][LoadBaddie1]
+[OpenMidLeft][LoadGregorias]
 Yar har hey, yar har ho![N]
 This be a good place to go![A][N]
 Yar har hey, yar har ho![N]

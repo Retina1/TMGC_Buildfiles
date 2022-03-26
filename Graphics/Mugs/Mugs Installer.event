@@ -212,6 +212,22 @@ CidMug:
 setMugEntry(0x57,CidMug,2,5,2,3)
 
 ALIGN 4
+GregoriasMug:
+#incext PortraitFormatter "Gregorias.png"
+setMugEntry(0x3a,GregoriasMug,3,5,3,3)
+
+ALIGN 4
+JonasMug:
+#incext PortraitFormatter "Jonas.png"
+setMugEntry(0x3b,JonasMug,2,5,3,3)
+
+ALIGN 4
+SofiaMug:
+#incext PortraitFormatter "Sofia.png"
+setMugEntry(0x35,SofiaMug,2,6,2,4)
+
+
+ALIGN 4
 BrandlMug:
 #incext PortraitFormatter "Brandl.png"
 setMugEntry(0x49,BrandlMug,2,5,2,2)

@@ -29,17 +29,17 @@ CharacterEvent(0x0,I3ReadyToEnd,Blair,Cid)
 END_MAIN
 
 LocationBasedEvents:
-Armory(I3Armory,12,1)
-Vendor(I3Vendor,8,7)
+Armory(I3Armory,5,19)
+Vendor(I3Vendor,8,19)
 END_MAIN
 
 ALIGN 4
 I3Armory:
-SHLI IronSword SteelSword Lancereaver IronLance SteelLance Axereaver Javelin
+SHLI IronSword SteelSword Lancereaver IronLance SteelLance Axereaver Javelin IronAxe SteelAxe Swordreaver HandAxe IronBow SteelBow Longbow
 BYTE 0x0 0x0
 ALIGN 4
 I3Vendor:
-SHLI IronAxe SteelAxe Swordreaver HandAxe IronBow SteelBow ShiningBow
+SHLI Fire Thunder Elfire Lightning Shine Divine Flux Nightfall Heal Mend Vulnerary Elixir
 BYTE 0x0 0x0
 ALIGN 4
 
@@ -63,7 +63,7 @@ UNIT Blair BlairLord 0x0 Level(1,Ally,0) [10,15] 0x0 0x0 0x0 0x0 [Fire, Awaken, 
 UNIT
 
 I3NPC:
-UNIT Cid Berserker 0x0 Level(9,NPC,0) [25,1] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
+UNIT Cid Berserker 0x0 Level(9,NPC,0) [6,7] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
 UNIT
 
 ALIGN 4

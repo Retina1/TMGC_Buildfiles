@@ -46,7 +46,19 @@ CharacterEvent(0xb,C9BechamelRecruitment,Apollo,Bechamel)
 END_MAIN
 
 LocationBasedEvents:
+Armory(C9Armory,18,19)
+Vendor(C9Vendor,21,19)
 END_MAIN
+
+ALIGN 4
+C9Armory:
+SHLI IronSword SteelSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow
+BYTE 0x0 0x0
+ALIGN 4
+C9Vendor:
+SHLI Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary
+BYTE 0x0 0x0
+ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies

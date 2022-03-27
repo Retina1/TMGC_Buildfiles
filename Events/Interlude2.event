@@ -25,6 +25,11 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,I2Hyperius,Blair,Hyperius)
+CharacterEvent(0xb,I2Alexis,Blair,Alexis)
+CharacterEvent(0xc,I2Charley,Blair,Charley)
+CharacterEvent(0xd,I2ManfredWilhelm,Blair,Manfred)
+CharacterEvent(0xd,I2ManfredWilhelm,Blair,Wilhelm)
 CharacterEvent(0xe,I2Merchant,Blair,Merchant)
 CharacterEvent(0xf,I2Cit,Blair,Citizen)
 CharacterEvent(0x10,I2Cit2,Blair,Citizen2)
@@ -77,12 +82,12 @@ UNIT
 
 I2NPC:
 UNIT Cid Berserker 0x0 Level(9,NPC,0) [25,1] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
-UNIT C7Wilhelm Soldier 0x0 Level(16,NPC,0) [0,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Wilhelm Soldier 0x0 Level(16,NPC,0) [0,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Manfred DarkM 0x0 Level(18,NPC,0) [0,7] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Charley SniperF 0x0 Level(2,NPC,0) [6,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Alexis AxeArm 0x0 Level(8,NPC,0) [8,11] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Hyperius SwdGen 0x0 Level(12,NPC,0) [6,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Merchant Sage 0x0 Level(5,NPC,1) [21,13] 0x0 0x0 0x0 0x0 [Yoink] NeverMoveAI
+UNIT Merchant Merc 0x0 Level(19,NPC,1) [21,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Citizen CivilM 0x0 Level(1,NPC,1) [21,17] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Citizen2 CivilM 0x0 Level(1,NPC,1) [10,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT ElbaCor MageF 0x0 Level(14,NPC,1) [9,20] 0x0 0x0 0x0 0x0 [Elfire,Elixir] NeverMoveAI
@@ -99,57 +104,73 @@ LOAD1 0x0 I2NPC
 ENUN
 MUSC NarrationTheme
 Narration(Base2_Narration)
-CleanTextNoMap(0x3,I1_Opening)
+CleanTextNoMap(0x3,I2_Opening)
 GotoPrepScreen
 ENDA
 
 EndingScene:
 DisableFreeMovement
-Text(I1_Opening)
+Text(I2ReleaseMe)
 MoveToChapter(Chapter9)
 ENDA
 
 I2Merchant:
 EVBIT_MODIFY 4
-Text(I1MerchantTalk)
+Text(I2MerchantTalk)
 CHECK_MONEY
-SVAL 0x1 0x5DC
+SVAL 0x1 0x693
 BGE 0x1 0xc 0x1
-Text(I1NoMoneyHa)
+Text(I2NoMoneyHa)
 ENUF 0xe
 GOTO 0x2
 LABEL 0x1
-SystemText(I1StaffBuy)
+SystemText(I2SkillBuy)
 IfNoSelectedGoto(0x3)
-Text(I1StaffPurchased)
-SVAL 0x3 0x5dc
+Text(I2SkillPurchased)
+SVAL 0x3 0x693
 TAKEMONEY
-GiveItem(Yoink,Blair)
+GiveItemWithDurability(SkillScroll,LightWeightID,Blair)
 GOTO 0x2
 LABEL 0x3
-Text(I1StaffDenied)
+Text(I2SkillDenied)
 ENUF 0xe
 LABEL 0x2
 EndEvent
 
+I2Hyperius:
+Text(I2HyperiusTalk)
+EndEvent
+
+I2Alexis:
+Text(I2AlexisTalk)
+GiveItem(AnkleWeight,Blair)
+EndEvent
+
+I2Charley:
+Text(I2CharleyTalk)
+EndEvent
+
+I2ManfredWilhelm:
+Text(I2ManfredWilhelmTalk)
+EndEvent
+
 I2Cit:
-Text(I1CitTalk)
+Text(I2CitTalk)
 EndEvent
 
 I2Cit2:
-Text(I1Cit2Talk)
+Text(I2Cit2Talk)
 EndEvent
-
 
 I2ReadyToEnd:
 EVBIT_MODIFY 4
-Text(I1ConfirmLeave)
+Text(I2ConfirmLeave)
 SystemText(I1LeavePrompt)
 IfNoSelectedGoto(0x2)
 CALL EndingScene
 GOTO 0x1
 LABEL 0x2
-Text(I1NotYet)
+Text(I2NotYet)
 LABEL 0x1
 EndEvent
 

@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song0A_grp, voicegroup000
-	.equ	song0A_pri, 0
-	.equ	song0A_rev, 0
-	.equ	song0A_mvl, 127
-	.equ	song0A_key, 0
-	.equ	song0A_tbs, 1
-	.equ	song0A_exg, 0
-	.equ	song0A_cmp, 1
+	.equ	DraculaCastle_grp, voicegroup000
+	.equ	DraculaCastle_pri, 0
+	.equ	DraculaCastle_rev, 0
+	.equ	DraculaCastle_mvl, 127
+	.equ	DraculaCastle_key, 0
+	.equ	DraculaCastle_tbs, 1
+	.equ	DraculaCastle_exg, 0
+	.equ	DraculaCastle_cmp, 1
 
 	.section .rodata
-	.global	song0A
+	.global	DraculaCastle
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0A_001:
+DraculaCastle_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
- .byte   TEMPO , 136*song0A_tbs/2
+ .byte   KEYSH , DraculaCastle_key+0
+ .byte   TEMPO , 136*DraculaCastle_tbs/2
  .byte   VOICE , 104
- .byte   VOL , 43*song0A_mvl/mxv
+ .byte   VOL , 43*DraculaCastle_mvl/mxv
  .byte   PAN , c_v-25
  .byte   TIE ,An3 ,v100
  .byte   TIE ,Fs4
@@ -999,11 +999,11 @@ Label_010056A5:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0A_002:
+DraculaCastle_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 33
- .byte   VOL , 34*song0A_mvl/mxv
+ .byte   VOL , 34*DraculaCastle_mvl/mxv
  .byte   PAN , c_v+24
  .byte   W96
 @  #02 @001   ----------------------------------------
@@ -1585,11 +1585,11 @@ Label_01009363:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0A_003:
+DraculaCastle_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 48
- .byte   VOL , 39*song0A_mvl/mxv
+ .byte   VOL , 39*DraculaCastle_mvl/mxv
  .byte   PAN , c_v-14
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -1921,11 +1921,11 @@ Label_01004F59:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0A_004:
+DraculaCastle_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 48
- .byte   VOL , 43*song0A_mvl/mxv
+ .byte   VOL , 43*DraculaCastle_mvl/mxv
  .byte   PAN , c_v-1
  .byte   TIE ,An3 ,v040
  .byte   TIE ,Bn3 ,v080
@@ -2499,11 +2499,11 @@ Label_01008515:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0A_005:
+DraculaCastle_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 19
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 19*DraculaCastle_mvl/mxv
  .byte   PAN , c_v+36
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -2657,11 +2657,11 @@ Label_0100518D:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song0A_006:
+DraculaCastle_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 56
- .byte   VOL , 33*song0A_mvl/mxv
+ .byte   VOL , 33*DraculaCastle_mvl/mxv
  .byte   PAN , c_v-29
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -2921,11 +2921,11 @@ Label_01008734:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song0A_007:
+DraculaCastle_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 13
- .byte   VOL , 34*song0A_mvl/mxv
+ .byte   VOL , 34*DraculaCastle_mvl/mxv
  .byte   PAN , c_v-24
  .byte   N12 ,Bn4 ,v064
  .byte   W12
@@ -3260,11 +3260,11 @@ Label_0100827F:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song0A_008:
+DraculaCastle_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 30
- .byte   VOL , 30*song0A_mvl/mxv
+ .byte   VOL , 30*DraculaCastle_mvl/mxv
  .byte   PAN , c_v-29
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -3693,11 +3693,11 @@ Label_0100896F:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song0A_009:
+DraculaCastle_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 95
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 25*DraculaCastle_mvl/mxv
  .byte   PAN , c_v-1
  .byte   TIE ,Bn0 ,v127
  .byte   TIE ,Bn1
@@ -3927,7 +3927,7 @@ Label_01008ACE:
  .byte   W96
 @  #09 @011   ----------------------------------------
  .byte   W90
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 21*DraculaCastle_mvl/mxv
  .byte   W04
  .byte   VOICE , 62
  .byte   W02
@@ -4445,11 +4445,11 @@ Label_01008CBE:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song0A_010:
+DraculaCastle_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 30
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 25*DraculaCastle_mvl/mxv
  .byte   PAN , c_v+56
  .byte   W96
 @  #10 @001   ----------------------------------------
@@ -4609,7 +4609,7 @@ Label_0100522D:
  .byte   W24
  .byte   PAN , c_v-26
  .byte   W12
- .byte   VOL , 30*song0A_mvl/mxv
+ .byte   VOL , 30*DraculaCastle_mvl/mxv
  .byte   W12
  .byte   N48 ,Gs1 ,v120
  .byte   W48
@@ -4652,11 +4652,11 @@ Label_0100522D:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song0A_011:
+DraculaCastle_011:
 @  #11 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 124
- .byte   VOL , 31*song0A_mvl/mxv
+ .byte   VOL , 31*DraculaCastle_mvl/mxv
  .byte   PAN , c_v-1
  .byte   N03 ,As3 ,v080
  .byte   W12
@@ -5702,11 +5702,11 @@ Label_010098AD:
 
 @**************** Track 12 (Midi-Chn.11) ****************@
 
-song0A_012:
+DraculaCastle_012:
 @  #12 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
+ .byte   KEYSH , DraculaCastle_key+0
  .byte   VOICE , 29
- .byte   VOL , 23*song0A_mvl/mxv
+ .byte   VOL , 23*DraculaCastle_mvl/mxv
  .byte   PAN , c_v+56
  .byte   W96
 @  #12 @001   ----------------------------------------
@@ -5865,7 +5865,7 @@ Label_01007F68:
 @  #12 @053   ----------------------------------------
  .byte   W96
 @  #12 @054   ----------------------------------------
- .byte   VOL , 50*song0A_mvl/mxv
+ .byte   VOL , 50*DraculaCastle_mvl/mxv
  .byte   N06 ,An2 ,v040
  .byte   W03
  .byte   Gs2
@@ -5911,7 +5911,7 @@ Label_01007F68:
  .byte   Fs3
  .byte   W05
 @  #12 @055   ----------------------------------------
- .byte   VOL , 27*song0A_mvl/mxv
+ .byte   VOL , 27*DraculaCastle_mvl/mxv
  .byte   W96
 @  #12 @056   ----------------------------------------
  .byte   W96
@@ -5930,25 +5930,25 @@ Label_01007F68:
 @******************************************************@
 	.align	2
 
-song0A:
+DraculaCastle:
 	.byte	12	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0A_pri	@ Priority
-	.byte	song0A_rev	@ Reverb.
+	.byte	DraculaCastle_pri	@ Priority
+	.byte	DraculaCastle_rev	@ Reverb.
     
-	.word	song0A_grp
+	.word	DraculaCastle_grp
     
-	.word	song0A_001
-	.word	song0A_002
-	.word	song0A_003
-	.word	song0A_004
-	.word	song0A_005
-	.word	song0A_006
-	.word	song0A_007
-	.word	song0A_008
-	.word	song0A_009
-	.word	song0A_010
-	.word	song0A_011
-	.word	song0A_012
+	.word	DraculaCastle_001
+	.word	DraculaCastle_002
+	.word	DraculaCastle_003
+	.word	DraculaCastle_004
+	.word	DraculaCastle_005
+	.word	DraculaCastle_006
+	.word	DraculaCastle_007
+	.word	DraculaCastle_008
+	.word	DraculaCastle_009
+	.word	DraculaCastle_010
+	.word	DraculaCastle_011
+	.word	DraculaCastle_012
 
 	.end

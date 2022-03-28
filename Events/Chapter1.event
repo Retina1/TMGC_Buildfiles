@@ -145,7 +145,7 @@ ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt1
-CleanTextNoMap(0x10,Ch1_Opening)
+CleanTextNoMap(HallCG,Ch1_Opening)
 LoadUnitsByDifficulty(C1Easy,C1Normal,C1Hard)
 MUSC NarrationTheme
 Narration(Ch1_Narration)
@@ -153,10 +153,10 @@ LOAD1 0x0 C1CutsceneUnits
 ENUN
 CHECK_ALIVE Kenneth
 BNE 0x1 0xC 0x0
-CleanText(0x3,Ch1_Opening_2_Dead_Kenneth)
+CleanText(PathCG,Ch1_Opening_2_Dead_Kenneth)
 GOTO 0x2
 LABEL 0x1
-CleanText(0x3,Ch1_Opening_2)
+CleanText(PathCG,Ch1_Opening_2)
 LABEL 0x2
 LOAD1 0x0 C1Units
 GotoPrepScreen
@@ -172,32 +172,11 @@ ResetBaseFlags
 CHECK_EXISTS Natasia
 BNE 0x1 0xC 0x0
 MUSC VictoryTheme
-CleanTextNoMap(0x3, You_Almost_Forgot_Natasia_Dummy)
+CleanTextNoMap(PathCG, You_Almost_Forgot_Natasia_Dummy)
 LOAD1 0x0 NatasiaRecruitment
 ENUN
 LABEL 0x1
-CHECK_ALIVE Kenneth
-BNE 0x2 0xC 0x0
-CHECK_ALIVE Natasia
-BNE 0x3 0xC 0x0
-MUSC VictoryMinor
-CleanTextNoMap(0x3,Ch1_Ending_Dead_Kenneth_and_Natasia)
-GOTO 0x5
-LABEL 0x3
-MUSC VictoryMinor
-CleanTextNoMap(0x3,Ch1_Ending_Dead_Kenneth)
-GOTO 0x5
-LABEL 0x2
-CHECK_ALIVE Natasia
-BNE 0x4 0xC 0x0
-MUSC VictoryMinor
-CleanTextNoMap(0x3,Ch1_Ending_Dead_Natasia)
-GOTO 0x5
-LABEL 0x4
-MUSC VictoryTheme
-CleanTextNoMap(0x3,Ch1_Ending)
-LABEL 0x5
-MUSC 0x0
+DeathBranchText(Kenneth,Natasia,VictoryMinor,VictoryTheme,0x3,Ch1_Ending,Ch1_Ending_Dead_Kenneth,Ch1_Ending_Dead_Natasia,Ch1_Ending_Dead_Kenneth_and_Natasia)
 MoveToChapter(Chapter2)
 EndEvent
 
@@ -235,19 +214,19 @@ CHECK_ACTIVEID Blair
 BNE 0x1 0xC 0x0
 CHECK_ACTIVEID Arin
 BNE 0x2 0xC 0x0
-Text(0x3, Natasia_Verbally_Abuses_Kenneth_Then_Joins_The_Party)
+Text(VillageCG, Natasia_Verbally_Abuses_Kenneth_Then_Joins_The_Party)
 GOTO 0x3
 LABEL 0x2
-Text(0x3, Arin_Recruits_Natasia)
+Text(VillageCG, Arin_Recruits_Natasia)
 GOTO 0x3
 LABEL 0x1
-Text(0x3, Blair_Recruits_Natasia)
+Text(VillageCG, Blair_Recruits_Natasia)
 LABEL 0x3
 Reinforcements(NatasiaRecruitment)
 ENUN
 EndEvent
 	
 C1EVillage:
-	VillageEventItem(C1EVillageText, 0x3, SecretBook)
+	VillageEventItem(C1EVillageText, VillageCG, SecretBook)
 
 MESSAGE Events end at offset CURRENTOFFSET

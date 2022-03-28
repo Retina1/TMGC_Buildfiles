@@ -271,14 +271,16 @@ LOAD1 0x0 C7Allies
 MUSC NarrationTheme
 Narration(Ch7_Narration)
 CLEAN
-CleanTextNoMap(0x10,Ch7_Opening)
-SetBackground(0x33)
+DeathBranchText(Rachael,Cassius,0x0,0x0,HillCG,Ch7_Opening,Ch7_Opening_Dead_Rachael,Ch7_Opening_Dead_Cassius,Ch7_Opening_Dead_Rachael_and_Cassius)
+SetBackground(BlankCG)
 SystemText(BaseJoinNotice)
 GotoPrepScreen
 EndEvent
 
 EndingScene:
 ResetBaseFlags
+DeathBranchText(Rachael,Cassius,VictoryMinor,VictoryTheme,OutdoorCastleCG,Ch7_Ending,Ch7_Ending_Dead_Rachael,Ch7_Ending_Dead_Cassius,Ch7_Ending_Dead_Rachael_and_Cassius)
+SetBackground(BlankCG)
 GiveMoney(0x1d4c)
 MoveToChapter(Chapter8)
 ENDA
@@ -354,16 +356,16 @@ Text(Ch7_Zaine_Spawn)
 EndEvent
 
 C7North:
-HouseEvent(Ch7_NorthHouse,0x0)
+HouseEvent(Ch7_NorthHouse,HouseCG)
 
 C7Mid1:
-HouseEvent(Ch7_Mid1House,0x0)
+HouseEvent(Ch7_Mid1House,HouseCG)
 
 C7Mid2:
-HouseEvent(Ch7_Mid2House,0x0)
+HouseEvent(Ch7_Mid2House,House2CG)
 
 C7South:
-HouseEvent(Ch7_SouthHouse,0x0)
+HouseEvent(Ch7_SouthHouse,HouseCG)
 
 ALIGN 4
 EscapePointPointerTable(Chapter7,C7Escape)

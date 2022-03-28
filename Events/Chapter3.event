@@ -221,7 +221,7 @@ CHECK_ALIVE Desmond
 BNE 0x33 0xC 0x0
 ENUT BaseFlag2
 LABEL 0x33
-CleanTextNoMap(0x3,Ch3_Opening)
+CleanTextNoMap(OuterFortCG,Ch3_Opening)
 GotoPrepScreen
 ENDA
 
@@ -273,13 +273,13 @@ TurnAlly(Josef)
 EndEvent
 
 C3Village:
-VillageEventItem(C3VillageText, 0x1, Thunder)
+VillageEventItem(C3VillageText, House2CG, Thunder)
 
 EndingScene:
 ResetBaseFlags
 MUSC VictoryMinor
 CLEAN
-SetBackground(0x10)
+SetBackground(HallCG)
 FADU 0x3c
 TEXTSTART
 TEXTSHOW Ch3_Ending

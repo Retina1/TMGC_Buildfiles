@@ -52,11 +52,11 @@ END_MAIN
 
 ALIGN 4
 C9Armory:
-SHLI IronSword SteelSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow
+SHLI IronSword IronLance IronAxe IronBow
 BYTE 0x0 0x0
 ALIGN 4
 C9Vendor:
-SHLI Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary
+SHLI Fire Lightning Flux Heal Vulnerary
 BYTE 0x0 0x0
 ALIGN 4
 
@@ -226,7 +226,7 @@ LOAD1 0x0 C9Ally
 ENUN
 MUSC NarrationTheme
 Narration(Ch9_Narration)
-CleanText(0x3,Ch9_Opening)
+CleanText(BoatCG,Ch9_Opening)
 LOAD1 0x0 C9Units
 ENUN
 GotoPrepScreen
@@ -235,7 +235,7 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
-CleanTextNoMap(0x10,Ch9_Ending)
+CleanTextNoMap(BoatCG,Ch9_Ending)
 MoveToChapter(Interlude3)
 ENDA
 

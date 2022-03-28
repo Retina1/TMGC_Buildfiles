@@ -109,7 +109,7 @@ LOAD1 0x0 I1NPC
 ENUN
 MUSC NarrationTheme
 Narration(Base1_Narration)
-CleanTextNoMap(0x3,I1_Opening)
+CleanTextNoMap(StreetCG,I1_Opening)
 GotoPrepScreen
 ENDA
 
@@ -187,13 +187,13 @@ Text(I1Cit2Talk)
 EndEvent
 
 I1West:
-HouseEvent(I1House1,0x0)
+HouseEvent(I1House1,House2CG)
 
 I1East1:
-HouseEvent(I1House2,0x0)
+HouseEvent(I1House2,HouseCG)
 
 I1East2:
-HouseEvent(I1House3,0x0)
+HouseEvent(I1House3,House2CG)
 
 I1ReadyToEnd:
 EVBIT_MODIFY 4

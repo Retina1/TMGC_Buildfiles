@@ -166,17 +166,17 @@ UNIT
 C4Ygstra2:
 UNIT Ygstra MercF 0x0 Level(7,Enemy,1) [25,7] 0x0 0x0 0x1 REDA25R7 [SteelSword] NoAI
 UNIT Ygstra AxeArm 0x0 Level(7,Enemy,1) [25,8] 0x0 0x0 0x1 REDA25R8 [SteelAxe] NoAI
-UNIT Ygstra Hero 0x0 Level(2,Enemy,1) [25,9] 0x0 0x0 0x1 REDA25R9 [SilverAxe] NoAI
+UNIT Ygstra Hero 0x0 Level(2,Enemy,1) [25,9] 0x0 0x0 0x1 REDA25R9 [IronAxe] NoAI
 UNIT Ygstra LncArm 0x0 Level(7,Enemy,1) [25,10] 0x0 0x0 0x1 REDA25R10 [SteelLance] NoAI
 UNIT Ygstra Mage 0x0 Level(7,Enemy,1) [25,11] 0x0 0x0 0x1 REDA25R11 [Thunder] NoAI
 UNIT
 
 C4YgstraOof:
-UNIT Ygstra Sniper 0x0 Level(5,Enemy,1) [25,7] 0x0 0x0 0x1 REDA25R7 [SilverBow] NoAI
-UNIT Ygstra LncGen 0x0 Level(5,Enemy,1) [25,8] 0x0 0x0 0x1 REDA25R8 [SilverLance,Spear] NoAI
+UNIT Ygstra Sniper 0x0 Level(5,Enemy,1) [25,7] 0x0 0x0 0x1 REDA25R7 [SteelBow] NoAI
+UNIT Ygstra LncGen 0x0 Level(5,Enemy,1) [25,8] 0x0 0x0 0x1 REDA25R8 [SteelLance,Spear] NoAI
 UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [25,9] DropItem 0x0 0x1 REDA25R9 [Arkhinal,Tomahawk,LegRing] NoAI
-UNIT Ygstra LncGen 0x0 Level(5,Enemy,1) [25,10] 0x0 0x0 0x1 REDA25R10 [SilverLance,Spear] NoAI
-UNIT Ygstra Sniper 0x0 Level(5,Enemy,1) [25,11] 0x0 0x0 0x1 REDA25R11 [SilverBow] NoAI
+UNIT Ygstra LncGen 0x0 Level(5,Enemy,1) [25,10] 0x0 0x0 0x1 REDA25R10 [SteelLance,Spear] NoAI
+UNIT Ygstra Sniper 0x0 Level(5,Enemy,1) [25,11] 0x0 0x0 0x1 REDA25R11 [SteelBow] NoAI
 UNIT
 
 C4YgstraOhGod:
@@ -226,7 +226,7 @@ BNE 0x12 0xC 0x0
 ENUT BaseFlag2
 LABEL 0x12
 MUSC S_SMTLevelUp
-CleanTextNoMap(0x3,Ch4_Opening)
+CleanTextNoMap(PathCG,Ch4_Opening)
 GotoPrepScreen
 ENDA
 
@@ -235,10 +235,10 @@ ResetBaseFlags
 MUSC S_FE4Conversation
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0
-CleanText(0x3,Ch4_Ending_Dead_Peggy)
+CleanText(HillCG,Ch4_Ending_Dead_Peggy)
 GOTO 0x2
 LABEL 0x1
-CleanText(0x3,Ch4_Ending)
+CleanText(HillCG,Ch4_Ending)
 LABEL 0x2
 CLEAN
 FADU 0x30
@@ -247,7 +247,7 @@ LOAD1 0x0 C4Ending
 CAM1 Lazarus
 FlashCursor(Lazarus,60)
 Text(Ch4_Ending_2)
-CleanTextNoMap(0x2e,Ch4_Ending_3)
+CleanTextNoMap(ElbaCorCastleCG,Ch4_Ending_3)
 MoveToChapter(0x5)
 ENDA
 

@@ -180,10 +180,10 @@ MUSC NarrationTheme
 Narration(Ch5_Narration)
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0
-CleanTextNoMap(0x20,Ch5_Opening_Dead_Peggy)
+CleanTextNoMap(JungleCG,Ch5_Opening_Dead_Peggy)
 GOTO 0x2
 LABEL 0x1
-CleanTextNoMap(0x20,Ch5_Opening)
+CleanTextNoMap(JungleCG,Ch5_Opening)
 LABEL 0x2
 GotoPrepScreen
 EndEvent
@@ -193,12 +193,12 @@ ResetBaseFlags
 MUSC S_FE4Conversation
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0
-CleanTextNoMap(0x20,Ch5_Ending_Dead_Peggy)
+CleanTextNoMap(JungleCG,Ch5_Ending_Dead_Peggy)
 GOTO 0x2
 LABEL 0x1
-CleanTextNoMap(0x20,Ch5_Ending)
+CleanTextNoMap(JungleCG,Ch5_Ending)
 LABEL 0x2
-CleanTextNoMap(0x11,Ch5_Ending2)
+CleanTextNoMap(HallCG,Ch5_Ending2)
 MoveToChapter(0x26)
 EndEvent
 
@@ -231,10 +231,10 @@ Reinforcements(C5Ygstra)
 EndEvent
 
 C5North:
-HouseEvent(Ch5_NorthHouse,0x0)
+HouseEvent(Ch5_NorthHouse,HouseCG)
 
 C5South:
-HouseEvent(Ch5_SouthHouse,0x0)
+HouseEvent(Ch5_SouthHouse,HouseCG)
 
 C5ButchRecruitment:
 EVBIT_MODIFY 3

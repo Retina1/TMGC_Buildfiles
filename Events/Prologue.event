@@ -110,7 +110,7 @@ ALIGN 4
 BeginningScene:
 EVBIT_MODIFY 4
 ENUT 0xcb
-SetBackground(0x33)
+SetBackground(BlankCG)
 ASMC 0x864CD
 SVAL 0x1 0x1
 BEQ 0x1 0xC 0x1
@@ -144,7 +144,7 @@ ENUN
 LoadUnitsByDifficulty(PEasy,PNormal,PHard)
 MUSC NarrationTheme
 Narration(Prologue_Narration)
-CleanText(0x3,Prologue_Opening)
+CleanText(PathCG,Prologue_Opening)
 ENUT AllUnitsMustEscapeFlag
 ENUT LordMustEscapeLastFlag
 EndEvent
@@ -153,11 +153,11 @@ EndingScene:
 CHECK_ALIVE Kenneth
 BNE 0x1 0xC 0x0
 MUSC VictoryMinor
-Text(0x3,Prologue_Ending_Dead_Kenneth)
+Text(PathCG,Prologue_Ending_Dead_Kenneth)
 GOTO 0x2
 LABEL 0x1
 MUSC VictoryTheme
-Text(0x3,Prologue_Ending)
+Text(PathCG,Prologue_Ending)
 LABEL 0x2
 MUSC 0x0
 MoveToChapter(Chapter1)
@@ -172,9 +172,9 @@ MUSC 0x0
 EndEvent
 
 PNVillage:
-	VillageEventItem(PNVillageText, 0x0, GoddessIcon)
+	VillageEventItem(PNVillageText, HouseCG, GoddessIcon)
 	
 PSVillage:
-	VillageEventItem(PSVillageText, 0x1, SteelSword)
+	VillageEventItem(PSVillageText, House2CG, SteelSword)
 
 MESSAGE Events end at offset CURRENTOFFSET

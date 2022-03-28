@@ -28,10 +28,14 @@ TurnEventPlayer(0x0,C10HeSpawns,3)
 TurnEventPlayer(0x0,C10CavSpawns,4,2)
 TurnEventPlayer(0x0,C10CavSpawns,7,2)
 TurnEventPlayer(0x0,C10FlierSpawns,10,2)
+TurnEventPlayer(0x0,C10PromotedSpawns,11)
 TurnEventPlayer(0x0,C10CavSpawns,12)
+TurnEventPlayer(0x0,C10PromotedSpawns,13)
 TurnEventPlayer(0x0,C10FlierSpawns,14)
 TurnEventPlayer(0x0,C10CavSpawns,15)
+TurnEventPlayer(0x0,C10PromotedSpawns,15)
 TurnEventPlayer(0x0,C10FlierSpawns,16)
+TurnEventPlayer(0x0,C10PromotedSpawns,17)
 
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -167,6 +171,11 @@ UNIT Ygstra LncWyv 0x0 Level(13,Enemy,1) [26,15] 0x0 0x0 0x1 REDA24R12 [IronLanc
 UNIT Ygstra SwdPeg 0x0 Level(13,Enemy,1) [26,15] 0x0 0x0 0x1 REDA22R14 [SteelSword] NoAI
 UNIT
 
+C10Promoteds:
+UNIT Ygstra HalberdierF 0x0 Level(3,Enemy,1) [0,23] 0x0 0x0 0x1 REDA2R23 [SteelLance] NoAI
+UNIT Ygstra HeroF 0x0 Level(3,Enemy,1) [0,24] 0x0 0x0 0x1 REDA3R24 [SteelSword] NoAI
+UNIT Ygstra WarriorF 0x0 Level(3,Enemy,1) [0,25] 0x0 0x0 0x1 REDA2R25 [SteelAxe] NoAI
+UNIT
 
 ALIGN 4
 
@@ -177,7 +186,7 @@ LOAD1 0x0 C10Ally
 ENUN
 MUSC NarrationTheme
 Narration(Ch10_Narration)
-CleanText(0x3,Ch9_Opening)
+CleanText(BoatCG,Ch10_Opening)
 LOAD1 0x0 C10Units
 ENUN
 GotoPrepScreen
@@ -186,7 +195,7 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
-CleanTextNoMap(0x10,Ch9_Ending)
+CleanTextNoMap(BoatCG,Ch10_Ending)
 MoveToChapter(Chapter11)
 ENDA
 
@@ -208,6 +217,13 @@ EndEvent
 
 C10FlierSpawns:
 Reinforcements(C10Fliers)
+EndEvent
+
+C10PromotedSpawns:
+CHECK_HARD
+BEQ 0x1 0xc 0x0
+Reinforcements(C10Promoteds)
+LABEL 0x1
 EndEvent
 
 C10LowerDeck:

@@ -104,7 +104,7 @@ LOAD1 0x0 C11Ally
 ENUN
 MUSC NarrationTheme
 Narration(Ch11_Narration)
-CleanText(0x3,Ch9_Opening)
+CleanText(DesertCG,Ch9_Opening)
 LOAD1 0x0 C11Units
 ENUN
 GotoPrepScreen
@@ -113,7 +113,7 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
-CleanTextNoMap(0x10,Ch9_Ending)
+CleanTextNoMap(HallCG,Ch9_Ending)
 MoveToChapter(Chapter12)
 ENDA
 

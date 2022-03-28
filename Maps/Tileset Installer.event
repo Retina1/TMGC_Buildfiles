@@ -99,6 +99,18 @@ DesertTiles:
 #incext compress "Tilesets/Desert.mapchip_config"
 
 ALIGN 4
+FrontierObjects:
+#incext Png2Dmp "Tilesets/YgstraFrontier.png" --lz77
+
+ALIGN 4
+YgstraFrontierPalette:
+#incext Png2Dmp "Tilesets/YgstraFrontier.png" --palette-only
+
+ALIGN 4
+FrontierTiles:
+#incext compress "Tilesets/Frontier.mapchip_config"
+
+ALIGN 4
 CastleFrame1:
 #incbin "CastleAnim/CastleFrame1.dmp"
 ALIGN 4
@@ -302,6 +314,10 @@ EventPointerTable(ANILava, 0x59D800)
 EventPointerTable(OBJDesert, DesertObjects) 
 EventPointerTable(PALDesert, DesertPalette) 
 EventPointerTable(TILDesert, DesertTiles) 
+
+EventPointerTable(OBJFrontier, FrontierObjects) 
+EventPointerTable(PALYgstraFrontier, YgstraFrontierPalette) 
+EventPointerTable(TILFrontier, FrontierTiles) 
 
 
 #define MinimapTileTable $A7A38

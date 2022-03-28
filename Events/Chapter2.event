@@ -158,13 +158,12 @@ ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt2
-CleanTextNoMap(0x10,Ch2_ColdOpen)
+CleanTextNoMap(HallCG,Ch2_ColdOpen)
 LoadUnitsByDifficulty(C2Easy,C2Normal,C2Hard)
 LOAD1 0x0 C2Allies
 ENUN
 MUSC NarrationTheme
 Narration(Ch2_Narration)
-MUSC S_Crisis
 CHECK_ALIVE Kenneth
 BEQ 0x11 0xC 0x0
 CHECK_ALIVE Natasia
@@ -172,23 +171,7 @@ BNE 0x22 0xC 0x0
 LABEL 0x11
 ENUT BaseFlag1
 LABEL 0x22
-CHECK_ALIVE Kenneth
-BNE 0x2 0xC 0x0
-CHECK_ALIVE Natasia
-BNE 0x3 0xC 0x0
-CleanText(0x3,Ch2_Opening_Dead_Kenneth_and_Natasia)
-GOTO 0x5
-LABEL 0x3
-CleanText(0x3,Ch2_Opening_Dead_Kenneth)
-GOTO 0x5
-LABEL 0x2
-CHECK_ALIVE Natasia
-BNE 0x4 0xC 0x0
-CleanText(0x3,Ch2_Opening_Dead_Natasia)
-GOTO 0x5
-LABEL 0x4
-CleanText(0x3,Ch2_Opening)
-LABEL 0x5
+DeathBranchText(Kenneth,Natasia,S_Crisis,S_Crisis,OutdoorCastleCG,Ch2_Opening,Ch2_Opening_Dead_Kenneth,Ch2_Opening_Dead_Natasia,Ch2_Opening_Dead_Kenneth_and_Natasia)
 LOAD1 0x0 C2Units
 ENUN
 GotoPrepScreen
@@ -215,7 +198,7 @@ MUSC S_Ameno
 Text(C2Spooky)
 LOAD1 0x1 C2Cutscene2
 ENUN
-SetBackground(0x10)
+SetBackground(HallCG)
 Text(C2Spooky2)
 REMOVEUNIT Aercolyn
 REMOVEUNIT Aercolyn
@@ -237,35 +220,18 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryMinor
-CHECK_ALIVE Stefan
-BNE 0x2 0xC 0x0
-CHECK_ALIVE Desmond
-BNE 0x3 0xC 0x0
-CleanTextNoMap(0x10,Ch2_Ending_Dead_Stefan_and_Desmond)
-GOTO 0x5
-LABEL 0x3
-CleanTextNoMap(0x10,Ch2_Ending_Dead_Stefan)
-GOTO 0x5
-LABEL 0x2
-CHECK_ALIVE Desmond
-BNE 0x4 0xC 0x0
-CleanTextNoMap(0x10,Ch2_Ending_Dead_Desmond)
-GOTO 0x5
-LABEL 0x4
-CleanTextNoMap(0x10,Ch2_Ending)
-LABEL 0x5
-CleanTextNoMap(0x10,Ch2_Ending2)
+DeathBranchText(Stefan,Desmond,VictoryMinor,VictoryMinor,DungeonCG,Ch2_Ending,Ch2_Ending_Dead_Stefan,Ch2_Ending_Dead_Desmond,Ch2_Ending_Dead_Stefan_and_Desmond)
+CleanTextNoMap(HallCG,Ch2_Ending2)
 REMA
 EVBIT_F 2
-SetBackground(0x33)
+SetBackground(BlankCG)
 FADU 0x3c
 GiveMoney(0xbb8)
 MoveToChapter(Chapter3)
 ENDA
 
 C2Village:
-	VillageEventItem(C2VillageText, 0x0, Hammer)
+	VillageEventItem(C2VillageText, HouseCG, Hammer)
 
 ALIGN 4
 EscapePointPointerTable(Chapter2,C2Escape)

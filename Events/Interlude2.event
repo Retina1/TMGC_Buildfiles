@@ -45,11 +45,11 @@ END_MAIN
 
 ALIGN 4
 I2Armory:
-SHLI IronSword SteelSword Lancereaver IronLance SteelLance Axereaver Javelin
+SHLI IronSword SteelSword Lancereaver Zanbato IronLance SteelLance Axereaver Horseslayer Javelin
 BYTE 0x0 0x0
 ALIGN 4
 I2Armory2:
-SHLI IronAxe SteelAxe Swordreaver HandAxe IronBow SteelBow ShiningBow
+SHLI IronAxe SteelAxe Swordreaver Halberd HandAxe IronBow SteelBow ShiningBow
 BYTE 0x0 0x0
 ALIGN 4
 I2Vendor:
@@ -104,7 +104,7 @@ LOAD1 0x0 I2NPC
 ENUN
 MUSC NarrationTheme
 Narration(Base2_Narration)
-CleanTextNoMap(0x3,I2_Opening)
+CleanTextNoMap(PortCG,I2_Opening)
 GotoPrepScreen
 ENDA
 

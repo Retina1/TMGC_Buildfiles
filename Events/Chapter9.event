@@ -243,6 +243,12 @@ C9Turn1:
 CAM1 Pete
 FlashCursor(3,0,60)
 SystemText(BarrelHint)
+CAM1 Apollo
+FlashCursor(Apollo,60)
+Text(C9T1Apollo)
+CAM1 Bechamel
+FlashCursor(Bechamel,60)
+Text(C9T1Bechamel)
 EndEvent
 
 C9Turn2:
@@ -333,13 +339,13 @@ EndEvent
 
 C9ApolloRecruitment:
 MUSC RecruitmentTheme
-Text(Ch5_Butch_Talk)
+Text(Ch9_Apollo_Talk)
 TurnAlly(Apollo)
 EndEvent
 
 C9BechamelRecruitment:
 MUSC RecruitmentTheme
-Text(Ch5_Butch_Talk)
+Text(Ch9_Bechamel_Talk)
 TurnAlly(Bechamel)
 EndEvent
 

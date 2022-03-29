@@ -4,11 +4,11 @@ enemies.[X]
 
 ##Ch8_Opening
 [OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+today i will walk in an active volcano[A][X]
 
 ##Ch8_Ending
 [OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-sex[A][X]
+how am i not dead[A][X]
 
 ##C8EsmeBattle
 [OpenMidLeft][LoadEsme]
@@ -19,15 +19,36 @@ out into the proverbial fire![A][X]
 
 ##C8EsmeRachaelBattle
 [OpenMidRight][LoadRachael]
-a[A][X]
+Wait... I recognize you.[N]
+You're Esme, correct?[A][N][ClearFace][OpenMidLeft][LoadEsme]
+Ah, one of the king's dogs?[A][N]
+What, have you come to drive[N]
+us out of [OpenQuote]sacred grounds[CloseQuote]?[A][N]
+Don't give me that. You know[N]
+we've been cast out.[A][N][ClearFace][OpenMidRight][LoadRachael][CloseEyes]
+...It is the duty of a knight[N]
+to serve their liege.[A][N][ClearFace][OpenMidLeft][LoadEsme]
+...There's truly nothing left[N]
+for you. Goodbye.[A][X]
 
 ##C8EsmeCassiusBattle
 [OpenMidLeft][LoadEsme]
-die in pain[A][X]
+Those colors... So, the king[N]
+did send you after all.[A][N][ClearFace][OpenMidRight][LoadCassius]
+So what if he did?[A][N][ClearFace][OpenMidLeft][LoadEsme]
+Your kind and your blind[N]
+obedience sicken me.[A][N]
+We're a very real people suffering[N]
+here, and we get no sympathy.[A][N][ClearFace][OpenMidRight][LoadCassius][CloseEyes]
+...I can't fix the world order.[N]
+All I can do is my duty.[A][X]
 
 ##C8EsmeDeath
 [OpenMidLeft][LoadEsme]
-.[A][X]
+Urgh... This is...[N]
+simply... unfair...[A][N]
+What choice... did...[N]
+we have...?[X]
 
 ##C8CidDeath
 [OpenMidLeft][LoadCid]

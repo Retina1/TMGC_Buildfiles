@@ -5,13 +5,13 @@
 
 #ifdef _FE8_
 
-  PUSH
+  /*PUSH
     ORG $089CFC
       jumpToHack(DrawHelpBoxWeaponStats_Hook)
   POP
 
   #include "asm/NegativeDisplay.lyn.event"
-
+*/
 #else // _FE8_
   ERROR Negative WtCrit Display hack is for FE8
 #endif // _FE8_

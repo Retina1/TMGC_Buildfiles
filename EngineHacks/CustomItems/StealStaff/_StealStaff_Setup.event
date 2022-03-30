@@ -7,7 +7,7 @@
 
 //Steal Staff cannot steal items with given attributes
 //set to 0 to let everything be stolen
-#define StealStaff_BanAttributes "IsWeapon|IsStaff"
+#define StealStaff_BanAttributes "0"
 
 #include "../_StaffTemplates.event"
 
@@ -41,7 +41,7 @@ POIN StealStaff_IgnoreItems
 WORD 0 //end of list
 
 //comment out the line below to prevent the steal staff from taking weapons
-// #define StealStaff_TakeWeapons
+#define StealStaff_TakeWeapons
 
 //creates the staff's map animation
 ALIGN 4
@@ -59,12 +59,12 @@ StealStaff_TCondition:
 	POIN 0x24D8C //allegience routine
 	POIN GetItemSlotBitmap
 	POIN StealStaff_ItemCalcLoop
-/* 	#ifdef StealStaff_TakeWeapons
+ 	#ifdef StealStaff_TakeWeapons
 		POIN rfTrueCheck
 	#else
 		POIN 0x17054
 	#endif
- */
+ 
 
 StealStaff_RangeSetup:
 rfItemRangeSetup(StealStaff_TCondition, Item_TURange) //based on Steal 0x25BA0

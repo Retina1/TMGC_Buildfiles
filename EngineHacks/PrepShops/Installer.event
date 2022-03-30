@@ -28,7 +28,7 @@ BYTE 0x0 0x0
 
 ALIGN 4
 PrepShop2:
-SHLI IronSword SteelSword IronLance SteelLance IronAxe SteelAxe IronBow SteelBow Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary
+SHLI IronSword SteelSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary
 BYTE 0x0 0x0
 
 ALIGN 4
@@ -38,15 +38,8 @@ BYTE 0x0 0x0
 
 ALIGN 4
 PrepShop4:
-SHLI SilverSword Wyrmslayer SilverLance Horseslayer Javelin SilverAxe Hammer HandAxe SilverBow Longbow Elfire Fimbulvetr Divine Aura Nightfall Fenrir Mend Recover Vulnerary Elixir
-BYTE 0x0 0x0
-
-ALIGN 4
-PrepShop5:
 SHLI SilverSword GildedSword SilverLance GildedLance Spear SilverAxe GildedAxe Tomahawk SilverBow GildedBow Fimbulvetr Flare Aura Radiance Fenrir Nocturne Recover Physic Vulnerary Elixir
 BYTE 0x0 0x0
-
-
 
 #else
     ERROR This version of Selection Quotes is for FE8!

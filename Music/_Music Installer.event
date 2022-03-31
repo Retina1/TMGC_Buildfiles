@@ -93,6 +93,10 @@ SongTable(S_AstroMan,AstroMan,1)
 SongTable(S_SMTVBattle,SMT_V_Battle_theme,0)
 }
 {
+#include "BattleA1.event"
+SongTable(S_BattleA1,BattleA1,0)
+}
+{
 #include "FE5Battle.event"
 SongTable(S_FE5Battle,FE5Battle,0)
 }

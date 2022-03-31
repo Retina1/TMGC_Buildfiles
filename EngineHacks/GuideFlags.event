@@ -12,6 +12,24 @@
 #define GuideChpt9 0xD4
 #define GuideChpt10 0xD5
 #define GuideChpt11 0xD6
+#define GuideChpt12 0xD7
+#define GuideChpt13 0xD8
+#define GuideChpt14 0xD9
+#define GuideChpt15 0xDa //also covers zeke party
+#define GuideChpt16 0xDb
+#define GuideChpt17 0xDc
+#define GuideChpt18 0xdd
+#define GuideChpt19 0xde
+#define GuideChpt20 0xdf
+#define GuideChpt21 0xe0 //also covers virid party
+#define GuideChpt22 0xe1
+#define GuideChpt23 0xe2
+#define GuideChpt24 0xe3
+#define GuideChpt25 0xe4
+#define GuideChpt26 0xe5
+#define GuideChpt27 0xe6
+#define GuideChpt28 0xe7
+#define GuideChptE 0xe8
 
 // entry table: 0xB19E0C
 // pointers: CDF5C, CE380, CE40C, CE480, CE57C, CE618, CE6C4, CE998, CEB5C, CEC20, CF090, CF468, CF488
@@ -106,6 +124,21 @@ GuideEntry(4, 3, GuideEmile, GuideEmileDesc, GuideChpt8, GuideChpt8)
 GuideEntry(4, 3, GuideJeff, GuideJeffDesc, GuideChpt8, GuideChpt8)
 GuideEntry(4, 3, GuideApollo, GuideApolloDesc, GuideChpt10, GuideChpt10)
 GuideEntry(4, 3, GuideBechamel, GuideBechamelDesc, GuideChpt10, GuideChpt10)
+GuideEntry(4, 3, GuideSveltzalus, GuideSveltzalusDesc, GuideChpt11, GuideChpt11)
+GuideEntry(4, 3, GuideHilbert, GuideHilbertDesc, GuideChpt12, GuideChpt12)
+GuideEntry(4, 3, GuideFlynn, GuideFlynnDesc, GuideChpt13, GuideChpt13)
+GuideEntry(4, 3, GuideMikey, GuideMikeyDesc, GuideChpt14, GuideChpt14)
+GuideEntry(4, 3, GuideCarbon, GuideCarbonDesc, GuideChpt14, GuideChpt14)
+GuideEntry(4, 3, GuideAthena, GuideAthenaDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideCharley, GuideCharleyDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideZeke, GuideZekeDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideHyperius, GuideHyperiusDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideAlexis, GuideAlexisDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideLeila, GuideLeilaDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideDamien, GuideDamienDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideZacharias, GuideZachariasDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideAvan, GuideAvanDesc, GuideChpt15, GuideChpt15)
+GuideEntry(4, 3, GuideToddsworth, GuideToddsworthDesc, GuideChpt15, GuideChpt15)
 GuideEntry(0xC,0,0,0,0,0) //terminator?
 GuideTerminator
 

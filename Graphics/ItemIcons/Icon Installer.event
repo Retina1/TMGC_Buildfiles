@@ -18,6 +18,7 @@
 #define BraveSwordIcon 0xa
 #define ShamshirIcon 0xb2
 #define LancesnapperIcon 0x78
+#define ShimmerswordIcon 0x75
 
 #define IronLanceIcon 0x13
 #define SteelLanceIcon 0x15
@@ -34,6 +35,8 @@
 #define ShatterspearIcon 0xa7
 #define DragonpikeIcon 0xb6
 #define AxebusterIcon 0x79
+#define DousingLanceIcon 0x74
+
 
 #define IronAxeIcon 0x1e
 #define SteelAxeIcon 0x1f
@@ -52,6 +55,7 @@
 #define SwordslayerIcon 0x2a
 #define DracoaxeIcon 0x58
 #define FrypanIcon 0xb9
+#define HereticAxeIcon 0x73
 
 #define IronBowIcon 0x2b
 #define SteelBowIcon 0x2c
@@ -219,6 +223,9 @@ ItemIconEntry(BraveSwordIcon)
 ALIGN 4
 ItemIconEntry(LancesnapperIcon)
 #incbin "Swords/Lancereaver.dmp"
+ALIGN 4
+ItemIconEntry(ShimmerswordIcon)
+#incbin "Swords/Shadow Killer.dmp"
 
 ALIGN 4
 ItemIconEntry(IronLanceIcon)
@@ -265,6 +272,9 @@ ItemIconEntry(ShatterspearIcon)
 ALIGN 4
 ItemIconEntry(DragonpikeIcon)
 #incbin "Lances/Dragonspear.dmp"
+ALIGN 4
+ItemIconEntry(DousingLanceIcon)
+#incbin "Lances/Mage Slayer.dmp"
 
 ALIGN 4
 ItemIconEntry(IronAxeIcon)
@@ -317,6 +327,9 @@ ItemIconEntry(DracoaxeIcon)
 ALIGN 4
 ItemIconEntry(FrypanIcon)
 #incbin "Frypan.dmp"
+ALIGN 4
+ItemIconEntry(HereticAxeIcon)
+#incbin "Axes/Blood Mace.dmp"
 
 ALIGN 4
 ItemIconEntry(IronBowIcon)

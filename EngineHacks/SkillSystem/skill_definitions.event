@@ -44,7 +44,7 @@
 //Author Unknown (Initial Commit)
 #define DemoiselleID 200
 
-//Drive Skills: Allies within 2 spaces receive +4 to their respective stat.
+//Drive Skills: Allies within 2 spaces receive +2 to their respective stat.
 //By Sme
 #define DriveStrID 255
 #define DriveMagID 255
@@ -92,7 +92,7 @@
 //By SD9k
 #define SolidarityID 208
 
-//Spur Skills: Adjacent allies gain +4 to their respective stat.
+//Spur Skills: Adjacent allies gain +2 to their respective stat.
 //Author Unknown (Initial Commit)
 #define SpurStrID 159
 #define SpurMagID 160
@@ -540,9 +540,10 @@
 //By Sme
 #define TowerShieldID 179
 
-//Tower Shield+: Take no damage against attacks recieved at range.
+//Barrier Effect: Halve incoming and outgoing damage (item skill only), currently broken.
 //By Sme
 #define TowerShieldPlusID 180
+#define BarrierEffectID TowerShieldPlusID
 
 //Trample: +5 damage to unmounted units.
 //By Tequila

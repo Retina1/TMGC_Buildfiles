@@ -28,7 +28,7 @@ beq Done
 mov r0, r4
 add     r0,#0x5E    @Move to the attacker's AS.
 ldrh    r3,[r0]     @Load the attacker's AS into r3.
-add     r3,#4    @add 4 to the attacker's AS.
+add     r3,#2    @add 4 to the attacker's AS.
 strh    r3,[r0]     @Store attacker AS.
 
 Done:

@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	BattleA3_grp, voicegroup000
+	.equ	BattleA3_pri, 0
+	.equ	BattleA3_rev, 0
+	.equ	BattleA3_mvl, 127
+	.equ	BattleA3_key, 0
+	.equ	BattleA3_tbs, 1
+	.equ	BattleA3_exg, 0
+	.equ	BattleA3_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	BattleA3
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+BattleA3_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_0100A30A:
- .byte   TEMPO , 240*song04_tbs/2
+ .byte   TEMPO , 240*BattleA3_tbs/2
  .byte   VOICE , 34
- .byte   VOL , 33*song04_mvl/mxv
+ .byte   VOL , 33*BattleA3_mvl/mxv
  .byte   N10 ,En0 ,v096
  .byte   W12
  .byte   N10
@@ -520,12 +520,12 @@ Label_0100A56A:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+BattleA3_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_010048A6:
  .byte   VOICE , 81
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*BattleA3_mvl/mxv
  .byte   N10 ,En1 ,v052
  .byte   W12
  .byte   N10
@@ -1039,14 +1039,14 @@ Label_01004B12:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+BattleA3_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_01009DDA:
  .byte   VOICE , 30
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*BattleA3_mvl/mxv
  .byte   PAN , c_v-23
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*BattleA3_mvl/mxv
  .byte   PAN , c_v-23
  .byte   N12 ,En1 ,v096
  .byte   W12
@@ -1143,7 +1143,7 @@ Label_01009E09:
   .word Label_01009DF6
 @  #03 @016   ----------------------------------------
 Label_01009E5D:
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*BattleA3_mvl/mxv
  .byte   N24 ,Bn1 ,v096
  .byte   N24 ,Fs2
  .byte   W36
@@ -1265,9 +1265,9 @@ Label_01009EE0:
  .byte   W12
  .byte   PEND 
 @  #03 @024   ----------------------------------------
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*BattleA3_mvl/mxv
  .byte   PAN , c_v-23
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*BattleA3_mvl/mxv
  .byte   PAN , c_v-23
  .byte   N12 ,En1
  .byte   W12
@@ -1379,7 +1379,7 @@ Label_01009EE0:
  .byte   PATT
   .word Label_01009EE0
 @  #03 @056   ----------------------------------------
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BattleA3_mvl/mxv
  .byte   N12 ,En2 ,v076
  .byte   W12
  .byte   N12
@@ -1566,9 +1566,9 @@ Label_0100A044:
  .byte   PATT
   .word Label_0100A044
 @  #03 @088   ----------------------------------------
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*BattleA3_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*BattleA3_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N10 ,En1 ,v096
  .byte   W12
@@ -1699,12 +1699,12 @@ Label_0100A124:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+BattleA3_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_0100A6D2:
  .byte   VOICE , 30
- .byte   VOL , 33*song04_mvl/mxv
+ .byte   VOL , 33*BattleA3_mvl/mxv
  .byte   PAN , c_v+34
  .byte   N11 ,En1 ,v068
  .byte   W11
@@ -2012,7 +2012,7 @@ Label_0100A855:
  .byte   PEND 
 @  #04 @016   ----------------------------------------
 Label_0100A86D:
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleA3_mvl/mxv
  .byte   N24 ,Bn1 ,v092
  .byte   N24 ,Fs2 ,v100
  .byte   W36
@@ -2184,7 +2184,7 @@ Label_0100A948:
  .byte   W12
  .byte   PEND 
 @  #04 @024   ----------------------------------------
- .byte   VOL , 33*song04_mvl/mxv
+ .byte   VOL , 33*BattleA3_mvl/mxv
  .byte   PAN , c_v+34
  .byte   N11 ,En1 ,v068
  .byte   W11
@@ -2304,7 +2304,7 @@ Label_0100A9EF:
  .byte   PATT
   .word Label_0100A9EF
 @  #04 @052   ----------------------------------------
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleA3_mvl/mxv
  .byte   N01 ,An1 ,v108
  .byte   N23 ,Bn1 ,v096
  .byte   N01 ,En2 ,v100
@@ -2335,7 +2335,7 @@ Label_0100A9EF:
  .byte   PATT
   .word Label_0100A948
 @  #04 @056   ----------------------------------------
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BattleA3_mvl/mxv
  .byte   N11 ,En2 ,v100
  .byte   W11
  .byte   N12
@@ -3045,13 +3045,13 @@ Label_0100A9EF:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+BattleA3_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_0100843E:
  .byte   VOICE , 104
  .byte   PAN , c_v+10
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   PAN , c_v+10
  .byte   TIE ,Bn3 ,v096
  .byte   TIE ,En4
@@ -3141,7 +3141,7 @@ Label_01008471:
 @  #05 @026   ----------------------------------------
  .byte   W96
 @  #05 @027   ----------------------------------------
- .byte   VOL , 32*song04_mvl/mxv
+ .byte   VOL , 32*BattleA3_mvl/mxv
  .byte   TIE ,Bn3 ,v096
  .byte   TIE ,En4
  .byte   W96
@@ -3302,7 +3302,7 @@ Label_01008471:
 @  #05 @097   ----------------------------------------
  .byte   W96
 @  #05 @098   ----------------------------------------
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleA3_mvl/mxv
  .byte   TIE ,Bn3 ,v088
  .byte   TIE ,En4
  .byte   W96
@@ -3315,53 +3315,53 @@ Label_01008471:
 @  #05 @102   ----------------------------------------
  .byte   EOT
  .byte   Bn3 ,v076
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*BattleA3_mvl/mxv
  .byte   TIE ,Dn4
  .byte   TIE ,Fs4
  .byte   W01
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleA3_mvl/mxv
  .byte   W72
  .byte   W02
 @  #05 @103   ----------------------------------------
@@ -3373,53 +3373,53 @@ Label_01008471:
 @  #05 @106   ----------------------------------------
  .byte   EOT
  .byte   Dn4 ,v078
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*BattleA3_mvl/mxv
  .byte   TIE ,En4
  .byte   TIE ,Gn4
  .byte   W01
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleA3_mvl/mxv
  .byte   W72
  .byte   W02
 @  #05 @107   ----------------------------------------
@@ -3431,54 +3431,54 @@ Label_01008471:
 @  #05 @110   ----------------------------------------
  .byte   EOT
  .byte   En4 ,v079
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*BattleA3_mvl/mxv
  .byte   TIE ,Dn4
  .byte   TIE ,Fs4
  .byte   TIE ,An4
  .byte   W01
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleA3_mvl/mxv
  .byte   W72
  .byte   W02
 @  #05 @111   ----------------------------------------
@@ -3497,9 +3497,9 @@ Label_01008471:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+BattleA3_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_010073D2:
  .byte   VOICE , 80
  .byte   W96
@@ -3535,7 +3535,7 @@ Label_010073D2:
  .byte   W96
 @  #06 @016   ----------------------------------------
 Label_010073E4:
- .byte   VOL , 28*song04_mvl/mxv
+ .byte   VOL , 28*BattleA3_mvl/mxv
  .byte   N12 ,Bn4 ,v096
  .byte   W12
  .byte   An4
@@ -3817,9 +3817,9 @@ Label_0100743F:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+BattleA3_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_01004B6A:
  .byte   VOICE , 80
  .byte   W96
@@ -3854,7 +3854,7 @@ Label_01004B6A:
 @  #07 @015   ----------------------------------------
  .byte   W96
 @  #07 @016   ----------------------------------------
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   N12 ,Bn3 ,v076
  .byte   W12
  .byte   An3
@@ -3985,7 +3985,7 @@ Label_01004BD6:
 @  #07 @039   ----------------------------------------
  .byte   W96
 @  #07 @040   ----------------------------------------
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*BattleA3_mvl/mxv
  .byte   N12 ,Bn3
  .byte   W12
  .byte   An3
@@ -4022,7 +4022,7 @@ Label_01004BD6:
  .byte   PATT
   .word Label_01004BD6
 @  #07 @048   ----------------------------------------
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*BattleA3_mvl/mxv
  .byte   N12 ,Bn3 ,v076
  .byte   N12 ,Fs4 ,v088
  .byte   W12
@@ -4255,10 +4255,10 @@ Label_01004C5C:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+BattleA3_008:
 @  #08 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 50*BattleA3_mvl/mxv
+ .byte   KEYSH , BattleA3_key+0
 Label_01007144:
  .byte   VOICE , 50
  .byte   W96
@@ -4503,9 +4503,9 @@ Label_01007156:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song04_009:
+BattleA3_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_0100AEFA:
  .byte   VOICE , 30
  .byte   W96
@@ -4556,9 +4556,9 @@ Label_0100AEFA:
 @  #09 @023   ----------------------------------------
  .byte   W96
 @  #09 @024   ----------------------------------------
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*BattleA3_mvl/mxv
  .byte   PAN , c_v-6
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*BattleA3_mvl/mxv
  .byte   PAN , c_v-6
  .byte   BEND , c_v-62
  .byte   TIE ,Bn4 ,v100
@@ -5394,7 +5394,7 @@ Label_0100B0A6:
 @  #09 @075   ----------------------------------------
  .byte   W96
 @  #09 @076   ----------------------------------------
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   BEND , c_v-60
  .byte   N96 ,Bn4 ,v084
  .byte   W01
@@ -5838,7 +5838,7 @@ Label_0100B0A6:
  .byte   W01
  .byte   BEND , c_v+1
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   BEND , c_v+2
  .byte   W01
  .byte   BEND , c_v+3
@@ -5915,7 +5915,7 @@ Label_0100B0A6:
  .byte   W01
  .byte   BEND , c_v-4
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   BEND , c_v-5
  .byte   W01
  .byte   BEND , c_v-5
@@ -6040,7 +6040,7 @@ Label_0100B46F:
  .byte   W01
  .byte   BEND , c_v+1
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   BEND , c_v+2
  .byte   W01
  .byte   BEND , c_v+3
@@ -6119,7 +6119,7 @@ Label_0100B525:
  .byte   W01
  .byte   BEND , c_v-4
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   BEND , c_v-5
  .byte   W01
  .byte   BEND , c_v-5
@@ -6241,7 +6241,7 @@ Label_0100B525:
  .byte   W01
  .byte   BEND , c_v+1
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   BEND , c_v+2
  .byte   W01
  .byte   BEND , c_v+3
@@ -6350,7 +6350,7 @@ Label_0100B525:
  .byte   W01
  .byte   BEND , c_v+1
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   BEND , c_v+2
  .byte   W01
  .byte   BEND , c_v+3
@@ -6428,7 +6428,7 @@ Label_0100B525:
  .byte   W01
  .byte   BEND , c_v-4
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BattleA3_mvl/mxv
  .byte   BEND , c_v-5
  .byte   W01
  .byte   BEND , c_v-5
@@ -6480,9 +6480,9 @@ Label_0100B525:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song04_010:
+BattleA3_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_01004DC2:
  .byte   VOICE , 89
  .byte   W96
@@ -6597,59 +6597,59 @@ Label_01004DC2:
 @  #10 @055   ----------------------------------------
  .byte   W96
 @  #10 @056   ----------------------------------------
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   TIE ,Bn3 ,v096
  .byte   TIE ,En4
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleA3_mvl/mxv
  .byte   W03
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W03
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W03
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W03
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W03
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W03
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W02
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W42
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W06
 @  #10 @057   ----------------------------------------
  .byte   W76
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W20
 @  #10 @058   ----------------------------------------
  .byte   EOT
@@ -6659,9 +6659,9 @@ Label_01004E39:
  .byte   TIE ,En4
  .byte   TIE ,Gn4
  .byte   W21
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W42
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W32
  .byte   W01
  .byte   PEND 
@@ -6669,7 +6669,7 @@ Label_01004E39:
 Label_01004E48:
  .byte   W52
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W42
  .byte   W01
  .byte   PEND 
@@ -6678,60 +6678,60 @@ Label_01004E48:
  .byte   Bn3 ,v076
  .byte   Gn4
 Label_01004E53:
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleA3_mvl/mxv
  .byte   TIE ,Bn3 ,v096
  .byte   TIE ,En4
  .byte   TIE ,Fs4
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W42
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W30
  .byte   PEND 
 @  #10 @061   ----------------------------------------
@@ -6745,60 +6745,60 @@ Label_01004E53:
  .byte   EOT
  .byte   Bn3
 Label_01004E99:
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleA3_mvl/mxv
  .byte   TIE ,Dn4 ,v096
  .byte   TIE ,An4
  .byte   W01
  .byte   PEND 
  .byte   EOT
  .byte   En4
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W72
 @  #10 @063   ----------------------------------------
  .byte   W92
@@ -6848,111 +6848,111 @@ Label_01004EDC:
 @  #10 @072   ----------------------------------------
  .byte   EOT
  .byte   Cs4 ,v078
- .byte   VOL , 0*song04_mvl/mxv
+ .byte   VOL , 0*BattleA3_mvl/mxv
  .byte   TIE ,Bn3
  .byte   TIE ,En4
  .byte   W01
- .byte   VOL , 0*song04_mvl/mxv
+ .byte   VOL , 0*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 2*song04_mvl/mxv
+ .byte   VOL , 2*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 2*song04_mvl/mxv
+ .byte   VOL , 2*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W42
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W06
 @  #10 @073   ----------------------------------------
  .byte   W76
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W20
 @  #10 @074   ----------------------------------------
  .byte   EOT
@@ -6972,7 +6972,7 @@ Label_01004EDC:
   .word Label_01004E53
 @  #10 @079   ----------------------------------------
  .byte   W54
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W40
  .byte   EOT
  .byte   Fs4
@@ -6987,53 +6987,53 @@ Label_01004EDC:
 @  #10 @082   ----------------------------------------
  .byte   EOT
  .byte   En4
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleA3_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleA3_mvl/mxv
  .byte   W72
  .byte   W92
 @  #10 @083   ----------------------------------------
@@ -7118,12 +7118,12 @@ Label_01004EDC:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song04_011:
+BattleA3_011:
 @  #11 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleA3_key+0
 Label_0100B6BA:
  .byte   VOICE , 124
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*BattleA3_mvl/mxv
  .byte   N12 ,Cn1 ,v104
  .byte   N10 ,Cs2 ,v080
  .byte   W24
@@ -7920,24 +7920,24 @@ Label_0100BB80:
 @******************************************************@
 	.align	2
 
-song04:
+BattleA3:
 	.byte	11	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	BattleA3_pri	@ Priority
+	.byte	BattleA3_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	BattleA3_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
-	.word	song04_009
-	.word	song04_010
-	.word	song04_011
+	.word	BattleA3_001
+	.word	BattleA3_002
+	.word	BattleA3_003
+	.word	BattleA3_004
+	.word	BattleA3_005
+	.word	BattleA3_006
+	.word	BattleA3_007
+	.word	BattleA3_008
+	.word	BattleA3_009
+	.word	BattleA3_010
+	.word	BattleA3_011
 
 	.end

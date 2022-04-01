@@ -33,6 +33,8 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+AFEV 0x22 C12DragonSpawn 0x21 
 END_MAIN
 
 Dunno:
@@ -47,18 +49,20 @@ ENDTRAP
 ALIGN 4
 
 C12Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [19,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [21,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [20,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [21,18] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,18] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,17] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [11,24] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,24] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,25] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,26] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,26] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,26] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [13,26] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT
 
 C12Easy:
@@ -70,13 +74,23 @@ UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverM
 UNIT
 
 C12Hard:
-UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Bandit FighterF 0x0 Level(14,Enemy,1) [9,19] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Holanis Fighter 0x0 Level(13,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Holanis FighterF 0x0 Level(14,Enemy,1) [9,19] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Opistia Fighter 0x0 Level(13,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Laronde Halberdier 0x0 Level(4,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Spear,Nuboko,Dragonpike] NeverMoveAI
 UNIT
 
+
 C12Ally:
-UNIT Flynn Myrm 0x0 Level(9,NPC,0) [17,16] 0x0 0x0 0x0 0x0 [Shimmersword,KillingEdge] NoAI
+UNIT Flynn Myrm 0x0 Level(9,NPC,0) [5,15] 0x0 0x0 0x0 0x0 [Shimmersword,KillingEdge,Vulnerary] [0x6,0x3,0x3,0x0]
+UNIT
+
+C12DragonGroup:
+UNIT C12Dragon IceDragon 0x0 Level(3,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R2 [IceBreath] DelayedAI
+UNIT
+
+C12AllyLaronde:
+UNIT Laronde Halberdier 0x0 Level(4,NPC,1) [11,5] 0x0 0x0 0x1 REDA11R5 [Spear,Nuboko,Dragonpike] NoAI
 UNIT
 
 ALIGN 4
@@ -106,6 +120,14 @@ EVBIT_MODIFY 3
 MUSC RecruitmentTheme
 Text(Ch5_Butch_Talk)
 TurnAlly(Flynn)
+EndEvent
+
+C12DragonSpawn:
+CLEE 0
+Text(C10OthersArrive)
+Reinforcements(C12DragonGroup)
+Text(C10OthersArrive)
+Reinforcements(C12AllyLaronde)
 EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

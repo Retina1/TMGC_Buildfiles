@@ -1,26 +1,26 @@
 	.include "MPlayDef.s"
 
-	.equ	song02_grp, voicegroup000
-	.equ	song02_pri, 0
-	.equ	song02_rev, 0
-	.equ	song02_mvl, 127
-	.equ	song02_key, 0
-	.equ	song02_tbs, 1
-	.equ	song02_exg, 0
-	.equ	song02_cmp, 1
+	.equ	SkyTower_grp, voicegroup000
+	.equ	SkyTower_pri, 0
+	.equ	SkyTower_rev, 0
+	.equ	SkyTower_mvl, 127
+	.equ	SkyTower_key, 0
+	.equ	SkyTower_tbs, 1
+	.equ	SkyTower_exg, 0
+	.equ	SkyTower_cmp, 1
 
 	.section .rodata
-	.global	song02
+	.global	SkyTower
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song02_001:
+SkyTower_001:
 @ 000   ----------------------------------------
- .byte   VOL , 40*song02_mvl/mxv
- .byte   KEYSH , song02_key+0
- .byte   TEMPO , 116*song02_tbs/2
+ .byte   VOL , 40*SkyTower_mvl/mxv
+ .byte   KEYSH , SkyTower_key+0
+ .byte   TEMPO , 116*SkyTower_tbs/2
  .byte   VOICE , 40
  .byte   W96
 @ 001   ----------------------------------------
@@ -592,29 +592,29 @@ Label_0_54703C:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song02_002:
+SkyTower_002:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 48
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   MOD 0
  .byte   CnM2
@@ -667,7 +667,7 @@ Label_1_547750:
  .byte   W92
  .byte   W03
  .byte   EOT
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   W01
 @ 014   ----------------------------------------
 Label_1_547776:
@@ -817,7 +817,7 @@ Label_1_547793:
  .byte   N44 ,Cs4 ,v092
  .byte   W56
  .byte   W03
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   W01
 @ 049   ----------------------------------------
  .byte   N92 ,Fs4 ,v052
@@ -946,7 +946,7 @@ Label_1_54786E:
 @ 094   ----------------------------------------
  .byte   W92
  .byte   W03
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   W01
 @ 095   ----------------------------------------
  .byte   N32 ,Fs2 ,v112
@@ -974,15 +974,15 @@ Label_1_54786E:
 @ 100   ----------------------------------------
  .byte   VOICE , 48
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   BEND , c_v+0
@@ -990,29 +990,29 @@ Label_1_54786E:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song02_003:
+SkyTower_003:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 48
  .byte   PAN , c_v-63
- .byte   VOL , 0*song02_mvl/mxv
+ .byte   VOL , 0*SkyTower_mvl/mxv
  .byte   PAN , c_v-63
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v-63
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 0*song02_mvl/mxv
+ .byte   VOL , 0*SkyTower_mvl/mxv
  .byte   PAN , c_v-63
  .byte   CsM2
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 0*song02_mvl/mxv
+ .byte   VOL , 0*SkyTower_mvl/mxv
  .byte   PAN , c_v-63
  .byte   BEND , c_v+0
  .byte   TIE ,Fs2 ,v068
  .byte   W05
- .byte   VOL , 0*song02_mvl/mxv
+ .byte   VOL , 0*SkyTower_mvl/mxv
  .byte   W06
  .byte   CsM2
  .byte   W07
@@ -1129,7 +1129,7 @@ Label_2_015DAA77:
 @ 014   ----------------------------------------
  .byte   W92
  .byte   W03
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   PAN , c_v-20
  .byte   W01
 @ 015   ----------------------------------------
@@ -1298,7 +1298,7 @@ Label_2_015DAACC:
  .byte   N32 ,Cs2
  .byte   W56
  .byte   W03
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   W01
 @ 053   ----------------------------------------
  .byte   N92 ,Cs4 ,v052
@@ -1327,7 +1327,7 @@ Label_2_015DAACC:
  .byte   W92
  .byte   W03
  .byte   EOT
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   W01
 @ 061   ----------------------------------------
 Label_2_015DAB69:
@@ -1471,7 +1471,7 @@ Label_2_015DABF4:
 @ 085   ----------------------------------------
  .byte   W92
  .byte   W03
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   W01
 @ 086   ----------------------------------------
  .byte   TIE ,Dn2 ,v112
@@ -1493,15 +1493,15 @@ Label_2_015DABF4:
 @ 091   ----------------------------------------
  .byte   VOICE , 48
  .byte   PAN , c_v-20
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v-20
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v-20
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   BEND , c_v+0
@@ -1509,33 +1509,33 @@ Label_2_015DABF4:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song02_004:
+SkyTower_004:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 48
  .byte   PAN , c_v+63
- .byte   VOL , 0*song02_mvl/mxv
+ .byte   VOL , 0*SkyTower_mvl/mxv
  .byte   PAN , c_v+63
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+63
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 0*song02_mvl/mxv
+ .byte   VOL , 0*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+63
  .byte   Gn8
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 0*song02_mvl/mxv
+ .byte   VOL , 0*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+63
  .byte   BEND , c_v+0
  .byte   TIE ,Bn1 ,v068
  .byte   W05
- .byte   VOL , 0*song02_mvl/mxv
+ .byte   VOL , 0*SkyTower_mvl/mxv
  .byte   W06
  .byte   CsM2
  .byte   W07
@@ -1651,7 +1651,7 @@ Label_3_015D9BD7:
  .byte   W92
  .byte   W03
  .byte   EOT
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   PAN , c_v+20
  .byte   W01
 @ 015   ----------------------------------------
@@ -1836,7 +1836,7 @@ Label_3_015D9C32:
 @ 043   ----------------------------------------
  .byte   W92
  .byte   W03
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   W01
 @ 044   ----------------------------------------
  .byte   TIE ,An3 ,v052
@@ -1869,7 +1869,7 @@ Label_3_015D9C32:
  .byte   W92
  .byte   W03
  .byte   EOT
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   W01
 @ 052   ----------------------------------------
 Label_3_015D9CF8:
@@ -2017,7 +2017,7 @@ Label_3_015D9CFF:
 @ 077   ----------------------------------------
  .byte   W92
  .byte   W03
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   W01
  .byte   PATT
   .word Label_3_015D9C06
@@ -2041,15 +2041,15 @@ Label_3_015D9CFF:
 @ 081   ----------------------------------------
  .byte   VOICE , 48
  .byte   PAN , c_v+20
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+20
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+20
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   BEND , c_v+0
@@ -2057,19 +2057,19 @@ Label_3_015D9CFF:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song02_005:
+SkyTower_005:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 10
  .byte   PAN , c_v+0
- .byte   VOL , 24*song02_mvl/mxv
+ .byte   VOL , 24*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 24*song02_mvl/mxv
+ .byte   VOL , 24*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 24*song02_mvl/mxv
+ .byte   VOL , 24*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   En3
- .byte   VOL , 24*song02_mvl/mxv
+ .byte   VOL , 24*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   BEND , c_v+0
  .byte   N04 ,Bn3 ,v100
@@ -2181,7 +2181,7 @@ Label_4_015D9FBF:
  .byte   An2 ,v088
  .byte   W11
  .byte   VOICE , 7
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   W01
 @ 005   ----------------------------------------
 Label_4_015DA043:
@@ -2317,7 +2317,7 @@ Label_4_015DA05E:
  .byte   W15
  .byte   VOICE , 4
  .byte   W01
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   W80
 @ 048   ----------------------------------------
 Label_4_015DA0D0:
@@ -2422,7 +2422,7 @@ Label_4_015DA0E9:
  .byte   W01
  .byte   En3
  .byte   W11
- .byte   VOL , 28*song02_mvl/mxv
+ .byte   VOL , 28*SkyTower_mvl/mxv
  .byte   W05
  .byte   Dn0
  .byte   W03
@@ -2438,7 +2438,7 @@ Label_4_015DA0E9:
  .byte   W06
  .byte   N40 ,Cs5 ,v100
  .byte   W24
- .byte   VOL , 30*song02_mvl/mxv
+ .byte   VOL , 30*SkyTower_mvl/mxv
  .byte   W03
  .byte   En0
  .byte   W02
@@ -2492,7 +2492,7 @@ Label_4_015DA0E9:
 @ 062   ----------------------------------------
  .byte   N80 ,Fs4
  .byte   W42
- .byte   VOL , 29*song02_mvl/mxv
+ .byte   VOL , 29*SkyTower_mvl/mxv
  .byte   W08
  .byte   Fn0
  .byte   W06
@@ -2502,27 +2502,27 @@ Label_4_015DA0E9:
  .byte   W02
  .byte   BEND , c_v-1
  .byte   W02
- .byte   VOL , 26*song02_mvl/mxv
+ .byte   VOL , 26*SkyTower_mvl/mxv
  .byte   W02
  .byte   BEND , c_v-1
  .byte   W01
- .byte   VOL , 25*song02_mvl/mxv
+ .byte   VOL , 25*SkyTower_mvl/mxv
  .byte   W01
  .byte   BEND , c_v-1
  .byte   W01
- .byte   VOL , 24*song02_mvl/mxv
+ .byte   VOL , 24*SkyTower_mvl/mxv
  .byte   W01
  .byte   BEND , c_v-1
  .byte   W01
- .byte   VOL , 22*song02_mvl/mxv
+ .byte   VOL , 22*SkyTower_mvl/mxv
  .byte   W01
  .byte   AnM1
  .byte   BEND , c_v-1
  .byte   W02
- .byte   VOL , 19*song02_mvl/mxv
+ .byte   VOL , 19*SkyTower_mvl/mxv
  .byte   BEND , c_v-1
  .byte   W02
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   W02
  .byte   DsM1
  .byte   W02
@@ -2539,7 +2539,7 @@ Label_4_015DA0E9:
  .byte   VOICE , 4
  .byte   BEND , c_v+0
  .byte   W01
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   W80
  .byte   PATT
   .word Label_4_015DA0D0
@@ -2589,39 +2589,39 @@ Label_4_015DA0E9:
 @ 071   ----------------------------------------
  .byte   VOICE , 7
  .byte   PAN , c_v+0
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song02_006:
+SkyTower_006:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 52
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
  .byte   En3
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
@@ -3337,15 +3337,15 @@ Label_5_015DB1B8:
   .word Label_5_015DAF16
 @ 076   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   BEND , c_v+0
@@ -3353,29 +3353,29 @@ Label_5_015DB1B8:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song02_007:
+SkyTower_007:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 80
  .byte   PAN , c_v+0
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   MOD 0
  .byte   CnM2
@@ -4118,15 +4118,15 @@ Label_6_015DA883:
   .word Label_6_015DA52C
 @ 028   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 18*song02_mvl/mxv
+ .byte   VOL , 18*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   BEND , c_v+0
@@ -4134,29 +4134,29 @@ Label_6_015DA883:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song02_008:
+SkyTower_008:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 77
  .byte   PAN , c_v+0
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   MOD 0
  .byte   CnM2
@@ -4347,7 +4347,7 @@ Label_7_015D9365:
 @ 015   ----------------------------------------
  .byte   W92
  .byte   W03
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W01
 @ 016   ----------------------------------------
@@ -4506,7 +4506,7 @@ Label_7_015D947C:
  .byte   W01
  .byte   N02 ,Gs4
  .byte   W23
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   PAN , c_v+40
  .byte   W01
 @ 022   ----------------------------------------
@@ -4667,7 +4667,7 @@ Label_7_015D9529:
  .byte   W01
  .byte   N01 ,Fs3
  .byte   W05
- .byte   VOL , 34*song02_mvl/mxv
+ .byte   VOL , 34*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W01
 @ 024   ----------------------------------------
@@ -4827,7 +4827,7 @@ Label_7_015D96BF:
  .byte   W12
  .byte   Cs4 ,v112
  .byte   W11
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   PAN , c_v+40
  .byte   W01
 @ 029   ----------------------------------------
@@ -4985,15 +4985,15 @@ Label_7_015D9744:
   .word Label_7_015D9365
 @ 032   ----------------------------------------
  .byte   PAN , c_v+40
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+40
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+40
- .byte   VOL , 20*song02_mvl/mxv
+ .byte   VOL , 20*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   BEND , c_v+0
@@ -5001,29 +5001,29 @@ Label_7_015D9744:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song02_009:
+SkyTower_009:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 77
  .byte   PAN , c_v+0
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   MOD 0
  .byte   CnM2
@@ -5289,15 +5289,15 @@ Label_8_5473F6:
   .word Label_8_5473F6
 @ 113   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   PAN , c_v+0
- .byte   VOL , 17*song02_mvl/mxv
+ .byte   VOL , 17*SkyTower_mvl/mxv
  .byte   MOD 0
  .byte   CnM2
  .byte   BEND , c_v+0
@@ -5305,19 +5305,19 @@ Label_8_5473F6:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song02_010:
+SkyTower_010:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 127
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   En3
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   BEND , c_v+0
  .byte   W96
@@ -5648,29 +5648,29 @@ Label_9_546790:
   .word Label_9_546742
 @ 045   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song02_011:
+SkyTower_011:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 127
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   En3
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   BEND , c_v+0
  .byte   W96
@@ -5985,29 +5985,29 @@ Label_10_015DACD1:
   .word Label_10_015DACD1
 @ 054   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 31*song02_mvl/mxv
+ .byte   VOL , 31*SkyTower_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 12 (Midi-Chn.11) ****************@
 
-song02_012:
+SkyTower_012:
 @ 000   ----------------------------------------
- .byte   KEYSH , song02_key+0
+ .byte   KEYSH , SkyTower_key+0
  .byte   VOICE , 127
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   En3
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
  .byte   BEND , c_v+0
  .byte   N04 ,An3 ,v068
@@ -6371,7 +6371,7 @@ Label_11_015DB54A:
 @ 008   ----------------------------------------
 Label_11_015DB634:
  .byte   W24
- .byte   VOL , 12*song02_mvl/mxv
+ .byte   VOL , 12*SkyTower_mvl/mxv
  .byte   W36
  .byte   N01 ,Bn4 ,v012
  .byte   W03
@@ -6584,7 +6584,7 @@ Label_11_015DB736:
  .byte   PAN , c_v+0
  .byte   W44
  .byte   W03
- .byte   VOL , 22*song02_mvl/mxv
+ .byte   VOL , 22*SkyTower_mvl/mxv
  .byte   W01
  .byte   PEND 
 @ 013   ----------------------------------------
@@ -6617,7 +6617,7 @@ Label_11_015DB75A:
  .byte   W12
  .byte   N11
  .byte   W11
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   W01
  .byte   PEND 
  .byte   PATT
@@ -6739,36 +6739,36 @@ Label_11_015DB75A:
   .word Label_11_015DB54A
 @ 017   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song02_mvl/mxv
+ .byte   VOL , 40*SkyTower_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-song02:
+SkyTower:
 	.byte	12	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song02_pri	@ Priority
-	.byte	song02_rev	@ Reverb.
+	.byte	SkyTower_pri	@ Priority
+	.byte	SkyTower_rev	@ Reverb.
     
-	.word	song02_grp
+	.word	SkyTower_grp
     
-	.word	song02_001
-	.word	song02_002
-	.word	song02_003
-	.word	song02_004
-	.word	song02_005
-	.word	song02_006
-	.word	song02_007
-	.word	song02_008
-	.word	song02_009
-	.word	song02_010
-	.word	song02_011
-	.word	song02_012
+	.word	SkyTower_001
+	.word	SkyTower_002
+	.word	SkyTower_003
+	.word	SkyTower_004
+	.word	SkyTower_005
+	.word	SkyTower_006
+	.word	SkyTower_007
+	.word	SkyTower_008
+	.word	SkyTower_009
+	.word	SkyTower_010
+	.word	SkyTower_011
+	.word	SkyTower_012
 
 	.end

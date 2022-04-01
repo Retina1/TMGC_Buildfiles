@@ -1,29 +1,29 @@
 	.include "MPlayDef.s"
 
-	.equ	song09_grp, voicegroup000
-	.equ	song09_pri, 0
-	.equ	song09_rev, 0
-	.equ	song09_mvl, 127
-	.equ	song09_key, 0
-	.equ	song09_tbs, 1
-	.equ	song09_exg, 0
-	.equ	song09_cmp, 1
+	.equ	ForTheCommanders_grp, voicegroup000
+	.equ	ForTheCommanders_pri, 0
+	.equ	ForTheCommanders_rev, 0
+	.equ	ForTheCommanders_mvl, 127
+	.equ	ForTheCommanders_key, 0
+	.equ	ForTheCommanders_tbs, 1
+	.equ	ForTheCommanders_exg, 0
+	.equ	ForTheCommanders_cmp, 1
 
 	.section .rodata
-	.global	song09
+	.global	ForTheCommanders
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song09_001:
+ForTheCommanders_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
- .byte   TEMPO , 120*song09_tbs/2
+ .byte   KEYSH , ForTheCommanders_key+0
+ .byte   TEMPO , 120*ForTheCommanders_tbs/2
  .byte   VOICE , 41
  .byte   W24
 Label_54CFAB:
- .byte   VOL , 32*song09_mvl/mxv
+ .byte   VOL , 32*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+9
  .byte   N28 ,Fn2 ,v104
  .byte   N28 ,As2 ,v100
@@ -54,7 +54,7 @@ Label_54CFAB:
  .byte   W72
 @  #01 @003   ----------------------------------------
  .byte   W24
- .byte   VOL , 25*song09_mvl/mxv
+ .byte   VOL , 25*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+4
  .byte   N05 ,As2 ,v072
  .byte   W06
@@ -68,7 +68,7 @@ Label_54CFAB:
  .byte   W48
 @  #01 @004   ----------------------------------------
  .byte   W24
- .byte   VOL , 32*song09_mvl/mxv
+ .byte   VOL , 32*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+9
  .byte   N32 ,Fn2 ,v088
  .byte   N32 ,As2 ,v092
@@ -97,7 +97,7 @@ Label_54CFAB:
  .byte   N44 ,As2 ,v084
  .byte   N44 ,Cs3 ,v056
  .byte   W48
- .byte   VOL , 25*song09_mvl/mxv
+ .byte   VOL , 25*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+4
  .byte   N44 ,As3 ,v096
  .byte   W24
@@ -138,7 +138,7 @@ Label_54CFAB:
  .byte   W72
 @  #01 @012   ----------------------------------------
  .byte   W24
- .byte   VOL , 32*song09_mvl/mxv
+ .byte   VOL , 32*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+9
  .byte   N32 ,Fn3 ,v108
  .byte   W36
@@ -170,7 +170,7 @@ Label_54CFAB:
  .byte   An3 ,v096
  .byte   W24
 @  #01 @016   ----------------------------------------
- .byte   VOL , 32*song09_mvl/mxv
+ .byte   VOL , 32*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+9
  .byte   W24
  .byte   N44 ,As3 ,v076
@@ -232,15 +232,15 @@ Label_54CFAB:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song09_002:
+ForTheCommanders_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , ForTheCommanders_key+0
  .byte   VOICE , 65
  .byte   W24
 Label_54C6F1:
  .byte   MOD 0
  .byte   MOD 0
- .byte   VOL , 20*song09_mvl/mxv
+ .byte   VOL , 20*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+1
  .byte   BEND , c_v-3
  .byte   TIE ,As2 ,v072
@@ -336,7 +336,7 @@ Label_54C712:
  .byte   W24
 @  #02 @016   ----------------------------------------
  .byte   W24
- .byte   VOL , 34*song09_mvl/mxv
+ .byte   VOL , 34*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+4
  .byte   N44 ,Cs3 ,v088
  .byte   W48
@@ -397,15 +397,15 @@ Label_54C712:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song09_003:
+ForTheCommanders_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , ForTheCommanders_key+0
  .byte   VOICE , 52
  .byte   W24
 Label_54D639:
  .byte   MOD 0
  .byte   MOD 2
- .byte   VOL , 12*song09_mvl/mxv
+ .byte   VOL , 12*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v+1
  .byte   TIE ,As2 ,v076
  .byte   W72
@@ -529,13 +529,13 @@ Label_54D658:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song09_004:
+ForTheCommanders_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , ForTheCommanders_key+0
  .byte   VOICE , 40
  .byte   W24
 Label_54C879:
- .byte   VOL , 27*song09_mvl/mxv
+ .byte   VOL , 27*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v-20
  .byte   TIE ,As1 ,v108
  .byte   W72
@@ -644,13 +644,13 @@ Label_54C879:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song09_005:
+ForTheCommanders_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , ForTheCommanders_key+0
  .byte   VOICE , 32
  .byte   W24
 Label_01125259:
- .byte   VOL , 22*song09_mvl/mxv
+ .byte   VOL , 22*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v-3
  .byte   N08 ,Fn3 ,v100
  .byte   W12
@@ -898,11 +898,11 @@ Label_011253A7:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song09_006:
+ForTheCommanders_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , ForTheCommanders_key+0
  .byte   VOICE , 127
- .byte   VOL , 27*song09_mvl/mxv
+ .byte   VOL , 27*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v-4
  .byte   W24
 Label_011253F1:
@@ -1218,11 +1218,11 @@ Label_01125434:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song09_007:
+ForTheCommanders_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song09_key+0
+ .byte   KEYSH , ForTheCommanders_key+0
  .byte   VOICE , 127
- .byte   VOL , 27*song09_mvl/mxv
+ .byte   VOL , 27*ForTheCommanders_mvl/mxv
  .byte   PAN , c_v-4
  .byte   W12
  .byte   N11 ,Fn1 ,v116
@@ -1441,20 +1441,20 @@ Label_011211E9:
 @******************************************************@
 	.align	2
 
-song09:
+ForTheCommanders:
 	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song09_pri	@ Priority
-	.byte	song09_rev	@ Reverb.
+	.byte	ForTheCommanders_pri	@ Priority
+	.byte	ForTheCommanders_rev	@ Reverb.
     
-	.word	song09_grp
+	.word	ForTheCommanders_grp
     
-	.word	song09_001
-	.word	song09_002
-	.word	song09_003
-	.word	song09_004
-	.word	song09_005
-	.word	song09_006
-	.word	song09_007
+	.word	ForTheCommanders_001
+	.word	ForTheCommanders_002
+	.word	ForTheCommanders_003
+	.word	ForTheCommanders_004
+	.word	ForTheCommanders_005
+	.word	ForTheCommanders_006
+	.word	ForTheCommanders_007
 
 	.end

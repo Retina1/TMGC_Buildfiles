@@ -111,6 +111,11 @@ RiftMug:
 setMugEntry(0x2d,RiftMug,4,6,4,4)
 
 ALIGN 4
+RoseMug:
+#incext PortraitFormatter "Rose.png"
+setMugEntry(0xf,RoseMug,3,5,3,3)
+
+ALIGN 4
 WilhelmMug:
 #incext PortraitFormatter "Wilhelm.png"
 setMugEntry(0x0d,WilhelmMug,3,5,3,3)
@@ -226,6 +231,10 @@ SofiaMug:
 #incext PortraitFormatter "Sofia.png"
 setMugEntry(0x35,SofiaMug,2,6,2,4)
 
+ALIGN 4
+LarondeMug:
+#incext PortraitFormatter "Laronde.png"
+setMugEntry(0x4a,LarondeMug,3,5,3,3)
 
 ALIGN 4
 BrandlMug:

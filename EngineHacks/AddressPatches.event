@@ -1,3 +1,9 @@
+//remove articles - may disable?
+PUSH
+ORG $1619C
+BYTE 0x04 0xE1
+POP
+
 //fog enemy count? -thx contro ily
 PUSH
 ORG $8D378

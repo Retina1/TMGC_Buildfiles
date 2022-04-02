@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x23,C12AIChange,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -86,7 +87,7 @@ UNIT Flynn Myrm 0x0 Level(9,NPC,0) [5,15] 0x0 0x0 0x0 0x0 [Shimmersword,KillingE
 UNIT
 
 C12DragonGroup:
-UNIT C12Dragon IceDragon 0x0 Level(3,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R2 [IceBreath] DelayedAI
+UNIT C12Dragon IceDragon 0x0 Level(3,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R2 [IceBreath] NeverMoveAI
 UNIT
 
 C12AllyLaronde:
@@ -105,6 +106,7 @@ Narration(Ch11_Narration)
 CleanText(DesertCG,Ch9_Opening)
 LOAD1 0x0 C12Units
 ENUN
+ENUT 0x23
 GotoPrepScreen
 ENDA
 
@@ -124,10 +126,17 @@ EndEvent
 
 C12DragonSpawn:
 CLEE 0
-Text(C10OthersArrive)
+CleanText(HallCG,C12Huh)
 Reinforcements(C12DragonGroup)
-Text(C10OthersArrive)
+CleanText(HallCG,C12OhNo)
 Reinforcements(C12AllyLaronde)
+ENUF 0x23
+EndEvent
+
+C12AIChange:
+Text(C12HeChargeth)
+SVAL 0x1 0x00040000
+CHAI C12Dragon
 EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

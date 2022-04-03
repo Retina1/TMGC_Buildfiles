@@ -221,6 +221,10 @@ SongTable(S_CampIchigaya,CampIchigaya,1)
 #include "DraculaCastle.event"
 SongTable(S_DraculaCastle,DraculaCastle,1)
 }
+{
+#include "UenoUnderground.event"
+SongTable(S_UenoUnderground,UenoUnderground,1)
+}
 //sound room completion rate
 PUSH
 ORG $AF69C

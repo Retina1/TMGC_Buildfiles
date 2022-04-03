@@ -30,6 +30,12 @@ CharacterEvent(0xa,C12FlynnRecruitment,Blair,Flynn)
 END_MAIN
 
 LocationBasedEvents:
+Chest(Rewarp,3,4)
+Chest(DevilAxe,4,5)
+Chest(Dracoshield,20,4)
+Chest(IronRune,19,5)
+Chest(Dragonpike,12,13)
+Chest(MasterSeal,11,14)
 END_MAIN
 
 MiscBasedEvents:
@@ -78,7 +84,7 @@ C12Hard:
 UNIT Holanis Fighter 0x0 Level(13,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Holanis FighterF 0x0 Level(14,Enemy,1) [9,19] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT Opistia Fighter 0x0 Level(13,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Laronde Halberdier 0x0 Level(4,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Spear,Nuboko,Dragonpike] NeverMoveAI
+UNIT Laronde Halberdier 0x0 Level(4,Enemy,1) [11,3] DropItem 0x0 0x0 0x0 [Spear,Nuboko,Elixir] NeverMoveAI
 UNIT
 
 
@@ -91,7 +97,7 @@ UNIT C12Dragon IceDragon 0x0 Level(3,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R2 [IceBr
 UNIT
 
 C12AllyLaronde:
-UNIT Laronde Halberdier 0x0 Level(4,NPC,1) [11,5] 0x0 0x0 0x1 REDA11R5 [Spear,Nuboko,Dragonpike] NoAI
+UNIT Laronde Halberdier 0x0 Level(4,NPC,1) [11,5] 0x0 0x0 0x1 REDA11R5 [Spear,Nuboko] NoAI
 UNIT
 
 ALIGN 4

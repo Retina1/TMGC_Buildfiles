@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song0A_grp, voicegroup000
-	.equ	song0A_pri, 0
-	.equ	song0A_rev, 0
-	.equ	song0A_mvl, 127
-	.equ	song0A_key, 0
-	.equ	song0A_tbs, 1
-	.equ	song0A_exg, 0
-	.equ	song0A_cmp, 1
+	.equ	song04_grp, voicegroup000
+	.equ	song04_pri, 0
+	.equ	song04_rev, 0
+	.equ	song04_mvl, 127
+	.equ	song04_key, 0
+	.equ	song04_tbs, 1
+	.equ	song04_exg, 0
+	.equ	song04_cmp, 1
 
 	.section .rodata
-	.global	song0A
+	.global	song04
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0A_001:
+song04_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
-Label_0141D3FA:
- .byte   TEMPO , 90*song0A_tbs/2
- .byte   VOICE , 41
- .byte   VOL , 35*song0A_mvl/mxv
+ .byte   KEYSH , song04_key+0
+Label_F7ABDA:
+ .byte   TEMPO , 90*song04_tbs/2
+ .byte   VOICE , 4
+ .byte   VOL , 23*song04_mvl/mxv
  .byte   N12 ,Fn2 ,v096
  .byte   W12
  .byte   Ds3
@@ -52,7 +52,7 @@ Label_0141D3FA:
  .byte   Fn3
  .byte   W24
 @  #01 @003   ----------------------------------------
-Label_0141D41C:
+Label_F7ABFC:
  .byte   N12 ,Fn2 ,v096
  .byte   W12
  .byte   Ds3
@@ -72,10 +72,10 @@ Label_0141D41C:
  .byte   PEND 
 @  #01 @004   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @005   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @006   ----------------------------------------
  .byte   W96
 @  #01 @007   ----------------------------------------
@@ -84,16 +84,16 @@ Label_0141D41C:
  .byte   W96
 @  #01 @009   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @010   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @011   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @012   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @013   ----------------------------------------
  .byte   W96
 @  #01 @014   ----------------------------------------
@@ -110,9 +110,9 @@ Label_0141D41C:
  .byte   W12
 @  #01 @016   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @017   ----------------------------------------
-Label_0141D462:
+Label_F7AC42:
  .byte   N12 ,Fs2 ,v096
  .byte   W12
  .byte   Cn3
@@ -131,7 +131,7 @@ Label_0141D462:
  .byte   W12
  .byte   PEND 
 @  #01 @018   ----------------------------------------
-Label_0141D475:
+Label_F7AC55:
  .byte   N12 ,Gs2 ,v096
  .byte   W12
  .byte   Ds3
@@ -157,22 +157,22 @@ Label_0141D475:
  .byte   W96
 @  #01 @022   ----------------------------------------
  .byte   PATT
-  .word Label_0141D475
+  .word Label_F7AC55
 @  #01 @023   ----------------------------------------
  .byte   PATT
-  .word Label_0141D462
+  .word Label_F7AC42
 @  #01 @024   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @025   ----------------------------------------
  .byte   PATT
-  .word Label_0141D462
+  .word Label_F7AC42
 @  #01 @026   ----------------------------------------
  .byte   PATT
-  .word Label_0141D475
+  .word Label_F7AC55
 @  #01 @027   ----------------------------------------
  .byte   PATT
-  .word Label_0141D462
+  .word Label_F7AC42
 @  #01 @028   ----------------------------------------
  .byte   W60
  .byte   N12 ,Ds3 ,v096
@@ -183,10 +183,10 @@ Label_0141D475:
  .byte   W12
 @  #01 @029   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @030   ----------------------------------------
  .byte   PATT
-  .word Label_0141D41C
+  .word Label_F7ABFC
 @  #01 @031   ----------------------------------------
  .byte   N12 ,Fn2 ,v096
  .byte   W12
@@ -201,7 +201,7 @@ Label_0141D475:
  .byte   Ds3
  .byte   W12
  .byte   GOTO
-  .word Label_0141D3FA
+  .word Label_F7ABDA
 @  #01 @032   ----------------------------------------
  .byte   N12 ,Fn3 ,v096
  .byte   W12
@@ -211,12 +211,12 @@ Label_0141D475:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0A_002:
+song04_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
-Label_0141D66A:
- .byte   VOICE , 104
- .byte   VOL , 43*song0A_mvl/mxv
+ .byte   KEYSH , song04_key+0
+Label_F7AE9E:
+ .byte   VOICE , 92
+ .byte   VOL , 46*song04_mvl/mxv
  .byte   W36
  .byte   N12 ,Ds2 ,v068
  .byte   W12
@@ -255,7 +255,7 @@ Label_0141D66A:
 @  #02 @005   ----------------------------------------
  .byte   W96
 @  #02 @006   ----------------------------------------
-Label_0141D693:
+Label_F7AEC7:
  .byte   N12 ,Fn1 ,v076
  .byte   W12
  .byte   Ds2
@@ -275,10 +275,10 @@ Label_0141D693:
  .byte   PEND 
 @  #02 @007   ----------------------------------------
  .byte   PATT
-  .word Label_0141D693
+  .word Label_F7AEC7
 @  #02 @008   ----------------------------------------
  .byte   PATT
-  .word Label_0141D693
+  .word Label_F7AEC7
 @  #02 @009   ----------------------------------------
  .byte   W96
 @  #02 @010   ----------------------------------------
@@ -288,7 +288,7 @@ Label_0141D693:
 @  #02 @012   ----------------------------------------
  .byte   W96
 @  #02 @013   ----------------------------------------
-Label_0141D6B4:
+Label_F7AEE8:
  .byte   N12 ,Fs1 ,v076
  .byte   W12
  .byte   Cn2
@@ -340,10 +340,10 @@ Label_0141D6B4:
  .byte   W96
 @  #02 @019   ----------------------------------------
  .byte   PATT
-  .word Label_0141D6B4
+  .word Label_F7AEE8
 @  #02 @020   ----------------------------------------
  .byte   PATT
-  .word Label_0141D693
+  .word Label_F7AEC7
 @  #02 @021   ----------------------------------------
  .byte   N12 ,Fs1 ,v076
  .byte   W12
@@ -375,7 +375,7 @@ Label_0141D6B4:
  .byte   W96
 @  #02 @028   ----------------------------------------
  .byte   PATT
-  .word Label_0141D693
+  .word Label_F7AEC7
 @  #02 @029   ----------------------------------------
  .byte   W96
 @  #02 @030   ----------------------------------------
@@ -383,18 +383,18 @@ Label_0141D6B4:
 @  #02 @031   ----------------------------------------
  .byte   W72
  .byte   GOTO
-  .word Label_0141D66A
+  .word Label_F7AE9E
 @  #02 @032   ----------------------------------------
  .byte   W24
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0A_003:
+song04_003:
 @  #03 @000   ----------------------------------------
- .byte   VOL , 26*song0A_mvl/mxv
- .byte   KEYSH , song0A_key+0
-Label_0141D95C:
+ .byte   VOL , 35*song04_mvl/mxv
+ .byte   KEYSH , song04_key+0
+Label_F7B048:
  .byte   VOICE , 34
  .byte   N96 ,Fn2 ,v096
  .byte   W96
@@ -492,17 +492,17 @@ Label_0141D95C:
  .byte   Fn2
  .byte   W72
  .byte   GOTO
-  .word Label_0141D95C
+  .word Label_F7B048
 @  #03 @032   ----------------------------------------
  .byte   W24
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0A_004:
+song04_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
-Label_0141D9CA:
+ .byte   KEYSH , song04_key+0
+Label_0100494A:
  .byte   VOICE , 52
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -512,7 +512,7 @@ Label_0141D9CA:
 @  #04 @003   ----------------------------------------
  .byte   W96
 @  #04 @004   ----------------------------------------
- .byte   VOL , 26*song0A_mvl/mxv
+ .byte   VOL , 32*song04_mvl/mxv
  .byte   N96 ,Cn3 ,v096
  .byte   W01
  .byte   PAN , c_v+42
@@ -540,7 +540,7 @@ Label_0141D9CA:
  .byte   Bn2
  .byte   W96
 @  #04 @012   ----------------------------------------
-Label_0141D9E9:
+Label_01004969:
  .byte   N72 ,Cn4 ,v096
  .byte   W72
  .byte   N24 ,Bn3
@@ -557,7 +557,7 @@ Label_0141D9E9:
  .byte   W96
 @  #04 @016   ----------------------------------------
  .byte   PATT
-  .word Label_0141D9E9
+  .word Label_01004969
 @  #04 @017   ----------------------------------------
  .byte   N96 ,As3 ,v096
  .byte   W96
@@ -570,254 +570,254 @@ Label_0141D9E9:
 @  #04 @020   ----------------------------------------
  .byte   Cn4
  .byte   W54
- .byte   VOL , 26*song0A_mvl/mxv
+ .byte   VOL , 32*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song0A_mvl/mxv
+ .byte   VOL , 30*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song0A_mvl/mxv
+ .byte   VOL , 30*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song0A_mvl/mxv
+ .byte   VOL , 29*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 23*song0A_mvl/mxv
+ .byte   VOL , 29*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song0A_mvl/mxv
+ .byte   VOL , 28*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song0A_mvl/mxv
+ .byte   VOL , 28*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 16*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 16*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 13*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 13*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
 @  #04 @021   ----------------------------------------
-Label_0141DA4A:
- .byte   VOL , 26*song0A_mvl/mxv
+Label_010049EA:
+ .byte   VOL , 32*song04_mvl/mxv
  .byte   N96 ,Cn4 ,v096
  .byte   W42
  .byte   W01
- .byte   VOL , 26*song0A_mvl/mxv
+ .byte   VOL , 32*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song0A_mvl/mxv
+ .byte   VOL , 30*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song0A_mvl/mxv
+ .byte   VOL , 30*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song0A_mvl/mxv
+ .byte   VOL , 29*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song0A_mvl/mxv
+ .byte   VOL , 29*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song0A_mvl/mxv
+ .byte   VOL , 29*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song0A_mvl/mxv
+ .byte   VOL , 28*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 3*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 3*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 2*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 2*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 26*song0A_mvl/mxv
+ .byte   VOL , 32*song04_mvl/mxv
  .byte   W01
  .byte   PEND 
 @  #04 @022   ----------------------------------------
  .byte   Dn1
  .byte   N96
  .byte   W54
- .byte   VOL , 26*song0A_mvl/mxv
+ .byte   VOL , 32*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song0A_mvl/mxv
+ .byte   VOL , 30*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song0A_mvl/mxv
+ .byte   VOL , 30*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song0A_mvl/mxv
+ .byte   VOL , 29*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 23*song0A_mvl/mxv
+ .byte   VOL , 29*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song0A_mvl/mxv
+ .byte   VOL , 28*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song0A_mvl/mxv
+ .byte   VOL , 28*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 16*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 16*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 13*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 13*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
 @  #04 @023   ----------------------------------------
  .byte   PATT
-  .word Label_0141DA4A
+  .word Label_010049EA
 @  #04 @024   ----------------------------------------
  .byte   N96 ,Ds3 ,v060
  .byte   N96 ,Gs3 ,v096
@@ -842,138 +842,138 @@ Label_0141DA4A:
  .byte   TIE ,Cn3
  .byte   W92
  .byte   W02
- .byte   VOL , 20*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
 @  #04 @029   ----------------------------------------
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 16*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 9*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 5*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 3*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 3*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 2*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 2*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 2*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 1*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W02
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song0A_mvl/mxv
+ .byte   VOL , 27*song04_mvl/mxv
  .byte   W24
 @  #04 @030   ----------------------------------------
  .byte   W01
@@ -983,17 +983,17 @@ Label_0141DA4A:
 @  #04 @031   ----------------------------------------
  .byte   W72
  .byte   GOTO
-  .word Label_0141D9CA
+  .word Label_0100494A
 @  #04 @032   ----------------------------------------
  .byte   W24
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0A_005:
+song04_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0A_key+0
-Label_0141D4DA:
+ .byte   KEYSH , song04_key+0
+Label_F7B096:
  .byte   VOICE , 52
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -1003,9 +1003,9 @@ Label_0141D4DA:
 @  #05 @003   ----------------------------------------
  .byte   W96
 @  #05 @004   ----------------------------------------
- .byte   VOL , 22*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   PAN , c_v-40
- .byte   VOL , 22*song0A_mvl/mxv
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   W96
 @  #05 @005   ----------------------------------------
  .byte   N96 ,Ds3 ,v096
@@ -1114,7 +1114,7 @@ Label_0141D4DA:
 @  #05 @031   ----------------------------------------
  .byte   W72
  .byte   GOTO
-  .word Label_0141D4DA
+  .word Label_F7B096
 @  #05 @032   ----------------------------------------
  .byte   W24
  .byte   FINE
@@ -1122,18 +1122,18 @@ Label_0141D4DA:
 @******************************************************@
 	.align	2
 
-song0A:
+song04:
 	.byte	5	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0A_pri	@ Priority
-	.byte	song0A_rev	@ Reverb.
+	.byte	song04_pri	@ Priority
+	.byte	song04_rev	@ Reverb.
     
-	.word	song0A_grp
+	.word	song04_grp
     
-	.word	song0A_001
-	.word	song0A_002
-	.word	song0A_003
-	.word	song0A_004
-	.word	song0A_005
+	.word	song04_001
+	.word	song04_002
+	.word	song04_003
+	.word	song04_004
+	.word	song04_005
 
 	.end

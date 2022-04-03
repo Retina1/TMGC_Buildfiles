@@ -37,7 +37,6 @@
 #define AxebusterIcon 0x79
 #define DousingLanceIcon 0x74
 
-
 #define IronAxeIcon 0x1e
 #define SteelAxeIcon 0x1f
 #define SilverAxeIcon 0x20
@@ -141,7 +140,14 @@
 #define BootsIcon 0x60
 #define BodyRingIcon 0x61
 
+#define PhalanotisIcon 0x70
+#define NuiusseonIcon 0x71
 #define ArkhinalIcon 0xb7
+#define IneubrenosIcon 0x72
+#define StarfallIcon 0x7c
+#define OpistusIcon 0x7d
+#define SDarkIcon 0x7e
+#define PrototypeIcon 0x7f
 
 #define DivineBreathIcon 0xca
 #define EarthBreathIcon 0xcb
@@ -158,6 +164,8 @@
 
 #define EvilEyeIcon 0x77
 #define SlamIcon 0xab
+
+#define IronRuneIcon 0xdb
 
 ALIGN 4
 NewItemIcons:
@@ -573,10 +581,30 @@ ALIGN 4
 ItemIconEntry(BodyRingIcon)
 #incbin "statboosters/{Beansy} Heavy Band.dmp"
 
-
+ALIGN 4
+ItemIconEntry(PhalanotisIcon)
+#incbin "Swords/Arectaris.dmp"
+ALIGN 4
+ItemIconEntry(NuiusseonIcon)
+#incbin "Lances/Arectaris.dmp"
 ALIGN 4
 ItemIconEntry(ArkhinalIcon)
 #incbin "Axes/Arectaris.dmp"
+ALIGN 4
+ItemIconEntry(IneubrenosIcon)
+#incbin "Bows/Arectaris.dmp"
+ALIGN 4
+ItemIconEntry(StarfallIcon)
+#incbin "Tomes/Anima/Fire/Arectaris.dmp"
+ALIGN 4
+ItemIconEntry(OpistusIcon)
+#incbin "Tomes/Light/Divine Mirror.dmp"
+ALIGN 4
+ItemIconEntry(SDarkIcon)
+#incbin "Tomes/Dark/Mire.dmp"
+ALIGN 4
+ItemIconEntry(PrototypeIcon)
+#incbin "Staves/Old(bad)/Arectaris.dmp"
 
 ALIGN 4
 ItemIconEntry(DivineBreathIcon)
@@ -622,6 +650,9 @@ ALIGN 4
 ItemIconEntry(AngelWingsIcon)
 #incbin "AngelWings.dmp"
 
+ALIGN 4
+ItemIconEntry(IronRuneIcon)
+#incbin "{Cardcafe} {FE15} Item 49.dmp"
 // End of icons 
 POP 
 

@@ -96,9 +96,11 @@ ReadFlag - eid set when the entry has been read
 
 ALIGN 4
 GuideEntryTable:
+//mechanical stuff
 GuideEntry(1, 0, GuideChanges, GuideChangesDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(1, 0, GuideMovementSkills, GuideMovementSkillsDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(1, 0, GuideBase, GuideBaseDesc, UnlockGuideFlag, UnlockGuideFlag)
+//country lore
 GuideEntry(2, 1, GuideAercolyn, GuideAercolynDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(2, 1, GuideDalst, GuideDalstDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(2, 1, GuideMevion, GuideMevionDesc, UnlockGuideFlag, UnlockGuideFlag)
@@ -108,6 +110,38 @@ GuideEntry(2, 1, GuideOpistia, GuideOpistiaDesc, UnlockGuideFlag, UnlockGuideFla
 GuideEntry(2, 1, GuideHolanis, GuideHolanisDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(2, 1, GuideLowlands, GuideLowlandsDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(2, 1, GuideLoile, GuideLoileDesc, UnlockGuideFlag, UnlockGuideFlag)
+//chapter summmary/blair thoughts
+GuideEntry(3, 2, _Prologue, PrologueDiary, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(3, 2, _Chapt1, Chapt1Diary, GuideChpt1, GuideChpt1)
+GuideEntry(3, 2, _Chapt2, Chapt1Diary, GuideChpt2, GuideChpt2)
+GuideEntry(3, 2, _Chapt3, Chapt1Diary, GuideChpt3, GuideChpt3)
+GuideEntry(3, 2, _Chapt4, Chapt1Diary, GuideChpt4, GuideChpt4)
+GuideEntry(3, 2, _Chapt5, Chapt1Diary, GuideChpt5, GuideChpt5)
+GuideEntry(3, 2, _Chapt6, Chapt1Diary, GuideChpt6, GuideChpt6)
+GuideEntry(3, 2, _Chapt7, Chapt1Diary, GuideChpt7, GuideChpt7)
+GuideEntry(3, 2, _Chapt8, Chapt1Diary, GuideChpt8, GuideChpt8)
+GuideEntry(3, 2, _Chapt9, Chapt1Diary, GuideChpt9, GuideChpt9)
+GuideEntry(3, 2, _Chapt10, Chapt1Diary, GuideChpt10, GuideChpt10)
+GuideEntry(3, 2, _Chapt11, Chapt1Diary, GuideChpt11, GuideChpt11)
+GuideEntry(3, 2, _Chapt12, Chapt1Diary, GuideChpt12, GuideChpt12)
+GuideEntry(3, 2, _Chapt13, Chapt1Diary, GuideChpt13, GuideChpt13)
+GuideEntry(3, 2, _Chapt14, Chapt1Diary, GuideChpt14, GuideChpt14)
+GuideEntry(3, 2, _Chapt15, Chapt1Diary, GuideChpt15, GuideChpt15)
+GuideEntry(3, 2, _Chapt16, Chapt1Diary, GuideChpt16, GuideChpt16)
+GuideEntry(3, 2, _Chapt17, Chapt1Diary, GuideChpt17, GuideChpt17)
+GuideEntry(3, 2, _Chapt18, Chapt1Diary, GuideChpt18, GuideChpt18)
+GuideEntry(3, 2, _Chapt19, Chapt1Diary, GuideChpt19, GuideChpt19)
+GuideEntry(3, 2, _Chapt20, Chapt1Diary, GuideChpt20, GuideChpt20)
+GuideEntry(3, 2, _Chapt21, Chapt1Diary, GuideChpt21, GuideChpt21)
+GuideEntry(3, 2, _Chapt22, Chapt1Diary, GuideChpt22, GuideChpt22)
+GuideEntry(3, 2, _Chapt23, Chapt1Diary, GuideChpt23, GuideChpt23)
+GuideEntry(3, 2, _Chapt24, Chapt1Diary, GuideChpt24, GuideChpt24)
+GuideEntry(3, 2, _Chapt25, Chapt1Diary, GuideChpt25, GuideChpt25)
+GuideEntry(3, 2, _Chapt26, Chapt1Diary, GuideChpt26, GuideChpt26)
+GuideEntry(3, 2, _Chapt27, Chapt1Diary, GuideChpt27, GuideChpt27)
+GuideEntry(3, 2, _Chapt28, Chapt1Diary, GuideChpt28, GuideChpt28)
+GuideEntry(3, 2, _ChaptF, Chapt1Diary, GuideChptE, GuideChptE)
+//characters
 GuideEntry(4, 3, GuideBlair, GuideBlairDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(4, 3, GuideArin, GuideArinDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(4, 3, GuideKenneth, GuideKennethDesc, GuideChpt1, GuideChpt1)
@@ -139,6 +173,7 @@ GuideEntry(4, 3, GuideDamien, GuideDamienDesc, GuideChpt15, GuideChpt15)
 GuideEntry(4, 3, GuideZacharias, GuideZachariasDesc, GuideChpt15, GuideChpt15)
 GuideEntry(4, 3, GuideAvan, GuideAvanDesc, GuideChpt15, GuideChpt15)
 GuideEntry(4, 3, GuideToddsworth, GuideToddsworthDesc, GuideChpt15, GuideChpt15)
+
 GuideEntry(0xC,0,0,0,0,0) //terminator?
 GuideTerminator
 

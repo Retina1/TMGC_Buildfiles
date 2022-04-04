@@ -65,6 +65,7 @@
 #define LongbowIcon 0x32
 #define BraveBowIcon 0x30
 #define ShiningBowIcon 0xa8
+#define GreatbowIcon 0x80
 
 #define MiniBallistaIcon 0x35
 
@@ -366,6 +367,9 @@ ItemIconEntry(BraveBowIcon)
 ALIGN 4
 ItemIconEntry(ShiningBowIcon)
 #incbin "Bows/Magic Bow.dmp"
+ALIGN 4
+ItemIconEntry(GreatbowIcon)
+#incbin "Bows/Greatbow.dmp"
 
 ALIGN 4
 ItemIconEntry(FireIcon)

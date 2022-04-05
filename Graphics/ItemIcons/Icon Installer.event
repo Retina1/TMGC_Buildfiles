@@ -146,7 +146,7 @@
 #define ArkhinalIcon 0xb7
 #define IneubrenosIcon 0x72
 #define StarfallIcon 0x7c
-#define OpistusIcon 0x7d
+#define BookOfOpistusIcon 0x7d
 #define SDarkIcon 0x7e
 #define PrototypeIcon 0x7f
 
@@ -601,7 +601,7 @@ ALIGN 4
 ItemIconEntry(StarfallIcon)
 #incbin "Tomes/Anima/Fire/Arectaris.dmp"
 ALIGN 4
-ItemIconEntry(OpistusIcon)
+ItemIconEntry(BookOfOpistusIcon)
 #incbin "Tomes/Light/Divine Mirror.dmp"
 ALIGN 4
 ItemIconEntry(SDarkIcon)

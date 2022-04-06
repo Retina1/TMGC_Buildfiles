@@ -93,7 +93,7 @@ UNIT Flynn Myrm 0x0 Level(9,NPC,0) [5,15] 0x0 0x0 0x0 0x0 [Shimmersword,KillingE
 UNIT
 
 C12DragonGroup:
-UNIT C12Dragon IceDragon 0x0 Level(3,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R2 [IceBreath] NeverMoveAI
+UNIT C12Dragon IceDragon 0x0 Level(3,Enemy,1) [12,0] DropItem 0x0 0x1 REDA12R2 [IceBreath,BlueGem] NeverMoveAI
 UNIT
 
 C12AllyLaronde:
@@ -103,12 +103,12 @@ UNIT
 ALIGN 4
 
 BeginningScene:
-ENUT GuideChpt11
+ENUT GuideChpt12
 LoadUnitsByDifficulty(C12Easy,C12Normal,C12Hard)
 LOAD1 0x0 C12Ally
 ENUN
 MUSC NarrationTheme
-Narration(Ch11_Narration)
+Narration(Ch12_Narration)
 CleanText(DesertCG,Ch9_Opening)
 LOAD1 0x0 C12Units
 ENUN
@@ -120,7 +120,7 @@ EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
 CleanTextNoMap(HallCG,Ch9_Ending)
-MoveToChapter(Chapter13)
+MoveToChapter(Interlude4)
 ENDA
 
 C12FlynnRecruitment:

@@ -1,0 +1,87 @@
+//// Portrait Upshift Edit(or?)
+// This table determines whether or not to upshift a portrait 
+// (see the topic)
+// Anything but zero means the portrait will be upwards shifted
+// (or if you prefer "zero means the portrait will be downshifted" idk)
+
+// If you use character portraits past ID 0x71 for R-selectable units,
+// you should probably feed this a free space location.
+// (and by "should probably" i mean "if you leave this inline the code
+// after it will get overwritten or be read from and give the wrong values")
+
+PUSH
+//remember to uncomment this if you need to expand the table!
+
+	ORG 0x5C24
+	BYTE $01 $49 $08 $5C $70 $47 $C0 46
+	
+	//.thumb
+	//@.org 0x5C24
+	//@This routine is passed Portrait Number
+	//ldr r1, ShiftPortraitTable
+	//ldrb r0, [r1, r0]
+	//bx r14
+	//.align
+	//ShiftPortraitTable:
+
+	ALIGN 4
+	POIN PortraitShiftEdit
+
+POP
+//this too!
+
+ALIGN 4
+PortraitShiftEdit:
+//0x00
+BYTE 0 0 0 0 1 1 0 0
+//0x08
+BYTE 0 1 0 0 1 0 0 0
+//0x10
+BYTE 1 0 0 0 0 0 0 0 
+//0x18
+BYTE 0 1 0 0 0 0 0 0 
+//0x20
+BYTE 0 0 0 1 0 0 0 0
+//0x28
+BYTE 0 0 0 0 0 1 1 0
+//0x30
+BYTE 0 0 0 1 0 1 0 0
+//0x38
+BYTE 0 0 1 0 0 0 0 0
+//0x40
+BYTE 0 0 0 0 0 0 0 0
+//0x48
+BYTE 0 1 0 0 0 0 0 0
+//0x50
+BYTE 0 0 0 0 0 0 0 0
+//0x58
+BYTE 0 0 0 0 0 0 0 0
+//0x60
+BYTE 0 0 0 0 0 0 0 0
+//0x68
+BYTE 0 0 0 0 0 0 0 0
+//0x70
+BYTE 0 0 0 0 0 0 0 0
+//0x78
+BYTE 0 0 0 0 0 0 0 0
+//0x80
+BYTE 0 0 0 0 0 0 0 0
+//0x88
+BYTE 0 0 0 0 0 0 0 0
+//0x90
+BYTE 0 0 0 0 0 0 0 0
+//0x98
+BYTE 0 0 0 0 0 0 0 0
+//0xa0
+BYTE 0 0 0 0 0 0 0 0
+//0xa8
+BYTE 0 0 0 0 0 0 0 0
+//0xb0
+BYTE 0 0 0 0 0 0 0 0
+//0xb8
+BYTE 0 0 0 0 0 0 0 0
+//0xc0
+BYTE 0 0 0 0 0 0 0 0
+//0xc8
+BYTE 0 0 0 0 0 0 0 0
+//at last check, mugs used ended with addington at c8

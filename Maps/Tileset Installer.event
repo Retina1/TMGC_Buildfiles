@@ -111,6 +111,44 @@ FrontierTiles:
 #incext compress "Tilesets/Frontier.mapchip_config"
 
 ALIGN 4
+FrontierFrame1:
+#incbin "Tilesets/FrontierAnimation/frontieranims.mapanime1_000.dmp"
+ALIGN 4
+FrontierFrame2:
+#incbin "Tilesets/FrontierAnimation/frontieranims.mapanime1_001.dmp"
+ALIGN 4
+FrontierFrame3:
+#incbin "Tilesets/FrontierAnimation/frontieranims.mapanime1_002.dmp"
+ALIGN 4
+FrontierFrame4:
+#incbin "Tilesets/FrontierAnimation/frontieranims.mapanime1_003.dmp"
+ALIGN 4
+FrontierFrame5:
+#incbin "Tilesets/FrontierAnimation/frontieranims.mapanime1_004.dmp"
+ALIGN 4
+FrontierFrame6:
+#incbin "Tilesets/FrontierAnimation/frontieranims.mapanime1_005.dmp"
+ALIGN 4
+FrontierFrame7:
+#incbin "Tilesets/FrontierAnimation/frontieranims.mapanime1_006.dmp"
+ALIGN 4
+FrontierFrame8:
+#incbin "Tilesets/FrontierAnimation/frontieranims.mapanime1_007.dmp"
+ALIGN 4
+FrontierAnims:
+tilesetAnimation(0xf,0x1000,FrontierFrame1)
+tilesetAnimation(0xf,0x1000,FrontierFrame2)
+tilesetAnimation(0xf,0x1000,FrontierFrame3)
+tilesetAnimation(0xf,0x1000,FrontierFrame4)
+tilesetAnimation(0xf,0x1000,FrontierFrame5)
+tilesetAnimation(0xf,0x1000,FrontierFrame6)
+tilesetAnimation(0xf,0x1000,FrontierFrame7)
+tilesetAnimation(0xf,0x1000,FrontierFrame8)
+WORD 0 0
+
+
+
+ALIGN 4
 CastleFrame1:
 #incbin "CastleAnim/CastleFrame1.dmp"
 ALIGN 4
@@ -318,6 +356,7 @@ EventPointerTable(TILDesert, DesertTiles)
 EventPointerTable(OBJFrontier, FrontierObjects) 
 EventPointerTable(PALYgstraFrontier, YgstraFrontierPalette) 
 EventPointerTable(TILFrontier, FrontierTiles) 
+EventPointerTable(ANIFrontier, FrontierAnims) 
 
 
 #define MinimapTileTable $A7A38

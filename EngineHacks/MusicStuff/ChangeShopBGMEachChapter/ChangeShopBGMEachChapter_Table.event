@@ -1,0 +1,10 @@
+#define csvmacro000(arg000,arg001,arg002) "SHORT arg000; BYTE arg001 arg002; "
+//0- armory
+//1- vendor
+//2- secret
+//10- prep
+//song, type, map
+ChangeShopBGMEachChapter_Table:
+csvmacro000(S_SummerLove,0x00,Interlude1)
+csvmacro000(S_HipShop,0x01,Interlude1)
+csvmacro000(0x00,0x00,0x00)  // term

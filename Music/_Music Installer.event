@@ -225,6 +225,14 @@ SongTable(S_DraculaCastle,DraculaCastle,1)
 #include "UenoUnderground.event"
 SongTable(S_UenoUnderground,UenoUnderground,1)
 }
+{
+#include "SummerLove.event"
+SongTable(S_SummerLove,SummerLove,1)
+}
+{
+#include "HipShop.event"
+SongTable(S_HipShop,HipShop,1)
+}
 //sound room completion rate
 PUSH
 ORG $AF69C

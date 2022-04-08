@@ -37,6 +37,18 @@
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define EndAnim "WORD 0x0 0x0"
 {
+#include "RangerM\Sword Installer.event"
+#include "RangerM\Lance Installer.event"
+#include "RangerM\Bow Installer.event"
+#include "RangerM\Unarmed Installer.event"
+}
+{
+#include "RangerF\Sword Installer.event"
+#include "RangerF\Lance Installer.event"
+#include "RangerF\Bow Installer.event"
+#include "RangerF\Unarmed Installer.event"
+}
+{
 #include "FighterM(LeoLink)\Axe Installer.event"
 #include "FighterM(LeoLink)\Handaxe Installer.event"
 #include "FighterM(LeoLink)\Unarmed Installer.event"
@@ -207,6 +219,14 @@
 #include "MyrmF(epicer)\Unarmed Installer.event"
 }
 {
+#include "SwordmasterM(TBA)\Sword Installer.event"
+#include "SwordmasterM(TBA)\Unarmed Installer.event"
+}
+{
+#include "SwordmasterF(RussellClark)\Sword Installer.event"
+#include "SwordmasterF(RussellClark)\Unarmed Installer.event"
+}
+{
 #include "DarkM(Temp)\Magic Installer.event"
 }
 {
@@ -227,6 +247,16 @@
 {
 #include "SageF(LisandraBrave)\Magic Installer.event"
 #include "SageF(LisandraBrave)\Staff Installer.event"
+}
+{
+#include "BishopM(Eldritch)\Magic Installer.event"
+#include "BishopM(Eldritch)\Staff Installer.event"
+#include "BishopM(Eldritch)\Unarmed Installer.event"
+}
+{
+#include "BishopF(Eldritch)\Magic Installer.event"
+#include "BishopF(Eldritch)\Staff Installer.event"
+#include "BishopF(Eldritch)\Unarmed Installer.event"
 }
 {
 #include "Desmond(Nuramon)\Lance Installer.event"
@@ -416,6 +446,7 @@ MagicAnim(0x6d)
 StaffAnim(0x6e)
 EndAnim
 
+
 ALIGN 4
 SageFAnims:
 MagicAnim(0x6f)
@@ -425,6 +456,24 @@ EndAnim
 ALIGN 4
 LightMAnims:
 MagicAnim(0x7d)
+EndAnim
+
+ALIGN 4
+BishopMAnims:
+AnimaAnim(0xd4)
+LightAnim(0xd4)
+DarkAnim(0xd4)
+StaffAnim(0x82)
+UnarmedAnim(0x81)
+EndAnim
+
+ALIGN 4
+BishopFAnims:
+AnimaAnim(0xd5)
+LightAnim(0xd5)
+DarkAnim(0xd5)
+StaffAnim(0x84)
+UnarmedAnim(0x83)
 EndAnim
 
 ALIGN 4
@@ -563,6 +612,22 @@ AxeAnim(0x4d)
 HandAxeAnim(0x55)
 BowAnim(0x56)
 UnarmedAnim(0x57)
+EndAnim
+
+ALIGN 4
+RangerMAnims:
+SwordAnim(0xcc)
+LanceAnim(0xcd)
+BowAnim(0xce)
+UnarmedAnim(0xcf)
+EndAnim
+
+ALIGN 4
+RangerFAnims:
+SwordAnim(0xd0)
+LanceAnim(0xd1)
+BowAnim(0xd2)
+UnarmedAnim(0xd3)
 EndAnim
 
 ALIGN 4
@@ -728,4 +793,16 @@ ALIGN 4
 MyrmFAnims:
 SwordAnim(0x13)
 UnarmedAnim(0x14)
+EndAnim
+
+ALIGN 4
+SwordmasterMAnims:
+SwordAnim(0x15)
+UnarmedAnim(0x16)
+EndAnim
+
+ALIGN 4
+SwordmasterFAnims:
+SwordAnim(0x17)
+UnarmedAnim(0x18)
 EndAnim

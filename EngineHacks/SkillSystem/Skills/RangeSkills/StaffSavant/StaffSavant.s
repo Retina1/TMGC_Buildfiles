@@ -27,10 +27,7 @@ mov 	r2, sp
 ldrh 	r0, [r2]
 add 	r0, r0, #MaxRangeBonus
 
-@prevent the maximum range from going over 15
-cmp 	r0, #0xF
-bls NotOverMax
-mov 	r0, #0xF
+@why would i prevent the maximum range from going over 15
 NotOverMax:
 strh 	r0, [r2]
 

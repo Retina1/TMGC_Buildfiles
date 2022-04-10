@@ -280,8 +280,10 @@ EndEvent
 EndingScene:
 ResetBaseFlags
 DeathBranchText(Rachael,Cassius,VictoryMinor,VictoryTheme,OutdoorCastleCG,Ch7_Ending,Ch7_Ending_Dead_Rachael,Ch7_Ending_Dead_Cassius,Ch7_Ending_Dead_Rachael_and_Cassius)
+CleanTextNoMap(ElbaCorCastleCG, Ch7_Ending2)
 SetBackground(BlankCG)
 GiveMoney(0x1d4c)
+CleanTextNoMap(HallCG, Ch7_Ending3)
 MoveToChapter(Chapter8)
 ENDA
 

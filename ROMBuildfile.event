@@ -17,6 +17,7 @@
 	
     //CSV tables
 	#include "Tables/StatBoosts.event"
+	#include "Tables/WeaponLockDefs.event"
 	#include "Tables/PromoUsability.event"
     #include "Tables/TableInstaller.event"
     MESSAGE Used table space ends at currentOffset
@@ -67,24 +68,6 @@
 	
 	//cap changing
 	PUSH
-	/*luck cap- may change
-	ORG $872ae
-	BYTE 0x24
-	ORG $2c016
-	BYTE 0x24
-	ORG $2c01c
-	BYTE 0x24
-	ORG $18250
-	BYTE 0x24
-	ORG $18254
-	BYTE 0x24
-	ORG $926fc
-	BYTE 0x24
-	ORG $9c154
-	BYTE 0x24
-	ORG $9c31c
-	BYTE 0x24
-	*/
 	ORG $87132
 	BYTE 0x24
 	ORG $87142
@@ -116,9 +99,9 @@
 	ORG $2bf60
 	BYTE 0x78
 	POP
-	ALIGN 4
-	WORD 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 // Prevent NUPS from cutting off the last 6 bytes
-
+ // CRC Correction
+    ALIGN 16
+    WORD 0 0 0 0
     MESSAGE Used free space ends at currentOffset
 	MESSAGE "Now I am become sleepy, the goer to bed. - J. Robert Oppenheimer, fathers of the pjs after drinking warm milk"
 #else

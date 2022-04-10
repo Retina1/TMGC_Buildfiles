@@ -79,6 +79,7 @@
 #define GalewindIcon 0x5
 #define InversionIcon 0x6
 #define TrisagionIcon 0xbf
+#define CloudburstIcon 0x81
 
 #define LightningIcon 0x3d
 #define ShineIcon 0x3e
@@ -90,6 +91,8 @@
 #define SmiteIcon 0x14
 #define BanishIcon 0x17
 #define JavelinRainIcon 0xc0
+#define ResireIcon 0x8a
+#define LuxIcon 0x82
 
 #define FluxIcon 0x43
 #define NightfallIcon 0x44
@@ -101,6 +104,7 @@
 #define FreikugelIcon 0xc1
 #define HellIcon 0x46
 #define NocturneIcon 0xbc
+#define NoxIcon 0x83
 
 #define HealIcon 0x49
 #define MendIcon 0x4a
@@ -401,6 +405,9 @@ ItemIconEntry(InversionIcon)
 ALIGN 4
 ItemIconEntry(TrisagionIcon)
 #incbin "Tomes/Anima/Fire/Fissure(Devil Tome).dmp"
+ALIGN 4
+ItemIconEntry(CloudburstIcon)
+#incbin "Tomes/Anima/Ice/Cross Freeze.dmp"
 
 ALIGN 4
 ItemIconEntry(LightningIcon)
@@ -432,6 +439,12 @@ ItemIconEntry(AuraIcon)
 ALIGN 4
 ItemIconEntry(RadianceIcon)
 #incbin "Tomes/Light/Aurora.dmp"
+ALIGN 4
+ItemIconEntry(ResireIcon)
+#incbin "Tomes/Light/Lifelight.dmp"
+ALIGN 4
+ItemIconEntry(LuxIcon)
+#incbin "Tomes/Light/Elivaldi.dmp"
 
 ALIGN 4
 ItemIconEntry(FluxIcon)
@@ -463,6 +476,9 @@ ItemIconEntry(HellIcon)
 ALIGN 4
 ItemIconEntry(NocturneIcon)
 #incbin "Tomes/Dark/Dark Prism.dmp"
+ALIGN 4
+ItemIconEntry(NoxIcon)
+#incbin "Tomes/Light/Justice.dmp"
 
 ALIGN 4
 ItemIconEntry(HealIcon)

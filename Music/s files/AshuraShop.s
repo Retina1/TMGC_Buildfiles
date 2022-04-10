@@ -1,26 +1,26 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	AshuraShop_grp, voicegroup000
+	.equ	AshuraShop_pri, 0
+	.equ	AshuraShop_rev, 0
+	.equ	AshuraShop_mvl, 127
+	.equ	AshuraShop_key, 0
+	.equ	AshuraShop_tbs, 1
+	.equ	AshuraShop_exg, 0
+	.equ	AshuraShop_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	AshuraShop
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+AshuraShop_001:
 @  #01 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 88*song04_tbs/2
+ .byte   VOL , 50*AshuraShop_mvl/mxv
+ .byte   KEYSH , AshuraShop_key+0
+ .byte   TEMPO , 88*AshuraShop_tbs/2
  .byte   VOICE , 4
  .byte   N48 ,Ds3 ,v096
  .byte   N48 ,Gn3
@@ -194,16 +194,16 @@ Label_01007BEC:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+AshuraShop_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , AshuraShop_key+0
  .byte   VOICE , 90
  .byte   W96
 @  #02 @001   ----------------------------------------
 Label_01008039:
  .byte   W96
 @  #02 @002   ----------------------------------------
- .byte   VOL , 32*song04_mvl/mxv
+ .byte   VOL , 32*AshuraShop_mvl/mxv
  .byte   W02
  .byte   N01 ,Cn4 ,v044
  .byte   W02
@@ -525,9 +525,9 @@ Label_01008099:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+AshuraShop_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , AshuraShop_key+0
  .byte   VOICE , 80
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -554,7 +554,7 @@ Label_01008281:
 @  #03 @011   ----------------------------------------
  .byte   W96
 @  #03 @012   ----------------------------------------
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*AshuraShop_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N06 ,As3 ,v096
  .byte   W06
@@ -1050,10 +1050,10 @@ Label_01008281:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+AshuraShop_004:
 @  #04 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 50*AshuraShop_mvl/mxv
+ .byte   KEYSH , AshuraShop_key+0
  .byte   VOICE , 34
  .byte   N12 ,Cn2 ,v056
  .byte   W12
@@ -1094,7 +1094,7 @@ Label_010084E6:
  .byte   N90 ,Gn1
  .byte   W96
 @  #04 @004   ----------------------------------------
- .byte   VOL , 31*song04_mvl/mxv
+ .byte   VOL , 31*AshuraShop_mvl/mxv
  .byte   N12 ,Cn2 ,v092
  .byte   W12
  .byte   N12
@@ -1387,10 +1387,10 @@ Label_01008617:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+AshuraShop_005:
 @  #05 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 50*AshuraShop_mvl/mxv
+ .byte   KEYSH , AshuraShop_key+0
  .byte   VOICE , 52
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -1716,10 +1716,10 @@ Label_01005219:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+AshuraShop_006:
 @  #06 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 50*AshuraShop_mvl/mxv
+ .byte   KEYSH , AshuraShop_key+0
  .byte   VOICE , 121
  .byte   N06 ,Cn1 ,v096
  .byte   N06 ,Fs1 ,v064
@@ -2496,19 +2496,19 @@ Label_0100882D:
 @******************************************************@
 	.align	2
 
-song04:
+AshuraShop:
 	.byte	6	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	AshuraShop_pri	@ Priority
+	.byte	AshuraShop_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	AshuraShop_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
+	.word	AshuraShop_001
+	.word	AshuraShop_002
+	.word	AshuraShop_003
+	.word	AshuraShop_004
+	.word	AshuraShop_005
+	.word	AshuraShop_006
 
 	.end

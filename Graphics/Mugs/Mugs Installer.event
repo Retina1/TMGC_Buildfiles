@@ -1,3 +1,17 @@
+#define PortraitTable NewPortraitTable
+#define MaxPortraitEntries 0xff
+
+ALIGN 4
+NewPortraitTable:
+	#incbin "NewPortraitTable.bin"
+	ORG NewPortraitTable + (MaxPortraitEntries * 28)
+
+PUSH
+	ORG $5524
+	POIN PortraitTable
+
+POP
+
 #include "Tools/Tool Helpers.txt"
 //(mouthx,mouthy,eyesx,eyesy)
 ALIGN 4
@@ -284,3 +298,31 @@ ALIGN 4
 AddingtonMug:
 #incext PortraitFormatter "Addington.png"
 setMugEntry(0xc8,AddingtonMug,4,7,4,5)
+
+
+
+
+ALIGN 4
+DLEstelleMug:
+#incext PortraitFormatter "spoilerly/DL_Estelle.png"
+setMugEntry(0xfa,DLEstelleMug,3,5,3,3)
+
+ALIGN 4
+DLRiftMug:
+#incext PortraitFormatter "spoilerly/DL_Rift.png"
+setMugEntry(0xfb,DLRiftMug,4,6,4,4)
+
+ALIGN 4
+DLRoseMug:
+#incext PortraitFormatter "spoilerly/DL_Rose.png"
+setMugEntry(0xfc,DLRoseMug,3,5,3,3)
+
+ALIGN 4
+DLManfredMug:
+#incext PortraitFormatter "spoilerly/DL_Manfred.png"
+setMugEntry(0xfd,DLManfredMug,3,5,3,3)
+
+ALIGN 4
+DLWilhelmMug:
+#incext PortraitFormatter "spoilerly/DL_Wilhelm.png"
+setMugEntry(0xfe,DLWilhelmMug,3,5,3,3)

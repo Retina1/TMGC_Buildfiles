@@ -1,32 +1,32 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	BlackMarket_grp, voicegroup000
+	.equ	BlackMarket_pri, 0
+	.equ	BlackMarket_rev, 0
+	.equ	BlackMarket_mvl, 127
+	.equ	BlackMarket_key, 0
+	.equ	BlackMarket_tbs, 1
+	.equ	BlackMarket_exg, 0
+	.equ	BlackMarket_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	BlackMarket
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+BlackMarket_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 86*song04_tbs/2
+ .byte   KEYSH , BlackMarket_key+0
+ .byte   TEMPO , 86*BlackMarket_tbs/2
  .byte   VOICE , 52
  .byte   W96
 @  #01 @001   ----------------------------------------
  .byte   W96
 @  #01 @002   ----------------------------------------
 Label_01005840:
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*BlackMarket_mvl/mxv
  .byte   N12 ,As2 ,v064
  .byte   N12 ,As3 ,v096
  .byte   W12
@@ -224,11 +224,11 @@ Label_01005913:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+BlackMarket_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackMarket_key+0
  .byte   VOICE , 34
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*BlackMarket_mvl/mxv
  .byte   N06 ,Gn0 ,v096
  .byte   W06
  .byte   As0
@@ -260,42 +260,42 @@ song04_002:
  .byte   W12
  .byte   Fn0
  .byte   W21
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*BlackMarket_mvl/mxv
  .byte   W01
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 37*song04_mvl/mxv
+ .byte   VOL , 37*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 37*song04_mvl/mxv
+ .byte   VOL , 37*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 37*song04_mvl/mxv
+ .byte   VOL , 37*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*BlackMarket_mvl/mxv
  .byte   W01
 @  #02 @002   ----------------------------------------
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*BlackMarket_mvl/mxv
  .byte   N06 ,Gn0
  .byte   W06
  .byte   As0
@@ -529,11 +529,11 @@ Label_010052E2:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+BlackMarket_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackMarket_key+0
  .byte   VOICE , 4
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BlackMarket_mvl/mxv
  .byte   PAN , c_v-16
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -649,142 +649,142 @@ Label_01007B70:
  .byte   W96
 @  #03 @028   ----------------------------------------
  .byte   W06
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BlackMarket_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BlackMarket_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BlackMarket_mvl/mxv
  .byte   W02
 @  #03 @029   ----------------------------------------
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BlackMarket_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 2*song04_mvl/mxv
+ .byte   VOL , 2*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 2*song04_mvl/mxv
+ .byte   VOL , 2*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*BlackMarket_mvl/mxv
  .byte   W01
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*BlackMarket_mvl/mxv
  .byte   W03
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 0*song04_mvl/mxv
+ .byte   VOL , 0*BlackMarket_mvl/mxv
  .byte   W02
- .byte   VOL , 0*song04_mvl/mxv
+ .byte   VOL , 0*BlackMarket_mvl/mxv
  .byte   W02
  .byte   EOT
  .byte   Gn2 ,v062
- .byte   VOL , 0*song04_mvl/mxv
+ .byte   VOL , 0*BlackMarket_mvl/mxv
  .byte   W01
- .byte   VOL , 0*song04_mvl/mxv
+ .byte   VOL , 0*BlackMarket_mvl/mxv
  .byte   W36
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BlackMarket_mvl/mxv
  .byte   W11
 @  #03 @030   ----------------------------------------
  .byte   PATT
@@ -793,9 +793,9 @@ Label_01007B70:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+BlackMarket_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackMarket_key+0
  .byte   VOICE , 30
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -818,7 +818,7 @@ song04_004:
  .byte   W96
 @  #04 @010   ----------------------------------------
 Label_010075EE:
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*BlackMarket_mvl/mxv
  .byte   W36
  .byte   N06 ,Gn2 ,v096
  .byte   N06 ,As2
@@ -959,9 +959,9 @@ Label_01007621:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+BlackMarket_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackMarket_key+0
  .byte   VOICE , 30
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -991,9 +991,9 @@ Label_01007C6A:
  .byte   W96
 @  #05 @013   ----------------------------------------
  .byte   W24
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BlackMarket_mvl/mxv
  .byte   PAN , c_v-45
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BlackMarket_mvl/mxv
  .byte   PAN , c_v-45
  .byte   W11
  .byte   N06 ,Fn2 ,v084
@@ -1070,7 +1070,7 @@ Label_01007C6A:
 @  #05 @029   ----------------------------------------
  .byte   W96
 @  #05 @030   ----------------------------------------
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BlackMarket_mvl/mxv
  .byte   PAN , c_v+44
  .byte   W24
  .byte   PAN , c_v-45
@@ -1109,10 +1109,10 @@ Label_01007C6A:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+BlackMarket_006:
 @  #06 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 50*BlackMarket_mvl/mxv
+ .byte   KEYSH , BlackMarket_key+0
  .byte   VOICE , 124
  .byte   N06 ,Cn1 ,v096
  .byte   W24
@@ -1438,19 +1438,19 @@ Label_010081EA:
 @******************************************************@
 	.align	2
 
-song04:
+BlackMarket:
 	.byte	6	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	BlackMarket_pri	@ Priority
+	.byte	BlackMarket_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	BlackMarket_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
+	.word	BlackMarket_001
+	.word	BlackMarket_002
+	.word	BlackMarket_003
+	.word	BlackMarket_004
+	.word	BlackMarket_005
+	.word	BlackMarket_006
 
 	.end

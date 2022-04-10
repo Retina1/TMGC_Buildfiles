@@ -233,6 +233,14 @@ SongTable(S_SummerLove,SummerLove,1)
 #include "HipShop.event"
 SongTable(S_HipShop,HipShop,1)
 }
+{
+#include "AshuraShop.event"
+SongTable(S_AshuraShop,AshuraShop,1)
+}
+{
+#include "BlackMarket.event"
+SongTable(S_BlackMarket,BlackMarket,1)
+}
 //sound room completion rate
 PUSH
 ORG $AF69C

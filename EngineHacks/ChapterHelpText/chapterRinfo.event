@@ -1,0 +1,20 @@
+#include "Extensions/Hack Installation.txt"
+
+PUSH; ORG $89DEA; SHORT 0; jumpToHack(chapterRinfo); POP
+
+ALIGN 4
+chapterRinfo:
+#incbin "chapterRinfo.dmp"
+POIN chapterRinfoChapterID //this is the function that will decide the text id to use, feel free to replace it with your own
+
+ALIGN 4
+chapterRinfoChapterID:
+#incbin "chapterRinfoChapterID.dmp"
+POIN chapterRinfoChapterIDtable
+
+ALIGN 4
+chapterRinfoChapterIDtable: //fill this with whatever text ids you want
+SHORT PrologueHelp Ch1Help Ch2Help Ch3Help Ch4Help Ch5Help Ch6Help Ch7Help Ch8Help Ch9I3Ch10Help Ch9I3Ch10Help Ch11Help Ch12Help Ch13Help Ch14Help I5Ch15Help Ch16Help Ch17Ch18Ch24Help Ch17Ch18Ch24Help Ch19Help Ch20Help Ch21Help Ch22Help Ch23Help Ch17Ch18Ch24Help Ch25Help I10Ch26Help Ch27Ch28Help Ch27Ch28Help EndgameHelp ChZVHelp ChZVHelp
+SHORT ChZVHelp ChZVHelp ChZVHelp ChZVHelp ChZVHelp ChZVHelp I1Help I2Help Ch9I3Ch10Help I4Help I5Ch15Help I6Help ChZVHelp ChZVHelp I9Help I10Ch26Help 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+SHORT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+SHORT 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

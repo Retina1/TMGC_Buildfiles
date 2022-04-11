@@ -391,8 +391,8 @@ ALIGN 4
 //modular summon (for addington)
 #include "TMGC/ModularSummon/Installer.event"
 
-//angel wings
-#include "TMGC/FE8-Pathfinder/FE8-Pathfinder EA.event"
+//angel wings- disabled until acrobat compatibility figured out
+//#include "TMGC/FE8-Pathfinder/FE8-Pathfinder EA.event"
 
 //l cycling for other factions
 #include "TMGC/UpdatedLButtonCycling/Installer.event"
@@ -402,3 +402,9 @@ ALIGN 4
 
 //nosresire palette
 #include "TMGC/NosResire/NosResire.event"
+
+//hopefully fix help text- not working yet but may as well keep this for when it does- haha jk here's some patch
+PUSH
+ORG $A8A22 // Fix R text crash on the save screen (by removing the button press check).
+SHORT 0xE025
+POP

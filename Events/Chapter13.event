@@ -30,8 +30,22 @@ CharacterEvent(0xb,C13CarbonRecruitment,Mikey,Carbon)
 END_MAIN
 
 LocationBasedEvents:
+Vendor(C13Vendor,22,4)
+Armory(C13Armory,16,12)
 Seize(2,2)
 END_MAIN
+
+ALIGN 4
+C13Armory:
+SHLI SteelSword SilverSword Zanbato Armorslayer Lancereaver SteelLance SilverLance Horseslayer Shatterspear Axereaver SteelAxe SilverAxe Halberd Hammer Swordreaver SteelBow SilverBow Longbow
+BYTE 0x0 0x0
+ALIGN 4
+
+C13Vendor:
+SHLI Thunder Elfire Inversion Shine Divine Banish Nightfall Corruption Mend Physic Barrier Vulnerary Elixir PureWater
+BYTE 0x0 0x0
+
+ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies

@@ -392,6 +392,7 @@ EventPointerTable(ANIFrontier, FrontierAnims)
 
 #define SetMinimapTileHandler(tileType, pointer) "PUSH; ORG MinimapTileTable+(tileType*4); POIN pointer; POP"
 
+SetMinimapTileHandler(0xe,TileHandler_Road)
 SetMinimapTileHandler(0x9,TileHandler_Water)
 SetMinimapTileHandler(0x24,TileHandler_ArmoryVendor)
 SetMinimapTileHandler(0x2a,TileHandler_Road)

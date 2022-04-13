@@ -1,0 +1,150 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(Events14,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C14Units C14Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,C14Turn2,2)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Seize(13,1)
+Door(1,13)
+Door(2,13)
+Door(1,14)
+Door(2,14)
+Door(23,1)
+Door(12,9)
+Door(13,9)
+Door(14,9)
+Door(12,10)
+Door(13,10)
+Door(14,10)
+Door(12,13)
+Door(13,13)
+Door(14,13)
+Door(12,14)
+Door(13,14)
+Door(14,14)
+Chest(MemberCard,1,3)
+Chest(Hammerne,25,1)
+Chest(Rescue,21,12)
+Chest(EnergyRing,22,12)
+Chest(Fenrir,20,19)
+Chest(SilverSword,19,20)
+Door(13,6)
+SecretShop(Ch14SecretShop,5,24) 
+END_MAIN
+
+ALIGN 4
+Ch14SecretShop:
+SHLI Lancesnapper Axebuster Swordslayer Calibur Pierce Knoggelvi Silence SecretBook GoddessIcon MasterSeal
+BYTE 0x0 0x0
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C14Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [13,28] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,29] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,29] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,29] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,29] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,29] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,29] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,28] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,28] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,28] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,28] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,27] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,27] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,27] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,27] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C14Easy:
+UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT
+
+C14Normal:
+UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT
+
+C14Hard:
+UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Ygstra Halberdier 0x0 Level(4,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [13,16] 0x0 0x0 0x0 0x0 [SilverAxe] NeverMoveAI
+UNIT Valden LncPal 0x0 Level(8,Enemy,1) [13,1] DropItem 0x0 0x0 0x0 [Spear,GildedLance,BraveLance,MasterSeal] NeverMoveAI
+UNIT
+
+C14Athena:
+UNIT Athena AxeWyv 0x0 Level(14,Ally,0) [1,29] 0x0 0x0 0x1 REDA1R22 [Hammer,HandAxe,MasterSeal] NoAI
+UNIT
+
+C14Charley:
+UNIT Charley SniperF 0x0 Level(2,Ally,0) [1,22] 0x0 0x0 0x1 REDA0R21 [SilverBow,Greatbow,Elixir] NoAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt14
+LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
+MUSC NarrationTheme
+Narration(Ch14_Narration)
+CleanText(DesertCG,Ch9_Opening)
+LOAD1 0x0 C14Units
+ENUN
+ENUT 0x23
+GotoPrepScreen
+ENDA
+
+EndingScene:
+ResetBaseFlags
+MUSC S_FE4Conversation
+CleanTextNoMap(HallCG,Ch9_Ending)
+MoveToChapter(ChapterZ1)
+ENDA
+
+C14Turn2:
+Reinforcements(C14Athena)
+Reinforcements(C14Charley)
+MUSC RecruitmentTheme
+Text(Ch3_Sam_Joins)
+EndEvent
+
+MESSAGE Events end at offset CURRENTOFFSET

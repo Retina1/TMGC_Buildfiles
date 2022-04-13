@@ -25,12 +25,23 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-CharacterEvent(0x0,I4ReadyToEnd,Blair,Cid)
+CharacterEvent(0x0,I4ReadyToEnd,Blair,Vladmir)
 END_MAIN
 
 LocationBasedEvents:
+Armory(I4Armory,1,24)
+Vendor(I4Vendor,11,24)
+House(0xa,I4VerySecretSpace,2,9)
 END_MAIN
 
+ALIGN 4
+I4Armory:
+SHLI SteelSword Armorslayer KillingEdge SteelLance Shatterspear KillerLance Javelin SteelAxe Hammer KillerAxe HandAxe SteelBow KillerBow Longbow
+BYTE 0x0 0x0
+ALIGN 4
+I4Vendor:
+SHLI Thunder Elfire Shine Divine Nightfall Nosferatu Mend Recover Yoink Vulnerary Elixir PureWater
+BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
@@ -49,22 +60,31 @@ ENDTRAP
 ALIGN 4
 
 I4Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [10,15] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [5,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT
 
 I4NPC:
-UNIT Cid Berserker 0x0 Level(9,NPC,0) [25,1] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
-UNIT Wilhelm Soldier 0x0 Level(16,NPC,0) [0,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Manfred DarkM 0x0 Level(18,NPC,0) [0,7] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Charley SniperF 0x0 Level(2,NPC,0) [6,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Alexis AxeArm 0x0 Level(8,NPC,0) [8,11] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Hyperius SwdGen 0x0 Level(12,NPC,0) [6,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Merchant Merc 0x0 Level(19,NPC,1) [21,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Citizen CivilM 0x0 Level(1,NPC,1) [21,17] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Citizen2 CivilM 0x0 Level(1,NPC,1) [10,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT ElbaCor MageF 0x0 Level(14,NPC,1) [9,20] 0x0 0x0 0x0 0x0 [Elfire,Elixir] NeverMoveAI
-UNIT ElbaCor LightM 0x0 Level(18,NPC,1) [4,21] 0x0 0x0 0x0 0x0 [Smite,Elixir] NeverMoveAI
-UNIT ElbaCor Falco 0x0 Level(17,NPC,1) [15,15] 0x0 0x0 0x0 0x0 [GildedLance,Elixir] NeverMoveAI
+UNIT Vladmir Bishop 0x0 Level(15,NPC,0) [6,32] 0x0 0x0 0x0 0x0 [BookOfOpistus] NeverMoveAI
+UNIT Laronde Halberdier 0x0 Level(4,NPC,1) [12,1] 0x0 0x0 0x0 0x0 [Spear,Nuboko,Elixir] NeverMoveAI
+UNIT Athena AxeWyv 0x0 Level(14,NPC,0) [5,22] 0x0 0x0 0x0 0x0 [Hammer,HandAxe,MasterSeal] NeverMoveAI
+UNIT Callum SwdPal 0x0 Level(11,NPC,0) [12,26] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Leila SwdPeg 0x0 Level(13,NPC,0) [17,24] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Merchant SorcF 0x0 Level(8,NPC,1) [8,20] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen CivilM 0x0 Level(1,NPC,1) [0,35] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen2 CivilM 0x0 Level(1,NPC,1) [10,30] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Mevion Hero 0x0 Level(16,NPC,1) [17,9] 0x0 0x0 0x0 0x0 [Phalanotis] NeverMoveAI
+UNIT Opistia LightM 0x0 Level(18,NPC,1) [5,7] 0x0 0x0 0x0 0x0 [Aura,Elixir] NeverMoveAI
+UNIT Opistia LightM 0x0 Level(19,NPC,1) [12,7] 0x0 0x0 0x0 0x0 [Aura,Elixir] NeverMoveAI
+UNIT Opistia Priest 0x0 Level(17,NPC,1) [4,12] 0x0 0x0 0x0 0x0 [Physic,Elixir] NeverMoveAI
+UNIT Opistia Cleric 0x0 Level(14,NPC,1) [13,12] 0x0 0x0 0x0 0x0 [Physic,Elixir] NeverMoveAI
+UNIT Opistia Bishop 0x0 Level(4,NPC,1) [6,5] 0x0 0x0 0x0 0x0 [Aura,Fortify,Elixir] NeverMoveAI
+UNIT Opistia BishopF 0x0 Level(7,NPC,1) [4,1] 0x0 0x0 0x0 0x0 [Aura,Sleep,Elixir] NeverMoveAI
+UNIT Opistia Bishop 0x0 Level(9,NPC,1) [11,5] 0x0 0x0 0x0 0x0 [Aura,Again,Elixir] NeverMoveAI
+UNIT Opistia BishopF 0x0 Level(12,NPC,1) [13,1] 0x0 0x0 0x0 0x0 [Aura,Thief,Elixir] NeverMoveAI
+UNIT
+
+I4VerySpecialUnit:
+UNIT Addington Automaton 0x0 Level(1,Ally,0) [1,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
@@ -98,4 +118,31 @@ Text(I2NotYet)
 LABEL 0x1
 EndEvent
 
+I4VerySecretSpace:
+EVBIT_MODIFY 4
+MUSC S_CampIchigaya
+SetBackground(HallCG)
+Text(I4Buyington)
+CHECK_MONEY
+SVAL 0x1 0x1E60
+BGE 0x1 0xc 0x1
+Text(I4BuyingtonBroke)
+ENUF 0xa
+GOTO 0x2
+LABEL 0x1
+SystemText(I4BuyingtonPrompt)
+IfNoSelectedGoto(0x3)
+Text(I4BuyingtonBought)
+SVAL 0x3 0x1E60
+TAKEMONEY
+FADI 60
+Reinforcements(I4VerySpecialUnit)
+CLEAN
+FADU 60
+GOTO 0x2
+LABEL 0x3
+Text(I4BuyingtonNo)
+ENUF 0xa
+LABEL 0x2
+EndEvent
 MESSAGE Events end at offset CURRENTOFFSET

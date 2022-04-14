@@ -22,6 +22,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C14Turn2,2)
+TurnEventPlayer(0x0,C14Turn3,3)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -64,6 +65,7 @@ BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
+AreaEvent(0x21,C14ThroneTrap,2,2,2,2)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -105,10 +107,12 @@ UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverM
 UNIT
 
 C14Hard:
-UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Ygstra Halberdier 0x0 Level(4,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
-UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [13,16] 0x0 0x0 0x0 0x0 [SilverAxe] NeverMoveAI
-UNIT Valden LncPal 0x0 Level(8,Enemy,1) [13,1] DropItem 0x0 0x0 0x0 [Spear,GildedLance,BraveLance,MasterSeal] NeverMoveAI
+UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [14,23] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Ygstra Sage 0x0 Level(2,Enemy,1) [5,15] DropItem 0x0 0x0 0x0 [Thunder,DoorKey] NoAI
+UNIT Ygstra Halberdier 0x0 Level(4,Enemy,1) [2,2] DropItem 0x0 0x0 0x0 [Spear,MasterSeal] NeverMoveAI
+UNIT Ygstra Thief 0x0 Level(15,Enemy,1) [8,16] DropItem 0x0 0x0 0x0 [SilverSword,Ladymace] NoAI
 UNIT
 
 C14Athena:
@@ -119,10 +123,31 @@ C14Charley:
 UNIT Charley SniperF 0x0 Level(2,Ally,0) [1,22] 0x0 0x0 0x1 REDA0R21 [SilverBow,Greatbow,Elixir] NoAI
 UNIT
 
+C14OpeningScene:
+UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [13,2] DropItem 0x0 0x0 0x0 [SilverAxe,Tomahawk,LegRing] NeverMoveAI
+UNIT Valden LncPal 0x0 Level(8,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [GildedLance] NeverMoveAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt14
+CAM1 [13,1]
+LOAD1 0x0 C14OpeningScene
+CleanText(HallCG,C14PreScriptedBattle) //laz is fed up with this shit
+StartBattle
+NormalDamage(0,39) 
+NormalDamage(1,15)
+CriticalHit(0,99)
+EndAttack
+FIG1 Lazarus Valden SilverAxe
+Text(C14ValdenDies) //valden fucking dies
+SET_SOMETHING Valden
+DISA Valden
+STAL 30
+MOVE_1STEP 16 Lazarus Up
+ENUN
+Text(C14LazarusMoment) //laz moment
 LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
 MUSC NarrationTheme
 Narration(Ch14_Narration)
@@ -146,5 +171,36 @@ Reinforcements(C14Charley)
 MUSC RecruitmentTheme
 Text(Ch3_Sam_Joins)
 EndEvent
+
+C14Turn3:
+CAM1 [0,0]
+FlashCursor(2,2,60)
+Text(C14SwitchHint)
+EndEvent
+
+C14ThroneTrap:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+SOUN 0xB1
+TILECHANGE 0xC
+CAM1 Lazarus
+FlashCursor(Lazarus,60)
+Text(nothroneha)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x21
+LABEL 0x2
+EndEvent
+
+ALIGN 4
+EscapePointPointerTable(Chapter14,C14Escape)
+
+ALIGN 4
+C14Escape:
+EscapePoint(24,0, NoMove)
+EscapePoint(20,11, NoMove)
+EscapePoint(26,19, MoveRight)
+EscapePoint(26,20, MoveRight)
+EscapePointEnd
 
 MESSAGE Events end at offset CURRENTOFFSET

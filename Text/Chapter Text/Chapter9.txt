@@ -2,8 +2,14 @@
 Defeat Pete.[X]
 
 ##Ch9_Opening
-[OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]
-you are a pirate[A][X]
+[OpenLeft][LoadBlair][OpenFarLeft][LoadArin][OpenMidRight][LoadCid]
+How're you lassies holdin' up?[N]
+'Ave ye ever been to sea before?[A][N][OpenFarLeft]
+Can't say that I have.[N]
+It's fine enough.[A][N][OpenLeft]
+I'm quite enjoying it![N]
+It's a nice change of pace.[A][N]
+(dev notes- encounter pirate raid on opistian ship)[A][X]
 
 ##Ch9_Ending
 [OpenMidLeft][LoadBlair][OpenRight][LoadRachael][OpenFarRight][LoadCassius][OpenMidLeft]

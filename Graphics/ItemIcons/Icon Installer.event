@@ -55,6 +55,7 @@
 #define DracoaxeIcon 0x58
 #define FrypanIcon 0xb9
 #define HereticAxeIcon 0x73
+#define LadymaceIcon 0x6d
 
 #define IronBowIcon 0x2b
 #define SteelBowIcon 0x2c
@@ -343,6 +344,9 @@ ItemIconEntry(FrypanIcon)
 ALIGN 4
 ItemIconEntry(HereticAxeIcon)
 #incbin "Axes/Blood Mace.dmp"
+ALIGN 4
+ItemIconEntry(LadymaceIcon)
+#incbin "TopazLight Mace.dmp"
 
 ALIGN 4
 ItemIconEntry(IronBowIcon)

@@ -37,6 +37,10 @@
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define EndAnim "WORD 0x0 0x0"
 {
+#include "Bigle\Magic Installer.event"
+#include "Bigle\Monster Installer.event"
+}
+{
 #include "RangerM\Sword Installer.event"
 #include "RangerM\Lance Installer.event"
 #include "RangerM\Bow Installer.event"
@@ -364,6 +368,12 @@ SpecialAnim(0xc6,WyvernBreath)
 SpecialAnim(0xc7,DemonBreath)
 SpecialAnim(0xc8,EarthBreath)
 SpecialAnim(0xc9,DivineBreath)
+EndAnim
+
+ALIGN 4
+BigleAnims:
+SpecialAnim(0xbb,Slam)
+MagicAnim(0xba)
 EndAnim
 
 ALIGN 4

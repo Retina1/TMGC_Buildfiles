@@ -19,6 +19,8 @@
 
 #include "MugHeight/PortraitHeight.event"
 
+#include "TMGCMenus/MenuInstaller.event"
+
 PUSH
 ORG $88638
 POIN NewStatScreen
@@ -118,22 +120,3 @@ LevelUpScreenTSA:
 ALIGN 4
 LevelUpScreenPal:
 #incbin "Level Up Screen.png.pal.dmp"
-
-
-/*PUSH
-ORG $5b65c0
-POIN MenuTiles
-ORG $a1b730
-POIN DeployMenuTiles
-ORG $a1d7dc
-POIN ConvoyMenuTiles
-POP
-ALIGN 4
-MenuTiles:
-#incext Png2Dmp "MenuTiles.png"
-ALIGN 4
-DeployMenuTiles:
-#incext Png2Dmp "DeployMenuTiles.png" 
-ALIGN 4
-ConvoyMenuTiles:
-#incext Png2Dmp "ConvoyMenuTiles.png"*/

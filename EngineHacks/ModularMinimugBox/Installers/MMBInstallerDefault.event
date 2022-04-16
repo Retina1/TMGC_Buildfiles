@@ -33,7 +33,7 @@ After each set of module options are definitions that you can use to adjust the 
 
 	// In 8x8 pixel tiles
 	#define MMBHeight 9
-	#define MMBWidth 14
+	#define MMBWidth 15
 	#define MMBTilemapPaletteIndex 3
 
 	ALIGN 4
@@ -45,16 +45,15 @@ After each set of module options are definitions that you can use to adjust the 
 	// The tilemap is 'upside-down' with the bottom row being first
 	// and the top row being last
 
-	SHORT $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 // Row 9 (bottom)
-	SHORT $1a $1b $1c $1c $1c $1c $1c $1c $1c $1c $1c $1c $1e $1f // Row 8
-	SHORT $0B $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0E $0F // Row 7
-	SHORT $0B $0E $0E $0E $0E $0e $0E $0E $0E $0E $0E $0E $0E $0F // Row 6
-	SHORT $06 $09 $09 $09 $09 $2f $0E $0E $0E $0E $0E $0E $0E $0F // Row 5
-	SHORT $06 $09 $09 $09 $09 $2f $0E $0E $0E $0E $0E $0E $0E $0F // Row 4
-	SHORT $06 $09 $09 $09 $09 $2f $0E $0E $0E $0E $0E $0E $0E $0F // Row 3
-	SHORT $06 $09 $09 $09 $09 $2f $0E $0E $0E $0E $0E $0E $0E $0F // Row 2
-	SHORT $61 $62 $03 $03 $03 $03 $03 $03 $03 $03 $03 $03 $04 $05 // Row 1 (Top)
-
+SHORT $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 //row9(filler)
+SHORT $0801 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0C01 $00   //Row8
+SHORT $03 $23 $25 $25 $25 $25 $25 $25 $25 $25 $25 $25 $24 $0403 $0400   //Row7
+SHORT $03 $23 $25 $25 $25 $25 $25 $25 $25 $25 $25 $25 $24 $0473 $0472   //Row6
+SHORT $03 $0A $30 $30 $0B $27 $23 $25 $25 $25 $25 $25 $24 $0453 $0452   //Row5
+SHORT $03 $2D $31 $31 $2E $2B $23 $25 $25 $25 $25 $25 $24 $0433 $0432   //Row4
+SHORT $03 $2D $31 $31 $2E $2B $0A $30 $30 $30 $30 $30 $0B $0413 $0412   //Row3
+SHORT $03 $06 $2F $2F $07 $40 $06 $2F $2F $2F $2F $2F $07 $0403 $00   //Row2
+SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 	ALIGN 4
 
 // Unit name modules

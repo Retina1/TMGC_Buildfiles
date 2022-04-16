@@ -1,0 +1,301 @@
+#ifdef _FE8_
+	#include "Extensions/Hack Installation.txt"
+	//#ifndef Free_Space
+	//#define Free_Space 0xE47200
+	//ORG Free_Space
+	//#endif
+
+
+/*
+MMB TSA #30
+15 tiles wide
+8 tiles tall
+copy and paste this into your buildfile instalation
+SHORT $0801 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0802 $0C01 $00   //Row8
+SHORT $03 $23 $25 $25 $25 $25 $25 $25 $25 $25 $25 $25 $24 $0403 $0400   //Row7
+SHORT $03 $23 $25 $25 $25 $25 $25 $25 $25 $25 $25 $25 $24 $0473 $0472   //Row6
+SHORT $03 $0A $30 $30 $0B $27 $23 $25 $25 $25 $25 $25 $24 $0453 $0452   //Row5
+SHORT $03 $2D $31 $31 $2E $2B $23 $25 $25 $25 $25 $25 $24 $0433 $0432   //Row4
+SHORT $03 $2D $31 $31 $2E $2B $0A $30 $30 $30 $30 $30 $0B $0413 $0412   //Row3
+SHORT $03 $06 $2F $2F $07 $40 $06 $2F $2F $2F $2F $2F $07 $0403 $00   //Row2
+SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
+*/
+
+
+	PUSH
+		ORG 0x5B6470
+		POIN Tileset
+		POIN Tileset
+		POIN Tileset
+		POIN Tileset
+		
+		ORG 0x5B6BB4//Palettes
+		#incbin "Blue.dmp"
+		#incbin "Red.dmp"
+		#incbin "Green.dmp"
+		#incbin "Gray.dmp"//actually purple but w/e
+		//Darkened palettes will just be the same
+		#incbin "Blue.dmp"
+		#incbin "Red.dmp"
+		#incbin "Green.dmp"
+		#incbin "Gray.dmp"
+		
+		ORG 0xA1738C//MMB Palettes
+		#incbin "Blue.dmp"
+		#incbin "Red.dmp"
+		#incbin "Green.dmp"
+		
+		
+		ORG 0x0DA2F4//self generating panels 1
+		#incbin "AutoPanel.dmp"
+		
+		ORG 0xA1742C//terrain panel 2
+		#incbin "TerrainPanel.dmp"				
+		ORG 0x8D01A
+		BYTE $00 $20 //disable transparency
+
+		ORG 0xA17744//1LineGoal 3
+		#incbin "1Goal.dmp"
+		
+		ORG 0xA176BC//2LineGoal 4
+		#incbin "2Goal.dmp"
+		
+		ORG 0x90F94//UnitMenu 5
+		POIN UnitMenu
+		ORG 0x91AB8
+		BYTE $00 $20 //disable transparency
+		
+		ORG 0xB1C84//OptionsMenu 6
+		POIN OptionsMenu
+		
+		ORG 0x8E07C//StatusMenu 7
+		POIN StatusMenu
+		ORG 0x8E3AC
+		BYTE $00 $20 //disable transparency
+		
+		ORG 0xAC19C//DifficultyMenu 8
+		POIN DifficultyMenu
+		
+		ORG 0x95E3C//PrepStart 9
+		POIN PrepStart
+		ORG 0x95EB8//PrepStart
+		POIN PrepStart
+		
+		ORG 0x95EAC//PrepStart 10
+		POIN PrepStartGoal
+
+		ORG 0x9A8E0//PrepDeploy 11
+		POIN PrepDeploy
+		ORG 0x9A8A0//Null out weird tiles in deploy menu
+		BYTE $00 $00 $00 $00
+		
+		ORG 0x98D78//PrepItem 12
+		POIN PrepItem
+		ORG 0x995C0//PrepItem
+		POIN PrepItem
+		ORG 0x99C40//PrepItem
+		POIN PrepItem
+		
+		ORG 0x98CB4//PrepOptions 13
+		POIN PrepOptions
+		ORG 0xB1B12
+		BYTE $00 $20 //disable transparency
+
+		ORG 0x98468//PrepHeaderFunds 14
+		POIN PrepHeaderFunds
+
+		ORG 0x99C4C//PrepItem2 15
+		POIN PrepItem2
+
+		ORG 0x9DC38//Convoy 16
+		POIN Convoy
+		ORG 0x9F0C8
+		POIN Convoy
+		
+		ORG 0x9DC44//ConvoyMug 17
+		POIN ConvoyMug
+		
+		ORG 0xAF7C8//SoundRoom1 18
+		POIN SoundRoom1
+		ORG 0x0AFC40//random mode sliding nonsense
+		POIN SoundRoom1
+
+		ORG 0xAF744
+		BYTE $00 $20 //disable transparency
+		
+		ORG 0xAF7CC//SoundRoom2 19
+		POIN SoundRoom2
+		ORG 0xAFC44//random mode sliding nonsense
+		POIN SoundRoom2
+		
+		ORG 0xAFC5C//SoundRoom3 20
+		POIN SoundRoom3
+
+		ORG 0xCEEFC//Journal 21
+		POIN Journal
+		ORG 0xCEF14
+		BYTE $00 $20 //disable transparency
+
+		ORG 0x88658//StatscreenPanel 22
+		POIN StatscreenPanel
+		
+		//ORG 0x152F314//UseMenu 23
+		//POIN UseMenu
+		ORG 0x9C65C
+		BYTE $00 $00 $00 $00//null out garbage tiles
+		
+		ORG 0xB4E70//ShopGold 24
+		POIN ShopGold
+		
+		ORG 0xB5954//MerchantPanel 25
+		POIN MerchantPanel
+		ORG 0xB4E04//MerchantPanel
+		POIN MerchantPanel
+		
+		ORG 0x368A0//BattlePreview 26
+		POIN BattlePreview
+
+		ORG 0x36B08//BattlePreviewDetail 27
+		POIN BattlePreviewDetail
+		
+		ORG 0xA14D8//SupportPanel 28
+		POIN SupportPanel
+
+		ORG 0xA2AA0//SupportUnit	29
+		POIN SupportUnit
+		ORG 0xA2420
+		POIN SupportUnit
+		
+		ORG 0x242FC//StealPanel 31(30 is MMB)
+		POIN StealPanel
+
+		ORG 0x349C8//RescueTradeUpperHalf 32
+		POIN RescueTradeUpperHalf
+
+		ORG 0x349CC//TradeOtherHalfAutobox 33
+		POIN TradeOtherHalfAutobox
+		
+	POP
+		ALIGN 4
+		Tileset:
+		#incext Png2Dmp --lz77 "TMGCMenuTiles.png"
+
+		ALIGN 4
+		UnitMenu:
+		#incbin "UnitMenu.dmp"
+
+		ALIGN 4
+		OptionsMenu:
+		#incbin "OptionsMenu.dmp"
+
+		ALIGN 4
+		StatusMenu:
+		#incbin "StatusMenu.dmp"
+
+		ALIGN 4
+		DifficultyMenu:
+		#incbin "DifficultyMenu.dmp"
+
+		ALIGN 4
+		PrepStart:
+		#incbin "PrepStart.dmp"
+
+		ALIGN 4
+		PrepStartGoal:
+		#incbin "PrepStartGoal.dmp"
+
+		ALIGN 4
+		PrepDeploy:
+		#incbin "PrepDeploy.dmp"
+
+		ALIGN 4
+		PrepItem:
+		#incbin "PrepItem.dmp"
+
+		ALIGN 4
+		PrepOptions:
+		#incext Png2Dmp --lz77 "OptionBox.png"
+
+		ALIGN 4
+		PrepHeaderFunds:
+		#incext Png2Dmp --lz77 "HeaderFunds.png"
+
+		ALIGN 4
+		PrepItem2:
+		#incbin "PrepItem2.dmp"
+
+		ALIGN 4
+		Convoy:
+		#incbin "Convoy.dmp"
+
+		ALIGN 4
+		ConvoyMug:
+		#incbin "ConvoyMug.dmp"
+
+		ALIGN 4
+		SoundRoom1:
+		#incbin "SoundRoom1.dmp"
+
+		ALIGN 4
+		SoundRoom2:
+		#incbin "SoundRoom2.dmp"
+
+		ALIGN 4
+		SoundRoom3:
+		#incbin "SoundRoom3.dmp"
+
+		ALIGN 4
+		Journal:
+		#incbin "Journal.dmp"
+
+		ALIGN 4
+		StatscreenPanel:
+		#incext Png2Dmp --lz77 "StatscreenPanel.png"
+
+		ALIGN 4
+		UseMenu:
+		#incbin "UseMenu.dmp"
+
+		ALIGN 4
+		ShopGold:
+		#incext Png2Dmp --lz77 "ShopGold.png"
+
+		ALIGN 4
+		MerchantPanel:
+		#incbin "MerchantPanel.dmp"
+		
+		ALIGN 4
+		BattlePreview:
+		#incbin "BattlePreview.dmp"
+		
+		ALIGN 4
+		BattlePreviewDetail:
+		#incbin "BattlePreviewDetail.dmp"
+		
+		ALIGN 4
+		SupportPanel:
+		#incbin "SupportPanel.dmp"
+
+		ALIGN 4
+		SupportUnit:
+		#incbin "SupportUnit.dmp"
+
+		ALIGN 4
+		StealPanel:
+		#incbin "StealPanel.dmp"
+
+		ALIGN 4
+		RescueTradeUpperHalf:
+		#incbin "RescueTradeUpperHalf.dmp"
+
+		ALIGN 4
+		TradeOtherHalfAutobox:
+		#incbin "TradeOtherHalfAutobox.dmp"
+
+	
+#else
+	ERROR "You're not assembling FE8 events!"
+#endif
+
+
+

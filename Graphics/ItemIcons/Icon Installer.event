@@ -173,6 +173,12 @@
 
 #define IronRuneIcon 0xdb
 
+#define SalvationIcon 0xe0
+#define GaleriderIcon 0xe1
+#define MazandyneIcon 0xe2
+#define LonginusIcon 0xe3
+#define FlyingSpikeIcon 0xe4
+
 ALIGN 4
 NewItemIcons:
 // Sheet with all icons goes here 
@@ -387,7 +393,7 @@ ItemIconEntry(ThunderIcon)
 #incbin "Tomes/Anima/Thunder/Thunder.dmp"
 ALIGN 4
 ItemIconEntry(ElfireIcon)
-#incbin "Tomes/Anima/Fire/Elfire.dmp"
+#incbin "Tomes/Anima/Fire/Elfire-2.dmp"
 ALIGN 4
 ItemIconEntry(BoltingIcon)
 #incbin "Tomes/Anima/Thunder/Bolting.dmp"
@@ -677,6 +683,22 @@ ItemIconEntry(AngelWingsIcon)
 ALIGN 4
 ItemIconEntry(IronRuneIcon)
 #incbin "{Cardcafe} {FE15} Item 49.dmp"
+
+ALIGN 4
+ItemIconEntry(SalvationIcon)
+#incbin "Tomes/Light/Justice.dmp"
+ALIGN 4
+ItemIconEntry(GaleriderIcon)
+#incbin "Axes/Emerald Axe.dmp"
+ALIGN 4
+ItemIconEntry(MazandyneIcon)
+#incbin "Tomes/Anima/Wind/Tornado-2.dmp"
+ALIGN 4
+ItemIconEntry(LonginusIcon)
+#incbin "Lances/Bright Lance.dmp"
+ALIGN 4
+ItemIconEntry(FlyingSpikeIcon)
+#incbin "Lances/Seigmund.dmp"
 // End of icons 
 POP 
 

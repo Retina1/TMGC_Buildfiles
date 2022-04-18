@@ -19,7 +19,9 @@
 
 #include "MugHeight/PortraitHeight.event"
 
+//ily scraiza
 #include "TMGCMenus/MenuInstaller.event"
+#include "BattleMenus/BattleMenuInstaller.txt"
 
 PUSH
 ORG $88638
@@ -73,6 +75,8 @@ ORG $7eb84
 POIN LevelUpScreen
 ORG $7eb8c
 POIN LevelUpScreenTSA
+ORG $73DA0
+POIN LevelUpScreenPal
 POP
 
 ALIGN 4

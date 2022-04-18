@@ -243,6 +243,13 @@ Narration(Ch10_Narration)
 CleanText(BoatCG,Ch10_Opening)
 LOAD1 0x0 C10Units
 ENUN
+CHECK_ALIVE Apollo
+BEQ 0x11 0xC 0x0
+CHECK_ALIVE Bechamel
+BNE 0x22 0xC 0x0
+LABEL 0x11
+ENUT BaseFlag1
+LABEL 0x22
 GotoPrepScreen
 ENDA
 

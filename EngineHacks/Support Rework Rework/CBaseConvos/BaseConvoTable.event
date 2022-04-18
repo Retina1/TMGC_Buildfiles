@@ -206,6 +206,29 @@
 			bg(BoatCG)
 			text(C9_Arin_Desmond_Base)
 			baseSupport(Arin,Desmond,CPSupport)
+	Chapter(Chapter10)
+		Entry
+			name(C10_Redemption_Select)
+			bg(BoatCG)
+			importance(3)
+			text(C10_Redemption)
+			item(RedGem,Blair)
+			eventID(BaseFlag1)
+		Entry
+			name(Rachael_Jeff_Base_Select)
+			bg(BoatCG)
+			text(C10_Rachael_Jeff_Base)
+			baseSupport(Rachael,Jeff,CSupport)
+		Entry
+			name(Sam_Emile_Base_Select)
+			bg(BoatCG)
+			text(C10_Sam_Emile_Base)
+			baseSupport(Sam,Emile,CSupport)
+		Entry
+			name(Apollo_Bechamel_Base_Select)
+			bg(BoatCG)
+			text(C10_Apollo_Bechamel_Base)
+			baseSupport(Apollo,Bechamel,CSupport)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

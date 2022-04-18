@@ -1,16 +1,12 @@
 //FE8 Show battle stats when animations are off
 //By Tequila
-
-#ifdef _FE8_
-	
-	#include "Extensions/Hack Installation.txt"
-	
-	#ifndef Free_Space
-		#define Free_Space 0xB2B000
-		ORG Free_Space
-	#endif
-	
 	PUSH
+	ORG $9AD648//palettes of the anims off btl screen 
+	
+	#incbin "Blue.dmp"
+	#incbin "Red.dmp"
+	#incbin "Green.dmp"
+	#incbin "Gray.dmp"
 	
 	//Update the graphics
 	ORG $7BC44
@@ -21,7 +17,12 @@
 	POIN New_Numbers
 	
 	//TSA for the right and left boxes, respectively
-	ORG $9A3680
+	ORG $9A3670
+	POIN New_Battle_Anims_Off_Single_TSA
+	POIN New_Battle_Anims_Off_Single_TSA
+	POIN New_Battle_Anims_Off_Single_TSA
+	POIN New_Battle_Anims_Off_Single_TSA
+
 	POIN New_Battle_Anims_Off_Right_TSA
 	POIN New_Battle_Anims_Off_Left_TSA
 	
@@ -42,8 +43,12 @@
 	
 	ALIGN 4
 	New_Battle_Anims_Off_Graphics:
-	//#incext Png2Dmp "Anims_Off_Battle_Graphic New.png" --lz77
-	#incbin "Anims_Off_Battle_Graphic New.dmp"
+	#incext Png2Dmp "Anims_Off_Battle_Graphic-New.png" --lz77
+	//#incbin "Anims_Off_Battle_Graphic New.dmp"
+
+	ALIGN 4
+	New_Battle_Anims_Off_Single_TSA:
+	#incbin "New_Battle_Anims_Off_Single_TSA.dmp"
 	
 	ALIGN 4
 	New_Battle_Anims_Off_Right_TSA:
@@ -73,6 +78,53 @@
 	//#incext Png2Dmp "new_numbers.png" --lz77
 	#incbin "new_numbers.dmp"
 	
-#else
-	ERROR "You're not assembling FE8 events!"
-#endif
+	PUSH 
+
+	ORG $802558//palettes of anims on btl screen
+
+	#incbin "BLU.dmp"
+	#incbin "REDD.dmp"
+	#incbin "GREN.dmp"
+
+	ORG 0x51F68
+	POIN Battle_Screen_Tiles
+	
+	ORG 0x052028
+	POIN ITEMLEFT
+	
+	ORG 0x051FC8
+	POIN NAMELEFT
+	
+	ORG 0x052164
+	POIN ITEMRIGHT
+	
+	ORG 0x052088
+	POIN NAMERIGHT
+	
+	ORG 0x80210C
+	#incbin "TSAAll.dmp"
+	
+	ORG 0x519B8
+	SHORT 0x3578//move battle screen items up a px
+
+	ORG 0x51A24
+	SHORT 0x3578//move battle screen items up a px
+	
+	
+	POP
+
+	ALIGN 4
+	Battle_Screen_Tiles:
+	#incext Png2Dmp --lz77 "Battle_Screen_Tiles.png"
+	ALIGN 4
+	NAMELEFT:
+	#incext Png2Dmp --lz77 "NAMELEFT.png"
+	ALIGN 4
+	NAMERIGHT:
+	#incext Png2Dmp --lz77 "NAMERIGHT.png"
+	ALIGN 4
+	ITEMLEFT:
+	#incext Png2Dmp --lz77 "ITEMLEFT.png"
+	ALIGN 4
+	ITEMRIGHT:
+	#incext Png2Dmp --lz77 "ITEMRIGHT.png"

@@ -128,6 +128,9 @@ SVAL 0x1 0x1E60
 BGE 0x1 0xc 0x1
 Text(I4BuyingtonBroke)
 ENUF 0xa
+FADI 60
+CLEAN
+FADU 60
 GOTO 0x2
 LABEL 0x1
 SystemText(I4BuyingtonPrompt)
@@ -143,6 +146,9 @@ GOTO 0x2
 LABEL 0x3
 Text(I4BuyingtonNo)
 ENUF 0xa
+FADI 60
+CLEAN
+FADU 60
 LABEL 0x2
 EndEvent
 MESSAGE Events end at offset CURRENTOFFSET

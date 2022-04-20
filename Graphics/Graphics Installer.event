@@ -38,12 +38,20 @@ POP
 PUSH
 ORG $AC188
 POIN LevelSelect
+//ORG 0xAC190
+//POIN DifficultySelectPal
 POP
 
 PUSH
+//after title screen
 ORG $A8EDC
 POIN MainMenu
 //ORG $A8EE4
+//POIN MainMenuPal
+// Elsewhere
+ORG 0xAA43C
+POIN MainMenu
+//ORG 0xAA444
 //POIN MainMenuPal
 POP
 
@@ -52,11 +60,18 @@ ORG $8E088
 POIN ChapterTitle
 //ORG $8E090
 //POIN ChapterTitlePal
+// Sound Room Banner
+ORG 0xAF7D0
+POIN ChapterTitle
+//ORG 0xAF7D8
+//POIN ChapterTitlePal
 POP
 
 PUSH
 ORG $896A4
 POIN SaveSlot
+//ORG 0x895E0
+//POIN SaveSlotPalettes
 POP
 
 PUSH
@@ -77,6 +92,8 @@ ORG $7eb84
 POIN LevelUpScreen
 ORG $7eb8c
 POIN LevelUpScreenTSA
+ORG 0x7EB94
+POIN LevelUpScreenPal
 POP
 
 ALIGN 4

@@ -27,9 +27,11 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 CharacterBasedEvents:
 CharacterEvent(0xa,C13MikeyRecruitment,Blair,Mikey)
 CharacterEvent(0xb,C13CarbonRecruitment,Mikey,Carbon)
+CharacterEvent(0xc,C13Reunion,Desmond,0xd1)
 END_MAIN
 
 LocationBasedEvents:
+Village(0x11,C13NorthVillage,13,2)
 Vendor(C13Vendor,22,4)
 Armory(C13Armory,16,12)
 Seize(2,2)
@@ -94,6 +96,10 @@ UNIT Carbon BowCav 0x0 Level(11,Enemy,0) [16,0] 0x0 0x0 0x0 0x0 [Longbow,KillerB
 UNIT Ygstra Halberdier 0x0 Level(4,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT
 
+C13Horse:
+UNIT 0xd1 0x1d 0x0 Level(15,NPC,0) [13,2] 0x0 0x0 0x1 REDA13R4 [0x0] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -127,6 +133,22 @@ EVBIT_MODIFY 3
 MUSC RecruitmentTheme
 Text(Ch5_Butch_Talk)
 TurnAlly(Carbon)
+EndEvent
+
+C13NorthVillage:
+CleanText(VillageCG,C13WhoIsThisHorse)
+Reinforcements(C13Horse)
+EndEvent
+
+C13Reunion:
+MUSC S_EncountersAndReunions
+SetBackground(FieldCG)
+Text(C13HorseReunion)
+PROMOTE Desmond LncPal MasterSeal
+DISA 0xd1
+FADI 16
+CLEAN
+FADU 16
 EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

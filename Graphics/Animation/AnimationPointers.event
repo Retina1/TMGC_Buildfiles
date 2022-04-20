@@ -360,6 +360,39 @@
 #include "AssassF\Bow Installer.event"
 #include "AssassF\Unarmed Installer.event"
 }
+{
+#include "TroubM\Sword Installer.event"
+#include "TroubM\Magic Installer.event"
+#include "TroubM\Staff Installer.event"
+}
+{
+#include "TroubF\Sword Installer.event"
+#include "TroubF\Magic Installer.event"
+#include "TroubF\Staff Installer.event"
+}
+{
+#include "ValkM\Sword Installer.event"
+#include "ValkM\Magic Installer.event"
+#include "ValkM\Staff Installer.event"
+}
+{
+#include "ValkF\Sword Installer.event"
+#include "ValkF\Magic Installer.event"
+#include "ValkF\Staff Installer.event"
+}
+{
+#include "RuneMyrm\Sword Installer.event"
+#include "RuneMyrm\Unarmed Installer.event"
+}
+{
+#include "Runemaster(Aruka)\Sword Installer.event"
+#include "Runemaster(Aruka)\Magic Installer.event"
+}
+{
+#include "Dracopope\Axe Installer.event"
+#include "Dracopope\Handaxe Installer.event"
+#include "Dracopope\Magic Installer.event"
+}
 ALIGN 4
 DragonAnims:
 SpecialAnim(0xc4,FireBreath)
@@ -371,9 +404,57 @@ SpecialAnim(0xc9,DivineBreath)
 EndAnim
 
 ALIGN 4
+DracopopeAnims:
+AxeAnim(0xda)
+HandAxeAnim(0xdb)
+MagicAnim(0xdc)
+StaffAnim(0xdc)
+EndAnim
+
+ALIGN 4
+RuneMyrmAnims:
+SwordAnim(0xd6)
+UnarmedAnim(0xd7)
+EndAnim
+
+ALIGN 4
+RunemasterAnims:
+SwordAnim(0xd8)
+MagicAnim(0xd9)
+EndAnim
+
+ALIGN 4
 BigleAnims:
 SpecialAnim(0xbb,Slam)
 MagicAnim(0xba)
+EndAnim
+
+ALIGN 4
+TroubMAnims:
+SwordAnim(0xb0)
+StaffAnim(0xae)
+MagicAnim(0xaf)
+EndAnim
+
+ALIGN 4
+TroubFAnims:
+SwordAnim(0x95)
+StaffAnim(0x85)
+MagicAnim(0x86)
+EndAnim
+
+ALIGN 4
+ValkMAnims:
+SwordAnim(0x71)
+StaffAnim(0x72)
+MagicAnim(0x73)
+EndAnim
+
+ALIGN 4
+ValkFAnims:
+SwordAnim(0x74)
+StaffAnim(0x87)
+MagicAnim(0x88)
 EndAnim
 
 ALIGN 4

@@ -22,6 +22,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x23,C12AIChange,1,255)
+TurnEventPlayer(0x0,C12Turn7,7)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -86,15 +87,31 @@ UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverM
 UNIT
 
 C12Hard:
-UNIT Holanis Fighter 0x0 Level(13,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Holanis FighterF 0x0 Level(14,Enemy,1) [9,19] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Opistia Fighter 0x0 Level(13,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Opistia LightM 0x0 Level(14,Enemy,1) [14,17] 0x0 0x0 0x0 0x0 [Divine] NoAI
+UNIT Opistia LightM 0x0 Level(13,Enemy,1) [9,17] 0x0 0x0 0x0 0x0 [Shine] NoAI
+UNIT Opistia SwdCav 0x0 Level(13,Enemy,1) [10,0] 0x0 0x0 0x0 0x0 [Zanbato] AttackInRangeAI
+UNIT Opistia AxeCavF 0x0 Level(13,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [KillerAxe] AttackInRangeAI
+UNIT Opistia MageF 0x0 Level(13,Enemy,1) [21,18] 0x0 0x0 0x0 0x0 [Calibur] NeverMoveAI
+UNIT Opistia DarkM 0x0 Level(13,Enemy,1) [20,15] DropItem 0x0 0x0 0x0 [Corruption] AttackInRangeAI
+UNIT Opistia DarkF 0x0 Level(13,Enemy,1) [22,15] 0x0 0x0 0x0 0x0 [Nightfall] AttackInRangeAI
+UNIT Opistia Archer 0x0 Level(13,Enemy,1) [20,13] 0x0 0x0 0x0 0x0 [Longbow] AttackInRangeAI
+UNIT Opistia SniperF 0x0 Level(1,Enemy,1) [21,12] DropItem 0x0 0x0 0x0 [SteelBow,EnergyRing] AttackInRangeAI
+UNIT Opistia Archer 0x0 Level(13,Enemy,1) [22,13] 0x0 0x0 0x0 0x0 [Longbow] AttackInRangeAI
+UNIT Opistia AxeGen 0x0 Level(1,Enemy,1) [5,9] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Opistia AxeGen 0x0 Level(1,Enemy,1) [18,9] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Opistia LncArm 0x0 Level(15,Enemy,1) [11,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Opistia LncArm 0x0 Level(15,Enemy,1) [12,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Opistia Bishop 0x0 Level(1,Enemy,1) [12,2] 0x0 0x0 0x0 0x0 [Sleep] NeverMoveAI
 UNIT Laronde Halberdier 0x0 Level(4,Enemy,1) [11,3] DropItem 0x0 0x0 0x0 [Spear,Nuboko,Elixir] NeverMoveAI
 UNIT
 
-
 C12Ally:
 UNIT Flynn Myrm 0x0 Level(9,NPC,0) [5,15] 0x0 0x0 0x0 0x0 [Shimmersword,KillingEdge,Vulnerary] [0x6,0x3,0x3,0x0]
+UNIT
+
+C12Thieves:
+UNIT Bandit Thief 0x0 Level(13,Enemy,1) [6,11] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
+UNIT Bandit Thief 0x0 Level(13,Enemy,1) [17,11] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
 UNIT
 
 C12DragonGroup:
@@ -149,5 +166,18 @@ Text(C12HeChargeth)
 SVAL 0x1 0x00040000
 CHAI C12Dragon
 EndEvent
+
+C12Turn7:
+Reinforcements(C12Thieves)
+EndEvent
+
+ALIGN 4
+EscapePointPointerTable(Chapter12,C12Escape)
+
+ALIGN 4
+C12Escape:
+EscapePoint(2,3, NoMove)
+EscapePoint(21,3, NoMove)
+EscapePointEnd
 
 MESSAGE Events end at offset CURRENTOFFSET

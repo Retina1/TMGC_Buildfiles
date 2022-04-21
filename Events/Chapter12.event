@@ -22,7 +22,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x23,C12AIChange,1,255)
-TurnEventPlayer(0x0,C12Turn7,7)
+TurnEventPlayer(0x0,C12Turn9,9)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -87,11 +87,35 @@ UNIT Pirates LncArm 0x0 Level(8,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Javelin] NeverM
 UNIT
 
 C12Hard:
-UNIT Opistia LightM 0x0 Level(14,Enemy,1) [14,17] 0x0 0x0 0x0 0x0 [Divine] NoAI
-UNIT Opistia LightM 0x0 Level(13,Enemy,1) [9,17] 0x0 0x0 0x0 0x0 [Shine] NoAI
+UNIT Opistia LightM 0x0 Level(13,Enemy,1) [14,17] 0x0 0x0 0x0 0x0 [Shine] NoAI
+UNIT Opistia LightM 0x0 Level(14,Enemy,1) [9,17] DropItem 0x0 0x0 0x0 [Shine] NoAI
+UNIT Opistia Merc 0x0 Level(14,Enemy,1) [8,19] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Opistia Merc 0x0 Level(14,Enemy,1) [15,19] DropItem 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Opistia Soldier 0x0 Level(14,Enemy,1) [10,20] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Opistia SoldierF 0x0 Level(14,Enemy,1) [13,20] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Opistia Fighter 0x0 Level(12,Enemy,1) [6,16] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Opistia FighterF 0x0 Level(13,Enemy,1) [17,17] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Opistia LightM 0x0 Level(12,Enemy,1) [2,18] 0x0 0x0 0x0 0x0 [Lightning] NoAI
+UNIT Opistia HalberdierF 0x0 Level(1,Enemy,1) [1,19] 0x0 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT Opistia Merc 0x0 Level(14,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [SilverSword] ChaseOnceApproachedAI
+UNIT Opistia MercF 0x0 Level(14,Enemy,1) [19,3] 0x0 0x0 0x0 0x0 [Rapier] ChaseOnceApproachedAI
+UNIT Opistia MageF 0x0 Level(14,Enemy,1) [2,5] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT Opistia Mage 0x0 Level(14,Enemy,1) [21,5] 0x0 0x0 0x0 0x0 [Inversion] AttackInRangeAI
+UNIT Opistia SoldierF 0x0 Level(14,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [SilverLance,Vulnerary] AttackInRangeAI
+UNIT Opistia DarkM 0x0 Level(14,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Opistia LightM 0x0 Level(14,Enemy,1) [21,9] 0x0 0x0 0x0 0x0 [Divine] ChaseOnceApproachedAI
+UNIT Opistia MyrmF 0x0 Level(14,Enemy,1) [11,9] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
+UNIT Opistia MyrmF 0x0 Level(14,Enemy,1) [12,9] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
+UNIT Opistia LightM 0x0 Level(14,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [Shine] AttackInRangeAI
+UNIT Opistia Fighter 0x0 Level(14,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
+UNIT Opistia Merc 0x0 Level(14,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Opistia LightM 0x0 Level(14,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Banish] AttackInRangeAI
+UNIT Opistia LncCavF 0x0 Level(13,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [Axereaver] ChaseOnceApproachedAI
+UNIT Opistia LncCav 0x0 Level(13,Enemy,1) [12,0] 0x0 0x0 0x0 0x0 [Shatterspear] ChaseOnceApproachedAI
 UNIT Opistia SwdCav 0x0 Level(13,Enemy,1) [10,0] 0x0 0x0 0x0 0x0 [Zanbato] AttackInRangeAI
 UNIT Opistia AxeCavF 0x0 Level(13,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [KillerAxe] AttackInRangeAI
 UNIT Opistia MageF 0x0 Level(13,Enemy,1) [21,18] 0x0 0x0 0x0 0x0 [Calibur] NeverMoveAI
+UNIT Opistia HalberdierF 0x0 Level(1,Enemy,1) [22,19] 0x0 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Opistia DarkM 0x0 Level(13,Enemy,1) [20,15] DropItem 0x0 0x0 0x0 [Corruption] AttackInRangeAI
 UNIT Opistia DarkF 0x0 Level(13,Enemy,1) [22,15] 0x0 0x0 0x0 0x0 [Nightfall] AttackInRangeAI
 UNIT Opistia Archer 0x0 Level(13,Enemy,1) [20,13] 0x0 0x0 0x0 0x0 [Longbow] AttackInRangeAI
@@ -101,17 +125,18 @@ UNIT Opistia AxeGen 0x0 Level(1,Enemy,1) [5,9] 0x0 0x0 0x0 0x0 [HandAxe] NeverMo
 UNIT Opistia AxeGen 0x0 Level(1,Enemy,1) [18,9] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Opistia LncArm 0x0 Level(15,Enemy,1) [11,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Opistia LncArm 0x0 Level(15,Enemy,1) [12,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Opistia Bishop 0x0 Level(1,Enemy,1) [12,2] 0x0 0x0 0x0 0x0 [Sleep] NeverMoveAI
+UNIT Opistia Bishop 0x0 Level(1,Enemy,1) [12,2] 0x0 0x0 0x0 0x0 [JavelinRain,Sleep] NeverMoveAI
+UNIT Opistia AxeGen 0x0 Level(20,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [GildedAxe,MasterAxe] NoAI
 UNIT Laronde Halberdier 0x0 Level(4,Enemy,1) [11,3] DropItem 0x0 0x0 0x0 [Spear,Nuboko,Elixir] NeverMoveAI
 UNIT
 
 C12Ally:
-UNIT Flynn Myrm 0x0 Level(9,NPC,0) [5,15] 0x0 0x0 0x0 0x0 [Shimmersword,KillingEdge,Vulnerary] [0x6,0x3,0x3,0x0]
+UNIT Flynn Myrm 0x0 Level(9,NPC,0) [5,15] 0x0 0x0 0x0 0x0 [Shimmersword,KillingEdge,Elixir] [0x6,0x3,0x3,0x20]
 UNIT
 
 C12Thieves:
-UNIT Bandit Thief 0x0 Level(13,Enemy,1) [6,11] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
-UNIT Bandit Thief 0x0 Level(13,Enemy,1) [17,11] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
+UNIT Bandit Thief 0x0 Level(13,Enemy,1) [2,3] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
+UNIT Bandit Thief 0x0 Level(13,Enemy,1) [21,3] DropItem 0x0 0x0 0x0 [SilverSword,ChestKey] LootingThiefAI
 UNIT
 
 C12DragonGroup:
@@ -149,6 +174,8 @@ C12FlynnRecruitment:
 EVBIT_MODIFY 3
 MUSC RecruitmentTheme
 Text(Ch5_Butch_Talk)
+SVAL 0x1 0x00000000
+CHAI Flynn
 TurnAlly(Flynn)
 EndEvent
 
@@ -167,7 +194,7 @@ SVAL 0x1 0x00040000
 CHAI C12Dragon
 EndEvent
 
-C12Turn7:
+C12Turn9:
 Reinforcements(C12Thieves)
 EndEvent
 

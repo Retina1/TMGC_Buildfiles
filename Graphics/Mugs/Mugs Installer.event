@@ -251,6 +251,11 @@ LarondeMug:
 setMugEntry(0x4a,LarondeMug,3,5,3,3)
 
 ALIGN 4
+AmaraMug:
+#incext PortraitFormatter "Amara.png"
+setMugEntry(0x40,AmaraMug,3,5,3,3)
+
+ALIGN 4
 BrandlMug:
 #incext PortraitFormatter "Brandl.png"
 setMugEntry(0x49,BrandlMug,2,5,2,2)

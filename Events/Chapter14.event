@@ -128,16 +128,22 @@ UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [13,2] DropItem 0x0 0x0 0x0 [SilverAxe
 UNIT Valden LncPal 0x0 Level(8,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [GildedLance] NeverMoveAI
 UNIT
 
+C14OpeningSceneDeadValden:
+UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [13,2] DropItem 0x0 0x0 0x0 [SilverAxe,Tomahawk,LegRing] NeverMoveAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt14
+CHECK_EVENTID ValdenDeadFlag
+BNE 0x66 0xc 0x0
 CAM1 [13,1]
 LOAD1 0x0 C14OpeningScene
 CleanText(HallCG,C14PreScriptedBattle) //laz is fed up with this shit
 StartBattle
 NormalDamage(0,39) 
-NormalDamage(1,15)
+NormalDamage(1,19)
 CriticalHit(0,99)
 EndAttack
 FIG1 Lazarus Valden SilverAxe
@@ -148,6 +154,18 @@ STAL 30
 MOVE_1STEP 16 Lazarus Up
 ENUN
 Text(C14LazarusMoment) //laz moment
+GOTO 0x67
+LABEL 0x66
+CAM1 [13,1]
+LOAD1 0x0 C14OpeningSceneDeadValden
+TEXTSTART
+TEXTSHOW C14OpenDeadValden
+TEXTEND
+MOVE_1STEP 16 Lazarus Up
+ENUN
+TEXTCONT
+TEXTEND
+LABEL 0x67
 LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
 MUSC NarrationTheme
 Narration(Ch14_Narration)

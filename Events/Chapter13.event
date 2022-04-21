@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C13ValdenHandoff,10)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -93,7 +94,8 @@ C13Hard:
 UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Mikey Soldier 0x0 Level(12,Enemy,0) [14,24] 0x0 0x0 0x0 0x0 [SteelLance,Horseslayer,Javelin,Vulnerary] [0x6,0x3,0x4,0x0]
 UNIT Carbon BowCav 0x0 Level(11,Enemy,0) [16,0] 0x0 0x0 0x0 0x0 [Longbow,KillerBow,Talisman] [0x0,0x12,0x4,0x0]
-UNIT Ygstra Halberdier 0x0 Level(4,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Amara WarriorF 0x0 Level(5,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [Tomahawk,Longbow] NeverMoveAI
+UNIT Valden LncPal 0x0 Level(8,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [GildedLance,Spear] NeverMoveAI
 UNIT
 
 C13Horse:
@@ -138,6 +140,29 @@ EndEvent
 C13NorthVillage:
 CleanText(VillageCG,C13WhoIsThisHorse)
 Reinforcements(C13Horse)
+EndEvent
+
+C13ValdenHandoff:
+CHECK_EVENTID ValdenDeadFlag
+BNE 0x2 0xc 0x0
+CAM1 Valden
+FlashCursor(Valden,60)
+CHECK_ALIVE Amara
+BEQ 0x1 0xc 0x0
+Text(C13ValdenLeavesAmaraAlive)
+DISA_IF Valden
+DISA Valden
+STAL 20
+MOVE_1STEP 12 Amara Up
+ENUN
+MOVE_1STEP 12 Amara Up
+ENUN
+GOTO 0x2
+LABEL 0x1
+Text(C13ValdenLeavesAmaraDead)
+DISA_IF Valden
+DISA Valden
+LABEL 0x2
 EndEvent
 
 C13Reunion:

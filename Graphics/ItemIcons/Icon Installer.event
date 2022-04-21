@@ -81,6 +81,7 @@
 #define InversionIcon 0x6
 #define TrisagionIcon 0xbf
 #define CloudburstIcon 0x81
+#define SagittaeIcon 0xe5
 
 #define LightningIcon 0x3d
 #define ShineIcon 0x3e
@@ -683,6 +684,10 @@ ItemIconEntry(AngelWingsIcon)
 ALIGN 4
 ItemIconEntry(IronRuneIcon)
 #incbin "{Cardcafe} {FE15} Item 49.dmp"
+
+ALIGN 4
+ItemIconEntry(SagittaeIcon)
+#incbin "{Cardcafe} Tome 1.dmp"
 
 ALIGN 4
 ItemIconEntry(SalvationIcon)

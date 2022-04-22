@@ -134,6 +134,10 @@ Narration(Ch11_Narration)
 CleanText(DesertCG,Ch9_Opening)
 LOAD1 0x0 C11Units
 ENUN
+CHECK_ALIVE Josef
+BNE 0x11 0xC 0x0
+ENUT BaseFlag1
+LABEL 0x11
 GotoPrepScreen
 ENDA
 

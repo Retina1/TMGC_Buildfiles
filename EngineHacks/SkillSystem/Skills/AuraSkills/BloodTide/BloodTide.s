@@ -31,7 +31,7 @@ strh    r3,[r0]     @Store dmg.
 
 add		r0,#6		@Move to the attacker's hit.
 ldrh	r3,[r0]		@Load the attacker's hit into r3.
-add		r3,#5		@Add 5 hit.
+add		r3,#0xf		@Add 15 hit.
 strh	r3,[r0]		@Store hit.
 
 

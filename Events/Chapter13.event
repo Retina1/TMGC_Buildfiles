@@ -169,11 +169,12 @@ C13Reunion:
 MUSC S_EncountersAndReunions
 SetBackground(FieldCG)
 Text(C13HorseReunion)
-PROMOTE Desmond LncPal MasterSeal
+PROMOTE Desmond LncPal Emboldener
 DISA 0xd1
 FADI 16
 CLEAN
 FADU 16
+GiveItem(Emboldener,Desmond) 
 EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

@@ -266,6 +266,21 @@ NeillstromMug:
 setMugEntry(0x4f,NeillstromMug,2,5,2,3)
 
 ALIGN 4
+CiraweissMug:
+#incext PortraitFormatter "Ciraweiss.png"
+setMugEntry(0x3c,CiraweissMug,4,5,4,3)
+
+ALIGN 4
+ArbordiaMug:
+#incext PortraitFormatter "Arbordia.png"
+setMugEntry(0x3d,ArbordiaMug,2,5,2,3)
+
+ALIGN 4
+LiamMug:
+#incext PortraitFormatter "Liam.png"
+setMugEntry(0x3e,LiamMug,3,5,3,3)
+
+ALIGN 4
 ValdenMug:
 #incext PortraitFormatter "Valden.png"
 setMugEntry(0x47,ValdenMug,2,5,2,3)

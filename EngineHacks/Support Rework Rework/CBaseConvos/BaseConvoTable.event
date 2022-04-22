@@ -229,6 +229,21 @@
 			bg(BoatCG)
 			text(C10_Apollo_Bechamel_Base)
 			baseSupport(Apollo,Bechamel,CSupport)
+	Chapter(Chapter11)
+		Entry
+			name(C11_Faltering_Select)
+			bg(DesertCG)
+			importance(3)
+			music(S_Neutral)
+			text(C11_Faltering)
+			item(Longinus,Josef)
+			eventID(BaseFlag1)
+		Entry
+			name(C11_The_Desert_Select)
+			bg(DesertCG)
+			importance(2)
+			text(C11_The_Desert)
+			eventID(BaseFlag2)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

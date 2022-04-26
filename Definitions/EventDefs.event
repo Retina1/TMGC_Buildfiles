@@ -12,6 +12,10 @@
 #define CamOn "EVBIT_T 9"
 #define CamOff "EVBIT_F 9"
 #define Reinforcements(pointer) "CamOn ; LOAD1 0x0 pointer; ENUN; CamOff"
+#define RemoveUnit(unit,labelid) "CHECK_ALIVE unit; BEQ labelid 0xc 0x0; REMU unit; LABEL labelid"
+#define UnremoveUnit(unit,labelid) "CHECK_ALIVE unit; BEQ labelid 0xc 0x0; REVEAL unit; LABEL labelid"
+#define RemoveUnit(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; REMU unit; LABEL unit"
+#define UnremoveUnit(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; REVEAL unit; LABEL unit"
 
 #define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
 

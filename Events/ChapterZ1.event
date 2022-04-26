@@ -1,0 +1,112 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsZ1,ThisChapter)
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Z1Units Z1Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Escape(0,0)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Z1Units:
+UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [28,1] 0x0 0x0 0x0 0x0 [IronLance, IronBow, Elixir] NoAI
+UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [27,2] 0x0 0x0 0x0 0x0 [SilverSword, IronSword, Vulnerary] NoAI
+UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [29,2] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe, Vulnerary] NoAI
+UNIT Leila SwdPeg 0x0 Level(13,Ally,0) [28,4] 0x0 0x0 0x0 0x0 [Rapier, SteelSword, AngelicRobe] NoAI
+UNIT
+
+Z1Easy:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+Z1Normal:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+Z1Hard:
+UNIT Holanis Brigand 0x0 Level(9,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Holanis Deserter 0x0 Level(10,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [SteelLance, Javelin] NeverMoveAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+RemoveUnit(Blair)
+RemoveUnit(Arin)
+RemoveUnit(Kenneth)
+RemoveUnit(Natasia)
+RemoveUnit(Stefan)
+RemoveUnit(Desmond)
+RemoveUnit(Sam)
+RemoveUnit(Josef)
+RemoveUnit(Peggy)
+RemoveUnit(Butch)
+RemoveUnit(Rachael)
+RemoveUnit(Cassius)
+RemoveUnit(Jeff)
+RemoveUnit(Emile)
+RemoveUnit(Apollo)
+RemoveUnit(Bechamel)
+RemoveUnit(Sveltzalus)
+RemoveUnit(Hilbert)
+RemoveUnit(Flynn)
+RemoveUnit(Addington)
+RemoveUnit(Mikey)
+RemoveUnit(Carbon)
+RemoveUnit(Athena)
+RemoveUnit(Charley)
+LOAD1 0x1 Z1Units
+ENUN
+LoadUnitsByDifficulty(Z1Easy,Z1Normal,Z1Hard)
+MUSC NarrationTheme
+Narration(ChZ1_Narration)
+CleanText(PathCG,Prologue_Opening)
+EndEvent
+
+EndingScene:
+MUSC VictoryTheme
+Text(PathCG,Prologue_Ending)
+MoveToChapter(ChapterZ2)
+EndEvent
+
+Z1Village:
+	VillageEventItem(PNVillageText, HouseCG, GoddessIcon)
+
+MESSAGE Events end at offset CURRENTOFFSET

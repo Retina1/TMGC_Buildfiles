@@ -32,21 +32,19 @@ ldrb r0,[r0,#2] @range
 cmp r0,#1
 bne End
 
+@check sword
+mov		r1,#0x50
+ldrb r0,[r4,r1] @weapon type
+cmp r0,#0x0
+bne End
+
 @store magic/2 in r6
 mov		r1,#0x3A
 ldrb	r6,[r4,r1]
 lsr		r6,#1
 
-add		r6,#3 @add 3
-
 @hit
-mov r1, #0x60
-ldrh r0, [r4, r1]
-add r0, r6
-strh r0, [r4,r1]
-
-@crit
-mov r1, #0x66
+mov r1, #0x5a
 ldrh r0, [r4, r1]
 add r0, r6
 strh r0, [r4,r1]

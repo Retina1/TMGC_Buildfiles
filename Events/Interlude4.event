@@ -26,6 +26,14 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0x0,I4ReadyToEnd,Blair,Vladmir)
+CharacterEvent(0x10,I4Laronde,Blair,Laronde)
+CharacterEvent(0x11,I4Athena,Blair,Athena)
+CharacterEvent(0x12,I4Callum,Blair,Callum)
+CharacterEvent(0x13,I4Leila,Blair,Leila)
+CharacterEvent(0x14,I4Liam,Blair,Liam)
+CharacterEvent(0x15,I4Merchant,Blair,Merchant)
+CharacterEvent(0x16,I4Cit,Blair,Citizen)
+CharacterEvent(0x17,I4Cit2,Blair,Citizen2)
 END_MAIN
 
 LocationBasedEvents:
@@ -105,6 +113,67 @@ DisableFreeMovement
 Text(I2ReleaseMe)
 MoveToChapter(Chapter13)
 ENDA
+
+I4Laronde:
+Text(I2HyperiusTalk)
+EndEvent
+
+I4Leila:
+Text(I2HyperiusTalk)
+EndEvent
+
+I4Athena:
+Text(I2HyperiusTalk)
+EndEvent
+
+I4Callum:
+Text(I2HyperiusTalk)
+EndEvent
+
+I4Cit:
+Text(I2HyperiusTalk)
+EndEvent
+
+I4Cit2:
+Text(I2HyperiusTalk)
+EndEvent
+
+I4Merchant:
+EVBIT_MODIFY 4
+Text(I2MerchantTalk)
+CHECK_MONEY
+SVAL 0x1 0x693
+BGE 0x1 0xc 0x1
+Text(I2NoMoneyHa)
+ENUF 0x15
+GOTO 0x2
+LABEL 0x1
+SystemText(I2SkillBuy)
+IfNoSelectedGoto(0x3)
+Text(I2SkillPurchased)
+SVAL 0x3 0x693
+TAKEMONEY
+GiveItemWithDurability(SkillScroll,LightWeightID,Blair)
+GOTO 0x2
+LABEL 0x3
+Text(I2SkillDenied)
+ENUF 0x15
+LABEL 0x2
+EndEvent
+
+I4Liam:
+EVBIT_MODIFY 4
+Text(I4LiamTalk)
+SystemText(I4LiamChoice)
+IfNoSelectedGoto(0x3)
+Text(I4LiamYes)
+ENUT LiamAcceptedFlag
+GOTO 0x2
+LABEL 0x3
+Text(I4LiamNo)
+ENUF 0x14
+LABEL 0x2
+EndEvent
 
 I4ReadyToEnd:
 EVBIT_MODIFY 4

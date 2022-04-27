@@ -10,6 +10,44 @@ After all, our meals are all blessed[N]
 by an actual priest.[A] You can't[N]
 beat food approved by Opistus![A][X]
 
+##I4LiamTalk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadLiam]
+...Hey. You there. You look like[N]
+you could use some extra muscle.[A][N]
+Well, I happen to be a mercenary.[N]
+Name's Liam, by the by.[A][N]
+I've got a few jobs coming up soon,[N]
+but after those, nothing.[A][N]
+How'd you feel about hiring me?[A][N]
+...Don't worry about the details.[N]
+I'll find you in your hour of need.[A][N]
+Hell, I won't even make you pay[N]
+me in advance.[A] Course, if the[N]
+day comes and you can't pay...[A][N]
+Well, that'd be interesting for sure.[N]
+What do you say?[A][X]
+
+##I4LiamChoice
+Commit to hiring Liam?[N]
+[Yes][X]
+
+##I4LiamYes
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadLiam][OpenMidLeft]
+Sure thing![A][N][OpenMidRight]
+You're not going to regret this,[N]
+young lady.[A] My boys and I will[N]
+win you the day, some day.[A][N]
+Just remember to keep some gold ready.[A][X]
+
+##I4LiamNo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadLiam][OpenMidLeft]
+Hm... I'm not sure...[A][N][OpenMidRight]
+Alright, alright. Scary offer,[N]
+I guess.[A] I'll be here if you[N]
+happen to change your mind.[A][X]
+
+
+
 ##I4Buyington
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadBaddie3]
 How did you... Did the authorities send you?[N]

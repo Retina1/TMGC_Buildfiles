@@ -41,6 +41,11 @@
 #include "Bigle\Monster Installer.event"
 }
 {
+#include "Zeke\Lance Installer.event"
+#include "Zeke\Bow Installer.event"
+#include "Zeke\Unarmed Installer.event"
+}
+{
 #include "RangerM\Sword Installer.event"
 #include "RangerM\Lance Installer.event"
 #include "RangerM\Bow Installer.event"
@@ -401,6 +406,13 @@ SpecialAnim(0xc6,WyvernBreath)
 SpecialAnim(0xc7,DemonBreath)
 SpecialAnim(0xc8,EarthBreath)
 SpecialAnim(0xc9,DivineBreath)
+EndAnim
+
+ALIGN 4
+ZekeAnims:
+LanceAnim(0x1)
+BowAnim(0xc1)
+UnarmedAnim(0x2)
 EndAnim
 
 ALIGN 4

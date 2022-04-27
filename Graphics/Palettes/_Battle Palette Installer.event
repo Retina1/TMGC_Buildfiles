@@ -52,6 +52,10 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define BechamelUPaletteID 0x15
 #define BechamelPPaletteID 0x16
 #define BlairPPaletteID 0x17
+#define CharleyPaletteID 0x22
+#define HyperiusPaletteID 0x23
+#define RoseUPaletteID 0x24
+#define RosePPaletteID 0x25
 
 #define DavelarnPaletteID 0x18
 #define MarqueStarquePaletteID 0x19
@@ -101,6 +105,13 @@ setPalette(JosefPPaletteID,JosefPPalette)
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
 
+setPalette(CharleyPaletteID,CharleyPalette)
+
+setPalette(HyperiusPaletteID,HyperiusPalette)
+
+setPalette(RoseUPaletteID,RoseUPalette)
+setPalette(RosePPaletteID,RosePPalette)
+
 setPalette(DavelarnPaletteID,DavelarnPalette)
 setPalette(MarqueStarquePaletteID,MarqueStarquePalette)
 setPalette(BrentsonPaletteID,BrentsonPalette)
@@ -128,6 +139,16 @@ SetPaletteFull(Emile,0x0,0x0,0x0,Sage,0x0,0x0)
 SetPaletteFull(Jeff,0x0,Thief,0x0,Assass,0x0,0x0)
 SetPaletteFull(Apollo,0x0,LightM,0x0,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
+SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
+SetPaletteFull(Hilbert,0x0,Mage,0x0,Sage,0x0,0x0)
+SetPaletteFull(Flynn,0x0,Myrm,0x0,SwMast,0x0,0x0)
+SetPaletteFull(Mikey,0x0,Soldier,0x0,Halberdier,0x0,0x0)
+SetPaletteFull(Carbon,0x0,BowCav,0x0,BowPal,0x0,0x0)
+SetPaletteFull(Athena,0x0,AxeWyv,0x0,WyvLord,0x0,0x0)
+SetPaletteFull(Charley,0x0,0x0,CharleyPaletteID,SniperF,0x0,0x0)
+SetPaletteFull(Hyperius,0x0,0x0,HyperiusPaletteID,SwdGen,0x0,0x0)
+
+SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,0x0,0x0)
 
 SetPaletteFull(Davelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Marque,MarqueStarquePaletteID,AxeCav,0x0,0x0,0x0,0x0)
@@ -141,6 +162,7 @@ SetPaletteFull(Esme,0x0,0x0,EsmePaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Pete,0x0,0x0,PetePaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Lazarus,0x0,0x0,LazarusPaletteID,AxeGen,0x0,0x0)
 
+SetPaletteFull(C7Hyperius,0x0,0x0,HyperiusPaletteID,SwdGen,0x0,0x0)
 
 // I'm commenting the classes out that don't have palettes yet.
 
@@ -225,6 +247,23 @@ BechamelUPalette:
 ALIGN 4
 BechamelPPalette:
 #incbin "BechamelPromoted.dmp"
+
+ALIGN 4
+CharleyPalette:
+#incbin "Charley.dmp"
+
+ALIGN 4
+HyperiusPalette:
+#incbin "Hyperius.dmp"
+
+
+ALIGN 4
+RoseUPalette:
+#incbin "RoseUnpromoted.dmp"
+ALIGN 4
+RosePPalette:
+#incbin "RosePromoted.dmp"
+
 
 ALIGN 4
 DavelarnPalette:

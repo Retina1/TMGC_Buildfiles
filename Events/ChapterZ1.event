@@ -28,6 +28,11 @@ END_MAIN
 
 LocationBasedEvents:
 Escape(0,0)
+Escape(1,0)
+Escape(2,0)
+Village(0x11,Z1Village,4,8)
+Chest(Partisan,29,0)
+DurabilityChest(SkillScroll,OpportunistID,24,6)
 END_MAIN
 
 MiscBasedEvents:
@@ -46,7 +51,7 @@ ENDTRAP
 ALIGN 4
 
 Z1Units:
-UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [28,1] 0x0 0x0 0x0 0x0 [IronLance, IronBow, Elixir] NoAI
+UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [28,1] 0x0 0x0 0x0 0x0 [IronLance, IronBow, Elixir, ChestKey] NoAI
 UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [27,2] 0x0 0x0 0x0 0x0 [SilverSword, IronSword, Vulnerary] NoAI
 UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [29,2] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe, Vulnerary] NoAI
 UNIT Leila SwdPeg 0x0 Level(13,Ally,0) [28,4] 0x0 0x0 0x0 0x0 [Rapier, SteelSword, AngelicRobe] NoAI
@@ -98,6 +103,7 @@ LoadUnitsByDifficulty(Z1Easy,Z1Normal,Z1Hard)
 MUSC NarrationTheme
 Narration(ChZ1_Narration)
 CleanText(PathCG,Prologue_Opening)
+SystemText(ZekeArcPrimer)
 EndEvent
 
 EndingScene:
@@ -107,6 +113,6 @@ MoveToChapter(ChapterZ2)
 EndEvent
 
 Z1Village:
-	VillageEventItem(PNVillageText, HouseCG, GoddessIcon)
+	VillageEventItem(PNVillageText, HouseCG, Javelin)
 
 MESSAGE Events end at offset CURRENTOFFSET

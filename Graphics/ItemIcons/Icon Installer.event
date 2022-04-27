@@ -181,6 +181,7 @@
 #define LonginusIcon 0xe3
 #define FlyingSpikeIcon 0xe4
 #define EmboldenerIcon 0x8b
+#define PartisanIcon 0x1
 
 ALIGN 4
 NewItemIcons:
@@ -712,6 +713,9 @@ ItemIconEntry(FlyingSpikeIcon)
 ALIGN 4
 ItemIconEntry(EmboldenerIcon)
 #incbin "{Jubby} Lance 4.dmp"
+ALIGN 4
+ItemIconEntry(PartisanIcon)
+#incbin "2WB Partisan.dmp"
 // End of icons 
 POP 
 

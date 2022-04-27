@@ -72,28 +72,11 @@ add     r3,#0x05    @Add 5 to the attacker's AS.
 strh    r3,[r0]     @Store attacker AS.
 b       SkillReturn
 WardingSkill:
-ldr     r0,=0x203A56C       @Move defender data into r1.
-mov r1, #0x4c    @Move to the defender's weapon ability
-ldr r1, [r0,r1]
-mov r2, #0x42
-tst r1, r2
-beq     SkillReturn @do nothing if magic bit not set
-mov r2, #0x2
-lsl r2, #0x10 @0x20000 negate def/res
-tst r1, r2
-bne SkillReturn
-ldr r0, =0x203a4ec
-@ add     r0,#0x5A    @Move to the defender's damage.
-@ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#0x14    @Subtract 20 from the defender's avoid.
-@ strh    r3,[r0]     @Store defender avoid.
-
-@testing
-add r0, #0x5c @attacker defense
-ldrh r3, [r0]
-add r3, #20
-strh r3, [r0]
-
+ldr r0, =0x203a4ec @move attacker data to r0
+add r0, #0x5c @move to attacker defense
+ldrh r3, [r0] @load def into r3
+add r3, #8 @add 8
+strh r3, [r0] @yer done
 b       SkillReturn
 CertainSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.

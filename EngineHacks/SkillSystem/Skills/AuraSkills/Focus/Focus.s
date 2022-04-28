@@ -25,16 +25,25 @@ mov lr, r0
 mov r0, r4 @attacker
 mov r1, #0
 mov r2, #0 @can_trade
-mov r3, #3 @range
+mov r3, #5 @range
 .short 0xf800
 cmp r0, #0
 bne Done
 
 mov r0, r4
-add     r0,#0x66    @Move to the attacker's crit.
-ldrh    r3,[r0]     @Load the attacker's crit into r3.
-add     r3,#10    @add 10.
+add     r0,#0x5a    @Move to the attacker's attack.
+ldrh    r3,[r0]     @Load the attacker's attack into r3.
+add     r3,#3    @add 3.
 strh    r3,[r0]     @Store.
+add     r0,#0x04    @Move to the attacker's as.
+ldrh    r3,[r0]     @Load the attacker's as into r3.
+add     r3,#3    @add 3.
+strh    r3,[r0]     @Store.
+add     r0,#0x02    @Move to the attacker's hit.
+ldrh    r3,[r0]     @Load the attacker's hit into r3.
+add     r3,#0xf    @add 15.
+strh    r3,[r0]     @Store.
+
 
 Done:
 pop {r4-r7}

@@ -49,9 +49,7 @@ cmp r3,#0x3
 beq Final
 cmp r3,#0x4
 beq Final
-cmp r3,#0x3B
-beq Final
-cmp r3,#0x3C
+cmp r3,#0x3E
 beq Final
 b Loop
 

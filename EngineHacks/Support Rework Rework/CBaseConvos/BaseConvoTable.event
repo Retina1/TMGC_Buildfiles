@@ -244,6 +244,14 @@
 			importance(2)
 			text(C11_The_Desert)
 			eventID(BaseFlag2)
+	Chapter(Chapter12)
+		Entry
+			name(C12_Light_Select)
+			bg(DesertCG)
+			importance(3)
+			text(C12_Light)
+			item(LuxAurumque,Kenneth)
+			eventID(BaseFlag1)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

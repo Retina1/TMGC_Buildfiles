@@ -196,6 +196,11 @@
 #include "SniperF(Nuramon)\Unarmed Installer.event"
 }
 {
+#include "Viridian(Nuramon)\Bow Installer.event"
+#include "Viridian(Nuramon)\Staff Installer.event"
+#include "Viridian(Nuramon)\Unarmed Installer.event"
+}
+{
 #include "SoldierM(Flasuban)\Lance Installer.event"
 #include "SoldierM(Flasuban)\Unarmed Installer.event"
 }
@@ -678,6 +683,13 @@ ALIGN 4
 SniperFAnims:
 BowAnim(0x2c)
 UnarmedAnim(0x2d)
+EndAnim
+
+ALIGN 4
+ViridianAnims:
+BowAnim(0xdd)
+StaffAnim(0xde)
+UnarmedAnim(0xdf)
 EndAnim
 
 ALIGN 4

@@ -218,6 +218,13 @@ CleanText(DesertCG,Ch9_Opening)
 LOAD1 0x0 C12Units
 ENUN
 ENUT 0x23
+CHECK_ALIVE Kenneth
+BEQ 0x11 0xC 0x0
+CHECK_ALIVE Emile
+BNE 0x22 0xC 0x0
+LABEL 0x11
+ENUT BaseFlag1
+LABEL 0x22
 GotoPrepScreen
 ENDA
 

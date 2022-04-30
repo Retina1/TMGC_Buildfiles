@@ -257,16 +257,31 @@ UNIT Pirates LncPeg 0x0 Level(10,Enemy,1) [9,7] 0x0 0x0 0x1 REDA10R6 [SteelLance
 UNIT Pirates SwdPeg 0x0 Level(10,Enemy,1) [9,7] 0x0 0x0 0x1 REDA10R8 [SilverSword] NoAI
 UNIT
 
+C9Cutscene:
+UNIT Pirates Pirate 0x0 Level(11,Enemy,1) [10,17] 0x0 0x0 0x1 REDA6R17 [IronAxe] NoAI
+UNIT
+
+C9Cutscene2:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [17,5] 0x0 0x0 0x1 REDA18R5 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt9
-LoadUnitsByDifficulty(C9Easy,C9Normal,C9Hard)
 LOAD1 0x0 C9Ally
 ENUN
 MUSC NarrationTheme
 Narration(Ch9_Narration)
 CleanText(BoatCG,Ch9_Opening)
+Reinforcements(C9Cutscene)
+FlashCursor(6,17,60)
+MUSC S_Crisis
+CleanText(BoatCG,Ch9_Opening2)
+Reinforcements(C9Cutscene2)
+FlashCursor(18,5,60)
+CleanTextNoMap(BoatCG,Ch9_Opening3)
+LoadUnitsByDifficulty(C9Easy,C9Normal,C9Hard)
 LOAD1 0x0 C9Units
 ENUN
 GotoPrepScreen

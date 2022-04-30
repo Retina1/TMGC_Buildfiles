@@ -260,19 +260,61 @@ UNIT Ygstra Archer 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA9R1 [Longbow] Gro
 UNIT Ygstra Archer 0x0 Level(10,Enemy,1) [8,0] 0x0 0x0 0x1 REDA7R3 [Longbow] GroupSixAI
 UNIT
 
+C7Cutscene:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [4,20] 0x0 0x0 0x1 REDA4R18 [Fire, Awaken, Vulnerary] NoAI
+UNIT Cassius BlairLord 0x0 Level(1,Ally,0) [4,20] 0x0 0x0 0x1 REDA3R18 [Fire, Awaken, Vulnerary] NoAI
+UNIT Rachael BlairLord 0x0 Level(1,Ally,0) [4,20] 0x0 0x0 0x1 REDA4R19 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
 
 ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt7
 LoadUnitsByDifficulty(C7Easy,C7Normal,C7Hard)
-LOAD1 0x0 C7Units
 LOAD1 0x0 C7Allies
 MUSC NarrationTheme
 Narration(Ch7_Narration)
 CLEAN
-DeathBranchText(Rachael,Cassius,0x0,0x0,HillCG,Ch7_Opening,Ch7_Opening_Dead_Rachael,Ch7_Opening_Dead_Cassius,Ch7_Opening_Dead_Rachael_and_Cassius)
+CHECK_ALIVE Rachael
+BNE 0x2 0xC 0x0
+CHECK_ALIVE Cassius
+BNE 0x3 0xC 0x0
+CleanText(HillCG,Ch7_Opening_Dead_Rachael_and_Cassius)
+GOTO 0x5
+LABEL 0x3
+CleanText(HillCG,Ch7_Opening_Dead_Rachael)
+GOTO 0x5
+LABEL 0x2
+CHECK_ALIVE Cassius
+BNE 0x4 0xC 0x0
+CleanText(HillCG,Ch7_Opening_Dead_Cassius)
+GOTO 0x5
+LABEL 0x4
+CleanText(HillCG,Ch7_Opening)
+LABEL 0x5
+Reinforcements(C7Cutscene)
+FlashCursor(Blair,60)
+MUSC S_Crisis
+CHECK_ALIVE Rachael
+BNE 0x7 0xC 0x0
+CHECK_ALIVE Cassius
+BNE 0x8 0xC 0x0
+CleanTextNoMap(HillCG,Ch7_Opening_Dead_Rachael_and_Cassius2)
+GOTO 0x10
+LABEL 0x8
+CleanTextNoMap(HillCG,Ch7_Opening_Dead_Rachael2)
+GOTO 0x10
+LABEL 0x7
+CHECK_ALIVE Cassius
+BNE 0x9 0xC 0x0
+CleanTextNoMap(HillCG,Ch7_Opening_Dead_Cassius2)
+GOTO 0x10
+LABEL 0x9
+CleanTextNoMap(HillCG,Ch7_Opening2)
+LABEL 0x10
 SetBackground(BlankCG)
+LOAD1 0x0 C7Units
 SystemText(BaseJoinNotice)
 GotoPrepScreen
 EndEvent

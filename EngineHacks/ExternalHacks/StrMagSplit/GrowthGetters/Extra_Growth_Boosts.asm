@@ -124,12 +124,18 @@ cmp r5,#0
 ble GoBack
 mov r0, r5 
 mov r1, #100 
-swi 6 
+swi 6
+cmp r1, #0
+beq NoModulo
 mov r1, #100 
-mul r0, r1 
+mul r0, r1
 add r0, #100 
 mov r5, r0 @ remove remainer (modulo)
-
+bl GoBack
+NoModulo:
+mov r1, #100 
+mul r0, r1
+mov r5, r0 @ remove remainer (modulo)
 
 GoBack:
 mov		r1,r8

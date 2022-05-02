@@ -120,6 +120,11 @@ HoratioMug:
 setMugEntry(0x46,HoratioMug,3,6,3,4)
 
 ALIGN 4
+FreddricMug:
+#incext PortraitFormatter "Freddric.png"
+setMugEntry(0x15,FreddricMug,3,5,3,3)
+
+ALIGN 4
 EstelleMug:
 #incext PortraitFormatter "Estelle.png"
 setMugEntry(0x2e,EstelleMug,3,5,3,3)
@@ -158,6 +163,11 @@ ALIGN 4
 TobiasMug:
 #incext PortraitFormatter "Tobias.png"
 setMugEntry(0x51,TobiasMug,2,5,3,3)
+
+ALIGN 4
+IanMug:
+#incext PortraitFormatter "Ian.png"
+setMugEntry(0x56,IanMug,2,7,3,5)
 
 ALIGN 4
 ElcorianMug:
@@ -290,6 +300,10 @@ ValdenMug:
 #incext PortraitFormatter "Valden.png"
 setMugEntry(0x47,ValdenMug,2,5,2,3)
 
+ALIGN 4
+BriantMug:
+#incext PortraitFormatter "Briant.png"
+setMugEntry(0x53,BriantMug,4,5,4,3)
 
 
 

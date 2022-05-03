@@ -1,10 +1,13 @@
+@Flare: Halve enemy resistance (Skill% activation)
+@differs from Luna in that it only negates res
+
 .thumb
 .macro blh to, reg=r3
   ldr \reg, =\to
   mov lr, \reg
   .short 0xf800
 .endm
-.equ IgnisID, SkillTester+4
+.equ DragonFangID, SkillTester+4
 .equ d100Result, 0x802a52c
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -20,17 +23,17 @@ lsl r1, #8 @0xC000
 add r1, #2 @miss
 tst r0, r1
 bne End
-@if another skill already activated, don't do anything
+@if another skill already activated, dont do anything
 
-@check for Ignis proc
+@check for DragonFang proc
 @ldr r0, SkillTester
 @mov lr, r0
 @mov r0, r4 @attacker data
-@ldr r1, IgnisID
+@ldr r1, DragonFangID
 @.short 0xf800
 ldr r0,=#0x0203F101
 ldrb r0,[r0]
-cmp r0, #11 @Ignis art ID
+cmp r0, #9 @dragon fang art ID
 bne End
 @if user has sure shot, check for proc rate
 
@@ -57,36 +60,46 @@ and     r0,r2                @ 0802B436 4010
 orr     r0,r1                @ 0802B438 4308     
 str     r0,[r6]                @ 0802B43A 6018  
 
-ldrb  r0, IgnisID
-strb  r0, [r6,#4] 
+ldrb  r0, DragonFangID
+strb  r0, [r6,#4]// 2
 
-@add def/2 and res/2 to damage dealt
-mov r0, r4
-blh 0x8019250 @def getter
-lsr r5, r0, #1 @save def/2
-mov r0, r4
-blh 0x8019270 @res getter
-lsr r0, #1 @res/2
-add r0, r5 @averaged defenses in r0
+@1.5x attack
+ldrh r0,[r7,#4]
+mov r2,#3
+mul r0,r2 @x3
+lsr r0,#1 @/2; net x1.5
 
-ldr r2, [r6]
-mov r1, #1
-tst r1, r2
-beq NoCrit
-@if crit, multiply by 3
-lsl r1, r0, #1
-add r0, r1
-
-NoCrit:
-mov r5, r0 @@put final damage in r5
-mov r0, #4
-ldrsh r0, [r7, r0]
-add r0, r5 @add ignis damage
 cmp r0, #0x7f @damage cap of 127
 ble NotCap
 mov r0, #0x7f
 NotCap:
-strh r0, [r7, #4] @final damage + ignis damage
+strh r0, [r7, #4] @final damage
+
+//code
+mov  r2,#0x02
+ldrb r1, [r7]
+and  r1, r2
+cmp  r1, r2
+bne  BattleStarted//if bit 2 is set, battle has NOT started
+mov  r2, #0x5C//def offset
+ldrh r2, [r5,r2]
+mov  r3, #0x5A//atk offset
+ldrh r3, [r4,r3]
+sub  r3, r2//atk
+mov  r2,#0x03
+mul  r3,r2
+asr  r3,#0x01
+add  r3, r2
+mov  r2, #0x5C//def offset
+ldrh r2, [r5,r2]
+add  r3,r2
+mov  r2, #0x5A//atk offset
+strh r3, [r4,r2]
+strh r3, [r7, #0x04]
+b    End
+BattleStarted:
+//endofcode
+
 
 End:
 pop {r4-r7}
@@ -96,4 +109,5 @@ pop {r15}
 .ltorg
 SkillTester:
 @POIN SkillTester
-@WORD IgnisID
+@WORD DragonFangID
+

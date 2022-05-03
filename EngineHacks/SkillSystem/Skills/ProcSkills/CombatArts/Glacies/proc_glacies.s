@@ -20,7 +20,7 @@ lsl r1, #8 @0xC000
 add r1, #2 @miss
 tst r0, r1
 bne End
-@if another skill already activated, don't do anything
+@if another skill already activated, dont do anything
 
 @check for Glacies proc
 @ldr r0, SkillTester
@@ -82,6 +82,25 @@ ble NotCap
 mov r0, #0x7f
 NotCap:
 strh r0, [r7, #4] @final damage + Glacies damage
+
+
+//code
+mov  r2,#0x02
+ldrb r1, [r7]
+and  r1, r2
+cmp  r1, r2
+bne  BattleStarted//if bit 2 is set, battle has NOT started
+mov  r2, #0x5C//def offset
+ldrh r2, [r5,r2]
+add  r0,r2//dmg+res+enemy def
+mov  r2, #0x5A//atk offset
+strh r0, [r4,r2]
+strh r0, [r7, #0x04]
+b    End
+BattleStarted:
+//endofcode
+
+
 
 End:
 pop {r4-r7}

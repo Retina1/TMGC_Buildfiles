@@ -208,7 +208,7 @@ mov r0,#2
 b IsAttackerEclipsing_GoBack
 
 IsAttackerEclipsing_RetFalse:
-mov r0,#0
+mov r0,#2
 
 IsAttackerEclipsing_GoBack:
 pop {r4-r5}
@@ -276,7 +276,7 @@ mov r0,#2
 b IsAttackerWeaponUnableToDouble_GoBack
 
 IsAttackerWeaponUnableToDouble_RetFalse:
-mov r0,#0
+mov r0,#2
 
 IsAttackerWeaponUnableToDouble_GoBack:
 pop {r4-r5}

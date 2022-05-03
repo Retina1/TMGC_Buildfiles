@@ -107,6 +107,25 @@ mov r0, #0x7f
 NotCap:
 strh r0, [r7, #4] @final damage
 
+//code
+mov  r2,#0x02
+ldrb r1, [r7]
+and  r1, r2
+cmp  r1, r2
+bne  BattleStarted//if bit 2 is set, battle has NOT started
+mov  r2, #0x5C//def offset
+ldrh r2, [r5,r2]
+mov  r3, #0x5A//atk offset
+ldrh r3, [r4,r3]
+add  r3,r3//atk x 2
+sub  r3, r2//atk x 2 - def = atk+dmg
+mov  r2, #0x5A//atk offset
+strh r3, [r4,r2]
+strh r3, [r7, #0x04]
+b    End
+BattleStarted:
+//endofcode
+
 End:
 pop {r4-r7}
 pop {r15}

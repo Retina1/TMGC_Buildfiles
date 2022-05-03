@@ -23,7 +23,18 @@
 #define MapMusicGroup 1
 #define SFXGroup 6
 
-
+{
+#include "TheDevoted.event"
+SongTable(S_TheDevoted,TheDevoted,0)
+}
+{
+#include "CTBattle2.event"
+SongTable(S_CTBattle2,CTBattle2,0)
+}
+{
+#include "FE6Attack.event"
+SongTable(S_FE6Battle,FE6Attack,0)
+}
 {
 #include "Glory.event"
 SongTable(S_GloryToGrann,Glory,1)

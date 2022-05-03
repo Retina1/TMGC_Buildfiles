@@ -4,17 +4,17 @@
 	
 	// This can be no greater than 7. Start at level 0, count up until you reach the highest level,
 		// and fill out the SupportLevelNameTable accordingly. Supports will not be raised higher than this amount.
-	#define MaxSupportLevelVal 7
+	#define MaxSupportLevelVal 5
 	
 	// You can define your own support levels here. These are just examples.
 	#define CSupport 0
 	#define CPSupport 1
-	#define BMSupport 2
-	#define BSupport 3
-	#define BPSupport 4
-	#define AMSupport 5
-	#define ASupport 6
-	#define APSupport 7
+	//#define BMSupport 2
+	#define BSupport 2
+	#define BPSupport 3
+	//#define AMSupport 5
+	#define ASupport 4
+	#define APSupport 5
 	
 	// Macros for directly controlling support data. "Popup" parameter is a boolean for should we show a popup a la "Support level increased to X."?
 	#define AddSupport(Character1,Character2,Level,Popup) "SVAL 0x1 Character1 ; SVAL 0x2 Character2 ; SVAL 0x3 Level ; SVAL 0x4 Popup ; ASMC CallAddSupport|1"

@@ -14,7 +14,7 @@ mov r5, r1 @defender
 mov r6, r2 @battle buffer
 mov r7, r3 @battle data
 
-@check if we're already in astra
+@check if were already in astra
 ldrb r0, [r2, #4] @active skill
 ldrb r1, AstraID
 cmp r0, r1
@@ -31,7 +31,7 @@ lsl r1, #8 @0xC000
 add r1, #0x2 @miss @@@@OR BRAVE??????
 tst r0, r1
 bne End
-@if another skill already activated, don't do anything
+@if another skill already activated, dont do anything
 
 @check for Astra proc
 @ldr r0, SkillTester
@@ -58,11 +58,40 @@ bne End
 
 @astra effect starts here
 
-@write the damage, since we're skipping ahead
+@write the damage, since were skipping ahead
 mov     r2, #4
 ldrsh   r3, [r7, r2]
 asr     r3, #1 @damage halved
 strh    r3, [r7, #4]
+
+//code
+mov  r2,#0x02
+ldrb r1, [r7]
+and  r1, r2
+cmp  r1, r2
+bne  BattleStarted//if bit 2 is set, battle has NOT started
+mov  r2, #0x5C//def offset
+ldrh r2, [r5,r2]
+mov  r3, #0x5A//atk offset
+ldrh r3, [r4,r3]
+sub  r3, r2
+
+cmp  r3,#0x00
+bge  OverZero
+mov  r3,#0x00
+OverZero:
+asr  r3,#0x01
+mov  r0,#0x05
+mul  r3,r0
+add  r3, r2
+mov  r2, #0x5A//atk offset
+strh r3, [r4,r2]
+strh r3, [r7, #0x04]
+b    End
+BattleStarted:
+//endofcode
+
+
 
 @ lsl     r3, #0x18
 
@@ -88,7 +117,7 @@ ldr r0, [r2,r1] @location of number of rounds on the stack... hopefully
 add r0, #4
 str r0, [r2,r1]
 
-@HERE'S THE TRICKY BIT: UPDATE A NEW ROUND OF BATTLE AND SET THE OFFENSIVE SKILL FLAG
+@HERES THE TRICKY BIT: UPDATE A NEW ROUND OF BATTLE AND SET THE OFFENSIVE SKILL FLAG
 mov r4, r6
 
 add r4, #8 @next round
@@ -103,7 +132,7 @@ b End
 .ltorg
 
 AlreadyAstra:
-@write the damage, since we're skipping ahead
+@write the damage, since were skipping ahead
 mov     r2, #4
 ldrsh   r3, [r7, r2]
 asr     r3, #1 @damage halved

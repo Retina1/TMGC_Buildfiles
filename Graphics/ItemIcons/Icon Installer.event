@@ -130,6 +130,7 @@
 #define RewarpIcon 0x65
 #define ThiefStaffIcon 0x66
 #define AgainIcon 0x04
+#define MineStaffIcon 0xe6
 
 #define AwakenIcon 0xb3
 
@@ -169,6 +170,7 @@
 #define MiniGemIcon 0x89
 #define AngelWingsIcon 0x76
 #define SkillScrollIcon 0x7a
+#define MercuryBootsIcon 0xe7
 
 #define EvilEyeIcon 0x77
 #define SlamIcon 0xab
@@ -557,6 +559,9 @@ ItemIconEntry(YoinkIcon)
 ALIGN 4
 ItemIconEntry(WrathStaffIcon)
 #incbin "WrathStaff.dmp"
+ALIGN 4
+ItemIconEntry(YoinkIcon)
+#incbin "Staves/Old(bad)/Mine Staff.dmp"
 
 
 ALIGN 4
@@ -683,6 +688,9 @@ ItemIconEntry(FoggyGlassesIcon)
 ALIGN 4
 ItemIconEntry(AnkleWeightIcon)
 #incbin "AnkleWeight.dmp"
+ALIGN 4
+ItemIconEntry(MercuryBootsIcon)
+#incbin "MercuryBoots.dmp"
 ALIGN 4
 ItemIconEntry(AngelWingsIcon)
 #incbin "AngelWings.dmp"

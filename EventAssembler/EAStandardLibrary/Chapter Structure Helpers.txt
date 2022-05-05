@@ -25,9 +25,9 @@
 #define GotoPrepScreen "ENDB"
 #endif
 
-#ifdef _FE8_
-#define GotoPrepScreen "CALL $591FD8; ENDA"
-#endif
+//#ifdef _FE8_
+//#define GotoPrepScreen "CALL $591FD8; ENDA"
+//#endif
 
 
 //Event ID's with special meanings

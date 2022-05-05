@@ -26,4 +26,6 @@
 
 #define DeathBranchText(char1,char2,deadmus,alivemus,background,bothalive,char1dead,char2dead,bothdead) "CHECK_ALIVE char1; BNE 0x2 0xC 0x0; CHECK_ALIVE char2; BNE 0x3 0xC 0x0; MUSC deadmus; CleanTextNoMap(background,bothdead); GOTO 0x5; LABEL 0x3; MUSC deadmus; CleanTextNoMap(background,char1dead); GOTO 0x5; LABEL 0x2; CHECK_ALIVE char2; BNE 0x4 0xC 0x0; MUSC deadmus; CleanTextNoMap(background,char2dead); GOTO 0x5; LABEL 0x4; MUSC alivemus; CleanTextNoMap(background,bothalive); LABEL 0x5"
 
+#define GotoPrepScreen "LABEL 0x6500; CALL $591FD8; ASMC ASMCCheckBaseConvo|1; BEQ 0x6501 0xc 0x0; FADU 16; SystemText(BaseConvoConfirm); IfNoSelectedGoto(0x6500); LABEL 0x6501; EndEvent"
+
 //DeathBranchText(char1,char2,deadmus,alivemus,background,bothalive,char1dead,char2dead,bothdead) i'm sorry

@@ -56,6 +56,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define HyperiusPaletteID 0x23
 #define RoseUPaletteID 0x24
 #define RosePPaletteID 0x25
+#define EmilePaletteID 0x26
 
 #define DavelarnPaletteID 0x18
 #define MarqueStarquePaletteID 0x19
@@ -74,6 +75,9 @@ setPalette(BlairPPaletteID,BlairPPalette)
 
 setPalette(ArinPaletteID,ArinPalette)
 
+setPalette(KennethUPaletteID,KennethUPalette)
+setPalette(KennethPPaletteID,KennethPPalette)
+
 setPalette(NatasiaUPaletteID,NatasiaUPalette)
 setPalette(NatasiaPPaletteID,NatasiaPPalette)
 
@@ -81,6 +85,12 @@ setPalette(StefanUPaletteID,StefanUPalette)
 setPalette(StefanPPaletteID,StefanPPalette)
 
 setPalette(DesmondPaletteID,DesmondPalette)
+
+setPalette(SamUPaletteID,SamUPalette)
+setPalette(SamPPaletteID,SamPPalette)
+
+setPalette(JosefUPaletteID,JosefUPalette)
+setPalette(JosefPPaletteID,JosefPPalette)
 
 setPalette(PeggyUPaletteID,PeggyUPalette)
 setPalette(PeggyPPaletteID,PeggyPPalette)
@@ -90,17 +100,10 @@ setPalette(ButchUPaletteID,ButchUPalette)
 setPalette(CassiusUPaletteID,CassiusUPalette)
 setPalette(CassiusPPaletteID,CassiusPPalette)
 
-setPalette(SamUPaletteID,SamUPalette)
-setPalette(SamPPaletteID,SamPPalette)
-
-setPalette(KennethUPaletteID,KennethUPalette)
-setPalette(KennethPPaletteID,KennethPPalette)
-
 setPalette(RachaelUPaletteID,RachaelUPalette)
 setPalette(RachaelPPaletteID,RachaelPPalette)
 
-setPalette(JosefUPaletteID,JosefUPalette)
-setPalette(JosefPPaletteID,JosefPPalette)
+setPalette(EmilePaletteID,EmilePalette)
 
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
@@ -135,7 +138,7 @@ SetPaletteFull(Peggy,PeggyUPaletteID,Cleric,PeggyPPaletteID,BishopF,0x0,0x0)
 SetPaletteFull(Butch,ButchUPaletteID,Merc,ButchUPaletteID,Hero,0x0,0x0)
 SetPaletteFull(Cassius,CassiusUPaletteID,AxeCav,CassiusPPaletteID,AxePal,0x0,0x0)
 SetPaletteFull(Rachael,RachaelUPaletteID,LncPeg,RachaelPPaletteID,Falco,0x0,0x0)
-SetPaletteFull(Emile,0x0,0x0,0x0,Sage,0x0,0x0)
+SetPaletteFull(Emile,0x0,0x0,EmilePaletteID,Sage,0x0,0x0)
 SetPaletteFull(Jeff,0x0,Thief,0x0,Assass,0x0,0x0)
 SetPaletteFull(Apollo,0x0,LightM,0x0,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
@@ -247,6 +250,10 @@ BechamelUPalette:
 ALIGN 4
 BechamelPPalette:
 #incbin "BechamelPromoted.dmp"
+
+ALIGN 4
+EmilePalette:
+#incbin "Emile.dmp"
 
 ALIGN 4
 CharleyPalette:

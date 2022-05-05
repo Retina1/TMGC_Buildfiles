@@ -80,6 +80,11 @@ RachaelMug:
 setMugEntry(0x10,RachaelMug,3,5,3,3)
 
 ALIGN 4
+EmileMug:
+#incext PortraitFormatter "Emile.png"
+setMugEntry(0x11,EmileMug,3,5,3,3)
+
+ALIGN 4
 BechamelMug:
 #incext PortraitFormatter "Bechamel.png"
 setMugEntry(0x16,BechamelMug,3,5,3,3)

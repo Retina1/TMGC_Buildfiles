@@ -1,0 +1,106 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	song02E8_grp  voicegroup000
+	#define	song02E8_pri  20
+	#define	song02E8_rev  0
+	#define	song02E8_mvl  127
+	#define	song02E8_key  0
+	#define	song02E8_tbs  1
+	#define	song02E8_exg  0
+	#define	song02E8_cmp  1
+
+	// .rodata
+	//	song02E8
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+song02E8_001:
+// 000   ----------------------------------------
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+song02E8_002:
+// 000   ----------------------------------------
+ BYTE   KEYSH   song02E8_key+0
+ BYTE   VOICE   62
+ BYTE   MOD 0
+ BYTE   GsM1
+ BYTE   PAN   c_v+0
+// 001   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   0*song02E8_mvl/mxv
+ BYTE   W14
+ BYTE   CnM2
+ BYTE   W01
+ BYTE   EnM2
+ BYTE   W01
+ BYTE   AnM2
+ BYTE   TIE  Cn3  v127
+ BYTE   TIE  Cs3
+ BYTE   W01
+ BYTE   VOL   13*song02E8_mvl/mxv
+ BYTE   W01
+ BYTE   EnM1
+ BYTE   W01
+ BYTE   GsM1
+ BYTE   W01
+ BYTE   Cs0
+ BYTE   W01
+ BYTE   En0
+ BYTE   W01
+ BYTE   An0
+ BYTE   W01
+ BYTE   Cs1
+ BYTE   W01
+ BYTE   En1
+ BYTE   W01
+ BYTE   An1
+ BYTE   W01
+ BYTE   Cs2
+ BYTE   W01
+ BYTE   En2
+ BYTE   W01
+ BYTE   An2
+ BYTE   W01
+ BYTE   Dn3
+ BYTE   W01
+ BYTE   En3
+ BYTE   W01
+ BYTE   An3
+ BYTE   W01
+ BYTE   Cs4
+ BYTE   W01
+ BYTE   En4
+ BYTE   W01
+ BYTE   An4
+ BYTE   W01
+ BYTE   Cs5
+ BYTE   W01
+ BYTE   Fn5
+ BYTE   W01
+ BYTE   Fs5
+ BYTE   W56
+ BYTE   W01
+// 002   ----------------------------------------
+ BYTE   W78
+ BYTE   EOT
+ BYTE   Cn3  v061
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+song02E8:
+	BYTE	2	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	song02E8_pri	// Priority
+	BYTE	song02E8_rev	// Reverb.
+    
+	POIN2	song02E8_grp
+    
+	POIN2	song02E8_001
+	POIN2	song02E8_002
+
+	

@@ -184,6 +184,7 @@
 #define FlyingSpikeIcon 0xe4
 #define EmboldenerIcon 0x8b
 #define PartisanIcon 0x1
+#define BeecurveBowIcon 0x97
 
 ALIGN 4
 NewItemIcons:
@@ -560,7 +561,7 @@ ALIGN 4
 ItemIconEntry(WrathStaffIcon)
 #incbin "WrathStaff.dmp"
 ALIGN 4
-ItemIconEntry(YoinkIcon)
+ItemIconEntry(MineStaffIcon)
 #incbin "Staves/Old(bad)/Mine Staff.dmp"
 
 
@@ -724,6 +725,9 @@ ItemIconEntry(EmboldenerIcon)
 ALIGN 4
 ItemIconEntry(PartisanIcon)
 #incbin "2WB Partisan.dmp"
+ALIGN 4
+ItemIconEntry(BeecurveBowIcon)
+#incbin "BeecurveBow.dmp"
 // End of icons 
 POP 
 

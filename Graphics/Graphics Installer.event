@@ -98,10 +98,10 @@ POP
 
 ALIGN 4
 NewStatScreen:
-#incext Png2Dmp "StatScreen.png" --lz77
+#incext Png2Dmp "NewStatscreen.png" --lz77
 ALIGN 4
 NewStatScreenPal:
-#incext Png2Dmp "StatScreen.png" --palette-only
+#incext Png2Dmp "NewStatscreen.png" --palette-only
 
 ALIGN 4
 LevelSelect:

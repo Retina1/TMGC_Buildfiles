@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "AugustB.event"
+SongTable(S_AugustB,AugustB,1)
+}
+{
 #include "TheDevoted.event"
 SongTable(S_TheDevoted,TheDevoted,0)
 }

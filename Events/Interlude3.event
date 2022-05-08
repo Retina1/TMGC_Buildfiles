@@ -212,7 +212,9 @@ Text(I3ArinConvo)
 EndEvent
 
 I3PeggyTalk:
-Text(I3ArinConvo)
+Text(I3PeggyConvo)
+AddUnitStatus(Peggy,Strength,2)
+SystemText(I3PeggyStrengthUp)
 EndEvent
 
 I3ButchTalk:

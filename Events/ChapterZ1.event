@@ -20,6 +20,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,CZ1Turn3,3)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -54,7 +55,10 @@ Z1Units:
 UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [28,1] 0x0 0x0 0x0 0x0 [IronLance, IronBow, Elixir, ChestKey] NoAI
 UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [27,2] 0x0 0x0 0x0 0x0 [SilverSword, IronSword, Vulnerary] NoAI
 UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [29,2] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe, Vulnerary] NoAI
-UNIT Leila SwdPeg 0x0 Level(13,Ally,0) [28,4] 0x0 0x0 0x0 0x0 [Rapier, SteelSword, AngelicRobe] NoAI
+UNIT
+
+Z1Leila:
+UNIT Leila SwdPeg 0x0 Level(13,NPC,0) [15,0] 0x0 0x0 0x1 REDA16R4 [Rapier, SteelSword, AngelicRobe] NoAI
 UNIT
 
 Z1Easy:
@@ -106,6 +110,15 @@ MUSC NarrationTheme
 Narration(ChZ1_Narration)
 CleanText(PathCG,Prologue_Opening)
 SystemText(ZekeArcPrimer)
+EndEvent
+
+CZ1Turn3:
+Reinforcements(Z1Leila)
+MUSC RecruitmentTheme
+Text(Ch3_Sam_Joins)
+TurnEnemy(Leila)
+Text(Ch3_Sam_Joins)
+TurnAlly(Leila)
 EndEvent
 
 EndingScene:

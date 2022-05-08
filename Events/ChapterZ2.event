@@ -1,0 +1,148 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsZ2,ThisChapter)
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Z2Units Z2Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,Z2Turn5,5)
+TurnEventPlayer(0x23,Z2DragonSpawn,1,255)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Escape(0,0)
+Escape(0,1)
+Escape(0,2)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+AreaEvent(0x21,Z2AreaTrigger,11,9,11,9)
+AreaEvent(0x22,Z2AreaTrigger2,15,6,15,6)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Z2Units:
+UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [22,23] 0x0 0x0 0x0 0x0 [IronLance, IronBow, Elixir, ChestKey] NoAI
+UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [21,24] 0x0 0x0 0x0 0x0 [SilverSword, IronSword, Vulnerary] NoAI
+UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [23,22] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe, Vulnerary] NoAI
+UNIT Leila SwdPeg 0x0 Level(13,Ally,0) [21,22] 0x0 0x0 0x0 0x0 [Rapier, SteelSword, AngelicRobe] NoAI
+UNIT
+
+Z2NewUnits:
+UNIT Damien Archer 0x0 Level(15,Ally,0) [0,18] 0x0 0x0 0x1 REDA0R17 [SteelBow, IronBow, Vulnerary] NoAI
+UNIT Zacharias Fighter 0x0 Level(12,Ally,0) [0,18] 0x0 0x0 0x1 REDA1R18 [SteelAxe, Halberd, Vulnerary] NoAI
+UNIT
+
+Z2Easy:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+Z2Normal:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+Z2Hard:
+UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT
+
+Z2WyvernGroup:
+UNIT Z2Wyvern Wyvern 0x0 Level(2,Enemy,1) [11,29] DropItem 0x0 0x1 REDA9R26 [WyvernBreath,MasterSeal] NoAI
+UNIT
+
+Z2WyvernGroupHard:
+UNIT Z2Wyvern Wyvern 0x0 Level(2,Enemy,1) [11,29] DropItem 0x0 0x1 REDA12R27 [WyvernBreath,MasterSeal] NoAI
+UNIT Dragon Wyvern 0x0 Level(1,Enemy,1) [0,23] 0x0 0x0 0x1 REDA3R20 [WyvernBreath] NoAI
+UNIT Dragon Wyvern 0x0 Level(1,Enemy,1) [0,23] 0x0 0x0 0x1 REDA7R24 [WyvernBreath] NoAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 Z2Units
+ENUN
+LoadUnitsByDifficulty(Z2Easy,Z2Normal,Z2Hard)
+MUSC NarrationTheme
+Narration(ChZ2_Narration)
+ENUT 0x23
+CleanText(PathCG,Prologue_Opening)
+EndEvent
+
+EndingScene:
+MUSC VictoryTheme
+Text(PathCG,Prologue_Ending)
+MoveToChapter(ChapterZ3)
+EndEvent
+
+Z2Turn5:
+Reinforcements(Z2NewUnits)
+MUSC RecruitmentTheme
+Text(Ch3_Sam_Joins)
+EndEvent
+
+Z2DragonSpawn:
+CHECK_HARD
+BEQ 0x1 0xc 0x0
+Reinforcements(Z2WyvernGroupHard)
+GOTO 0x2
+LABEL 0x1
+Reinforcements(Z2WyvernGroup)
+LABEL 0x2
+Text(Ch3_Sam_Joins)
+EndEvent
+
+Z2AreaTrigger2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+TILECHANGE 0x0
+GOTO 0x2
+LABEL 0x1
+ENUF 0x22
+LABEL 0x2
+EndEvent
+
+Z2AreaTrigger:
+CHECK_EVENTID 0x22
+BEQ 0x1 0xc 0x0
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+TILECHANGE 0x1
+TILECHANGE 0x2
+TILECHANGE 0x3
+ENUF 0x23
+GOTO 0x2
+LABEL 0x1
+ENUF 0x21
+LABEL 0x2
+EndEvent
+
+MESSAGE Events end at offset CURRENTOFFSET

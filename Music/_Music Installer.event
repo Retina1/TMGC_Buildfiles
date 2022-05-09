@@ -24,6 +24,14 @@
 #define SFXGroup 6
 
 {
+#include "FE5Promo.event"
+SongTable(S_FE5Promo,FE5Promo,0)
+}
+{
+#include "FE5RecoveryB.event"
+SongTable(S_FE5RecoveryB,FE5RecoveryB,0)
+}
+{
 #include "AugustB.event"
 SongTable(S_AugustB,AugustB,1)
 }

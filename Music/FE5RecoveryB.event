@@ -1,0 +1,335 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	FE5RecoveryB_grp  voicegroup000
+	#define	FE5RecoveryB_pri  0
+	#define	FE5RecoveryB_rev  0
+	#define	FE5RecoveryB_mvl  127
+	#define	FE5RecoveryB_key  0
+	#define	FE5RecoveryB_tbs  1
+	#define	FE5RecoveryB_exg  0
+	#define	FE5RecoveryB_cmp  1
+
+	// .rodata
+	//	FE5RecoveryB
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+FE5RecoveryB_001:
+//  #01 //000   ----------------------------------------
+ BYTE   KEYSH   FE5RecoveryB_key+0
+Label_561376:
+ BYTE   TEMPO   70*FE5RecoveryB_tbs/2
+ BYTE   VOICE   52
+ BYTE   W96
+//  #01 //001   ----------------------------------------
+ BYTE   W96
+//  #01 //002   ----------------------------------------
+ BYTE   W96
+//  #01 //003   ----------------------------------------
+ BYTE   W03
+ BYTE   VOL   44*FE5RecoveryB_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   PAN   c_v+25
+ BYTE   N44  Fn2  v096
+ BYTE   W48
+ BYTE   En2
+ BYTE   W44
+ BYTE   W01
+//  #01 //004   ----------------------------------------
+ BYTE   W03
+ BYTE   Fn2
+ BYTE   W48
+ BYTE   En2
+ BYTE   W44
+ BYTE   W01
+//  #01 //005   ----------------------------------------
+ BYTE   VOL   0*FE5RecoveryB_mvl/mxv
+ BYTE   GoTo
+  POIN2 Label_561376
+//  #01 //006   ----------------------------------------
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+FE5RecoveryB_002:
+//  #02 //000   ----------------------------------------
+ BYTE   KEYSH   FE5RecoveryB_key+0
+Label_560F4E:
+ BYTE   VOICE   105
+ BYTE   W96
+//  #02 //001   ----------------------------------------
+ BYTE   W96
+//  #02 //002   ----------------------------------------
+ BYTE   W96
+//  #02 //003   ----------------------------------------
+ BYTE   W03
+ BYTE   VOL   44*FE5RecoveryB_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   PAN   c_v+0
+ BYTE   TIE  Gn2  v084
+ BYTE   W92
+ BYTE   W01
+//  #02 //004   ----------------------------------------
+ BYTE   W96
+//  #02 //005   ----------------------------------------
+ BYTE   VOL   0*FE5RecoveryB_mvl/mxv
+ BYTE   GoTo
+  POIN2 Label_560F4E
+//  #02 //006   ----------------------------------------
+ BYTE   W02
+ BYTE   EOT
+ BYTE   Gn2
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+FE5RecoveryB_003:
+//  #03 //000   ----------------------------------------
+ BYTE   KEYSH   FE5RecoveryB_key+0
+Label_5611EE:
+ BYTE   VOICE   10
+ BYTE   W03
+ BYTE   VOL   48*FE5RecoveryB_mvl/mxv
+ BYTE   PAN   c_v+14
+ BYTE   N02  Dn4  v052
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   En4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Cs4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   En4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Cs4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   En4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Cs4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   En4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Cs4
+ BYTE   W03
+//  #03 //001   ----------------------------------------
+Label_561235:
+ BYTE   N02  Fs3  v052
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   En4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Cs4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   En4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Cs4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   En4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Cs4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   En4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Dn4
+ BYTE   W03
+ BYTE   Fs3
+ BYTE   W03
+ BYTE   Cs4
+ BYTE   W03
+ BYTE   PEND 
+//  #03 //002   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_561235
+//  #03 //003   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_561235
+//  #03 //004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_561235
+//  #03 //005   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_5611EE
+//  #03 //006   ----------------------------------------
+ BYTE   N02  Fs3  v052
+ BYTE   W02
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+FE5RecoveryB_004:
+//  #04 //000   ----------------------------------------
+ BYTE   KEYSH   FE5RecoveryB_key+0
+Label_56139A:
+ BYTE   VOICE   105
+ BYTE   W03
+ BYTE   VOL   54*FE5RecoveryB_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   PAN   c_v+0
+ BYTE   TIE  Bn0  v127
+ BYTE   W92
+ BYTE   W01
+//  #04 //001   ----------------------------------------
+ BYTE   W96
+//  #04 //002   ----------------------------------------
+ BYTE   W96
+//  #04 //003   ----------------------------------------
+ BYTE   W96
+//  #04 //004   ----------------------------------------
+ BYTE   W96
+//  #04 //005   ----------------------------------------
+ BYTE   VOL   0*FE5RecoveryB_mvl/mxv
+ BYTE   GoTo
+  POIN2 Label_56139A
+//  #04 //006   ----------------------------------------
+ BYTE   W02
+ BYTE   EOT
+ BYTE   Bn0
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+FE5RecoveryB_005:
+//  #05 //000   ----------------------------------------
+ BYTE   KEYSH   FE5RecoveryB_key+0
+Label_5613B6:
+ BYTE   VOICE   52
+ BYTE   W03
+ BYTE   VOL   44*FE5RecoveryB_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   N92  An2  v092
+ BYTE   W92
+ BYTE   W01
+//  #05 //001   ----------------------------------------
+ BYTE   W03
+ BYTE   Gs2
+ BYTE   W92
+ BYTE   W01
+//  #05 //002   ----------------------------------------
+ BYTE   W04
+ BYTE   N44  Gn2
+ BYTE   W48
+ BYTE   An2  v084
+ BYTE   W44
+//  #05 //003   ----------------------------------------
+ BYTE   W03
+ BYTE   PAN   c_v-25
+ BYTE   TIE  Bn2  v092
+ BYTE   W92
+ BYTE   W01
+//  #05 //004   ----------------------------------------
+ BYTE   W96
+//  #05 //005   ----------------------------------------
+ BYTE   VOL   0*FE5RecoveryB_mvl/mxv
+ BYTE   GoTo
+  POIN2 Label_5613B6
+//  #05 //006   ----------------------------------------
+ BYTE   W02
+ BYTE   EOT
+ BYTE   Bn2
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+FE5RecoveryB:
+	BYTE	5	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	FE5RecoveryB_pri	// Priority
+	BYTE	FE5RecoveryB_rev	// Reverb.
+    
+	POIN2	FE5RecoveryB_grp
+    
+	POIN2	FE5RecoveryB_001
+	POIN2	FE5RecoveryB_002
+	POIN2	FE5RecoveryB_003
+	POIN2	FE5RecoveryB_004
+	POIN2	FE5RecoveryB_005
+
+	

@@ -222,11 +222,15 @@ Text(I3ArinConvo)
 EndEvent
 
 I3CassiusTalk:
-Text(I3ArinConvo)
+Text(I3CassiusConvo)
+AddUnitStatus(Cassius,Skill,1)
+SystemText(I3CassiusSkillUp)
 EndEvent
 
 I3RachaelTalk:
-Text(I3ArinConvo)
+Text(I3RachaelConvo)
+AddUnitStatus(Rachael,MaxHP,3)
+SystemText(I3RachaelHPUp)
 EndEvent
 
 I3JeffTalk:

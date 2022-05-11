@@ -34,10 +34,51 @@ some pirate-run shops on this boat.)[A][N]
 (It wouldn't hurt to see what[N]
 they have available.)[A][X]
 
+##I3ConfirmLeave
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadCid]
+Ye good wit' yer mates, lass?[A][X]
+
+##I3NotYet
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadCid][OpenMidLeft]
+Not quite yet, captain.[A][N]
+[OpenMidRight]Aye. I get ya.[N]
+Go then, and be merry.[A][X]
+
+##I3ReleaseMe
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadCid][OpenMidLeft]
+I believe so.[A][N][OpenMidRight]
+Well, then. Shall ye gaze o'er[N]
+the vast horizon?[A][X]
+
 ##I3ArinConvo
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadArin]
 Ah, Blair. How are you[N]
-holding up?[A][X]
+holding up?[A][N][OpenMidLeft]
+I'm well, all things considered.[N]
+It's been an exhausting road.[A][N]
+But you'd know that.[N]
+...Thanks for all of this.[A][N][OpenMidRight]
+I'm hardly the only reason[N]
+you've made it this far.[A][N]
+Don't undersell your own skills,[N]
+both on and off the battlefield.[A][N][OpenMidLeft]
+But that's the thing! You're a greater[N]
+fighter than I could ever be,[A][N]
+AND you've practically been my[N]
+tactician![A] I owe everything[N]
+up to this point to you.[A][N][OpenMidRight][CloseEyes]
+If you insist.[A][N][OpenEyes]
+Anyway, if you haven't yet,[N]
+you should check in on the others.[A][N]
+As always, it's great to see you.[A][X]
+
+##I3KennethConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadKenneth]
+book[A][X]
+
+##I3NatasiaConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadNatasia]
+and they were roommates[A][X]
 
 ##I3StefanConvo
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadStefan]
@@ -59,6 +100,18 @@ A pleasure seeing you![A][X]
 ##I3StefanSpeedUp
 Stefan's speed[N]
 increased by 2![A][X]
+
+##I3DesmondConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadDesmond]
+jagen moment[A][X]
+
+##I3SamConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadSam]
+i'm bad[A][X]
+
+##I3JosefConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadJosef]
+grave robbery[A][X]
 
 ##I3PeggyConvo
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadPeggy]
@@ -82,6 +135,10 @@ Look out, world! You can't stop me now.[A][X]
 ##I3PeggyStrengthUp
 Peggy's strength[N]
 increased by 2![A][X]
+
+##I3ButchConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadButch]
+...i don't have a joke for this[A][X]
 
 ##I3CassiusConvo
 [OpenMidRight][LoadCassius]
@@ -136,3 +193,19 @@ in, milady. Good day.[A][X]
 ##I3RachaelHPUp
 Rachael's max HP[N]
 increased by 3![A][X]
+
+##I3EmileConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadEmile]
+mmmmmmagic[A][X]
+
+##I3JeffConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadJeff]
+speemd[A][X]
+
+##I3ApolloConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadApollo]
+god[A][X]
+
+##I3BechamelConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadBechamel]
+lass[A][X]

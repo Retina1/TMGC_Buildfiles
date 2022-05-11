@@ -134,7 +134,9 @@ ENDA
 
 EndingScene:
 DisableFreeMovement
-Text(I1_Opening)
+EVBIT_MODIFY 0
+//maybe change cg or music here- contemplative about journey so far into oh shit the yg'strans (or maybe keep yg'strans for chapter 10)
+Text(I3ReleaseMe)
 MoveToChapter(Chapter10)
 ENDA
 
@@ -171,13 +173,13 @@ EndEvent
 
 I3ReadyToEnd:
 EVBIT_MODIFY 4
-Text(I1ConfirmLeave)
+Text(I3ConfirmLeave)
 SystemText(I1LeavePrompt)
 IfNoSelectedGoto(0x2)
 CALL EndingScene
 GOTO 0x1
 LABEL 0x2
-Text(I1NotYet)
+Text(I3NotYet)
 LABEL 0x1
 EndEvent
 
@@ -186,11 +188,11 @@ Text(I3ArinConvo)
 EndEvent
 
 I3KennethTalk:
-Text(I3ArinConvo)
+Text(I3KennethConvo)
 EndEvent
 
 I3NatasiaTalk:
-Text(I3ArinConvo)
+Text(I3NatasiaConvo)
 EndEvent
 
 I3StefanTalk:
@@ -200,15 +202,15 @@ SystemText(I3StefanSpeedUp)
 EndEvent
 
 I3DesmondTalk:
-Text(I3ArinConvo)
+Text(I3DesmondConvo)
 EndEvent
 
 I3SamTalk:
-Text(I3ArinConvo)
+Text(I3SamConvo)
 EndEvent
 
 I3JosefTalk:
-Text(I3ArinConvo)
+Text(I3JosefConvo)
 EndEvent
 
 I3PeggyTalk:
@@ -218,7 +220,7 @@ SystemText(I3PeggyStrengthUp)
 EndEvent
 
 I3ButchTalk:
-Text(I3ArinConvo)
+Text(I3ButchConvo)
 EndEvent
 
 I3CassiusTalk:
@@ -234,19 +236,19 @@ SystemText(I3RachaelHPUp)
 EndEvent
 
 I3JeffTalk:
-Text(I3ArinConvo)
+Text(I3JeffConvo)
 EndEvent
 
 I3EmileTalk:
-Text(I3ArinConvo)
+Text(I3EmileConvo)
 EndEvent
 
 I3ApolloTalk:
-Text(I3ArinConvo)
+Text(I3ApolloConvo)
 EndEvent
 
 I3BechamelTalk:
-Text(I3ArinConvo)
+Text(I3BechamelConvo)
 EndEvent
 
 ALIGN 4

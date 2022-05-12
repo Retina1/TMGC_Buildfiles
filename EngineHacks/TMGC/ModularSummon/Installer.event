@@ -14,6 +14,7 @@ ModularSummonTable:
 // 0x0 = any unit, class, level, or flag is fine 
 // 		Unit, 			Class, 			LevelReq, 	FlagReq, 	PosType, 		MatchLvl, 	ResetStats		Padding
 BYTE 	Addington		Automaton 		0x0 		0x0 		0x1				0x0 		0x1 		$0 ; POIN AddingtonSummon; ALIGN 12
+BYTE 	Horatio			RuneMast	 	0x0 		HoratioFlag 		0x1				0x1 		0x1 		$0 ; POIN HoratioSummon; ALIGN 12
 WORD 0 0 0 // Terminator 
 // (Align 12 is probably unnecessary but if you forget a byte it might make things explode a little less I'm hoping) 
 
@@ -36,6 +37,10 @@ AddingtonSummon:
 //   UnitID  			ClassID    		Comm   Level,Alleg,AutoL  Coords 	Spec,ItemD,Mons n/a REDAShort	 ItemWord 								AIWord 
 UNIT 0xcf  			0x61 			0x0 	Level(1, NPC, 0)     [9,9] 0x0 0x0 0x0 0x0 		[0x0,0x0,0x0,0x0] 		[0x6,0x3,0x0,0x0]
 UNIT 0xd0  			0x61 			0x0 	Level(1, NPC, 0)     [11,11] 0x0 0x0 0x0 0x0 		[0x0,0x0,0x0,0x0] 		[0x6,0x3,0x0,0x0]
+UNIT 
+HoratioSummon:
+//   UnitID  			ClassID    		Comm   Level,Alleg,AutoL  Coords 	Spec,ItemD,Mons n/a REDAShort	 ItemWord 								AIWord 
+UNIT 0xd2  			0x1e 			0x0 	Level(1, Ally, 0)     [9,10] 0x0 0x0 0x0 0x0 		[IronSword,0x0,0x0,0x0] 		[0x6,0x3,0x0,0x0]
 UNIT 
 // Default here is Glen, Selena, Valter, Riev, Ismaire, Caellach, Fado 
 

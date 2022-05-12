@@ -185,6 +185,7 @@
 #define EmboldenerIcon 0x8b
 #define PartisanIcon 0x1
 #define BeecurveBowIcon 0x97
+#define EyedropsIcon 0xdc
 
 ALIGN 4
 NewItemIcons:
@@ -728,6 +729,10 @@ ItemIconEntry(PartisanIcon)
 ALIGN 4
 ItemIconEntry(BeecurveBowIcon)
 #incbin "BeecurveBow.dmp"
+
+ALIGN 4
+ItemIconEntry(EyedropsIcon)
+#incbin "Blue Tonic.dmp"
 // End of icons 
 POP 
 

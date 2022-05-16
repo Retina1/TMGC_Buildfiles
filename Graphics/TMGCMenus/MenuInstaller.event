@@ -175,6 +175,8 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 		ORG 0x349CC//TradeOtherHalfAutobox 33
 		POIN TradeOtherHalfAutobox
 		
+	//	ORG 0x5AE190
+	//	POIN NameEntryBox
 	POP
 		ALIGN 4
 		Tileset:
@@ -291,6 +293,10 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 		ALIGN 4
 		TradeOtherHalfAutobox:
 		#incbin "TradeOtherHalfAutobox.dmp"
+		
+	//	ALIGN 4
+	//	NameEntryBox:
+	//	#incbin "NameEntry.dmp"
 
 	
 #else

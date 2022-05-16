@@ -1,3 +1,17 @@
+//text id 0xEFF is tactician name
+PUSH
+ORG (TextTable+(4*0xEFF))
+WORD 0x8202bd10
+POP
+
+//name length
+PUSH
+ORG 0x44800
+BYTE 0x09
+ORG 0x482bA
+BYTE 0x09
+POP
+
 //not an address but eh it fits here
 #include "ArenaPointers.event"
 

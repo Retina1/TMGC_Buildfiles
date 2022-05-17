@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C7Turn1,1)
 TurnEventPlayer(0x0,C7Turn2,2)
 TurnEventPlayer(0x0,C7Turn5,5)
 TurnEventPlayer(0x0,C7Turn7,7)
@@ -329,6 +330,10 @@ MUSC S_Chaos
 CleanTextNoMap(HallCG, Ch7_Ending3)
 MoveToChapter(Chapter8)
 ENDA
+
+C7Turn1:
+SystemText(C7GreenUnitNote)
+EndEvent
 
 C7Turn2:
 Reinforcements(C7Emile)

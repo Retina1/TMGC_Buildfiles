@@ -110,7 +110,7 @@ UNIT Ygstra Sniper 0x0 Level(3,Enemy,1) [0,24] 0x0 0x0 0x0 0x0 [IronBow] AttackI
 UNIT Ygstra Warrior 0x0 Level(3,Enemy,1) [1,23] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Ygstra Hero 0x0 Level(3,Enemy,1) [1,25] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
 UNIT Ygstra AxeWyv 0x0 Level(13,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Jonas LncWyv 0x0 Level(17,Enemy,1) [2,9] DropItem 0x0 0x0 0x0 [Horseslayer,MasterSeal] NoAI
+UNIT Jonas LncWyv 0x0 Level(17,Enemy,1) [2,23] DropItem 0x0 0x0 0x0 [Horseslayer,MasterSeal] NoAI
 UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [1,24] DropItem 0x0 0x0 0x0 [Arkhinal,Tomahawk,LegRing] NeverMoveAI
 UNIT
 
@@ -142,7 +142,7 @@ UNIT Ygstra Warrior 0x0 Level(5,Enemy,1) [1,23] 0x0 0x0 0x0 0x0 [SteelAxe] Attac
 UNIT Ygstra Hero 0x0 Level(5,Enemy,1) [1,25] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
 UNIT Ygstra AxeWyv 0x0 Level(13,Enemy,1) [2,11] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Ygstra LncWyv 0x0 Level(13,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
-UNIT Jonas LncWyv 0x0 Level(17,Enemy,1) [2,9] DropItem 0x0 0x0 0x0 [Horseslayer,Shatterspear,MasterSeal] NoAI
+UNIT Jonas LncWyv 0x0 Level(17,Enemy,1) [1,28] DropItem 0x0 0x0 0x0 [Horseslayer,Shatterspear,MasterSeal] NoAI
 UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [1,29] DropItem 0x0 0x0 0x0 [Arkhinal,Tomahawk,LegRing] NeverMoveAI
 UNIT
 
@@ -178,7 +178,7 @@ UNIT Ygstra Sorc 0x0 Level(5,Enemy,1) [0,26] 0x0 0x0 0x0 0x0 [Nightfall,Physic] 
 UNIT Ygstra AxeWyv 0x0 Level(13,Enemy,1) [2,11] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Ygstra AxeWyv 0x0 Level(13,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT Ygstra LncWyv 0x0 Level(13,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
-UNIT Jonas LncWyv 0x0 Level(17,Enemy,1) [2,9] DropItem 0x0 0x0 0x0 [Horseslayer,Shatterspear,Axebuster,MasterSeal] NoAI
+UNIT Jonas LncWyv 0x0 Level(17,Enemy,1) [1,28] DropItem 0x0 0x0 0x0 [Horseslayer,Shatterspear,Axebuster,MasterSeal] NoAI
 UNIT Ygstra Ballistician 0x0 Level(17,Enemy,1) [0,30] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Ygstra Ballistician 0x0 Level(17,Enemy,1) [2,30] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Lazarus AxeGen 0x0 Level(12,Enemy,1) [1,29] DropItem 0x0 0x0 0x0 [Arkhinal,Tomahawk,LegRing] NeverMoveAI
@@ -238,9 +238,17 @@ ENUT GuideChpt10
 LoadUnitsByDifficulty(C10Easy,C10Normal,C10Hard)
 LOAD1 0x0 C10Ally
 ENUN
+CleanTextNoMap(BoatCG,Ch10_Opening)
 MUSC NarrationTheme
 Narration(Ch10_Narration)
-CleanText(BoatCG,Ch10_Opening)
+CAM1 Lazarus
+CLEAN
+FADU 0x3C
+FlashCursor(Lazarus,60)
+CleanText(BoatCG,Ch10_Opening2)
+MOVE 30 Jonas [2,9]
+ENUN
+CleanText(BoatCG,Ch10_Opening3)
 LOAD1 0x0 C10Units
 ENUN
 CHECK_ALIVE Apollo

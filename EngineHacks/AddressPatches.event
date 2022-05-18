@@ -1,6 +1,6 @@
-//text id 0xEFF is tactician name
+//text id 0x0041 is tactician name
 PUSH
-ORG (TextTable+(4*0xEFF))
+ORG (TextTable+(4*0x0041))
 WORD 0x8202bd10
 POP
 

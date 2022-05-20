@@ -231,14 +231,26 @@ UNIT Ygstra HeroF 0x0 Level(3,Enemy,1) [0,24] 0x0 0x0 0x1 REDA3R24 [SteelSword] 
 UNIT Ygstra WarriorF 0x0 Level(3,Enemy,1) [0,25] 0x0 0x0 0x1 REDA2R25 [SteelAxe] NoAI
 UNIT
 
+C10Cutscene:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [15,22] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt10
 LoadUnitsByDifficulty(C10Easy,C10Normal,C10Hard)
 LOAD1 0x0 C10Ally
+LOAD1 0x0 C10Cutscene
 ENUN
-CleanTextNoMap(BoatCG,Ch10_Opening)
+SetBackground(BoatCG)
+TEXTSTART
+TEXTSHOW Ch10_Opening
+TEXTEND
+MUSC S_SMTLevelUp
+TEXTCONT
+TEXTEND
+FADI 0x3C
 MUSC NarrationTheme
 Narration(Ch10_Narration)
 CAM1 Lazarus
@@ -249,7 +261,9 @@ MUSC S_Crisis
 CleanText(BoatCG,Ch10_Opening2)
 MOVE 30 Jonas [2,9]
 ENUN
-CleanText(BoatCG,Ch10_Opening3)
+CAM1 Blair
+FlashCursor(Blair,60)
+CleanTextNoMap(BoatCG,Ch10_Opening3)
 LOAD1 0x0 C10Units
 ENUN
 CHECK_ALIVE Apollo

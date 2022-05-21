@@ -239,6 +239,8 @@ EndEvent
 
 I3JeffTalk:
 Text(I3JeffConvo)
+AddUnitStatus(Jeff,LuckStat,2)
+SystemText(I3JeffLuckUp)
 EndEvent
 
 I3EmileTalk:

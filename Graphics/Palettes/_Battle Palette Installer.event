@@ -59,6 +59,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define EmilePaletteID 0x26
 #define ElcorianPaletteID 0x27
 #define AlexisUPaletteID 0x28
+#define JeffUPaletteID 0x29
+#define JeffPPaletteID 0x2a
 
 #define DavelarnPaletteID 0x18
 #define MarqueStarquePaletteID 0x19
@@ -105,6 +107,9 @@ setPalette(CassiusPPaletteID,CassiusPPalette)
 setPalette(RachaelUPaletteID,RachaelUPalette)
 setPalette(RachaelPPaletteID,RachaelPPalette)
 
+setPalette(JeffUPaletteID,JeffUPalette)
+setPalette(JeffPPaletteID,JeffPPalette)
+
 setPalette(EmilePaletteID,EmilePalette)
 
 setPalette(BechamelUPaletteID,BechamelUPalette)
@@ -145,7 +150,7 @@ SetPaletteFull(Butch,ButchUPaletteID,Merc,ButchUPaletteID,Hero,0x0,0x0)
 SetPaletteFull(Cassius,CassiusUPaletteID,AxeCav,CassiusPPaletteID,AxePal,0x0,0x0)
 SetPaletteFull(Rachael,RachaelUPaletteID,LncPeg,RachaelPPaletteID,Falco,0x0,0x0)
 SetPaletteFull(Emile,0x0,Mage,EmilePaletteID,Sage,0x0,0x0)
-SetPaletteFull(Jeff,0x0,Thief,0x0,Assass,0x0,0x0)
+SetPaletteFull(Jeff,JeffUPaletteID,Thief,JeffPPaletteID,Assass,0x0,0x0)
 SetPaletteFull(Apollo,0x0,LightM,0x0,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
@@ -277,6 +282,13 @@ RachaelUPalette:
 ALIGN 4
 RachaelPPalette:
 #incbin "RachaelPromoted.dmp"
+
+ALIGN 4
+JeffUPalette:
+#incbin "JeffUnpromoted.dmp"
+ALIGN 4
+JeffPPalette:
+#incbin "JeffPromoted.dmp"
 
 ALIGN 4
 JosefUPalette:

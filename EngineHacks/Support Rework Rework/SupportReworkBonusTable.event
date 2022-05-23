@@ -36,6 +36,12 @@
 			support(BSupport,0,0,10,10,0,5)
 			support(BPSupport,0,0,15,10,0,10)
 			support(ASupport,0,1,15,15,0,15)
+		entry(Blair,Carbon)
+			support(CSupport,0,0,0,0,0,5)
+			support(CPSupport,0,0,0,0,0,10)
+			support(BSupport,0,0,5,0,0,15)
+			support(BPSupport,1,1,10,0,0,25)
+			support(ASupport,3,3,25,0,0,30)
 	//arin (blair)
 		entry(Arin,Desmond)
 			support(CSupport,0,0,10,0,0,0)
@@ -139,7 +145,13 @@
 	//hilbert
 	//flynn
 	//mikey
-	//carbon
+		entry(Mikey,Carbon)
+			support(CSupport,0,0,0,0,5,5)
+			support(CPSupport,0,0,0,0,10,10)
+			support(BSupport,1,1,0,0,10,10)
+			support(BPSupport,1,1,10,0,10,10)
+			support(ASupport,1,1,15,0,15,15)
+	//carbon (blair, mikey)
 	//athena
 	//charley
 	entry(0,0) // Terminator

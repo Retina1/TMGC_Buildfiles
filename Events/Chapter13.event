@@ -144,6 +144,7 @@ CleanText(DesertCG,Ch9_Opening)
 LOAD1 0x0 C13Units
 ENUN
 ENUT 0x23
+SetSupport(Mikey,Carbon,CSupport)
 GotoPrepScreen
 ENDA
 
@@ -157,14 +158,14 @@ ENDA
 C13MikeyRecruitment:
 EVBIT_MODIFY 3
 MUSC RecruitmentTheme
-Text(Ch5_Butch_Talk)
+Text(Ch13_Mikey_Talk)
 TurnAlly(Mikey)
 EndEvent
 
 C13CarbonRecruitment:
 EVBIT_MODIFY 3
 MUSC RecruitmentTheme
-Text(Ch5_Butch_Talk)
+Text(Ch13_Carbon_Talk)
 TurnAlly(Carbon)
 EndEvent
 

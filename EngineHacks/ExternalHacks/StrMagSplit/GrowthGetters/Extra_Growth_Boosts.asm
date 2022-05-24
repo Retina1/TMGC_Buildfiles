@@ -119,7 +119,7 @@ mov		r14,r0
 mov		r0,#0xED	@event id
 .short	0xF800
 cmp r0,#0
-beq GoBack
+beq MinGrowthsCheck
 cmp r5,#0
 ble GoBack
 mov r0, r5 
@@ -136,6 +136,23 @@ NoModulo:
 mov r1, #100 
 mul r0, r1
 mov r5, r0 @ remove remainer (modulo)
+
+MinGrowthsCheck:
+ldr		r0,Check_Event_ID
+mov		r14,r0
+mov		r0,#0xEC	@event id
+.short	0xF800
+cmp r0,#0
+beq GoBack
+cmp r5,#0
+ble GoBack
+mov r0, r5 
+mov r1, #100 
+swi 6
+mov r1, #100
+mul r0, r1 
+mov r5, r0
+bl GoBack
 
 GoBack:
 mov		r1,r8

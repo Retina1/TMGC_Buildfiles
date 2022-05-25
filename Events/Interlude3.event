@@ -191,10 +191,14 @@ EndEvent
 
 I3KennethTalk:
 Text(I3KennethConvo)
+AddUnitStatus(Kenneth,Defence,1)
+SystemText(I3KennethDefUp)
 EndEvent
 
 I3NatasiaTalk:
 Text(I3NatasiaConvo)
+AddUnitStatus(Natasia,Resistance,2)
+SystemText(I3NatasiaResUp)
 EndEvent
 
 I3StefanTalk:
@@ -249,6 +253,7 @@ EndEvent
 
 I3ApolloTalk:
 Text(I3ApolloConvo)
+GiveItem(ApolloNote,Blair)
 EndEvent
 
 I3BechamelTalk:

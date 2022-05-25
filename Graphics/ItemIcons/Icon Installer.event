@@ -187,6 +187,8 @@
 #define BeecurveBowIcon 0x97
 #define EyedropsIcon 0xdc
 
+#define NoteIcon 0x98
+
 ALIGN 4
 NewItemIcons:
 // Sheet with all icons goes here 
@@ -733,6 +735,10 @@ ItemIconEntry(BeecurveBowIcon)
 ALIGN 4
 ItemIconEntry(EyedropsIcon)
 #incbin "Blue Tonic.dmp"
+
+ALIGN 4
+ItemIconEntry(NoteIcon)
+#incbin "Paper.dmp"
 // End of icons 
 POP 
 

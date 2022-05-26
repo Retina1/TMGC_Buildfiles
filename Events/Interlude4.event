@@ -104,38 +104,38 @@ LOAD1 0x0 I4NPC
 ENUN
 MUSC NarrationTheme
 Narration(Base4_Narration)
-CleanTextNoMap(PortCG,I2_Opening)
+CleanTextNoMap(PortCG,FillerDialogue)
 GotoPrepScreen
 ENDA
 
 EndingScene:
 DisableFreeMovement
-Text(I2ReleaseMe)
+Text(FillerDialogue)
 MoveToChapter(Chapter13)
 ENDA
 
 I4Laronde:
-Text(I2HyperiusTalk)
+Text(FillerDialogue)
 EndEvent
 
 I4Leila:
-Text(I2HyperiusTalk)
+Text(FillerDialogue)
 EndEvent
 
 I4Athena:
-Text(I2HyperiusTalk)
+Text(FillerDialogue)
 EndEvent
 
 I4Callum:
-Text(I2HyperiusTalk)
+Text(FillerDialogue)
 EndEvent
 
 I4Cit:
-Text(I2HyperiusTalk)
+Text(FillerDialogue)
 EndEvent
 
 I4Cit2:
-Text(I2HyperiusTalk)
+Text(FillerDialogue)
 EndEvent
 
 I4Merchant:
@@ -177,13 +177,13 @@ EndEvent
 
 I4ReadyToEnd:
 EVBIT_MODIFY 4
-Text(I2ConfirmLeave)
+Text(FillerDialogue)
 SystemText(I1LeavePrompt)
 IfNoSelectedGoto(0x2)
 CALL EndingScene
 GOTO 0x1
 LABEL 0x2
-Text(I2NotYet)
+Text(FillerDialogue)
 LABEL 0x1
 EndEvent
 

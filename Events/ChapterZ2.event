@@ -94,19 +94,19 @@ LoadUnitsByDifficulty(Z2Easy,Z2Normal,Z2Hard)
 MUSC NarrationTheme
 Narration(ChZ2_Narration)
 ENUT 0x23
-CleanText(PathCG,Prologue_Opening)
+CleanText(PathCG,FillerDialogue)
 EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-Text(PathCG,Prologue_Ending)
+Text(PathCG,FillerDialogue)
 MoveToChapter(ChapterZ3)
 EndEvent
 
 Z2Turn5:
 Reinforcements(Z2NewUnits)
 MUSC RecruitmentTheme
-Text(Ch3_Sam_Joins)
+Text(FillerDialogue)
 EndEvent
 
 Z2DragonSpawn:
@@ -117,7 +117,7 @@ GOTO 0x2
 LABEL 0x1
 Reinforcements(Z2WyvernGroup)
 LABEL 0x2
-Text(Ch3_Sam_Joins)
+Text(FillerDialogue)
 EndEvent
 
 Z2AreaTrigger2:

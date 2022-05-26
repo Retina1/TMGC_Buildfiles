@@ -180,7 +180,7 @@ LABEL 0x67
 LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
 MUSC NarrationTheme
 Narration(Ch14_Narration)
-CleanText(DesertCG,Ch9_Opening)
+CleanText(DesertCG,FillerDialogue)
 LOAD1 0x0 C14Units
 ENUN
 ENUT 0x23
@@ -190,7 +190,7 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
-CleanTextNoMap(HallCG,Ch9_Ending)
+CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(ChapterZ1)
 ENDA
 
@@ -198,7 +198,7 @@ C14Turn2:
 Reinforcements(C14Athena)
 Reinforcements(C14Charley)
 MUSC RecruitmentTheme
-Text(Ch3_Sam_Joins)
+Text(FillerDialogue)
 EndEvent
 
 C14Turn3:

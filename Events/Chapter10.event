@@ -221,6 +221,9 @@ UNIT
 C10Fliers:
 UNIT Ygstra AxeWyv 0x0 Level(13,Enemy,1) [0,13] 0x0 0x0 0x1 REDA2R11 [IronAxe] NoAI
 UNIT Ygstra LncPeg 0x0 Level(13,Enemy,1) [0,13] 0x0 0x0 0x1 REDA4R13 [SteelLance] NoAI
+UNIT
+
+C10Fliers2:
 UNIT Ygstra LncWyv 0x0 Level(13,Enemy,1) [26,15] 0x0 0x0 0x1 REDA24R12 [IronLance] NoAI
 UNIT Ygstra SwdPeg 0x0 Level(13,Enemy,1) [26,15] 0x0 0x0 0x1 REDA22R14 [SteelSword] NoAI
 UNIT
@@ -280,6 +283,8 @@ EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
 CleanTextNoMap(BoatCG,Ch10_Ending)
+MUSC S_Chaos
+CleanTextNoMap(HallCG, Ch10_Ending2)
 MoveToChapter(Chapter11)
 ENDA
 
@@ -301,6 +306,7 @@ EndEvent
 
 C10FlierSpawns:
 Reinforcements(C10Fliers)
+Reinforcements(C10Fliers2)
 EndEvent
 
 C10PromotedSpawns:

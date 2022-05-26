@@ -214,7 +214,7 @@ LOAD1 0x0 C12Ally
 ENUN
 MUSC NarrationTheme
 Narration(Ch12_Narration)
-CleanText(DesertCG,Ch9_Opening)
+CleanText(DesertCG,FillerDialogue)
 LOAD1 0x0 C12Units
 ENUN
 ENUT 0x23
@@ -231,7 +231,7 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
-CleanTextNoMap(HallCG,Ch9_Ending)
+CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Interlude4)
 ENDA
 

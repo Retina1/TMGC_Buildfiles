@@ -61,6 +61,13 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define AlexisUPaletteID 0x28
 #define JeffUPaletteID 0x29
 #define JeffPPaletteID 0x2a
+#define AlexisPPaletteID 0x2b
+#define LeilaUPaletteID 0x2c
+#define LeilaPPaletteID 0x2d
+#define WilhelmUPaletteID 0x35
+#define WilhelmPPaletteID 0x36
+
+#define CidPaletteID 0x2e
 
 #define DavelarnPaletteID 0x18
 #define MarqueStarquePaletteID 0x19
@@ -71,6 +78,12 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ZainePaletteID 0x1e
 #define EsmePaletteID 0x1f
 #define PetePaletteID 0x20
+#define JonasPaletteID 0x2f
+#define GregoriasPaletteID 0x30
+#define SofiaPaletteID 0x31
+#define LarondePaletteID 0x32
+#define AmaraPaletteID 0x33
+#define ValdenPaletteID 0x34
 #define LazarusPaletteID 0x21
 
 
@@ -120,11 +133,20 @@ setPalette(CharleyPaletteID,CharleyPalette)
 setPalette(HyperiusPaletteID,HyperiusPalette)
 
 setPalette(AlexisUPaletteID,AlexisUPalette)
+setPalette(AlexisPPaletteID,AlexisPPalette)
+
+setPalette(LeilaUPaletteID,LeilaUPalette)
+setPalette(LeilaPPaletteID,LeilaPPalette)
 
 setPalette(ElcorianPaletteID,ElcorianPalette)
 
 setPalette(RoseUPaletteID,RoseUPalette)
 setPalette(RosePPaletteID,RosePPalette)
+
+setPalette(WilhelmUPaletteID,WilhelmUPalette)
+setPalette(WilhelmPPaletteID,WilhelmPPalette)
+
+setPalette(CidPaletteID,CidPalette)
 
 setPalette(DavelarnPaletteID,DavelarnPalette)
 setPalette(MarqueStarquePaletteID,MarqueStarquePalette)
@@ -135,6 +157,12 @@ setPalette(AmundsenPaletteID,AmundsenPalette)
 setPalette(ZainePaletteID,ZainePalette)
 setPalette(EsmePaletteID,EsmePalette)
 setPalette(PetePaletteID,PetePalette)
+setPalette(JonasPaletteID,JonasPalette)
+setPalette(GregoriasPaletteID,GregoriasPalette)
+setPalette(SofiaPaletteID,SofiaPalette)
+setPalette(LarondePaletteID,LarondePalette)
+setPalette(AmaraPaletteID,AmaraPalette)
+setPalette(ValdenPaletteID,ValdenPalette)
 setPalette(LazarusPaletteID,LazarusPalette)
 
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,BlairPPaletteID,BlairLordX,0x0,0x0)
@@ -162,8 +190,8 @@ SetPaletteFull(Athena,0x0,AxeWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(Charley,0x0,ArcherF,CharleyPaletteID,SniperF,0x0,0x0)
 SetPaletteFull(Zeke,0x0,ZekeLord,0x0,ZekeLordX,0x0,0x0)
 SetPaletteFull(Hyperius,0x0,SwdArm,HyperiusPaletteID,SwdGen,0x0,0x0)
-SetPaletteFull(Alexis,AlexisUPaletteID,AxeArm,0x0,AxeGen,0x0,0x0)
-SetPaletteFull(Leila,0x0,SwdPeg,0x0,Falco,0x0,0x0)
+SetPaletteFull(Alexis,AlexisUPaletteID,AxeArm,AlexisPPaletteID,AxeGen,0x0,0x0)
+SetPaletteFull(Leila,LeilaUPaletteID,SwdPeg,LeilaPPaletteID,Falco,0x0,0x0)
 SetPaletteFull(Damien,0x0,Archer,0x0,Sniper,0x0,0x0)
 SetPaletteFull(Zacharias,0x0,Fighter,0x0,Warrior,0x0,0x0)
 SetPaletteFull(Avan,0x0,TroubF,0x0,ValkF,0x0,0x0)
@@ -193,7 +221,7 @@ SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,0x0,0x0)
 SetPaletteFull(Dirk,0x0,Pirate,0x0,Berserker,0x0,0x0)
 SetPaletteFull(Callum,0x0,SwdCav,0x0,SwdPal,0x0,0x0)
 SetPaletteFull(Manfred,0x0,DarkM,0x0,Sorc,0x0,0x0)
-SetPaletteFull(Wilhelm,0x0,Soldier,0x0,Halberdier,0x0,0x0)
+SetPaletteFull(Wilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Argent,0x0,BowArm,0x0,BowGen,0x0,0x0)
 SetPaletteFull(Addington,0x0,Automaton,0x0,0x0,0x0,0x0)
 SetPaletteFull(Tonnamin,0x0,AxeArm,0x0,AxeGen,0x0,0x0)
@@ -208,11 +236,18 @@ SetPaletteFull(Amundsen,AmundsenPaletteID,Bruiser,0x0,0x0,0x0,0x0)
 SetPaletteFull(Zaine,0x0,0x0,ZainePaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Esme,0x0,0x0,EsmePaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Pete,0x0,0x0,PetePaletteID,Berserker,0x0,0x0)
+SetPaletteFull(Jonas,JonasPaletteID,LncWyv,0x0,0x0,0x0,0x0)
+SetPaletteFull(Gregorias,GregoriasPaletteID,Pirate,0x0,0x0,0x0,0x0)
+SetPaletteFull(Sofia,0x0,0x0,SofiaPaletteID,SorcF,0x0,0x0)
+SetPaletteFull(Laronde,0x0,0x0,LarondePaletteID,Halberdier,0x0,0x0)
+SetPaletteFull(Amara,0x0,0x0,AmaraPaletteID,WarriorF,0x0,0x0)
+SetPaletteFull(Valden,0x0,0x0,ValdenPaletteID,LncPal,0x0,0x0)
 SetPaletteFull(Lazarus,0x0,0x0,LazarusPaletteID,AxeGen,0x0,0x0)
 
+SetPaletteFull(Cid,0x0,0x0,CidPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(C7Hyperius,0x0,0x0,HyperiusPaletteID,SwdGen,0x0,0x0)
 SetPaletteFull(C7Alexis,AlexisUPaletteID,AxeArm,0x0,0x0,0x0,0x0)
-SetPaletteFull(C7Wilhelm,0x0,Soldier,0x0,0x0,0x0,0x0)
+SetPaletteFull(C7Wilhelm,WilhelmUPaletteID,Soldier,0x0,0x0,0x0,0x0)
 // I'm commenting the classes out that don't have palettes yet.
 
 ALIGN 4
@@ -319,6 +354,16 @@ HyperiusPalette:
 ALIGN 4
 AlexisUPalette:
 #incbin "AlexisUnpromoted.dmp"
+ALIGN 4
+AlexisPPalette:
+#incbin "AlexisPromoted.dmp"
+
+ALIGN 4
+LeilaUPalette:
+#incbin "LeilaUnpromoted.dmp"
+ALIGN 4
+LeilaPPalette:
+#incbin "LeilaPromoted.dmp"
 
 
 ALIGN 4
@@ -332,6 +377,16 @@ ALIGN 4
 RosePPalette:
 #incbin "RosePromoted.dmp"
 
+ALIGN 4
+WilhelmUPalette:
+#incbin "WilhelmUnpromoted.dmp"
+ALIGN 4
+WilhelmPPalette:
+#incbin "WilhelmPromoted.dmp"
+
+ALIGN 4
+CidPalette:
+#incbin "Cid.dmp"
 
 ALIGN 4
 DavelarnPalette:
@@ -360,6 +415,24 @@ EsmePalette:
 ALIGN 4
 PetePalette:
 #incbin "Pete.dmp"
+ALIGN 4
+JonasPalette:
+#incbin "Jonas.dmp"
+ALIGN 4
+GregoriasPalette:
+#incbin "Gregorias.dmp"
+ALIGN 4
+SofiaPalette:
+#incbin "Sofia.dmp"
+ALIGN 4
+LarondePalette:
+#incbin "Laronde.dmp"
+ALIGN 4
+AmaraPalette:
+#incbin "Amara.dmp"
+ALIGN 4
+ValdenPalette:
+#incbin "Valden.dmp"
 ALIGN 4
 LazarusPalette:
 #incbin "Lazarus.dmp"

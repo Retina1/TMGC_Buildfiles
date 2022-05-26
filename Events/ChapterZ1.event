@@ -108,26 +108,26 @@ ENUN
 LoadUnitsByDifficulty(Z1Easy,Z1Normal,Z1Hard)
 MUSC NarrationTheme
 Narration(ChZ1_Narration)
-CleanText(PathCG,Prologue_Opening)
+CleanText(PathCG,FillerDialogue)
 SystemText(ZekeArcPrimer)
 EndEvent
 
 CZ1Turn3:
 Reinforcements(Z1Leila)
 MUSC RecruitmentTheme
-Text(Ch3_Sam_Joins)
+Text(FillerDialogue)
 TurnEnemy(Leila)
-Text(Ch3_Sam_Joins)
+Text(FillerDialogue)
 TurnAlly(Leila)
 EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-Text(PathCG,Prologue_Ending)
+Text(PathCG,FillerDialogue)
 MoveToChapter(ChapterZ2)
 EndEvent
 
 Z1Village:
-	VillageEventItem(PNVillageText, HouseCG, Javelin)
+	VillageEventItem(FillerDialogue, HouseCG, Javelin)
 
 MESSAGE Events end at offset CURRENTOFFSET

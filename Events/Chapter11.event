@@ -190,7 +190,7 @@ LOAD1 0x0 C11Ally
 ENUN
 MUSC NarrationTheme
 Narration(Ch11_Narration)
-CleanText(DesertCG,FillerDialogue)
+CleanText(DesertCG,Ch11_Opening)
 LOAD1 0x0 C11Units
 ENUN
 CHECK_ALIVE Josef
@@ -202,8 +202,11 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC S_FE4Conversation
-CleanTextNoMap(HallCG,FillerDialogue)
+MUSC VictoryTheme
+CleanTextNoMap(HallCG,Ch11_Ending)
+CleanTextNoMap(DesertCG,Ch11_Ending2)
+MUSC S_Chaos
+CleanTextNoMap(HallCG,Ch11_Ending3)
 MoveToChapter(Chapter12)
 ENDA
 

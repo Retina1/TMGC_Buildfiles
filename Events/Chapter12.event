@@ -214,7 +214,7 @@ LOAD1 0x0 C12Ally
 ENUN
 MUSC NarrationTheme
 Narration(Ch12_Narration)
-CleanText(DesertCG,FillerDialogue)
+CleanText(DesertCG,Ch12_Opening)
 LOAD1 0x0 C12Units
 ENUN
 ENUT 0x23
@@ -230,8 +230,11 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC S_FE4Conversation
-CleanTextNoMap(HallCG,FillerDialogue)
+MUSC VictoryTheme
+CleanTextNoMap(HallCG,Ch12_Ending)
+CleanTextNoMap(DesertCG,Ch12_Ending2)
+MUSC S_Chaos
+CleanTextNoMap(BlankCG,Ch12_Ending3)
 MoveToChapter(Interlude4)
 ENDA
 

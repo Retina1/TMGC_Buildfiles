@@ -104,13 +104,13 @@ LOAD1 0x0 I4NPC
 ENUN
 MUSC NarrationTheme
 Narration(Base4_Narration)
-CleanTextNoMap(PortCG,FillerDialogue)
+CleanTextNoMap(HallCG,I4_Opening)
 GotoPrepScreen
 ENDA
 
 EndingScene:
 DisableFreeMovement
-Text(FillerDialogue)
+Text(I4ReleaseMe)
 MoveToChapter(Chapter13)
 ENDA
 
@@ -177,13 +177,13 @@ EndEvent
 
 I4ReadyToEnd:
 EVBIT_MODIFY 4
-Text(FillerDialogue)
+Text(I4COnfirmLeave)
 SystemText(I1LeavePrompt)
 IfNoSelectedGoto(0x2)
 CALL EndingScene
 GOTO 0x1
 LABEL 0x2
-Text(FillerDialogue)
+Text(I4NotYet)
 LABEL 0x1
 EndEvent
 

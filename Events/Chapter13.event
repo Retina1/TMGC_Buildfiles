@@ -140,7 +140,8 @@ ENUT GuideChpt13
 LoadUnitsByDifficulty(C13Easy,C13Normal,C13Hard)
 MUSC NarrationTheme
 Narration(Ch13_Narration)
-CleanText(DesertCG,FillerDialogue)
+CleanText(DesertCG,Ch13_Opening)
+CleanText(DesertCG,Ch13_Opening2)
 LOAD1 0x0 C13Units
 ENUN
 ENUT 0x23
@@ -151,7 +152,7 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,Ch13_Ending)
 MoveToChapter(Chapter14)
 ENDA
 

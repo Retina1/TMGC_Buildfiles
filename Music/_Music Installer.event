@@ -24,6 +24,18 @@
 #define SFXGroup 6
 
 {
+#include "ThraciaAdvance.event"
+SongTable(S_ThraciaAdvance,ThraciaAdvance,1)
+}
+{
+#include "Trisection.event"
+SongTable(S_Trisection,Trisection,1)
+}
+{
+#include "Stratagem.event"
+SongTable(S_Stratagem,Stratagem,1)
+}
+{
 #include "FE5Promo.event"
 SongTable(S_FE5Promo,FE5Promo,0)
 }

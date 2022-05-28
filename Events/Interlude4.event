@@ -177,7 +177,7 @@ EndEvent
 
 I4ReadyToEnd:
 EVBIT_MODIFY 4
-Text(I4COnfirmLeave)
+Text(I4ConfirmLeave)
 SystemText(I1LeavePrompt)
 IfNoSelectedGoto(0x2)
 CALL EndingScene

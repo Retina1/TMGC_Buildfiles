@@ -198,6 +198,7 @@ GOTO 0x2
 LABEL 0x1
 CleanTextNoMap(JungleCG,Ch5_Ending)
 LABEL 0x2
+MUSC S_Stratagem
 CleanTextNoMap(HallCG,Ch5_Ending2)
 MoveToChapter(0x26)
 EndEvent

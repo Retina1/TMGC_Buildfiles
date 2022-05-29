@@ -90,6 +90,11 @@ EmileMug:
 setMugEntry(0x11,EmileMug,3,5,3,3)
 
 ALIGN 4
+ApolloMug:
+#incext PortraitFormatter "Apollo.png"
+setMugEntry(0x14,ApolloMug,3,6,3,4)
+
+ALIGN 4
 BechamelMug:
 #incext PortraitFormatter "Bechamel.png"
 setMugEntry(0x16,BechamelMug,3,5,3,3)

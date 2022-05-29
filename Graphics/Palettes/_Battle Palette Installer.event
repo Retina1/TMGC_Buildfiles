@@ -66,6 +66,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define LeilaPPaletteID 0x2d
 #define WilhelmUPaletteID 0x35
 #define WilhelmPPaletteID 0x36
+#define ApolloUPaletteID 0x37
+#define ApolloPPaletteID 0x38
 
 #define CidPaletteID 0x2e
 
@@ -89,52 +91,40 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
 setPalette(BlairUPaletteID,BlairUPalette)
 setPalette(BlairPPaletteID,BlairPPalette)
-
 setPalette(ArinPaletteID,ArinPalette)
 
 setPalette(KennethUPaletteID,KennethUPalette)
 setPalette(KennethPPaletteID,KennethPPalette)
-
 setPalette(NatasiaUPaletteID,NatasiaUPalette)
 setPalette(NatasiaPPaletteID,NatasiaPPalette)
-
 setPalette(StefanUPaletteID,StefanUPalette)
 setPalette(StefanPPaletteID,StefanPPalette)
-
 setPalette(DesmondPaletteID,DesmondPalette)
 
 setPalette(SamUPaletteID,SamUPalette)
 setPalette(SamPPaletteID,SamPPalette)
-
 setPalette(JosefUPaletteID,JosefUPalette)
 setPalette(JosefPPaletteID,JosefPPalette)
-
 setPalette(PeggyUPaletteID,PeggyUPalette)
 setPalette(PeggyPPaletteID,PeggyPPalette)
-
 setPalette(ButchUPaletteID,ButchUPalette)
-
 setPalette(CassiusUPaletteID,CassiusUPalette)
 setPalette(CassiusPPaletteID,CassiusPPalette)
-
 setPalette(RachaelUPaletteID,RachaelUPalette)
 setPalette(RachaelPPaletteID,RachaelPPalette)
-
 setPalette(JeffUPaletteID,JeffUPalette)
 setPalette(JeffPPaletteID,JeffPPalette)
-
 setPalette(EmilePaletteID,EmilePalette)
-
+setPalette(ApolloUPaletteID,ApolloUPalette)
+setPalette(ApolloPPaletteID,ApolloPPalette)
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
 
 setPalette(CharleyPaletteID,CharleyPalette)
 
 setPalette(HyperiusPaletteID,HyperiusPalette)
-
 setPalette(AlexisUPaletteID,AlexisUPalette)
 setPalette(AlexisPPaletteID,AlexisPPalette)
-
 setPalette(LeilaUPaletteID,LeilaUPalette)
 setPalette(LeilaPPaletteID,LeilaPPalette)
 
@@ -179,7 +169,7 @@ SetPaletteFull(Cassius,CassiusUPaletteID,AxeCav,CassiusPPaletteID,AxePal,0x0,0x0
 SetPaletteFull(Rachael,RachaelUPaletteID,LncPeg,RachaelPPaletteID,Falco,0x0,0x0)
 SetPaletteFull(Emile,0x0,Mage,EmilePaletteID,Sage,0x0,0x0)
 SetPaletteFull(Jeff,JeffUPaletteID,Thief,JeffPPaletteID,Assass,0x0,0x0)
-SetPaletteFull(Apollo,0x0,LightM,0x0,Bishop,0x0,0x0)
+SetPaletteFull(Apollo,ApolloUPaletteID,LightM,ApolloPPaletteID,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
 SetPaletteFull(Hilbert,0x0,Mage,0x0,Sage,0x0,0x0)
@@ -331,6 +321,13 @@ JosefUPalette:
 ALIGN 4
 JosefPPalette:
 #incbin "JosefPromoted.dmp"
+
+ALIGN 4
+ApolloUPalette:
+#incbin "ApolloUnpromoted.dmp"
+ALIGN 4
+ApolloPPalette:
+#incbin "ApolloPromoted.dmp"
 
 ALIGN 4
 BechamelUPalette:

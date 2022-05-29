@@ -414,3 +414,6 @@ PUSH
 ORG $A8A22 // Fix R text crash on the save screen (by removing the button press check).
 SHORT 0xE025
 POP
+
+//chapter intro is a dying ember
+//#include "ChapterIntro/ChapterScreen.event"

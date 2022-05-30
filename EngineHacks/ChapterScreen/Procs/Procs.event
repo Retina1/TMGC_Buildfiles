@@ -1,0 +1,21 @@
+// Procs and proc routines
+ALIGN 4
+#include "Defs/ProcDefinitions.event"
+ALIGN 4
+Proc_MapSprites:
+#include "MapSprites/MapSprites.event"
+  ALIGN 4
+  Proc_Dummy:
+  #include "MapSprites/Dummy/Dummy.event"
+  ALIGN 4
+  Init_MapSprites:
+  #include "MapSprites/Init_MapSprites.lyn.event"
+  ALIGN 4
+  Loop_MapSprites:
+  #include "MapSprites/Loop_MapSprites.lyn.event"
+    ALIGN 4
+    VRAMupdate:
+    #include "MapSprites/VRAMupdate.lyn.event"
+    ALIGN 4
+    CalcMov:
+    #include "MapSprites/CalculateMovement.lyn.event"

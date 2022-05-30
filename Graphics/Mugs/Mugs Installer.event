@@ -110,6 +110,11 @@ CharleyMug:
 setMugEntry(0x20,CharleyMug,4,6,3,4)
 
 ALIGN 4
+ZekeMug:
+#incext PortraitFormatter "Zeke.png"
+setMugEntry(0x21,ZekeMug,3,5,3,3)
+
+ALIGN 4
 HyperiusMug:
 #incext PortraitFormatter "Hyperius.png"
 setMugEntry(0x22,HyperiusMug,3,5,3,3)

@@ -1,15 +1,15 @@
 .thumb
 
-.equ LockTouchID, SkillTester+4
+.equ CunningID, SkillTester+4
 
-@Check for TouchLock Skill 
+@Check for Cunning Skill 
 
 push {r2} @The vanilla routine we jump back to needs this value
 
 	ldr r0, SkillTester
 	mov lr, r0
 	mov r0, r2
-	ldr r1, LockTouchID
+	ldr r1, CunningID
 	
 	.short 0xf800
 	
@@ -39,4 +39,4 @@ pop {r2}
 
 	SkillTester:
 		@POIN SkillTester
-		@WORD LockTouchID
+		@WORD CunningID

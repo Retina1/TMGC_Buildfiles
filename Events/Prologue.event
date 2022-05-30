@@ -20,7 +20,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0x0,KennethCometh,4)
+TurnEventPlayer(0x0,KennethCometh,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -52,7 +52,7 @@ ALIGN 4
 
 PUnits:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [5,0] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword] NoAI
 UNIT
 
 PEasy:

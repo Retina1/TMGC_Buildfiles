@@ -54,4 +54,122 @@ b EndRanks
 EndRanks:
 pop {r5-r7}
 
+
+draw_textID_at 13, 11, textID=0xd4c, width=16, colour=Blue
+
+@ first skill
+mov    r0,r8
+ldr    r1,[r0]               @load character pointer
+ldrb   r1,[r1,#0x4]	         @load character number
+ldr    r0,=PersonalDataTable  @load first like
+@ldr    r0,[r0]
+mov    r2,#12
+mul    r1,r2
+@add    r1,#2
+add	   r0,r1
+ldrh   r0,[r0]		@load textid
+mov    r3, r7
+mov r1, #12
+ldrh r2,[r3] @current number
+add r2,r1 @for the next one.
+strb r1, [r3, #4] @store width
+strb r2, [r3, #8] @assign the next one.
+blh BufferText
+mov    r2, #0x0
+str    r2, [sp]
+str    r0, [sp, #4]
+mov    r2, #0 @colour
+mov    r0, r7
+ldr    r1, =(tile_origin+(0x20*2*11)+(2*17))
+mov    r3, #0
+blh    DrawText, r4
+add    r7, #8
+
+b LiteralJump1
+.ltorg
+.align
+LiteralJump1:
+
+@ second skill
+mov    r0,r8
+ldr    r1,[r0]               @load character pointer
+ldrb   r1,[r1,#0x4]	         @load character number
+ldr    r0,=PersonalDataTable  @load first like
+@ldr    r0,[r0]
+mov    r2,#12
+mul    r1,r2
+add    r1,#2
+ldrh   r0,[r0,r1]		@load textid
+mov    r3, r7
+mov r1, #12
+ldrh r2,[r3] @current number
+add r2,r1 @for the next one.
+strb r1, [r3, #4] @store width
+strb r2, [r3, #8] @assign the next one.
+blh BufferText
+mov    r2, #0x0
+str    r2, [sp]
+str    r0, [sp, #4]
+mov    r2, #0 @colour
+mov    r0, r7
+ldr    r1, =(tile_origin+(0x20*2*13)+(2*17))
+mov    r3, #0
+blh    DrawText, r4
+add    r7, #8
+
+@ third skill
+mov    r0,r8
+ldr    r1,[r0]               @load character pointer
+ldrb   r1,[r1,#0x4]	         @load character number
+ldr    r0,=PersonalDataTable  @load first like
+@ldr    r0,[r0]
+mov    r2,#12
+mul    r1,r2
+add    r1,#4
+ldrh   r0,[r0,r1]		@load textid
+mov    r3, r7
+mov r1, #12
+ldrh r2,[r3] @current number
+add r2,r1 @for the next one.
+strb r1, [r3, #4] @store width
+strb r2, [r3, #8] @assign the next one.
+blh BufferText
+mov    r2, #0x0
+str    r2, [sp]
+str    r0, [sp, #4]
+mov    r2, #0 @colour
+mov    r0, r7
+ldr    r1, =(tile_origin+(0x20*2*15)+(2*17))
+mov    r3, #0
+blh    DrawText, r4
+add    r7, #8
+
+@ fourth skill
+mov    r0,r8
+ldr    r1,[r0]               @load character pointer
+ldrb   r1,[r1,#0x4]	         @load character number
+ldr    r0,=PersonalDataTable  @load first like
+@ldr    r0,[r0]
+mov    r2,#12
+mul    r1,r2
+add    r1,#6
+ldrh   r0,[r0,r1]		@load textid
+mov    r3, r7
+mov r1, #12
+ldrh r2,[r3] @current number
+add r2,r1 @for the next one.
+strb r1, [r3, #4] @store width
+strb r2, [r3, #8] @assign the next one.
+blh BufferText
+mov    r2, #0x0
+str    r2, [sp]
+str    r0, [sp, #4]
+mov    r2, #0 @colour
+mov    r0, r7
+ldr    r1, =(tile_origin+(0x20*2*17)+(2*17))
+mov    r3, #0
+blh    DrawText, r4
+add    r7, #8
+
+
 page_end

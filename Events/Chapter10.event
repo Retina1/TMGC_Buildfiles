@@ -52,6 +52,7 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AFEV 0x22 JonasRetreats DefeatBossFlag
 AreaEvent(0x21,C10LowerDeck,18,0,21,3)
 END_MAIN
 
@@ -346,6 +347,20 @@ FlashCursor(Lazarus,60)
 Text(C10_LazThreat)
 SVAL 0x1 0x00040000
 CHAI Lazarus
+LABEL 0x1
+EndEvent
+
+JonasRetreats:
+CHECK_ALIVE Jonas
+BEQ 0x1 0xc 0x0
+CAM1 Jonas
+FlashCursor(Jonas,60)
+Text(C10_JonasDips)
+MOVE 60 Jonas [0,11]
+ENUN
+DISA_IF Jonas
+DISA Jonas
+ENUT JonasAliveFlag
 LABEL 0x1
 EndEvent
 

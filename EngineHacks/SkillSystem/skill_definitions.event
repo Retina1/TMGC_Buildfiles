@@ -100,9 +100,10 @@
 #define SpurDefID 162
 #define SpurResID 163
 
-//Tantivy: +10 Hit/Avoid if there are no allies within 3 tiles.
+//Just Cause: -1 Atk, +3 Atk/+15 Hit if adjacent ally.
 //Author Unknown (Initial Commit)
 #define TantivyID 209
+#define JustCauseID TantivyID
 
 //Up With Arch: Adjacent ally units gain might equal to half this unit's might. (Only if name starts with "Arch")
 //Author Unknown (Initial Commit)

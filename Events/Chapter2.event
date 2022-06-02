@@ -29,6 +29,9 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0xa,C2BlairStefanTalkConvo,Blair,Stefan)
+CharacterEventBothWays(0xb,C2BlairDesmondTalkConvo,Blair,Desmond)
+CharacterEvent(0xc,C2StefanJohanTalkConvo,Stefan,JohanC2)
 END_MAIN
 
 LocationBasedEvents:
@@ -194,7 +197,7 @@ C2Turn4:
 CAM1 Brentson
 LOAD1 0x1 C2Cutscene1
 ENUN
-MUSC S_Ameno
+MUSC S_Chaos
 Text(C2Spooky)
 LOAD1 0x1 C2Cutscene2
 ENUN
@@ -229,6 +232,15 @@ FADU 0x3c
 GiveMoney(0xbb8)
 MoveToChapter(Chapter3)
 ENDA
+
+C2BlairStefanTalkConvo:
+ConvoEvent(C2BlairStefanTalk)
+
+C2BlairDesmondTalkConvo:
+ConvoEvent(C2BlairDesmondTalk)
+
+C2StefanJohanTalkConvo:
+ConvoEvent(C2StefanJohanTalk)
 
 C2Village:
 	VillageEventItem(C2VillageText, HouseCG, Hammer)

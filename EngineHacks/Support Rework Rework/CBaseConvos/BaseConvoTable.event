@@ -247,10 +247,22 @@
 	Chapter(Chapter12)
 		Entry
 			name(C12_Light_Select)
-			bg(DesertCG)
+			bg(HallCG)
 			importance(3)
 			text(C12_Light)
 			item(LuxAurumque,Kenneth)
+			eventID(BaseFlag1)
+	Chapter(Chapter14)
+		Entry
+			name(Blair_Carbon_Base_Select)
+			bg(DesertCG)
+			text(C14_Blair_Carbon_Base)
+			baseSupport(Blair,Carbon,CSupport)
+	Chapter(Chapter19)
+		Entry
+			name(C19_Unlimited_Power_Select)
+			importance(3)
+			event(C19UnlimitedPowerEvent)
 			eventID(BaseFlag1)
 	POP
 	}
@@ -267,8 +279,24 @@ NoFade
 ENDA
 
 ALIGN 4
+C19UnlimitedPowerEvent:
+SetBackground(0x3)
+MUSC S_Ameno
+Text(C19_Unlimited_Power)
+LOAD1 0x1 C19Horatio
+FADI 0x5
+CLEAN
+NoFade
+ENDA
+
+ALIGN 4
 C7Jeff:
 UNIT Jeff Thief 0x0 Level(7,Ally,0) [3,18] 0x0 0x0 0x0 0x0 [SteelSword,Lancereaver] NoAI
+UNIT
+
+ALIGN 4
+C19Horatio:
+UNIT Horatio Rune 0x0 Level(17,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [HoratioBlade] NoAI
 UNIT
 
 

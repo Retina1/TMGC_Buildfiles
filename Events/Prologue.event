@@ -25,6 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0xa,PBlairKennethTalkConvo,Blair,Kenneth)
 END_MAIN
 
 LocationBasedEvents:
@@ -177,6 +178,9 @@ MUSC RecruitmentTheme
 Text(PKennethText)
 MUSC 0x0
 EndEvent
+
+PBlairKennethTalkConvo:
+ConvoEvent(PBlairKennethTalk)
 
 PNVillage:
 	VillageEventItem(PNVillageText, HouseCG, GoddessIcon)

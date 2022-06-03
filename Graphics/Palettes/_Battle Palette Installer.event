@@ -68,6 +68,10 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define WilhelmPPaletteID 0x36
 #define ApolloUPaletteID 0x37
 #define ApolloPPaletteID 0x38
+#define MikeyUPaletteID 0x39
+#define MikeyPPaletteID 0x3a
+#define DamienUPaletteID 0x3b
+#define DamienPPaletteID 0x3c
 
 #define CidPaletteID 0x2e
 
@@ -120,6 +124,9 @@ setPalette(ApolloPPaletteID,ApolloPPalette)
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
 
+setPalette(MikeyUPaletteID,MikeyUPalette)
+setPalette(MikeyPPaletteID,MikeyPPalette)
+
 setPalette(CharleyPaletteID,CharleyPalette)
 
 setPalette(HyperiusPaletteID,HyperiusPalette)
@@ -127,6 +134,8 @@ setPalette(AlexisUPaletteID,AlexisUPalette)
 setPalette(AlexisPPaletteID,AlexisPPalette)
 setPalette(LeilaUPaletteID,LeilaUPalette)
 setPalette(LeilaPPaletteID,LeilaPPalette)
+setPalette(DamienUPaletteID,DamienUPalette)
+setPalette(DamienPPaletteID,DamienPPalette)
 
 setPalette(ElcorianPaletteID,ElcorianPalette)
 
@@ -174,7 +183,7 @@ SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0
 SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
 SetPaletteFull(Hilbert,0x0,Mage,0x0,Sage,0x0,0x0)
 SetPaletteFull(Flynn,0x0,Myrm,0x0,SwMast,0x0,0x0)
-SetPaletteFull(Mikey,0x0,Soldier,0x0,Halberdier,0x0,0x0)
+SetPaletteFull(Mikey,MikeyUPaletteID,Soldier,MikeyPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Carbon,0x0,BowCav,0x0,BowPal,0x0,0x0)
 SetPaletteFull(Athena,0x0,AxeWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(Charley,0x0,ArcherF,CharleyPaletteID,SniperF,0x0,0x0)
@@ -182,7 +191,7 @@ SetPaletteFull(Zeke,0x0,ZekeLord,0x0,ZekeLordX,0x0,0x0)
 SetPaletteFull(Hyperius,0x0,SwdArm,HyperiusPaletteID,SwdGen,0x0,0x0)
 SetPaletteFull(Alexis,AlexisUPaletteID,AxeArm,AlexisPPaletteID,AxeGen,0x0,0x0)
 SetPaletteFull(Leila,LeilaUPaletteID,SwdPeg,LeilaPPaletteID,Falco,0x0,0x0)
-SetPaletteFull(Damien,0x0,Archer,0x0,Sniper,0x0,0x0)
+SetPaletteFull(Damien,DamienUPaletteID,Archer,DamienPPaletteID,Sniper,0x0,0x0)
 SetPaletteFull(Zacharias,0x0,Fighter,0x0,Warrior,0x0,0x0)
 SetPaletteFull(Avan,0x0,TroubF,0x0,ValkF,0x0,0x0)
 SetPaletteFull(Toddsworth,0x0,Bard,0x0,0x0,0x0,0x0)
@@ -341,6 +350,13 @@ EmilePalette:
 #incbin "Emile.dmp"
 
 ALIGN 4
+MikeyUPalette:
+#incbin "MikeyUnpromoted.dmp"
+ALIGN 4
+MikeyPPalette:
+#incbin "MikeyPromoted.dmp"
+
+ALIGN 4
 CharleyPalette:
 #incbin "Charley.dmp"
 
@@ -361,6 +377,13 @@ LeilaUPalette:
 ALIGN 4
 LeilaPPalette:
 #incbin "LeilaPromoted.dmp"
+
+ALIGN 4
+DamienUPalette:
+#incbin "DamienUnpromoted.dmp"
+ALIGN 4
+DamienPPalette:
+#incbin "DamienPromoted.dmp"
 
 
 ALIGN 4

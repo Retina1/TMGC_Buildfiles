@@ -35,6 +35,9 @@ END_MAIN
 
 LocationBasedEvents:
 Village(0x11,C13NorthVillage,13,2)
+Village(0x12,C13SouthVillage,5,26)
+Village(0x13,C13WestVillage,17,16)
+Village(0x14,C13EastVillage,21,15)
 Vendor(C13Vendor,22,4)
 Armory(C13Armory,16,12)
 Seize(2,2)
@@ -70,20 +73,20 @@ ENDTRAP
 ALIGN 4
 
 C13Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [0,21] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,17] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,17] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,18] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,18] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,19] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [4,21] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,20] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,21] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,16] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,22] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,23] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
 UNIT
 
 C13Easy:
@@ -105,9 +108,9 @@ UNIT Ygstra AxeCav 0x0 Level(13,Enemy,1) [14,4] 0x0 0x0 0x0 0x0 [Halberd] ChaseO
 UNIT Ygstra SwdCav 0x0 Level(13,Enemy,1) [7,0] 0x0 0x0 0x0 0x0 [SilverSword] ChaseOnceApproachedAI
 UNIT Ygstra AxePalF 0x0 Level(1,Enemy,1) [8,1] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
 UNIT Ygstra LncCav 0x0 Level(13,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
-UNIT Ygstra FighterF 0x0 Level(13,Enemy,1) [22,23] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
-UNIT Ygstra FighterF 0x0 Level(13,Enemy,1) [21,24] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [22,25] 0x0 0x0 0x0 0x0 [Hammer] NoAI
+UNIT Ygstra FighterF 0x0 Level(13,Enemy,1) [23,18] 0x0 0x0 0x0 0x0 [HandAxe] DelayedAI
+UNIT Ygstra FighterF 0x0 Level(13,Enemy,1) [21,18] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [22,19] 0x0 0x0 0x0 0x0 [Hammer] DelayedAI
 UNIT Ygstra AxeCav 0x0 Level(13,Enemy,1) [7,6] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT Ygstra BowPal 0x0 Level(1,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
 UNIT Ygstra AxeCavF 0x0 Level(13,Enemy,1) [9,6] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
@@ -120,9 +123,14 @@ UNIT Ygstra SoldierF 0x0 Level(13,Enemy,1) [9,24] 0x0 0x0 0x0 0x0 [SteelLance] G
 UNIT Ygstra SoldierF 0x0 Level(13,Enemy,1) [15,26] 0x0 0x0 0x0 0x0 [Shatterspear] GroupTwoAI
 UNIT Ygstra Soldier 0x0 Level(13,Enemy,1) [11,25] 0x0 0x0 0x0 0x0 [Javelin] GroupTwoAI
 UNIT Ygstra Soldier 0x0 Level(13,Enemy,1) [16,23] 0x0 0x0 0x0 0x0 [SteelLance] GroupTwoAI
+UNIT Ygstra Merc 0x0 Level(13,Enemy,1) [4,27] 0x0 0x0 0x0 0x0 [SteelSword] GroupFourAI
+UNIT Ygstra Merc 0x0 Level(13,Enemy,1) [6,27] 0x0 0x0 0x0 0x0 [SteelSword] GroupFourAI
+UNIT Ygstra Merc 0x0 Level(13,Enemy,1) [23,24] 0x0 0x0 0x0 0x0 [Zanbato] NoAI
+UNIT Ygstra MercF 0x0 Level(13,Enemy,1) [23,25] 0x0 0x0 0x0 0x0 [Armorslayer] NoAI
+UNIT Ygstra LncCav 0x0 Level(13,Enemy,1) [21,6] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Ygstra AxeCav 0x0 Level(13,Enemy,1) [19,7] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Ygstra Halberdier 0x0 Level(2,Enemy,1) [22,17] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Ygstra Ballistician 0x0 Level(15,Enemy,1) [0,1] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
-UNIT Ygstra Ballistician 0x0 Level(15,Enemy,1) [4,5] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
-UNIT Ygstra Ballistician 0x0 Level(15,Enemy,1) [6,10] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Ygstra Ballistician 0x0 Level(15,Enemy,1) [13,6] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Ygstra Ballistician 0x0 Level(15,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
 UNIT Mikey Soldier 0x0 Level(12,Enemy,0) [14,24] 0x0 0x0 0x0 0x0 [SteelLance,Horseslayer,Javelin,Vulnerary] [0x6,0x3,0x4,0x0]
@@ -130,8 +138,6 @@ UNIT Carbon BowCav 0x0 Level(11,Enemy,0) [16,0] 0x0 0x0 0x0 0x0 [Longbow,KillerB
 UNIT Ygstra Sniper 0x0 Level(1,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [IronBow] GroupOneAI
 UNIT Ygstra Assass 0x0 Level(1,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
 UNIT Ygstra Halberdier 0x0 Level(1,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [IronLance] GroupOneAI
-UNIT Ygstra LncGen 0x0 Level(1,Enemy,1) [4,21] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Ygstra AxeGen 0x0 Level(1,Enemy,1) [4,22] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Amara WarriorF 0x0 Level(5,Enemy,1) [2,3] DropItem 0x0 0x0 0x0 [Tomahawk,Longbow,Eyedrops] NeverMoveAI
 UNIT Valden LncPal 0x0 Level(8,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [GildedLance,Spear] NeverMoveAI
 UNIT
@@ -141,7 +147,7 @@ UNIT 0xd1 0x1d 0x0 Level(15,NPC,0) [13,2] 0x0 0x0 0x1 REDA13R4 [0x0] NoAI
 UNIT
 
 C13Wallbreaker:
-UNIT Ygstra Fighter 0x0 Level(16,Enemy,1) [9,9] 0x0 0x0 0x1 REDA10R10 [BraveAxe] AttackWallAI
+UNIT Ygstra Fighter 0x0 Level(16,Enemy,1) [9,9] 0x0 0x0 0x1 REDA10R10 [SteelAxe] AttackWallAI
 UNIT
 
 C13Timed1FirstWave:
@@ -153,9 +159,9 @@ UNIT
 
 C13Timed1SecondWave:
 UNIT Ygstra Pirate 0x0 Level(13,Enemy,1) [23,2] 0x0 0x0 0x1 REDA19R2 [SteelAxe] NoAI
-UNIT Ygstra Archer 0x0 Level(13,Enemy,1) [23,3] 0x0 0x0 0x1 REDA21R3 [SteelBow] NoAI
+UNIT Ygstra Archer 0x0 Level(13,Enemy,1) [23,3] 0x0 0x0 0x1 REDA21R3 [SteelBow] ChaseOnceApproachedAI
 UNIT Ygstra Pirate 0x0 Level(13,Enemy,1) [23,11] 0x0 0x0 0x1 REDA21R11 [SteelAxe] NoAI
-UNIT Ygstra Sniper 0x0 Level(1,Enemy,1) [23,12] 0x0 0x0 0x1 REDA23R15 [SteelBow] NoAI
+UNIT Ygstra Sniper 0x0 Level(1,Enemy,1) [23,12] 0x0 0x0 0x1 REDA23R15 [SteelBow] ChaseOnceApproachedAI
 UNIT
 
 C13Timed1FinalWave:
@@ -232,6 +238,15 @@ C13NorthVillage:
 CleanText(VillageCG,C13WhoIsThisHorse)
 Reinforcements(C13Horse)
 EndEvent
+
+C13SouthVillage:
+VillageEventItem(C13SouthVillageText, VillageCG, MasterSeal)
+
+C13WestVillage:
+VillageEventItem(C13WestVillageText, VillageCG, Sagittae)
+
+C13EastVillage:
+VillageEventItem(C13EastVillageText, VillageCG, Again)
 
 C13ValdenHandoff:
 CHECK_EVENTID ValdenDeadFlag

@@ -19,6 +19,7 @@
 #define ShamshirIcon 0xb2
 #define LancesnapperIcon 0x78
 #define ShimmerswordIcon 0x75
+#define FlameSwordIcon 0x99
 
 #define IronLanceIcon 0x13
 #define SteelLanceIcon 0x15
@@ -256,6 +257,9 @@ ItemIconEntry(LancesnapperIcon)
 ALIGN 4
 ItemIconEntry(ShimmerswordIcon)
 #incbin "Swords/Shadow Killer.dmp"
+ALIGN 4
+ItemIconEntry(FlameSwordIcon)
+#incbin "FlameSword(LisandraBrave).dmp"
 
 ALIGN 4
 ItemIconEntry(IronLanceIcon)

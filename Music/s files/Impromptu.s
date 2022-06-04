@@ -1,35 +1,35 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	Impromptu_grp, voicegroup000
+	.equ	Impromptu_pri, 0
+	.equ	Impromptu_rev, 0
+	.equ	Impromptu_mvl, 127
+	.equ	Impromptu_key, 0
+	.equ	Impromptu_tbs, 1
+	.equ	Impromptu_exg, 0
+	.equ	Impromptu_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	Impromptu
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+Impromptu_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 100*song04_tbs/2
+ .byte   KEYSH , Impromptu_key+0
+ .byte   TEMPO , 100*Impromptu_tbs/2
  .byte   VOICE , 1
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Impromptu_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N68 ,En3 ,v080
  .byte   N68 ,Gn3
  .byte   N68 ,Cn4
  .byte   W48
- .byte   TEMPO , 104*song04_tbs/2
+ .byte   TEMPO , 104*Impromptu_tbs/2
  .byte   W24
- .byte   TEMPO , 108*song04_tbs/2
+ .byte   TEMPO , 108*Impromptu_tbs/2
  .byte   N22 ,En3 ,v096
  .byte   W24
 @  #01 @001   ----------------------------------------
@@ -91,7 +91,7 @@ Label_01005D2F:
  .byte   PEND 
 @  #01 @003   ----------------------------------------
 Label_01005D60:
- .byte   TEMPO , 88*song04_tbs/2
+ .byte   TEMPO , 88*Impromptu_tbs/2
  .byte   N11 ,Gn3 ,v064
  .byte   N11 ,As3
  .byte   N11 ,Cs4
@@ -106,7 +106,7 @@ Label_01005D60:
  .byte   N22 ,Gn3 ,v052
  .byte   N22 ,Cn4
  .byte   W24
- .byte   TEMPO , 100*song04_tbs/2
+ .byte   TEMPO , 100*Impromptu_tbs/2
  .byte   An4 ,v064
  .byte   W24
  .byte   PEND 
@@ -287,26 +287,26 @@ Label_01005E4E:
   .word Label_01005E0B
 @  #01 @017   ----------------------------------------
 Label_01005E73:
- .byte   TEMPO , 94*song04_tbs/2
+ .byte   TEMPO , 94*Impromptu_tbs/2
  .byte   N32 ,Cn3 ,v096
  .byte   N32 ,En3
  .byte   N32 ,Cn4
  .byte   W36
  .byte   N11 ,Bn3
  .byte   W12
- .byte   TEMPO , 88*song04_tbs/2
+ .byte   TEMPO , 88*Impromptu_tbs/2
  .byte   N44
  .byte   W48
  .byte   PEND 
 @  #01 @018   ----------------------------------------
- .byte   TEMPO , 100*song04_tbs/2
+ .byte   TEMPO , 100*Impromptu_tbs/2
  .byte   N68 ,En3 ,v080
  .byte   N68 ,Gn3
  .byte   N68 ,Cn4
  .byte   W48
- .byte   TEMPO , 104*song04_tbs/2
+ .byte   TEMPO , 104*Impromptu_tbs/2
  .byte   W24
- .byte   TEMPO , 108*song04_tbs/2
+ .byte   TEMPO , 108*Impromptu_tbs/2
  .byte   N22 ,En3 ,v096
  .byte   W24
 @  #01 @019   ----------------------------------------
@@ -363,14 +363,14 @@ Label_01005E98:
  .byte   PATT
   .word Label_01005E73
 @  #01 @037   ----------------------------------------
- .byte   TEMPO , 100*song04_tbs/2
+ .byte   TEMPO , 100*Impromptu_tbs/2
  .byte   N68 ,En3 ,v096
  .byte   N68 ,Gn3
  .byte   N68 ,Cn4
  .byte   W48
- .byte   TEMPO , 104*song04_tbs/2
+ .byte   TEMPO , 104*Impromptu_tbs/2
  .byte   W24
- .byte   TEMPO , 108*song04_tbs/2
+ .byte   TEMPO , 108*Impromptu_tbs/2
  .byte   N22 ,En3 ,v088
  .byte   W24
 @  #01 @038   ----------------------------------------
@@ -430,7 +430,7 @@ Label_01005E98:
  .byte   En4 ,v060
  .byte   W04
 @  #01 @041   ----------------------------------------
- .byte   TEMPO , 88*song04_tbs/2
+ .byte   TEMPO , 88*Impromptu_tbs/2
  .byte   N11 ,Gn3
  .byte   N11 ,As3
  .byte   N11 ,Cs4
@@ -445,7 +445,7 @@ Label_01005E98:
  .byte   N22 ,Gn3
  .byte   N22 ,Cn4
  .byte   W24
- .byte   TEMPO , 100*song04_tbs/2
+ .byte   TEMPO , 100*Impromptu_tbs/2
  .byte   An4 ,v052
  .byte   W24
 @  #01 @042   ----------------------------------------
@@ -479,10 +479,10 @@ Label_01005E98:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+Impromptu_002:
 @  #02 @000   ----------------------------------------
- .byte   VOL , 53*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 53*Impromptu_mvl/mxv
+ .byte   KEYSH , Impromptu_key+0
  .byte   VOICE , 1
  .byte   N11 ,Cn1 ,v080
  .byte   N11 ,Cn2
@@ -951,15 +951,15 @@ Label_01005996:
 @******************************************************@
 	.align	2
 
-song04:
+Impromptu:
 	.byte	2	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	Impromptu_pri	@ Priority
+	.byte	Impromptu_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	Impromptu_grp
     
-	.word	song04_001
-	.word	song04_002
+	.word	Impromptu_001
+	.word	Impromptu_002
 
 	.end

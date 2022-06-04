@@ -28,6 +28,8 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0xa,C14BlairAthenaTalkConvo,Blair,Athena)
+CharacterEventBothWays(0xb,C14BlairCharleyTalkConvo,Blair,Charley)
 END_MAIN
 
 LocationBasedEvents:
@@ -184,7 +186,7 @@ TEXTCONT
 TEXTEND
 LABEL 0x67
 LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
-MUSC NarrationTheme
+MUSC NarrationTheme2
 Narration(Ch14_Narration)
 MUSC S_Trisection
 CleanText(DesertCG,FillerDialogue)
@@ -203,9 +205,14 @@ ENDA
 
 C14Turn2:
 Reinforcements(C14Athena)
-Reinforcements(C14Charley)
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+TEXTSTART
+TEXTSHOW C14AthenaCharleyJoin
+TEXTEND
+Reinforcements(C14Charley)
+TEXTCONT
+TEXTEND
+CLEAN
 EndEvent
 
 C14Turn4:
@@ -243,6 +250,12 @@ LABEL 0x1
 ENUF 0x21
 LABEL 0x2
 EndEvent
+
+C14BlairCharleyTalkConvo:
+ConvoEvent(FillerDialogue)
+
+C14BlairAthenaTalkConvo:
+ConvoEvent(FillerDialogue)
 
 ALIGN 4
 EscapePointPointerTable(Chapter14,C14Escape)

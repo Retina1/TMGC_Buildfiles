@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song01_grp, voicegroup000
-	.equ	song01_pri, 10
-	.equ	song01_rev, 128
-	.equ	song01_mvl, 127
-	.equ	song01_key, 0
-	.equ	song01_tbs, 1
-	.equ	song01_exg, 0
-	.equ	song01_cmp, 1
+	.equ	PascalTheDog_grp, voicegroup000
+	.equ	PascalTheDog_pri, 10
+	.equ	PascalTheDog_rev, 128
+	.equ	PascalTheDog_mvl, 127
+	.equ	PascalTheDog_key, 0
+	.equ	PascalTheDog_tbs, 1
+	.equ	PascalTheDog_exg, 0
+	.equ	PascalTheDog_cmp, 1
 
 	.section .rodata
-	.global	song01
+	.global	PascalTheDog
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song01_001:
+PascalTheDog_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song01_key+0
- .byte   TEMPO , 172*song01_tbs/2
+ .byte   KEYSH , PascalTheDog_key+0
+ .byte   TEMPO , 172*PascalTheDog_tbs/2
  .byte   VOICE , 85
  .byte   BENDR, 4
- .byte   VOL , 35*song01_mvl/mxv
+ .byte   VOL , 35*PascalTheDog_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N23 ,En3 ,v127
  .byte   W48
@@ -141,11 +141,11 @@ Label_016A4475:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song01_002:
+PascalTheDog_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song01_key+0
+ .byte   KEYSH , PascalTheDog_key+0
  .byte   VOICE , 34
- .byte   VOL , 20*song01_mvl/mxv
+ .byte   VOL , 20*PascalTheDog_mvl/mxv
  .byte   W24
  .byte   N11 ,Bn2 ,v100
  .byte   N11 ,En3
@@ -254,11 +254,11 @@ Label_013D3796:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song01_003:
+PascalTheDog_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song01_key+0
+ .byte   KEYSH , PascalTheDog_key+0
  .byte   VOICE , 104
- .byte   VOL , 32*song01_mvl/mxv
+ .byte   VOL , 32*PascalTheDog_mvl/mxv
  .byte   W96
 @  #03 @001   ----------------------------------------
  .byte   W92
@@ -401,12 +401,12 @@ Label_01442A81:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song01_004:
+PascalTheDog_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song01_key+0
+ .byte   KEYSH , PascalTheDog_key+0
  .byte   W24
  .byte   VOICE , 104
- .byte   VOL , 17*song01_mvl/mxv
+ .byte   VOL , 17*PascalTheDog_mvl/mxv
  .byte   W96
 @  #04 @001   ----------------------------------------
  .byte   W72
@@ -546,17 +546,17 @@ Label_015262FA:
 @******************************************************@
 	.align	2
 
-song01:
+PascalTheDog:
 	.byte	4	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song01_pri	@ Priority
-	.byte	song01_rev	@ Reverb.
+	.byte	PascalTheDog_pri	@ Priority
+	.byte	PascalTheDog_rev	@ Reverb.
     
-	.word	song01_grp
+	.word	PascalTheDog_grp
     
-	.word	song01_001
-	.word	song01_002
-	.word	song01_003
-	.word	song01_004
+	.word	PascalTheDog_001
+	.word	PascalTheDog_002
+	.word	PascalTheDog_003
+	.word	PascalTheDog_004
 
 	.end

@@ -1,38 +1,38 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	IntoTheMind_grp, voicegroup000
+	.equ	IntoTheMind_pri, 0
+	.equ	IntoTheMind_rev, 0
+	.equ	IntoTheMind_mvl, 127
+	.equ	IntoTheMind_key, 0
+	.equ	IntoTheMind_tbs, 1
+	.equ	IntoTheMind_exg, 0
+	.equ	IntoTheMind_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	IntoTheMind
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+IntoTheMind_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 170*song04_tbs/2
+ .byte   KEYSH , IntoTheMind_key+0
+ .byte   TEMPO , 170*IntoTheMind_tbs/2
  .byte   VOICE , 4
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N06 ,Fs2 ,v100
  .byte   N06 ,An2
@@ -280,37 +280,37 @@ Label_F8BA01:
   .word Label_F8BA01
 @  #01 @085   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
- .byte   TEMPO , 170*song04_tbs/2
+ .byte   TEMPO , 170*IntoTheMind_tbs/2
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+IntoTheMind_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 81
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #02 @001   ----------------------------------------
@@ -689,38 +689,38 @@ Label_01004ECA:
 @  #02 @084   ----------------------------------------
  .byte   VOICE , 81
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   VOICE , 81
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   VOICE , 81
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+IntoTheMind_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 40
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -1091,36 +1091,36 @@ Label_010050DE:
   .word Label_01004F40
 @  #03 @084   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+IntoTheMind_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 80
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -1417,38 +1417,38 @@ Label_01005210:
 @  #04 @085   ----------------------------------------
  .byte   VOICE , 80
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   VOICE , 80
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   VOICE , 80
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+IntoTheMind_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 86
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -1812,38 +1812,38 @@ Label_01005466:
 @  #05 @084   ----------------------------------------
  .byte   VOICE , 86
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   VOICE , 86
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   VOICE , 86
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+IntoTheMind_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 38
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -2207,38 +2207,38 @@ Label_01005676:
 @  #06 @084   ----------------------------------------
  .byte   VOICE , 38
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   VOICE , 38
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   VOICE , 38
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+IntoTheMind_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 61
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -2525,38 +2525,38 @@ Label_010057B8:
 @  #07 @084   ----------------------------------------
  .byte   VOICE , 61
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   VOICE , 61
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   VOICE , 61
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+IntoTheMind_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 1
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -3010,36 +3010,36 @@ Label_01005A48:
   .word Label_01005858
 @  #08 @084   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song04_009:
+IntoTheMind_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 56
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #09 @001   ----------------------------------------
@@ -3254,38 +3254,38 @@ Label_F8B581:
 @  #09 @084   ----------------------------------------
  .byte   VOICE , 56
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   VOICE , 56
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   VOICE , 56
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song04_010:
+IntoTheMind_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , IntoTheMind_key+0
  .byte   VOICE , 124
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #10 @001   ----------------------------------------
@@ -3643,38 +3643,38 @@ Label_01005C5F:
   .word Label_01005AF8
 @  #10 @084   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W32
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*IntoTheMind_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-song04:
+IntoTheMind:
 	.byte	10	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	IntoTheMind_pri	@ Priority
+	.byte	IntoTheMind_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	IntoTheMind_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
-	.word	song04_009
-	.word	song04_010
+	.word	IntoTheMind_001
+	.word	IntoTheMind_002
+	.word	IntoTheMind_003
+	.word	IntoTheMind_004
+	.word	IntoTheMind_005
+	.word	IntoTheMind_006
+	.word	IntoTheMind_007
+	.word	IntoTheMind_008
+	.word	IntoTheMind_009
+	.word	IntoTheMind_010
 
 	.end

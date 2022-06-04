@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	CrossCounter_grp, voicegroup000
+	.equ	CrossCounter_pri, 0
+	.equ	CrossCounter_rev, 0
+	.equ	CrossCounter_mvl, 127
+	.equ	CrossCounter_key, 0
+	.equ	CrossCounter_tbs, 1
+	.equ	CrossCounter_exg, 0
+	.equ	CrossCounter_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	CrossCounter
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+CrossCounter_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 178*song04_tbs/2
+ .byte   KEYSH , CrossCounter_key+0
+ .byte   TEMPO , 178*CrossCounter_tbs/2
  .byte   VOICE , 30
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*CrossCounter_mvl/mxv
  .byte   W96
 @  #01 @001   ----------------------------------------
  .byte   W96
@@ -437,12 +437,12 @@ Label_010046D8:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+CrossCounter_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , CrossCounter_key+0
  .byte   VOICE , 33
  .byte   PAN , c_v+0
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*CrossCounter_mvl/mxv
  .byte   N10 ,En1 ,v112
  .byte   W12
  .byte   Bn1
@@ -873,12 +873,12 @@ Label_01004A4F:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+CrossCounter_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , CrossCounter_key+0
  .byte   VOICE , 62
  .byte   PAN , c_v-30
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*CrossCounter_mvl/mxv
  .byte   N44 ,Gn2 ,v116
  .byte   N44 ,Bn2
  .byte   N44 ,En4
@@ -1217,12 +1217,12 @@ Label_01004C45:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+CrossCounter_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , CrossCounter_key+0
  .byte   VOICE , 30
  .byte   PAN , c_v+34
- .byte   VOL , 33*song04_mvl/mxv
+ .byte   VOL , 33*CrossCounter_mvl/mxv
  .byte   N11 ,En1 ,v072
  .byte   N11 ,En2 ,v100
  .byte   W12
@@ -1803,12 +1803,12 @@ Label_01005038:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+CrossCounter_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , CrossCounter_key+0
  .byte   VOICE , 124
  .byte   PAN , c_v+0
- .byte   VOL , 33*song04_mvl/mxv
+ .byte   VOL , 33*CrossCounter_mvl/mxv
  .byte   N01 ,An2 ,v100
  .byte   W48
  .byte   N01
@@ -2171,10 +2171,10 @@ Label_0100527B:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+CrossCounter_006:
 @  #06 @000   ----------------------------------------
- .byte   VOL , 44*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 44*CrossCounter_mvl/mxv
+ .byte   KEYSH , CrossCounter_key+0
  .byte   VOICE , 124
  .byte   N01 ,Cn1 ,v120
  .byte   W12
@@ -2723,19 +2723,19 @@ Label_0100552E:
 @******************************************************@
 	.align	2
 
-song04:
+CrossCounter:
 	.byte	6	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	CrossCounter_pri	@ Priority
+	.byte	CrossCounter_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	CrossCounter_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
+	.word	CrossCounter_001
+	.word	CrossCounter_002
+	.word	CrossCounter_003
+	.word	CrossCounter_004
+	.word	CrossCounter_005
+	.word	CrossCounter_006
 
 	.end

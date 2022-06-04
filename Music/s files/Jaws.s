@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song93_grp, voicegroup000
-	.equ	song93_pri, 0
-	.equ	song93_rev, 148
-	.equ	song93_mvl, 127
-	.equ	song93_key, 0
-	.equ	song93_tbs, 1
-	.equ	song93_exg, 0
-	.equ	song93_cmp, 1
+	.equ	Jaws_grp, voicegroup000
+	.equ	Jaws_pri, 0
+	.equ	Jaws_rev, 148
+	.equ	Jaws_mvl, 127
+	.equ	Jaws_key, 0
+	.equ	Jaws_tbs, 1
+	.equ	Jaws_exg, 0
+	.equ	Jaws_cmp, 1
 
 	.section .rodata
-	.global	song93
+	.global	Jaws
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song93_001:
+Jaws_001:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
- .byte   TEMPO , 150*song93_tbs/2
+ .byte   KEYSH , Jaws_key+0
+ .byte   TEMPO , 150*Jaws_tbs/2
  .byte   VOICE , 47
- .byte   VOL , 62*song93_mvl/mxv
+ .byte   VOL , 62*Jaws_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @ 001   ----------------------------------------
@@ -238,11 +238,11 @@ Label_0_01023B25:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song93_002:
+Jaws_002:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 123
- .byte   VOL , 59*song93_mvl/mxv
+ .byte   VOL , 59*Jaws_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @ 001   ----------------------------------------
@@ -514,11 +514,11 @@ Label_1_01023B84:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song93_003:
+Jaws_003:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 127
- .byte   VOL , 59*song93_mvl/mxv
+ .byte   VOL , 59*Jaws_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N05 ,En2 ,v112
  .byte   W12
@@ -967,11 +967,11 @@ Label_2_01023F53:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song93_004:
+Jaws_004:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 50
- .byte   VOL , 20*song93_mvl/mxv
+ .byte   VOL , 20*Jaws_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @ 001   ----------------------------------------
@@ -1477,11 +1477,11 @@ Label_3_01024204:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song93_005:
+Jaws_005:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 1
- .byte   VOL , 54*song93_mvl/mxv
+ .byte   VOL , 54*Jaws_mvl/mxv
  .byte   PAN , c_v-8
  .byte   N05 ,An1 ,v088
  .byte   N05 ,Gn2
@@ -2277,11 +2277,11 @@ Label_4_010243BB:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song93_006:
+Jaws_006:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 1
- .byte   VOL , 54*song93_mvl/mxv
+ .byte   VOL , 54*Jaws_mvl/mxv
  .byte   PAN , c_v-64
  .byte   W96
 @ 001   ----------------------------------------
@@ -2528,11 +2528,11 @@ Label_5_0102479D:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song93_007:
+Jaws_007:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 1
- .byte   VOL , 54*song93_mvl/mxv
+ .byte   VOL , 54*Jaws_mvl/mxv
  .byte   PAN , c_v+63
  .byte   W96
 @ 001   ----------------------------------------
@@ -2786,11 +2786,11 @@ Label_6_010247D0:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song93_008:
+Jaws_008:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 46
- .byte   VOL , 41*song93_mvl/mxv
+ .byte   VOL , 41*Jaws_mvl/mxv
  .byte   PAN , c_v+15
  .byte   W96
 @ 001   ----------------------------------------
@@ -3210,11 +3210,11 @@ Label_7_010248CE:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song93_009:
+Jaws_009:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 46
- .byte   VOL , 21*song93_mvl/mxv
+ .byte   VOL , 21*Jaws_mvl/mxv
  .byte   PAN , c_v-20
  .byte   BEND , c_v-2
  .byte   W96
@@ -3607,11 +3607,11 @@ Label_8_01024B3B:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song93_010:
+Jaws_010:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 73
- .byte   VOL , 48*song93_mvl/mxv
+ .byte   VOL , 48*Jaws_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @ 001   ----------------------------------------
@@ -4040,11 +4040,11 @@ Label_9_01024C21:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song93_011:
+Jaws_011:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 73
- .byte   VOL , 15*song93_mvl/mxv
+ .byte   VOL , 15*Jaws_mvl/mxv
  .byte   PAN , c_v+46
  .byte   BEND , c_v-2
  .byte   W96
@@ -4493,11 +4493,11 @@ Label_10_01024DEE:
 
 @**************** Track 12 (Midi-Chn.11) ****************@
 
-song93_012:
+Jaws_012:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 73
- .byte   VOL , 13*song93_mvl/mxv
+ .byte   VOL , 13*Jaws_mvl/mxv
  .byte   PAN , c_v-48
  .byte   BEND , c_v-4
  .byte   W96
@@ -4668,9 +4668,9 @@ Label_11_01024FCA:
 
 @**************** Track 13 (Midi-Chn.12) ****************@
 
-song93_013:
+Jaws_013:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 23
  .byte   W96
 @ 001   ----------------------------------------
@@ -4772,7 +4772,7 @@ Label_12_01025028:
  .byte   W96
 @ 049   ----------------------------------------
  .byte   W06
- .byte   VOL , 53*song93_mvl/mxv
+ .byte   VOL , 53*Jaws_mvl/mxv
  .byte   PAN , c_v+1
  .byte   W90
 @ 050   ----------------------------------------
@@ -4947,11 +4947,11 @@ Label_12_01025028:
 
 @**************** Track 14 (Midi-Chn.13) ****************@
 
-song93_014:
+Jaws_014:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 1
- .byte   VOL , 22*song93_mvl/mxv
+ .byte   VOL , 22*Jaws_mvl/mxv
  .byte   PAN , c_v-50
  .byte   W18
  .byte   N05 ,En3 ,v080
@@ -5135,11 +5135,11 @@ Label_13_01025144:
 
 @**************** Track 15 (Midi-Chn.14) ****************@
 
-song93_015:
+Jaws_015:
 @ 000   ----------------------------------------
- .byte   KEYSH , song93_key+0
+ .byte   KEYSH , Jaws_key+0
  .byte   VOICE , 1
- .byte   VOL , 22*song93_mvl/mxv
+ .byte   VOL , 22*Jaws_mvl/mxv
  .byte   PAN , c_v+50
  .byte   W78
  .byte   N05 ,En3 ,v080
@@ -5327,28 +5327,28 @@ Label_14_010251E0:
 @******************************************************@
 	.align	2
 
-song93:
+Jaws:
 	.byte	15	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song93_pri	@ Priority
-	.byte	song93_rev	@ Reverb.
+	.byte	Jaws_pri	@ Priority
+	.byte	Jaws_rev	@ Reverb.
     
-	.word	song93_grp
+	.word	Jaws_grp
     
-	.word	song93_001
-	.word	song93_002
-	.word	song93_003
-	.word	song93_004
-	.word	song93_005
-	.word	song93_006
-	.word	song93_007
-	.word	song93_008
-	.word	song93_009
-	.word	song93_010
-	.word	song93_011
-	.word	song93_012
-	.word	song93_013
-	.word	song93_014
-	.word	song93_015
+	.word	Jaws_001
+	.word	Jaws_002
+	.word	Jaws_003
+	.word	Jaws_004
+	.word	Jaws_005
+	.word	Jaws_006
+	.word	Jaws_007
+	.word	Jaws_008
+	.word	Jaws_009
+	.word	Jaws_010
+	.word	Jaws_011
+	.word	Jaws_012
+	.word	Jaws_013
+	.word	Jaws_014
+	.word	Jaws_015
 
 	.end

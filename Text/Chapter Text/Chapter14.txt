@@ -85,6 +85,29 @@ I've got some vengeance to partake in.[A][N]
 Young lady[ToggleMouthMove]...[ToggleMouthMove] Come and take Yg'stra[N]
 from me, if you dare.[A][X]
 
+##C14AthenaCharleyJoin
+[OpenMidLeft][LoadAthena]
+[ToggleMouthMove]...[ToggleMouthMove]And here we are.[A][N]
+I'd say this is above my pay grade,[N]
+but, hey. At least it's exciting.[A][N]
+Moreso than border-guarding.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]You can let go of me now.[N]
+We're here.[A][N][Event][OpenMidRight][LoadCharley]
+Apologies. Never've been the[N]
+most[ToggleMouthMove]...[ToggleMouthMove] comfortable flier.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]If I may ask, why[N]
+did you want to come along?[A][N]
+Surely, you can do more personally[N]
+fulfilling things than war.[A][N][OpenMidRight]
+For a long time, I've felt like I've[N]
+wandered without a purpose.[A][N]
+This might be what I've been looking[N]
+for all this time.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Alright. Enough talking. The lady's[N]
+party should be nearby.[A][N][OpenMidRight]
+Very well. It's all up to us.[A][X]
+
+
 ##C14SwitchHint
 [OpenMidLeft][LoadSoldier4]
 [ToggleMouthMove]...[ToggleMouthMove]Why am I standing here, again?[A][N]
@@ -98,7 +121,7 @@ Alas. I'm not one to defy him.[N]
 Hopefully he's doing alright.[A][X]
 
 ##C14Spooky
-[OpenFarFarLeft][OpenFarFarRight]
+[OpenFarFarLeft][LoadArbordia][OpenFarFarRight][LoadElcorian]
 Are you sure this is quite[N]
 alright, Girard?[A][N][OpenFarFarLeft]
 Relax. Nobody will see us from[N]

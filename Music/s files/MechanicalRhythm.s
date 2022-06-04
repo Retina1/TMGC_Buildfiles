@@ -1,29 +1,29 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	MechanicalRhythm_grp, voicegroup000
+	.equ	MechanicalRhythm_pri, 0
+	.equ	MechanicalRhythm_rev, 0
+	.equ	MechanicalRhythm_mvl, 127
+	.equ	MechanicalRhythm_key, 0
+	.equ	MechanicalRhythm_tbs, 1
+	.equ	MechanicalRhythm_exg, 0
+	.equ	MechanicalRhythm_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	MechanicalRhythm
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+MechanicalRhythm_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 130*song04_tbs/2
+ .byte   KEYSH , MechanicalRhythm_key+0
+ .byte   TEMPO , 130*MechanicalRhythm_tbs/2
  .byte   VOICE , 40
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*MechanicalRhythm_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -591,13 +591,13 @@ Label_01004E91:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+MechanicalRhythm_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , MechanicalRhythm_key+0
  .byte   VOICE , 41
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*MechanicalRhythm_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #02 @001   ----------------------------------------
@@ -1081,13 +1081,13 @@ Label_010050C2:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+MechanicalRhythm_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , MechanicalRhythm_key+0
  .byte   VOICE , 30
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 52*song04_mvl/mxv
+ .byte   VOL , 52*MechanicalRhythm_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N05 ,Dn2 ,v060
  .byte   W06
@@ -2409,13 +2409,13 @@ Label_0100574F:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+MechanicalRhythm_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , MechanicalRhythm_key+0
  .byte   VOICE , 36
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*MechanicalRhythm_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -3434,13 +3434,13 @@ Label_01005C68:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+MechanicalRhythm_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , MechanicalRhythm_key+0
  .byte   VOICE , 124
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*MechanicalRhythm_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -4216,18 +4216,18 @@ Label_01006086:
 @******************************************************@
 	.align	2
 
-song04:
+MechanicalRhythm:
 	.byte	5	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	MechanicalRhythm_pri	@ Priority
+	.byte	MechanicalRhythm_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	MechanicalRhythm_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
+	.word	MechanicalRhythm_001
+	.word	MechanicalRhythm_002
+	.word	MechanicalRhythm_003
+	.word	MechanicalRhythm_004
+	.word	MechanicalRhythm_005
 
 	.end

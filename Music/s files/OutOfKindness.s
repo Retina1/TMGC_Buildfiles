@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	OutOfKindness_grp, voicegroup000
+	.equ	OutOfKindness_pri, 0
+	.equ	OutOfKindness_rev, 0
+	.equ	OutOfKindness_mvl, 127
+	.equ	OutOfKindness_key, 0
+	.equ	OutOfKindness_tbs, 1
+	.equ	OutOfKindness_exg, 0
+	.equ	OutOfKindness_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	OutOfKindness
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+OutOfKindness_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 94*song04_tbs/2
+ .byte   KEYSH , OutOfKindness_key+0
+ .byte   TEMPO , 94*OutOfKindness_tbs/2
  .byte   VOICE , 1
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*OutOfKindness_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N05 ,Gn4 ,v080
  .byte   W06
@@ -92,7 +92,7 @@ Label_01004EC8:
  .byte   PEND 
 @  #01 @002   ----------------------------------------
 Label_01004EEB:
- .byte   TEMPO , 94*song04_tbs/2
+ .byte   TEMPO , 94*OutOfKindness_tbs/2
  .byte   N05 ,Gn4 ,v080
  .byte   W06
  .byte   An4
@@ -254,10 +254,10 @@ Label_01004F51:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+OutOfKindness_002:
 @  #02 @000   ----------------------------------------
- .byte   VOL , 50*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 50*OutOfKindness_mvl/mxv
+ .byte   KEYSH , OutOfKindness_key+0
  .byte   VOICE , 30
  .byte   TIE ,Gn0 ,v080
  .byte   TIE ,Gn1
@@ -501,11 +501,11 @@ Label_01004D81:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+OutOfKindness_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OutOfKindness_key+0
  .byte   VOICE , 91
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*OutOfKindness_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -737,11 +737,11 @@ Label_0100508A:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+OutOfKindness_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OutOfKindness_key+0
  .byte   VOICE , 124
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*OutOfKindness_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -961,17 +961,17 @@ Label_010051D0:
 @******************************************************@
 	.align	2
 
-song04:
+OutOfKindness:
 	.byte	4	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	OutOfKindness_pri	@ Priority
+	.byte	OutOfKindness_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	OutOfKindness_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
+	.word	OutOfKindness_001
+	.word	OutOfKindness_002
+	.word	OutOfKindness_003
+	.word	OutOfKindness_004
 
 	.end

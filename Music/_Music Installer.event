@@ -24,6 +24,66 @@
 #define SFXGroup 6
 
 {
+#include "DickGumshoe.event"
+SongTable(S_DickGumshoe,DickGumshoe,1)
+}
+{
+#include "Impromptu.event"
+SongTable(S_Impromptu,Impromptu,0)
+}
+{
+#include "Jaws.event"
+SongTable(S_Jaws,Jaws,1)
+}
+{
+#include "PascalTheDog.event"
+SongTable(S_PascalTheDog,PascalTheDog,1)
+}
+{
+#include "Ambience.event"
+SongTable(S_Ambience,Ambience,1)
+}
+{
+#include "SearchingTheEnemy.event"
+SongTable(S_SearchingTheEnemy,SearchingTheEnemy,1)
+}
+{
+#include "OutOfKindness.event"
+SongTable(S_OutOfKindness,OutOfKindness,1)
+}
+{
+#include "GentleMadman.event"
+SongTable(S_GentleMadman,GentleMadman,1)
+}
+{
+#include "IntoTheMind.event"
+SongTable(S_IntoTheMind,IntoTheMind,1)
+}
+{
+#include "MechanicalRhythm.event"
+SongTable(S_MechanicalRhythm,MechanicalRhythm,0)
+}
+{
+#include "CrossCounter.event"
+SongTable(S_CrossCounter,CrossCounter,0)
+}
+{
+#include "CrimsonRidge.event"
+SongTable(S_CrimsonRidge,CrimsonRidge,0)
+}
+{
+#include "EverydayBrawls.event"
+SongTable(S_EverydayBrawls,EverydayBrawls,1)
+}
+{
+#include "ClashOfCalamity.event"
+SongTable(S_ClashOfCalamity,ClashOfCalamity,0)
+}
+{
+#include "FearlessAdversary.event"
+SongTable(S_FearlessAdversary,FearlessAdversary,0)
+}
+{
 #include "ThraciaAdvance.event"
 SongTable(S_ThraciaAdvance,ThraciaAdvance,1)
 }

@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	GentleMadman_grp, voicegroup000
+	.equ	GentleMadman_pri, 0
+	.equ	GentleMadman_rev, 0
+	.equ	GentleMadman_mvl, 127
+	.equ	GentleMadman_key, 0
+	.equ	GentleMadman_tbs, 1
+	.equ	GentleMadman_exg, 0
+	.equ	GentleMadman_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	GentleMadman
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+GentleMadman_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 88*song04_tbs/2
+ .byte   KEYSH , GentleMadman_key+0
+ .byte   TEMPO , 88*GentleMadman_tbs/2
  .byte   VOICE , 52
- .byte   VOL , 43*song04_mvl/mxv
+ .byte   VOL , 43*GentleMadman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N56 ,Dn3 ,v080
  .byte   N56 ,Gn3
@@ -134,7 +134,7 @@ Label_F8B4EB:
  .byte   Dn3 ,v067
  .byte   W01
 @  #01 @029   ----------------------------------------
- .byte   TEMPO , 88*song04_tbs/2
+ .byte   TEMPO , 88*GentleMadman_tbs/2
  .byte   N56 ,Dn3 ,v080
  .byte   N56 ,Gn3
  .byte   W60
@@ -169,11 +169,11 @@ Label_F8B4EB:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+GentleMadman_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , GentleMadman_key+0
  .byte   VOICE , 1
- .byte   VOL , 43*song04_mvl/mxv
+ .byte   VOL , 43*GentleMadman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N90 ,Gn0 ,v080
  .byte   N90 ,Gn1
@@ -474,11 +474,11 @@ Label_01004E47:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+GentleMadman_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , GentleMadman_key+0
  .byte   VOICE , 30
- .byte   VOL , 43*song04_mvl/mxv
+ .byte   VOL , 43*GentleMadman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -597,11 +597,11 @@ Label_F8B73C:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+GentleMadman_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , GentleMadman_key+0
  .byte   VOICE , 124
- .byte   VOL , 43*song04_mvl/mxv
+ .byte   VOL , 43*GentleMadman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -901,17 +901,17 @@ Label_01004FC7:
 @******************************************************@
 	.align	2
 
-song04:
+GentleMadman:
 	.byte	4	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	GentleMadman_pri	@ Priority
+	.byte	GentleMadman_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	GentleMadman_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
+	.word	GentleMadman_001
+	.word	GentleMadman_002
+	.word	GentleMadman_003
+	.word	GentleMadman_004
 
 	.end

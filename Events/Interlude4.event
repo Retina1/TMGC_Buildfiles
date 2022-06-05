@@ -28,7 +28,8 @@ CharacterBasedEvents:
 CharacterEvent(0x0,I4ReadyToEnd,Blair,Vladmir)
 CharacterEvent(0x10,I4Laronde,Blair,Laronde)
 CharacterEvent(0x11,I4Athena,Blair,Athena)
-CharacterEvent(0x12,I4Callum,Blair,Callum)
+CharacterEvent(0x12,I4DirkEliza,Blair,Eliza)
+CharacterEvent(0x12,I4DirkEliza,Blair,Dirk)
 CharacterEvent(0x13,I4Leila,Blair,Leila)
 CharacterEvent(0x14,I4Liam,Blair,Liam)
 CharacterEvent(0x15,I4Merchant,Blair,Merchant)
@@ -75,7 +76,8 @@ I4NPC:
 UNIT Vladmir Bishop 0x0 Level(15,NPC,0) [6,32] 0x0 0x0 0x0 0x0 [BookOfOpistus] NeverMoveAI
 UNIT Laronde Halberdier 0x0 Level(4,NPC,1) [12,1] 0x0 0x0 0x0 0x0 [Spear,Nuboko,Elixir] NeverMoveAI
 UNIT Athena AxeWyv 0x0 Level(14,NPC,0) [5,22] 0x0 0x0 0x0 0x0 [Hammer,HandAxe,MasterSeal] NeverMoveAI
-UNIT Callum SwdPal 0x0 Level(11,NPC,0) [12,26] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Eliza Cleric 0x0 Level(12,NPC,0) [12,26] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Dirk Berserker 0x0 Level(7,NPC,0) [12,27] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Leila SwdPeg 0x0 Level(13,NPC,0) [17,24] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Merchant SorcF 0x0 Level(8,NPC,1) [8,20] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Citizen CivilM 0x0 Level(1,NPC,1) [0,35] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
@@ -126,7 +128,7 @@ I4Athena:
 Text(FillerDialogue)
 EndEvent
 
-I4Callum:
+I4DirkEliza:
 Text(FillerDialogue)
 EndEvent
 

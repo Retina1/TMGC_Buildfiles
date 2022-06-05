@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "AmalaBattle.event"
+SongTable(S_AmalaBattle,AmalaBattle,0)
+}
+{
 #include "DickGumshoe.event"
 SongTable(S_DickGumshoe,DickGumshoe,1)
 }

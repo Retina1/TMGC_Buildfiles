@@ -1,0 +1,25 @@
+ALIGN 4
+NewSuperArenaCheck:
+#incbin "NewSuperArenaCheck.dmp"
+ALIGN 4
+SuperArenaStuff:
+#incbin "SuperArena.dmp"
+ALIGN 4
+SuperArenaHook:
+#incbin "SuperArenaHook.dmp"
+POIN SuperArenaStuff
+
+PUSH
+ORG 0xB5998
+jumpToHack(NewSuperArenaCheck)
+ORG 0x24E04
+jumpToHack(SuperArenaHook)
+POP
+
+//Uncomment this section if you're not using skill system; if you are, move the contents of the PUSH/POP to the end of the Post Combat Skills Installer, where it also edits this part (this makes it so dancing doesn't clear a unit's super arena flags):
+
+//PUSH
+//ORG $323A0
+//SHORT 0xFFBD
+//SHORT 0xFFF9
+//POP

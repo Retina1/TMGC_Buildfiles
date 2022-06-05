@@ -136,5 +136,8 @@ SHORT 0xFFBD
 SHORT 0xFFFF
 ORG $39B98 //this sets 00040000 to the status bitfield thing for some reason on non-player units
 SHORT 0x46C0
+/*ORG $323A0 //makes dancing not clear super arena flag
+SHORT 0xFFBD
+SHORT 0xFFF9*/
 POP
 

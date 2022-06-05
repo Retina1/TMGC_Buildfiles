@@ -140,6 +140,11 @@ DamienMug:
 setMugEntry(0x24,DamienMug,3,5,3,3)
 
 ALIGN 4
+AvanMug:
+#incext PortraitFormatter "Avan.png"
+setMugEntry(0x26,AvanMug,3,5,3,3)
+
+ALIGN 4
 HoratioMug:
 #incext PortraitFormatter "Horatio.png"
 setMugEntry(0x46,HoratioMug,3,6,3,4)

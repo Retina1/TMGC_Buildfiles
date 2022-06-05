@@ -1,4 +1,11 @@
 PUSH
+ORG 0xD7F5C
+BYTE ArenaSword ArenaLance ArenaAxe ArenaBow 0x00 ArenaAnima ArenaLight ArenaDark
+ORG 0xD7F64
+BYTE ArenaSword ArenaSword ArenaSword 0x0 ArenaLance ArenaLance ArenaLance 0x0 ArenaAxe ArenaAxe ArenaAxe 0x0 ArenaBow ArenaBow ArenaBow 0x0 ArenaAnima ArenaAnima ArenaAnima 0x0 ArenaLight ArenaLight 0x0 ArenaDark 0x0 0xff
+POP
+
+PUSH
 ORG 0x3194c
 POIN ArenaMelee
 ORG 0x319a8
@@ -11,16 +18,37 @@ ALIGN 4
 ArenaMelee:
 BYTE Merc MercF Fighter FighterF Soldier SoldierF Myrm MyrmF Thief ThiefF Mage MageF LightM DarkM DarkF SwdArm LncArm AxeArm SwdCav LncCav AxeCav SwdCavF LncCavF AxeCavF LncPeg SwdPeg LncWyv AxeWyv Pirate PirateF Brigand Deserter Bruiser
 BYTE Valk ValkF Hero HeroF Warrior WarriorF Halberdier HalberdierF SwMast SwMastF Assass AssassF Sage SageF Bishop BishopF Sorc SorcF SwdGen LncGen AxeGen SwdPal LncPal AxePal SwdPalF LncPalF AxePalF Falco WyvLord Berserker BerserkerF
+BYTE Merc MercF Fighter FighterF Soldier SoldierF Myrm MyrmF Thief ThiefF Mage MageF LightM DarkM DarkF SwdArm LncArm AxeArm SwdCav LncCav AxeCav SwdCavF LncCavF AxeCavF LncPeg SwdPeg LncWyv AxeWyv Pirate PirateF Brigand Deserter Bruiser
+BYTE Valk ValkF Hero HeroF Warrior WarriorF Halberdier HalberdierF SwMast SwMastF Assass AssassF Sage SageF Bishop BishopF Sorc SorcF SwdGen LncGen AxeGen SwdPal LncPal AxePal SwdPalF LncPalF AxePalF Falco WyvLord Berserker BerserkerF
+BYTE Merc MercF Fighter FighterF Soldier SoldierF Mage MageF LightM DarkM DarkF SwdArm LncArm AxeArm SwdCav LncCav AxeCav SwdCavF LncCavF AxeCavF LncPeg SwdPeg LncWyv AxeWyv Pirate PirateF
+BYTE Hero HeroF Warrior WarriorF Halberdier HalberdierF Sage SageF Bishop BishopF Sorc SorcF SwdGen LncGen AxeGen SwdPal LncPal AxePal SwdPalF LncPalF AxePalF Falco WyvLord Berserker BerserkerF
+BYTE Merc MercF Fighter FighterF Soldier SoldierF Mage MageF LightM DarkM DarkF SwdArm LncArm AxeArm SwdCav LncCav AxeCav SwdCavF LncCavF AxeCavF LncPeg SwdPeg LncWyv AxeWyv Pirate PirateF
+BYTE Hero HeroF Warrior WarriorF Halberdier HalberdierF Sage SageF Bishop BishopF Sorc SorcF SwdGen LncGen AxeGen SwdPal LncPal AxePal SwdPalF LncPalF AxePalF Falco WyvLord Berserker BerserkerF
+BYTE BlairLord BlairLordX ZekeLord ZekeLordX Baron Dismount ArinValk Draco
 BYTE 0x0
 
 ALIGN 4
 ArenaMage:
 BYTE Archer ArcherF Merc MercF Fighter FighterF Soldier SoldierF Myrm MyrmF Thief ThiefF Mage MageF LightM DarkM DarkF SwdArm LncArm AxeArm BowArm SwdCav LncCav AxeCav BowCav SwdCavF LncCavF AxeCavF BowCavF LncPeg SwdPeg LncWyv AxeWyv Pirate PirateF Brigand Deserter Bruiser Hunter
 BYTE Valk ValkF Sniper SniperF Hero HeroF Warrior WarriorF Halberdier HalberdierF SwMast SwMastF Assass AssassF Sage SageF Bishop BishopF Sorc SorcF SwdGen LncGen AxeGen BowGen SwdPal LncPal AxePal BowPal SwdPalF LncPalF AxePalF BowPalF Falco WyvLord Berserker BerserkerF
+BYTE Archer ArcherF Merc MercF Fighter FighterF Soldier SoldierF Myrm MyrmF Thief ThiefF Mage MageF LightM DarkM DarkF SwdArm LncArm AxeArm BowArm SwdCav LncCav AxeCav BowCav SwdCavF LncCavF AxeCavF BowCavF LncPeg SwdPeg LncWyv AxeWyv Pirate PirateF Brigand Deserter Bruiser Hunter
+BYTE Valk ValkF Sniper SniperF Hero HeroF Warrior WarriorF Halberdier HalberdierF SwMast SwMastF Assass AssassF Sage SageF Bishop BishopF Sorc SorcF SwdGen LncGen AxeGen BowGen SwdPal LncPal AxePal BowPal SwdPalF LncPalF AxePalF BowPalF Falco WyvLord Berserker BerserkerF
+BYTE Archer ArcherF Merc MercF Fighter FighterF Soldier SoldierF Mage MageF LightM DarkM DarkF SwdArm LncArm AxeArm BowArm SwdCav LncCav AxeCav BowCav SwdCavF LncCavF AxeCavF BowCavF LncPeg SwdPeg LncWyv AxeWyv Pirate PirateF
+BYTE Sniper SniperF Hero HeroF Warrior WarriorF Halberdier HalberdierF Sage SageF Bishop BishopF Sorc SorcF SwdGen LncGen AxeGen BowGen SwdPal LncPal AxePal BowPal SwdPalF LncPalF AxePalF BowPalF Falco WyvLord Berserker BerserkerF
+BYTE Archer ArcherF Merc MercF Fighter FighterF Soldier SoldierF Mage MageF LightM DarkM DarkF SwdArm LncArm AxeArm BowArm SwdCav LncCav AxeCav BowCav SwdCavF LncCavF AxeCavF BowCavF LncPeg SwdPeg LncWyv AxeWyv Pirate PirateF
+BYTE Sniper SniperF Hero HeroF Warrior WarriorF Halberdier HalberdierF Sage SageF Bishop BishopF Sorc SorcF SwdGen LncGen AxeGen BowGen SwdPal LncPal AxePal BowPal SwdPalF LncPalF AxePalF BowPalF Falco WyvLord Berserker BerserkerF
+BYTE BlairLord BlairLordX ZekeLord ZekeLordX Baron Dismount ArinValk ViridianLord BowWyv Draco
 BYTE 0x0
 
 ALIGN 4
 ArenaArcher:
 BYTE Archer ArcherF Mage MageF LightM DarkM DarkF BowArm BowCav BowCavF Hunter
 BYTE Sniper SniperF Sage SageF Bishop BishopF Sorc SorcF BowGen BowPal BowPalF
+BYTE Archer ArcherF Mage MageF LightM DarkM DarkF BowArm BowCav BowCavF Hunter
+BYTE Sniper SniperF Sage SageF Bishop BishopF Sorc SorcF BowGen BowPal BowPalF
+BYTE Archer ArcherF Mage MageF LightM DarkM DarkF BowArm BowCav BowCavF
+BYTE Sniper SniperF Sage SageF Bishop BishopF Sorc SorcF BowGen BowPal BowPalF
+BYTE Archer ArcherF Mage MageF LightM DarkM DarkF BowArm BowCav BowCavF
+BYTE Sniper SniperF Sage SageF Bishop BishopF Sorc SorcF BowGen BowPal BowPalF
+BYTE BlairLord BlairLordX ZekeLord ZekeLordX Baron ViridianLord BowWyv Draco
 BYTE 0x0

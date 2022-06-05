@@ -66,10 +66,10 @@ POP
 #include "TMGC/SplitPromoItems/SplitPromoItems.event"
 
 //this part is maybe dumb and not cooperating yet
-PUSH
-ORG $2BE38
-#incbin "LoseRanksOnPromo.dmp"
-POP
+//PUSH
+//ORG $2BE38
+//#incbin "LoseRanksOnPromo.dmp"
+//POP
 
 //minimug palette buffer
 #include "TMGC/Minimug Palette/MinimugPalette.event"
@@ -421,3 +421,8 @@ POP
 #include "TMGC/AlphabeticalSort/AlphabeticalSort.event"
 
 #include "DrawMapActionAnimation/Installer.event"
+
+#include "TMGC/AnimationForcer/AnimationForcer.event"
+
+//currently always active- try to fix?
+//#include "TMGC/SuperArena/SuperArenaInstaller.event"

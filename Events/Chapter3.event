@@ -32,6 +32,7 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0xa,C3JosefRecruitment,Blair,Josef)
+CharacterEventBothWays(0xb,C3SamJosefTalkConvo,Sam,Josef)
 END_MAIN
 
 LocationBasedEvents:
@@ -271,6 +272,9 @@ MUSC RecruitmentTheme
 Text(Ch3_Josef_Talk)
 TurnAlly(Josef)
 EndEvent
+
+C3SamJosefTalkConvo:
+ConvoEvent(C3SamJosefTalk)
 
 C3Village:
 VillageEventItem(C3VillageText, House2CG, Thunder)

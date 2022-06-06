@@ -59,6 +59,7 @@ MiscBasedEvents:
 CauseGameOverIfLordDies
 AreaEvent(0x23,C4AreaTrigger,9,0,15,12)
 AreaEvent(0x24,C4AreaTrigger2,0,0,4,12)
+AreaEvent(0xa,C4PeggyChurch,15,5,15,5)
 END_MAIN
 
 Dunno:
@@ -315,6 +316,17 @@ ENUF 0x22
 GOTO 0x2
 LABEL 0x1
 ENUF 0x24
+LABEL 0x2
+EndEvent
+
+C4PeggyChurch:
+CHECK_ACTIVEID 0x9
+BNE 0x1 0xC 0x0
+CleanText(HallCG,Ch4_PeggyChurch)
+GiveMoney(300)
+GOTO 0x2
+LABEL 0x1
+ENUF 0xa
 LABEL 0x2
 EndEvent
 

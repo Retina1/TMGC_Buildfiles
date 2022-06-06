@@ -1,0 +1,156 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsZ3,ThisChapter)
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Z3Units Z3Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,Z3Turn2,2)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+SupportConvo(CPSupport,Zeke,Hyperius,FillerDialogue)
+SupportConvo(CPSupport,Hyperius,Alexis,FillerDialogue)
+SupportConvo(CSupport,Leila,Zacharias,FillerDialogue)
+SupportConvo(CSupport,Avan,Toddsworth,FillerDialogue)
+END_MAIN
+
+LocationBasedEvents:
+Escape(2,1)
+Village(0x11,Z3NorthVillage,14,2)
+Village(0x12,Z3SouthVillage,6,10)
+LOCA 0x65 [2,0] 0x20
+END_MAIN
+
+MiscBasedEvents:
+AreaEvent(0x22,Z3GameOverCheck,2,1,2,1)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Z3Units:
+UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [22,13] 0x0 0x0 0x0 0x0 [IronLance, IronBow, Elixir, ChestKey] NoAI
+UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [23,12] 0x0 0x0 0x0 0x0 [SilverSword, IronSword, Vulnerary] NoAI
+UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [23,14] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe, Vulnerary] NoAI
+UNIT Leila SwdPeg 0x0 Level(13,Ally,0) [21,10] 0x0 0x0 0x0 0x0 [Rapier, SteelSword, AngelicRobe] NoAI
+UNIT Damien Archer 0x0 Level(15,Ally,0) [21,15] 0x0 0x0 0x0 0x0 [SteelBow, IronBow, Vulnerary] NoAI
+UNIT Zacharias Fighter 0x0 Level(12,Ally,0) [20,16] 0x0 0x0 0x0 0x0 [SteelAxe, Halberd, Vulnerary] NoAI
+UNIT
+
+Z3NewUnits:
+UNIT Avan TroubF 0x0 Level(11,Ally,0) [14,2] 0x0 0x0 0x1 REDA18R7 [Unlock, Physic, Vulnerary] NoAI
+UNIT Toddsworth Bard 0x0 Level(3,Ally,0) [14,2] 0x0 0x0 0x1 REDA17R9 [ParagonRing, Elixir] NoAI
+UNIT
+
+Z3Easy:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+Z3Normal:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+Z3Hard:
+UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [10,1] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
+UNIT
+
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 Z3Units
+ENUN
+LoadUnitsByDifficulty(Z3Easy,Z3Normal,Z3Hard)
+MUSC NarrationTheme
+Narration(ChZ3_Narration)
+ENUT 0x23
+CleanText(PathCG,FillerDialogue)
+SystemText(Z3Note)
+EndEvent
+
+Z3Turn2:
+Reinforcements(Z3NewUnits)
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+CLEAN
+EndEvent
+
+Z3NorthVillage:
+VillageEventItem(FillerDialogue, VillageCG, MasterSeal)
+
+Z3SouthVillage:
+VillageEventItem(FillerDialogue, VillageCG, MasterSeal)
+
+Z3ManorWrecked:
+Text(Z3Damn)
+CALL 0x592104
+EndEvent
+
+Z3GameOverCheck:
+CHECK_CLASS 0xFFFF
+SVAL 0x1 0x41
+BNE 0x1 0xC 0x1
+CALL Z3ManorWrecked
+GOTO 0x2
+LABEL 0x1
+ENUF 0x22
+LABEL 0x2
+EndEvent
+
+EndingScene:
+MUSC VictoryTheme
+Text(PathCG,FillerDialogue)
+UnremoveUnit(Blair)
+UnremoveUnit(Arin)
+UnremoveUnit(Kenneth)
+UnremoveUnit(Natasia)
+UnremoveUnit(Stefan)
+UnremoveUnit(Desmond)
+UnremoveUnit(Sam)
+UnremoveUnit(Josef)
+UnremoveUnit(Peggy)
+UnremoveUnit(Butch)
+UnremoveUnit(Rachael)
+UnremoveUnit(Cassius)
+UnremoveUnit(Jeff)
+UnremoveUnit(Emile)
+UnremoveUnit(Apollo)
+UnremoveUnit(Bechamel)
+UnremoveUnit(Sveltzalus)
+UnremoveUnit(Hilbert)
+UnremoveUnit(Flynn)
+UnremoveUnit(Addington)
+UnremoveUnit(Mikey)
+UnremoveUnit(Carbon)
+UnremoveUnit(Athena)
+UnremoveUnit(Charley)
+MoveToChapter(Interlude5)
+EndEvent
+
+MESSAGE Events end at offset CURRENTOFFSET

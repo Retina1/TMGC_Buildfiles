@@ -11,6 +11,14 @@ DalstTownPalette:
 #incext Png2Dmp "Tilesets/DalstTown.png" --palette-only
 
 ALIGN 4
+BoatyTownPalette:
+#incext Png2Dmp "Tilesets/BoatyTown.png" --palette-only
+
+ALIGN 4
+HolanisTownPalette:
+#incext Png2Dmp "Tilesets/HolanisTown.png" --palette-only
+
+ALIGN 4
 TownTiles:
 #incext compress "Tilesets/Town.mapchip_config"
 
@@ -326,6 +334,8 @@ WORD 0 0
 
 EventPointerTable(OBJTown, TownObjects)
 EventPointerTable(PALDalstTown, DalstTownPalette)
+EventPointerTable(PALBoatyTown, BoatyTownPalette)
+EventPointerTable(PALHolanisTown, HolanisTownPalette)
 EventPointerTable(TILTown, TownTiles)
 EventPointerTable(ANITown,TownAnims)
 

@@ -24,13 +24,13 @@
 
 ALIGN 4
 MapData:
-  #incbin "Interlude2_data.dmp"
+  #incbin "ChapterZ3_data.dmp"
 
-SetChapterData(Interlude2, OBJTown, 0, PALBoatyTown, TILTown, MapI2, MapData, ANITown, 0, MapChangeI2)
+SetChapterData(ChapterZ3, OBJField, 0, PALElbaCorField, TILField, MapZ3, MapData, ANIField, 0, MapChangeZ3)
 
 ALIGN 4
 Map_Change_0:
-  SHORT $80
+  SHORT $E1C $E20 $E24 $E9C $EA0 $EA4 $F1C $F20 $F24
 
 ALIGN 4
 Map_Change_1:
@@ -38,15 +38,25 @@ Map_Change_1:
 
 ALIGN 4
 Map_Change_2:
+  SHORT $E1C $E20 $E24 $E9C $EA0 $EA4 $F1C $F20 $F24
+
+ALIGN 4
+Map_Change_3:
   SHORT $80
 
 ALIGN 4
+Map_Change_4:
+  SHORT $CA8 $CAC $CB0 $D28 $D2C $D30
+
+ALIGN 4
 MapChangesData:
-  TileMap(0, 1, 5, 1, 1, Map_Change_0)
-  TileMap(1, 6, 2, 1, 1, Map_Change_1)
-  TileMap(2, 15, 12, 1, 1, Map_Change_2)
+  TileMap(0, 13, 0, 3, 3, Map_Change_0)
+  TileMap(1, 14, 2, 1, 1, Map_Change_1)
+  TileMap(2, 5, 8, 3, 3, Map_Change_2)
+  TileMap(3, 6, 10, 1, 1, Map_Change_3)
+  TileMap(4, 1, 0, 3, 2, Map_Change_4)
   TileMapEnd
 
-EventPointerTable(MapChangeI2, MapChangesData)
+EventPointerTable(MapChangeZ3, MapChangesData)
 
 }

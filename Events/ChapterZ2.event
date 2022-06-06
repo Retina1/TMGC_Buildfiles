@@ -26,6 +26,8 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+SupportConvo(CSupport,Leila,Damien,FillerDialogue)
+SupportConvo(CSupport,Damien,Zacharias,FillerDialogue)
 END_MAIN
 
 LocationBasedEvents:
@@ -95,6 +97,7 @@ MUSC NarrationTheme
 Narration(ChZ2_Narration)
 ENUT 0x23
 CleanText(PathCG,FillerDialogue)
+SystemText(Z2Note)
 EndEvent
 
 EndingScene:

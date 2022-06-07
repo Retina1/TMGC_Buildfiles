@@ -241,6 +241,11 @@ StarqueMug:
 setMugEntry(0x41,StarqueMug,3,5,3,3)
 
 ALIGN 4
+ParqueMug:
+#incext PortraitFormatter "Parque.png"
+setMugEntry(0xca,ParqueMug,3,5,3,3)
+
+ALIGN 4
 HelgaMug:
 #incext PortraitFormatter "Helga.png"
 setMugEntry(0x33,HelgaMug,3,5,3,3)
@@ -334,6 +339,16 @@ ALIGN 4
 BriantMug:
 #incext PortraitFormatter "Briant.png"
 setMugEntry(0x53,BriantMug,4,5,4,3)
+
+ALIGN 4
+RoarkMug:
+#incext PortraitFormatter "Roark.png"
+setMugEntry(0xcb,RoarkMug,2,5,3,3)
+
+ALIGN 4
+AugustoMug:
+#incext PortraitFormatter "Augusto.png"
+setMugEntry(0xcc,AugustoMug,2,4,4,2)
 
 
 

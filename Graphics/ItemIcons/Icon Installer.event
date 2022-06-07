@@ -173,6 +173,10 @@
 #define SkillScrollIcon 0x7a
 #define MercuryBootsIcon 0xe7
 
+#define LegRingIcon 0x8f
+#define ParagonRingIcon 0x90
+#define KnightRingIcon 0x91
+
 #define EvilEyeIcon 0x77
 #define SlamIcon 0xab
 
@@ -189,6 +193,9 @@
 #define EyedropsIcon 0xdc
 
 #define NoteIcon 0x98
+
+#define ResoluteSealIcon 0xd8
+#define AscendancySealIcon 0xd7
 
 ALIGN 4
 NewItemIcons:
@@ -583,7 +590,6 @@ ItemIconEntry(MiniBallistaIcon)
 ALIGN 4
 ItemIconEntry(MasterSealIcon)
 #incbin "{Purple} Master Seal.dmp"
-
 ALIGN 4
 ItemIconEntry(AnimusSealIcon)
 #incbin "{Seal} {SacredWar} Item 65.dmp"
@@ -591,42 +597,48 @@ ItemIconEntry(AnimusSealIcon)
 ALIGN 4
 ItemIconEntry(SeraphRobeIcon)
 #incbin "statboosters/{Seal} {SacredWar} Item 16.dmp"
-
 ALIGN 4
 ItemIconEntry(EnergyRingIcon)
 #incbin "statboosters/{Seal} {SacredWar} Item 17.dmp"
-
 ALIGN 4
 ItemIconEntry(SpiritDustIcon)
 #incbin "{Zelix} icon 135.dmp"
-
 ALIGN 4
 ItemIconEntry(SecretBookIcon)
 #incbin "statboosters/{Seal} {SacredWar} Item 18.dmp"
-
 ALIGN 4
 ItemIconEntry(SpeedwingIcon)
 #incbin "statboosters/{Zelix} icon 137.dmp"
-
 ALIGN 4
 ItemIconEntry(GoddessIconIcon)
 #incbin "statboosters/{Seal} {SacredWar} Item 20.dmp"
-
 ALIGN 4
 ItemIconEntry(DracoshieldIcon)
 #incbin "statboosters/{Seal} {SacredWar} Item 21.dmp"
-
 ALIGN 4
 ItemIconEntry(TalismanIcon)
 #incbin "statboosters/{Seal} {SacredWar} Item 22.dmp"
-
 ALIGN 4
 ItemIconEntry(BootsIcon)
 #incbin "statboosters/{Zarg} Item 8.dmp"
-
 ALIGN 4
 ItemIconEntry(BodyRingIcon)
 #incbin "statboosters/{Beansy} Heavy Band.dmp"
+ALIGN 4
+ItemIconEntry(LegRingIcon)
+#incbin "statboosters/Ring Red.dmp"
+ALIGN 4
+ItemIconEntry(ParagonRingIcon)
+#incbin "statboosters/Ring Blue.dmp"
+ALIGN 4
+ItemIconEntry(KnightRingIcon)
+#incbin "statboosters/Ring Green.dmp"
+ALIGN 4
+ItemIconEntry(ResoluteSealIcon)
+#incbin "statboosters/Moon Amulet.dmp"
+ALIGN 4
+ItemIconEntry(AscendancySealIcon)
+#incbin "statboosters/Sun Amulet.dmp"
 
 ALIGN 4
 ItemIconEntry(PhalanotisIcon)

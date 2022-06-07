@@ -74,6 +74,10 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define DamienPPaletteID 0x3c
 #define AvanUPaletteID 0x3e
 #define AvanPPaletteID 0x3f
+#define HoratioUPaletteID 0x40
+#define HoratioPPaletteID 0x41
+#define JohanUPaletteID 0x42
+#define JohanPPaletteID 0x43
 
 #define CidPaletteID 0x2e
 
@@ -144,6 +148,12 @@ setPalette(DamienPPaletteID,DamienPPalette)
 setPalette(AvanUPaletteID,AvanUPalette)
 setPalette(AvanPPaletteID,AvanPPalette)
 
+setPalette(HoratioUPaletteID,HoratioUPalette)
+setPalette(HoratioPPaletteID,HoratioPPalette)
+
+setPalette(JohanUPaletteID,JohanUPalette)
+setPalette(JohanPPaletteID,JohanPPalette)
+
 setPalette(ElcorianPaletteID,ElcorianPalette)
 
 setPalette(RoseUPaletteID,RoseUPalette)
@@ -207,16 +217,16 @@ SetPaletteFull(Toddsworth,0x0,Bard,0x0,0x0,0x0,0x0)
 SetPaletteFull(Artemis,0x0,AxeCavF,0x0,AxePalF,0x0,0x0)
 SetPaletteFull(Hollandaise,0x0,PirateF,0x0,BerserkerF,0x0,0x0)
 SetPaletteFull(Vladmir,0x0,LightM,0x0,Bishop,0x0,Draco)
-SetPaletteFull(Horatio,0x0,Rune,0x0,RuneMast,0x0,0x0)
+SetPaletteFull(Horatio,HoratioUPaletteID,Rune,HoratioPPaletteID,RuneMast,0x0,0x0)
 SetPaletteFull(Simone,0x0,DarkF,0x0,SorcF,0x0,0x0)
 SetPaletteFull(Ptolemy,0x0,BowArm,0x0,BowWyv,0x0,0x0)
-SetPaletteFull(Johan,0x0,LncCav,0x0,LncPal,0x0,0x0)
+SetPaletteFull(Johan,JohanUPaletteID,LncCav,JohanPPaletteID,LncPal,0x0,0x0)
 SetPaletteFull(Peter,0x0,AxeWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(Sonia,0x0,SoldierF,0x0,HalberdierF,0x0,0x0)
 SetPaletteFull(Joan,0x0,MercF,0x0,HeroF,0x0,0x0)
 SetPaletteFull(Tobias,0x0,Fighter,0x0,Warrior,0x0,0x0)
 SetPaletteFull(Ian,0x0,CivilM,0x0,0x0,0x0,0x0)
-SetPaletteFull(Olsen,0x0,Thief,0x0,Assass,0x0,0x0)
+SetPaletteFull(Olsen,0x0,ThiefF,0x0,AssassF,0x0,0x0)
 SetPaletteFull(Elcorian,0x0,Troub,ElcorianPaletteID,Valk,0x0,0x0)
 SetPaletteFull(Viridian,0x0,0x0,0x0,ViridianLord,0x0,0x0)
 SetPaletteFull(Freddric,0x0,LncWyv,0x0,WyvLord,0x0,0x0)
@@ -252,6 +262,8 @@ SetPaletteFull(Amara,0x0,0x0,AmaraPaletteID,WarriorF,0x0,0x0)
 SetPaletteFull(Valden,0x0,0x0,ValdenPaletteID,LncPal,0x0,0x0)
 SetPaletteFull(Lazarus,0x0,0x0,LazarusPaletteID,AxeGen,0x0,0x0)
 SetPaletteFull(Briant,0x0,0x0,0x0,Baron,0x0,0x0)
+
+SetPaletteFull(Parque,0x0,0x0,0x0,LncPal,0x0,0x0)
 
 SetPaletteFull(Liam,0x0,0x0,0x0,Hero,0x0,0x0)
 SetPaletteFull(Neillstrom,0x0,0x0,0x0,WyvLord,0x0,0x0)
@@ -406,6 +418,20 @@ AvanUPalette:
 ALIGN 4
 AvanPPalette:
 #incbin "AvanPromoted.dmp"
+
+ALIGN 4
+HoratioUPalette:
+#incbin "HoratioUnpromoted.dmp"
+ALIGN 4
+HoratioPPalette:
+#incbin "HoratioPromoted.dmp"
+
+ALIGN 4
+JohanUPalette:
+#incbin "JohanUnpromoted.dmp"
+ALIGN 4
+JohanPPalette:
+#incbin "JohanPromoted.dmp"
 
 
 ALIGN 4

@@ -78,6 +78,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define HoratioPPaletteID 0x41
 #define JohanUPaletteID 0x42
 #define JohanPPaletteID 0x43
+#define HilbertUPaletteID 0x44
+#define HilbertPPaletteID 0x45
 
 #define CidPaletteID 0x2e
 
@@ -131,6 +133,8 @@ setPalette(ApolloUPaletteID,ApolloUPalette)
 setPalette(ApolloPPaletteID,ApolloPPalette)
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
+setPalette(HilbertUPaletteID,HilbertUPalette)
+setPalette(HilbertPPaletteID,HilbertPPalette)
 
 setPalette(MikeyUPaletteID,MikeyUPalette)
 setPalette(MikeyPPaletteID,MikeyPPalette)
@@ -200,7 +204,7 @@ SetPaletteFull(Jeff,JeffUPaletteID,Thief,JeffPPaletteID,Assass,0x0,0x0)
 SetPaletteFull(Apollo,ApolloUPaletteID,LightM,ApolloPPaletteID,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
-SetPaletteFull(Hilbert,0x0,Mage,0x0,Sage,0x0,0x0)
+SetPaletteFull(Hilbert,HilbertUPaletteID,Mage,HilbertPPaletteID,Sage,0x0,0x0)
 SetPaletteFull(Flynn,0x0,Myrm,0x0,SwMast,0x0,0x0)
 SetPaletteFull(Mikey,MikeyUPaletteID,Soldier,MikeyPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Carbon,0x0,BowCav,0x0,BowPal,0x0,0x0)
@@ -375,6 +379,13 @@ BechamelPPalette:
 ALIGN 4
 EmilePalette:
 #incbin "Emile.dmp"
+
+ALIGN 4
+HilbertUPalette:
+#incbin "HilbertUnpromoted.dmp"
+ALIGN 4
+HilbertPPalette:
+#incbin "HilbertPromoted.dmp"
 
 ALIGN 4
 MikeyUPalette:

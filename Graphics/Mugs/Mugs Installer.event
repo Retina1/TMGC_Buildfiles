@@ -105,6 +105,11 @@ SveltzalusMug:
 setMugEntry(0x18,SveltzalusMug,2,7,2,3)
 
 ALIGN 4
+HilbertMug:
+#incext PortraitFormatter "Hilbert.png"
+setMugEntry(0x19,HilbertMug,3,6,3,4)
+
+ALIGN 4
 MikeyMug:
 #incext PortraitFormatter "Mikey.png"
 setMugEntry(0x1b,MikeyMug,3,6,3,4)

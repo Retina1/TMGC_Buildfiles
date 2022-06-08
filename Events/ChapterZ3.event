@@ -25,10 +25,10 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-SupportConvo(CPSupport,Zeke,Hyperius,FillerDialogue)
-SupportConvo(CPSupport,Hyperius,Alexis,FillerDialogue)
 SupportConvo(CSupport,Leila,Zacharias,FillerDialogue)
 SupportConvo(CSupport,Avan,Toddsworth,FillerDialogue)
+SupportConvo(CPSupport,Zeke,Hyperius,FillerDialogue)
+SupportConvo(CPSupport,Hyperius,Alexis,FillerDialogue)
 END_MAIN
 
 LocationBasedEvents:
@@ -86,9 +86,24 @@ UNIT Bandit Brigand 0x0 Level(11,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [SilverAxe] Bri
 UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [13,8] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
 UNIT Bandit Bruiser 0x0 Level(13,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Ygstra AxeCav 0x0 Level(14,Enemy,1) [13,18] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Mevion LncCav 0x0 Level(14,Enemy,1) [0,10] 0x0 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
-UNIT Mevion LncCav 0x0 Level(14,Enemy,1) [0,12] 0x0 0x0 0x0 0x0 [Axereaver] AttackInRangeAI
-UNIT Parque LncPal 0x0 Level(2,Enemy,1) [0,11] DropItem 0x0 0x0 0x0 [SilverLance,MasterSeal] AttackInRangeAI
+UNIT Ygstra AxeCavF 0x0 Level(14,Enemy,1) [14,19] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Ygstra Archer 0x0 Level(14,Enemy,1) [5,6] 0x0 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
+UNIT Ygstra Archer 0x0 Level(14,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI
+UNIT Ygstra FighterF 0x0 Level(14,Enemy,1) [4,14] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT Ygstra FighterF 0x0 Level(14,Enemy,1) [14,6] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
+UNIT Ygstra DarkF 0x0 Level(14,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Nosferatu] AttackInRangeAI
+UNIT Ygstra DarkM 0x0 Level(14,Enemy,1) [10,11] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI
+UNIT Ygstra DarkM 0x0 Level(14,Enemy,1) [9,7] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI
+UNIT Ygstra Soldier 0x0 Level(14,Enemy,1) [3,17] 0x0 0x0 0x0 0x0 [Javelin] ChaseOnceApproachedAI
+UNIT Ygstra Soldier 0x0 Level(14,Enemy,1) [6,16] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT Ygstra LncArm 0x0 Level(14,Enemy,1) [10,18] 0x0 0x0 0x0 0x0 [Javelin,Shatterspear] NeverMoveAI
+UNIT Ygstra LncArm 0x0 Level(14,Enemy,1) [10,19] DropItem 0x0 0x0 0x0 [Javelin,Axebuster] NeverMoveAI
+UNIT Mevion Merc 0x0 Level(14,Enemy,1) [2,10] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Mevion Fighter 0x0 Level(14,Enemy,1) [1,11] 0x0 0x0 0x0 0x0 [Swordreaver] AttackInRangeAI
+UNIT Mevion Merc 0x0 Level(14,Enemy,1) [0,12] 0x0 0x0 0x0 0x0 [Lancereaver] AttackInRangeAI
+UNIT Mevion LncCav 0x0 Level(14,Enemy,1) [1,10] 0x0 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT Mevion LncCav 0x0 Level(14,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [Axereaver] AttackInRangeAI
+UNIT Parque LncPal 0x0 Level(2,Enemy,1) [0,10] DropItem 0x0 0x0 0x0 [SilverLance,Nuboko,MasterSeal] AttackInRangeAI
 UNIT
 
 

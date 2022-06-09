@@ -80,6 +80,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define JohanPPaletteID 0x43
 #define HilbertUPaletteID 0x44
 #define HilbertPPaletteID 0x45
+#define DesmondPalPaletteID 0x46
 
 #define CidPaletteID 0x2e
 
@@ -114,7 +115,7 @@ setPalette(NatasiaPPaletteID,NatasiaPPalette)
 setPalette(StefanUPaletteID,StefanUPalette)
 setPalette(StefanPPaletteID,StefanPPalette)
 setPalette(DesmondPaletteID,DesmondPalette)
-
+setPalette(DesmondPalPaletteID,DesmondPalPalette)
 setPalette(SamUPaletteID,SamUPalette)
 setPalette(SamPPaletteID,SamPPalette)
 setPalette(JosefUPaletteID,JosefUPalette)
@@ -192,7 +193,7 @@ SetPaletteFull(Arin,ArinPaletteID,Trickster,0x0,ArinValk,0x0,0x0)
 SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Natasia,NatasiaUPaletteID,FighterF,NatasiaPPaletteID,WarriorF,0x0,0x0)
 SetPaletteFull(Stefan,StefanUPaletteID,SwdCav,StefanPPaletteID,SwdPal,0x0,0x0)
-SetPaletteFull(Desmond,0x0,LncCav,DesmondPaletteID,Dismount,0x0,LncPal)
+SetPaletteFull(Desmond,0x0,LncCav,DesmondPaletteID,Dismount,DesmondPalPaletteID,LncPal)
 SetPaletteFull(Sam,SamUPaletteID,ArcherF,SamPPaletteID,SniperF,0x0,0x0)
 SetPaletteFull(Josef,JosefUPaletteID,LncArm,JosefPPaletteID,LncGen,0x0,0x0)
 SetPaletteFull(Peggy,PeggyUPaletteID,Cleric,PeggyPPaletteID,BishopF,0x0,0x0)
@@ -308,6 +309,9 @@ StefanPPalette:
 ALIGN 4
 DesmondPalette:
 #incbin "DesmondCommander.dmp"
+ALIGN 4
+DesmondPalPalette:
+#incbin "DesmondPaladin.dmp"
 
 ALIGN 4
 PeggyUPalette:

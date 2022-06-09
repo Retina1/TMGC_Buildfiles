@@ -34,6 +34,13 @@ CharacterEvent(0xc,C13Reunion,Desmond,0xd1)
 END_MAIN
 
 LocationBasedEvents:
+House(0x0,C13House1,12,5)
+House(0x0,C13House2,14,6)
+House(0x0,C13House3,5,9)
+House(0x0,C13House4,18,11)
+House(0x0,C13House5,13,13)
+House(0x0,C13House6,10,15)
+House(0x0,C13House7,18,23)
 Village(0x11,C13NorthVillage,13,2)
 Village(0x12,C13SouthVillage,5,26)
 Village(0x13,C13WestVillage,17,16)
@@ -247,6 +254,21 @@ VillageEventItem(C13WestVillageText, VillageCG, Sagittae)
 
 C13EastVillage:
 VillageEventItem(C13EastVillageText, VillageCG, Again)
+
+C13House1:
+HouseEvent(FillerDialogue,HouseCG)
+C13House2:
+HouseEvent(FillerDialogue,HouseCG)
+C13House3:
+HouseEvent(FillerDialogue,HouseCG)
+C13House4:
+HouseEvent(FillerDialogue,HouseCG)
+C13House5:
+HouseEvent(FillerDialogue,HouseCG)
+C13House6:
+HouseEvent(FillerDialogue,HouseCG)
+C13House7:
+HouseEvent(FillerDialogue,HouseCG)
 
 C13ValdenHandoff:
 CHECK_EVENTID ValdenDeadFlag

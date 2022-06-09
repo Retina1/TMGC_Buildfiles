@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "StoppableDestiny.event"
+SongTable(S_StoppableDestiny,StoppableDestiny,0)
+}
+{
 #include "AmalaBattle.event"
 SongTable(S_AmalaBattle,AmalaBattle,0)
 }

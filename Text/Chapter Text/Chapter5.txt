@@ -262,6 +262,17 @@ Luckily for you, you won't[N]
 have to worry about that.[A][N][CloseEyes]
 [ToggleMouthMove]...[ToggleMouthMove]I'll kill you first.[A][X]
 
+##C5MitchellPeggyBattle
+[OpenMidLeft][LoadMitchell]
+Young woman, do I know you?[N]
+You seem familiar.[A][N][ClearFace][OpenMidRight][LoadPeggy]
+Hm[ToggleMouthMove]...[ToggleMouthMove] Nope![N]
+You're nothing to me.[A][N]
+I'd say I'm sorry to disappoint,[N]
+but that'd be a lie.[A][N][ClearFace][OpenMidLeft][LoadMitchell]
+Well, then. Guess I won't[N]
+have to feel bad about this.[A][X]
+
 ##C5MitchellDeath
 [OpenMidLeft][LoadMitchell]
 I have[ToggleMouthMove]...[ToggleMouthMove] failed.[A][N]

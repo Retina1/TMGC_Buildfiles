@@ -33,6 +33,10 @@ END_MAIN
 
 LocationBasedEvents:
 Escape(2,1)
+House(0x0,Z3House1,5,1)
+House(0x0,Z3House2,13,8)
+House(0x0,Z3House3,8,14)
+House(0x0,Z3House4,17,18)
 Village(0x11,Z3NorthVillage,14,2)
 Village(0x12,Z3SouthVillage,6,10)
 LOCA 0x65 [2,0] 0x20
@@ -81,7 +85,7 @@ UNIT Bandit Brigand 0x0 Level(13,Enemy,1) [0,18] 0x0 0x0 0x0 0x0 [SteelAxe] Brig
 UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [0,17] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
 UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [1,19] 0x0 0x0 0x0 0x0 [Hammer] BrigandAI
 UNIT Bandit Brigand 0x0 Level(13,Enemy,1) [10,0] 0x0 0x0 0x0 0x0 [HandAxe] BrigandAI
-UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [KillerAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Halberd] BrigandAI
 UNIT Bandit Brigand 0x0 Level(11,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
 UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [13,8] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
 UNIT Bandit Bruiser 0x0 Level(13,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
@@ -132,6 +136,15 @@ VillageEventItem(FillerDialogue, VillageCG, MasterSeal)
 
 Z3SouthVillage:
 VillageEventItem(FillerDialogue, VillageCG, MasterSeal)
+
+Z3House1:
+HouseEvent(FillerDialogue,HouseCG)
+Z3House2:
+HouseEvent(FillerDialogue,HouseCG)
+Z3House3:
+HouseEvent(FillerDialogue,HouseCG)
+Z3House4:
+HouseEvent(FillerDialogue,HouseCG)
 
 Z3ManorWrecked:
 Text(Z3Damn)

@@ -155,6 +155,16 @@ HoratioMug:
 setMugEntry(0x46,HoratioMug,3,6,3,4)
 
 ALIGN 4
+SimoneMug:
+#incext PortraitFormatter "Simone.png"
+setMugEntry(0x45,SimoneMug,3,5,3,3)
+
+ALIGN 4
+TotallyNotSimoneMug:
+#incext PortraitFormatter "TotallyNotSimone.png"
+setMugEntry(0xcd,TotallyNotSimoneMug,2,5,3,3)
+
+ALIGN 4
 FreddricMug:
 #incext PortraitFormatter "Freddric.png"
 setMugEntry(0x15,FreddricMug,3,5,3,3)

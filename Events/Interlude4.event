@@ -32,7 +32,7 @@ CharacterEvent(0x12,I4DirkEliza,Blair,Eliza)
 CharacterEvent(0x12,I4DirkEliza,Blair,Dirk)
 CharacterEvent(0x13,I4Leila,Blair,Leila)
 CharacterEvent(0x14,I4Liam,Blair,Liam)
-CharacterEvent(0x15,I4Merchant,Blair,Merchant)
+CharacterEvent(0x15,I4Merchant,Blair,Merchant3)
 CharacterEvent(0x16,I4Cit,Blair,Citizen)
 CharacterEvent(0x17,I4Cit2,Blair,Citizen2)
 END_MAIN
@@ -41,6 +41,9 @@ LocationBasedEvents:
 Armory(I4Armory,1,24)
 Vendor(I4Vendor,11,24)
 House(0xa,I4VerySecretSpace,2,9)
+Village(0x21,I4LeftVillage,2,33)
+Village(0x22,I4CenterVillage,10,32)
+Village(0x23,I4RightVillage,16,29)
 END_MAIN
 
 ALIGN 4
@@ -79,7 +82,7 @@ UNIT Athena AxeWyv 0x0 Level(14,NPC,0) [5,22] 0x0 0x0 0x0 0x0 [Hammer,HandAxe,Ma
 UNIT Eliza Cleric 0x0 Level(12,NPC,0) [12,26] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Dirk Berserker 0x0 Level(7,NPC,0) [12,27] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Leila SwdPeg 0x0 Level(13,NPC,0) [17,24] 0x0 0x0 0x0 0x0 [Rapier, SteelSword, AngelicRobe] NeverMoveAI
-UNIT Merchant SorcF 0x0 Level(8,NPC,1) [8,20] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Merchant3 SorcF 0x0 Level(4,NPC,0) [8,20] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Citizen CivilM 0x0 Level(1,NPC,1) [0,35] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Citizen2 CivilM 0x0 Level(1,NPC,1) [10,30] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Liam Hero 0x0 Level(16,NPC,1) [17,9] 0x0 0x0 0x0 0x0 [Phalanotis] NeverMoveAI
@@ -140,25 +143,32 @@ I4Cit2:
 Text(FillerDialogue)
 EndEvent
 
+I4LeftVillage:
+VillageEventItem(FillerDialogue, HouseCG, Pierce)
+I4CenterVillage:
+HouseEvent(FillerDialogue, HouseCG)
+I4RightVillage:
+HouseEvent(FillerDialogue, HouseCG)
+
 I4Merchant:
 EVBIT_MODIFY 4
-Text(I2MerchantTalk)
+Text(I4MerchantTalk)
 CHECK_MONEY
-SVAL 0x1 0x693
+SVAL 0x1 0x384
 BGE 0x1 0xc 0x1
-Text(I2NoMoneyHa)
+Text(I4NoMoneyHa)
 ENUF 0x15
 GOTO 0x2
 LABEL 0x1
-SystemText(I2SkillBuy)
+SystemText(I4TomeBuy)
 IfNoSelectedGoto(0x3)
-Text(I2SkillPurchased)
-SVAL 0x3 0x693
+Text(I4TomePurchased)
+SVAL 0x3 0x384
 TAKEMONEY
-GiveItemWithDurability(SkillScroll,LightWeightID,Blair)
+GiveItem(Mazandyne,Blair)
 GOTO 0x2
 LABEL 0x3
-Text(I2SkillDenied)
+Text(I4TomeDenied)
 ENUF 0x15
 LABEL 0x2
 EndEvent

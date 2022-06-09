@@ -28,6 +28,44 @@ After all, our meals are all blessed[N]
 by an actual priest.[A] You can't[N]
 beat food approved by Opistus![A][X]
 
+##I4MerchantTalk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadTotallyNotSimone]
+[ToggleMouthMove]...[ToggleMouthMove]Hold, please. You look like[N]
+you might know a hero.[A][N]
+A real young big shot, if you[N]
+get what I'm saying.[A][N]
+Well, for that kind of kid,[N]
+I've got something marvelous.[A][N]
+A tome that'll bring out the[N]
+hero in a young mage.[A][N]
+Asking price is 900 gold. Final offer.[A][X]
+
+##I4NoMoneyHa
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadTotallyNotSimone]
+Wait, you don't have enough?[N]
+Shame. Maybe next time.[A][X]
+
+##I4TomeBuy
+Purchase a heroic tome?[N]
+[Yes][X]
+
+##I4TomePurchased
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadTotallyNotSimone][OpenMidLeft]
+Alright, here you go![A][N]
+[OpenMidRight]Excellent. Just know that this[N]
+tome is a fickle thing.[A][N]
+Not just anyone can use it.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Not my fault if you[N]
+didn't pick up on that.[A][X]
+
+##I4TomeDenied
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadTotallyNotSimone][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I think I'm good.[A][N]
+[OpenMidRight]I get it. This kind of power[N]
+is a scary thing.[A][N]
+I've nothing else, so if you change[N]
+your mind, you may as well return.[A][X]
+
 ##I4LarondeTalk
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadLaronde]
 Hello, Lady Blair! Apologies for[N]

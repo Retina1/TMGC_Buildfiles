@@ -206,6 +206,16 @@
 			bg(BoatCG)
 			text(C9_Arin_Desmond_Base)
 			baseSupport(Arin,Desmond,CPSupport)
+		Entry
+			name(Kenneth_Stefan_Base_Select)
+			bg(BoatCG)
+			text(C9_Kenneth_Stefan_Base)
+			baseSupport(Kenneth,Stefan,CPSupport)
+		Entry
+			name(Butch_Jeff_Base_Select)
+			bg(JungleCG)
+			text(C9_Butch_Jeff_Base)
+			baseSupport(Butch,Jeff,CSupport)
 	Chapter(Chapter10)
 		Entry
 			name(C10_Redemption_Select)
@@ -229,6 +239,16 @@
 			bg(BoatCG)
 			text(C10_Apollo_Bechamel_Base)
 			baseSupport(Apollo,Bechamel,CSupport)
+		Entry
+			name(Stefan_Desmond_Base_Select)
+			bg(BoatCG)
+			text(C10_Stefan_Desmond_Base)
+			baseSupport(Stefan,Desmond,CPSupport)
+		Entry
+			name(Sam_Josef_Base_Select)
+			bg(BoatCG)
+			text(C10_Sam_Josef_Base)
+			baseSupport(Sam,Josef,CPSupport)
 	Chapter(Chapter11)
 		Entry
 			name(C11_Faltering_Select)
@@ -244,6 +264,26 @@
 			importance(2)
 			text(C11_The_Desert)
 			eventID(BaseFlag2)
+		Entry
+			name(Peggy_Apollo_Base_Select)
+			bg(DesertCG)
+			text(C11_Peggy_Apollo_Base)
+			baseSupport(Peggy,Apollo,CSupport)
+		Entry
+			name(Natasia_Bechamel_Base_Select)
+			bg(DesertCG)
+			text(C11_Natasia_Bechamel_Base)
+			baseSupport(Natasia,Bechamel,CSupport)
+		Entry
+			name(Blair_Emile_Base_Select)
+			bg(DesertCG)
+			text(C11_Blair_Emile_Base)
+			baseSupport(Blair,Emile,CPSupport)
+		Entry
+			name(Rachael_Cassius_Base_Select)
+			bg(DesertCG)
+			text(C11_Rachael_Cassius_Base)
+			baseSupport(Rachael,Cassius,CPSupport)
 	Chapter(Chapter12)
 		Entry
 			name(C12_Light_Select)

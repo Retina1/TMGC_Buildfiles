@@ -1,3 +1,27 @@
+//weather stuff- higher number goes behind more
+PUSH
+//0x030366 change 80 to 80/A0/C0/E0 light snow
+ORG 0x30366
+BYTE 0xc0
+//0x03066D change 10 to 10/14/18/1C heavy snow
+ORG 0x3066D
+BYTE 0x18
+//0x59D95F and 0x59D967 change 10 to 10/14/18/1C rain
+ORG 0x59d95f
+BYTE 0x18
+ORG 0x59d967
+BYTE 0x18
+//0x0309B2 change A0 to A0/A4/A8/AC BBQ
+ORG 0x309b2
+BYTE 0xA8
+//0x03053D change 10 to 10/14/18/1C sandstorm
+ORG 0x3053D
+BYTE 0x18
+//0x030B31 change AC to A0/A4/A8/AC clouds
+ORG 0x30b31
+BYTE 0xA8
+POP
+
 //text id 0x0041 is tactician name
 PUSH
 ORG (TextTable+(4*0x0041))

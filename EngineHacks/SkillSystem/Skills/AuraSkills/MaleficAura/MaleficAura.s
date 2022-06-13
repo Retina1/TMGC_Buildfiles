@@ -8,13 +8,6 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
-mov r0, r4       @Move attacker data into r1.
-mov r1, #0x4c    @Move to the attacker's weapon ability
-ldr r1, [r0,r1]
-mov r2, #0x42
-tst r1, r2
-beq     Done @do nothing if magic bit not set
-
 @now check for the skill
 ldr r0, AuraSkillCheck
 mov lr, r0
@@ -26,11 +19,34 @@ mov r3, #2 @range
 cmp r0, #0
 beq Done
 
+
+mov r0, r4       @Move attacker data into r1.
+mov r1, #0x4c    @Move to the attacker's weapon ability
+ldr r1, [r0,r1]
+mov r2, #0x42
+tst r1, r2
+bne     TargetDef @do nothing if magic bit is set
+
 mov r0, r4
-add     r0,#0x5A    @Move to the attacker's damage.
-ldrh    r3,[r0]     @Load the attacker's damage into r3.
-add     r3,#2    @add 2 to the attacker's damage.
-strh    r3,[r0]     @Store attacker damage.
+add     r0,#0x4c    @Move to the attacker's weapon bit
+ldrh    r3,[r0]     @Load the attacker's weapon bit into r3.
+add     r3,#2    @add 2 to weapon bit (activate targets res).
+strh    r3,[r0]     @Store bit
+b		Done
+
+TargetDef:
+mov r0, r4
+add     r0,#0x4c    @Move to the attacker's weapon bit
+ldrh    r3,[r0]     @Load the attacker's weapon bit into r3.
+cmp		r3,#0x42
+blt		MagicDamageOff
+sub     r3,#0x42    @sub 42 to weapon bit (deactivate targets res and magic damage).
+strh    r3,[r0]     @Store bit
+b		Done
+
+MagicDamageOff:
+sub     r3,#0x2    @sub 2 to weapon bit (deactivate targets res).
+strh    r3,[r0]     @Store bit
 
 Done:
 pop {r4-r7}

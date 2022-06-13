@@ -28,6 +28,7 @@ callHack_r3(Lunge)
 //Vantage
 ORG $2Af7C
 jumpToHack(Vantage)
+PROTECT $2af7c
 
 //Inspiring Tune
 ORG $32364
@@ -41,6 +42,8 @@ ORG $2B57C
 jumpToHack(TriangleAttackSkill1)
 ORG $2B16C
 callHack_r1(TriangleAttackSkill2)
+PROTECT $2b57c
+PROTECT $2b16c
 
 #endif
 

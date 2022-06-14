@@ -24,6 +24,12 @@ TurnBasedEvents:
 TurnEventPlayer(0x0,C14Turn2,2)
 TurnEventPlayer(0x0,C14Turn3,3)
 TurnEventPlayer(0x0,C14Turn4,4)
+TurnEventPlayer(0x0,C14Turn6,6)
+TurnEventPlayer(0x0,C14Turn8,8)
+TurnEventPlayer(0x0,C14Turn9,9)
+TurnEventPlayer(0x0,C14Turn10,10)
+TurnEventPlayer(0x0,C14Turn12,12)
+TurnEventPlayer(0x23,C14ThroneReinforcements,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -52,11 +58,11 @@ Door(12,14)
 Door(13,14)
 Door(14,14)
 Chest(MemberCard,1,3)
-Chest(Hammerne,25,1)
-Chest(Rescue,21,12)
-Chest(EnergyRing,22,12)
+Chest(Rescue,25,1)
+Chest(Implant,21,12)
+Chest(SpiritDust,22,12)
 Chest(Fenrir,20,19)
-Chest(SilverSword,19,20)
+Chest(FlameSword,19,20)
 Door(13,6)
 SecretShop(Ch14SecretShop,5,24) 
 END_MAIN
@@ -69,6 +75,7 @@ ALIGN 4
 
 MiscBasedEvents:
 AreaEvent(0x21,C14ThroneTrap,2,2,2,2)
+AreaEvent(0x22,C14AreaTrigger,7,0,19,6)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -119,7 +126,7 @@ UNIT Ygstra HeroF 0x0 Level(2,Enemy,1) [10,2] 0x0 0x0 0x0 0x0 [HandAxe] NeverMov
 UNIT Ygstra AxeArm 0x0 Level(15,Enemy,1) [25,8] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Ygstra AxeArm 0x0 Level(15,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Ygstra AxeArm 0x0 Level(15,Enemy,1) [15,3] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
-UNIT Ygstra Hero 0x0 Level(2,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Ygstra HeroF 0x0 Level(2,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Ygstra Sniper 0x0 Level(3,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [Greatbow,SteelBow] NeverMoveAI
 UNIT Ygstra Archer 0x0 Level(14,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
 UNIT Ygstra Archer 0x0 Level(14,Enemy,1) [15,12] 0x0 0x0 0x0 0x0 [ShiningBow] NoAI
@@ -131,10 +138,10 @@ UNIT Ygstra Ballistician 0x0 Level(15,Enemy,1) [16,23] 0x0 0x0 0x0 0x0 [MiniBall
 UNIT Ygstra Ballistician 0x0 Level(15,Enemy,1) [18,20] 0x0 0x0 0x0 0x0 [MiniBallista,MiniGem] NeverMoveAI
 UNIT Ygstra ArcherF 0x0 Level(13,Enemy,1) [1,11] 0x0 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
 UNIT Ygstra FighterF 0x0 Level(13,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
-UNIT Ygstra AxeCavF 0x0 Level(15,Enemy,1) [24,19] DropItem 0x0 0x0 0x0 [HereticAxe,BraveAxe] AttackInRangeAI
+UNIT Ygstra AxeCav 0x0 Level(15,Enemy,1) [24,19] DropItem 0x0 0x0 0x0 [HereticAxe,BraveAxe] AttackInRangeAI
 UNIT Ygstra SwdCav 0x0 Level(15,Enemy,1) [23,20] 0x0 0x0 0x0 0x0 [Shimmersword,BraveSword] AttackInRangeAI
-UNIT Ygstra SwdCavF 0x0 Level(15,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [BraveSword] AttackInRangeAI
-UNIT Ygstra LncCavF 0x0 Level(15,Enemy,1) [9,7] 0x0 0x0 0x0 0x0 [Shatterspear] AttackInRangeAI
+UNIT Ygstra SwdCav 0x0 Level(15,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [BraveSword] AttackInRangeAI
+UNIT Ygstra LncCav 0x0 Level(15,Enemy,1) [9,7] 0x0 0x0 0x0 0x0 [Shatterspear] AttackInRangeAI
 UNIT Ygstra AxeCav 0x0 Level(15,Enemy,1) [17,7] 0x0 0x0 0x0 0x0 [Hammer] AttackInRangeAI
 UNIT Ygstra LncCav 0x0 Level(15,Enemy,1) [18,6] 0x0 0x0 0x0 0x0 [DousingLance] AttackInRangeAI
 UNIT Ygstra LncArm 0x0 Level(15,Enemy,1) [1,17] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
@@ -144,7 +151,7 @@ UNIT Ygstra MercF 0x0 Level(13,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [LightBrand] Chas
 UNIT Ygstra Soldier 0x0 Level(13,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [17,15] 0x0 0x0 0x0 0x0 [Hammer] AttackInRangeAI
 UNIT Ygstra FighterF 0x0 Level(13,Enemy,1) [18,16] 0x0 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
-UNIT Ygstra Merc 0x0 Level(13,Enemy,1) [26,16] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Ygstra MercF 0x0 Level(13,Enemy,1) [26,16] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
 UNIT Ygstra Merc 0x0 Level(13,Enemy,1) [20,8] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
 UNIT Ygstra SoldierF 0x0 Level(13,Enemy,1) [22,9] 0x0 0x0 0x0 0x0 [Javelin] AttackInRangeAI
 UNIT Ygstra DarkM 0x0 Level(13,Enemy,1) [25,12] 0x0 0x0 0x0 0x0 [Nosferatu] ChaseOnceApproachedAI
@@ -157,28 +164,28 @@ UNIT Ygstra Thief 0x0 Level(15,Enemy,1) [16,9] DropItem 0x0 0x0 0x0 [SilverSword
 UNIT Dragon FireDragon 0x0 Level(5,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [FireBreath,Dracoshield] NeverMoveAI
 UNIT
 
-C14WestReinforcements:
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [21,0] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [22,0] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [26,5] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [26,8] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [26,19] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [26,20] 0x0 0x0 0x0 0x0 [Elfire] NoAI
+C14EastReinforcements:
+UNIT Ygstra Fighter 0x0 Level(13,Enemy,1) [21,0] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Ygstra FighterF 0x0 Level(13,Enemy,1) [22,0] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Ygstra Soldier 0x0 Level(13,Enemy,1) [26,5] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Ygstra MercF 0x0 Level(13,Enemy,1) [26,8] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Ygstra SwdCav 0x0 Level(13,Enemy,1) [26,19] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Ygstra LncCav 0x0 Level(13,Enemy,1) [26,20] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT
 
-C14EastReinforcements:
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [Elfire] NoAI
+C14WestReinforcements:
+UNIT Ygstra Archer 0x0 Level(13,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [ShiningBow] NoAI
+UNIT Ygstra Archer 0x0 Level(13,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
 UNIT Ygstra Falco 0x0 Level(1,Enemy,1) [0,7] 0x0 0x0 0x0 0x0 [SteelSword,SteelLance] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [0,10] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [Elfire] NoAI
+UNIT Ygstra SwdArm 0x0 Level(13,Enemy,1) [0,10] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Ygstra SwdArm 0x0 Level(13,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT
 
 C14CentralReinforcements:
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [7,0] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [8,0] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [18,0] 0x0 0x0 0x0 0x0 [Elfire] NoAI
-UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [19,0] 0x0 0x0 0x0 0x0 [Elfire] NoAI
+UNIT Ygstra FighterF 0x0 Level(13,Enemy,1) [7,0] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Ygstra SageF 0x0 Level(2,Enemy,1) [8,0] 0x0 0x0 0x0 0x0 [Thunder,Physic] NoAI
+UNIT Ygstra WarriorF 0x0 Level(2,Enemy,1) [18,0] 0x0 0x0 0x0 0x0 [SteelAxe,SteelBow] NoAI
+UNIT Ygstra MageF 0x0 Level(13,Enemy,1) [19,0] 0x0 0x0 0x0 0x0 [Fimbulvetr] NoAI
 UNIT
 
 C14Thief1:
@@ -247,11 +254,11 @@ ENUN
 TEXTCONT
 TEXTEND
 LABEL 0x67
-LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
 MUSC NarrationTheme2
 Narration(Ch14_Narration)
 MUSC S_Trisection
-CleanText(DesertCG,FillerDialogue)
+CleanTextNoMap(DesertCG,FillerDialogue)
+LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
 LOAD1 0x0 C14Units
 ENUN
 ENUT 0x23
@@ -299,6 +306,30 @@ FlashCursor(2,2,60)
 Text(C14SwitchHint)
 EndEvent
 
+C14Turn6:
+Reinforcements(C14EastReinforcements)
+EndEvent
+
+C14Turn8:
+Reinforcements(C14Thief1)
+EndEvent
+
+C14Turn9:
+Reinforcements(C14Thief2)
+EndEvent
+
+C14Turn10:
+Reinforcements(C14WestReinforcements)
+EndEvent
+
+C14Turn12:
+Reinforcements(C14Thief3)
+EndEvent
+
+C14ThroneReinforcements:
+Reinforcements(C14CentralReinforcements)
+EndEvent
+
 C14ThroneTrap:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
@@ -310,6 +341,16 @@ Text(nothroneha)
 GOTO 0x2
 LABEL 0x1
 ENUF 0x21
+LABEL 0x2
+EndEvent
+
+C14AreaTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x23
+GOTO 0x2
+LABEL 0x1
+ENUF 0x22
 LABEL 0x2
 EndEvent
 

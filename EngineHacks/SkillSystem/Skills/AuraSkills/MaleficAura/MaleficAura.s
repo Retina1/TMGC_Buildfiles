@@ -29,24 +29,20 @@ bne     TargetDef @do nothing if magic bit is set
 
 mov r0, r4
 add     r0,#0x4c    @Move to the attacker's weapon bit
-ldrh    r3,[r0]     @Load the attacker's weapon bit into r3.
-add     r3,#2    @add 2 to weapon bit (activate targets res).
-strh    r3,[r0]     @Store bit
+ldrh r3, [r0]
+mov  r2, #0x2
+orr  r3, r2 @set the second bit
+strh r3, [r0]
 b		Done
 
 TargetDef:
 mov r0, r4
 add     r0,#0x4c    @Move to the attacker's weapon bit
 ldrh    r3,[r0]     @Load the attacker's weapon bit into r3.
-cmp		r3,#0x42
-blt		MagicDamageOff
-sub     r3,#0x42    @sub 42 to weapon bit (deactivate targets res and magic damage).
+mov		r2, #0x42
+bic		r3, r2
 strh    r3,[r0]     @Store bit
-b		Done
 
-MagicDamageOff:
-sub     r3,#0x2    @sub 2 to weapon bit (deactivate targets res).
-strh    r3,[r0]     @Store bit
 
 Done:
 pop {r4-r7}

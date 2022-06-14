@@ -210,8 +210,10 @@ MUSC NarrationTheme2
 Narration(Ch13_Narration)
 MUSC S_Trisection
 CleanText(DesertCG,Ch13_Opening)
+CAM1 Valden
+FlashCursor(Valden,60)
 MUSC S_Stratagem
-CleanText(DesertCG,Ch13_Opening2)
+CleanTextNoMap(DesertCG,Ch13_Opening2)
 LOAD1 0x0 C13Units
 ENUN
 ENUT 0x23

@@ -21,6 +21,8 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,CZ1Turn3,3)
+TurnEventPlayer(0x0,CZ1Turn6,6)
+TurnEventPlayer(0x0,CZ1Turn8,8)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -55,7 +57,7 @@ ENDTRAP
 ALIGN 4
 
 Z1Units:
-UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [28,1] 0x0 0x0 0x0 0x0 [IronLance, IronBow, Elixir, ChestKey] NoAI
+UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [29,0] 0x0 0x0 0x0 0x0 [IronBow, Elixir, ChestKey] NoAI
 UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [27,2] 0x0 0x0 0x0 0x0 [SilverSword, IronSword, Vulnerary] NoAI
 UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [29,2] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe, Vulnerary] NoAI
 UNIT
@@ -74,10 +76,35 @@ UNIT
 
 Z1Hard:
 UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Bandit Merc 0x0 Level(11,Enemy,1) [21,13] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
 UNIT Bandit Deserter 0x0 Level(16,Enemy,1) [23,10] 0x0 0x0 0x0 0x0 [Javelin] NoAI
 UNIT Bandit Deserter 0x0 Level(15,Enemy,1) [24,2] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Bandit Soldier 0x0 Level(11,Enemy,1) [29,9] 0x0 0x0 0x0 0x0 [Shatterspear] NoAI
+UNIT Bandit Soldier 0x0 Level(12,Enemy,1) [27,5] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Holanis LncCav 0x0 Level(10,Enemy,1) [30,14] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Holanis LncCav 0x0 Level(13,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [Axereaver] DelayedAI
+UNIT Holanis SwdCav 0x0 Level(13,Enemy,1) [0,14] DropItem 0x0 0x0 0x0 [Lancereaver,Vulnerary] DelayedAI
+UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [29,9] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Holanis DarkM 0x0 Level(12,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Holanis Myrm 0x0 Level(12,Enemy,1) [19,14] DropItem 0x0 0x0 0x0 [Armorslayer,BraveSword] DelayedAI
+UNIT Holanis LncArm 0x0 Level(13,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Javelin,SteelLance] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(13,Enemy,1) [17,9] 0x0 0x0 0x0 0x0 [HandAxe,SteelAxe] NeverMoveAI
 UNIT Roark Fighter 0x0 Level(18,Enemy,1) [1,2] DropItem 0x0 0x0 0x0 [HandAxe,GoddessIcon] AttackInRangeAI
+UNIT
+
+Z1FootSquad:
+UNIT Holanis Soldier 0x0 Level(15,Enemy,1) [23,14] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Holanis Fighter 0x0 Level(15,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Holanis Merc 0x0 Level(15,Enemy,1) [25,14] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Archer 0x0 Level(15,Enemy,1) [26,14] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT
+
+Z1CavSquad:
+UNIT Holanis LncCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA23R0 [SilverLance] NoAI
+UNIT Holanis AxeCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA25R0 [SilverAxe] NoAI
+UNIT Holanis SwdCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA24R1 [SilverSword] NoAI
+UNIT Holanis BowCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA24R0 [SilverBow] NoAI
 UNIT
 
 ALIGN 4
@@ -113,6 +140,15 @@ LoadUnitsByDifficulty(Z1Easy,Z1Normal,Z1Hard)
 MUSC NarrationTheme
 Narration(ChZ1_Narration)
 CleanText(PathCG,FillerDialogue)
+CAM1 Zeke
+STAL 30
+SOUN 0xB1
+TILECHANGE 0x0
+STAL 15
+SetUnitStatus(Zeke, Item3Uses, 2)
+GiveItem(Partisan,Zeke)
+MOVE 60 Zeke [28,1]
+ENUN
 SystemText(ZekeArcPrimer)
 EndEvent
 
@@ -123,6 +159,14 @@ Text(FillerDialogue)
 TurnEnemy(Leila)
 Text(FillerDialogue)
 TurnAlly(Leila)
+EndEvent
+
+CZ1Turn6:
+Reinforcements(Z1FootSquad)
+EndEvent
+
+CZ1Turn8:
+Reinforcements(Z1CavSquad)
 EndEvent
 
 EndingScene:

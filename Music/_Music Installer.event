@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "NeonMixtape.event"
+SongTable(S_NeonMixtape,NeonMixtape,1)
+}
+{
 #include "StoppableDestiny.event"
 SongTable(S_StoppableDestiny,StoppableDestiny,0)
 }

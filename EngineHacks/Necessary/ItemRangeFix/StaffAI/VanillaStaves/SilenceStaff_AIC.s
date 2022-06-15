@@ -32,9 +32,9 @@ and 	r0, r1
 cmp 	r0, #0x0
 bne 	CantHit
 
-@check if target has a usable staff or weapon
+@check if target has a usable staff 
 mov 	r0, r4
-_blh HasUsableStaffOrWeapon
+_blh DoesUnitHaveUsableStaff 
 cmp 	r0, #0x0
 beq CantHit
 

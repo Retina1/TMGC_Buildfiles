@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "MainTheme.event"
+SongTable(S_MainTheme,MainTheme,1)
+}
+{
 #include "NeonMixtape.event"
 SongTable(S_NeonMixtape,NeonMixtape,1)
 }

@@ -87,10 +87,24 @@ UNIT Holanis LncCav 0x0 Level(13,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [Axereaver] Del
 UNIT Holanis SwdCav 0x0 Level(13,Enemy,1) [0,14] DropItem 0x0 0x0 0x0 [Lancereaver,Vulnerary] DelayedAI
 UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [29,9] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Holanis DarkM 0x0 Level(12,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Holanis Merc 0x0 Level(12,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
 UNIT Holanis Myrm 0x0 Level(12,Enemy,1) [19,14] DropItem 0x0 0x0 0x0 [Armorslayer,BraveSword] DelayedAI
 UNIT Holanis LncArm 0x0 Level(13,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Javelin,SteelLance] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(13,Enemy,1) [17,9] 0x0 0x0 0x0 0x0 [HandAxe,SteelAxe] NeverMoveAI
-UNIT Roark Fighter 0x0 Level(18,Enemy,1) [1,2] DropItem 0x0 0x0 0x0 [HandAxe,GoddessIcon] AttackInRangeAI
+UNIT Holanis Soldier 0x0 Level(13,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Holanis DarkM 0x0 Level(14,Enemy,1) [21,6] DropItem 0x0 0x0 0x0 [Nightfall,GoddessIcon] NeverMoveAI
+UNIT Holanis Merc 0x0 Level(12,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Holanis MercF 0x0 Level(12,Enemy,1) [0,5] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Holanis FighterF 0x0 Level(12,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
+UNIT Holanis LncCavF 0x0 Level(11,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
+UNIT Holanis Mage 0x0 Level(12,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [Fire] ChaseOnceApproachedAI
+UNIT Holanis SoldierF 0x0 Level(12,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Holanis Sniper 0x0 Level(1,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [IronBow] ChaseOnceApproachedAI
+UNIT Holanis Hero 0x0 Level(1,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT Holanis Soldier 0x0 Level(13,Enemy,1) [9,3] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(12,Enemy,1) [4,8] DropItem 0x0 0x0 0x0 [Javelin,Vulnerary] NeverMoveAI
+UNIT Holanis Fighter 0x0 Level(13,Enemy,1) [6,7] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Roark Fighter 0x0 Level(18,Enemy,1) [1,2] DropItem 0x0 0x0 0x0 [HandAxe,SecretBook] AttackInRangeAI
 UNIT
 
 Z1FootSquad:

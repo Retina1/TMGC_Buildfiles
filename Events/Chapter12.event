@@ -212,9 +212,10 @@ ENUT GuideChpt12
 LoadUnitsByDifficulty(C12Easy,C12Normal,C12Hard)
 LOAD1 0x0 C12Ally
 ENUN
+CleanTextNoMap(DesertCG,Ch12_Opening)
 MUSC NarrationTheme2
 Narration(Ch12_Narration)
-CleanTextNoMap(DesertCG,Ch12_Opening)
+CleanTextNoMap(HallCG,Ch12_Opening2)
 LOAD1 0x0 C12Units
 ENUN
 ENUT 0x23

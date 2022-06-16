@@ -13,6 +13,15 @@
 #define AxePalCard 0xaa
 #define BowPalCard 0x97
 
+#define SwdCavFCard 0xbb
+#define LncCavFCard 0xbc
+#define AxeCavFCard 0xce
+#define BowCavFCard 0xcf
+#define SwdPalFCard 0xd0
+#define LncPalFCard 0xd1
+#define AxePalFCard 0xd2
+#define BowPalFCard 0xd3
+
 #define SwdArmCard 0x76
 #define LncArmCard 0x9f
 #define AxeArmCard 0xa0
@@ -189,6 +198,46 @@ BowPalPortrait:
 #incbin "BowPal.dmp"
 BowPalPortraitPalette:
 #incbin "BowPalPalette.dmp"
+
+SwdCavFPortrait:
+#incbin "SwdCavF.dmp"
+SwdCavFPortraitPalette:
+#incbin "SwdCavFPalette.dmp"
+
+LncCavFPortrait:
+#incbin "LncCavF.dmp"
+LncCavFPortraitPalette:
+#incbin "LncCavFPalette.dmp"
+
+AxeCavFPortrait:
+#incbin "AxeCavF.dmp"
+AxeCavFPortraitPalette:
+#incbin "AxeCavFPalette.dmp"
+
+BowCavFPortrait:
+#incbin "BowCavF.dmp"
+BowCavFPortraitPalette:
+#incbin "BowCavFPalette.dmp"
+
+SwdPalFPortrait:
+#incbin "SwdPalF.dmp"
+SwdPalFPortraitPalette:
+#incbin "SwdPalFPalette.dmp"
+
+LncPalFPortrait:
+#incbin "LncPalF.dmp"
+LncPalFPortraitPalette:
+#incbin "LncPalFPalette.dmp"
+
+AxePalFPortrait:
+#incbin "AxePalF.dmp"
+AxePalFPortraitPalette:
+#incbin "AxePalFPalette.dmp"
+
+BowPalFPortrait:
+#incbin "BowPalF.dmp"
+BowPalFPortraitPalette:
+#incbin "BowPalFPalette.dmp"
 
 SwdArmPortrait:
 #incbin "SwdArm.dmp"
@@ -478,6 +527,14 @@ setCardEntry(SwdPalCard,SwdPalPortrait,SwdPalPortraitPalette)
 setCardEntry(LncPalCard,LncPalPortrait,LncPalPortraitPalette)
 setCardEntry(AxePalCard,AxePalPortrait,AxePalPortraitPalette)
 setCardEntry(BowPalCard,BowPalPortrait,BowPalPortraitPalette)
+setCardEntry(SwdCavFCard,SwdCavFPortrait,SwdCavFPortraitPalette)
+setCardEntry(LncCavFCard,LncCavFPortrait,LncCavFPortraitPalette)
+setCardEntry(AxeCavFCard,AxeCavFPortrait,AxeCavFPortraitPalette)
+setCardEntry(BowCavFCard,BowCavFPortrait,BowCavFPortraitPalette)
+setCardEntry(SwdPalFCard,SwdPalFPortrait,SwdPalFPortraitPalette)
+setCardEntry(LncPalFCard,LncPalFPortrait,LncPalFPortraitPalette)
+setCardEntry(AxePalFCard,AxePalFPortrait,AxePalFPortraitPalette)
+setCardEntry(BowPalFCard,BowPalFPortrait,BowPalFPortraitPalette)
 
 setCardEntry(SwdArmCard,SwdArmPortrait,SwdArmPortraitPalette)
 setCardEntry(LncArmCard,LncArmPortrait,LncArmPortraitPalette)

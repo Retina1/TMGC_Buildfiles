@@ -174,7 +174,7 @@ GuideEntry(4, 3, GuideDamien, GuideDamienDesc, GuideChpt15, GuideChpt15)
 GuideEntry(4, 3, GuideZacharias, GuideZachariasDesc, GuideChpt15, GuideChpt15)
 GuideEntry(4, 3, GuideAvan, GuideAvanDesc, GuideChpt15, GuideChpt15)
 GuideEntry(4, 3, GuideToddsworth, GuideToddsworthDesc, GuideChpt15, GuideChpt15)
-//lost diaries
+//lost diaries/lore
 GuideEntry(5, 4, _ChaptZ1, ChaptZ1Lore, GuideChpt15, GuideChpt15)
 GuideEntry(5, 4, _ChaptZ2, ChaptZ2Lore, GuideChpt15, GuideChpt15)
 GuideEntry(5, 4, _ChaptZ3, ChaptZ3Lore, GuideChpt15, GuideChpt15)
@@ -183,10 +183,9 @@ GuideEntry(5, 4, _ChaptV2, ChaptV2Lore, GuideChpt21, GuideChpt21)
 GuideEntry(5, 4, _ChaptV3, ChaptV3Lore, GuideChpt21, GuideChpt21)
 GuideEntry(5, 4, _ChaptV4, ChaptV4Lore, GuideChpt21, GuideChpt21)
 GuideEntry(5, 4, _ChaptV5, ChaptV5Lore, GuideChpt21, GuideChpt21)
-//lost lore
-GuideEntry(6, 5, MariusLetterTitle, MariusLetter, GuideChpt20, GuideChpt20)
+GuideEntry(5, 4, MariusLetterTitle, MariusLetter, GuideChpt20, GuideChpt20)
 //credits
-GuideEntry(7, 6, CreditsThanks, CreditsThanksDesc, UnlockGuideFlag, UnlockGuideFlag)
+GuideEntry(6, 5, CreditsThanks, CreditsThanksDesc, UnlockGuideFlag, UnlockGuideFlag)
 GuideEntry(0xC,0,0,0,0,0) //terminator?
 GuideTerminator
 
@@ -198,7 +197,6 @@ GuideChapterEntry(GuideSection3)
 GuideChapterEntry(GuideSection4)
 GuideChapterEntry(GuideSection5)
 GuideChapterEntry(GuideSection6)
-GuideChapterEntry(GuideSection7)
 BYTE 0x0 0x0 0xC9 0x5 //terminator?
 GuideTerminator
 
@@ -211,7 +209,6 @@ GuideCategoryEntry(GuideSection3)
 GuideCategoryEntry(GuideSection4)
 GuideCategoryEntry(GuideSection5)
 GuideCategoryEntry(GuideSection6)
-GuideCategoryEntry(GuideSection7)
 GuideEntry(PageCount,0,0,0,0,0) //terminator?
 GuideTerminator
 

@@ -9,7 +9,7 @@
 @jumped to at 22410 (fe6)
 @r4 = char data ptr
 
-.equ crit_warning_cutoff, 24	@anything less than or equal this won't trigger the !
+.equ crit_warning_cutoff, 1	@anything less than or equal this won't trigger the !
 
 .if FE6 == 1
 	.equ WarningCache, 			0x0203ACC0	@free space in ram. Change this if necessary.

@@ -25,10 +25,9 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-SupportConvo(CSupport,Leila,Zacharias,FillerDialogue)
-SupportConvo(CSupport,Avan,Toddsworth,FillerDialogue)
-SupportConvo(CPSupport,Zeke,Hyperius,FillerDialogue)
-SupportConvo(CPSupport,Hyperius,Alexis,FillerDialogue)
+CharacterEventBothWays(0xa,Z3LeilaZachariasSupport,Leila,Zacharias)
+CharacterEventBothWays(0xb,Z3ZekeHyperiusSupport,Zeke,Hyperius)
+CharacterEventBothWays(0xc,Z3HyperiusAlexisSupport,Hyperius,Alexis)
 END_MAIN
 
 LocationBasedEvents:
@@ -122,6 +121,25 @@ Narration(ChZ3_Narration)
 ENUT 0x23
 CleanText(PathCG,FillerDialogue)
 SystemText(Z3Note)
+GetSupportLevel(Zeke,Hyperius) //we want C/0
+BEQ 0x1 0x1 0x0
+ENUT 0xb
+LABEL 0x1
+EndEvent
+
+Z3LeilaZachariasSupport:
+Text(FillerDialogue)
+SetSupport(Leila,Zacharias,CSupport,1)
+EndEvent
+
+Z3ZekeHyperiusSupport:
+Text(FillerDialogue)
+SetSupport(Zeke,Hyperius,CPSupport,1)
+EndEvent
+
+Z3HyperiusAlexisSupport:
+Text(FillerDialogue)
+SetSupport(Hyperius,Alexis,CPSupport,1)
 EndEvent
 
 Z3Turn2:
@@ -129,6 +147,7 @@ Reinforcements(Z3NewUnits)
 MUSC RecruitmentTheme
 Text(FillerDialogue)
 CLEAN
+SetSupport(Avan,Toddsworth,CSupport)
 EndEvent
 
 Z3NorthVillage:

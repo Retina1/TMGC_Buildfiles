@@ -26,8 +26,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-SupportConvo(CSupport,Leila,Damien,FillerDialogue)
-SupportConvo(CSupport,Damien,Zacharias,FillerDialogue)
+CharacterEventBothWays(0xa,Z2LeilaDamienSupport,Leila,Damien)
 END_MAIN
 
 LocationBasedEvents:
@@ -134,6 +133,12 @@ Z2Turn5:
 Reinforcements(Z2NewUnits)
 MUSC RecruitmentTheme
 Text(FillerDialogue)
+SetSupport(Damien,Zacharias,CSupport)
+EndEvent
+
+Z2LeilaDamienSupport:
+Text(FillerDialogue)
+SetSupport(Leila,Damien,CSupport,1)
 EndEvent
 
 Z2DragonSpawn:

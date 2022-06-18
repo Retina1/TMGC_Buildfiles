@@ -110,7 +110,7 @@ ENUN
 MUSC NarrationTheme2
 Narration(Base4_Narration)
 CleanTextNoMap(HallCG,I4_Opening)
-GotoPrepScreen
+GotoPrepScreenNoBaseCheck
 ENDA
 
 EndingScene:
@@ -124,15 +124,24 @@ Text(I4LarondeTalk)
 EndEvent
 
 I4Leila:
-Text(FillerDialogue)
+TEXTSTART
+TEXTSHOW I4LeilaTalk
+TEXTEND
+SOUN 0xa6
+DISA_IF Leila
+DISA Leila
+ENUN
+TEXTCONT
+TEXTEND
+REMA
 EndEvent
 
 I4Athena:
-Text(FillerDialogue)
+Text(I4AthenaTalk)
 EndEvent
 
 I4DirkEliza:
-Text(FillerDialogue)
+Text(I4DirkElizaTalk)
 EndEvent
 
 I4Cit:

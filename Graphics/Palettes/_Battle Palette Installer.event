@@ -81,6 +81,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define HilbertUPaletteID 0x44
 #define HilbertPPaletteID 0x45
 #define DesmondPalPaletteID 0x46
+#define PtolemyUPaletteID 0x47
+#define PtolemyPPaletteID 0x48
 
 #define CidPaletteID 0x2e
 
@@ -156,6 +158,8 @@ setPalette(AvanPPaletteID,AvanPPalette)
 setPalette(HoratioUPaletteID,HoratioUPalette)
 setPalette(HoratioPPaletteID,HoratioPPalette)
 
+setPalette(PtolemyUPaletteID,PtolemyUPalette)
+setPalette(PtolemyPPaletteID,PtolemyPPalette)
 setPalette(JohanUPaletteID,JohanUPalette)
 setPalette(JohanPPaletteID,JohanPPalette)
 
@@ -224,7 +228,7 @@ SetPaletteFull(Hollandaise,0x0,PirateF,0x0,BerserkerF,0x0,0x0)
 SetPaletteFull(Vladmir,0x0,LightM,0x0,Bishop,0x0,Draco)
 SetPaletteFull(Horatio,HoratioUPaletteID,Rune,HoratioPPaletteID,RuneMast,0x0,0x0)
 SetPaletteFull(Simone,0x0,DarkF,0x0,SorcF,0x0,0x0)
-SetPaletteFull(Ptolemy,0x0,BowArm,0x0,BowWyv,0x0,0x0)
+SetPaletteFull(Ptolemy,PtolemyUPaletteID,BowArm,PtolemyPPaletteID,BowWyv,0x0,0x0)
 SetPaletteFull(Johan,JohanUPaletteID,LncCav,JohanPPaletteID,LncPal,0x0,0x0)
 SetPaletteFull(Peter,0x0,AxeWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(Sonia,0x0,SoldierF,0x0,HalberdierF,0x0,0x0)
@@ -441,6 +445,12 @@ ALIGN 4
 HoratioPPalette:
 #incbin "HoratioPromoted.dmp"
 
+ALIGN 4
+PtolemyUPalette:
+#incbin "PtolemyUnpromoted.dmp"
+ALIGN 4
+PtolemyPPalette:
+#incbin "PtolemyPromoted.dmp"
 ALIGN 4
 JohanUPalette:
 #incbin "JohanUnpromoted.dmp"

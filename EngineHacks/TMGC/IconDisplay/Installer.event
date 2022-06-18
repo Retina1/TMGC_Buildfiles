@@ -1,0 +1,65 @@
+#include "eastdlib.event"
+
+PUSH
+
+ORG $279B0 
+jumpToHack(UnitDisplay)
+
+ORG $279E8 
+callHack_r3(IconDisplay)
+// ldr r2 =OAMSize 
+ORG $279F6 
+SHORT 0x46C0 // Nop - normally ldr r3, =0x811 
+
+POP 
+
+
+
+
+ALIGN 4 
+PUSH; ORG CurrentOffset+1
+UnitDisplay:
+POP; #incbin "UnitDisplay.dmp"
+POIN IconDisplayList
+
+
+ALIGN 4 
+PUSH; ORG CurrentOffset+1
+IconDisplay:
+POP; #incbin "IconDisplay.dmp"
+POIN IconDisplayList
+
+
+
+ALIGN 4
+IconDisplayList:
+//BYTE 0 // Any Unit ID 
+//BYTE 0 // Any Class 
+//SHORT 0 // Any flag 
+//BYTE 0xFF // Any chapter 
+//BYTE 0xFF // Default ObjTileID 
+//BYTE 0 // padding 
+//BYTE 0 // Padding 
+
+BYTE LootDalstRebel 0; SHORT 0; BYTE 0xFF 0x65 0 0 // Unit ID 1 to always display default icon for unit to defend 
+BYTE LootMevion 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootYgstra 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootRemnant 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootElbaCor 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootOpistia 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootHolanis 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootLowlands 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootLoile 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootPirates 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootDalst 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootAercolyn 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootBandit 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootSimulacrum 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootDragon 0; SHORT 0; BYTE 0xFF 0x65 0 0
+BYTE LootUnknown 0; SHORT 0; BYTE 0xFF 0x65 0 0
+
+WORD 0xFFFFFFFF 0xFFFFFFFF // terminator 
+
+
+
+

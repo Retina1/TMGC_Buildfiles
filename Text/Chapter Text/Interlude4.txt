@@ -16,6 +16,24 @@ the time you need.[A][X]
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadVladmir][OpenMidLeft]
 we done[X]
 
+##I4AthenaTalk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadAthena]
+[ToggleMouthMove]...[ToggleMouthMove]Greetings.[A][N][X]
+
+##I4DirkElizaTalk
+[OpenMidLeft][LoadBlair][OpenRight][LoadDirk][OpenFarRight][LoadEliza]
+Hello![A][N][X]
+
+##I4LeilaTalk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadLeila]
+Who're you? Wait[ToggleMouthMove]...[ToggleMouthMove][N]
+Blue hair, noble clothing[ToggleMouthMove]...[ToggleMouthMove][A][N]
+I've heard rumors of you[ToggleMouthMove]...[ToggleMouthMove][N]
+Didn't Elba Cor send you?[A][N][OpenMidLeft]
+That's-[A][N][OpenMidRight][ClearFace][Event]
+[OpenMidLeft][ToggleMouthMove]...[ToggleMouthMove]correct.[A][N]
+What was that about?[A][N][X]
+
 ##I4InnText
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
 Ah, hello there! Welcome to[N]

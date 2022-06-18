@@ -28,6 +28,8 @@
 
 #define GotoPrepScreen "LABEL 0x6500; CALL $591FD8; ASMC ASMCCheckBaseConvo|1; BEQ 0x6501 0xc 0x0; FADU 16; SystemText(BaseConvoConfirm); IfNoSelectedGoto(0x6500); LABEL 0x6501; EndEvent"
 
+#define GotoPrepScreenNoBaseCheck "CALL $591FD8; EndEvent"
+
 #define LearnSkill(charID,skillID) "SVAL 1 skillID; SVAL 2 charID; ASMC ASMC_LearnNewSkill|1"
 #define CurrentUnitLearnSkill(skillID) "SVAL 1 skillID; SVAL 2 (-1); ASMC ASMC_LearnNewSkill|1"
 

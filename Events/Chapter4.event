@@ -321,7 +321,7 @@ EndEvent
 
 C4PeggyChurch:
 CHECK_ACTIVEID 0x9
-BNE 0x1 0xC 0x0
+BEQ 0x1 0xC 0x0
 CleanText(HallCG,Ch4_PeggyChurch)
 GiveMoney(300)
 GOTO 0x2

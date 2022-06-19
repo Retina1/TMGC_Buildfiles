@@ -94,14 +94,76 @@ BYTE 15 MiracleID
 BYTE 00 00
 ALIGN 4
 
+FlynnSkillList:
+BYTE 15 PushResID
+BYTE 38 DoubleLionID
+BYTE 00 00
+ALIGN 4
+
+MikeySkillList:
+BYTE 15 LunaID
+BYTE 00 00
+ALIGN 4
+
 CarbonSkillList:
 BYTE 15 PerfectionistID
 BYTE 21 CantoPlusID
 BYTE 00 00
 ALIGN 4
 
+AthenaSkillList:
+BYTE 15 IntimidateID
+BYTE 00 00
+ALIGN 4
+
+CharleySkillList:
+BYTE 32 BowRangeUpID
+BYTE 00 00
+ALIGN 4
+
+ZekeSkillList:
+BYTE 15 DriveSpdID
+BYTE 21 SupplyID
+BYTE 00 00
+ALIGN 4
+
 HyperiusSkillList:
 BYTE 40 ResolveID
+BYTE 00 00
+ALIGN 4
+
+AlexisSkillList:
+BYTE 15 TriAdeptID
+BYTE 00 00
+ALIGN 4
+
+LeilaSkillList:
+BYTE 15 DauntID
+BYTE 00 00
+ALIGN 4
+
+DamienSkillList:
+BYTE 15 LungeID
+BYTE 30 BowfaireID
+BYTE 00 00
+ALIGN 4
+
+ZachariasSkillList:
+BYTE 15 PursuitID
+BYTE 21 SwordbreakerID
+BYTE 00 00
+ALIGN 4
+
+AvanSkillList:
+BYTE 15 LiveToServeID
+BYTE 00 00
+ALIGN 4
+
+ToddsworthSkillList:
+BYTE 7 BowbreakerID
+BYTE 8 TomebreakerID
+BYTE 10 QuickRiposteID
+BYTE 12 GrislyWoundID
 BYTE 00 00
 ALIGN 4
 
@@ -130,7 +192,6 @@ BYTE 00 00
 ALIGN 4
 
 EphraimGreatLordSkillList:
-BYTE 1 SupplyID
 BYTE 00 00
 ALIGN 4
 

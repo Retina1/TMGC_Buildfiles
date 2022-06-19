@@ -48,7 +48,7 @@
 //By Sme
 #define DriveStrID 255
 #define DriveMagID 255
-#define DriveSpdID 255
+#define DriveSpdID 5
 #define DriveDefID 255
 #define DriveResID 255
 
@@ -839,7 +839,7 @@
 #define PushSklID 255
 #define PushSpdID 155
 #define PushDefID 255
-#define PushResID 255
+#define PushResID 151
 
 //Lull Skills: Negate the effects of a rally for the given stat.
 //By Sme
@@ -949,7 +949,7 @@
 
 //Catch 'Em All: Grants the user every skill.
 //By Leonarth
-#define CatchEmAllID 151
+#define CatchEmAllID 255
 
 //Vantage+: User always attacks first, even if attacked. Negates crits.
 //By SD9k
@@ -965,7 +965,7 @@
 
 //Locktouch: Can open locks without keys or picks.
 //By Kao
-#define LockTouchID 5
+#define LockTouchID 255
 #define LocktouchID LockTouchID //Alias
 
 //Expertise: Reduce bonus damage from critical hits by 50%.

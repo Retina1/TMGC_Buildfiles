@@ -24,6 +24,18 @@
 #define SFXGroup 6
 
 {
+#include "Dialga.event"
+SongTable(S_Dialga,Dialga,0)
+}
+{
+#include "ConfidenceInTheDomination.event"
+SongTable(S_Confidence,ConfidenceInTheDomination,0)
+}
+{
+#include "DelusionalExtremities.event"
+SongTable(S_Delusional,DelusionalExtremities,1)
+}
+{
 #include "MainTheme.event"
 SongTable(S_MainTheme,MainTheme,1)
 }

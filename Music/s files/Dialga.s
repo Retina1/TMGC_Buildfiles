@@ -1,43 +1,43 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	Dialga_grp, voicegroup000
+	.equ	Dialga_pri, 0
+	.equ	Dialga_rev, 0
+	.equ	Dialga_mvl, 127
+	.equ	Dialga_key, 0
+	.equ	Dialga_tbs, 1
+	.equ	Dialga_exg, 0
+	.equ	Dialga_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	Dialga
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+Dialga_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_01004E8A:
- .byte   TEMPO , 180*song04_tbs/2
+ .byte   TEMPO , 180*Dialga_tbs/2
  .byte   VOICE , 38
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*Dialga_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   N11 ,Cn1 ,v127
@@ -135,7 +135,7 @@ Label_01004F03:
  .byte   PATT
   .word Label_01004F03
 @  #01 @011   ----------------------------------------
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*Dialga_mvl/mxv
  .byte   N11 ,Cs1 ,v127
  .byte   W12
  .byte   Fn1
@@ -343,7 +343,7 @@ Label_01004FEF:
  .byte   W12
  .byte   Cs1
  .byte   W12
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   N11 ,Cn1
  .byte   W12
  .byte   Cs1
@@ -991,40 +991,40 @@ Label_010052B6:
  .byte   W60
 @  #01 @117   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+Dialga_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_01005326:
  .byte   VOICE , 40
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   TIE ,Cn3 ,v112
@@ -1125,7 +1125,7 @@ Label_01005326:
  .byte   EOT
  .byte   W01
 @  #02 @024   ----------------------------------------
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Dialga_mvl/mxv
  .byte   N23 ,Gs2
  .byte   W24
  .byte   Gn2
@@ -1328,7 +1328,7 @@ Label_010053FB:
  .byte   EOT
  .byte   W01
  .byte   PAN , c_v+0
- .byte   VOL , 43*song04_mvl/mxv
+ .byte   VOL , 43*Dialga_mvl/mxv
  .byte   N32 ,Cs3
  .byte   W36
  .byte   Gs3
@@ -1430,7 +1430,7 @@ Label_010053FB:
  .byte   W03
  .byte   EOT
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   PAN , c_v-33
  .byte   TIE ,Cs4
  .byte   W48
@@ -1454,7 +1454,7 @@ Label_010053FB:
  .byte   EOT
  .byte   W01
  .byte   PAN , c_v-32
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   N23 ,Cn2
  .byte   W24
  .byte   Cs2
@@ -1584,40 +1584,40 @@ Label_010053FB:
  .byte   W96
 @  #02 @117   ----------------------------------------
  .byte   PAN , c_v-32
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-32
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-32
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+Dialga_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_0100559A:
  .byte   VOICE , 40
  .byte   PAN , c_v-34
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   PAN , c_v-34
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-34
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-34
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-34
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-34
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   TIE ,Gn2 ,v112
@@ -1654,7 +1654,7 @@ Label_0100559A:
  .byte   Gs2
  .byte   W96
 @  #03 @012   ----------------------------------------
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N23 ,Gn1
  .byte   W24
@@ -1997,7 +1997,7 @@ Label_01005670:
  .byte   EOT
  .byte   W01
  .byte   PAN , c_v-8
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   N92 ,Fs3
  .byte   W48
 @  #03 @088   ----------------------------------------
@@ -2031,7 +2031,7 @@ Label_01005670:
 @  #03 @095   ----------------------------------------
  .byte   W48
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   N23 ,Gn2
  .byte   W24
  .byte   Gs2
@@ -2166,40 +2166,40 @@ Label_01005670:
  .byte   W96
 @  #03 @117   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+Dialga_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_01005806:
  .byte   VOICE , 1
  .byte   PAN , c_v+0
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   W03
@@ -2348,7 +2348,7 @@ Label_01005876:
 @  #04 @029   ----------------------------------------
  .byte   W96
 @  #04 @030   ----------------------------------------
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   W12
  .byte   PAN , c_v-32
  .byte   N32 ,Cn5 ,v112
@@ -2813,25 +2813,25 @@ Label_01005A60:
  .byte   W96
 @  #04 @117   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+Dialga_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_01005AC2:
  .byte   VOICE , 40
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*Dialga_mvl/mxv
  .byte   PAN , c_v+35
  .byte   PAN , c_v+35
  .byte   MOD 0
@@ -3298,27 +3298,27 @@ Label_01005C58:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+Dialga_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_01006FB2:
  .byte   VOICE , 1
  .byte   PAN , c_v+40
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   PAN , c_v+40
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+40
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-40
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-40
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-40
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   N11 ,Cn5 ,v112
@@ -3452,7 +3452,7 @@ Label_0100703E:
  .byte   W96
 @  #06 @014   ----------------------------------------
  .byte   PAN , c_v-44
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   N23 ,Gn3 ,v112
  .byte   W24
  .byte   Gs3
@@ -3564,7 +3564,7 @@ Label_0100703E:
  .byte   W96
 @  #06 @044   ----------------------------------------
  .byte   PAN , c_v+4
- .byte   VOL , 43*song04_mvl/mxv
+ .byte   VOL , 43*Dialga_mvl/mxv
  .byte   N05 ,Cn6 ,v112
  .byte   W06
  .byte   Cn6 ,v040
@@ -3584,7 +3584,7 @@ Label_0100703E:
  .byte   N44 ,Cn6 ,v112
  .byte   W48
 @  #06 @045   ----------------------------------------
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   N05
  .byte   W06
  .byte   Cn6 ,v040
@@ -3604,7 +3604,7 @@ Label_0100703E:
  .byte   N44 ,Cn6 ,v112
  .byte   W48
 @  #06 @046   ----------------------------------------
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*Dialga_mvl/mxv
  .byte   N05
  .byte   W06
  .byte   Cn6 ,v040
@@ -3624,7 +3624,7 @@ Label_0100703E:
  .byte   N44 ,Cn6 ,v112
  .byte   W48
 @  #06 @047   ----------------------------------------
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*Dialga_mvl/mxv
  .byte   N05
  .byte   W06
  .byte   Cn6 ,v040
@@ -3643,9 +3643,9 @@ Label_0100703E:
  .byte   W54
 @  #06 @048   ----------------------------------------
  .byte   W24
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*Dialga_mvl/mxv
  .byte   W06
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   W66
 @  #06 @049   ----------------------------------------
  .byte   W96
@@ -3657,7 +3657,7 @@ Label_0100703E:
  .byte   W96
 @  #06 @053   ----------------------------------------
  .byte   W24
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   N11 ,Cn3 ,v112
  .byte   W12
  .byte   Ds3
@@ -3991,7 +3991,7 @@ Label_010072FB:
  .byte   Gs3
  .byte   W12
  .byte   PAN , c_v-40
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*Dialga_mvl/mxv
  .byte   N03 ,Cs4
  .byte   W04
  .byte   Ds4
@@ -4449,7 +4449,7 @@ Label_010072FB:
  .byte   W96
 @  #06 @097   ----------------------------------------
  .byte   W48
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   PAN , c_v+35
  .byte   N23 ,Gn3
  .byte   W24
@@ -4493,7 +4493,7 @@ Label_010072FB:
  .byte   N23 ,Ds4
  .byte   W24
  .byte   PAN , c_v-40
- .byte   VOL , 32*song04_mvl/mxv
+ .byte   VOL , 32*Dialga_mvl/mxv
  .byte   N11 ,Cn4
  .byte   W12
  .byte   Gn3
@@ -4560,7 +4560,7 @@ Label_010072FB:
  .byte   Gn3
  .byte   W12
  .byte   PAN , c_v-40
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Dialga_mvl/mxv
  .byte   N11 ,As4
  .byte   W12
  .byte   Fn4
@@ -4644,7 +4644,7 @@ Label_010072FB:
  .byte   W12
  .byte   Gn4
  .byte   W12
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*Dialga_mvl/mxv
  .byte   PAN , c_v-40
  .byte   N11 ,As4
  .byte   W12
@@ -4734,36 +4734,36 @@ Label_010072FB:
  .byte   W60
 @  #06 @117   ----------------------------------------
  .byte   PAN , c_v+40
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+40
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+40
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+Dialga_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_0100640A:
  .byte   VOICE , 40
  .byte   PAN , c_v+8
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*Dialga_mvl/mxv
  .byte   PAN , c_v+8
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*Dialga_mvl/mxv
  .byte   PAN , c_v+8
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*Dialga_mvl/mxv
  .byte   PAN , c_v+8
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*Dialga_mvl/mxv
  .byte   PAN , c_v+8
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*Dialga_mvl/mxv
  .byte   PAN , c_v+8
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W03
  .byte   TIE ,Cn3 ,v112
@@ -4806,7 +4806,7 @@ Label_0100640A:
  .byte   W92
  .byte   W01
 @  #07 @012   ----------------------------------------
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Dialga_mvl/mxv
  .byte   PAN , c_v+23
  .byte   N23 ,Gn3 ,v127
  .byte   W24
@@ -4880,7 +4880,7 @@ Label_0100640A:
  .byte   W92
  .byte   EOT
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*Dialga_mvl/mxv
  .byte   N05 ,Bn2
  .byte   W03
 @  #07 @024   ----------------------------------------
@@ -4920,7 +4920,7 @@ Label_0100640A:
  .byte   W01
 @  #07 @028   ----------------------------------------
  .byte   PAN , c_v-25
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*Dialga_mvl/mxv
  .byte   W03
  .byte   N56 ,Cs3 ,v127
  .byte   W60
@@ -5040,7 +5040,7 @@ Label_010064ED:
  .byte   W44
  .byte   W01
 @  #07 @044   ----------------------------------------
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*Dialga_mvl/mxv
  .byte   W03
  .byte   N92 ,En3 ,v127
  .byte   W92
@@ -5146,7 +5146,7 @@ Label_0100658A:
  .byte   W44
  .byte   W01
  .byte   PAN , c_v+30
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*Dialga_mvl/mxv
  .byte   W03
  .byte   N32 ,Cs3
  .byte   W36
@@ -5272,7 +5272,7 @@ Label_0100664D:
 @  #07 @087   ----------------------------------------
  .byte   W48
  .byte   PAN , c_v-16
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*Dialga_mvl/mxv
  .byte   W36
  .byte   PAN , c_v-32
  .byte   N32 ,Cs5 ,v112
@@ -5433,7 +5433,7 @@ Label_0100668D:
  .byte   W01
  .byte   N23 ,Gn4
  .byte   W24
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   N23 ,As2
  .byte   W24
  .byte   Fn2
@@ -5501,37 +5501,37 @@ Label_0100668D:
  .byte   W96
 @  #07 @117   ----------------------------------------
  .byte   PAN , c_v+31
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   PAN , c_v+31
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   PAN , c_v+31
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+Dialga_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_0100679A:
  .byte   VOICE , 47
  .byte   PAN , c_v-32
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   PAN , c_v-32
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-32
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   W96
@@ -6033,41 +6033,41 @@ Label_010069DE:
 @  #08 @117   ----------------------------------------
  .byte   VOICE , 47
  .byte   PAN , c_v-1
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-1
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v-1
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song04_009:
+Dialga_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , Dialga_key+0
 Label_01006A9A:
  .byte   VOICE , 124
  .byte   PAN , c_v+0
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Dialga_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 41*song04_mvl/mxv
- .byte   MOD 0
- .byte   PAN , c_v+0
- .byte   MOD 0
- .byte   VOL , 41*song04_mvl/mxv
- .byte   PAN , c_v+0
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
  .byte   MOD 0
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Dialga_mvl/mxv
+ .byte   PAN , c_v+0
+ .byte   VOL , 41*Dialga_mvl/mxv
+ .byte   MOD 0
+ .byte   PAN , c_v+0
+ .byte   MOD 0
+ .byte   VOL , 41*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #09 @001   ----------------------------------------
@@ -6604,7 +6604,7 @@ Label_01006D2C:
  .byte   W04
  .byte   PAN , c_v-43
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*Dialga_mvl/mxv
  .byte   BEND , c_v-1
  .byte   N56 ,Ds1
  .byte   W03
@@ -6615,184 +6615,184 @@ Label_01006D2C:
  .byte   BEND , c_v-1
  .byte   W04
  .byte   PAN , c_v-27
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v-25
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v-19
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v-12
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v-3
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v-2
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v+9
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*Dialga_mvl/mxv
  .byte   BEND , c_v-1
  .byte   W04
  .byte   PAN , c_v+16
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*Dialga_mvl/mxv
  .byte   BEND , c_v-1
  .byte   W04
  .byte   PAN , c_v+23
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*Dialga_mvl/mxv
  .byte   BEND , c_v-1
  .byte   W01
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   W03
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*Dialga_mvl/mxv
  .byte   PAN , c_v+29
  .byte   BEND , c_v-1
  .byte   W04
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*Dialga_mvl/mxv
  .byte   W04
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*Dialga_mvl/mxv
  .byte   W01
  .byte   N56 ,Fs3
  .byte   W03
- .byte   VOL , 3*song04_mvl/mxv
+ .byte   VOL , 3*Dialga_mvl/mxv
  .byte   W04
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*Dialga_mvl/mxv
  .byte   W04
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*Dialga_mvl/mxv
  .byte   W01
  .byte   PAN , c_v+48
  .byte   BEND , c_v+1
  .byte   W03
  .byte   PAN , c_v+41
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*Dialga_mvl/mxv
  .byte   BEND , c_v+1
  .byte   W01
  .byte   BEND , c_v+0
  .byte   W03
  .byte   PAN , c_v+40
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v+34
- .byte   VOL , 32*song04_mvl/mxv
+ .byte   VOL , 32*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v+29
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
 @  #09 @090   ----------------------------------------
  .byte   W03
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   PAN , c_v+21
  .byte   BEND , c_v-1
  .byte   W04
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   PAN , c_v-33
  .byte   W04
- .byte   VOL , 37*song04_mvl/mxv
+ .byte   VOL , 37*Dialga_mvl/mxv
  .byte   PAN , c_v-50
  .byte   BEND , c_v-1
  .byte   W04
- .byte   VOL , 34*song04_mvl/mxv
+ .byte   VOL , 34*Dialga_mvl/mxv
  .byte   PAN , c_v-52
  .byte   BEND , c_v-1
  .byte   W04
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*Dialga_mvl/mxv
  .byte   BEND , c_v-2
  .byte   W04
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*Dialga_mvl/mxv
  .byte   BEND , c_v-2
  .byte   W04
- .byte   VOL , 1*song04_mvl/mxv
+ .byte   VOL , 1*Dialga_mvl/mxv
  .byte   BEND , c_v-2
  .byte   W05
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*Dialga_mvl/mxv
  .byte   W03
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*Dialga_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*Dialga_mvl/mxv
  .byte   BEND , c_v-1
  .byte   N68 ,Gn1
  .byte   W03
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*Dialga_mvl/mxv
  .byte   BEND , c_v-1
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*Dialga_mvl/mxv
  .byte   W03
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*Dialga_mvl/mxv
  .byte   BEND , c_v-1
  .byte   W01
  .byte   PAN , c_v-45
  .byte   W03
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*Dialga_mvl/mxv
  .byte   PAN , c_v-39
  .byte   BEND , c_v+0
  .byte   W04
  .byte   PAN , c_v-28
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*Dialga_mvl/mxv
  .byte   PAN , c_v-21
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*Dialga_mvl/mxv
  .byte   PAN , c_v-11
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*Dialga_mvl/mxv
  .byte   PAN , c_v+3
  .byte   BEND , c_v+0
  .byte   W01
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W03
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*Dialga_mvl/mxv
  .byte   PAN , c_v+21
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 38*song04_mvl/mxv
+ .byte   VOL , 38*Dialga_mvl/mxv
  .byte   PAN , c_v+35
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W01
  .byte   BEND , c_v-1
  .byte   W03
- .byte   VOL , 32*song04_mvl/mxv
+ .byte   VOL , 32*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W04
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*Dialga_mvl/mxv
  .byte   BEND , c_v+1
  .byte   W01
  .byte   PAN , c_v-34
  .byte   W03
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*Dialga_mvl/mxv
  .byte   W01
 @  #09 @091   ----------------------------------------
  .byte   W03
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*Dialga_mvl/mxv
  .byte   W09
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*Dialga_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N11 ,En1
  .byte   W12
@@ -6965,13 +6965,13 @@ Label_01006EC7:
  .byte   W60
 @  #09 @117   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*Dialga_mvl/mxv
  .byte   MOD 0
  .byte   BEND , c_v+0
  .byte   FINE
@@ -6979,22 +6979,22 @@ Label_01006EC7:
 @******************************************************@
 	.align	2
 
-song04:
+Dialga:
 	.byte	9	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	Dialga_pri	@ Priority
+	.byte	Dialga_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	Dialga_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
-	.word	song04_009
+	.word	Dialga_001
+	.word	Dialga_002
+	.word	Dialga_003
+	.word	Dialga_004
+	.word	Dialga_005
+	.word	Dialga_006
+	.word	Dialga_007
+	.word	Dialga_008
+	.word	Dialga_009
 
 	.end

@@ -244,6 +244,7 @@ TurnAlly(Carbon)
 EndEvent
 
 C13NorthVillage:
+MUSC S_PascalTheDog
 CleanText(VillageCG,C13WhoIsThisHorse)
 Reinforcements(C13Horse)
 EndEvent
@@ -258,19 +259,19 @@ C13EastVillage:
 VillageEventItem(C13EastVillageText, VillageCG, Again)
 
 C13House1:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C13House1Text,HouseCG)
 C13House2:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C13House2Text,HouseCG)
 C13House3:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C13House3Text,HouseCG)
 C13House4:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C13House4Text,HouseCG)
 C13House5:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C13House5Text,HouseCG)
 C13House6:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C13House6Text,HouseCG)
 C13House7:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C13House7Text,HouseCG)
 
 C13ValdenHandoff:
 CHECK_EVENTID ValdenDeadFlag

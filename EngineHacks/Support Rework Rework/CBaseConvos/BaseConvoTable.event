@@ -292,6 +292,37 @@
 			text(C12_Light)
 			item(LuxAurumque,Kenneth)
 			eventID(BaseFlag1)
+		Entry
+			name(C12_The_Trial_Select)
+			bg(HallCG)
+			importance(1)
+			text(C12_The_Trial)
+			eventID(BaseFlag2)
+		Entry
+			name(Natasia_Peggy_Base_Select)
+			bg(HallCG)
+			text(C12_Natasia_Peggy_Base)
+			baseSupport(Natasia,Peggy,CPSupport)
+		Entry
+			name(Stefan_Josef_Base_Select)
+			bg(HallCG)
+			text(C12_Stefan_Josef_Base)
+			baseSupport(Stefan,Josef,CPSupport)
+		Entry
+			name(Arin_Sveltzalus_Base_Select)
+			bg(HillCG)
+			text(C12_Arin_Sveltzalus_Base)
+			baseSupport(Arin,Sveltzalus,CSupport)
+		Entry
+			name(Kenneth_Hilbert_Base_Select)
+			bg(HillCG)
+			text(C12_Kenneth_Hilbert_Base)
+			baseSupport(Kenneth,Hilbert,CSupport)
+		Entry
+			name(Sam_Bechamel_Base_Select)
+			bg(HallCG)
+			text(C12_Sam_Bechamel_Base)
+			baseSupport(Sam,Bechamel,CSupport)
 	Chapter(Chapter14)
 		Entry
 			name(Blair_Carbon_Base_Select)

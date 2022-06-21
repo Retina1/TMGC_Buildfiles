@@ -12,9 +12,6 @@
 
 push {r4-r6, lr}
 
-ldr r3, =MemorySlot 
-add r3, #0x0C*4 
-str r4, [r3] @ save unit struct to memory slot C to be used in IconDisplay 
 
 @ in vanilla, r4 is unit struct 
 @ r2 is a character's unit table 
@@ -72,9 +69,11 @@ bne Loop
 
 SkipCheckChapter: 
 
-
-
 ReturnTrue: 
+
+@ save unit struct to be used in IconDisplay 
+mov r9, r4 
+
 mov r1, #0x10 @ XX coord ? 
 
 pop {r4-r6}
@@ -93,5 +92,4 @@ bx r3
 .ltorg 
 
 IconDisplayList: 
-
 

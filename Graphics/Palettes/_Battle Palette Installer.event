@@ -83,6 +83,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define DesmondPalPaletteID 0x46
 #define PtolemyUPaletteID 0x47
 #define PtolemyPPaletteID 0x48
+#define EstelleUPaletteID 0x49
+#define EstellePPaletteID 0x4a
+#define RiftPaletteID 0x4b
 
 #define CidPaletteID 0x2e
 
@@ -157,6 +160,10 @@ setPalette(AvanPPaletteID,AvanPPalette)
 
 setPalette(HoratioUPaletteID,HoratioUPalette)
 setPalette(HoratioPPaletteID,HoratioPPalette)
+
+setPalette(RiftPaletteID,RiftPalette)
+setPalette(EstelleUPaletteID,EstelleUPalette)
+setPalette(EstellePPaletteID,EstellePPalette)
 
 setPalette(PtolemyUPaletteID,PtolemyUPalette)
 setPalette(PtolemyPPaletteID,PtolemyPPalette)
@@ -242,8 +249,8 @@ SetPaletteFull(Freddric,0x0,LncWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(Dean,0x0,Fighter,0x0,Warrior,0x0,0x0)
 SetPaletteFull(Eliza,0x0,Cleric,0x0,BishopF,0x0,0x0)
 SetPaletteFull(Chartreuse,0x0,BardF,0x0,0x0,0x0,0x0)
-SetPaletteFull(Rift,0x0,Myrm,0x0,SwMast,0x0,0x0)
-SetPaletteFull(Estelle,0x0,BowCavF,0x0,BowPalF,0x0,0x0)
+SetPaletteFull(Rift,0x0,Myrm,RiftPaletteID,SwMast,0x0,0x0)
+SetPaletteFull(Estelle,EstelleUPaletteID,BowCavF,EstellePPaletteID,BowPalF,0x0,0x0)
 SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,0x0,0x0)
 SetPaletteFull(Dirk,0x0,Pirate,0x0,Berserker,0x0,0x0)
 SetPaletteFull(Callum,0x0,SwdCav,0x0,SwdPal,0x0,0x0)
@@ -462,6 +469,17 @@ JohanPPalette:
 ALIGN 4
 ElcorianPalette:
 #incbin "Elcorian.dmp"
+
+ALIGN 4
+RiftPalette:
+#incbin "Rift.dmp"
+
+ALIGN 4
+EstelleUPalette:
+#incbin "EstelleUnpromoted.dmp"
+ALIGN 4
+EstellePPalette:
+#incbin "EstellePromoted.dmp"
 
 ALIGN 4
 RoseUPalette:

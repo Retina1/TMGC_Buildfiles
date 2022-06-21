@@ -1,0 +1,137 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsV1,ThisChapter)
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN V1Units V1Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,CV1Turn3,3)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+V1Units:
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [SilverBow, Mend] NoAI
+UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [4,0] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
+UNIT Eliza Cleric 0x0 Level(12,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
+UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [3,1] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
+UNIT
+
+V1MoreUnits:
+UNIT Rift SwMast 0x0 Level(6,Ally,0) [0,2] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
+UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT
+
+V1Easy:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+V1Normal:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+V1Hard:
+UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+RemoveUnit(Blair)
+RemoveUnit(Arin)
+RemoveUnit(Kenneth)
+RemoveUnit(Natasia)
+RemoveUnit(Stefan)
+RemoveUnit(Desmond)
+RemoveUnit(Sam)
+RemoveUnit(Josef)
+RemoveUnit(Peggy)
+RemoveUnit(Butch)
+RemoveUnit(Rachael)
+RemoveUnit(Cassius)
+RemoveUnit(Jeff)
+RemoveUnit(Emile)
+RemoveUnit(Apollo)
+RemoveUnit(Bechamel)
+RemoveUnit(Sveltzalus)
+RemoveUnit(Hilbert)
+RemoveUnit(Flynn)
+RemoveUnit(Addington)
+RemoveUnit(Mikey)
+RemoveUnit(Carbon)
+RemoveUnit(Athena)
+RemoveUnit(Charley)
+RemoveUnit(Zeke)
+RemoveUnit(Hyperius)
+RemoveUnit(Alexis)
+RemoveUnit(Leila)
+RemoveUnit(Damien)
+RemoveUnit(Zacharias)
+RemoveUnit(Avan)
+RemoveUnit(Toddsworth)
+RemoveUnit(Artemis)
+RemoveUnit(Hollandaise)
+RemoveUnit(Vladmir)
+RemoveUnit(Horatio)
+RemoveUnit(Simone)
+LOAD1 0x1 V1Units
+ENUN
+LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
+MUSC NarrationTheme
+Narration(ChV1_Narration)
+CleanText(PathCG,FillerDialogue)
+SystemText(ViridianArcPrimer)
+SetSupport(Viridian,Freddric,CSupport)
+SetSupport(Viridian,Chartreuse,CSupport)
+EndEvent
+
+EndingScene:
+MUSC VictoryTheme
+Text(PathCG,FillerDialogue)
+MoveToChapter(ChapterV2)
+EndEvent
+
+CV1Turn3:
+Reinforcements(V1MoreUnits)
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+EndEvent
+
+MESSAGE Events end at offset CURRENTOFFSET

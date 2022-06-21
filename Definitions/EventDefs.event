@@ -1,7 +1,7 @@
 #define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
-#define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
+#define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; REMA"
 #define SystemText(bgid,textid) "CenterTutorialTextBox; SetBackground(bgid); TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
-#define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND;"
+#define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND"
 #define NarrationText(textid) "SVAL 0xB 0x00B4FFFF; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
 #define EndEvent "EVBIT_T 0x7; ENDA"
 #define CleanTextNoMap(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
@@ -25,8 +25,9 @@
 #define DesertScroll(skillid,flag) "CHECK_ALLEGIANCE 0xFFFF; BNE 0x1 0xC 0x0; GiveItemWithDurability(SkillScroll,skillid,0xFFFF); GOTO 0x2; LABEL 0x1; ENUF flag; LABEL 0x2; EndEvent"
 
 #define DeathBranchText(char1,char2,deadmus,alivemus,background,bothalive,char1dead,char2dead,bothdead) "CHECK_ALIVE char1; BNE 0x2 0xC 0x0; CHECK_ALIVE char2; BNE 0x3 0xC 0x0; MUSC deadmus; CleanTextNoMap(background,bothdead); GOTO 0x5; LABEL 0x3; MUSC deadmus; CleanTextNoMap(background,char1dead); GOTO 0x5; LABEL 0x2; CHECK_ALIVE char2; BNE 0x4 0xC 0x0; MUSC deadmus; CleanTextNoMap(background,char2dead); GOTO 0x5; LABEL 0x4; MUSC alivemus; CleanTextNoMap(background,bothalive); LABEL 0x5"
-
-#define GotoPrepScreen "LABEL 0x6500; CALL $591FD8; ASMC ASMCCheckBaseConvo|1; BEQ 0x6501 0xc 0x0; FADU 16; SystemText(BaseConvoConfirm); IfNoSelectedGoto(0x6500); LABEL 0x6501; EndEvent"
+#define PreChoiceToggle "EVBIT_MODIFY 4"
+#define PostChoiceToggle "EVBIT_F 5; EVBIT_F 4; EVBIT_F 3; EVBIT_F 2; EVBIT_F 1; EVBIT_F 0"
+#define GotoPrepScreen "LABEL 0x6500; CALL $591FD8; ASMC ASMCCheckBaseConvo|1; BEQ 0x6501 0xc 0x0; FADU 16; PreChoiceToggle; SystemText(BaseConvoConfirm); PostChoiceToggle; IfNoSelectedGoto(0x6500); LABEL 0x6501; EndEvent"
 
 #define GotoPrepScreenNoBaseCheck "CALL $591FD8; EndEvent"
 

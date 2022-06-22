@@ -25,10 +25,10 @@ TurnEventPlayer(0x0,C14Turn2,2)
 TurnEventPlayer(0x0,C14Turn3,3)
 TurnEventPlayer(0x0,C14Turn4,4)
 TurnEventPlayer(0x0,C14Turn6,6)
-TurnEventPlayer(0x0,C14Turn8,8)
-TurnEventPlayer(0x0,C14Turn9,9)
+TurnEventPlayer(0x0,C14ThiefSpawn1,8)
+TurnEventPlayer(0x0,C14ThiefSpawn2,9)
 TurnEventPlayer(0x0,C14Turn10,10)
-TurnEventPlayer(0x0,C14Turn12,12)
+TurnEventPlayer(0x0,C14ThiefSpawn3,12)
 TurnEventPlayer(0x23,C14ThroneReinforcements,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -159,8 +159,8 @@ UNIT LootYgstra Warrior 0x0 Level(2,Enemy,1) [22,4] 0x0 0x0 0x0 0x0 [SteelAxe,St
 UNIT Ygstra Sorc 0x0 Level(1,Enemy,1) [8,1] 0x0 0x0 0x0 0x0 [Jormungandr,Silence] NeverMoveAI
 UNIT Ygstra Sorc 0x0 Level(1,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [Freikugel,Sleep] NeverMoveAI
 UNIT Ygstra Halberdier 0x0 Level(4,Enemy,1) [2,2] DropItem 0x0 0x0 0x0 [Spear,MasterSeal] NeverMoveAI
-UNIT Ygstra Thief 0x0 Level(15,Enemy,1) [8,16] DropItem 0x0 0x0 0x0 [SilverSword,Ladymace] LootingThiefAI
-UNIT Ygstra Thief 0x0 Level(15,Enemy,1) [16,9] DropItem 0x0 0x0 0x0 [SilverSword,MercuryBoots] LootingThiefAI
+UNIT Ygstra Thief 0x0 Level(15,Enemy,1) [6,11] DropItem 0x0 0x0 0x0 [SilverSword,Ladymace] LootingThiefAI
+UNIT Ygstra Thief 0x0 Level(15,Enemy,1) [13,3] DropItem 0x0 0x0 0x0 [SilverSword,MercuryBoots] LootingThiefAI
 UNIT Dragon FireDragon 0x0 Level(5,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [FireBreath,Dracoshield] NeverMoveAI
 UNIT
 
@@ -199,7 +199,7 @@ UNIT Ygstra Thief 0x0 Level(15,Enemy,1) [26,19] DropItem 0x0 0x0 0x0 [SilverSwor
 UNIT
 
 C14Athena:
-UNIT Athena AxeWyv 0x0 Level(14,Ally,0) [1,29] 0x0 0x0 0x1 REDA1R22 [Hammer,HandAxe,MasterSeal] NoAI
+UNIT Athena AxeWyv 0x0 Level(14,Ally,0) [1,29] 0x0 0x0 0x1 REDA1R22 [Hammer,IronAxe,HandAxe,MasterSeal] NoAI
 UNIT
 
 C14Charley:
@@ -310,11 +310,11 @@ C14Turn6:
 Reinforcements(C14EastReinforcements)
 EndEvent
 
-C14Turn8:
+C14ThiefSpawn1:
 Reinforcements(C14Thief1)
 EndEvent
 
-C14Turn9:
+C14ThiefSpawn2:
 Reinforcements(C14Thief2)
 EndEvent
 
@@ -322,7 +322,7 @@ C14Turn10:
 Reinforcements(C14WestReinforcements)
 EndEvent
 
-C14Turn12:
+C14ThiefSpawn3:
 Reinforcements(C14Thief3)
 EndEvent
 

@@ -218,6 +218,10 @@ LOAD1 0x0 C13Units
 ENUN
 ENUT 0x23
 ENUT 0x24
+CHECK_ALIVE Jeff
+BNE 0x11 0xC 0x0
+ENUT BaseFlag1
+LABEL 0x11
 SetSupport(Mikey,Carbon,CSupport)
 GotoPrepScreen
 ENDA

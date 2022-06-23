@@ -59,6 +59,9 @@ POP
 
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 
+//music stuff
+#include "MusicStuff/Installer.event"
+
 //hand axe anims
 #include "TMGC/handaxs_wildcard/Installer.event"
 
@@ -363,9 +366,6 @@ ALIGN 4
 
 //item drops- mkol/huichelaar
 #include "TMGC/ItemDropIcon/Display Droppable Item.event"
-
-//music stuff
-#include "MusicStuff/Installer.event"
 
 //100 Crit Cap
 #include "ExternalHacks/CritCap/CritCap.event"

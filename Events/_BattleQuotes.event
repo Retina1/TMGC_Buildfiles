@@ -51,12 +51,16 @@ UnspecifiedBattleConvo(Sofia,Chapter11,0x1,C11SofiaBattle)
 //ch 12
 UnspecifiedBattleConvo(Laronde,Chapter12,0x1,C12LarondeBattle)
 //ch 13
-SpecifiedBattleConvo(Mikey,Amara,Chapter13,0x18,0x0)
-SpecifiedBattleConvo(Carbon,Amara,Chapter13,0x19,0x0)
-UnspecifiedBattleConvo(Amara,Chapter13,0x1,0x0)
-UnspecifiedBattleConvo(Valden,Chapter13,0x17,0x0)
+SpecifiedBattleConvo(Mikey,Amara,Chapter13,0x18,C13AmaraMikeyBattle)
+SpecifiedBattleConvo(Carbon,Amara,Chapter13,0x19,C13AmaraCarbonBattle)
+UnspecifiedBattleConvo(Amara,Chapter13,0x1,C13AmaraBattle)
+SpecifiedBattleConvo(Mikey,Valden,Chapter13,0x16,C13ValdenMikeyBattle)
+SpecifiedBattleConvo(Carbon,Valden,Chapter13,0x15,C13ValdenCarbonBattle)
+UnspecifiedBattleConvo(Valden,Chapter13,0x17,C13ValdenBattle)
 //ch 14
-SpecifiedBattleConvo(Lazarus,Valden,Chapter14,0x0,0x0)
+SpecifiedBattleConvo(Lazarus,Valden,Chapter14,0x0,C14LazarusValdenBattle)
 SpecifiedBattleConvo(Blair,Lazarus,Chapter14,0x19,C14LazarusBlairBattle)
+SpecifiedBattleConvo(Mikey,Lazarus,Chapter14,0x18,C14LazarusMikeyBattle)
+SpecifiedBattleConvo(Carbon,Lazarus,Chapter14,0x17,C14LazarusCarbonBattle)
 UnspecifiedBattleConvo(Lazarus,Chapter14,0x1,C14LazarusBattle)
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 

@@ -28,9 +28,10 @@ ORG $88638
 POIN NewStatScreen
 ORG $88640
 POIN NewStatScreenPal
-POP
-
-PUSH
+//ORG 0xA06460 
+//#incbin "Dmp/SD9K_StatScreen_pal.dmp"
+ORG $88644
+POIN NewStatScreenTSA
 ORG $88590
 SHORT 0x0000 0x0000
 POP
@@ -98,10 +99,13 @@ POP
 
 ALIGN 4
 NewStatScreen:
-#incext Png2Dmp "NewStatscreen.png" --lz77
+#incbin "StatScreen.png.dmp"
 ALIGN 4
 NewStatScreenPal:
-#incext Png2Dmp "NewStatscreen.png" --palette-only
+#incbin "StatScreen.png.pal.dmp"
+ALIGN 4
+NewStatScreenTSA:
+#incbin "StatScreen.png.tsa.dmp"
 
 ALIGN 4
 LevelSelect:

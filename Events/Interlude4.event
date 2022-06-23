@@ -145,19 +145,19 @@ Text(I4DirkElizaTalk)
 EndEvent
 
 I4Cit:
-Text(FillerDialogue)
+Text(I4Cit1Talk)
 EndEvent
 
 I4Cit2:
-Text(FillerDialogue)
+Text(I4Cit2Talk)
 EndEvent
 
 I4LeftVillage:
-VillageEventItem(FillerDialogue, HouseCG, Pierce)
+VillageEventItem(I4LeftTalk, HouseCG, Pierce)
 I4CenterVillage:
-HouseEvent(FillerDialogue, HouseCG)
+HouseEvent(I4CenterTalk, HouseCG)
 I4RightVillage:
-HouseEvent(FillerDialogue, HouseCG)
+HouseEvent(I4RightTalk, HouseCG)
 
 I4Merchant:
 EVBIT_MODIFY 4

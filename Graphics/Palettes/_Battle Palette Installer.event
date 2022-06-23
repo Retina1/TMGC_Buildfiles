@@ -86,6 +86,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define EstelleUPaletteID 0x49
 #define EstellePPaletteID 0x4a
 #define RiftPaletteID 0x4b
+#define ZekePPaletteID 0x4c
 
 #define CidPaletteID 0x2e
 
@@ -146,6 +147,8 @@ setPalette(MikeyUPaletteID,MikeyUPalette)
 setPalette(MikeyPPaletteID,MikeyPPalette)
 
 setPalette(CharleyPaletteID,CharleyPalette)
+
+setPalette(ZekePPaletteID,ZekePPalette)
 
 setPalette(HyperiusPaletteID,HyperiusPalette)
 setPalette(AlexisUPaletteID,AlexisUPalette)
@@ -222,7 +225,7 @@ SetPaletteFull(Mikey,MikeyUPaletteID,Soldier,MikeyPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Carbon,0x0,BowCav,0x0,BowPal,0x0,0x0)
 SetPaletteFull(Athena,0x0,AxeWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(Charley,0x0,ArcherF,CharleyPaletteID,SniperF,0x0,0x0)
-SetPaletteFull(Zeke,0x0,ZekeLord,0x0,ZekeLordX,0x0,0x0)
+SetPaletteFull(Zeke,0x0,ZekeLord,ZekePPaletteID,ZekeLordX,0x0,0x0)
 SetPaletteFull(Hyperius,0x0,SwdArm,HyperiusPaletteID,SwdGen,0x0,0x0)
 SetPaletteFull(Alexis,AlexisUPaletteID,AxeArm,AlexisPPaletteID,AxeGen,0x0,0x0)
 SetPaletteFull(Leila,LeilaUPaletteID,SwdPeg,LeilaPPaletteID,Falco,0x0,0x0)
@@ -413,6 +416,10 @@ ALIGN 4
 CharleyPalette:
 #incbin "Charley.dmp"
 
+
+ALIGN 4
+ZekePPalette:
+#incbin "ZekePromoted.dmp"
 ALIGN 4
 HyperiusPalette:
 #incbin "Hyperius.dmp"

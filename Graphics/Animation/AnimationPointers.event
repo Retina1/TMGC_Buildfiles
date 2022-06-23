@@ -46,6 +46,14 @@
 #include "Zeke\Unarmed Installer.event"
 }
 {
+#include "ZekeDx\Sword Installer.event"
+#include "ZekeDx\Axe Installer.event"
+#include "ZekeDx\Handaxe Installer.event"
+#include "ZekeDx\Lance Installer.event"
+#include "ZekeDx\Bow Installer.event"
+#include "ZekeDx\Unarmed Installer.event"
+}
+{
 #include "RangerM\Sword Installer.event"
 #include "RangerM\Lance Installer.event"
 #include "RangerM\Bow Installer.event"
@@ -418,6 +426,16 @@ ZekeAnims:
 LanceAnim(0x1)
 BowAnim(0xc1)
 UnarmedAnim(0x2)
+EndAnim
+
+ALIGN 4
+ZekeDxAnims:
+SwordAnim(0x05)
+LanceAnim(0x07)
+AxeAnim(0x08)
+HandAxeAnim(0x09)
+BowAnim(0x0a)
+UnarmedAnim(0xe0)
 EndAnim
 
 ALIGN 4

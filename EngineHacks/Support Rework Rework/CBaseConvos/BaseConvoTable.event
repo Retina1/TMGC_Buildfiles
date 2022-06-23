@@ -323,6 +323,13 @@
 			bg(HallCG)
 			text(C12_Sam_Bechamel_Base)
 			baseSupport(Sam,Bechamel,CSupport)
+	Chapter(Chapter13)
+		Entry
+			name(C13_Delusion_Select)
+			bg(DesertCG)
+			importance(3)
+			event(C13DelusionEvent)
+			eventID(BaseFlag1)
 	Chapter(Chapter14)
 		Entry
 			name(Blair_Carbon_Base_Select)
@@ -341,9 +348,19 @@
 
 ALIGN 4
 C4HonorEvent:
-SetBackground(0x3)
+SetBackground(PathCG)
 Text(C4_Honor)
 GiveItemWithDurability(SkillScroll,DisciplineID,Blair)
+FADI 0x5
+CLEAN
+NoFade
+ENDA
+
+ALIGN 4
+C13DelusionEvent:
+SetBackground(DesertCG)
+Text(C13_Delusion)
+GiveItemWithDurability(SkillScroll,HexID,Blair)
 FADI 0x5
 CLEAN
 NoFade

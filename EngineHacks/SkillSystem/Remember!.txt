@@ -8,3 +8,11 @@ Otherwise, you'll get a glitchy icon and placeholder text.
 Don't forget to edit the skill description event file so the game can see your description.
 If all goes well, your skill should function in the game!
 -Darrman (Updated by Sme)
+
+
+You can configure level up skills to only be learned by certain allegiances or only on certain difficulties using the highest 3 bits of the learned level. Currently available options are as follows:
+
+1: Player Only
+2: Enemy Only
+3: Normal & Hard Mode Only
+4: Hard Mode Only

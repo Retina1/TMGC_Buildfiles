@@ -188,11 +188,16 @@ ENUT GuideChpt11
 LoadUnitsByDifficulty(C11Easy,C11Normal,C11Hard)
 LOAD1 0x0 C11Ally
 ENUN
-MUSC NarrationTheme2
-Narration(Ch11_Narration)
-CleanTextNoMap(DesertCG,Ch11_Opening)
 LOAD1 0x0 C11Units
 ENUN
+MUSC NarrationTheme2
+Narration(Ch11_Narration)
+CleanText(DesertCG,Ch11_Opening)
+CAM1 Sofia
+MUSC S_Crisis
+FlashCursor(Sofia,60)
+CleanTextNoMap(HallCG,Ch11_Opening2)
+CleanTextNoMap(DesertCG,Ch11_Opening3)
 CHECK_ALIVE Josef
 BNE 0x11 0xC 0x0
 ENUT BaseFlag1

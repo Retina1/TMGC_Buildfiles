@@ -181,6 +181,15 @@ C11Ally:
 UNIT Hilbert Mage 0x0 Level(2,NPC,0) [17,16] 0x0 0x0 0x0 0x0 [Fire,Thunder,Vulnerary,Vulnerary] NoAI
 UNIT
 
+C11EndingNotVlad:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [6,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,2] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C11EndingVlad:
+UNIT Vladmir Bishop 0x0 Level(15,NPC,0) [0,8] 0x0 0x0 0x1 REDA6R3 [BookOfOpistus] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -206,9 +215,13 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
+CLEE 0
 ResetBaseFlags
 MUSC VictoryTheme
-CleanTextNoMap(HallCG,Ch11_Ending)
+LOAD1 0x0 C11EndingNotVlad
+ENUN
+CleanText(HallCG,Ch11_Ending)
+Reinforcements(C11EndingVlad)
 CleanTextNoMap(DesertCG,Ch11_Ending2)
 MUSC S_Stratagem
 CleanTextNoMap(HallCG,Ch11_Ending3)

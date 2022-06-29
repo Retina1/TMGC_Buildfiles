@@ -422,7 +422,7 @@ POP
 
 #include "DrawMapActionAnimation/Installer.event"
 
-#include "TMGC/AnimationForcer/AnimationForcer.event"
+#include "TMGC/BossAnimeONEx/install.event"
 
 //currently always active- try to fix?
 //#include "TMGC/SuperArena/SuperArenaInstaller.event"
@@ -438,3 +438,6 @@ POP
 
 //arena weapons
 #include "TMGC/ArenaWeapons/Install.event"
+
+//class hp
+#include "TMGC/SetHPClassLimit/SetHPClassLimit.event"

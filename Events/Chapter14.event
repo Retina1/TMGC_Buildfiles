@@ -335,10 +335,12 @@ ENUN
 TEXTCONT
 TEXTEND
 LABEL 0x67
-MUSC NarrationTheme2
-Narration(Ch14_Narration)
 MUSC S_Trisection
-CleanTextNoMap(DesertCG,FillerDialogue)
+SetBackground(0x34)
+STAL 120
+NarrationText(Ch14_Narration)
+FADI 0x3c
+CleanTextNoMap(OutdoorCastleCG,Ch14_Opening2)
 LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
 LOAD1 0x0 C14Units
 ENUN

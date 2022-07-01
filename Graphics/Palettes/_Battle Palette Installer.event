@@ -95,7 +95,10 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define TobiasPaletteID 0x51
 #define SimonePaletteID 0x52
 
+
 #define CidPaletteID 0x2e
+#define BrandlPaletteID 0x53
+#define BriantPaletteID 0x54
 
 #define DavelarnPaletteID 0x18
 #define MarqueStarquePaletteID 0x19
@@ -192,6 +195,8 @@ setPalette(WilhelmUPaletteID,WilhelmUPalette)
 setPalette(WilhelmPPaletteID,WilhelmPPalette)
 
 setPalette(CidPaletteID,CidPalette)
+setPalette(BrandlPaletteID,BrandlPalette)
+setPalette(BriantPaletteID,BriantPalette)
 
 setPalette(DavelarnPaletteID,DavelarnPalette)
 setPalette(MarqueStarquePaletteID,MarqueStarquePalette)
@@ -290,7 +295,7 @@ SetPaletteFull(Laronde,0x0,0x0,LarondePaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Amara,0x0,0x0,AmaraPaletteID,WarriorF,0x0,0x0)
 SetPaletteFull(Valden,0x0,0x0,ValdenPaletteID,LncPal,0x0,0x0)
 SetPaletteFull(Lazarus,0x0,0x0,LazarusPaletteID,AxeGen,0x0,0x0)
-SetPaletteFull(Briant,0x0,0x0,0x0,Baron,0x0,0x0)
+SetPaletteFull(Briant,0x0,0x0,BriantPaletteID,Baron,0x0,0x0)
 SetPaletteFull(Roark,0x0,Fighter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Vulture,0x0,BowArm,0x0,0x0,0x0,0x0)
 SetPaletteFull(Parque,0x0,0x0,0x0,LncPal,0x0,0x0)
@@ -300,6 +305,7 @@ SetPaletteFull(Neillstrom,0x0,0x0,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(Ciraweiss,0x0,0x0,0x0,SageF,0x0,0x0)
 SetPaletteFull(Arbordia,0x0,0x0,ArbordiaPaletteID,Baron,0x0,0x0)
 
+SetPaletteFull(Brandl,0x0,0x0,BrandlPaletteID,Sniper,0x0,0x0)
 SetPaletteFull(Cid,0x0,0x0,CidPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(C7Hyperius,0x0,0x0,HyperiusPaletteID,SwdGen,0x0,0x0)
 SetPaletteFull(C7Alexis,AlexisUPaletteID,AxeArm,0x0,0x0,0x0,0x0)
@@ -530,6 +536,12 @@ WilhelmPPalette:
 ALIGN 4
 CidPalette:
 #incbin "Cid.dmp"
+ALIGN 4
+BrandlPalette:
+#incbin "Brandl.dmp"
+ALIGN 4
+BriantPalette:
+#incbin "Briant.dmp"
 
 ALIGN 4
 DavelarnPalette:

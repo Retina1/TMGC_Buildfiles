@@ -301,6 +301,15 @@ UNIT Bandit Baron 0x0 Level(1,Enemy,1) [24,29] 0x0 0x0 0x1 REDA24R28 [0x0] Never
 UNIT Unknown Valk 0x0 Level(1,Enemy,1) [25,29] 0x0 0x0 0x1 REDA25R27 [0x0] NeverMoveAI
 UNIT
 
+C14Briant:
+UNIT Briant Baron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT
+
+C14EndsceneUnits:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [7,9] 0x0 0x0 0x1 REDA7R5 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,9] 0x0 0x0 0x1 REDA8R7 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -350,8 +359,47 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC S_FE4Conversation
-CleanTextNoMap(HallCG,FillerDialogue)
+MUSC 0x0
+SetBackground(HallCG)
+TEXTSTART
+TEXTSHOW FillerDialogue
+TEXTEND
+FADI 0x3c
+CLEE 0
+CLEN 0
+CLEA 0
+LOMA Chapter14Ending
+CAM1 [0,0]
+LOAD1 0x0 C14Briant
+ENUN
+FADU 0x3c
+Text(Ch14_Ending1)
+LOAD1 0x0 C14EndsceneUnits
+ENUN
+MUSC S_Chaos
+Text(Ch14_Ending2) //talk
+PreChoiceToggle
+SystemText(C14TheChoice) //kill by your hand or no
+PostChoiceToggle
+IfNoSelectedGoto(0x5)
+ENUT BriantKilledFlag
+Text(Ch14_EndingKill) //blair does it
+StartBattle
+CriticalHit(0,120)
+EndAttack
+FIG1 Blair Briant Awaken
+Text(Ch14_EndingKillDead) //briant fucking dies
+SET_SOMETHING Briant
+DISA Briant
+STAL 30
+GOTO 0x6
+LABEL 0x5
+Text(Ch14_EndingSpare) //he does it
+SET_SOMETHING Briant
+DISA Briant
+STAL 30
+LABEL 0x6
+Text(Ch14_EndingFinal) //end of chapter
 MoveToChapter(ChapterZ1)
 ENDA
 

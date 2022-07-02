@@ -345,7 +345,7 @@ TEXTCONT
 TEXTEND
 LABEL 0x67
 MUSC S_Trisection
-SetBackground(0x34)
+SetBackground(MapCG)
 STAL 120
 NarrationText(Ch14_Narration)
 FADI 0x3c
@@ -354,16 +354,25 @@ LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
 LOAD1 0x0 C14Units
 ENUN
 ENUT 0x23
+CHECK_ALIVE Mikey
+BEQ 0x11 0xC 0x0
+CHECK_ALIVE Carbon
+BNE 0x22 0xC 0x0
+LABEL 0x11
+ENUT BaseFlag1
+LABEL 0x22
 GotoPrepScreen
 ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC 0x0
+EVBIT_MODIFY 3
+MUSC S_FE4Conversation
 SetBackground(HallCG)
 TEXTSTART
-TEXTSHOW FillerDialogue
+TEXTSHOW Ch14_Ending0
 TEXTEND
+MUSC 0x0
 FADI 0x3c
 CLEE 0
 CLEN 0
@@ -400,6 +409,7 @@ DISA Briant
 STAL 30
 LABEL 0x6
 Text(Ch14_EndingFinal) //end of chapter
+SystemText(Arc1Ending)
 MoveToChapter(ChapterZ1)
 ENDA
 
@@ -488,10 +498,10 @@ LABEL 0x2
 EndEvent
 
 C14BlairCharleyTalkConvo:
-ConvoEvent(FillerDialogue)
+ConvoEvent(Ch14_CharleyTalk)
 
 C14BlairAthenaTalkConvo:
-ConvoEvent(FillerDialogue)
+ConvoEvent(Ch14_AthenaTalk)
 
 ALIGN 4
 EscapePointPointerTable(Chapter14,C14Escape)

@@ -148,7 +148,7 @@ ENUT GuideChpt1
 CleanTextNoMap(HallCG,Ch1_Opening)
 LoadUnitsByDifficulty(C1Easy,C1Normal,C1Hard)
 MUSC NarrationTheme
-Narration(Ch1_Narration)
+Narration(MapCG,Ch1_Narration)
 LOAD1 0x0 C1CutsceneUnits
 ENUN
 CHECK_ALIVE Kenneth

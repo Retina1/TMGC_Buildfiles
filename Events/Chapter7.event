@@ -275,7 +275,7 @@ ENUT GuideChpt7
 LoadUnitsByDifficulty(C7Easy,C7Normal,C7Hard)
 LOAD1 0x0 C7Allies
 MUSC NarrationTheme
-Narration(Ch7_Narration)
+Narration(MapCG,Ch7_Narration)
 CLEAN
 CHECK_ALIVE Rachael
 BNE 0x2 0xC 0x0

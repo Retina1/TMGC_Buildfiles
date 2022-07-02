@@ -326,14 +326,26 @@
 	Chapter(Chapter13)
 		Entry
 			name(C13_Delusion_Select)
-			bg(DesertCG)
+			bg(SunsetPathCG)
 			importance(3)
 			event(C13DelusionEvent)
 			eventID(BaseFlag1)
+		Entry
+			name(Blair_Arin_Base_Select)
+			bg(SunsetPathCG)
+			text(C13_Blair_Arin_Base)
+			baseSupport(Blair,Arin,BSupport)
 	Chapter(Chapter14)
 		Entry
+			name(C14_Deserters_Select)
+			bg(OutdoorCastleCG)
+			importance(3)
+			text(C14_Deserters)
+			item(Axebuster,Mikey)
+			eventID(BaseFlag1)
+		Entry
 			name(Blair_Carbon_Base_Select)
-			bg(DesertCG)
+			bg(OutdoorCastleCG)
 			text(C14_Blair_Carbon_Base)
 			baseSupport(Blair,Carbon,CSupport)
 	Chapter(Chapter19)

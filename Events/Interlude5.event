@@ -78,9 +78,10 @@ EnableFreeMovement
 LOAD1 0x0 I5Units
 LOAD1 0x0 I5NPC
 ENUN
+CleanTextNoMap(HallCG,FillerDialogue)//negotiations, dalst yoinks ygstra
 MUSC NarrationTheme2
-Narration(Base5_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+Narration(Map2CG,Base5_Narration)
+CleanTextNoMap(HallCG,FillerDialogue)//zeke returns
 GotoPrepScreenNoBaseCheck
 ENDA
 

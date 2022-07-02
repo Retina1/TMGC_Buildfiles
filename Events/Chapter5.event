@@ -177,7 +177,7 @@ ENUT GuideChpt5
 LoadUnitsByDifficulty(C5Easy,C5Normal,C5Hard)
 LOAD1 0x0 C5Units
 MUSC NarrationTheme
-Narration(Ch5_Narration)
+Narration(MapCG,Ch5_Narration)
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0
 CleanTextNoMap(JungleCG,Ch5_Opening_Dead_Peggy)

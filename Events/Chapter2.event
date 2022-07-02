@@ -166,7 +166,7 @@ LoadUnitsByDifficulty(C2Easy,C2Normal,C2Hard)
 LOAD1 0x0 C2Allies
 ENUN
 MUSC NarrationTheme
-Narration(Ch2_Narration)
+Narration(MapCG,Ch2_Narration)
 CHECK_ALIVE Kenneth
 BEQ 0x11 0xC 0x0
 CHECK_ALIVE Natasia

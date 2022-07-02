@@ -276,7 +276,7 @@ BeginningScene:
 ENUT GuideChpt13
 LoadUnitsByDifficulty(C13Easy,C13Normal,C13Hard)
 MUSC NarrationTheme2
-Narration(Ch13_Narration)
+Narration(MapCG,Ch13_Narration)
 CLEAN
 FADU 60
 CAM1 Valden
@@ -311,7 +311,7 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC S_FE4Conversation
+MUSC VictoryMinor
 CleanTextNoMap(OutdoorCastleCG,Ch13_Ending)
 MoveToChapter(Chapter14)
 ENDA

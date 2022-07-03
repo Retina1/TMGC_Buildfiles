@@ -11,38 +11,10 @@ WORD 0 //terminator
 //Change existing effective items (class weaknesses are already part of the class data table)
 #define ItemEffectivenessPtr(item_id, label_to_point_to) "PUSH; ORG ItemTable + 0x24*item_id + 0x10; POIN label_to_point_to; POP"
 //just do this all in table lol
-/*ItemEffectivenessPtr(Rapier, LordWeaponEffectiveness)
-ItemEffectivenessPtr(Armorslayer, ArmorEffectiveness)
-ItemEffectivenessPtr(Wyrmslayer, DragonEffectiveness)
-ItemEffectivenessPtr(Zanbato, HorseEffectiveness)
-ItemEffectivenessPtr(Horseslayer, HorseEffectiveness)
-ItemEffectivenessPtr(Halberd, HorseEffectiveness)
-ItemEffectivenessPtr(Hammer, ArmorEffectiveness)
-ItemEffectivenessPtr(Swordslayer, SwordEffectiveness)
-ItemEffectivenessPtr(IronBow, FlierEffectiveness)
-ItemEffectivenessPtr(SteelBow, FlierEffectiveness)
-ItemEffectivenessPtr(SilverBow, FlierEffectiveness)
-ItemEffectivenessPtr(KillerBow, FlierEffectiveness)
-ItemEffectivenessPtr(BraveBow, FlierEffectiveness)
-ItemEffectivenessPtr(BarrierBow, FlierEffectiveness)
-ItemEffectivenessPtr(Longbow, FlierEffectiveness)
-ItemEffectivenessPtr(Ballista, FlierEffectiveness)
-ItemEffectivenessPtr(IronBallista, FlierEffectiveness)
-ItemEffectivenessPtr(KillerBallista, FlierEffectiveness)
-ItemEffectivenessPtr(DragonAxe, DragonEffectiveness)
-ItemEffectivenessPtr(BeaconBow, FlierEffectiveness)
-ItemEffectivenessPtr(GildedBow, FlierEffectiveness)
-ItemEffectivenessPtr(DragonSpear, DragonEffectiveness)
-ItemEffectivenessPtr(HeavySpear, ArmorEffectiveness)
-ItemEffectivenessPtr(WindSword, FlierEffectiveness)
-ItemEffectivenessPtr(MasterBow, FlierEffectiveness)
-ItemEffectivenessPtr(ShiningBow, FlierEffectiveness)
-ItemEffectivenessPtr(Shimmersword, DarkEffectiveness)
-ItemEffectivenessPtr(DousingLance, AnimaEffectiveness)
-ItemEffectivenessPtr(HereticAxe, LightEffectiveness)*/
 
 //Protector item (macro still works, even if it's wrongly named)
 ItemEffectivenessPtr(DelphiShield, FlierProtection)
+ItemEffectivenessPtr(BigShield, ArmorProtection)
 
 #define SetWeaponEffectiveness(type_list, coefficient_times_2) "BYTE 0 coefficient_times_2; SHORT type_list"
 LordWeaponEffectiveness:
@@ -111,3 +83,12 @@ WORD 0
 #define SetProtection(type_list) "SHORT 0 type_list"
 FlierProtection:
 SetProtection(FlierType)
+
+HorseProtection:
+SetProtection(HorseType)
+
+ArmorProtection:
+SetProtection(ArmorType)
+
+OmniProtection:
+SetProtection(ArmorType|HorseType|DragonType|FlierType|SwordType|LanceType|AxeType|BowType|AnimaType|LightType|DarkType|StaffType)

@@ -1,4 +1,4 @@
-//CURRENT NEXT 0x63
+//CURRENT NEXT 0x67
 
 
 #define Map0 0x1
@@ -84,6 +84,7 @@
 #define OBJVolcano 0x2a
 #define OBJDesert 0x3f
 #define OBJFrontier 0x48
+#define OBJStronghold 0x63
 
 #define TILTown 0x2b
 #define TILField 0x2c
@@ -93,6 +94,7 @@
 #define TILVolcano 0x30
 #define TILDesert 0x40
 #define TILFrontier 0x49
+#define TILStronghold 0x64
 
 #define PALDalstTown 0x31
 #define PALBoatyTown 0x5a
@@ -114,9 +116,12 @@
 
 #define PALYgstraFrontier 0x4a
 
+#define PALStronghold 0x66
+
 #define ANIField 0x38
 #define ANITown 0x39
 #define ANICastle 0x3a
 #define ANIFrontier 0x4c
+#define ANIStronghold 0x65
 
 #define ANILava 0x3b

@@ -2,7 +2,7 @@
 //By Tequila
 
 #include EAstdlib.event
-
+PUSH
 #ifdef _FE8_
 	#define table1 0x78D90
 	#define table2 0x78E90
@@ -20,3 +20,4 @@
 #else
 	ERROR "You're not assembling FE8 events!"
 #endif
+POP

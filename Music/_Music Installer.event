@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "SonicBoss.event"
+SongTable(S_SonicBoss,SonicBoss,0)
+}
+{
 #include "Dialga.event"
 SongTable(S_Dialga,Dialga,0)
 }

@@ -7,6 +7,14 @@ Kill the emperor by[N]
 your own hand?[N]
 [Yes][X]
 
+##ObtainTheHandle
+A small tomb lies beyond[N]
+the open door.[A][N]
+Though you wish not to disturb[N]
+it, something catches your eye.[A][N]
+...On the ground lies a long[N]
+thin rod, like an axe's handle.[A][X]
+
 ##Arc1Ending
 And so comes the end of an era.[A][N]
 The flames of war that had burned[N]
@@ -43,13 +51,27 @@ your strength, and bring victory![A][X]
 
 ##Ch14_CharleyTalk
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadCharley]
-[ToggleMouthMove]...[ToggleMouthMove]It's time, Blair. Have you made[N]
-your final preparations?[A][X]
+You're Blair, right? I feel like[N]
+we might've met before.[A][N]
+The name's Charley. I've joined[N]
+up with Opistia to help you.[A][N][OpenMidLeft]
+I'm glad to hear that.[N]
+I see you've got quite the large bow.[A][N][OpenMidRight]
+Ah, yes. It's certainly unwieldy,[N]
+but its range is unmatched.[A][N]
+Whatever you need done, I can[N]
+handle for you.[A][X]
 
 ##Ch14_AthenaTalk
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadAthena]
-[ToggleMouthMove]...[ToggleMouthMove]It's time, Blair. Have you made[N]
-your final preparations?[A][X]
+[ToggleMouthMove]...[ToggleMouthMove]So, we meet again after all.[N]
+You were in the capital.[A][N]
+I'm Athena, if you don't recall.[A][N]
+The archbishop sent a few your way,[N]
+and, well, here I am.[A][N][OpenMidLeft]
+I appreciate that.[A][N][OpenMidRight]
+Good. I shall be off to battle now.[N]
+Guide me well.[A][X]
 
 ##Ch14_Ending0
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadArin][OpenMidLeft][CloseEyes]

@@ -9,10 +9,6 @@
 #include "Extensions/Hack Installation.txt"
 #include "EAstdlib.event"
 
-#ifndef FreeSpace
-	#define FreeSpace 0x1000000
-	ORG FreeSpace
-#endif
 {
 // Definitions & variables
 #define MMP_Buffer 0x202B4AC    // Set this to some free ram space, size 0x200 bytes.

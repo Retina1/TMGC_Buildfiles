@@ -9,10 +9,6 @@
 #include "Extensions/Hack Installation.txt"
 #include "Extensions/6CDefinitions.txt"
 
-#ifndef FreeSpace
-	#define FreeSpace 0xB2B000
-	ORG FreeSpace
-#endif
 
 PUSH
 

@@ -153,6 +153,7 @@
 #define PhalanotisIcon 0x70
 #define NuiusseonIcon 0x71
 #define ArkhinalIcon 0xb7
+#define ArkhinalHandleIcon 0xe8
 #define IneubrenosIcon 0x72
 #define StarfallIcon 0x7c
 #define BookOfOpistusIcon 0x7d
@@ -653,6 +654,9 @@ ItemIconEntry(NuiusseonIcon)
 ALIGN 4
 ItemIconEntry(ArkhinalIcon)
 #incbin "Axes/Arectaris.dmp"
+ALIGN 4
+ItemIconEntry(ArkhinalHandleIcon)
+#incbin "Axes/ArkhinalHandle.dmp"
 ALIGN 4
 ItemIconEntry(IneubrenosIcon)
 #incbin "Bows/Arectaris.dmp"

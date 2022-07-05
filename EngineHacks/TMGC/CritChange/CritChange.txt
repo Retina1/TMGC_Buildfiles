@@ -7,11 +7,6 @@
 	
 #include EAstdlib.event
 #include "Extensions/Hack Installation.txt"
-	
-#ifndef FreeSpace
-	#define FreeSpace 0xD00000
-	ORG FreeSpace
-#endif
 
 PUSH
 

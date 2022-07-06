@@ -1,203 +1,6 @@
 #define ItemIconEntry(ItemIconID) "ORG NewItemIcons + (ItemIconID*128)"
 
-#define IronSwordIcon 0x0
-#define SteelSwordIcon 0x2
-#define SilverSwordIcon 0x3
-#define GildedSwordIcon 0x93
-#define MasterSwordIcon 0xd1
-#define LevinSwordIcon 0x9
-#define LancereaverIcon 0x11
-#define ArmorslayerIcon 0xd
-#define WyrmslayerIcon 0xe
-#define ZanbatoIcon 0x12
-#define KagutsuchiIcon 0xd5
-#define KillingEdgeIcon 0xc
-#define LightBrandIcon 0xf
-#define RapierIcon 0x8
-#define RuneswordIcon 0x10
-#define BraveSwordIcon 0xa
-#define ShamshirIcon 0xb2
-#define LancesnapperIcon 0x78
-#define ShimmerswordIcon 0x75
-#define FlameSwordIcon 0x99
-
-#define IronLanceIcon 0x13
-#define SteelLanceIcon 0x15
-#define SilverLanceIcon 0x16
-#define GildedLanceIcon 0x94
-#define MasterLanceIcon 0xd2
-#define JavelinIcon 0x1b
-#define SpearIcon 0x1c
-#define AxereaverIcon 0x1d
-#define HorseslayerIcon 0x1a
-#define KillerLanceIcon 0x19
-#define NubokoIcon 0xc4
-#define BraveLanceIcon 0x18
-#define ShatterspearIcon 0xa7
-#define DragonpikeIcon 0xb6
-#define AxebusterIcon 0x79
-#define DousingLanceIcon 0x74
-
-#define IronAxeIcon 0x1e
-#define SteelAxeIcon 0x1f
-#define SilverAxeIcon 0x20
-#define GildedAxeIcon 0x95
-#define MasterAxeIcon 0xd3
-#define HandAxeIcon 0x27
-#define TomahawkIcon 0x28
-#define HammerIcon 0x25
-#define SwordreaverIcon 0x29
-#define HalberdIcon 0x24
-#define KillerAxeIcon 0x23
-#define UkonvasaraIcon 0xbe
-#define BraveAxeIcon 0x22
-#define DevilAxeIcon 0x26
-#define SwordslayerIcon 0x2a
-#define DracoaxeIcon 0x58
-#define FrypanIcon 0xb9
-#define HereticAxeIcon 0x73
-#define LadymaceIcon 0x6d
-
-#define IronBowIcon 0x2b
-#define SteelBowIcon 0x2c
-#define SilverBowIcon 0x2d
-#define GildedBowIcon 0x96
-#define MasterBowIcon 0xd4
-#define KillerBowIcon 0x2f
-#define LongbowIcon 0x32
-#define BraveBowIcon 0x30
-#define ShiningBowIcon 0xa8
-#define GreatbowIcon 0x80
-#define WardbowIcon 0xc5
-
-#define MiniBallistaIcon 0x35
-
-#define FireIcon 0x36
-#define ThunderIcon 0x37
-#define ElfireIcon 0x38
-#define BoltingIcon 0x39
-#define FimbulvetrIcon 0x3a
-#define FlareIcon 0x3b
-#define CaliburIcon 0x3c
-#define GalewindIcon 0x5
-#define InversionIcon 0x6
-#define TrisagionIcon 0xbf
-#define CloudburstIcon 0x81
-#define SagittaeIcon 0xe5
-
-#define LightningIcon 0x3d
-#define ShineIcon 0x3e
-#define DivineIcon 0x3f
-#define PurgeIcon 0x40
-#define AuraIcon 0x41
-#define RadianceIcon 0x42
-#define PierceIcon 0xb
-#define SmiteIcon 0x14
-#define BanishIcon 0x17
-#define JavelinRainIcon 0xc0
-#define ResireIcon 0x8a
-#define LuxIcon 0x82
-
-#define FluxIcon 0x43
-#define NightfallIcon 0x44
-#define NosferatuIcon 0x45
-#define FenrirIcon 0x47
-#define JormungandrIcon 0x7
-#define KnoggelviIcon 0x21
-#define CorruptionIcon 0x2e
-#define FreikugelIcon 0xc1
-#define HellIcon 0x46
-#define NocturneIcon 0xbc
-#define NoxIcon 0x83
-
-#define HealIcon 0x49
-#define MendIcon 0x4a
-#define RecoverIcon 0x4b
-#define PhysicIcon 0x4c
-#define FortifyIcon 0x4d
-#define RestoreIcon 0x4e
-#define SilenceIcon 0x4f
-#define SleepIcon 0x50
-#define BerserkIcon 0x51
-#define WarpIcon 0x52
-#define RescueIcon 0x53
-#define TorchStaffIcon 0x54
-#define HammerneIcon 0x55
-#define UnlockIcon 0x56
-#define BarrierIcon 0x57
-#define WrathStaffIcon 0xd6
-
-#define YoinkIcon 0x63
-#define RunestaffIcon 0x64
-#define RewarpIcon 0x65
-#define ThiefStaffIcon 0x66
-#define AgainIcon 0x04
-#define MineStaffIcon 0xe6
-
-#define AwakenIcon 0xb3
-
-#define MasterSealIcon 0xd9
-#define AnimusSealIcon 0x62
-
-#define SeraphRobeIcon 0x59
-#define SpiritDustIcon 0xc9
-#define EnergyRingIcon 0x5a
-#define SecretBookIcon 0x5b
-#define SpeedwingIcon 0x5c
-#define GoddessIconIcon 0x5d
-#define DracoshieldIcon 0x5e
-#define TalismanIcon 0x5f
-#define BootsIcon 0x60
-#define BodyRingIcon 0x61
-
-#define PhalanotisIcon 0x70
-#define NuiusseonIcon 0x71
-#define ArkhinalIcon 0xb7
-#define ArkhinalHandleIcon 0xe8
-#define IneubrenosIcon 0x72
-#define StarfallIcon 0x7c
-#define BookOfOpistusIcon 0x7d
-#define SDarkIcon 0x7e
-#define PrototypeIcon 0x7f
-
-#define DivineBreathIcon 0xca
-#define EarthBreathIcon 0xcb
-#define FireBreathIcon 0xcc
-#define IceBreathIcon 0xcd
-#define DemonBreathIcon 0xce
-#define WyvernBreathIcon 0xcf
-
-#define HoneyCharmIcon 0x6f
-#define AnkleWeightIcon 0x8e
-#define FoggyGlassesIcon 0x7b
-#define MiniGemIcon 0x89
-#define AngelWingsIcon 0x76
-#define SkillScrollIcon 0x7a
-#define MercuryBootsIcon 0xe7
-
-#define LegRingIcon 0x8f
-#define ParagonRingIcon 0x90
-#define KnightRingIcon 0x91
-
-#define EvilEyeIcon 0x77
-#define SlamIcon 0xab
-
-#define IronRuneIcon 0xdb
-
-#define SalvationIcon 0xe0
-#define GaleriderIcon 0xe1
-#define MazandyneIcon 0xe2
-#define LonginusIcon 0xe3
-#define FlyingSpikeIcon 0xe4
-#define EmboldenerIcon 0x8b
-#define PartisanIcon 0x1
-#define BeecurveBowIcon 0x97
-#define EyedropsIcon 0xdc
-
-#define NoteIcon 0x98
-
-#define ResoluteSealIcon 0xd8
-#define AscendancySealIcon 0xd7
+//defs now handled elsewhere
 
 ALIGN 4
 NewItemIcons:
@@ -410,6 +213,9 @@ ItemIconEntry(GreatbowIcon)
 ALIGN 4
 ItemIconEntry(WardbowIcon)
 #incbin "2WBWardbow.dmp"
+ALIGN 4
+ItemIconEntry(LuckbowIcon)
+#incbin "Bows/ViridBow.dmp"
 
 ALIGN 4
 ItemIconEntry(FireIcon)
@@ -444,6 +250,9 @@ ItemIconEntry(TrisagionIcon)
 ALIGN 4
 ItemIconEntry(CloudburstIcon)
 #incbin "Tomes/Anima/Ice/Cross Freeze.dmp"
+ALIGN 4
+ItemIconEntry(AvalonIcon)
+#incbin "Tomes/Avalon.dmp"
 
 ALIGN 4
 ItemIconEntry(LightningIcon)
@@ -644,6 +453,46 @@ ItemIconEntry(ResoluteSealIcon)
 ALIGN 4
 ItemIconEntry(AscendancySealIcon)
 #incbin "statboosters/Sun Amulet.dmp"
+
+ALIGN 4
+ItemIconEntry(BlackGemIcon)
+#incbin "Basics/BlackGem.dmp"
+ALIGN 4
+ItemIconEntry(BlueGemIcon)
+#incbin "Basics/BlueGem.dmp"
+ALIGN 4
+ItemIconEntry(ChestKeyIcon)
+#incbin "Basics/ChestKey.dmp"
+ALIGN 4
+ItemIconEntry(DoorKeyIcon)
+#incbin "Basics/DoorKey.dmp"
+ALIGN 4
+ItemIconEntry(ElixirIcon)
+#incbin "Basics/Elixir.dmp"
+ALIGN 4
+ItemIconEntry(JunaFruitIcon)
+#incbin "Basics/JunaFruit.dmp"
+ALIGN 4
+ItemIconEntry(MemberCardIcon)
+#incbin "Basics/MemberCard.dmp"
+ALIGN 4
+ItemIconEntry(PureWaterIcon)
+#incbin "Basics/PureWater.dmp"
+ALIGN 4
+ItemIconEntry(RedGemIcon)
+#incbin "Basics/RedGem.dmp"
+ALIGN 4
+ItemIconEntry(SilverCardIcon)
+#incbin "Basics/SilverCard.dmp"
+ALIGN 4
+ItemIconEntry(VulneraryIcon)
+#incbin "Basics/Vulnerary.dmp"
+ALIGN 4
+ItemIconEntry(WhiteGemIcon)
+#incbin "Basics/WhiteGem.dmp"
+ALIGN 4
+ItemIconEntry(ZoryaShieldIcon)
+#incbin "Basics/ZoryaShield.dmp"
 
 ALIGN 4
 ItemIconEntry(PhalanotisIcon)

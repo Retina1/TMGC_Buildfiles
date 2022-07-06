@@ -30,7 +30,7 @@ cmp r0, #0
 beq GoBack
 
 mov r0,r4
-add r0,#4
+add r0,#50
 mov r4,r0 
 
 

@@ -99,10 +99,30 @@
 #define DivineDragonCard 0xba
 
 #define CrateCard 0xc9
-
-//including addington, current next entry is 0xca
-
+#define HorseCard 0xd5
+#define SwordCard 0xd6
+#define ThiefMCard 0x8e
+#define ThiefFCard 0xd7
 ALIGN 4
+
+ThiefMPortrait:
+#incbin "ThiefM.dmp"
+ThiefMPortraitPalette:
+#incbin "ThiefMPalette.dmp"
+
+ThiefFPortrait:
+#incbin "ThiefF.dmp"
+ThiefFPortraitPalette:
+#incbin "ThiefFPalette.dmp"
+
+HorsePortrait:
+#incbin "Horse.dmp"
+HorsePortraitPalette:
+#incbin "HorsePalette.dmp"
+SwordPortrait:
+#incbin "Sword.dmp"
+SwordPortraitPalette:
+#incbin "SwordPalette.dmp"
 
 CratePortrait:
 #incbin "CrateCard.dmp"
@@ -597,6 +617,8 @@ setCardEntry(ClericCard,ClericPortrait,ClericPortraitPalette)
 setCardEntry(BishopMCard,BishopMPortrait,BishopMPortraitPalette)
 setCardEntry(BishopFCard,BishopFPortrait,BishopFPortraitPalette)
 
+setCardEntry(ThiefMCard,ThiefMPortrait,ThiefMPortraitPalette)
+setCardEntry(ThiefFCard,ThiefFPortrait,ThiefFPortraitPalette)
 setCardEntry(AssassMCard,AssassMPortrait,AssassMPortraitPalette)
 setCardEntry(AssassFCard,AssassFPortrait,AssassFPortraitPalette)
 setCardEntry(TricksterCard,TricksterPortrait,TricksterPortraitPalette)
@@ -607,6 +629,8 @@ setCardEntry(BerserkFCard,BerserkFPortrait,BerserkFPortraitPalette)
 setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
 
 setCardEntry(CrateCard,CratePortrait,CratePortraitPalette)
+setCardEntry(HorseCard,HorsePortrait,HorsePortraitPalette)
+setCardEntry(SwordCard,SwordPortrait,SwordPortraitPalette)
 setCardEntry(FireDragonCard,FireDragonPortrait,FireDragonPortraitPalette)
 setCardEntry(IceDragonCard,IceDragonPortrait,IceDragonPortraitPalette)
 setCardEntry(WyvernCard,WyvernPortrait,WyvernPortraitPalette)

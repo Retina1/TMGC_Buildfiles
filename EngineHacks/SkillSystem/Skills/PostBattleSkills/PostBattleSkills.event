@@ -18,6 +18,20 @@ POIN LifetakerEvent
 #include "Lifetaker/LifetakerEvent.event"
 
 ALIGN 4
+Dullahan:
+#incbin "Dullahan/Dullahan.dmp"
+POIN SkillTester
+WORD DullahanID
+POIN DullahanEvent
+#include "Dullahan/DullahanEvent.event"
+
+ALIGN 4
+DullahanCost:
+#incbin "Dullahan/DullahanCost.dmp"
+POIN SkillTester
+POIN DullahanID
+
+ALIGN 4
 Fury:
 #incbin "Fury/fury.dmp"
 POIN SkillTester

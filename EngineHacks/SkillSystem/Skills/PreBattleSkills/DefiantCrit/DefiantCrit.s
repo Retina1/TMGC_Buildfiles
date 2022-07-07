@@ -28,10 +28,10 @@ beq GoBack
 
 mov r0, r4
 
-@avoid
-add r0,#0x66
+@apply luna effect
+add r0,#0x4e
 ldrh r3,[r0]
-add r3,#30
+mov r3,#2
 strh r3,[r0]
 
 

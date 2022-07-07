@@ -395,7 +395,7 @@
 //Defiant Avoid/Crit: When HP is 25% or lower, gain +30 Avoid or Crit.
 //By Sme
 #define DefiantAvoID 235
-#define DefiantCritID 236
+#define DefiantCritID 236 //haha jk this one is now defiant luna
 
 //Indoor/Outdoor Fighter: +10 Hit and Avo when fighting indoors/outdoors.
 //By Sme
@@ -529,9 +529,9 @@
 #define SturdyStanceID 252
 #define SwiftStanceID 253
 #define WardingStanceID 254
-#define SpectrumStanceID 255
+#define SpectrumStanceID 245
 //By Sme
-#define AlertStanceID 245
+#define AlertStanceID 255
 #define AlertStancePlusID 255
 
 //Thunderstorm: If weapon weight > enemy W. Weight, +2 dmg, +15% hit, +5% crit.
@@ -806,7 +806,7 @@
 
 //Stat Modifier Skills
 
-//Defiant Skills: When HP is 25% or lower, gain +4 to the given stat.
+//Defiant Skills: When HP is 25% or lower, gain +50 to the given stat.
 //By Sme
 #define DefiantStrID 255
 #define DefiantMagID 255
@@ -1065,7 +1065,9 @@
 
 #define CunningID 4
 #define NiceThighsID 115
+#define DullahanID NiceThighsID
 #define PersonalityID 116
+#define MiracullahanID PersonalityID
 
 
 //Broken Skills

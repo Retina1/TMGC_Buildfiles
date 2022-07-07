@@ -55,11 +55,24 @@ ALIGN 4
 SpecificWeaponAnimations:
 BYTE WrathStaff Hit1AnimID 
 BYTE Slam Hit1AnimID 
-BYTE SilverSword Shards1AnimID // Silver sword will always use the Shards1 animation 
+BYTE Lancereaver Shards2AnimID
+BYTE Lancesnapper Shards2AnimID
+BYTE Wyrmslayer Shards2AnimID
+BYTE Axereaver ThinSlashAnimID
+BYTE Axebuster ThinSlashAnimID
+BYTE Dragonpike ThinSlashAnimID
+BYTE Swordreaver Hit1AnimID
+BYTE Swordslayer Hit1AnimID
+BYTE Dracoaxe Hit1AnimID
+BYTE Inversion FlashAnimID
+BYTE Banish Impact1AnimID
+BYTE Corruption Splash2AnimID
 BYTE HoratioBlade ThickSlashAnimID
 BYTE SummonBlade ThickSlashAnimID
 BYTE TheSDarkTome Splash2AnimID
+BYTE Flare CauterizeAnimID 
 BYTE Starfall CauterizeAnimID 
+BYTE Avalon FlashAnimID
 SHORT 0xFFFF // Terminator 
 
 

@@ -34,4 +34,7 @@
 #define LearnSkill(charID,skillID) "SVAL 1 skillID; SVAL 2 charID; ASMC ASMC_LearnNewSkill|1"
 #define CurrentUnitLearnSkill(skillID) "SVAL 1 skillID; SVAL 2 (-1); ASMC ASMC_LearnNewSkill|1"
 
+#define RemoveItem(unit,item) "SVAL 1 unit; BYTE 0x40 0x0D ; SHORT item ; POIN TakeUnitOneItem|1"
+#define TakeItemAll(ITEM) "BYTE 0x40 0x0D ; SHORT ITEM ; POIN TakeItemAll|1"
+
 //DeathBranchText(char1,char2,deadmus,alivemus,background,bothalive,char1dead,char2dead,bothdead) i'm sorry

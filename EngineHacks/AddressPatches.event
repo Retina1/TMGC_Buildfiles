@@ -1,3 +1,4 @@
+
 //sort convoy items by iconid
 PUSH
 ORG 0x09815A
@@ -8,6 +9,22 @@ ORG 0x09817A
 BYTE 0x7F 0xF7 0xC1 0xFA
 ORG 0x098182
 BYTE 0x7F 0xF7 0xBD 0xFA
+POP
+
+PUSH
+
+    //prevent freezes when units don't exist
+    ORG $F25C
+    SHORT 0x2000
+    ORG $1027C
+    WORD 0xE0222000
+    ORG $102D4
+    SHORT 0x2000
+    ORG $1063C
+    SHORT 0x2000
+    ORG $10804
+    SHORT 0x2000
+
 POP
 
 //weather stuff- higher number goes behind more

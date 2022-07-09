@@ -56,10 +56,13 @@ ENDTRAP
 
 ALIGN 4
 
-Z1Units:
+Z1UnitsZeke:
 UNIT Zeke ZekeLord 0x0 Level(7,Ally,0) [29,0] 0x0 0x0 0x0 0x0 [IronBow, Elixir, ChestKey] NoAI
-UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [27,2] 0x0 0x0 0x0 0x0 [SilverSword, IronSword, Vulnerary] NoAI
-UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [29,2] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe, Vulnerary] NoAI
+UNIT
+
+Z1Units:
+UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [1,0] 0x0 0x0 0x1 REDA27R2 [SilverSword, IronSword, Vulnerary] NoAI
+UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [2,0] 0x0 0x0 0x1 REDA29R2 [IronAxe, HandAxe, Vulnerary] NoAI
 UNIT
 
 Z1Leila:
@@ -146,12 +149,20 @@ RemoveUnit(Mikey)
 RemoveUnit(Carbon)
 RemoveUnit(Athena)
 RemoveUnit(Charley)
-LOAD1 0x1 Z1Units
-ENUN
-LoadUnitsByDifficulty(Z1Easy,Z1Normal,Z1Hard)
 MUSC NarrationTheme
 Narration(MapCG,ChZ1_Narration)
-CleanText(PathCG,FillerDialogue)
+CleanText(PathCG,Z1Opening)
+LOAD1 0x1 Z1Units
+ENUN
+LOAD1 0x1 Z1UnitsZeke
+ENUN
+SetBackground(PathCG)
+TEXTSTART
+TEXTSHOW Z1Opening2
+TEXTEND
+LoadUnitsByDifficulty(Z1Easy,Z1Normal,Z1Hard)
+ClearBackgroundSmooth
+Text(Z1Opening3)
 CAM1 Zeke
 STAL 30
 SOUN 0xB1
@@ -161,6 +172,7 @@ SetUnitStatus(Zeke, Item3Uses, 2)
 GiveItem(Partisan,Zeke)
 MOVE 60 Zeke [28,1]
 ENUN
+Text(Z1Opening4)
 ENUT 0x21
 ENUT 0x22
 SystemText(ZekeArcPrimer)
@@ -170,9 +182,9 @@ EndEvent
 CZ1Turn3:
 Reinforcements(Z1Leila)
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(Z1LeilaText)
 TurnEnemy(Leila)
-Text(FillerDialogue)
+Text(Z1LeilaText2)
 TurnAlly(Leila)
 EndEvent
 
@@ -197,17 +209,17 @@ EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-Text(PathCG,FillerDialogue)
+Text(PathCG,Z1Ending)
 MoveToChapter(ChapterZ2)
 EndEvent
 
 Z1ZekeHyperiusSupport:
-Text(FillerDialogue)
+Text(ZekeHyperiusCSupport)
 SetSupport(Zeke,Hyperius,CSupport,1)
 EndEvent
 
 Z1HyperiusLeilaSupport:
-Text(FillerDialogue)
+Text(HyperiusLeilaCSupport)
 SetSupport(Hyperius,Leila,CSupport,1)
 EndEvent
 

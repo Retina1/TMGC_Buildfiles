@@ -361,17 +361,11 @@ ALIGN 4
 //higher promo values
 #include "TMGC/HigherStatGains/HigherNumberGains.event"
 
-//reverse mode
-#include "TMGC/ReverseInstaller/ReverseInstaller.txt"
-
 //item drops- mkol/huichelaar
 #include "TMGC/ItemDropIcon/Display Droppable Item.event"
 
 //100 Crit Cap
 #include "ExternalHacks/CritCap/CritCap.event"
-	
-//anim numbers- not working yet
-//#include "ExternalHacks/AnimNumbers/AnimNumbers.event"
 
 //group AI
 #include "TMGC/GroupAI/GroupAI.event"
@@ -441,3 +435,6 @@ POP
 
 //class hp
 #include "TMGC/SetHPClassLimit/SetHPClassLimit.event"
+
+//prep image
+#include "TMGC/PrepImage/Installer.event"

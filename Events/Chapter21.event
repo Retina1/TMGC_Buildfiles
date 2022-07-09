@@ -1,0 +1,188 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(Events21,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C21Units C21Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+//prison doors
+Door(2,2)
+Door(3,2)
+Door(2,3)
+Door(3,2)
+Door(9,2)
+Door(9,3)
+Door(10,2)
+Door(10,3)
+Door(15,2)
+Door(15,3)
+Door(16,2)
+Door(16,3)
+Door(17,18)
+Door(17,19)
+Door(18,18)
+Door(18,19)
+Door(16,28)
+Door(16,29)
+Door(17,28)
+Door(17,29)
+Door(1,23)
+Door(2,23)
+Door(1,24)
+Door(2,24)
+//non prison doors
+Door(1,6)
+Door(2,6)
+Door(1,7)
+Door(2,7)
+Door(8,22)
+Door(9,22)
+Door(10,22)
+Door(8,23)
+Door(9,23)
+Door(10,23)
+Door(10,15)
+Door(11,15)
+//chests
+Chest(MemberCard,14,4)
+Chest(MemberCard,19,13)
+Chest(MemberCard,10,14)
+DurabilityChest(SkillScroll,CantoID,9,13)
+Chest(MemberCard,11,13)
+Chest(Rescue,12,14)
+Chest(Implant,18,24)
+Chest(SpiritDust,19,23)
+Chest(Fenrir,15,35)
+Chest(FlameSword,17,36)
+Chest(FlameSword,19,36)
+Chest(FlameSword,16,37)
+//shop
+SecretShop(Ch21SecretShop,12,4) 
+END_MAIN
+
+ALIGN 4
+Ch21SecretShop:
+SHLI Runesword Kagutsuchi Spear Nuboko Tomahawk Ukonvasara Bolting Trisagion Purge JavelinRain Freikugel Rescue Unlock AngelicRobe
+BYTE 0x0 0x0
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+TelliusTorchOff(15,7,6)
+TelliusTorchOff(6,17,6)
+TelliusTorchOff(15,23,6)
+TelliusTorchOff(6,8,6)
+TelliusTorchOff(4,5,6)
+TelliusTorchOff(10,29,6)
+TelliusTorchOn(1,32,6)
+TelliusTorchOn(19,11,3)
+ENDTRAP
+
+ALIGN 4
+
+C21Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [5,35] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,33] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,33] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,33] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,34] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,34] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,34] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,34] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,35] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,35] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,35] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,35] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,36] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,36] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,36] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,36] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT
+
+C21Easy:
+UNIT Ygstra MercF 0x0 Level(13,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [LightBrand] ChaseOnceApproachedAI
+UNIT
+
+C21Normal:
+UNIT Ygstra Mage 0x0 Level(15,Enemy,1) [5,15] DropItem 0x0 0x0 0x0 [Thunder,DoorKey] NoAI
+UNIT
+
+C21Hard:
+UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [7,25] 0x0 0x0 0x0 0x0 [Fenrir] NoAI
+UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT
+
+C21InitialAllies:
+UNIT Johan LncCav 0x0 Level(8,NPC,0) [16,1] 0x0 0x0 0x0 0x0 [0x0] [0x6,0x3,0x4,0x0]
+UNIT Ptolemy BowArm 0x0 Level(14,NPC,0) [8,5] 0x0 0x0 0x0 0x0 [BeecurveBow,Beelista,Elixir] [0x6,0x3,0x4,0x0]
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt21
+MUSC S_GentleMadman
+Narration(Map2CG,Ch21_Narration)
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+LoadUnitsByDifficulty(C21Easy,C21Normal,C21Hard)
+LOAD1 0x0 C21Units
+ENUN
+LOAD1 0x0 C21InitialAllies
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+ResetBaseFlags
+MUSC S_MainTheme
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+MoveToChapter(Chapter22)
+ENDA
+
+ALIGN 4
+EscapePointPointerTable(Chapter21,C21Escape)
+
+ALIGN 4
+C21Escape:
+EscapePoint(0,8, MoveLeft)
+EscapePoint(0,9, MoveLeft)
+EscapePoint(20,8, MoveRight)
+EscapePoint(20,9, MoveRight)
+EscapePoint(4,37,MoveDown)
+EscapePoint(5,37,MoveDown)
+EscapePoint(6,37,MoveDown)
+EscapePointEnd
+
+MESSAGE Events end at offset CURRENTOFFSET

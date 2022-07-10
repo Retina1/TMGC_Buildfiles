@@ -85,41 +85,41 @@ UNIT Bandit Deserter 0x0 Level(16,Enemy,1) [23,10] 0x0 0x0 0x0 0x0 [Javelin] Att
 UNIT Bandit Deserter 0x0 Level(15,Enemy,1) [24,2] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Bandit Soldier 0x0 Level(11,Enemy,1) [29,9] 0x0 0x0 0x0 0x0 [Shatterspear] NoAI
 UNIT Bandit Soldier 0x0 Level(12,Enemy,1) [27,5] 0x0 0x0 0x0 0x0 [IronLance] NoAI
-UNIT Holanis LncCav 0x0 Level(10,Enemy,1) [30,14] 0x0 0x0 0x0 0x0 [IronLance] NoAI
-UNIT Holanis LncCav 0x0 Level(13,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [Axereaver] ChaseOnceApproachedAI
-UNIT Holanis SwdCav 0x0 Level(13,Enemy,1) [0,14] DropItem 0x0 0x0 0x0 [Lancereaver,Vulnerary] ChaseOnceApproachedAI
+UNIT Bandit LncCav 0x0 Level(10,Enemy,1) [30,14] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Bandit LncCav 0x0 Level(13,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [Axereaver] ChaseOnceApproachedAI
+UNIT Bandit SwdCav 0x0 Level(13,Enemy,1) [0,14] DropItem 0x0 0x0 0x0 [Lancereaver,Vulnerary] ChaseOnceApproachedAI
 UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
-UNIT Holanis DarkM 0x0 Level(10,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Bandit DarkM 0x0 Level(10,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
 UNIT Bandit Bruiser 0x0 Level(12,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
-UNIT Holanis Myrm 0x0 Level(12,Enemy,1) [19,14] DropItem 0x0 0x0 0x0 [Armorslayer,BraveSword] DelayedAI
-UNIT Holanis LncArm 0x0 Level(13,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Javelin,SteelLance] NeverMoveAI
-UNIT Holanis AxeArm 0x0 Level(13,Enemy,1) [17,9] DropItem 0x0 0x0 0x0 [HandAxe,SteelAxe,Vulnerary] NeverMoveAI
-UNIT Holanis Soldier 0x0 Level(13,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Holanis DarkM 0x0 Level(14,Enemy,1) [21,6] DropItem 0x0 0x0 0x0 [Nightfall,GoddessIcon] NeverMoveAI
-UNIT Holanis Merc 0x0 Level(12,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
-UNIT Holanis MercF 0x0 Level(12,Enemy,1) [0,5] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
-UNIT Holanis FighterF 0x0 Level(12,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
-UNIT Holanis LncCavF 0x0 Level(11,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
-UNIT Holanis Mage 0x0 Level(10,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
-UNIT Holanis SoldierF 0x0 Level(12,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
-UNIT Holanis Archer 0x0 Level(11,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI
-UNIT Holanis Hero 0x0 Level(1,Enemy,1) [14,9] DropItem 0x0 0x0 0x0 [IronSword,Vulnerary] AttackInRangeAI
-UNIT Holanis Soldier 0x0 Level(13,Enemy,1) [9,3] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Holanis LncArm 0x0 Level(12,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Holanis Fighter 0x0 Level(13,Enemy,1) [6,7] DropItem 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Bandit Myrm 0x0 Level(12,Enemy,1) [19,14] DropItem 0x0 0x0 0x0 [Armorslayer,BraveSword] DelayedAI
+UNIT Bandit LncArm 0x0 Level(13,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Javelin,SteelLance] NeverMoveAI
+UNIT Bandit AxeArm 0x0 Level(13,Enemy,1) [17,9] DropItem 0x0 0x0 0x0 [HandAxe,SteelAxe,Vulnerary] NeverMoveAI
+UNIT Bandit Soldier 0x0 Level(13,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit DarkM 0x0 Level(14,Enemy,1) [21,6] DropItem 0x0 0x0 0x0 [Nightfall,GoddessIcon] NeverMoveAI
+UNIT Bandit Merc 0x0 Level(12,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Bandit MercF 0x0 Level(12,Enemy,1) [0,5] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Bandit FighterF 0x0 Level(12,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
+UNIT Bandit LncCavF 0x0 Level(11,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
+UNIT Bandit Mage 0x0 Level(10,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT Bandit SoldierF 0x0 Level(12,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Bandit Archer 0x0 Level(11,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI
+UNIT Bandit Hero 0x0 Level(1,Enemy,1) [14,9] DropItem 0x0 0x0 0x0 [IronSword,Vulnerary] AttackInRangeAI
+UNIT Bandit Soldier 0x0 Level(13,Enemy,1) [9,3] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit LncArm 0x0 Level(12,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [6,7] DropItem 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Roark Fighter 0x0 Level(18,Enemy,1) [1,2] DropItem 0x0 0x0 0x0 [HandAxe,SecretBook] AttackInRangeAI
 UNIT
 
 Z1FootSquad:
-UNIT Holanis Soldier 0x0 Level(15,Enemy,1) [23,14] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
-UNIT Holanis Fighter 0x0 Level(15,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Holanis Merc 0x0 Level(15,Enemy,1) [25,14] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Bandit Soldier 0x0 Level(15,Enemy,1) [23,14] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Bandit Fighter 0x0 Level(15,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Bandit Merc 0x0 Level(15,Enemy,1) [25,14] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT
 
 Z1CavSquad:
-UNIT Holanis LncCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA23R0 [SteelLance] NoAI
-UNIT Holanis AxeCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA25R0 [SteelAxe] NoAI
-UNIT Holanis SwdCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA24R1 [SteelSword] NoAI
+UNIT Bandit LncCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA23R0 [SteelLance] NoAI
+UNIT Bandit AxeCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA25R0 [SteelAxe] NoAI
+UNIT Bandit SwdCav 0x0 Level(15,Enemy,1) [24,0] 0x0 0x0 0x1 REDA24R1 [SteelSword] NoAI
 UNIT
 
 ALIGN 4
@@ -149,19 +149,23 @@ RemoveUnit(Mikey)
 RemoveUnit(Carbon)
 RemoveUnit(Athena)
 RemoveUnit(Charley)
+LOAD1 0x1 Z1UnitsZeke
+ENUN
 MUSC NarrationTheme
 Narration(MapCG,ChZ1_Narration)
 CleanText(PathCG,Z1Opening)
 LOAD1 0x1 Z1Units
 ENUN
-LOAD1 0x1 Z1UnitsZeke
-ENUN
+MUSC S_Neutral
 SetBackground(PathCG)
 TEXTSTART
 TEXTSHOW Z1Opening2
 TEXTEND
+FADI 0x15
 LoadUnitsByDifficulty(Z1Easy,Z1Normal,Z1Hard)
-ClearBackgroundSmooth
+CLEAN
+FADU 0x15
+MUSC S_Crisis
 Text(Z1Opening3)
 CAM1 Zeke
 STAL 30

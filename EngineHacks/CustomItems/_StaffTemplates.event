@@ -13,7 +13,7 @@
 	#define rfStaffTargeting(routine, rangefunc, procpoin) "SHORT 0x1C28 0x1C22 0x4903 0x4B04; BL(routine); SHORT 0xBC30 0xBC01 0x4700 0x0; POIN (rangefunc|1) procpoin"
 	#define rfStaffEffect(routine, pointer) "SHORT 0x1C30 0x4903; BL(routine); jumpToHack(0x2FF76); POIN (pointer | 1)"
 
-	#define rfItemRangeSetup(TConditon, RangeBuilder) "SHORT 0xB500 0x4902; BL(RangeBuilder); SHORT 0xBC08 0x4718; POIN (TConditon | 1)"
+	//#define rfItemRangeSetup(TConditon, RangeBuilder) "SHORT 0xB500 0x4902; BL(RangeBuilder); SHORT 0xBC08 0x4718; POIN (TConditon | 1)"
 
 	Staff_UETemplate: //template for staff effects
 	#include "asm/StaffEffect.lyn.event"

@@ -146,20 +146,20 @@ MUSC NarrationTheme
 Narration(MapCG,ChZ2_Narration)
 ENUT 0x23
 ENUT 0x24
-CleanText(PathCG,FillerDialogue)
+CleanText(PathCG,Z2Opening)
 SystemText(Z2Note)
 EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-Text(PathCG,FillerDialogue)
+Text(PathCG,Z2Ending)
 MoveToChapter(ChapterZ3)
 EndEvent
 
 Z2Turn5:
 Reinforcements(Z2NewUnits)
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(Z2RecruitmentText)
 SetSupport(Damien,Zacharias,CSupport)
 EndEvent
 
@@ -176,7 +176,7 @@ GOTO 0x2
 LABEL 0x1
 Reinforcements(Z2WyvernGroup)
 LABEL 0x2
-Text(FillerDialogue)
+Text(Z2WyvernsSpawnedText)
 ENUT 0x4
 ENUF 0x24
 EndEvent

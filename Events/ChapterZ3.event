@@ -91,7 +91,10 @@ UNIT Bandit Bruiser 0x0 Level(13,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [SteelSword] No
 UNIT Remnant AxeCav 0x0 Level(14,Enemy,1) [13,18] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT Remnant AxeCavF 0x0 Level(14,Enemy,1) [14,19] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT Remnant Archer 0x0 Level(14,Enemy,1) [5,6] 0x0 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
+UNIT Remnant MercF 0x0 Level(14,Enemy,1) [6,11] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Remnant AxeCav 0x0 Level(14,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
 UNIT Remnant Archer 0x0 Level(14,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI
+UNIT Remnant Myrmidon 0x0 Level(14,Enemy,1) [0,8] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
 UNIT Remnant FighterF 0x0 Level(14,Enemy,1) [4,14] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
 UNIT Remnant FighterF 0x0 Level(14,Enemy,1) [14,6] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
 UNIT Remnant DarkF 0x0 Level(14,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Nosferatu] AttackInRangeAI
@@ -101,6 +104,9 @@ UNIT Remnant Soldier 0x0 Level(14,Enemy,1) [3,17] 0x0 0x0 0x0 0x0 [Javelin] Chas
 UNIT Remnant Soldier 0x0 Level(14,Enemy,1) [6,16] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
 UNIT Remnant LncArm 0x0 Level(14,Enemy,1) [10,18] 0x0 0x0 0x0 0x0 [Javelin,Shatterspear] NeverMoveAI
 UNIT Remnant LncArm 0x0 Level(14,Enemy,1) [10,19] DropItem 0x0 0x0 0x0 [Javelin,Axebuster] NeverMoveAI
+UNIT Remnant BowArm 0x0 Level(13,Enemy,1) [0,4] 0x0 0x0 0x0 0x0 [Longbow,SteelBow] NeverMoveAI
+UNIT Remnant AxeArm 0x0 Level(13,Enemy,1) [1,4] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Remnant SwdArm 0x0 Level(13,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [LightBrand] NeverMoveAI
 UNIT Mevion Merc 0x0 Level(14,Enemy,1) [2,10] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
 UNIT Mevion Fighter 0x0 Level(14,Enemy,1) [1,11] 0x0 0x0 0x0 0x0 [Swordreaver] AttackInRangeAI
 UNIT Mevion Merc 0x0 Level(14,Enemy,1) [0,12] 0x0 0x0 0x0 0x0 [Lancereaver] AttackInRangeAI
@@ -119,7 +125,7 @@ LoadUnitsByDifficulty(Z3Easy,Z3Normal,Z3Hard)
 MUSC NarrationTheme
 Narration(MapCG,ChZ3_Narration)
 ENUT 0x23
-CleanText(PathCG,FillerDialogue)
+CleanText(PathCG,Z3Opening)
 SystemText(Z3Note)
 GetSupportLevel(Zeke,Hyperius) //we want C/0
 BEQ 0x1 0x1 0x0
@@ -143,27 +149,31 @@ SetSupport(Hyperius,Alexis,CPSupport,1)
 EndEvent
 
 Z3Turn2:
+CAM1 [14,0]
+FlashCursor(14,2,60)
+MUSC S_PascalTheDog
+CleanText(VillageCG,Z3RecruitmentText)
 Reinforcements(Z3NewUnits)
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(Z3RecruitmentText2)
 CLEAN
 SetSupport(Avan,Toddsworth,CSupport)
 EndEvent
 
 Z3NorthVillage:
-VillageEventItem(FillerDialogue, VillageCG, SilverLance)
+VillageEventItem(Z3NorthVillageText, VillageCG, SilverLance)
 
 Z3SouthVillage:
-VillageEventItem(FillerDialogue, VillageCG, Runesword)
+VillageEventItem(Z3SouthVillageText, VillageCG, Runesword)
 
 Z3House1:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(Z3House1Text,HouseCG)
 Z3House2:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(Z3House2Text,HouseCG)
 Z3House3:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(Z3House3Text,HouseCG)
 Z3House4:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(Z3House4Text,HouseCG)
 
 Z3ManorWrecked:
 Text(Z3Damn)
@@ -183,9 +193,11 @@ EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-Text(PathCG,FillerDialogue)
+CleanTextNoMap(PathCG,Z3Ending)
+MUSC S_CircleOfTheMoon
+CleanTextNoMap(PathCG,Z3Ending2)
 MUSC S_MainTheme
-SystemText(ArcZekeEnding)
+SystemText(BlankCG,ArcZekeEnding)
 UnremoveUnit(Blair)
 UnremoveUnit(Arin)
 UnremoveUnit(Kenneth)

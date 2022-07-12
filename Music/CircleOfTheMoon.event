@@ -1,0 +1,3756 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	CircleOfTheMoon_grp  voicegroup000
+	#define	CircleOfTheMoon_pri  0
+	#define	CircleOfTheMoon_rev  0
+	#define	CircleOfTheMoon_mvl  127
+	#define	CircleOfTheMoon_key  0
+	#define	CircleOfTheMoon_tbs  1
+	#define	CircleOfTheMoon_exg  0
+	#define	CircleOfTheMoon_cmp  1
+
+	// .rodata
+	//	CircleOfTheMoon
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+CircleOfTheMoon_001:
+//  #01 //000   ----------------------------------------
+ BYTE   KEYSH   CircleOfTheMoon_key+0
+ BYTE   TEMPO   100*CircleOfTheMoon_tbs/2
+ BYTE   VOICE   1
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   PAN   c_v-64
+ BYTE   N06  An4  v127
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5  v120
+ BYTE   W06
+ BYTE   An5  v104
+ BYTE   W06
+ BYTE   An4  v127
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5  v120
+ BYTE   W06
+ BYTE   An5  v104
+ BYTE   W06
+ BYTE   An4  v127
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5  v120
+ BYTE   W06
+ BYTE   An5  v104
+ BYTE   W06
+ BYTE   An4  v127
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5  v120
+ BYTE   W06
+ BYTE   An5  v104
+ BYTE   W06
+//  #01 //001   ----------------------------------------
+Label_018932AB:
+ BYTE   N06  An4  v127
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5  v120
+ BYTE   W06
+ BYTE   An5  v104
+ BYTE   W06
+ BYTE   An4  v127
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5  v120
+ BYTE   W06
+ BYTE   An5  v104
+ BYTE   W06
+ BYTE   An4  v127
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5  v120
+ BYTE   W06
+ BYTE   An5  v104
+ BYTE   W06
+ BYTE   An4  v127
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5  v120
+ BYTE   W06
+ BYTE   An5  v104
+ BYTE   W06
+ BYTE   PEND 
+//  #01 //002   ----------------------------------------
+Label_018932D9:
+//  #01 //003   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018932AB
+//  #01 //004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018932AB
+//  #01 //005   ----------------------------------------
+Label_018932E3:
+ BYTE   N06  Gn4  v127
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Gn5  v104
+ BYTE   W06
+ BYTE   Gn4  v127
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Gn5  v104
+ BYTE   W06
+ BYTE   Gn4  v127
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Gn5  v104
+ BYTE   W06
+ BYTE   Gn4  v127
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Gn5  v104
+ BYTE   W06
+ BYTE   PEND 
+//  #01 //006   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018932E3
+//  #01 //007   ----------------------------------------
+Label_01893316:
+ BYTE   N06  Gn4  v127
+ BYTE   W06
+ BYTE   As4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Gn5  v104
+ BYTE   W06
+ BYTE   Gn4  v127
+ BYTE   W06
+ BYTE   As4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Gn5  v104
+ BYTE   W06
+ BYTE   Gn4  v127
+ BYTE   W06
+ BYTE   As4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Gn5  v104
+ BYTE   W06
+ BYTE   Gn4  v127
+ BYTE   W06
+ BYTE   As4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Gn5  v104
+ BYTE   W06
+ BYTE   PEND 
+//  #01 //008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01893316
+//  #01 //009   ----------------------------------------
+Label_01893349:
+ BYTE   N06  Fs4  v127
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Fs5  v108
+ BYTE   W06
+ BYTE   Fs4  v127
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Fs5  v108
+ BYTE   W06
+ BYTE   Fs4  v127
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Fs5  v108
+ BYTE   W06
+ BYTE   Fs4  v127
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5  v120
+ BYTE   W06
+ BYTE   Fs5  v108
+ BYTE   W06
+ BYTE   PEND 
+//  #01 //010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01893349
+//  #01 //011   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_018932D9
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+CircleOfTheMoon_002:
+//  #02 //000   ----------------------------------------
+ BYTE   KEYSH   CircleOfTheMoon_key+0
+ BYTE   VOICE   1
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   PAN   c_v+63
+ BYTE   W09
+ BYTE   N06  An4  v076
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W03
+//  #02 //001   ----------------------------------------
+Label_01004FA1:
+ BYTE   W03
+ BYTE   N06  An5  v076
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W06
+ BYTE   An5
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   En5
+ BYTE   W03
+ BYTE   PEND 
+//  #02 //002   ----------------------------------------
+Label_01004FC5:
+//  #02 //003   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004FA1
+//  #02 //004   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01004FA1
+//  #02 //005   ----------------------------------------
+ BYTE   W03
+ BYTE   N06  An5  v076
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W03
+//  #02 //006   ----------------------------------------
+ BYTE   W03
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   Bn4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W03
+//  #02 //007   ----------------------------------------
+Label_01005013:
+ BYTE   W03
+ BYTE   N06  Gn5  v076
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   As4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   As4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   As4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Gn5
+ BYTE   W06
+ BYTE   Gn4
+ BYTE   W06
+ BYTE   As4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W03
+ BYTE   PEND 
+//  #02 //008   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_01005013
+//  #02 //009   ----------------------------------------
+ BYTE   W03
+ BYTE   N06  Gn5  v076
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W03
+//  #02 //010   ----------------------------------------
+ BYTE   W03
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W06
+ BYTE   Dn5
+ BYTE   W06
+ BYTE   Fs5
+ BYTE   W06
+ BYTE   Fs4
+ BYTE   W06
+ BYTE   An4
+ BYTE   W09
+//  #02 //011   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_01004FC5
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+CircleOfTheMoon_003:
+//  #03 //000   ----------------------------------------
+ BYTE   KEYSH   CircleOfTheMoon_key+0
+ BYTE   VOICE   73
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   LFOS 25
+ BYTE   MODT 1
+ BYTE   PAN   c_v+0
+ BYTE   W96
+//  #03 //001   ----------------------------------------
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W96
+//  #03 //002   ----------------------------------------
+Label_010050A8:
+ BYTE   MOD 0
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   N44  En5  v084
+ BYTE   W11
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W12
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   TIE  An4  v072
+ BYTE   W48
+//  #03 //003   ----------------------------------------
+ BYTE   W04
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W32
+ BYTE   MOD 5
+ BYTE   W21
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 0
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   N23  Cn5  v096
+ BYTE   W11
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #03 //004   ----------------------------------------
+ BYTE   N44  En5  v092
+ BYTE   W23
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Gn4  v076
+ BYTE   W44
+ BYTE   W03
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #03 //005   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 0
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   N22  Bn4  v088
+ BYTE   W11
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #03 //006   ----------------------------------------
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   N44  Dn5  v096
+ BYTE   W23
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   TIE  Gn4  v072
+ BYTE   W48
+//  #03 //007   ----------------------------------------
+ BYTE   W36
+ BYTE   MOD 5
+ BYTE   W11
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 0
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   N21  As4  v080
+ BYTE   W10
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #03 //008   ----------------------------------------
+ BYTE   TIE  An4  v076
+ BYTE   W07
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W05
+//  #03 //009   ----------------------------------------
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   EOT
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #03 //010   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_010050A8
+//  #03 //011   ----------------------------------------
+ BYTE   MOD 0
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   FINE
+
+//**************** Track 4 (Midi-Chn.3) ****************//
+
+CircleOfTheMoon_004:
+//  #04 //000   ----------------------------------------
+ BYTE   KEYSH   CircleOfTheMoon_key+0
+ BYTE   VOICE   73
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   LFOS 25
+ BYTE   MODT 1
+ BYTE   PAN   c_v+0
+ BYTE   W96
+//  #04 //001   ----------------------------------------
+ BYTE   W96
+//  #04 //002   ----------------------------------------
+Label_010053B6:
+ BYTE   MOD 0
+ BYTE   W21
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   N48  Dn5  v096
+ BYTE   W24
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W15
+//  #04 //003   ----------------------------------------
+ BYTE   W36
+ BYTE   MOD 5
+ BYTE   W22
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   MOD 0
+ BYTE   N22  Bn4  v084
+ BYTE   W11
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   N24  Dn5  v100
+ BYTE   W11
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #04 //004   ----------------------------------------
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   N36
+ BYTE   W23
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W30
+ BYTE   W01
+//  #04 //005   ----------------------------------------
+ BYTE   W36
+ BYTE   MOD 5
+ BYTE   W23
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 0
+ BYTE   N23  An4  v068
+ BYTE   W11
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   N30  Cn5  v100
+ BYTE   W11
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #04 //006   ----------------------------------------
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   N42  Cn5  v096
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W07
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W12
+//  #04 //007   ----------------------------------------
+ BYTE   W36
+ BYTE   MOD 5
+ BYTE   W21
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   MOD 0
+ BYTE   N22  An4  v064
+ BYTE   W11
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   N24  Cn5  v088
+ BYTE   W11
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #04 //008   ----------------------------------------
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W84
+//  #04 //009   ----------------------------------------
+ BYTE   W24
+ BYTE   MOD 5
+ BYTE   W72
+//  #04 //010   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_010053B6
+//  #04 //011   ----------------------------------------
+ BYTE   MOD 0
+ BYTE   FINE
+
+//**************** Track 5 (Midi-Chn.4) ****************//
+
+CircleOfTheMoon_005:
+//  #05 //000   ----------------------------------------
+ BYTE   KEYSH   CircleOfTheMoon_key+0
+ BYTE   VOICE   73
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W96
+//  #05 //001   ----------------------------------------
+ BYTE   W96
+//  #05 //002   ----------------------------------------
+Label_010055B6:
+ BYTE   W96
+//  #05 //003   ----------------------------------------
+ BYTE   W96
+//  #05 //004   ----------------------------------------
+ BYTE   W84
+ BYTE   W01
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W11
+//  #05 //005   ----------------------------------------
+ BYTE   N48  Bn4  v016
+ BYTE   W48
+ BYTE   Cn5
+ BYTE   W48
+//  #05 //006   ----------------------------------------
+ BYTE   N92  As4  v012
+ BYTE   W48
+ BYTE   W03
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #05 //007   ----------------------------------------
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W44
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W30
+//  #05 //008   ----------------------------------------
+ BYTE   W32
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W12
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   N44  Dn4  v036
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #05 //009   ----------------------------------------
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   N44
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   N44  Dn5  v012
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   11*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   10*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   9*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   8*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   7*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   6*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   5*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   4*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   3*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+//  #05 //010   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_010055B6
+ BYTE   FINE
+
+//**************** Track 6 (Midi-Chn.5) ****************//
+
+CircleOfTheMoon_006:
+//  #06 //000   ----------------------------------------
+ BYTE   KEYSH   CircleOfTheMoon_key+0
+ BYTE   VOICE   105
+ BYTE   MOD 0
+ BYTE   PAN   c_v-20
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   LFOS 50
+ BYTE   MODT 1
+ BYTE   TIE  An2  v108
+ BYTE   TIE  En3
+ BYTE   W03
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+//  #06 //001   ----------------------------------------
+ BYTE   W06
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W09
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W09
+//  #06 //002   ----------------------------------------
+ BYTE   EOT
+ BYTE   An2  v064
+Label_0100582F:
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  An2  v108
+ BYTE   TIE  En3
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W05
+ BYTE   MOD 5
+ BYTE   W21
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W12
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W13
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W13
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W13
+//  #06 //003   ----------------------------------------
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W13
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W13
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W13
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+//  #06 //004   ----------------------------------------
+ BYTE   EOT
+ BYTE   An2  v064
+ BYTE   MOD 0
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Gn2
+ BYTE   TIE  Dn3
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W72
+//  #06 //005   ----------------------------------------
+ BYTE   W24
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+//  #06 //006   ----------------------------------------
+ BYTE   EOT
+ BYTE   Gn2  v062
+ BYTE   MOD 0
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Gn2
+ BYTE   TIE  Dn3
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W72
+//  #06 //007   ----------------------------------------
+ BYTE   W08
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W04
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+//  #06 //008   ----------------------------------------
+ BYTE   EOT
+ BYTE   Gn2  v062
+ BYTE   MOD 0
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Fs2
+ BYTE   TIE  Dn3
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W08
+ BYTE   MOD 5
+ BYTE   W13
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W11
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W10
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W11
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W11
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W10
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W06
+//  #06 //009   ----------------------------------------
+ BYTE   W05
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W11
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W10
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W11
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+//  #06 //010   ----------------------------------------
+ BYTE   EOT
+ BYTE   Fs2  v062
+ BYTE   GoTo
+  POIN2 Label_0100582F
+//  #06 //011   ----------------------------------------
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   FINE
+
+//**************** Track 7 (Midi-Chn.6) ****************//
+
+CircleOfTheMoon_007:
+//  #07 //000   ----------------------------------------
+ BYTE   KEYSH   CircleOfTheMoon_key+0
+ BYTE   VOICE   105
+ BYTE   PAN   c_v+0
+ BYTE   MOD 0
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   LFOS 50
+ BYTE   MODT 1
+ BYTE   TIE  Fn1  v127
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   29*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   30*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   31*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   32*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   33*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W03
+//  #07 //001   ----------------------------------------
+ BYTE   W92
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #07 //002   ----------------------------------------
+ BYTE   EOT
+Label_01005B84:
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Fn1  v127
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W72
+//  #07 //003   ----------------------------------------
+ BYTE   W36
+ BYTE   W03
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W56
+ BYTE   EOT
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #07 //004   ----------------------------------------
+ BYTE   MOD 0
+ BYTE   VOL   44*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  En1
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W72
+//  #07 //005   ----------------------------------------
+ BYTE   W11
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W84
+ BYTE   EOT
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #07 //006   ----------------------------------------
+ BYTE   MOD 0
+ BYTE   VOL   44*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Ds1
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W72
+//  #07 //007   ----------------------------------------
+ BYTE   W92
+ BYTE   W03
+ BYTE   EOT
+ BYTE   VOL   34*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #07 //008   ----------------------------------------
+ BYTE   MOD 0
+ BYTE   VOL   44*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Dn1
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   43*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   41*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   40*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   39*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   38*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   37*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   36*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   35*CircleOfTheMoon_mvl/mxv
+ BYTE   W72
+//  #07 //009   ----------------------------------------
+ BYTE   W96
+//  #07 //010   ----------------------------------------
+ BYTE   EOT
+ BYTE   GoTo
+  POIN2 Label_01005B84
+//  #07 //011   ----------------------------------------
+ BYTE   VOL   42*CircleOfTheMoon_mvl/mxv
+ BYTE   FINE
+
+//**************** Track 8 (Midi-Chn.7) ****************//
+
+CircleOfTheMoon_008:
+//  #08 //000   ----------------------------------------
+ BYTE   KEYSH   CircleOfTheMoon_key+0
+ BYTE   VOICE   105
+ BYTE   MOD 0
+ BYTE   PAN   c_v+27
+ BYTE   VOL   12*CircleOfTheMoon_mvl/mxv
+ BYTE   LFOS 50
+ BYTE   MODT 1
+ BYTE   TIE  Cn3  v084
+ BYTE   W03
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   13*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   14*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+//  #08 //001   ----------------------------------------
+ BYTE   W92
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W02
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #08 //002   ----------------------------------------
+ BYTE   EOT
+Label_01005D1B:
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Cn3  v084
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W68
+ BYTE   W03
+//  #08 //003   ----------------------------------------
+ BYTE   W12
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W80
+ BYTE   W02
+ BYTE   EOT
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #08 //004   ----------------------------------------
+ BYTE   MOD 0
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  Bn2
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W36
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W18
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W17
+//  #08 //005   ----------------------------------------
+ BYTE   W02
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W19
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W18
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W19
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W19
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W18
+ BYTE   EOT
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #08 //006   ----------------------------------------
+ BYTE   MOD 0
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  As2
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W32
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W32
+ BYTE   W02
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W05
+//  #08 //007   ----------------------------------------
+ BYTE   W28
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W32
+ BYTE   W02
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W32
+ BYTE   W01
+ BYTE   EOT
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+//  #08 //008   ----------------------------------------
+ BYTE   MOD 0
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   TIE  An2
+ BYTE   W01
+ BYTE   VOL   28*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   26*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   25*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   24*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   23*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   22*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   21*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   20*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   19*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   18*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   17*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   16*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W01
+ BYTE   MOD 5
+ BYTE   VOL   15*CircleOfTheMoon_mvl/mxv
+ BYTE   W72
+//  #08 //009   ----------------------------------------
+ BYTE   W96
+//  #08 //010   ----------------------------------------
+ BYTE   EOT
+ BYTE   GoTo
+  POIN2 Label_01005D1B
+//  #08 //011   ----------------------------------------
+ BYTE   VOL   27*CircleOfTheMoon_mvl/mxv
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+CircleOfTheMoon:
+	BYTE	8	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	CircleOfTheMoon_pri	// Priority
+	BYTE	CircleOfTheMoon_rev	// Reverb.
+    
+	POIN2	CircleOfTheMoon_grp
+    
+	POIN2	CircleOfTheMoon_001
+	POIN2	CircleOfTheMoon_002
+	POIN2	CircleOfTheMoon_003
+	POIN2	CircleOfTheMoon_004
+	POIN2	CircleOfTheMoon_005
+	POIN2	CircleOfTheMoon_006
+	POIN2	CircleOfTheMoon_007
+	POIN2	CircleOfTheMoon_008
+
+	

@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "CircleOfTheMoon.event"
+SongTable(S_CircleOfTheMoon,CircleOfTheMoon,1)
+}
+{
 #include "LiveALive.event"
 SongTable(S_LiveALive,LiveALive,0)
 }

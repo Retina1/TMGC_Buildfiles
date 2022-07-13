@@ -368,7 +368,9 @@ ALIGN 4
 #include "ExternalHacks/CritCap/CritCap.event"
 
 //group AI
-#include "TMGC/GroupAI/GroupAI.event"
+//#include "TMGC/GroupAI/GroupAI.event"
+#include "TMGC/GroupAI2/Installer.event"
+
 //dance Ai
 #include "TMGC/DanceAi/DanceAi.event" 
 
@@ -438,3 +440,6 @@ POP
 
 //prep image
 #include "TMGC/PrepImage/Installer.event"
+
+//death item dump
+#include "TMGC/DeathDump/Installer.event"

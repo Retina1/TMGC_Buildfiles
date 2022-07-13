@@ -222,6 +222,7 @@ CHECK_ALIVE Desmond
 BNE 0x33 0xC 0x0
 ENUT BaseFlag2
 LABEL 0x33
+MUSC S_Terra
 CleanTextNoMap(OuterFortCG,Ch3_Opening)
 GotoPrepScreen
 ENDA

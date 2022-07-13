@@ -80,10 +80,10 @@ UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, J
 UNIT
 
 Z3Hard:
-UNIT Bandit Brigand 0x0 Level(13,Enemy,1) [0,18] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
-UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [0,17] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
-UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [1,19] 0x0 0x0 0x0 0x0 [Hammer] BrigandAI
-UNIT Bandit Brigand 0x0 Level(13,Enemy,1) [10,0] 0x0 0x0 0x0 0x0 [HandAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(13,Enemy,1) [0,18] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedBrigandAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [0,17] 0x0 0x0 0x0 0x0 [IronAxe] DelayedBrigandAI
+UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [1,19] 0x0 0x0 0x0 0x0 [Hammer] DelayedBrigandAI
+UNIT Bandit Brigand 0x0 Level(13,Enemy,1) [10,0] 0x0 0x0 0x0 0x0 [HandAxe] DelayedBrigandAI
 UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Halberd] BrigandAI
 UNIT Bandit Brigand 0x0 Level(11,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
 UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [13,8] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
@@ -125,6 +125,7 @@ LoadUnitsByDifficulty(Z3Easy,Z3Normal,Z3Hard)
 MUSC NarrationTheme
 Narration(MapCG,ChZ3_Narration)
 ENUT 0x23
+MUSC S_Terra
 CleanText(PathCG,Z3Opening)
 SystemText(Z3Note)
 GetSupportLevel(Zeke,Hyperius) //we want C/0

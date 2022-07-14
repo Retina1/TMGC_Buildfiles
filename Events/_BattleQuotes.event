@@ -44,11 +44,18 @@ UnspecifiedBattleConvo(Pete,Chapter9,0x1,C9PeteBattle)
 SpecifiedBattleConvo(Cid,Lazarus,Chapter10,0x18,C10LazarusCidBattle)
 SpecifiedBattleConvo(Blair,Lazarus,Chapter10,0x19,C10LazarusBlairBattle)
 UnspecifiedBattleConvo(Lazarus,Chapter10,0x1,C10LazarusBattle)
+SpecifiedBattleConvo(Bechamel,Gregorias,Chapter10,0x1c,C10GregoriasBechamelBattle)
 UnspecifiedBattleConvo(Gregorias,Chapter10,0x1a,C10GregoriasBattle)
 UnspecifiedBattleConvo(Jonas,Chapter10,0x1b,C10JonasBattle)
 //ch 11
+SpecifiedBattleConvo(Kenneth,Sofia,Chapter11,0x11,C11SofiaKennethBattle)
+SpecifiedBattleConvo(Hilbert,Sofia,Chapter11,0x12,C11SofiaHilbertBattle)
+SpecifiedBattleConvo(Emile,Sofia,Chapter11,0x13,C11SofiaEmileBattle)
 UnspecifiedBattleConvo(Sofia,Chapter11,0x1,C11SofiaBattle)
 //ch 12
+SpecifiedBattleConvo(Desmond,Laronde,Chapter12,0x1a,C12LarondeDesmondBattle)
+SpecifiedBattleConvo(Apollo,Laronde,Chapter12,0x1b,C12LarondeApolloBattle)
+SpecifiedBattleConvo(Flynn,Laronde,Chapter12,0x1c,C12LarondeFlynnBattle)
 UnspecifiedBattleConvo(Laronde,Chapter12,0x1,C12LarondeBattle)
 //ch 13
 SpecifiedBattleConvo(Mikey,Amara,Chapter13,0x18,C13AmaraMikeyBattle)
@@ -65,7 +72,11 @@ SpecifiedBattleConvo(Carbon,Lazarus,Chapter14,0x17,C14LazarusCarbonBattle)
 UnspecifiedBattleConvo(Lazarus,Chapter14,0x1,C14LazarusBattle)
 UnspecifiedBattleConvo(Briant,0xFF,0x0,C14BriantBattle)
 //zeke arc
+//more quotes
+SpecifiedBattleConvo(Zeke,Roark,ChapterZ1,0x1f,Z1RoarkZekeBattle)
 UnspecifiedBattleConvo(Roark,ChapterZ1,0x1,Z1RoarkBattle)
+SpecifiedBattleConvo(Zeke,Vulture,ChapterZ2,0x1f,Z2VultureZekeBattle)
 UnspecifiedBattleConvo(Vulture,ChapterZ2,0x1,Z2VultureBattle)
+SpecifiedBattleConvo(Zeke,Parque,ChapterZ3,0x1f,Z3ParqueZekeBattle)
 UnspecifiedBattleConvo(Parque,ChapterZ3,0x1,Z3ParqueBattle)
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 

@@ -293,11 +293,20 @@ You'll get more outta it than me.[A][X]
 
 ##Z1RoarkBattle
 [OpenMidLeft][LoadRoark]
+You're a bold one.[N]
+Real bold.[A][N]
+But nobody's ever beaten me.[N]
+Think on that while you die.[A][X]
+
+##Z1RoarkZekeBattle
+[OpenMidLeft][LoadRoark]
 You want to get in my way?[A][N]
 Scram, brat. Before I[N]
 chop you up.[A][N]
 [ToggleMouthMove]...[ToggleMouthMove]Well then. Looks like[N]
-you're gonna die, bud.[A][X]
+you're gonna die, bud.[A][N][ClearFace][OpenMidRight][LoadZeke]
+Sorry, but I can't die.[N]
+I've too much to do.[A][X]
 
 ##Z1RoarkDeath
 [OpenMidLeft][LoadRoark]

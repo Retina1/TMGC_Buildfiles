@@ -115,6 +115,12 @@ UNIT Mevion LncCav 0x0 Level(14,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [Axereaver] Atta
 UNIT Parque LncPal 0x0 Level(2,Enemy,1) [0,10] DropItem 0x0 0x0 0x0 [SilverLance,Nuboko,MasterSeal] AttackInRangeAI
 UNIT
 
+Z3OpeningFlee:
+UNIT Ygstra Fighter 0x0 Level(1,Enemy,1) [14,11] 0x0 0x0 0x1 REDA24R12 [0x0] NoAI
+UNIT Ygstra AxePal 0x0 Level(1,Enemy,1) [14,11] 0x0 0x0 0x1 REDA24R13 [0x0] NoAI
+UNIT Ygstra BowArm 0x0 Level(1,Enemy,1) [14,11] 0x0 0x0 0x1 REDA24R14 [0x0] NoAI
+UNIT
+
 
 ALIGN 4
 
@@ -127,6 +133,14 @@ Narration(MapCG,ChZ3_Narration)
 ENUT 0x23
 MUSC S_Terra
 CleanText(PathCG,Z3Opening)
+LOAD1 0x1 Z3OpeningFlee
+ENUN
+REMOVEUNIT Ygstra
+REMOVEUNIT Ygstra
+REMOVEUNIT Ygstra
+ENUN
+MUSC S_Trisection
+Text(Z3Opening2)
 SystemText(Z3Note)
 GetSupportLevel(Zeke,Hyperius) //we want C/0
 BEQ 0x1 0x1 0x0

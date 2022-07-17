@@ -155,6 +155,11 @@ AvanMug:
 setMugEntry(0x26,AvanMug,3,5,3,3)
 
 ALIGN 4
+VladmirMug:
+#incext PortraitFormatter "Vladmir.png"
+setMugEntry(0x2c,VladmirMug,3,5,3,3)
+
+ALIGN 4
 HoratioMug:
 #incext PortraitFormatter "Horatio.png"
 setMugEntry(0x46,HoratioMug,3,6,3,4)
@@ -364,6 +369,11 @@ ALIGN 4
 AugustoMug:
 #incext PortraitFormatter "Augusto.png"
 setMugEntry(0xcc,AugustoMug,2,4,4,2)
+
+ALIGN 4
+UnknownMug:
+#incext PortraitFormatter "Unknown.png"
+setMugEntry(0xd8,UnknownMug,3,6,3,4)
 
 
 

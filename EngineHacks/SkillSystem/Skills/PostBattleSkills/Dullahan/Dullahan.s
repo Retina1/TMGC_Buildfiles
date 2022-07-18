@@ -43,7 +43,7 @@ strb r0, [r4, #0x13] @currhp
 
 @ unkill the unit
 ldrb r0, [r4, #0xC]
-mov r1, #0xF1				@f1 to dance on death, f2 to not
+mov r1, #0xF0				@f0 to dance on death, f2 to not
 and r0, r1
 strb r0, [r4, #0xC]
 

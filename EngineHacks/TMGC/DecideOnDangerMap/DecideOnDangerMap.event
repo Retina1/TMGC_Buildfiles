@@ -1,0 +1,16 @@
+#include "EAstdlib.event"
+#ifndef callHackNew
+	#define callHackNew(offset) "BYTE $01 $4B $9E $46 $00 $F8 $01 $E0; POIN (offset|0x1)"
+#endif 
+
+
+PUSH 
+ORG $3E308 // from $3E2F4 SetupAiDangerMap	//{U}
+//ORG $3E298 // from SetupAiDangerMap	//{J}
+callHackNew(DecideOnDanger|1) 
+POP 
+
+ALIGN 4 
+DecideOnDanger: 
+#incbin "DecideOnDanger.dmp" 
+

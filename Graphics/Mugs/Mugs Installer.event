@@ -175,6 +175,11 @@ TotallyNotSimoneMug:
 setMugEntry(0xcd,TotallyNotSimoneMug,2,5,3,3)
 
 ALIGN 4
+DeanMug:
+#incext PortraitFormatter "Dean.png"
+setMugEntry(0x17,DeanMug,2,5,2,3)
+
+ALIGN 4
 EstelleMug:
 #incext PortraitFormatter "Estelle.png"
 setMugEntry(0x2e,EstelleMug,3,5,3,3)
@@ -376,7 +381,10 @@ UnknownMug:
 setMugEntry(0xd8,UnknownMug,3,6,3,4)
 
 
-
+ALIGN 4
+IneubrenosMug:
+#incext PortraitFormatter "Ineubrenos.png"
+setMugEntry(0xd9,IneubrenosMug,3,6,3,4)
 
 ALIGN 4
 JakeMug:

@@ -98,6 +98,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ZachariasPPaletteID 0x57
 #define VladmirPaletteID 0x5b
 #define VladmirDracoPaletteID 0x5c
+#define DeanUPaletteID 0x5d
+#define DeanPPaletteID 0x5e
 
 #define CidPaletteID 0x2e
 #define BrandlPaletteID 0x53
@@ -193,6 +195,9 @@ setPalette(TobiasPaletteID,TobiasPalette)
 
 setPalette(ElcorianPaletteID,ElcorianPalette)
 
+setPalette(DeanUPaletteID,DeanUPalette)
+setPalette(DeanPPaletteID,DeanPPalette)
+
 setPalette(RiftPaletteID,RiftPalette)
 setPalette(EstelleUPaletteID,EstelleUPalette)
 setPalette(EstellePPaletteID,EstellePPalette)
@@ -278,7 +283,7 @@ SetPaletteFull(Olsen,0x0,ThiefF,0x0,AssassF,0x0,0x0)
 SetPaletteFull(Elcorian,0x0,Troub,ElcorianPaletteID,Valk,0x0,0x0)
 SetPaletteFull(Viridian,0x0,0x0,0x0,ViridianLord,0x0,0x0)
 SetPaletteFull(Freddric,0x0,LncWyv,0x0,WyvLord,0x0,0x0)
-SetPaletteFull(Dean,0x0,Fighter,0x0,Warrior,0x0,0x0)
+SetPaletteFull(Dean,DeanUPaletteID,Fighter,DeanPPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Eliza,0x0,Cleric,0x0,BishopF,0x0,0x0)
 SetPaletteFull(Chartreuse,0x0,BardF,0x0,0x0,0x0,0x0)
 SetPaletteFull(Rift,0x0,Myrm,RiftPaletteID,SwMast,0x0,0x0)
@@ -530,6 +535,13 @@ TobiasPalette:
 ALIGN 4
 ElcorianPalette:
 #incbin "Elcorian.dmp"
+
+ALIGN 4
+DeanUPalette:
+#incbin "DeanUnpromoted.dmp"
+ALIGN 4
+DeanPPalette:
+#incbin "DeanPromoted.dmp"
 
 ALIGN 4
 RiftPalette:

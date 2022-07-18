@@ -83,6 +83,10 @@ MevionCityPalette:
 #incext Png2Dmp "Tilesets/MevionCity.png" --palette-only
 
 ALIGN 4
+ElbaCorCityPalette:
+#incext Png2Dmp "Tilesets/ElbaCorCity.png" --palette-only
+
+ALIGN 4
 CityTiles:
 #incext compress "Tilesets/City.mapchip_config"
 
@@ -398,6 +402,7 @@ EventPointerTable(TILSwamp, SwampTiles)
 
 EventPointerTable(OBJCity, CityObjects)
 EventPointerTable(PALMevionCity, MevionCityPalette)
+EventPointerTable(PALElbaCorCity, ElbaCorCityPalette)
 EventPointerTable(TILCity, CityTiles)
 
 EventPointerTable(OBJCastle, CastleObjects)

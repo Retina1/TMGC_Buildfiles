@@ -55,7 +55,7 @@ strb  r0, [r6,#4]
 
 @add res to damage dealt
 mov r0, r4
-blh 0x8019270 @res getter
+blh 0x80191D0 @skill getter
 
 ldr r2, [r6]
 mov r1, #1

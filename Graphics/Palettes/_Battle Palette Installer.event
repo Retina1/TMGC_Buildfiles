@@ -100,6 +100,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define VladmirDracoPaletteID 0x5c
 #define DeanUPaletteID 0x5d
 #define DeanPPaletteID 0x5e
+#define FreddricPaletteID 0x5f
+#define CarbonUPaletteID 0x60
+#define CarbonPPaletteID 0x61
 
 #define CidPaletteID 0x2e
 #define BrandlPaletteID 0x53
@@ -164,6 +167,8 @@ setPalette(HilbertPPaletteID,HilbertPPalette)
 
 setPalette(MikeyUPaletteID,MikeyUPalette)
 setPalette(MikeyPPaletteID,MikeyPPalette)
+setPalette(CarbonUPaletteID,CarbonUPalette)
+setPalette(CarbonPPaletteID,CarbonPPalette)
 
 setPalette(CharleyPaletteID,CharleyPalette)
 setPalette(ZekeUPaletteID,ZekeUPalette)
@@ -195,6 +200,7 @@ setPalette(TobiasPaletteID,TobiasPalette)
 
 setPalette(ElcorianPaletteID,ElcorianPalette)
 
+setPalette(FreddricPaletteID,FreddricPalette)
 setPalette(DeanUPaletteID,DeanUPalette)
 setPalette(DeanPPaletteID,DeanPPalette)
 
@@ -256,7 +262,7 @@ SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
 SetPaletteFull(Hilbert,HilbertUPaletteID,Mage,HilbertPPaletteID,Sage,0x0,0x0)
 SetPaletteFull(Flynn,0x0,Myrm,0x0,SwMast,0x0,0x0)
 SetPaletteFull(Mikey,MikeyUPaletteID,Soldier,MikeyPPaletteID,Halberdier,0x0,0x0)
-SetPaletteFull(Carbon,0x0,BowCav,0x0,BowPal,0x0,0x0)
+SetPaletteFull(Carbon,CarbonUPaletteID,BowCav,CarbonPPaletteID,BowPal,0x0,0x0)
 SetPaletteFull(Athena,0x0,AxeWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(Charley,0x0,ArcherF,CharleyPaletteID,SniperF,0x0,0x0)
 SetPaletteFull(Zeke,ZekeUPaletteID,ZekeLord,ZekePPaletteID,ZekeLordX,0x0,0x0)
@@ -282,7 +288,7 @@ SetPaletteFull(Ian,0x0,CivilM,0x0,0x0,0x0,0x0)
 SetPaletteFull(Olsen,0x0,ThiefF,0x0,AssassF,0x0,0x0)
 SetPaletteFull(Elcorian,0x0,Troub,ElcorianPaletteID,Valk,0x0,0x0)
 SetPaletteFull(Viridian,0x0,0x0,0x0,ViridianLord,0x0,0x0)
-SetPaletteFull(Freddric,0x0,LncWyv,0x0,WyvLord,0x0,0x0)
+SetPaletteFull(Freddric,0x0,LncWyv,FreddricPaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Dean,DeanUPaletteID,Fighter,DeanPPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Eliza,0x0,Cleric,0x0,BishopF,0x0,0x0)
 SetPaletteFull(Chartreuse,0x0,BardF,0x0,0x0,0x0,0x0)
@@ -448,6 +454,12 @@ MikeyUPalette:
 ALIGN 4
 MikeyPPalette:
 #incbin "MikeyPromoted.dmp"
+ALIGN 4
+CarbonUPalette:
+#incbin "CarbonUnpromoted.dmp"
+ALIGN 4
+CarbonPPalette:
+#incbin "CarbonPromoted.dmp"
 
 ALIGN 4
 CharleyPalette:
@@ -536,6 +548,9 @@ ALIGN 4
 ElcorianPalette:
 #incbin "Elcorian.dmp"
 
+ALIGN 4
+FreddricPalette:
+#incbin "Freddric.dmp"
 ALIGN 4
 DeanUPalette:
 #incbin "DeanUnpromoted.dmp"

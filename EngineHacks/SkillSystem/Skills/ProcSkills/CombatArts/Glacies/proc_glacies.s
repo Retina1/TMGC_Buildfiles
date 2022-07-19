@@ -60,9 +60,25 @@ str     r0,[r6]                @ 0802B43A 6018
 ldrb  r0, GlaciesID
 strb  r0, [r6,#4] 
 
-@add res to damage dealt
+@add skl to damage dealt
 mov r0, r4
-blh 0x8019270 @res getter
+blh 0x80191D0 @skl getter
+
+//code
+mov  r2,#0x02
+ldrb r1, [r7]
+and  r1, r2
+cmp  r1, r2
+bne  BattleStarted//if bit 2 is set, battle has NOT started
+mov  r3, #0x5A//atk offset
+ldrh r3, [r4,r3]
+add  r3,r0//total atk
+mov  r2, #0x5A//atk offset
+strh r3, [r4,r2]
+strh r3, [r7, #0x04]
+b    End
+BattleStarted:
+//endofcode
 
 ldr r2, [r6]
 mov r1, #1
@@ -82,25 +98,6 @@ ble NotCap
 mov r0, #0x7f
 NotCap:
 strh r0, [r7, #4] @final damage + Glacies damage
-
-
-//code
-mov  r2,#0x02
-ldrb r1, [r7]
-and  r1, r2
-cmp  r1, r2
-bne  BattleStarted//if bit 2 is set, battle has NOT started
-mov  r2, #0x5C//def offset
-ldrh r2, [r5,r2]
-add  r0,r2//dmg+res+enemy def
-mov  r2, #0x5A//atk offset
-strh r0, [r4,r2]
-strh r0, [r7, #0x04]
-b    End
-BattleStarted:
-//endofcode
-
-
 
 End:
 pop {r4-r7}

@@ -1,3 +1,10 @@
+//slightly faster level ups
+PUSH
+ORG 0x07F464
+BYTE 0x0F
+ORG 0x0741E0
+BYTE 0x10
+POP
 
 //sort convoy items by iconid
 PUSH

@@ -209,8 +209,12 @@ EndEvent
 EndingScene:
 MUSC VictoryTheme
 CleanTextNoMap(PathCG,Z3Ending)
+MUSC S_Chaos
+CleanTextNoMap(HouseCG,Z3Ending2)
+MUSC 0x0
+CleanTextNoMap(PathCG,Z3Ending3)
 MUSC S_CircleOfTheMoon
-CleanTextNoMap(PathCG,Z3Ending2)
+CleanTextNoMap(ElbaCorCastleCG,Z3Ending4)
 MUSC S_MainTheme
 SystemText(BlankCG,ArcZekeEnding)
 UnremoveUnit(Blair)

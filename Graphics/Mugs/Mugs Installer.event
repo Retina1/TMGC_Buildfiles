@@ -115,6 +115,11 @@ MikeyMug:
 setMugEntry(0x1b,MikeyMug,3,6,3,4)
 
 ALIGN 4
+CarbonMug:
+#incext PortraitFormatter "Carbon.png"
+setMugEntry(0x1c,CarbonMug,3,5,3,3)
+
+ALIGN 4
 CharleyMug:
 #incext PortraitFormatter "Charley.png"
 setMugEntry(0x20,CharleyMug,4,6,3,4)
@@ -128,6 +133,10 @@ ALIGN 4
 HyperiusMug:
 #incext PortraitFormatter "Hyperius.png"
 setMugEntry(0x22,HyperiusMug,3,5,3,3)
+ALIGN 4
+FlashbackHyperiusMug:
+#incext PortraitFormatter "FlashbackHyperius.png"
+setMugEntry(0xdb,FlashbackHyperiusMug,3,5,3,3)
 
 ALIGN 4
 AlexisMug:
@@ -173,6 +182,11 @@ ALIGN 4
 TotallyNotSimoneMug:
 #incext PortraitFormatter "TotallyNotSimone.png"
 setMugEntry(0xcd,TotallyNotSimoneMug,2,5,3,3)
+
+ALIGN 4
+FreddricMug:
+#incext PortraitFormatter "Freddric.png"
+setMugEntry(0x15,FreddricMug,3,5,3,3)
 
 ALIGN 4
 DeanMug:
@@ -380,6 +394,12 @@ UnknownMug:
 #incext PortraitFormatter "Unknown.png"
 setMugEntry(0xd8,UnknownMug,3,6,3,4)
 
+
+
+ALIGN 4
+MariusMug:
+#incext PortraitFormatter "Marius.png"
+setMugEntry(0xda,MariusMug,2,5,2,3)
 
 ALIGN 4
 IneubrenosMug:

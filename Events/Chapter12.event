@@ -216,7 +216,7 @@ CleanTextNoMap(DesertCG,Ch12_Opening)
 MUSC NarrationTheme2
 Narration(MapCG,Ch12_Narration)
 MUSC S_Terra
-CleanTextNoMap(HallCG,Ch12_Opening2)
+LocationText(HallCG,Ch12_Opening2,TowerOfOpistusLabel)
 LOAD1 0x0 C12Units
 ENUN
 ENUT 0x23
@@ -237,8 +237,7 @@ CleanTextNoMap(HallCG,Ch12_Ending)
 CleanTextNoMap(DesertCG,Ch12_Ending2)
 SetBackground(BlankCG)
 GiveMoney(0x2710)
-MUSC S_Chaos
-CleanTextNoMap(BlankCG,Ch12_Ending3)
+LocationText(BlankCG,Ch12_Ending3,UnknownLocationLabel,S_Chaos)
 MoveToChapter(Interlude4)
 ENDA
 

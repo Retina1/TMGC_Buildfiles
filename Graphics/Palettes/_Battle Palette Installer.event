@@ -103,6 +103,12 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define FreddricPaletteID 0x5f
 #define CarbonUPaletteID 0x60
 #define CarbonPPaletteID 0x61
+#define FlynnUPaletteID 0x62
+#define FlynnPPaletteID 0x63
+#define ElizaUPaletteID 0x64
+#define ElizaPPaletteID 0x65
+#define AthenaUPaletteID 0x66
+#define AthenaPPaletteID 0x67
 
 #define CidPaletteID 0x2e
 #define BrandlPaletteID 0x53
@@ -162,14 +168,17 @@ setPalette(ApolloUPaletteID,ApolloUPalette)
 setPalette(ApolloPPaletteID,ApolloPPalette)
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
+//svelt uses class palettes because of course he does
 setPalette(HilbertUPaletteID,HilbertUPalette)
 setPalette(HilbertPPaletteID,HilbertPPalette)
-
+setPalette(FlynnUPaletteID,FlynnUPalette)
+setPalette(FlynnPPaletteID,FlynnPPalette)
 setPalette(MikeyUPaletteID,MikeyUPalette)
 setPalette(MikeyPPaletteID,MikeyPPalette)
 setPalette(CarbonUPaletteID,CarbonUPalette)
 setPalette(CarbonPPaletteID,CarbonPPalette)
-
+setPalette(AthenaUPaletteID,AthenaUPalette)
+setPalette(AthenaPPaletteID,AthenaPPalette)
 setPalette(CharleyPaletteID,CharleyPalette)
 setPalette(ZekeUPaletteID,ZekeUPalette)
 setPalette(ZekePPaletteID,ZekePPalette)
@@ -203,6 +212,8 @@ setPalette(ElcorianPaletteID,ElcorianPalette)
 setPalette(FreddricPaletteID,FreddricPalette)
 setPalette(DeanUPaletteID,DeanUPalette)
 setPalette(DeanPPaletteID,DeanPPalette)
+setPalette(ElizaUPaletteID,ElizaUPalette)
+setPalette(ElizaPPaletteID,ElizaPPalette)
 
 setPalette(RiftPaletteID,RiftPalette)
 setPalette(EstelleUPaletteID,EstelleUPalette)
@@ -260,10 +271,10 @@ SetPaletteFull(Apollo,ApolloUPaletteID,LightM,ApolloPPaletteID,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
 SetPaletteFull(Hilbert,HilbertUPaletteID,Mage,HilbertPPaletteID,Sage,0x0,0x0)
-SetPaletteFull(Flynn,0x0,Myrm,0x0,SwMast,0x0,0x0)
+SetPaletteFull(Flynn,FlynnUPaletteID,Myrm,FlynnPPaletteID,SwMast,0x0,0x0)
 SetPaletteFull(Mikey,MikeyUPaletteID,Soldier,MikeyPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Carbon,CarbonUPaletteID,BowCav,CarbonPPaletteID,BowPal,0x0,0x0)
-SetPaletteFull(Athena,0x0,AxeWyv,0x0,WyvLord,0x0,0x0)
+SetPaletteFull(Athena,AthenaUPaletteID,AxeWyv,AthenaPPaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Charley,0x0,ArcherF,CharleyPaletteID,SniperF,0x0,0x0)
 SetPaletteFull(Zeke,ZekeUPaletteID,ZekeLord,ZekePPaletteID,ZekeLordX,0x0,0x0)
 SetPaletteFull(Hyperius,0x0,SwdArm,HyperiusPaletteID,SwdGen,0x0,0x0)
@@ -290,7 +301,7 @@ SetPaletteFull(Elcorian,0x0,Troub,ElcorianPaletteID,Valk,0x0,0x0)
 SetPaletteFull(Viridian,0x0,0x0,0x0,ViridianLord,0x0,0x0)
 SetPaletteFull(Freddric,0x0,LncWyv,FreddricPaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Dean,DeanUPaletteID,Fighter,DeanPPaletteID,Warrior,0x0,0x0)
-SetPaletteFull(Eliza,0x0,Cleric,0x0,BishopF,0x0,0x0)
+SetPaletteFull(Eliza,ElizaUPaletteID,Cleric,ElizaPPaletteID,BishopF,0x0,0x0)
 SetPaletteFull(Chartreuse,0x0,BardF,0x0,0x0,0x0,0x0)
 SetPaletteFull(Rift,0x0,Myrm,RiftPaletteID,SwMast,0x0,0x0)
 SetPaletteFull(Estelle,EstelleUPaletteID,BowCavF,EstellePPaletteID,BowPalF,0x0,0x0)
@@ -344,110 +355,99 @@ BlairUPalette:
 ALIGN 4
 BlairPPalette:
 #incbin "BlairPromoted.dmp"
-
 ALIGN 4
 ArinPalette:
 #incbin "ArinTrickster.dmp"
-
 ALIGN 4
 NatasiaUPalette:
 #incbin "NatasiaUnpromoted.dmp"
 ALIGN 4
 NatasiaPPalette:
 #incbin "NatasiaPromoted.dmp"
-
 ALIGN 4
 StefanUPalette:
 #incbin "StefanUnpromoted.dmp"
 ALIGN 4
 StefanPPalette:
 #incbin "StefanPromoted.dmp"
-
 ALIGN 4
 DesmondPalette:
 #incbin "DesmondCommander.dmp"
 ALIGN 4
 DesmondPalPalette:
 #incbin "DesmondPaladin.dmp"
-
 ALIGN 4
 PeggyUPalette:
 #incbin "PeggyUnpromoted.dmp"
 ALIGN 4
 PeggyPPalette:
 #incbin "PeggyPromoted.dmp"
-
 ALIGN 4
 ButchUPalette:
 #incbin "ButchUnpromoted.dmp"
-
 ALIGN 4
 CassiusUPalette:
 #incbin "CassiusUnpromoted.dmp"
 ALIGN 4
 CassiusPPalette:
 #incbin "CassiusPromoted.dmp"
-
 ALIGN 4
 SamUPalette:
 #incbin "SamUnpromoted.dmp"
 ALIGN 4
 SamPPalette:
 #incbin "SamPromoted.dmp"
-
 ALIGN 4
 KennethUPalette:
 #incbin "KennethUnpromoted.dmp"
 ALIGN 4
 KennethPPalette:
 #incbin "KennethPromoted.dmp"
-
 ALIGN 4
 RachaelUPalette:
 #incbin "RachaelUnpromoted.dmp"
 ALIGN 4
 RachaelPPalette:
 #incbin "RachaelPromoted.dmp"
-
 ALIGN 4
 JeffUPalette:
 #incbin "JeffUnpromoted.dmp"
 ALIGN 4
 JeffPPalette:
 #incbin "JeffPromoted.dmp"
-
 ALIGN 4
 JosefUPalette:
 #incbin "JosefUnpromoted.dmp"
 ALIGN 4
 JosefPPalette:
 #incbin "JosefPromoted.dmp"
-
 ALIGN 4
 ApolloUPalette:
 #incbin "ApolloUnpromoted.dmp"
 ALIGN 4
 ApolloPPalette:
 #incbin "ApolloPromoted.dmp"
-
 ALIGN 4
 BechamelUPalette:
 #incbin "BechamelUnpromoted.dmp"
 ALIGN 4
 BechamelPPalette:
 #incbin "BechamelPromoted.dmp"
-
 ALIGN 4
 EmilePalette:
 #incbin "Emile.dmp"
-
 ALIGN 4
 HilbertUPalette:
 #incbin "HilbertUnpromoted.dmp"
 ALIGN 4
 HilbertPPalette:
 #incbin "HilbertPromoted.dmp"
-
+ALIGN 4
+FlynnUPalette:
+#incbin "FlynnUnpromoted.dmp"
+ALIGN 4
+FlynnPPalette:
+#incbin "FlynnPromoted.dmp"
 ALIGN 4
 MikeyUPalette:
 #incbin "MikeyUnpromoted.dmp"
@@ -460,11 +460,15 @@ CarbonUPalette:
 ALIGN 4
 CarbonPPalette:
 #incbin "CarbonPromoted.dmp"
-
+ALIGN 4
+AthenaUPalette:
+#incbin "AthenaUnpromoted.dmp"
+ALIGN 4
+AthenaPPalette:
+#incbin "AthenaPromoted.dmp"
 ALIGN 4
 CharleyPalette:
 #incbin "Charley.dmp"
-
 ALIGN 4
 ZekeUPalette:
 #incbin "ZekeUnpromoted.dmp"
@@ -474,21 +478,18 @@ ZekePPalette:
 ALIGN 4
 HyperiusPalette:
 #incbin "Hyperius.dmp"
-
 ALIGN 4
 AlexisUPalette:
 #incbin "AlexisUnpromoted.dmp"
 ALIGN 4
 AlexisPPalette:
 #incbin "AlexisPromoted.dmp"
-
 ALIGN 4
 LeilaUPalette:
 #incbin "LeilaUnpromoted.dmp"
 ALIGN 4
 LeilaPPalette:
 #incbin "LeilaPromoted.dmp"
-
 ALIGN 4
 DamienUPalette:
 #incbin "DamienUnpromoted.dmp"
@@ -557,6 +558,12 @@ DeanUPalette:
 ALIGN 4
 DeanPPalette:
 #incbin "DeanPromoted.dmp"
+ALIGN 4
+ElizaUPalette:
+#incbin "ElizaUnpromoted.dmp"
+ALIGN 4
+ElizaPPalette:
+#incbin "ElizaPromoted.dmp"
 
 ALIGN 4
 RiftPalette:

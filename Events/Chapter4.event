@@ -248,7 +248,7 @@ LOAD1 0x0 C4Ending
 CAM1 Lazarus
 FlashCursor(Lazarus,60)
 Text(Ch4_Ending_2)
-CleanTextNoMap(ElbaCorCastleCG,Ch4_Ending_3)
+LocationText(ElbaCorCastleCG,Ch4_Ending_3,ElbaCorCastleLabel)
 MoveToChapter(0x5)
 ENDA
 

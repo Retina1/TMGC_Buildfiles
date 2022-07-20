@@ -110,6 +110,11 @@ HilbertMug:
 setMugEntry(0x19,HilbertMug,3,6,3,4)
 
 ALIGN 4
+FlynnMug:
+#incext PortraitFormatter "Flynn.png"
+setMugEntry(0x1A,FlynnMug,3,5,3,3)
+
+ALIGN 4
 MikeyMug:
 #incext PortraitFormatter "Mikey.png"
 setMugEntry(0x1b,MikeyMug,3,6,3,4)
@@ -118,6 +123,11 @@ ALIGN 4
 CarbonMug:
 #incext PortraitFormatter "Carbon.png"
 setMugEntry(0x1c,CarbonMug,3,5,3,3)
+
+ALIGN 4
+AthenaMug:
+#incext PortraitFormatter "Athena.png"
+setMugEntry(0x1e,AthenaMug,3,6,3,4)
 
 ALIGN 4
 CharleyMug:
@@ -192,6 +202,11 @@ ALIGN 4
 DeanMug:
 #incext PortraitFormatter "Dean.png"
 setMugEntry(0x17,DeanMug,2,5,2,3)
+
+ALIGN 4
+ElizaMug:
+#incext PortraitFormatter "Eliza.png"
+setMugEntry(0x1d,ElizaMug,3,6,3,4)
 
 ALIGN 4
 EstelleMug:

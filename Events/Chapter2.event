@@ -224,7 +224,7 @@ EndEvent
 EndingScene:
 ResetBaseFlags
 DeathBranchText(Stefan,Desmond,VictoryMinor,VictoryMinor,DungeonCG,Ch2_Ending,Ch2_Ending_Dead_Stefan,Ch2_Ending_Dead_Desmond,Ch2_Ending_Dead_Stefan_and_Desmond)
-CleanTextNoMap(HallCG,Ch2_Ending2)
+LocationText(HallCG,Ch2_Ending2,SeveralDaysLaterLabel)
 REMA
 EVBIT_F 2
 SetBackground(BlankCG)

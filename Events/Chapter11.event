@@ -223,8 +223,7 @@ ENUN
 CleanText(HallCG,Ch11_Ending)
 Reinforcements(C11EndingVlad)
 CleanTextNoMap(DesertCG,Ch11_Ending2)
-MUSC S_Stratagem
-CleanTextNoMap(HallCG,Ch11_Ending3)
+LocationText(HallCG,Ch11_Ending3,YgstraBarracksLabel,S_Stratagem)
 MoveToChapter(Chapter12)
 ENDA
 

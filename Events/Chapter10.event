@@ -285,8 +285,7 @@ EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
 CleanTextNoMap(BoatCG,Ch10_Ending)
-MUSC S_Chaos
-CleanTextNoMap(HallCG, Ch10_Ending2)
+LocationText(HallCG, Ch10_Ending2,UnknownLocationLabel,S_Chaos)
 MoveToChapter(Chapter11)
 ENDA
 

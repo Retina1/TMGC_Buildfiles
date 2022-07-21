@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "RiversInTheDesert.event"
+SongTable(S_RiversInTheDesert,RiversInTheDesert,1)
+}
+{
 #include "Terra.event"
 SongTable(S_Terra,Terra,1)
 }

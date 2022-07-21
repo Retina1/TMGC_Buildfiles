@@ -70,11 +70,58 @@ UNIT Leila SwdPeg 0x0 Level(13,NPC,0) [15,0] 0x0 0x0 0x1 REDA16R4 [Rapier, Steel
 UNIT
 
 Z1Easy:
-UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Bandit Bruiser 0x0 Level(11,Enemy,1) [21,13] DropItem 0x0 0x0 0x0 [IronSword,Vulnerary] DelayedAI
+UNIT Bandit Deserter 0x0 Level(16,Enemy,1) [23,10] 0x0 0x0 0x0 0x0 [Javelin] AttackInRangeAI
+UNIT Bandit Soldier 0x0 Level(12,Enemy,1) [27,5] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Bandit LncCav 0x0 Level(10,Enemy,1) [30,14] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Bandit SwdCav 0x0 Level(13,Enemy,1) [0,14] DropItem 0x0 0x0 0x0 [SteelSword,Vulnerary] ChaseOnceApproachedAI
+UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Bandit Bruiser 0x0 Level(12,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
+UNIT Bandit Myrm 0x0 Level(12,Enemy,1) [19,14] DropItem 0x0 0x0 0x0 [SilverSword,BraveSword] DelayedAI
+UNIT Bandit LncArm 0x0 Level(13,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit AxeArm 0x0 Level(13,Enemy,1) [17,9] DropItem 0x0 0x0 0x0 [HandAxe,Vulnerary] NeverMoveAI
+UNIT Bandit Soldier 0x0 Level(13,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit Mage 0x0 Level(13,Enemy,1) [21,6] DropItem 0x0 0x0 0x0 [Fire,GoddessIcon] NeverMoveAI
+UNIT Bandit Merc 0x0 Level(12,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Bandit MercF 0x0 Level(12,Enemy,1) [0,5] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Bandit FighterF 0x0 Level(12,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT Bandit LncCavF 0x0 Level(11,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Bandit Mage 0x0 Level(10,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT Bandit SoldierF 0x0 Level(12,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Bandit Merc 0x0 Level(15,Enemy,1) [14,9] DropItem 0x0 0x0 0x0 [SteelSword,Vulnerary] AttackInRangeAI
+UNIT Bandit LncArm 0x0 Level(12,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [6,7] DropItem 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Roark Fighter 0x0 Level(18,Enemy,1) [1,2] DropItem 0x0 0x0 0x0 [HandAxe,SecretBook] NeverMoveAI
 UNIT
 
 Z1Normal:
-UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Bandit Bruiser 0x0 Level(11,Enemy,1) [21,13] DropItem 0x0 0x0 0x0 [IronSword,Vulnerary] DelayedAI
+UNIT Bandit Deserter 0x0 Level(16,Enemy,1) [23,10] 0x0 0x0 0x0 0x0 [Javelin] AttackInRangeAI
+UNIT Bandit Soldier 0x0 Level(12,Enemy,1) [27,5] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Bandit LncCav 0x0 Level(10,Enemy,1) [30,14] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Bandit LncCav 0x0 Level(13,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Bandit SwdCav 0x0 Level(13,Enemy,1) [0,14] DropItem 0x0 0x0 0x0 [SteelSword,Vulnerary] ChaseOnceApproachedAI
+UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Bandit DarkM 0x0 Level(10,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Bandit Bruiser 0x0 Level(12,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
+UNIT Bandit Myrm 0x0 Level(12,Enemy,1) [19,14] DropItem 0x0 0x0 0x0 [Armorslayer,BraveSword] DelayedAI
+UNIT Bandit LncArm 0x0 Level(13,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Javelin,SteelLance] NeverMoveAI
+UNIT Bandit AxeArm 0x0 Level(13,Enemy,1) [17,9] DropItem 0x0 0x0 0x0 [HandAxe,SteelAxe,Vulnerary] NeverMoveAI
+UNIT Bandit Soldier 0x0 Level(13,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit DarkM 0x0 Level(14,Enemy,1) [21,6] DropItem 0x0 0x0 0x0 [Flux,GoddessIcon] NeverMoveAI
+UNIT Bandit Merc 0x0 Level(12,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Bandit MercF 0x0 Level(12,Enemy,1) [0,5] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Bandit FighterF 0x0 Level(12,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT Bandit LncCavF 0x0 Level(11,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Bandit Mage 0x0 Level(10,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [Fire] AttackInRangeAI
+UNIT Bandit SoldierF 0x0 Level(12,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [IronLance] ChaseOnceApproachedAI
+UNIT Bandit Merc 0x0 Level(15,Enemy,1) [14,9] DropItem 0x0 0x0 0x0 [SteelSword,Vulnerary] AttackInRangeAI
+UNIT Bandit LncArm 0x0 Level(12,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [6,7] DropItem 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Roark Fighter 0x0 Level(18,Enemy,1) [1,2] DropItem 0x0 0x0 0x0 [HandAxe,SecretBook] AttackInRangeAI
 UNIT
 
 Z1Hard:

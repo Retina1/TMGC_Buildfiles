@@ -109,6 +109,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ElizaPPaletteID 0x65
 #define AthenaUPaletteID 0x66
 #define AthenaPPaletteID 0x67
+#define ToddsworthPaletteID 0x69
+#define DirkPaletteID 0x68
+
 
 #define CidPaletteID 0x2e
 #define BrandlPaletteID 0x53
@@ -193,7 +196,7 @@ setPalette(ZachariasUPaletteID,ZachariasUPalette)
 setPalette(ZachariasPPaletteID,ZachariasPPalette)
 setPalette(AvanUPaletteID,AvanUPalette)
 setPalette(AvanPPaletteID,AvanPPalette)
-
+setPalette(ToddsworthPaletteID,ToddsworthPalette)
 setPalette(VladmirPaletteID,VladmirPalette)
 setPalette(VladmirDracoPaletteID,VladmirDracoPalette)
 setPalette(HoratioUPaletteID,HoratioUPalette)
@@ -283,7 +286,7 @@ SetPaletteFull(Leila,LeilaUPaletteID,SwdPeg,LeilaPPaletteID,Falco,0x0,0x0)
 SetPaletteFull(Damien,DamienUPaletteID,Archer,DamienPPaletteID,Sniper,0x0,0x0)
 SetPaletteFull(Zacharias,ZachariasUPaletteID,Fighter,ZachariasPPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Avan,AvanUPaletteID,TroubF,AvanPPaletteID,ValkF,0x0,0x0)
-SetPaletteFull(Toddsworth,0x0,Bard,0x0,0x0,0x0,0x0)
+SetPaletteFull(Toddsworth,ToddsworthPaletteID,Bard,0x0,0x0,0x0,0x0)
 SetPaletteFull(Artemis,0x0,AxeCavF,0x0,AxePalF,0x0,0x0)
 SetPaletteFull(Hollandaise,0x0,PirateF,0x0,BerserkerF,0x0,0x0)
 SetPaletteFull(Vladmir,0x0,LightM,VladmirPaletteID,Bishop,VladmirDracoPaletteID,Draco)
@@ -306,7 +309,7 @@ SetPaletteFull(Chartreuse,0x0,BardF,0x0,0x0,0x0,0x0)
 SetPaletteFull(Rift,0x0,Myrm,RiftPaletteID,SwMast,0x0,0x0)
 SetPaletteFull(Estelle,EstelleUPaletteID,BowCavF,EstellePPaletteID,BowPalF,0x0,0x0)
 SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,0x0,0x0)
-SetPaletteFull(Dirk,0x0,Pirate,0x0,Berserker,0x0,0x0)
+SetPaletteFull(Dirk,0x0,Pirate,DirkPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Callum,0x0,SwdCav,0x0,SwdPal,0x0,0x0)
 SetPaletteFull(Manfred,ManfredUPaletteID,DarkM,ManfredPPaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Wilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x0,0x0)
@@ -508,7 +511,9 @@ AvanUPalette:
 ALIGN 4
 AvanPPalette:
 #incbin "AvanPromoted.dmp"
-
+ALIGN 4
+ToddsworthPalette:
+#incbin "Toddsworth.dmp"
 
 ALIGN 4
 VladmirPalette:
@@ -580,6 +585,9 @@ RoseUPalette:
 ALIGN 4
 RosePPalette:
 #incbin "RosePromoted.dmp"
+ALIGN 4
+DirkPalette:
+#incbin "Dirk.dmp"
 
 ALIGN 4
 ManfredUPalette:

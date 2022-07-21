@@ -2,163 +2,133 @@ BlairSkillList:
 BYTE 15 InspirationID
 BYTE 00 00
 ALIGN 4
-
 ArinSkillList:
 BYTE 06 RallyResID
 BYTE 14 RallyDefID
 BYTE 00 00
 ALIGN 4
-
 KennethSkillList:
 BYTE 15 PragmaticID
 BYTE 00 00
 ALIGN 4
-
 NatasiaSkillList:
 BYTE 15 WrathID
 BYTE 00 00
 ALIGN 4
-
 StefanSkillList:
 BYTE 15 KnightAspirantID
 BYTE 00 00
 ALIGN 4
-
 DesmondSkillList:
 BYTE 24 SaviorID
 BYTE 27 LancefaireID
 BYTE 00 00
 ALIGN 4
-
 SamSkillList:
 BYTE 15 BowbreakerID
 BYTE 21 PassID
 BYTE 00 00
 ALIGN 4
-
 JosefSkillList:
 BYTE 15 PuissanceID
 BYTE 21 DespoilID
 BYTE 00 00
 ALIGN 4
-
 PeggySkillList:
 BYTE 15 SwarpID
 BYTE 00 00
 ALIGN 4
-
 ButchSkillList:
 BYTE 15 OpportunistID
 BYTE 00 00
 ALIGN 4
-
 RachaelSkillList:
 BYTE 15 ChivalryID
 BYTE 00 00
 ALIGN 4
-
 CassiusSkillList:
 BYTE 15 ChargeID
 BYTE 00 00
 ALIGN 4
-
 EmileSkillList:
 BYTE 26 InsightID
 BYTE 31 TomebreakerID
 BYTE 00 00
 ALIGN 4
-
 JeffSkillList:
 BYTE 15 QuickRiposteID
 BYTE 00 00
 ALIGN 4
-
 ApolloSkillList:
 BYTE 15 AnathemaID
 BYTE 00 00
 ALIGN 4
-
 BechamelSkillList:
 BYTE 15 HeavyStrikesID
 BYTE 00 00
 ALIGN 4
-
 SveltzalusSkillList:
 BYTE 15 DesperationID
 BYTE 31 CantoPlusID
 BYTE 00 00
 ALIGN 4
-
 HilbertSkillList:
 BYTE 15 MiracleID
 BYTE 00 00
 ALIGN 4
-
 FlynnSkillList:
 BYTE 15 PushResID
 BYTE 38 DoubleLionID
 BYTE 00 00
 ALIGN 4
-
 MikeySkillList:
 BYTE 15 LunaID
 BYTE 00 00
 ALIGN 4
-
 CarbonSkillList:
 BYTE 15 PerfectionistID
 BYTE 21 CantoPlusID
 BYTE 00 00
 ALIGN 4
-
 AthenaSkillList:
 BYTE 15 IntimidateID
 BYTE 00 00
 ALIGN 4
-
 CharleySkillList:
 BYTE 32 BowRangeUpID
 BYTE 00 00
 ALIGN 4
-
 ZekeSkillList:
 BYTE 15 DriveSpdID
 BYTE 21 SupplyID
 BYTE 00 00
 ALIGN 4
-
 HyperiusSkillList:
 BYTE 40 ResolveID
 BYTE 00 00
 ALIGN 4
-
 AlexisSkillList:
 BYTE 15 TriAdeptID
 BYTE 00 00
 ALIGN 4
-
 LeilaSkillList:
 BYTE 15 DauntID
 BYTE 00 00
 ALIGN 4
-
 DamienSkillList:
 BYTE 15 LungeID
 BYTE 30 BowfaireID
 BYTE 00 00
 ALIGN 4
-
 ZachariasSkillList:
 BYTE 15 PursuitID
 BYTE 21 SwordbreakerID
 BYTE 00 00
 ALIGN 4
-
 AvanSkillList:
 BYTE 15 LiveToServeID
 BYTE 00 00
 ALIGN 4
-
 ToddsworthSkillList:
 BYTE 7 BowbreakerID
 BYTE 8 TomebreakerID
@@ -167,227 +137,34 @@ BYTE 12 GrislyWoundID
 BYTE 00 00
 ALIGN 4
 
+ElizaSkillList:
+BYTE 15 PowerstaffID 
+BYTE 00 00
+ALIGN 4
+
+DirkSkillList:
+BYTE 27 DesperationID
+BYTE 00 00
+ALIGN 4
+
 JoanSkillList:
 BYTE 31 TriangleAttackID
 BYTE 00 00
 ALIGN 4
-
 SoniaSkillList:
 BYTE 33 TriangleAttackID
 BYTE 00 00
 ALIGN 4
-
 TobiasSkillList:
 BYTE 36 TriangleAttackID
 BYTE 00 00
 ALIGN 4
 
-EphraimLordSkillList:
+EmptySkillList:
 BYTE 00 00
 ALIGN 4
 
-EirikaLordSkillList:
+LordSkillList:
 BYTE 1 SupplyID
-BYTE 00 00
-ALIGN 4
-
-EphraimGreatLordSkillList:
-BYTE 00 00
-ALIGN 4
-
-EirikaGreatLordSkillList:
-BYTE 1 SupplyID
-BYTE 00 00
-ALIGN 4
-
-CavalierSkillList:
-BYTE 00 00
-
-PaladinSkillList:
-BYTE 00 00
-ALIGN 4
-
-KnightSkillList:
-BYTE 00 00
-ALIGN 4
-
-GeneralSkillList:
-BYTE 00 00
-ALIGN 4
-
-ThiefSkillList:
-BYTE 00 00
-ALIGN 4
-
-MercenarySkillList:
-BYTE 00 00
-ALIGN 4
-
-HeroSkillList:
-BYTE 00 00
-ALIGN 4
-
-MyrmidonSkillList:
-BYTE 00 00
-ALIGN 4
-
-SwordmasterSkillList:
-BYTE 00 00
-ALIGN 4
-
-AssassinSkillList:
-BYTE 00 00
-ALIGN 4
-
-ArcherSkillList:
-BYTE 00 00
-ALIGN 4
-
-SniperSkillList:
-BYTE 00 00
-ALIGN 4
-
-RangerSkillList:
-BYTE 00 00
-ALIGN 4
-
-WyvernRiderSkillList:
-BYTE 00 00
-ALIGN 4
-
-WyvernLordSkillList:
-BYTE 00 00
-ALIGN 4
-
-WyvernKnightSkillList:
-BYTE 00 00
-ALIGN 4
-
-MageSkillList:
-BYTE 00 00
-ALIGN 4
-
-SageSkillList:
-BYTE 00 00
-ALIGN 4
-
-MageKnightSkillList:
-BYTE 00 00
-ALIGN 4
-
-BishopSkillList:
-BYTE 00 00
-ALIGN 4
-
-ShamanSkillList:
-BYTE 00 00
-ALIGN 4
-
-DruidSkillList:
-BYTE 00 00
-ALIGN 4
-
-SummonerSkillList:
-BYTE 00 00
-ALIGN 4
-
-RogueSkillList:
-BYTE 01 CantoID
-BYTE 00 00
-ALIGN 4
-
-GreatKnightSkillList:
-BYTE 00 00
-ALIGN 4
-
-ManaketeFSkillList:
-BYTE 00 00
-ALIGN 4
-
-FighterSkillList:
-BYTE 00 00
-ALIGN 4
-
-WarriorSkillList:
-BYTE 00 00
-ALIGN 4
-
-BrigandSkillList:
-BYTE 00 00
-ALIGN 4
-
-PirateSkillList:
-BYTE 00 00
-ALIGN 4
-
-BerserkerSkillList:
-BYTE 00 00
-ALIGN 4
-
-MonkSkillList:
-BYTE 00 00
-ALIGN 4
-
-PriestSkillList:
-BYTE 00 00
-ALIGN 4
-
-PegKnightSkillList:
-BYTE 00 00
-ALIGN 4
-
-FalcoknightSkillList:
-BYTE 00 00
-ALIGN 4
-
-ClericSkillList:
-BYTE 00 00
-ALIGN 4
-
-TroubadourSkillList:
-BYTE 00 00
-ALIGN 4
-
-ValkyrieSkillList:
-BYTE 00 00
-ALIGN 4
-
-DancerSkillList:
-BYTE 00 00
-ALIGN 4
-
-SoldierSkillList:
-BYTE 00 00
-ALIGN 4
-
-NecromancerSkillList:
-BYTE 00 00
-ALIGN 4
-
-FleetSkillList:
-BYTE 00 00
-ALIGN 4
-
-PhantomSkillList:
-BYTE 00 00
-ALIGN 4
-
-SuperJourneymanSkillList:
-BYTE 00 00
-ALIGN 4
-
-SuperPupilSkillList:
-BYTE 00 00
-ALIGN 4
-
-SuperRecruitSkillList:
-BYTE 00 00
-ALIGN 4
-
-ManaketeMSkillList:
-BYTE 00 00
-ALIGN 4
-
-DemonKingSkillList:
 BYTE 00 00
 ALIGN 4

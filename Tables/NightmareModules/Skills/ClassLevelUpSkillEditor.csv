@@ -1,86 +1,86 @@
 INLINE ClassLevelUpSkillTable,Skill Pointer
 0x00 Separator/Nothing,0x0
-0x01 Ephraim Lord,EphraimLordSkillList|IsPointer
-0x02 Eirika Lord,EirikaLordSkillList|IsPointer
-0x03 Ephraim Great Lord,EphraimGreatLordSkillList|IsPointer
-0x04 Eirika Great Lord,EirikaGreatLordSkillList|IsPointer
-0x05 Cavalier,CavalierSkillList|IsPointer
-0x06 Cavalier (F),CavalierSkillList|IsPointer
-0x07 Paladin,PaladinSkillList|IsPointer
-0x08 Paladin (F),PaladinSkillList|IsPointer
-0x09 Armour Knight,KnightSkillList|IsPointer
-0x0A Armour Knight (F),KnightSkillList|IsPointer
-0x0B General,GeneralSkillList|IsPointer
-0x0C General (F),GeneralSkillList|IsPointer
-0x0D Thief,ThiefSkillList|IsPointer
+0x01 Ephraim Lord,0x0
+0x02 Eirika Lord,LordSkillList|IsPointer
+0x03 Ephraim Great Lord,0x0
+0x04 Eirika Great Lord,LordSkillList|IsPointer
+0x05 Cavalier,0x0
+0x06 Cavalier (F),0x0
+0x07 Paladin,0x0
+0x08 Paladin (F),0x0
+0x09 Armour Knight,0x0
+0x0A Armour Knight (F),0x0
+0x0B General,0x0
+0x0C General (F),0x0
+0x0D Thief,0x0
 0x0E Manakete,0x0
-0x0F Mercenary,MercenarySkillList|IsPointer
-0x10 Mercenary (F),MercenarySkillList|IsPointer
-0x11 Hero,HeroSkillList|IsPointer
-0x12 Hero (F),HeroSkillList|IsPointer
-0x13 Myrmidon,MyrmidonSkillList|IsPointer
-0x14 Myrmidon (F),MyrmidonSkillList|IsPointer
-0x15 Swordmaster,SwordmasterSkillList|IsPointer
-0x16 Swordmaster (F),SwordmasterSkillList|IsPointer
-0x17 Assassin,AssassinSkillList|IsPointer
-0x18 Assassin (F),AssassinSkillList|IsPointer
-0x19 Archer,ArcherSkillList|IsPointer
-0x1A Archer (F),ArcherSkillList|IsPointer
-0x1B Sniper,SniperSkillList|IsPointer
-0x1C Sniper (F),SniperSkillList|IsPointer
-0x1D Ranger,RangerSkillList|IsPointer
-0x1E Ranger (F),RangerSkillList|IsPointer
-0x1F Wyvern Rider,WyvernRiderSkillList|IsPointer
-0x20 Wyvern Rider (F),WyvernRiderSkillList|IsPointer
-0x21 Wyvern Lord,WyvernLordSkillList|IsPointer
-0x22 Wyvern Lord (F),WyvernLordSkillList|IsPointer
-0x23 Wyvern Knight,WyvernKnightSkillList|IsPointer
-0x24 Wyvern Knight (F),WyvernKnightSkillList|IsPointer
-0x25 Mage,MageSkillList|IsPointer
-0x26 Mage (F),MageSkillList|IsPointer
-0x27 Sage,SageSkillList|IsPointer
-0x28 Sage (F),SageSkillList|IsPointer
-0x29 Mage Knight,MageKnightSkillList|IsPointer
-0x2A Mage Knight (F),MageKnightSkillList|IsPointer
-0x2B Bishop,BishopSkillList|IsPointer
-0x2C Bishop (F),BishopSkillList|IsPointer
-0x2D Shaman,ShamanSkillList|IsPointer
-0x2E Shaman (F),ShamanSkillList|IsPointer
-0x2F Druid,DruidSkillList|IsPointer
-0x30 Druid (F),DruidSkillList|IsPointer
-0x31 Summoner,SummonerSkillList|IsPointer
-0x32 Summoner (F),SummonerSkillList|IsPointer
-0x33 Rogue,RogueSkillList|IsPointer
+0x0F Mercenary,0x0
+0x10 Mercenary (F),0x0
+0x11 Hero,0x0
+0x12 Hero (F),0x0
+0x13 Myrmidon,0x0
+0x14 Myrmidon (F),0x0
+0x15 Swordmaster,0x0
+0x16 Swordmaster (F),0x0
+0x17 Assassin,0x0
+0x18 Assassin (F),0x0
+0x19 Archer,0x0
+0x1A Archer (F),0x0
+0x1B Sniper,0x0
+0x1C Sniper (F),0x0
+0x1D Ranger,0x0
+0x1E Ranger (F),0x0
+0x1F Wyvern Rider,0x0
+0x20 Wyvern Rider (F),0x0
+0x21 Wyvern Lord,0x0
+0x22 Wyvern Lord (F),0x0
+0x23 Wyvern Knight,0x0
+0x24 Wyvern Knight (F),0x0
+0x25 Mage,0x0
+0x26 Mage (F),0x0
+0x27 Sage,0x0
+0x28 Sage (F),0x0
+0x29 Mage Knight,0x0
+0x2A Mage Knight (F),0x0
+0x2B Bishop,0x0
+0x2C Bishop (F),0x0
+0x2D Shaman,0x0
+0x2E Shaman (F),0x0
+0x2F Druid,0x0
+0x30 Druid (F),0x0
+0x31 Summoner,0x0
+0x32 Summoner (F),0x0
+0x33 Rogue,0x0
 0x34 Gorgon Egg,0x0
-0x35 Great Knight,GreatKnightSkillList|IsPointer
-0x36 Great Knight (F),GreatKnightSkillList|IsPointer
+0x35 Great Knight,0x0
+0x36 Great Knight (F),0x0
 0x37 Recruit (2),0x0
 0x38 Journeyman (3),0x0
 0x39 Pupil (3),0x0
 0x3A Recruit (3),0x0
 0x3B Manakete,0x0
-0x3C Manakete (F),ManaketeFSkillList|IsPointer
+0x3C Manakete (F),0x0
 0x3D Journeyman (1),0x0
-0x3E Pupil (1),0x0
-0x3F Fighter,FighterSkillList|IsPointer
-0x40 Warrior,WarriorSkillList|IsPointer
-0x41 Brigand,BrigandSkillList|IsPointer
-0x42 Pirate,PirateSkillList|IsPointer
-0x43 Berserker,BerserkerSkillList|IsPointer
-0x44 Monk,MonkSkillList|IsPointer
-0x45 Priest,PriestSkillList|IsPointer
+0x3E Pupil (1),LordSkillList|IsPointer
+0x3F Fighter,0x0
+0x40 Warrior,0x0
+0x41 Brigand,0x0
+0x42 Pirate,0x0
+0x43 Berserker,0x0
+0x44 Monk,0x0
+0x45 Priest,0x0
 0x46 Bard,0x0
 0x47 Recruit (1),0x0
-0x48 Pegasus Knight,PegKnightSkillList|IsPointer
-0x49 Falcon Knight,FalcoknightSkillList|IsPointer
-0x4A Cleric,ClericSkillList|IsPointer
-0x4B Troubadour,TroubadourSkillList|IsPointer
-0x4C Valkyrie,ValkyrieSkillList|IsPointer
-0x4D Dancer,DancerSkillList|IsPointer
-0x4E Soldier,SoldierSkillList|IsPointer
-0x4F Necromancer,NecromancerSkillList|IsPointer
-0x50 Fleet,FleetSkillList|IsPointer
-0x51 Phantom,PhantomSkillList|IsPointer
+0x48 Pegasus Knight,0x0
+0x49 Falcon Knight,0x0
+0x4A Cleric,0x0
+0x4B Troubadour,0x0
+0x4C Valkyrie,0x0
+0x4D Dancer,0x0
+0x4E Soldier,0x0
+0x4F Necromancer,0x0
+0x50 Fleet,0x0
+0x51 Phantom,0x0
 0x52 Revenant,0x0
 0x53 Entombed,0x0
 0x54 Bonewalker,0x0

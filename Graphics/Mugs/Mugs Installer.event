@@ -179,6 +179,11 @@ ToddsworthMug:
 setMugEntry(0x29,ToddsworthMug,3,5,3,3)
 
 ALIGN 4
+ArtemisMug:
+#incext PortraitFormatter "Artemis.png"
+setMugEntry(0x2a,ArtemisMug,3,5,3,3)
+
+ALIGN 4
 VladmirMug:
 #incext PortraitFormatter "Vladmir.png"
 setMugEntry(0x2c,VladmirMug,3,5,3,3)
@@ -254,6 +259,11 @@ PtolemyMug:
 setMugEntry(0x4b,PtolemyMug,3,4,3,2)
 
 ALIGN 4
+SoniaMug:
+#incext PortraitFormatter "Sonia.png"
+setMugEntry(0x48,SoniaMug,4,5,4,3)
+
+ALIGN 4
 TobiasMug:
 #incext PortraitFormatter "Tobias.png"
 setMugEntry(0x51,TobiasMug,2,5,3,3)
@@ -262,6 +272,11 @@ ALIGN 4
 IanMug:
 #incext PortraitFormatter "Ian.png"
 setMugEntry(0x56,IanMug,2,7,3,5)
+
+ALIGN 4
+OlsenMug:
+#incext PortraitFormatter "Olsen.png"
+setMugEntry(0x52,OlsenMug,3,5,3,3)
 
 ALIGN 4
 ElcorianMug:
@@ -468,6 +483,25 @@ setMugEntry(0xd4,TonnaminMug,3,5,3,3)
 
 
 
+ALIGN 4
+DLFreddricMug:
+#incext PortraitFormatter "spoilerly/DL_Freddric.png"
+setMugEntry(0xf6,DLFreddricMug,3,5,3,3)
+
+ALIGN 4
+DLDeanMug:
+#incext PortraitFormatter "spoilerly/DL_Dean.png"
+setMugEntry(0xf7,DLDeanMug,2,5,2,3)
+
+ALIGN 4
+DLElizaMug:
+#incext PortraitFormatter "spoilerly/DL_Eliza.png"
+setMugEntry(0xf8,DLElizaMug,3,6,3,4)
+
+ALIGN 4
+DLDirkMug:
+#incext PortraitFormatter "spoilerly/DL_Dirk.png"
+setMugEntry(0xf9,DLDirkMug,3,5,3,3)
 
 ALIGN 4
 DLEstelleMug:
@@ -482,7 +516,7 @@ setMugEntry(0xfb,DLRiftMug,4,6,4,4)
 ALIGN 4
 DLRoseMug:
 #incext PortraitFormatter "spoilerly/DL_Rose.png"
-setMugEntry(0xfc,DLRoseMug,3,5,3,3)
+setMugEntry(0xfc,DLRoseMug,3,6,3,4)
 
 ALIGN 4
 DLManfredMug:

@@ -111,6 +111,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define AthenaPPaletteID 0x67
 #define ToddsworthPaletteID 0x69
 #define DirkPaletteID 0x68
+#define SoniaPaletteID 0x6a
+#define OlsenPaletteID 0x6b
+#define ArtemisPaletteID 0x6c
 
 
 #define CidPaletteID 0x2e
@@ -140,11 +143,11 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
 #define ArbordiaPaletteID 0x3d
 
-
+//to do: unpromoted pals for promoted units?
 setPalette(BlairUPaletteID,BlairUPalette)
 setPalette(BlairPPaletteID,BlairPPalette)
 setPalette(ArinPaletteID,ArinPalette)
-
+//arin valk once biraku finishes the repal
 setPalette(KennethUPaletteID,KennethUPalette)
 setPalette(KennethPPaletteID,KennethPPalette)
 setPalette(NatasiaUPaletteID,NatasiaUPalette)
@@ -195,8 +198,11 @@ setPalette(DamienPPaletteID,DamienPPalette)
 setPalette(ZachariasUPaletteID,ZachariasUPalette)
 setPalette(ZachariasPPaletteID,ZachariasPPalette)
 setPalette(AvanUPaletteID,AvanUPalette)
-setPalette(AvanPPaletteID,AvanPPalette)
+setPalette(AvanPPaletteID,AvanPPalette)//repal coming
 setPalette(ToddsworthPaletteID,ToddsworthPalette)
+setPalette(ArtemisPaletteID,ArtemisPalette)
+//hollandaise
+//hollandaise promoted
 setPalette(VladmirPaletteID,VladmirPalette)
 setPalette(VladmirDracoPaletteID,VladmirDracoPalette)
 setPalette(HoratioUPaletteID,HoratioUPalette)
@@ -207,27 +213,33 @@ setPalette(PtolemyPPaletteID,PtolemyPPalette)
 setPalette(JohanUPaletteID,JohanUPalette)
 setPalette(JohanPPaletteID,JohanPPalette)
 setPalette(PeterPaletteID,PeterPalette)
-
+setPalette(SoniaPaletteID,SoniaPalette)
+//joan
 setPalette(TobiasPaletteID,TobiasPalette)
-
-setPalette(ElcorianPaletteID,ElcorianPalette)
-
+//ian when i find him an anim
+setPalette(OlsenPaletteID,OlsenPalette)
+setPalette(ElcorianPaletteID,ElcorianPalette)//repal coming
+//viridian
 setPalette(FreddricPaletteID,FreddricPalette)
 setPalette(DeanUPaletteID,DeanUPalette)
 setPalette(DeanPPaletteID,DeanPPalette)
 setPalette(ElizaUPaletteID,ElizaUPalette)
 setPalette(ElizaPPaletteID,ElizaPPalette)
-
+//chartreuse
 setPalette(RiftPaletteID,RiftPalette)
 setPalette(EstelleUPaletteID,EstelleUPalette)
 setPalette(EstellePPaletteID,EstellePPalette)
 setPalette(RoseUPaletteID,RoseUPalette)
 setPalette(RosePPaletteID,RosePPalette)
-
+setPalette(DirkPaletteID,DirkPalette)
+//callum
 setPalette(ManfredUPaletteID,ManfredUPalette)
 setPalette(ManfredPPaletteID,ManfredPPalette)
 setPalette(WilhelmUPaletteID,WilhelmUPalette)
 setPalette(WilhelmPPaletteID,WilhelmPPalette)
+//argent
+//tonnamin
+//player jonas, laronde is down further
 
 setPalette(CidPaletteID,CidPalette)
 setPalette(BrandlPaletteID,BrandlPalette)
@@ -287,7 +299,7 @@ SetPaletteFull(Damien,DamienUPaletteID,Archer,DamienPPaletteID,Sniper,0x0,0x0)
 SetPaletteFull(Zacharias,ZachariasUPaletteID,Fighter,ZachariasPPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Avan,AvanUPaletteID,TroubF,AvanPPaletteID,ValkF,0x0,0x0)
 SetPaletteFull(Toddsworth,ToddsworthPaletteID,Bard,0x0,0x0,0x0,0x0)
-SetPaletteFull(Artemis,0x0,AxeCavF,0x0,AxePalF,0x0,0x0)
+SetPaletteFull(Artemis,0x0,AxeCavF,ArtemisPaletteID,AxePalF,0x0,0x0)
 SetPaletteFull(Hollandaise,0x0,PirateF,0x0,BerserkerF,0x0,0x0)
 SetPaletteFull(Vladmir,0x0,LightM,VladmirPaletteID,Bishop,VladmirDracoPaletteID,Draco)
 SetPaletteFull(Horatio,HoratioUPaletteID,Rune,HoratioPPaletteID,RuneMast,0x0,0x0)
@@ -295,11 +307,11 @@ SetPaletteFull(Simone,0x0,DarkF,SimonePaletteID,SorcF,0x0,0x0)
 SetPaletteFull(Ptolemy,PtolemyUPaletteID,BowArm,PtolemyPPaletteID,BowWyv,0x0,0x0)
 SetPaletteFull(Johan,JohanUPaletteID,LncCav,JohanPPaletteID,LncPal,0x0,0x0)
 SetPaletteFull(Peter,0x0,AxeWyv,PeterPaletteID,WyvLord,0x0,0x0)
-SetPaletteFull(Sonia,0x0,SoldierF,0x0,HalberdierF,0x0,0x0)
+SetPaletteFull(Sonia,0x0,SoldierF,SoniaPaletteID,HalberdierF,0x0,0x0)
 SetPaletteFull(Joan,0x0,MercF,0x0,HeroF,0x0,0x0)
 SetPaletteFull(Tobias,0x0,Fighter,TobiasPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Ian,0x0,CivilM,0x0,0x0,0x0,0x0)
-SetPaletteFull(Olsen,0x0,ThiefF,0x0,AssassF,0x0,0x0)
+SetPaletteFull(Olsen,0x0,ThiefF,OlsenPaletteID,AssassF,0x0,0x0)
 SetPaletteFull(Elcorian,0x0,Troub,ElcorianPaletteID,Valk,0x0,0x0)
 SetPaletteFull(Viridian,0x0,0x0,0x0,ViridianLord,0x0,0x0)
 SetPaletteFull(Freddric,0x0,LncWyv,FreddricPaletteID,WyvLord,0x0,0x0)
@@ -316,6 +328,8 @@ SetPaletteFull(Wilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x
 SetPaletteFull(Argent,0x0,BowArm,0x0,BowGen,0x0,0x0)
 SetPaletteFull(Addington,0x0,Automaton,0x0,0x0,0x0,0x0)
 SetPaletteFull(Tonnamin,0x0,AxeArm,0x0,AxeGen,0x0,0x0)
+SetPaletteFull(SecretJonas,JonasPaletteID,LncWyv,0x0,WyvLord,0x0,0x0)
+SetPaletteFull(SecretLaronde,0x0,Soldier,LarondePaletteID,Halberdier,0x0,0x0)
 
 SetPaletteFull(Davelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Marque,MarqueStarquePaletteID,AxeCav,0x0,0x0,0x0,0x0)
@@ -514,6 +528,9 @@ AvanPPalette:
 ALIGN 4
 ToddsworthPalette:
 #incbin "Toddsworth.dmp"
+ALIGN 4
+ArtemisPalette:
+#incbin "Artemis.dmp"
 
 ALIGN 4
 VladmirPalette:
@@ -545,11 +562,17 @@ JohanPPalette:
 ALIGN 4
 PeterPalette:
 #incbin "Peter.dmp"
+ALIGN 4
+SoniaPalette:
+#incbin "Sonia.dmp"
 
 ALIGN 4
 TobiasPalette:
 #incbin "Tobias.dmp"
 
+ALIGN 4
+OlsenPalette:
+#incbin "Olsen.dmp"
 ALIGN 4
 ElcorianPalette:
 #incbin "Elcorian.dmp"

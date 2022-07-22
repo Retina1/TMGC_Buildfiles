@@ -212,7 +212,15 @@ CleanTextNoMap(PathCG,Z3Ending)
 LocationText(HouseCG,Z3Ending2,TwoYearsAgoLabel,S_Chaos)
 MUSC 0x0
 CleanTextNoMap(PathCG,Z3Ending3)
-LocationText(ElbaCorCastleCG,Z3Ending4,ElbaCorCastleLabel,S_CircleOfTheMoon)
+SetBackground(ElbaCorCastleCG)
+Location(ElbaCorCastleLabel)
+TEXTSTART
+TEXTSHOW Z3Ending4
+TEXTEND
+MUSC S_CircleOfTheMoon
+TEXTCONT
+TEXTEND
+FADI 0x3c
 MUSC S_MainTheme
 SystemText(BlankCG,ArcZekeEnding)
 UnremoveUnit(Blair)

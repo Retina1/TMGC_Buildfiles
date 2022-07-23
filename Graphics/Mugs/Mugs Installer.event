@@ -189,6 +189,11 @@ VladmirMug:
 setMugEntry(0x2c,VladmirMug,3,5,3,3)
 
 ALIGN 4
+HollandaiseMug:
+#incext PortraitFormatter "Hollandaise.png"
+setMugEntry(0x2b,HollandaiseMug,3,5,3,3)
+
+ALIGN 4
 HoratioMug:
 #incext PortraitFormatter "Horatio.png"
 setMugEntry(0x46,HoratioMug,3,6,3,4)

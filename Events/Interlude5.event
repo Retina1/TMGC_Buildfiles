@@ -88,16 +88,21 @@ EnableFreeMovement
 LOAD1 0x0 I5Units
 LOAD1 0x0 I5NPC
 ENUN
-CleanTextNoMap(HallCG,FillerDialogue)//negotiations, dalst yoinks ygstra
+
 MUSC NarrationTheme2
-Narration(Map2CG,Base5_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)//zeke returns
+Narration(MapCG,Base5_Narration)
+CleanTextNoMap(HallCG,I5Opening)//blair returns after zeke
 GotoPrepScreenNoBaseCheck
 ENDA
 
 EndingScene:
 DisableFreeMovement
-Text(FillerDialogue)
+Text(FillerDialogue)//blair talks to king, meets zeke
+CleanTextNoMap(HallCG,I5Ending2)//negotiations, dalst yoinks ygstra
+CHECK_ALIVE Kenneth
+BEQ 0x1 0xc 0x0
+CleanTextNoMap(HallCG,I5KennethScene)//kenneth says hi to dad
+LABEL 0x1
 MoveToChapter(Chapter15)
 ENDA
 

@@ -3,7 +3,7 @@
 	.equ	SearchingForFriends_FINAL_grp, voicegroup000
 	.equ	SearchingForFriends_FINAL_pri, 0
 	.equ	SearchingForFriends_FINAL_rev, 0
-	.equ	SearchingForFriends_FINAL_mvl, 50
+	.equ	SearchingForFriends_FINAL_mvl, 53
 	.equ	SearchingForFriends_FINAL_key, 0
 	.equ	SearchingForFriends_FINAL_tbs, 1
 	.equ	SearchingForFriends_FINAL_exg, 0
@@ -20,11 +20,9 @@ SearchingForFriends_FINAL_1:
 @ 000   ----------------------------------------
 	.byte	TEMPO , 124*SearchingForFriends_FINAL_tbs/2
 	.byte		VOICE , 75
-	.byte		MODT  , 0
 	.byte		LFOS  , 44
 	.byte		VOL   , 127*SearchingForFriends_FINAL_mvl/mxv
 	.byte		PAN   , c_v+32
-	.byte		MOD   , 4
 	.byte		VOL   , 90*SearchingForFriends_FINAL_mvl/mxv
 	.byte		BEND  , c_v+0
 	.byte	W96
@@ -245,11 +243,9 @@ SearchingForFriends_FINAL_2:
 	.byte	KEYSH , SearchingForFriends_FINAL_key+0
 @ 000   ----------------------------------------
 	.byte		VOICE , 52
-	.byte		MODT  , 0
 	.byte		LFOS  , 44
 	.byte		VOL   , 127*SearchingForFriends_FINAL_mvl/mxv
 	.byte		PAN   , c_v+32
-	.byte		MOD   , 4
 	.byte		VOL   , 78*SearchingForFriends_FINAL_mvl/mxv
 	.byte		BEND  , c_v+0
 	.byte		N96   , Cs3 , v028
@@ -394,11 +390,9 @@ SearchingForFriends_FINAL_3:
 	.byte	KEYSH , SearchingForFriends_FINAL_key+0
 @ 000   ----------------------------------------
 	.byte		VOICE , 18
-	.byte		MODT  , 0
 	.byte		LFOS  , 44
 	.byte		VOL   , 127*SearchingForFriends_FINAL_mvl/mxv
 	.byte		PAN   , c_v+63
-	.byte		MOD   , 4
 	.byte		VOL   , 35*SearchingForFriends_FINAL_mvl/mxv
 	.byte		BEND  , c_v+0
 	.byte	W96
@@ -535,11 +529,9 @@ SearchingForFriends_FINAL_4:
 	.byte	KEYSH , SearchingForFriends_FINAL_key+0
 @ 000   ----------------------------------------
 	.byte		VOICE , 40
-	.byte		MODT  , 0
 	.byte		LFOS  , 44
 	.byte		VOL   , 127*SearchingForFriends_FINAL_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		MOD   , 4
 	.byte		VOL   , 49*SearchingForFriends_FINAL_mvl/mxv
 	.byte		BEND  , c_v+0
 	.byte		N96   , En3 , v080
@@ -774,11 +766,9 @@ SearchingForFriends_FINAL_5:
 	.byte	KEYSH , SearchingForFriends_FINAL_key+0
 @ 000   ----------------------------------------
 	.byte		VOICE , 38
-	.byte		MODT  , 0
 	.byte		LFOS  , 44
 	.byte		VOL   , 127*SearchingForFriends_FINAL_mvl/mxv
 	.byte		PAN   , c_v+32
-	.byte		MOD   , 4
 	.byte		VOL   , 72*SearchingForFriends_FINAL_mvl/mxv
 	.byte		BEND  , c_v+0
 	.byte		N84   , An1 , v127
@@ -1276,11 +1266,9 @@ SearchingForFriends_FINAL_6:
 	.byte	KEYSH , SearchingForFriends_FINAL_key+0
 @ 000   ----------------------------------------
 	.byte		VOICE , 124
-	.byte		MODT  , 0
 	.byte		LFOS  , 44
 	.byte		VOL   , 127*SearchingForFriends_FINAL_mvl/mxv
 	.byte		PAN   , c_v+0
-	.byte		MOD   , 4
 	.byte		VOL   , 31*SearchingForFriends_FINAL_mvl/mxv
 	.byte		N12   , As1 , v028
 	.byte	W12

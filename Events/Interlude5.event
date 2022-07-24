@@ -26,7 +26,8 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0x0,I5ReadyToEnd,Blair,Brandl)
-CharacterEvent(0x11,I5Merchant,Blair,Merchant)
+CharacterEvent(0x11,I5Merchant,Blair,Merchant)//sell item
+CharacterEvent(0x11,I5Merchant,Blair,Merchant3)//sell a stat boost
 END_MAIN
 
 LocationBasedEvents:
@@ -78,7 +79,20 @@ UNIT Brandl Sniper 0x0 Level(11,NPC,0) [4,1] 0x0 0x0 0x0 0x0 [Longbow, Elixir] N
 UNIT Argent BowGen 0x0 Level(6,NPC,1) [12,2] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Viridian ViridianLord 0x0 Level(4,NPC,0) [11,12] 0x0 0x0 0x0 0x0 [Luckbow] NeverMoveAI
 UNIT Freddric WyvLord 0x0 Level(5,NPC,0) [13,11] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
-UNIT Merchant ValkF 0x0 Level(4,NPC,1) [0,34] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Merchant ValkF 0x0 Level(15,NPC,1) [0,34] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Merchant3 Bishop 0x0 Level(13,NPC,1) [3,13] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor MercF 0x0 Level(19,NPC,1) [15,31] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor SageF 0x0 Level(2,NPC,1) [6,30] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor Falco 0x0 Level(9,NPC,1) [25,1] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor LncGen 0x0 Level(19,NPC,1) [2,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor AxeGen 0x0 Level(18,NPC,1) [5,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor SwdPeg 0x0 Level(12,NPC,1) [13,17] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor Soldier 0x0 Level(14,NPC,1) [7,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor SoldierF 0x0 Level(11,NPC,1) [8,11] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor Hero 0x0 Level(3,NPC,1) [1,22] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT ElbaCor Cleric 0x0 Level(4,NPC,1) [15,37] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Bandit Berserker 0x0 Level(14,Enemy,1) [29,5] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Bandit Berserker 0x0 Level(14,Enemy,1) [27,31] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 ALIGN 4
@@ -88,8 +102,7 @@ EnableFreeMovement
 LOAD1 0x0 I5Units
 LOAD1 0x0 I5NPC
 ENUN
-
-MUSC NarrationTheme2
+MUSC NarrationTheme3
 Narration(MapCG,Base5_Narration)
 CleanTextNoMap(HallCG,I5Opening)//blair returns after zeke
 GotoPrepScreenNoBaseCheck
@@ -98,7 +111,10 @@ ENDA
 EndingScene:
 DisableFreeMovement
 Text(FillerDialogue)//blair talks to king, meets zeke
-CleanTextNoMap(HallCG,I5Ending2)//negotiations, dalst yoinks ygstra
+MUSC S_Chaos
+CleanTextNoMap(HallCG,I5Ending2)
+SetBackground(BlankCG)
+GiveItem(ResoluteSeal,Blair)
 CHECK_ALIVE Kenneth
 BEQ 0x1 0xc 0x0
 CleanTextNoMap(HallCG,I5KennethScene)//kenneth says hi to dad

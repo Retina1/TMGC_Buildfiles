@@ -41,6 +41,10 @@
 #include "Bigle\Monster Installer.event"
 }
 {
+#include "Civilian(Nuramon)\Sword Installer.event"
+#include "Civilian(Nuramon)\Unarmed Installer.event"
+}
+{
 #include "Zeke(Nuramon)\Lance Installer.event"
 #include "Zeke(Nuramon)\Bow Installer.event"
 #include "Zeke(Nuramon)\Unarmed Installer.event"
@@ -419,6 +423,12 @@ SpecialAnim(0xc6,WyvernBreath)
 SpecialAnim(0xc7,DemonBreath)
 SpecialAnim(0xc8,EarthBreath)
 SpecialAnim(0xc9,DivineBreath)
+EndAnim
+
+ALIGN 4
+CivilianAnims:
+SwordAnim(0x7b)
+UnarmedAnim(0x7c)
 EndAnim
 
 ALIGN 4

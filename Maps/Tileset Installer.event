@@ -45,10 +45,12 @@ CastleObjects:
 ALIGN 4
 LowlandsCastlePalette:
 #incext Png2Dmp "Tilesets/LowlandsCastle.png" --palette-only
-
 ALIGN 4
 YgstraCastlePalette:
 #incext Png2Dmp "Tilesets/YgstraCastle.png" --palette-only
+ALIGN 4
+ElbaCorCastlePalette:
+#incext Png2Dmp "Tilesets/ElbaCorCastle.png" --palette-only
 
 ALIGN 4
 CastleTiles:
@@ -408,6 +410,7 @@ EventPointerTable(TILCity, CityTiles)
 EventPointerTable(OBJCastle, CastleObjects)
 EventPointerTable(PALLowlandsCastle, LowlandsCastlePalette)
 EventPointerTable(PALYgstraCastle, YgstraCastlePalette)
+EventPointerTable(PALElbaCorCastle, ElbaCorCastlePalette)
 EventPointerTable(TILCastle, CastleTiles)
 EventPointerTable(ANICastle, CastleAnims)
 

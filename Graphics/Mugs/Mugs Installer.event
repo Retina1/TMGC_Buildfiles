@@ -117,7 +117,7 @@ setMugEntry(0x1A,FlynnMug,3,5,3,3)
 ALIGN 4
 MikeyMug:
 #incext PortraitFormatter "Mikey.png"
-setMugEntry(0x1b,MikeyMug,3,6,3,4)
+setMugEntry(0x1b,MikeyMug,3,5,3,3)
 
 ALIGN 4
 CarbonMug:
@@ -267,6 +267,11 @@ ALIGN 4
 SoniaMug:
 #incext PortraitFormatter "Sonia.png"
 setMugEntry(0x48,SoniaMug,4,5,4,3)
+
+ALIGN 4
+JoanMug:
+#incext PortraitFormatter "Joan.png"
+setMugEntry(0x43,JoanMug,3,5,3,3)
 
 ALIGN 4
 TobiasMug:

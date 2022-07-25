@@ -118,6 +118,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define HollandaisePPaletteID 0x6e
 #define IanPaletteID 0x6f
 #define JoanPaletteID 0x70
+#define CallumPaletteID 0x71
 
 
 #define CidPaletteID 0x2e
@@ -145,6 +146,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ParquePaletteID 0x5a
 #define UnknownPaletteID 0x58
 
+#define LiamPaletteID 0x72
+#define NeillstromPaletteID 0x73
+#define CiraweissPaletteID 0x74
 #define ArbordiaPaletteID 0x3d
 
 //to do: unpromoted pals for promoted units?
@@ -236,7 +240,7 @@ setPalette(EstellePPaletteID,EstellePPalette)
 setPalette(RoseUPaletteID,RoseUPalette)
 setPalette(RosePPaletteID,RosePPalette)
 setPalette(DirkPaletteID,DirkPalette)
-//callum
+setPalette(CallumPaletteID,CallumPalette)
 setPalette(ManfredUPaletteID,ManfredUPalette)
 setPalette(ManfredPPaletteID,ManfredPPalette)
 setPalette(WilhelmUPaletteID,WilhelmUPalette)
@@ -270,6 +274,9 @@ setPalette(VulturePaletteID,VulturePalette)
 setPalette(ParquePaletteID,ParquePalette)
 setPalette(UnknownPaletteID,UnknownPalette)
 
+setPalette(LiamPaletteID,LiamPalette)
+setPalette(NeillstromPaletteID,NeillstromPalette)
+setPalette(CiraweissPaletteID,CiraweissPalette)
 setPalette(ArbordiaPaletteID,ArbordiaPalette)
 
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,BlairPPaletteID,BlairLordX,0x0,0x0)
@@ -326,7 +333,7 @@ SetPaletteFull(Rift,0x0,Myrm,RiftPaletteID,SwMast,0x0,0x0)
 SetPaletteFull(Estelle,EstelleUPaletteID,BowCavF,EstellePPaletteID,BowPalF,0x0,0x0)
 SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,0x0,0x0)
 SetPaletteFull(Dirk,0x0,Pirate,DirkPaletteID,Berserker,0x0,0x0)
-SetPaletteFull(Callum,0x0,SwdCav,0x0,SwdPal,0x0,0x0)
+SetPaletteFull(Callum,0x0,SwdCav,CallumPaletteID,SwdPal,0x0,0x0)
 SetPaletteFull(Manfred,ManfredUPaletteID,DarkM,ManfredPPaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Wilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Argent,0x0,BowArm,0x0,BowGen,0x0,0x0)
@@ -358,9 +365,9 @@ SetPaletteFull(Vulture,VulturePaletteID,BowArm,0x0,0x0,0x0,0x0)
 SetPaletteFull(Parque,0x0,0x0,ParquePaletteID,LncPal,0x0,0x0)
 SetPaletteFull(C15Boss,0x0,0x0,UnknownPaletteID,Sorc,0x0,0x0)
 
-SetPaletteFull(Liam,0x0,0x0,0x0,Hero,0x0,0x0)
-SetPaletteFull(Neillstrom,0x0,0x0,0x0,WyvLord,0x0,0x0)
-SetPaletteFull(Ciraweiss,0x0,0x0,0x0,SageF,0x0,0x0)
+SetPaletteFull(Liam,0x0,0x0,LiamPaletteID,Hero,0x0,0x0)
+SetPaletteFull(Neillstrom,0x0,0x0,NeillstromPaletteID,WyvLord,0x0,0x0)
+SetPaletteFull(Ciraweiss,0x0,0x0,CiraweissPaletteID,SageF,0x0,0x0)
 SetPaletteFull(Arbordia,0x0,0x0,ArbordiaPaletteID,Baron,0x0,0x0)
 
 SetPaletteFull(Brandl,0x0,0x0,BrandlPaletteID,Sniper,0x0,0x0)
@@ -624,7 +631,9 @@ RosePPalette:
 ALIGN 4
 DirkPalette:
 #incbin "Dirk.dmp"
-
+ALIGN 4
+CallumPalette:
+#incbin "Callum.dmp"
 ALIGN 4
 ManfredUPalette:
 #incbin "ManfredUnpromoted.dmp"
@@ -709,6 +718,15 @@ ALIGN 4
 UnknownPalette:
 #incbin "Unknown.dmp"
 
+ALIGN 4
+LiamPalette:
+#incbin "Liam.dmp"
+ALIGN 4
+NeillstromPalette:
+#incbin "Neillstrom.dmp"
+ALIGN 4
+CiraweissPalette:
+#incbin "Ciraweiss.dmp"
 ALIGN 4
 ArbordiaPalette:
 #incbin "Arbordia.dmp"

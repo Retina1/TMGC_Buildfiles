@@ -244,6 +244,11 @@ DirkMug:
 setMugEntry(0x27,DirkMug,3,5,3,3)
 
 ALIGN 4
+CallumMug:
+#incext PortraitFormatter "Callum.png"
+setMugEntry(0x28,CallumMug,3,5,3,3)
+
+ALIGN 4
 WilhelmMug:
 #incext PortraitFormatter "Wilhelm.png"
 setMugEntry(0x0d,WilhelmMug,3,5,3,3)

@@ -151,7 +151,7 @@ ALIGN 4
 Loyalty:
 #incbin "Loyalty/Loyalty.dmp"
 POIN SkillTester
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 WORD LoyaltyID
 
 ALIGN 4
@@ -164,7 +164,7 @@ ALIGN 4
 MageSlayer:
 #incbin "MageSlayer/MageSlayer.dmp"
 POIN SkillTester
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 WORD MageSlayerID
 
 ALIGN 4
@@ -324,7 +324,7 @@ Thighdeology:
 #incbin "Thighdeology/Thighdeology.dmp"
 POIN SkillTester
 WORD ThighdeologyID
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 WORD NiceThighsID
 
 ALIGN 4

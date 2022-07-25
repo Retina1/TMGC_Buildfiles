@@ -68,7 +68,7 @@ SavageBlow:
 POIN SkillTester
 WORD SavageBlowID
 POIN SavageBlowEvent
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 #include "SavageBlow/SavageBlowEvent.event"
 
 ALIGN 4
@@ -77,7 +77,7 @@ BreathOfLife:
 POIN SkillTester
 WORD BreathOfLifeID
 POIN BreathOfLifeEvent
-POIN AuraSkillCheck
+POIN GetUnitsInRange
 #include "BreathOfLife/BreathOfLifeEvent.event"
 
 ALIGN 4

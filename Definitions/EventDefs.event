@@ -12,6 +12,8 @@
 #define CamOn "EVBIT_T 9"
 #define CamOff "EVBIT_F 9"
 #define Reinforcements(pointer) "CamOn ; LOAD1 0x0 pointer; ENUN; CamOff"
+#define HardReinforcements(pointer) "CHECK_HARD ; BNE 6789 rC r0 ; Reinforcements(pointer); LABEL 6789"
+#define DifficultyReinforcements(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; Reinforcements(normal) ; GOTO 4036 ; LABEL 4034 ; Reinforcements(easy) ; GOTO 4036 ; LABEL 4035 ; Reinforcements(hard) ; LABEL 4036 ; ENUN;"
 #define RemoveUnit(unit,labelid) "CHECK_ALIVE unit; BEQ labelid 0xc 0x0; REMU unit; LABEL labelid"
 #define UnremoveUnit(unit,labelid) "CHECK_ALIVE unit; BEQ labelid 0xc 0x0; REVEAL unit; LABEL labelid"
 #define RemoveUnit(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; REMU unit; LABEL unit"

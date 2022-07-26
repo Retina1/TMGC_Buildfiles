@@ -21,6 +21,12 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C15GateOpens,3)
+TurnEventPlayer(0x0,C15Turn4,4)
+TurnEventPlayer(0x0,C15Turn5,5)
+TurnEventPlayer(0x0,C15Turn6,6)
+TurnEventPlayer(0x0,C15Turn7,7)
+TurnEventPlayer(0x0,C15BridgeOpens,8)
 TurnEventPlayer(0x3,IntoEndingScene,14)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -29,7 +35,25 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Door(25,14)
+Door(26,14)
+Chest(MasterSeal,25,12)
+Chest(Tomahawk,26,13)
+Chest(Resire,12,29)
+Chest(KnightRing,13,28)
+Vendor(C15Vendor,13,12)
+Armory(C15Armory,20,20)
+Village(0x11,C15Village,26,27)
 END_MAIN
+
+ALIGN 4
+C15Armory:
+SHLI SilverSword Wyrmslayer Shimmersword SilverLance Dragonpike DousingLance SilverAxe Dracoaxe HereticAxe SilverBow Wardbow Greatbow
+BYTE 0x0 0x0
+ALIGN 4
+C15Vendor:
+SHLI Elfire Fimbulvetr Divine Aura Nightfall Nosferatu Fenrir Physic Recover Restore Barrier Yoink Runeward Elixir PureWater
+BYTE 0x0 0x0
 
 ALIGN 4
 
@@ -52,21 +76,21 @@ ALIGN 4
 C15Units:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [15,3] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [17,3] 0x0 0x0 0x0 0x0 [IronBow] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,2] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,1] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,1] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,2] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,2] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,5] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,5] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,2] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,1] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,3] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,2] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,2] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,1] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,3] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,2] 0x0 0x0 0x0 0x0 [IronSword, Heal, LevinSword, Lockpick] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [14,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C15Easy:
@@ -78,13 +102,95 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C15Hard:
-UNIT Unknown AxeArm 0x0 Level(17,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Unknown AxeCav 0x0 Level(17,Enemy,1) [4,26] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Unknown Valk 0x0 Level(2,Enemy,1) [5,29] 0x0 0x0 0x0 0x0 [LightBrand,Zanbato] AttackInRangeAI
+UNIT Unknown LncPal 0x0 Level(2,Enemy,1) [6,28] 0x0 0x0 0x0 0x0 [BraveLance,RedGem] NoAI
+UNIT Unknown Valk 0x0 Level(2,Enemy,1) [7,29] 0x0 0x0 0x0 0x0 [LightBrand,SteelSword] AttackInRangeAI
+UNIT Unknown AxeCavF 0x0 Level(17,Enemy,1) [8,26] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Unknown MageF 0x0 Level(20,Enemy,1) [3,26] DropItem 0x0 0x0 0x0 [Bolting,GoddessIcon] NeverMoveAI
+UNIT Unknown MageF 0x0 Level(20,Enemy,1) [9,26] DropItem 0x0 0x0 0x0 [Bolting] NeverMoveAI
 UNIT C15Boss Sorc 0x0 Level(20,Enemy,1) [6,27] DropItem 0x0 0x0 0x0 [Avalon,RainbowGem,Boots] NeverMoveAI
+UNIT
+
+C15GateCrashers:
+UNIT Unknown MageF 0x0 Level(17,Enemy,1) [0,28] 0x0 0x0 0x1 REDA1R27 [Elfire] NoAI
+UNIT Unknown MercF 0x0 Level(17,Enemy,1) [0,28] 0x0 0x0 0x1 REDA3R27 [SilverSword] NoAI
+UNIT Unknown Hero 0x0 Level(2,Enemy,1) [0,29] 0x0 0x0 0x1 REDA2R28 [Ukonvasara] NoAI
+UNIT Unknown SoldierF 0x0 Level(17,Enemy,1) [0,29] 0x0 0x0 0x1 REDA3R29 [SilverLance] NoAI
+UNIT Unknown ArcherF 0x0 Level(17,Enemy,1) [0,29] 0x0 0x0 0x1 REDA1R29 [SilverBow] NoAI
+UNIT
+
+C15Turn4Units:
+UNIT Unknown Merc 0x0 Level(17,Enemy,1) [1,20] 0x0 0x0 0x1 REDA0R19 [SilverSword] NoAI
+UNIT Unknown Myrm 0x0 Level(17,Enemy,1) [1,20] 0x0 0x0 0x1 REDA2R19 [SilverSword] NoAI
+UNIT Unknown FighterF 0x0 Level(17,Enemy,1) [11,20] 0x0 0x0 0x1 REDA10R19 [SteelAxe] NoAI
+UNIT Unknown LncArm 0x0 Level(17,Enemy,1) [11,20] 0x0 0x0 0x1 REDA9R20 [SteelLance] NoAI
+UNIT
+
+C15Turn5Units:
+UNIT Unknown SwdCav 0x0 Level(17,Enemy,1) [32,19] 0x0 0x0 0x1 REDA30R19 [SteelSword] NoAI
+UNIT Unknown LncCavF 0x0 Level(17,Enemy,1) [32,20] 0x0 0x0 0x1 REDA29R19 [SteelLance] NoAI
+UNIT Unknown BowCav 0x0 Level(17,Enemy,1) [32,21] 0x0 0x0 0x1 REDA29R20 [SteelBow] NoAI
+UNIT Unknown AxeCavF 0x0 Level(17,Enemy,1) [32,22] 0x0 0x0 0x1 REDA28R20 [SteelAxe] NoAI
+UNIT
+
+C15Turn5UnitsLunatic:
+UNIT Unknown SwdCav 0x0 Level(17,Enemy,1) [32,19] 0x0 0x0 0x1 REDA30R19 [BraveSword] NoAI
+UNIT Unknown LncCavF 0x0 Level(17,Enemy,1) [32,20] 0x0 0x0 0x1 REDA29R19 [BraveLance] NoAI
+UNIT Unknown BowCav 0x0 Level(17,Enemy,1) [32,21] 0x0 0x0 0x1 REDA29R20 [BraveBow] NoAI
+UNIT Unknown AxeCavF 0x0 Level(17,Enemy,1) [32,22] 0x0 0x0 0x1 REDA28R20 [BraveAxe] NoAI
+UNIT
+
+C15Turn6Units:
+UNIT Unknown Mage 0x0 Level(13,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT Unknown LncPeg 0x0 Level(17,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Unknown SwdPeg 0x0 Level(17,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Unknown AxeWyv 0x0 Level(17,Enemy,1) [4,4] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT
+
+C15Turn6UnitsLunatic:
+UNIT Unknown Mage 0x0 Level(17,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT Unknown LightM 0x0 Level(17,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
+UNIT Unknown Falco 0x0 Level(1,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [SteelSword,SteelLance] NoAI
+UNIT Unknown WyvLord 0x0 Level(1,Enemy,1) [4,4] 0x0 0x0 0x0 0x0 [SteelAxe,SteelLance] NoAI
+UNIT
+
+C15Turn7Units:
+UNIT Unknown Cleric 0x0 Level(17,Enemy,1) [0,11] 0x0 0x0 0x1 REDA1R11 [Sleep] NoAI
+UNIT Unknown Myrm 0x0 Level(17,Enemy,1) [0,13] 0x0 0x0 0x1 REDA1R13 [SteelSword] NoAI
+UNIT Unknown Myrm 0x0 Level(17,Enemy,1) [0,14] 0x0 0x0 0x1 REDA1R14 [SteelSword] NoAI
+UNIT Unknown Cleric 0x0 Level(17,Enemy,1) [0,16] 0x0 0x0 0x1 REDA1R16 [Silence] NoAI
+UNIT
+
+C15Turn7UnitsLunatic:
+UNIT Unknown Troub 0x0 Level(17,Enemy,1) [0,11] 0x0 0x0 0x1 REDA1R11 [Sleep] NoAI
+UNIT Unknown SwMast 0x0 Level(1,Enemy,1) [0,12] 0x0 0x0 0x1 REDA2R12 [SteelSword] NoAI
+UNIT Unknown Mage 0x0 Level(17,Enemy,1) [0,13] 0x0 0x0 0x1 REDA1R13 [Elfire] NoAI
+UNIT Unknown Mage 0x0 Level(17,Enemy,1) [0,14] 0x0 0x0 0x1 REDA1R14 [Elfire] NoAI
+UNIT Unknown SwMast 0x0 Level(1,Enemy,1) [0,15] 0x0 0x0 0x1 REDA2R15 [SteelSword] NoAI
+UNIT Unknown Troub 0x0 Level(17,Enemy,1) [0,16] 0x0 0x0 0x1 REDA1R16 [Silence] NoAI
+UNIT
+
+C15BridgeChargers:
+UNIT Unknown Mage 0x0 Level(16,Enemy,1) [32,15] 0x0 0x0 0x1 REDA30R15 [Elfire] NoAI
+UNIT Unknown HeroF 0x0 Level(2,Enemy,1) [32,16] 0x0 0x0 0x1 REDA29R16 [SilverSword] NoAI
+UNIT Unknown MageF 0x0 Level(16,Enemy,1) [32,17] 0x0 0x0 0x1 REDA30R17 [Thunder] NoAI
+UNIT
+
+C15Turn8Others:
+UNIT Unknown DarkM 0x0 Level(16,Enemy,1) [32,1] 0x0 0x0 0x1 REDA29R1 [Nosferatu] NoAI
+UNIT Unknown Sorc 0x0 Level(2,Enemy,1) [32,2] DropItem 0x0 0x1 REDA30R2 [Knoggelvi,SecretBook] NoAI
+UNIT Unknown DarkM 0x0 Level(16,Enemy,1) [32,3] 0x0 0x0 0x1 REDA29R3 [Nightfall] NoAI
 UNIT
 
 C15Allies:
 UNIT Brandl Sniper 0x0 Level(11,NPC,0) [16,4] 0x0 0x0 0x0 0x0 [Longbow, Elixir] GreenStationaryAI
+UNIT ElbaCor Sage 0x0 Level(8,NPC,1) [14,4] 0x0 0x0 0x0 0x0 [Flare, Physic] StationaryHeal
+UNIT ElbaCor Sage 0x0 Level(8,NPC,1) [18,4] 0x0 0x0 0x0 0x0 [Flare, Physic] StationaryHeal
+UNIT ElbaCor Sniper 0x0 Level(14,NPC,1) [12,7] 0x0 0x0 0x0 0x0 [Greatbow, Elixir] GreenStationaryAI
+UNIT ElbaCor Sniper 0x0 Level(14,NPC,1) [20,7] 0x0 0x0 0x0 0x0 [Greatbow, Elixir] GreenStationaryAI
 UNIT
+//definitely add more greens
 
 ALIGN 4
 
@@ -106,6 +212,38 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter16)
 ENDA
+
+C15Village:
+VillageEventItem(FillerDialogue, HouseCG, Hammerne)
+
+C15GateOpens:
+CAM1 [6,23]
+SOUN 0xB1
+TILECHANGE 0x0
+Text(FillerDialogue)
+Reinforcements(C15GateCrashers)
+EndEvent
+
+C15Turn4:
+Reinforcements(C15Turn4Units)
+EndEvent
+C15Turn5:
+DifficultyReinforcements(C15Turn5Units,C15Turn5Units,C15Turn5UnitsLunatic)
+EndEvent
+C15Turn6:
+DifficultyReinforcements(C15Turn6Units,C15Turn6Units,C15Turn6UnitsLunatic)
+EndEvent
+C15Turn7:
+DifficultyReinforcements(C15Turn7Units,C15Turn7Units,C15Turn7UnitsLunatic)
+EndEvent
+
+C15BridgeOpens:
+CAM1 [18,7]
+TILECHANGE 0x1
+Text(FillerDialogue)
+Reinforcements(C15BridgeChargers)
+Reinforcements(C15Turn8Others)
+EndEvent
 
 IntoEndingScene:
 Text(FillerDialogue)

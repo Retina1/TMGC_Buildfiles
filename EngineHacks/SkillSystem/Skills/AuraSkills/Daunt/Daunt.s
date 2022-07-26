@@ -1,4 +1,4 @@
-@Daunt: enemies in 3 spaces get -5 hit and -5 crit
+@Daunt: enemies in 4 spaces get -10 hit and -5 crit
 .equ DauntID, AuraSkillCheck+4
 .thumb
 push {r4-r7,lr}
@@ -22,7 +22,7 @@ beq Done
 mov r0, r4
 add     r0,#0x60    @Move to the attacker's hit.
 ldrh    r3,[r0]     @Load the attacker's hit into r3.
-sub     r3,#5      @subtract 5 from the attacker's hit
+sub     r3,#10      @subtract 10 from the attacker's hit
 cmp 	r3,#0
 bgt		StoreHitAsIs
 mov 	r3,#0

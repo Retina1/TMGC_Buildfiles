@@ -26,8 +26,13 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0x0,I5ReadyToEnd,Blair,Brandl)
+CharacterEvent(0x13,I5Zeke,Blair,Zeke)
+CharacterEvent(0x14,I5Hyperius,Blair,Hyperius)
+CharacterEvent(0x15,I5Argent,Blair,Argent)
+CharacterEvent(0x16,I5ViridFred,Blair,Viridian)
+CharacterEvent(0x16,I5ViridFred,Blair,Freddric)
 CharacterEvent(0x11,I5Merchant,Blair,Merchant)//sell item
-CharacterEvent(0x11,I5Merchant,Blair,Merchant3)//sell a stat boost
+CharacterEvent(0x12,I5Merchant2,Blair,Merchant3)//sell a stat boost
 END_MAIN
 
 LocationBasedEvents:
@@ -110,55 +115,108 @@ ENDA
 
 EndingScene:
 DisableFreeMovement
+EVBIT_MODIFY 3
 Text(FillerDialogue)//blair talks to king, meets zeke
-MUSC S_Chaos
-CleanTextNoMap(HallCG,I5Ending2)
+LocationText(ElbaCorCastleCG, I5Ending2,ElbaCorCastleLabel,S_Chaos)
 SetBackground(BlankCG)
 GiveItem(ResoluteSeal,Blair)
 CHECK_ALIVE Kenneth
 BEQ 0x1 0xc 0x0
 CleanTextNoMap(HallCG,I5KennethScene)//kenneth says hi to dad
 LABEL 0x1
+CHECK_EVENTID 0x16
+BNE 0x2 0xc 0x0
+LocationText(VillageCG,FillerDialogue,CouriaLabel,S_TMSQuestBattle)
+SetBackground(BlankCG)
+GiveItem(MercFlier,Blair)
+LABEL 0x2
 MoveToChapter(Chapter15)
 ENDA
+
+I5Zeke:
+Text(FillerDialogue)
+EndEvent
+I5Hyperius:
+Text(FillerDialogue)
+EndEvent
+I5Argent:
+Text(FillerDialogue)
+EndEvent
+I5ViridFred:
+Text(FillerDialogue)
+GiveItem(MercFlier,Blair)
+EndEvent
+
 
 I5House1:
 HouseEvent(I5InnText,House2CG)
 I5House2:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(I5House2Text,HouseCG)
 I5House3:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(I5House3Text,HouseCG)
 I5House4:
-HouseEvent(FillerDialogue,House2CG)
+HouseEvent(I5House4Text,House2CG)
 I5House5:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(I5House5Text,HouseCG)
 I5House6:
-HouseEvent(FillerDialogue,House2CG)
+HouseEvent(I5House6Text,House2CG)
 I5House7:
-HouseEvent(FillerDialogue,House2CG)
+HouseEvent(I5House7Text,House2CG)
 I5House8:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(I5House8Text,HouseCG)
 
 I5Merchant:
 EVBIT_MODIFY 4
-Text(I4MerchantTalk)
+Text(I5MerchantTalk)
 CHECK_MONEY
-SVAL 0x1 0x384
+SVAL 0x1 0x640
 BGE 0x1 0xc 0x1
-Text(I4NoMoneyHa)
+Text(I5NoMoneyHa)
 ENUF 0x15
 GOTO 0x2
 LABEL 0x1
-SystemText(I4TomeBuy)
+SystemText(I5ItemBuy)
 IfNoSelectedGoto(0x3)
-Text(I4TomePurchased)
-SVAL 0x3 0x384
+Text(I5ItemPurchased)
+SVAL 0x3 0x640
 TAKEMONEY
-GiveItem(Mazandyne,Blair)
+GiveItem(LiveGoose,Blair)
 GOTO 0x2
 LABEL 0x3
-Text(I4TomeDenied)
+Text(I5ItemDenied)
 ENUF 0x11
+LABEL 0x2
+EndEvent
+
+I5Merchant2:
+EVBIT_MODIFY 4
+Text(I5Merchant2Talk)
+CHECK_MONEY
+SVAL 0x1 0xbb8
+BGE 0x1 0xc 0x1
+Text(I5NoMoneyHa2)
+ENUF 0x15
+GOTO 0x2
+LABEL 0x1
+SystemText(I5StatBuy)
+IfNoSelectedGoto(0x3)
+Text(I5StatPurchased)
+SVAL 0x3 0xbb8
+TAKEMONEY
+AddUnitStatus(Blair, MaxHP, 1)
+AddUnitStatus(Blair, CurrentHP, 1)
+AddUnitStatus(Blair, Strength, 1)
+AddUnitStatus(Blair, Magic, 1)
+AddUnitStatus(Blair, Skill, 1)
+AddUnitStatus(Blair, Speed, 1)
+AddUnitStatus(Blair, LuckStat, 1)
+AddUnitStatus(Blair, Defence, 1)
+AddUnitStatus(Blair, Resistance, 1)
+SystemText(I5BlairStatsUp)
+GOTO 0x2
+LABEL 0x3
+Text(I5StatDenied)
+ENUF 0x12
 LABEL 0x2
 EndEvent
 

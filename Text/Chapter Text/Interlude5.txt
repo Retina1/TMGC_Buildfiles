@@ -1,6 +1,50 @@
+##CouriaLabel
+Couria: Town[X]
+
 ##I5Opening
-[OpenMidLeft][LoadBlair]
-aight we here[A][X]
+[OpenFarLeft][LoadArin][OpenLeft][LoadBlair]
+[ToggleMouthMove]...[ToggleMouthMove]We're finally back. It's still[ToggleMouthMove]...[ToggleMouthMove][N]
+hard to believe.[A][N][OpenMidRight][LoadVladmir]
+Young lady! It's a pleasure to see you well.[A][N][OpenLeft]
+Same to you, Archbishop.[N]
+If you're here[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
+That's correct. Elba Cor is still[N]
+standing.[A] They probably would've[N]
+managed without our help,[A][N]
+but we relieved a lot of pressure.[A][N]
+Since you're back, I presume[N]
+your task went to plan?[A][N][OpenLeft]
+That[ToggleMouthMove]...[ToggleMouthMove] is correct. Yg'stra has fallen.[A][N][CloseEyes]
+Unfortunately, the emperor[ToggleMouthMove]...[ToggleMouthMove] is no more.[N]
+So[ToggleMouthMove]...[ToggleMouthMove] what happens now?[A][N][OpenMidRight]
+I planned ahead and arranged a roundtable.[A][N]
+Elba Cor, Opistia, and Dalst shall all[N]
+be in attendance.[A] We will discuss the[N]
+fate of Yg'stra there.[A][N]
+In fact, I believe every necessary party[N]
+is in the city.[A] Once you've arrived[N]
+at the castle, we'll convene.[A][N]
+Don't feel rushed, though. I'm sure that[N]
+it has been a long and painful journey.[A][N]
+Take some time to yourself. There's lots[N]
+to see here.[A][N][OpenFarLeft]
+On that note, it seems there's commotion[N]
+near the castle,[A] beyond what this meeting[N]
+should be capable of causing.[A][N]
+What of that?[A][N][OpenMidRight]
+Ah, of course. Today is a blessed day indeed.[N]
+You recall hearing of Prince Zeke, correct?[A][N][OpenLeft][OpenEyes]
+The late prince? What of him?[A][N][OpenMidRight]
+Well, I'm sure you'll see for youself.[N]
+I must be off now.[A][N]
+May you all ever walk in His light.[A][N][ClearFace][OpenFarLeft]
+Well, you heard him. We're in no rush.[N]
+This would be a good time to resupply.[A][N][OpenLeft]
+[ToggleMouthMove]...[ToggleMouthMove]But the war's over.[A][N][OpenFarLeft][CloseEyes]
+You can never be too prepared.[A][N][OpenLeft]
+Very well, Arin. Once we're done,[N]
+I'll make my way to the king.[A][N]
+Then we can get these talks in motion.[A][X]
 
 ##I5Ending2
 [OpenLeft][LoadBlair][OpenFarLeft][LoadBrandl][OpenRight][LoadElcorian][OpenFarRight][LoadNeillstrom][OpenFarLeft]
@@ -134,6 +178,85 @@ have a semblance of independent thought.[A][N][OpenFarLeft]
 [ToggleMouthMove]...[ToggleMouthMove][A][N][OpenLeft]
 But, hey. That's what I'm for.[N]
 I'll carve my own path.[A][X]
+
+##I5MerchantTalk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3]
+give 1600 money[A][X]
+
+##I5NoMoneyHa
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3]
+die[A][X]
+
+##I5ItemBuy
+Purchase a friend?[N]
+[Yes][X]
+
+##I5ItemPurchased
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3][OpenMidLeft]
+cool[A][X]
+
+##I5ItemDenied
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3][OpenMidLeft]
+no[A][X]
+
+##I5Merchant2Talk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3]
+give 3000 money[A][X]
+
+##I5NoMoneyHa2
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3]
+die[A][X]
+
+##I5StatBuy
+Purchase a wondrous solution?[N]
+[Yes][X]
+
+##I5StatPurchased
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3][OpenMidLeft]
+cool[A][X]
+
+##I5BlairStatsUp
+Blair is empowered![N]
++1 to all stats![A][X]
+
+##I5StatDenied
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3][OpenMidLeft]
+no[A][X]
+
+##I5House2Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House3Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House4Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House5Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House6Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House7Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House8Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
 
 ##I5InnText
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]

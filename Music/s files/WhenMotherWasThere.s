@@ -1,29 +1,29 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	WhenMotherWasThere_grp, voicegroup000
+	.equ	WhenMotherWasThere_pri, 0
+	.equ	WhenMotherWasThere_rev, 0
+	.equ	WhenMotherWasThere_mvl, 127
+	.equ	WhenMotherWasThere_key, 0
+	.equ	WhenMotherWasThere_tbs, 1
+	.equ	WhenMotherWasThere_exg, 0
+	.equ	WhenMotherWasThere_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	WhenMotherWasThere
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+WhenMotherWasThere_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 102*song04_tbs/2
+ .byte   KEYSH , WhenMotherWasThere_key+0
+ .byte   TEMPO , 102*WhenMotherWasThere_tbs/2
  .byte   VOICE , 30
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+2
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -682,13 +682,13 @@ Label_0100552C:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+WhenMotherWasThere_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 74
- .byte   VOL , 42*song04_mvl/mxv
+ .byte   VOL , 42*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+2
  .byte   N05 ,Dn3 ,v072
  .byte   N05 ,Dn4
@@ -945,13 +945,13 @@ Label_018C7621:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+WhenMotherWasThere_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 52
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+2
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -1214,13 +1214,13 @@ Label_018C719F:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+WhenMotherWasThere_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 99
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W18
  .byte   N17 ,An2 ,v064
@@ -1605,13 +1605,13 @@ Label_010057A4:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+WhenMotherWasThere_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 30
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v-3
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -1952,13 +1952,13 @@ Label_010051DB:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+WhenMotherWasThere_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 34
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N56 ,Dn1 ,v096
  .byte   W60
@@ -2314,13 +2314,13 @@ Label_010059F2:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+WhenMotherWasThere_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 75
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v-3
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -2748,13 +2748,13 @@ Label_01005B99:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+WhenMotherWasThere_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 48
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v-3
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -3140,13 +3140,13 @@ Label_01005010:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song04_009:
+WhenMotherWasThere_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 4
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N92 ,Dn2 ,v048
  .byte   N92 ,Fn2
@@ -3708,15 +3708,15 @@ Label_01005F7F:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song04_010:
+WhenMotherWasThere_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , WhenMotherWasThere_key+0
  .byte   VOICE , 124
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*WhenMotherWasThere_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,Cn1 ,v068
  .byte   N11 ,En3 ,v096
@@ -6053,23 +6053,23 @@ Label_010070F0:
 @******************************************************@
 	.align	2
 
-song04:
+WhenMotherWasThere:
 	.byte	10	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	WhenMotherWasThere_pri	@ Priority
+	.byte	WhenMotherWasThere_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	WhenMotherWasThere_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
-	.word	song04_009
-	.word	song04_010
+	.word	WhenMotherWasThere_001
+	.word	WhenMotherWasThere_002
+	.word	WhenMotherWasThere_003
+	.word	WhenMotherWasThere_004
+	.word	WhenMotherWasThere_005
+	.word	WhenMotherWasThere_006
+	.word	WhenMotherWasThere_007
+	.word	WhenMotherWasThere_008
+	.word	WhenMotherWasThere_009
+	.word	WhenMotherWasThere_010
 
 	.end

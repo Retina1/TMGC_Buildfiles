@@ -116,7 +116,7 @@ ENDA
 EndingScene:
 DisableFreeMovement
 EVBIT_MODIFY 3
-Text(FillerDialogue)//blair talks to king, meets zeke
+Text(I5FreeMe)//blair talks to king, meets zeke
 LocationText(ElbaCorCastleCG, I5Ending2,ElbaCorCastleLabel,S_Chaos)
 SetBackground(BlankCG)
 GiveItem(ResoluteSeal,Blair)
@@ -126,7 +126,7 @@ CleanTextNoMap(HallCG,I5KennethScene)//kenneth says hi to dad
 LABEL 0x1
 CHECK_EVENTID 0x16
 BNE 0x2 0xc 0x0
-LocationText(VillageCG,FillerDialogue,CouriaLabel,S_TMSQuestBattle)
+LocationText(VillageCG,I5ViridFredPostmapText,CouriaLabel,S_TMSQuestBattle)
 SetBackground(BlankCG)
 GiveItem(MercFlier,Blair)
 LABEL 0x2
@@ -134,16 +134,17 @@ MoveToChapter(Chapter15)
 ENDA
 
 I5Zeke:
-Text(FillerDialogue)
+MUSC S_CircleOfTheMoon
+Text(I5ZekeText)
 EndEvent
 I5Hyperius:
-Text(FillerDialogue)
+Text(I5HyperiusText)
 EndEvent
 I5Argent:
-Text(FillerDialogue)
+Text(I5ArgentText)
 EndEvent
 I5ViridFred:
-Text(FillerDialogue)
+Text(I5ViridFredText)
 GiveItem(MercFlier,Blair)
 EndEvent
 
@@ -222,13 +223,13 @@ EndEvent
 
 I5ReadyToEnd:
 EVBIT_MODIFY 4
-Text(FillerDialogue)
+Text(I5ReadyText)
 SystemText(I1LeavePrompt)
 IfNoSelectedGoto(0x2)
 CALL EndingScene
 GOTO 0x1
 LABEL 0x2
-Text(FillerDialogue)
+Text(I5NotYet)
 LABEL 0x1
 EndEvent
 

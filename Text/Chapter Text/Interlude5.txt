@@ -1,6 +1,250 @@
 ##CouriaLabel
 Couria: Town[X]
 
+##I5MerchantTalk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3]
+You seem lonely. In that case,[N]
+I've got a deal for you.[A][N]
+Give me 1600 gold, and I'll[N]
+give you an animal companion.[A][N]
+She's something unconventional for sure,[N]
+but I know you'll grow to love her.[A][X]
+
+##I5NoMoneyHa
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3]
+You can't afford that? Well, then.[A][N]
+Scrape up some money, and pray[N]
+no other customers arrive.[A][X]
+
+##I5ItemBuy
+Purchase a friend?[N]
+[Yes][X]
+
+##I5ItemPurchased
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I wouldn't say I'm lonely,[N]
+but sure.[A][N][OpenMidRight]
+Excellent! Here you go. She[ToggleMouthMove]...[ToggleMouthMove][N]
+might not bite? That much?[A][N]
+Take it from me[ToggleMouthMove]...[ToggleMouthMove][N]
+Goose eggs are delicious.[A][N]
+Worth the risk.[A][X]
+
+##I5ItemDenied
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]No.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Is it because I called you lonely?[N]
+[ToggleMouthMove]...[ToggleMouthMove]Have fun wallowing.[A][N]
+In loneliness. Alone.[A][X]
+
+##I5Merchant2Talk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3]
+Hello, young lady! I've a concoction[N]
+of marvelous potential.[A][N]
+I'll sell you a swig for 3000 gold.[N]
+It's completely safe.[A][X]
+
+##I5NoMoneyHa2
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3]
+[ToggleMouthMove]...[ToggleMouthMove]Wait. You're broke.[N]
+Hands off the goods.[A][X]
+
+##I5StatBuy
+Purchase a wondrous solution?[N]
+[Yes][X]
+
+##I5StatPurchased
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3][OpenMidLeft]
+I'll probably regret this[ToggleMouthMove]...[ToggleMouthMove][N]
+But sure.[A][N][OpenMidRight]
+Excellent![A][N][MoveMidRight]
+Here you go. Bottoms up![A][N][OpenMidLeft][MoveMidLeft]
+Hm[ToggleMouthMove]...[ToggleMouthMove] That's actually[ToggleMouthMove]...[ToggleMouthMove][N]
+not too bad.[A][N]
+I feel pretty good![N]
+Thank you![A][N][ClearFace][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]So you CAN sell a vial of regular[N]
+old water for massive profits.[A][N]
+Very interesting indeed.[A][N]
+But, hey[ToggleMouthMove]...[ToggleMouthMove] If she believes it holds[N]
+power, who am I to deny her?[A][X]
+
+##I5BlairStatsUp
+Blair is empowered![N]
++1 to all stats![A][X]
+
+##I5StatDenied
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3][OpenMidLeft]
+No thanks.[A][N][OpenMidRight]
+Fine. Be that way. Your loss.[N]
+[ToggleMouthMove]...[ToggleMouthMove]*sigh*[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
+##I5ZekeText
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
+[ToggleMouthMove]...[ToggleMouthMove]Hello there. Who might you be?[N]
+You appear to have business with Father.[A][N][OpenMidLeft]
+Father[ToggleMouthMove]...[ToggleMouthMove]? But, wait[ToggleMouthMove]...[ToggleMouthMove][N]
+Wouldn't that mean[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
+Ah, of course. I should introduce myself.[N]
+Prince Ezekiel. Or just Zeke.[A][N][OpenMidLeft]
+So that means[ToggleMouthMove]...[ToggleMouthMove] You've been alive[N]
+this entire time?[A] I just realized.[N]
+Haven't introduced myself either.[A][N]
+I'm Blair. From[ToggleMouthMove]...[ToggleMouthMove] Dalst.[A][N][OpenMidRight]
+Of course[ToggleMouthMove]...[ToggleMouthMove] How did I not put[N]
+two and two together?[A][N]
+Father has spoken highly of you.[N]
+It's an honor to meet you.[A][N][OpenMidLeft]
+Same to you, Prince Zeke.[A][X]
+
+##I5ArgentText
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadArgent][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenEyes]
+Ah, apologies. You caught me deep in thought.[N]
+Tell me[ToggleMouthMove]...[ToggleMouthMove] The choices you've made[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
+Do you ever regret them? Ever hate how[N]
+in this life[ToggleMouthMove]...[ToggleMouthMove] there's only one chance?[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]And yet, part of me would make[N]
+all those choices again.[A][N][OpenEyes]
+Sorry for rambling. I've long lost[N]
+my purpose here.[A][N]
+And yet still I stay.[A][N][CloseEyes]
+I ought to find a new purpose.[N]
+But after so long[ToggleMouthMove]...[ToggleMouthMove] That's not easy.[A][X]
+
+##I5HyperiusText
+[OpenMidLeft][LoadHyperius][OpenMidRight][LoadBlair]
+General Hyperius! It's good[N]
+to see you well.[A][N][OpenMidLeft]
+And you alike, young lady. I've[N]
+heard of your exploits.[A][N]
+Even an old man as I is[N]
+impressed by your deeds.[A][N]
+I myself have been[ToggleMouthMove]...[ToggleMouthMove] quite busy.[A][N]
+I regret not helping against Yg'stra,[N]
+but my mission was worth it.[A][N]
+If the time comes that we're to[N]
+fight for Elba Cor again,[A][N]
+it'd be an honor to fight by[N]
+your side.[A][X]
+
+##I5ViridFredText
+[OpenFarLeft][LoadFreddric][OpenLeft][LoadViridian][OpenMidRight][LoadBlair][OpenFarLeft]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Fred. I think we've possibly[N]
+got a client.[A][N][OpenFarLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Wait, what?[A][N][OpenLeft]
+The blue-haired one. They want[N]
+to talk to us. I think.[A][N]
+Get on with the shtick.[A][N][OpenFarLeft]
+You're the leader here, Viridian![A][N][OpenLeft]
+Yeah, but[ToggleMouthMove]...[ToggleMouthMove][N]
+Oh, fine.[A][N]
+Hey there. Name's Viridian.[N]
+Of the Viridian Mercenaries.[A][N]
+You interested in hiring us?[A][N]
+Well, we're a bit floded in work[N]
+at the current moment.[A][N]
+But, here. Take this pamphlet.[A][N]
+If you're ever in a bind,[N]
+this'll help you find us.[A][N]
+I know you've probably got a merc on[N]
+every corner asking for work,[A][N]
+so I get it if you just throw[N]
+that thing out.[A][N][OpenFarLeft]
+Give it a once-over, at least.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Alright, then.[A][N][OpenLeft]
+Thank you, stranger.[N]
+See, Fred? Was that so hard?[A][X]
+
+##I5ViridFredPostmapText
+[OpenFarLeft][LoadFreddric][OpenLeft][LoadViridian][OpenMidRight][LoadBlair][OpenFarLeft]
+Pardon me, friend! Are you in need[N]
+of mercenary services?[A][N][OpenLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Really, Fred? Friend?[A][N][OpenFarLeft]
+What do you want me to say?[N]
+You know, YOU could shout to passerby.[A][N][OpenLeft]
+You're right. My bad. Keep[N]
+doing what you're doing.[A][N][OpenFarLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Are you sure?[A][N][OpenLeft]
+Yes, I'm- Wait, don't go![A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenLeft]
+Look. The name's Viridian. Of the[N]
+Viridian Mercenaries.[A][N]
+Just[ToggleMouthMove]...[ToggleMouthMove] Take this pamphlet.[A][N]
+If you're ever in a bind,[N]
+this'll help you find us.[A][N]
+I know you've probably got a merc on[N]
+every corner asking for work,[A][N]
+so I get it if you just throw[N]
+that thing out.[A][N][OpenFarLeft]
+Give it a once-over, at least.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Alright, then.[A][N][OpenLeft]
+Thank you, stranger.[A][X]
+
+##I5ReadyText
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadBrandl]
+we done?[A][X]
+
+##I5NotYet
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadBrandl]
+ok then[A][X]
+
+##I5FreeMe
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadBrandl]
+we done[A][X]
+
+##I5House2Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House3Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House4Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House5Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House6Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House7Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5House8Text
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][X]
+
+##I5InnText
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
+Ah, hello there! Welcome to[N]
+our little establishment.[A][N]
+We're the [OpenQuote]Distant Cutlass,[CloseQuote] Couria's[N]
+finest bar and inn.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]You look a little bit like you've[N]
+heard all of this before.[A][N]
+Well, we're different. Whenever the[N]
+king needs to drown his sorrows[ToggleMouthMove]...[ToggleMouthMove][A][N]
+Well, he certainly walks by our door.[N]
+Haven't convinced him to come in. Yet.[A][N]
+But maybe today's the day! You[N]
+wouldn't want to miss it.[A][X]
+
 ##I5Opening
 [OpenFarLeft][LoadArin][OpenLeft][LoadBlair]
 [ToggleMouthMove]...[ToggleMouthMove]We're finally back. It's still[ToggleMouthMove]...[ToggleMouthMove][N]
@@ -178,97 +422,3 @@ have a semblance of independent thought.[A][N][OpenFarLeft]
 [ToggleMouthMove]...[ToggleMouthMove][A][N][OpenLeft]
 But, hey. That's what I'm for.[N]
 I'll carve my own path.[A][X]
-
-##I5MerchantTalk
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3]
-give 1600 money[A][X]
-
-##I5NoMoneyHa
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3]
-die[A][X]
-
-##I5ItemBuy
-Purchase a friend?[N]
-[Yes][X]
-
-##I5ItemPurchased
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3][OpenMidLeft]
-cool[A][X]
-
-##I5ItemDenied
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadWoman3][OpenMidLeft]
-no[A][X]
-
-##I5Merchant2Talk
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3]
-give 3000 money[A][X]
-
-##I5NoMoneyHa2
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3]
-die[A][X]
-
-##I5StatBuy
-Purchase a wondrous solution?[N]
-[Yes][X]
-
-##I5StatPurchased
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3][OpenMidLeft]
-cool[A][X]
-
-##I5BlairStatsUp
-Blair is empowered![N]
-+1 to all stats![A][X]
-
-##I5StatDenied
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan3][OpenMidLeft]
-no[A][X]
-
-##I5House2Text
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
-Ah, hello there! Welcome to[N]
-our little establishment.[A][X]
-
-##I5House3Text
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
-Ah, hello there! Welcome to[N]
-our little establishment.[A][X]
-
-##I5House4Text
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
-Ah, hello there! Welcome to[N]
-our little establishment.[A][X]
-
-##I5House5Text
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
-Ah, hello there! Welcome to[N]
-our little establishment.[A][X]
-
-##I5House6Text
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
-Ah, hello there! Welcome to[N]
-our little establishment.[A][X]
-
-##I5House7Text
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
-Ah, hello there! Welcome to[N]
-our little establishment.[A][X]
-
-##I5House8Text
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
-Ah, hello there! Welcome to[N]
-our little establishment.[A][X]
-
-##I5InnText
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadMan2]
-Ah, hello there! Welcome to[N]
-our little establishment.[A][N]
-We're the [OpenQuote]Distant Cutlass,[CloseQuote] Couria's[N]
-finest bar and inn.[A][N]
-[ToggleMouthMove]...[ToggleMouthMove]You look a little bit like you've[N]
-heard all of this before.[A][N]
-Well, we're different. Whenever the[N]
-king needs to drown his sorrows[ToggleMouthMove]...[ToggleMouthMove][A][N]
-Well, he certainly walks by our door.[N]
-Haven't convinced him to come in. Yet.[A][N]
-But maybe today's the day! You[N]
-wouldn't want to miss it.[A][X]

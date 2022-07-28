@@ -194,6 +194,13 @@ Narration(MapCG,Ch6_Narration)
 CLEAN
 MUSC S_Terra
 CleanTextNoMap(JungleCG,Ch6_Opening)
+CHECK_ALIVE Butch
+BEQ 0x11 0xC 0x0
+CHECK_ALIVE Peggy
+BNE 0x22 0xC 0x0
+LABEL 0x11
+ENUT BaseFlag1
+LABEL 0x22
 GotoPrepScreen
 EndEvent
 

@@ -24,6 +24,14 @@
 #define SFXGroup 6
 
 {
+#include "WhenMotherWasThere.event"
+SongTable(S_WhenMotherWasThere,WhenMotherWasThere,1)
+}
+{
+#include "WhenMotherWasThereAlt.event"
+SongTable(S_WhenMotherWasThereAlt,WhenMotherWasThereAlt,1)
+}
+{
 #include "SearchingForFriends.event"
 SongTable(S_SearchingForFriends,SearchingForFriends,1)
 }

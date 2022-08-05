@@ -209,6 +209,11 @@ TotallyNotSimoneMug:
 setMugEntry(0xcd,TotallyNotSimoneMug,2,5,3,3)
 
 ALIGN 4
+ViridianMug:
+#incext PortraitFormatter "Viridian.png"
+setMugEntry(0x12,ViridianMug,4,5,4,3)
+
+ALIGN 4
 FreddricMug:
 #incext PortraitFormatter "Freddric.png"
 setMugEntry(0x15,FreddricMug,3,5,3,3)
@@ -222,6 +227,11 @@ ALIGN 4
 ElizaMug:
 #incext PortraitFormatter "Eliza.png"
 setMugEntry(0x1d,ElizaMug,3,6,3,4)
+
+ALIGN 4
+ChartreuseMug:
+#incext PortraitFormatter "Chartreuse.png"
+setMugEntry(0x1f,ChartreuseMug,3,5,3,3)
 
 ALIGN 4
 EstelleMug:
@@ -252,6 +262,11 @@ ALIGN 4
 WilhelmMug:
 #incext PortraitFormatter "Wilhelm.png"
 setMugEntry(0x0d,WilhelmMug,3,5,3,3)
+
+ALIGN 4
+ArgentMug:
+#incext PortraitFormatter "Argent.png"
+setMugEntry(0x2f,ArgentMug,3,5,3,3)
 
 ALIGN 4
 ManfredMug:

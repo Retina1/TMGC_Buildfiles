@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "XC3Theme.event"
+SongTable(S_XC3Theme,XC3Theme,0)
+}
+{
 #include "WhenMotherWasThere.event"
 SongTable(S_WhenMotherWasThere,WhenMotherWasThere,1)
 }

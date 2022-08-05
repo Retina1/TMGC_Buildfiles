@@ -119,6 +119,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define IanPaletteID 0x6f
 #define JoanPaletteID 0x70
 #define CallumPaletteID 0x71
+#define ViridianPaletteID 0x75
+#define ChartreusePaletteID 0x76
+#define ArgentPaletteID 0x77
 
 
 #define CidPaletteID 0x2e
@@ -227,13 +230,13 @@ setPalette(TobiasPaletteID,TobiasPalette)
 setPalette(IanPaletteID,IanPalette)
 setPalette(OlsenPaletteID,OlsenPalette)
 setPalette(ElcorianPaletteID,ElcorianPalette)//repal coming
-//viridian
+setPalette(ViridianPaletteID,ViridianPalette)
 setPalette(FreddricPaletteID,FreddricPalette)
 setPalette(DeanUPaletteID,DeanUPalette)
 setPalette(DeanPPaletteID,DeanPPalette)
 setPalette(ElizaUPaletteID,ElizaUPalette)
 setPalette(ElizaPPaletteID,ElizaPPalette)
-//chartreuse
+setPalette(ChartreusePaletteID,ChartreusePalette)
 setPalette(RiftPaletteID,RiftPalette)
 setPalette(EstelleUPaletteID,EstelleUPalette)
 setPalette(EstellePPaletteID,EstellePPalette)
@@ -245,7 +248,7 @@ setPalette(ManfredUPaletteID,ManfredUPalette)
 setPalette(ManfredPPaletteID,ManfredPPalette)
 setPalette(WilhelmUPaletteID,WilhelmUPalette)
 setPalette(WilhelmPPaletteID,WilhelmPPalette)
-//argent
+setPalette(ArgentPaletteID,ArgentPalette)
 //tonnamin
 //player jonas, laronde is down further
 
@@ -324,11 +327,11 @@ SetPaletteFull(Tobias,0x0,Fighter,TobiasPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Ian,IanPaletteID,CivilM,0x0,0x0,0x0,0x0)
 SetPaletteFull(Olsen,0x0,ThiefF,OlsenPaletteID,AssassF,0x0,0x0)
 SetPaletteFull(Elcorian,0x0,Troub,ElcorianPaletteID,Valk,0x0,0x0)
-SetPaletteFull(Viridian,0x0,0x0,0x0,ViridianLord,0x0,0x0)
+SetPaletteFull(Viridian,0x0,0x0,ViridianPaletteID,ViridianLord,0x0,0x0)
 SetPaletteFull(Freddric,0x0,LncWyv,FreddricPaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Dean,DeanUPaletteID,Fighter,DeanPPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Eliza,ElizaUPaletteID,Cleric,ElizaPPaletteID,BishopF,0x0,0x0)
-SetPaletteFull(Chartreuse,0x0,BardF,0x0,0x0,0x0,0x0)
+SetPaletteFull(Chartreuse,ChartreusePaletteID,BardF,0x0,0x0,0x0,0x0)
 SetPaletteFull(Rift,0x0,Myrm,RiftPaletteID,SwMast,0x0,0x0)
 SetPaletteFull(Estelle,EstelleUPaletteID,BowCavF,EstellePPaletteID,BowPalF,0x0,0x0)
 SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,0x0,0x0)
@@ -336,7 +339,7 @@ SetPaletteFull(Dirk,0x0,Pirate,DirkPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Callum,0x0,SwdCav,CallumPaletteID,SwdPal,0x0,0x0)
 SetPaletteFull(Manfred,ManfredUPaletteID,DarkM,ManfredPPaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Wilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x0,0x0)
-SetPaletteFull(Argent,0x0,BowArm,0x0,BowGen,0x0,0x0)
+SetPaletteFull(Argent,0x0,BowArm,ArgentPaletteID,BowGen,0x0,0x0)
 SetPaletteFull(Addington,0x0,Automaton,0x0,0x0,0x0,0x0)
 SetPaletteFull(Tonnamin,0x0,AxeArm,0x0,AxeGen,0x0,0x0)
 SetPaletteFull(SecretJonas,JonasPaletteID,LncWyv,0x0,WyvLord,0x0,0x0)
@@ -596,7 +599,9 @@ OlsenPalette:
 ALIGN 4
 ElcorianPalette:
 #incbin "Elcorian.dmp"
-
+ALIGN 4
+ViridianPalette:
+#incbin "Viridian.dmp"
 ALIGN 4
 FreddricPalette:
 #incbin "Freddric.dmp"
@@ -612,7 +617,9 @@ ElizaUPalette:
 ALIGN 4
 ElizaPPalette:
 #incbin "ElizaPromoted.dmp"
-
+ALIGN 4
+ChartreusePalette:
+#incbin "Chartreuse.dmp"
 ALIGN 4
 RiftPalette:
 #incbin "Rift.dmp"
@@ -646,7 +653,9 @@ WilhelmUPalette:
 ALIGN 4
 WilhelmPPalette:
 #incbin "WilhelmPromoted.dmp"
-
+ALIGN 4
+ArgentPalette:
+#incbin "Argent.dmp"
 ALIGN 4
 CidPalette:
 #incbin "Cid.dmp"

@@ -1,0 +1,35 @@
+//unit shop stuff
+#include "ShopUnit.lyn.event"
+
+SetUnitAction(0x28, ActionRoutine(ActionShopUnit))
+
+#define ShopUnitListEntry(charID,shopTypeID,shopListPtr) "BYTE charID shopTypeID 0 0; POIN shopListPtr"
+#define ShopUnitListEnd "WORD 0 0"
+
+ALIGN 4
+ShopUnitTickerTextLink:
+SHORT ShopUnitTickerText
+
+ALIGN 4
+ShopUnitTargetSelectionStruct:
+	POIN (ShopUnit_OnConstruction|1) // Constructor
+	POIN (ShopUnit_DestructMoveDisplay|1) // Destructor
+	WORD 0 // idk (actually ik kinda, see my notes)
+	POIN (ShopUnit_OnChange|1) // target change
+	WORD 0 // idk (same)
+	POIN (ShopUnit_OnSelection|1) // A Press
+	POIN 0x22749 // B Press (Generic Vanilla One that calls the unit menu back)
+	WORD 0 // idk (same)
+
+
+
+
+ALIGN 4
+ShopUnitList:
+ShopUnitListEntry(Rose,2,RoseShopList)
+ShopUnitListEnd
+
+ALIGN 4
+RoseShopList:
+SHLI Galewind Smite Jormungandr Physic BlackLotus 
+ALIGN 4

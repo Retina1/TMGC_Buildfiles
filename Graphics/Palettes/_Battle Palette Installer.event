@@ -149,6 +149,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ParquePaletteID 0x5a
 #define UnknownPaletteID 0x58
 
+#define IneubrenosPaletteID 0x78
+
 #define LiamPaletteID 0x72
 #define NeillstromPaletteID 0x73
 #define CiraweissPaletteID 0x74
@@ -277,6 +279,8 @@ setPalette(VulturePaletteID,VulturePalette)
 setPalette(ParquePaletteID,ParquePalette)
 setPalette(UnknownPaletteID,UnknownPalette)
 
+setPalette(IneubrenosPaletteID,IneubrenosPalette)
+
 setPalette(LiamPaletteID,LiamPalette)
 setPalette(NeillstromPaletteID,NeillstromPalette)
 setPalette(CiraweissPaletteID,CiraweissPalette)
@@ -367,6 +371,8 @@ SetPaletteFull(Roark,RoarkPaletteID,Fighter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Vulture,VulturePaletteID,BowArm,0x0,0x0,0x0,0x0)
 SetPaletteFull(Parque,0x0,0x0,ParquePaletteID,LncPal,0x0,0x0)
 SetPaletteFull(C15Boss,0x0,0x0,UnknownPaletteID,Sorc,0x0,0x0)
+
+SetPaletteFull(BossIneubrenos,0x0,0x0,IneubrenosPaletteID,Sniper,0x0,0x0)
 
 SetPaletteFull(Liam,0x0,0x0,LiamPaletteID,Hero,0x0,0x0)
 SetPaletteFull(Neillstrom,0x0,0x0,NeillstromPaletteID,WyvLord,0x0,0x0)
@@ -727,6 +733,10 @@ ALIGN 4
 UnknownPalette:
 #incbin "Unknown.dmp"
 
+
+ALIGN 4
+IneubrenosPalette:
+#incbin "Ineubrenos.dmp"
 ALIGN 4
 LiamPalette:
 #incbin "Liam.dmp"

@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(BlackLotusIcon)
+#incbin "statboosters/Lotus.dmp"
+ALIGN 4
 ItemIconEntry(SkillScrollIcon)
 #incbin "SkillBook.dmp"
 ALIGN 4

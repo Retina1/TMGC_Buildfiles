@@ -21,6 +21,16 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,Z3Turn2,2)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,4)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,5)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,7)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,8)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,9)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,10)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,12)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,13)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,15)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,15)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -121,6 +131,16 @@ UNIT Ygstra AxePal 0x0 Level(1,Enemy,1) [14,11] 0x0 0x0 0x1 REDA24R13 [0x0] NoAI
 UNIT Ygstra BowArm 0x0 Level(1,Enemy,1) [14,11] 0x0 0x0 0x1 REDA24R14 [0x0] NoAI
 UNIT
 
+Z3BrigandSpawns:
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [5,19] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [7,0] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
+UNIT
+
+Z3MevionSpawns:
+UNIT Mevion Merc 0x0 Level(14,Enemy,1) [0,7] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Mevion LncCav 0x0 Level(14,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Mevion Fighter 0x0 Level(14,Enemy,1) [0,2] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 
 ALIGN 4
 
@@ -173,6 +193,14 @@ MUSC RecruitmentTheme
 Text(Z3RecruitmentText2)
 CLEAN
 SetSupport(Avan,Toddsworth,CSupport)
+EndEvent
+
+Z3BrigandSpawnTurns:
+Reinforcements(Z3BrigandSpawns)
+EndEvent
+
+Z3MevionSpawnTurns:
+Reinforcements(Z3MevionSpawns)
 EndEvent
 
 Z3NorthVillage:

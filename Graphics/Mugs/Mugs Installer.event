@@ -241,7 +241,7 @@ setMugEntry(0x2e,EstelleMug,3,5,3,3)
 ALIGN 4
 RiftMug:
 #incext PortraitFormatter "Rift.png"
-setMugEntry(0x2d,RiftMug,4,6,4,4)
+setMugEntry(0x2d,RiftMug,3,6,3,4)
 
 ALIGN 4
 RoseMug:
@@ -514,6 +514,26 @@ setMugEntry(0xd4,TonnaminMug,3,5,3,3)
 
 
 ALIGN 4
+DLViridianMug:
+#incext PortraitFormatter "spoilerly/DL_Viridian.png"
+setMugEntry(0xf2,DLViridianMug,4,5,4,3)
+
+ALIGN 4
+DLChartreuseMug:
+#incext PortraitFormatter "spoilerly/DL_Chartreuse.png"
+setMugEntry(0xf3,DLChartreuseMug,3,5,3,3)
+
+ALIGN 4
+DLCallumMug:
+#incext PortraitFormatter "spoilerly/DL_Callum.png"
+setMugEntry(0xf4,DLCallumMug,3,5,3,3)
+
+ALIGN 4
+DLArgentMug:
+#incext PortraitFormatter "spoilerly/DL_Argent.png"
+setMugEntry(0xf5,DLArgentMug,3,5,3,3)
+
+ALIGN 4
 DLFreddricMug:
 #incext PortraitFormatter "spoilerly/DL_Freddric.png"
 setMugEntry(0xf6,DLFreddricMug,3,5,3,3)
@@ -541,7 +561,7 @@ setMugEntry(0xfa,DLEstelleMug,3,5,3,3)
 ALIGN 4
 DLRiftMug:
 #incext PortraitFormatter "spoilerly/DL_Rift.png"
-setMugEntry(0xfb,DLRiftMug,4,6,4,4)
+setMugEntry(0xfb,DLRiftMug,3,6,3,4)
 
 ALIGN 4
 DLRoseMug:

@@ -72,6 +72,17 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
         }
     }
 
+    //If generic, load skills from learned list
+    else {
+        u8* tempBuffer = GetInitialSkillList_Pointer(unit, gTempSkillBuffer);
+        for (int i = 0; i < GenericLearnedSkillLimit; ++i) {
+            if (!IsSkillIDValid(tempBuffer[i])) {
+                break;
+            }
+            buffer->skills[count++] = tempBuffer[i];
+        }
+    }
+
     //Item passive skills
     for (int i = 0; i < 5 && unit->items[i]; ++i) {
         temp = unit->items[i];

@@ -42,10 +42,11 @@ POIN UpWithArch
 POIN AxefaithHit
 POIN StancesASM
 #ifdef ENABLE_GBA_LETHALITY
-POIN LethalitySkill Bane
+POIN LethalitySkill
 #else
-POIN LethalitySkill NonGBALethalitySkill Bane
+POIN LethalitySkill NonGBALethalitySkill
 #endif
+POIN Bane /*haha it's actully headhunter*/
 
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	POIN ModularPreBattleSkill 

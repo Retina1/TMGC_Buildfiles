@@ -122,12 +122,12 @@ Proc_Moonbow:
 POIN SkillTester
 WORD MoonbowID
 
-Proc_Bane: //Proc_Bane should always come after Proc_Lethality
+/*Proc_Bane: //Proc_Bane should always come after Proc_Lethality
 #incbin "Bane/proc_bane.dmp" //bane does not proc against counter because it was giving problems
 POIN SkillTester
 WORD CounterID
 WORD CounterMagicID
-WORD BaneID
+WORD BaneID*/
 
 DownWithArch: //lethality if the enemies name starts with "Arch"
 #incbin "DownWithArch/proc_downwitharch.dmp"

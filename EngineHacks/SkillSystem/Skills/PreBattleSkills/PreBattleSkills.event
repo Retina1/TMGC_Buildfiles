@@ -6,10 +6,9 @@ POIN SkillTester
 WORD AxeFaithID
 
 ALIGN 4
-Bane: //skill/2% of leaving the enemy with 1hp if the normal damage would not have killed (bane is ignored if the unit has lethality)
+Bane: //now headhunter
 #incbin "Bane/Bane.dmp"
 POIN SkillTester
-WORD LethalityID
 WORD BaneID
 
 ALIGN 4

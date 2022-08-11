@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	BlackTar_grp, voicegroup000
+	.equ	BlackTar_pri, 0
+	.equ	BlackTar_rev, 0
+	.equ	BlackTar_mvl, 127
+	.equ	BlackTar_key, 0
+	.equ	BlackTar_tbs, 1
+	.equ	BlackTar_exg, 0
+	.equ	BlackTar_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	BlackTar
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+BlackTar_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 132*song04_tbs/2
+ .byte   KEYSH , BlackTar_key+0
+ .byte   TEMPO , 132*BlackTar_tbs/2
  .byte   VOICE , 102
- .byte   VOL , 45*song04_mvl/mxv
+ .byte   VOL , 45*BlackTar_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -617,11 +617,11 @@ Label_01005083:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+BlackTar_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackTar_key+0
  .byte   VOICE , 104
- .byte   VOL , 47*song04_mvl/mxv
+ .byte   VOL , 47*BlackTar_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #02 @001   ----------------------------------------
@@ -1253,11 +1253,11 @@ Label_0100544B:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+BlackTar_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackTar_key+0
  .byte   VOICE , 30
- .byte   VOL , 41*song04_mvl/mxv
+ .byte   VOL , 41*BlackTar_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -2379,11 +2379,11 @@ Label_010056EF:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+BlackTar_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackTar_key+0
  .byte   VOICE , 81
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BlackTar_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,Cn2 ,v112
  .byte   W12
@@ -3002,11 +3002,11 @@ Label_01005A70:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+BlackTar_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackTar_key+0
  .byte   VOICE , 38
- .byte   VOL , 39*song04_mvl/mxv
+ .byte   VOL , 39*BlackTar_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N17 ,Cn1 ,v064
  .byte   W18
@@ -3694,11 +3694,11 @@ Label_01005DC5:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+BlackTar_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BlackTar_key+0
  .byte   VOICE , 124
- .byte   VOL , 43*song04_mvl/mxv
+ .byte   VOL , 43*BlackTar_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -4252,19 +4252,19 @@ Label_01006254:
 @******************************************************@
 	.align	2
 
-song04:
+BlackTar:
 	.byte	6	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	BlackTar_pri	@ Priority
+	.byte	BlackTar_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	BlackTar_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
+	.word	BlackTar_001
+	.word	BlackTar_002
+	.word	BlackTar_003
+	.word	BlackTar_004
+	.word	BlackTar_005
+	.word	BlackTar_006
 
 	.end

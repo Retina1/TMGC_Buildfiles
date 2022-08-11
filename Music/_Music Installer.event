@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "BlackTar.event"
+SongTable(S_BlackTar,BlackTar,1)
+}
+{
 #include "XC3Theme.event"
 SongTable(S_XC3Theme,XC3Theme,0)
 }

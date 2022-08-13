@@ -1,7 +1,7 @@
 #define BossBGMEntry(UnitId,SongId) "BYTE UnitId 0 0 0; SHORT SongId 0"
 #define BossBGMTerminator "BYTE 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF"
 
-//b2 is early bosses, paths is mid bosses, face myself is lazarus, sonic boss is zeke arc, a1 is dragons, crimson ridge is legendary weapons, calamity is dalst, b4 is big sad
+//b2 is early bosses, paths is mid bosses, face myself is lazarus, sonic boss is zeke arc, a1/a3 is dragons, crimson ridge is legendary weapons, calamity is dalst, b4 is big sad
 
 ALIGN 4
 BossBGMTable:
@@ -41,7 +41,7 @@ BossBGMEntry(Neillstrom,S_ClashOfCalamity)
 BossBGMEntry(Ciraweiss,S_ClashOfCalamity)
 BossBGMEntry(Arbordia,S_ClashOfCalamity)
 //huh
-BossBGMEntry(DL1,S_ClashOfCalamity)
+BossBGMEntry(DL1,S_SMT4B4)
 BossBGMEntry(DL2,S_SMT4B4)
 BossBGMEntry(DL3,S_SMT4B4)
 BossBGMEntry(DL4,S_SMT4B4)

@@ -207,6 +207,7 @@ LoadUnitsByDifficulty(C15Easy,C15Normal,C15Hard)
 LOAD1 0x0 C15Units
 ENUN
 LOAD1 0x0 C15Allies
+ENUN
 CHECK_ALIVE Rachael
 BEQ 0x11 0xC 0x0
 CHECK_ALIVE Cassius

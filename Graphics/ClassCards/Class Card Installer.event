@@ -103,7 +103,13 @@
 #define SwordCard 0xd6
 #define ThiefMCard 0x8e
 #define ThiefFCard 0xd7
+#define BookCard 0xf1
 ALIGN 4
+
+BookPortrait:
+#incbin "Book.dmp"
+BookPortraitPalette:
+#incbin "BookPalette.dmp"
 
 ThiefMPortrait:
 #incbin "ThiefM.dmp"
@@ -631,6 +637,7 @@ setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
 setCardEntry(CrateCard,CratePortrait,CratePortraitPalette)
 setCardEntry(HorseCard,HorsePortrait,HorsePortraitPalette)
 setCardEntry(SwordCard,SwordPortrait,SwordPortraitPalette)
+setCardEntry(BookCard,BookPortrait,BookPortraitPalette)
 setCardEntry(FireDragonCard,FireDragonPortrait,FireDragonPortraitPalette)
 setCardEntry(IceDragonCard,IceDragonPortrait,IceDragonPortraitPalette)
 setCardEntry(WyvernCard,WyvernPortrait,WyvernPortraitPalette)

@@ -1,0 +1,132 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(Events16,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C16Units C16Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x65,C16OutOfTime,15)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Vendor(C16Vendor,6,21)
+Armory(C16Armory,19,16)
+Village(0x11,C16Village,1,18)
+Village(0x12,C16Village,17,1)
+Village(0x13,C16Village,24,14)
+END_MAIN
+
+ALIGN 4
+C16Armory:
+SHLI SilverSword Wyrmslayer Shimmersword SilverLance Dragonpike DousingLance SilverAxe Dracoaxe HereticAxe SilverBow Wardbow Greatbow
+BYTE 0x0 0x0
+ALIGN 4
+C16Vendor:
+SHLI Elfire Fimbulvetr Divine Aura Nightfall Nosferatu Fenrir Physic Recover Restore Barrier Yoink Runeward Elixir PureWater
+BYTE 0x0 0x0
+
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatAll(EndingScene)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C16Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [24,19] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [24,20] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,19] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [26,19] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [27,19] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,20] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [27,20] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,21] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,21] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [26,21] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,22] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [26,22] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [27,22] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [23,22] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+C16Easy:
+UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT
+
+C16Normal:
+UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT
+
+C16Hard:
+UNIT Holanis AxeCav 0x0 Level(17,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Artemis AxePalF 0x0 Level(4,Enemy,0) [25,0] 0x0 0x0 0x0 0x0 [SilverAxe,SteelBow,Vulnerary] NoAI
+UNIT C15Boss Sorc 0x0 Level(20,Enemy,1) [7,0] DropItem 0x0 0x0 0x0 [Avalon,RainbowGem,Boots] NeverMoveAI
+UNIT
+
+#define YupThatIsABook "0xd3 0x7c"
+C16Books:
+UNIT YupThatIsABook 0x0 Level(1,NPC,1) [12,7] 0x0 0x0 0x0 0x0 [0x0] GreenStationaryAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt16
+MUSC NarrationTheme3
+Narration(Map2CG,Ch16_Narration)
+CleanTextNoMap(HallCG,FillerDialogue)
+LoadUnitsByDifficulty(C16Easy,C16Normal,C16Hard)
+LOAD1 0x0 C16Units
+ENUN
+LOAD1 0x0 C16Books
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+ResetBaseFlags
+MUSC VictoryTheme
+CleanTextNoMap(HallCG,FillerDialogue)
+MoveToChapter(Chapter17)
+ENDA
+
+C16Village:
+VillageEventItem(FillerDialogue, HouseCG, Hammerne)
+
+C16OutOfTime:
+Text(FillerDialogue)
+CALL 0x592104
+EndEvent
+
+MESSAGE Events end at offset CURRENTOFFSET

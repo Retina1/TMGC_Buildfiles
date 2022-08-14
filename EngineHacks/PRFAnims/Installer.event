@@ -22,14 +22,10 @@ IndividualAnimation7743_CC:
 #incbin "IndividualAnimation7743_CC.dmp"
 POIN CustomAnimeTable
 
-
+#define CustomAnimationSet(unit,class,pointer) "BYTE unit; BYTE class; BYTE 0x00; BYTE 0x00; WORD pointer"
 CustomAnimeTable:
-BYTE 0x01  //Unit: Eirika
-BYTE 0x02  //Class: Lord
-BYTE 0x00  //dummy
-BYTE 0x00  //dummy
-WORD 0x088AEFFC //Eirika Master Load Battle Animation.
-
+CustomAnimationSet(Rift,SwMast,RiftAnims|IsPointer)
+CustomAnimationSet(Damien,Archer,DamienUAnims|IsPointer)
 BYTE 0x00  //Unit: term data
 BYTE 0x00  //dummy
 BYTE 0x00  //dummy

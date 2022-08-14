@@ -36,6 +36,15 @@
 #define MonsterAnim(Animation) "BYTE 0x0B 0x01 ; SHORT Animation"
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define EndAnim "WORD 0x0 0x0"
+
+{
+#include "CharacterSpecific\DamienU\Bow Installer.event"
+#include "CharacterSpecific\DamienU\Unarmed Installer.event"
+}
+{
+#include "CharacterSpecific\Rift\Sword Installer.event"
+#include "CharacterSpecific\Rift\Unarmed Installer.event"
+}
 {
 #include "Bigle\Magic Installer.event"
 #include "Bigle\Monster Installer.event"
@@ -415,6 +424,19 @@
 #include "Dracopope\Handaxe Installer.event"
 #include "Dracopope\Magic Installer.event"
 }
+
+ALIGN 4
+DamienUAnims:
+BowAnim(0xe3)
+UnarmedAnim(0xe4)
+EndAnim
+
+ALIGN 4
+RiftAnims:
+SwordAnim(0xe1)
+UnarmedAnim(0xe2)
+EndAnim
+
 ALIGN 4
 DragonAnims:
 SpecialAnim(0xc4,FireBreath)

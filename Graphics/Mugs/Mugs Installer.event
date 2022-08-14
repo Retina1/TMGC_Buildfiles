@@ -20,8 +20,10 @@ BlairMug:
 setMugEntry(0x2,BlairMug,3,5,3,3)
 
 ALIGN 4
+//ArinMug:
+//#incext PortraitFormatter "Arin.png"
 ArinMug:
-#incext PortraitFormatter "Arin.png"
+#incext PortraitFormatter "NewArin.png"
 setMugEntry(0x4,ArinMug,3,6,3,4)
 
 ALIGN 4

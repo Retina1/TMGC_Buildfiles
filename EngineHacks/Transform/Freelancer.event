@@ -1,0 +1,100 @@
+#ifdef _FE8_
+	#include "Extensions/Hack Installation.txt"
+
+	#define  FreelancerClassID Freelancer	//The ID of the class you want to be able to transform
+	#define  FreelancerCharacterID 0x3f	//The ID of the playable character
+	#define  FreelancerTempCloneID 0x7e	//The ID of an unused unit to handle the stat swapping between transformations in the background, will never become playable.
+	#define  FreelancerTurns 0x05	    //How many turns do you want the transformation to last
+	//#define  TransformNameID 0x10E4		//This is for the menu, make sure it has a space before it, ( Copy). Note that Transform doesn't fit the menu.
+	//#define  TransformDescID 0x10E5		//Description when you press the help button
+    //#define  TrsfrmStatscrnTextID 0xE6	//+0x1000 will be added to this. ID of the statscreen name of the turn counter.
+	
+/*	#define  TransformCommID 0x20				//ID of the menu command
+	#define  UnitMenuCommandsTable 0x15B4284		//Vanilla location, change if your table isn't here
+	#define  TransformMenuEntryID 0x05 			//This is the entry number of the command,*/
+												//expand your table and adjust the entry to an unused one.
+	PUSH
+		//This inserts the menu command data in the unit table
+		/*ORG   UnitMenuCommandsTable+(TransformMenuEntryID*0x24)
+		WORD  0x080D7E18        //door jp pointer name, we won't use this
+		SHORT TransformNameID   //text string ID to use for english menu name
+		SHORT TransformDescID   //text string ID to use for menu description
+		BYTE  0x00          	//Menu Color
+		BYTE  TransformCommID   //Menu command ID
+		SHORT 0x0000   //Padding
+		POIN  TransformCommandUsability|1
+		WORD  0x00000000
+		POIN  TransformCommandEffect|1
+		WORD  0x00000000
+		WORD  0x00000000
+		WORD  0x00000000*/
+		
+		ORG   0x153B8//player phase initializator routine
+		jumpToHack(TransformCountdown)
+		ORG   0x9DC4//map end routine
+		jumpToHack(TransformChapterEnd)
+//		ORG   0xE90374//fucky stuff, this goes right where the trv text string gets drawn
+//		jumpToHack(TransformStatscreen)
+//		ORG   0x8737C//fucky stuff, this goes right where the trv unit name gets drawn
+//		jumpToHack(TransformStatscreenNumber)
+	POP
+	
+	
+	ALIGN 4
+	
+	FreelancerTargetSelectRoutineList:
+	WORD 0x00000000						//creation func
+	WORD 0x0804E884|1					//erase func, CLEAR BG0 BG1
+	WORD 0x00000000						//creation func 2
+	WORD 0x00000000						//targetswap func
+	WORD 0x00000000						//targetswap func2
+	POIN TransformAPress|1				//A press func
+	WORD 0x08022748|1					//B press func, GenericSelection_BackToUM
+	WORD 0x00000000						//R press func
+	
+
+	ALIGN 4
+	TransformCommandUsability:
+	BYTE FreelancerClassID 0x21 0x0 0x0//r1 has charID
+	#incbin "TransformCommandUsability.dmp"
+	
+	ALIGN 4
+	POIN FreelancerTargetSelectRoutineList
+	TransformCommandEffect:
+	BYTE 0x7B 0x46 0x00 0x00//mov r3,r15 + nop
+	#incbin "TransformCommandEffect.dmp"
+
+	ALIGN 4
+	TransformAPress:
+	BYTE FreelancerCharacterID 0x23 FreelancerTempCloneID 0x22 FreelancerTurns 0x20 0x00 0x00
+	//r0 has turns to transform, r1 has charID, r2 has cloneID
+	#incbin "TransformCommandAPress.dmp"
+
+	ALIGN 4
+	TransformCountdown:
+	BYTE FreelancerCharacterID 0x23 FreelancerClassID 0x20 FreelancerTempCloneID 0x21 0x00 0x00
+	//r3 has charID, r1 has cloneID, r0 freelancer classID
+	#incbin "TransformCountdown.dmp"
+
+	ALIGN 4
+	TransformChapterEnd:
+	BYTE FreelancerCharacterID 0x23 FreelancerClassID 0x20 FreelancerTempCloneID 0x21 0x00 0x00
+	//r3 has charID, r1 has cloneID, r0 freelancer classID
+	#incbin "TransformChapterEnd.dmp"
+
+/*	ALIGN 4
+	WORD TrsfrmStatscrnTextID
+	TransformStatscreen:
+	BYTE 0x79 0x46 0x00 0x00//mov r1,r15 + nop
+	BYTE FreelancerClassID 0x22 FreelancerTempCloneID 0x23 FreelancerCharacterID 0x20 0x00 0x00 
+	//r3 has charID, r1 has cloneID, r0 freelancer classID
+	#incbin "TransformStatscreen.dmp"
+
+	ALIGN 4
+	TransformStatscreenNumber:
+	BYTE FreelancerClassID 0x22 FreelancerTempCloneID 0x23 FreelancerCharacterID 0x20 TrsfrmStatscrnTextID 0x21 
+	//r3 has charID, r1 has cloneID, r0 freelancer classID
+	#incbin "TransformStatscreenNumber.dmp"*/
+#else
+	ERROR "Select FE8!"
+#endif

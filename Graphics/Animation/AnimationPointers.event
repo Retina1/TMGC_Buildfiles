@@ -38,6 +38,9 @@
 #define EndAnim "WORD 0x0 0x0"
 
 {
+#include "Freelancer(GabrielKnight)\Magic Installer.event"
+}
+{
 #include "CharacterSpecific\DamienU\Bow Installer.event"
 #include "CharacterSpecific\DamienU\Unarmed Installer.event"
 }
@@ -424,6 +427,10 @@
 #include "Dracopope\Handaxe Installer.event"
 #include "Dracopope\Magic Installer.event"
 }
+ALIGN 4
+FreelancerAnims:
+MagicAnim(0xe5)
+EndAnim
 
 ALIGN 4
 DamienUAnims:

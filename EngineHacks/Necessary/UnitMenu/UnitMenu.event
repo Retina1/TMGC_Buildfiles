@@ -81,6 +81,7 @@ UnitMenuTable:
   // UM_Attack_B
   MenuCommand(0x67b, 0x6c0, NormalText, $24a28, AttackEffect, $22c31, $22c99)
   UM_Staff
+  
   MenuCommand(TransformNameID, TransformDescID, BlueText, TransformCommandUsability|1, TransformCommandEffect|1)
   //UM_Dance
   MenuCommand(0x67E,0x6C2,NormalText,NewDanceUsability,0x231D0)

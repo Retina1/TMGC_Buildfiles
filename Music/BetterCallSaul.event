@@ -1,0 +1,398 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	BetterCallSaul_grp  voicegroup000
+	#define	BetterCallSaul_pri  0
+	#define	BetterCallSaul_rev  0
+	#define	BetterCallSaul_mvl  127
+	#define	BetterCallSaul_key  0
+	#define	BetterCallSaul_tbs  1
+	#define	BetterCallSaul_exg  0
+	#define	BetterCallSaul_cmp  1
+
+	// .rodata
+	//	BetterCallSaul
+	ALIGN 4
+
+
+//**************** Track 1 (Midi-Chn.0) ****************//
+
+BetterCallSaul_001:
+//  #01 //000   ----------------------------------------
+ BYTE   KEYSH   BetterCallSaul_key+0
+Label_018F62D2:
+ BYTE   TEMPO   164*BetterCallSaul_tbs/2
+ BYTE   VOICE   18
+ BYTE   VOL   41*BetterCallSaul_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   TIE  Cs3  v080
+ BYTE   TIE  En3
+ BYTE   TIE  An3
+ BYTE   W96
+//  #01 //001   ----------------------------------------
+ BYTE   W17
+ BYTE   EOT
+ BYTE   Cs3  v064
+ BYTE   An3
+ BYTE   W07
+ BYTE   N11  Ds3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W12
+ BYTE   N22  En3
+ BYTE   W24
+//  #01 //002   ----------------------------------------
+Label_018F62F4:
+ BYTE   TIE  En3  v080
+ BYTE   TIE  Gn3
+ BYTE   TIE  Cn4
+ BYTE   W96
+ BYTE   PEND 
+//  #01 //003   ----------------------------------------
+ BYTE   W17
+ BYTE   EOT
+ BYTE   En3  v067
+ BYTE   Cn4
+ BYTE   W07
+ BYTE   N22  Fs3
+ BYTE   N22  An3
+ BYTE   N22  En4
+ BYTE   W24
+ BYTE   N11  Dn4
+ BYTE   W12
+ BYTE   N32  Cn4
+ BYTE   W36
+//  #01 //004   ----------------------------------------
+Label_018F6310:
+ BYTE   TIE  Cs3  v080
+ BYTE   TIE  En3
+ BYTE   TIE  An3
+ BYTE   W96
+ BYTE   PEND 
+//  #01 //005   ----------------------------------------
+ BYTE   W17
+ BYTE   EOT
+ BYTE   Cs3  v064
+ BYTE   An3
+ BYTE   W07
+ BYTE   N11  Dn3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   N22  Gn3
+ BYTE   W24
+//  #01 //006   ----------------------------------------
+ BYTE   W48
+ BYTE   N44  Gs2
+ BYTE   W48
+//  #01 //007   ----------------------------------------
+Label_018F632F:
+ BYTE   N22  Cn3  v080
+ BYTE   N22  En3
+ BYTE   W24
+ BYTE   Ds3
+ BYTE   W24
+ BYTE   Dn3
+ BYTE   W24
+ BYTE   Cn3
+ BYTE   W24
+ BYTE   PEND 
+//  #01 //008   ----------------------------------------
+ BYTE   W24
+ BYTE   N11
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W60
+//  #01 //009   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_018F62D2
+//  #01 //010   ----------------------------------------
+ BYTE   TEMPO   164*BetterCallSaul_tbs/2
+ BYTE   TIE  Cs3  v080
+ BYTE   TIE  En3
+ BYTE   TIE  An3
+ BYTE   W96
+//  #01 //011   ----------------------------------------
+ BYTE   W17
+ BYTE   EOT
+ BYTE   Cs3  v064
+ BYTE   An3
+ BYTE   W07
+ BYTE   N11  Ds3
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   Gs3
+ BYTE   W12
+ BYTE   N22  En3
+ BYTE   W24
+//  #01 //012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F62F4
+//  #01 //013   ----------------------------------------
+ BYTE   W17
+ BYTE   EOT
+ BYTE   En3  v067
+ BYTE   Cn4
+ BYTE   W07
+ BYTE   N22  Fs3  v080
+ BYTE   N22  An3
+ BYTE   N22  En4
+ BYTE   W24
+ BYTE   N11  Dn4
+ BYTE   W12
+ BYTE   N32  Cn4
+ BYTE   W36
+//  #01 //014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F6310
+//  #01 //015   ----------------------------------------
+ BYTE   W17
+ BYTE   EOT
+ BYTE   Cs3  v064
+ BYTE   An3
+ BYTE   W07
+ BYTE   N11  Dn3  v080
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   Cs4
+ BYTE   W12
+ BYTE   En3
+ BYTE   W12
+ BYTE   N22  Gn3
+ BYTE   W24
+//  #01 //016   ----------------------------------------
+ BYTE   W48
+ BYTE   N44  Gs2
+ BYTE   W48
+//  #01 //017   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F632F
+//  #01 //018   ----------------------------------------
+ BYTE   W24
+ BYTE   N11  Cn3  v080
+ BYTE   W12
+ BYTE   Dn3
+ BYTE   W44
+ BYTE   W03
+ BYTE   FINE
+
+//**************** Track 2 (Midi-Chn.1) ****************//
+
+BetterCallSaul_002:
+//  #02 //000   ----------------------------------------
+ BYTE   VOL   53*BetterCallSaul_mvl/mxv
+ BYTE   KEYSH   BetterCallSaul_key+0
+Label_018F6598:
+ BYTE   VOICE   18
+ BYTE   N78  An1  v080
+ BYTE   W84
+ BYTE   N11
+ BYTE   W12
+//  #02 //001   ----------------------------------------
+Label_018F65A0:
+ BYTE   N22  An1  v080
+ BYTE   W24
+ BYTE   N44  En2
+ BYTE   W48
+ BYTE   N22  An1
+ BYTE   W24
+ BYTE   PEND 
+//  #02 //002   ----------------------------------------
+Label_018F65AB:
+ BYTE   N78  Cn2  v080
+ BYTE   W84
+ BYTE   N11
+ BYTE   W12
+ BYTE   PEND 
+//  #02 //003   ----------------------------------------
+Label_018F65B2:
+ BYTE   N22  Bn1  v080
+ BYTE   W24
+ BYTE   N44  Dn2
+ BYTE   W48
+ BYTE   N22  En1
+ BYTE   W24
+ BYTE   PEND 
+//  #02 //004   ----------------------------------------
+Label_018F65BD:
+ BYTE   N78  An1  v080
+ BYTE   W84
+ BYTE   N11
+ BYTE   W12
+ BYTE   PEND 
+//  #02 //005   ----------------------------------------
+Label_018F65C4:
+ BYTE   N22  An1  v080
+ BYTE   W24
+ BYTE   N44
+ BYTE   W72
+ BYTE   PEND 
+//  #02 //006   ----------------------------------------
+Label_018F65CB:
+ BYTE   N44  En1  v080
+ BYTE   W48
+ BYTE   En2
+ BYTE   W48
+ BYTE   PEND 
+//  #02 //007   ----------------------------------------
+ BYTE   W96
+//  #02 //008   ----------------------------------------
+ BYTE   N11  Ds2
+ BYTE   W12
+ BYTE   N11
+ BYTE   W48
+ BYTE   An1
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W24
+//  #02 //009   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_018F6598
+//  #02 //010   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F65BD
+//  #02 //011   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F65A0
+//  #02 //012   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F65AB
+//  #02 //013   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F65B2
+//  #02 //014   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F65BD
+//  #02 //015   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F65C4
+//  #02 //016   ----------------------------------------
+ BYTE   PATT
+  POIN2 Label_018F65CB
+//  #02 //017   ----------------------------------------
+ BYTE   W96
+//  #02 //018   ----------------------------------------
+ BYTE   N11  Ds2  v080
+ BYTE   W12
+ BYTE   N11
+ BYTE   W48
+ BYTE   An1
+ BYTE   W12
+ BYTE   Cn2
+ BYTE   W11
+ BYTE   FINE
+
+//**************** Track 3 (Midi-Chn.2) ****************//
+
+BetterCallSaul_003:
+//  #03 //000   ----------------------------------------
+ BYTE   KEYSH   BetterCallSaul_key+0
+Label_018F673E:
+ BYTE   VOICE   124
+ BYTE   VOL   53*BetterCallSaul_mvl/mxv
+ BYTE   PAN   c_v+0
+ BYTE   W48
+ BYTE   N23  Fs1  v080
+ BYTE   W48
+//  #03 //001   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //002   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //003   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //004   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //005   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //006   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //007   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //008   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //009   ----------------------------------------
+ BYTE   GoTo
+  POIN2 Label_018F673E
+//  #03 //010   ----------------------------------------
+ BYTE   W48
+ BYTE   N23  Fs1  v080
+ BYTE   W48
+//  #03 //011   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //012   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //013   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //014   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //015   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //016   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //017   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W48
+//  #03 //018   ----------------------------------------
+ BYTE   W48
+ BYTE   N23
+ BYTE   W32
+ BYTE   W03
+ BYTE   FINE
+
+//******************************************************//
+	ALIGN 4
+
+BetterCallSaul:
+	BYTE	3	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	BetterCallSaul_pri	// Priority
+	BYTE	BetterCallSaul_rev	// Reverb.
+    
+	POIN2	BetterCallSaul_grp
+    
+	POIN2	BetterCallSaul_001
+	POIN2	BetterCallSaul_002
+	POIN2	BetterCallSaul_003
+
+	

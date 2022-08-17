@@ -181,6 +181,11 @@ ToddsworthMug:
 setMugEntry(0x29,ToddsworthMug,3,5,3,3)
 
 ALIGN 4
+YuyuMug:
+#incext PortraitFormatter "Yuyu.png"
+setMugEntry(0xdc,YuyuMug,4,6,4,4)
+
+ALIGN 4
 ArtemisMug:
 #incext PortraitFormatter "Artemis.png"
 setMugEntry(0x2a,ArtemisMug,3,5,3,3)

@@ -122,7 +122,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ViridianPaletteID 0x75
 #define ChartreusePaletteID 0x76
 #define ArgentPaletteID 0x77
-
+#define YuyuPaletteID 0x79
 
 #define CidPaletteID 0x2e
 #define BrandlPaletteID 0x53
@@ -253,6 +253,7 @@ setPalette(WilhelmPPaletteID,WilhelmPPalette)
 setPalette(ArgentPaletteID,ArgentPalette)
 //tonnamin
 //player jonas, laronde is down further
+setPalette(YuyuPaletteID,YuyuPalette)
 
 setPalette(CidPaletteID,CidPalette)
 setPalette(BrandlPaletteID,BrandlPalette)
@@ -348,6 +349,7 @@ SetPaletteFull(Addington,0x0,Automaton,0x0,0x0,0x0,0x0)
 SetPaletteFull(Tonnamin,0x0,AxeArm,0x0,AxeGen,0x0,0x0)
 SetPaletteFull(SecretJonas,JonasPaletteID,LncWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(SecretLaronde,0x0,Soldier,LarondePaletteID,Halberdier,0x0,0x0)
+SetPaletteFull(Yuyu,YuyuPaletteID,Freelancer,0x0,0x0,0x0,0x0)
 
 SetPaletteFull(Davelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Marque,MarqueStarquePaletteID,AxeCav,0x0,0x0,0x0,0x0)
@@ -662,6 +664,9 @@ WilhelmPPalette:
 ALIGN 4
 ArgentPalette:
 #incbin "Argent.dmp"
+ALIGN 4
+YuyuPalette:
+#incbin "Yuyu.dmp"
 ALIGN 4
 CidPalette:
 #incbin "Cid.dmp"

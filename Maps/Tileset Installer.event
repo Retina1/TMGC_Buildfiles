@@ -35,6 +35,10 @@ ElbaCorFieldPalette:
 #incext Png2Dmp "Tilesets/ElbaCorField.png" --palette-only
 
 ALIGN 4
+LowlandsFieldPalette:
+#incext Png2Dmp "Tilesets/LowlandsField.png" --palette-only
+
+ALIGN 4
 FieldTiles:
 #incext compress "Tilesets/Field.mapchip_config"
 
@@ -395,6 +399,7 @@ EventPointerTable(ANITown,TownAnims)
 EventPointerTable(OBJField, FieldObjects)
 EventPointerTable(PALDalstField, DalstFieldPalette)
 EventPointerTable(PALElbaCorField, ElbaCorFieldPalette)
+EventPointerTable(PALLowlandsField, LowlandsFieldPalette)
 EventPointerTable(TILField, FieldTiles)
 EventPointerTable(ANIField, FieldAnims)
 

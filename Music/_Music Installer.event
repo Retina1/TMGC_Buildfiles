@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "TimeToMakeHistory.event"
+SongTable(S_TimeToMakeHistory,TimeToMakeHistory,0)
+}
+{
 #include "BetterCallSaul.event"
 SongTable(S_BetterCallSaul,BetterCallSaul,1)
 }

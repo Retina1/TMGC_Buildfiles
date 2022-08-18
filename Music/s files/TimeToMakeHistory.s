@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	TimeToMakeHistory_grp, voicegroup000
+	.equ	TimeToMakeHistory_pri, 0
+	.equ	TimeToMakeHistory_rev, 0
+	.equ	TimeToMakeHistory_mvl, 127
+	.equ	TimeToMakeHistory_key, 0
+	.equ	TimeToMakeHistory_tbs, 1
+	.equ	TimeToMakeHistory_exg, 0
+	.equ	TimeToMakeHistory_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	TimeToMakeHistory
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+TimeToMakeHistory_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 100*song04_tbs/2
+ .byte   KEYSH , TimeToMakeHistory_key+0
+ .byte   TEMPO , 100*TimeToMakeHistory_tbs/2
  .byte   VOICE , 52
- .byte   VOL , 44*song04_mvl/mxv
+ .byte   VOL , 44*TimeToMakeHistory_mvl/mxv
  .byte   W96
 @  #01 @001   ----------------------------------------
  .byte   W96
@@ -498,11 +498,11 @@ Label_01005089:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+TimeToMakeHistory_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , TimeToMakeHistory_key+0
  .byte   VOICE , 18
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*TimeToMakeHistory_mvl/mxv
  .byte   W96
 @  #02 @001   ----------------------------------------
  .byte   W96
@@ -1275,11 +1275,11 @@ Label_01005C5A:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+TimeToMakeHistory_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , TimeToMakeHistory_key+0
  .byte   VOICE , 30
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*TimeToMakeHistory_mvl/mxv
  .byte   N05 ,Fn1 ,v080
  .byte   W06
  .byte   Fs1
@@ -1804,11 +1804,11 @@ Label_010056D4:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+TimeToMakeHistory_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , TimeToMakeHistory_key+0
  .byte   VOICE , 38
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*TimeToMakeHistory_mvl/mxv
  .byte   N05 ,Fn0 ,v080
  .byte   W06
  .byte   Fs0
@@ -2340,11 +2340,11 @@ Label_0100592B:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+TimeToMakeHistory_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , TimeToMakeHistory_key+0
  .byte   VOICE , 124
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*TimeToMakeHistory_mvl/mxv
  .byte   N11 ,As1 ,v080
  .byte   W12
  .byte   Fs1
@@ -3229,18 +3229,18 @@ Label_0100634F:
 @******************************************************@
 	.align	2
 
-song04:
+TimeToMakeHistory:
 	.byte	5	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	TimeToMakeHistory_pri	@ Priority
+	.byte	TimeToMakeHistory_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	TimeToMakeHistory_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
+	.word	TimeToMakeHistory_001
+	.word	TimeToMakeHistory_002
+	.word	TimeToMakeHistory_003
+	.word	TimeToMakeHistory_004
+	.word	TimeToMakeHistory_005
 
 	.end

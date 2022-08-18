@@ -26,6 +26,8 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,C16BlairArtemisRecruitment,Blair,Artemis)
+CharacterEvent(0xa,C16ZekeArtemisRecruitment,Zeke,Artemis)
 END_MAIN
 
 LocationBasedEvents:
@@ -91,7 +93,7 @@ UNIT
 C16Hard:
 UNIT Holanis AxeCav 0x0 Level(17,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Artemis AxePalF 0x0 Level(4,Enemy,0) [25,0] 0x0 0x0 0x0 0x0 [SilverAxe,SteelBow,Vulnerary] NoAI
-UNIT C15Boss Sorc 0x0 Level(20,Enemy,1) [7,0] DropItem 0x0 0x0 0x0 [Avalon,RainbowGem,Boots] NeverMoveAI
+UNIT 0x5b SwMastF 0x0 Level(4,Enemy,1) [7,0] DropItem 0x0 0x0 0x0 [FlameSword,GildedSword,MasterSeal] NeverMoveAI
 UNIT
 
 #define YupThatIsABook "0xd3 0x7c"
@@ -123,6 +125,18 @@ ENDA
 
 C16Village:
 VillageEventItem(FillerDialogue, HouseCG, Hammerne)
+
+C16BlairArtemisRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Artemis)
+EndEvent
+
+C16ZekeArtemisRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Artemis)
+EndEvent
 
 C16OutOfTime:
 Text(FillerDialogue)

@@ -1,4 +1,4 @@
-//CURRENT NEXT 0x73
+//CURRENT NEXT 0x76
 
 
 #define Map0 0x1
@@ -26,6 +26,7 @@
 #define MapI5 0x16
 #define Map15 0x6e
 #define Map16 0x70
+#define Map17 0x73
 
 #define Map21 0x67
 
@@ -57,6 +58,7 @@
 #define MapChangeI5 0x0
 #define MapChange15 0x6b
 #define MapChange16 0x71
+#define MapChange17 0x0
 
 #define MapChange21 0x68
 
@@ -85,6 +87,7 @@
 #define EventsI5 0x60
 #define Events15 0x6c
 #define Events16 0x72
+#define Events17 0x74
 
 #define EventsV1 0x5f
 
@@ -117,6 +120,7 @@
 
 #define PALDalstField 0x32
 #define PALElbaCorField 0x33
+#define PALLowlandsField 0x75
 
 #define PALLowlandsCastle 0x34
 #define PALYgstraCastle 0x50

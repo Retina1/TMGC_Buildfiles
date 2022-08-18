@@ -1,0 +1,112 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(Events17,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C17Units C17Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+CharacterEvent(0xa,C17HollandaiseRecruitment,Bechamel,Hollandaise)
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C17Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+C17Easy:
+UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT
+
+C17Normal:
+UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT
+
+C17Hard:
+UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Hollandaise PirateF 0x0 Level(18,Enemy,0) [12,20] 0x0 0x0 0x0 0x0 [Ukonvasara,Vulnerary] NoAI
+UNIT 0x5c Berserker 0x0 Level(6,Enemy,1) [0,26] DropItem 0x0 0x0 0x0 [KillerAxe,Tomahawk,BraveBow] DelayedAI
+UNIT 0x5d Berserker 0x0 Level(7,Enemy,1) [18,1] DropItem 0x0 0x0 0x0 [DevilAxe,BraveLance] DelayedAI
+UNIT 0x5e Warrior 0x0 Level(8,Enemy,1) [18,25] DropItem 0x0 0x0 0x0 [GildedAxe,MasterBow,Wardwood] NeverMoveAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt17
+MUSC NarrationTheme3
+Narration(Map2CG,Ch16_Narration)
+CleanTextNoMap(HallCG,FillerDialogue)
+LoadUnitsByDifficulty(C17Easy,C17Normal,C17Hard)
+LOAD1 0x0 C17Units
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+ResetBaseFlags
+MUSC VictoryTheme
+CleanTextNoMap(HallCG,FillerDialogue)
+MoveToChapter(Chapter18)
+ENDA
+
+C17HollandaiseRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Hollandaise)
+EndEvent
+
+
+MESSAGE Events end at offset CURRENTOFFSET

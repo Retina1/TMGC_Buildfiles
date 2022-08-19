@@ -148,6 +148,10 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define VulturePaletteID 0x59
 #define ParquePaletteID 0x5a
 #define UnknownPaletteID 0x58
+#define NicolePaletteID 0x7a
+#define EdwardPaletteID 0x7b
+#define EddiePaletteID 0x7c
+#define EduardoPaletteID 0x7d
 
 #define IneubrenosPaletteID 0x78
 
@@ -279,6 +283,10 @@ setPalette(RoarkPaletteID,RoarkPalette)
 setPalette(VulturePaletteID,VulturePalette)
 setPalette(ParquePaletteID,ParquePalette)
 setPalette(UnknownPaletteID,UnknownPalette)
+setPalette(NicolePaletteID,NicolePalette)
+setPalette(EdwardPaletteID,EdwardPalette)
+setPalette(EddiePaletteID,EddiePalette)
+setPalette(EduardoPaletteID,EduardoPalette)
 
 setPalette(IneubrenosPaletteID,IneubrenosPalette)
 
@@ -373,6 +381,10 @@ SetPaletteFull(Roark,RoarkPaletteID,Fighter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Vulture,VulturePaletteID,BowArm,0x0,0x0,0x0,0x0)
 SetPaletteFull(Parque,0x0,0x0,ParquePaletteID,LncPal,0x0,0x0)
 SetPaletteFull(C15Boss,0x0,0x0,UnknownPaletteID,Sorc,0x0,0x0)
+SetPaletteFull(Nicole,0x0,0x0,NicolePaletteID,SwMastF,0x0,0x0)
+SetPaletteFull(Edward,0x0,0x0,EdwardPaletteID,Berserker,0x0,0x0)
+SetPaletteFull(Eddie,0x0,0x0,EddiePaletteID,Berserker,0x0,0x0)
+SetPaletteFull(Eduardo,0x0,0x0,EduardoPaletteID,Warrior,0x0,0x0)
 
 SetPaletteFull(BossIneubrenos,0x0,0x0,IneubrenosPaletteID,Sniper,0x0,0x0)
 
@@ -737,6 +749,18 @@ ParquePalette:
 ALIGN 4
 UnknownPalette:
 #incbin "Unknown.dmp"
+ALIGN 4
+NicolePalette:
+#incbin "Nicole.dmp"
+ALIGN 4
+EdwardPalette:
+#incbin "Edward.dmp"
+ALIGN 4
+EddiePalette:
+#incbin "Eddie.dmp"
+ALIGN 4
+EduardoPalette:
+#incbin "Eduardo.dmp"
 
 
 ALIGN 4

@@ -24,7 +24,7 @@ MechanicalRhythm_001:
  BYTE   VOICE   40
  BYTE   MODT 0
  BYTE   LFOS 44
- BYTE   VOL   30*MechanicalRhythm_mvl/mxv
+ BYTE   VOL   40*MechanicalRhythm_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   W96
 //  #01 //001   ----------------------------------------
@@ -598,7 +598,7 @@ MechanicalRhythm_002:
  BYTE   VOICE   41
  BYTE   MODT 0
  BYTE   LFOS 44
- BYTE   VOL   38*MechanicalRhythm_mvl/mxv
+ BYTE   VOL   48*MechanicalRhythm_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   W96
 //  #02 //001   ----------------------------------------
@@ -1088,7 +1088,7 @@ MechanicalRhythm_003:
  BYTE   VOICE   30
  BYTE   MODT 0
  BYTE   LFOS 44
- BYTE   VOL   52*MechanicalRhythm_mvl/mxv
+ BYTE   VOL   55*MechanicalRhythm_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   N05  Dn2  v060
  BYTE   W06
@@ -2413,10 +2413,10 @@ Label_0100574F:
 MechanicalRhythm_004:
 //  #04 //000   ----------------------------------------
  BYTE   KEYSH   MechanicalRhythm_key+0
- BYTE   VOICE   36
+ BYTE   VOICE   38
  BYTE   MODT 0
  BYTE   LFOS 44
- BYTE   VOL   42*MechanicalRhythm_mvl/mxv
+ BYTE   VOL   47*MechanicalRhythm_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   W96
 //  #04 //001   ----------------------------------------
@@ -3441,7 +3441,7 @@ MechanicalRhythm_005:
  BYTE   VOICE   124
  BYTE   MODT 0
  BYTE   LFOS 44
- BYTE   VOL   29*MechanicalRhythm_mvl/mxv
+ BYTE   VOL   39*MechanicalRhythm_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   W96
 //  #05 //001   ----------------------------------------

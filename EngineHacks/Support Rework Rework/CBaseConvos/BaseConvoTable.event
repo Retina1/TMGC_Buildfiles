@@ -410,9 +410,17 @@ ENDA
 
 ALIGN 4
 C19UnlimitedPowerEvent:
+EVBIT_MODIFY 3
 SetBackground(0x3)
 MUSC S_Ameno
 Text(C19_Unlimited_Power)
+FADI 0x5
+CLEAN
+ASMC2 0x48281
+FADI 0x5
+CLEAN
+SetBackground(0x3)
+Text(C19_Unlimited_Power2)
 LOAD1 0x1 C19Horatio
 FADI 0x5
 CLEAN

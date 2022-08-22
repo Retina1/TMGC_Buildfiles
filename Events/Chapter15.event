@@ -208,11 +208,10 @@ UNIT
 
 C15Turn7UnitsLunatic:
 UNIT Unknown Troub 0x0 Level(17,Enemy,1) [0,11] 0x0 0x0 0x1 REDA1R11 [Sleep] NoAI
-UNIT Unknown SwMast 0x0 Level(1,Enemy,1) [0,12] 0x0 0x0 0x1 REDA2R12 [SteelSword] NoAI
-UNIT Unknown Mage 0x0 Level(17,Enemy,1) [0,13] 0x0 0x0 0x1 REDA1R13 [Elfire] NoAI
-UNIT Unknown Mage 0x0 Level(17,Enemy,1) [0,14] 0x0 0x0 0x1 REDA1R14 [Elfire] NoAI
-UNIT Unknown SwMast 0x0 Level(1,Enemy,1) [0,15] 0x0 0x0 0x1 REDA2R15 [SteelSword] NoAI
-UNIT Unknown Troub 0x0 Level(17,Enemy,1) [0,16] 0x0 0x0 0x1 REDA1R16 [Silence] NoAI
+UNIT Unknown Mage 0x0 Level(17,Enemy,1) [0,12] 0x0 0x0 0x1 REDA2R12 [Elfire] NoAI
+UNIT Unknown SwMast 0x0 Level(1,Enemy,1) [0,13] 0x0 0x0 0x1 REDA1R13 [SteelSword] NoAI
+UNIT Unknown Mage 0x0 Level(17,Enemy,1) [0,14] 0x0 0x0 0x1 REDA2R14 [Elfire] NoAI
+UNIT Unknown Troub 0x0 Level(17,Enemy,1) [0,15] 0x0 0x0 0x1 REDA1R15 [Silence] NoAI
 UNIT
 
 C15BridgeChargers:
@@ -412,14 +411,14 @@ Reinforcements(C15Turn8Others)
 EndEvent
 C15Turn9:
 DifficultyReinforcements(C15Turn9Units,C15Turn9Units,C15Turn9UnitsLunatic)
-DifficultyReinforcements(C15Turn9Units2,C15Turn9Units2,C15Turn9UnitsLunatic2)
+DifficultyReinforcements2(C15Turn9Units2,C15Turn9Units2,C15Turn9UnitsLunatic2)
 EndEvent
 C15Turn10:
 DifficultyReinforcements(C15Turn10Units,C15Turn10Units,C15Turn10UnitsLunatic)
 EndEvent
 C15Turn11:
 DifficultyReinforcements(C15Turn11Units,C15Turn11Units,C15Turn11UnitsLunatic)
-DifficultyReinforcements(C15Turn11Units2,C15Turn11Units2,C15Turn11UnitsLunatic2)
+DifficultyReinforcements2(C15Turn11Units2,C15Turn11Units2,C15Turn11UnitsLunatic2)
 EndEvent
 C15Turn12:
 Reinforcements(C15Turn12Units)

@@ -21,16 +21,16 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,Z3Turn2,2)
-TurnEventPlayer(0x0,Z3MevionSpawnTurns,4)
-TurnEventPlayer(0x0,Z3BrigandSpawnTurns,5)
-TurnEventPlayer(0x0,Z3BrigandSpawnTurns,7)
-TurnEventPlayer(0x0,Z3MevionSpawnTurns,8)
-TurnEventPlayer(0x0,Z3BrigandSpawnTurns,9)
-TurnEventPlayer(0x0,Z3MevionSpawnTurns,10)
-TurnEventPlayer(0x0,Z3BrigandSpawnTurns,12)
-TurnEventPlayer(0x0,Z3MevionSpawnTurns,13)
-TurnEventPlayer(0x0,Z3BrigandSpawnTurns,15)
-TurnEventPlayer(0x0,Z3MevionSpawnTurns,15)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,5)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,6)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,8)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,9)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,10)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,11)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,13)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,14)
+TurnEventPlayer(0x0,Z3BrigandSpawnTurns,16)
+TurnEventPlayer(0x0,Z3MevionSpawnTurns,16)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 

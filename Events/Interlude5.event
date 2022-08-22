@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,I5MapStart,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -132,6 +133,11 @@ GiveItem(MercFlier,Blair)
 LABEL 0x2
 MoveToChapter(Chapter15)
 ENDA
+
+I5MapStart:
+Text(I5StartText)
+GiveMoney(0x2710)
+EndEvent
 
 I5Zeke:
 MUSC S_CircleOfTheMoon

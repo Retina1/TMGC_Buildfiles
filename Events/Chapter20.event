@@ -25,6 +25,10 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,C20SimoneBlairRecruitment,Blair,Simone)
+CharacterEvent(0xa,C20SimoneArinRecruitment,Arin,Simone)
+CharacterEvent(0xa,C20SimoneEmileRecruitment,Emile,Simone)
+CharacterEvent(0xa,C20SimoneZekeRecruitment,Zeke,Simone)
 END_MAIN
 
 LocationBasedEvents:
@@ -103,5 +107,29 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(ChapterV1)
 ENDA
+
+C20SimoneBlairRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Simone)
+EndEvent
+
+C20SimoneArinRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Simone)
+EndEvent
+
+C20SimoneEmileRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Simone)
+EndEvent
+
+C20SimoneZekeRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Simone)
+EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

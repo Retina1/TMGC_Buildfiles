@@ -22,6 +22,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x11,C18VladmirCheck,1,255)
+TurnEventEnemy(0x0,C18EndCheck,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -114,7 +115,14 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
+CHECK_EXISTS Vladmir
+BNE 0x1 0xc 0x0
+Reinforcements(C18Vladmir)
 CleanTextNoMap(HallCG,FillerDialogue)
+GOTO 0x2
+LABEL 0x1
+CleanTextNoMap(HallCG,FillerDialogue)
+LABEL 0x2
 MoveToChapter(Interlude6)
 ENDA
 
@@ -148,15 +156,28 @@ ENUF 0x11
 LABEL 0x2
 EndEvent
 
-//build off of this for ending
-/*C18EndCheck:
-GetTrapExt1At(2,14)
+C18EndCheck:
+GetTrapExt1At(7,3)
 BEQ 0x1 0xC 0x0
-Reinforcements(C8TorchTrapAUnits)
-GOTO 0x2
+GetTrapExt1At(2,16)
+BEQ 0x1 0xC 0x0
+GetTrapExt1At(15,4)
+BEQ 0x1 0xC 0x0
+GetTrapExt1At(11,15)
+BEQ 0x1 0xC 0x0
+GetTrapExt1At(23,10)
+BEQ 0x1 0xC 0x0
+GetTrapExt1At(27,5)
+BEQ 0x1 0xC 0x0
+GetTrapExt1At(29,12)
+BEQ 0x1 0xC 0x0
+GetTrapExt1At(33,16)
+BEQ 0x1 0xC 0x0
+GetTrapExt1At(32,2)
+BEQ 0x1 0xC 0x0
+Text(FillerDialogue)
+CALL EndingScene
 LABEL 0x1
-ENUF 0x10
-LABEL 0x2
-EndEvent*/
+EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

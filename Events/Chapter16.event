@@ -34,8 +34,8 @@ LocationBasedEvents:
 Vendor(C16Vendor,6,21)
 Armory(C16Armory,19,16)
 Village(0x11,C16Village,1,18)
-Village(0x12,C16Village,17,1)
-Village(0x13,C16Village,24,14)
+Village(0x12,C16Village2,17,1)
+Village(0x13,C16Village3,24,14)
 END_MAIN
 
 ALIGN 4
@@ -124,6 +124,10 @@ MoveToChapter(Chapter17)
 ENDA
 
 C16Village:
+VillageEventItem(FillerDialogue, HouseCG, Hammerne)
+C16Village2:
+VillageEventItem(FillerDialogue, HouseCG, Hammerne)
+C16Village3:
 VillageEventItem(FillerDialogue, HouseCG, Hammerne)
 
 C16BlairArtemisRecruitment:

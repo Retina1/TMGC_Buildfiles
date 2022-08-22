@@ -201,12 +201,12 @@ ALIGN 4
 BeginningScene:
 LOAD1 0x1 Z2Units
 ENUN
-MUSC S_Terra
 LoadUnitsByDifficulty(Z2Easy,Z2Normal,Z2Hard)
 MUSC NarrationTheme
 Narration(MapCG,ChZ2_Narration)
 ENUT 0x23
 ENUT 0x24
+MUSC S_Terra
 CleanText(PathCG,Z2Opening)
 SystemText(Z2Note)
 EndEvent

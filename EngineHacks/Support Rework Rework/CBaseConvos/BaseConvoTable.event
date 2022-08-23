@@ -366,6 +366,30 @@
 			text(C15_The_Deserted_Base)
 			item(Courante,Leila)
 			eventID(BaseFlag2)
+		Entry
+			bg(ElbaCorCastleCG)
+			text(C15_Blair_Zeke_Base)
+			baseSupport(Blair,Zeke,CSupport)
+		Entry
+			bg(ElbaCorCastleCG)
+			text(C15_Stefan_Carbon_Base)
+			baseSupport(Stefan,Carbon,CSupport)
+		Entry
+			bg(ElbaCorCastleCG)
+			text(C15_Butch_Jeff_Base)
+			baseSupport(Butch,Jeff,CPSupport)
+		Entry
+			bg(ElbaCorCastleCG)
+			text(C15_Zeke_Cassius_Base)
+			baseSupport(Zeke,Cassius,CSupport)
+		Entry
+			bg(ElbaCorCastleCG)
+			text(C15_Rachael_Hyperius_Base)
+			baseSupport(Rachael,Hyperius,CSupport)
+		Entry
+			bg(ElbaCorCastleCG)
+			text(C15_Apollo_Charley_Base)
+			baseSupport(Apollo,Charley,CSupport)
 	Chapter(Chapter19)
 		Entry
 			name(C19_Unlimited_Power_Select)
@@ -403,6 +427,7 @@ MUSC S_EncountersAndReunions
 Text(C15_The_Devoted_Base)
 GiveItem(Galerider,Cassius)
 GiveItem(FlyingSpike,Rachael)
+SetSupport(Cassius,Rachael,BSupport,1)
 FADI 0x5
 CLEAN
 NoFade

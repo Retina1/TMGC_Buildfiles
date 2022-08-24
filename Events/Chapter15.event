@@ -342,13 +342,22 @@ C15YuyuJoin:
 UNIT Yuyu Freelancer 0x0 Level(1,Ally,0) [27,26] 0x0 0x0 0x1 REDA27R27 [Elixir,WhiteGem] NoAI
 UNIT
 
+C15Elcorian:
+UNIT Elcorian Valkyrie 0x0 Level(1,NPC,0) [15,0] 0x0 0x0 0x1 REDA0R15 [0x0] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt15
 MUSC NarrationTheme3
+CleanTextNoMap(HallCG,Ch15_Opening)//opening, blair/zeke/elcorian talking a bit?
 Narration(Map2CG,Ch15_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(HallCG,Ch15_Opening2)//elcorian goes to get dudes
+Reinforcements(C15Elcorian)
+DISA_IF Elcorian
+DISA Elcorian
+CleanTextNoMap(HallCG,Ch15_Opening3)//zeke says he'll help
 LoadUnitsByDifficulty(C15Easy,C15Normal,C15Hard)
 LOAD1 0x0 C15Units
 ENUN
@@ -371,7 +380,7 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(HallCG,Ch15_Ending)
 MoveToChapter(Chapter16)
 ENDA
 
@@ -386,7 +395,7 @@ C15GateOpens:
 CAM1 [6,23]
 SOUN 0xB1
 TILECHANGE 0x0
-Text(FillerDialogue)
+Text(Ch15_GateUnlock)
 Reinforcements(C15GateCrashers)
 EndEvent
 
@@ -405,7 +414,7 @@ EndEvent
 C15BridgeOpens:
 CAM1 [18,7]
 TILECHANGE 0x1
-Text(FillerDialogue)
+Text(Ch15_BridgeTime)
 Reinforcements(C15BridgeChargers)
 Reinforcements(C15Turn8Others)
 EndEvent
@@ -422,16 +431,16 @@ DifficultyReinforcements2(C15Turn11Units2,C15Turn11Units2,C15Turn11UnitsLunatic2
 EndEvent
 C15Turn12:
 Reinforcements(C15Turn12Units)
-Text(FillerDialogue)
+Text(Ch15_NotOverYet)
 EndEvent
 C15Turn13:
 Reinforcements(C15Turn13Units)
 Reinforcements(C15Turn13Units2)
-Text(FillerDialogue)
+Text(Ch15_IKingTrabant)
 EndEvent
 
 IntoEndingScene:
-Text(FillerDialogue)
+Text(Ch15_ElcorianTheCamooIsHere)
 CALL EndingScene
 EndEvent
 

@@ -37,6 +37,29 @@ SHORT 0x0000 0x0000
 POP
 
 PUSH
+ORG 0x0507D4
+POIN NewEXPBar
+ORG 0x07c0b8
+POIN NewEXPBar
+ORG 0x0507E4
+POIN NewEXPBarPal
+ORG 0x07c0d0
+POIN NewEXPBarPal
+ORG 0x0508E0
+POIN NewEXPScale
+ORG 0x0508E4
+POIN NewEXPNumber
+ORG 0x050a74
+POIN NewEXPScale
+ORG 0x050a78
+POIN NewEXPNumber
+ORG 0x07c0c0
+POIN NewEXPScale
+ORG 0x07c0c8
+POIN NewEXPNumber
+POP
+
+PUSH
 ORG $AC188
 POIN LevelSelect
 //ORG 0xAC190
@@ -106,6 +129,19 @@ NewStatScreenPal:
 ALIGN 4
 NewStatScreenTSA:
 #incbin "StatScreen.png.tsa.dmp"
+
+ALIGN 4
+NewEXPBar:
+#incbin "ExpBarStuff.png.dmp"
+ALIGN 4
+NewEXPBarPal:
+#incbin "ExpBarStuff.png.pal.dmp"
+ALIGN 4
+NewEXPScale:
+#incbin "ExpScale.png.dmp"
+ALIGN 4
+NewEXPNumber:
+#incbin "ExpNumber.png.dmp"
 
 ALIGN 4
 LevelSelect:

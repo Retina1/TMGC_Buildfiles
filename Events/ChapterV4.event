@@ -1,0 +1,86 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsV4,ThisChapter)
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN V1Units V1Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+V1Units:
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
+UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [4,0] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
+UNIT Eliza Cleric 0x0 Level(12,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
+UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [3,1] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
+UNIT
+
+V1Easy:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+V1Normal:
+UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT
+
+V1Hard:
+UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 V1Units
+ENUN
+LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
+MUSC NarrationTheme
+Narration(Map2CG,ChV1_Narration)
+CleanText(PathCG,FillerDialogue)
+GotoPrepScreen
+EndEvent
+
+EndingScene:
+MUSC VictoryTheme
+Text(PathCG,FillerDialogue)
+MoveToChapter(Interlude8)
+EndEvent
+
+MESSAGE Events end at offset CURRENTOFFSET

@@ -1,0 +1,103 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(Events28,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN C19Units C19Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Seize(0,0)
+END_MAIN
+
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+C19Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+C19Easy:
+UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT
+
+C19Normal:
+UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT
+
+C19Hard:
+UNIT Holanis Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Holanis Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+ENUT GuideChpt28
+MUSC NarrationTheme3
+Narration(Map2CG,Ch19_Narration)
+CleanTextNoMap(HallCG,FillerDialogue)
+LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
+LOAD1 0x0 C19Units
+ENUN
+GotoPrepScreen
+ENDA
+
+EndingScene:
+ResetBaseFlags
+MUSC VictoryTheme
+CleanTextNoMap(HallCG,FillerDialogue)
+MoveToChapter(Endgame)
+ENDA
+
+
+MESSAGE Events end at offset CURRENTOFFSET

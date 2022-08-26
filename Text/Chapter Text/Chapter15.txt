@@ -73,9 +73,21 @@ We've come this far. I'm not[N]
 giving up on Elba Cor now.[A][X]
 
 ##Ch15_ElcorianTheCamooIsHere
-[OpenMidLeft][LoadBlair][OpenRight][LoadZeke][OpenFarRight][LoadBrandl]
-[ToggleMouthMove]...[ToggleMouthMove]Your life is forfeit.[N]
-You cannot hope to triumph.[A][X]
+[OpenMidLeft][LoadElcorian][OpenMidRight][LoadNeillstrom]
+Leave it to me, Elcorian.[A][N][OpenMidLeft]
+My thanks, Tarquin.[A][N]
+Blair! Get everyone to safety![N]
+We'll handle them![A][N][X]
+
+##Ch15_ElcorianTheCamooIsHere2
+[OpenMidLeft][LoadElcorian][OpenMidRight][LoadNeillstrom][OpenMidLeft]
+Where did he[ToggleMouthMove]...[ToggleMouthMove]?[N]
+[ToggleMouthMove]...[ToggleMouthMove]That's not important now.[A][N]
+We ought to take down the stragglers.[A][N][OpenMidRight]
+Of course. I'll subdue them[N]
+for questioning.[A][N]
+Go make sure everyone is well.[A][N][OpenMidLeft]
+Of course.[A][X]
 
 ##C15BrandlDeath
 [OpenMidRight][LoadBrandl]
@@ -95,7 +107,7 @@ You cannot hope to triumph.[A][X]
 ##C15BossDeath
 [OpenMidLeft][LoadUnknown]
 [ToggleMouthMove]...[ToggleMouthMove]That's enough from me.[N]
-Know you cannot fight our will.[A][X]
+You cannot fight our will.[A][X]
 
 ##C15_Yuyu_Recruitment
 [OpenMidLeft][LoadCurrent][OpenMidRight][LoadYuyu]

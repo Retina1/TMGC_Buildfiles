@@ -24,6 +24,18 @@
 #define SFXGroup 6
 
 {
+#include "LifeWillChange.event"
+SongTable(S_LifeWillChange,LifeWillChange,1)
+}
+{
+#include "FierceAsFire.event"
+SongTable(S_FierceAsFire,FierceAsFire,1)
+}
+{
+#include "JFAEnding.event"
+SongTable(S_JFAEnding,JFAEnding,1)
+}
+{
 #include "TimeToMakeHistory.event"
 SongTable(S_TimeToMakeHistory,TimeToMakeHistory,0)
 }

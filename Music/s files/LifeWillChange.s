@@ -1,31 +1,31 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	LifeWillChange_grp, voicegroup000
+	.equ	LifeWillChange_pri, 0
+	.equ	LifeWillChange_rev, 0
+	.equ	LifeWillChange_mvl, 127
+	.equ	LifeWillChange_key, 0
+	.equ	LifeWillChange_tbs, 1
+	.equ	LifeWillChange_exg, 0
+	.equ	LifeWillChange_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	LifeWillChange
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+LifeWillChange_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 132*song04_tbs/2
+ .byte   KEYSH , LifeWillChange_key+0
+ .byte   TEMPO , 132*LifeWillChange_tbs/2
  .byte   VOICE , 30
- .byte   VOL , 47*song04_mvl/mxv
+ .byte   VOL , 47*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 47*song04_mvl/mxv
+ .byte   VOL , 47*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -628,15 +628,15 @@ Label_01005E8F:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+LifeWillChange_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , LifeWillChange_key+0
  .byte   VOICE , 30
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*LifeWillChange_mvl/mxv
  .byte   PAN , c_v-1
- .byte   VOL , 32*song04_mvl/mxv
+ .byte   VOL , 32*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N05 ,Fn2 ,v080
  .byte   N05 ,Cn3
@@ -1866,15 +1866,15 @@ Label_01006548:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+LifeWillChange_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , LifeWillChange_key+0
  .byte   VOICE , 40
- .byte   VOL , 32*song04_mvl/mxv
+ .byte   VOL , 32*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -2538,15 +2538,15 @@ Label_01005C0C:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+LifeWillChange_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , LifeWillChange_key+0
  .byte   VOICE , 18
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -3257,13 +3257,13 @@ Label_0100723F:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+LifeWillChange_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , LifeWillChange_key+0
  .byte   VOICE , 40
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -3896,13 +3896,13 @@ Label_01006D94:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+LifeWillChange_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , LifeWillChange_key+0
  .byte   VOICE , 30
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -4425,13 +4425,13 @@ Label_01005865:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+LifeWillChange_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , LifeWillChange_key+0
  .byte   VOICE , 38
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -5306,11 +5306,11 @@ Label_010079AB:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+LifeWillChange_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , LifeWillChange_key+0
  .byte   VOICE , 124
- .byte   VOL , 28*song04_mvl/mxv
+ .byte   VOL , 28*LifeWillChange_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N23 ,Cn1 ,v080
  .byte   N05 ,Fs1 ,v120
@@ -6091,21 +6091,21 @@ Label_01007DD8:
 @******************************************************@
 	.align	2
 
-song04:
+LifeWillChange:
 	.byte	8	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	LifeWillChange_pri	@ Priority
+	.byte	LifeWillChange_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	LifeWillChange_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
+	.word	LifeWillChange_001
+	.word	LifeWillChange_002
+	.word	LifeWillChange_003
+	.word	LifeWillChange_004
+	.word	LifeWillChange_005
+	.word	LifeWillChange_006
+	.word	LifeWillChange_007
+	.word	LifeWillChange_008
 
 	.end

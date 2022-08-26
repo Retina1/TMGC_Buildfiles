@@ -1,29 +1,29 @@
 	.include "MPlayDef.s"
 
-	.equ	song03_grp, voicegroup000
-	.equ	song03_pri, 0
-	.equ	song03_rev, 0
-	.equ	song03_mvl, 127
-	.equ	song03_key, 0
-	.equ	song03_tbs, 1
-	.equ	song03_exg, 0
-	.equ	song03_cmp, 1
+	.equ	JFAEnding_grp, voicegroup000
+	.equ	JFAEnding_pri, 0
+	.equ	JFAEnding_rev, 0
+	.equ	JFAEnding_mvl, 127
+	.equ	JFAEnding_key, 0
+	.equ	JFAEnding_tbs, 1
+	.equ	JFAEnding_exg, 0
+	.equ	JFAEnding_cmp, 1
 
 	.section .rodata
-	.global	song03
+	.global	JFAEnding
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song03_001:
+JFAEnding_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song03_key+0
+ .byte   KEYSH , JFAEnding_key+0
 Label_018F7012:
- .byte   TEMPO , 78*song03_tbs/2
+ .byte   TEMPO , 78*JFAEnding_tbs/2
  .byte   VOICE , 1
  .byte   PAN , c_v+0
- .byte   VOL , 53*song03_mvl/mxv
+ .byte   VOL , 53*JFAEnding_mvl/mxv
  .byte   PAN , c_v-1
  .byte   W24
  .byte   N24 ,Gn3 ,v116
@@ -124,12 +124,12 @@ Label_018F7058:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song03_002:
+JFAEnding_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song03_key+0
+ .byte   KEYSH , JFAEnding_key+0
 Label_018F708A:
  .byte   VOICE , 1
- .byte   VOL , 44*song03_mvl/mxv
+ .byte   VOL , 44*JFAEnding_mvl/mxv
  .byte   PAN , c_v-51
  .byte   BEND , c_v-2
  .byte   W36
@@ -230,12 +230,12 @@ Label_018F70D0:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song03_003:
+JFAEnding_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song03_key+0
+ .byte   KEYSH , JFAEnding_key+0
 Label_018F75D6:
  .byte   VOICE , 38
- .byte   VOL , 37*song03_mvl/mxv
+ .byte   VOL , 37*JFAEnding_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W12
  .byte   N12 ,Gs1 ,v076
@@ -319,12 +319,12 @@ Label_018F7607:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song03_004:
+JFAEnding_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song03_key+0
+ .byte   KEYSH , JFAEnding_key+0
 Label_018F7376:
  .byte   VOICE , 63
- .byte   VOL , 30*song03_mvl/mxv
+ .byte   VOL , 30*JFAEnding_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W24
  .byte   N12 ,Dn3 ,v060
@@ -482,12 +482,12 @@ Label_018F740A:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song03_005:
+JFAEnding_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song03_key+0
+ .byte   KEYSH , JFAEnding_key+0
 Label_018F7656:
  .byte   VOICE , 13
- .byte   VOL , 48*song03_mvl/mxv
+ .byte   VOL , 48*JFAEnding_mvl/mxv
  .byte   PAN , c_v-64
  .byte   BEND , c_v-62
  .byte   N12 ,As2 ,v080
@@ -579,12 +579,12 @@ Label_018F7656:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song03_006:
+JFAEnding_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song03_key+0
+ .byte   KEYSH , JFAEnding_key+0
 Label_018F76B2:
  .byte   VOICE , 1
- .byte   VOL , 53*song03_mvl/mxv
+ .byte   VOL , 53*JFAEnding_mvl/mxv
  .byte   PAN , c_v+63
  .byte   BEND , c_v-62
  .byte   N12 ,As2 ,v068
@@ -676,12 +676,12 @@ Label_018F76B2:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song03_007:
+JFAEnding_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song03_key+0
+ .byte   KEYSH , JFAEnding_key+0
 Label_018F745A:
  .byte   VOICE , 91
- .byte   VOL , 53*song03_mvl/mxv
+ .byte   VOL , 53*JFAEnding_mvl/mxv
  .byte   PAN , c_v+63
  .byte   BEND , c_v-2
  .byte   W24
@@ -789,20 +789,20 @@ Label_018F74A2:
 @******************************************************@
 	.align	2
 
-song03:
+JFAEnding:
 	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song03_pri	@ Priority
-	.byte	song03_rev	@ Reverb.
+	.byte	JFAEnding_pri	@ Priority
+	.byte	JFAEnding_rev	@ Reverb.
     
-	.word	song03_grp
+	.word	JFAEnding_grp
     
-	.word	song03_001
-	.word	song03_002
-	.word	song03_003
-	.word	song03_004
-	.word	song03_005
-	.word	song03_006
-	.word	song03_007
+	.word	JFAEnding_001
+	.word	JFAEnding_002
+	.word	JFAEnding_003
+	.word	JFAEnding_004
+	.word	JFAEnding_005
+	.word	JFAEnding_006
+	.word	JFAEnding_007
 
 	.end

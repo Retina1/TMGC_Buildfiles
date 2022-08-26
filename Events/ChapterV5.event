@@ -50,6 +50,14 @@ UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [SilverLance, Ja
 UNIT Dean Fighter 0x0 Level(15,Ally,0) [4,0] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
 UNIT Eliza Cleric 0x0 Level(12,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
 UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [3,1] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
+UNIT Rift SwMast 0x0 Level(6,Ally,0) [0,2] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
+UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Rose MageF 0x0 Level(9,Ally,0) [3,3] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
+UNIT Dirk Berserker 0x0 Level(7,Ally,0) [2,5] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Callum SwdPal 0x0 Level(11,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
+UNIT Manfred DarkM 0x0 Level(18,Ally,0) [3,5] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
+UNIT Wilhelm Soldier 0x0 Level(16,Ally,0) [2,4] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Argent BowGen 0x0 Level(6,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
 UNIT
 
 V1Easy:
@@ -72,7 +80,7 @@ LOAD1 0x1 V1Units
 ENUN
 LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
 MUSC NarrationTheme
-Narration(Map2CG,ChV1_Narration)
+Narration(Map2CG,ChV5_Narration)
 CleanText(PathCG,FillerDialogue)
 GotoPrepScreen
 EndEvent

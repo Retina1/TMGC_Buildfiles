@@ -41,6 +41,10 @@
 #include "Freelancer(GabrielKnight)\Magic Installer.event"
 }
 {
+#include "CharacterSpecific\RoseP\Magic Installer.event"
+#include "CharacterSpecific\RoseP\Staff Installer.event"
+}
+{
 #include "CharacterSpecific\DamienU\Bow Installer.event"
 #include "CharacterSpecific\DamienU\Unarmed Installer.event"
 }
@@ -283,8 +287,8 @@
 #include "SageM(Levin64)\Staff Installer.event"
 }
 {
-#include "SageF(LisandraBrave)\Magic Installer.event"
-#include "SageF(LisandraBrave)\Staff Installer.event"
+#include "SageF(Levin64)\Magic Installer.event"
+#include "SageF(Levin64)\Staff Installer.event"
 }
 {
 #include "BishopM(Eldritch)\Magic Installer.event"
@@ -427,6 +431,13 @@
 #include "Dracopope\Handaxe Installer.event"
 #include "Dracopope\Magic Installer.event"
 }
+
+ALIGN 4
+RosePAnims:
+MagicAnim(0xe6)
+StaffAnim(0xe7)
+EndAnim
+
 ALIGN 4
 FreelancerAnims:
 MagicAnim(0xe5)

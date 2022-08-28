@@ -1,5 +1,5 @@
 #define PortraitTable NewPortraitTable
-#define MaxPortraitEntries 0xff
+#define MaxPortraitEntries 0x1ff
 
 ALIGN 4
 NewPortraitTable:
@@ -85,6 +85,10 @@ ALIGN 4
 JeffMug:
 #incext PortraitFormatter "Jeff.png"
 setMugEntry(0x13,JeffMug,3,6,3,4)
+ALIGN 4
+JeffPromoMug:
+#incext PortraitFormatter "JeffPromo.png"
+setMugEntry(0xe3,JeffPromoMug,3,6,3,4)
 
 ALIGN 4
 EmileMug:
@@ -110,6 +114,10 @@ ALIGN 4
 HilbertMug:
 #incext PortraitFormatter "Hilbert.png"
 setMugEntry(0x19,HilbertMug,3,6,3,4)
+ALIGN 4
+HilbertPromoMug:
+#incext PortraitFormatter "HilbertPromo.png"
+setMugEntry(0xe2,HilbertPromoMug,3,6,3,4)
 
 ALIGN 4
 FlynnMug:
@@ -254,6 +262,10 @@ ALIGN 4
 RoseMug:
 #incext PortraitFormatter "Rose.png"
 setMugEntry(0xf,RoseMug,3,6,3,4)
+ALIGN 4
+RosePromoMug:
+#incext PortraitFormatter "RosePromo.png"
+setMugEntry(0xe4,RosePromoMug,3,6,3,4)
 
 ALIGN 4
 DirkMug:
@@ -538,7 +550,7 @@ setMugEntry(0xc8,AddingtonMug,4,7,4,5)
 ALIGN 4
 TonnaminMug:
 #incext PortraitFormatter "Tonnamin.png"
-setMugEntry(0xd4,TonnaminMug,3,5,3,3)
+setMugEntry(0x1fe,TonnaminMug,3,5,3,3)
 
 
 

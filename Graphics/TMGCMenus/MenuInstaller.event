@@ -175,8 +175,8 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 		ORG 0x349CC//TradeOtherHalfAutobox 33
 		POIN TradeOtherHalfAutobox
 		
-	//	ORG 0x5AE190
-	//	POIN NameEntryBox
+		ORG 0x447F0//fucky stuff but i think that's the tsa itself
+		POIN NameEntryBox
 	POP
 		ALIGN 4
 		Tileset:
@@ -294,9 +294,9 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 		TradeOtherHalfAutobox:
 		#incbin "TradeOtherHalfAutobox.dmp"
 		
-	//	ALIGN 4
-	//	NameEntryBox:
-	//	#incbin "NameEntry.dmp"
+		ALIGN 4
+		NameEntryBox:
+		#incbin "NameEntry.dmp"
 
 	
 #else

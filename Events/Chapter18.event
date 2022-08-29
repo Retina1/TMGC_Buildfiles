@@ -30,7 +30,13 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+SecretShop(Ch18SecretShop,15,3) 
 END_MAIN
+
+ALIGN 4
+Ch18SecretShop:
+SHLI BraveSword LevinSword BraveLance BraveAxe Bolting Purge Nosferatu Unlock Talisman MasterSeal
+BYTE 0x0 0x0
 
 ALIGN 4
 

@@ -21,6 +21,11 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C16Turn1,1)
+TurnEventPlayer(0x0,C16BookScatter1,3)
+TurnEventPlayer(0x0,C16BookScatter2,6)
+TurnEventPlayer(0x0,C16BookScatter3,9)
+TurnEventPlayer(0x0,C16BookScatter4,12)
 TurnEventPlayer(0x65,C16OutOfTime,15)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -99,8 +104,32 @@ UNIT Dragon FireDragon 0x0 Level(3,Enemy,1) [3,1] 0x0 0x0 0x0 0x0 [FireBreath] N
 UNIT Nicole SwMastF 0x0 Level(4,Enemy,1) [4,1] DropItem 0x0 0x0 0x0 [FlameSword,GildedSword,MasterSeal] NeverMoveAI
 UNIT
 
-C16Books:
-UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [12,7] 0x0 0x0 0x0 0x0 [0x0] GreenStationaryAI
+C16Books1:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [8,8] 0x0 0x0 0x1 REDA8R9 [0x0] GreenStationaryAI
+UNIT
+
+C16Books21:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [2,5] 0x0 0x0 0x1 REDA2R6 [0x0] GreenStationaryAI
+UNIT
+C16Books22:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [12,1] 0x0 0x0 0x1 REDA12R2 [0x0] GreenStationaryAI
+UNIT
+
+C16Books31:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [1,14] 0x0 0x0 0x1 REDA2R14 [0x0] GreenStationaryAI
+UNIT
+C16Books32:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [10,5] 0x0 0x0 0x1 REDA11R5 [0x0] GreenStationaryAI
+UNIT
+
+C16Books41:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [13,11] 0x0 0x0 0x1 REDA13R12 [0x0] GreenStationaryAI
+UNIT
+C16Books42:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [3,9] 0x0 0x0 0x1 REDA3R10 [0x0] GreenStationaryAI
+UNIT
+C16Books43:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [2,2] 0x0 0x0 0x1 REDA3R2 [0x0] GreenStationaryAI
 UNIT
 
 ALIGN 4
@@ -113,8 +142,6 @@ CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C16Easy,C16Normal,C16Hard)
 LOAD1 0x0 C16Units
 ENUN
-LOAD1 0x0 C16Books
-ENUN
 GotoPrepScreen
 ENDA
 
@@ -124,6 +151,27 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter17)
 ENDA
+
+C16Turn1:
+SystemText(_Ch16SysText)
+EndEvent
+
+C16BookScatter1:
+Reinforcements(C16Books1)
+EndEvent
+C16BookScatter2:
+Reinforcements(C16Books21)
+Reinforcements(C16Books22)
+EndEvent
+C16BookScatter3:
+Reinforcements(C16Books31)
+Reinforcements(C16Books32)
+EndEvent
+C16BookScatter4:
+Reinforcements(C16Books41)
+Reinforcements(C16Books42)
+Reinforcements(C16Books43)
+EndEvent
 
 C16Village:
 VillageEventItem(FillerDialogue, HouseCG, Cloudburst)

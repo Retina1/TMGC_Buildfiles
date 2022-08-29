@@ -17,7 +17,11 @@ POP
 ALIGN 4
 BlairMug:
 #incext PortraitFormatter "Blair.png"
-setMugEntry(0x2,BlairMug,3,5,3,3)
+setMugEntry(0x2,BlairMug,3,6,3,4)
+ALIGN 4
+BlairPromoMug:
+#incext PortraitFormatter "BlairPromo.png"
+setMugEntry(0xd4,BlairPromoMug,3,6,3,4)
 
 ALIGN 4
 //ArinMug:

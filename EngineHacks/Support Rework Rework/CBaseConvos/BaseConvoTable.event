@@ -390,12 +390,60 @@
 			bg(ElbaCorCastleCG)
 			text(C15_Apollo_Charley_Base)
 			baseSupport(Apollo,Charley,CSupport)
+	Chapter(Chapter16)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C16_Blair_Avan_Base)
+			baseSupport(Blair,Avan,CSupport)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C16_Blair_Carbon_Base)
+			baseSupport(Blair,Carbon,CPSupport)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C16_Natasia_Bechamel_Base)
+			baseSupport(Natasia,Bechamel,CPSupport)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C16_Sam_Emile_Base)
+			baseSupport(Sam,Emile,CPSupport)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C16_Peggy_Butch_Base)
+			baseSupport(Peggy,Butch,BSupport)		
+		Entry
+			bg(OutdoorCastleCG)
+			text(C16_Rachael_Leila_Base)
+			baseSupport(Rachael,Leila,CSupport)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C16_Cassius_Athena_Base)
+			baseSupport(Cassius,Athena,CSupport)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C16_Carbon_Mikey_Base)
+			baseSupport(Carbon,Mikey,CPSupport)
+	Chapter(Chapter17)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C15_Blair_Zeke_Base)
+			baseSupport(Blair,Yuyu,CSupport)
+	Chapter(Chapter18)
+		Entry
+			bg(OutdoorCastleCG)
+			text(C15_Blair_Zeke_Base)
+			baseSupport(Blair,Emile,BSupport)
 	Chapter(Chapter19)
 		Entry
 			name(C19_Unlimited_Power_Select)
 			importance(3)
 			event(C19UnlimitedPowerEvent)
 			eventID(BaseFlag1)
+	Chapter(Chapter20)
+			Entry
+			bg(OutdoorCastleCG)
+			text(C15_Blair_Zeke_Base)
+			baseSupport(Blair,Arin,BPSupport)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

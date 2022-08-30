@@ -92,7 +92,7 @@ setMugEntry(0x13,JeffMug,3,6,3,4)
 ALIGN 4
 JeffPromoMug:
 #incext PortraitFormatter "JeffPromo.png"
-setMugEntry(0xe3,JeffPromoMug,3,6,3,4)
+setMugEntry(0x103,JeffPromoMug,3,6,3,4)
 
 ALIGN 4
 EmileMug:
@@ -121,7 +121,7 @@ setMugEntry(0x19,HilbertMug,3,6,3,4)
 ALIGN 4
 HilbertPromoMug:
 #incext PortraitFormatter "HilbertPromo.png"
-setMugEntry(0xe2,HilbertPromoMug,3,6,3,4)
+setMugEntry(0x104,HilbertPromoMug,3,6,3,4)
 
 ALIGN 4
 FlynnMug:
@@ -246,6 +246,10 @@ ALIGN 4
 ElizaMug:
 #incext PortraitFormatter "Eliza.png"
 setMugEntry(0x1d,ElizaMug,3,6,3,4)
+ALIGN 4
+ElizaPromoMug:
+#incext PortraitFormatter "ElizaPromo.png"
+setMugEntry(0x101,ElizaPromoMug,3,6,3,4)
 
 ALIGN 4
 ChartreuseMug:
@@ -269,7 +273,7 @@ setMugEntry(0xf,RoseMug,3,6,3,4)
 ALIGN 4
 RosePromoMug:
 #incext PortraitFormatter "RosePromo.png"
-setMugEntry(0xe4,RosePromoMug,3,6,3,4)
+setMugEntry(0x102,RosePromoMug,3,6,3,4)
 
 ALIGN 4
 DirkMug:

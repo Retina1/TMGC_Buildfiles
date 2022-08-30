@@ -37,6 +37,11 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0x12,C15SamCharleySupport,Sam,Charley)
+CharacterEventBothWays(0x13,C15JosefAthenaSupport,Josef,Athena)
+CharacterEventBothWays(0x14,C15KennethHilbertSupport,Kenneth,Hilbert)
+CharacterEventBothWays(0x15,C15RachaelJeffSupport,Rachael,Jeff)
+CharacterEventBothWays(0x16,C15ApolloBechamelSupport,Apollo,Bechamel)
 END_MAIN
 
 LocationBasedEvents:
@@ -363,6 +368,27 @@ UNIT
 
 ALIGN 4
 
+C15SamCharleySupport:
+Text(SamCharleyCSupport)
+SetSupport(Sam,Charley,CSupport,1)
+EndEvent
+C15JosefAthenaSupport:
+Text(JosefAthenaCSupport)
+SetSupport(Josef,Athena,CSupport,1)
+EndEvent
+C15KennethHilbertSupport:
+Text(KennethHilbertCPSupport)
+SetSupport(Kenneth,Hilbert,CPSupport,1)
+EndEvent
+C15RachaelJeffSupport:
+Text(RachaelJeffCPSupport)
+SetSupport(Rachael,Jeff,CPSupport,1)
+EndEvent
+C15ApolloBechamelSupport:
+Text(ApolloBechamelCPSupport)
+SetSupport(Apollo,Bechamel,CPSupport,1)
+EndEvent
+
 BeginningScene:
 ENUT GuideChpt15
 LoadUnitsByDifficulty(C15Easy,C15Normal,C15Hard)
@@ -403,6 +429,9 @@ CHECK_ALIVE Rachael
 BEQ 0x33 0xC 0x0
 ENUT BaseFlag2
 LABEL 0x33
+SupportFlagOn(Kenneth,Hilbert,0x14,CSupport)
+SupportFlagOn(Rachael,Jeff,0x15,CSupport)
+SupportFlagOn(Apollo,Bechamel,0x16,CSupport)
 GotoPrepScreen
 ENDA
 

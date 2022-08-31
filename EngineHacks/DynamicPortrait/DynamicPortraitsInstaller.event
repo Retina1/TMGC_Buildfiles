@@ -34,14 +34,14 @@ BYTE  For the character ID who we will check to determine if we change the portr
 BYTE  For the class ID the character above must be to trigger the portrait change (0 if you don't care about their class)
 
 */
-//blair
+//Blair
 SHORT 0x0002
 SHORT 0x00d4 //she
 SHORT 0x0000
 BYTE  Blair
 BYTE  BlairLordX
 
-//jeff
+//Jeff
 SHORT 0x0013
 SHORT 0x0103 //mask
 SHORT 0x0000
@@ -54,6 +54,13 @@ SHORT 0x0104 //shoulderpad
 SHORT 0x0000
 BYTE  Hilbert
 BYTE  Sage
+
+//Damien
+SHORT 0x0024
+SHORT 0x0105 //shoulderpad
+SHORT 0x0000
+BYTE  Damien
+BYTE  Sniper
 
 //Eliza
 SHORT 0x001d

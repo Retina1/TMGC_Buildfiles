@@ -69,7 +69,7 @@ ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
-DefeatBoss(EndingScene)
+DefeatBoss(BossKillIntoEndingScene)
 END_MAIN
 
 Dunno:
@@ -256,7 +256,7 @@ UNIT
 C15Turn10Units:
 UNIT Unknown Fighter 0x0 Level(17,Enemy,1) [1,20] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT Unknown Merc 0x0 Level(17,Enemy,1) [11,20] 0x0 0x0 0x0 0x0 [Lancereaver] NoAI
-UNIT Unknown LightM 0x0 Level(17,Enemy,1) [14,20] 0x0 0x0 0x0 0x0 [Divine,Physic] NoAI
+UNIT Unknown LightM 0x0 Level(17,Enemy,1) [14,20] 0x0 0x0 0x0 0x0 [Divine] NoAI
 UNIT Unknown Myrm 0x0 Level(17,Enemy,1) [14,18] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Unknown Myrm 0x0 Level(17,Enemy,1) [14,14] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Unknown AxeWyv 0x0 Level(17,Enemy,1) [25,25] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
@@ -511,6 +511,12 @@ DISA_IF C15Boss
 DISA C15Boss
 ENDWARP
 Text(Ch15_ElcorianTheCamooIsHere2)
+CALL EndingScene
+EndEvent
+
+BossKillIntoEndingScene:
+Reinforcements(C15EndingElcorian)
+Text(Ch15_ElcorianTheCamooIsHereLate)
 CALL EndingScene
 EndEvent
 

@@ -27,7 +27,10 @@ bne End
 @ lsr r0, #1 @max/2
 @ cmp r1, r0
 @ blt End
-
+@make sure this is the actual attacker kthx
+ldr r0,=#0x203A4EC
+cmp r0,r4
+bne End
 @check for Mercy
 ldr r0, =MercyFlag
 ldrb r0, [r0]

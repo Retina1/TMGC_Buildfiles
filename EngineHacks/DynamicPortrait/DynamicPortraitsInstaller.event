@@ -26,13 +26,11 @@ BYTE 0x7B 0x46 0x00 0x00//mov r3,r15 + nop
 ALIGN 4
 DynamicPortraitTable:
 /* Each table entry works like this:
-
 SHORT For the base portrait ID
 SHORT For the new portrait ID
 SHORT For the Event Flag ID that will trigger the portrait change (0 if you want no flag)
 BYTE  For the character ID who we will check to determine if we change the portrait (0 if you want no character)
 BYTE  For the class ID the character above must be to trigger the portrait change (0 if you don't care about their class)
-
 */
 //Blair
 SHORT 0x0002
@@ -40,39 +38,71 @@ SHORT 0x00d4 //she
 SHORT 0x0000
 BYTE  Blair
 BYTE  BlairLordX
-
+//Arin
+//Kenneth
+//Natasia
+//Stefan
+SHORT 0x0006
+SHORT 0x0106 //new cape
+SHORT 0x0000
+BYTE  Stefan
+BYTE  SwdPal
+//Desmond
+//Sam
+//Josef
+//Peggy
+//Butch
 //Jeff
 SHORT 0x0013
 SHORT 0x0103 //mask
 SHORT 0x0000
 BYTE  Jeff
 BYTE  Assassin
-
+//Apollo
+//Bechamel
 //Hilbert
 SHORT 0x0019
 SHORT 0x0104 //shoulderpad
 SHORT 0x0000
 BYTE  Hilbert
 BYTE  Sage
-
+//Flynn
+//Mikey
+//Carbon
+//Athena
+//Zeke
+//Alexis
+//Leila
 //Damien
 SHORT 0x0024
 SHORT 0x0105 //shoulderpad
 SHORT 0x0000
 BYTE  Damien
 BYTE  Sniper
-
+//Zacharias
+//Avan
+//Hollandaise
+//Vladmir
+//Horatio
+//Ptolemy
+//Johan
+//Ian maybe
+//Dean
 //Eliza
 SHORT 0x001d
 SHORT 0x0101 //necklace
 SHORT 0x0000
 BYTE  Eliza
 BYTE  BishopF
-
+//Estelle
 //Rose
 SHORT 0x000f
 SHORT 0x0102 //shoulder things
 SHORT 0x0000
 BYTE  Rose
 BYTE  SageF
+//Manfred
+//Wilhelm
+//Jonas
+//Laronde maybe
 WORD 0x0 0x0//Terminator, don't delete this or very bad things will happen

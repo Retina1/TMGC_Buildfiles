@@ -38,7 +38,11 @@ setMugEntry(0x7,KennethMug,3,5,3,3)
 ALIGN 4
 StefanMug:
 #incext PortraitFormatter "Stefan.png"
-setMugEntry(0x6,StefanMug,3,5,3,3)
+setMugEntry(0x6,StefanMug,2,5,3,3)
+ALIGN 4
+StefanPromoMug:
+#incext PortraitFormatter "StefanPromo.png"
+setMugEntry(0x106,StefanPromoMug,2,5,3,3)
 
 ALIGN 4
 JohanMug:

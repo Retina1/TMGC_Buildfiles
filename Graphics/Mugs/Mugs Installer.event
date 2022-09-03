@@ -52,7 +52,7 @@ setMugEntry(0x3f,JohanMug,3,4,3,2)
 ALIGN 4
 SamMug:
 #incext PortraitFormatter "Sam.png"
-setMugEntry(0x5,SamMug,2,6,3,4)
+setMugEntry(0x5,SamMug,4,6,4,4)
 
 ALIGN 4
 CassiusMug:
@@ -67,7 +67,11 @@ setMugEntry(0x8,DesmondMug,3,5,3,3)
 ALIGN 4
 JosefMug:
 #incext PortraitFormatter "Josef.png"
-setMugEntry(0xa,JosefMug,2,4,2,2)
+setMugEntry(0xa,JosefMug,3,5,3,3)
+ALIGN 4
+JosefPromoMug:
+#incext PortraitFormatter "JosefPromo.png"
+setMugEntry(0x107,JosefPromoMug,3,5,3,3)
 
 ALIGN 4
 NatasiaMug:
@@ -155,7 +159,7 @@ setMugEntry(0x20,CharleyMug,4,6,3,4)
 ALIGN 4
 ZekeMug:
 #incext PortraitFormatter "Zeke.png"
-setMugEntry(0x21,ZekeMug,3,5,3,3)
+setMugEntry(0x21,ZekeMug,4,6,4,4)
 
 ALIGN 4
 HyperiusMug:

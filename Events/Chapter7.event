@@ -29,6 +29,7 @@ TurnEventPlayer(0x0,C7Turn9,9)
 TurnEventPlayer(0x0,C7Turn12,12)
 TurnEventPlayer(0x0,C7Turn14,14)
 TurnEventPlayer(0x0,C7Turn16,16)
+TurnEventPlayer(0x21,C7ZaineSpawn,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -319,6 +320,8 @@ CleanTextNoMap(HillCG,Ch7_Opening2)
 LABEL 0x10
 SetBackground(BlankCG)
 LOAD1 0x0 C7Units
+ENUN
+ENUT 0x21
 SystemText(BaseJoinNotice)
 GotoPrepScreen
 EndEvent
@@ -401,6 +404,10 @@ GOTO 0x3
 LABEL 0x1
 Text(BrandlCassiusTalk)
 LABEL 0x3
+ENUF 0x21
+EndEvent
+
+C7ZaineSpawn:
 Reinforcements(C7BossGroup)
 CAM1 Zaine
 FlashCursor(Zaine,60)

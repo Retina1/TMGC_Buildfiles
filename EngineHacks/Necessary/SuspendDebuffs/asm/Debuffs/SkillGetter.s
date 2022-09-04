@@ -55,7 +55,7 @@ mov r0, #0x2
 and r0, r1
 cmp r0, #0x0
 beq noSklRally
-add r5, #0x4
+add r5, #0x8
 noSklRally:
 @Rally Spectrum
 mov r0, #0x80

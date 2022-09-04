@@ -31,6 +31,7 @@ PromoItemEntry(MasterSeal,MasterSealPromoList)
 PromoItemEntry(AnimusSeal,AnimusSealPromoList)
 PromoItemEntry(LunarBrace,LunarBracePromoList)
 PromoItemEntry(SolarBrace,SolarBracePromoList)
+PromoItemEntry(FireEmblem,FireEmblemPromoList)
 PromoItemsEnd
 
 ALIGN 4
@@ -193,6 +194,59 @@ PromoListEnd
 ALIGN 4
 SolarBracePromoList:
 PromoListEntry(ZekeLord,ZekeLordX)
+PromoListEnd
+
+ALIGN 4
+FireEmblemPromoList:
+PromoListEntry(BlairLord,BlairLordX)
+PromoListEntry(ZekeLord,ZekeLordX)
+PromoListEntry(Thief,Assass)
+PromoListEntry(ThiefF,AssassF)
+PromoListEntry(Rune,RuneMast)
+PromoListEntry(Merc,Hero)
+PromoListEntry(MercF,HeroF)
+PromoListEntry(Myrm,SwMast)
+PromoListEntry(MyrmF,SwMastF)
+PromoListEntry(Archer,Sniper)
+PromoListEntry(ArcherF,SniperF)
+PromoListEntry(Fighter,Warrior)
+PromoListEntry(FighterF,WarriorF)
+PromoListEntry(Pirate,Berserker)
+PromoListEntry(PirateF,BerserkerF)
+PromoListEntry(Soldier,Halberdier)
+PromoListEntry(SoldierF,HalberdierF)
+
+PromoListEntry(SwdCav,SwdPal)
+PromoListEntry(LncCav,LncPal)
+PromoListEntry(AxeCav,AxePal)
+PromoListEntry(BowCav,BowPal)
+PromoListEntry(SwdCavF,SwdPalF)
+PromoListEntry(LncCavF,LncPalF)
+PromoListEntry(AxeCavF,AxePalF)
+PromoListEntry(BowCavF,BowPalF)
+PromoListEntry(SwdArm,SwdGen)
+PromoListEntry(LncArm,LncGen)
+PromoListEntry(AxeArm,AxeGen)
+PromoListEntry(BowArm,BowWyv)
+
+PromoListEntry(Mage,Sage)
+PromoListEntry(MageF,SageF)
+PromoListEntry(Troub,Valk)
+PromoListEntry(TroubF,ValkF)
+PromoListEntry(Priest,Bishop)
+PromoListEntry(Cleric,BishopF)
+PromoListEntry(LightM,Bishop)
+PromoListEntry(DarkM,Sorc)
+PromoListEntry(Bigle,Bigerle)
+PromoListEntry(DarkF,SorcF)
+
+PromoListEntry(LncWyv,WyvLord)
+PromoListEntry(AxeWyv,WyvLord)
+PromoListEntry(LncPeg,Falco)
+PromoListEntry(SwdPeg,Falco)
+
+PromoListEntry(CivilM,CivilM)
+
 PromoListEnd
 
 #endif // SPLIT_PROMO_ITEMS

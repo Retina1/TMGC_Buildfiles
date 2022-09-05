@@ -21,13 +21,50 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,I6MapStart,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x8,I6ArinTalk,Blair,Arin)
+CharacterEvent(0x9,I6ArinTalk,Blair,Kenneth)
+CharacterEvent(0xa,I6ArinTalk,Blair,Natasia)
+CharacterEvent(0xb,I6ArinTalk,Blair,Stefan)
+CharacterEvent(0xc,I6ArinTalk,Blair,Desmond)
+CharacterEvent(0xd,I6ArinTalk,Blair,Sam)
+CharacterEvent(0xe,I6ArinTalk,Blair,Josef)
+CharacterEvent(0xf,I6PeggyTalk,Blair,Peggy)
+CharacterEvent(0x10,I6ArinTalk,Blair,Butch)
+CharacterEvent(0x11,I6ArinTalk,Blair,Cassius)
+CharacterEvent(0x12,I6ArinTalk,Blair,Rachael)
+CharacterEvent(0x13,I6ArinTalk,Blair,Jeff)
+CharacterEvent(0x14,I6ArinTalk,Blair,Emile)
+CharacterEvent(0x15,I6ArinTalk,Blair,Apollo)
+CharacterEvent(0x16,I6ArinTalk,Blair,Bechamel)
+CharacterEvent(0x17,I6ArinTalk,Blair,Sveltzalus)
+CharacterEvent(0x18,I6ArinTalk,Blair,Hilbert)
+CharacterEvent(0x19,I6ArinTalk,Blair,Flynn)
+CharacterEvent(0x1a,I6ArinTalk,Blair,Mikey)
+CharacterEvent(0x1b,I6ArinTalk,Blair,Carbon)
+CharacterEvent(0x1c,I6ArinTalk,Blair,Athena)
+CharacterEvent(0x1d,I6ArinTalk,Blair,Charley)
+CharacterEvent(0x1e,I6ArinTalk,Blair,Zeke)
+CharacterEvent(0x1f,I6ArinTalk,Blair,Hyperius)
+CharacterEvent(0x20,I6ArinTalk,Blair,Alexis)
+CharacterEvent(0x21,I6ArinTalk,Blair,Leila)
+CharacterEvent(0x22,I6ArinTalk,Blair,Damien)
+CharacterEvent(0x23,I6ArinTalk,Blair,Zacharias)
+CharacterEvent(0x24,I6ArinTalk,Blair,Avan)
+CharacterEvent(0x25,I6ArinTalk,Blair,Toddsworth)
+CharacterEvent(0x26,I6ArinTalk,Blair,Yuyu)
+CharacterEvent(BaseFlag1,I6ArinTalk,Blair,Artemis)
+CharacterEvent(BaseFlag2,I6ArinTalk,Blair,Hollandaise)
+CharacterEvent(BaseFlag3,I6ArinTalk,Blair,Vladmir)
+CharacterEvent(BaseFlag4,I6ArinTalk,Blair,Addington)
 END_MAIN
 
 LocationBasedEvents:
+House(0x0,I6ReadyToEnd,4,1)
 END_MAIN
 
 ALIGN 4
@@ -97,6 +134,22 @@ UNIT
 
 ALIGN 4
 
+I6ArinTalk:
+Text(I6ArinConvo)
+EndEvent
+
+I6PeggyTalk:
+BranchIfSupport(Peggy,Natasia,CPSupport,0x1)
+Text(I6PeggyConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6PeggySpecialConvo)
+SystemText(I6PeggyAxeRank)
+SetUnitStatus(Peggy,AxeExp,31)
+SetSupport(Peggy,Natasia,BSupport,1)
+LABEL 0x2
+EndEvent
+
 BeginningScene:
 EnableFreeMovement
 ENUT GuideChpt17
@@ -110,10 +163,24 @@ ENUN
 GotoPrepScreen
 ENDA
 
+I6MapStart:
+FlashCursor(4,1,60)
+SystemText(I6Note)
+EndEvent
+
 EndingScene:
 DisableFreeMovement
+ResetBaseFlags
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter19)
 ENDA
+
+I6ReadyToEnd:
+EVBIT_MODIFY 4
+SystemText(I1LeavePrompt)
+IfNoSelectedGoto(0x2)
+CALL EndingScene
+LABEL 0x2
+EndEvent
 
 MESSAGE Events end at offset CURRENTOFFSET

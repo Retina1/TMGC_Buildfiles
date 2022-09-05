@@ -77,7 +77,21 @@ UNIT
 
 C17Hard:
 UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [13,18] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [4,20] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
 UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [2,23] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+UNIT Lowlands AxeGen 0x0 Level(3,Enemy,1) [7,15] DropItem 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Lowlands SwdGen 0x0 Level(3,Enemy,1) [3,21] DropItem 0x0 0x0 0x0 [Runesword] NeverMoveAI
+UNIT Lowlands Brigand 0x0 Level(20,Enemy,1) [9,15] 0x0 0x0 0x0 0x0 [SilverAxe,HandAxe] GroupOneAI
+UNIT Lowlands Hero 0x0 Level(2,Enemy,1) [8,16] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
+UNIT Lowlands Deserter 0x0 Level(20,Enemy,1) [9,17] 0x0 0x0 0x0 0x0 [SilverLance,Javelin] GroupOneAI
+UNIT Lowlands Hero 0x0 Level(2,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
+UNIT Lowlands LncWyv 0x0 Level(18,Enemy,1) [16,0] 0x0 0x0 0x0 0x0 [SteelLance,Axereaver] GroupTwoAI
+UNIT Lowlands AxeWyv 0x0 Level(18,Enemy,1) [19,3] 0x0 0x0 0x0 0x0 [SteelAxe,Swordreaver] GroupTwoAI
+UNIT Lowlands AxeWyv 0x0 Level(18,Enemy,1) [13,12] 0x0 0x0 0x0 0x0 [HandAxe] GroupTwoAI
+UNIT Lowlands Warrior 0x0 Level(3,Enemy,1) [19,23] 0x0 0x0 0x0 0x0 [Dracoaxe,Longbow] GroupTwoAI
+UNIT Lowlands Warrior 0x0 Level(3,Enemy,1) [16,26] 0x0 0x0 0x0 0x0 [Hammer,Longbow] GroupTwoAI
 UNIT Hollandaise PirateF 0x0 Level(18,Enemy,0) [12,20] 0x0 0x0 0x0 0x0 [Ukonvasara,Vulnerary] NoAI
 UNIT Edward Berserker 0x0 Level(7,Enemy,1) [0,26] DropItem 0x0 0x0 0x0 [KillerAxe,Tomahawk,BraveBow] DelayedAI
 UNIT Eddie Berserker 0x0 Level(6,Enemy,1) [18,1] DropItem 0x0 0x0 0x0 [DevilAxe,BraveLance] DelayedAI

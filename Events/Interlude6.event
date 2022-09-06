@@ -54,7 +54,7 @@ CharacterEvent(0x20,I6ArinTalk,Blair,Alexis)
 CharacterEvent(0x21,I6ArinTalk,Blair,Leila)
 CharacterEvent(0x22,I6ArinTalk,Blair,Damien)
 CharacterEvent(0x23,I6ArinTalk,Blair,Zacharias)
-CharacterEvent(0x24,I6ArinTalk,Blair,Avan)
+CharacterEvent(0x24,I6AvanTalk,Blair,Avan)
 CharacterEvent(0x25,I6ArinTalk,Blair,Toddsworth)
 CharacterEvent(0x26,I6ArinTalk,Blair,Yuyu)
 CharacterEvent(BaseFlag1,I6ArinTalk,Blair,Artemis)
@@ -147,6 +147,18 @@ Text(I6PeggySpecialConvo)
 SystemText(I6PeggyAxeRank)
 SetUnitStatus(Peggy,AxeExp,31)
 SetSupport(Peggy,Natasia,BSupport,1)
+LABEL 0x2
+EndEvent
+
+I6AvanTalk:
+BranchIfSupport(Blair,Avan,CSupport,0x1)
+Text(I6AvanConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6AvanSpecialConvo)
+SystemText(I6AvanAnimaRank)
+SetUnitStatus(Avan,AnimaExp,31)
+SetSupport(Blair,Avan,CPSupport,1)
 LABEL 0x2
 EndEvent
 

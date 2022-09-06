@@ -302,7 +302,19 @@
 			support(BSupport,0,1,20,0,0,0)
 			support(BPSupport,1,1,20,0,0,0)
 			support(ASupport,1,2,30,0,0,0)
+		entry(Apollo,Vladmir)
+			support(CSupport,0,0,0,0,0,10)//c18
+			support(CPSupport,0,0,10,0,0,20)
+			support(BSupport,0,0,20,0,0,25)
+			support(BPSupport,0,1,25,0,0,25)
+			support(ASupport,0,2,30,0,0,30)
 	//bechamel (natasia, sam, apollo)
+		entry(Bechamel,Hollandaise)
+			support(CSupport,1,0,0,0,0,0)//c17 recruitment
+			support(CPSupport,2,0,0,0,0,0)
+			support(BSupport,2,0,10,0,0,0)
+			support(BPSupport,2,0,20,0,0,0)
+			support(ASupport,2,0,20,0,20,0)
 	//sveltzalus (arin, jeff)
 		entry(Sveltzalus,Flynn)
 			support(CSupport,0,0,0,0,0,10)
@@ -379,6 +391,9 @@
 			support(ASupport,2,1,15,25,0,0)
 	//toddsworth (sveltzalus, avan)
 	//yuyu
+	//artemis
+	//hollandaise (bechamel)
+	//vladmir (apollo)
 	entry(0,0) // Terminator
 	}
 

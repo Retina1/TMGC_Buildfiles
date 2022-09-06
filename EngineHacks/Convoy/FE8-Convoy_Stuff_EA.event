@@ -4,13 +4,13 @@
 //NOTE: This hack does NOT expand the amount of items saved! It changes the items you can have, yes, but you're responsible for using Modular Save or some other hack to actually save more stuff.
 
 #define ConvoyTotalSize 200
-#define gConvoyItemArray 0x203A81C
+#define gConvoyItemArray 0x0203B200
 #define _COMBINE_ITEMS_HACK_ // comment this out if you don't want item combining
 //#define _CONVOY_PARTITION_SETUP_2_ //uncomment this if you're using setup2, detailed in the Readme
 
 #define ConvoyPartition(start_slot, length, function) "BYTE start_slot length 0 0; POIN function"
 
-//blair gets convoy of size 150, zeke doesn't get his own convoy for his maps, viridian gets his own size 50 convoy (maybe merge it in ch. 24)
+//blair gets convoy of size 150, zeke doesn't get his own convoy for his maps, viridian gets own size 50 convoy (maybe merge it in ch. 24)
 
 ConvoyPartitionTable:
 ConvoyPartition(0, 150, 0) //blair

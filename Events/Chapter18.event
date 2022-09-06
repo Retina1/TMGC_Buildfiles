@@ -27,6 +27,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0x21,C18ApolloVladmirSupport,Apollo,Vladmir)
 END_MAIN
 
 LocationBasedEvents:
@@ -105,6 +106,12 @@ UNIT Vladmir Bishop 0x0 Level(15,Ally,0) [14,7] 0x0 0x0 0x1 REDA14R8 [BookOfOpis
 UNIT
 
 ALIGN 4
+
+C18ApolloVladmirSupport:
+Text(ApolloVladmirCSupport)
+GiveItem(Salvation,Apollo)
+SetSupport(Apollo,Vladmir,CSupport,1)
+EndEvent
 
 BeginningScene:
 ENUT GuideChpt18

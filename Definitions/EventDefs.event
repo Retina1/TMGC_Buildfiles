@@ -18,8 +18,10 @@
 #define DifficultyReinforcements2(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4064 rC r0 ; CHECK_HARD ; BNE 4065 rC r0 ; Reinforcements(normal) ; GOTO 4066 ; LABEL 4064 ; Reinforcements(easy) ; GOTO 4066 ; LABEL 4065 ; Reinforcements(hard) ; LABEL 4066 ; ENUN;"
 #define RemoveUnit(unit,labelid) "CHECK_ALIVE unit; BEQ labelid 0xc 0x0; REMU unit; LABEL labelid"
 #define UnremoveUnit(unit,labelid) "CHECK_ALIVE unit; BEQ labelid 0xc 0x0; REVEAL unit; LABEL labelid"
-#define RemoveUnit(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; REMU unit; LABEL unit"
-#define UnremoveUnit(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; REVEAL unit; LABEL unit"
+#define RemoveUnit(unit) "CHECK_EXISTS unit; BEQ unit 0xc 0x0; REMU unit; LABEL unit"
+#define UnremoveUnit(unit) "CHECK_EXISTS unit; BEQ unit 0xc 0x0; REVEAL unit; LABEL unit"
+#define KillUnitIfPlayerAlive(player,unit) "CHECK_ALIVE player; BEQ unit 0xc 0x0; CHECK_ALIVE unit; BEQ unit 0xc 0x0; DISA_IF unit; DISA unit; LABEL unit"
+#define TurnAllyIfAlive(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; TurnAlly(unit); LABEL unit"
 
 #define Location(textid) "BROWNBOXTEXT textid [8,8]"
 #define LocationText(bgid,textid,labelid) "SetBackground(bgid); Location(labelid) ; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"

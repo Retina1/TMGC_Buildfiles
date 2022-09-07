@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C15Turn1,1)
 TurnEventPlayer(0x0,C15GateOpens,3)
 TurnEventPlayer(0x0,C15Turn4,5)//don't ask
 TurnEventPlayer(0x0,C15Turn5,4)//please don't ask
@@ -535,6 +536,10 @@ Text(Ch15_GateUnlock)
 Reinforcements(C15GateCrashers)
 EndEvent
 
+C15Turn1:
+Text(Ch15_ZekeLearnsSupply)
+LearnSkill(Zeke,SupplyID)
+EndEvent
 C15Turn4:
 Reinforcements(C15Turn4Units)
 EndEvent

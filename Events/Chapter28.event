@@ -16,7 +16,7 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
-POIN C19Units C19Units
+POIN C28Units C28Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -48,7 +48,7 @@ ENDTRAP
 
 ALIGN 4
 
-C19Units:
+C28Units:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
@@ -66,17 +66,28 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
-C19Easy:
+C28Easy:
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
 
-C19Normal:
+C28Normal:
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
 
-C19Hard:
-UNIT Holanis Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Holanis Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+C28Hard:
+UNIT DL1 ViridianLord 0x0 Level(15,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL2 WyvLord 0x0 Level(18,Enemy,1) [10,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL4 BishopF 0x0 Level(9,Enemy,1) [10,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL5 BardF 0x0 Level(17,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL6 SwMast 0x0 Level(13,Enemy,1) [10,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL7 BowPalF 0x0 Level(8,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL8 SageF 0x0 Level(6,Enemy,1) [10,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL9 Berserker 0x0 Level(12,Enemy,1) [10,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL10 SwdPal 0x0 Level(16,Enemy,1) [10,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL11 Sorc 0x0 Level(11,Enemy,1) [10,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL12 Halberdier 0x0 Level(13,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT DL13 BowGen 0x0 Level(16,Enemy,1) [10,15] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
@@ -86,8 +97,21 @@ ENUT GuideChpt28
 MUSC NarrationTheme3
 Narration(Map2CG,Ch28_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
-LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
-LOAD1 0x0 C19Units
+LoadUnitsByDifficulty(C28Easy,C28Normal,C28Hard)
+KillUnitIfPlayerAlive(Viridian,DL1)
+KillUnitIfPlayerAlive(Freddric,DL2)
+KillUnitIfPlayerAlive(Dean,DL3)
+KillUnitIfPlayerAlive(Eliza,DL4)
+KillUnitIfPlayerAlive(Chartreuse,DL5)
+KillUnitIfPlayerAlive(Rift,DL6)
+KillUnitIfPlayerAlive(Estelle,DL7)
+KillUnitIfPlayerAlive(Rose,DL8)
+KillUnitIfPlayerAlive(Dirk,DL9)
+KillUnitIfPlayerAlive(Callum,DL10)
+KillUnitIfPlayerAlive(Manfred,DL11)
+KillUnitIfPlayerAlive(Wilhelm,DL12)
+KillUnitIfPlayerAlive(Argent,DL13)
+LOAD1 0x0 C28Units
 ENUN
 GotoPrepScreen
 ENDA

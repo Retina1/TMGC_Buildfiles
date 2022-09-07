@@ -75,6 +75,13 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C19Hard:
+UNIT Peter WyvLord 0x0 Level(1,Enemy,0) [11,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Joan HeroF 0x0 Level(1,Enemy,0) [12,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Sonia HalberdierF 0x0 Level(1,Enemy,0) [13,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Tobias Warrior 0x0 Level(1,Enemy,0) [14,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Ian CivilM 0x0 Level(1,Enemy,0) [15,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Olsen AssassF 0x0 Level(1,Enemy,0) [16,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Elcorian Valk 0x0 Level(1,Enemy,0) [17,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Holanis Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Holanis Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
 UNIT
@@ -94,6 +101,13 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
+TurnAllyIfAlive(Peter)
+TurnAllyIfAlive(Sonia)
+TurnAllyIfAlive(Joan)
+TurnAllyIfAlive(Tobias)
+TurnAllyIfAlive(Ian)
+TurnAllyIfAlive(Olsen)
+TurnAllyIfAlive(Elcorian)
 MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Interlude9)

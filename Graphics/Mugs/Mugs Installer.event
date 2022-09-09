@@ -52,7 +52,11 @@ setMugEntry(0x3f,JohanMug,3,4,3,2)
 ALIGN 4
 SamMug:
 #incext PortraitFormatter "Sam.png"
-setMugEntry(0x5,SamMug,4,6,4,4)
+setMugEntry(0x5,SamMug,2,6,3,4)
+ALIGN 4
+SamPromoMug:
+#incext PortraitFormatter "SamPromo.png"
+setMugEntry(0x108,SamPromoMug,2,6,3,4)
 
 ALIGN 4
 CassiusMug:

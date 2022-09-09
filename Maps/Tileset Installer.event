@@ -59,10 +59,16 @@ YgstraCastlePalette:
 ALIGN 4
 ElbaCorCastlePalette:
 #incext Png2Dmp "Tilesets/ElbaCorCastle.png" --palette-only
+ALIGN 4
+GreatRiverCastlePalette:
+#incext Png2Dmp "Tilesets/LowlandserCastle.png" --palette-only
 
 ALIGN 4
 CastleTiles:
 #incext compress "Tilesets/Castle.mapchip_config"
+ALIGN 4
+GreatRiverCastleTiles:
+#incext compress "Tilesets/GreatRiverCastle.mapchip_config"
 
 ALIGN 4
 SwampObjects:
@@ -419,9 +425,11 @@ EventPointerTable(TILCity, CityTiles)
 
 EventPointerTable(OBJCastle, CastleObjects)
 EventPointerTable(PALLowlandsCastle, LowlandsCastlePalette)
+EventPointerTable(PALGreatRiverCastle, GreatRiverCastlePalette)
 EventPointerTable(PALYgstraCastle, YgstraCastlePalette)
 EventPointerTable(PALElbaCorCastle, ElbaCorCastlePalette)
 EventPointerTable(TILCastle, CastleTiles)
+EventPointerTable(TILGreatRiver, GreatRiverCastleTiles)
 EventPointerTable(ANICastle, CastleAnims)
 
 EventPointerTable(OBJVolcano, LavaCaveObjects) 

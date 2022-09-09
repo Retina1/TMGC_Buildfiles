@@ -24,6 +24,14 @@
 #define SFXGroup 6
 
 {
+#include "JokingMotive.event"
+SongTable(S_JokingMotive,JokingMotive,1)
+}
+{
+#include "RigorousJustice.event"
+SongTable(S_RigorousJustice,RigorousJustice,1)
+}
+{
 #include "LifeWillChange.event"
 SongTable(S_LifeWillChange,LifeWillChange,1)
 }

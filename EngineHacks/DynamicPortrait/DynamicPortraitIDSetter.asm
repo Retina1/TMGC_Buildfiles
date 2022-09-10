@@ -66,6 +66,7 @@ ldrh    r0,[r7,#0x02]
 b       End
 
 NextEntry:
+mov r0, r6
 add     r7,#0x08
 b       CheckingLoop
 

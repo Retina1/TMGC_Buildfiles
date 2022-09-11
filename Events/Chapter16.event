@@ -38,9 +38,9 @@ END_MAIN
 LocationBasedEvents:
 Vendor(C16Vendor,6,21)
 Armory(C16Armory,19,16)
-Village(0x11,C16Village,1,18)
-Village(0x12,C16Village2,17,1)
-Village(0x13,C16Village3,24,14)
+Village(0x0,C16Village,1,18)
+Village(0x0,C16Village2,17,1)
+Village(0x0,C16Village3,24,14)
 END_MAIN
 
 ALIGN 4
@@ -190,6 +190,56 @@ EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
+CHECK_EVENTID 0x1c //1c on- 3 dead
+BNE 0x1 0xc 0x0
+//best reward
+CleanTextNoMap(HallCG,FillerDialogue)
+GiveMoney(0x1f4)
+GiveItem(SecretBook,Blair)
+GiveItem(Galewind,Blair)
+GiveItem(UnknownPage,Blair)
+GOTO 0x6
+LABEL 0x1
+CHECK_EVENTID 0x1d //1e on- 4 dead
+BNE 0x2 0xc 0x0
+//good reward
+CleanTextNoMap(HallCG,FillerDialogue)
+REMA
+GiveMoney(0x1f4)
+GiveItem(SecretBook,Blair)
+GiveItem(Galewind,Blair)
+GOTO 0x6
+LABEL 0x2
+CHECK_EVENTID 0x1f //21 on- 6 dead
+BNE 0x3 0xc 0x0
+//eh reward
+CleanTextNoMap(HallCG,FillerDialogue)
+REMA
+GiveMoney(0x1f4)
+GiveItem(SecretBook,Blair)
+GOTO 0x6
+LABEL 0x3
+CHECK_EVENTID 0x22 //23 on- 8 dead
+BNE 0x4 0xc 0x0
+//bad reward
+CleanTextNoMap(HallCG,FillerDialogue)
+REMA
+GiveMoney(0x1f4)
+GOTO 0x6
+LABEL 0x4
+CHECK_EVENTID 0x24 //24 on- they're all dead
+BNE 0x5 0xc 0x0
+//you sure tried
+CleanTextNoMap(HallCG,FillerDialogue)
+REMA
+GiveMoney(0x5)
+GOTO 0x6
+LABEL 0x5
+//how the fuck did you do this poorly
+CleanTextNoMap(HallCG,FillerDialogue)
+REMA
+GiveMoney(0x1)
+LABEL 0x6
 MoveToChapter(Chapter17)
 ENDA
 

@@ -25,6 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xf,SellToddToMevion,0x0,Mevion)
 END_MAIN
 
 LocationBasedEvents:
@@ -75,6 +76,7 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C19Hard:
+UNIT Mevion WyvLord 0x0 Level(1,Enemy,1) [11,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Peter WyvLord 0x0 Level(1,Enemy,0) [11,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Joan HeroF 0x0 Level(1,Enemy,0) [12,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Sonia HalberdierF 0x0 Level(1,Enemy,0) [13,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
@@ -98,6 +100,27 @@ LOAD1 0x0 C19Units
 ENUN
 GotoPrepScreen
 ENDA
+
+SellToddToMevion:
+CHECK_ACTIVEID Toddsworth
+BEQ 0x1 0xc 0x0
+Text(FillerDialogue)//todd
+GOTO 0x2
+LABEL 0x1 //not todd
+Text(FillerDialogue)
+GiveMoney(0x4b0)
+FADI 0x1c
+DISA_IF Toddsworth
+DISA Toddsworth
+ENUN
+FADU 0x1c
+MOVE 60 Mevion [0,6]
+ENUN
+DISA_IF Mevion
+DISA Mevion
+ENUN
+LABEL 0x2
+EndEvent
 
 EndingScene:
 ResetBaseFlags

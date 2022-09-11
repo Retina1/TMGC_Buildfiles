@@ -91,6 +91,9 @@ ALIGN 4
 ButchMug:
 #incext PortraitFormatter "Butch.png"
 setMugEntry(0xe,ButchMug,3,5,3,3)
+ButchPromoMug:
+#incext PortraitFormatter "ButchPromo.png"
+setMugEntry(0x109,ButchPromoMug,3,5,3,3)
 
 ALIGN 4
 RachaelMug:
@@ -115,6 +118,9 @@ ALIGN 4
 ApolloMug:
 #incext PortraitFormatter "Apollo.png"
 setMugEntry(0x14,ApolloMug,3,6,3,4)
+ApolloPromoMug:
+#incext PortraitFormatter "ApolloPromo.png"
+setMugEntry(0x10a,ApolloPromoMug,3,6,3,4)
 
 ALIGN 4
 BechamelMug:

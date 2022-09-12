@@ -31,11 +31,11 @@ INLINE CharLevelUpSkillTable,Skill List Address
 0x1D Zacharias,ZachariasSkillList|IsPointer
 0x1E Avan,AvanSkillList|IsPointer
 0x1F Toddsworth,ToddsworthSkillList|IsPointer
-0x20 Artemis,0
-0x21 Hollandaise,0
-0x22 Vladmir,0
-0x23 Horatio,0
-0x24 Simone,0
+0x20 Artemis,ArtemisSkillList|IsPointer
+0x21 Hollandaise,HollandaiseSkillList|IsPointer
+0x22 Vladmir,VladmirSkillList|IsPointer
+0x23 Horatio,HoratioSkillList|IsPointer
+0x24 Simone,SimoneSkillList|IsPointer
 0x25 Ptolemy,0
 0x26 Johan,0
 0x27 Peter,0
@@ -58,11 +58,11 @@ INLINE CharLevelUpSkillTable,Skill List Address
 0x38 Manfred,0
 0x39 Wilhelm,0
 0x3A Argent,0
-Lyon's Summon,0
--,0
--,0
-Knoll's Summon,0
-Ewan's Summon,0
+0x3b Addington,0
+0x3C Tonnamin (hehe),0
+0x3D Jonas (secret funnyman),0
+0x3e Laronde (other secret),0
+0x3F Yuyu,YuyuSkillList|IsPointer
 Lyon (Ch 17),0
 Morva (Ch 20),0
 Orson (Ch 5x),0

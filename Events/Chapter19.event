@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C19Turn1,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -78,6 +79,12 @@ UNIT
 C19Hard:
 UNIT Holanis Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Holanis Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+UNIT Holanis Sage 0x0 Level(5,Enemy,1) [17,12] 0x0 0x0 0x0 0x0 [Sagittae,Sleep] NeverMoveAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [16,13] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [18,13] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT Holanis BowGen 0x0 Level(5,Enemy,1) [17,14] 0x0 0x0 0x0 0x0 [SteelBow] NeverMoveAI
+UNIT Holanis AxeGen 0x0 Level(5,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Michael Sniper 0x0 Level(8,Enemy,1) [17,13] DropItem 0x0 0x0 0x0 [BarrierBow] NeverMoveAI
 UNIT
 
 ALIGN 4
@@ -106,6 +113,10 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter20)
 ENDA
+
+C19Turn1:
+SystemText(_Ch19SysText)
+EndEvent
 
 C19RiverFlow:
 TILEREVERSE 0x0

@@ -23,6 +23,7 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x11,C18VladmirCheck,1,255)
 TurnEventEnemy(0x0,C18EndCheck,1,255)
+TurnEventPlayer(0x0,C18Turn1,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -139,17 +140,8 @@ LABEL 0x2
 MoveToChapter(Interlude6)
 ENDA
 
-
-C17EndCheck:
-CHECK_EVENTID 0x21
-BEQ 0x1 0xc 0x0
-CHECK_EVENTID 0x22
-BEQ 0x1 0xc 0x0
-CALL EndingScene
-GOTO 0x2
-LABEL 0x1
-ENUF 0x24
-LABEL 0x2
+C18Turn1:
+SystemText(_Ch18SysText)
 EndEvent
 
 C18VladmirCheck:

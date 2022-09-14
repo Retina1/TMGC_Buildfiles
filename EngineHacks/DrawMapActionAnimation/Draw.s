@@ -13,7 +13,7 @@
   .short 0xf800
 .endm
 
-
+.set AnimPalID, 25
 	
 
 .global ASMC_Draw
@@ -543,7 +543,7 @@ NoSound:
 ldr r0, [r7, #8] @ Palette to use 
 
 @UpdatePalette
-mov r1, #26 @ palette # 
+mov r1, #AnimPalID @ palette # 
 lsl r1, #5 @ multiply by #0x20
 mov	r2,#0x20 @ size 
 blh CopyToPaletteBuffer @Arguments: r0 = source pointer, r1 = destination offset, r2 = size (0x20 per full palette)
@@ -765,7 +765,7 @@ orr r1, r2
 
 
 @mov r3, r3 @ Vram tile 
-mov r2, #26 @ palette # 26 - or 27 is the light rune palette i think 
+mov r2, #AnimPalID @ palette # 26 - or 27 is the light rune palette i think 
 lsl r2, #12 @ bits 12-15 
 orr r3, r2 @ palette | flips | tile 
 

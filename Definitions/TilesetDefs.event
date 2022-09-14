@@ -1,4 +1,4 @@
-//CURRENT NEXT 0x78f
+//CURRENT NEXT 0x98
 
 
 #define Map0 0x1
@@ -30,6 +30,7 @@
 #define Map18 0x7b
 #define MapI6 0x7d
 #define Map19 0x8f
+#define Map20 0x93
 
 #define Map21 0x67
 
@@ -65,6 +66,7 @@
 #define MapChange18 0x0
 #define MapChangeI6 0x0
 #define MapChange19 0x90
+#define MapChange20 0x94
 
 #define MapChange21 0x68
 
@@ -128,6 +130,7 @@
 #define OBJDesert 0x3f
 #define OBJFrontier 0x48
 #define OBJStronghold 0x63
+#define OBJRuins 0x95
 
 #define TILGreatRiver 0x91
 #define TILTown 0x2b
@@ -139,6 +142,7 @@
 #define TILDesert 0x40
 #define TILFrontier 0x49
 #define TILStronghold 0x64
+#define TILRuins 0x96
 
 #define PALDalstTown 0x31
 #define PALBoatyTown 0x5a
@@ -166,6 +170,8 @@
 #define PALYgstraFrontier 0x4a
 
 #define PALStronghold 0x66
+
+#define PALRuins 0x97
 
 #define ANIField 0x38
 #define ANITown 0x39

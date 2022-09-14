@@ -528,7 +528,10 @@ ALIGN 4
 EduardoMug:
 #incext PortraitFormatter "Eduardo.png"
 setMugEntry(0xdf,EduardoMug,3,5,3,3)
-
+ALIGN 4
+BungalasMug:
+#incext PortraitFormatter "Bungalas.png"
+setMugEntry(0xe4,BungalasMug,3,5,3,3)
 ALIGN 4
 MichaelMug:
 #incext PortraitFormatter "Michael.png"

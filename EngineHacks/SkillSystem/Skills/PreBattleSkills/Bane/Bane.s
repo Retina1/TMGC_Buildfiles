@@ -36,11 +36,11 @@ beq GoBack @skip if not boss
 
 mov r1, #0x5a
 ldrh r0, [r4, r1] @Atk
-add r0, #2
+add r0, #4
 strh r0, [r4,r1]
 mov r1, #0x5E
 ldrh r0, [r4, r1] @AS
-add r0, #2
+add r0, #4
 strh r0, [r4,r1]
 mov r1, #0x66
 ldrh r0, [r4, r1] @crit

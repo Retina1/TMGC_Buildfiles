@@ -32,7 +32,27 @@ CharacterEvent(0xa,C20SimoneZekeRecruitment,Zeke,Simone)
 END_MAIN
 
 LocationBasedEvents:
+Seize(0x1a,C20Seize1,3,11)
+Seize(0x1b,C20Seize2,8,6)
+Seize(0x1c,C20Seize3,21,19)
+Seize(0x1d,C20Seize4,26,4)
+Seize(0x1e,C20Seize5,34,21)
+Seize(13,2)
+Chest(KnightRing,14,10)
+Chest(KnightRing,28,22)
+Vendor(C20Vendor,8,23)
+Armory(C20Armory,6,22)
+Village(0x1f,C20Village,10,24)
 END_MAIN
+
+ALIGN 4
+C20Armory:
+SHLI Wyrmslayer Dragonpike Dracoaxe Longbow Wardbow
+BYTE 0x0 0x0
+ALIGN 4
+C20Vendor:
+SHLI Elfire Fimbulvetr Divine Aura Nightfall Nosferatu Fenrir Mend Physic Recover Restore Barrier Elixir PureWater
+BYTE 0x0 0x0
 
 ALIGN 4
 
@@ -52,21 +72,21 @@ ENDTRAP
 ALIGN 4
 
 C20Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [3,22] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [2,22] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,22] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,23] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,23] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,23] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,24] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,24] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [3,24] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,24] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,24] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [1,25] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [2,25] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,25] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,25] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C20Easy:
@@ -78,12 +98,59 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C20Hard:
-UNIT Holanis Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Dragon EarthDragon 0x0 Level(4,Enemy,1) [4,4] 0x0 0x0 0x0 0x0 [EarthBreath] NoAI
+UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [2,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Dragon FireDragon 0x0 Level(6,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon FireDragon 0x0 Level(6,Enemy,1) [4,12] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon EarthDragon 0x0 Level(7,Enemy,1) [3,11] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT
+
+C20Chamber1:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+C20Chamber1Lunatic:
+UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Dragon EarthDragon 0x0 Level(4,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+
+C20Chamber2:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+C20Chamber2Lunatic:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+
+C20Chamber3:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+C20Chamber3Lunatic:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+
+C20Chamber4:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+C20Chamber4Lunatic:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+
+C20Chamber5:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT
+C20Chamber5Lunatic:
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT
 
 C20Simone:
-UNIT Simone SorcF 0x0 Level(4,NPC,0) [10,10] 0x0 0x0 0x0 0x0 [Fenrir,Sleep] NoAI
+UNIT Simone SorcF 0x0 Level(4,NPC,0) [8,26] 0x0 0x0 0x0 0x0 [Fenrir,Sleep] NoAI
 UNIT
 
 ALIGN 4
@@ -107,6 +174,55 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(ChapterV1)
 ENDA
+
+C20Seize1:
+SetBackground(VillageCG)
+Text(FillerDialogue)//tales of the old kingdom of holanis
+FADI 0x3C
+TILECHANGE 0x0
+DifficultyReinforcements(C20Chamber1,C20Chamber1,C20Chamber1Lunatic)
+CLEAN
+FADU 0x3c
+EndEvent
+C20Seize2:
+SetBackground(VillageCG)
+Text(FillerDialogue)//in the name of progress
+FADI 0x3C
+TILECHANGE 0x1
+DifficultyReinforcements(C20Chamber2,C20Chamber2,C20Chamber2Lunatic)
+CLEAN
+FADU 0x3c
+EndEvent
+C20Seize3:
+SetBackground(VillageCG)
+Text(FillerDialogue)//the annihilation
+FADI 0x3C
+TILECHANGE 0x2
+DifficultyReinforcements(C20Chamber3,C20Chamber3,C20Chamber3Lunatic)
+CLEAN
+FADU 0x3c
+EndEvent
+C20Seize4:
+SetBackground(VillageCG)
+Text(FillerDialogue)//the new dragons
+FADI 0x3C
+TILECHANGE 0x5
+DifficultyReinforcements(C20Chamber4,C20Chamber4,C20Chamber4Lunatic)
+CLEAN
+FADU 0x3c
+EndEvent
+C20Seize5:
+SetBackground(VillageCG)
+Text(FillerDialogue)//something something
+FADI 0x3C
+TILECHANGE 0x4
+DifficultyReinforcements(C20Chamber5,C20Chamber5,C20Chamber5Lunatic)
+CLEAN
+FADU 0x3c
+EndEvent
+
+C20Village:
+VillageEventItem(FillerDialogue, VillageCG, SpiritDust)
 
 C20SimoneBlairRecruitment:
 MUSC RecruitmentTheme

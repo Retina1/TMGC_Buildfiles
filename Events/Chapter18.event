@@ -37,7 +37,7 @@ END_MAIN
 
 ALIGN 4
 Ch18SecretShop:
-SHLI BraveSword LevinSword BraveLance BraveAxe Bolting Purge Nosferatu Unlock Talisman MasterSeal
+SHLI BraveSword LevinSword BraveLance BraveAxe BraveBow Bolting Purge Nosferatu Unlock Talisman MasterSeal
 BYTE 0x0 0x0
 
 ALIGN 4
@@ -95,6 +95,7 @@ UNIT
 C18Hard:
 UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+UNIT Bungalas LncGen 0x0 Level(10,Enemy,1) [33,1] 0x0 0x0 0x0 0x0 [Spear,Eyedrops] AttackInRangeAI
 UNIT
 
 C18VladmirAirlift:

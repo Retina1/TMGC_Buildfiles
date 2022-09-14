@@ -154,6 +154,18 @@ ALIGN 4
 StrongholdTiles:
 #incext compress "Tilesets/Stronghold.mapchip_config"
 
+ALIGN 4
+RuinsObjects:
+#incext Png2Dmp "Tilesets/Ruins.png" --lz77
+
+ALIGN 4
+RuinsPalette:
+#incext Png2Dmp "Tilesets/Ruins.png" --palette-only
+
+ALIGN 4
+RuinsTiles:
+#incext compress "Tilesets/Ruins.mapchip_config"
+
 
 ALIGN 4
 FrontierFrame1:
@@ -451,6 +463,10 @@ EventPointerTable(PALStronghold, StrongholdPalette)
 EventPointerTable(TILStronghold, StrongholdTiles)
 EventPointerTable(ANIStronghold, StrongholdAnims)
 
+EventPointerTable(OBJRuins, RuinsObjects) 
+EventPointerTable(PALRuins, RuinsPalette) 
+EventPointerTable(TILRuins, RuinsTiles) 
+//EventPointerTable(ANIRuins, RuinsAnims) later
 
 #define MinimapTileTable $A7A38
 #define TileHandler_Plain $A7B3C
@@ -485,6 +501,7 @@ EventPointerTable(ANIStronghold, StrongholdAnims)
 
 #define SetMinimapTileHandler(tileType, pointer) "PUSH; ORG MinimapTileTable+(tileType*4); POIN pointer; POP"
 
+SetMinimapTileHandler(0x0,TileHandler_Road)
 SetMinimapTileHandler(0xe,TileHandler_Road)
 SetMinimapTileHandler(0x9,TileHandler_Water)
 SetMinimapTileHandler(0x24,TileHandler_ArmoryVendor)

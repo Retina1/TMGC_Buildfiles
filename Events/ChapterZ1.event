@@ -172,30 +172,8 @@ UNIT
 ALIGN 4
 
 BeginningScene:
-RemoveUnit(Blair)
-RemoveUnit(Arin)
-RemoveUnit(Kenneth)
-RemoveUnit(Natasia)
-RemoveUnit(Stefan)
-RemoveUnit(Desmond)
-RemoveUnit(Sam)
-RemoveUnit(Josef)
-RemoveUnit(Peggy)
-RemoveUnit(Butch)
-RemoveUnit(Rachael)
-RemoveUnit(Cassius)
-RemoveUnit(Jeff)
-RemoveUnit(Emile)
-RemoveUnit(Apollo)
-RemoveUnit(Bechamel)
-RemoveUnit(Sveltzalus)
-RemoveUnit(Hilbert)
-RemoveUnit(Flynn)
-RemoveUnit(Addington)
-RemoveUnit(Mikey)
-RemoveUnit(Carbon)
-RemoveUnit(Athena)
-RemoveUnit(Charley)
+OnAllUnitState(Blair*0x100+Charley, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+OnAllUnitState(Addington, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
 LOAD1 0x1 Z1UnitsZeke
 ENUN
 MUSC NarrationTheme

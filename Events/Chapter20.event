@@ -38,20 +38,20 @@ Seize(0x1c,C20Seize3,21,19)
 Seize(0x1d,C20Seize4,26,4)
 Seize(0x1e,C20Seize5,34,21)
 Seize(13,2)
-Chest(KnightRing,14,10)
-Chest(KnightRing,28,22)
-Vendor(C20Vendor,8,23)
+DurabilityChest(SkillScroll,WrathID,14,10)
+Chest(Jormungandr,28,22)
+Vendor(C20Vendor,0,23)
 Armory(C20Armory,6,22)
 Village(0x1f,C20Village,10,24)
 END_MAIN
 
 ALIGN 4
 C20Armory:
-SHLI Wyrmslayer Dragonpike Dracoaxe Longbow Wardbow
+SHLI SteelSword SilverSword Wyrmslayer SteelLance SilverLance Dragonpike Javelin SteelAxe SilverAxe Dracoaxe HandAxe SteelBow SilverBow Longbow Wardbow
 BYTE 0x0 0x0
 ALIGN 4
 C20Vendor:
-SHLI Elfire Fimbulvetr Divine Aura Nightfall Nosferatu Fenrir Mend Physic Recover Restore Barrier Elixir PureWater
+SHLI Thunder Elfire Fimbulvetr Shine Divine Aura Nightfall Nosferatu Fenrir Mend Physic Recover Barrier Elixir PureWater
 BYTE 0x0 0x0
 
 ALIGN 4
@@ -125,28 +125,34 @@ C20Chamber2:
 UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT
 C20Chamber2Lunatic:
-UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(11,Enemy,1) [21,19] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
 UNIT
 
 C20Chamber3:
 UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT
 C20Chamber3Lunatic:
-UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Dragon FireDragon 0x0 Level(10,Enemy,1) [26,4] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
 UNIT
 
 C20Chamber4:
-UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Simulacrum DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT
 C20Chamber4Lunatic:
-UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [27,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [35,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [34,21] 0x0 0x0 0x0 0x0 [WyvernBreath] NeverMoveAI
 UNIT
 
 C20Chamber5:
-UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [27,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [35,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [34,21] 0x0 0x0 0x0 0x0 [WyvernBreath] NeverMoveAI
 UNIT
 C20Chamber5Lunatic:
-UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Simulacrum DemonDragon 0x0 Level(6,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Simulacrum DemonDragon 0x0 Level(6,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT C20Boss DivineDragon 0x0 Level(10,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT
 
 C20Simone:
@@ -222,7 +228,7 @@ FADU 0x3c
 EndEvent
 
 C20Village:
-VillageEventItem(FillerDialogue, VillageCG, SpiritDust)
+VillageEventItem(FillerDialogue, VillageCG, IronRune)
 
 C20SimoneBlairRecruitment:
 MUSC RecruitmentTheme

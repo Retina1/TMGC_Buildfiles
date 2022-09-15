@@ -31,7 +31,20 @@ END_MAIN
 LocationBasedEvents:
 Seize(17,13)
 Seize(0x11,C19RiverFlow,1,8)
+Chest(Berserk,1,1)
+Chest(Trisagion,2,0)
+Vendor(C19Vendor,4,21)
+Armory(C19Armory,2,20)
 END_MAIN
+
+ALIGN 4
+C19Armory:
+SHLI SteelSword SilverSword Zanbato Armorslayer SteelLance SilverLance Javelin Horseslayer Shatterspear SteelAxe SilverAxe HandAxe Halberd Hammer SteelBow SilverBow Longbow
+BYTE 0x0 0x0
+ALIGN 4
+C19Vendor:
+SHLI Thunder Elfire Calibur Shine Divine Pierce Nightfall Nosferatu Knoggelvi Mend Physic Barrier Yoink Elixir PureWater
+BYTE 0x0 0x0
 
 ALIGN 4
 

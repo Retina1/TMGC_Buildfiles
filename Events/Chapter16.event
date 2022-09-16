@@ -178,8 +178,10 @@ ALIGN 4
 BeginningScene:
 ENUT GuideChpt16
 MUSC NarrationTheme3
+CleanTextNoMap(HallCG,Ch16_Opening)
+CleanTextNoMap(HallCG,Ch16_Opening2)
 Narration(Map2CG,Ch16_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+LocationText(ElbaCorCastleCG,Ch16_Opening3,ElbaCorArchivesLabel)
 LoadUnitsByDifficulty(C16Easy,C16Normal,C16Hard)
 LOAD1 0x0 C16Units
 ENUN

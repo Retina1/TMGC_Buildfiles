@@ -3,7 +3,7 @@ Rout quickly and[N]
 protect books.[X]
 
 ##ElbaCorArchivesLabel
-Elba Cor: Elba Cor Archives[X]
+Elba Cor: Archives[X]
 
 ##Ch16_Opening
 [OpenMidLeft][LoadNeillstrom][OpenMidRight][LoadElcorian]
@@ -54,8 +54,8 @@ am I blind to?[A][X]
 
 ##Ch16_Opening3
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
-What's going on here? Why[N]
-is it on fire?[A][N][OpenMidLeft]
+What's going on here?[N]
+Why is it on fire?[A][N][OpenMidLeft]
 This destruction isn't from[N]
 any normal bandits[ToggleMouthMove]...[ToggleMouthMove][A][N]
 Did Holanis have the same idea as us?[A][N]
@@ -67,6 +67,15 @@ I'm sure we'll find some surviving records.[A][N][OpenMidLeft]
 Of course[ToggleMouthMove]...[ToggleMouthMove] Everyone, prepare[N]
 to face Holanis again.[A][N]
 We've got no time for doubt![A][X]
+
+##Ch16_Ending
+[OpenLeft][LoadBlair][OpenFarLeft][LoadZeke]
+That's the last of them.[N]
+Is everyone alright?[A][N][OpenMidRight][LoadArchivist]
+Ah[ToggleMouthMove]...[ToggleMouthMove] Would you two happen[N]
+to be the saviors?[A][N]
+What, pray tell, are you looking for?[A][X]
+//explain holanian goose chase
 
 ##_Ch16SysText
 Over time, books will emerge[N]

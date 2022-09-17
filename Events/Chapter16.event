@@ -173,15 +173,42 @@ C16Books43:
 UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [2,2] 0x0 0x0 0x1 REDA3R2 [0x0] GreenStationaryAI
 UNIT
 
+C16OpeningUnits:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [15,3] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [17,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Elcorian Valk 0x0 Level(1,NPC,0) [16,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt16
-MUSC NarrationTheme3
 CleanTextNoMap(HallCG,Ch16_Opening)
+LOMA Chapter15
+LOAD1 0x0 C16OpeningUnits
+ENUN
+CAM1 Elcorian
+FADU 0xc
+STAL 0x30
+MOVE 10 Elcorian [15,4]
+ENUN
+STAL 0x30
+MOVE 10 Elcorian [17,4]
+ENUN
+STAL 0x20
+MOVE 10 Elcorian [16,0]
+ENUN
+DISA_IF Elcorian
+DISA Elcorian
+ENUN
 CleanTextNoMap(HallCG,Ch16_Opening2)
+CLEE 0
+CLEN 0
+CLEA 0
+LOMA Chapter16
+MUSC NarrationTheme3
 Narration(Map2CG,Ch16_Narration)
-LocationText(ElbaCorCastleCG,Ch16_Opening3,ElbaCorArchivesLabel)
+LocationText(ElbaCorCastleCG,Ch16_Opening3,ElbaCorArchivesLabel,S_Crisis)
 LoadUnitsByDifficulty(C16Easy,C16Normal,C16Hard)
 LOAD1 0x0 C16Units
 ENUN
@@ -191,7 +218,7 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(HallCG,Ch16_Ending)
 CHECK_EVENTID 0x1c //1c on- 3 dead
 BNE 0x1 0xc 0x0
 //best reward

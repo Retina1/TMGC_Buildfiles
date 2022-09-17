@@ -36,6 +36,15 @@ KennethMug:
 setMugEntry(0x7,KennethMug,3,5,3,3)
 
 ALIGN 4
+NatasiaMug:
+#incext PortraitFormatter "Natasia.png"
+setMugEntry(0x9,NatasiaMug,3,5,3,3)
+ALIGN 4
+NatasiaPromoMug:
+#incext PortraitFormatter "NatasiaPromo.png"
+setMugEntry(0x10b,NatasiaPromoMug,3,5,3,3)
+
+ALIGN 4
 StefanMug:
 #incext PortraitFormatter "Stefan.png"
 setMugEntry(0x6,StefanMug,2,5,3,3)
@@ -76,11 +85,6 @@ ALIGN 4
 JosefPromoMug:
 #incext PortraitFormatter "JosefPromo.png"
 setMugEntry(0x107,JosefPromoMug,3,5,3,3)
-
-ALIGN 4
-NatasiaMug:
-#incext PortraitFormatter "Natasia.png"
-setMugEntry(0x9,NatasiaMug,3,5,3,3)
 
 ALIGN 4
 PeggyMug:
@@ -594,6 +598,11 @@ ALIGN 4
 TonnaminMug:
 #incext PortraitFormatter "Tonnamin.png"
 setMugEntry(0x1fe,TonnaminMug,3,5,3,3)
+
+ALIGN 4
+ArchivistMug:
+#incext PortraitFormatter "Archivist.png"
+setMugEntry(0xe5,ArchivistMug,3,6,3,4)
 
 
 

@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(FrontierJusticeIcon)
+#incbin "Bows/FrontierJustice.dmp"
+ALIGN 4
 ItemIconEntry(BarrierBowIcon)
 #incbin "Bows/BarrierBow.dmp"
 ALIGN 4

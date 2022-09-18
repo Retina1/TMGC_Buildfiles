@@ -87,7 +87,6 @@ BYTE 00 00
 ALIGN 4
 CarbonSkillList:
 BYTE 15 PerfectionistID
-BYTE 21 CantoPlusID
 BYTE 00 00
 ALIGN 4
 AthenaSkillList:
@@ -137,9 +136,11 @@ BYTE 12 GrislyWoundID
 BYTE 00 00
 ALIGN 4
 YuyuSkillList:
+BYTE 20 DoubleLionID
 BYTE 00 00
 ALIGN 4
 ArtemisSkillList:
+BYTE 24 SwapID
 BYTE 00 00
 ALIGN 4
 HollandaiseSkillList:
@@ -153,6 +154,7 @@ HoratioSkillList:
 BYTE 00 00
 ALIGN 4
 SimoneSkillList:
+BYTE 24 FocusedGoalID
 BYTE 00 00
 ALIGN 4
 

@@ -148,8 +148,11 @@ C16Books1:
 UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [8,8] 0x0 0x0 0x1 REDA8R9 [0x0] GreenStationaryAI
 UNIT
 
-C16Books2:
+C16Books21:
 UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [2,5] 0x0 0x0 0x1 REDA2R6 [0x0] GreenStationaryAI
+UNIT
+C16Books22:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [9,12] 0x0 0x0 0x1 REDA10R12 [0x0] GreenStationaryAI
 UNIT
 
 
@@ -171,6 +174,9 @@ UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [3,9] 0x0 0x0 0x1 REDA3R10 [0x0] GreenStationa
 UNIT
 C16Books43:
 UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [2,2] 0x0 0x0 0x1 REDA3R2 [0x0] GreenStationaryAI
+UNIT
+C16Books44:
+UNIT 0xd3 0x7c 0x0 Level(1,NPC,1) [5,12] 0x0 0x0 0x1 REDA6R12 [0x0] GreenStationaryAI
 UNIT
 
 C16OpeningUnits:
@@ -222,7 +228,7 @@ CleanTextNoMap(HallCG,Ch16_Ending)
 CHECK_EVENTID 0x1c //1c on- 3 dead
 BNE 0x1 0xc 0x0
 //best reward
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Best)
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
 GiveItem(Galewind,Blair)
@@ -232,17 +238,17 @@ LABEL 0x1
 CHECK_EVENTID 0x1d //1e on- 4 dead
 BNE 0x2 0xc 0x0
 //good reward
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Good)
 REMA
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
 GiveItem(Galewind,Blair)
 GOTO 0x6
 LABEL 0x2
-CHECK_EVENTID 0x1f //21 on- 6 dead
+CHECK_EVENTID 0x1f //20 on- 6 dead
 BNE 0x3 0xc 0x0
 //eh reward
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Eh)
 REMA
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
@@ -251,7 +257,7 @@ LABEL 0x3
 CHECK_EVENTID 0x22 //23 on- 8 dead
 BNE 0x4 0xc 0x0
 //bad reward
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Bad)
 REMA
 GiveMoney(0x1f4)
 GOTO 0x6
@@ -259,13 +265,13 @@ LABEL 0x4
 CHECK_EVENTID 0x24 //24 on- they're all dead
 BNE 0x5 0xc 0x0
 //you sure tried
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_YouTried)
 REMA
 GiveMoney(0x5)
 GOTO 0x6
 LABEL 0x5
 //how the fuck did you do this poorly
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_HowDidYouDoThisBad)
 REMA
 GiveMoney(0x1)
 LABEL 0x6
@@ -280,7 +286,8 @@ C16BookScatter1:
 Reinforcements(C16Books1)
 EndEvent
 C16BookScatter2:
-Reinforcements(C16Books2)
+Reinforcements(C16Books21)
+Reinforcements(C16Books22)
 EndEvent
 C16BookScatter3:
 Reinforcements(C16Books31)
@@ -291,14 +298,15 @@ C16BookScatter4:
 Reinforcements(C16Books41)
 Reinforcements(C16Books42)
 Reinforcements(C16Books43)
+Reinforcements(C16Books44)
 EndEvent
 
 C16Village:
-VillageEventItem(FillerDialogue, HouseCG, Cloudburst)
+VillageEventItem(C16VillageText1, HouseCG, Cloudburst)
 C16Village2:
-VillageEventItem(FillerDialogue, HouseCG, Hammerne)
+VillageEventItem(C16VillageText2, HouseCG, Hammerne)
 C16Village3:
-VillageEventItem(FillerDialogue, HouseCG, MasterSeal)
+VillageEventItem(C16VillageText3, HouseCG, MasterSeal)
 
 C16BlairArtemisRecruitment:
 MUSC RecruitmentTheme

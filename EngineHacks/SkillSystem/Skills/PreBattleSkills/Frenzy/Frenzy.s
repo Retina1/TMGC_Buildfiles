@@ -12,8 +12,8 @@ beq   NoAddAtk
 ldrb  r0,[r4,#0x12] @attacker max hp
 ldrb  r1,[r4,#0x13] @attacker current hp
 sub   r0,r1
-lsr   r0,#0x2     @missing hp/4
-mov   r2,#0x5A
+lsl   r0,#0x1     @missing hp*2
+mov   r2,#0x66
 ldrh  r1,[r4,r2]
 add   r1,r0,r1
 strh  r1,[r4,r2]

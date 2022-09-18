@@ -47,9 +47,15 @@ WORD DeadeyeID
 
 ALIGN 4
 DefiantAvo:
-#incbin "DefiantAvo/DefiantAvo.dmp"
+#incbin "DefiantAvo/FocusedGoal.dmp"
 POIN SkillTester
 WORD DefiantAvoID
+POIN FocusedGoalChapters
+// Ends on 0x4f as 0x0 is the prologue and 0x4f is last chapter in list
+ALIGN 4
+FocusedGoalChapters:
+BYTE Prologue Chapter2 Chapter3 Chapter5 Chapter6 Chapter7 Chapter9 Chapter11 Chapter12 Chapter13 Chapter14 Chapter17 Chapter19 Chapter20 ChapterV2 ChapterV3 Chapter23 Chapter25 Chapter27 Chapter28 Endgame 0x4f
+
 
 ALIGN 4
 DefiantCrit:

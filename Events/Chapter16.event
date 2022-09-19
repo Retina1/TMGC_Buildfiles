@@ -22,6 +22,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C16Turn1,1)
+TurnEventPlayer(0x0,C16Turn2,2)
 TurnEventPlayer(0x0,C16BookScatter1,3)
 TurnEventPlayer(0x0,C16BookScatter2,6)
 TurnEventPlayer(0x0,C16BookScatter3,9)
@@ -33,6 +34,13 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 CharacterBasedEvents:
 CharacterEvent(0xa,C16BlairArtemisRecruitment,Blair,Artemis)
 CharacterEvent(0xa,C16ZekeArtemisRecruitment,Zeke,Artemis)
+CharacterEventBothWays(0x10,C16PeggyAthenaSupport,Peggy,Athena)
+CharacterEventBothWays(0x11,C16FlynnSveltzalusSupport,Flynn,Sveltzalus)
+CharacterEventBothWays(0x12,C16ToddsworthSveltzalusSupport,Toddsworth,Sveltzalus)
+CharacterEventBothWays(0x13,C16CassiusHyperiusSupport,Cassius,Hyperius)
+CharacterEventBothWays(0x14,C16ArinSveltzalusSupport,Arin,Sveltzalus)
+CharacterEventBothWays(0x15,C16EmileHilbertSupport,Emile,Hilbert)
+CharacterEventBothWays(0x16,C16SamJosefSupport,Sam,Josef)
 END_MAIN
 
 LocationBasedEvents:
@@ -89,11 +97,88 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,21] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C16Easy:
-UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [27,8] 0x0 0x0 0x0 0x0 [HandAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [15,22] 0x0 0x0 0x0 0x0 [HandAxe] BrigandAI
+UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT LootHolanis DarkM 0x0 Level(19,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [Nosferatu,MiniGem] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Holanis Sage 0x0 Level(2,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT Holanis Sniper 0x0 Level(2,Enemy,1) [6,6] DropItem 0x0 0x0 0x0 [SteelBow,AngelicRobe] AttackInRangeAI
+UNIT Holanis Halberdier 0x0 Level(2,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Horseslayer] GroupFivePaceAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [4,11] 0x0 0x0 0x0 0x0 [Zanbato] GroupFivePaceAI
+UNIT Holanis AxeCav 0x0 Level(18,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Holanis SwdCav 0x0 Level(18,Enemy,1) [16,18] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis LncCav 0x0 Level(18,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Holanis DarkM 0x0 Level(18,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [Nightfall] NoAI
+UNIT Holanis Mage 0x0 Level(18,Enemy,1) [2,20] 0x0 0x0 0x0 0x0 [Thunder] GroupSixAI
+UNIT LootHolanis Sorc 0x0 Level(2,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [Nightfall,Elixir] GroupSixAI
+UNIT Holanis MageF 0x0 Level(18,Enemy,1) [2,22] 0x0 0x0 0x0 0x0 [Thunder] GroupSixAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [HandAxe] GroupFourAI
+UNIT Holanis Merc 0x0 Level(18,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [Lancereaver] GroupFourAI
+UNIT Holanis Soldier 0x0 Level(18,Enemy,1) [11,22] 0x0 0x0 0x0 0x0 [Axereaver] GroupFourAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [8,0] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
+UNIT Holanis Halberdier 0x0 Level(2,Enemy,1) [9,0] DropItem 0x0 0x0 0x0 [SteelLance,MasterSeal] DelayedAI
+UNIT Holanis Warrior 0x0 Level(2,Enemy,1) [10,0] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Holanis BowCav 0x0 Level(18,Enemy,1) [23,0] 0x0 0x0 0x0 0x0 [SteelBow] GroupThreeAI
+UNIT Holanis SwdCav 0x0 Level(18,Enemy,1) [25,0] 0x0 0x0 0x0 0x0 [SteelSword] GroupThreeAI
+UNIT Holanis Mage 0x0 Level(18,Enemy,1) [21,11] 0x0 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT LootHolanis Fighter 0x0 Level(18,Enemy,1) [22,10] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] AttackInRangeAI
+UNIT Holanis BowCavF 0x0 Level(18,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
+UNIT Holanis SwdCavF 0x0 Level(18,Enemy,1) [19,4] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
+UNIT Holanis MercF 0x0 Level(18,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [SilverSword] GroupOnePaceAI
+UNIT Artemis AxePalF 0x0 Level(4,Enemy,0) [18,5] 0x0 0x0 0x0 0x0 [SilverAxe,SteelBow,Vulnerary] GroupOneAI
+UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [6,16] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Holanis Mage 0x0 Level(18,Enemy,1) [7,15] 0x0 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT Holanis Merc 0x0 Level(18,Enemy,1) [8,15] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(3,Enemy,1) [11,19] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
+UNIT Dragon DemonDragon 0x0 Level(3,Enemy,1) [23,9] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Dragon FireDragon 0x0 Level(5,Enemy,1) [3,1] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
+UNIT Nicole SwMastF 0x0 Level(4,Enemy,1) [4,1] DropItem 0x0 0x0 0x0 [SilverSword,LightBrand,MasterSeal] NeverMoveAI
 UNIT
 
 C16Normal:
-UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [27,8] 0x0 0x0 0x0 0x0 [HandAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [15,22] 0x0 0x0 0x0 0x0 [HandAxe] BrigandAI
+UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT LootHolanis Sorc 0x0 Level(2,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [Nosferatu,MiniGem] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Holanis Sage 0x0 Level(2,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Holanis Sniper 0x0 Level(2,Enemy,1) [6,6] DropItem 0x0 0x0 0x0 [SteelBow,AngelicRobe] AttackInRangeAI
+UNIT Holanis Halberdier 0x0 Level(2,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Horseslayer,Axebuster] GroupFivePaceAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [4,11] 0x0 0x0 0x0 0x0 [Zanbato,Wyrmslayer] GroupFivePaceAI
+UNIT Holanis AxeCav 0x0 Level(18,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Holanis SwdCav 0x0 Level(18,Enemy,1) [16,18] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis LncCav 0x0 Level(18,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Holanis DarkM 0x0 Level(18,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [Nightfall] NoAI
+UNIT Holanis Mage 0x0 Level(18,Enemy,1) [2,20] 0x0 0x0 0x0 0x0 [Thunder] GroupSixAI
+UNIT LootHolanis Sorc 0x0 Level(2,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [Nightfall,Elixir] GroupSixAI
+UNIT Holanis MageF 0x0 Level(18,Enemy,1) [2,22] 0x0 0x0 0x0 0x0 [Elfire] GroupSixAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [HandAxe,Swordslayer] GroupFourAI
+UNIT Holanis Merc 0x0 Level(18,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [Lancesnapper] GroupFourAI
+UNIT Holanis Soldier 0x0 Level(18,Enemy,1) [11,22] 0x0 0x0 0x0 0x0 [Axebuster] GroupFourAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [8,0] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
+UNIT Holanis Halberdier 0x0 Level(2,Enemy,1) [9,0] DropItem 0x0 0x0 0x0 [SteelLance,MasterSeal] DelayedAI
+UNIT Holanis Warrior 0x0 Level(2,Enemy,1) [10,0] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Holanis BowCav 0x0 Level(18,Enemy,1) [23,0] 0x0 0x0 0x0 0x0 [SteelBow] GroupThreeAI
+UNIT Holanis SwdCav 0x0 Level(18,Enemy,1) [25,0] 0x0 0x0 0x0 0x0 [SilverSword] GroupThreeAI
+UNIT Holanis Mage 0x0 Level(18,Enemy,1) [21,11] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT LootHolanis Fighter 0x0 Level(18,Enemy,1) [22,10] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] AttackInRangeAI
+UNIT Holanis SwdPeg 0x0 Level(18,Enemy,1) [18,9] 0x0 0x0 0x0 0x0 [SteelSword] GroupTwoAI
+UNIT Holanis LncPeg 0x0 Level(18,Enemy,1) [22,5] 0x0 0x0 0x0 0x0 [SteelLance] GroupTwoAI
+UNIT Holanis BowCavF 0x0 Level(18,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [SilverBow] GroupOneAI
+UNIT Holanis SwdCavF 0x0 Level(18,Enemy,1) [19,4] 0x0 0x0 0x0 0x0 [SilverSword] GroupOneAI
+UNIT Holanis MercF 0x0 Level(18,Enemy,1) [19,6] 0x0 0x0 0x0 0x0 [SilverSword] GroupOnePaceAI
+UNIT Artemis AxePalF 0x0 Level(4,Enemy,0) [18,5] 0x0 0x0 0x0 0x0 [SilverAxe,SteelBow,Vulnerary] GroupOneAI
+UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [6,16] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Holanis Mage 0x0 Level(18,Enemy,1) [7,15] 0x0 0x0 0x0 0x0 [Thunder] AttackInRangeAI
+UNIT Holanis Merc 0x0 Level(18,Enemy,1) [8,15] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(3,Enemy,1) [11,19] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
+UNIT Dragon DemonDragon 0x0 Level(3,Enemy,1) [23,9] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Dragon FireDragon 0x0 Level(5,Enemy,1) [3,1] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
+UNIT Nicole SwMastF 0x0 Level(4,Enemy,1) [4,1] DropItem 0x0 0x0 0x0 [SilverSword,FlameSword,MasterSeal] NeverMoveAI
 UNIT
 
 C16Hard:
@@ -114,7 +199,7 @@ UNIT Holanis SwdCav 0x0 Level(18,Enemy,1) [16,18] 0x0 0x0 0x0 0x0 [SilverSword] 
 UNIT Holanis LncCav 0x0 Level(18,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Holanis DarkM 0x0 Level(18,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [Nightfall] NoAI
 UNIT Holanis Mage 0x0 Level(18,Enemy,1) [2,20] 0x0 0x0 0x0 0x0 [Calibur] GroupSixAI
-UNIT Holanis Sorc 0x0 Level(2,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [Freikugel] GroupSixAI
+UNIT LootHolanis Sorc 0x0 Level(2,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [Freikugel,Elixir] GroupSixAI
 UNIT Holanis MageF 0x0 Level(18,Enemy,1) [2,22] 0x0 0x0 0x0 0x0 [Elfire] GroupSixAI
 UNIT Holanis Hero 0x0 Level(2,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [HandAxe,Swordslayer] GroupFourAI
 UNIT Holanis Merc 0x0 Level(18,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [Lancesnapper] GroupFourAI
@@ -126,7 +211,7 @@ UNIT Holanis BowCav 0x0 Level(18,Enemy,1) [23,0] 0x0 0x0 0x0 0x0 [SteelBow] Grou
 UNIT Holanis LncCav 0x0 Level(18,Enemy,1) [24,0] 0x0 0x0 0x0 0x0 [Shatterspear] GroupThreeAI
 UNIT Holanis SwdCav 0x0 Level(18,Enemy,1) [25,0] 0x0 0x0 0x0 0x0 [SilverSword] GroupThreeAI
 UNIT Holanis Mage 0x0 Level(18,Enemy,1) [21,11] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
-UNIT Holanis Fighter 0x0 Level(18,Enemy,1) [22,10] 0x0 0x0 0x0 0x0 [HandAxe] AttackInRangeAI
+UNIT LootHolanis Fighter 0x0 Level(18,Enemy,1) [22,10] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] AttackInRangeAI
 UNIT Holanis SwdPeg 0x0 Level(18,Enemy,1) [18,9] 0x0 0x0 0x0 0x0 [SilverSword] GroupTwoAI
 UNIT Holanis LncPeg 0x0 Level(18,Enemy,1) [22,5] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
 UNIT Holanis BowPalF 0x0 Level(2,Enemy,1) [17,4] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
@@ -187,6 +272,35 @@ UNIT
 
 ALIGN 4
 
+C16PeggyAthenaSupport:
+Text(PeggyAthenaCSupport)
+SetSupport(Peggy,Athena,CSupport,1)
+EndEvent
+C16FlynnSveltzalusSupport:
+Text(FlynnSveltzalusCSupport)
+SetSupport(Flynn,Sveltzalus,CSupport,1)
+EndEvent
+C16ToddsworthSveltzalusSupport:
+Text(ToddsworthSveltzalusCSupport)
+SetSupport(Toddsworth,Sveltzalus,CSupport,1)
+EndEvent
+C16CassiusHyperiusSupport:
+Text(CassiusHyperiusCSupport)
+SetSupport(Cassius,Hyperius,CSupport,1)
+EndEvent
+C16ArinSveltzalusSupport:
+Text(ArinSveltzalusCPSupport)
+SetSupport(Arin,Sveltzalus,CPSupport,1)
+EndEvent
+C16EmileHilbertSupport:
+Text(EmileHilbertCPSupport)
+SetSupport(Emile,Hilbert,CPSupport,1)
+EndEvent
+C16SamJosefSupport:
+Text(SamJosefBSupport)
+SetSupport(Sam,Josef,BSupport,1)
+EndEvent
+
 BeginningScene:
 ENUT GuideChpt16
 CleanTextNoMap(HallCG,Ch16_Opening)
@@ -218,6 +332,9 @@ LocationText(ElbaCorCastleCG,Ch16_Opening3,ElbaCorArchivesLabel,S_Crisis)
 LoadUnitsByDifficulty(C16Easy,C16Normal,C16Hard)
 LOAD1 0x0 C16Units
 ENUN
+SupportFlagOn(Arin,Sveltzalus,0x14,CSupport)
+SupportFlagOn(Emile,Hilbert,0x15,CSupport)
+SupportFlagOn(Sam,Josef,0x16,CPSupport)
 GotoPrepScreen
 ENDA
 
@@ -229,6 +346,8 @@ CHECK_EVENTID 0x1c //1c on- 3 dead
 BNE 0x1 0xc 0x0
 //best reward
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Best)
+REMA
+SetBackground(BlankCG)
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
 GiveItem(Galewind,Blair)
@@ -240,6 +359,7 @@ BNE 0x2 0xc 0x0
 //good reward
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Good)
 REMA
+SetBackground(BlankCG)
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
 GiveItem(Galewind,Blair)
@@ -250,6 +370,7 @@ BNE 0x3 0xc 0x0
 //eh reward
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Eh)
 REMA
+SetBackground(BlankCG)
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
 GOTO 0x6
@@ -259,6 +380,7 @@ BNE 0x4 0xc 0x0
 //bad reward
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Bad)
 REMA
+SetBackground(BlankCG)
 GiveMoney(0x1f4)
 GOTO 0x6
 LABEL 0x4
@@ -267,12 +389,14 @@ BNE 0x5 0xc 0x0
 //you sure tried
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_YouTried)
 REMA
+SetBackground(BlankCG)
 GiveMoney(0x5)
 GOTO 0x6
 LABEL 0x5
 //how the fuck did you do this poorly
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_HowDidYouDoThisBad)
 REMA
+SetBackground(BlankCG)
 GiveMoney(0x1)
 LABEL 0x6
 MoveToChapter(Chapter17)
@@ -280,6 +404,17 @@ ENDA
 
 C16Turn1:
 SystemText(_Ch16SysText)
+EndEvent
+
+C16Turn2:
+CHECK_ALIVE Artemis
+BEQ 0x1 0xc 0x0
+CHECK_ALLEGIANCE Artemis
+BEQ 0x1 0xc 0x0
+CAM1 Artemis
+FlashCursor(Artemis,60)
+Text(C16_ArtemisSpeaks)
+LABEL 0x1
 EndEvent
 
 C16BookScatter1:
@@ -310,18 +445,18 @@ VillageEventItem(C16VillageText3, HouseCG, MasterSeal)
 
 C16BlairArtemisRecruitment:
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(C16_ArtemisBlairTalk)
 TurnAlly(Artemis)
 EndEvent
 
 C16ZekeArtemisRecruitment:
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(C16_ArtemisZekeTalk)
 TurnAlly(Artemis)
 EndEvent
 
 C16OutOfTime:
-Text(FillerDialogue)
+Text(C16_GameOver)
 CALL 0x592104
 EndEvent
 

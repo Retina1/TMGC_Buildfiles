@@ -24,10 +24,9 @@ BlairPromoMug:
 setMugEntry(0xd4,BlairPromoMug,3,6,3,4)
 
 ALIGN 4
-//ArinMug:
-//#incext PortraitFormatter "Arin.png"
 ArinMug:
-#incext PortraitFormatter "NewArin.png"
+#incext PortraitFormatter "Arin.png"
+//#incext PortraitFormatter "NewArin.png" new arin 3,6,3,4
 setMugEntry(0x4,ArinMug,3,6,3,4)
 
 ALIGN 4
@@ -89,7 +88,11 @@ setMugEntry(0x107,JosefPromoMug,3,5,3,3)
 ALIGN 4
 PeggyMug:
 #incext PortraitFormatter "Peggy.png"
-setMugEntry(0xc,PeggyMug,3,6,3,4)
+setMugEntry(0xc,PeggyMug,3,5,3,3)
+ALIGN 4
+PeggyPromoMug:
+#incext PortraitFormatter "PeggyPromo.png"
+setMugEntry(0x10d,PeggyPromoMug,3,5,3,3)
 
 ALIGN 4
 ButchMug:

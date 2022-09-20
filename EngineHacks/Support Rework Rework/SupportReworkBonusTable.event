@@ -44,7 +44,7 @@
 			support(ASupport,3,3,25,0,0,30)
 		entry(Blair,Zeke)
 			support(CSupport,1,0,5,0,0,0)//c15
-			support(CPSupport,2,0,5,0,0,5)
+			support(CPSupport,2,0,5,0,0,5)//c17
 			support(BSupport,2,0,10,0,0,5)
 			support(BPSupport,2,0,20,0,0,10)
 			support(ASupport,3,0,25,0,0,15)
@@ -64,7 +64,7 @@
 		entry(Arin,Desmond)
 			support(CSupport,0,0,10,0,0,0)//c4
 			support(CPSupport,0,0,20,0,0,0)//c9
-			support(BSupport,0,0,30,0,0,0)
+			support(BSupport,0,0,30,0,0,0)//c17
 			support(BPSupport,0,0,40,0,0,0)
 			support(ASupport,0,0,50,0,0,0)
 		entry(Arin,Sam)
@@ -79,17 +79,23 @@
 			support(BSupport,0,0,20,0,0,10)
 			support(BPSupport,0,0,25,10,0,10)
 			support(ASupport,0,0,30,20,0,10)
+		entry(Arin,Yuyu)
+			support(CSupport,1,0,0,0,0,0)//c17 battle
+			support(CPSupport,2,0,0,0,0,0)
+			support(BSupport,2,0,20,0,0,0)
+			support(BPSupport,2,0,25,20,0,0)
+			support(ASupport,2,0,40,40,0,0)
 	//kenneth (blair)
 		entry(Kenneth,Natasia)
 			support(CSupport,0,0,5,5,0,0)//c3
 			support(CPSupport,0,0,10,5,5,0)//c8
-			support(BSupport,0,0,15,10,10,0)
+			support(BSupport,0,0,15,10,10,0)//c17 in map
 			support(BPSupport,0,0,20,10,10,5)
 			support(ASupport,0,0,25,15,15,10)
 		entry(Kenneth,Stefan)
 			support(CSupport,0,0,0,5,0,5)//c5
 			support(CPSupport,0,0,5,5,5,5)//c9
-			support(BSupport,0,0,10,10,5,5)
+			support(BSupport,0,0,10,10,5,5)//c17
 			support(BPSupport,0,0,10,10,10,10)
 			support(ASupport,0,0,15,15,15,15)
 		entry(Kenneth,Hilbert)
@@ -115,7 +121,7 @@
 		entry(Stefan,Desmond)
 			support(CSupport,0,0,5,5,0,0)//c8
 			support(CPSupport,0,1,5,5,0,0)//c10
-			support(BSupport,0,1,10,10,0,0)
+			support(BSupport,0,1,10,10,0,0)//c17 in map
 			support(BPSupport,0,0,0,0,0,0)
 			support(ASupport,0,2,20,15,0,0)
 		entry(Stefan,Josef)
@@ -171,7 +177,7 @@
 	//josef (stefan, sam)
 		entry(Josef,Hilbert)
 			support(CSupport,0,1,0,0,0,0)//c13
-			support(CPSupport,0,2,0,0,0,0)
+			support(CPSupport,0,2,0,0,0,0)//c17 battle
 			support(BSupport,0,3,0,0,0,0)
 			support(BPSupport,0,4,0,0,0,0)
 			support(ASupport,0,5,0,0,0,0)
@@ -190,7 +196,7 @@
 			support(ASupport,3,0,15,0,15,0)
 		entry(Peggy,Apollo)
 			support(CSupport,0,1,0,0,0,0)//c11
-			support(CPSupport,1,1,0,0,0,0)
+			support(CPSupport,1,1,0,0,0,0)//c17
 			support(BSupport,1,2,0,0,0,0)
 			support(BPSupport,2,2,0,0,0,0)
 			support(ASupport,2,2,10,0,0,15)
@@ -292,7 +298,7 @@
 			support(ASupport,0,4,20,0,0,15)
 		entry(Apollo,Flynn)
 			support(CSupport,1,0,0,0,0,5)//c13
-			support(CPSupport,1,0,5,0,0,10)
+			support(CPSupport,1,0,5,0,0,10)//c17 battle
 			support(BSupport,2,0,15,0,0,10)
 			support(BPSupport,2,0,25,0,0,10)
 			support(ASupport,3,1,25,0,0,10)
@@ -344,14 +350,14 @@
 		entry(Zeke,Hyperius)
 			support(CSupport,0,0,10,0,0,5)//z1
 			support(CPSupport,0,0,15,0,0,5)//z3
-			support(BSupport,0,0,20,10,0,5)
+			support(BSupport,0,0,20,10,0,5)//c17 battle
 			support(BPSupport,0,0,25,15,0,10)
 			support(ASupport,1,0,25,20,0,15)
 	//hyperius (rachael, cassius, zeke)
 		entry(Hyperius,Alexis)
 			support(CSupport,0,0,5,0,0,5)//base
 			support(CPSupport,0,0,10,0,0,10)//z3
-			support(BSupport,0,1,15,0,0,10)
+			support(BSupport,0,1,15,0,0,10)//c17 battle
 			support(BPSupport,1,1,15,0,0,15)
 			support(ASupport,1,2,20,0,0,15)
 		entry(Hyperius,Leila)
@@ -377,7 +383,7 @@
 	//damien (leila)
 		entry(Damien,Zacharias)
 			support(CSupport,1,0,0,0,0,0)//base
-			support(CPSupport,1,0,10,0,0,0)
+			support(CPSupport,1,0,10,0,0,0)//c17 base
 			support(BSupport,2,0,10,0,0,0)
 			support(BPSupport,2,0,15,0,0,5)
 			support(ASupport,2,0,25,0,0,10)
@@ -390,7 +396,7 @@
 			support(BPSupport,2,1,10,15,0,0)
 			support(ASupport,2,1,15,25,0,0)
 	//toddsworth (sveltzalus, avan)
-	//yuyu
+	//yuyu (blair, arin)
 	//artemis
 	//hollandaise (bechamel)
 	//vladmir (apollo)

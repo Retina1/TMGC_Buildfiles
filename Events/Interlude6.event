@@ -38,7 +38,7 @@ CharacterEvent(0x10,I6ArinTalk,Blair,Butch)
 CharacterEvent(0x11,I6ArinTalk,Blair,Cassius)
 CharacterEvent(0x12,I6ArinTalk,Blair,Rachael)
 CharacterEvent(0x13,I6ArinTalk,Blair,Jeff)
-CharacterEvent(0x14,I6ArinTalk,Blair,Emile)
+CharacterEvent(0x14,I6EmileTalk,Blair,Emile)
 CharacterEvent(0x15,I6ArinTalk,Blair,Apollo)
 CharacterEvent(0x16,I6ArinTalk,Blair,Bechamel)
 CharacterEvent(0x17,I6ArinTalk,Blair,Sveltzalus)
@@ -134,8 +134,49 @@ UNIT
 
 ALIGN 4
 
+//make someone give a live to serve scroll
+//emile gets to choose between S anima, C light, D dark, and A staves
+//he also gets a tome of the chosen type
+
+
 I6ArinTalk:
 Text(I6ArinConvo)
+EndEvent
+
+I6EmileTalk:
+EVBIT_MODIFY 3
+Text(I6EmileConvo)
+REMA
+ASMC prCallEmileMenu+1
+BNE 0x10 0xc 0x0
+Text(I6EmileConvoAnima)
+SystemText(I6EmileAnima)
+SetUnitStatus(Emile,AnimaExp,251)
+GiveItem(Fimbulvetr,Emile)
+GOTO 0x19
+LABEL 0x10
+SVAL 0x1 0x1
+BNE 0x11 0xc 0x1
+Text(I6EmileConvoLight)
+SystemText(I6EmileLight)
+SetUnitStatus(Emile,LightExp,71)
+GiveItem(Divine,Emile)
+GOTO 0x19
+LABEL 0x11
+SVAL 0x1 0x2
+BNE 0x12 0xc 0x1
+Text(I6EmileConvoDark)
+SystemText(I6EmileDark)
+SetUnitStatus(Emile,DarkExp,31)
+GiveItem(Flux,Emile)
+GOTO 0x19
+LABEL 0x12
+Text(I6EmileConvoStaves)
+SystemText(I6EmileStaves)
+GiveItem(Physic,Emile)
+GiveItem(Yoink,Emile)
+GiveItem(Silence,Emile)
+LABEL 0x19
 EndEvent
 
 I6PeggyTalk:

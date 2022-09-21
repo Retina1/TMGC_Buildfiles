@@ -84,15 +84,15 @@ UNIT Lowlands Bruiser 0x0 Level(19,Enemy,1) [4,7] 0x0 0x0 0x0 0x0 [Runesword,Rap
 UNIT Lowlands Bruiser 0x0 Level(19,Enemy,1) [4,18] 0x0 0x0 0x0 0x0 [SilverSword] GroupSixAI
 UNIT Lowlands Hunter 0x0 Level(19,Enemy,1) [1,18] 0x0 0x0 0x0 0x0 [Longbow] GroupSixAI
 UNIT Lowlands SwdPal 0x0 Level(2,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [BraveSword] GroupSixAI
-UNIT Lowlands SwdPal 0x0 Level(2,Enemy,1) [15,18] 0x0 0x0 0x0 0x0 [BraveSword] GroupSevenAI
-UNIT Lowlands SwdPal 0x0 Level(2,Enemy,1) [19,20] 0x0 0x0 0x0 0x0 [BraveSword] GroupSevenAI
-UNIT Lowlands SwdPal 0x0 Level(2,Enemy,1) [17,21] 0x0 0x0 0x0 0x0 [BraveSword] GroupSevenAI
-UNIT Lowlands SwdPal 0x0 Level(2,Enemy,1) [8,25] 0x0 0x0 0x0 0x0 [BraveSword] GroupEightAI
-UNIT Lowlands SwdPal 0x0 Level(2,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [BraveSword] GroupEightAI
-UNIT Lowlands SwdPal 0x0 Level(2,Enemy,1) [13,26] 0x0 0x0 0x0 0x0 [BraveSword] GroupEightAI
+UNIT Lowlands Bruiser 0x0 Level(20,Enemy,1) [15,18] 0x0 0x0 0x0 0x0 [SilverSword] GroupSevenAI
+UNIT Lowlands SniperF 0x0 Level(2,Enemy,1) [19,20] 0x0 0x0 0x0 0x0 [SilverBow] GroupSevenAI
+UNIT Lowlands AxePal 0x0 Level(2,Enemy,1) [17,21] 0x0 0x0 0x0 0x0 [BraveAxe] GroupSevenAI
+UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [8,25] 0x0 0x0 0x0 0x0 [SilverLance] GroupEightAI//change
+UNIT Lowlands Hero 0x0 Level(2,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [Armorslayer,Zanbato] GroupEightAI//change
+UNIT Lowlands LncPal 0x0 Level(2,Enemy,1) [13,26] 0x0 0x0 0x0 0x0 [BraveLance] GroupEightAI//change
 UNIT Lowlands BowCav 0x0 Level(19,Enemy,1) [11,8] 0x0 0x0 0x0 0x0 [SilverBow] GroupFourAI
 UNIT Lowlands BowCav 0x0 Level(19,Enemy,1) [12,7] 0x0 0x0 0x0 0x0 [SilverBow] GroupFourAI
-UNIT Lowlands SwdPal 0x0 Level(2,Enemy,1) [16,23] 0x0 0x0 0x0 0x0 [BraveSword] AttackInRangeAI
+UNIT Lowlands DarkF 0x0 Level(20,Enemy,1) [16,23] 0x0 0x0 0x0 0x0 [Nocturne] AttackInRangeAI
 UNIT Lowlands LncArm 0x0 Level(19,Enemy,1) [11,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Lowlands LncArm 0x0 Level(19,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Lowlands LncArm 0x0 Level(19,Enemy,1) [17,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
@@ -139,6 +139,7 @@ EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
+LocationText(BlankCG,Ch17_Ending2,UnknownLocationLabel,S_Chaos)
 MoveToChapter(Chapter18)
 ENDA
 

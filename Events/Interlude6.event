@@ -143,6 +143,18 @@ I6ArinTalk:
 Text(I6ArinConvo)
 EndEvent
 
+I6PeggyTalk:
+BranchIfSupport(Peggy,Natasia,CPSupport,0x1)
+Text(I6PeggyConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6PeggySpecialConvo)
+SystemText(I6PeggyAxeRank)
+SetUnitStatus(Peggy,AxeExp,31)
+SetSupport(Peggy,Natasia,BSupport,1)
+LABEL 0x2
+EndEvent
+
 I6EmileTalk:
 EVBIT_MODIFY 3
 Text(I6EmileConvo)
@@ -177,18 +189,6 @@ GiveItem(Physic,Emile)
 GiveItem(Yoink,Emile)
 GiveItem(Silence,Emile)
 LABEL 0x19
-EndEvent
-
-I6PeggyTalk:
-BranchIfSupport(Peggy,Natasia,CPSupport,0x1)
-Text(I6PeggyConvo)
-GOTO 0x2
-LABEL 0x1
-Text(I6PeggySpecialConvo)
-SystemText(I6PeggyAxeRank)
-SetUnitStatus(Peggy,AxeExp,31)
-SetSupport(Peggy,Natasia,BSupport,1)
-LABEL 0x2
 EndEvent
 
 I6AvanTalk:

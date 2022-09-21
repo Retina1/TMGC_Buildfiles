@@ -144,7 +144,7 @@ UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [Javelin] Never
 UNIT LootHolanis Sorc 0x0 Level(2,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [Nosferatu,MiniGem] NeverMoveAI
 UNIT Holanis LncArm 0x0 Level(19,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Holanis Sage 0x0 Level(2,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
-UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
 UNIT Holanis Sniper 0x0 Level(2,Enemy,1) [6,6] DropItem 0x0 0x0 0x0 [SteelBow,AngelicRobe] AttackInRangeAI
 UNIT Holanis Halberdier 0x0 Level(2,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Horseslayer,Axebuster] GroupFivePaceAI
 UNIT Holanis Hero 0x0 Level(2,Enemy,1) [4,11] 0x0 0x0 0x0 0x0 [Zanbato,Wyrmslayer] GroupFivePaceAI
@@ -188,7 +188,7 @@ UNIT Holanis LncGen 0x0 Level(2,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [Javelin] NeverM
 UNIT LootHolanis Sorc 0x0 Level(2,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [Nosferatu,MiniGem] NeverMoveAI
 UNIT Holanis LncGen 0x0 Level(2,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Holanis Sage 0x0 Level(2,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
-UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
 UNIT LootHolanis Sniper 0x0 Level(2,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [SteelBow,AngelicRobe] AttackInRangeAI
 UNIT Holanis Halberdier 0x0 Level(2,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Horseslayer,Axebuster] GroupFivePaceAI
 UNIT Holanis HalberdierF 0x0 Level(2,Enemy,1) [10,10] 0x0 0x0 0x0 0x0 [Shatterspear,Dragonpike] GroupFivePaceAI
@@ -399,6 +399,7 @@ REMA
 SetBackground(BlankCG)
 GiveMoney(0x1)
 LABEL 0x6
+LocationText(BlankCG,Ch16_Ending2,UnknownLocationLabel,S_Chaos)
 MoveToChapter(Chapter17)
 ENDA
 

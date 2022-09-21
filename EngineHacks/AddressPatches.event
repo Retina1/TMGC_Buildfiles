@@ -1,3 +1,9 @@
+//stacking reavers
+PUSH
+ORG 0x02C784
+BYTE 0x00 0x00
+POP
+
 //thracia taking and giving
 PUSH
 ORG 0x229A8

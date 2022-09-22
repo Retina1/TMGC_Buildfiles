@@ -18,8 +18,8 @@ TeamDebuffTables:
   #define OUDebuffTable "GUDebuffTable + (MaxGreenUnits*8)"
   ALIGN 4
   WORD PUDebuffTable
-  WORD EUDebuffTable
   WORD GUDebuffTable
+  WORD EUDebuffTable
   WORD OUDebuffTable
   }
   
@@ -44,7 +44,7 @@ TeamDebuffTables:
 
     // prevent debuffs and loading issue (Kirb)
 
-    ORG 0xBA30
+    /*ORG 0xBA30
       WORD 0x203ED40
 
     ORG 0xBA54
@@ -54,7 +54,7 @@ TeamDebuffTables:
       WORD 0x203ED40
 
     ORG 0xD5B80
-      WORD 0x203ED40
+      WORD 0x203ED40*/
 
     // new stat getters
     // see modular stat getters

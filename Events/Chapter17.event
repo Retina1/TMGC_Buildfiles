@@ -21,6 +21,9 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x10,C17EastZoneSpawns,1,255)
+TurnEventPlayer(0x12,C17WestZoneSpawns,1,255)
+TurnEventPlayer(0x14,C17BossZoneSpawns,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -36,6 +39,10 @@ ALIGN 4
 MiscBasedEvents:
 CauseGameOverIfLordDies
 AFEV 0x24 C17EndCheck 0x23
+AreaEvent(0x11,C17EastZone,12,13,19,19)
+AreaEvent(0x13,C17WestZone,0,17,6,26)
+AreaEvent(0x15,C17BossZone,12,20,19,26)
+AreaEvent(0x16,C17Treasure,8,17,8,17)
 END_MAIN
 
 Dunno:
@@ -121,6 +128,24 @@ UNIT Edward Berserker 0x0 Level(7,Enemy,1) [0,26] DropItem 0x0 0x0 0x0 [KillerAx
 UNIT Eddie Berserker 0x0 Level(6,Enemy,1) [18,1] DropItem 0x0 0x0 0x0 [DevilAxe,BraveLance] DelayedAI
 UNIT Eduardo Warrior 0x0 Level(8,Enemy,1) [18,25] DropItem 0x0 0x0 0x0 [GildedAxe,MasterBow,Wardwood] NeverMoveAI
 UNIT
+C17East:
+UNIT Lowlands AxeWyv 0x0 Level(19,Enemy,1) [16,0] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Lowlands AxeWyv 0x0 Level(19,Enemy,1) [19,3] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Lowlands Sorc 0x0 Level(3,Enemy,1) [13,12] 0x0 0x0 0x0 0x0 [Nightfall,Sleep] NeverMoveAI
+UNIT Lowlands SwdPeg 0x0 Level(19,Enemy,1) [9,14] 0x0 0x0 0x0 0x0 [LightBrand] NoAI
+UNIT
+C17West:
+UNIT Lowlands LncWyv 0x0 Level(19,Enemy,1) [0,8] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Lowlands LncWyv 0x0 Level(19,Enemy,1) [8,19] 0x0 0x0 0x0 0x0 [Horseslayer] NoAI
+UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [0,26] 0x0 0x0 0x1 REDA1R24 [HandAxe] NoAI
+UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [0,26] 0x0 0x0 0x1 REDA2R25 [SteelAxe,Hammer] NoAI
+UNIT
+C17Boss:
+UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [12,20] 0x0 0x0 0x1 REDA12R21 [SilverAxe] NoAI
+UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [12,20] 0x0 0x0 0x1 REDA13R20 [DevilAxe] NoAI
+UNIT Lowlands Halberdier 0x0 Level(1,Enemy,1) [18,26] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Lowlands Hero 0x0 Level(1,Enemy,1) [19,25] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT
 
 ALIGN 4
 
@@ -159,6 +184,47 @@ CALL EndingScene
 GOTO 0x2
 LABEL 0x1
 ENUF 0x24
+LABEL 0x2
+EndEvent
+
+C17EastZoneSpawns:
+Reinforcements(C17East)
+EndEvent
+C17WestZoneSpawns:
+Reinforcements(C17West)
+EndEvent
+C17BossZoneSpawns:
+Reinforcements(C17Boss)
+EndEvent
+
+C17Treasure:
+DesertItem(Speedwings,0x16)
+
+C17EastZone:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x10
+GOTO 0x2
+LABEL 0x1
+ENUF 0x11
+LABEL 0x2
+EndEvent
+C17WestZone:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x12
+GOTO 0x2
+LABEL 0x1
+ENUF 0x13
+LABEL 0x2
+EndEvent
+C17BossZone:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x14
+GOTO 0x2
+LABEL 0x1
+ENUF 0x15
 LABEL 0x2
 EndEvent
 

@@ -72,7 +72,8 @@ GreatRiverCastleTiles:
 
 ALIGN 4
 SwampObjects:
-#incbin "Tilesets/Swamps.dmp"
+#incext Png2Dmp "Tilesets/Swamp.png" --lz77
+//#incbin "Tilesets/Swamps.dmp"
 
 ALIGN 4
 MevionSwampPalette:
@@ -112,11 +113,12 @@ LavaCavePalette:
 
 ALIGN 4
 LavaCaveObjects:
-#incbin "Tilesets/FE8LavaCave.img.bin"
+//#incbin "Tilesets/FE8LavaCave.img.bin"
+#incext Png2Dmp "Tilesets/Volcano.png" --lz77
 
 ALIGN 4
 LavaCaveConfig:
-#incbin "Tilesets/Volcano_comp.dmp"
+#incext compress "Tilesets/Volcano.mapchip_config"
 
 ALIGN 4
 DesertObjects:
@@ -504,6 +506,7 @@ EventPointerTable(TILRuins, RuinsTiles)
 SetMinimapTileHandler(0x0,TileHandler_Walls)
 SetMinimapTileHandler(0xe,TileHandler_Road)
 SetMinimapTileHandler(0x9,TileHandler_Water)
+SetMinimapTileHandler(0x1c,TileHandler_Throne)
 SetMinimapTileHandler(0x24,TileHandler_ArmoryVendor)
 SetMinimapTileHandler(0x2a,TileHandler_Road)
 SetMinimapTileHandler(0x32,TileHandler_Walls)

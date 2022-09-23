@@ -1,0 +1,71 @@
+//Savepoint terrain by Scraiza.
+//Thanks to SubwayBossEmmet for commissioning this and allowing it to be free to use.
+//Thanks to Retina for helping me with the eventing.
+
+//autosave killer
+PUSH
+ORG 0x154FE
+BYTE 0x00 0x00 0x00 0x00
+ORG 0x1C318
+BYTE 0x00 0x00 0x00 0x00
+ORG 0x1C89E
+BYTE 0x00 0x00 0x00 0x00
+ORG 0x1D22C
+BYTE 0x00 0x00 0x00 0x00
+ORG 0x2CDDE
+BYTE 0x00 0x00 0x00 0x00
+ORG 0x31F06
+BYTE 0x00 0x00 0x00 0x00
+ORG 0x377A2
+BYTE 0x00 0x00 0x00 0x00
+ORG 0x39AF4
+BYTE 0x00 0x00 0x00 0x00
+POP
+
+//All of this stuff is related to the asm that makes things work
+
+#define  SaveMode 0x04 		    			//0x02 consumes the unit's turn, 0x04 does not
+#define  SavepointTerrainID 0x1C			//This is rubble terrain ID, unused in vanilla.
+											//Change it to whatever terrain ID you want for saves if you use churches.
+//all of this is stuff related to the text that save points use.
+//Modify the IDs or the text inside the IDs to match your needs
+
+/*
+--------------------------------- You shouldn't need to edit anything below this line ----------------------------------
+*/
+
+//ASM
+ALIGN 4
+POIN SaveEvent
+SaveEffect:
+#incbin "SaveEffect.dmp"
+
+ALIGN 4
+SaveEffectExecute:
+BYTE SaveMode 0x21 0x00 0x00
+#incbin "SaveEffectExecute.dmp"
+
+ALIGN 4
+SaveUsability:
+BYTE SavepointTerrainID 0x21 0x00 0x00
+#incbin "SaveUsability.dmp"
+
+//Event
+ALIGN 4
+SaveEvent:
+EVBIT_T 4
+EVBIT_T 5
+EVBIT_T 6
+EVBIT_T 7
+SystemText(SavepointAskTextID)
+IfNoSelectedGoto(0x01)
+ASMC SaveEffectExecute|1
+ASMC 0x080790A4|1
+ASMC 0x080B5D5C|1
+SystemText(SavepointSaveCompleteID)
+LABEL 0x01
+EVBIT_F 4
+EVBIT_F 5
+EVBIT_F 6
+EVBIT_T 7
+ENDA

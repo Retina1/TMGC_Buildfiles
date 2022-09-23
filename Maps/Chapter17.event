@@ -26,6 +26,27 @@ ALIGN 4
 MapData:
   #incbin "Chapter17_data.dmp"
 
-SetChapterData(Chapter17, OBJField, 0, PALLowlandsField, TILField, Map17, MapData, ANIField, 0, 0)
+SetChapterData(Chapter17, OBJField, 0, PALLowlandsField, TILField, Map17, MapData, ANIField, 0, MapChange17)
+
+ALIGN 4
+Map_Change_0:
+  SHORT $208
+
+ALIGN 4
+Map_Change_1:
+  SHORT $208
+
+ALIGN 4
+Map_Change_2:
+  SHORT $208
+
+ALIGN 4
+MapChangesData:
+  TileMap(0, 14, 15, 1, 1, Map_Change_0)
+  TileMap(1, 8, 15, 1, 1, Map_Change_1)
+  TileMap(2, 10, 23, 1, 1, Map_Change_2)
+  TileMapEnd
+
+EventPointerTable(MapChange17, MapChangesData)
 
 }

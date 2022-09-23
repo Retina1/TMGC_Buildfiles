@@ -45,11 +45,26 @@ Map_Change_3:
   SHORT $31C $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $318 $634 $398 $31C $0 $0 $0 $0 $0 $318 $31C $0 $318 $39C $0 $0 $398 $634 $634 $31C $0 $0 $5B8 $544 $0 $39C $0 $0 $0 $0 $0 $0 $398 $31C $318 $544 $544 $0 $0 $0 $0 $0 $0 $0 $0 $0 $398 $5C0 $544 $5BC $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $5B8 $31C $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $398 $544 $31C $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $5B8 $5BC $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $5B8 $5BC $0 $0
 
 ALIGN 4
+Map_Change_4:
+  SHORT $10
+
+ALIGN 4
+Map_Change_5:
+  SHORT $108
+
+ALIGN 4
+Map_Change_6:
+  SHORT $108
+
+ALIGN 4
 MapChangesData:
   TileMap(0, 16, 0, 8, 7, Map_Change_0)
   TileMap(1, 2, 0, 9, 9, Map_Change_1)
   TileMap(2, 0, 9, 11, 12, Map_Change_2)
   TileMap(3, 11, 20, 13, 10, Map_Change_3)
+  TileMap(4, 17, 17, 1, 1, Map_Change_4)
+  TileMap(5, 13, 8, 1, 1, Map_Change_5)
+  TileMap(6, 2, 14, 1, 1, Map_Change_6)
   TileMapEnd
 
 EventPointerTable(MapChangeZ2, MapChangesData)

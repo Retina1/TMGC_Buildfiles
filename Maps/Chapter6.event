@@ -45,11 +45,21 @@ Map_Change_3:
   SHORT $80
 
 ALIGN 4
+Map_Change_4:
+  SHORT $B50
+
+ALIGN 4
+Map_Change_5:
+  SHORT $644
+
+ALIGN 4
 MapChangesData:
   TileMap(0, 0, 11, 3, 3, Map_Change_0)
   TileMap(1, 1, 13, 1, 1, Map_Change_1)
   TileMap(2, 13, 2, 3, 3, Map_Change_2)
   TileMap(3, 14, 4, 1, 1, Map_Change_3)
+  TileMap(4, 8, 12, 1, 1, Map_Change_4)
+  TileMap(5, 4, 24, 1, 1, Map_Change_5)
   TileMapEnd
 
 EventPointerTable(MapChange6, MapChangesData)

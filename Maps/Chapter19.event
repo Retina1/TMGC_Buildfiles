@@ -69,6 +69,14 @@ Map_Change_9:
   SHORT $DB0 $D28 $D24 $D24
 
 ALIGN 4
+Map_Change_10:
+  SHORT $188
+
+ALIGN 4
+Map_Change_11:
+  SHORT $D24
+
+ALIGN 4
 MapChangesData:
   TileMap(0, 12, 0, 14, 4, Map_Change_0)
   TileMap(1, 11, 9, 12, 7, Map_Change_1)
@@ -80,6 +88,8 @@ MapChangesData:
   TileMap(7, 2, 0, 1, 1, Map_Change_7)
   TileMap(8, 1, 1, 1, 1, Map_Change_8)
   TileMap(9, 2, 3, 2, 2, Map_Change_9)
+  TileMap(10, 20, 27, 1, 1, Map_Change_10)
+  TileMap(11, 9, 11, 1, 1, Map_Change_11)
   TileMapEnd
 
 EventPointerTable(MapChange19, MapChangesData)

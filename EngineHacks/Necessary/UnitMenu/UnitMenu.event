@@ -65,6 +65,7 @@ UnitMenuTable:
   //MenuCommand(DualAtkTxtID,DualAtkDescId,0,DualAtkCheck,DualAtkSelected) 
   
   
+  MenuCommand(SavepointNameID, SavepointDescID, GreenText, SaveUsability|1, SaveEffect|1)
   MenuCommand(0x67A, 0x6CC, BlueText, $22FDC, $23020)
   // UM_Seize
   #ifdef ESCAPE_ARRIVE

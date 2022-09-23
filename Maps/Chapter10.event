@@ -37,9 +37,19 @@ Map_Change_1:
   SHORT $0 $0 $2FC $0 $0 $378 $0 $3EC $3F0 $468 $46C $470 $4E8 $584 $4F4 $5A4 $604 $4F4 $5A4 $6F4 $58C $3D8 $610 $60C $458 $5F0 $5F0 $0 $5D0 $5D4 $0 $650 $654 $0 $0 $6D4
 
 ALIGN 4
+Map_Change_2:
+  SHORT $4B8
+
+ALIGN 4
+Map_Change_3:
+  SHORT $280
+
+ALIGN 4
 MapChangesData:
   TileMap(0, 21, 1, 5, 2, Map_Change_0)
   TileMap(1, 24, 13, 3, 12, Map_Change_1)
+  TileMap(2, 20, 2, 1, 1, Map_Change_2)
+  TileMap(3, 15, 7, 1, 1, Map_Change_3)
   TileMapEnd
 
 EventPointerTable(MapChange10, MapChangesData)

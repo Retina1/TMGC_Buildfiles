@@ -69,6 +69,14 @@ Map_Change_9:
   SHORT $EAC
 
 ALIGN 4
+Map_Change_10:
+  SHORT $FAC
+
+ALIGN 4
+Map_Change_11:
+  SHORT $FAC
+
+ALIGN 4
 MapChangesData:
   TileMap(0, 3, 4, 1, 1, Map_Change_0)
   TileMap(1, 4, 5, 1, 1, Map_Change_1)
@@ -80,6 +88,8 @@ MapChangesData:
   TileMap(7, 21, 11, 1, 1, Map_Change_7)
   TileMap(8, 21, 14, 1, 1, Map_Change_8)
   TileMap(9, 21, 17, 1, 1, Map_Change_9)
+  TileMap(10, 8, 10, 1, 1, Map_Change_10)
+  TileMap(11, 18, 16, 1, 1, Map_Change_11)
   TileMapEnd
 
 EventPointerTable(MapChange12, MapChangesData)

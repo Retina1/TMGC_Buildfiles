@@ -75,7 +75,7 @@ WardingSkill:
 ldr r0, =0x203a4ec @move attacker data to r0
 add r0, #0x5c @move to attacker defense
 ldrh r3, [r0] @load def into r3
-add r3, #8 @add 8
+lsl r3, #1 @multiply by 2
 strh r3, [r0] @yer done
 b       SkillReturn
 CertainSkill:

@@ -53,15 +53,15 @@ Tutorial:
 END_MAIN
 
 TrapData:
-TelliusTorchOff(7,3,8)
-TelliusTorchOff(2,16,8)
-TelliusTorchOff(15,4,8)
-TelliusTorchOff(11,15,8)
-TelliusTorchOff(23,10,8)
-TelliusTorchOff(27,5,8)
-TelliusTorchOff(29,12,8)
-TelliusTorchOff(33,16,8)
-TelliusTorchOff(32,2,8)
+TelliusTorchOff(7,3,9)
+TelliusTorchOff(2,16,9)
+TelliusTorchOff(15,4,9)
+TelliusTorchOff(11,15,9)
+TelliusTorchOff(23,10,9)
+TelliusTorchOff(27,5,9)
+TelliusTorchOff(29,12,9)
+TelliusTorchOff(33,16,9)
+TelliusTorchOff(32,2,9)
 ENDTRAP
 
 ALIGN 4
@@ -94,8 +94,19 @@ UNIT
 
 C18Hard:
 UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
-UNIT Bungalas LncGen 0x0 Level(10,Enemy,1) [33,1] 0x0 0x0 0x0 0x0 [Spear,Eyedrops] AttackInRangeAI
+UNIT Lowlands Berserker 0x0 Level(2,Enemy,1) [24,6] 0x0 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
+UNIT Lowlands Mage 0x0 Level(18,Enemy,1) [16,6] 0x0 0x0 0x0 0x0 [Elfire] NoAI
+UNIT Lowlands Warrior 0x0 Level(3,Enemy,1) [21,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Lowlands Warrior 0x0 Level(3,Enemy,1) [21,7] DropItem 0x0 0x0 0x0 [HandAxe,MasterSeal] NeverMoveAI
+UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [3,15] 0x0 0x0 0x0 0x0 [SilverLance] GroupOneAI
+UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [Axebuster] GroupOneAI
+UNIT Lowlands BowPal 0x0 Level(2,Enemy,1) [1,17] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
+UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [20,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Lowlands Sorc 0x0 Level(4,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [Sleep] NeverMoveAI
+UNIT Lowlands Sniper 0x0 Level(2,Enemy,1) [32,0] 0x0 0x0 0x0 0x0 [Longbow] GroupTwoAI
+UNIT Lowlands Sniper 0x0 Level(2,Enemy,1) [34,2] 0x0 0x0 0x0 0x0 [ShiningBow,SteelBow] GroupTwoAI
+UNIT Bungalas LncGen 0x0 Level(10,Enemy,1) [33,1] 0x0 0x0 0x0 0x0 [Spear,Eyedrops] GroupTwoAI
 UNIT
 
 C18VladmirAirlift:

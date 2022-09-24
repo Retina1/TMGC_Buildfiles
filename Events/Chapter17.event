@@ -29,6 +29,13 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0xa,C17HollandaiseRecruitment,Bechamel,Hollandaise)
+CharacterEventBothWays(0xb,C17StefanDesmondSupport,Stefan,Desmond)
+CharacterEventBothWays(0xc,C17KennethNatasiaSupport,Kenneth,Natasia)
+CharacterEventBothWays(0xd,C17ZekeHyperiusSupport,Zeke,Hyperius)
+CharacterEventBothWays(0xe,C17AlexisHyperiusSupport,Alexis,Hyperius)
+CharacterEventBothWays(0xf,C17JosefHilbertSupport,Josef,Hilbert)
+CharacterEventBothWays(0x17,C17ApolloFlynnSupport,Apollo,Flynn)
+CharacterEventBothWays(0x20,C17ArinYuyuSupport,Arin,Yuyu)
 END_MAIN
 
 LocationBasedEvents:
@@ -149,6 +156,37 @@ UNIT
 
 ALIGN 4
 
+C17StefanDesmondSupport:
+Text(StefanDesmondBSupport)
+SetSupport(Stefan,Desmond,BSupport,1)
+EndEvent
+C17KennethNatasiaSupport:
+Text(KennethNatasiaBSupport)
+SetSupport(Kenneth,Natasia,BSupport,1)
+EndEvent
+C17ZekeHyperiusSupport:
+Text(ZekeHyperiusBSupport)
+SetSupport(Zeke,Hyperius,BSupport,1)
+EndEvent
+C17AlexisHyperiusSupport:
+Text(AlexisHyperiusBSupport)
+SetSupport(Alexis,Hyperius,BSupport,1)
+EndEvent
+C17JosefHilbertSupport:
+Text(JosefHilbertCPSupport)
+SetSupport(Josef,Hilbert,CPSupport,1)
+EndEvent
+C17ApolloFlynnSupport:
+Text(ApolloFlynnCPSupport)
+SetSupport(Apollo,Flynn,CPSupport,1)
+EndEvent
+C17ArinYuyuSupport:
+Text(ArinYuyuCSupport)
+SetSupport(Arin,Yuyu,CSupport,1)
+EndEvent
+
+
+//beginning - have blair and zeke summarize route so far, introduce hollandaise and the eds, have a hint at deploying bechamel/maybe another unit or two for a possible recruitment
 BeginningScene:
 ENUT GuideChpt17
 MUSC NarrationTheme3
@@ -157,6 +195,15 @@ CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C17Easy,C17Normal,C17Hard)
 LOAD1 0x0 C17Units
 ENUN
+SupportFlagOn(Stefan,Desmond,0xb,CPSupport)
+SupportFlagOn(Kenneth,Natasia,0xc,CPSupport)
+SupportFlagOn(Zeke,Hyperius,0xd,CPSupport)
+SupportFlagOn(Alexis,Hyperius,0xe,CPSupport)
+SupportFlagOn(Josef,Hilbert,0xf,CSupport)
+SupportFlagOn(Apollo,Flynn,0x17,CSupport)
+ENUT 0x10
+ENUT 0x12
+ENUT 0x14
 GotoPrepScreen
 ENDA
 

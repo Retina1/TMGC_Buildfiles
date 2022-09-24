@@ -21,7 +21,7 @@ mov r1, #2 @miss
 tst r0, r1
 bne End
 
-@check defender's hp >50%
+@check defender hp >50%
 ldrb r0, [r5,#0x12] @max hp
 ldrb r1, [r5,#0x13] @current hp
 cmp r1, #1 @1hp left?

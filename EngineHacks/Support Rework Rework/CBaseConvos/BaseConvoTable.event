@@ -425,9 +425,29 @@
 			baseSupport(Carbon,Mikey,CPSupport)
 	Chapter(Chapter17)
 		Entry
-			bg(OutdoorCastleCG)
-			text(C15_Blair_Zeke_Base)
+			bg(0x1a)
+			text(C17_Blair_Yuyu_Base)
 			baseSupport(Blair,Yuyu,CSupport)
+		Entry
+			bg(0x1a)
+			text(C17_Blair_Zeke_Base)
+			baseSupport(Blair,Zeke,CPSupport)
+		Entry
+			bg(0x1a)
+			text(C17_Stefan_Kenneth_Base)
+			baseSupport(Kenneth,Stefan,BSupport)
+		Entry
+			bg(0x1a)
+			text(C17_Arin_Desmond_Base)
+			baseSupport(Arin,Desmond,BSupport)
+		Entry
+			bg(0x1a)
+			text(C17_Damien_Zacharias_Base)
+			baseSupport(Damien,Zacharias,CPSupport)
+		Entry
+			bg(0x1a)
+			text(C17_Peggy_Apollo_Base)
+			baseSupport(Peggy,Apollo,CPSupport)
 	Chapter(Chapter18)
 		Entry
 			bg(OutdoorCastleCG)
@@ -460,7 +480,7 @@ ENDA
 
 ALIGN 4
 C13DelusionEvent:
-SetBackground(DesertCG)
+SetBackground(SunsetPathCG)
 Text(C13_Delusion)
 GiveItemWithDurability(SkillScroll,HexID,Blair)
 FADI 0x5

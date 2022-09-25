@@ -2,6 +2,12 @@
 //Thanks to SubwayBossEmmet for commissioning this and allowing it to be free to use.
 //Thanks to Retina (hey that's me!) for helping me with the eventing.
 
+//bye suspend
+PUSH
+ORG 0x59cf50
+POIN $0804f451
+POP
+
 //autosave killer
 PUSH
 ORG 0x154FE

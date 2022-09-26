@@ -4,6 +4,7 @@ ALIGN 4
 SetConvoBackground(Map2CG,Map2Image,Map2TSA,Map2Palette)
 SetConvoBackground(MapCG,MapImage,MapTSA,MapPalette)
 SetConvoBackground(BlankCG,BlankImage,BlankTSA,BlankPalette)
+SetConvoBackground(LowlandsCG,LowlandsImage,LowlandsTSA,LowlandsPalette)
 ALIGN 4
 MapImage:
 #incbin "map for real.png.dmp"
@@ -31,3 +32,12 @@ BlankTSA:
 ALIGN 4
 BlankPalette:
 #incbin "blank.png.pal.dmp"
+ALIGN 4
+LowlandsImage:
+#incbin "fixedlowlands.png.dmp"
+ALIGN 4
+LowlandsTSA:
+#incbin "fixedlowlands.png.tsa.dmp"
+ALIGN 4
+LowlandsPalette:
+#incbin "fixedlowlands.png.pal.dmp"

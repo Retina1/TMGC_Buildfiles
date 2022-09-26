@@ -154,6 +154,19 @@ UNIT Lowlands Halberdier 0x0 Level(1,Enemy,1) [18,26] 0x0 0x0 0x0 0x0 [SilverLan
 UNIT Lowlands Hero 0x0 Level(1,Enemy,1) [19,25] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
 UNIT
 
+C17EnemyCutscene:
+UNIT Hollandaise PirateF 0x0 Level(18,Enemy,0) [18,25] 0x0 0x0 0x1 REDA18R26 [Ukonvasara,Vulnerary] NoAI
+UNIT Edward Berserker 0x0 Level(7,Enemy,1) [18,25] 0x0 0x0 0x1 REDA18R24 [KillerAxe,Tomahawk,BraveBow] DelayedAI
+UNIT Eddie Berserker 0x0 Level(6,Enemy,1) [18,25] 0x0 0x0 0x1 REDA17R25 [DevilAxe,BraveLance] DelayedAI
+UNIT Eduardo Warrior 0x0 Level(8,Enemy,1) [18,25] 0x0 0x0 0x0 0x0 [GildedAxe,MasterBow,Wardwood] NeverMoveAI
+UNIT
+
+C17PlayerCutscene:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
 ALIGN 4
 
 C17StefanDesmondSupport:
@@ -191,7 +204,19 @@ BeginningScene:
 ENUT GuideChpt17
 MUSC NarrationTheme3
 Narration(Map2CG,Ch17_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanText(LowlandsCG,Ch17_Opening)
+Reinforcements(C17EnemyCutscene)
+CleanText(LowlandsCG,Ch17_Opening2)
+Reinforcements(C17PlayerCutscene)
+CleanTextNoMap(LowlandsCG,Ch17_Opening3)
+DISA_IF Hollandaise
+DISA Hollandaise
+DISA_IF Eddie
+DISA Eddie
+DISA_IF Eduardo
+DISA Eduardo
+DISA_IF Edward
+DISA Edward
 LoadUnitsByDifficulty(C17Easy,C17Normal,C17Hard)
 LOAD1 0x0 C17Units
 ENUN

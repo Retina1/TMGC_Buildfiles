@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song5F_grp, voicegroup000
-	.equ	song5F_pri, 0
-	.equ	song5F_rev, 0
-	.equ	song5F_mvl, 127
-	.equ	song5F_key, 0
-	.equ	song5F_tbs, 1
-	.equ	song5F_exg, 0
-	.equ	song5F_cmp, 1
+	.equ	FearFactory_grp, voicegroup000
+	.equ	FearFactory_pri, 0
+	.equ	FearFactory_rev, 0
+	.equ	FearFactory_mvl, 127
+	.equ	FearFactory_key, 0
+	.equ	FearFactory_tbs, 1
+	.equ	FearFactory_exg, 0
+	.equ	FearFactory_cmp, 1
 
 	.section .rodata
-	.global	song5F
+	.global	FearFactory
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song5F_001:
+FearFactory_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
- .byte   TEMPO , 134*song5F_tbs/2
+ .byte   KEYSH , FearFactory_key+0
+ .byte   TEMPO , 134*FearFactory_tbs/2
  .byte   VOICE , 76
- .byte   VOL , 34*song5F_mvl/mxv
+ .byte   VOL , 34*FearFactory_mvl/mxv
  .byte   PAN , c_v+45
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -266,11 +266,11 @@ Label_0100522A:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song5F_002:
+FearFactory_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 100
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #02 @001   ----------------------------------------
@@ -515,11 +515,11 @@ Label_01005364:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song5F_003:
+FearFactory_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 49
- .byte   VOL , 39*song5F_mvl/mxv
+ .byte   VOL , 39*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -828,11 +828,11 @@ Label_010054AC:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song5F_004:
+FearFactory_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 38
- .byte   VOL , 39*song5F_mvl/mxv
+ .byte   VOL , 39*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N01 ,En2 ,v127
  .byte   W06
@@ -1132,187 +1132,187 @@ Label_0100565B:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song5F_005:
+FearFactory_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 105
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 1*song5F_mvl/mxv
+ .byte   VOL , 1*FearFactory_mvl/mxv
  .byte   TIE ,En5 ,v127
  .byte   TIE ,En6 ,v080
  .byte   W06
- .byte   VOL , 2*song5F_mvl/mxv
+ .byte   VOL , 2*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 4*song5F_mvl/mxv
+ .byte   VOL , 4*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 5*song5F_mvl/mxv
+ .byte   VOL , 5*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 7*song5F_mvl/mxv
+ .byte   VOL , 7*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
 @  #05 @001   ----------------------------------------
 Label_010057A2:
- .byte   VOL , 24*song5F_mvl/mxv
+ .byte   VOL , 24*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 26*song5F_mvl/mxv
+ .byte   VOL , 26*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 27*song5F_mvl/mxv
+ .byte   VOL , 27*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 28*song5F_mvl/mxv
+ .byte   VOL , 28*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 30*song5F_mvl/mxv
+ .byte   VOL , 30*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 31*song5F_mvl/mxv
+ .byte   VOL , 31*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 33*song5F_mvl/mxv
+ .byte   VOL , 33*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 34*song5F_mvl/mxv
+ .byte   VOL , 34*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 36*song5F_mvl/mxv
+ .byte   VOL , 36*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 37*song5F_mvl/mxv
+ .byte   VOL , 37*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 39*song5F_mvl/mxv
+ .byte   VOL , 39*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 40*song5F_mvl/mxv
+ .byte   VOL , 40*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 42*song5F_mvl/mxv
+ .byte   VOL , 42*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 43*song5F_mvl/mxv
+ .byte   VOL , 43*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 44*song5F_mvl/mxv
+ .byte   VOL , 44*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   W06
  .byte   PEND 
 @  #05 @002   ----------------------------------------
 Label_010057D3:
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 44*song5F_mvl/mxv
+ .byte   VOL , 44*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 43*song5F_mvl/mxv
+ .byte   VOL , 43*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 42*song5F_mvl/mxv
+ .byte   VOL , 42*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 40*song5F_mvl/mxv
+ .byte   VOL , 40*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 39*song5F_mvl/mxv
+ .byte   VOL , 39*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 37*song5F_mvl/mxv
+ .byte   VOL , 37*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 36*song5F_mvl/mxv
+ .byte   VOL , 36*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 34*song5F_mvl/mxv
+ .byte   VOL , 34*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 33*song5F_mvl/mxv
+ .byte   VOL , 33*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 31*song5F_mvl/mxv
+ .byte   VOL , 31*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 30*song5F_mvl/mxv
+ .byte   VOL , 30*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 28*song5F_mvl/mxv
+ .byte   VOL , 28*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 27*song5F_mvl/mxv
+ .byte   VOL , 27*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 26*song5F_mvl/mxv
+ .byte   VOL , 26*FearFactory_mvl/mxv
  .byte   W06
  .byte   PEND 
 @  #05 @003   ----------------------------------------
 Label_01005804:
- .byte   VOL , 24*song5F_mvl/mxv
+ .byte   VOL , 24*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 7*song5F_mvl/mxv
+ .byte   VOL , 7*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 5*song5F_mvl/mxv
+ .byte   VOL , 5*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 4*song5F_mvl/mxv
+ .byte   VOL , 4*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 2*song5F_mvl/mxv
+ .byte   VOL , 2*FearFactory_mvl/mxv
  .byte   W06
  .byte   PEND 
 @  #05 @004   ----------------------------------------
  .byte   EOT
  .byte   En5 ,v100
- .byte   VOL , 1*song5F_mvl/mxv
+ .byte   VOL , 1*FearFactory_mvl/mxv
  .byte   TIE ,Gn4 ,v127
  .byte   TIE ,Gn5 ,v080
  .byte   W06
- .byte   VOL , 2*song5F_mvl/mxv
+ .byte   VOL , 2*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 4*song5F_mvl/mxv
+ .byte   VOL , 4*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 5*song5F_mvl/mxv
+ .byte   VOL , 5*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 7*song5F_mvl/mxv
+ .byte   VOL , 7*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
 @  #05 @005   ----------------------------------------
  .byte   PATT
@@ -1326,39 +1326,39 @@ Label_01005804:
 @  #05 @008   ----------------------------------------
  .byte   EOT
  .byte   Gn4 ,v091
- .byte   VOL , 1*song5F_mvl/mxv
+ .byte   VOL , 1*FearFactory_mvl/mxv
  .byte   TIE ,Dn4 ,v080
  .byte   TIE ,Dn5 ,v127
  .byte   W06
- .byte   VOL , 2*song5F_mvl/mxv
+ .byte   VOL , 2*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 4*song5F_mvl/mxv
+ .byte   VOL , 4*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 5*song5F_mvl/mxv
+ .byte   VOL , 5*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 7*song5F_mvl/mxv
+ .byte   VOL , 7*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
 @  #05 @009   ----------------------------------------
  .byte   PATT
@@ -1372,39 +1372,39 @@ Label_01005804:
 @  #05 @012   ----------------------------------------
  .byte   EOT
  .byte   Dn4 ,v086
- .byte   VOL , 1*song5F_mvl/mxv
+ .byte   VOL , 1*FearFactory_mvl/mxv
  .byte   TIE ,Bn4 ,v127
  .byte   TIE ,Bn5 ,v080
  .byte   W06
- .byte   VOL , 2*song5F_mvl/mxv
+ .byte   VOL , 2*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 4*song5F_mvl/mxv
+ .byte   VOL , 4*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 5*song5F_mvl/mxv
+ .byte   VOL , 5*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 7*song5F_mvl/mxv
+ .byte   VOL , 7*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
 @  #05 @013   ----------------------------------------
  .byte   PATT
@@ -1418,9 +1418,9 @@ Label_01005804:
 @  #05 @016   ----------------------------------------
  .byte   EOT
  .byte   Bn4 ,v095
- .byte   VOL , 1*song5F_mvl/mxv
+ .byte   VOL , 1*FearFactory_mvl/mxv
  .byte   W12
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   W84
 @  #05 @017   ----------------------------------------
  .byte   W96
@@ -1467,39 +1467,39 @@ Label_01005804:
 @  #05 @037   ----------------------------------------
  .byte   W96
 @  #05 @038   ----------------------------------------
- .byte   VOL , 1*song5F_mvl/mxv
+ .byte   VOL , 1*FearFactory_mvl/mxv
  .byte   TIE ,Gn5
  .byte   TIE ,Gn6 ,v080
  .byte   W06
- .byte   VOL , 2*song5F_mvl/mxv
+ .byte   VOL , 2*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 4*song5F_mvl/mxv
+ .byte   VOL , 4*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 5*song5F_mvl/mxv
+ .byte   VOL , 5*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 7*song5F_mvl/mxv
+ .byte   VOL , 7*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
 @  #05 @039   ----------------------------------------
  .byte   PATT
@@ -1508,35 +1508,35 @@ Label_01005804:
  .byte   PATT
   .word Label_010057D3
 @  #05 @041   ----------------------------------------
- .byte   VOL , 24*song5F_mvl/mxv
+ .byte   VOL , 24*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W30
 @  #05 @042   ----------------------------------------
  .byte   EOT
  .byte   Gn5 ,v103
  .byte   W12
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   W84
 @  #05 @043   ----------------------------------------
  .byte   W96
@@ -1583,39 +1583,39 @@ Label_01005804:
 @  #05 @063   ----------------------------------------
  .byte   W96
 @  #05 @064   ----------------------------------------
- .byte   VOL , 1*song5F_mvl/mxv
+ .byte   VOL , 1*FearFactory_mvl/mxv
  .byte   TIE ,En5
  .byte   TIE ,En6 ,v080
  .byte   W06
- .byte   VOL , 2*song5F_mvl/mxv
+ .byte   VOL , 2*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 4*song5F_mvl/mxv
+ .byte   VOL , 4*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 5*song5F_mvl/mxv
+ .byte   VOL , 5*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 7*song5F_mvl/mxv
+ .byte   VOL , 7*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
 @  #05 @065   ----------------------------------------
  .byte   PATT
@@ -1627,49 +1627,49 @@ Label_01005804:
  .byte   PATT
   .word Label_010057D3
 @  #05 @068   ----------------------------------------
- .byte   VOL , 24*song5F_mvl/mxv
+ .byte   VOL , 24*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 23*song5F_mvl/mxv
+ .byte   VOL , 23*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 21*song5F_mvl/mxv
+ .byte   VOL , 21*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 20*song5F_mvl/mxv
+ .byte   VOL , 20*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 18*song5F_mvl/mxv
+ .byte   VOL , 18*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 17*song5F_mvl/mxv
+ .byte   VOL , 17*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 15*song5F_mvl/mxv
+ .byte   VOL , 15*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 14*song5F_mvl/mxv
+ .byte   VOL , 14*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 13*song5F_mvl/mxv
+ .byte   VOL , 13*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 11*song5F_mvl/mxv
+ .byte   VOL , 11*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 10*song5F_mvl/mxv
+ .byte   VOL , 10*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 8*song5F_mvl/mxv
+ .byte   VOL , 8*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 7*song5F_mvl/mxv
+ .byte   VOL , 7*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 5*song5F_mvl/mxv
+ .byte   VOL , 5*FearFactory_mvl/mxv
  .byte   W06
- .byte   VOL , 4*song5F_mvl/mxv
+ .byte   VOL , 4*FearFactory_mvl/mxv
  .byte   W06
  .byte   EOT
  .byte   En5 ,v100
- .byte   VOL , 2*song5F_mvl/mxv
+ .byte   VOL , 2*FearFactory_mvl/mxv
  .byte   W06
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song5F_006:
+FearFactory_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 18
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -1952,11 +1952,11 @@ Label_01005AE9:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song5F_007:
+FearFactory_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 11
- .byte   VOL , 30*song5F_mvl/mxv
+ .byte   VOL , 30*FearFactory_mvl/mxv
  .byte   PAN , c_v-45
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -2201,11 +2201,11 @@ Label_01005C24:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song5F_008:
+FearFactory_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 94
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -2412,11 +2412,11 @@ Label_019448CE:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song5F_009:
+FearFactory_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 89
- .byte   VOL , 31*song5F_mvl/mxv
+ .byte   VOL , 31*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #09 @001   ----------------------------------------
@@ -2620,11 +2620,11 @@ Label_01944B12:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song5F_010:
+FearFactory_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 36
- .byte   VOL , 39*song5F_mvl/mxv
+ .byte   VOL , 39*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #10 @001   ----------------------------------------
@@ -2796,11 +2796,11 @@ Label_0194454E:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song5F_011:
+FearFactory_011:
 @  #11 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 74
- .byte   VOL , 46*song5F_mvl/mxv
+ .byte   VOL , 46*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #11 @001   ----------------------------------------
@@ -2994,11 +2994,11 @@ Label_01944355:
 
 @**************** Track 12 (Midi-Chn.11) ****************@
 
-song5F_012:
+FearFactory_012:
 @  #12 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 94
- .byte   VOL , 27*song5F_mvl/mxv
+ .byte   VOL , 27*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #12 @001   ----------------------------------------
@@ -3162,11 +3162,11 @@ Label_019444DB:
 
 @**************** Track 13 (Midi-Chn.12) ****************@
 
-song5F_013:
+FearFactory_013:
 @  #13 @000   ----------------------------------------
- .byte   KEYSH , song5F_key+0
+ .byte   KEYSH , FearFactory_key+0
  .byte   VOICE , 124
- .byte   VOL , 39*song5F_mvl/mxv
+ .byte   VOL , 39*FearFactory_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W36
  .byte   N01 ,Cn1 ,v127
@@ -3537,26 +3537,26 @@ Label_01005E41:
 @******************************************************@
 	.align	2
 
-song5F:
+FearFactory:
 	.byte	13	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song5F_pri	@ Priority
-	.byte	song5F_rev	@ Reverb.
+	.byte	FearFactory_pri	@ Priority
+	.byte	FearFactory_rev	@ Reverb.
     
-	.word	song5F_grp
+	.word	FearFactory_grp
     
-	.word	song5F_001
-	.word	song5F_002
-	.word	song5F_003
-	.word	song5F_004
-	.word	song5F_005
-	.word	song5F_006
-	.word	song5F_007
-	.word	song5F_008
-	.word	song5F_009
-	.word	song5F_010
-	.word	song5F_011
-	.word	song5F_012
-	.word	song5F_013
+	.word	FearFactory_001
+	.word	FearFactory_002
+	.word	FearFactory_003
+	.word	FearFactory_004
+	.word	FearFactory_005
+	.word	FearFactory_006
+	.word	FearFactory_007
+	.word	FearFactory_008
+	.word	FearFactory_009
+	.word	FearFactory_010
+	.word	FearFactory_011
+	.word	FearFactory_012
+	.word	FearFactory_013
 
 	.end

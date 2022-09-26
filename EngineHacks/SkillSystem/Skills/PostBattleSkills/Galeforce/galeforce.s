@@ -13,12 +13,12 @@ cmp	r0, #0x00
 beq	End
 
 push {r2}
-ldr r2,=#0x203A4EC
+ldr r2,=#0x203A56C
 mov r0,#0x53
 ldsb r1,[r2,r0]
 pop {r2}
 cmp r1,#0x0
-ble End
+bge End
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn

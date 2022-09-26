@@ -125,6 +125,18 @@ Map_Change_23:
   SHORT $4
 
 ALIGN 4
+Map_Change_24:
+  SHORT $784
+
+ALIGN 4
+Map_Change_25:
+  SHORT $90C
+
+ALIGN 4
+Map_Change_26:
+  SHORT $790
+
+ALIGN 4
 MapChangesData:
   TileMap(0, 2, 2, 2, 3, Map_Change_0)
   TileMap(1, 9, 2, 2, 2, Map_Change_1)
@@ -150,6 +162,9 @@ MapChangesData:
   TileMap(21, 17, 36, 1, 1, Map_Change_21)
   TileMap(22, 19, 36, 1, 1, Map_Change_22)
   TileMap(23, 16, 37, 1, 1, Map_Change_23)
+  TileMap(24, 9, 21, 1, 1, Map_Change_24)
+  TileMap(25, 10, 9, 1, 1, Map_Change_25)
+  TileMap(26, 10, 30, 1, 1, Map_Change_26)
   TileMapEnd
 
 EventPointerTable(MapChange21, MapChangesData)

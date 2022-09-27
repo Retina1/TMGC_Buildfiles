@@ -71,8 +71,8 @@ Read up on new mechanics and[N]
 the lore of Ulmaron.[X]
 
 # 0x08FF
-[OpenLeft]Next time, choose Resume[NL]
-Chapter to finish this battle.[A][X]
+[OpenLeft]Alrighty, then! Have[N]
+a swell day, pal![A][X]
 
 #include "Chapter Text/Prologue.txt"
 #include "Chapter Text/Chapter1.txt"
@@ -420,3 +420,14 @@ You can't steal that.[X]
 
 # 0x01E0
 Save[X]
+
+# 0x069F
+ Quit[X]
+
+# 0x08FE
+[OpenLeft][LoadFace][0x64][0x01][OpenLeft]Return to the title screen?[NL]
+[Yes][X]
+
+# 0x06E4
+Return to the title screen.[NL]
+Unsaved progress will be lost.[X]

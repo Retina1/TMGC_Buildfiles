@@ -206,6 +206,7 @@ MUSC NarrationTheme3
 Narration(Map2CG,Ch17_Narration)
 CleanText(LowlandsCG,Ch17_Opening)
 Reinforcements(C17EnemyCutscene)
+MUSC S_Crisis
 CleanText(LowlandsCG,Ch17_Opening2)
 Reinforcements(C17PlayerCutscene)
 CleanTextNoMap(LowlandsCG,Ch17_Opening3)
@@ -229,6 +230,10 @@ SupportFlagOn(Apollo,Flynn,0x17,CSupport)
 ENUT 0x10
 ENUT 0x12
 ENUT 0x14
+CHECK_ALIVE Bechamel
+BNE 0x111 0xC 0x0
+ENUT BaseFlag1
+LABEL 0x111
 GotoPrepScreen
 ENDA
 

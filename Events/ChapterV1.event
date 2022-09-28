@@ -75,8 +75,13 @@ ALIGN 4
 
 BeginningScene:
 OnAllUnitState(Blair*0x100+Simone, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
-OnAllUnitState(Addington, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
-OnAllUnitState(Yuyu, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+OnAllUnitState(Addington*0x100+Addington, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+OnAllUnitState(Yuyu*0x100+Yuyu, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+CHECK_MONEY
+SADD 0xC2
+Write_Word(HereComesTheMoney)
+SVAL 0x2 0x0
+//asmc here for setting gold
 LOAD1 0x1 V1Units
 ENUN
 LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)

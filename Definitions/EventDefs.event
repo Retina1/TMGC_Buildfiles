@@ -22,6 +22,8 @@
 #define UnremoveUnit(unit) "CHECK_EXISTS unit; BEQ unit 0xc 0x0; REVEAL unit; LABEL unit"
 #define KillUnitIfPlayerAlive(player,unit) "CHECK_ALIVE player; BEQ unit 0xc 0x0; CHECK_ALIVE unit; BEQ unit 0xc 0x0; DISA_IF unit; DISA unit; LABEL unit"
 #define TurnAllyIfAlive(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; TurnAlly(unit); LABEL unit"
+#define SilentKillUnit(unit) "DISA_IF unit; DISA unit"
+#define SFXKillUnit(unit) "SET_SOMETHING unit; DISA unit"
 
 #define Location(textid) "BROWNBOXTEXT textid [8,8]"
 #define LocationText(bgid,textid,labelid) "SetBackground(bgid); Location(labelid) ; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"

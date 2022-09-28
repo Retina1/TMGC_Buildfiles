@@ -103,7 +103,7 @@ UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [Axebuster] 
 UNIT Lowlands BowPal 0x0 Level(2,Enemy,1) [1,17] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
 UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [20,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
-UNIT Lowlands Sorc 0x0 Level(4,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [Sleep] NeverMoveAI
+UNIT Lowlands Sorc 0x0 Level(4,Enemy,1) [13,0] DropItem 0x0 0x0 0x0 [Sleep,Cutlad] NeverMoveAI
 UNIT Lowlands Sniper 0x0 Level(2,Enemy,1) [32,0] 0x0 0x0 0x0 0x0 [Longbow] GroupTwoAI
 UNIT Lowlands Sniper 0x0 Level(2,Enemy,1) [34,2] 0x0 0x0 0x0 0x0 [ShiningBow,SteelBow] GroupTwoAI
 UNIT Bungalas LncGen 0x0 Level(10,Enemy,1) [33,1] 0x0 0x0 0x0 0x0 [Spear,Eyedrops] GroupTwoAI
@@ -165,8 +165,8 @@ Reinforcements(C18Vladmir)
 Text(FillerDialogue)
 MOVE 60 Opistia [15,0]
 ENUN
-DISA_IF Opistia
-DISA Opistia
+SilentKillUnit(Opistia)
+ENUN
 GOTO 0x2
 LABEL 0x1
 ENUF 0x11

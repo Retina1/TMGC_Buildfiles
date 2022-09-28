@@ -490,8 +490,7 @@ FADI 0x3c
 MUSC S_Crisis
 CleanText(HallCG,Ch15_Opening2)//elcorian goes to get dudes
 Reinforcements(C15Elcorian)
-DISA_IF Elcorian
-DISA Elcorian
+SilentKillUnit(Elcorian)
 CleanTextNoMap(HallCG,Ch15_Opening3)//zeke says he'll help
 LOAD1 0x0 C15Units
 ENUN
@@ -590,8 +589,7 @@ Text(Ch15_ElcorianTheCamooIsHere)
 FlashCursor(C15Boss,60)
 Text(C15BossDeath)
 WARPOUT [6,27]	//god damn it why is the effect not playing at the right coordinates
-DISA_IF C15Boss
-DISA C15Boss
+SilentKillUnit(C15Boss)
 ENDWARP
 Text(Ch15_ElcorianTheCamooIsHere2)
 CALL EndingScene

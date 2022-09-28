@@ -327,8 +327,7 @@ CriticalHit(0,99)
 EndAttack
 FIG1 Lazarus Valden SilverAxe
 Text(C14ValdenDies) //valden fucking dies
-SET_SOMETHING Valden
-DISA Valden
+SFXKillUnit(Valden)
 STAL 30
 MOVE_1STEP 16 Lazarus Up
 ENUN
@@ -436,10 +435,8 @@ CLEAN
 MOVE 60 Bandit [26,28]
 MOVE 60 Unknown [26,27]
 ENUN
-DISA_IF Bandit
-DISA Bandit
-DISA_IF Unknown
-DISA Unknown
+SilentKillUnit(Bandit)
+SilentKillUnit(Unknown)
 ENUN
 EndEvent
 

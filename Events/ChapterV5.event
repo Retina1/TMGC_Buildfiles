@@ -93,8 +93,11 @@ CLEE 0
 CLEN 0
 CLEA 0
 OffAllUnitState(Blair*0x100+Simone, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
-OffAllUnitState(Addington, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
-OffAllUnitState(Yuyu, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+OffAllUnitState(Addington*0x100+Addington, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+OffAllUnitState(Yuyu*0x100+Yuyu, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem) 
+Read_Word(HereComesTheMoney)
+//get value from 2 into our money
+//asmc here for setting gold
 MoveToChapter(Chapter21)
 EndEvent
 

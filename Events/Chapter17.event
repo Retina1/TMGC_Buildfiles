@@ -28,6 +28,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x9,C17HollandaiseStall,Blair,Hollandaise)
 CharacterEvent(0xa,C17HollandaiseRecruitment,Bechamel,Hollandaise)
 CharacterEventBothWays(0xb,C17StefanDesmondSupport,Stefan,Desmond)
 CharacterEventBothWays(0xc,C17KennethNatasiaSupport,Kenneth,Natasia)
@@ -167,6 +168,10 @@ UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
+C17EndingCutscene:
+UNIT Hollandaise PirateF 0x0 Level(18,Enemy,0) [0,0] 0x0 0x0 0x1 REDA0R0 [Ukonvasara,Vulnerary] NoAI
+UNIT
+
 ALIGN 4
 
 C17StefanDesmondSupport:
@@ -198,8 +203,6 @@ Text(ArinYuyuCSupport)
 SetSupport(Arin,Yuyu,CSupport,1)
 EndEvent
 
-
-//beginning - have blair and zeke summarize route so far, introduce hollandaise and the eds, have a hint at deploying bechamel/maybe another unit or two for a possible recruitment
 BeginningScene:
 ENUT GuideChpt17
 MUSC NarrationTheme3
@@ -210,14 +213,10 @@ MUSC S_Crisis
 CleanText(LowlandsCG,Ch17_Opening2)
 Reinforcements(C17PlayerCutscene)
 CleanTextNoMap(LowlandsCG,Ch17_Opening3)
-DISA_IF Hollandaise
-DISA Hollandaise
-DISA_IF Eddie
-DISA Eddie
-DISA_IF Eduardo
-DISA Eduardo
-DISA_IF Edward
-DISA Edward
+SilentKillUnit(Hollandaise)
+SilentKillUnit(Eddie)
+SilentKillUnit(Eduardo)
+SilentKillUnit(Edward)
 LoadUnitsByDifficulty(C17Easy,C17Normal,C17Hard)
 LOAD1 0x0 C17Units
 ENUN
@@ -240,16 +239,43 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(LowlandsCG,Ch17_Ending)
+CHECK_EVENTID 0xa
+BNE 0x1 0xc 0x0
+MUSC RecruitmentTheme
+SilentKillUnit(Hollandaise)
+LOAD1 0x0 C17EndingCutscene
+ENUN
+CHECK_EVENTID 0x9
+BNE 0x2 0xc 0x0
+CleanTextNoMap(LowlandsCG,Ch17_HollandaiseJoinsUnprompted)//did not talk to her with blair
+GOTO 0x3
+LABEL 0x2
+CleanTextNoMap(LowlandsCG,Ch17_BlairHollandaiseFollowup)//talked to her with blair
+LABEL 0x3
+TurnAlly(Hollandaise)
+CHECK_ALIVE Bechamel
+BEQ 0x1 0xc 0x0
+CleanTextNoMap(LowlandsCG,Ch17_BechamelAndHollandaiseCatchUp)//bechamel support level
+REMA
+AddSupport(Bechamel,Hollandaise,1)
+LABEL 0x1
 LocationText(BlankCG,Ch17_Ending2,UnknownLocationLabel,S_Chaos)
 MoveToChapter(Chapter18)
 ENDA
 
+C17HollandaiseStall:
+Text(Ch17_BlairHollandaiseTalk)
+SVAL 0x1 0x00040306
+CHAI Hollandaise
+EndEvent
+
 C17HollandaiseRecruitment:
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(Ch17_BechamelRecruitsHollandaise)
 TurnAlly(Hollandaise)
 AddSupport(Bechamel,Hollandaise,1)
+ENUT 0x9
 EndEvent
 
 C17EndCheck:

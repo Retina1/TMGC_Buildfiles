@@ -1,0 +1,15 @@
+NAME=Convert Chapter Titles to Text_ver2(Install)
+TYPE=EA
+TAG=#ENGINE
+
+PATCHED_IF:$FGREP4 fe8_chapter_names.dmp=0x3D 0xE1 0x00 0xB5
+EA=fe8_chnames.event
+
+INFO.en=Patches the ROM to use text for all chapter titles rather than images.\r\nEdit Chapter name in Chapter Editor to rename.\r\nThis version also displays the number of chapters.
+
+AUTHOR=circleseverywhere,7743
+TEXT:0x157=Ch.
+TEXT:0x158=x(gaiden)
+TEXT:0xCC=NO DATA
+TEXT:0x7cf=Epilogue
+TEXT:0x7d0=Creature Campaign(Trial)

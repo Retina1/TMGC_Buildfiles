@@ -194,7 +194,7 @@ POP
   #include "Necessary/ItemRangeFix/ItemRangeFix.event"
   
   //Chapter Names as Text
-  #include "QualityOfLife/TextChNames/TextChNames.event"
+  //#include "QualityOfLife/TextChNames/TextChNames.event"
 
   //PC and Generic Music Hack (writes to e80000/e90000)
   #include "QualityOfLife/PCAndGenericMusic.event"
@@ -436,3 +436,8 @@ POP
 #include "TMGC/MultiSeize/Installer.event"
 
 #include "SavePoints/Savepoints.event"
+
+#include "TMGC/ChapterNames/fe8_chnames.event"
+
+//make its own option eventually
+//#include "TMGC/ForceBattleOffWithDanceAndStaff/Install.event"

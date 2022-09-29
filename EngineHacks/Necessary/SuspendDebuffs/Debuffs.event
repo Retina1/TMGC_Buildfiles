@@ -43,8 +43,8 @@ TeamDebuffTables:
       WORD $0D; POIN GameCtrlClearProc
 
     // prevent debuffs and loading issue (Kirb)
-
-    /*ORG 0xBA30
+//comment out if you want to move the debuff table again
+    ORG 0xBA30
       WORD 0x203ED40
 
     ORG 0xBA54
@@ -54,7 +54,7 @@ TeamDebuffTables:
       WORD 0x203ED40
 
     ORG 0xD5B80
-      WORD 0x203ED40*/
+      WORD 0x203ED40
 
     // new stat getters
     // see modular stat getters

@@ -1,0 +1,41 @@
+PUSH
+
+ORG 0xB7B96	//{U}
+BYTE 0x00 0x00
+jumpToHack(DrawExtraTextInEDScroll)
+
+POP
+
+ALIGN 4
+DrawExtraTextInEDScroll:
+#incbin "DrawExtraTextInEDScroll.dmp"
+POIN DrawExtraTextInEDScrollTable
+
+ALIGN 4
+DrawExtraTextInEDScrollTable:	//sizeof == 8
+//		mapid	editon			flag	textid			color	addX
+BYTE	Prologue	0xff	;SHORT	0		Part1Label	;BYTE	0		12 //聖魔の光跡
+
+BYTE	ChapterZ1	0xff	;SHORT	0		0x0000	;BYTE	0		5  //padding
+BYTE	ChapterZ1	0xff	;SHORT	0		Part2Label	;BYTE	0		12 //聖魔の光跡
+
+BYTE	Chapter15	0xff	;SHORT	0		0x0000	;BYTE	0		5  //padding
+BYTE	Chapter15	0xff	;SHORT	0		Part3Label	;BYTE	0		12 //聖魔の光跡
+
+BYTE	ChapterV1	0xff	;SHORT	0		0x0000	;BYTE	0		5  //padding
+BYTE	ChapterV1	0xff	;SHORT	0		Part4Label	;BYTE	0		12 //聖魔の光跡
+
+BYTE	Chapter21	0xff	;SHORT	0		0x0000	;BYTE	0		5  //padding
+BYTE	Chapter21	0xff	;SHORT	0		Part5Label	;BYTE	0		12 //聖魔の光跡
+
+BYTE 0xff 0xff 0xff 0xff 0xff 0xff 0xff 0xff	//term
+
+//color memo
+//0 = white  白色
+//1 = gray   灰色
+//2 = blue   水色
+//3 = yellow 黄色
+//4 = green  緑色
+
+
+ALIGN 4

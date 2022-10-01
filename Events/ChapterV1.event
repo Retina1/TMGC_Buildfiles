@@ -46,16 +46,16 @@ ENDTRAP
 ALIGN 4
 
 V1Units:
-UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
-UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
-UNIT Dean Fighter 0x0 Level(15,Ally,0) [4,0] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
-UNIT Eliza Cleric 0x0 Level(12,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
-UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [3,1] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [16,12] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
+UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [15,11] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [14,12] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
+UNIT Eliza Cleric 0x0 Level(12,Ally,0) [17,13] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
+UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [15,13] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
 UNIT
 
 V1MoreUnits:
-UNIT Rift SwMast 0x0 Level(6,Ally,0) [0,2] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
-UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Rift SwMast 0x0 Level(6,Ally,0) [12,0] 0x0 0x0 0x1 REDA12R2 [SteelSword, FlameSword] NoAI
+UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [13,0] 0x0 0x0 0x1 REDA13R1 [IronBow, Longbow, Vulnerary] NoAI
 UNIT
 
 V1Easy:
@@ -67,8 +67,8 @@ UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, J
 UNIT
 
 V1Hard:
-UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [12,8] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
 UNIT
 
 ALIGN 4

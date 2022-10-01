@@ -127,6 +127,12 @@ C18Vladmir:
 UNIT Vladmir Bishop 0x0 Level(15,Ally,0) [14,7] 0x0 0x0 0x1 REDA14R8 [BookOfOpistus,Fortify,GoddessIcon] NoAI
 UNIT
 
+C18OpeningCutscene:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [0,2] 0x0 0x0 0x1 REDA2R2 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [0,1] 0x0 0x0 0x1 REDA1R1 [IronBow] NoAI
+UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [4,2] 0x0 0x0 0x1 REDA4R4 [SilverAxe] NoAI
+UNIT 
+
 ALIGN 4
 
 C18ApolloVladmirSupport:
@@ -139,7 +145,24 @@ BeginningScene:
 ENUT GuideChpt18
 MUSC NarrationTheme3
 Narration(Map2CG,Ch18_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+SetBackground(LowlandsCG)
+TEXTSTART
+TEXTSHOW Ch18_Opening
+TEXTEND
+MUSC S_Chaos
+TEXTCONT
+TEXTEND
+MUSC 0x0
+TEXTCONT
+TEXTEND
+ClearBackgroundSmooth
+FADI 0x1c
+CAM1 [0,0]
+LOAD1 0x0 C18OpeningCutscene
+ENUN
+MUSC S_Crisis
+Text(Ch18_Opening2)
+CleanTextNoMap(LowlandsCG,Ch18_Opening3)
 LoadUnitsByDifficulty(C18Easy,C18Normal,C18Hard)
 LOAD1 0x0 C18Units
 ENUN

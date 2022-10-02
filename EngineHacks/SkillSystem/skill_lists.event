@@ -141,10 +141,12 @@ BYTE 00 00
 ALIGN 4
 ArtemisSkillList:
 BYTE 24 SwapID
+BYTE 27 InsightID
 BYTE 00 00
 ALIGN 4
 HollandaiseSkillList:
 BYTE 18 StealPlusID
+BYTE 30 SavageBlowID
 BYTE 00 00
 ALIGN 4
 VladmirSkillList:

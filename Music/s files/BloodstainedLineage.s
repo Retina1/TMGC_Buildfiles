@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	BloodstainedLineage_grp, voicegroup000
+	.equ	BloodstainedLineage_pri, 0
+	.equ	BloodstainedLineage_rev, 0
+	.equ	BloodstainedLineage_mvl, 127
+	.equ	BloodstainedLineage_key, 0
+	.equ	BloodstainedLineage_tbs, 1
+	.equ	BloodstainedLineage_exg, 0
+	.equ	BloodstainedLineage_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	BloodstainedLineage
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+BloodstainedLineage_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 158*song04_tbs/2
+ .byte   KEYSH , BloodstainedLineage_key+0
+ .byte   TEMPO , 158*BloodstainedLineage_tbs/2
  .byte   VOICE , 110
  .byte   PAN , c_v+16
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*BloodstainedLineage_mvl/mxv
  .byte   N68 ,En2 ,v092
  .byte   N68 ,En3
  .byte   W72
@@ -93,7 +93,7 @@ song04_001:
  .byte   Bn3
  .byte   W01
 @  #01 @010   ----------------------------------------
- .byte   TEMPO , 320*song04_tbs/2
+ .byte   TEMPO , 320*BloodstainedLineage_tbs/2
  .byte   TIE ,Bn2
  .byte   TIE ,En3
  .byte   W96
@@ -1605,12 +1605,12 @@ Label_01005ACA:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+BloodstainedLineage_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 110
  .byte   PAN , c_v-24
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*BloodstainedLineage_mvl/mxv
  .byte   W96
 @  #02 @001   ----------------------------------------
  .byte   W96
@@ -2720,12 +2720,12 @@ Label_01005D46:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+BloodstainedLineage_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 10
  .byte   PAN , c_v-14
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BloodstainedLineage_mvl/mxv
  .byte   N11 ,En5 ,v092
  .byte   W12
  .byte   Bn5
@@ -3503,12 +3503,12 @@ Label_0100525B:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+BloodstainedLineage_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 47
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*BloodstainedLineage_mvl/mxv
  .byte   N23 ,En1 ,v092
  .byte   W24
  .byte   N68 ,Bn1
@@ -4236,11 +4236,11 @@ Label_01006035:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+BloodstainedLineage_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 124
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BloodstainedLineage_mvl/mxv
  .byte   N05 ,Ds2 ,v092
  .byte   W06
  .byte   N05
@@ -4331,7 +4331,7 @@ Label_010061BC:
 @  #05 @009   ----------------------------------------
  .byte   W96
 @  #05 @010   ----------------------------------------
- .byte   VOL , 35*song04_mvl/mxv
+ .byte   VOL , 35*BloodstainedLineage_mvl/mxv
  .byte   N11 ,Cn1 ,v092
  .byte   N11 ,Cs2
  .byte   N11 ,Gn2
@@ -6079,12 +6079,12 @@ Label_01006B3C:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+BloodstainedLineage_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 36
  .byte   PAN , c_v+0
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BloodstainedLineage_mvl/mxv
  .byte   W96
 @  #06 @001   ----------------------------------------
  .byte   W96
@@ -7438,12 +7438,12 @@ Label_01006EF4:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+BloodstainedLineage_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 30
  .byte   PAN , c_v-24
- .byte   VOL , 60*song04_mvl/mxv
+ .byte   VOL , 60*BloodstainedLineage_mvl/mxv
  .byte   W96
 @  #07 @001   ----------------------------------------
  .byte   W96
@@ -8310,12 +8310,12 @@ Label_01007321:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+BloodstainedLineage_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 30
  .byte   PAN , c_v+16
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BloodstainedLineage_mvl/mxv
  .byte   W96
 @  #08 @001   ----------------------------------------
  .byte   W96
@@ -8573,7 +8573,7 @@ Label_01007662:
  .byte   PEND 
 @  #08 @052   ----------------------------------------
 Label_0100766C:
- .byte   VOL , 44*song04_mvl/mxv
+ .byte   VOL , 44*BloodstainedLineage_mvl/mxv
  .byte   N23 ,En2 ,v092
  .byte   N23 ,En3
  .byte   W24
@@ -8680,7 +8680,7 @@ Label_010076B7:
   .word Label_01007691
 @  #08 @068   ----------------------------------------
 Label_010076EF:
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BloodstainedLineage_mvl/mxv
  .byte   TIE ,En2 ,v092
  .byte   TIE ,An2
  .byte   W96
@@ -9779,12 +9779,12 @@ Label_010078D6:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song04_009:
+BloodstainedLineage_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 36
  .byte   PAN , c_v+6
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BloodstainedLineage_mvl/mxv
  .byte   W96
 @  #09 @001   ----------------------------------------
  .byte   W96
@@ -10533,12 +10533,12 @@ Label_01007CDF:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song04_010:
+BloodstainedLineage_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BloodstainedLineage_key+0
  .byte   VOICE , 1
  .byte   PAN , c_v+6
- .byte   VOL , 30*song04_mvl/mxv
+ .byte   VOL , 30*BloodstainedLineage_mvl/mxv
  .byte   W96
 @  #10 @001   ----------------------------------------
  .byte   W96
@@ -11479,23 +11479,23 @@ Label_01007FA8:
 @******************************************************@
 	.align	2
 
-song04:
+BloodstainedLineage:
 	.byte	10	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	BloodstainedLineage_pri	@ Priority
+	.byte	BloodstainedLineage_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	BloodstainedLineage_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
-	.word	song04_009
-	.word	song04_010
+	.word	BloodstainedLineage_001
+	.word	BloodstainedLineage_002
+	.word	BloodstainedLineage_003
+	.word	BloodstainedLineage_004
+	.word	BloodstainedLineage_005
+	.word	BloodstainedLineage_006
+	.word	BloodstainedLineage_007
+	.word	BloodstainedLineage_008
+	.word	BloodstainedLineage_009
+	.word	BloodstainedLineage_010
 
 	.end

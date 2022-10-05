@@ -24,6 +24,10 @@
 #define SFXGroup 6
 
 {
+#include "BloodstainedLineage.event"
+SongTable(S_BloodstainedLineage,BloodstainedLineage,1)
+}
+{
 #include "FearFactory.event"
 SongTable(S_FearFactory,FearFactory,1)
 }

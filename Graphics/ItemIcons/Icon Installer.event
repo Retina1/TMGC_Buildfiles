@@ -10,6 +10,12 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(BigShieldIcon)
+#incbin "{Seal} (SacredWar) Item 28.dmp"
+ALIGN 4
+ItemIconEntry(RealLastShieldIcon)
+#incbin "{Celice} Item 38.dmp"
+ALIGN 4
 ItemIconEntry(CutladIcon)
 #incbin "Swords/Cutlass.dmp"
 ALIGN 4

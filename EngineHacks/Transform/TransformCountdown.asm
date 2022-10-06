@@ -84,7 +84,8 @@ str     r0,[r5,#0x2C]//St An Lt Dk Wrank
 mov     r0,#0x00
 str     r0,[r6]
 str     r0,[r6,#0x04]
-str     r0,[r6,#0x08]
+strh r0,[r6,#0x8]
+strb r0,[r6,#0xA]
 str     r0,[r6,#0x0C]
 str     r0,[r6,#0x10]
 str     r0,[r6,#0x14]

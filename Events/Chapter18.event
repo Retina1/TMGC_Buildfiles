@@ -191,20 +191,26 @@ CleanTextNoMap(LowlandsCG,Ch18_Opening3)
 LoadUnitsByDifficulty(C18Easy,C18Normal,C18Hard)
 LOAD1 0x0 C18Units
 ENUN
-//move vlad to torch based event later
 GotoPrepScreen
 ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryTheme
 CHECK_EXISTS Vladmir
 BNE 0x1 0xc 0x0
+MUSC VictoryTheme
+CleanTextNoMap(LowlandsCG,Ch18_EndingNoVladmir)
 Reinforcements(C18Vladmir)
-CleanTextNoMap(HallCG,FillerDialogue)
 GOTO 0x2
 LABEL 0x1
-CleanTextNoMap(HallCG,FillerDialogue)
+CHECK_ALIVE Vladmir
+BNE 0x3 0xc 0x0
+MUSC VictoryMinor
+CleanTextNoMap(LowlandsCG,Ch18_EndingVladmirDead)
+GOTO 0x2
+LABEL 0x3
+MUSC VictoryTheme
+CleanTextNoMap(LowlandsCG,Ch18_Ending)
 LABEL 0x2
 MoveToChapter(Interlude6)
 ENDA

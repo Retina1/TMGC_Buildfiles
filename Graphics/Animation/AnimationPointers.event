@@ -41,6 +41,10 @@
 #include "Freelancer(GabrielKnight)\Magic Installer.event"
 }
 {
+#include "CharacterSpecific\EstelleU\Bow Installer.event"
+#include "CharacterSpecific\EstelleU\Unarmed Installer.event"
+}
+{
 #include "CharacterSpecific\RoseP\Magic Installer.event"
 #include "CharacterSpecific\RoseP\Staff Installer.event"
 }
@@ -431,6 +435,12 @@
 #include "Dracopope\Handaxe Installer.event"
 #include "Dracopope\Magic Installer.event"
 }
+
+ALIGN 4
+EstelleUAnims:
+BowAnim(0xe8)
+UnarmedAnim(0xe9)
+EndAnim
 
 ALIGN 4
 RosePAnims:

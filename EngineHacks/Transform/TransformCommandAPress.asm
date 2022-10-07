@@ -35,8 +35,11 @@ blh     #0x8019464, r3 //get rom char data
 str     r0,[r5]//store on clone location
 ldr     r0,[r6,#0x04]//get class
 str     r0,[r5,#0x04]//store clone class
-ldr 	r0,[r6,#0x08]//get lv xp and deploymment things
-str     r0,[r5,#0x08]//store
+ldrh 	r0,[r6,#0x08]//get lv xp and deploymment things
+strh     r0,[r5,#0x08]//store
+ldrb 	r0,[r6,#0x0A]//get lv xp and deploymment things
+strb     r0,[r5,#0x0A]//store
+//no b
 mov     r0,#0x95
 strb    r0,[r5,#0xC]//hide the clone
 mov     r0,#0xFF

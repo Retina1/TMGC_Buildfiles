@@ -23,6 +23,11 @@
 #define MapMusicGroup 1
 #define SFXGroup 6
 
+
+{
+#include "UrbanArea.event"
+SongTable(S_UrbanArea,UrbanArea,1)
+}
 {
 #include "SkyBattle.event"
 SongTable(S_SkyBattle,SkyBattle,1)

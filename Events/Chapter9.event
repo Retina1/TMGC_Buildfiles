@@ -265,6 +265,11 @@ C9Cutscene2:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [17,5] 0x0 0x0 0x1 REDA18R5 [Fire, Awaken, Vulnerary] NoAI
 UNIT
 
+C9ApolloEnding:
+UNIT Apollo LightM 0x0 Level(10,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [Shine,Banish,Elixir] [0x03,0x03,0x00,0x00]
+UNIT
+
+
 ALIGN 4
 
 BeginningScene:
@@ -295,7 +300,7 @@ MUSC VictoryTheme
 CHECK_EVENTID 0xa
 BEQ 0x1 0xc 0x0
 CleanTextNoMap(BoatCG,Ch9_Ending_Apollo_Unrecruited)
-TurnAlly(Apollo)
+LOAD1 0x0 C9ApolloEnding
 GOTO 0x3
 LABEL 0x1
 CHECK_ALIVE Apollo

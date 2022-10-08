@@ -225,7 +225,7 @@ BEQ 0x1 0xC 0x0
 MUSC S_EncountersAndReunions
 Reinforcements(C18VladmirAirlift)
 Reinforcements(C18Vladmir)
-Text(FillerDialogue)
+Text(Ch18_VladmirJoin)
 MOVE 60 Opistia [15,0]
 ENUN
 SilentKillUnit(Opistia)
@@ -255,7 +255,7 @@ GetTrapExt1At(33,16)
 BEQ 0x1 0xC 0x0
 GetTrapExt1At(32,2)
 BEQ 0x1 0xC 0x0
-Text(FillerDialogue)
+Text(Ch18_AllAlight)
 CALL EndingScene
 LABEL 0x1
 EndEvent

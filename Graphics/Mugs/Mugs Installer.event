@@ -291,7 +291,11 @@ setMugEntry(0x1f,ChartreuseMug,3,5,3,3)
 ALIGN 4
 EstelleMug:
 #incext PortraitFormatter "Estelle.png"
-setMugEntry(0x2e,EstelleMug,3,5,3,3)
+setMugEntry(0x2e,EstelleMug,4,5,4,3)
+ALIGN 4
+EstellePromoMug:
+#incext PortraitFormatter "EstellePromo.png"
+setMugEntry(0x10e,EstellePromoMug,4,5,4,3)
 
 ALIGN 4
 RiftMug:

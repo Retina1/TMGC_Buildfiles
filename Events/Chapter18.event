@@ -28,6 +28,13 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0x12,C18StefanCarbonSupport,Stefan,Carbon)
+CharacterEventBothWays(0x13,C18CassiusMikeySupport,Cassius,Mikey)
+CharacterEventBothWays(0x14,C18JeffSveltzalusSupport,Jeff,Sveltzalus)
+CharacterEventBothWays(0x15,C18JeffHilbertSupport,Jeff,Hilbert)
+CharacterEventBothWays(0x16,C18LeilaDamienSupport,Leila,Damien)
+CharacterEventBothWays(0x17,C18LeilaZachariasSupport,Leila,Zacharias)
+CharacterEventBothWays(0x18,C18DesmondMikeySupport,Desmond,Mikey)
 CharacterEventBothWays(0x21,C18ApolloVladmirSupport,Apollo,Vladmir)
 END_MAIN
 
@@ -165,6 +172,34 @@ Text(ApolloVladmirCSupport)
 GiveItem(Salvation,Apollo)
 SetSupport(Apollo,Vladmir,CSupport,1)
 EndEvent
+C18StefanCarbonSupport:
+Text(StefanCarbonCPSupport)
+SetSupport(Stefan,Carbon,CPSupport,1)
+EndEvent
+C18CassiusMikeySupport:
+Text(CassiusMikeyCPSupport)
+SetSupport(Cassius,Mikey,CPSupport,1)
+EndEvent
+C18JeffSveltzalusSupport:
+Text(JeffSveltzalusCPSupport)
+SetSupport(Jeff,Sveltzalus,CPSupport,1)
+EndEvent
+C18JeffHilbertSupport:
+Text(JeffHilbertCPSupport)
+SetSupport(Jeff,Hilbert,CPSupport,1)
+EndEvent
+C18LeilaDamienSupport:
+Text(LeilaDamienCPSupport)
+SetSupport(Leila,Damien,CPSupport,1)
+EndEvent
+C18LeilaZachariasSupport:
+Text(LeilaZachariasCPSupport)
+SetSupport(Leila,Zacharias,CPSupport,1)
+EndEvent
+C18DesmondMikeySupport:
+Text(DesmondMikeyCPSupport)
+SetSupport(Desmond,Mikey,CPSupport,1)
+EndEvent
 
 BeginningScene:
 ENUT GuideChpt18
@@ -191,6 +226,13 @@ CleanTextNoMap(LowlandsCG,Ch18_Opening3)
 LoadUnitsByDifficulty(C18Easy,C18Normal,C18Hard)
 LOAD1 0x0 C18Units
 ENUN
+SupportFlagOn(Stefan,Carbon,0x12,CSupport)
+SupportFlagOn(Cassius,Mikey,0x13,CSupport)
+SupportFlagOn(Jeff,Sveltzalus,0x14,CSupport)
+SupportFlagOn(Jeff,Hilbert,0x15,CSupport)
+SupportFlagOn(Leila,Damien,0x16,CSupport)
+SupportFlagOn(Leila,Zacharias,0x17,CSupport)
+SupportFlagOn(Desmond,Mikey,0x18,CSupport)
 GotoPrepScreen
 ENDA
 

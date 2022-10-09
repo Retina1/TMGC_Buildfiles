@@ -24,6 +24,7 @@
 #define TurnAllyIfAlive(unit) "CHECK_ALIVE unit; BEQ unit 0xc 0x0; TurnAlly(unit); LABEL unit"
 #define SilentKillUnit(unit) "DISA_IF unit; DISA unit"
 #define SFXKillUnit(unit) "SET_SOMETHING unit; DISA unit"
+#define DisaIfDead(unit) "CHECK_ALIVE unit; BNE unit 0xc 0x0; DISA unit; LABEL unit"
 
 #define Location(textid) "BROWNBOXTEXT textid [8,8]"
 #define LocationText(bgid,textid,labelid) "SetBackground(bgid); Location(labelid) ; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"

@@ -43,6 +43,7 @@ CharacterEventBothWays(0x13,C15JosefAthenaSupport,Josef,Athena)
 CharacterEventBothWays(0x14,C15KennethHilbertSupport,Kenneth,Hilbert)
 CharacterEventBothWays(0x15,C15RachaelJeffSupport,Rachael,Jeff)
 CharacterEventBothWays(0x16,C15ApolloBechamelSupport,Apollo,Bechamel)
+CharacterEventBothWays(0x17,C15DesmondMikeySupport,Desmond,Mikey)
 END_MAIN
 
 LocationBasedEvents:
@@ -466,6 +467,10 @@ EndEvent
 C15ApolloBechamelSupport:
 Text(ApolloBechamelCPSupport)
 SetSupport(Apollo,Bechamel,CPSupport,1)
+EndEvent
+C15DesmondMikeySupport:
+Text(DesmondMikeyCSupport)
+SetSupport(Desmond,Mikey,CSupport,1)
 EndEvent
 
 BeginningScene:

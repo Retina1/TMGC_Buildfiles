@@ -1,30 +1,30 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	RefreshingToilets_grp, voicegroup000
+	.equ	RefreshingToilets_pri, 0
+	.equ	RefreshingToilets_rev, 0
+	.equ	RefreshingToilets_mvl, 127
+	.equ	RefreshingToilets_key, 0
+	.equ	RefreshingToilets_tbs, 1
+	.equ	RefreshingToilets_exg, 0
+	.equ	RefreshingToilets_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	RefreshingToilets
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+RefreshingToilets_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 120*song04_tbs/2
+ .byte   KEYSH , RefreshingToilets_key+0
+ .byte   TEMPO , 120*RefreshingToilets_tbs/2
  .byte   VOICE , 49
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v-44
  .byte   W24
- .byte   TEMPO , 132*song04_tbs/2
+ .byte   TEMPO , 132*RefreshingToilets_tbs/2
  .byte   TIE ,En3 ,v112
  .byte   W72
 @  #01 @001   ----------------------------------------
@@ -57,7 +57,7 @@ song04_001:
  .byte   W23
  .byte   EOT
  .byte   W01
-Label_010085D6:
+Label_019652E6:
  .byte   N44 ,Dn4 ,v112
  .byte   W48
  .byte   N23 ,Cs4
@@ -86,7 +86,7 @@ Label_010085D6:
  .byte   EOT
  .byte   W01
 @  #01 @013   ----------------------------------------
-Label_010085F5:
+Label_01965305:
  .byte   N23 ,An4 ,v112
  .byte   W24
  .byte   Gs4
@@ -97,7 +97,7 @@ Label_010085F5:
  .byte   W24
  .byte   PEND 
 @  #01 @014   ----------------------------------------
-Label_01008600:
+Label_01965310:
  .byte   N23 ,Dn4 ,v112
  .byte   W24
  .byte   TIE ,Cs4
@@ -137,10 +137,10 @@ Label_01008600:
  .byte   W72
 @  #01 @021   ----------------------------------------
  .byte   PATT
-  .word Label_010085F5
+  .word Label_01965305
 @  #01 @022   ----------------------------------------
  .byte   PATT
-  .word Label_01008600
+  .word Label_01965310
 @  #01 @023   ----------------------------------------
  .byte   W96
 @  #01 @024   ----------------------------------------
@@ -173,16 +173,16 @@ Label_01008600:
  .byte   EOT
  .byte   W01
  .byte   GOTO
-  .word Label_010085D6
+  .word Label_019652E6
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+RefreshingToilets_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , RefreshingToilets_key+0
  .byte   VOICE , 49
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v+46
  .byte   W24
  .byte   TIE ,An1 ,v112
@@ -217,7 +217,7 @@ song04_002:
  .byte   W23
  .byte   EOT
  .byte   W01
-Label_0100867A:
+Label_0196581A:
  .byte   N92 ,Bn1 ,v127
  .byte   W72
 @  #02 @009   ----------------------------------------
@@ -241,7 +241,7 @@ Label_0100867A:
  .byte   En2
  .byte   W72
 @  #02 @014   ----------------------------------------
-Label_0100868D:
+Label_0196582D:
  .byte   W24
  .byte   TIE ,An1 ,v127
  .byte   W72
@@ -276,7 +276,7 @@ Label_0100868D:
  .byte   W72
 @  #02 @022   ----------------------------------------
  .byte   PATT
-  .word Label_0100868D
+  .word Label_0196582D
 @  #02 @023   ----------------------------------------
  .byte   W96
 @  #02 @024   ----------------------------------------
@@ -309,16 +309,16 @@ Label_0100868D:
  .byte   EOT
  .byte   W01
  .byte   GOTO
-  .word Label_0100867A
+  .word Label_0196581A
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+RefreshingToilets_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , RefreshingToilets_key+0
  .byte   VOICE , 36
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 34*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v+10
  .byte   BEND , c_v+0
  .byte   W24
@@ -335,7 +335,7 @@ song04_003:
  .byte   N06 ,Gs2
  .byte   W24
 @  #03 @001   ----------------------------------------
-Label_01008782:
+Label_0100541A:
  .byte   W12
  .byte   N11 ,En2 ,v127
  .byte   W06
@@ -357,7 +357,7 @@ Label_01008782:
  .byte   W24
  .byte   PEND 
 @  #03 @002   ----------------------------------------
-Label_010087A3:
+Label_0100543C:
  .byte   W12
  .byte   N05 ,Gs2 ,v127
  .byte   W06
@@ -377,7 +377,7 @@ Label_010087A3:
  .byte   W24
  .byte   PEND 
 @  #03 @003   ----------------------------------------
-Label_010087C4:
+Label_0100545D:
  .byte   W12
  .byte   N11 ,Fs2 ,v127
  .byte   W06
@@ -399,7 +399,7 @@ Label_010087C4:
  .byte   W24
  .byte   PEND 
 @  #03 @004   ----------------------------------------
-Label_010087E5:
+Label_0100547F:
  .byte   W12
  .byte   N05 ,Fs2 ,v127
  .byte   W06
@@ -420,22 +420,22 @@ Label_010087E5:
  .byte   PEND 
 @  #03 @005   ----------------------------------------
  .byte   PATT
-  .word Label_01008782
+  .word Label_0100541A
 @  #03 @006   ----------------------------------------
  .byte   PATT
-  .word Label_010087A3
+  .word Label_0100543C
 @  #03 @007   ----------------------------------------
  .byte   PATT
-  .word Label_010087C4
+  .word Label_0100545D
 @  #03 @008   ----------------------------------------
-Label_01008815:
+Label_010054AF:
  .byte   W12
  .byte   N05 ,Fs2 ,v127
  .byte   W06
  .byte   N01 ,En2 ,v096
  .byte   W06
  .byte   PEND 
-Label_0100881F:
+Label_010054B9:
  .byte   N08 ,An2 ,v127
  .byte   W12
  .byte   N01 ,An2 ,v092
@@ -449,7 +449,7 @@ Label_0100881F:
  .byte   N06 ,An2
  .byte   W24
 @  #03 @009   ----------------------------------------
-Label_01008836:
+Label_010054D0:
  .byte   W12
  .byte   N11 ,Fs2 ,v127
  .byte   W06
@@ -471,7 +471,7 @@ Label_01008836:
  .byte   W24
  .byte   PEND 
 @  #03 @010   ----------------------------------------
-Label_01008857:
+Label_010054F2:
  .byte   W12
  .byte   N05 ,Gs2 ,v127
  .byte   W06
@@ -530,13 +530,13 @@ Label_01008857:
  .byte   W24
 @  #03 @013   ----------------------------------------
  .byte   PATT
-  .word Label_01008836
+  .word Label_010054D0
 @  #03 @014   ----------------------------------------
  .byte   PATT
-  .word Label_01008857
+  .word Label_010054F2
 @  #03 @015   ----------------------------------------
  .byte   PATT
-  .word Label_01008782
+  .word Label_0100541A
 @  #03 @016   ----------------------------------------
  .byte   W12
  .byte   N05 ,Gs2 ,v127
@@ -633,46 +633,46 @@ Label_01008857:
  .byte   W24
 @  #03 @021   ----------------------------------------
  .byte   PATT
-  .word Label_01008836
+  .word Label_010054D0
 @  #03 @022   ----------------------------------------
  .byte   PATT
-  .word Label_01008857
+  .word Label_010054F2
 @  #03 @023   ----------------------------------------
  .byte   PATT
-  .word Label_01008782
+  .word Label_0100541A
 @  #03 @024   ----------------------------------------
  .byte   PATT
-  .word Label_010087A3
+  .word Label_0100543C
 @  #03 @025   ----------------------------------------
  .byte   PATT
-  .word Label_010087C4
+  .word Label_0100545D
 @  #03 @026   ----------------------------------------
  .byte   PATT
-  .word Label_010087E5
+  .word Label_0100547F
 @  #03 @027   ----------------------------------------
  .byte   PATT
-  .word Label_01008782
+  .word Label_0100541A
 @  #03 @028   ----------------------------------------
  .byte   PATT
-  .word Label_010087A3
+  .word Label_0100543C
 @  #03 @029   ----------------------------------------
  .byte   PATT
-  .word Label_010087C4
+  .word Label_0100545D
 @  #03 @030   ----------------------------------------
  .byte   PATT
-  .word Label_01008815
+  .word Label_010054AF
 @  #03 @031   ----------------------------------------
  .byte   GOTO
-  .word Label_0100881F
+  .word Label_010054B9
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+RefreshingToilets_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , RefreshingToilets_key+0
  .byte   VOICE , 49
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v-14
  .byte   W24
  .byte   TIE ,Cs3 ,v112
@@ -703,7 +703,7 @@ song04_004:
  .byte   W23
  .byte   EOT
  .byte   W01
-Label_010086F1:
+Label_019655A1:
  .byte   N92 ,Fs3 ,v112
  .byte   W72
 @  #04 @009   ----------------------------------------
@@ -715,7 +715,7 @@ Label_010086F1:
  .byte   En3
  .byte   W72
 @  #04 @011   ----------------------------------------
-Label_010086FB:
+Label_019655AB:
  .byte   W24
  .byte   TIE ,Fs3 ,v112
  .byte   W72
@@ -754,7 +754,7 @@ Label_010086FB:
  .byte   W96
 @  #04 @020   ----------------------------------------
  .byte   PATT
-  .word Label_010086FB
+  .word Label_019655AB
 @  #04 @021   ----------------------------------------
  .byte   W24
  .byte   N44 ,Bn3 ,v112
@@ -799,16 +799,16 @@ Label_010086FB:
  .byte   EOT
  .byte   W01
  .byte   GOTO
-  .word Label_010086F1
+  .word Label_019655A1
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+RefreshingToilets_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , RefreshingToilets_key+0
  .byte   VOICE , 49
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v+16
  .byte   W24
  .byte   TIE ,Gs2 ,v112
@@ -843,7 +843,7 @@ song04_005:
  .byte   W23
  .byte   EOT
  .byte   W01
-Label_01008DBE:
+Label_0100520E:
  .byte   N92 ,An2 ,v112
  .byte   W72
 @  #05 @009   ----------------------------------------
@@ -859,7 +859,7 @@ Label_01008DBE:
  .byte   N92 ,Cs3
  .byte   W72
 @  #05 @012   ----------------------------------------
-Label_01008DCD:
+Label_0100521D:
  .byte   W24
  .byte   TIE ,Dn3 ,v112
  .byte   W72
@@ -894,7 +894,7 @@ Label_01008DCD:
  .byte   W72
 @  #05 @020   ----------------------------------------
  .byte   PATT
-  .word Label_01008DCD
+  .word Label_0100521D
 @  #05 @021   ----------------------------------------
  .byte   W96
 @  #05 @022   ----------------------------------------
@@ -935,16 +935,16 @@ Label_01008DCD:
  .byte   EOT
  .byte   W01
  .byte   GOTO
-  .word Label_01008DBE
+  .word Label_0100520E
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+RefreshingToilets_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , RefreshingToilets_key+0
  .byte   VOICE , 127
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W36
  .byte   N03 ,En3 ,v100
@@ -1033,7 +1033,7 @@ song04_006:
  .byte   En3 ,v080
  .byte   W06
 @  #06 @005   ----------------------------------------
-Label_01007541:
+Label_010056E5:
  .byte   N02 ,Gs1 ,v104
  .byte   N03 ,Dn5 ,v120
  .byte   W12
@@ -1059,7 +1059,7 @@ Label_01007541:
  .byte   PEND 
 @  #06 @006   ----------------------------------------
  .byte   PATT
-  .word Label_01007541
+  .word Label_010056E5
 @  #06 @007   ----------------------------------------
  .byte   N02 ,Gs1 ,v104
  .byte   N03 ,Dn5 ,v120
@@ -1105,7 +1105,7 @@ Label_01007541:
  .byte   N11 ,Gn1
  .byte   N03 ,Dn3 ,v100
  .byte   W12
-Label_010075BF:
+Label_01005763:
  .byte   N44 ,En2 ,v127
  .byte   N05 ,Dn5
  .byte   W18
@@ -1144,7 +1144,7 @@ Label_010075BF:
  .byte   An7 ,v088
  .byte   W12
 @  #06 @010   ----------------------------------------
-Label_01007602:
+Label_010057A6:
  .byte   N05 ,Cs6 ,v127
  .byte   W12
  .byte   N04 ,An7 ,v100
@@ -1168,7 +1168,7 @@ Label_01007602:
  .byte   W12
  .byte   PEND 
 @  #06 @011   ----------------------------------------
-Label_0100762B:
+Label_010057CF:
  .byte   N05 ,Cs6 ,v127
  .byte   W12
  .byte   N04 ,An7 ,v100
@@ -1193,16 +1193,16 @@ Label_0100762B:
  .byte   PEND 
 @  #06 @012   ----------------------------------------
  .byte   PATT
-  .word Label_01007602
+  .word Label_010057A6
 @  #06 @013   ----------------------------------------
  .byte   PATT
-  .word Label_0100762B
+  .word Label_010057CF
 @  #06 @014   ----------------------------------------
  .byte   PATT
-  .word Label_01007602
+  .word Label_010057A6
 @  #06 @015   ----------------------------------------
  .byte   PATT
-  .word Label_0100762B
+  .word Label_010057CF
 @  #06 @016   ----------------------------------------
  .byte   N05 ,Cs6 ,v127
  .byte   W06
@@ -1227,40 +1227,40 @@ Label_0100762B:
  .byte   W12
 @  #06 @017   ----------------------------------------
  .byte   PATT
-  .word Label_0100762B
+  .word Label_010057CF
 @  #06 @018   ----------------------------------------
  .byte   PATT
-  .word Label_01007602
+  .word Label_010057A6
 @  #06 @019   ----------------------------------------
  .byte   PATT
-  .word Label_0100762B
+  .word Label_010057CF
 @  #06 @020   ----------------------------------------
  .byte   PATT
-  .word Label_01007602
+  .word Label_010057A6
 @  #06 @021   ----------------------------------------
  .byte   PATT
-  .word Label_0100762B
+  .word Label_010057CF
 @  #06 @022   ----------------------------------------
  .byte   PATT
-  .word Label_01007602
+  .word Label_010057A6
 @  #06 @023   ----------------------------------------
  .byte   PATT
-  .word Label_0100762B
+  .word Label_010057CF
 @  #06 @024   ----------------------------------------
  .byte   PATT
-  .word Label_01007602
+  .word Label_010057A6
 @  #06 @025   ----------------------------------------
  .byte   PATT
-  .word Label_0100762B
+  .word Label_010057CF
 @  #06 @026   ----------------------------------------
  .byte   PATT
-  .word Label_01007602
+  .word Label_010057A6
 @  #06 @027   ----------------------------------------
  .byte   PATT
-  .word Label_0100762B
+  .word Label_010057CF
 @  #06 @028   ----------------------------------------
  .byte   PATT
-  .word Label_01007602
+  .word Label_010057A6
 @  #06 @029   ----------------------------------------
  .byte   N05 ,Cs6 ,v127
  .byte   W12
@@ -1296,16 +1296,16 @@ Label_0100762B:
  .byte   N11 ,Gn1
  .byte   W12
  .byte   GOTO
-  .word Label_010075BF
+  .word Label_01005763
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+RefreshingToilets_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , RefreshingToilets_key+0
  .byte   VOICE , 4
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v-64
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -1324,7 +1324,7 @@ song04_007:
  .byte   W96
 @  #07 @008   ----------------------------------------
  .byte   W24
-Label_01008E2D:
+Label_0100527D:
  .byte   W72
 @  #07 @009   ----------------------------------------
  .byte   W96
@@ -1339,7 +1339,7 @@ Label_01008E2D:
 @  #07 @014   ----------------------------------------
  .byte   W96
 @  #07 @015   ----------------------------------------
-Label_01008E34:
+Label_01005284:
  .byte   W24
  .byte   N03 ,An2 ,v127
  .byte   W04
@@ -1379,7 +1379,7 @@ Label_01008E34:
  .byte   W04
  .byte   PEND 
 @  #07 @016   ----------------------------------------
-Label_01008E5C:
+Label_010052AC:
  .byte   N03 ,En4 ,v127
  .byte   W04
  .byte   Cs4
@@ -1407,12 +1407,12 @@ Label_01008E5C:
  .byte   W96
 @  #07 @023   ----------------------------------------
  .byte   PATT
-  .word Label_01008E34
+  .word Label_01005284
 @  #07 @024   ----------------------------------------
  .byte   PATT
-  .word Label_01008E5C
+  .word Label_010052AC
 @  #07 @025   ----------------------------------------
-Label_01008E7B:
+Label_010052CB:
  .byte   W24
  .byte   N03 ,Dn2 ,v127
  .byte   W04
@@ -1466,13 +1466,13 @@ Label_01008E7B:
  .byte   W76
 @  #07 @027   ----------------------------------------
  .byte   PATT
-  .word Label_01008E34
+  .word Label_01005284
 @  #07 @028   ----------------------------------------
  .byte   PATT
-  .word Label_01008E5C
+  .word Label_010052AC
 @  #07 @029   ----------------------------------------
  .byte   PATT
-  .word Label_01008E7B
+  .word Label_010052CB
 @  #07 @030   ----------------------------------------
  .byte   N03 ,An3 ,v127
  .byte   W04
@@ -1487,16 +1487,16 @@ Label_01008E7B:
  .byte   Fs2
  .byte   W04
  .byte   GOTO
-  .word Label_01008E2D
+  .word Label_0100527D
  .byte   FINE
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+RefreshingToilets_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , RefreshingToilets_key+0
  .byte   VOICE , 4
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v+63
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -1515,7 +1515,7 @@ song04_008:
  .byte   W96
 @  #08 @008   ----------------------------------------
  .byte   W24
-Label_010072F9:
+Label_01005335:
  .byte   W72
 @  #08 @009   ----------------------------------------
  .byte   W96
@@ -1530,7 +1530,7 @@ Label_010072F9:
 @  #08 @014   ----------------------------------------
  .byte   W96
 @  #08 @015   ----------------------------------------
-Label_01007300:
+Label_0100533C:
  .byte   W28
  .byte   N03 ,An2 ,v127
  .byte   W04
@@ -1568,7 +1568,7 @@ Label_01007300:
  .byte   W04
  .byte   PEND 
 @  #08 @016   ----------------------------------------
-Label_01007326:
+Label_01005362:
  .byte   N03 ,Gs4 ,v127
  .byte   W04
  .byte   En4
@@ -1596,12 +1596,12 @@ Label_01007326:
  .byte   W96
 @  #08 @023   ----------------------------------------
  .byte   PATT
-  .word Label_01007300
+  .word Label_0100533C
 @  #08 @024   ----------------------------------------
  .byte   PATT
-  .word Label_01007326
+  .word Label_01005362
 @  #08 @025   ----------------------------------------
-Label_01007345:
+Label_01005381:
  .byte   W28
  .byte   N03 ,Dn2 ,v127
  .byte   W04
@@ -1653,13 +1653,13 @@ Label_01007345:
  .byte   W76
 @  #08 @027   ----------------------------------------
  .byte   PATT
-  .word Label_01007300
+  .word Label_0100533C
 @  #08 @028   ----------------------------------------
  .byte   PATT
-  .word Label_01007326
+  .word Label_01005362
 @  #08 @029   ----------------------------------------
  .byte   PATT
-  .word Label_01007345
+  .word Label_01005381
 @  #08 @030   ----------------------------------------
  .byte   N03 ,Cs4 ,v127
  .byte   W04
@@ -1674,16 +1674,16 @@ Label_01007345:
  .byte   An2
  .byte   W04
  .byte   GOTO
-  .word Label_010072F9
+  .word Label_01005335
  .byte   FINE
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song04_009:
+RefreshingToilets_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , RefreshingToilets_key+0
  .byte   VOICE , 74
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*RefreshingToilets_mvl/mxv
  .byte   PAN , c_v+63
  .byte   W96
 @  #09 @001   ----------------------------------------
@@ -1702,7 +1702,7 @@ song04_009:
  .byte   W96
 @  #09 @008   ----------------------------------------
  .byte   W24
-Label_010073AD:
+Label_010058C9:
  .byte   N44 ,Dn4 ,v127
  .byte   W48
  .byte   N23 ,Cs4
@@ -1731,7 +1731,7 @@ Label_010073AD:
  .byte   EOT
  .byte   W01
 @  #09 @013   ----------------------------------------
-Label_010073CC:
+Label_010058E8:
  .byte   N23 ,An4 ,v127
  .byte   W24
  .byte   Gs4
@@ -1742,7 +1742,7 @@ Label_010073CC:
  .byte   W24
  .byte   PEND 
 @  #09 @014   ----------------------------------------
-Label_010073D7:
+Label_010058F3:
  .byte   N23 ,Dn4 ,v127
  .byte   W24
  .byte   TIE ,Cs4
@@ -1782,10 +1782,10 @@ Label_010073D7:
  .byte   W72
 @  #09 @021   ----------------------------------------
  .byte   PATT
-  .word Label_010073CC
+  .word Label_010058E8
 @  #09 @022   ----------------------------------------
  .byte   PATT
-  .word Label_010073D7
+  .word Label_010058F3
 @  #09 @023   ----------------------------------------
  .byte   W96
 @  #09 @024   ----------------------------------------
@@ -1818,28 +1818,28 @@ Label_010073D7:
  .byte   EOT
  .byte   W01
  .byte   GOTO
-  .word Label_010073AD
+  .word Label_010058C9
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-song04:
+RefreshingToilets:
 	.byte	9	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	RefreshingToilets_pri	@ Priority
+	.byte	RefreshingToilets_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	RefreshingToilets_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
-	.word	song04_009
+	.word	RefreshingToilets_001
+	.word	RefreshingToilets_002
+	.word	RefreshingToilets_003
+	.word	RefreshingToilets_004
+	.word	RefreshingToilets_005
+	.word	RefreshingToilets_006
+	.word	RefreshingToilets_007
+	.word	RefreshingToilets_008
+	.word	RefreshingToilets_009
 
 	.end

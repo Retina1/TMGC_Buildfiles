@@ -112,6 +112,12 @@ BeginningScene:
 EVBIT_MODIFY 4
 ENUT 0xcb
 SetBackground(BlankCG)
+CheckNewGameFlag(12)
+BEQ 0x999 0xc 0x0
+SystemText(NewGamePlusPrompt)
+IfNoSelectedGoto(0x999)
+ENUT NewGamePlusFlag
+LABEL 0x999
 ASMC prCallGrowthMenu+1
 SVAL 0x1 0x1
 BEQ 0x1 0xC 0x1

@@ -4,6 +4,7 @@
 
 @.set DrawTextInline, 0x0800443C
 @.set GetPortrait, 0x80192B8
+.equ StealPanel, OffsetList + 0x0
 
 push 	{r4-r7, lr}
 add 	sp, #-0x8
@@ -11,7 +12,7 @@ add 	sp, #-0x8
 @mov 	r1, #0x0
 @_blh 	BGMap_Fill
 ldr 	r6, =gActionData
-ldr 	r0, =#0x202352C
+ldr 	r0, =StealPanel
 ldr 	r1, =#0x85A0D4C
 mov 	r2, #0x80
 lsl 	r2, r2, #0x5

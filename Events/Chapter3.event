@@ -275,7 +275,16 @@ TurnAlly(Josef)
 EndEvent
 
 C3SamJosefTalkConvo:
-ConvoEvent(C3SamJosefTalk)
+CHECK_ALLEGIANCE Josef
+BEQ 0x1 0xc 0x0
+MUSC RecruitmentTheme
+Text(C3SamJosefRecruitment)
+TurnAlly(Josef)
+ENUT 0xa
+GOTO 0x2
+LABEL 0x1
+Text(C3SamJosefTalk)
+EndEvent
 
 C3Village:
 VillageEventItem(C3VillageText, House2CG, Thunder)

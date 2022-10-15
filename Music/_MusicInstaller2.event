@@ -541,6 +541,11 @@ MESSAGE Main voice table begins at CURRENTOFFSET
 //Uncomment the above line if you want to know where exactly the installer is writing the voice table every time.
 //This is useful to ascertain the table location when using GBAMusRiper to make a soundfont.
 
+//NOTES ON RETINA CHANGES
+//replaced dummy 55 w/ old flute 73
+//replaced dummy 72 w/old oboe 68
+
+
 MusicVoices:
 //0 acoustic grand - G2-C4
 VoiceMulti(MusicVoices,0x0,PianoTable,PianoChart)
@@ -647,13 +652,13 @@ VoiceDirect(MusicVoices,0x32,0x3c,0x0247AE8,0x0,0x0,0x0,0x64,0x0,0xff,0xa0)
 //51 strings1 c2 (kept for compatibility purposes; use 48 instead) (if you are looking for synthstrings, try 105) - C2
 VoiceDirect(MusicVoices,0x33,0x3c,0x02367A8,0x0,0x0,0x0,0x80,0x0,0xff,0xa0)
 //52 choir aah - C3-C4
-VoiceMulti(MusicVoices,0x34,ChoirTable,C3toC4Chart)
-//53
-VoiceDummy(MusicVoices,0x35)
+VoiceDirect(MusicVoices,0x34,0x3c,0x028DDD0,0x0,0x0,0x0,0xff,0x0,0xff,0xc0)
+//53 new aaah
+VoiceMulti(MusicVoices,0x35,ChoirTable,C3toC4Chart)
 //54 choir aah c4 (kept for compatibility purposes; use 52 instead) - C4
 VoiceDirect(MusicVoices,0x36,0x3c,0x028CD70,0x0,0x0,0x0,0x32,0x0,0xff,0xd0)
-//55
-VoiceDummy(MusicVoices,0x37)
+//55 old flute
+VoiceDirect(MusicVoices,0x37,0x3c,0x027E640,0x0,0x0,0x0,0xd0,0x0,0xff,0xb0)
 //56 trumpet - C4-C5
 VoiceMulti(MusicVoices,0x38,TrumpetTable,C4toC5Chart)
 //57 trombone - C3
@@ -686,8 +691,8 @@ VoiceDirect(MusicVoices,0x45,0x3c,0x04C4F6C,0x0,0x0,0x0,0xff,0x0,0xff,0x80)
 VoiceDirect(MusicVoices,0x46,0x3c,0x02A7AA8,0x0,0x0,0x0,0xff,0x0,0xff,0xb0)
 //71 clarinet - C2-C4
 VoiceMulti(MusicVoices,0x47,ClarinetTable,C2toC4Chart)
-//72
-VoiceDummy(MusicVoices,0x48)
+//72 old oboe
+VoiceDirect(MusicVoices,0x48,0x3c,0x027BBD0,0x0,0x0,0x0,0xff,0x0,0xff,0x59)
 //73 flute - C4-C5
 VoiceMulti(MusicVoices,0x49,FluteTable,C4toC5Chart)
 //74 recorder (use 73 instead) - C4

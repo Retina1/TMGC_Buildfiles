@@ -10,6 +10,12 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(VoidCleaverIcon)
+#incbin "Axes/Void Cleaver.dmp"
+ALIGN 4
+ItemIconEntry(ShockstickIcon)
+#incbin "Lances/Shockstick.dmp"
+ALIGN 4
 ItemIconEntry(BigShieldIcon)
 #incbin "{Seal} (SacredWar) Item 28.dmp"
 ALIGN 4

@@ -456,13 +456,16 @@
 			baseSupport(Peggy,Apollo,CPSupport)
 	Chapter(Chapter18)
 		Entry
+			name(Secret_Seller_Select)
+			bg(LowlandsCG)
+			importance(2)
+			music(S_PascalTheDog)
+			text(C18_Secret_Seller)
+			eventID(BaseFlag1)
+		Entry
 			bg(LowlandsCG)
 			text(C18_Blair_Emile_Base)
 			baseSupport(Blair,Emile,BSupport)
-		Entry
-			bg(LowlandsCG)
-			text(C18_Arin_Sam_Base)
-			baseSupport(Arin,Sam,BSupport)
 		Entry
 			bg(LowlandsCG)
 			text(C18_Desmond_Flynn_Base)

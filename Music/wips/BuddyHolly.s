@@ -1,31 +1,31 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	BuddyHolly_grp, voicegroup000
+	.equ	BuddyHolly_pri, 0
+	.equ	BuddyHolly_rev, 0
+	.equ	BuddyHolly_mvl, 127
+	.equ	BuddyHolly_key, 0
+	.equ	BuddyHolly_tbs, 1
+	.equ	BuddyHolly_exg, 0
+	.equ	BuddyHolly_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	BuddyHolly
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+BuddyHolly_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BuddyHolly_key+0
 Label_01006022:
- .byte   TEMPO , 122*song04_tbs/2
+ .byte   TEMPO , 122*BuddyHolly_tbs/2
  .byte   VOICE , 36
  .byte   LFOS 44
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BuddyHolly_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BuddyHolly_mvl/mxv
  .byte   N10 ,Fn1 ,v084
  .byte   N10 ,Cn2
  .byte   N10 ,Fn2
@@ -823,15 +823,15 @@ Label_01006487:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+BuddyHolly_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BuddyHolly_key+0
 Label_01005D2A:
  .byte   VOICE , 30
  .byte   LFOS 44
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BuddyHolly_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BuddyHolly_mvl/mxv
  .byte   W96
 @  #02 @001   ----------------------------------------
  .byte   W96
@@ -1407,15 +1407,15 @@ Label_01005F51:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+BuddyHolly_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BuddyHolly_key+0
 Label_010066A6:
  .byte   VOICE , 30
  .byte   LFOS 44
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BuddyHolly_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BuddyHolly_mvl/mxv
  .byte   N09 ,Cn3 ,v072
  .byte   W12
  .byte   Cs3
@@ -2087,15 +2087,15 @@ Label_010069EA:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+BuddyHolly_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BuddyHolly_key+0
 Label_010059A2:
  .byte   VOICE , 38
  .byte   LFOS 44
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*BuddyHolly_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*BuddyHolly_mvl/mxv
  .byte   N08 ,Fn0 ,v096
  .byte   W12
  .byte   N08
@@ -2703,15 +2703,15 @@ Label_01005C1F:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+BuddyHolly_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BuddyHolly_key+0
 Label_01968ECE:
  .byte   VOICE , 74
  .byte   LFOS 44
- .byte   VOL , 43*song04_mvl/mxv
+ .byte   VOL , 43*BuddyHolly_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BuddyHolly_mvl/mxv
  .byte   W96
 @  #05 @001   ----------------------------------------
  .byte   W96
@@ -2966,13 +2966,13 @@ Label_01968EDB:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+BuddyHolly_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BuddyHolly_key+0
 Label_0100570A:
  .byte   VOICE , 18
  .byte   LFOS 44
- .byte   VOL , 33*song04_mvl/mxv
+ .byte   VOL , 33*BuddyHolly_mvl/mxv
  .byte   TIE ,Fn1 ,v120
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -3317,15 +3317,15 @@ Label_0100570A:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+BuddyHolly_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BuddyHolly_key+0
 Label_01006AAA:
  .byte   VOICE , 124
  .byte   LFOS 44
- .byte   VOL , 36*song04_mvl/mxv
+ .byte   VOL , 36*BuddyHolly_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 50*song04_mvl/mxv
+ .byte   VOL , 50*BuddyHolly_mvl/mxv
  .byte   N05 ,Cn1 ,v068
  .byte   N05 ,Fs1 ,v080
  .byte   N24 ,En2 ,v092
@@ -4212,10 +4212,10 @@ Label_01006E81:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+BuddyHolly_008:
 @  #08 @000   ----------------------------------------
- .byte   VOL , 55*song04_mvl/mxv
- .byte   KEYSH , song04_key+0
+ .byte   VOL , 55*BuddyHolly_mvl/mxv
+ .byte   KEYSH , BuddyHolly_key+0
 Label_01005230:
  .byte   VOICE , 124
  .byte   LFOS 44
@@ -4836,21 +4836,21 @@ Label_01005579:
 @******************************************************@
 	.align	2
 
-song04:
+BuddyHolly:
 	.byte	8	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	BuddyHolly_pri	@ Priority
+	.byte	BuddyHolly_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	BuddyHolly_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
+	.word	BuddyHolly_001
+	.word	BuddyHolly_002
+	.word	BuddyHolly_003
+	.word	BuddyHolly_004
+	.word	BuddyHolly_005
+	.word	BuddyHolly_006
+	.word	BuddyHolly_007
+	.word	BuddyHolly_008
 
 	.end

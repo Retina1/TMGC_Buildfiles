@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	BattleForStormHill_grp, voicegroup000
+	.equ	BattleForStormHill_pri, 0
+	.equ	BattleForStormHill_rev, 0
+	.equ	BattleForStormHill_mvl, 127
+	.equ	BattleForStormHill_key, 0
+	.equ	BattleForStormHill_tbs, 1
+	.equ	BattleForStormHill_exg, 0
+	.equ	BattleForStormHill_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	BattleForStormHill
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+BattleForStormHill_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
- .byte   TEMPO , 180*song04_tbs/2
+ .byte   KEYSH , BattleForStormHill_key+0
+ .byte   TEMPO , 180*BattleForStormHill_tbs/2
  .byte   VOICE , 42
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v-4
  .byte   N06 ,An1 ,v127
  .byte   W18
@@ -50,7 +50,7 @@ song04_001:
  .byte   W12
  .byte   N06
  .byte   W12
- .byte   TEMPO , 180*song04_tbs/2
+ .byte   TEMPO , 180*BattleForStormHill_tbs/2
  .byte   N06
  .byte   W12
  .byte   N06
@@ -694,13 +694,13 @@ Label_0100539A:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+BattleForStormHill_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 49
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v+8
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   N06 ,An2 ,v100
  .byte   N06 ,Cs3
  .byte   N06 ,En3 ,v127
@@ -1159,270 +1159,270 @@ Label_0100579E:
  .byte   TIE ,Gn4
  .byte   W72
 @  #02 @051   ----------------------------------------
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 28*song04_mvl/mxv
+ .byte   VOL , 28*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 28*song04_mvl/mxv
+ .byte   VOL , 28*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
  .byte   PEND 
 Label_01005826:
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
 @  #02 @052   ----------------------------------------
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
  .byte   PEND 
  .byte   EOT
  .byte   Gn3 ,v079
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W72
 @  #02 @053   ----------------------------------------
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   N06 ,An2 ,v100
  .byte   N06 ,Cs3
  .byte   N06 ,En3 ,v127
@@ -1636,17 +1636,17 @@ Label_01005826:
 @  #02 @106   ----------------------------------------
  .byte   EOT
  .byte   Gn3 ,v079
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W66
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+BattleForStormHill_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 47
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v-24
  .byte   N60 ,An1 ,v127
  .byte   W72
@@ -2091,11 +2091,11 @@ Label_01005B3B:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+BattleForStormHill_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 46
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v+24
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -3187,11 +3187,11 @@ Label_01005F68:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+BattleForStormHill_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 61
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v-12
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -3200,7 +3200,7 @@ song04_005:
 @  #05 @002   ----------------------------------------
  .byte   W48
 Label_010060AC:
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   N36 ,An2 ,v100
  .byte   N36 ,Dn3
  .byte   W36
@@ -3715,266 +3715,266 @@ Label_01006326:
  .byte   W36
  .byte   PEND 
 Label_0100632F:
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   TIE ,As2 ,v127
  .byte   W01
- .byte   VOL , 28*song04_mvl/mxv
+ .byte   VOL , 28*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 28*song04_mvl/mxv
+ .byte   VOL , 28*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
 @  #05 @052   ----------------------------------------
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
  .byte   PEND 
 @  #05 @053   ----------------------------------------
  .byte   EOT
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W96
 @  #05 @054   ----------------------------------------
  .byte   W48
@@ -4142,7 +4142,7 @@ Label_0100632F:
 @  #05 @106   ----------------------------------------
  .byte   EOT
  .byte   As2
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W96
 @  #05 @107   ----------------------------------------
  .byte   W42
@@ -4150,11 +4150,11 @@ Label_0100632F:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+BattleForStormHill_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 46
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v-20
  .byte   N06 ,An2 ,v100
  .byte   N06 ,Cs3
@@ -5400,11 +5400,11 @@ Label_010069E3:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+BattleForStormHill_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 61
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v+4
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -5876,11 +5876,11 @@ Label_01006D8D:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+BattleForStormHill_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 73
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v-16
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -5937,7 +5937,7 @@ Label_01006E5C:
 Label_01006E7A:
  .byte   W72
 @  #08 @018   ----------------------------------------
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   N12 ,Dn4 ,v127
  .byte   W12
  .byte   Gn4
@@ -6036,267 +6036,267 @@ Label_01006EE0:
  .byte   W48
  .byte   PEND 
 Label_01006EE6:
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 28*song04_mvl/mxv
+ .byte   VOL , 28*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 28*song04_mvl/mxv
+ .byte   VOL , 28*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 27*song04_mvl/mxv
+ .byte   VOL , 27*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 26*song04_mvl/mxv
+ .byte   VOL , 26*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 24*song04_mvl/mxv
+ .byte   VOL , 24*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 22*song04_mvl/mxv
+ .byte   VOL , 22*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 21*song04_mvl/mxv
+ .byte   VOL , 21*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 20*song04_mvl/mxv
+ .byte   VOL , 20*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 16*song04_mvl/mxv
+ .byte   VOL , 16*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 15*song04_mvl/mxv
+ .byte   VOL , 15*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 14*song04_mvl/mxv
+ .byte   VOL , 14*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 13*song04_mvl/mxv
+ .byte   VOL , 13*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 12*song04_mvl/mxv
+ .byte   VOL , 12*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 11*song04_mvl/mxv
+ .byte   VOL , 11*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
 @  #08 @026   ----------------------------------------
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 9*song04_mvl/mxv
+ .byte   VOL , 9*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 7*song04_mvl/mxv
+ .byte   VOL , 7*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 6*song04_mvl/mxv
+ .byte   VOL , 6*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 5*song04_mvl/mxv
+ .byte   VOL , 5*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W01
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W02
  .byte   PEND 
 @  #08 @027   ----------------------------------------
  .byte   EOT
  .byte   Dn5
 Label_01006FE8:
- .byte   VOL , 4*song04_mvl/mxv
+ .byte   VOL , 4*BattleForStormHill_mvl/mxv
  .byte   W96
 @  #08 @028   ----------------------------------------
  .byte   W48
@@ -6522,11 +6522,11 @@ Label_01006FE8:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song04_009:
+BattleForStormHill_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 40
- .byte   VOL , 23*song04_mvl/mxv
+ .byte   VOL , 23*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v+20
  .byte   N06 ,An2 ,v100
  .byte   N06 ,Cs3
@@ -7772,11 +7772,11 @@ Label_01007563:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song04_010:
+BattleForStormHill_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 116
- .byte   VOL , 29*song04_mvl/mxv
+ .byte   VOL , 29*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v-1
  .byte   W96
 @  #10 @001   ----------------------------------------
@@ -8077,11 +8077,11 @@ Label_01966338:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song04_011:
+BattleForStormHill_011:
 @  #11 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , BattleForStormHill_key+0
  .byte   VOICE , 124
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*BattleForStormHill_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N03 ,Cn1 ,v100
  .byte   N03 ,En1
@@ -9006,24 +9006,24 @@ Label_01007B69:
 @******************************************************@
 	.align	2
 
-song04:
+BattleForStormHill:
 	.byte	11	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	BattleForStormHill_pri	@ Priority
+	.byte	BattleForStormHill_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	BattleForStormHill_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
-	.word	song04_009
-	.word	song04_010
-	.word	song04_011
+	.word	BattleForStormHill_001
+	.word	BattleForStormHill_002
+	.word	BattleForStormHill_003
+	.word	BattleForStormHill_004
+	.word	BattleForStormHill_005
+	.word	BattleForStormHill_006
+	.word	BattleForStormHill_007
+	.word	BattleForStormHill_008
+	.word	BattleForStormHill_009
+	.word	BattleForStormHill_010
+	.word	BattleForStormHill_011
 
 	.end

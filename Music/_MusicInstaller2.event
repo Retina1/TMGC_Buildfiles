@@ -34,6 +34,18 @@
 //songs
 
 {
+#include "BattleForStormHill.event"
+SongTable(S_BattleForStormHill,BattleForStormHill,1)
+}
+{
+#include "BuddyHolly.event"
+SongTable(S_BuddyHolly,BuddyHolly,1)
+}
+{
+#include "TheWeightOfLife.event"
+SongTable(S_TheWeightOfLife,TheWeightOfLife,1)
+}
+{
 #include "RefreshingToilets.event"
 SongTable(S_RefreshingToilets,RefreshingToilets,1)
 }

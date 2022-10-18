@@ -29,16 +29,16 @@ CharacterBasedEvents:
 CharacterEvent(0x8,I6ArinTalk,Blair,Arin)
 CharacterEvent(0x9,I6ArinTalk,Blair,Kenneth)
 CharacterEvent(0xa,I6ArinTalk,Blair,Natasia)
-CharacterEvent(0xb,I6ArinTalk,Blair,Stefan)
+CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)
 CharacterEvent(0xc,I6ArinTalk,Blair,Desmond)
 CharacterEvent(0xd,I6ArinTalk,Blair,Sam)
 CharacterEvent(0xe,I6ArinTalk,Blair,Josef)
-CharacterEvent(0xf,I6PeggyTalk,Blair,Peggy)
+CharacterEvent(0xf,I6PeggyTalk,Blair,Peggy)//done
 CharacterEvent(0x10,I6ArinTalk,Blair,Butch)
 CharacterEvent(0x11,I6ArinTalk,Blair,Cassius)
 CharacterEvent(0x12,I6ArinTalk,Blair,Rachael)
 CharacterEvent(0x13,I6ArinTalk,Blair,Jeff)
-CharacterEvent(0x14,I6EmileTalk,Blair,Emile)
+CharacterEvent(0x14,I6EmileTalk,Blair,Emile)//done
 CharacterEvent(0x15,I6ArinTalk,Blair,Apollo)
 CharacterEvent(0x16,I6ArinTalk,Blair,Bechamel)
 CharacterEvent(0x17,I6ArinTalk,Blair,Sveltzalus)
@@ -54,7 +54,7 @@ CharacterEvent(0x20,I6ArinTalk,Blair,Alexis)
 CharacterEvent(0x21,I6ArinTalk,Blair,Leila)
 CharacterEvent(0x22,I6ArinTalk,Blair,Damien)
 CharacterEvent(0x23,I6ArinTalk,Blair,Zacharias)
-CharacterEvent(0x24,I6AvanTalk,Blair,Avan)
+CharacterEvent(0x24,I6AvanTalk,Blair,Avan)//done
 CharacterEvent(0x25,I6ArinTalk,Blair,Toddsworth)
 CharacterEvent(0x26,I6ArinTalk,Blair,Yuyu)
 CharacterEvent(BaseFlag1,I6ArinTalk,Blair,Artemis)
@@ -135,9 +135,107 @@ UNIT
 ALIGN 4
 
 //make someone give a live to serve scroll
+//stefan can choose a living sword user to pracice with and gain varying benefits
+//	arin:+mag/luck, butch:+skl/str, jeff:+spd/learn thievery?, flynn:+spd/res, hyperius:+hp/def, leila:+str/spd/-luck.training dummy:+all stats (only if everyone's dead)
+//toddsworth becomes god ifhe's been grinded to level 20
 
 I6ArinTalk:
 Text(I6ArinConvo)
+EndEvent
+
+I6StefanTalk:
+EVBIT_MODIFY 3
+Text(I6StefanConvo)
+REMA
+CHECK_ALIVE Arin
+BNE 0x40 0xc 0x0
+CHECK_ALIVE Butch
+BNE 0x40 0xc 0x0
+CHECK_ALIVE Jeff
+BNE 0x40 0xc 0x0
+CHECK_ALIVE Flynn
+BNE 0x40 0xc 0x0
+CHECK_ALIVE Hyperius
+BNE 0x40 0xc 0x0
+CHECK_ALIVE Leila
+BEQ 0x66 0xc 0x0
+LABEL 0x40
+ASMC prCallStefanMenu+1
+BNE 0x10 0xc 0x0
+CHECK_ALIVE Arin
+BEQ 0x15 0xc 0x0
+Text(I6StefanArinConvo)
+AddUnitStatus(Stefan,Magic,3)
+AddUnitStatus(Stefan,LuckStat,3)
+SystemText(I6ArinTrained)
+GOTO 0x68
+LABEL 0x10
+SVAL 0x1 0x1
+BNE 0x11 0xc 0x1
+CHECK_ALIVE Butch
+BEQ 0x15 0xc 0x0
+Text(I6StefanButchConvo)
+AddUnitStatus(Stefan,Skill,2)
+AddUnitStatus(Stefan,Strength,2)
+SystemText(I6ButchTrained)
+GOTO 0x68
+LABEL 0x11
+SVAL 0x1 0x2
+BNE 0x12 0xc 0x1
+CHECK_ALIVE Jeff
+BEQ 0x15 0xc 0x0
+Text(I6StefanJeffConvo)
+//AddUnitStatus(Stefan,Speed,2) cunning on its own is already good
+LearnSkill(Stefan,CunningID)
+SystemText(I6JeffTrained)
+GOTO 0x68
+LABEL 0x12
+SVAL 0x1 0x3
+BNE 0x13 0xc 0x1
+CHECK_ALIVE Flynn
+BEQ 0x15 0xc 0x0
+Text(I6StefanFlynnConvo)
+AddUnitStatus(Stefan,Speed,2)
+AddUnitStatus(Stefan,Resistance,2)
+SystemText(I6FlynnTrained)
+GOTO 0x68
+LABEL 0x13
+SVAL 0x1 0x4
+BNE 0x14 0xc 0x1
+CHECK_ALIVE Hyperius
+BEQ 0x15 0xc 0x0
+Text(I6StefanHyperiusConvo)
+AddUnitStatus(Stefan,MaxHP,3)
+AddUnitStatus(Stefan,Defence,3)
+SystemText(I6HyperiusTrained)
+GOTO 0x68
+LABEL 0x14
+SVAL 0x1 0x5
+BNE 0x15 0xc 0x1
+CHECK_ALIVE Leila
+BEQ 0x15 0xc 0x0
+Text(I6StefanLeilaConvo)
+AddUnitStatus(Stefan,Strength,3)
+AddUnitStatus(Stefan,Speed,3)
+AddUnitStatus(Stefan,LuckStat,(-3))
+SystemText(I6LeilaTrained)
+GOTO 0x68
+LABEL 0x15
+SystemText(StefanInvalidPartner)
+ClearBackgroundSmooth
+GOTO 0x40
+LABEL 0x66
+Text(I6StefanSoloConvo)
+AddUnitStatus(Stefan,MaxHP,4)
+AddUnitStatus(Stefan,Strength,4)
+AddUnitStatus(Stefan,Magic,4)
+AddUnitStatus(Stefan,Skill,4)
+AddUnitStatus(Stefan,Speed,4)
+AddUnitStatus(Stefan,Defence,4)
+AddUnitStatus(Stefan,Resistance,4)
+AddUnitStatus(Stefan,LuckStat,4)
+SystemText(I6SoloTrained)
+LABEL 0x68
 EndEvent
 
 I6PeggyTalk:

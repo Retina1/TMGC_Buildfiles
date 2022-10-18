@@ -10,6 +10,12 @@ ORG $a42a4
 BYTE 0x84 0x52 0x00 0x03
 POP
 
+//giveall fix (be careful with viridian convoy)
+/*PUSH
+ORG 0x0e191A
+BYTE 0x95
+POP*/
+
 //stacking reavers
 PUSH
 ORG 0x02C784

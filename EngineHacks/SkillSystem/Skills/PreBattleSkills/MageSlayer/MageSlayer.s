@@ -43,6 +43,24 @@ cmp r3,#0x4a
 beq Final
 cmp r3,#0x2c
 beq Final
+cmp r3,#0x2
+beq Final
+cmp r3,#0x4
+beq Final
+cmp r3,#0x26
+beq Final
+cmp r3,#0x28
+beq Final
+cmp r3,#0x2e
+beq Final
+cmp r3,#0x30
+beq Final
+cmp r3,#0x2a
+beq Final
+cmp r3,#0x4b
+beq Final
+cmp r3,#0x33
+beq Final
 b Loop
 
 

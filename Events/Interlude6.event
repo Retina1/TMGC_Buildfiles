@@ -29,7 +29,7 @@ CharacterBasedEvents:
 CharacterEvent(0x8,I6ArinTalk,Blair,Arin)
 CharacterEvent(0x9,I6ArinTalk,Blair,Kenneth)
 CharacterEvent(0xa,I6ArinTalk,Blair,Natasia)
-CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)
+CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)//done
 CharacterEvent(0xc,I6ArinTalk,Blair,Desmond)
 CharacterEvent(0xd,I6ArinTalk,Blair,Sam)
 CharacterEvent(0xe,I6ArinTalk,Blair,Josef)
@@ -135,8 +135,6 @@ UNIT
 ALIGN 4
 
 //make someone give a live to serve scroll
-//stefan can choose a living sword user to pracice with and gain varying benefits
-//	arin:+mag/luck, butch:+skl/str, jeff:+spd/learn thievery?, flynn:+spd/res, hyperius:+hp/def, leila:+str/spd/-luck.training dummy:+all stats (only if everyone's dead)
 //toddsworth becomes god ifhe's been grinded to level 20
 
 I6ArinTalk:

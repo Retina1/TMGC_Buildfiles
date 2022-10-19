@@ -13,11 +13,11 @@ ALIGN 4
 CharClassTable:
 FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
-#define BattleSpriteTable 0xC00008
+#define BattleSpriteTable ClassAnimTable
 
 #define setPalette(index, palette) "PUSH; ORG (PaletteTable + index * 0x10); POIN palette; POP"
 //set the generic palette to a class animation
-#define setGenericPalette(index, genpal) "PUSH; ORG ((BattleSpriteTable - 0x4) + (index * 0x20)); POIN genpal; POP"
+#define setGenericPalette(index, genpal) "PUSH; ORG ((BattleSpriteTable - 0x4) - 0x20 + (index * 0x20)); POIN genpal; POP"
 
 //For FE8 palette Association
 //#define CharClassTable $95E0A4

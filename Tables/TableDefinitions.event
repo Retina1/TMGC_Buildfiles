@@ -132,7 +132,7 @@
 #define AnimaAffinity 7
 
 #define negateByte(byte) "0x100-byte"
-#define IsPointer 0x8000000
+//#define IsPointer 0x8000000
 
   #define defWTAAdvantage(attackingType, defendingType) "BYTE attackingType defendingType"//"BYTE attackingType defendingType 0x0F 0x01"
   #define defWTADisadvantage(attackingType, defendingType) "BYTE defendingType attackingType" //"BYTE attackingType defendingType 0xF1 0xFF"

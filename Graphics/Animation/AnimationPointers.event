@@ -1,13 +1,13 @@
-#ifndef ClassAnimTable
+/*#ifndef ClassAnimTable
   #ifdef _FE8_
     #define ClassAnimTable (0xc00008-0x20)
   #endif
   #ifdef _FE7_
     #define ClassAnimTable (0xe00008-0x20)
   #endif
-#endif
+#endif*/
 
-#define AnimTableEntry(index) "ORG ClassAnimTable + ((index) * 0x20)"
+#define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
 #define animSword 0
 #define animLance 1
 #define animAxe 2
@@ -37,6 +37,12 @@
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define EndAnim "WORD 0x0 0x0"
 
+
+{
+#include "Brigand\Axe Installer.event"
+#include "Brigand\Handaxe Installer.event"
+#include "Brigand\Unarmed Installer.event"
+}
 {
 #include "Freelancer(GabrielKnight)\Magic Installer.event"
 }
@@ -437,15 +443,22 @@
 }
 
 ALIGN 4
+BrigandAnims:
+AxeAnim(0x20)
+HandAxeAnim(0x21)
+UnarmedAnim(0x22)
+EndAnim
+
+ALIGN 4
 EstelleUAnims:
-BowAnim(0xe8)
-UnarmedAnim(0xe9)
+BowAnim(0x61)
+UnarmedAnim(0x9f)
 EndAnim
 
 ALIGN 4
 RosePAnims:
-MagicAnim(0xe6)
-StaffAnim(0xe7)
+MagicAnim(0xc2)
+StaffAnim(0xc3)
 EndAnim
 
 ALIGN 4

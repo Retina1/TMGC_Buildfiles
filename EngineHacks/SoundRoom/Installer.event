@@ -1,0 +1,145 @@
+
+// credit to pikmin1211
+
+#define SoundRoomSongTable newMusicTable
+
+ALIGN 4
+#include "DrawSoundRoomText.lyn.event"
+
+gSoundRoomUIProc:
+WORD 0x8A21338
+
+PUSH
+
+// dont draw the completion number
+ORG 0xAF4F4 // DrawUiNumber()
+SHORT 0x46C0 0x46C0 // nop nop
+
+ORG 0xB0094
+jumpToHack(DrawSoundRoomSongSourceHook)
+
+// center the title text properly
+ORG 0xB0052
+BYTE 0xA8
+
+POP
+
+#define SoundRoomSource(songId, textId) "WORD songId; SHORT textId 0"
+
+ALIGN 4
+SoundRoomSourceTable:
+SoundRoomSource(S_ClashOfCalamity,Source_Other)
+SoundRoomSource(S_EverydayBrawls,Source_Other)
+SoundRoomSource(S_Ambience,Source_DKC)
+SoundRoomSource(S_GloryToGrann,Source_FireEmblem4)
+SoundRoomSource(S_FE6Battle,Source_FireEmblem6)
+SoundRoomSource(S_CTBattle2,Source_CT)
+SoundRoomSource(S_TheDevoted,Source_FireEmblem10)
+SoundRoomSource(S_Stratagem,Source_FireEmblem7)
+SoundRoomSource(S_TasteOfJustice,Source_Other)
+SoundRoomSource(S_ElfField,Source_Lagoon)
+SoundRoomSource(S_MasterOfWater,Source_Lagoon)
+SoundRoomSource(S_Premonition,Source_Lagoon)
+SoundRoomSource(S_Liberation,Source_FireEmblem12)
+SoundRoomSource(S_LastBibleField,Source_LastBible3)
+SoundRoomSource(S_FE4Victory,Source_FireEmblem4)
+SoundRoomSource(S_LongRoad,Source_FireEmblem16)
+SoundRoomSource(S_ShackledWolves,Source_FireEmblem16)
+SoundRoomSource(S_Metamorphosis,Source_FF6)
+SoundRoomSource(S_SkyTower,Source_PMDRT)
+SoundRoomSource(S_TearsOfResolution,Source_Other)
+SoundRoomSource(S_LussariasDestiny,Source_Other)
+SoundRoomSource(S_FootstepsOfFate,Source_FireEmblem11)
+SoundRoomSource(S_ForTheCommanders,Source_FireEmblem6)
+SoundRoomSource(S_SMTVBattle,Source_SMT5)
+SoundRoomSource(S_FE5Battle,Source_FireEmblem5)
+SoundRoomSource(S_ItHasToBeThisWay,Source_MGR)
+SoundRoomSource(S_PathsThatWillNeverCross,Source_FireEmblem16)
+SoundRoomSource(S_FaceMyself,Source_Persona4)
+SoundRoomSource(S_BattleA3,Source_SMT4)
+SoundRoomSource(S_CrimsonRidge,Source_Other)
+SoundRoomSource(S_StoppableDestiny,Source_FireEmblem10)
+SoundRoomSource(S_FE5RecoveryB,Source_FireEmblem5)
+SoundRoomSource(S_Impromptu,Source_Persona5)
+SoundRoomSource(S_FE5Promo,Source_FireEmblem5)
+SoundRoomSource(S_SMTLevelUp,Source_SMT)
+SoundRoomSource(S_Crisis,Source_FireEmblem5)
+SoundRoomSource(S_StickerbrushSymphony,Source_DKC2)
+SoundRoomSource(S_EncountersAndReunions,Source_FireEmblem5)
+SoundRoomSource(S_Trisection,Source_FFT)
+SoundRoomSource(S_FearlessAdversary,Source_Other)
+SoundRoomSource(S_DenpaMenPalace,Source_DenpaMen)
+SoundRoomSource(S_MachinaVillage,Source_XenobladeChronicles)
+SoundRoomSource(S_FE4Conversation,Source_FireEmblem4)
+SoundRoomSource(S_TMSQuestBattle,Source_TMS)
+SoundRoomSource(S_MythicQuestBattle,Source_FFMQ)
+SoundRoomSource(S_ThraciaAdvance,Source_FireEmblem5)
+SoundRoomSource(S_AugustB,Source_FireEmblem5)
+SoundRoomSource(S_DraculaCastle,Source_SOTN)
+SoundRoomSource(S_BabaIsYou,Source_BabaIsYou)
+SoundRoomSource(S_AshuraShop,Source_SMT4)
+SoundRoomSource(S_BlackMarket,Source_SMT4)
+SoundRoomSource(S_ShadowOfTheLowland,Source_XenobladeChronicles2)
+SoundRoomSource(S_AmalaBattle,Source_SMT3)
+SoundRoomSource(S_GameOver,Source_SMT2)
+SoundRoomSource(S_Unfulfilled,Source_FireEmblem16)
+SoundRoomSource(S_UenoUnderground,Source_SMT4)
+SoundRoomSource(S_RightRoad,Source_FireEmblem12)
+SoundRoomSource(S_Ameno,Source_Other)
+SoundRoomSource(S_SMT4ShinjukuUnderground,Source_SMT4)
+SoundRoomSource(S_BattleA1,Source_SMT4)
+SoundRoomSource(S_CampIchigaya,Source_SMT4)
+SoundRoomSource(S_SummerLove,Source_Lisa)
+SoundRoomSource(S_HipShop,Source_Deltarune)
+SoundRoomSource(S_Jaws,Source_OOE)
+SoundRoomSource(S_SearchingTheEnemy,Source_FireEmblem5)
+SoundRoomSource(S_OutOfKindness,Source_Persona5)
+SoundRoomSource(S_GentleMadman,Source_Persona5)
+SoundRoomSource(S_IntoTheMind,Source_YIIK)
+SoundRoomSource(S_SMT4B2,Source_SMT4)
+SoundRoomSource(S_SMT4Tokyo,Source_SMT4)
+SoundRoomSource(S_ToBecomeGodsEnemy,Source_SMT4A)
+SoundRoomSource(S_Neutral,Source_SMT2)
+SoundRoomSource(S_Chaos,Source_SMT2)
+SoundRoomSource(S_KKCondor,Source_AnimalCrossing)
+SoundRoomSource(S_MechanicalRhythm,Source_XenobladeChronicles)
+SoundRoomSource(S_CrossCounter,Source_BreathOfFire)
+SoundRoomSource(S_SMT4B4,Source_SMT4)
+SoundRoomSource(S_PascalTheDog,Source_SMT)
+SoundRoomSource(S_DickGumshoe,Source_PWAA)
+SoundRoomSource(S_NeonMixtape,Source_PVZ2)
+SoundRoomSource(S_MainTheme,Source_FireEmblem16)
+SoundRoomSource(S_ConfidenceInTheDomination,Source_ValkyrieProfile)
+SoundRoomSource(S_DelusionalExtremities,Source_ValkyrieProfile)
+SoundRoomSource(S_Dialga,Source_PokemonDP)
+SoundRoomSource(S_SonicBoss,Source_Sonic2)
+SoundRoomSource(S_LiveALive,Source_LiveALive)
+SoundRoomSource(S_CircleOfTheMoon,Source_COTM)
+SoundRoomSource(S_Terra,Source_FF6)
+SoundRoomSource(S_RiversInTheDesert,Source_Persona5)
+SoundRoomSource(S_SearchingForFriends,Source_FF6)
+SoundRoomSource(S_XC3Theme,Source_XenobladeChronicles3)
+SoundRoomSource(S_WhenMotherWasThere,Source_Persona5)
+SoundRoomSource(S_WhenMotherWasThereAlt,Source_Persona5)
+SoundRoomSource(S_BlackTar,Source_XenobladeChroniclesX)
+SoundRoomSource(S_Uncontrollable,Source_XenobladeChroniclesX)
+SoundRoomSource(S_BetterCallSaul,Source_Other)
+SoundRoomSource(S_TimeToMakeHistory,Source_Persona4)
+SoundRoomSource(S_LifeWillChange,Source_Persona5)
+SoundRoomSource(S_FierceAsFire,Source_FireEmblem16)
+SoundRoomSource(S_JFAEnding,Source_PWJFA)
+SoundRoomSource(S_RigorousJustice,Source_AAI2)
+SoundRoomSource(S_JokingMotive,Source_AAI2)
+SoundRoomSource(S_TheOnlyThingTheyFearIsYou,Source_Doom)
+SoundRoomSource(S_FearFactory,Source_DKC)
+SoundRoomSource(S_BloodstainedLineage,Source_GuiltyGear)
+SoundRoomSource(S_SkyBattle,Source_PockyAndRocky)
+SoundRoomSource(S_UrbanArea,Source_SMT4)
+SoundRoomSource(S_RefreshingToilets,Source_Mother3)
+SoundRoomSource(S_TheWeightOfLife,Source_XenobladeChronicles3)
+SoundRoomSource(S_BuddyHolly,Source_Weezer)
+SoundRoomSource(S_BattleForStormHill,Source_DKJB)
+SoundRoomSource(S_ForestInterlude,Source_DKC2)
+
+
+WORD 0 0 // term

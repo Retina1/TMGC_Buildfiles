@@ -85,6 +85,7 @@ mov  r2, #0x5C//def offset
 ldrh r2, [r5,r2]
 mov  r3, #0x5A//atk offset
 ldrh r3, [r4,r3]
+sub  r3, #0x2
 sub  r3, r2//atk
 mov  r2,#0x03
 mul  r3,r2

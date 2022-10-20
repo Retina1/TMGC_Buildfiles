@@ -34,5 +34,5 @@
 
 #ifdef _FE8_
 //Shockingly, FE8 does this the simplest way.
-#define MoveToChapter(chapter) "ENUT 0x3; MNC2 chapter"
+#define MoveToChapter(chapter) "ENUT 0x3; EVBIT_F 0x2; MNC2 chapter"
 #endif

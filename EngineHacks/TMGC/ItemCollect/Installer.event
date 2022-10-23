@@ -1,0 +1,6 @@
+ALIGN 4
+
+#define AnnihilateItem(item) "BYTE 0x40 0x0D item 0x00; POIN ItemCollectionFunction+1"
+//also eventually add mass check for things like axe handle and unknown page
+ItemCollectionFunction:
+#incbin "item_collect.bin"

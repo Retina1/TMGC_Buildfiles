@@ -41,7 +41,7 @@ CharacterEvent(0x13,I6ArinTalk,Blair,Jeff)
 CharacterEvent(0x14,I6EmileTalk,Blair,Emile)//done
 CharacterEvent(0x15,I6ArinTalk,Blair,Apollo)
 CharacterEvent(0x16,I6ArinTalk,Blair,Bechamel)
-CharacterEvent(0x17,I6ArinTalk,Blair,Sveltzalus)
+CharacterEvent(0x17,I6SveltzalusTalk,Blair,Sveltzalus)
 CharacterEvent(0x18,I6ArinTalk,Blair,Hilbert)
 CharacterEvent(0x19,I6ArinTalk,Blair,Flynn)
 CharacterEvent(0x1a,I6ArinTalk,Blair,Mikey)
@@ -55,12 +55,12 @@ CharacterEvent(0x21,I6ArinTalk,Blair,Leila)
 CharacterEvent(0x22,I6ArinTalk,Blair,Damien)
 CharacterEvent(0x23,I6ArinTalk,Blair,Zacharias)
 CharacterEvent(0x24,I6AvanTalk,Blair,Avan)//done
-CharacterEvent(0x25,I6ArinTalk,Blair,Toddsworth)
+CharacterEvent(0x25,I6ToddsworthTalk,Blair,Toddsworth)//done
 CharacterEvent(0x26,I6ArinTalk,Blair,Yuyu)
-CharacterEvent(BaseFlag1,I6ArinTalk,Blair,Artemis)
+CharacterEvent(BaseFlag1,I6ArtemisTalk,Blair,Artemis)//done
 CharacterEvent(BaseFlag2,I6ArinTalk,Blair,Hollandaise)
 CharacterEvent(BaseFlag3,I6ArinTalk,Blair,Vladmir)
-CharacterEvent(BaseFlag4,I6ArinTalk,Blair,Addington)
+CharacterEvent(BaseFlag4,I6AddingtonTalk,Blair,Addington)
 END_MAIN
 
 LocationBasedEvents:
@@ -135,10 +135,33 @@ UNIT
 ALIGN 4
 
 //make someone give a live to serve scroll
-//toddsworth becomes god if he's been grinded to level 20
+//mention the infernal music at the end of the map
 
 I6ArinTalk:
 Text(I6ArinConvo)
+EndEvent
+
+
+I6SveltzalusTalk:
+Text(I6SveltzalusConvo)
+AnnihilateItem(EvilEye)
+GiveItem(CrimsonEye,Sveltzalus)
+EndEvent
+
+I6ArtemisTalk:
+Text(I6ArtemisConvo)
+EndEvent
+
+I6AddingtonTalk:
+Text(I6AddingtonConvo)
+EndEvent
+
+I6ToddsworthTalk:
+EVBIT_MODIFY 3
+Text(I6ToddsworthConvo)
+ASMC prCallToddsworthMenu+1
+Text(I6ToddsworthConvo2)
+ENUT 0x4
 EndEvent
 
 I6StefanTalk:

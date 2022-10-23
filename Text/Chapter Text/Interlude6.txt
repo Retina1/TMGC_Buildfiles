@@ -32,19 +32,111 @@ gay gay homosexual gay[A][X]
 //leila
 //damien
 //zacharias
-//toddsworth - change the music to buddy holly?
-//artemis
 //hollandaise
 //vladmir
 
 //kenneth - blair/kenneth support
 //natasia - blair/natasia support
-//sveltzalus - weapon upgrade?
 //carbon - blair/carbon support
 //zeke - blair/zeke support
 //yuyu - blair/yuyu support
-//addington? - purely for the funny
 
+
+##I6SveltzalusConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadSveltzalus][OpenMidLeft]
+Hey, Sveltzalus. How're you?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][MoveMidRight][A][N][OpenMidLeft]
+Yeah, can't imagine all this ash[N]
+and soot is good for you.[A][N]
+Sorry about that, friend.[A][N]
+I must say, you've been in[N]
+great form lately.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]What's that? Is your eye[ToggleMouthMove]...[ToggleMouthMove][N]
+changing? Is this a new power?[A][N]
+Well, then[ToggleMouthMove]...[ToggleMouthMove] Good for you![A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][MoveMidRight][A][X]
+
+##I6AddingtonConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadAddington][OpenMidLeft]
+You know, I gotta say.[N]
+You're quite the machine.[A][N]
+Still not quite sure if I[N]
+got my money's worth[ToggleMouthMove]...[ToggleMouthMove][A][N][ToggleSmile]
+But you're fun. And sometimes,[N]
+that's all that matters.[A][N]
+I'm sure your creator's doing[N]
+great things[ToggleMouthMove]...[ToggleMouthMove][A] And you'll be[N]
+part of that grand legacy.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]What a lucky little guy.[A][X]
+
+##I6ArtemisConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadArtemis]
+Greetings, young lady. I had been[N]
+meaning to ask you something.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]You knew I was from Holanis, right?[A][N][OpenMidLeft]
+That'd be[ToggleMouthMove]...[ToggleMouthMove] correct. I guess we could've[N]
+saved some trouble by asking you things.[A][N]
+Lime where the army we fought  came from.[A][N]
+Apologies. It's been a hectic string of[N]
+events, and I overlooked that option.[A][N][OpenMidRight]
+I can appreciate being busy. Besides,[N]
+as it happens, I wouldn't be much help.[A][N]
+The closest thing to an army Holanis[N]
+should have is in Gohranos,[A] and it's[N]
+hardly enough to support an invasion.[A][N]
+Many of those at the archives were[N]
+mercenary in nature.[A] Technically, you[N]
+could argue all Gohranians are mercenary,[A][N]
+but in this case, most of those at the[N]
+archives were not familiar to me.[A][N][OpenMidLeft]
+So[ToggleMouthMove]...[ToggleMouthMove] What does that mean? Is someone[N]
+funding these mercenaries?[A][N][OpenMidRight]
+If only I knew. Gohranos should hardly[N]
+have the coin for this kind of manpower.[A][N]
+Perhaps there's another faction behind[N]
+the scenes, setting this all up.[A][N]
+But I've seen nothing of that in[N]
+Gohranos.[A][N][OpenMidLeft]
+So[ToggleMouthMove]...[ToggleMouthMove] We can probably just continue[N]
+our route as planned.[A][N]
+The landmarks that're recorded[N]
+in the Archives.[A][N][OpenMidRight]
+I'd agree. Of the three, I've only ever been to[N]
+the Aqueduct, and only in passing.[A][N]
+Can't say anything for sure of[N]
+what actually happens there.[A][N][OpenMidLeft]
+Alright[ToggleMouthMove]...[ToggleMouthMove] Thanks, Artemis.[N]
+This helped a lot.[A][N][OpenMidRight]
+Any time. I'd rather not fight for[N]
+a Holanis borne of the shadows.[A][X]
+
+##I6ToddsworthConvo
+[OpenMidLeft][LoadToddsworth][OpenMidRight][LoadBlair][OpenMidLeft]
+Ah, milady. Perfect timing![N]
+I had the grandest of ideas![A][N][OpenMidRight]
+What is it, Toddsworth?[A][N][OpenMidLeft]
+To bolster army morale, I thought[N]
+perhaps I could regale us with a song.[A][N]
+A perfect ballad came to me in a vision![A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]What kind of vision?[A][N][OpenMidLeft]
+You see, I found some absolutely[N]
+delectable berries,[A] and when I[N]
+ate them,[A] the gods themselves came[N]
+unto me.[A] They called me their most[N]
+turpid vessel,[A] and spoke to me a[N]
+song beyond mortal ken.[A][N]
+And then, I woke up and found a stream[N]
+of blood coming from my ears.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]They're fine now.[A][N]
+Anyway, shall I?[A][X]
+##YouMadeThisChoiceNowLiveWithIt
+You can't escape this.[X]
+##I6ToddsworthConvo2
+[OpenMidLeft][LoadToddsworth][OpenMidRight][LoadBlair][OpenMidLeft]
+Excellent! I'll start right now![A][N][ClearFace][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I didn't say anything.[N]
+[ToggleMouthMove]...[ToggleMouthMove]May Opistus help us all.[A][X]
 
 ##I6StefanConvo
 [OpenMidLeft][LoadStefan][OpenMidRight][LoadBlair][OpenMidLeft]
@@ -198,10 +290,6 @@ also decreased by 3.[A][X]
 ##I6SoloTrained
 Somehow, all of Stefan's[N]
 stats have increased by 4![A][X]
-
-
-
-
 
 ##I6EmileConvo
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadEmile]

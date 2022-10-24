@@ -27,7 +27,7 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0x8,I6ArinTalk,Blair,Arin)
-CharacterEvent(0x9,I6ArinTalk,Blair,Kenneth)
+CharacterEvent(0x9,I6KennethTalk,Blair,Kenneth)//done
 CharacterEvent(0xa,I6ArinTalk,Blair,Natasia)
 CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)//done
 CharacterEvent(0xc,I6ArinTalk,Blair,Desmond)
@@ -41,7 +41,7 @@ CharacterEvent(0x13,I6ArinTalk,Blair,Jeff)
 CharacterEvent(0x14,I6EmileTalk,Blair,Emile)//done
 CharacterEvent(0x15,I6ArinTalk,Blair,Apollo)
 CharacterEvent(0x16,I6ArinTalk,Blair,Bechamel)
-CharacterEvent(0x17,I6SveltzalusTalk,Blair,Sveltzalus)
+CharacterEvent(0x17,I6SveltzalusTalk,Blair,Sveltzalus)//done
 CharacterEvent(0x18,I6ArinTalk,Blair,Hilbert)
 CharacterEvent(0x19,I6ArinTalk,Blair,Flynn)
 CharacterEvent(0x1a,I6ArinTalk,Blair,Mikey)
@@ -60,7 +60,7 @@ CharacterEvent(0x26,I6ArinTalk,Blair,Yuyu)
 CharacterEvent(BaseFlag1,I6ArtemisTalk,Blair,Artemis)//done
 CharacterEvent(BaseFlag2,I6ArinTalk,Blair,Hollandaise)
 CharacterEvent(BaseFlag3,I6ArinTalk,Blair,Vladmir)
-CharacterEvent(BaseFlag4,I6AddingtonTalk,Blair,Addington)
+CharacterEvent(BaseFlag4,I6AddingtonTalk,Blair,Addington)//done
 END_MAIN
 
 LocationBasedEvents:
@@ -141,6 +141,16 @@ I6ArinTalk:
 Text(I6ArinConvo)
 EndEvent
 
+
+I6KennethTalk:
+BranchIfSupport(Blair,Kenneth,CPSupport,0x1)
+Text(I6KennethConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6KennethSpecialConvo)
+SetSupport(Blair,Kenneth,BSupport,1)
+LABEL 0x2
+EndEvent
 
 I6SveltzalusTalk:
 Text(I6SveltzalusConvo)

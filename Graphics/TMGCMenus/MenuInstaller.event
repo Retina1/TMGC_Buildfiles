@@ -296,8 +296,8 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 		
 		ALIGN 4
 		NameEntryBox:
-		#incbin "NameEntry.dmp"
-
+		//#incbin "NameEntry.dmp"
+		#incbin "UnitMenu.dmp"
 	
 #else
 	ERROR "You're not assembling FE8 events!"

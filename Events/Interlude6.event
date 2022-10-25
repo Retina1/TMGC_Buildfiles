@@ -52,7 +52,7 @@ CharacterEvent(0x1e,I6ArinTalk,Blair,Zeke)
 CharacterEvent(0x1f,I6ArinTalk,Blair,Hyperius)
 CharacterEvent(0x20,I6ArinTalk,Blair,Alexis)
 CharacterEvent(0x21,I6ArinTalk,Blair,Leila)
-CharacterEvent(0x22,I6ArinTalk,Blair,Damien)
+CharacterEvent(0x22,I6DamienTalk,Blair,Damien)//done
 CharacterEvent(0x23,I6ArinTalk,Blair,Zacharias)
 CharacterEvent(0x24,I6AvanTalk,Blair,Avan)//done
 CharacterEvent(0x25,I6ToddsworthTalk,Blair,Toddsworth)//done
@@ -141,6 +141,11 @@ I6ArinTalk:
 Text(I6ArinConvo)
 EndEvent
 
+
+I6DamienTalk:
+Text(I6DamienConvo)
+GiveItem(FrontierJustice,Damien)
+EndEvent
 
 I6KennethTalk:
 BranchIfSupport(Blair,Kenneth,CPSupport,0x1)
@@ -331,10 +336,9 @@ EndEvent
 
 BeginningScene:
 EnableFreeMovement
-ENUT GuideChpt17
 MUSC NarrationTheme3
 Narration(Map2CG,Base6_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(TentInsideCG,I6Opening)
 LOAD1 0x0 I6Units
 ENUN
 LOAD1 0x0 I6Props
@@ -348,9 +352,16 @@ SystemText(I6Note)
 EndEvent
 
 EndingScene:
+EVBIT_MODIFY 3
 DisableFreeMovement
 ResetBaseFlags
-CleanTextNoMap(HallCG,FillerDialogue)
+CHECK_EVENTID 0x4
+BEQ 0x1 0xc 0x0
+CleanTextNoMap(TentInsideCG,I6EndingShutUpTodd)
+GOTO 0x2
+LABEL 0x1
+CleanTextNoMap(TentInsideCG,I6Ending)
+LABEL 0x2
 MoveToChapter(Chapter19)
 ENDA
 

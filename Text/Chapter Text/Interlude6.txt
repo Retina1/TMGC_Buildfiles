@@ -10,7 +10,6 @@ the marked tent to end the map.[A][X]
 gay gay homosexual gay[A][X]
 
 //remaining
-//also make sure to do opening and ending scenes obviously
 
 //arin
 //desmond
@@ -30,17 +29,52 @@ gay gay homosexual gay[A][X]
 //hyperius
 //alexis
 //leila
-//damien
 //zacharias
 //hollandaise
 //vladmir
 
-//kenneth - blair/kenneth support
 //natasia - blair/natasia support
 //carbon - blair/carbon support
 //zeke - blair/zeke support
 //yuyu - blair/yuyu support
 
+##I6DamienConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadDamien]
+Greetings, milady! How're you doing?[N]
+You need anything from me?[A][N][OpenMidLeft]
+I don't believe so.[N]
+And I've been alright.[A][N][OpenMidRight]
+Fair enough. If you change your[N]
+mind, just say the word.[A][N]
+I've nothing else going on.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Might've already hunted us enough[N]
+meat for the next four weeks.[A][N][OpenMidLeft]
+That's[ToggleMouthMove]...[ToggleMouthMove] quite impressive.[A][N][OpenMidRight][ToggleSmile]
+It's nothing, really. If Uncle Toby[N]
+were here, it'd be enough for about[ToggleMouthMove]...[ToggleMouthMove][A][N]
+Oh, seven hours, give-or-take?[A][N]
+I'm used to hunting for the[ToggleMouthMove]...[ToggleMouthMove][N]
+heightened appetite.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Now I'm not sure what's[N]
+more impressive here.[A][N]
+You, or your uncle.[A][N][OpenMidRight]
+Ha! For sure. He's not really[N]
+my uncle[ToggleMouthMove]...[ToggleMouthMove][A] But he sure did[N]
+teach me all I know.[A][N][ToggleSmile]
+[ToggleMouthMove]...[ToggleMouthMove]I wonder how he's doing.[A][N][OpenMidLeft]
+I'm sure he's well. He sounds[N]
+like quite the[ToggleMouthMove]...[ToggleMouthMove] hearty man.[A][N][OpenMidRight][ToggleSmile]
+That's not the half of it. Anyway,[N]
+if you don't need me,[A] I'm gonna[N]
+go polish this up.[A][N]
+Found this bow while out hunting.[N]
+It's such a beautiful thing[ToggleMouthMove]...[ToggleMouthMove][A][N]
+Who'd just abandon it here?[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]That IS a nice bow.[N]
+You should treasure it.[A][N]
+Show it to Toby sometime.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I think I will.[N]
+Thanks, milady.[A][X]
 
 ##I6KennethConvo
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadKenneth]
@@ -491,3 +525,73 @@ and tell her I said hello.[A][X]
 ##I6PeggyAxeRank
 Peggy now has a[N]
 D rank in axes![A][X]
+
+
+##I6Opening
+[OpenMidRight][LoadBlair]
+Whew[ToggleMouthMove]...[ToggleMouthMove] I must say, this has[N]
+certainly helped me out.[A][N]
+I think we all needed a break.[A][N]
+And even though it's hardly luxury,[N]
+there's a certain[ToggleMouthMove]...[ToggleMouthMove] quaintness.[A][N]
+I'm not sure how much longer we[N]
+should stay[ToggleMouthMove]...[ToggleMouthMove][A] We ought to get[N]
+back on track soon.[A][N]
+Before then, though[ToggleMouthMove]...[ToggleMouthMove] I should catch[N]
+up with everyone.[A][N]
+While I've got the chance.[N]
+I'm sure they'll appreciate it.[A][X]
+
+##I6Ending
+[OpenMidLeft][LoadBlair]
+[ToggleMouthMove]...[ToggleMouthMove]And that's that.[A][N][OpenMidRight][LoadZeke]
+Ah, there you are. I had just[N]
+come to check in.[A][N]
+I believe we're all well-rested.[N]
+Shall we break camp on the morrow?[A][N][OpenMidLeft]
+That sounds fine to me.[N]
+From here, we're near the Aqueduct.[A][N]
+This[ToggleMouthMove]...[ToggleMouthMove] has done us well.[A][N][OpenMidRight]
+Agreed. I just hope we find what we seek.[N]
+If we were completely off-base[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
+Who knows what could've happened to[N]
+Elba Cor and Dalst?[A][N][OpenMidLeft]
+I'm sure even if we're wrong,[N]
+they'd remain standing.[A][N][OpenMidRight][OpenEyes]
+[ToggleMouthMove]...[ToggleMouthMove]You're right. If my father could hold[N]
+Elba Cor together against Yg'stra,[A][N]
+he can surely hold it together against[N]
+the Holanians.[A][N][OpenMidLeft]
+And I can say the same of Lord Neillstrom.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]But that's all if we're wrong.[N]
+And I don't think we were.[A][N][OpenMidRight][ToggleSmile]
+I[ToggleMouthMove]...[ToggleMouthMove] appreciate your optimism.[N]
+Sleep well, Blair.[A][N][OpenMidLeft]
+You too, Zeke.[A][X]
+##I6EndingShutUpTodd
+[OpenMidLeft][LoadBlair]
+[ToggleMouthMove]...[ToggleMouthMove]And that's that. [ToggleMouthMove]...[ToggleMouthMove]I fully and truly[N]
+regret letting Todd play music.[A][N][OpenMidRight][LoadZeke]
+Ah, there you are. I had just[N]
+come to check in.[A][N]
+I believe we're all well-rested.[N]
+Shall we break camp on the morrow?[A][N][OpenMidLeft]
+That sounds fine to me.[N]
+From here, we're near the Aqueduct.[A][N]
+This[ToggleMouthMove]...[ToggleMouthMove] has done us well.[A][N][OpenMidRight]
+Agreed. I just hope we find what we seek.[N]
+If we were completely off-base[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
+Who knows what could've happened to[N]
+Elba Cor and Dalst?[A][N][OpenMidLeft]
+I'm sure even if we're wrong,[N]
+they'd remain standing.[A][N][OpenMidRight][OpenEyes]
+[ToggleMouthMove]...[ToggleMouthMove]You're right. If my father could hold[N]
+Elba Cor together against Yg'stra,[A][N]
+he can surely hold it together against[N]
+the Holanians.[A][N][OpenMidLeft]
+And I can say the same of Lord Neillstrom.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]But that's all if we're wrong.[N]
+And I don't think we were.[A][N][OpenMidRight][ToggleSmile]
+I[ToggleMouthMove]...[ToggleMouthMove] appreciate your optimism.[N]
+Sleep well, Blair.[A][N][OpenMidLeft]
+You too, Zeke.[A][X]

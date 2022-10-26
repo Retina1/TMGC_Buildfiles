@@ -314,11 +314,12 @@
 
 //Cultured: If unit attacks next to a unit with Nice Thighs, move again. -50 hit against units with Nice Thighs.
 //By Sme
-#define CulturedID 121
+#define CulturedID 255
 
-//Gridmaster: Movement skills do not end your action.
+//Flow State: Toggle Flow for +5 Atk/AS, +15 Hit/Crit, -10 Def/Res
 //By Sme
-#define GridmasterID 255
+#define GridmasterID 121
+#define FlowStateID GridmasterID
 
 
 //Pre-Battle Skills
@@ -434,6 +435,7 @@
 
 //Frenzy: For every 4 damage taken, +1 to damage dealt.
 //By Tequila
+//reworked for frontier justice i think
 #define FrenzyID 169
 
 //Hawkeye: User will always hit the enemy.

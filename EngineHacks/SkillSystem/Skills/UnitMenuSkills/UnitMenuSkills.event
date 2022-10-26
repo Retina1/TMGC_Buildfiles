@@ -60,6 +60,37 @@ ALIGN 4
 MercyEffect:
 #incbin "Mercy/MercyEffect.dmp"
 
+ALIGN 4
+UnflowUsability: //don't ask
+#incbin "Flow/FlowUsability.dmp"
+POIN SkillTester
+WORD FlowStateID
+ALIGN 4
+FlowUsability:
+#incbin "Flow/UnflowUsability.dmp"
+POIN SkillTester
+WORD FlowStateID
+
+ALIGN 4
+FlowCombat:
+#incbin "Flow/FlowInBattle.dmp"
+POIN SkillTester
+WORD FlowStateID
+
+ALIGN 4
+POIN FlowEvent
+FlowEffect:
+#incbin "Flow/FlowEffect.dmp"
+ALIGN 4
+POIN FlowEvent
+UnflowEffect:
+#incbin "Flow/UnflowEffect.dmp"
+
+FlowEvent:
+SOUN 0x10F
+STAL 0x10
+NoFade
+ENDA
 
 #include "CombatArts/CombatArts.event"
 

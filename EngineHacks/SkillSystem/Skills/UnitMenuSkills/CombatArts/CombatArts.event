@@ -55,6 +55,9 @@ SetCombatArtCost(15,3) //Vengeance
 ALIGN 4
 CombatArtsMenu:
 
+MenuCommand(UM_Flow, UM_FlowDesc, NormalText, FlowUsability, FlowEffect, $22c31, $22c99)
+
+MenuCommand(UM_Unflow, UM_UnflowDesc, NormalText, UnflowUsability, UnflowEffect, $22c31, $22c99)
 
 MenuCommand(UM_Adept, UM_AdeptDesc, NormalText, AdeptUsability, AdeptEffect, $22c31, $22c99)
 

@@ -177,8 +177,9 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
+MUSC S_MainTheme
+SystemText(BlankCG,Arc2Ending)
 MoveToChapter(ChapterV1)
 ENDA
 

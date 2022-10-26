@@ -88,7 +88,7 @@ ALIGN 4
 
 BeginningScene:
 ENUT GuideChptE
-MUSC NarrationTheme3
+MUSC NarrationTheme6
 Narration(Map2CG,Final_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
@@ -99,8 +99,9 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
+MUSC S_MainTheme
+SystemText(FinalArcEnding)
 SetNewGameFlag(12)
 MoveToChapter(AfterTheEnd)
 ENDA

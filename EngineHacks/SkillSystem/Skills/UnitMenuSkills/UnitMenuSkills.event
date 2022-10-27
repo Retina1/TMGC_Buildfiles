@@ -78,11 +78,11 @@ POIN SkillTester
 WORD FlowStateID
 
 ALIGN 4
-POIN FlowEvent
+//POIN FlowEvent
 FlowEffect:
 #incbin "Flow/FlowEffect.dmp"
 ALIGN 4
-POIN FlowEvent
+//POIN FlowEvent
 UnflowEffect:
 #incbin "Flow/UnflowEffect.dmp"
 

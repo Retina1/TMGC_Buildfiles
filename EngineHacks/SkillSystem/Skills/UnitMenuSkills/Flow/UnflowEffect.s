@@ -1,29 +1,17 @@
 .thumb
-
-.macro blh to, reg
-  ldr \reg, =\to
-  mov lr, \reg
- .short 0xf800
-.endm
-
-//all this code does is call the save event and clear bg0 and 1 menu assets
-push 	{r14}
-push	{r2}
-ldr r2,=#0x203A4EC
+.equ CurrentUnitFateData, 0x203A958 
+push {lr}
+ldr r2,=#0x3004E50
+ldr r2, [r2] @Gets unit pointer
 ldr	r0, [r2,#0x0C]	@status bitfield
 mov	r1, #0x01
 lsl	r1, #0x1c
-and r0,r1
-Str	r0, [r2,#0x0C]	@status bitfield
-pop		{r2}
-mov     r1,r15//gets event ptr right behind this function
-sub     r1,#0x0A
-ldr     r0,[r1]
-mov     r1,#0x01
-blh     0x0800D07C,r2//execute event
-blh     0x0804E884,r2//clear bg0 and 1
-ldr  r0, =gActionData
-mov  r1, #1
-strb r1, [r0, #0x11]
-pop     {r1}
-bx      r1
+eor r0,r1
+str	r0, [r2,#0x0C]	@status bitfield
+ldr r1, =CurrentUnitFateData    @these four lines copied from wait routine
+mov r0, #0x1
+strb r0, [r1,#0x11]
+mov r0, #0x17    @makes the unit wait?? makes the menu disappear after command is selected??
+pop {r1} 
+bx r1
+.ltorg

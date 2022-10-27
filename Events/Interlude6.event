@@ -28,7 +28,7 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 CharacterBasedEvents:
 CharacterEvent(0x8,I6ArinTalk,Blair,Arin)
 CharacterEvent(0x9,I6KennethTalk,Blair,Kenneth)//done
-CharacterEvent(0xa,I6ArinTalk,Blair,Natasia)
+CharacterEvent(0xa,I6NatasiaTalk,Blair,Natasia)//eventing in, gotta write
 CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)//done
 CharacterEvent(0xc,I6ArinTalk,Blair,Desmond)
 CharacterEvent(0xd,I6ArinTalk,Blair,Sam)
@@ -45,18 +45,18 @@ CharacterEvent(0x17,I6SveltzalusTalk,Blair,Sveltzalus)//done
 CharacterEvent(0x18,I6ArinTalk,Blair,Hilbert)
 CharacterEvent(0x19,I6ArinTalk,Blair,Flynn)
 CharacterEvent(0x1a,I6ArinTalk,Blair,Mikey)
-CharacterEvent(0x1b,I6ArinTalk,Blair,Carbon)
+CharacterEvent(0x1b,I6CarbonTalk,Blair,Carbon)//eventing in, gotta write
 CharacterEvent(0x1c,I6ArinTalk,Blair,Athena)
 CharacterEvent(0x1d,I6ArinTalk,Blair,Charley)
-CharacterEvent(0x1e,I6ArinTalk,Blair,Zeke)
+CharacterEvent(0x1e,I6ZekeTalk,Blair,Zeke)//eventing in, gotta write
 CharacterEvent(0x1f,I6ArinTalk,Blair,Hyperius)
 CharacterEvent(0x20,I6ArinTalk,Blair,Alexis)
 CharacterEvent(0x21,I6ArinTalk,Blair,Leila)
 CharacterEvent(0x22,I6DamienTalk,Blair,Damien)//done
-CharacterEvent(0x23,I6ZachariasTalk,Blair,Zacharias)//done besides the skill itself
+CharacterEvent(0x23,I6ZachariasTalk,Blair,Zacharias)//done
 CharacterEvent(0x24,I6AvanTalk,Blair,Avan)//done
 CharacterEvent(0x25,I6ToddsworthTalk,Blair,Toddsworth)//done
-CharacterEvent(0x26,I6ArinTalk,Blair,Yuyu)
+CharacterEvent(0x26,I6YuyuTalk,Blair,Yuyu)//eventing in, gotta write
 CharacterEvent(BaseFlag1,I6ArtemisTalk,Blair,Artemis)//done
 CharacterEvent(BaseFlag2,I6ArinTalk,Blair,Hollandaise)
 CharacterEvent(BaseFlag3,I6ArinTalk,Blair,Vladmir)
@@ -139,6 +139,46 @@ ALIGN 4
 
 I6ArinTalk:
 Text(I6ArinConvo)
+EndEvent
+
+I6CarbonTalk:
+BranchIfSupport(Blair,Carbon,CPSupport,0x1)
+Text(I6CarbonConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6CarbonSpecialConvo)
+SetSupport(Blair,Carbon,BSupport,1)
+LABEL 0x2
+EndEvent
+
+I6YuyuTalk:
+BranchIfSupport(Blair,Yuyu,CSupport,0x1)
+Text(I6YuyuConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6YuyuSpecialConvo)
+SetSupport(Blair,Yuyu,CPSupport,1)
+LABEL 0x2
+EndEvent
+
+I6ZekeTalk:
+BranchIfSupport(Blair,Zeke,CPSupport,0x1)
+Text(I6ZekeConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6ZekeSpecialConvo)
+SetSupport(Blair,Zeke,BSupport,1)
+LABEL 0x2
+EndEvent
+
+I6NatasiaTalk:
+BranchIfSupport(Blair,Natasia,CPSupport,0x1)
+Text(I6NatasiaConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6NatasiaSpecialConvo)
+SetSupport(Blair,Natasia,BSupport,1)
+LABEL 0x2
 EndEvent
 
 I6ZachariasTalk:

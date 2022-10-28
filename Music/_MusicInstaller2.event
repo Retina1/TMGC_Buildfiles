@@ -34,6 +34,10 @@
 //songs
 
 {
+#include "WelcomeToLegend.event"
+SongTable(S_WelcomeToLegend,WelcomeToLegend,1)
+}
+{
 #include "KnightsOfRazelia.event"
 SongTable(S_KnightsOfRazelia,KnightsOfRazelia,1)
 }

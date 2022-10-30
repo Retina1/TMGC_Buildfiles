@@ -1,3 +1,9 @@
+//remove stealing speed check
+PUSH
+ORG 0x25BBE
+SHORT 0x46c0
+POP
+
 //try repointing things from 0203ecf4
 PUSH
 ORG $a418c

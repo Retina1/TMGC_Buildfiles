@@ -4,6 +4,12 @@ ORG 0x25BBE
 SHORT 0x46c0
 POP
 
+//warp fix
+PUSH
+ORG 0x10c18
+BYTE 0x91 0x78 0xD2 0x78 0x08 0x06
+POP
+
 //try repointing things from 0203ecf4
 PUSH
 ORG $a418c

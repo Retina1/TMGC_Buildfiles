@@ -31,7 +31,7 @@ CharacterEvent(0x9,I6KennethTalk,Blair,Kenneth)//done
 CharacterEvent(0xa,I6NatasiaTalk,Blair,Natasia)//done
 CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)//done
 			CharacterEvent(0xc,I6ArinTalk,Blair,Desmond)
-			CharacterEvent(0xd,I6ArinTalk,Blair,Sam)
+CharacterEvent(0xd,I6SamTalk,Blair,Sam)//done
 CharacterEvent(0xe,I6JosefTalk,Blair,Josef)//done
 CharacterEvent(0xf,I6PeggyTalk,Blair,Peggy)//done
 			CharacterEvent(0x10,I6ArinTalk,Blair,Butch)
@@ -138,6 +138,15 @@ ALIGN 4
 
 I6ArinTalk:
 Text(I6ArinConvo)
+EndEvent
+
+I6SamTalk:
+Text(I6SamConvo)
+AddUnitStatus(Sam,MaxHP,2)
+AddUnitStatus(Sam,Strength,2)
+AddUnitStatus(Sam,Speed,2)
+AddUnitStatus(Sam,Defence,2)
+SystemText(I6SamStats)
 EndEvent
 
 I6LeilaTalk:

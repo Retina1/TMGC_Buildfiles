@@ -50,7 +50,7 @@ CharacterEvent(0x1b,I6CarbonTalk,Blair,Carbon)//done
 			CharacterEvent(0x1d,I6ArinTalk,Blair,Charley)
 CharacterEvent(0x1e,I6ZekeTalk,Blair,Zeke)//done
 CharacterEvent(0x1f,I6HyperiusTalk,Blair,Hyperius)//done
-			CharacterEvent(0x20,I6ArinTalk,Blair,Alexis)
+CharacterEvent(0x20,I6AlexisTalk,Blair,Alexis)//done
 CharacterEvent(0x21,I6LeilaTalk,Blair,Leila)//done
 CharacterEvent(0x22,I6DamienTalk,Blair,Damien)//done
 CharacterEvent(0x23,I6ZachariasTalk,Blair,Zacharias)//done
@@ -58,7 +58,7 @@ CharacterEvent(0x24,I6AvanTalk,Blair,Avan)//done
 CharacterEvent(0x25,I6ToddsworthTalk,Blair,Toddsworth)//done
 CharacterEvent(0x26,I6YuyuTalk,Blair,Yuyu)//done
 CharacterEvent(BaseFlag1,I6ArtemisTalk,Blair,Artemis)//done
-			CharacterEvent(BaseFlag2,I6ArinTalk,Blair,Hollandaise)
+CharacterEvent(BaseFlag2,I6HollandaiseTalk,Blair,Hollandaise)//done
 CharacterEvent(BaseFlag3,I6VladmirTalk,Blair,Vladmir)//done
 CharacterEvent(BaseFlag4,I6AddingtonTalk,Blair,Addington)//done
 END_MAIN
@@ -138,6 +138,15 @@ ALIGN 4
 
 I6ArinTalk:
 Text(I6ArinConvo)
+EndEvent
+
+I6AlexisTalk:
+Text(I6AlexisConvo)
+EndEvent
+
+I6HollandaiseTalk:
+Text(I6HollandaiseConvo)
+GiveItem(WhiteGem,Blair)
 EndEvent
 
 I6SamTalk:

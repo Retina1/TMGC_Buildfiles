@@ -46,8 +46,8 @@ CharacterEvent(0x17,I6SveltzalusTalk,Blair,Sveltzalus)//done
 			CharacterEvent(0x19,I6ArinTalk,Blair,Flynn)
 			CharacterEvent(0x1a,I6ArinTalk,Blair,Mikey)
 CharacterEvent(0x1b,I6CarbonTalk,Blair,Carbon)//done
-			CharacterEvent(0x1c,I6ArinTalk,Blair,Athena)
-			CharacterEvent(0x1d,I6ArinTalk,Blair,Charley)
+CharacterEvent(0x1c,I6AthenaTalk,Blair,Athena)//done
+CharacterEvent(0x1d,I6CharleyTalk,Blair,Charley)//done
 CharacterEvent(0x1e,I6ZekeTalk,Blair,Zeke)//done
 CharacterEvent(0x1f,I6HyperiusTalk,Blair,Hyperius)//done
 CharacterEvent(0x20,I6AlexisTalk,Blair,Alexis)//done
@@ -138,6 +138,15 @@ ALIGN 4
 
 I6ArinTalk:
 Text(I6ArinConvo)
+EndEvent
+
+
+I6AthenaTalk:
+Text(I6AthenaConvo)
+EndEvent
+
+I6CharleyTalk:
+Text(I6CharleyConvo)
 EndEvent
 
 I6AlexisTalk:

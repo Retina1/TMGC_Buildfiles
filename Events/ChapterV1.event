@@ -29,6 +29,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,V1ClarqueEvent,Viridian,Clarque)
 END_MAIN
 
 LocationBasedEvents:
@@ -130,6 +131,18 @@ Text(PathCG,FillerDialogue)
 MoveToChapter(ChapterV2)
 EndEvent
 
+V1ClarqueEvent:
+MUSC S_FE4Conversation
+CleanTextNoMap(PathCG,V1ViridianClarqueConvo)
+LocationText(PathCG,V1Flashback,ThreeYearsAgoLabel,S_WelcomeToLegend)
+CleanText(PathCG,V1ViridianClarqueConvo2)
+GiveItem(MasterSeal,Viridian)
+GiveItem(MasterBow,Viridian)
+MOVE 60 Clarque [0,8]
+ENUN
+SilentKillUnit(Clarque)
+//add a flag for this
+EndEvent
 //clarque event? maybe instead he has battle convos because he knows viridian?
 
 CV1Turn2:

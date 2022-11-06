@@ -34,17 +34,17 @@ CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)//done
 CharacterEvent(0xd,I6SamTalk,Blair,Sam)//done
 CharacterEvent(0xe,I6JosefTalk,Blair,Josef)//done
 CharacterEvent(0xf,I6PeggyTalk,Blair,Peggy)//done
-			CharacterEvent(0x10,I6ArinTalk,Blair,Butch)
-			CharacterEvent(0x11,I6ArinTalk,Blair,Cassius)
-			CharacterEvent(0x12,I6ArinTalk,Blair,Rachael)
-			CharacterEvent(0x13,I6ArinTalk,Blair,Jeff)
+CharacterEvent(0x10,I6ButchTalk,Blair,Butch)//done
+CharacterEvent(0x11,I6CassiusTalk,Blair,Cassius)//done
+CharacterEvent(0x12,I6RachaelTalk,Blair,Rachael)//done
+CharacterEvent(0x13,I6ArinTalk,Blair,Jeff)//done
 CharacterEvent(0x14,I6EmileTalk,Blair,Emile)//done
 			CharacterEvent(0x15,I6ArinTalk,Blair,Apollo)
 			CharacterEvent(0x16,I6ArinTalk,Blair,Bechamel)
 CharacterEvent(0x17,I6SveltzalusTalk,Blair,Sveltzalus)//done
 			CharacterEvent(0x18,I6ArinTalk,Blair,Hilbert)
 			CharacterEvent(0x19,I6ArinTalk,Blair,Flynn)
-			CharacterEvent(0x1a,I6ArinTalk,Blair,Mikey)
+CharacterEvent(0x1a,I6MikeyTalk,Blair,Mikey)//done
 CharacterEvent(0x1b,I6CarbonTalk,Blair,Carbon)//done
 CharacterEvent(0x1c,I6AthenaTalk,Blair,Athena)//done
 CharacterEvent(0x1d,I6CharleyTalk,Blair,Charley)//done
@@ -140,6 +140,26 @@ I6ArinTalk:
 Text(I6ArinConvo)
 EndEvent
 
+I6JeffTalk:
+Text(I6JeffConvo)
+EndEvent
+
+I6ButchTalk:
+Text(I6ButchConvo)
+EndEvent
+
+I6RachaelTalk:
+Text(I6RachaelConvo)
+EndEvent
+
+I6CassiusTalk:
+Text(I6CassiusConvo)
+GiveItem(MasterAxe,Cassius)
+EndEvent
+
+I6MikeyTalk:
+Text(I6MikeyConvo)
+EndEvent
 
 I6AthenaTalk:
 Text(I6AthenaConvo)

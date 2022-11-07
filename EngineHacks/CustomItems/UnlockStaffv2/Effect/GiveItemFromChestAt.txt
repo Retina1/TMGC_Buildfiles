@@ -62,7 +62,7 @@ ChestEvent:
 ldr 	r0, [r6,#0x4]
 mov 	r1, #0xFF
 cmp 	r0, r1
-b ChestHasItem	@check if chest has an item, was blt
+blt ChestHasItem	@check if chest has an item
 
 and 	r1, r0
 mov 	r2, #0x77	@check if chest is giving money
@@ -83,7 +83,7 @@ HasEvent:
 cmp 	r0, #0x0
 beq End
 mov 	r7, r0
-ldrh 	r0, [r6, #0x2]
+ldrh 	r0, [r, #0x2]
 _blh SetEventID	@set event id for event
 mov 	r0, r7
 mov 	r1, #0x1

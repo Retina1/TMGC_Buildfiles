@@ -30,20 +30,20 @@ CharacterBasedEvents:
 CharacterEvent(0x9,I6KennethTalk,Blair,Kenneth)//done
 CharacterEvent(0xa,I6NatasiaTalk,Blair,Natasia)//done
 CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)//done
-			CharacterEvent(0xc,I6ArinTalk,Blair,Desmond)
+CharacterEvent(0xc,I6DesmondTalk,Blair,Desmond)//done
 CharacterEvent(0xd,I6SamTalk,Blair,Sam)//done
 CharacterEvent(0xe,I6JosefTalk,Blair,Josef)//done
 CharacterEvent(0xf,I6PeggyTalk,Blair,Peggy)//done
 CharacterEvent(0x10,I6ButchTalk,Blair,Butch)//done
 CharacterEvent(0x11,I6CassiusTalk,Blair,Cassius)//done
 CharacterEvent(0x12,I6RachaelTalk,Blair,Rachael)//done
-CharacterEvent(0x13,I6ArinTalk,Blair,Jeff)//done
+CharacterEvent(0x13,I6JeffTalk,Blair,Jeff)//done
 CharacterEvent(0x14,I6EmileTalk,Blair,Emile)//done
-			CharacterEvent(0x15,I6ArinTalk,Blair,Apollo)
+CharacterEvent(0x15,I6ApolloTalk,Blair,Apollo)//done besides writing
 			CharacterEvent(0x16,I6ArinTalk,Blair,Bechamel)
 CharacterEvent(0x17,I6SveltzalusTalk,Blair,Sveltzalus)//done
 			CharacterEvent(0x18,I6ArinTalk,Blair,Hilbert)
-			CharacterEvent(0x19,I6ArinTalk,Blair,Flynn)
+CharacterEvent(0x19,I6FlynnTalk,Blair,Flynn)//done
 CharacterEvent(0x1a,I6MikeyTalk,Blair,Mikey)//done
 CharacterEvent(0x1b,I6CarbonTalk,Blair,Carbon)//done
 CharacterEvent(0x1c,I6AthenaTalk,Blair,Athena)//done
@@ -138,6 +138,26 @@ ALIGN 4
 
 I6ArinTalk:
 Text(I6ArinConvo)
+EndEvent
+
+I6ApolloTalk:
+BranchIfSupport(Apollo,Bechamel,CPSupport,0x1)
+Text(I6ApolloConvo)
+GOTO 0x2
+LABEL 0x1
+Text(I6ApolloSpecialConvo)
+SystemText(I6ApolloHPUp)
+AddUnitStatus(Apollo,MaxHP,5)
+SetSupport(Apollo,Bechamel,BSupport,1)
+LABEL 0x2
+EndEvent
+
+I6FlynnTalk:
+Text(I6FlynnConvo)
+EndEvent
+
+I6DesmondTalk:
+Text(I6DesmondConvo)
 EndEvent
 
 I6JeffTalk:

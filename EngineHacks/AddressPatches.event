@@ -1,3 +1,9 @@
+//autolevels after this slot
+PUSH
+ORG 0x17c4c
+BYTE 0x45
+POP
+
 //remove stealing speed check
 PUSH
 ORG 0x25BBE

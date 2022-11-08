@@ -9,12 +9,11 @@ ALIGN 4
 
 #ifdef _FE8_
   #define SpellTable $5d4e60
-  #define CSATable $EF2F20 //CHANGE THIS TO A LOCATION WHERE YOU KNOW THERE ARE 0x13EC BYTES OF FREE SPACE
+ // #define CSATable $EF2F20 //CHANGE THIS TO A LOCATION WHERE YOU KNOW THERE ARE 0x13EC BYTES OF FREE SPACE
 
-  PUSH
-  ORG CSATable
+  CSATable:
   #incbin BlankCSATable.dmp
-
+PUSH
   ORG $95d780
   CSAEngine:
   #incbin "CSA System_fe8.dmp" //the custom spell engine. All custom spells point here.

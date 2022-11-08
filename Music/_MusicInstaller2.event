@@ -34,6 +34,10 @@
 //songs
 
 {
+#include "CryALive.event"
+SongTable(S_CryALive,CryALive,1)
+}
+{
 #include "ZanzaTheDivine.event"
 SongTable(S_ZanzaTheDivine,ZanzaTheDivine,1)
 }

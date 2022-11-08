@@ -26,7 +26,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-			CharacterEvent(0x8,I6ArinTalk,Blair,Arin)
+CharacterEvent(0x8,I6ArinTalk,Blair,Arin)//done besides writing
 CharacterEvent(0x9,I6KennethTalk,Blair,Kenneth)//done
 CharacterEvent(0xa,I6NatasiaTalk,Blair,Natasia)//done
 CharacterEvent(0xb,I6StefanTalk,Blair,Stefan)//done
@@ -39,10 +39,10 @@ CharacterEvent(0x11,I6CassiusTalk,Blair,Cassius)//done
 CharacterEvent(0x12,I6RachaelTalk,Blair,Rachael)//done
 CharacterEvent(0x13,I6JeffTalk,Blair,Jeff)//done
 CharacterEvent(0x14,I6EmileTalk,Blair,Emile)//done
-CharacterEvent(0x15,I6ApolloTalk,Blair,Apollo)//done besides writing
-			CharacterEvent(0x16,I6ArinTalk,Blair,Bechamel)
+CharacterEvent(0x15,I6ApolloTalk,Blair,Apollo)//done
+CharacterEvent(0x16,I6BechamelTalk,Blair,Bechamel)//done besides writing
 CharacterEvent(0x17,I6SveltzalusTalk,Blair,Sveltzalus)//done
-			CharacterEvent(0x18,I6ArinTalk,Blair,Hilbert)
+CharacterEvent(0x18,I6HilbertTalk,Blair,Hilbert)//done
 CharacterEvent(0x19,I6FlynnTalk,Blair,Flynn)//done
 CharacterEvent(0x1a,I6MikeyTalk,Blair,Mikey)//done
 CharacterEvent(0x1b,I6CarbonTalk,Blair,Carbon)//done
@@ -134,10 +134,26 @@ UNIT
 
 ALIGN 4
 
-//make someone give a live to serve scroll
-
 I6ArinTalk:
 Text(I6ArinConvo)
+GiveItemWithDurability(SkillScroll,LiveToServeID,Blair)
+EndEvent
+
+I6BechamelTalk:
+CHECK_CLASS Bechamel
+SVAL 0x1 Berserker
+BEQ 0x10 0xc 0x1
+Text(I6BechamelConvo)
+GOTO 0x11
+LABEL 0x10
+Text(I6BechamelSpecialConvo)
+LABEL 0x11
+EndEvent
+
+I6HilbertTalk:
+Text(I6HilbertConvo)
+SetUnitStatus(Hilbert,SwordExp,1)
+SystemText(I6HilbertSwordRank)
 EndEvent
 
 I6ApolloTalk:

@@ -17,7 +17,7 @@
 			support(CPSupport,1,0,5,0,0,0)//c5
 			support(BSupport,1,0,10,5,0,5)//c13
 			support(BPSupport,1,0,15,10,5,10)//c20
-			support(ASupport,2,1,20,10,10,10)
+			support(ASupport,2,1,20,10,10,10)		//lover convo
 		entry(Blair,Kenneth)
 			support(CSupport,0,1,0,0,0,0)//c2
 			support(CPSupport,0,1,0,5,0,0)//c6
@@ -29,7 +29,7 @@
 			support(CPSupport,1,0,5,0,0,0)//c8
 			support(BSupport,2,0,5,0,0,0)//c18x
 			support(BPSupport,2,0,10,0,5,0)
-			support(ASupport,3,0,10,0,10,0)
+			support(ASupport,3,0,10,0,10,0)			//lover convo
 		entry(Blair,Emile)
 			support(CSupport,0,0,5,5,0,0)//c8
 			support(CPSupport,0,0,10,5,0,5)//c11
@@ -53,7 +53,7 @@
 			support(CPSupport,0,0,15,0,5,0)//c18x
 			support(BSupport,1,0,20,0,0,0)
 			support(BPSupport,1,0,25,0,0,0)
-			support(ASupport,2,0,30,0,10,0)
+			support(ASupport,2,0,30,0,10,0)			//lover convo
 		entry(Blair,Yuyu)
 			support(CSupport,1,0,0,0,0,0)//c17
 			support(CPSupport,2,0,0,0,0,0)//c18x
@@ -72,7 +72,7 @@
 			support(CPSupport,0,0,10,0,0,10)//c13
 			support(BSupport,0,0,15,0,0,15)//c18
 			support(BPSupport,0,0,20,0,0,20)
-			support(ASupport,0,0,25,0,0,25)
+			support(ASupport,0,0,25,0,0,25)			//lover convo?
 		entry(Arin,Sveltzalus)
 			support(CSupport,0,0,5,0,0,5)//c12
 			support(CPSupport,0,0,10,0,0,10)//c16 in map
@@ -161,7 +161,7 @@
 			support(CPSupport,0,0,10,0,5,0)//c16
 			support(BSupport,0,0,15,0,10,0)
 			support(BPSupport,0,0,20,0,15,0)
-			support(ASupport,0,0,20,0,25,0)
+			support(ASupport,0,0,20,0,25,0)			//lover convo?
 		entry(Sam,Bechamel)
 			support(CSupport,1,0,0,0,0,0)//c12
 			support(CPSupport,1,0,10,0,0,0)//c18
@@ -173,7 +173,7 @@
 			support(CPSupport,0,0,0,0,10,0)
 			support(BSupport,0,0,0,0,15,0)
 			support(BPSupport,0,0,0,0,20,0)
-			support(ASupport,0,0,0,0,30,0)
+			support(ASupport,0,0,0,0,30,0)			//lover convo?
 	//josef (stefan, sam)
 		entry(Josef,Hilbert)
 			support(CSupport,0,1,0,0,0,0)//c13
@@ -186,7 +186,7 @@
 			support(CPSupport,1,1,0,0,0,0)
 			support(BSupport,1,2,0,0,0,0)
 			support(BPSupport,2,2,0,0,0,0)
-			support(ASupport,3,3,0,0,0,0)
+			support(ASupport,3,3,0,0,0,0)			//lover convo?
 	//peggy (natasia)
 		entry(Peggy,Butch)
 			support(CSupport,0,0,5,0,5,0)//c5 battle
@@ -225,7 +225,7 @@
 			support(CPSupport,0,0,10,5,5,0)//c11
 			support(BSupport,0,0,15,10,10,0)//c15 devoted convo
 			support(BPSupport,0,0,20,10,10,5)
-			support(ASupport,0,0,25,15,15,10)
+			support(ASupport,0,0,25,15,15,10)			//lover convo?
 		entry(Rachael,Jeff)
 			support(CSupport,0,0,0,0,0,0)//c10
 			support(CPSupport,0,0,5,0,0,0)//c15 in battle
@@ -262,7 +262,7 @@
 			support(CPSupport,0,2,10,0,0,0)
 			support(BSupport,0,2,15,0,0,0)
 			support(BPSupport,0,2,20,0,0,5)
-			support(ASupport,0,3,30,0,0,10)
+			support(ASupport,0,3,30,0,0,10)			//lover convo?
 		entry(Cassius,Hyperius)
 			support(CSupport,1,0,0,0,0,0)//c16 in battle
 			support(CPSupport,1,1,0,0,0,0)
@@ -295,19 +295,19 @@
 			support(CPSupport,0,1,5,0,0,10)//c15 in battle
 			support(BSupport,0,2,10,0,0,10)
 			support(BPSupport,0,2,20,0,0,15)
-			support(ASupport,0,4,20,0,0,15)
+			support(ASupport,0,4,20,0,0,15)			//lover convo
 		entry(Apollo,Flynn)
 			support(CSupport,1,0,0,0,0,5)//c13
 			support(CPSupport,1,0,5,0,0,10)//c17 battle
 			support(BSupport,2,0,15,0,0,10)
 			support(BPSupport,2,0,25,0,0,10)
-			support(ASupport,3,1,25,0,0,10)
+			support(ASupport,3,1,25,0,0,10)			//lover convo?
 		entry(Apollo,Charley)
 			support(CSupport,0,0,10,0,0,0)//c15
 			support(CPSupport,0,0,20,0,0,0)
 			support(BSupport,0,1,20,0,0,0)
 			support(BPSupport,1,1,20,0,0,0)
-			support(ASupport,1,2,30,0,0,0)
+			support(ASupport,1,2,30,0,0,0)			//lover convo?
 		entry(Apollo,Vladmir)
 			support(CSupport,0,0,0,0,0,10)//c18
 			support(CPSupport,0,0,10,0,0,20)
@@ -379,7 +379,7 @@
 			support(CPSupport,0,2,0,0,0,0)//c18 battle
 			support(BSupport,0,3,0,0,0,0)
 			support(BPSupport,0,4,0,0,0,0)
-			support(ASupport,0,5,0,0,0,0)
+			support(ASupport,0,5,0,0,0,0)			//lover convo
 		entry(Leila,Zacharias)
 			support(CSupport,1,0,0,0,0,0)//z3
 			support(CPSupport,2,0,0,0,0,0)//c18 battle

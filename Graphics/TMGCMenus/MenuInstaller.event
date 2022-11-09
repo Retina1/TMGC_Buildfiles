@@ -175,8 +175,13 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 		ORG 0x349CC//TradeOtherHalfAutobox 33
 		POIN TradeOtherHalfAutobox
 		
-		ORG 0x447F0//fucky stuff but i think that's the tsa itself
+		ORG 0x447F0//Name Entry Box
 		POIN NameEntryBox
+		ORG 0x4c50c
+		BYTE 0x00 0x20 //disable transparency
+		
+		//0xbeb70? ac 8e a9 08
+		
 	POP
 		ALIGN 4
 		Tileset:
@@ -296,8 +301,7 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 		
 		ALIGN 4
 		NameEntryBox:
-		//#incbin "NameEntry.dmp"
-		#incbin "UnitMenu.dmp"
+		#incbin "NameEntry.dmp"
 	
 #else
 	ERROR "You're not assembling FE8 events!"

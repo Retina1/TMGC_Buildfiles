@@ -22,6 +22,8 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C19Turn1,1)
+TurnEventPlayer(0x22,C19AreaTrapFollowUp,1,255)
+TurnEventPlayer(0x21,C19AreaTrap,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -50,6 +52,7 @@ ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AreaEvent(0x23,C19AreaTrigger,0,0,8,13)
 END_MAIN
 
 Dunno:
@@ -91,13 +94,28 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C19Hard:
-UNIT Holanis AxeCav 0x0 Level(20,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Holanis LncCav 0x0 Level(20,Enemy,1) [15,11] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Holanis Fighter 0x0 Level(20,Enemy,1) [18,5] 0x0 0x0 0x0 0x0 [Hammer] NoAI
+UNIT Holanis Fighter 0x0 Level(20,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Halberd] NoAI
+UNIT Holanis HeroF 0x0 Level(3,Enemy,1) [16,6] DropItem 0x0 0x0 0x0 [Hammer,Halberd,Swordslayer,Dracoaxe] NoAI
+UNIT Holanis SwdCav 0x0 Level(20,Enemy,1) [21,18] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis SwdCav 0x0 Level(20,Enemy,1) [23,18] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
+UNIT Holanis BowPalF 0x0 Level(2,Enemy,1) [22,20] DropItem 0x0 0x0 0x0 [Wardbow] NoAI
+UNIT Holanis LncCav 0x0 Level(20,Enemy,1) [15,11] 0x0 0x0 0x0 0x0 [SilverLance] DelayedAI
+UNIT Holanis AxeCav 0x0 Level(20,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [SilverAxe] DelayedAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [13,12] 0x0 0x0 0x0 0x0 [Fimbulvetr] DelayedAI
+UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [1,10] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
 UNIT Holanis Falco 0x0 Level(2,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [Shockstick] AttackInRangeAI
+UNIT Holanis Falco 0x0 Level(2,Enemy,1) [11,18] 0x0 0x0 0x0 0x0 [SilverLance] ChaseOnceApproachedAI
+UNIT Holanis Falco 0x0 Level(2,Enemy,1) [13,18] 0x0 0x0 0x0 0x0 [SilverSword] ChaseOnceApproachedAI
+UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [SilverBow] GroupOneAI
+UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [1,4] 0x0 0x0 0x0 0x0 [SilverBow] GroupOneAI
+UNIT Holanis Halberdier 0x0 Level(2,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [BraveLance] GroupOneAI
 UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [8,4] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Holanis LncGen 0x0 Level(3,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
-UNIT Holanis Sorc 0x0 Level(16,Enemy,1) [1,8] 0x0 0x0 0x0 0x0 [Nosferatu,Hell,WhiteGem] NeverMoveAI
+UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT LootHolanis Sorc 0x0 Level(16,Enemy,1) [1,8] 0x0 0x0 0x0 0x0 [Nosferatu,Hell,WhiteGem] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Holanis Sage 0x0 Level(5,Enemy,1) [17,12] 0x0 0x0 0x0 0x0 [Sagittae,Sleep] NeverMoveAI
@@ -106,6 +124,22 @@ UNIT Holanis Sage 0x0 Level(3,Enemy,1) [18,13] 0x0 0x0 0x0 0x0 [Bolting] NeverMo
 UNIT Holanis BowGen 0x0 Level(5,Enemy,1) [17,14] 0x0 0x0 0x0 0x0 [SteelBow] NeverMoveAI
 UNIT Holanis AxeGen 0x0 Level(5,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Michael Sniper 0x0 Level(8,Enemy,1) [17,13] DropItem 0x0 0x0 0x0 [BarrierBow] NeverMoveAI
+UNIT
+
+C19WestBuildingGroup:
+UNIT Holanis LncPal 0x0 Level(2,Enemy,1) [0,10] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Holanis SwdPal 0x0 Level(2,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Warrior 0x0 Level(4,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Holanis Halberdier 0x0 Level(4,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT LootHolanis Thief 0x0 Level(20,Enemy,1) [0,0] DropItem 0x0 0x0 0x0 [FlameSword,Speedwings,ChestKey] LootingThiefAI
+UNIT
+
+C19WestBuildingGroup2:
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [4,14] 0x0 0x0 0x0 0x0 [Zanbato] NoAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [7,14] 0x0 0x0 0x0 0x0 [Armorslayer] NoAI
+UNIT Holanis HeroF 0x0 Level(4,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis AxeWyv 0x0 Level(20,Enemy,1) [19,1] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Holanis LncWyv 0x0 Level(20,Enemy,1) [12,17] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
 UNIT
 
 ALIGN 4
@@ -125,6 +159,8 @@ TILECHANGE 0x6
 LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
 LOAD1 0x0 C19Units
 ENUN
+ENUT 0x21
+ENUT 0x22
 GotoPrepScreen
 ENDA
 
@@ -134,6 +170,24 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter20)
 ENDA
+
+C19AreaTrap:
+Reinforcements(C19WestBuildingGroup)
+ENUF 0x22
+EndEvent
+C19AreaTrapFollowUp:
+Reinforcements(C19WestBuildingGroup2)
+EndEvent
+
+C19AreaTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x21
+GOTO 0x2
+LABEL 0x1
+ENUF 0x23
+LABEL 0x2
+EndEvent
 
 C19Turn1:
 SystemText(_Ch19SysText)

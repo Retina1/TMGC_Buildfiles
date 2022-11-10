@@ -11,10 +11,11 @@
 .equ xMask2,						0x1FF
 .equ yMask2,						0xFF
 .equ IconNone,						0x869 @ Also sets priority to 2.
-.equ IconStealable,					0x840 @ Also sets priority to 2.
+.equ IconStealable,					0x864 @ Also sets priority to 2.
 .equ IconStealableDroppable,    	0x861 @ Also sets priority to 2.
 .equ IconDroppable,				    0x865 @ Also sets priority to 2.
-.equ MarkStealableGoldValue,        0x063 //99 in hex
+.equ MarkStealableGoldValue,        0xFA0 //4000 in hex
+
 push	{r2, r4, r14}
 
 @ Check whether DR-bit is set.
@@ -78,11 +79,6 @@ beq		CheckSteal
 
 //
 CheckStealDr://we check if unit has a stealable item of value > arbitrary value
-ldrb    r0,[r4,#0x0B]
-mov     r1,#0x40
-and     r0,r1
-cmp     r0,r1
-beq     Return//if playable, don't show anything
 mov     r0,#0x1E
 LoopStealDr:
 ldrh    r1,[r4,r0]
@@ -95,7 +91,7 @@ eor     r3,r1
 lsr     r3,#0x08//r3 has durability
 mov     r1,#0x24
 mul     r2,r1
-ldr     r1,NewItemTable
+ldr     r1,=#0x08809B10
 add     r1,r2
 add     r1,#0x07
 ldrb    r2,[r1]
@@ -107,7 +103,7 @@ push	{r0-r3}
 cmp     r0,#0x26
 beq     DroppableOnly//if we're at item 5 we WILL be the last
 add     r0,#0x02
-ldrb    r0,[r4,r0]
+ldrb    r0,[r1,r0]
 cmp     r0,#0x00
 beq     DroppableOnly//if next item's ID is 0, that slot is empty and we are last
 pop {r0-r3}
@@ -120,7 +116,6 @@ cmp     r2,#0x02
 beq     NotItemDr //not a stealable   
 add     r1,#0x13
 ldrh    r1,[r1]
-mov		r3,#0x1
 mul     r1,r3
 ldr     r3,=MarkStealableGoldValue
 cmp     r1,r3
@@ -198,11 +193,6 @@ bx		r5
 		
 //
 CheckSteal://we check if unit has a stealable item of value > arbitrary value
-ldrb    r0,[r4,#0x0B]
-mov     r1,#0x40
-and     r0,r1
-cmp     r0,#0x40
-beq     Return//if playable, don't show anything
 mov     r0,#0x1E
 LoopSteal:
 ldrh    r1,[r4,r0]
@@ -215,7 +205,7 @@ eor     r3,r1
 lsr     r3,#0x08//r3 has durability
 mov     r1,#0x24
 mul     r2,r1
-ldr     r1,NewItemTable
+ldr     r1,=#0x08809B10
 add     r1,r2
 add     r1,#0x07
 ldrb    r2,[r1]
@@ -230,7 +220,6 @@ cmp     r2,#0x02
 beq     NotItem //not a stealable   
 add     r1,#0x13
 ldrh    r1,[r1]
-mov		r3,#0x1
 mul     r1,r3
 ldr     r3,=MarkStealableGoldValue
 cmp     r1,r3
@@ -322,10 +311,6 @@ bhi		Return
 		bl		GOTO_R5
 		b       Return
 
-.align
-.ltorg
-NewItemTable:
-@POIN NewItemTable
 
 	
 

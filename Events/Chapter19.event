@@ -105,6 +105,10 @@ UNIT Holanis AxeCav 0x0 Level(20,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [SilverAxe] De
 UNIT Holanis Sage 0x0 Level(3,Enemy,1) [13,12] 0x0 0x0 0x0 0x0 [Fimbulvetr] DelayedAI
 UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [1,10] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
 UNIT Holanis Falco 0x0 Level(2,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [Shockstick] AttackInRangeAI
+UNIT Holanis AxeCav 0x0 Level(20,Enemy,1) [16,22] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
+UNIT Holanis SwdCav 0x0 Level(20,Enemy,1) [17,23] 0x0 0x0 0x0 0x0 [SilverSword] GroupTwoAI
+UNIT Holanis LncCav 0x0 Level(20,Enemy,1) [18,22] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT Holanis Valk 0x0 Level(2,Enemy,1) [17,21] DropItem 0x0 0x0 0x0 [LightBrand] GroupTwoAI
 UNIT Holanis Falco 0x0 Level(2,Enemy,1) [11,18] 0x0 0x0 0x0 0x0 [SilverLance] ChaseOnceApproachedAI
 UNIT Holanis Falco 0x0 Level(2,Enemy,1) [13,18] 0x0 0x0 0x0 0x0 [SilverSword] ChaseOnceApproachedAI
 UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [SilverBow] GroupOneAI
@@ -115,7 +119,7 @@ UNIT Holanis LncGen 0x0 Level(3,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Javelin] NeverMo
 UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
-UNIT LootHolanis Sorc 0x0 Level(16,Enemy,1) [1,8] 0x0 0x0 0x0 0x0 [Nosferatu,Hell,WhiteGem] NeverMoveAI
+UNIT Holanis Sorc 0x0 Level(16,Enemy,1) [1,8] 0x0 0x0 0x0 0x0 [Nosferatu,Hell,WhiteGem] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Holanis Sage 0x0 Level(5,Enemy,1) [17,12] 0x0 0x0 0x0 0x0 [Sagittae,Sleep] NeverMoveAI
@@ -131,7 +135,7 @@ UNIT Holanis LncPal 0x0 Level(2,Enemy,1) [0,10] 0x0 0x0 0x0 0x0 [SilverLance] No
 UNIT Holanis SwdPal 0x0 Level(2,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
 UNIT Holanis Warrior 0x0 Level(4,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT Holanis Halberdier 0x0 Level(4,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
-UNIT LootHolanis Thief 0x0 Level(20,Enemy,1) [0,0] DropItem 0x0 0x0 0x0 [FlameSword,Speedwings,ChestKey] LootingThiefAI
+UNIT Holanis Thief 0x0 Level(20,Enemy,1) [0,0] DropItem 0x0 0x0 0x0 [FlameSword,Speedwings,ChestKey] LootingThiefAI
 UNIT
 
 C19WestBuildingGroup2:
@@ -203,5 +207,13 @@ TILEREVERSE 0x5
 TILEREVERSE 0x6
 Text(FillerDialogue)
 EndEvent
+
+ALIGN 4
+EscapePointPointerTable(Chapter19,C19Escape)
+
+ALIGN 4
+C19Escape:
+EscapePoint(0,0, NoMove)
+EscapePointEnd
 
 //MESSAGE Events end at offset CURRENTOFFSET

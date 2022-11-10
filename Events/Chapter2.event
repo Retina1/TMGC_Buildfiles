@@ -69,7 +69,7 @@ UNIT
 
 C2Easy:
 UNIT Ygstra Fighter 0x0 Level(3,Enemy,1) [15,4] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT LootYgstra Fighter 0x0 Level(2,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] ChaseOnceApproachedAI
+UNIT Ygstra Fighter 0x0 Level(2,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] ChaseOnceApproachedAI
 UNIT Ygstra AxeArm 0x0 Level(2,Enemy,1) [18,12] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Ygstra AxeArm 0x0 Level(2,Enemy,1) [16,14] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [17,13] 0x0 0x0 0x0 0x0 [IronLance] AttackInRangeAI
@@ -77,19 +77,19 @@ UNIT Ygstra Soldier 0x0 Level(3,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [IronLance] Chase
 UNIT Ygstra SoldierF 0x0 Level(2,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [Javelin] ChaseOnceApproachedAI
 UNIT Ygstra Merc 0x0 Level(2,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
 UNIT Ygstra Merc 0x0 Level(3,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
-UNIT LootYgstra Mage 0x0 Level(4,Enemy,1) [13,9] 0x0 0x0 0x0 0x0 [Fire,MiniGem] ChaseOnceApproachedAI
+UNIT Ygstra Mage 0x0 Level(4,Enemy,1) [13,9] 0x0 0x0 0x0 0x0 [Fire,MiniGem] ChaseOnceApproachedAI
 UNIT Ygstra Brigand 0x0 Level(4,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
-UNIT LootYgstra AxeArm 0x0 Level(3,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] NeverMoveAI
+UNIT Ygstra AxeArm 0x0 Level(3,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] NeverMoveAI
 UNIT Ygstra BowCav 0x0 Level(2,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [IronBow] AttackInRangeAI
 UNIT Ygstra SwdCavF 0x0 Level(2,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
 UNIT Ygstra AxeCav 0x0 Level(2,Enemy,1) [17,2] DropItem 0x0 0x0 0x0 [Swordreaver] NoAI
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,5] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,IronLance,SkillScroll] NeverMoveAI
 UNIT
 
 C2Normal:
 UNIT Ygstra Fighter 0x0 Level(3,Enemy,1) [15,4] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT LootYgstra Fighter 0x0 Level(2,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] ChaseOnceApproachedAI
+UNIT Ygstra Fighter 0x0 Level(2,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] ChaseOnceApproachedAI
 UNIT Ygstra AxeArm 0x0 Level(2,Enemy,1) [18,12] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Ygstra AxeArm 0x0 Level(2,Enemy,1) [16,14] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [17,13] 0x0 0x0 0x0 0x0 [IronLance] AttackInRangeAI
@@ -97,9 +97,9 @@ UNIT Ygstra Soldier 0x0 Level(3,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [IronLance] Chase
 UNIT Ygstra SoldierF 0x0 Level(2,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [Javelin] ChaseOnceApproachedAI
 UNIT Ygstra Merc 0x0 Level(2,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
 UNIT Ygstra Merc 0x0 Level(3,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
-UNIT LootYgstra Mage 0x0 Level(4,Enemy,1) [13,9] 0x0 0x0 0x0 0x0 [Fire,MiniGem] ChaseOnceApproachedAI
+UNIT Ygstra Mage 0x0 Level(4,Enemy,1) [13,9] 0x0 0x0 0x0 0x0 [Fire,MiniGem] ChaseOnceApproachedAI
 UNIT Ygstra Brigand 0x0 Level(4,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
-UNIT LootYgstra AxeArm 0x0 Level(3,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] NeverMoveAI
+UNIT Ygstra AxeArm 0x0 Level(3,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] NeverMoveAI
 UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [13,5] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Ygstra BowCav 0x0 Level(2,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [IronBow] AttackInRangeAI
 UNIT Ygstra SwdCavF 0x0 Level(2,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
@@ -107,12 +107,12 @@ UNIT Ygstra LncCav 0x0 Level(2,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT Ygstra AxeCav 0x0 Level(2,Enemy,1) [18,2] DropItem 0x0 0x0 0x0 [Swordreaver] NoAI
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,4] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,6] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,SteelLance] NeverMoveAI
+UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,SteelLance,SkillScroll] NeverMoveAI
 UNIT
 
 C2Hard:
 UNIT Ygstra Fighter 0x0 Level(3,Enemy,1) [15,4] 0x0 0x0 0x0 0x0 [IronAxe] GroupOneAI
-UNIT LootYgstra Fighter 0x0 Level(2,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] ChaseOnceApproachedAI
+UNIT Ygstra Fighter 0x0 Level(2,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [IronAxe,Vulnerary] ChaseOnceApproachedAI
 UNIT Ygstra AxeArm 0x0 Level(2,Enemy,1) [18,12] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
 UNIT Ygstra AxeArm 0x0 Level(2,Enemy,1) [16,14] 0x0 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
 UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [17,13] 0x0 0x0 0x0 0x0 [IronLance] AttackInRangeAI
@@ -121,9 +121,9 @@ UNIT Ygstra SoldierF 0x0 Level(2,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [Javelin] ChaseO
 UNIT Ygstra Merc 0x0 Level(2,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
 UNIT Ygstra Merc 0x0 Level(3,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
 UNIT Ygstra MercF 0x0 Level(3,Enemy,1) [14,14] 0x0 0x0 0x0 0x0 [Lancereaver] ChaseOnceApproachedAI
-UNIT LootYgstra Mage 0x0 Level(4,Enemy,1) [13,9] 0x0 0x0 0x0 0x0 [Fire,MiniGem] ChaseOnceApproachedAI
+UNIT Ygstra Mage 0x0 Level(4,Enemy,1) [13,9] 0x0 0x0 0x0 0x0 [Fire,MiniGem] ChaseOnceApproachedAI
 UNIT Ygstra Brigand 0x0 Level(4,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
-UNIT LootYgstra AxeArm 0x0 Level(3,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] NeverMoveAI
+UNIT Ygstra AxeArm 0x0 Level(3,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [HandAxe,Vulnerary] NeverMoveAI
 UNIT Ygstra LncArm 0x0 Level(3,Enemy,1) [14,5] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Ygstra BowCav 0x0 Level(2,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [IronBow] GroupOneAI
 UNIT Ygstra BowCav 0x0 Level(2,Enemy,1) [18,0] 0x0 0x0 0x0 0x0 [IronBow] GroupOneAI
@@ -134,7 +134,7 @@ UNIT Ygstra AxeCav 0x0 Level(2,Enemy,1) [18,2] DropItem 0x0 0x0 0x0 [Swordreaver
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,4] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
 UNIT Ygstra LncWyv 0x0 Level(4,Enemy,1) [11,5] 0x0 0x0 0x0 0x0 [Axereaver] ChaseOnceApproachedAI
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,6] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,SilverLance] NeverMoveAI
+UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,SilverLance,SkillScroll] NeverMoveAI
 UNIT
 
 C2Allies:
@@ -177,6 +177,7 @@ LABEL 0x22
 DeathBranchText(Kenneth,Natasia,S_Crisis,S_Crisis,OutdoorCastleCG,Ch2_Opening,Ch2_Opening_Dead_Kenneth,Ch2_Opening_Dead_Natasia,Ch2_Opening_Dead_Kenneth_and_Natasia)
 LOAD1 0x0 C2Units
 ENUN
+SetUnitItemDurability(Brentson, 2, QuixoticID)
 GotoPrepScreen
 ENDA
 

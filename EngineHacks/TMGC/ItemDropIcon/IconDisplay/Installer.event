@@ -1,0 +1,157 @@
+#include "eastdlib.event"
+#include "Extensions/Hack Installation.txt"
+
+ORG 0x01A33B60
+
+PUSH
+
+ORG $279B0 
+jumpToHack(UnitDisplay)
+
+ORG $279E8 
+callHack_r3(IconDisplay)
+// ldr r2 =OAMSize 
+ORG $279F6 
+SHORT 0x46C0 // Nop - normally ldr r3, =0x811 
+
+POP 
+
+
+
+ALIGN 4 
+UnitDisplay:
+#incbin "UnitDisplay.dmp"
+POIN IconDisplayList
+
+
+ALIGN 4 
+IconDisplay:
+#incbin "IconDisplay.dmp"
+POIN IconDisplayList
+
+
+
+ALIGN 4
+IconDisplayList:
+//BYTE 0 // Any Unit ID 
+//BYTE 0 // Any Class 
+//SHORT 0 // Any flag 
+//BYTE 0xFF // Any chapter 
+//BYTE 0xFF // Default ObjTileID 
+//BYTE 0 // padding 
+//BYTE 0 // Padding 
+
+//Thieves
+BYTE 0xF9 // Any Unit ID 
+BYTE 0 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0xFF // Any chapter 
+BYTE 0x60 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0x9C // Any Unit ID 
+BYTE 0xE // Any Class 
+SHORT 0 // Any flag 
+BYTE 0x11 // Any chapter 
+BYTE 0x60 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+
+BYTE 0xA8 // Any Unit ID 
+BYTE 0xD // Any Class 
+SHORT 0 // Any flag 
+BYTE 0x10 // Any chapter 
+BYTE 0x60 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0xA8 // Any Unit ID 
+BYTE 0x10 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0x10 // Any chapter 
+BYTE 0x60 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0xA8 // Any Unit ID 
+BYTE 0x17 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0x10 // Any chapter 
+BYTE 0x60 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0x86 // Any Unit ID 
+BYTE 0x0E // Any Class 
+SHORT 0 // Any flag 
+BYTE 0x05 // Any chapter 
+BYTE 0x60 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+//Bandits
+
+BYTE 0xA1 // Any Unit ID 
+BYTE 0x00 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0xFF // Any chapter 
+BYTE 0x41 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0xA2 // Any Unit ID 
+BYTE 0x00 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0xFF // Any chapter 
+BYTE 0x41 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0xA3 // Any Unit ID 
+BYTE 0x00 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0xFF // Any chapter 
+BYTE 0x41 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0xA4 // Any Unit ID 
+BYTE 0x00 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0xFF // Any chapter 
+BYTE 0x41 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0xAB // Any Unit ID 
+BYTE 0x41 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0xFF // Any chapter 
+BYTE 0x41 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+BYTE 0xAB // Any Unit ID 
+BYTE 0x58 // Any Class 
+SHORT 0 // Any flag 
+BYTE 0xFF // Any chapter 
+BYTE 0x41 // Default ObjTileID 
+BYTE 0 // padding 
+BYTE 0 // Padding 
+
+
+/*
+BYTE 1 0; SHORT 0; 		BYTE 0xFF 0xFF 0 0 // Unit ID 1 to always display default icon for unit to defend 
+BYTE 2 0; SHORT 0; 		BYTE 0xFF 0x76 0 0
+BYTE 3 0; SHORT 0; 		BYTE 0xFF 0x77 0 0
+BYTE 4 0; SHORT 0; 		BYTE 0xFF 0x4  0 0
+BYTE 5 0; SHORT 0; 		BYTE 0xFF 0x51 0 0
+BYTE 6 0; SHORT 0; 	BYTE 0xFF 3 0 0  // Any unit ID, class, any flag
+*/
+WORD 0xFFFFFFFF 0xFFFFFFFF // terminator 
+
+
+
+

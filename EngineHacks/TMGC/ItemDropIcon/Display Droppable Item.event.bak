@@ -4,6 +4,8 @@ ERROR "You're not assembling to an FE8 ROM!"
 
 #include EAStdlib.event
 #include "Extensions/Hack Installation.txt"
+#define FreeSpace 0x01D0DB00
+ORG     FreeSpace
 PUSH
 
 	ORG 0x2793E
@@ -19,7 +21,6 @@ POP
 ALIGN 4
 FOG:
 #incbin "asm/DroppableItem.dmp"
-POIN NewItemTable
 ALIGN 4
 NewGraphic:
 #incext Png2Dmp "bin/NewGraphic.png" --lz77

@@ -34,6 +34,10 @@
 //songs
 
 {
+#include "MapIntro.event"
+SongTable(0x316,MapIntro,6)
+}
+{
 #include "CryALive.event"
 SongTable(S_CryALive,CryALive,1)
 }

@@ -26,6 +26,50 @@
 #include "BattleMenus/BattleMenuInstaller.txt"
 
 PUSH
+ORG $202B0
+POIN MapIntro
+ORG 0x0202B8
+POIN MapIntroPalette
+POP
+ALIGN 4
+MapIntro:
+#incbin "MapIntro.png.dmp"
+ALIGN 4
+MapIntroPalette:
+#incbin "MapIntro.png.pal.dmp"
+
+PUSH
+ORG 0x0209C0
+POIN ChapterFog
+ORG 0x0209CC
+POIN ChapterFogTSA
+ORG 0x0209C8
+POIN ChapterFogPalette
+POP
+ALIGN 4
+ChapterFog:
+#incbin "ChapterFog.png.dmp"
+ALIGN 4
+ChapterFogTSA:
+#incbin "ChapterFog.png.tsa.dmp"
+ALIGN 4
+ChapterFogPalette:
+#incbin "ChapterFog.png.pal.dmp"
+
+PUSH
+ORG 0x000202A0
+POIN LightEffect
+ORG 0x000202A8
+POIN LightEffectPalette
+POP
+ALIGN 4
+LightEffect:
+#incbin "LightEffect.png.dmp"
+ALIGN 4
+LightEffectPalette:
+#incbin "LightEffect.png.pal.dmp"
+
+PUSH
 ORG $88638
 POIN NewStatScreen
 ORG $88640

@@ -1,3 +1,11 @@
+//map intro speed
+PUSH
+ORG 0x59B1C2
+BYTE 0x00
+ORG 0x59B2D2
+BYTE 0x00
+POP
+
 //autolevels after this slot
 PUSH
 ORG 0x17c4c

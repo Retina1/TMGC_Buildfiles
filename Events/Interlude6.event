@@ -157,7 +157,10 @@ SystemText(I6HilbertSwordRank)
 EndEvent
 
 I6ApolloTalk:
+CHECK_ALIVE Bechamel
+BEQ 0x3 0xc 0x0
 BranchIfSupport(Apollo,Bechamel,CPSupport,0x1)
+LABEL 0x3
 Text(I6ApolloConvo)
 GOTO 0x2
 LABEL 0x1
@@ -232,7 +235,10 @@ Text(I6HyperiusConvo)
 EndEvent
 
 I6JosefTalk:
+CHECK_ALIVE Hilbert
+BEQ 0x3 0xc 0x0
 BranchIfSupport(Josef,Hilbert,CPSupport,0x1)
+LABEL 0x3
 Text(I6JosefConvo)
 GOTO 0x2
 LABEL 0x1
@@ -425,7 +431,10 @@ LABEL 0x68
 EndEvent
 
 I6PeggyTalk:
+CHECK_ALIVE Natasia
+BEQ 0x3 0xc 0x0
 BranchIfSupport(Peggy,Natasia,CPSupport,0x1)
+LABEL 0x3
 Text(I6PeggyConvo)
 GOTO 0x2
 LABEL 0x1

@@ -26,8 +26,8 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0xa,C20SimoneBlairRecruitment,Blair,Simone)
-CharacterEvent(0xa,C20SimoneArinRecruitment,Arin,Simone)
-CharacterEvent(0xa,C20SimoneEmileRecruitment,Emile,Simone)
+CharacterEvent(0xa,C20SimoneArinRecruitment,Arin,Simone) //let arin/simone C happen no matter who recruits?
+CharacterEvent(0xa,C20SimoneEmileRecruitment,Emile,Simone) //let emile/simone C happen no matter who recruits?
 CharacterEvent(0xa,C20SimoneZekeRecruitment,Zeke,Simone)
 END_MAIN
 

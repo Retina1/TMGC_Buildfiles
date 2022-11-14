@@ -314,6 +314,12 @@
 			support(BSupport,0,1,20,0,0,0)
 			support(BPSupport,1,1,20,0,0,0)
 			support(ASupport,1,2,30,0,0,0)			//lover convo?
+		entry(Apollo,Avan)
+			support(CSupport,0,1,5,0,0,0)//c19 in battle
+			support(CPSupport,0,1,10,0,0,5)
+			support(BSupport,0,2,10,0,0,10)
+			support(BPSupport,0,2,15,0,0,20)
+			support(ASupport,0,3,30,0,0,20)
 		entry(Apollo,Vladmir)
 			support(CSupport,0,0,0,0,0,10)//c18
 			support(CPSupport,0,0,10,0,0,20)
@@ -352,6 +358,12 @@
 	//carbon (blair, stefan, mikey)
 	//athena (josef, peggy)
 	//charley (sam, apollo)
+		entry(Charley,Yuyu)
+			support(CSupport,1,0,5,0,0,0)//c19 in battle
+			support(CPSupport,1,0,10,0,5,0)
+			support(BSupport,2,0,10,0,10,0)
+			support(BPSupport,2,0,15,0,20,0)
+			support(ASupport,2,0,15,0,30,0)
 	//zeke (blair, cassius)
 		entry(Zeke,Hyperius)
 			support(CSupport,0,0,10,0,0,5)//z1
@@ -408,7 +420,7 @@
 			support(BPSupport,2,1,10,15,0,0)
 			support(ASupport,2,1,15,25,0,0)
 	//toddsworth (sveltzalus, avan)
-	//yuyu (blair, arin)
+	//yuyu (blair, arin, charley)
 	//artemis (alexis)
 	//hollandaise (bechamel)
 	//vladmir (emile, apollo)

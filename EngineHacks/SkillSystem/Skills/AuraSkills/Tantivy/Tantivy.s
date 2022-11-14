@@ -32,7 +32,7 @@ beq NoAlly
 mov r0, r4
 add     r0,#0x5a    @Move to the attacker's atk.
 ldrh    r3,[r0]     @Load the attacker's atk into r3.
-add     r3,#3    @add 3 atk.
+add     r3,#5    @add 5 atk.
 strh    r3,[r0]     @Store.
 
 add r0, #6 @attacker's hit

@@ -29,6 +29,14 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0x12,C19SamCharleySupport,Sam,Charley)
+CharacterEventBothWays(0x13,C19PeggyAthenaSupport,Peggy,Athena)
+CharacterEventBothWays(0x14,C19RachaelHyperiusSupport,Rachael,Hyperius)
+CharacterEventBothWays(0x15,C19RachaelLeilaSupport,Rachael,Leila)
+CharacterEventBothWays(0x16,C19EmileHilbertSupport,Emile,Hilbert)
+CharacterEventBothWays(0x17,C19ApolloBechamelSupport,Apollo,Bechamel)
+CharacterEventBothWays(0x18,C19ApolloAvanSupport,Apollo,Avan)
+CharacterEventBothWays(0x19,C19CharleyYuyuSupport,Charley,Yuyu)
 END_MAIN
 
 LocationBasedEvents:
@@ -188,6 +196,39 @@ UNIT
 
 ALIGN 4
 
+C19SamCharleySupport:
+Text(SamCharleyCPSupport)
+SetSupport(Sam,Charley,CPSupport,1)
+EndEvent
+C19PeggyAthenaSupport:
+Text(PeggyAthenaCPSupport)
+SetSupport(Peggy,Athena,CPSupport,1)
+EndEvent
+C19RachaelHyperiusSupport:
+Text(RachaelHyperiusCPSupport)
+SetSupport(Rachael,Hyperius,CPSupport,1)
+EndEvent
+C19RachaelLeilaSupport:
+Text(RachaelLeilaCPSupport)
+SetSupport(Rachael,Leila,CPSupport,1)
+EndEvent
+C19EmileHilbertSupport:
+Text(EmileHilbertBSupport)
+SetSupport(Emile,Hilbert,BSupport,1)
+EndEvent
+C19ApolloBechamelSupport:
+Text(ApolloBechamelBSupport)
+SetSupport(Apollo,Bechamel,BSupport,1)
+EndEvent
+C19ApolloAvanSupport:
+Text(ApolloAvanCSupport)
+SetSupport(Apollo,Avan,CSupport,1)
+EndEvent
+C19CharleyYuyuSupport:
+Text(CharleyYuyuCSupport)
+SetSupport(Charley,Yuyu,CSupport,1)
+EndEvent
+
 BeginningScene:
 ENUT GuideChpt19
 MUSC NarrationTheme3
@@ -206,6 +247,12 @@ ENUN
 ENUT 0x21
 ENUT 0x22
 ENUT 0x24
+SupportFlagOn(Sam,Charley,0x12,CSupport)
+SupportFlagOn(Peggy,Athena,0x13,CSupport)
+SupportFlagOn(Rachael,Hyperius,0x14,CSupport)
+SupportFlagOn(Rachael,Leila,0x15,CSupport)
+SupportFlagOn(Emile,Hilbert,0x16,CPSupport)
+SupportFlagOn(Apollo,Bechamel,0x17,CPSupport)
 GotoPrepScreen
 ENDA
 

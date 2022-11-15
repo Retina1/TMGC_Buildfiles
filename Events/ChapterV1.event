@@ -121,8 +121,16 @@ MUSC NarrationTheme
 Narration(Map2CG,ChV1_Narration)
 CleanText(PathCG,FillerDialogue)
 SystemText(ViridianArcPrimer)
-SetSupport(Viridian,Freddric,CSupport)
-SetSupport(Viridian,Chartreuse,CSupport)
+SetSupport(Viridian,Freddric,BSupport)
+SetSupport(Viridian,Chartreuse,BSupport)
+SetSupport(Dean,Eliza,CPSupport)
+//other preset viridian arc supports for reference
+//eliza/dirk B
+//wilhelm/manfred C+ or B
+//dean/dirk C+
+//eliza/rose C+
+//argent/freddric C+
+//rift/callum C+
 EndEvent
 
 EndingScene:
@@ -154,7 +162,8 @@ CV1Turn3:
 Reinforcements(V1MoreUnits)
 MUSC RecruitmentThemeVirid
 Text(FillerDialogue)
-SetSupport(Rift,Estelle,CSupport)
+SetSupport(Rift,Estelle,CPSupport)
+SetSupport(Chartreuse,Estelle,CPSupport)
 EndEvent
 CV1Turn4:
 Reinforcements(V1Reinforcements2)

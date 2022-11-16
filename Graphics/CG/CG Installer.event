@@ -6,6 +6,7 @@ SetConvoBackground(MapCG,MapImage,MapTSA,MapPalette)
 SetConvoBackground(BlankCG,BlankImage,BlankTSA,BlankPalette)
 SetConvoBackground(LowlandsCG,LowlandsImage,LowlandsTSA,LowlandsPalette)
 SetConvoBackground(TentInsideCG,TentInsideImage,TentInsideTSA,TentInsidePalette)
+SetConvoBackground(LowlandsRiverCG,LowlandsRiverImage,LowlandsRiverTSA,LowlandsRiverPalette)
 ALIGN 4
 MapImage:
 #incbin "map for real.png.dmp"
@@ -42,6 +43,15 @@ LowlandsTSA:
 ALIGN 4
 LowlandsPalette:
 #incbin "fixedlowlands.png.pal.dmp"
+ALIGN 4
+LowlandsRiverImage:
+#incbin "lowlandsriver.png.dmp"
+ALIGN 4
+LowlandsRiverTSA:
+#incbin "lowlandsriver.png.tsa.dmp"
+ALIGN 4
+LowlandsRiverPalette:
+#incbin "lowlandsriver.png.pal.dmp"
 ALIGN 4
 TentInsideImage:
 #incbin "tent.png.dmp"

@@ -178,6 +178,15 @@ ENDA
 EndingScene:
 ResetBaseFlags
 CleanTextNoMap(HallCG,FillerDialogue)
+//elba corian messenger arrives with relics from king, blair asks them to seek out viridian mercs, they pass time near zeimstadt
+REMA
+SetBackground(BlankCG)
+GiveItem(Waning,Blair)
+GiveItem(Stalwart,Zeke)
+GiveItem(AscendancySeal,Zeke)
+GiveItem(Nuiusseon,Zeke)
+LearnSkill(Zeke,RightfulKingID)
+LocationText(BlankCG,Ch20_EndingStinger,UnknownLocationLabel,S_Chaos)
 MUSC S_MainTheme
 SystemText(BlankCG,Arc2Ending)
 MoveToChapter(ChapterV1)

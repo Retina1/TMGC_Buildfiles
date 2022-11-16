@@ -230,10 +230,6 @@ SetSupport(Charley,Yuyu,CSupport,1)
 EndEvent
 
 BeginningScene:
-ENUT GuideChpt19
-MUSC NarrationTheme3
-Narration(Map2CG,Ch19_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
 TILECHANGE 0x0
 TILECHANGE 0x1
 TILECHANGE 0x2
@@ -241,6 +237,11 @@ TILECHANGE 0x3
 TILECHANGE 0x4
 TILECHANGE 0x5
 TILECHANGE 0x6
+ENUT GuideChpt19
+MUSC NarrationTheme3
+Narration(Map2CG,Ch19_Narration)
+CleanTextNoMap(LowlandsRiverCG,Ch19_Opening)
+//break up text - one break for michael, one for army spawns
 LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
 LOAD1 0x0 C19Units
 ENUN
@@ -259,7 +260,10 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(LowlandsRiverCG,Ch19_Ending)
+//eventing here
+MUSC S_Chaos
+CleanTextNoMap(LowlandsRiverCG,Ch19_Ending2)
 MoveToChapter(Chapter20)
 ENDA
 
@@ -287,17 +291,24 @@ LABEL 0x2
 EndEvent
 
 C19North:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(FillerDialogue,HouseCG)//aqueduct activities
 C19South1:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(FillerDialogue,HouseCG)//horatio lore
 C19South2:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(FillerDialogue,HouseCG)//ian cameo
 
 C19Turn1:
 SystemText(_Ch19SysText)
 EndEvent
 
 C19RiverFlow:
+CHECK_ACTIVEID Blair
+BEQ 0x1 0xc 0x0
+Text(FillerDialogue) //blair does it
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue) //zeke does it
+LABEL 0x2
 TILEREVERSE 0x0
 TILEREVERSE 0x1
 TILEREVERSE 0x2
@@ -305,7 +316,9 @@ TILEREVERSE 0x3
 TILEREVERSE 0x4
 TILEREVERSE 0x5
 TILEREVERSE 0x6
-Text(FillerDialogue)
+CAM1 Michael
+FlashCursor(Michael,60)
+Text(FillerDialogue) //michael's angy that someone flooded his river, and hints at reinforcements
 EndEvent
 
 ALIGN 4

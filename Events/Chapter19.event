@@ -34,7 +34,7 @@ CharacterEventBothWays(0x13,C19PeggyAthenaSupport,Peggy,Athena)
 CharacterEventBothWays(0x14,C19RachaelHyperiusSupport,Rachael,Hyperius)
 CharacterEventBothWays(0x15,C19RachaelLeilaSupport,Rachael,Leila)
 CharacterEventBothWays(0x16,C19EmileHilbertSupport,Emile,Hilbert)
-CharacterEventBothWays(0x17,C19ApolloBechamelSupport,Apollo,Bechamel)
+CharacterEventBothWays(0x17,C19DamienZachariasSupport,Damien,Zacharias)
 CharacterEventBothWays(0x18,C19ApolloAvanSupport,Apollo,Avan)
 CharacterEventBothWays(0x19,C19CharleyYuyuSupport,Charley,Yuyu)
 END_MAIN
@@ -216,9 +216,9 @@ C19EmileHilbertSupport:
 Text(EmileHilbertBSupport)
 SetSupport(Emile,Hilbert,BSupport,1)
 EndEvent
-C19ApolloBechamelSupport:
-Text(ApolloBechamelBSupport)
-SetSupport(Apollo,Bechamel,BSupport,1)
+C19DamienZachariasSupport:
+Text(DamienZachariasBSupport)
+SetSupport(Damien,Zacharias,BSupport,1)
 EndEvent
 C19ApolloAvanSupport:
 Text(ApolloAvanCSupport)
@@ -253,7 +253,7 @@ SupportFlagOn(Peggy,Athena,0x13,CSupport)
 SupportFlagOn(Rachael,Hyperius,0x14,CSupport)
 SupportFlagOn(Rachael,Leila,0x15,CSupport)
 SupportFlagOn(Emile,Hilbert,0x16,CPSupport)
-SupportFlagOn(Apollo,Bechamel,0x17,CPSupport)
+SupportFlagOn(Damien,Zacharias,0x17,CPSupport)
 GotoPrepScreen
 ENDA
 

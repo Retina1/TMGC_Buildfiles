@@ -2,11 +2,9 @@
 //c19
 //sam charley c+
 //peggy athena c+
-//rachael hyperius c+
-//emile hilbert b
-//apollo bechamel b
 //apollo avan c
 //yuyu charley c
+//damien zacharias b
 //c20
 //blair avan b
 //blair yuyu b
@@ -17,11 +15,11 @@
 //rachael cassius b+
 //hyperius cassius c+
 //apollo flynn c+
-//damien zacharias b
 //toddsworth charley c
 //i feel like a grim reaper pretending to be a man
 
 //ch19
+
 
 ##SamCharleyCPSupport
 [OpenMidLeft][LoadSam][OpenMidRight][LoadCharley]
@@ -30,6 +28,41 @@ Halt, child! Do you know you[A][X]
 ##PeggyAthenaCPSupport
 [OpenMidLeft][LoadPeggy][OpenMidRight][LoadAthena]
 Halt, child! Do you know you[A][X]
+
+##ApolloAvanCSupport
+[OpenMidLeft][LoadApollo][OpenMidRight][LoadAvan]
+Halt, child! Do you know you[A][X]
+
+##CharleyYuyuCSupport
+[OpenMidLeft][LoadCharley][OpenMidRight][LoadYuyu]
+Halt, child! Do you know you[A][X]
+
+##DamienZachariasBSupport
+[OpenMidLeft][LoadDamien][OpenMidRight][LoadZacharias]
+Good day, Damien.[A][N][OpenMidLeft][ToggleSmile]
+That it is, pal. Say, you got[N]
+any plans this evening?[A][N]
+If not, I'm in the mood for some[N]
+fish.[A] How about you and I go and[N]
+find some top-notch fishing hole?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]That's unusual, coming from you.[A][N][OpenMidLeft]
+Hey. It never hurts to vary[N]
+one's palate.[A] I love some[N]
+game as much as any man could,[A][N]
+but fish're damned tasty too.[A][N][OpenMidRight]
+Understandable. In that case,[N]
+I'd enjoy some fishing.[A][N][OpenMidLeft]
+Excellent! I'll bring my bow, then.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Your bow?[A][N][OpenMidLeft]
+Of course! If I see some dastardly[N]
+fish refusing to bite,[A][N]
+I'll just shoot them out of[N]
+the water in an instant![A][N][OpenMidRight][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove]I'm pretty sure that defeats[N]
+the point of fishing.[A][N][OpenEyes]
+[ToggleMouthMove]...[ToggleMouthMove]Suppose it sounds amusing, though.[A][N][OpenMidLeft]
+That's the spirit! Together, we'll[N]
+catch ourselves a veritable feast![A][X]
 
 ##RachaelHyperiusCPSupport
 [OpenMidLeft][LoadRachael][OpenMidRight][LoadHyperius]
@@ -112,18 +145,6 @@ That's so cool, mister! Maybe once[N]
 this war is over, I could do that![A][N][OpenMidRight]
 Ha. Perhaps. For now, though,[N]
 we've a job to be done.[A][X]
-
-##ApolloBechamelBSupport
-[OpenMidLeft][LoadApollo][OpenMidRight][LoadBechamel]
-Halt, child! Do you know you[A][X]
-
-##ApolloAvanCSupport
-[OpenMidLeft][LoadApollo][OpenMidRight][LoadAvan]
-Halt, child! Do you know you[A][X]
-
-##CharleyYuyuCSupport
-[OpenMidLeft][LoadCharley][OpenMidRight][LoadYuyu]
-Halt, child! Do you know you[A][X]
 
 //ch18
 

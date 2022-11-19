@@ -91,16 +91,26 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,23] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C20Easy:
-UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Guardian AxeGen 0x0 Level(2,Enemy,1) [2,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Guardian AxeGen 0x0 Level(2,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Dragon FireDragon 0x0 Level(6,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon FireDragon 0x0 Level(6,Enemy,1) [4,12] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon EarthDragon 0x0 Level(7,Enemy,1) [3,11] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT
 
 C20Normal:
-UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Guardian AxeGen 0x0 Level(2,Enemy,1) [2,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Guardian AxeGen 0x0 Level(2,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Dragon FireDragon 0x0 Level(6,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon FireDragon 0x0 Level(6,Enemy,1) [4,12] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon EarthDragon 0x0 Level(7,Enemy,1) [3,11] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT
 
 C20Hard:
-UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [2,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
-UNIT Holanis AxeGen 0x0 Level(2,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Guardian AxeGen 0x0 Level(2,Enemy,1) [2,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Guardian AxeGen 0x0 Level(2,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
 UNIT Dragon FireDragon 0x0 Level(6,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Dragon FireDragon 0x0 Level(6,Enemy,1) [4,12] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
@@ -108,51 +118,106 @@ UNIT Dragon EarthDragon 0x0 Level(7,Enemy,1) [3,11] 0x0 0x0 0x0 0x0 [EarthBreath
 UNIT
 
 C20Chamber1:
-UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
-UNIT
-C20Chamber1Lunatic:
 UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
-UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
-UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Guardian AxePal 0x0 Level(4,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Guardian LncPal 0x0 Level(4,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
 UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
 UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
 UNIT Dragon EarthDragon 0x0 Level(4,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
 UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT
-
-C20Chamber2:
+C20Chamber1Lunatic:
+UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Guardian AxePal 0x0 Level(4,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
+UNIT Guardian LncPal 0x0 Level(4,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupTwoAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupTwoAI
+UNIT Dragon EarthDragon 0x0 Level(4,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
 UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT
+
+C20Chamber2:
+UNIT Dragon EarthDragon 0x0 Level(4,Enemy,1) [24,10] 0x0 0x0 0x0 0x0 [EarthBreath] AttackInRangeAI
+UNIT Dragon DemonDragon 0x0 Level(5,Enemy,1) [20,21] 0x0 0x0 0x0 0x0 [DemonBreath] AttackInRangeAI
+UNIT Dragon DemonDragon 0x0 Level(5,Enemy,1) [23,13] 0x0 0x0 0x0 0x0 [DemonBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [26,24] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [26,15] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Guardian Sorc 0x0 Level(4,Enemy,1) [23,19] 0x0 0x0 0x0 0x0 [Fenrir] NeverMoveAI
+UNIT Guardian Sorc 0x0 Level(4,Enemy,1) [23,21] 0x0 0x0 0x0 0x0 [Hell] NeverMoveAI
+UNIT Dragon IceDragon 0x0 Level(11,Enemy,1) [21,19] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
+UNIT
 C20Chamber2Lunatic:
+UNIT Dragon EarthDragon 0x0 Level(4,Enemy,1) [24,10] 0x0 0x0 0x0 0x0 [EarthBreath] GroupFourAI
+UNIT Dragon DemonDragon 0x0 Level(5,Enemy,1) [20,21] 0x0 0x0 0x0 0x0 [DemonBreath] GroupFourAI
+UNIT Dragon DemonDragon 0x0 Level(5,Enemy,1) [23,13] 0x0 0x0 0x0 0x0 [DemonBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [26,24] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupThreeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [26,15] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupThreeAI
+UNIT Guardian Sorc 0x0 Level(4,Enemy,1) [23,19] 0x0 0x0 0x0 0x0 [Fenrir] NeverMoveAI
+UNIT Guardian Sorc 0x0 Level(4,Enemy,1) [23,21] 0x0 0x0 0x0 0x0 [Hell] NeverMoveAI
 UNIT Dragon IceDragon 0x0 Level(11,Enemy,1) [21,19] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
 UNIT
 
 C20Chamber3:
-UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [31,7] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [31,11] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [31,4] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [31,16] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Guardian Berserker 0x0 Level(3,Enemy,1) [29,5] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [30,15] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Dragon FireDragon 0x0 Level(10,Enemy,1) [26,4] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
 UNIT
+
 C20Chamber3Lunatic:
+UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [31,7] 0x0 0x0 0x0 0x0 [FireBreath] GroupSixAI
+UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [31,11] 0x0 0x0 0x0 0x0 [IceBreath] GroupSixAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [31,4] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupFiveAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [31,16] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupFiveAI
+UNIT Guardian Berserker 0x0 Level(3,Enemy,1) [29,5] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [30,15] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT Dragon FireDragon 0x0 Level(10,Enemy,1) [26,4] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
 UNIT
 
 C20Chamber4:
-UNIT Simulacrum DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
-UNIT
-C20Chamber4Lunatic:
+UNIT Simulacrum DemonDragon 0x0 Level(7,Enemy,1) [29,20] 0x0 0x0 0x0 0x0 [DemonBreath] GroupOneAI
+UNIT Simulacrum EarthDragon 0x0 Level(7,Enemy,1) [30,19] 0x0 0x0 0x0 0x0 [EarthBreath] GroupOneAI
+UNIT Simulacrum DemonDragon 0x0 Level(7,Enemy,1) [31,20] 0x0 0x0 0x0 0x0 [DemonBreath] GroupOneAI
+UNIT Guardian SwMast 0x0 Level(5,Enemy,1) [30,22] 0x0 0x0 0x0 0x0 [GildedSword] AttackInRangeAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [27,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [35,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [34,21] 0x0 0x0 0x0 0x0 [WyvernBreath] NeverMoveAI
+UNIT
+C20Chamber4Lunatic:
+UNIT Simulacrum DemonDragon 0x0 Level(7,Enemy,1) [29,20] 0x0 0x0 0x0 0x0 [DemonBreath] GroupOneAI
+UNIT Simulacrum EarthDragon 0x0 Level(7,Enemy,1) [30,19] 0x0 0x0 0x0 0x0 [EarthBreath] GroupOneAI
+UNIT Simulacrum DemonDragon 0x0 Level(7,Enemy,1) [31,20] 0x0 0x0 0x0 0x0 [DemonBreath] GroupOneAI
+UNIT Guardian SwMast 0x0 Level(5,Enemy,1) [30,22] 0x0 0x0 0x0 0x0 [GildedSword] GroupSevenAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [27,23] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupSevenAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [35,23] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupSevenAI
 UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [34,21] 0x0 0x0 0x0 0x0 [WyvernBreath] NeverMoveAI
 UNIT
 
 C20Chamber5:
-UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [27,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
-UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [35,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
-UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [34,21] 0x0 0x0 0x0 0x0 [WyvernBreath] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(8,Enemy,1) [21,3] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [21,1] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Simulacrum FireDragon 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Simulacrum IceDragon 0x0 Level(10,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT 0x9e Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
+UNIT 0x9f RuneMast 0x0 Level(5,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quote
+UNIT C20Boss DivineDragon 0x0 Level(10,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT
 C20Chamber5Lunatic:
-UNIT Simulacrum DemonDragon 0x0 Level(6,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
-UNIT Simulacrum DemonDragon 0x0 Level(6,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(8,Enemy,1) [21,3] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [21,1] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupEightAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupEightAI
+UNIT Simulacrum FireDragon 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Simulacrum IceDragon 0x0 Level(10,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT 0x9e Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
+UNIT 0x9f RuneMast 0x0 Level(5,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quot
 UNIT C20Boss DivineDragon 0x0 Level(10,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT
 
@@ -230,7 +295,7 @@ FADU 0x3c
 EndEvent
 C20Seize5:
 SetBackground(VillageCG)
-Text(FillerDialogue)//something something
+Text(FillerDialogue)//the realization that this is cyclic
 FADI 0x3C
 TILECHANGE 0x4
 DifficultyReinforcements(C20Chamber5,C20Chamber5,C20Chamber5Lunatic)

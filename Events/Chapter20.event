@@ -29,6 +29,16 @@ CharacterEvent(0xa,C20SimoneBlairRecruitment,Blair,Simone)
 CharacterEvent(0xa,C20SimoneArinRecruitment,Arin,Simone) //let arin/simone C happen no matter who recruits?
 CharacterEvent(0xa,C20SimoneEmileRecruitment,Emile,Simone) //let emile/simone C happen no matter who recruits?
 CharacterEvent(0xa,C20SimoneZekeRecruitment,Zeke,Simone)
+CharacterEventBothWays(0x10,C20BlairAvanSupport,Blair,Avan)
+CharacterEventBothWays(0x11,C20BlairYuyuSupport,Blair,Yuyu)
+CharacterEventBothWays(0x12,C20ArinSveltzalusSupport,Arin,Sveltzalus)
+CharacterEventBothWays(0x13,C20ArinYuyuSupport,Arin,Yuyu)
+CharacterEventBothWays(0x14,C20NatasiaBechamelSupport,Natasia,Bechamel)
+CharacterEventBothWays(0x15,C20PeggyButchSupport,Peggy,Butch)
+CharacterEventBothWays(0x16,C20RachaelCassiusSupport,Rachael,Cassius)
+CharacterEventBothWays(0x17,C20CassiusHyperiusSupport,Cassius,Hyperius)
+CharacterEventBothWays(0x18,C20ApolloFlynnSupport,Apollo,Flynn)
+CharacterEventBothWays(0x19,C20CharleyToddsworthSupport,Charley,Toddsworth)
 END_MAIN
 
 LocationBasedEvents:
@@ -120,10 +130,10 @@ UNIT
 C20Chamber1:
 UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
-UNIT Guardian AxePal 0x0 Level(4,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
-UNIT Guardian LncPal 0x0 Level(4,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
-UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Guardian AxePal 0x0 Level(4,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Guardian LncPal 0x0 Level(4,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
 UNIT Dragon EarthDragon 0x0 Level(4,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
 UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
@@ -131,10 +141,10 @@ UNIT
 C20Chamber1Lunatic:
 UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
-UNIT Guardian AxePal 0x0 Level(4,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
-UNIT Guardian LncPal 0x0 Level(4,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
-UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupTwoAI
-UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupTwoAI
+UNIT Guardian AxePal 0x0 Level(4,Enemy,1) [17,16] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
+UNIT Guardian LncPal 0x0 Level(4,Enemy,1) [19,14] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [17,6] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupTwoAI
+UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupTwoAI
 UNIT Dragon EarthDragon 0x0 Level(4,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [10,7] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
 UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
@@ -206,8 +216,8 @@ UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [21,1] 0x0 0x0 0x0 0x0 [WyvernBreat
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
 UNIT Simulacrum FireDragon 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Simulacrum IceDragon 0x0 Level(10,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
-UNIT 0x9e Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
-UNIT 0x9f RuneMast 0x0 Level(5,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quote
+UNIT TricksterGuardian Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
+UNIT RunemasterGuardian RuneMast 0x0 Level(5,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quote
 UNIT C20Boss DivineDragon 0x0 Level(10,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT
 C20Chamber5Lunatic:
@@ -216,8 +226,8 @@ UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [21,1] 0x0 0x0 0x0 0x0 [WyvernBreat
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupEightAI
 UNIT Simulacrum FireDragon 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Simulacrum IceDragon 0x0 Level(10,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
-UNIT 0x9e Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
-UNIT 0x9f RuneMast 0x0 Level(5,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quot
+UNIT TricksterGuardian Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
+UNIT RunemasterGuardian RuneMast 0x0 Level(5,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quot
 UNIT C20Boss DivineDragon 0x0 Level(10,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT
 
@@ -226,6 +236,46 @@ UNIT Simone SorcF 0x0 Level(4,NPC,0) [8,26] 0x0 0x0 0x0 0x0 [Fenrir,Sleep] NoAI
 UNIT
 
 ALIGN 4
+C20BlairAvanSupport:
+Text(FillerDialogue)
+SetSupport(Blair,Avan,BSupport,1)
+EndEvent
+C20BlairYuyuSupport:
+Text(FillerDialogue)
+SetSupport(Blair,Yuyu,BSupport,1)
+EndEvent
+C20ArinSveltzalusSupport:
+Text(FillerDialogue)
+SetSupport(Arin,Sveltzalus,BSupport,1)
+EndEvent
+C20ArinYuyuSupport:
+Text(FillerDialogue)
+SetSupport(Arin,Yuyu,CPSupport,1)
+EndEvent
+C20NatasiaBechamelSupport:
+Text(FillerDialogue)
+SetSupport(Natasia,Bechamel,BSupport,1)
+EndEvent
+C20PeggyButchSupport:
+Text(FillerDialogue)
+SetSupport(Peggy,Butch,BPSupport,1)
+EndEvent
+C20RachaelCassiusSupport:
+Text(FillerDialogue)
+SetSupport(Rachael,Cassius,BPSupport,1)
+EndEvent
+C20CassiusHyperiusSupport:
+Text(FillerDialogue)
+SetSupport(Cassius,Hyperius,CPSupport,1)
+EndEvent
+C20ApolloFlynnSupport:
+Text(FillerDialogue)
+SetSupport(Apollo,Flynn,CPSupport,1)
+EndEvent
+C20CharleyToddsworthSupport:
+Text(FillerDialogue)
+SetSupport(Charley,Toddsworth,CSupport,1)
+EndEvent
 
 BeginningScene:
 ENUT GuideChpt20
@@ -237,6 +287,15 @@ LOAD1 0x0 C20Units
 ENUN
 LOAD1 0x0 C20Simone
 ENUN
+SupportFlagOn(Blair,Avan,0x10,CPSupport)
+SupportFlagOn(Blair,Yuyu,0x11,CPSupport)
+SupportFlagOn(Arin,Sveltzalus,0x12,CPSupport)
+SupportFlagOn(Arin,Yuyu,0x13,CSupport)
+SupportFlagOn(Natasia,Bechamel,0x14,CPSupport)
+SupportFlagOn(Peggy,Butch,0x15,BSupport)
+SupportFlagOn(Rachael,Cassius,0x16,BSupport)
+SupportFlagOn(Cassius,Hyperius,0x17,CSupport)
+SupportFlagOn(Apollo,Flynn,0x18,CSupport)
 GotoPrepScreen
 ENDA
 

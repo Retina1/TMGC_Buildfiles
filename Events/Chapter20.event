@@ -237,43 +237,43 @@ UNIT
 
 ALIGN 4
 C20BlairAvanSupport:
-Text(FillerDialogue)
+Text(BlairAvanBSupport)
 SetSupport(Blair,Avan,BSupport,1)
 EndEvent
 C20BlairYuyuSupport:
-Text(FillerDialogue)
+Text(BlairYuyuBSupport)
 SetSupport(Blair,Yuyu,BSupport,1)
 EndEvent
 C20ArinSveltzalusSupport:
-Text(FillerDialogue)
+Text(ArinSveltzalusBSupport)
 SetSupport(Arin,Sveltzalus,BSupport,1)
 EndEvent
 C20ArinYuyuSupport:
-Text(FillerDialogue)
+Text(ArinYuyuCPSupport)
 SetSupport(Arin,Yuyu,CPSupport,1)
 EndEvent
 C20NatasiaBechamelSupport:
-Text(FillerDialogue)
+Text(NatasiaBechamelBSupport)
 SetSupport(Natasia,Bechamel,BSupport,1)
 EndEvent
 C20PeggyButchSupport:
-Text(FillerDialogue)
+Text(PeggyButchBPSupport)
 SetSupport(Peggy,Butch,BPSupport,1)
 EndEvent
 C20RachaelCassiusSupport:
-Text(FillerDialogue)
+Text(RachaelCassiusBPSupport)
 SetSupport(Rachael,Cassius,BPSupport,1)
 EndEvent
 C20CassiusHyperiusSupport:
-Text(FillerDialogue)
+Text(CassiusHyperiusCPSupport)
 SetSupport(Cassius,Hyperius,CPSupport,1)
 EndEvent
 C20ApolloFlynnSupport:
-Text(FillerDialogue)
-SetSupport(Apollo,Flynn,CPSupport,1)
+Text(ApolloFlynnBSupport)
+SetSupport(Apollo,Flynn,BSupport,1)
 EndEvent
 C20CharleyToddsworthSupport:
-Text(FillerDialogue)
+Text(CharleyToddsworthSupport)
 SetSupport(Charley,Toddsworth,CSupport,1)
 EndEvent
 
@@ -295,7 +295,7 @@ SupportFlagOn(Natasia,Bechamel,0x14,CPSupport)
 SupportFlagOn(Peggy,Butch,0x15,BSupport)
 SupportFlagOn(Rachael,Cassius,0x16,BSupport)
 SupportFlagOn(Cassius,Hyperius,0x17,CSupport)
-SupportFlagOn(Apollo,Flynn,0x18,CSupport)
+SupportFlagOn(Apollo,Flynn,0x18,CPSupport)
 GotoPrepScreen
 ENDA
 

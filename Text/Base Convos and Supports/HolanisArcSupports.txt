@@ -15,15 +15,97 @@
 //toddsworth charley c
 //i feel like a grim reaper pretending to be a man
 
+//ch20
+##BlairAvanBSupport
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadAvan]
+Halt, child! Do you know you[A][X]
+
+##BlairYuyuBSupport
+[OpenMidLeft][LoadYuyu][OpenMidRight][LoadBlair]
+Halt, child! Do you know you[A][X]
+
+##ArinSveltzalusBSupport
+[OpenMidLeft][LoadArin][OpenMidRight][LoadSveltzalus]
+Halt, child! Do you know you[A][X]
+
+##ArinYuyuCPSupport
+[OpenMidLeft][LoadYuyu][OpenMidRight][LoadArin]
+Halt, child! Do you know you[A][X]
+
+##NatasiaBechamelBSupport
+[OpenMidLeft][LoadNatasia][OpenMidRight][LoadBechamel]
+Halt, child! Do you know you[A][X]
+
+##PeggyButchBPSupport
+[OpenMidLeft][LoadButch][OpenMidRight][LoadPeggy]
+Halt, child! Do you know you[A][X]
+
+##RachaelCassiusBPSupport
+[OpenMidLeft][LoadCassius][OpenMidRight][LoadRachael]
+Halt, child! Do you know you[A][X]
+
+##CassiusHyperiusCPSupport
+[OpenMidLeft][LoadCassius][OpenMidRight][LoadHyperius]
+Halt, child! Do you know you[A][X]
+
+##ApolloFlynnBSupport
+[OpenMidLeft][LoadApollo][OpenMidRight][LoadFlynn]
+Halt, child! Do you know you[A][X]
+
+##CharleyToddsworthSupport
+[OpenMidLeft][LoadToddsworth][OpenMidRight][LoadCharley]
+Halt, child! Do you know you[A][X]
+
 //ch19
 
 ##SamCharleyCPSupport
 [OpenMidLeft][LoadSam][OpenMidRight][LoadCharley]
-Halt, child! Do you know you[A][X]
+[ToggleMouthMove]...[ToggleMouthMove]Impressive shot.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]H-hardly. It was just luck[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
+I've seen hundreds of shooters.[N]
+I know what a lucky shot is.[A][N]
+And your shots are more than that.[A][N]
+Plus, if it's pure luck, how do[N]
+you do it so consistently?[A][N][OpenMidLeft][CloseEyes][ToggleSmile]
+[ToggleMouthMove]...[ToggleMouthMove]T-thanks[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
+Where'd you learn, anyway?[A][N][OpenMidLeft][ToggleSmile][OpenEyes]
+[ToggleMouthMove]...[ToggleMouthMove]I joined the army recently.[N]
+They[ToggleMouthMove]...[ToggleMouthMove] gave me a bow.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Are you some kind of prodigy?[N]
+This ability for a newcomer[ToggleMouthMove]...[ToggleMouthMove][A][N]
+It's almost unheard of.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]R-really?[A][N][OpenMidRight]
+After this battle, come with me.[N]
+I want to give something a try.[A][N]
+Run you through some exercises.[N]
+Is that alright?[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Okay.[A][N][OpenMidRight]
+Excellent. I sense great[N]
+potential within you.[A][X]
 
 ##PeggyAthenaCPSupport
 [OpenMidLeft][LoadPeggy][OpenMidRight][LoadAthena]
-Halt, child! Do you know you[A][X]
+[ToggleMouthMove]...[ToggleMouthMove]Hello, Peggy.[A][N][OpenMidLeft]
+Hey, Athena. You don't seem[N]
+too excited to see me.[A][N][OpenMidRight]
+It's preferable you're alive. But it's hardly[N]
+surprising enough to warrant celebration.[A][N][OpenMidLeft][CloseEyes]
+You wound me. With all the crap I say,[N]
+the enemies are always on top of me![A][N]
+Surviving that kind of onslaught[N]
+is a damned miracle, I'd say.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I suppose so. Still, you bring it[N]
+upon yourself.[A][N][OpenMidLeft][OpenEyes]
+Well, you'd never let a fellow faithful[N]
+die a worthless death, right?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I'll assist you as a member of[N]
+this army.[A] Faith means little[N]
+in that respect.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I like your attitude.[N]
+Well, parts of it.[A][N]
+Anyway, good talk, good talk.[N]
+I've got some bastards to bonk.[A][N][ClearFace][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]What a strange woman.[A][X]
 
 ##ApolloAvanCSupport
 [OpenMidLeft][LoadApollo][OpenMidRight][LoadAvan][OpenMidLeft]

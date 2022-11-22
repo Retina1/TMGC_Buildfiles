@@ -39,6 +39,7 @@ CharacterEventBothWays(0x16,C20RachaelCassiusSupport,Rachael,Cassius)
 CharacterEventBothWays(0x17,C20CassiusHyperiusSupport,Cassius,Hyperius)
 CharacterEventBothWays(0x18,C20ApolloFlynnSupport,Apollo,Flynn)
 CharacterEventBothWays(0x19,C20CharleyToddsworthSupport,Charley,Toddsworth)
+CharacterEventBothWays(0x23,C20DesmondFlynnSupport,Desmond,Flynn)
 END_MAIN
 
 LocationBasedEvents:
@@ -50,6 +51,7 @@ Seize(0x1e,C20Seize5,34,21)
 Seize(13,2)
 DurabilityChest(SkillScroll,WrathID,14,10)
 Chest(Jormungandr,28,22)
+Chest(Smite,30,15)
 Vendor(C20Vendor,0,23)
 Armory(C20Armory,6,22)
 Village(0x1f,C20Village,10,24)
@@ -176,7 +178,7 @@ UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [31,7] 0x0 0x0 0x0 0x0 [FireBreath] 
 UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [31,11] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
 UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [31,4] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
 UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [31,16] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
-UNIT Guardian Berserker 0x0 Level(3,Enemy,1) [29,5] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Guardian Berserker 0x0 Level(3,Enemy,1) [29,5] DropItem 0x0 0x0 0x0 [GildedAxe] AttackInRangeAI
 UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [30,15] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT Dragon FireDragon 0x0 Level(10,Enemy,1) [26,4] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
 UNIT
@@ -186,7 +188,7 @@ UNIT Dragon FireDragon 0x0 Level(8,Enemy,1) [31,7] 0x0 0x0 0x0 0x0 [FireBreath] 
 UNIT Dragon IceDragon 0x0 Level(8,Enemy,1) [31,11] 0x0 0x0 0x0 0x0 [IceBreath] GroupSixAI
 UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [31,4] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupFiveAI
 UNIT Dragon Wyvern 0x0 Level(10,Enemy,1) [31,16] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupFiveAI
-UNIT Guardian Berserker 0x0 Level(3,Enemy,1) [29,5] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Guardian Berserker 0x0 Level(3,Enemy,1) [29,5] DropItem 0x0 0x0 0x0 [GildedAxe] AttackInRangeAI
 UNIT Dragon DemonDragon 0x0 Level(6,Enemy,1) [30,15] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT Dragon FireDragon 0x0 Level(10,Enemy,1) [26,4] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
 UNIT
@@ -195,7 +197,7 @@ C20Chamber4:
 UNIT Simulacrum DemonDragon 0x0 Level(7,Enemy,1) [29,20] 0x0 0x0 0x0 0x0 [DemonBreath] GroupOneAI
 UNIT Simulacrum EarthDragon 0x0 Level(7,Enemy,1) [30,19] 0x0 0x0 0x0 0x0 [EarthBreath] GroupOneAI
 UNIT Simulacrum DemonDragon 0x0 Level(7,Enemy,1) [31,20] 0x0 0x0 0x0 0x0 [DemonBreath] GroupOneAI
-UNIT Guardian SwMast 0x0 Level(5,Enemy,1) [30,22] 0x0 0x0 0x0 0x0 [GildedSword] AttackInRangeAI
+UNIT Guardian SwMast 0x0 Level(5,Enemy,1) [30,22] DropItem 0x0 0x0 0x0 [GildedSword] AttackInRangeAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [27,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [35,23] 0x0 0x0 0x0 0x0 [WyvernBreath] AttackInRangeAI
 UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [34,21] 0x0 0x0 0x0 0x0 [WyvernBreath] NeverMoveAI
@@ -204,7 +206,7 @@ C20Chamber4Lunatic:
 UNIT Simulacrum DemonDragon 0x0 Level(7,Enemy,1) [29,20] 0x0 0x0 0x0 0x0 [DemonBreath] GroupOneAI
 UNIT Simulacrum EarthDragon 0x0 Level(7,Enemy,1) [30,19] 0x0 0x0 0x0 0x0 [EarthBreath] GroupOneAI
 UNIT Simulacrum DemonDragon 0x0 Level(7,Enemy,1) [31,20] 0x0 0x0 0x0 0x0 [DemonBreath] GroupOneAI
-UNIT Guardian SwMast 0x0 Level(5,Enemy,1) [30,22] 0x0 0x0 0x0 0x0 [GildedSword] GroupSevenAI
+UNIT Guardian SwMast 0x0 Level(5,Enemy,1) [30,22] DropItem 0x0 0x0 0x0 [GildedSword] GroupSevenAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [27,23] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupSevenAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [35,23] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupSevenAI
 UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [34,21] 0x0 0x0 0x0 0x0 [WyvernBreath] NeverMoveAI
@@ -217,7 +219,7 @@ UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [WyvernBreat
 UNIT Simulacrum FireDragon 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Simulacrum IceDragon 0x0 Level(10,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
 UNIT TricksterGuardian Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
-UNIT RunemasterGuardian RuneMast 0x0 Level(5,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quote
+UNIT RunemasterGuardian RuneMast 0x0 Level(5,Enemy,1) [14,3] DropItem 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quote
 UNIT C20Boss DivineDragon 0x0 Level(10,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT
 C20Chamber5Lunatic:
@@ -227,7 +229,7 @@ UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [WyvernBreat
 UNIT Simulacrum FireDragon 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Simulacrum IceDragon 0x0 Level(10,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
 UNIT TricksterGuardian Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
-UNIT RunemasterGuardian RuneMast 0x0 Level(5,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quot
+UNIT RunemasterGuardian RuneMast 0x0 Level(5,Enemy,1) [14,3] DropItem 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quot
 UNIT C20Boss DivineDragon 0x0 Level(10,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT
 
@@ -276,6 +278,12 @@ C20CharleyToddsworthSupport:
 Text(CharleyToddsworthSupport)
 SetSupport(Charley,Toddsworth,CSupport,1)
 EndEvent
+C20DesmondFlynnSupport:
+Text(DesmondFlynnBSupport)
+SystemText(C20DesmondSwordRank)
+SetUnitStatus(Desmond,SwordExp,71)
+SetSupport(Desmond,Flynn,BSupport,1)
+EndEvent
 
 BeginningScene:
 ENUT GuideChpt20
@@ -296,6 +304,7 @@ SupportFlagOn(Peggy,Butch,0x15,BSupport)
 SupportFlagOn(Rachael,Cassius,0x16,BSupport)
 SupportFlagOn(Cassius,Hyperius,0x17,CSupport)
 SupportFlagOn(Apollo,Flynn,0x18,CPSupport)
+SupportFlagOn(Desmond,Flynn,0x23,CPSupport)
 GotoPrepScreen
 ENDA
 

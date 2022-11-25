@@ -1,7 +1,4 @@
 //chapter 19 and 20 remain, and then we're free (until chapter v1)
-//c19
-//sam charley c+
-//peggy athena c+
 //c20
 //blair avan b
 //blair yuyu b
@@ -9,8 +6,6 @@
 //arin yuyu c+
 //natasia bechamel b
 //peggy butch b+
-//rachael cassius b+
-//hyperius cassius c+
 //apollo flynn c+
 //toddsworth charley c
 //i feel like a grim reaper pretending to be a man
@@ -24,20 +19,12 @@ Halt, child! Do you know you[A][X]
 [OpenMidLeft][LoadYuyu][OpenMidRight][LoadBlair]
 Halt, child! Do you know you[A][X]
 
-##ArinSveltzalusBSupport
-[OpenMidLeft][LoadArin][OpenMidRight][LoadSveltzalus]
-Halt, child! Do you know you[A][X]
-
 ##ArinYuyuCPSupport
 [OpenMidLeft][LoadYuyu][OpenMidRight][LoadArin]
 Halt, child! Do you know you[A][X]
 
 ##NatasiaBechamelBSupport
 [OpenMidLeft][LoadNatasia][OpenMidRight][LoadBechamel]
-Halt, child! Do you know you[A][X]
-
-##PeggyButchBPSupport
-[OpenMidLeft][LoadButch][OpenMidRight][LoadPeggy]
 Halt, child! Do you know you[A][X]
 
 ##ApolloFlynnBSupport
@@ -47,6 +34,66 @@ Halt, child! Do you know you[A][X]
 ##CharleyToddsworthSupport
 [OpenMidLeft][LoadToddsworth][OpenMidRight][LoadCharley]
 Halt, child! Do you know you[A][X]
+
+##PeggyButchBPSupport
+[OpenMidLeft][LoadButch][OpenMidRight][LoadPeggy]
+[ToggleMouthMove]...[ToggleMouthMove]Heya, Butch. Got any[N]
+festering wounds?[A][N][OpenMidLeft]
+Unfortunately for you, not today.[A][N]
+And I don't plan on lettin' these[N]
+things disembowel me for your amusement.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Coward.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]You got me. Anyways[ToggleMouthMove]...[ToggleMouthMove] I've been[N]
+thinking more.[A] About what to do[N]
+once the fightin's done.[A][N]
+Fighting's all I've known for[N]
+many a year[ToggleMouthMove]...[ToggleMouthMove][A][N]
+And I think it's time for something[N]
+different. You remember my brother?[A][N][OpenMidRight]
+You mean Rutherford? How's he been?[A][N][OpenMidLeft]
+Good. Real good. He's got this[N]
+bar in the capital.[A][N]
+I've been thinkin' of asking[N]
+for a job there.[A][N][OpenMidRight]
+Hm[ToggleMouthMove]...[ToggleMouthMove] Hospitality's not your[N]
+strong suit[ToggleMouthMove]...[ToggleMouthMove][A] But I think[N]
+you could learn some from me.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]What's your idea of hospitable?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Keeping myself in check enough to[N]
+not entirely knock people out.[A][N][OpenMidLeft][ToggleSmile]
+[ToggleMouthMove]...[ToggleMouthMove]I see. I think I'll pass.[N]
+Feel free to come down, though.[A][N]
+I could haggle you a place to stay[N]
+somewhere in the capital, I'm sure.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I'll consider it. Haven't been to[N]
+Kionius much lately.[A][N]
+Could be fun to get to know the[N]
+city once more.[A][N]
+Assuming it hasn't gone to hell[N]
+like Yg'stra or Elba Cor.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Well, if it has, that'd be[N]
+fun for you too.[A][N][OpenMidRight][ToggleSmile]
+[ToggleMouthMove]...[ToggleMouthMove]You know me so well.[A][X]
+
+##ArinSveltzalusBSupport
+[OpenMidLeft][LoadArin][OpenMidRight][LoadSveltzalus]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidLeft]
+You seem[ToggleMouthMove]...[ToggleMouthMove] tense.[N]
+For an eyeball, I mean.[A][N]
+Is this place[ToggleMouthMove]...[ToggleMouthMove] familiar?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidLeft]
+Both you and the dragons[ToggleMouthMove]...[ToggleMouthMove][N]
+Beings beyond our comprehension.[A][N]
+Are you Holanis's doing, too?[N]
+[ToggleMouthMove]...[ToggleMouthMove]You can't answer me anyway.[A][N]
+Though[ToggleMouthMove]...[ToggleMouthMove] Supposing that you are[N]
+a product of Holanis[ToggleMouthMove]...[ToggleMouthMove][A][N]
+You've done more good than harm[N]
+for our cause, I'd say.[A][N]
+But still[ToggleMouthMove]...[ToggleMouthMove] What are you?[N]
+Will we ever know?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Do we even need to know?[A][X]
 
 ##CassiusHyperiusCPSupport
 [OpenMidLeft][LoadCassius][OpenMidRight][LoadHyperius]

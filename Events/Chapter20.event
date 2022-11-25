@@ -28,6 +28,7 @@ CharacterBasedEvents:
 CharacterEvent(0xa,C20SimoneBlairRecruitment,Blair,Simone)
 CharacterEvent(0xa,C20SimoneArinRecruitment,Arin,Simone) //let arin/simone C happen no matter who recruits?
 CharacterEvent(0xa,C20SimoneEmileRecruitment,Emile,Simone) //let emile/simone C happen no matter who recruits?
+CharacterEvent(0xa,C20SimoneSveltzalusRecruitment,Sveltzalus,Simone)
 CharacterEvent(0xa,C20SimoneZekeRecruitment,Zeke,Simone)
 CharacterEventBothWays(0x10,C20BlairAvanSupport,Blair,Avan)
 CharacterEventBothWays(0x11,C20BlairYuyuSupport,Blair,Yuyu)
@@ -388,6 +389,12 @@ TurnAlly(Simone)
 EndEvent
 
 C20SimoneEmileRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Simone)
+EndEvent
+
+C20SimoneSveltzalusRecruitment:
 MUSC RecruitmentTheme
 Text(FillerDialogue)
 TurnAlly(Simone)

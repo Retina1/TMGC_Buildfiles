@@ -251,9 +251,12 @@ TurnAlly(Flynn)
 EndEvent
 
 C12DragonSpawn:
+MUSC 0x0
+ENUT 0x4
 CLEE 0
 CleanText(HallCG,C12Huh)
 Reinforcements(C12DragonGroup)
+MUSC S_HolyOrders
 CleanText(HallCG,C12OhNo)
 Reinforcements(C12AllyLaronde)
 ENUF 0x23

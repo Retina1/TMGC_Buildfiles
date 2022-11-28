@@ -33,6 +33,11 @@
 
 //songs
 
+
+{
+#include "HolyOrders.event"
+SongTable(S_HolyOrders,HolyOrders,1)
+}
 {
 #include "MapIntro.event"
 SongTable(0x316,MapIntro,6)

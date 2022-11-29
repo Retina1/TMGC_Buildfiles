@@ -227,8 +227,8 @@ C20Chamber5Lunatic:
 UNIT Simulacrum EarthDragon 0x0 Level(8,Enemy,1) [21,3] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [21,1] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupEightAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [WyvernBreath] GroupEightAI
-UNIT Simulacrum FireDragon 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
-UNIT Simulacrum IceDragon 0x0 Level(10,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Simulacrum FireDragon 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [FireBreath] GroupNineAI
+UNIT Simulacrum IceDragon 0x0 Level(10,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [IceBreath] GroupNineAI
 UNIT TricksterGuardian Trickster 0x0 Level(20,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [FlameSword,Sleep] NeverMoveAI //arin/simone battle quote
 UNIT RunemasterGuardian RuneMast 0x0 Level(5,Enemy,1) [14,3] DropItem 0x0 0x0 0x0 [FlameSword] NeverMoveAI //horatio battle quot
 UNIT C20Boss DivineDragon 0x0 Level(10,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI

@@ -305,10 +305,10 @@ EndEvent
 C19RiverFlow:
 CHECK_ACTIVEID Blair
 BEQ 0x1 0xc 0x0
-Text(FillerDialogue) //blair does it
+Text(Ch19_BlairFlood) //blair does it
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue) //zeke does it
+Text(Ch19_ZekeFlood) //zeke does it
 LABEL 0x2
 TILEREVERSE 0x0
 TILEREVERSE 0x1
@@ -319,7 +319,7 @@ TILEREVERSE 0x5
 TILEREVERSE 0x6
 CAM1 Michael
 FlashCursor(Michael,60)
-Text(FillerDialogue) //michael's angy that someone flooded his river, and hints at reinforcements
+Text(Ch19_MichaelIsAngy) //michael's angy that someone flooded his river, and hints at reinforcements
 EndEvent
 
 ALIGN 4

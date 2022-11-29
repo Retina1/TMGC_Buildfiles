@@ -262,7 +262,22 @@ Reinforcements(Z3MevionSpawns)
 EndEvent
 
 Z3NorthVillage:
-VillageEventItem(Z3NorthVillageText, VillageCG, SilverLance)
+MUSI
+SMOV 0x2 VillageCG
+CHECK_ACTIVEID Toddsworth
+BNE 0x1 0xC 0x0
+SMOV 0x3 Z3NorthVillageText
+GOTO 0x2
+LABEL 0x1
+SMOV 0x3 Z3NorthVillageToddText
+LABEL 0x2
+CALL $9EE310
+MUNO
+CALL $591F40
+SMOV 0x3 SilverLance
+GIVEITEMTO 0xFFFF
+EVBIT_T 0x7
+ENDA
 
 Z3SouthVillage:
 VillageEventItem(Z3SouthVillageText, VillageCG, Runesword)

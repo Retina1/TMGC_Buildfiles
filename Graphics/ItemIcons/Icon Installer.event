@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(PassacagliaIcon)
+#incbin "Bows/Nidhogg.dmp"
+ALIGN 4
 ItemIconEntry(VoidCleaverIcon)
 #incbin "Axes/Void Cleaver.dmp"
 ALIGN 4

@@ -42,6 +42,7 @@ AreaEvent(0x25,C11Treasure5,22,15,22,15)
 AreaEvent(0x1a,C11HiddenTreasure1,4,14,5,15)
 AreaEvent(0x1b,C11HiddenTreasure2,0,0,12,0)
 AreaEvent(0x1c,C11HiddenTreasure3,24,7,24,7)
+AreaEvent(0x14,C11SecretUnit,21,21,21,21)
 END_MAIN
 
 Dunno:
@@ -190,6 +191,9 @@ C11EndingVlad:
 UNIT Vladmir Bishop 0x0 Level(15,NPC,0) [0,8] 0x0 0x0 0x1 REDA6R3 [BookOfOpistus] NoAI
 UNIT
 
+C11Agnes:
+UNIT Agnes MercF 0x0 Level(14,Ally,0) [21,21] 0x0 0x0 0x1 REDA21R20 [Armorslayer,Zanbato,PureWater] NoAI
+UNIT
 ALIGN 4
 
 BeginningScene:
@@ -260,5 +264,23 @@ DesertItem(FoggyGlasses,0x1b)
 
 C11HiddenTreasure3:
 DesertItem(AnimusSeal,0x1c)
+
+C11SecretUnit:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_ACTIVEID Blair
+BNE 0x1 0xc 0x0
+CHECK_ACTIVEID Sveltzalus
+BNE 0x1 0xc 0x0
+CHECK_ACTIVEID Hilbert
+BNE 0x1 0xc 0x0
+MUSC RecruitmentTheme
+Text(Ch11_Agnes)
+Reinforcements(C11Agnes)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x14
+LABEL 0x2
+EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

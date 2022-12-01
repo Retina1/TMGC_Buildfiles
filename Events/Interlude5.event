@@ -80,6 +80,10 @@ UNIT Zeke 0x0 0x0 Level(1,Ally,0) [3,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Hyperius 0x0 0x0 Level(1,Ally,0) [1,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
+OhHaiElcorian:
+UNIT Elcorian Valk 0x0 Level(1,NPC,0) [4,0] 0x0 0x0 0x1 REDA4R2 [0x0] NoAI
+UNIT
+
 I5NPC:
 UNIT Brandl Sniper 0x0 Level(11,NPC,0) [4,1] 0x0 0x0 0x0 0x0 [Longbow, Elixir] NeverMoveAI
 UNIT Argent BowGen 0x0 Level(14,NPC,0) [12,2] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
@@ -118,6 +122,8 @@ EndingScene:
 DisableFreeMovement
 EVBIT_MODIFY 3
 Text(I5FreeMe)//blair talks to king, meets zeke
+Reinforcements(OhHaiElcorian)
+Text(I5ElcorianGreeting)
 LocationText(ElbaCorCastleCG, I5Ending2,ElbaCorCastleLabel,S_RigorousJustice)
 SetBackground(BlankCG)
 GiveItem(ResoluteSeal,Blair)

@@ -2,6 +2,46 @@
 Survive or[N]
 defeat boss.[X]
 
+##C1Signal
+[OpenMidLeft][LoadBlair]
+Hm[ToggleMouthMove]...[ToggleMouthMove] I don't think anyone's home.[N]
+Maybe there's something helpful inside.[A][N]
+I feel a bit bad about this, but[ToggleMouthMove]...[ToggleMouthMove][N]
+Well, I'm sure they'd understand.[A][X]
+
+##C1Signal2
+[OpenMidRight][LoadBlair]
+[ToggleMouthMove]...[ToggleMouthMove]Nothing helpful, it seems.[N]
+Nobody's been here for a while.[A][N][MoveRight][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]This window leads to the roof.[N]
+Might be a nice observation point.[A][X]
+
+##C1Signal3
+[OpenRight][LoadBlair]
+[ToggleMouthMove]...[ToggleMouthMove]This is a fine view. Though,[N]
+I shouldn't stay here too long.[A][N]
+Don't want to make myself an[N]
+easy target for archers.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Wait[ToggleMouthMove]...[ToggleMouthMove] That village over there[ToggleMouthMove]...[ToggleMouthMove][N]
+Is that[ToggleMouthMove]...[ToggleMouthMove] Natasia's?[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]I almost didn't realize![A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Hm[ToggleMouthMove]...[ToggleMouthMove] I wonder.[N]
+Let me try something.[A][N][CloseEyes][MoveRight]
+[ToggleMouthMove]...[ToggleMouthMove]Hyah![A][X]
+
+##Ch1_NatasiaSignaledScene
+[OpenMidLeft][LoadNatasia][OpenFarFarRight]
+*Whoosh! Shimmer!*[A][N][OpenMidLeft]
+Man. Didn't know the Mevs[N]
+had a magician out there.[A][N]
+They must really be tryin' today.[A][N][MoveLeft][OpenLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Wait[ToggleMouthMove]...[ToggleMouthMove] That's[ToggleMouthMove]...[ToggleMouthMove] not like[N]
+any normal magic.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Is[ToggleMouthMove]...[ToggleMouthMove] Blair fighting out there?![A][N][ToggleSmile]
+Well, then[ToggleMouthMove]...[ToggleMouthMove] Looks like I'm up![N]
+I can't possibly sit by now![A][N][MoveFarFarRight][OpenFarFarRight]
+Here I come![A][X]
+
 ##Ch1_Opening
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadElcorian]
 [OpenMidRight]
@@ -199,7 +239,7 @@ TELL ME WHY![A][N]
 [OpenMidRight][LoadBlair][OpenMidLeft][LoadNatasia]
 Blair, is that you?[N]
 It's been so long![A][N]
-[OpenMidRight]Natasia? I forgot you[N]
+[OpenMidRight]Natasia? I almost forgot you[N]
 lived around here![A][N]
 [OpenMidLeft]Ha, yeah. Real scenic place.[N]
 What brings you here, anyway?[A][N]

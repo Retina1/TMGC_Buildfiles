@@ -40,6 +40,7 @@ END_MAIN
 MiscBasedEvents:
 CauseGameOverIfLordDies
 DefeatBoss(EndingScene)
+AreaEvent(0x10,C1AreaTrigger,9,4,9,4)
 END_MAIN
 
 Dunno:
@@ -185,9 +186,12 @@ C1Turn2:
 CAM1 Marque
 FlashCursor(Marque,60)
 Text(C1Warning)
+CHECK_EVENTID 0x10
+BNE 0x1 0xc 0x0
 CAM1 [1,9]
 FlashCursor(1,9,60)
 CleanText(VillageCG,Ch1_NatasiaScene)
+LABEL 0x1
 EndEvent
 
 C1Turn3:
@@ -212,6 +216,26 @@ Reinforcements(C1T6)
 LABEL 0x1
 EndEvent
 
+C1AreaTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_ACTIVEID Blair
+BEQ 0x1 0xc 0x0
+Text(C1Signal)
+CleanText(HouseCG,C1Signal2)
+Text(C1Signal3)
+CAM1 [1,9]
+FlashCursor(1,9,60)
+MUSC RecruitmentTheme
+CleanText(VillageCG,Ch1_NatasiaSignaledScene)
+Reinforcements(NatasiaRecruitment)
+TILECHANGE 0x1
+GOTO 0x2
+LABEL 0x1
+ENUF 0x10
+LABEL 0x2
+EndEvent
+
 C1WVillage:
 MUSC RecruitmentTheme
 CHECK_ACTIVEID Blair
@@ -228,6 +252,7 @@ Text(VillageCG, Blair_Recruits_Natasia)
 LABEL 0x3
 Reinforcements(NatasiaRecruitment)
 ENUN
+ENUT 0x10
 EndEvent
 	
 C1EVillage:

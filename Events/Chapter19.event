@@ -292,11 +292,11 @@ LABEL 0x2
 EndEvent
 
 C19North:
-HouseEvent(FillerDialogue,HouseCG)//aqueduct activities
+HouseEvent(Ch19_NorthHouse,HouseCG)
 C19South1:
-HouseEvent(FillerDialogue,HouseCG)//horatio lore
+HouseEvent(Ch19_SouthHouse1,HouseCG)
 C19South2:
-HouseEvent(FillerDialogue,HouseCG)//ian cameo
+HouseEvent(Ch19_SouthHouse2,HouseCG)
 
 C19Turn1:
 SystemText(_Ch19SysText)

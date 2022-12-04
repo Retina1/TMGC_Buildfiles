@@ -33,7 +33,23 @@ CharacterEvent(0xa,V1ClarqueEvent,Viridian,Clarque)
 END_MAIN
 
 LocationBasedEvents:
+House(0x0,V1North,15,3)
+House(0x0,V1South,10,8)
+Village(0x11,V1EastVillage,8,3)
+Village(0x12,V1WestVillage,2,6)
+Armory(V1Armory,16,6)
+Vendor(V1Vendor,8,5)
 END_MAIN
+
+ALIGN 4
+V1Armory:
+SHLI SteelSword SilverSword Lancereaver Zanbato SteelLance SilverLance Javelin Axereaver Horseslayer SteelAxe SilverAxe HandAxe Swordreaver Hammer SteelBow SilverBow Longbow
+BYTE 0x0 0x0
+ALIGN 4
+V1Vendor:
+SHLI Heal Mend Physic Recover Barrier Yoink Vulnerary Elixir PureWater ChestKey DoorKey
+BYTE 0x0 0x0
+ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
@@ -152,6 +168,16 @@ SilentKillUnit(Clarque)
 //add a flag for this
 EndEvent
 //clarque event? maybe instead he has battle convos because he knows viridian?
+
+V1North:
+HouseEvent(FillerDialogue,HouseCG)
+V1South:
+HouseEvent(FillerDialogue,HouseCG)
+V1EastVillage:
+VillageEventItem(FillerDialogue, VillageCG, Nuboko)
+V1WestVillage:
+VillageEventItem(FillerDialogue, VillageCG, Eyedrops)
+
 
 CV1Turn2:
 Text(FillerDialogue)

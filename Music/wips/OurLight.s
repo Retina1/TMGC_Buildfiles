@@ -1,78 +1,78 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	OurLight_grp, voicegroup000
+	.equ	OurLight_pri, 0
+	.equ	OurLight_rev, 0
+	.equ	OurLight_mvl, 127
+	.equ	OurLight_key, 0
+	.equ	OurLight_tbs, 1
+	.equ	OurLight_exg, 0
+	.equ	OurLight_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	OurLight
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+OurLight_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OurLight_key+0
 Label_0140F2FA:
- .byte   TEMPO , 30*song04_tbs/2
+ .byte   TEMPO , 30*OurLight_tbs/2
  .byte   VOICE , 52
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 51*song04_mvl/mxv
+ .byte   VOL , 51*OurLight_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W06
- .byte   TEMPO , 52*song04_tbs/2
+ .byte   TEMPO , 52*OurLight_tbs/2
  .byte   W42
- .byte   TEMPO , 54*song04_tbs/2
+ .byte   TEMPO , 54*OurLight_tbs/2
  .byte   W48
 @  #01 @001   ----------------------------------------
- .byte   TEMPO , 58*song04_tbs/2
+ .byte   TEMPO , 58*OurLight_tbs/2
  .byte   W96
 @  #01 @002   ----------------------------------------
- .byte   TEMPO , 36*song04_tbs/2
+ .byte   TEMPO , 36*OurLight_tbs/2
  .byte   W06
- .byte   TEMPO , 50*song04_tbs/2
+ .byte   TEMPO , 50*OurLight_tbs/2
  .byte   W18
- .byte   TEMPO , 54*song04_tbs/2
+ .byte   TEMPO , 54*OurLight_tbs/2
  .byte   W24
- .byte   TEMPO , 42*song04_tbs/2
+ .byte   TEMPO , 42*OurLight_tbs/2
  .byte   W24
- .byte   TEMPO , 38*song04_tbs/2
+ .byte   TEMPO , 38*OurLight_tbs/2
  .byte   W24
 @  #01 @003   ----------------------------------------
- .byte   TEMPO , 42*song04_tbs/2
+ .byte   TEMPO , 42*OurLight_tbs/2
  .byte   W96
 @  #01 @004   ----------------------------------------
- .byte   TEMPO , 30*song04_tbs/2
+ .byte   TEMPO , 30*OurLight_tbs/2
  .byte   W06
- .byte   TEMPO , 52*song04_tbs/2
+ .byte   TEMPO , 52*OurLight_tbs/2
  .byte   W18
- .byte   TEMPO , 54*song04_tbs/2
+ .byte   TEMPO , 54*OurLight_tbs/2
  .byte   W24
- .byte   TEMPO , 60*song04_tbs/2
+ .byte   TEMPO , 60*OurLight_tbs/2
  .byte   W48
 @  #01 @005   ----------------------------------------
- .byte   TEMPO , 48*song04_tbs/2
+ .byte   TEMPO , 48*OurLight_tbs/2
  .byte   W48
- .byte   TEMPO , 64*song04_tbs/2
+ .byte   TEMPO , 64*OurLight_tbs/2
  .byte   W48
 @  #01 @006   ----------------------------------------
- .byte   TEMPO , 30*song04_tbs/2
+ .byte   TEMPO , 30*OurLight_tbs/2
  .byte   W06
- .byte   TEMPO , 50*song04_tbs/2
+ .byte   TEMPO , 50*OurLight_tbs/2
  .byte   W42
- .byte   TEMPO , 40*song04_tbs/2
+ .byte   TEMPO , 40*OurLight_tbs/2
  .byte   W24
- .byte   TEMPO , 32*song04_tbs/2
+ .byte   TEMPO , 32*OurLight_tbs/2
  .byte   W24
 @  #01 @007   ----------------------------------------
- .byte   TEMPO , 70*song04_tbs/2
+ .byte   TEMPO , 70*OurLight_tbs/2
  .byte   W96
 @  #01 @008   ----------------------------------------
  .byte   W72
@@ -198,7 +198,7 @@ Label_0140F39A:
  .byte   TIE ,As3 ,v112
  .byte   W12
 @  #01 @025   ----------------------------------------
- .byte   TEMPO , 72*song04_tbs/2
+ .byte   TEMPO , 72*OurLight_tbs/2
  .byte   W92
  .byte   W03
  .byte   EOT
@@ -316,7 +316,7 @@ Label_0140F46F:
  .byte   W96
  .byte   PEND 
 @  #01 @037   ----------------------------------------
- .byte   TEMPO , 72*song04_tbs/2
+ .byte   TEMPO , 72*OurLight_tbs/2
  .byte   N44 ,Cs3
  .byte   N44 ,Fn3 ,v112
  .byte   W48
@@ -371,7 +371,7 @@ Label_0140F499:
  .byte   Ds3
  .byte   W12
 @  #01 @050   ----------------------------------------
- .byte   TEMPO , 70*song04_tbs/2
+ .byte   TEMPO , 70*OurLight_tbs/2
  .byte   N44 ,As2
  .byte   W72
  .byte   N11 ,Cn3
@@ -479,7 +479,7 @@ Label_0140F513:
   .word Label_0140F513
 @  #01 @065   ----------------------------------------
  .byte   W36
- .byte   TEMPO , 72*song04_tbs/2
+ .byte   TEMPO , 72*OurLight_tbs/2
  .byte   N05 ,Fn3 ,v112
  .byte   W06
  .byte   Gn3
@@ -866,14 +866,14 @@ Label_0140F6E4:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+OurLight_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OurLight_key+0
 Label_0140F772:
  .byte   VOICE , 1
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
  .byte   TIE ,Fn1 ,v080
  .byte   TIE ,Fn2
@@ -2255,14 +2255,14 @@ Label_0140FB6E:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+OurLight_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OurLight_key+0
 Label_0140FEA2:
  .byte   VOICE , 104
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -3014,14 +3014,14 @@ Label_0141005F:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+OurLight_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OurLight_key+0
 Label_0141028E:
  .byte   VOICE , 30
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -3469,12 +3469,12 @@ Label_01410343:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+OurLight_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OurLight_key+0
 Label_014104CA:
  .byte   VOICE , 38
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -4070,12 +4070,12 @@ Label_0141063D:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+OurLight_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OurLight_key+0
 Label_014107A2:
  .byte   VOICE , 91
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
  .byte   TIE ,Fn3 ,v064
  .byte   W96
@@ -4621,12 +4621,12 @@ Label_014109B4:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+OurLight_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , OurLight_key+0
 Label_01410A76:
  .byte   VOICE , 124
- .byte   VOL , 40*song04_mvl/mxv
+ .byte   VOL , 40*OurLight_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -5850,20 +5850,20 @@ Label_01410F22:
 @******************************************************@
 	.align	2
 
-song04:
+OurLight:
 	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	OurLight_pri	@ Priority
+	.byte	OurLight_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	OurLight_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
+	.word	OurLight_001
+	.word	OurLight_002
+	.word	OurLight_003
+	.word	OurLight_004
+	.word	OurLight_005
+	.word	OurLight_006
+	.word	OurLight_007
 
 	.end

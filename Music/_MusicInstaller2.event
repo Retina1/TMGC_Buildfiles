@@ -35,6 +35,10 @@
 
 
 {
+#include "OurLight.event"
+SongTable(S_OurLight,OurLight,1)
+}
+{
 #include "HolyOrders.event"
 SongTable(S_HolyOrders,HolyOrders,1)
 }

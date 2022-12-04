@@ -602,8 +602,10 @@
 #define HeavyBladeID 255
 
 //Dancing Blade: +4 Attack Speed/-2 Damage when unit’s Con. is lower than the enemy.
+//haha jk it's true defiant luck
 //By Mikey Seregon
-#define DancingBladeID 255
+#define DancingBladeID 101
+#define LuckbowSkillID DancingBladeID
 
 //Fire Boost: Grants +6 Attack if unit's current HP is at least 3 higher than the enemy's.
 //By Mikey Seregon
@@ -819,7 +821,7 @@
 #define DefiantMagID 255
 #define DefiantSklID 255
 #define DefiantSpdID 255
-#define DefiantLckID 101
+#define DefiantLckID 255//101
 #define DefiantDefID 255
 #define DefiantResID 255
 

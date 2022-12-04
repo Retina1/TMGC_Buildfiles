@@ -161,7 +161,7 @@ Well, well, well[ToggleMouthMove]...[ToggleMouthMove][N]
 Boss! Do ya hear that?[A][N][OpenRight]
 Why, yes, Ed. I do. We've got[N]
 some fresh meat on the menu.[A][N]
-What do you think, Ed?[OpenFarLeft]
+What do you think, Ed?[A][N][OpenFarLeft]
 Well, Ed-Boss, I think you're[N]
 right. We've got us some scraps.[A][N]
 Howzabout you, Holly?[A][N][OpenLeft][LoadHollandaise]
@@ -228,9 +228,10 @@ For now[ToggleMouthMove]...[ToggleMouthMove] I think we need[N]
 a kind of hope.[A][N][OpenFarFarRight]
 I'll see what I can do, Johan.[N]
 I'm sure one day, we'll escape.[A][N]
-And then you can meet my friends![N]
-[ToggleMouthMove]...[ToggleMouthMove]They're all bees.[A][N][OpenFarFarLeft]
-[ToggleMouthMove]...[ToggleMouthMove]So they are.[A][X]
+And then you can meet my friends![N][OpenFarFarLeft]
+[ToggleMouthMove]...[ToggleMouthMove]That sounds[ToggleMouthMove]...[ToggleMouthMove] nice.[A][X]
+//have the "They're all bees!" line pay off later (ch 22/23) so scene isn't undercut
+
 
 ##C17EdwardBattle
 [OpenMidLeft][LoadEdward]

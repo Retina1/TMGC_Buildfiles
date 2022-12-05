@@ -35,10 +35,22 @@ BYTE  For the class ID the character above must be to trigger the portrait chang
 //Blair
 //flower alt eventually
 SHORT 0x0002
+SHORT 0x0112 //she
+SHORT BlairFlowerFlag
+BYTE  Blair
+BYTE  BlairLordX
+// regular promo
+SHORT 0x0002
 SHORT 0x00d4 //she
 SHORT 0x0000
 BYTE  Blair
 BYTE  BlairLordX
+// flower t1
+SHORT 0x0002
+SHORT 0x0111 //she
+SHORT BlairFlowerFlag
+BYTE  Blair
+BYTE  BlairLord
 //Arin
 //Kenneth
 //Natasia

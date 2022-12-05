@@ -108,6 +108,7 @@ UnitMenuTable:
 	//Capture
 	MenuCommand(UM_Capture, UM_CaptureDesc, NormalText, Capture_Usability, Capture_Effect_Func, $22c31, $22c99)
   #endif // COMBAT_ARTS
+    UM_Secret
 	MenuCommand(TorchName, TorchDesc, OrangeText, TelliusTorchUsability, TelliusTorchEffect)
 
   UM_Ride
@@ -155,7 +156,7 @@ UnitMenuTable:
   UM_Door
   UM_Armory
   UM_Vendor
-  UM_Secret
+
   MenuCommand(RoseShopNameText,RoseShopDescText,OrangeText,ShopUnitUsability,ShopUnitEffect)
   UM_Arena
   	

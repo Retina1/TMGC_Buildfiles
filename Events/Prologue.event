@@ -117,6 +117,9 @@ BEQ 0x999 0xc 0x0
 SystemText(NewGamePlusPrompt)
 IfNoSelectedGoto(0x999)
 ENUT NewGamePlusFlag
+SystemText(EarlyFlowerPrompt)
+IfNoSelectedGoto(0x999)
+ENUT BlairFlowerFlag
 LABEL 0x999
 ASMC prCallGrowthMenu+1
 SVAL 0x1 0x1

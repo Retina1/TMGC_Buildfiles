@@ -312,15 +312,22 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-CleanTextNoMap(HallCG,FillerDialogue)
-//elba corian messenger arrives with relics from king, blair asks them to seek out viridian mercs, they pass time near zeimstadt
+MUSC S_Chaos
+CleanTextNoMap(HallCG,Ch20_EndingLore)
+MUSC S_Neutral
+CleanTextNoMap(VillageCG,Ch20_EndingOutside)
 REMA
 SetBackground(BlankCG)
 GiveItem(Waning,Blair)
 GiveItem(Stalwart,Zeke)
-GiveItem(AscendancySeal,Zeke)
 GiveItem(Nuiusseon,Zeke)
+MUSC S_CircleOfTheMoon
+SystemText(BlankCG,BrandlLetter)
+GiveItem(AscendancySeal,Zeke)
 LearnSkill(Zeke,RightfulKingID)
+MUSC 0x0
+SystemText(BlankCG,MercenaryPetition)
+TakeItemAll(MercFlier)
 LocationText(BlankCG,Ch20_EndingStinger,UnknownLocationLabel,S_Chaos)
 MUSC S_MainTheme
 SystemText(BlankCG,Arc2Ending)
@@ -394,10 +401,10 @@ MUSC S_Chaos
 SetBackground(DungeonCG)
 CHECK_ACTIVEID Blair
 BEQ 0x1 0xc 0x0
-Text(FillerDialogue)//the cycle
+Text(Ch20_Lore5Blair)//the last gift
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)
+Text(Ch20_Lore5Zeke)
 LABEL 0x2
 FADI 0x3C
 TILECHANGE 0x4

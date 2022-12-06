@@ -26,9 +26,9 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0xa,C20SimoneBlairRecruitment,Blair,Simone)
-CharacterEvent(0xa,C20SimoneArinRecruitment,Arin,Simone) //let arin/simone C happen no matter who recruits?
-CharacterEvent(0xa,C20SimoneEmileRecruitment,Emile,Simone) //let emile/simone C happen no matter who recruits?
-CharacterEvent(0xa,C20SimoneSveltzalusRecruitment,Sveltzalus,Simone)
+CharacterEventBothWays(0xb,C20SimoneArinRecruitment,Arin,Simone)
+CharacterEventBothWays(0xc,C20SimoneEmileRecruitment,Emile,Simone)
+CharacterEventBothWays(0xd,C20SimoneSveltzalusRecruitment,Sveltzalus,Simone)
 CharacterEvent(0xa,C20SimoneZekeRecruitment,Zeke,Simone)
 CharacterEventBothWays(0x10,C20BlairAvanSupport,Blair,Avan)
 CharacterEventBothWays(0x11,C20BlairYuyuSupport,Blair,Yuyu)
@@ -291,7 +291,7 @@ BeginningScene:
 ENUT GuideChpt20
 MUSC NarrationTheme3
 Narration(Map2CG,Ch20_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(LowlandsCG,Ch20_Opening)
 LoadUnitsByDifficulty(C20Easy,C20Normal,C20Hard)
 LOAD1 0x0 C20Units
 ENUN
@@ -418,31 +418,55 @@ VillageEventItem(FillerDialogue, VillageCG, IronRune)
 
 C20SimoneBlairRecruitment:
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(Ch20_BlairSimoneRecruit)
 TurnAlly(Simone)
 EndEvent
 
 C20SimoneArinRecruitment:
+CHECK_EVENTID 0xa
+BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(Ch20_ArinSimoneRecruit)
 TurnAlly(Simone)
+ENUT 0xa
+GOTO 0x2
+LABEL 0x1
+Text(Ch20_ArinSimoneRecruited)
+LABEL 0x2
+SetSupport(Arin,Simone,CSupport,1)
 EndEvent
 
 C20SimoneEmileRecruitment:
+CHECK_EVENTID 0xa
+BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(Ch20_EmileSimoneRecruit)
 TurnAlly(Simone)
+ENUT 0xa
+GOTO 0x2
+LABEL 0x1
+Text(Ch20_EmileSimoneRecruited)
+LABEL 0x2
+SetSupport(Emile,Simone,CSupport,1)
 EndEvent
 
 C20SimoneSveltzalusRecruitment:
-MUSC RecruitmentTheme
-Text(FillerDialogue)
+MUSC S_CampIchigaya
+CHECK_EVENTID 0xa
+BNE 0x1 0xc 0x0
+Text(Ch20_SveltzalusSimoneRecruit)
 TurnAlly(Simone)
+ENUT 0xa
+GOTO 0x2
+LABEL 0x1
+Text(Ch20_SveltzalusSimoneRecruited)
+LABEL 0x2
+SetSupport(Sveltzalus,Simone,CSupport,1)
 EndEvent
 
 C20SimoneZekeRecruitment:
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(Ch20_ZekeSimoneRecruit)
 TurnAlly(Simone)
 EndEvent
 

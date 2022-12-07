@@ -291,6 +291,7 @@ BeginningScene:
 ENUT GuideChpt20
 MUSC NarrationTheme3
 Narration(Map2CG,Ch20_Narration)
+MUSC AmbientWind
 CleanTextNoMap(LowlandsCG,Ch20_Opening)
 LoadUnitsByDifficulty(C20Easy,C20Normal,C20Hard)
 LOAD1 0x0 C20Units
@@ -414,7 +415,7 @@ FADU 0x3c
 EndEvent
 
 C20Village:
-VillageEventItem(FillerDialogue, VillageCG, IronRune)
+VillageEventItem(C20VillageText, VillageCG, IronRune)
 
 C20SimoneBlairRecruitment:
 MUSC RecruitmentTheme

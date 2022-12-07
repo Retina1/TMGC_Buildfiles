@@ -282,6 +282,7 @@ CHECK_ALIVE Rachael
 BNE 0x2 0xC 0x0
 CHECK_ALIVE Cassius
 BNE 0x3 0xC 0x0
+MUSC AmbientWind
 CleanText(HillCG,Ch7_Opening_Dead_Rachael_and_Cassius)
 GOTO 0x5
 LABEL 0x3

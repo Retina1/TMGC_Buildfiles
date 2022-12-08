@@ -22,7 +22,7 @@ SMT4B4_001:
  BYTE   VOL   50*SMT4B4_mvl/mxv
  BYTE   KEYSH   SMT4B4_key+0
  BYTE   TEMPO   132*SMT4B4_tbs/2
- BYTE   VOICE   34
+ BYTE   VOICE   38
  BYTE   W96
 //  #01 //001   ----------------------------------------
  BYTE   W96
@@ -634,7 +634,7 @@ Label_01004545:
 SMT4B4_002:
 //  #02 //000   ----------------------------------------
  BYTE   KEYSH   SMT4B4_key+0
- BYTE   VOICE   40
+ BYTE   VOICE   49
  BYTE   VOL   40*SMT4B4_mvl/mxv
  BYTE   PAN   c_v+29
  BYTE   VOL   40*SMT4B4_mvl/mxv
@@ -999,7 +999,7 @@ Label_F52106:
 SMT4B4_003:
 //  #03 //000   ----------------------------------------
  BYTE   KEYSH   SMT4B4_key+0
- BYTE   VOICE   33
+ BYTE   VOICE   38
  BYTE   W96
 //  #03 //001   ----------------------------------------
  BYTE   W96
@@ -1637,7 +1637,7 @@ Label_010049B0:
 SMT4B4_004:
 //  #04 //000   ----------------------------------------
  BYTE   KEYSH   SMT4B4_key+0
- BYTE   VOICE   40
+ BYTE   VOICE   49
  BYTE   VOL   44*SMT4B4_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   VOL   44*SMT4B4_mvl/mxv
@@ -3644,7 +3644,7 @@ Label_010050BA:
 SMT4B4_006:
 //  #06 //000   ----------------------------------------
  BYTE   KEYSH   SMT4B4_key+0
- BYTE   VOICE   40
+ BYTE   VOICE   49
  BYTE   VOL   45*SMT4B4_mvl/mxv
  BYTE   PAN   c_v-21
  BYTE   VOL   45*SMT4B4_mvl/mxv

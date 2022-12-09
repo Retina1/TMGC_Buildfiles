@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C20Turn1,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -277,7 +278,7 @@ Text(ApolloFlynnBSupport)
 SetSupport(Apollo,Flynn,BSupport,1)
 EndEvent
 C20CharleyToddsworthSupport:
-Text(CharleyToddsworthSupport)
+Text(CharleyToddsworthCSupport)
 SetSupport(Charley,Toddsworth,CSupport,1)
 EndEvent
 C20DesmondFlynnSupport:
@@ -285,6 +286,10 @@ Text(DesmondFlynnBSupport)
 SystemText(C20DesmondSwordRank)
 SetUnitStatus(Desmond,SwordExp,71)
 SetSupport(Desmond,Flynn,BSupport,1)
+EndEvent
+
+C20Turn1:
+SystemText(_Ch20SysText)
 EndEvent
 
 BeginningScene:

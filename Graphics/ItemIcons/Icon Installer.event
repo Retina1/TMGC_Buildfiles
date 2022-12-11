@@ -10,6 +10,15 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(DangerPickIcon)
+#incbin "comedy/sealDangerPick.dmp"
+ALIGN 4
+ItemIconEntry(StormbowIcon)
+#incbin "comedy/2WBStormbow.dmp"
+ALIGN 4
+ItemIconEntry(MainGaucheIcon)
+#incbin "comedy/ereshkigalMainGauche.dmp"
+ALIGN 4
 ItemIconEntry(PassacagliaIcon)
 #incbin "Bows/Nidhogg.dmp"
 ALIGN 4

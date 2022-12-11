@@ -314,7 +314,8 @@
 
 //Cultured: If unit attacks next to a unit with Nice Thighs, move again. -50 hit against units with Nice Thighs.
 //By Sme
-#define CulturedID 255
+#define CulturedID 241
+#define HighRollerID CulturedID
 
 //Flow State: Toggle Flow for +5 Atk/AS, +15 Hit/Crit, -10 Def/Res
 //By Sme
@@ -332,10 +333,11 @@
 //Battle Veteran: Gain +1 damage and +5% Hit per 10 levels unit has.
 //By Datagne
 #define BattleVeteranID 166
+#define DangerPickID BattleVeteranID
 
 //Blow Skills: Apply a stat bonus when initiating battle.
 //By Rossendale
-#define DuelistsBlowID 241
+#define DuelistsBlowID 255
 #define DeathBlowID 240
 #define DartingBlowID 239
 #define WardingBlowID 242 //+8 to both defenses
@@ -414,6 +416,7 @@
 #define QuixoticID OddRhythmID
 
 #define EvenRhythmID 215
+#define MainGaucheID EvenRhythmID
 
 //Faire Skills: +4 damage when equipping a weapon of the specified type.
 //Author Unknown (Initial Commit)

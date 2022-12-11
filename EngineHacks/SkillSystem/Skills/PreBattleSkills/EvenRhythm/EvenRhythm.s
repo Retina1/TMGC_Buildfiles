@@ -1,42 +1,50 @@
 .thumb
-.equ EvenRhythmID, SkillTester+4
+.equ MainGaucheID, SkillTester+4
 
-push	{r4, lr}
-mov	r4, r0 @attacker
-mov	r5, r1 @defender
+push {r4-r7, lr}
+mov r4, r0 @atkr
+mov r5, r1 @dfdr
 
-@check if turn is even
-ldr	r0,=#0x202BCF0
-ldrh	r0, [r0,#0x10]
-mov	r1, #0x01
-and	r0, r1
-cmp	r0, #0x00
-bne	End
+@Only has 1 or less items
+mov r1, #0x20
+ldrb r0, [r4, r1] @second item in inventory
+cmp r0, #0x0 		 @This item is empty
+bne End @skip if holding 2 items
 
-@has skill
-ldr	r0, SkillTester
-mov	lr, r0
-mov	r0, r4
-ldr	r1, EvenRhythmID
-.short	0xf800
-cmp	r0, #0
-beq	End
+@has MainGaucheID
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker data
+ldr r1, MainGaucheID
+.short 0xf800
+cmp r0, #0
+beq End
 
-@add 10 to hit and avoid
-mov	r0, #0x60
-ldrh	r1, [r4,r0]	@load hit
-add	r1, #0x0A	@add 20 to hit
-strh	r1, [r4,r0]     @store
-
-mov	r0, #0x62
-ldrh	r1, [r4,r0]	@load avoid
-add	r1, #0x0A	@add 20 to avoid
-strh	r1, [r4,r0]     @store
+@add 100 AS
+mov r1, #0x5E
+ldrh r0, [r4, r1] @AS
+add r0, #100
+strh r0, [r4,r1]
+@add 100 hit
+mov r1, #0x60
+ldrh r0, [r4, r1] @AS
+add r0, #100
+strh r0, [r4,r1]
+@add 100 crit
+mov r1, #0x66
+ldrh r0, [r4, r1] @AS
+add r0, #100
+strh r0, [r4,r1]
+@add 100 avo
+mov r1, #0x62
+ldrh r0, [r4, r1] @AS
+add r0, #100
+strh r0, [r4,r1]
 
 End:
-pop	{r4, r15}
+pop {r4-r7, r15}
 .align
 .ltorg
 SkillTester:
 @Poin SkillTester
-@WORD EvenRhythmID
+@WORD MainGaucheID

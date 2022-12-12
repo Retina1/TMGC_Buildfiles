@@ -15,11 +15,12 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
-POIN V1Units V1Units
+POIN V2Units V2Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,CV2Turn2,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -27,9 +28,22 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Armory(V2Armory,19,12)
+Vendor(V2Vendor,10,15)
 END_MAIN
 
+ALIGN 4
+V2Armory:
+SHLI SteelSword SilverSword KillingEdge Lancereaver SteelLance SilverLance KillerLance Javelin Axereaver SteelAxe SilverAxe KillerAxe HandAxe Swordreaver SteelBow SilverBow KillerBow Longbow
+BYTE 0x0 0x0
+ALIGN 4
+V2Vendor:
+SHLI Thunder Elfire Inversion Shine Divine Banish Mend Recover Vulnerary Elixir PureWater ChestKey
+BYTE 0x0 0x0
+ALIGN 4
+
 MiscBasedEvents:
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -44,37 +58,42 @@ ENDTRAP
 
 ALIGN 4
 
-V1Units:
-UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
-UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
-UNIT Dean Fighter 0x0 Level(15,Ally,0) [4,0] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
-UNIT Eliza Cleric 0x0 Level(12,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
-UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [3,1] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
-UNIT Rift SwMast 0x0 Level(6,Ally,0) [0,2] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
-UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
-UNIT Rose MageF 0x0 Level(9,Ally,0) [3,3] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
+V2Units:
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [10,18] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
+UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [12,18] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [14,18] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
+UNIT Eliza Cleric 0x0 Level(12,Ally,0) [11,17] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
+UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [13,17] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
+UNIT Rift SwMast 0x0 Level(6,Ally,0) [15,17] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
+UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [12,16] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Rose MageF 0x0 Level(9,Ally,0) [14,16] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
 UNIT
 
-V1Easy:
+V2MoreUnits:
+UNIT Dirk Berserker 0x0 Level(7,Ally,0) [0,15] 0x0 0x0 0x1 REDA2R15 [Swordslayer,HereticAxe,BraveAxe,Barrier] NoAI
+UNIT Callum SwdPal 0x0 Level(11,Ally,0) [0,16] 0x0 0x0 0x1 REDA3R16 [GildedSword,Armorslayer,Horseslayer,Wyrmslayer] NoAI
+UNIT
+
+V2Easy:
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
 UNIT
 
-V1Normal:
+V2Normal:
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
 UNIT
 
-V1Hard:
+V2Hard:
 UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT DalstRebel Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
-UNIT DLDavelarn Deserter 0x0 Level(19,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT DalstRebel Brigand 0x0 Level(12,Enemy,1) [1,4] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT DLDavelarn Deserter 0x0 Level(19,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [GildedLance, Spear] NeverMoveAI
 UNIT
 
 ALIGN 4
 
 BeginningScene:
-LOAD1 0x1 V1Units
+LOAD1 0x1 V2Units
 ENUN
-LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
+LoadUnitsByDifficulty(V2Easy,V2Normal,V2Hard)
 MUSC NarrationTheme
 Narration(Map2CG,ChV2_Narration)
 CleanText(PathCG,FillerDialogue)
@@ -85,6 +104,16 @@ EndingScene:
 MUSC VictoryTheme
 Text(PathCG,FillerDialogue)
 MoveToChapter(Interlude7)
+EndEvent
+
+CV2Turn2:
+Reinforcements(V2MoreUnits)
+MUSC RecruitmentThemeVirid
+Text(FillerDialogue)
+SetSupport(Eliza,Dirk,BSupport)
+SetSupport(Dean,Dirk,CPSupport)
+SetSupport(Rift,Callum,CPSupport)
+SetSupport(Eliza,Rose,CPSupport)
 EndEvent
 
 

@@ -24,64 +24,74 @@
 
 ALIGN 4
 MapData:
-  #incbin "Chapter26_data.dmp"
+  #incbin "ChapterV2_data.dmp"
 
-SetChapterData(Chapter26, OBJStronghold, 0, PALStronghold, TILStronghold, Map26, MapData, 0, 0, MapChange26)
+SetChapterData(ChapterV2, OBJTown, 0, PALDalstTown, TILTown, MapV2, MapData, ANITown, 0, MapChangeV2)
 
 ALIGN 4
 Map_Change_0:
-  SHORT $FB4
+  SHORT $718 $790
 
 ALIGN 4
 Map_Change_1:
-  SHORT $FB4
+  SHORT $CA4 $CA8 $CAC $D24 $D28 $D2C
 
 ALIGN 4
 Map_Change_2:
-  SHORT $FB4
+  SHORT $80
 
 ALIGN 4
 Map_Change_3:
-  SHORT $FB4
+  SHORT $CA4 $CA8 $CAC $D24 $D28 $D2C
 
 ALIGN 4
 Map_Change_4:
-  SHORT $FB4
+  SHORT $80
 
 ALIGN 4
 Map_Change_5:
-  SHORT $FB4
+  SHORT $818 $710
 
 ALIGN 4
 Map_Change_6:
-  SHORT $FB4
+  SHORT $400
 
 ALIGN 4
 Map_Change_7:
-  SHORT $5D4
+  SHORT $CA4 $CA8 $CAC $D24 $D28 $D2C
 
 ALIGN 4
 Map_Change_8:
-  SHORT $5D4
+  SHORT $80
 
 ALIGN 4
 Map_Change_9:
-  SHORT $5D4
+  SHORT $CA4 $CA8 $CAC $D24 $D28 $D2C
+
+ALIGN 4
+Map_Change_10:
+  SHORT $80
+
+ALIGN 4
+Map_Change_11:
+  SHORT $300
 
 ALIGN 4
 MapChangesData:
-  TileMap(0, 3, 3, 1, 1, Map_Change_0)
-  TileMap(1, 33, 5, 1, 1, Map_Change_1)
-  TileMap(2, 19, 13, 1, 1, Map_Change_2)
-  TileMap(3, 9, 17, 1, 1, Map_Change_3)
-  TileMap(4, 31, 25, 1, 1, Map_Change_4)
-  TileMap(5, 11, 28, 1, 1, Map_Change_5)
-  TileMap(6, 1, 25, 1, 1, Map_Change_6)
-  TileMap(7, 18, 15, 1, 1, Map_Change_7)
-  TileMap(8, 30, 24, 1, 1, Map_Change_8)
-  TileMap(9, 5, 20, 1, 1, Map_Change_9)
+  TileMap(0, 5, 6, 2, 1, Map_Change_0)
+  TileMap(1, 0, 1, 3, 2, Map_Change_1)
+  TileMap(2, 1, 2, 1, 1, Map_Change_2)
+  TileMap(3, 12, 0, 3, 2, Map_Change_3)
+  TileMap(4, 13, 1, 1, 1, Map_Change_4)
+  TileMap(5, 4, 5, 2, 1, Map_Change_5)
+  TileMap(6, 2, 8, 1, 1, Map_Change_6)
+  TileMap(7, 9, 10, 3, 2, Map_Change_7)
+  TileMap(8, 10, 11, 1, 1, Map_Change_8)
+  TileMap(9, 15, 7, 3, 2, Map_Change_9)
+  TileMap(10, 16, 8, 1, 1, Map_Change_10)
+  TileMap(11, 17, 18, 1, 1, Map_Change_11)
   TileMapEnd
 
-EventPointerTable(MapChange26, MapChangesData)
+EventPointerTable(MapChangeV2, MapChangesData)
 
 }

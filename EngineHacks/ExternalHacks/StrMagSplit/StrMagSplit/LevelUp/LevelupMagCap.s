@@ -26,7 +26,7 @@ ldrb r1, [r3, #0x2] @MagClassTable[ClassID].MagicCap
 cmp r0 ,r1
 ble Exit
     mov r0, #0x3A
-    ldrb r0, [r2, r1] @RAMUnit->Mag
+    ldrb r0, [r2, r0] @RAMUnit->Mag
     sub r0 ,r1, r0    @MagCap - RAMUnit->Mag
 
     mov r3, r12

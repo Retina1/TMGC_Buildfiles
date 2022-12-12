@@ -1,23 +1,68 @@
-//chapter 19 and 20 remain, and then we're free (until chapter v1)
-//c20
-//blair avan b
-//blair yuyu b
-//arin svelt b
-//arin yuyu c+
-//natasia bechamel b
-//peggy butch b+
-//apollo flynn c+
-//toddsworth charley c
 //i feel like a grim reaper pretending to be a man
 
 //ch20
 ##BlairYuyuBSupport
-[OpenMidLeft][LoadYuyu][OpenMidRight][LoadBlair]
-Halt, child! Do you know you[A][X]
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadBlair]
+[ToggleMouthMove]...[ToggleMouthMove]Very funny, Yuyu.[A][N][OpenMidLeft]
+What're you talking about?[N]
+I'm[ToggleMouthMove]...[ToggleMouthMove] the real Blair![A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]So true![A][N][ClearFace][LoadYuyu][ToggleSmile]
+I had ya fooled, no?[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I don't see how you'd fool[N]
+someone by turning into them.[A][N][OpenMidRight]
+Don't question it.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Do you need me?[A][N][OpenMidRight]
+Not particularly. I'm just letting[N]
+the chicanery distract me.[A][N][ToggleSmile]
+[ToggleMouthMove]...[ToggleMouthMove]This place feels familiar.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Familiar?[A][N][OpenMidRight]
+Obviously, I'm not a dragon, or[N]
+whatever these are.[A][N]
+But[ToggleMouthMove]...[ToggleMouthMove] I think I've seen this[N]
+all before. Somehow.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]But that's not fun.[A][N]
+You know what is?[A][N][ClearFace][LoadArbordia]
+This. [ToggleMouthMove]...[ToggleMouthMove]Look at me, I'm[N]
+some big shot noble![A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Lord Arbordia? How[ToggleMouthMove]...[ToggleMouthMove]?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Guess I must've seen him somewhere.[N]
+Since you know[ToggleMouthMove]...[ToggleMouthMove][A] Wouldn't make much[N]
+sense if I could mimic a stranger.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Huh.[A][N][OpenMidRight]
+Well, you seem sufficiently[N]
+confused for now.[A][N][ClearFace][LoadYuyu][ToggleSmile]
+Toodles![A][N][ClearFace][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I can barely keep up with her antics.[N]
+But for her to have seen Arbordia before[ToggleMouthMove]...[ToggleMouthMove][A][N]
+What an odd coincidence.[A][X]
 
 ##ArinYuyuCPSupport
-[OpenMidLeft][LoadYuyu][OpenMidRight][LoadArin]
-Halt, child! Do you know you[A][X]
+[OpenMidLeft][LoadYuyu][OpenMidRight][LoadArin][OpenMidLeft]
+Heya.[A][N][OpenMidRight]
+Say, Yuyu. I've got a strange[N]
+request.[A] Could you[ToggleMouthMove]...[ToggleMouthMove] copy me?[A][N]
+I wish to spar.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Sure, why not.[A][N][ClearFace][LoadArin][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]My bad. I should've said I meant[N]
+later.[A] We ought to focus on[N]
+the battle.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Since I transformed already, can I run[N]
+around barking orders for a bit?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I hardly bark orders.[A][N][OpenMidLeft]
+That's a yes? Excellent![A][N][ClearFace][OpenFarFarLeft][LoadArin]
+Hey, Zeke! Blair needs you to[N]
+give me twenty thousand gold![A][N][OpenMidRight]
+Your Highness! Don't listen to that impostor![N]
+I need not one ounce of that gold![A][N][OpenFarFarLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Ten thousand gold![A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]This isn't a negotiation![A][N][OpenFarFarLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Just hand me all your[N]
+clothing instead.[A][N][OpenMidRight][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove]For the love of[ToggleMouthMove]...[ToggleMouthMove][A][N][ClearFace][OpenFarFarLeft]
+Your Highness. Don't listen to[N]
+Yuyu's shenanigans.[A][2NL]
+DO listen! They're very funny.[A][X]
 
 ##ApolloFlynnBSupport
 [OpenMidLeft][LoadApollo][OpenMidRight][LoadFlynn]
@@ -1123,8 +1168,8 @@ by dark magic.[A][N][OpenMidLeft]
 I'm sorry to hear that. But I'd like[N]
 you to understand something.[A][N]
 I'm on your side.[A][N][OpenMidRight]
-Hmph! You'll just have to prove that[N]
-to me![A][N][OpenMidLeft]
+Hmph! You'll just have to[N]
+prove that to me![A][N][OpenMidLeft]
 Very well. Back to the battle. I'll[N]
 show you my brand of power.[A][X]
 

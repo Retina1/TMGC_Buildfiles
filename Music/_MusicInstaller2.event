@@ -33,7 +33,10 @@
 
 //songs
 
-
+{
+#include "NorthernHemispheres.event"
+SongTable(S_NorthernHemispheres,NorthernHemispheres,1)
+}
 {
 #include "OurLight.event"
 SongTable(S_OurLight,OurLight,1)

@@ -1,3 +1,15 @@
+//staff base hitrate
+PUSH
+ORG 0x2cd30
+BYTE 0x50
+POP
+
+//fix swamp terrain
+PUSH
+ORG 0x80cb1c
+BYTE 0x5f
+POP
+
 //status thing
 PUSH
 ORG 0x002CD44

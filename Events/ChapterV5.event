@@ -174,52 +174,69 @@ DISA Viridian
 LABEL 0x100
 CHECK_ALIVE Freddric
 BNE 0x101 0xc 0x0
+ClearSupport(Freddric,Argent)
 DISA Freddric
 LABEL 0x101
 CHECK_ALIVE Dean
 BNE 0x102 0xc 0x0
+ClearSupport(Dean,Eliza)
+ClearSupport(Dean,Dirk)
 DISA Dean
 LABEL 0x102
 CHECK_ALIVE Eliza
 BNE 0x103 0xc 0x0
+ClearSupport(Eliza,Dirk)
+ClearSupport(Eliza,Dean)
+ClearSupport(Eliza,Rose)
 DISA Eliza
 LABEL 0x103
 CHECK_ALIVE Chartreuse
 BNE 0x104 0xc 0x0
+ClearSupport(Chartreuse,Viridian)
+ClearSupport(Chartreuse,Estelle)
 DISA Chartreuse
 LABEL 0x104
 CHECK_ALIVE Rift
 BNE 0x105 0xc 0x0
 ClearSupport(Rift,Estelle)
+ClearSupport(Rift,Callum)
 DISA Rift
 LABEL 0x105
 CHECK_ALIVE Estelle
 BNE 0x106 0xc 0x0
+ClearSupport(Estelle,Chartreuse)
 ClearSupport(Estelle,Rift)
 DISA Estelle
 LABEL 0x106
 CHECK_ALIVE Rose
 BNE 0x107 0xc 0x0
+ClearSupport(Rose,Eliza)
 DISA Rose
 LABEL 0x107
 CHECK_ALIVE Dirk
 BNE 0x108 0xc 0x0
+ClearSupport(Dirk,Eliza)
+ClearSupport(Dirk,Dean)
 DISA Dirk
 LABEL 0x108
 CHECK_ALIVE Callum
 BNE 0x109 0xc 0x0
+ClearSupport(Callum,Rift)
 DISA Callum
 LABEL 0x109
 CHECK_ALIVE Manfred
 BNE 0x110 0xc 0x0
+ClearSupport(Manfred,Wilhelm)
 DISA Manfred
 LABEL 0x110
 CHECK_ALIVE Wilhelm
 BNE 0x111 0xc 0x0
+ClearSupport(Wilhelm,Manfred)
 DISA Wilhelm
 LABEL 0x111
 CHECK_ALIVE Argent
 BNE 0x112 0xc 0x0
+ClearSupport(Argent,Freddric)
 DISA Argent
 LABEL 0x112
 EVBIT_MODIFY 4

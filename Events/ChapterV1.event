@@ -67,11 +67,11 @@ ENDTRAP
 ALIGN 4
 
 V1Units:
-UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [16,12] 0x0 0x0 0x0 0x0 [Luckbow, SilverBow, Mend] NoAI
-UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [15,11] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
-UNIT Dean Fighter 0x0 Level(15,Ally,0) [14,12] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
-UNIT Eliza Cleric 0x0 Level(12,Ally,0) [17,13] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
-UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [15,13] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [19,12] 0x0 0x0 0x1 REDA16R12 [Luckbow, SilverBow, Mend] NoAI
+UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [19,12] 0x0 0x0 0x1 REDA15R11 [SilverLance, Javelin, Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [19,13] 0x0 0x0 0x1 REDA14R12 [GildedAxe, HandAxe] NoAI
+UNIT Eliza Cleric 0x0 Level(12,Ally,0) [19,13] 0x0 0x0 0x1 REDA17R13 [Recover, Physic, Rescue] NoAI
+UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [19,14] 0x0 0x0 0x1 REDA15R13 [LegRing, Elixir] NoAI
 UNIT
 
 V1MoreUnits:
@@ -130,12 +130,16 @@ SADD 0xC2
 Write_Word(HereComesTheMoney)
 SVAL 0x2 0x0
 //asmc here for setting gold
-LOAD1 0x1 V1Units
-ENUN
 LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
 MUSC NarrationTheme
 Narration(Map2CG,ChV1_Narration)
-CleanText(PathCG,FillerDialogue)
+CleanText(PathCG,V1Opening)
+EVBIT_T 9
+LOAD1 0x1 V1Units
+ENUN
+EVBIT_F 9
+MUSC S_BattleForStormHill
+Text(V1Opening2)
 SystemText(ViridianArcPrimer)
 SetSupport(Viridian,Freddric,BSupport)
 SetSupport(Viridian,Chartreuse,BSupport)
@@ -165,7 +169,7 @@ GiveItem(MasterBow,Viridian)
 MOVE 60 Clarque [0,8]
 ENUN
 SilentKillUnit(Clarque)
-//add a flag for this
+ENUT ClarqueAliveFlag
 EndEvent
 //clarque event? maybe instead he has battle convos because he knows viridian?
 
@@ -198,7 +202,7 @@ CV1Turn6:
 Reinforcements(V1Reinforcements3)
 EndEvent
 CV1Turn7:
-Text(FillerDialogue)//rift goes super saiyan
+Text(V1RiftAscends)//rift goes super saiyan
 EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

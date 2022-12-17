@@ -462,6 +462,55 @@
 	//vladmir (emile, apollo)
 	//horatio (flynn)
 	//simone (to be added arin and emile)
+	//viridian
+		entry(Viridian,Freddric)
+			support(CSupport,1,0,0,0,0,5)
+			support(CPSupport,1,0,5,0,0,10)
+			support(BSupport,2,0,10,0,0,10)
+			support(BPSupport,2,1,15,0,0,10)
+			support(ASupport,3,2,30,0,0,10)
+		entry(Viridian,Chartreuse)
+			support(CSupport,0,1,0,0,0,5)
+			support(CPSupport,0,1,10,0,0,10)
+			support(BSupport,0,2,10,0,0,20)
+			support(BPSupport,0,2,20,0,0,30)
+			support(ASupport,0,3,30,0,0,40)
+	//freddric (viridian)
+	//dean
+		entry(Dean,Eliza)
+			support(CSupport,1,0,0,0,5,0)
+			support(CPSupport,1,0,5,0,10,0)
+			support(BSupport,2,0,10,0,10,0)
+			support(BPSupport,2,1,15,0,15,0)
+			support(ASupport,2,2,20,0,20,0)
+	//eliza (dean)
+		entry(Eliza,Dirk)
+			support(CSupport,1,1,0,0,0,0)
+			support(CPSupport,2,2,0,0,0,0)
+			support(BSupport,3,3,0,0,0,0)
+			support(BPSupport,4,4,0,0,0,0)
+			support(ASupport,5,5,0,0,0,0)
+	//chartreuse (viridian)
+		entry(Chartreuse,Estelle)
+			support(CSupport,0,0,10,0,10,0)
+			support(CPSupport,0,0,15,0,15,0)
+			support(BSupport,0,0,20,0,20,5)
+			support(BPSupport,0,0,25,0,25,10)
+			support(ASupport,0,0,30,0,30,15)
+	//rift
+		entry(Rift,Estelle)
+			support(CSupport,0,0,0,10,0,0)
+			support(CPSupport,0,0,0,20,0,0)
+			support(BSupport,0,1,10,20,0,0)
+			support(BPSupport,0,1,20,20,0,10)
+			support(ASupport,0,2,30,30,0,20)
+	//estelle (chartreuse, rift)
+	//rose
+	//dirk
+	//callum
+	//manfred
+	//wilhelm
+	//argent
 	entry(0,0) // Terminator
 	}
 

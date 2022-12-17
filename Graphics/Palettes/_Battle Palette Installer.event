@@ -124,6 +124,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ArgentPaletteID 0x77
 #define YuyuPaletteID 0x79
 
+#define TonnaminPaletteID 0x81
+
 #define CidPaletteID 0x2e
 #define BrandlPaletteID 0x53
 #define BriantPaletteID 0x54
@@ -259,7 +261,7 @@ setPalette(ManfredPPaletteID,ManfredPPalette)
 setPalette(WilhelmUPaletteID,WilhelmUPalette)
 setPalette(WilhelmPPaletteID,WilhelmPPalette)
 setPalette(ArgentPaletteID,ArgentPalette)
-//tonnamin
+setPalette(TonnaminPaletteID,TonnaminPalette)
 //player jonas, laronde is down further
 setPalette(YuyuPaletteID,YuyuPalette)
 
@@ -361,7 +363,7 @@ SetPaletteFull(Manfred,ManfredUPaletteID,DarkM,ManfredPPaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Wilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Argent,0x0,BowArm,ArgentPaletteID,BowGen,0x0,0x0)
 SetPaletteFull(Addington,0x0,Automaton,0x0,0x0,0x0,0x0)
-SetPaletteFull(Tonnamin,0x0,AxeArm,0x0,AxeGen,0x0,0x0)
+SetPaletteFull(Tonnamin,0x0,AxeArm,TonnaminPaletteID,AxeGen,0x0,0x0)
 SetPaletteFull(SecretJonas,JonasPaletteID,LncWyv,0x0,WyvLord,0x0,0x0)
 SetPaletteFull(SecretLaronde,0x0,Soldier,LarondePaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Yuyu,YuyuPaletteID,Freelancer,0x0,0x0,0x0,0x0)
@@ -714,6 +716,9 @@ BrandlPalette:
 ALIGN 4
 BriantPalette:
 #incbin "Briant.dmp"
+ALIGN 4
+TonnaminPalette:
+#incbin "Tonnamin.dmp"
 
 ALIGN 4
 DavelarnPalette:

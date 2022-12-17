@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(HurlbatIcon)
+#incbin "Axes/Hatchet.dmp"
+ALIGN 4
 ItemIconEntry(HighRollerIcon)
 #incbin "Lances/Iron GreatLance.dmp"
 ALIGN 4

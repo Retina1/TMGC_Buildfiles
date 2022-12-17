@@ -52,6 +52,7 @@ BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
+DefeatAll(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -67,15 +68,15 @@ ENDTRAP
 ALIGN 4
 
 V1Units:
-UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [19,12] 0x0 0x0 0x1 REDA16R12 [Luckbow, SilverBow, Mend] NoAI
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [19,12] 0x0 0x0 0x1 REDA16R12 [Luckbow, SilverBow, Mend, Vulnerary] NoAI
 UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [19,12] 0x0 0x0 0x1 REDA15R11 [SilverLance, Javelin, Elixir] NoAI
-UNIT Dean Fighter 0x0 Level(15,Ally,0) [19,13] 0x0 0x0 0x1 REDA14R12 [GildedAxe, HandAxe] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [19,13] 0x0 0x0 0x1 REDA14R12 [GildedAxe, HandAxe, Vulnerary] NoAI
 UNIT Eliza Cleric 0x0 Level(12,Ally,0) [19,13] 0x0 0x0 0x1 REDA17R13 [Recover, Physic, Rescue] NoAI
 UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [19,14] 0x0 0x0 0x1 REDA15R13 [LegRing, Elixir] NoAI
 UNIT
 
 V1MoreUnits:
-UNIT Rift SwMast 0x0 Level(6,Ally,0) [12,0] 0x0 0x0 0x1 REDA12R2 [SteelSword, FlameSword] NoAI
+UNIT Rift SwMast 0x0 Level(6,Ally,0) [12,0] 0x0 0x0 0x1 REDA12R2 [SteelSword, FlameSword, Vulnerary] NoAI
 UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [13,0] 0x0 0x0 0x1 REDA13R1 [IronBow, SteelBow, Longbow, Vulnerary] NoAI	//prf bow?
 UNIT
 
@@ -91,15 +92,22 @@ V1Hard:
 UNIT Bandit Fighter 0x0 Level(15,Enemy,1) [12,8] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,10] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
 UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
-UNIT Bandit Fighter 0x0 Level(16,Enemy,1) [18,10] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [IronAxe] BrigandAI
 UNIT Bandit Fighter 0x0 Level(13,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Bandit Warrior 0x0 Level(2,Enemy,1) [5,1] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Bandit LncPeg 0x0 Level(17,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Bandit Bruiser 0x0 Level(15,Enemy,1) [6,5] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Bandit Soldier 0x0 Level(15,Enemy,1) [5,8] 0x0 0x0 0x0 0x0 [SteelLance] ChaseOnceApproachedAI
+UNIT Bandit Fighter 0x0 Level(17,Enemy,1) [0,7] 0x0 0x0 0x0 0x0 [Swordreaver,SteelAxe] AttackInRangeAI
+UNIT Bandit Archer 0x0 Level(15,Enemy,1) [12,6] 0x0 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
+UNIT Bandit Mage 0x0 Level(14,Enemy,1) [8,0] 0x0 0x0 0x0 0x0 [Fire] ChaseOnceApproachedAI
+UNIT Bandit DarkM 0x0 Level(15,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Flux] ChaseOnceApproachedAI
+UNIT Bandit Priest 0x0 Level(17,Enemy,1) [10,9] 0x0 0x0 0x0 0x0 [Sleep] NoAI
 UNIT Clarque BowPal 0x0 Level(7,Enemy,1) [2,7] DropItem 0x0 0x0 0x0 [SilverSword,SilverBow,MasterSeal] NeverMoveAI
 UNIT
 
 V1Reinforcements1:
 UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [SteelAxe] BrigandAI
-UNIT Bandit BowCav 0x0 Level(14,Enemy,1) [0,7] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
 UNIT Bandit SwdCav 0x0 Level(14,Enemy,1) [0,14] 0x0 0x0 0x0 0x0 [Wyrmslayer] NoAI
 UNIT Bandit LncCavF 0x0 Level(14,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Bandit AxeCav 0x0 Level(14,Enemy,1) [2,14] 0x0 0x0 0x0 0x0 [Swordreaver] NoAI
@@ -115,7 +123,7 @@ V1Reinforcements3:
 UNIT Bandit Merc 0x0 Level(14,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Bandit DarkM 0x0 Level(14,Enemy,1) [5,1] 0x0 0x0 0x0 0x0 [Nightfall] NoAI
 UNIT Bandit LncWyv 0x0 Level(14,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
-UNIT Bandit SwdPeg 0x0 Level(14,Enemy,1) [17,9] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Bandit SwdPeg 0x0 Level(14,Enemy,1) [17,9] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Bandit Hunter 0x0 Level(16,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [Greatbow] NoAI
 UNIT
 
@@ -174,24 +182,28 @@ EndEvent
 //clarque event? maybe instead he has battle convos because he knows viridian?
 
 V1North:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(V1NorthHouse,HouseCG)
 V1South:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(V1SouthHouse,HouseCG)
 V1EastVillage:
-VillageEventItem(FillerDialogue, VillageCG, Nuboko)
+VillageEventItem(V1EastVillageText, VillageCG, Nuboko)
 V1WestVillage:
-VillageEventItem(FillerDialogue, VillageCG, Eyedrops)
+VillageEventItem(V1WestVillageText, VillageCG, Eyedrops)
 
 
 CV1Turn2:
-Text(FillerDialogue)
+CAM1 Clarque
+FlashCursor(Clarque,60)
+Text(V1ClarqueSpeaks)
 Reinforcements(V1Reinforcements1)
-Text(FillerDialogue)
+CAM1 Viridian
+FlashCursor(Viridian,60)
+Text(V1ViridianRebuts)
 EndEvent
 CV1Turn3:
 Reinforcements(V1MoreUnits)
 MUSC RecruitmentThemeVirid
-Text(FillerDialogue)
+Text(V1Arrival)
 SetSupport(Rift,Estelle,CPSupport)
 SetSupport(Chartreuse,Estelle,CPSupport)
 EndEvent

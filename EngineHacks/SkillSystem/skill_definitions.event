@@ -57,8 +57,10 @@
 #define FocusID 203
 
 //Gentilhomme: Female allies within 2 tiles receive -2 damage.
+//killer tactics: spur brave at low hp???
 //Author Unknown (Initial Commit)
 #define GentilhommeID 201
+#define KillerTacticsID GentilhommeID
 
 //Hex: -15 avoid to all adjacent enemies.
 //By Snakey1
@@ -340,7 +342,7 @@
 #define DuelistsBlowID 255
 #define DeathBlowID 240
 #define DartingBlowID 239
-#define WardingBlowID 242 //+8 to both defenses
+#define WardingBlowID 242 //x2 to both defenses
 #define CertainBlowID 238
 #define ArmoredBlowID 237
 //By Darrman

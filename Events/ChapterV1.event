@@ -137,7 +137,7 @@ CHECK_MONEY
 SADD 0xC2
 Write_Word(HereComesTheMoney)
 SVAL 0x2 0x0
-//asmc here for setting gold
+Write_Word(10000,HereIsTheMoney)
 LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
 MUSC NarrationTheme
 Narration(Map2CG,ChV1_Narration)
@@ -162,8 +162,20 @@ SetSupport(Dean,Eliza,CPSupport)
 EndEvent
 
 EndingScene:
+CHECK_EVENTID ClarqueAliveFlag
+BEQ 0x1 0xc 0x0
 MUSC VictoryTheme
-Text(PathCG,FillerDialogue)
+CleanTextNoMap(PathCG,FillerDialogue)//clarque lives
+GOTO 0x2
+LABEL 0x1
+MUSC VictoryMinor
+CleanTextNoMap(PathCG,FillerDialogue)//he doesn't - either way group wraps up and gets paid
+LABEL 0x2
+SetBackground(BlankCG)
+GiveMoney(0x2710)
+LocationText(HallCG, FillerDialogue,ArbordiaMeetingHallLabel,S_RigorousJustice)//elcorian panics and hires mercs
+CleanTextNoMap(PathCG,FillerDialogue)//the deal is made, the stage is set
+//and thus, the end of everything is set in motion
 MoveToChapter(ChapterV2)
 EndEvent
 

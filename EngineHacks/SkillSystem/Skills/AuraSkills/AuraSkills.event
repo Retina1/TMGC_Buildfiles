@@ -96,8 +96,9 @@ WORD LilysPoiseID
 ALIGN 4
 UpWithArch:
 #incbin "UpWithArch/UpWithArch.dmp"
-POIN NewAuraSkillCheck
+POIN SkillTester
 WORD UpWithArchID
+POIN GetUnitsInRange
 
 ALIGN 4
 Solidarity:

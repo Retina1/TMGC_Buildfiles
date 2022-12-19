@@ -165,12 +165,14 @@ EndingScene:
 CHECK_EVENTID ClarqueAliveFlag
 BEQ 0x1 0xc 0x0
 MUSC VictoryTheme
-CleanTextNoMap(PathCG,FillerDialogue)//clarque lives
+CleanTextNoMap(PathCG,V1EndingClarqueAlive)//clarque lives
 GOTO 0x2
 LABEL 0x1
 MUSC VictoryMinor
 CleanTextNoMap(PathCG,FillerDialogue)//he doesn't - either way group wraps up and gets paid
 LABEL 0x2
+MUSC AmbientBirds
+CleanTextNoMap(VillageCG,V1EndingReconvene)//reconvene
 SetBackground(BlankCG)
 GiveMoney(0x2710)
 LocationText(HallCG, FillerDialogue,ArbordiaMeetingHallLabel,S_RigorousJustice)//elcorian panics and hires mercs

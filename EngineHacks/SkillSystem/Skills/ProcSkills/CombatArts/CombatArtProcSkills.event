@@ -59,4 +59,10 @@ CombatArt_Vengeance:
 POIN SkillTester
 WORD VengeanceID
 
+ALIGN 4
+CombatArt_Lethality:
+#incbin "Lethality/proc_lethality.dmp"
+POIN SkillTester
+WORD LethalityID
+
 

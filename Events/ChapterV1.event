@@ -169,14 +169,15 @@ CleanTextNoMap(PathCG,V1EndingClarqueAlive)//clarque lives
 GOTO 0x2
 LABEL 0x1
 MUSC VictoryMinor
-CleanTextNoMap(PathCG,FillerDialogue)//he doesn't - either way group wraps up and gets paid
+CleanTextNoMap(PathCG,V1EndingClarqueDead)//he doesn't - either way group wraps up
 LABEL 0x2
 MUSC AmbientBirds
 CleanTextNoMap(VillageCG,V1EndingReconvene)//reconvene
 SetBackground(BlankCG)
 GiveMoney(0x2710)
-LocationText(HallCG, FillerDialogue,ArbordiaMeetingHallLabel,S_RigorousJustice)//elcorian panics and hires mercs
-CleanTextNoMap(PathCG,FillerDialogue)//the deal is made, the stage is set
+LocationText(HallCG, V1ElcorianPanic,ArbordiaMeetingHallLabel,S_RigorousJustice)//elcorian panics and hires mercs
+MUSC AmbientNight
+CleanTextNoMap(VillageCG,V1TheJob)//the deal is made, the stage is set
 //and thus, the end of everything is set in motion
 MoveToChapter(ChapterV2)
 EndEvent

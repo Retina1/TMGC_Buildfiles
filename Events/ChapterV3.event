@@ -20,6 +20,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,V3Joins,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -86,6 +87,12 @@ UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [4,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
 UNIT
 
+V3MoreUnits:
+UNIT Manfred DarkM 0x0 Level(18,Ally,0) [19,7] 0x0 0x0 0x1 REDA18R7 [Fenrir, Nightfall, Vulnerary] NoAI
+UNIT Wilhelm Soldier 0x0 Level(16,Ally,0) [19,8] 0x0 0x0 0x1 REDA17R8 [HighRoller,SteelLance,Javelin,Elixir] NoAI
+UNIT Argent BowGen 0x0 Level(14,Ally,0) [19,9] 0x0 0x0 0x1 REDA18R9 [BraveBow,DousingLance,Hammer] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -102,6 +109,14 @@ EndingScene:
 MUSC VictoryTheme
 Text(PathCG,FillerDialogue)
 MoveToChapter(ChapterV4)
+EndEvent
+
+V3Joins:
+Reinforcements(V3MoreUnits)
+MUSC RecruitmentThemeVirid
+Text(FillerDialogue)
+SetSupport(Wilhelm,Manfred,BSupport)
+SetSupport(Argent,Freddric,CPSupport)
 EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

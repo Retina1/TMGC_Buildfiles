@@ -557,6 +557,19 @@
 			bg(LowlandsCG)
 			text(C20_Flynn_Horatio_Base)
 			baseSupport(Flynn,Horatio,CSupport)
+	Chapter(ChapterV2)
+		Entry
+			name(V2_Thorns_Select)
+			bg(PathCG)
+			importance(2)
+			text(V2_Thorns)
+			eventID(BaseFlag1)
+		Entry
+			name(V2_Past_Select)
+			bg(PathCG)
+			importance(1)
+			text(V2_Past)
+			eventID(BaseFlag2)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

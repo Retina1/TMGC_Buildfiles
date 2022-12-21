@@ -97,6 +97,7 @@ LoadUnitsByDifficulty(V2Easy,V2Normal,V2Hard)
 MUSC NarrationTheme
 Narration(Map2CG,ChV2_Narration)
 CleanText(PathCG,FillerDialogue)
+SetSupport(Eliza,Rose,CPSupport)
 GotoPrepScreen
 EndEvent
 
@@ -113,7 +114,6 @@ Text(FillerDialogue)
 SetSupport(Eliza,Dirk,BSupport)
 SetSupport(Dean,Dirk,CPSupport)
 SetSupport(Rift,Callum,CPSupport)
-SetSupport(Eliza,Rose,CPSupport)
 EndEvent
 
 

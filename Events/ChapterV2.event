@@ -106,9 +106,27 @@ BeginningScene:
 LOAD1 0x1 V2Units
 ENUN
 LoadUnitsByDifficulty(V2Easy,V2Normal,V2Hard)
+MUSC AmbientBirds
+CleanTextNoMap(VillageCG,V2Opening1)
 MUSC NarrationTheme
 Narration(Map2CG,ChV2_Narration)
-CleanText(PathCG,FillerDialogue)
+SetBackground(PathCG)
+MUSC AmbientWindBirds
+TEXTSTART
+TEXTSHOW V2Opening2
+TEXTEND
+MUSC S_Chaos
+TEXTCONT
+TEXTEND
+ClearBackgroundSmooth
+CAM1 DLDavelarn
+FlashCursor(DLDavelarn,60)
+Text(V2Opening3)
+MUSC 0x0
+CAM1 Viridian
+FlashCursor(Viridian,60)
+MUSC S_BattleForStormHill
+Text(V2Opening4)
 SetSupport(Eliza,Rose,CPSupport)
 GotoPrepScreen
 EndEvent

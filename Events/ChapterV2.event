@@ -30,6 +30,10 @@ END_MAIN
 LocationBasedEvents:
 Armory(V2Armory,19,12)
 Vendor(V2Vendor,10,15)
+Village(0x11,V2Village1,1,2)
+Village(0x12,V2Village2,13,1)
+Village(0x13,V2Village3,10,11)
+Village(0x14,V2Village4,16,8)
 END_MAIN
 
 ALIGN 4
@@ -70,7 +74,7 @@ UNIT Rose MageF 0x0 Level(9,Ally,0) [14,16] 0x0 0x0 0x0 0x0 [Thunder,BlueGem,Vul
 UNIT
 
 V2MoreUnits:
-UNIT Dirk Berserker 0x0 Level(7,Ally,0) [0,15] 0x0 0x0 0x1 REDA2R15 [Swordslayer,HereticAxe,BraveAxe,Barrier] NoAI
+UNIT Dirk Berserker 0x0 Level(7,Ally,0) [0,15] 0x0 0x0 0x1 REDA2R15 [Swordslayer,HereticAxe,BraveAxe,Warp] NoAI
 UNIT Callum SwdPal 0x0 Level(11,Ally,0) [0,16] 0x0 0x0 0x1 REDA3R16 [GildedSword,Armorslayer,Horseslayer,Wyrmslayer] NoAI
 UNIT
 
@@ -136,6 +140,15 @@ MUSC VictoryTheme
 Text(PathCG,FillerDialogue)
 MoveToChapter(Interlude7)
 EndEvent
+
+V2Village1:
+VillageEventItem(FillerDialogue, HouseCG, SpiritDust)
+V2Village2:
+VillageEventItem(FillerDialogue, HouseCG, Runeward)
+V2Village3:
+VillageEventItem(FillerDialogue, HouseCG, MasterSeal)
+V2Village4:
+VillageEventItem(FillerDialogue, HouseCG, Greatbow)
 
 CV2Turn2:
 Reinforcements(V2MoreUnits)

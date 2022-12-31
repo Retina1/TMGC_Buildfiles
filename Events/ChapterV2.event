@@ -63,14 +63,14 @@ ENDTRAP
 ALIGN 4
 
 V2Units:
-UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [10,18] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
-UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [12,18] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
-UNIT Dean Fighter 0x0 Level(15,Ally,0) [14,18] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
-UNIT Eliza Cleric 0x0 Level(12,Ally,0) [11,17] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
-UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [13,17] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
-UNIT Rift SwMast 0x0 Level(6,Ally,0) [15,17] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
-UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [12,16] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
-UNIT Rose MageF 0x0 Level(9,Ally,0) [14,16] 0x0 0x0 0x0 0x0 [Thunder,BlueGem,Vulnerary] NoAI
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [20,17] 0x0 0x0 0x1 REDA10R18 [Luckbow, SteelBow, Mend] NoAI
+UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [20,18] 0x0 0x0 0x1 REDA12R18 [SilverLance, Javelin, Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [20,19] 0x0 0x0 0x1 REDA14R18 [GildedAxe, HandAxe] NoAI
+UNIT Eliza Cleric 0x0 Level(12,Ally,0) [20,17] 0x0 0x0 0x1 REDA11R17 [Recover, Physic, Rescue] NoAI
+UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [20,18] 0x0 0x0 0x1 REDA13R17 [LegRing, Elixir] NoAI
+UNIT Rift SwMast 0x0 Level(6,Ally,0) [20,19] 0x0 0x0 0x1 REDA15R17 [SteelSword, FlameSword] NoAI
+UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [20,17] 0x0 0x0 0x1 REDA12R16 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Rose MageF 0x0 Level(9,Ally,0) [20,19] 0x0 0x0 0x1 REDA14R16 [Thunder,BlueGem,Vulnerary] NoAI
 UNIT
 
 V2MoreUnits:
@@ -107,8 +107,6 @@ UNIT
 ALIGN 4
 
 BeginningScene:
-LOAD1 0x1 V2Units
-ENUN
 LoadUnitsByDifficulty(V2Easy,V2Normal,V2Hard)
 MUSC AmbientBirds
 CleanTextNoMap(VillageCG,V2Opening1)
@@ -123,6 +121,10 @@ MUSC S_Chaos
 TEXTCONT
 TEXTEND
 ClearBackgroundSmooth
+EVBIT_T 9
+LOAD1 0x1 V2Units
+ENUN
+EVBIT_F 9
 CAM1 DLDavelarn
 FlashCursor(DLDavelarn,60)
 Text(V2Opening3)

@@ -56,7 +56,10 @@ ALIGN 4
 BeginningScene:
 EnableFreeMovement
 MUSC NarrationTheme5
-Narration(Map2CG,Base10_Narration)
+SetBackground(Map2CG)
+STAL 120
+NarrationText(Base10_Narration)
+FADI 0x3c
 CleanTextNoMap(HallCG,FillerDialogue)
 LOAD1 0x0 I6Units
 ENUN

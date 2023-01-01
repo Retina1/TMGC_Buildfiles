@@ -104,6 +104,10 @@ ElbaCorCityPalette:
 #incext Png2Dmp "Tilesets/ElbaCorCity.png" --palette-only
 
 ALIGN 4
+DalstCityPalette:
+#incext Png2Dmp "Tilesets/DalstCity.png" --palette-only
+
+ALIGN 4
 CityTiles:
 #incext compress "Tilesets/City.mapchip_config"
 
@@ -435,6 +439,7 @@ EventPointerTable(TILSwamp, SwampTiles)
 EventPointerTable(OBJCity, CityObjects)
 EventPointerTable(PALMevionCity, MevionCityPalette)
 EventPointerTable(PALElbaCorCity, ElbaCorCityPalette)
+EventPointerTable(PALDalstCity, DalstCityPalette)
 EventPointerTable(TILCity, CityTiles)
 
 EventPointerTable(OBJCastle, CastleObjects)
@@ -504,6 +509,7 @@ EventPointerTable(TILRuins, RuinsTiles)
 #define SetMinimapTileHandler(tileType, pointer) "PUSH; ORG MinimapTileTable+(tileType*4); POIN pointer; POP"
 
 SetMinimapTileHandler(0x0,TileHandler_Walls)
+SetMinimapTileHandler(0x14,TileHandler_Walls)
 SetMinimapTileHandler(0xe,TileHandler_Road)
 SetMinimapTileHandler(0x9,TileHandler_Water)
 SetMinimapTileHandler(0x1c,TileHandler_Throne)

@@ -34,6 +34,10 @@
 //songs
 
 {
+#include "FightToTheDeath.event"
+SongTable(S_FightToTheDeath,FightToTheDeath,0)
+}
+{
 #include "NorthernHemispheres.event"
 SongTable(S_NorthernHemispheres,NorthernHemispheres,1)
 }

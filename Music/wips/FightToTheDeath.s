@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song04_grp, voicegroup000
-	.equ	song04_pri, 0
-	.equ	song04_rev, 0
-	.equ	song04_mvl, 127
-	.equ	song04_key, 0
-	.equ	song04_tbs, 1
-	.equ	song04_exg, 0
-	.equ	song04_cmp, 1
+	.equ	FightToTheDeath_grp, voicegroup000
+	.equ	FightToTheDeath_pri, 0
+	.equ	FightToTheDeath_rev, 0
+	.equ	FightToTheDeath_mvl, 127
+	.equ	FightToTheDeath_key, 0
+	.equ	FightToTheDeath_tbs, 1
+	.equ	FightToTheDeath_exg, 0
+	.equ	FightToTheDeath_cmp, 1
 
 	.section .rodata
-	.global	song04
+	.global	FightToTheDeath
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song04_001:
+FightToTheDeath_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_01404F8E:
- .byte   TEMPO , 130*song04_tbs/2
+ .byte   TEMPO , 130*FightToTheDeath_tbs/2
  .byte   VOICE , 39
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*FightToTheDeath_mvl/mxv
  .byte   N12 ,An1 ,v108
  .byte   W12
  .byte   N05
@@ -241,12 +241,12 @@ Label_01405023:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song04_002:
+FightToTheDeath_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_014048EA:
  .byte   VOICE , 58
- .byte   VOL , 18*song04_mvl/mxv
+ .byte   VOL , 18*FightToTheDeath_mvl/mxv
  .byte   W96
 @  #02 @001   ----------------------------------------
  .byte   W96
@@ -415,13 +415,13 @@ Label_01404953:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song04_003:
+FightToTheDeath_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_01404C0A:
  .byte   VOICE , 81
  .byte   PAN , c_v-29
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*FightToTheDeath_mvl/mxv
  .byte   W96
 @  #03 @001   ----------------------------------------
  .byte   W96
@@ -625,13 +625,13 @@ Label_01404CBA:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song04_004:
+FightToTheDeath_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_014049EA:
  .byte   VOICE , 61
  .byte   PAN , c_v+15
- .byte   VOL , 19*song04_mvl/mxv
+ .byte   VOL , 19*FightToTheDeath_mvl/mxv
  .byte   W96
 @  #04 @001   ----------------------------------------
  .byte   W96
@@ -834,13 +834,13 @@ Label_01404A9A:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song04_005:
+FightToTheDeath_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_01405256:
  .byte   VOICE , 49
  .byte   PAN , c_v-11
- .byte   VOL , 8*song04_mvl/mxv
+ .byte   VOL , 8*FightToTheDeath_mvl/mxv
  .byte   N06 ,An4 ,v124
  .byte   W06
  .byte   Bn4
@@ -1061,13 +1061,13 @@ Label_014052FB:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song04_006:
+FightToTheDeath_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_014050EA:
  .byte   VOICE , 48
  .byte   PAN , c_v+31
- .byte   VOL , 10*song04_mvl/mxv
+ .byte   VOL , 10*FightToTheDeath_mvl/mxv
  .byte   N06 ,An3 ,v124
  .byte   W06
  .byte   Bn3
@@ -1288,12 +1288,12 @@ Label_0140518F:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song04_007:
+FightToTheDeath_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_014059FE:
  .byte   VOICE , 104
- .byte   VOL , 17*song04_mvl/mxv
+ .byte   VOL , 17*FightToTheDeath_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N06 ,An2 ,v124
  .byte   W06
@@ -1515,12 +1515,12 @@ Label_01405AA3:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song04_008:
+FightToTheDeath_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_014039DA:
  .byte   VOICE , 6
- .byte   VOL , 32*song04_mvl/mxv
+ .byte   VOL , 32*FightToTheDeath_mvl/mxv
  .byte   PAN , c_v-16
  .byte   N06 ,AnM1 ,v124
  .byte   W24
@@ -1682,12 +1682,12 @@ Label_01403A57:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song04_009:
+FightToTheDeath_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_01404D3A:
  .byte   VOICE , 124
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*FightToTheDeath_mvl/mxv
  .byte   N22 ,Cn1 ,v096
  .byte   N96 ,Cs2 ,v116
  .byte   W24
@@ -1838,12 +1838,12 @@ Label_01404D62:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song04_010:
+FightToTheDeath_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_014053B6:
  .byte   VOICE , 47
- .byte   VOL , 47*song04_mvl/mxv
+ .byte   VOL , 47*FightToTheDeath_mvl/mxv
  .byte   PAN , c_v-1
  .byte   N32 ,An1 ,v124
  .byte   W36
@@ -2045,12 +2045,12 @@ Label_01405466:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song04_011:
+FightToTheDeath_011:
 @  #11 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_014035AE:
  .byte   VOICE , 124
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*FightToTheDeath_mvl/mxv
  .byte   PAN , c_v-2
  .byte   N48 ,Cn1 ,v127
  .byte   W48
@@ -2196,12 +2196,12 @@ Label_014035C8:
 
 @**************** Track 12 (Midi-Chn.11) ****************@
 
-song04_012:
+FightToTheDeath_012:
 @  #12 @000   ----------------------------------------
- .byte   KEYSH , song04_key+0
+ .byte   KEYSH , FightToTheDeath_key+0
 Label_01404806:
  .byte   VOICE , 47
- .byte   VOL , 25*song04_mvl/mxv
+ .byte   VOL , 25*FightToTheDeath_mvl/mxv
  .byte   N96 ,An3 ,v127
  .byte   W96
 @  #12 @001   ----------------------------------------
@@ -2309,25 +2309,25 @@ Label_01404806:
 @******************************************************@
 	.align	2
 
-song04:
+FightToTheDeath:
 	.byte	12	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song04_pri	@ Priority
-	.byte	song04_rev	@ Reverb.
+	.byte	FightToTheDeath_pri	@ Priority
+	.byte	FightToTheDeath_rev	@ Reverb.
     
-	.word	song04_grp
+	.word	FightToTheDeath_grp
     
-	.word	song04_001
-	.word	song04_002
-	.word	song04_003
-	.word	song04_004
-	.word	song04_005
-	.word	song04_006
-	.word	song04_007
-	.word	song04_008
-	.word	song04_009
-	.word	song04_010
-	.word	song04_011
-	.word	song04_012
+	.word	FightToTheDeath_001
+	.word	FightToTheDeath_002
+	.word	FightToTheDeath_003
+	.word	FightToTheDeath_004
+	.word	FightToTheDeath_005
+	.word	FightToTheDeath_006
+	.word	FightToTheDeath_007
+	.word	FightToTheDeath_008
+	.word	FightToTheDeath_009
+	.word	FightToTheDeath_010
+	.word	FightToTheDeath_011
+	.word	FightToTheDeath_012
 
 	.end

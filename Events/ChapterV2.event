@@ -156,7 +156,9 @@ EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-Text(PathCG,FillerDialogue)
+CleanTextNoMap(VillageCG,V2Ending1)
+MUSC S_Chaos
+CleanTextNoMap(PathCG,V2Ending2)
 MoveToChapter(Interlude7)
 EndEvent
 

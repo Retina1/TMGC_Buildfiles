@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,I7MapStart,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -68,5 +69,11 @@ DisableFreeMovement
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(ChapterV3)
 ENDA
+
+I7MapStart:
+Text(FillerDialogue)//after paying merc salaries and setting aside family money, viridian has 60k left for equipment and other expenses
+GiveMoney(0xEA60)
+EndEvent
+
 
 //MESSAGE Events end at offset CURRENTOFFSET

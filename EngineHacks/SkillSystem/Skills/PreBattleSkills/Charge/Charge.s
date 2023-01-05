@@ -32,7 +32,6 @@ beq End
 
 ldr r3,=0x203a968 @Spaces Moved
 ldrb r2,[r3]
-lsr r2,#0x1
 mov r1, #0x5A
 ldrh r0, [r4, r1]
 add r0, r2

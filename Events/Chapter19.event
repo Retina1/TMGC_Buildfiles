@@ -77,6 +77,18 @@ TrapData:
 ENDTRAP
 
 ALIGN 4
+C19OpeningMichael:
+UNIT Michael Sniper 0x0 Level(8,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [BarrierBow] NeverMoveAI
+UNIT
+
+C19OpeningCutscene:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [25,6] 0x0 0x0 0x1 REDA24R6 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [25,6] 0x0 0x0 0x1 REDA23R6 [IronBow] NoAI
+UNIT
+
+C19OpeningCutscene2:
+UNIT Michael DarkM 0x0 Level(8,Enemy,1) [19,1] 0x0 0x0 0x1 REDA22R4 [BarrierBow] NeverMoveAI
+UNIT
 
 C19Units:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [24,6] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
@@ -320,12 +332,26 @@ TILECHANGE 0x3
 TILECHANGE 0x4
 TILECHANGE 0x5
 TILECHANGE 0x6
+LOAD1 0x1 C19OpeningMichael
 ENUT GuideChpt19
 MUSC NarrationTheme3
 Narration(Map2CG,Ch19_Narration)
 MUSC AmbientSwoosh
-CleanTextNoMap(LowlandsRiverCG,Ch19_Opening)
-//break up text - one break for michael, one for army spawns
+CleanText(LowlandsRiverCG,Ch19_Opening)
+Reinforcements(C19OpeningCutscene)
+CAM1 Blair
+MOVE 30 Michael [22,7]
+ENUN
+MUSC S_Chaos
+Text(Ch19_Opening2)
+FADI 0x3C
+SilentKillUnit(Michael)
+CleanText(LowlandsRiverCG,Ch19_Opening3)
+Reinforcements(C19OpeningCutscene2)
+MUSC S_Crisis
+Text(Ch19_Opening4)
+FADI 0x3C
+SilentKillUnit(Michael)
 LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
 LOAD1 0x0 C19Units
 ENUN

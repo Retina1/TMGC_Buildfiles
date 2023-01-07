@@ -72,6 +72,7 @@ ALIGN 4
 
 I7Units:
 UNIT Viridian BlairLord 0x0 Level(1,Ally,0) [11,12] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Freddric WyvLord 0x0 Level(1,Ally,0) [11,11] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT
 
 I7NPC:
@@ -100,6 +101,8 @@ DisableFreeMovement
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(ChapterV3)
 ENDA
+
+//freddric talk prevents progress if you haven't talked to viridian parents yet
 
 I7MapStart:
 Text(FillerDialogue)//after paying merc salaries and setting aside family money, viridian has 60k left for equipment and other expenses

@@ -163,18 +163,18 @@ MoveToChapter(Interlude7)
 EndEvent
 
 V2Village1:
-VillageEventItem(FillerDialogue, HouseCG, SpiritDust)
+VillageEventItem(V2Village1Text, HouseCG, SpiritDust)
 V2Village2:
-VillageEventItem(FillerDialogue, HouseCG, Runeward)
+VillageEventItem(V2Village2Text, HouseCG, Runeward)
 V2Village3:
-VillageEventItem(FillerDialogue, HouseCG, MasterSeal)
+VillageEventItem(V2Village3Text, HouseCG, MasterSeal)
 V2Village4:
-VillageEventItem(FillerDialogue, HouseCG, Greatbow)
+VillageEventItem(V2Village4Text, HouseCG, Greatbow)
 
 CV2Turn2:
 Reinforcements(V2MoreUnits)
 MUSC RecruitmentThemeVirid
-Text(FillerDialogue)
+Text(V2DirkCallumJoin)
 SetSupport(Eliza,Dirk,BSupport)
 SetSupport(Dean,Dirk,CPSupport)
 SetSupport(Rift,Callum,CPSupport)

@@ -26,6 +26,9 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x0,I7ReadyToEnd,Viridian,Freddric)
+CharacterEvent(0x10,I7ViridianFamily,Viridian,Valeria)
+CharacterEvent(0x10,I7ViridianFamily,Viridian,Victor)
 END_MAIN
 
 LocationBasedEvents:
@@ -33,7 +36,10 @@ Armory(I7Armory,6,10)
 Armory(I7Armory2,16,10)
 Vendor(I7Vendor,1,10)
 Vendor(I7Vendor2,21,10)
-//Village(0x21,I4LeftVillage,2,33) just throwing village in to have template
+House(0x1a,I7House1,21,3)
+House(0x1b,I7House2,4,10)
+House(0x1c,I7House3,1,21)
+House(0x1d,I7House4,20,26)
 END_MAIN
 
 ALIGN 4
@@ -102,7 +108,37 @@ CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(ChapterV3)
 ENDA
 
+I7ReadyToEnd:
+CHECK_EVENTID 0x10
+BNE 0x6 0xc 0x0
+Text(FillerDialogue)//talk to your family please
+GOTO 0x1
+LABEL 0x6
+EVBIT_MODIFY 4
+Text(FillerDialogue)
+SystemText(I1LeavePrompt)
+IfNoSelectedGoto(0x2)
+CALL EndingScene
+GOTO 0x1
+LABEL 0x2
+Text(FillerDialogue)//not yet
+LABEL 0x1
+EndEvent
+
+I7ViridianFamily:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+EndEvent
+
 //freddric talk prevents progress if you haven't talked to viridian parents yet
+I7House1:
+HouseEvent(FillerDialogue,House2CG)
+I7House2:
+HouseEvent(I7InnText,House2CG)
+I7House3:
+HouseEvent(FillerDialogue,House2CG)
+I7House4:
+HouseEvent(FillerDialogue,House2CG)
 
 I7MapStart:
 Text(FillerDialogue)//after paying merc salaries and setting aside family money, viridian has 60k left for equipment and other expenses

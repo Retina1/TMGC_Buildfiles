@@ -1569,8 +1569,8 @@ Label_01408022:
 song04_003:
 @  #03 @000   ----------------------------------------
  .byte   KEYSH , song04_key+0
- .byte   VOICE , 28
- .byte   VOL , 71*song04_mvl/mxv
+ .byte   VOICE , 104
+ .byte   VOL , 31*song04_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N44 ,Gn1 ,v096
  .byte   N44 ,Dn2
@@ -3248,7 +3248,7 @@ song04_005:
 @  #05 @000   ----------------------------------------
  .byte   KEYSH , song04_key+0
  .byte   VOICE , 124
- .byte   VOL , 53*song04_mvl/mxv
+ .byte   VOL , 38*song04_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N32 ,Cn1 ,v096
  .byte   N23 ,Cs2

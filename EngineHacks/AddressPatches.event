@@ -1,3 +1,10 @@
+//torch sight value
+PUSH
+ORG 0x02F4AE
+BYTE 0x01
+ORG 0x290ce
+SHORT 0x2801
+POP
 //staff base hitrate
 PUSH
 ORG 0x2cd30

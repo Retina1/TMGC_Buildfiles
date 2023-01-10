@@ -26,6 +26,21 @@
 #include "BattleMenus/BattleMenuInstaller.txt"
 
 PUSH
+ORG 0x43ad4
+POIN NameEntry
+ORG 0x447dc
+POIN NameEntry
+//ORG 0x43af0
+//POIN NameEntryPalette
+POP
+ALIGN 4
+NameEntry:
+#incbin "NameEntry.png.dmp"
+//ALIGN 4
+//NameEntryPalette:
+//#incbin "NameEntry.png.pal.dmp"
+
+PUSH
 ORG $202B0
 POIN MapIntro
 ORG 0x0202B8

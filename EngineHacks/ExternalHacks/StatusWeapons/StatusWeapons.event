@@ -3,5 +3,10 @@
 #ifdef STATUS_WEAPONS
 
   #include "StatusWeapons.lyn.event"
+//dration
+PUSH
+ORG 0x178EA
+BYTE 0x10
+POP
 
 #endif // STATUS_WEAPONS

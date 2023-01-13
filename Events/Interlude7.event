@@ -86,6 +86,8 @@ UNIT Valeria CitizenF 0x0 Level(16,NPC,0) [17,12] 0x0 0x0 0x0 0x0 [0x0] NeverMov
 UNIT Victor CitizenM 0x0 Level(14,NPC,0) [19,12] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Merchant SwMast 0x0 Level(20,NPC,1) [18,1] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Dalst Falco 0x0 Level(17,NPC,1) [8,17] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Joan HeroF 0x0 Level(11,Enemy,1) [10,2] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Sonia HalberdierF 0x0 Level(13,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 ALIGN 4
@@ -94,7 +96,7 @@ BeginningScene:
 EnableFreeMovement
 MUSC NarrationTheme3
 Narration(Map2CG,Base7_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(VillageCG,I7Opening)
 LOAD1 0x0 I7NPC
 ENUN
 LOAD1 0x0 I7Units
@@ -104,6 +106,7 @@ ENDA
 
 EndingScene:
 DisableFreeMovement
+Text(I7ReleaseMe)
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(ChapterV3)
 ENDA
@@ -111,17 +114,17 @@ ENDA
 I7ReadyToEnd:
 CHECK_EVENTID 0x10
 BNE 0x6 0xc 0x0
-Text(FillerDialogue)//talk to your family please
+Text(I7TalkToYourFamilyGoober)//talk to your family please
 GOTO 0x1
 LABEL 0x6
 EVBIT_MODIFY 4
-Text(FillerDialogue)
+Text(I7ConfirmLeave)
 SystemText(I1LeavePrompt)
 IfNoSelectedGoto(0x2)
 CALL EndingScene
 GOTO 0x1
 LABEL 0x2
-Text(FillerDialogue)//not yet
+Text(I7NotYet)//not yet
 LABEL 0x1
 EndEvent
 
@@ -141,7 +144,7 @@ I7House4:
 HouseEvent(FillerDialogue,House2CG)
 
 I7MapStart:
-Text(FillerDialogue)//after paying merc salaries and setting aside family money, viridian has 60k left for equipment and other expenses
+Text(I7Gold)//after paying merc salaries and setting aside family money, viridian has 60k left for equipment and other expenses
 GiveMoney(0xEA60)
 EndEvent
 

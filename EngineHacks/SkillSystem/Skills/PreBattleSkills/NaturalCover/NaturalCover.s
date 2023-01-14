@@ -5,20 +5,6 @@ push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
-@tile has no bonuses
-mov r1, #0x56
-ldrb r0, [r4,r1] @terrain def
-cmp r0, #0
-bne CheckSkill
-add r1, #1
-ldrb r0, [r4,r1] @terrain avo
-cmp r0, #0
-bne CheckSkill
-add r1, #1
-ldrb r0, [r4,r1] @terrain res
-cmp r0, #0
-beq End
-
 CheckSkill:
 @has NaturalCover
 ldr r0, SkillTester
@@ -29,19 +15,15 @@ ldr r1, NaturalCoverID
 cmp r0, #0
 beq End
 
-@sub 3 damage
-@ mov r1, #0x5a
-@ ldrh r0, [r5, r1] @atk
-@ sub r0, #3
-@ cmp r0, #0
-@ bge NotMin
-@ mov r0, #0 @in case negative?
-@ NotMin:
-@ strh r0, [r5,r1]
+mov r1, #0x31
+ldrsh r2, [r4, r1] @barrier/torch byte
+lsr r2,r2,#0x4
+cmp r2,#0
+ble End
 
-mov r1, #0x5c
-ldrsh r0, [r4, r1] @atk
-add r0, #3
+mov r1, #0x5e
+ldrsh r0, [r4, r1] @as
+add r0, r2
 strh r0, [r4,r1]
 
 End:

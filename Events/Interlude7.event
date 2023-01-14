@@ -130,18 +130,17 @@ EndEvent
 
 I7ViridianFamily:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(I7FamilyConvo)
 EndEvent
 
-//freddric talk prevents progress if you haven't talked to viridian parents yet
 I7House1:
-HouseEvent(FillerDialogue,House2CG)
+HouseEvent(I7House1Text,House2CG)
 I7House2:
 HouseEvent(I7InnText,House2CG)
 I7House3:
-HouseEvent(FillerDialogue,House2CG)
+HouseEvent(I7House2Text,House2CG)
 I7House4:
-HouseEvent(FillerDialogue,House2CG)
+HouseEvent(I7House3Text,House2CG)
 
 I7MapStart:
 Text(I7Gold)//after paying merc salaries and setting aside family money, viridian has 60k left for equipment and other expenses

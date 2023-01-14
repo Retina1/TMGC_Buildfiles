@@ -488,8 +488,10 @@
 #define ProtectiveID MageSlayerID
 
 //Natural Cover: -3 damage taken when on terrain with effects.
+//jk now it's Shroud: +AS equal to current Res bonus from Pure Water.
 //Author Unknown (Initial Commit)
 #define NaturalCoverID 224
+#define ShroudID NaturalCoverID
 
 //Opportunist: +4 damage if the foe cannot counter.
 //By Tequila

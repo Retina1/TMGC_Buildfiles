@@ -154,6 +154,8 @@ CALL EndingScene
 LABEL 0x1
 EndEvent
 
+//use event id 0x66 to disable objective display
+
 BeginningScene:
 LOAD1 0x1 V1Units
 ENUN

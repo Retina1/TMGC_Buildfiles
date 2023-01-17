@@ -29,6 +29,11 @@ CharacterBasedEvents:
 CharacterEvent(0x0,I7ReadyToEnd,Viridian,Freddric)
 CharacterEvent(0x10,I7ViridianFamily,Viridian,Valeria)
 CharacterEvent(0x10,I7ViridianFamily,Viridian,Victor)
+CharacterEvent(0x11,I7CouncilMembers,Viridian,Elcorian)
+CharacterEvent(0x11,I7CouncilMembers,Viridian,0xa4)
+CharacterEvent(0x12,I7KennethDad,Viridian,0xa3)
+CharacterEvent(0x13,I7Joania,Viridian,Joan)
+CharacterEvent(0x13,I7Joania,Viridian,Sonia)
 END_MAIN
 
 LocationBasedEvents:
@@ -88,6 +93,9 @@ UNIT Merchant SwMast 0x0 Level(20,NPC,1) [18,1] 0x0 0x0 0x0 0x0 [0x0] NeverMoveA
 UNIT Dalst Falco 0x0 Level(17,NPC,1) [8,17] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Joan HeroF 0x0 Level(11,Enemy,1) [10,2] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT Sonia HalberdierF 0x0 Level(13,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Elcorian Valk 0x0 Level(16,NPC,0) [3,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT 0xa4 SageF 0x0 Level(18,NPC,0) [4,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT 0xa3 WyvLord 0x0 Level(17,NPC,0) [15,18] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 ALIGN 4
@@ -131,6 +139,20 @@ EndEvent
 I7ViridianFamily:
 MUSC S_CircleOfTheMoon
 Text(I7FamilyConvo)
+EndEvent
+
+I7CouncilMembers:
+MUSC S_Chaos
+Text(I7ElcorianEthylConvo)
+EndEvent
+
+I7KennethDad:
+MUSC S_RigorousJustice
+Text(I7TarquinConvo)
+EndEvent
+
+I7Joania:
+Text(I7JoanSoniaConvo)
 EndEvent
 
 I7House1:

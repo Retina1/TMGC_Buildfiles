@@ -186,7 +186,7 @@ setMugEntry(0x1e,AthenaMug,3,6,3,4)
 ALIGN 4
 CharleyMug:
 #incext PortraitFormatter "Charley.png"
-setMugEntry(0x20,CharleyMug,4,6,3,4)
+setMugEntry(0x20,CharleyMug,3,5,3,3)
 
 ALIGN 4
 ZekeMug:
@@ -400,8 +400,23 @@ setMugEntry(0xB,ElcorianMug,3,5,3,2)
 //temporary
 ALIGN 4
 AgnesMug:
-#incext PortraitFormatter "Elcorian.png"
-setMugEntry(0xe7,AgnesMug,3,5,3,2)
+#incext PortraitFormatter "Placeholder.png"
+setMugEntry(0xe7,AgnesMug,3,5,3,3)
+ALIGN 4
+GaylordMug:
+#incext PortraitFormatter "Placeholder.png"
+setMugEntry(0xe8,GaylordMug,3,5,3,3)
+
+
+ALIGN 4
+ValeriaMug:
+#incext PortraitFormatter "Placeholder.png"
+setMugEntry(0xe1,ValeriaMug,3,5,3,3)
+ALIGN 4
+VictorMug:
+#incext PortraitFormatter "Placeholder.png"
+setMugEntry(0xe9,VictorMug,3,5,3,3)
+
 
 
 

@@ -114,9 +114,16 @@ ENDA
 
 EndingScene:
 DisableFreeMovement
-//introduce viridian to tarquin, check if tarquin talk happened
+EVBIT_MODIFY 3
 Text(I7ReleaseMe)
-CleanTextNoMap(HallCG,FillerDialogue)
+LocationText(HouseCG,I7DinnerScene,ArbordiaInnLabel,S_WelcomeToLegend)
+CHECK_EVENTID 0x12
+BEQ 0x1 0xc 0x0
+LocationText(HallCG, I7TheNextJobTarquinKnown,ArbordiaMeetingHallLabel,S_RigorousJustice)
+GOTO 0x2
+LABEL 0x1
+LocationText(HallCG, I7TheNextJob,ArbordiaMeetingHallLabel,S_RigorousJustice)
+LABEL 0x2
 MoveToChapter(ChapterV3)
 ENDA
 

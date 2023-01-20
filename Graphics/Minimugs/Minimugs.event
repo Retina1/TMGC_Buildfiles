@@ -1,0 +1,26 @@
+PUSH
+ORG 0x5F6C
+BYTE $00 $B5 $FF $21 $08 $40 $C0 $00 $02 $49 $40 $18 $00 $68 $02 $BC $08 $47 $C0 $46
+POIN GenericMinimugTable
+POP
+
+PUSH
+ORG 0x5F9C
+BYTE $00 $B5 $FF $22 $10 $40 $C0 $00 $05 $4A $80 $18 $40 $68 $49 $01 $20 $22 $02 $4B $9E $46 $00 $F8 $01 $BC $00 $47 $B8 $0D $00 $08
+POIN GenericMinimugTable
+POP
+
+#define GenericMinimugEntry(id,gfx,pal) "PUSH; ORG (GenericMinimugTable+(8*id)); POIN gfx pal; POP"
+
+ALIGN 4
+GenericMinimugTable:
+FILL 256*8
+
+GenericMinimugEntry(0,$599D34,$599F34)
+GenericMinimugEntry(1,$599B34,$599F54)
+GenericMinimugEntry(2,$599734,$599F74)
+GenericMinimugEntry(3,$599734,$599F54)
+GenericMinimugEntry(4,$599D34,$599F54)
+GenericMinimugEntry(5,$599934,$599F74)
+GenericMinimugEntry(6,$599934,$599F54)
+GenericMinimugEntry(7,$599D34,$599F34)

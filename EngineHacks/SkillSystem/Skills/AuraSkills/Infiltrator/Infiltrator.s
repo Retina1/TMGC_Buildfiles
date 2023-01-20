@@ -23,7 +23,7 @@ CheckSkill:
 ldr r0, GetUnitsInRange
 mov lr, r0
 mov r0, r4 @attacker
-mov r1, #3 @Enemy
+mov r1, #0 @can trade
 mov r2, #2
 .short 0xf800
 cmp r0, #0
@@ -33,25 +33,17 @@ mov r2, #0x0
 Loop:
 ldrb r1, [r0, r2]
 cmp  r1, #0x0
-beq  CheckCount
+beq  Next
 add  r2, #0x1
 b Loop
 
-CheckCount:
-cmp r2,#0x2
-blt Done
-
 Next:
+mov r3,#3
+mul r2,r2,r3
 mov r0, #0x5A
 ldrh r3, [r4,r0]
-add r3, #3
+add r3, r2
 strh r3, [r4,r0]
-
-mov r0, #0x60
-ldrh r3, [r4,r0]
-add r3, #15
-strh r3, [r4,r0]
-
 
 Done:
 pop {r4-r7, r15}

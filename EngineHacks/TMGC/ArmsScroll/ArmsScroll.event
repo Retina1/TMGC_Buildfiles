@@ -1,0 +1,41 @@
+
+#define ArmsScrollEffectID 0x46
+
+/*
+## ArmsScrollPopupText
+Ranks increased.[X]
+*/
+
+ALIGN 4
+ArmsScrollPopup:
+	Popup_SetSound(0x5A)
+//	Popup_Space(1)
+//	Popup_ItemIcon
+	Popup_Space(1)
+	Popup_SetColor(0)
+	Popup_StringId(ArmsScrollPopupText)
+	Popup_Space(1)
+	Popup_End
+
+ALIGN 4
+ArmsScrollPopupPointer:
+POIN ArmsScrollPopup
+
+ALIGN 4
+ArmsScrollPopupTextWord:
+WORD ArmsScrollPopupText
+
+#include "ArmsScroll.lyn.event"
+
+#define ArmsScrollEffect ArmsScrollEffectLadder
+#define ArmsScrollUsability ArmsScrollUsabilityLadder
+#define ArmsScrollTargetting 0x2905C
+#define ArmsScrollPrepScreenUsability ArmsScrollPrepScreenUsabilityFunc
+#define ArmsScrollPrepScreenEffect ArmsScrollPrepScreenEffectFunc
+
+/*PUSH
+	ORG IERevampTable + (ArmsScrollEffectID * 16)
+	POIN ArmsScrollUsability ArmsScrollPrepScreenUsability ArmsScrollTargetting ArmsScrollEffect
+	ORG IBArray + (ArmsScrollEffectID * 4)
+	POIN ArmsScrollPrepScreenEffect
+POP*/

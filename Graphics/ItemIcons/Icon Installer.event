@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(MorningStarIcon)
+#incbin "Tomes/Light/Radiance.dmp"
+ALIGN 4
 ItemIconEntry(ArmsScrollIcon)
 #incbin "statboosters/ArmScroll.dmp"
 ALIGN 4

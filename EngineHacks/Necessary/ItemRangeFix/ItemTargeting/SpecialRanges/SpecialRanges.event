@@ -15,6 +15,7 @@
 
 SpecialRangeTable:
 SpecialRange(0,1,HalfMag_Text,HalfMag_Range|1)
+SpecialRange(0,2,FullMag_Text,FullMag_Range|1)
 SpecialRange(0xf,0xf,Total_RangeText, Total_Range|1)
 SpecialRangeEnd	//End of Table
 
@@ -33,6 +34,14 @@ HalfMag_Range:
 	#ifdef _FE8_
 	POIN 0x18A1C
 	#endif
+
+FullMag_Range:
+#include "RangeCalcs/HalfMag_Range.lyn.event"
+	POIN FullMagFormula
+FullMagFormula:
+#include "RangeCalcs/FullRange.lyn.event"
+POIN 0x191B8 + 1 // get unit mag
+//remember you can use this to make range scale off of any stat and any divisor
 
 Total_Range:
 SHORT 0x20FF 0x2100	//return 0xFF for total range

@@ -78,7 +78,7 @@ Chest(JavelinRain,18,24)
 Chest(NoxAurumque,19,23)
 Chest(Eyedrops,15,35)
 Chest(BigShield,17,36)
-Chest(ZoryaShield,19,36)
+Chest(Voulche,19,36)
 Chest(Again,16,37)
 //shop
 SecretShop(Ch21SecretShop,12,4) 
@@ -101,13 +101,13 @@ Tutorial:
 END_MAIN
 
 TrapData:
-TelliusTorchOff(15,7,6)
-TelliusTorchOff(6,17,6)
-TelliusTorchOff(15,23,6)
-TelliusTorchOff(6,8,6)
-TelliusTorchOff(4,5,6)
-TelliusTorchOff(10,29,6)
-TelliusTorchOn(1,32,6)
+TelliusTorchOff(15,7,8)
+TelliusTorchOff(6,17,8)
+TelliusTorchOff(15,23,8)
+TelliusTorchOff(6,8,8)
+TelliusTorchOff(4,5,8)
+TelliusTorchOff(10,29,8)
+TelliusTorchOn(1,32,8)
 ENDTRAP
 TrapData2:
 ENDTRAP
@@ -143,7 +143,7 @@ UNIT
 
 C21Hard:
 UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [7,25] 0x0 0x0 0x0 0x0 [Fenrir] NoAI
-UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(15,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [Stormbow] NeverMoveAI
 UNIT

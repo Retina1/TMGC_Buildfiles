@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x3,EndingScene,16)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -28,7 +29,6 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Seize(0,0)
 END_MAIN
 
 ALIGN 4
@@ -79,6 +79,10 @@ UNIT
 
 C26Hard:
 UNIT Dalst Brigand 0x0 Level(19,Enemy,1) [18,15] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [18,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
+UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
+UNIT Dalst LightM 0x0 Level(20,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst LightM 0x0 Level(20,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [Galewind,Purge,Nocturne,Starfall] NeverMoveAI
 UNIT
 

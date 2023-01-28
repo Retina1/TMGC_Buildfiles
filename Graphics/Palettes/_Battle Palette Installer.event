@@ -158,6 +158,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define MichaelPaletteID 0x7f
 
 #define ClarquePaletteID 0x80
+#define ReynardPaletteID 0x82
 
 #define IneubrenosPaletteID 0x78
 
@@ -296,6 +297,7 @@ setPalette(EduardoPaletteID,EduardoPalette)
 setPalette(BungalasPaletteID,BungalasPalette)
 setPalette(MichaelPaletteID,MichaelPalette)
 setPalette(ClarquePaletteID,ClarquePalette)
+setPalette(ReynardPaletteID,ReynardPalette)
 
 setPalette(IneubrenosPaletteID,IneubrenosPalette)
 
@@ -398,6 +400,7 @@ SetPaletteFull(Bungalas,0x0,0x0,BungalasPaletteID,LncGen,0x0,0x0)
 SetPaletteFull(Michael,0x0,0x0,MichaelPaletteID,Sniper,0x0,0x0)
 SetPaletteFull(Clarque,0x0,0x0,ClarquePaletteID,BowPal,0x0,0x0)
 SetPaletteFull(DLDavelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
+SetPaletteFull(Reynard,0x0,0x0,ReynardPaletteID,Hero,0x0,0x0)
 
 SetPaletteFull(BossIneubrenos,0x0,0x0,IneubrenosPaletteID,SniperF,0x0,0x0)
 
@@ -801,6 +804,9 @@ MichaelPalette:
 ALIGN 4
 ClarquePalette:
 #incbin "Clarque.dmp"
+ALIGN 4
+ReynardPalette:
+#incbin "Reynard.dmp"
 
 
 ALIGN 4

@@ -81,18 +81,18 @@ UNIT
 
 C28Hard:
 UNIT DL1 ViridianLord 0x0 Level(15,Enemy,1) [10,3] DropItem 0x0 0x0 0x0 [Soulbow,SkillScroll] NoAI
-UNIT DL2 WyvLord 0x0 Level(18,Enemy,1) [10,4] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [10,5] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL4 BishopF 0x0 Level(9,Enemy,1) [10,6] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
+UNIT DL2 WyvLord 0x0 Level(18,Enemy,1) [10,4] DropItem 0x0 0x0 0x0 [TrueSaunion,MasterLance,SkillScroll] NoAI
+UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [10,5] DropItem 0x0 0x0 0x0 [GildedAxe,MasterAxe,SkillScroll] NoAI
+UNIT DL4 BishopF 0x0 Level(9,Enemy,1) [10,6] DropItem 0x0 0x0 0x0 [Radiance,MorningStar,SkillScroll] NoAI
 UNIT DL5 BardF 0x0 Level(17,Enemy,1) [10,7] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL6 SwMast 0x0 Level(13,Enemy,1) [10,8] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL7 BowPalF 0x0 Level(8,Enemy,1) [10,9] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL8 SageF 0x0 Level(6,Enemy,1) [10,10] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL9 Berserker 0x0 Level(12,Enemy,1) [10,11] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL10 SwdPal 0x0 Level(16,Enemy,1) [10,12] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL11 Sorc 0x0 Level(11,Enemy,1) [10,13] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL12 Halberdier 0x0 Level(13,Enemy,1) [10,14] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
-UNIT DL13 BowGen 0x0 Level(16,Enemy,1) [10,15] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
+UNIT DL6 SwMast 0x0 Level(13,Enemy,1) [10,8] DropItem 0x0 0x0 0x0 [FlameSword,MasterSword,MainGauche,SkillScroll] NoAI
+UNIT DL7 BowPalF 0x0 Level(8,Enemy,1) [10,9] DropItem 0x0 0x0 0x0 [GildedBow,Greatbow,SkillScroll] NoAI
+UNIT DL8 SageF 0x0 Level(6,Enemy,1) [10,10] DropItem 0x0 0x0 0x0 [Flare,Galewind,ForceSpike,SkillScroll] NoAI
+UNIT DL9 Berserker 0x0 Level(12,Enemy,1) [10,11] DropItem 0x0 0x0 0x0 [MasterAxe,DangerPick,SkillScroll] NoAI
+UNIT DL10 SwdPal 0x0 Level(16,Enemy,1) [10,12] DropItem 0x0 0x0 0x0 [GildedSword,MasterSword,SkillScroll] NoAI
+UNIT DL11 Sorc 0x0 Level(11,Enemy,1) [10,13] DropItem 0x0 0x0 0x0 [Nocturne,Hell,Voulche,SkillScroll] NoAI
+UNIT DL12 Halberdier 0x0 Level(13,Enemy,1) [10,14] DropItem 0x0 0x0 0x0 [MasterLance,HighRoller,SkillScroll] NoAI
+UNIT DL13 BowGen 0x0 Level(16,Enemy,1) [10,15] DropItem 0x0 0x0 0x0 [MasterAxe,MasterBow,Stormbow,SkillScroll] NoAI
 UNIT
 
 ALIGN 4
@@ -104,18 +104,18 @@ Narration(Map2CG,Ch28_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C28Easy,C28Normal,C28Hard)
 SetUnitItemDurability(DL1, 1, InspirationID)
-SetUnitItemDurability(DL2, 0, KillerTacticsID)
-SetUnitItemDurability(DL3, 0, DragonFangID)
-SetUnitItemDurability(DL4, 0, RallyLukID)
+SetUnitItemDurability(DL2, 2, KillerTacticsID)
+SetUnitItemDurability(DL3, 2, DragonFangID)
+SetUnitItemDurability(DL4, 2, RallyLukID)
 SetUnitItemDurability(DL5, 0, ResonanceID)
-SetUnitItemDurability(DL6, 0, LuckySevenID)
-SetUnitItemDurability(DL7, 0, LungeID)
-SetUnitItemDurability(DL8, 0, ParagonID)
-SetUnitItemDurability(DL9, 0, ProtectiveID)
-SetUnitItemDurability(DL10,0, IgnisID)
-SetUnitItemDurability(DL11,0, ShroudID)
-SetUnitItemDurability(DL12,0, GambleID)
-SetUnitItemDurability(DL13,0, InspirationID)
+SetUnitItemDurability(DL6, 3, LuckySevenID)
+SetUnitItemDurability(DL7, 2, LungeID)
+SetUnitItemDurability(DL8, 3, ParagonID)
+SetUnitItemDurability(DL9, 2, ProtectiveID)
+SetUnitItemDurability(DL10,2, IgnisID)
+SetUnitItemDurability(DL11,3, ShroudID)
+SetUnitItemDurability(DL12,2, GambleID)
+SetUnitItemDurability(DL13,3, InspirationID)
 KillUnitIfPlayerAlive(Viridian,DL1)
 KillUnitIfPlayerAlive(Freddric,DL2)
 KillUnitIfPlayerAlive(Dean,DL3)

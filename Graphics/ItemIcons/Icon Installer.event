@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(VoulcheIcon)
+#incbin "Tomes/Dark/Voulche.dmp"
+ALIGN 4
 ItemIconEntry(MorningStarIcon)
 #incbin "Tomes/Light/Radiance.dmp"
 ALIGN 4

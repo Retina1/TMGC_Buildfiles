@@ -28,6 +28,8 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Armory(V3Armory,11,20)
+Vendor(V3Vendor,3,18)
 Door(2,13)
 Door(16,17)
 Door(10,1)
@@ -35,6 +37,16 @@ Door(18,5)
 Door(2,1)
 Seize(2,1)//check all doors open before seize works (if doors not open, viridian says "hey dummy, open doors")
 END_MAIN
+
+ALIGN 4
+V3Armory:
+SHLI SilverSword GildedSword Lancereaver SilverLance GildedLance Axereaver SilverAxe GildedAxe Swordreaver SilverBow GildedBow Longbow
+BYTE 0x0 0x0
+ALIGN 4
+V3Vendor:
+SHLI Fimbulvetr Inversion Calibur Aura Banish Pierce Fenrir Corruption Knoggelvi Physic Recover Restore Barrier Yoink Vulnerary Elixir
+BYTE 0x0 0x0
+ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
@@ -57,6 +69,7 @@ TelliusTorchOff(6,15,8)
 TelliusTorchOff(11,18,8)
 TelliusTorchOn(6,23,8)
 TelliusTorchOn(14,23,8)
+TelliusTorchOn(11,2,3)
 ENDTRAP
 TrapData2:
 ENDTRAP
@@ -85,8 +98,18 @@ UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, J
 UNIT
 
 V3Hard:
+UNIT Remnant Sage 0x0 Level(2,Enemy,1) [10,2] DropItem 0x0 0x0 0x0 [Sagittae,Elfire,Silence] NeverMoveAI
+UNIT Remnant Sage 0x0 Level(2,Enemy,1) [2,14] DropItem 0x0 0x0 0x0 [Elfire,DoorKey] NeverMoveAI
+UNIT Remnant Warrior 0x0 Level(2,Enemy,1) [16,18] DropItem 0x0 0x0 0x0 [HandAxe,DoorKey] NeverMoveAI
 UNIT Remnant LncWyv 0x0 Level(17,Enemy,1) [18,0] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Remnant AxeWyv 0x0 Level(17,Enemy,1) [19,1] 0x0 0x0 0x0 0x0 [Swordreaver] NoAI
+UNIT Remnant Soldier 0x0 Level(17,Enemy,1) [7,14] 0x0 0x0 0x0 0x0 [Javelin] AttackInRangeAI
+UNIT Remnant Merc 0x0 Level(17,Enemy,1) [1,17] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Remnant AxeArm 0x0 Level(17,Enemy,1) [15,21] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Remnant SwdArm 0x0 Level(17,Enemy,1) [14,22] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
+UNIT Remnant LncArm 0x0 Level(17,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
+UNIT Remnant Fighter 0x0 Level(15,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [DangerPick] NoAI
+UNIT Remnant Halberdier 0x0 Level(1,Enemy,1) [12,17] 0x0 0x0 0x0 0x0 [Axereaver] NoAI
 UNIT Remnant Archer 0x0 Level(17,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [Longbow] AttackInRangeAI
 UNIT Remnant BowCav 0x0 Level(18,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Longbow] AttackInRangeAI
 UNIT Remnant Sorc 0x0 Level(1,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI

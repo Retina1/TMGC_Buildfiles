@@ -45,6 +45,10 @@ dalst
 //songs
 
 {
+#include "GUILT.event"
+SongTable(S_GUILT,GUILT,1)
+}
+{
 #include "FightToTheDeath.event"
 SongTable(S_FightToTheDeath,FightToTheDeath,0)
 }

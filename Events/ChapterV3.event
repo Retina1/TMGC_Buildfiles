@@ -34,8 +34,7 @@ Door(2,13)
 Door(16,17)
 Door(10,1)
 Door(18,5)
-Door(2,1)
-Seize(2,1)//check all doors open before seize works (if doors not open, viridian says "hey dummy, open doors")
+Seize(0x3,SeizeCheck,2,1)//check all doors open before seize works (if doors not open, viridian says "hey dummy, open doors")
 END_MAIN
 
 ALIGN 4
@@ -50,6 +49,10 @@ ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AFEV 0x21 V3Door1 0x0
+AFEV 0x22 V3Door2 0x0
+AFEV 0x23 V3Door3 0x0
+AFEV 0x24 V3Door4 0x0
 END_MAIN
 
 Dunno:
@@ -59,12 +62,12 @@ Tutorial:
 END_MAIN
 
 TrapData:
-TelliusTorchOff(0,4,8)
+TelliusTorchOff(4,7,8)
 TelliusTorchOff(8,5,8)
 TelliusTorchOff(17,4,8)
-TelliusTorchOff(18,12,8)
+TelliusTorchOff(14,10,8)
 TelliusTorchOff(16,15,8)
-TelliusTorchOff(0,12,8)
+TelliusTorchOff(0,9,8)
 TelliusTorchOff(6,15,8)
 TelliusTorchOff(11,18,8)
 TelliusTorchOn(6,23,8)
@@ -103,13 +106,24 @@ UNIT Remnant Sage 0x0 Level(2,Enemy,1) [2,14] DropItem 0x0 0x0 0x0 [Elfire,DoorK
 UNIT Remnant Warrior 0x0 Level(2,Enemy,1) [16,18] DropItem 0x0 0x0 0x0 [HandAxe,DoorKey] NeverMoveAI
 UNIT Remnant LncWyv 0x0 Level(17,Enemy,1) [18,0] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Remnant AxeWyv 0x0 Level(17,Enemy,1) [19,1] 0x0 0x0 0x0 0x0 [Swordreaver] NoAI
+UNIT Remnant Merc 0x0 Level(15,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT Remnant Soldier 0x0 Level(16,Enemy,1) [13,7] 0x0 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Remnant Soldier 0x0 Level(17,Enemy,1) [7,14] 0x0 0x0 0x0 0x0 [Javelin] AttackInRangeAI
+UNIT Remnant LightM 0x0 Level(17,Enemy,1) [18,12] DropItem 0x0 0x0 0x0 [Resire] AttackInRangeAI
 UNIT Remnant Merc 0x0 Level(17,Enemy,1) [1,17] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Remnant Soldier 0x0 Level(17,Enemy,1) [6,19] 0x0 0x0 0x0 0x0 [TrueSaunion] NoAI
+UNIT Remnant Fighter 0x0 Level(17,Enemy,1) [3,20] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Remnant Archer 0x0 Level(17,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
 UNIT Remnant AxeArm 0x0 Level(17,Enemy,1) [15,21] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
 UNIT Remnant SwdArm 0x0 Level(17,Enemy,1) [14,22] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
 UNIT Remnant LncArm 0x0 Level(17,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
-UNIT Remnant Fighter 0x0 Level(15,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [DangerPick] NoAI
+UNIT Remnant Fighter 0x0 Level(15,Enemy,1) [19,20] 0x0 0x0 0x0 0x0 [DangerPick] NoAI
 UNIT Remnant Halberdier 0x0 Level(1,Enemy,1) [12,17] 0x0 0x0 0x0 0x0 [Axereaver] NoAI
+UNIT Remnant AxeGen 0x0 Level(1,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [Hammer] GroupOnePaceAI
+UNIT Remnant SwMast 0x0 Level(1,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
+UNIT Remnant Archer 0x0 Level(18,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [SilverBow] GroupOneAI
+UNIT Remnant SwdPal 0x0 Level(2,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [SteelSword] GroupTwoAI
+UNIT Remnant LncPal 0x0 Level(2,Enemy,1) [7,0] 0x0 0x0 0x0 0x0 [SteelLance] GroupTwoAI
 UNIT Remnant Archer 0x0 Level(17,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [Longbow] AttackInRangeAI
 UNIT Remnant BowCav 0x0 Level(18,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Longbow] AttackInRangeAI
 UNIT Remnant Sorc 0x0 Level(1,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI
@@ -117,6 +131,8 @@ UNIT Remnant Sorc 0x0 Level(1,Enemy,1) [13,12] 0x0 0x0 0x0 0x0 [Nightfall] Never
 UNIT Remnant LncArm 0x0 Level(18,Enemy,1) [5,9] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Remnant Halberdier 0x0 Level(1,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Remnant LncArm 0x0 Level(18,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
+UNIT Remnant HeroF 0x0 Level(3,Enemy,1) [9,7] 0x0 0x0 0x0 0x0 [HandAxe,Rapier,BraveAxe] NeverMoveAI
+UNIT Remnant HeroF 0x0 Level(3,Enemy,1) [10,8] 0x0 0x0 0x0 0x0 [HandAxe,DevilAxe,BraveSword] NeverMoveAI
 UNIT Reynard Hero 0x0 Level(9,Enemy,1) [2,2] DropItem 0x0 0x0 0x0 [Tomahawk,BraveSword,MasterSeal] NeverMoveAI
 UNIT
 
@@ -124,6 +140,19 @@ V3MoreUnits:
 UNIT Manfred DarkM 0x0 Level(18,Ally,0) [19,7] 0x0 0x0 0x1 REDA18R7 [Fenrir, Nightfall, PureWater] NoAI
 UNIT Wilhelm Soldier 0x0 Level(16,Ally,0) [19,8] 0x0 0x0 0x1 REDA17R8 [HighRoller,SteelLance,Javelin,Elixir] NoAI
 UNIT Argent BowGen 0x0 Level(14,Ally,0) [19,9] 0x0 0x0 0x1 REDA18R9 [BraveBow,DousingLance,Hammer,Vulnerary] NoAI
+UNIT
+
+V3Door1Spawn:
+UNIT Dalst CitizenM 0x0 Level(14,NPC,0) [10,0] 0x0 0x0 0x1 REDA10R1 [0x0] NoAI
+UNIT
+V3Door2Spawn:
+UNIT Dalst CitizenF 0x0 Level(14,NPC,0) [19,4] 0x0 0x0 0x1 REDA18R5 [0x0] NoAI
+UNIT
+V3Door3Spawn:
+UNIT Dalst CitizenF 0x0 Level(14,NPC,0) [0,10] 0x0 0x0 0x1 REDA2R13 [0x0] NoAI
+UNIT
+V3Door4Spawn:
+UNIT Dalst CitizenM 0x0 Level(14,NPC,0) [19,16] 0x0 0x0 0x1 REDA16R17 [0x0] NoAI
 UNIT
 
 ALIGN 4
@@ -135,7 +164,93 @@ LoadUnitsByDifficulty(V3Easy,V3Normal,V3Hard)
 MUSC NarrationTheme
 Narration(Map2CG,ChV3_Narration)
 CleanText(PathCG,FillerDialogue)
+CAM1 Reynard
+FlashCursor(Reynard,60)
+Text(FillerDialogue)
+SOUN 0xB1
+TILECHANGE 0x6
+MOVE 60 Reynard [2,1]
+ENUN
+Text(FillerDialogue)
+CAM1 Viridian
+FlashCursor(Viridian,60)
+MUSC S_BattleForStormHill
+Text(FillerDialogue)
 GotoPrepScreen
+EndEvent
+
+SeizeCheck:
+TileChangeCheck(0x2)
+BEQ 0x1 0xc 0x0
+TileChangeCheck(0x3)
+BEQ 0x1 0xc 0x0
+TileChangeCheck(0x4)
+BEQ 0x1 0xc 0x0
+TileChangeCheck(0x5)
+BEQ 0x1 0xc 0x0
+Text(FillerDialogue)//you're done
+CALL EndingScene
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//you're not done
+ENUF 0x3
+LABEL 0x2
+EndEvent
+
+V3Door1:
+TileChangeCheck(0x2)
+BEQ 0x1 0xc 0x0
+Reinforcements(V3Door1Spawn)
+Text(FillerDialogue)
+MOVE 60 Dalst [8,0]
+ENUN
+SilentKillUnit(Dalst)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x21
+LABEL 0x2
+EndEvent
+
+V3Door2:
+TileChangeCheck(0x3)
+BEQ 0x1 0xc 0x0
+Reinforcements(V3Door2Spawn)
+Text(FillerDialogue)
+MOVE 60 Dalst [19,7]
+ENUN
+SilentKillUnit(Dalst)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x22
+LABEL 0x2
+EndEvent
+
+V3Door3:
+TileChangeCheck(0x4)
+BEQ 0x1 0xc 0x0
+Reinforcements(V3Door3Spawn)
+Text(FillerDialogue)
+MOVE 60 Dalst [0,15]
+ENUN
+SilentKillUnit(Dalst)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x23
+LABEL 0x2
+EndEvent
+
+V3Door4:
+TileChangeCheck(0x5)
+BEQ 0x1 0xc 0x0
+Reinforcements(V3Door4Spawn)
+Text(FillerDialogue)
+MOVE 60 Dalst [19,20]
+ENUN
+SilentKillUnit(Dalst)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x24
+LABEL 0x2
 EndEvent
 
 EndingScene:

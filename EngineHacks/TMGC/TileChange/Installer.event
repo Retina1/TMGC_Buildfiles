@@ -1,0 +1,6 @@
+ALIGN 4
+
+#define TileChangeCheck(id) "BYTE 0x40 0x0D id 0x00; POIN IsTileChanged+1"
+
+IsTileChanged:
+#incbin "TileChange.dmp"

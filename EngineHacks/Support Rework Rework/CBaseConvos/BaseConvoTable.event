@@ -290,32 +290,32 @@
 	Chapter(Chapter13)
 		Entry
 			name(C13_Delusion_Select)
-			bg(SunsetPathCG)
+			bg(YgstraCG)
 			importance(3)
 			event(C13DelusionEvent)
 			eventID(BaseFlag1)
 		Entry
-			bg(SunsetPathCG)
+			bg(YgstraCG)
 			text(C13_Blair_Arin_Base)
 			baseSupport(Blair,Arin,BSupport)
 		Entry
-			bg(SunsetPathCG)
+			bg(YgstraCG)
 			text(C13_Arin_Sam_Base)
 			baseSupport(Arin,Sam,CPSupport)
 		Entry
-			bg(SunsetPathCG)
+			bg(YgstraCG)
 			text(C13_Josef_Hilbert_Base)
 			baseSupport(Josef,Hilbert,CSupport)
 		Entry
-			bg(SunsetPathCG)
+			bg(YgstraCG)
 			text(C13_Emile_Hilbert_Base)
 			baseSupport(Emile,Hilbert,CSupport)
 		Entry
-			bg(SunsetPathCG)
+			bg(YgstraCG)
 			text(C13_Jeff_Sveltzalus_Base)
 			baseSupport(Jeff,Sveltzalus,CSupport)
 		Entry
-			bg(SunsetPathCG)
+			bg(YgstraCG)
 			text(C13_Apollo_Flynn_Base)
 			baseSupport(Apollo,Flynn,CSupport)
 	Chapter(Chapter14)
@@ -570,6 +570,27 @@
 			importance(1)
 			text(V2_Past)
 			eventID(BaseFlag2)
+	Chapter(ChapterV3)
+		Entry
+			name(V3_Family_Select)
+			bg(YgstraCG)
+			importance(1)
+			text(V3_Family)
+			eventID(BaseFlag1)
+		Entry
+			name(V3_Way_Select)
+			bg(YgstraCG)
+			importance(1)
+			text(V3_Way)
+			eventID(BaseFlag2)
+		Entry
+			bg(YgstraCG)
+			text(V3_Viridian_Freddric_Base)
+			baseSupport(Viridian,Freddric,BPSupport)
+		Entry
+			bg(YgstraCG)
+			text(V3_Chartreuse_Estelle_Base)
+			baseSupport(Chartreuse,Estelle,BSupport)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

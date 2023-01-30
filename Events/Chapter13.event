@@ -283,7 +283,7 @@ MUSC S_Stratagem
 CleanText(OutdoorCastleCG,Ch13_Opening)
 CAM1 Carbon
 FlashCursor(Carbon,60)
-CleanText(SunsetPathCG,Ch13_OpeningCarbonMikey)
+CleanText(YgstraCG,Ch13_OpeningCarbonMikey)
 MOVE 120 Carbon [16,0]
 ENUN
 CAM1 [0,24]
@@ -294,7 +294,7 @@ CAM1 Blair
 ENUN
 FlashCursor(Blair,60)
 MUSC S_Trisection
-CleanTextNoMap(SunsetPathCG,Ch13_Opening2)
+CleanTextNoMap(YgstraCG,Ch13_Opening2)
 LOAD1 0x0 C13Units
 ENUN
 ENUT 0x23

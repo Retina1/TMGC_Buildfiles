@@ -7,6 +7,7 @@ SetConvoBackground(BlankCG,BlankImage,BlankTSA,BlankPalette)
 SetConvoBackground(LowlandsCG,LowlandsImage,LowlandsTSA,LowlandsPalette)
 SetConvoBackground(TentInsideCG,TentInsideImage,TentInsideTSA,TentInsidePalette)
 SetConvoBackground(LowlandsRiverCG,LowlandsRiverImage,LowlandsRiverTSA,LowlandsRiverPalette)
+SetConvoBackground(YgstraCG,YgstraImage,YgstraTSA,YgstraPalette)
 ALIGN 4
 MapImage:
 #incbin "map for real.png.dmp"
@@ -61,3 +62,12 @@ TentInsideTSA:
 ALIGN 4
 TentInsidePalette:
 #incbin "tent.png.pal.dmp"
+ALIGN 4
+YgstraImage:
+#incbin "ygstra.png.dmp"
+ALIGN 4
+YgstraTSA:
+#incbin "ygstra.png.tsa.dmp"
+ALIGN 4
+YgstraPalette:
+#incbin "ygstra.png.pal.dmp"

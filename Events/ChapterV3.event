@@ -163,19 +163,19 @@ ENUN
 LoadUnitsByDifficulty(V3Easy,V3Normal,V3Hard)
 MUSC NarrationTheme
 Narration(Map2CG,ChV3_Narration)
-CleanText(PathCG,FillerDialogue)
+CleanText(PathCG,V3_Opening1)
 CAM1 Reynard
 FlashCursor(Reynard,60)
-Text(FillerDialogue)
+Text(V3_Opening2)
 SOUN 0xB1
 TILECHANGE 0x6
 MOVE 60 Reynard [2,1]
 ENUN
-Text(FillerDialogue)
+Text(V3_Opening3)
 CAM1 Viridian
 FlashCursor(Viridian,60)
 MUSC S_BattleForStormHill
-Text(FillerDialogue)
+Text(V3_Opening4)
 GotoPrepScreen
 EndEvent
 
@@ -188,11 +188,11 @@ TileChangeCheck(0x4)
 BEQ 0x1 0xc 0x0
 TileChangeCheck(0x5)
 BEQ 0x1 0xc 0x0
-Text(FillerDialogue)//you're done
+Text(V3_NoDoorsRemain)//you're done
 CALL EndingScene
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)//you're not done
+Text(V3_DoorsRemain)//you're not done
 ENUF 0x3
 LABEL 0x2
 EndEvent
@@ -201,7 +201,7 @@ V3Door1:
 TileChangeCheck(0x2)
 BEQ 0x1 0xc 0x0
 Reinforcements(V3Door1Spawn)
-Text(FillerDialogue)
+Text(V3_Civ1)
 MOVE 60 Dalst [8,0]
 ENUN
 SilentKillUnit(Dalst)
@@ -215,7 +215,7 @@ V3Door2:
 TileChangeCheck(0x3)
 BEQ 0x1 0xc 0x0
 Reinforcements(V3Door2Spawn)
-Text(FillerDialogue)
+Text(V3_Civ2)
 MOVE 60 Dalst [19,7]
 ENUN
 SilentKillUnit(Dalst)
@@ -229,7 +229,7 @@ V3Door3:
 TileChangeCheck(0x4)
 BEQ 0x1 0xc 0x0
 Reinforcements(V3Door3Spawn)
-Text(FillerDialogue)
+Text(V3_Civ3)
 MOVE 60 Dalst [0,15]
 ENUN
 SilentKillUnit(Dalst)
@@ -243,7 +243,7 @@ V3Door4:
 TileChangeCheck(0x5)
 BEQ 0x1 0xc 0x0
 Reinforcements(V3Door4Spawn)
-Text(FillerDialogue)
+Text(V3_Civ4)
 MOVE 60 Dalst [19,20]
 ENUN
 SilentKillUnit(Dalst)
@@ -262,7 +262,7 @@ EndEvent
 V3Joins:
 Reinforcements(V3MoreUnits)
 MUSC RecruitmentThemeVirid
-Text(FillerDialogue)
+Text(V3_Arrival)
 SetSupport(Wilhelm,Manfred,BSupport)
 SetSupport(Argent,Freddric,CPSupport)
 EndEvent

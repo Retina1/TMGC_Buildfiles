@@ -4,12 +4,6 @@
 push {r4-r5, lr}
 mov	r4, r0 @attacker
 
-@check if turn is bigger than 15
-ldr	r5,=#0x202BCF0
-ldrh	r5, [r5,#0x10]
-cmp	r5, #0x0F
-bhi	End
-
 @has skill
 ldr	r0, SkillTester
 mov	lr, r0
@@ -19,18 +13,20 @@ ldr	r1, QuickBurnID
 cmp	r0, #0
 beq	End
 
-@add 16 - turn to hit and avoid
-mov	r0, #0x60
-ldrh	r1, [r4,r0]	@load hit
-add	r1, #0x10	@add 16 to hit
-sub	r1, r5		@subtract turn to hit (so result is hit = hit + 16 - turn)
-strh	r1, [r4,r0]     @store
+@check money and divide
+ldr	r5,=#0x202BCF0
+ldr	r0, [r5,#0x08]
+mov r1,#100
+mov r2,#50
+mul r1,r1,r2
+swi 0x6 @r0 is what we want
 
-mov	r0, #0x62
-ldrh	r1, [r4,r0]	@load avoid
-add	r1, #0x10	@add 16 to avoid
-sub	r1, r5		@subtract turn to hit (so result is hit = hit + 16 - turn)
-strh	r1, [r4,r0]     @store
+@add to crit
+mov	r2, #0x66
+ldrh	r1, [r4,r2]	@load hit
+add	r1, r0	@add 16 to hit
+strh	r1, [r4,r2]     @store
+
 
 End:
 pop	{r4-r5, r15}

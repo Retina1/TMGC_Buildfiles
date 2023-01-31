@@ -20,22 +20,15 @@ cmp r0, #0
 beq Done
 
 mov r0, r4
-add     r0,#0x5A    @Move to the attacker's dmg.
+add     r0,#0x60    @Move to the attacker's hit.
 ldrh    r3,[r0]     @Load the attacker's dmg into r3.
-add     r3,#1    @add 1 to the attacker's dmg.
+add     r3,#250    @add a fuckton to the attacker's hit.
 strh    r3,[r0]     @Store.
-
-@ mov r0, r5
-@ add     r0,#0x5A    @Move to the defender's dmg.
-@ ldrh    r3,[r0]     @Load the defender's dmg into r3.
-@ sub     r3,#3    @sub 3 from the defender's dmg.
-@ strh    r3,[r0]     @Store.
 
 @testing
 mov r0, r4
-add r0, #0x5c @attacker defense
-ldrh r3, [r0]
-add r3, #3
+add r0, #0x62 @attacker avoid
+mov r3, #0
 strh r3, [r0]
 
 Done:

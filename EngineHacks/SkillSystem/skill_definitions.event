@@ -79,9 +79,10 @@
 //Author Unknown (Initial Commit)
 #define IntimidateID 186
 
-//Lily's Poise: Adjacent allies gain +1/-3 damage dealt/received.
+//Veteran's Eye: Adjacent allies always hit but have 0 avoid.
 //Author Unknown (Initial Commit)
 #define LilysPoiseID 206
+#define VeteranEyeID LilysPoiseID
 
 //Invert: Enemies within 2 tiles use Res for physical damage calcs.
 //Author Unknown (Initial Commit)
@@ -522,6 +523,7 @@
 //Quick/Slow Burn: Hit and Avoid bonus increasing or decreasing each turn, maximum +15.
 //Author Unknown (Initial Commit)
 #define QuickBurnID 228
+#define DeepPocketsID QuickBurnID
 #define SlowBurnID 229
 
 //Short Shield: Gain 6 defense against attacks recieved in melee.

@@ -1,3 +1,54 @@
 ##_V3Seize
 Open all doors,[N]
 then seize.[X]
+
+##V3_Opening1
+[OpenMidLeft][LoadViridian][OpenMidRight][LoadFreddric]
+are we there yet[A][X]
+
+##V3_Opening2
+[OpenMidLeft][LoadReynard]
+it sure is dark[N]
+wait crap they're here[A][X]
+
+##V3_Opening3
+[OpenMidLeft][LoadReynard]
+good thing i got my[N]
+epic gaming chair[A][N]
+get em, boys[A][X]
+
+##V3_Opening4
+[OpenMidLeft][LoadViridian][OpenMidRight][LoadFreddric]
+open doors, wilhelm approaches[N]
+use torches babygirl[A][X]
+
+##V3_Arrival
+[OpenMidLeft][LoadArgent][OpenRight][LoadWilhelm][OpenFarRight][LoadManfred][OpenMidLeft]
+have you explored each[N]
+other's bodies yet[A][X]
+
+##V3_Civ1
+[OpenMidLeft][LoadMan2]
+ok[A][X]
+
+##V3_Civ2
+[OpenMidLeft][LoadWoman2]
+ok[A][X]
+
+##V3_Civ3
+[OpenMidLeft][LoadWoman4]
+ok[A][X]
+
+##V3_Civ4
+[OpenMidLeft][LoadMan5]
+ok[A][X]
+
+##V3_DoorsRemain
+[OpenMidLeft][LoadViridian]
+What am I doing? There's[N]
+still people to liberate.[A][X]
+
+##V3_NoDoorsRemain
+[OpenMidLeft][LoadViridian]
+I think we got everyone.[N]
+Now, let's wrap this up.[A][X]

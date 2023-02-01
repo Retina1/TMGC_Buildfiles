@@ -20,6 +20,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,V3Turn1,1)
 TurnEventPlayer(0x0,V3Joins,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -163,15 +164,18 @@ ENUN
 LoadUnitsByDifficulty(V3Easy,V3Normal,V3Hard)
 MUSC NarrationTheme
 Narration(Map2CG,ChV3_Narration)
+MUSC AmbientSwoosh
 CleanText(PathCG,V3_Opening1)
 CAM1 Reynard
 FlashCursor(Reynard,60)
+MUSC S_Stratagem
 Text(V3_Opening2)
 SOUN 0xB1
 TILECHANGE 0x6
 MOVE 60 Reynard [2,1]
 ENUN
 Text(V3_Opening3)
+MUSC 0x0
 CAM1 Viridian
 FlashCursor(Viridian,60)
 MUSC S_BattleForStormHill
@@ -195,6 +199,10 @@ LABEL 0x1
 Text(V3_DoorsRemain)//you're not done
 ENUF 0x3
 LABEL 0x2
+EndEvent
+
+V3Turn1:
+SystemText(V3ScrollText)
 EndEvent
 
 V3Door1:

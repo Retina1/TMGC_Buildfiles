@@ -16,7 +16,7 @@ beq	End
 @check money and divide
 ldr	r5,=#0x202BCF0
 ldr	r0, [r5,#0x08]
-mov r1,#100
+mov r1,#50
 mov r2,#50
 mul r1,r1,r2
 swi 0x6 @r0 is what we want

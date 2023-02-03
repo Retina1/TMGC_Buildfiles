@@ -22,6 +22,10 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x0,V3Turn1,1)
 TurnEventPlayer(0x0,V3Joins,2)
+TurnEventPlayer(0x11,V3Trap1,1,255)
+TurnEventPlayer(0x12,V3Trap2,1,255)
+TurnEventPlayer(0x13,V3Trap3,1,255)
+TurnEventPlayer(0x14,V3Trap4,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -146,14 +150,37 @@ UNIT
 V3Door1Spawn:
 UNIT Dalst CitizenM 0x0 Level(14,NPC,0) [10,0] 0x0 0x0 0x1 REDA10R1 [0x0] NoAI
 UNIT
+V3Door1Trap:
+UNIT Remnant MercF 0x0 Level(20,Enemy,1) [2,1] DropItem 0x0 0x1 REDA2R2 [LightBrand] NoAI
+UNIT Remnant HeroF 0x0 Level(3,Enemy,1) [2,1] DropItem 0x0 0x1 REDA1R2 [Ukonvasara,Kagutsuchi,Swordslayer,BodyRing] NoAI
+UNIT Remnant MercF 0x0 Level(20,Enemy,1) [2,1] DropItem 0x0 0x1 REDA3R2 [SilverSword] NoAI
+UNIT
+
 V3Door2Spawn:
 UNIT Dalst CitizenF 0x0 Level(14,NPC,0) [19,4] 0x0 0x0 0x1 REDA18R5 [0x0] NoAI
 UNIT
+V3Door2Trap:
+UNIT Remnant LncWyv 0x0 Level(18,Enemy,1) [15,0] 0x0 0x0 0x1 REDA15R1 [SteelLance] NoAI
+UNIT Remnant AxeWyv 0x0 Level(18,Enemy,1) [16,0] DropItem 0x0 0x1 REDA16R2 [SilverAxe] NoAI
+UNIT Remnant LncWyv 0x0 Level(18,Enemy,1) [17,0] 0x0 0x0 0x1 REDA17R1 [Horseslayer] NoAI
+UNIT
+
 V3Door3Spawn:
 UNIT Dalst CitizenF 0x0 Level(14,NPC,0) [0,10] 0x0 0x0 0x1 REDA2R13 [0x0] NoAI
 UNIT
+V3Door3Trap:
+UNIT Remnant AxeCav 0x0 Level(18,Enemy,1) [2,24] DropItem 0x0 0x1 REDA2R23 [Swordreaver] NoAI
+UNIT Remnant SwdCav 0x0 Level(18,Enemy,1) [3,24] DropItem 0x0 0x1 REDA3R22 [Lancereaver] NoAI
+UNIT Remnant LncCav 0x0 Level(18,Enemy,1) [4,24] DropItem 0x0 0x1 REDA4R23 [Axereaver] NoAI
+UNIT
+
 V3Door4Spawn:
 UNIT Dalst CitizenM 0x0 Level(14,NPC,0) [19,16] 0x0 0x0 0x1 REDA16R17 [0x0] NoAI
+UNIT
+V3Door4Trap:
+UNIT Remnant Archer 0x0 Level(18,Enemy,1) [13,15] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
+UNIT Remnant Mage 0x0 Level(18,Enemy,1) [12,23] DropItem 0x0 0x0 0x0 [Calibur] NoAI
+UNIT Remnant Fighter 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
 UNIT
 
 ALIGN 4
@@ -183,6 +210,14 @@ Text(V3_Opening4)
 GotoPrepScreen
 EndEvent
 
+EndingScene:
+MUSC 0x0
+CleanTextNoMap(YgstraCG,V3Ending1)
+MUSC S_Chaos
+CleanTextNoMap(HallCG,V3Ending2)
+MoveToChapter(ChapterV4)
+EndEvent
+
 SeizeCheck:
 TileChangeCheck(0x2)
 BEQ 0x1 0xc 0x0
@@ -205,6 +240,16 @@ V3Turn1:
 SystemText(V3ScrollText)
 EndEvent
 
+V3Trap1:
+TileChangeCheck(0x2)
+BEQ 0x1 0xc 0x0
+Reinforcements(V3Door1Trap)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x11
+LABEL 0x2
+EndEvent
+
 V3Door1:
 TileChangeCheck(0x2)
 BEQ 0x1 0xc 0x0
@@ -216,6 +261,16 @@ SilentKillUnit(Dalst)
 GOTO 0x2
 LABEL 0x1
 ENUF 0x21
+LABEL 0x2
+EndEvent
+
+V3Trap2:
+TileChangeCheck(0x3)
+BEQ 0x1 0xc 0x0
+Reinforcements(V3Door2Trap)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x12
 LABEL 0x2
 EndEvent
 
@@ -233,6 +288,16 @@ ENUF 0x22
 LABEL 0x2
 EndEvent
 
+V3Trap3:
+TileChangeCheck(0x4)
+BEQ 0x1 0xc 0x0
+Reinforcements(V3Door3Trap)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x13
+LABEL 0x2
+EndEvent
+
 V3Door3:
 TileChangeCheck(0x4)
 BEQ 0x1 0xc 0x0
@@ -244,6 +309,16 @@ SilentKillUnit(Dalst)
 GOTO 0x2
 LABEL 0x1
 ENUF 0x23
+LABEL 0x2
+EndEvent
+
+V3Trap4:
+TileChangeCheck(0x5)
+BEQ 0x1 0xc 0x0
+Reinforcements(V3Door4Trap)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x14
 LABEL 0x2
 EndEvent
 
@@ -259,12 +334,6 @@ GOTO 0x2
 LABEL 0x1
 ENUF 0x24
 LABEL 0x2
-EndEvent
-
-EndingScene:
-MUSC VictoryTheme
-Text(PathCG,FillerDialogue)
-MoveToChapter(ChapterV4)
 EndEvent
 
 V3Joins:

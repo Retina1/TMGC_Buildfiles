@@ -1,0 +1,223 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    weaponbrokep22_grp  GUIVoices
+        #define    weaponbrokep22_pri  0
+        #define    weaponbrokep22_rev  0
+        #define    weaponbrokep22_key  0
+
+        // .rodata
+        // weaponbrokep22
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+weaponbrokep22_0:
+        BYTE   KEYSH   weaponbrokep22_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   160/2
+        BYTE           VOICE   9
+        BYTE           PAN     c_v-6
+        BYTE           VOL     80
+        BYTE   W02
+        BYTE           N08     Ds4   v127
+        BYTE   W06
+        BYTE           VOL     57
+        BYTE   W03
+        BYTE           N08     Fn4
+        BYTE   W01
+        BYTE           VOL     90
+        BYTE   W06
+        BYTE                   57
+        BYTE   W02
+        BYTE           N08     Ds4
+        BYTE   W09
+        BYTE           N11     Dn4
+        BYTE   W01
+        BYTE           VOL     90
+        BYTE   W09
+        BYTE                   68
+        BYTE   W03
+        BYTE                   90
+        BYTE   W01
+        BYTE           N11     Cn4
+        BYTE   W08
+        BYTE           VOL     68
+        BYTE   W06
+        BYTE                   90
+        BYTE           N44     Dn4
+        BYTE   W03
+        BYTE           VOL     85
+        BYTE   W03
+        BYTE                   79
+        BYTE   W15
+        BYTE                   81
+        BYTE   W03
+        BYTE                   82
+        BYTE   W03
+        BYTE                   84
+        BYTE   W03
+        BYTE                   85
+        BYTE   W03
+        BYTE                   86
+        BYTE   W03
+        BYTE                   88
+        BYTE   W03
+// 001   ----------------------------------------
+        BYTE                   45
+        BYTE   W12
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.2) ******************//
+
+weaponbrokep22_1:
+        BYTE   KEYSH   weaponbrokep22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   9
+        BYTE           PAN     c_v+28
+        BYTE           MOD     4
+        BYTE           LFOS    9
+        BYTE           LFODL   1
+        BYTE   W02
+        BYTE           VOL     14
+        BYTE           TIE     As3   v084
+        BYTE   W02
+        BYTE           VOL     19
+        BYTE   W02
+        BYTE                   26
+        BYTE   W02
+        BYTE                   32
+        BYTE   W02
+        BYTE                   38
+        BYTE   W02
+        BYTE                   45
+        BYTE   W02
+        BYTE                   51
+        BYTE   W02
+        BYTE                   58
+        BYTE   W02
+        BYTE                   64
+        BYTE   W02
+        BYTE                   70
+        BYTE   W02
+        BYTE                   77
+        BYTE   W02
+        BYTE                   82
+        BYTE   W02
+        BYTE                   90
+        BYTE   W32
+        BYTE   W02
+        BYTE                   89
+        BYTE   W04
+        BYTE                   82
+        BYTE   W04
+        BYTE                   75
+        BYTE   W04
+        BYTE                   69
+        BYTE   W04
+        BYTE                   63
+        BYTE   W04
+        BYTE                   56
+        BYTE   W04
+        BYTE                   50
+        BYTE   W04
+        BYTE                   43
+        BYTE   W04
+        BYTE                   36
+        BYTE   W04
+// 001   ----------------------------------------
+        BYTE                   30
+        BYTE   W04
+        BYTE                   24
+        BYTE   W04
+        BYTE                   17
+        BYTE   W04
+        BYTE           EOT
+        BYTE           VOL     11
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.3) ******************//
+
+weaponbrokep22_2:
+        BYTE   KEYSH   weaponbrokep22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   9
+        BYTE           PAN     c_v-28
+        BYTE           MOD     4
+        BYTE           LFOS    9
+        BYTE           LFODL   1
+        BYTE   W02
+        BYTE           VOL     14
+        BYTE           TIE     Gs3   v084
+        BYTE   W02
+        BYTE           VOL     19
+        BYTE   W02
+        BYTE                   26
+        BYTE   W02
+        BYTE                   32
+        BYTE   W02
+        BYTE                   38
+        BYTE   W02
+        BYTE                   45
+        BYTE   W02
+        BYTE                   51
+        BYTE   W02
+        BYTE                   58
+        BYTE   W02
+        BYTE                   64
+        BYTE   W02
+        BYTE                   70
+        BYTE   W02
+        BYTE                   77
+        BYTE   W02
+        BYTE                   82
+        BYTE   W02
+        BYTE                   90
+        BYTE   W32
+        BYTE   W02
+        BYTE                   89
+        BYTE   W04
+        BYTE                   82
+        BYTE   W04
+        BYTE                   75
+        BYTE   W04
+        BYTE                   69
+        BYTE   W04
+        BYTE                   63
+        BYTE   W04
+        BYTE                   56
+        BYTE   W04
+        BYTE                   50
+        BYTE   W04
+        BYTE                   43
+        BYTE   W04
+        BYTE                   36
+        BYTE   W04
+// 001   ----------------------------------------
+        BYTE                   30
+        BYTE   W04
+        BYTE                   24
+        BYTE   W04
+        BYTE                   17
+        BYTE   W04
+        BYTE           EOT
+        BYTE           VOL     11
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+weaponbrokep22:
+        BYTE   3                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   weaponbrokep22_pri      // Priority
+        BYTE   weaponbrokep22_rev      // Reverb
+
+        POIN2   weaponbrokep22_grp     
+
+        POIN2   weaponbrokep22_0
+        POIN2   weaponbrokep22_1
+        POIN2   weaponbrokep22_2
+
+        

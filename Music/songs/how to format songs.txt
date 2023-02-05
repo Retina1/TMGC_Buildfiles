@@ -1,0 +1,23 @@
+TO AUTOMATICALLY FORMAT SONGS:
+
+Drag .mid file(s) onto makesong.cmd. Output will be placed in "processed" folder.
+
+
+HOW TO FORMAT AN INDIVIDUAL SONG:
+
+Run your .mid through midi2agb.exe (you can drag and drop for default settings, or open it in
+command prompt for custom settings, e.g. changing master volume if a song is too loud).
+
+Open the .s file you get and change the "grp" parameter from "voicegroup000" to the name of your desired voice table
+(or just leave it as-is; the music installer defines voicegroup000 to be synonymous with the default MusicVoices).
+
+The "rev" parameter is reverb. Set it accordingly:
+0 =inherit from previous song (used for sound effects, so a sound effect playing won't suddenly turn off the reverb)
+0x80 =off
+0x81-0xff =1-127
+Values of 0x1-0x7f are not used.
+I recommend just leaving it off and using volume change/expression events in your songs for fine control of the volume/making
+things sound like they're reverberating, etc, but you can play around with it if you'd like.
+
+Finally, find-and-replace ".align  2" to "ALIGN 4"; this is because s2ea was originally made for .s files converted with
+mid2agb (Nintendo's proprietary tool) and not midi2agb (ipatix's open-source version). makesong.cmd does this for you.

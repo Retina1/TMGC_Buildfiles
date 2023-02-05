@@ -1,0 +1,191 @@
+//Event file generated from Sappy .s format.
+        #include "MPlayDef.event"
+
+        #define    itemgetp22_grp  GUIVoices
+        #define    itemgetp22_pri  0
+        #define    itemgetp22_rev  0
+        #define    itemgetp22_key  0
+
+        // .rodata
+        // itemgetp22
+        ALIGN 4
+
+//****************** Track 0 (Midi-Chn.0) ******************//
+
+itemgetp22_0:
+        BYTE   KEYSH   itemgetp22_key+0
+// 000   ----------------------------------------
+        BYTE   TEMPO   160/2
+        BYTE           VOICE   10
+        BYTE           VOL     72
+        BYTE           PAN     c_v+10
+        BYTE           N04     Cn4   v127
+        BYTE   W03
+        BYTE           VOL     50
+        BYTE   W03
+        BYTE                   72
+        BYTE           N04     Gn4
+        BYTE   W03
+        BYTE           VOL     50
+        BYTE   W03
+        BYTE                   72
+        BYTE           N04     Ds4
+        BYTE   W03
+        BYTE           VOL     50
+        BYTE   W03
+        BYTE                   72
+        BYTE           N04     Gn4
+        BYTE   W03
+        BYTE           VOL     50
+        BYTE   W03
+        BYTE                   72
+        BYTE           N04     As4
+        BYTE   W03
+        BYTE           VOL     50
+        BYTE   W03
+        BYTE                   72
+        BYTE           N04     Cn5
+        BYTE   W04
+        BYTE           VOL     50
+        BYTE   W02
+        BYTE                   72
+        BYTE           N48     Dn5
+        BYTE   W03
+        BYTE           VOL     70
+        BYTE   W03
+        BYTE                   68
+        BYTE   W03
+        BYTE                   66
+        BYTE   W03
+        BYTE                   63
+        BYTE   W12
+        BYTE                   65
+        BYTE   W03
+        BYTE                   66
+        BYTE   W03
+        BYTE                   67
+        BYTE   W03
+        BYTE                   68
+        BYTE   W03
+        BYTE                   69
+        BYTE   W03
+        BYTE                   70
+        BYTE   W03
+        BYTE                   36
+        BYTE   W12
+        BYTE   FINE
+
+//****************** Track 1 (Midi-Chn.1) ******************//
+
+itemgetp22_1:
+        BYTE   KEYSH   itemgetp22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   10
+        BYTE           VOL     68
+        BYTE           PAN     c_v-10
+        BYTE           N04     Gn3   v127
+        BYTE   W03
+        BYTE           VOL     47
+        BYTE   W03
+        BYTE                   68
+        BYTE           N04     Dn4
+        BYTE   W03
+        BYTE           VOL     47
+        BYTE   W03
+        BYTE                   68
+        BYTE           N04     As3
+        BYTE   W03
+        BYTE           VOL     47
+        BYTE   W03
+        BYTE                   68
+        BYTE           N04     Dn4
+        BYTE   W03
+        BYTE           VOL     47
+        BYTE   W03
+        BYTE                   68
+        BYTE           N04     Fn4
+        BYTE   W03
+        BYTE           VOL     47
+        BYTE   W03
+        BYTE                   68
+        BYTE           N04     Gn4
+        BYTE   W04
+        BYTE           VOL     47
+        BYTE   W02
+        BYTE                   68
+        BYTE           N48     An4
+        BYTE   W03
+        BYTE           VOL     66
+        BYTE   W03
+        BYTE                   64
+        BYTE   W03
+        BYTE                   62
+        BYTE   W03
+        BYTE                   60
+        BYTE   W12
+        BYTE                   61
+        BYTE   W03
+        BYTE                   62
+        BYTE   W03
+        BYTE                   63
+        BYTE   W03
+        BYTE                   64
+        BYTE   W03
+        BYTE                   65
+        BYTE   W03
+        BYTE                   66
+        BYTE   W03
+        BYTE                   34
+        BYTE   W12
+        BYTE   FINE
+
+//****************** Track 2 (Midi-Chn.2) ******************//
+
+itemgetp22_2:
+        BYTE   KEYSH   itemgetp22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   11
+        BYTE           VOL     61
+        BYTE           PAN     c_v+20
+        BYTE           N32     Ds3   v127
+        BYTE   W36
+        BYTE           N54     Gn3
+        BYTE   W48
+        BYTE           VOL     31
+        BYTE   W06
+        BYTE   FINE
+
+//****************** Track 3 (Midi-Chn.3) ******************//
+
+itemgetp22_3:
+        BYTE   KEYSH   itemgetp22_key+0
+// 000   ----------------------------------------
+        BYTE           VOICE   11
+        BYTE           VOL     59
+        BYTE           PAN     c_v-20
+        BYTE           N32     As2   v127
+        BYTE   W36
+        BYTE           N54     Cn3
+        BYTE   W48
+        BYTE           VOL     30
+        BYTE   W06
+        BYTE   FINE
+
+
+//********************** End of Song ***********************//
+
+        ALIGN 4
+itemgetp22:
+        BYTE   4                       // Num Tracks
+        BYTE   0                       // Unknown
+        BYTE   itemgetp22_pri          // Priority
+        BYTE   itemgetp22_rev          // Reverb
+
+        POIN2   itemgetp22_grp         
+
+        POIN2   itemgetp22_0
+        POIN2   itemgetp22_1
+        POIN2   itemgetp22_2
+        POIN2   itemgetp22_3
+
+        

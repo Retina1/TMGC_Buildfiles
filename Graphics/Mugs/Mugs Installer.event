@@ -171,7 +171,11 @@ setMugEntry(0x1A,FlynnMug,3,5,3,3)
 ALIGN 4
 MikeyMug:
 #incext PortraitFormatter "Mikey.png"
-setMugEntry(0x1b,MikeyMug,3,6,3,4)
+setMugEntry(0x1b,MikeyMug,4,6,4,4)
+ALIGN 4
+MikeyPromoMug:
+#incext PortraitFormatter "MikeyPromo.png"
+setMugEntry(0x114,MikeyPromoMug,3,5,3,3)
 
 ALIGN 4
 CarbonMug:

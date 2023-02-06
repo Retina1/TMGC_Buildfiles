@@ -1,0 +1,501 @@
+#include "eastdlib.event" 
+
+// Conversation Viewer
+// by Vesly 
+// Commissioned by Retina & Vyland. 
+
+// Replaces the Support Conversations menu from the title screen 
+// with a new menu for viewing events, rather than just supports 
+
+#include "ConversationViewer.lyn.event" 
+
+PUSH 
+// Support Completion proc 
+ORG 0xA1988 
+callHackNew(ConversationViewer_ASMC) 
+
+ORG 0xA14E4 
+POIN HistoryGFX // Replace "Supports" image with "History" (Credits: Retina) 
+
+// Enable support room always by 7743 
+ORG 0xA36C4
+BYTE 0x03 0x20	//必ず支援3まであると返す
+ORG 0xAB93A
+BYTE 0x00 0x00	//必ずエクストラ支援画面を表示する
+ORG 0xA3824
+BYTE 0x01		//GGM_IsCharacterKnown always 1
+POP 
+
+ALIGN 4 
+ConversationViewer_DefaultBGM:
+SHORT 0x9 // Distant roads 
+
+ALIGN 4 
+ConvoChapterEntry: 
+FILL(4*0xFF) 
+ORG ConvoChapterEntry 
+POIN PrologueConversations
+POIN Chapter1Conversations
+POIN Chapter2Conversations
+POIN Chapter3Conversations
+POIN Chapter4Conversations
+POIN Chapter5Conversations
+POIN Interlude1Conversations
+POIN BaseConversations  
+POIN SupportConversations1
+POIN DeathQuoteConversations 
+POIN FinalDeathQuoteConversations 
+POIN EscapeQuoteConversations  
+POIN 0 
+
+
+ORG ConvoChapterEntry+(4*0xFF)
+#define ConversationEntry(titleid,textid,bg,chapterid) "POIN 0; SHORT textid; BYTE bg chapterid; SHORT titleid 0;"
+#define ConversationEntry(titleid,textid,bg,chapterid,bgm) "POIN 0; SHORT textid; BYTE bg chapterid; SHORT titleid bgm;"
+#define ConversationEntryTerminator "POIN 0xFFFFFFFF; SHORT 0xFFFF; BYTE 0xFF 0xFF; SHORT 0xFFFF 0xFFFF"
+
+ALIGN 4
+PrologueConversations:
+ConversationEntry(EC0Open1,Prologue_Opening,PathCG,Prologue)
+ConversationEntry(EC0RecruitKenneth,PKennethText,PathCG,Prologue,RecruitmentTheme)
+ConversationEntry(EC0BlairKenneth,Prologue_Opening,PathCG,Prologue)
+ConversationEntry(EC0Village1,PNVillageText,HouseCG,Prologue)
+ConversationEntry(EC0Village2,PSVillageText,House2CG,Prologue)
+ConversationEntry(EC0BlairFight,PBlairBattle,PathCG,Prologue)
+ConversationEntry(EC0BossGen,PDavelarnBattle,PathCG,Prologue)
+ConversationEntry(EC0BossDie,PDavelarnDeath,PathCG,Prologue)
+ConversationEntry(EC0End1,Prologue_Ending,PathCG,Prologue,VictoryTheme)
+ConversationEntry(EC0End1Alt,Prologue_Ending_Dead_Kenneth,PathCG,Prologue,VictoryMinor)
+ConversationEntryTerminator
+
+ALIGN 4 
+Chapter1Conversations:
+ConversationEntry(EC1Open1,Ch1_Opening,HallCG,Chapter1)
+ConversationEntry(EC1Open2,Ch1_Opening_2,PathCG,Chapter1,S_Terra)
+ConversationEntry(EC1Open2Alt,Ch1_Opening_2_Dead_Kenneth,PathCG,Chapter1,S_Terra)
+ConversationEntry(EC1NatasiaScene,Ch1_NatasiaScene,VillageCG,Chapter1)
+ConversationEntry(EC1RecruitNatasia1,Blair_Recruits_Natasia,VillageCG,Chapter1,RecruitmentTheme)
+ConversationEntry(EC1RecruitNatasia2,Arin_Recruits_Natasia,VillageCG,Chapter1,RecruitmentTheme)
+ConversationEntry(EC1RecruitNatasia3,Natasia_Verbally_Abuses_Kenneth_Then_Joins_The_Party,VillageCG,Chapter1,RecruitmentTheme)
+ConversationEntry(EC1Village1,C1EVillageText,VillageCG,Chapter1)
+ConversationEntry(EC1Warning,C1Warning,PathCG,Chapter1)
+ConversationEntry(EC1BossGen,C1MarqueBattle,PathCG,Chapter1)
+ConversationEntry(EC1BossDie,C1MarqueDeath,PathCG,Chapter1)
+ConversationEntry(EC1TimeUp,C1TurnsUp,PathCG,Chapter1)
+ConversationEntry(EC1EndNatasia,You_Almost_Forgot_Natasia_Dummy,PathCG,Chapter1)
+ConversationEntry(EC1End1,Ch1_Ending,PathCG,Chapter1,VictoryTheme)
+ConversationEntry(EC1End1Alt,Ch1_Ending_Dead_Kenneth,PathCG,Chapter1,VictoryMinor)
+ConversationEntry(EC1End1Alt2,Ch1_Ending_Dead_Natasia,PathCG,Chapter1,VictoryMinor)
+ConversationEntry(EC1End1Alt3,Ch1_Ending_Dead_Kenneth_and_Natasia,PathCG,Chapter1,VictoryMinor)
+ConversationEntry(EC1Secret1,C1Signal,PathCG,Chapter1)
+ConversationEntry(EC1Secret2,C1Signal2,HouseCG,Chapter1)
+ConversationEntry(EC1Secret3,C1Signal3,PathCG,Chapter1)
+ConversationEntry(EC1Secret4,Ch1_NatasiaSignaledScene,VillageCG,Chapter1,RecruitmentTheme)
+ConversationEntryTerminator
+
+ALIGN 4 
+Chapter2Conversations:
+ConversationEntry(EC2Open0,Ch2_ColdOpen,HallCG,Chapter2)
+ConversationEntry(EC2Open1,Ch2_Opening,OutdoorCastleCG,Chapter2,S_Crisis)
+ConversationEntry(EC2Open1Alt1,Ch2_Opening_Dead_Natasia,OutdoorCastleCG,Chapter2,S_Crisis)
+ConversationEntry(EC2Open1Alt2,Ch2_Opening_Dead_Kenneth,OutdoorCastleCG,Chapter2,S_Crisis)
+ConversationEntry(EC2Open1Alt3,Ch2_Opening_Dead_Kenneth_and_Natasia,OutdoorCastleCG,Chapter2,S_Crisis)
+ConversationEntry(EC2Johan,C2JohanT2,HallCG,Chapter2)
+ConversationEntry(EC2Recruitment,C2StefanDesmond,OutdoorCastleCG,Chapter2,RecruitmentTheme)
+ConversationEntry(EC2DesmondConvo,C2BlairDesmondTalk,OutdoorCastleCG,Chapter2)
+ConversationEntry(EC2StefanConvo,C2BlairStefanTalk,OutdoorCastleCG,Chapter2)
+ConversationEntry(EC2Village,C2VillageText,HouseCG,Chapter2)
+ConversationEntry(EC2Spooky,C2Spooky,HallCG,Chapter2,S_Chaos)
+ConversationEntry(EC2Spooky2,C2Spooky2,HallCG,Chapter2,S_Chaos)
+ConversationEntry(EC2BossGen,C2BrentsonBattle,HallCG,Chapter2)
+ConversationEntry(EC2BossDie,C2BrentsonDeath,HallCG,Chapter2)
+ConversationEntry(EC2End1,Ch2_Ending,DungeonCG,Chapter2,VictoryMinor)
+ConversationEntry(EC2End1Alt1,Ch2_Ending_Dead_Stefan,DungeonCG,Chapter2,VictoryMinor)
+ConversationEntry(EC2End1Alt2,Ch2_Ending_Dead_Desmond,DungeonCG,Chapter2,VictoryMinor)
+ConversationEntry(EC2End1Alt3,Ch2_Ending_Dead_Stefan_and_Desmond,DungeonCG,Chapter2,VictoryMinor)
+ConversationEntry(EC2End2,Ch2_Ending2,HallCG,Chapter2,VictoryMinor)
+ConversationEntry(EC2JohanConvo,C2StefanJohanTalk,HallCG,Chapter2)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter3Conversations:
+ConversationEntry(EC3Open1,Ch3_Opening,OutdoorCastleCG,Chapter3,S_Terra)
+ConversationEntry(EC3RecruitSam,Ch3_Sam_Joins,OutdoorCastleCG,Chapter3,RecruitmentTheme)
+ConversationEntry(EC3RecruitJosef,Ch3_Josef_Talk,HallCG,Chapter3,RecruitmentTheme)
+ConversationEntry(EC3SamJosef,C3SamJosefRecruitment,HallCG,Chapter3,RecruitmentTheme)
+ConversationEntry(EC3SamJosefAlt,C3SamJosefTalk,HallCG,Chapter3)
+ConversationEntry(EC3Village,C3VillageText,House2CG,Chapter3)
+ConversationEntry(EC3Warning,C3Hint,OutdoorCastleCG,Chapter3)
+ConversationEntry(EC3BossGen,C3HelgaBattle,HallCG,Chapter3)
+ConversationEntry(EC3BossDie,C3HelgaDeath,HallCG,Chapter3)
+ConversationEntry(EC3JosefDie,AllyJosefDeath,HallCG,Chapter3)
+ConversationEntry(EC3End1,Ch3_Ending,OutdoorCastleCG,Chapter3,VictoryMinor)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter4Conversations:
+ConversationEntry(EC4Open1,Ch4_Opening,PathCG,Chapter4,S_SMTLevelUp)
+ConversationEntry(EC4RecruitPeggy,C4PeggyJoin,PathCG,Chapter4,RecruitmentTheme)
+ConversationEntry(EC4PeggySecret,Ch4_PeggyChurch,HallCG,Chapter4)
+ConversationEntry(EC4StarqueWarning,C4Warning,PathCG,Chapter4)
+ConversationEntry(EC4Warning1,Ch4_Get_Moving,PathCG,Chapter4)
+ConversationEntry(EC4Warning2,Ch4_Get_Out,PathCG,Chapter4)
+ConversationEntry(EC4LazComes,Ch4_Lazarus_Arrives,PathCG,Chapter4)
+ConversationEntry(EC4BossGen,C4StarqueBattle,PathCG,Chapter4)
+ConversationEntry(EC4BossDie,C4StarqueDeath,PathCG,Chapter4)
+ConversationEntry(ELazarusFight,C4LazarusBattle,PathCG,Chapter4)
+ConversationEntry(ELazarusRetreat,C4LazarusDeath,PathCG,Chapter4)
+ConversationEntry(EC4End1,Ch4_Ending,HillCG,Chapter4,S_FE4Conversation)
+ConversationEntry(EC4End1Alt,Ch4_Ending_Dead_Peggy,HillCG,Chapter4,S_FE4Conversation)
+ConversationEntry(EC4End2,Ch4_Ending_2,PathCG,Chapter4,S_FE4Conversation)
+ConversationEntry(EC4End3,Ch4_Ending_3,ElbaCorCastleCG,Chapter4,S_FE4Conversation)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter5Conversations:
+ConversationEntry(EC5Open1,Ch5_Opening,JungleCG,Chapter5,S_Crisis)
+ConversationEntry(EC5Open1Alt,Ch5_Opening_Dead_Peggy,JungleCG,Chapter5,S_Crisis)
+ConversationEntry(EC5ButchHint,C5Hint,JungleCG,Chapter5)
+ConversationEntry(EC5ButchRecruit,Ch5_Butch_Talk,JungleCG,Chapter5,RecruitmentTheme)
+ConversationEntry(EC5House1,Ch5_NorthHouse,HouseCG,Chapter5)
+ConversationEntry(EC5House2,Ch5_SouthHouse,HouseCG,Chapter5)
+ConversationEntry(EC5RachaelAndCassius,Ch5_Rachael_Cassius,JungleCG,Chapter5)
+ConversationEntry(EC5Warning,C5Warning,JungleCG,Chapter5)
+ConversationEntry(EC5BossGen,C5MitchellBattle,JungleCG,Chapter5)
+ConversationEntry(EC5BossButch,C5MitchellButchBattle,JungleCG,Chapter5)
+ConversationEntry(EC5BossPeggy,C5MitchellPeggyBattle,JungleCG,Chapter5)
+ConversationEntry(EC5BossDie,C5MitchellDeath,JungleCG,Chapter5)
+ConversationEntry(EC5ButchDie,EnemyButchDeath,JungleCG,Chapter5)
+ConversationEntry(EC5End1,Ch5_Ending,JungleCG,Chapter5,S_FE4Conversation)
+ConversationEntry(EC5End1Alt,Ch5_Ending_Dead_Peggy,JungleCG,Chapter5,S_FE4Conversation)
+ConversationEntry(EC5End2,Ch5_Ending2,HallCG,Chapter5,S_Stratagem)
+ConversationEntryTerminator
+
+ALIGN 4
+Interlude1Conversations:
+ConversationEntry(EI1Open1,I1_Opening,StreetCG,Interlude1)
+ConversationEntry(EI1Explanation,IntExplanation,StreetCG,Interlude1)
+ConversationEntry(EI1Peter,I1PeterTalk,StreetCG,Interlude1)
+ConversationEntry(EI1Ptolemy,I1PtolemyTalk,StreetCG,Interlude1)
+ConversationEntry(EI1Rift,I1RiftTalk,StreetCG,Interlude1)
+ConversationEntry(EI1Estelle,I1EstelleTalk,StreetCG,Interlude1)
+ConversationEntry(EI1House1,I1House1,House2CG,Interlude1)
+ConversationEntry(EI1House2,I1House2,HouseCG,Interlude1)
+ConversationEntry(EI1House3,I1House3,House2CG,Interlude1)
+ConversationEntry(EI1Cit1,I1CitTalk,StreetCG,Interlude1)
+ConversationEntry(EI1Cit2,I1Cit2Talk,StreetCG,Interlude1)
+ConversationEntry(EI1Merchant,I1MerchantTalk,StreetCG,Interlude1)
+ConversationEntry(EI1MerchantPoor,I1NoMoneyHa,StreetCG,Interlude1)
+ConversationEntry(EI1MerchantDeny,I1StaffDenied,StreetCG,Interlude1)
+ConversationEntry(EI1MerchantBuy,I1StaffPurchased,StreetCG,Interlude1)
+ConversationEntry(EI1Leave,I1ConfirmLeave,StreetCG,Interlude1)
+ConversationEntry(EI1NotYet,I1NotYet,StreetCG,Interlude1)
+ConversationEntry(EI1End1,I1ReleaseMe,StreetCG,Interlude1)
+ConversationEntryTerminator
+
+ALIGN 4
+BaseConversations:
+ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
+ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
+ConversationEntry(C3_Captured_Select,C3_Captured,OuterFortCG,BaseConvoViewer)
+ConversationEntry(C3_Horse_Select,C3_Horses,OuterFortCG,BaseConvoViewer)
+ConversationEntry(C4_Solitude_Select,C4_Solitude,PathCG,BaseConvoViewer)
+ConversationEntry(C4_Honor_Select,C4_Honor,PathCG,BaseConvoViewer)
+ConversationEntry(C5_Fog_Primer_Select,C5_Fog_Primer,JungleCG,BaseConvoViewer)
+ConversationEntry(C6_Old_Friends_Select,C6_Old_Friends,JungleCG,BaseConvoViewer)
+ConversationEntry(C6_Elba_Cor_Select,C6_Elba_Cor,JungleCG,BaseConvoViewer)
+ConversationEntry(C7_Mugger_Select,C7_Mugger,HillCG,BaseConvoViewer)
+ConversationEntry(C8_Loile_Select,C8_Loile,VolcanoCG,BaseConvoViewer)
+ConversationEntry(C9_Piracy_Select,C9_Piracy,BoatCG,BaseConvoViewer)
+ConversationEntry(C10_Redemption_Select,C10_Redemption,BoatCG,BaseConvoViewer)
+ConversationEntry(C11_Faltering_Select,C11_Faltering,DesertCG,BaseConvoViewer,S_Neutral)
+ConversationEntry(C11_The_Desert_Select,C11_The_Desert,DesertCG,BaseConvoViewer)
+ConversationEntry(C12_Light_Select,C12_Light,HallCG,BaseConvoViewer)
+ConversationEntry(C12_The_Trial_Select,C12_The_Trial,HallCG,BaseConvoViewer)
+ConversationEntry(C13_Delusion_Select,C13_Delusion,YgstraCG,BaseConvoViewer)
+ConversationEntry(C14_Deserters_Select,C14_Deserters,OutdoorCastleCG,BaseConvoViewer)
+ConversationEntry(SSCh14,C14_Secret_Seller,OutdoorCastleCG,BaseConvoViewer,S_PascalTheDog)
+ConversationEntry(C15_The_Devoted,C15_The_Devoted_Base,ElbaCorCastleCG,BaseConvoViewer,S_EncountersAndReunions)
+ConversationEntry(C15_The_Deserted,C15_The_Deserted_Base,ElbaCorCastleCG,BaseConvoViewer)
+ConversationEntry(C17_Homeward_Select,C17_Homeward,LowlandsCG,BaseConvoViewer)
+ConversationEntry(SSCh18,C18_Secret_Seller,LowlandsCG,BaseConvoViewer,S_PascalTheDog)
+ConversationEntry(C19_Unlimited_Power_Select,C19_Unlimited_Power,LowlandsRiverCG,BaseConvoViewer,S_Ameno)
+ConversationEntry(Unlimited2,C19_Unlimited_Power2,LowlandsRiverCG,BaseConvoViewer,S_Ameno)
+ConversationEntry(V2_Thorns_Select,V2_Thorns,PathCG,BaseConvoViewer)
+ConversationEntry(V2_Past_Select,V2_Past,PathCG,BaseConvoViewer)
+ConversationEntry(V3_Family_Select,V3_Family,YgstraCG,BaseConvoViewer)
+ConversationEntry(V3_Way_Select,V3_Way,YgstraCG,BaseConvoViewer)
+ConversationEntryTerminator
+
+ALIGN 4
+SupportConversations1:
+ConversationEntry(EBlairArinC,C1_Blair_Arin_Base,PathCG,Support1Viewer)
+ConversationEntry(EBlairArinCP,C5_Blair_Arin_Base,JungleCG,Support1Viewer)
+ConversationEntry(EBlairArinB,C13_Blair_Arin_Base,YgstraCG,Support1Viewer)
+ConversationEntry(EBlairKennethC,C2_Blair_Kenneth,OutdoorCastleCG,Support1Viewer)
+ConversationEntry(EBlairKennethCP,C6_Blair_Kenneth_Base,JungleCG,Support1Viewer)
+ConversationEntry(EBlairNatasiaC,C4_Blair_Natasia,PathCG,Support1Viewer)
+ConversationEntry(EBlairNatasiaCP,C8_Blair_Natasia_Base,VolcanoCG,Support1Viewer)
+ConversationEntry(EArinDesmondC,C4_Arin_Desmond,PathCG,Support1Viewer)
+ConversationEntry(EArinDesmondCP,C9_Arin_Desmond_Base,BoatCG,Support1Viewer)
+ConversationEntry(EKennethNatasiaC,C3_Kenneth_Natasia,PathCG,Support1Viewer)
+ConversationEntry(EKennethNatasiaCP,C8_Kenneth_Natasia_Base,VolcanoCG,Support1Viewer)
+ConversationEntry(EKennethStefanC,C5_Kenneth_Stefan_Base,JungleCG,Support1Viewer)
+ConversationEntry(EKennethStefanCP,C9_Kenneth_Stefan_Base,BoatCG,Support1Viewer)
+ConversationEntryTerminator
+
+/*ALIGN 4
+NarrationEvents:
+NarrationEntry(_Prologue,Prologue_Narration,MapCG)
+NarrationEntry(_Chapt1,Ch1_Narration,MapCG)
+NarrationEntry(_Chapt2,Ch2_Narration,MapCG)
+NarrationEntry(_Chapt3,Ch3_Narration,MapCG)
+NarrationEntry(_Chapt4,Ch3_Narration,MapCG)
+NarrationEntry(_Chapt5,Ch5_Narration,MapCG)
+NarrationEntry(_Base5,Base1_Narration,MapCG)
+NarrationEntry(_Chapt6,Ch6_Narration,MapCG)
+NarrationEntry(_Chapt7,Ch7_Narration,MapCG)
+NarrationEntry(_Chapt8,Ch8_Narration,MapCG)
+NarrationEntry(_Base8,Base2_Narration,MapCG)
+NarrationEntry(_Chapt9,Ch9_Narration,MapCG)
+NarrationEntry(_Base9,Base3_Narration,MapCG)
+NarrationEntry(_Chapt10,Ch10_Narration,MapCG)
+NarrationEntry(_Chapt11,Ch11_Narration,MapCG)
+NarrationEntry(_Chapt12,Ch12_Narration,MapCG)
+NarrationEntry(_Base12,Base4_Narration,MapCG)
+NarrationEntry(_Chapt13,Ch13_Narration,MapCG)
+NarrationEntry(_Chapt14,Ch14_Narration,MapCG)
+NarrationEntry(_ChaptZ1,ChZ1_Narration,MapCG)
+NarrationEntry(_ChaptZ2,ChZ2_Narration,MapCG)
+NarrationEntry(_ChaptZ3,ChZ3_Narration,MapCG)
+NarrationEntry(_BaseZ3,Base5_Narration,MapCG)
+NarrationEntry(_Chapt15,Ch15_Narration,Map2CG)
+NarrationEntry(_Chapt16,Ch16_Narration,Map2CG)
+NarrationEntry(_Chapt17,Ch17_Narration,Map2CG)
+NarrationEntry(_Chapt18,Ch18_Narration,Map2CG)
+NarrationEntry(_Base18,Base6_Narration,Map2CG)
+NarrationEntry(_Chapt19,Ch19_Narration,Map2CG)
+NarrationEntry(_Chapt20,Ch20_Narration,Map2CG)
+NarrationEntry(_ChaptV1,ChV1_Narration,Map2CG)
+NarrationEntry(_ChaptV2,ChV2_Narration,Map2CG)
+NarrationEntry(_BaseV2,Base7_Narration,Map2CG)
+NarrationEntry(_ChaptV3,ChV3_Narration,Map2CG)
+//currently up to V3
+ConversationEntryTerminator*/
+
+ALIGN 4
+DeathQuoteConversations:
+ConversationEntry(EBlairDeath,BlairDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EArinDeath,ArinDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EKennethDeath,KennethDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(ENatasiaDeath,NatasiaDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EStefanDeath,StefanDeath,OutdoorCastleCG,DeathQuoteViewer)
+ConversationEntry(EDesmondDeath,DesmondDeath,OutdoorCastleCG,DeathQuoteViewer)
+ConversationEntry(ESamDeath,SamDeath,OutdoorCastleCG,DeathQuoteViewer)
+ConversationEntry(EJosefDeath,JosefDeath,HallCG,DeathQuoteViewer)
+ConversationEntry(EPeggyDeath,PeggyDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EButchDeath,ButchDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(ERachaelDeath,RachaelDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(ECassiusDeath,CassiusDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(EJeffDeath,JeffDeath,HillCG,DeathQuoteViewer)
+ConversationEntry(EEmileDeath,EmileDeath,HillCG,DeathQuoteViewer)
+ConversationEntry(EApolloDeath,ApolloDeath,BoatCG,DeathQuoteViewer)
+ConversationEntry(EBechamelDeath,BechamelDeath,BoatCG,DeathQuoteViewer)
+ConversationEntry(ESveltzalusDeath,SveltzalusDeath,BoatCG,DeathQuoteViewer)
+ConversationEntry(EHilbertDeath,HilbertDeath,DesertCG,DeathQuoteViewer)
+ConversationEntry(EFlynnDeath,FlynnDeath,HallCG,DeathQuoteViewer)
+ConversationEntry(EMikeyDeath,MikeyDeath,YgstraCG,DeathQuoteViewer)
+ConversationEntry(ECarbonDeath,CarbonDeath,YgstraCG,DeathQuoteViewer)
+ConversationEntry(EAthenaDeath,AthenaDeath,HallCG,DeathQuoteViewer)
+ConversationEntry(ECharleyDeath,CharleyDeath,HallCG,DeathQuoteViewer)
+ConversationEntry(EZekeDeath,ZekeDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EHyperiusDeath,HyperiusDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EAlexisDeath,AlexisDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(ELeilaDeath,LeilaDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EDamienDeath,DamienDeath,YgstraCG,DeathQuoteViewer)
+ConversationEntry(EZachariasDeath,ZachariasDeath,YgstraCG,DeathQuoteViewer)
+ConversationEntry(EAvanDeath,AvanDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EToddsworthDeath,ToddsworthDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EYuyuDeath,YuyuDeath,OutdoorCastleCG,DeathQuoteViewer)
+ConversationEntry(EArtemisDeath,ArtemisDeath,OutdoorCastleCG,DeathQuoteViewer)
+ConversationEntry(EHollandaiseDeath,HollandaiseDeath,LowlandsCG,DeathQuoteViewer)
+ConversationEntry(EVladmirDeath,VladmirDeath,LowlandsCG,DeathQuoteViewer)
+ConversationEntry(EHoratioDeath,HoratioDeath,LowlandsRiverCG,DeathQuoteViewer)
+ConversationEntry(ESimoneDeath,SimoneDeath,LowlandsCG,DeathQuoteViewer)
+ConversationEntry(EPtolemyDeath,PtolemyDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EJohanDeath,JohanDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EPeterDeath,PeterDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EJoanDeath,JoanDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(ESoniaDeath,SoniaDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(ETobiasDeath,TobiasDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EIanDeath,IanDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EOlsenDeath,OlsenDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EElcorianDeath,ElcorianDeath,PathCG,DeathQuoteViewer)
+ConversationEntryTerminator
+
+ALIGN 4
+FinalDeathQuoteConversations:
+ConversationEntry(EBlairDeathEndgame,BlairDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EArinDeathEndgame,ArinDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EKennethDeathEndgame,KennethDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ENatasiaDeathEndgame,NatasiaDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EStefanDeathEndgame,StefanDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EDesmondDeathEndgame,DesmondDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ESamDeathEndgame,SamDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EJosefDeathEndgame,JosefDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EPeggyDeathEndgame,PeggyDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EButchDeathEndgame,ButchDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ERachaelDeathEndgame,RachaelDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ECassiusDeathEndgame,CassiusDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EJeffDeathEndgame,JeffDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EEmileDeathEndgame,EmileDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EApolloDeathEndgame,ApolloDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EBechamelDeathEndgame,BechamelDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EHilbertDeathEndgame,HilbertDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EFlynnDeathEndgame,FlynnDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EMikeyDeathEndgame,MikeyDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ECarbonDeathEndgame,CarbonDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EAthenaDeathEndgame,AthenaDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ECharleyDeathEndgame,CharleyDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EZekeDeathEndgame,ZekeDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EHyperiusDeathEndgame,HyperiusDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EAlexisDeathEndgame,AlexisDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ELeilaDeathEndgame,LeilaDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EDamienDeathEndgame,DamienDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EZachariasDeathEndgame,ZachariasDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EAvanDeathEndgame,AvanDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EToddsworthDeathEndgame,ToddsworthDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EYuyuDeathEndgame,YuyuDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EArtemisDeathEndgame,ArtemisDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EHollandaiseDeathEndgame,HollandaiseDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EVladmirDeathEndgame,VladmirDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EHoratioDeathEndgame,HoratioDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ESimoneDeathEndgame,SimoneDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EPtolemyDeathEndgame,PtolemyDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EJohanDeathEndgame,JohanDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EPeterDeathEndgame,PeterDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EJoanDeathEndgame,JoanDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ESoniaDeathEndgame,SoniaDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(ETobiasDeathEndgame,TobiasDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EIanDeathEndgame,IanDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EOlsenDeathEndgame,OlsenDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EElcorianDeathEndgame,ElcorianDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntryTerminator
+
+ALIGN 4
+EscapeQuoteConversations:
+ConversationEntry(EBlairEscape,BlairEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EArinEscape,ArinEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EKennethEscape,KennethEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(ENatasiaEscape,NatasiaEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EStefanEscape,StefanEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EDesmondEscape,DesmondEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(ESamEscape,SamEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EJosefEscape,JosefEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EPeggyEscape,PeggyEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EButchEscape,ButchEscape,BoatCG,EscapeQuoteViewer)
+ConversationEntry(ERachaelEscape,RachaelEscape,BoatCG,EscapeQuoteViewer)
+ConversationEntry(ECassiusEscape,CassiusEscape,BoatCG,EscapeQuoteViewer)
+ConversationEntry(EJeffEscape,JeffEscape,BoatCG,EscapeQuoteViewer)
+ConversationEntry(EEmileEscape,EmileEscape,BoatCG,EscapeQuoteViewer)
+ConversationEntry(EApolloEscape,ApolloEscape,BoatCG,EscapeQuoteViewer)
+ConversationEntry(EBechamelEscape,BechamelEscape,BoatCG,EscapeQuoteViewer)
+ConversationEntry(ESveltzalusEscape,SveltzalusEscape,BoatCG,EscapeQuoteViewer)
+ConversationEntry(EHilbertEscape,HilbertEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EFlynnEscape,FlynnEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EMikeyEscape,MikeyEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(ECarbonEscape,CarbonEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EAthenaEscape,AthenaEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(ECharleyEscape,CharleyEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EZekeEscape,ZekeEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EHyperiusEscape,HyperiusEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EAlexisEscape,AlexisEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(ELeilaEscape,LeilaEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EDamienEscape,DamienEscape,YgstraCG,EscapeQuoteViewer)
+ConversationEntry(EZachariasEscape,ZachariasEscape,YgstraCG,EscapeQuoteViewer)
+ConversationEntry(EAvanEscape,AvanEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EToddsworthEscape,ToddsworthEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EYuyuEscape,YuyuEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EArtemisEscape,ArtemisEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EHollandaiseEscape,HollandaiseEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EVladmirEscape,VladmirEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EHoratioEscape,HoratioEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(ESimoneEscape,SimoneEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EPtolemyEscape,PtolemyEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EJohanEscape,JohanEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EPeterEscape,PeterEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EJoanEscape,JoanEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(ESoniaEscape,SoniaEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(ETobiasEscape,TobiasEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EIanEscape,IanEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EOlsenEscape,OlsenEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EElcorianEscape,ElcorianEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntryTerminator
+
+ALIGN 4 
+HistoryGFX: 
+BYTE $10 $00 $10 $00 $1D $00 $00 $00 $F0 $01 $F0 $01 $E0 $01 $05 $40 $03 $F1 $F0 $01 $C0 $24 $F0 $01 $F0 $01 $00 $00 $66 $00 $03 $55 $11 $00 $03 $44 $00 $03 $67 $00 $03 $60 $00 $03 $40 $40 $40 $03 $00 $66 $66 $66 $66 $11 $00 $51 $56 $12 $12 $64 $66 $15 $11 $22 $76 $67 $00 $03 $60 $13 $21 $20 $03 $40 $50 $12 $20 $1F $06 $00 $3C $74 $00 $00 $41 $00 $76 $60 $06 $62 $77 $46 $62 $62 $00 $07 $34 $31 $63 $07 $56 $51 $63 $39 $07 $66 $10 $57 $E0 $01 $00 $2E $00 $76 $00 $03 $77 $77 $F0 $1B $80 $91 $00 $25 $36 $00 $54 $F0 $01 $F0 $01 $FF $F0 $01 $20 $01 $10 $C4 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $C1 $F0 $01 $D0 $01 $65 $66 $66 $56 $65 $10 $07 $03 $56 $00 $00 $50 $66 $05 $00 $03 $00 $08 $56 $65 $00 $04 $60 $13 $57 $65 $00 $11 $03 $B7 $55 $D4 $10 $20 $03 $2B $50 $00 $1B $00 $10 $12 $65 $56 $EF $10 $29 $00 $09 $03 $B5 $55 $F3 $7F $00 $01 $20 $29 $00 $04 $75 $55 $10 $04 $00 $39 $40 $12 $36 $40 $03 $26 $40 $03 $40 $16 $10 $03 $21 $66 $46 $12 $11 $11 $00 $11 $11 $51 $55 $55 $11 $51 $76 $00 $56 $11 $41 $77 $56 $21 $41 $07 $00 $36 $21 $61 $07 $36 $31 $61 $07 $00 $26 $31 $65 $07 $60 $66 $65 $07 $00 $36 $43 $64 $47 $12 $63 $74 $60 $80 $30 $03 $76 $60 $11 $63 $76 $40 $11 $60 $65 $10 $03 $00 $1E $06 $07 $26 $11 $65 $00 $67 $12 $23 $61 $47 $31 $46 $62 $00 $57 $21 $43 $66 $57 $11 $22 $65 $80 $04 $45 $63 $57 $65 $15 $65 $60 $16 $00 $64 $06 $46 $11 $32 $66 $26 $11 $00 $52 $46 $46 $21 $66 $36 $56 $21 $00 $76 $26 $56 $31 $76 $16 $36 $31 $02 $76 $14 $36 $51 $76 $14 $10 $E9 $34 $00 $51 $06 $60 $12 $13 $64 $26 $51 $00 $16 $62 $34 $61 $16 $62 $56 $62 $04 $16 $62 $36 $62 $14 $00 $03 $15 $63 $20 $26 $56 $00 $E5 $13 $32 $65 $23 $11 $00 $11 $61 $12 $11 $53 $66 $14 $21 $00 $66 $77 $14 $21 $76 $07 $24 $31 $24 $76 $00 $00 $42 $00 $36 $00 $1E $00 $32 $00 $23 $42 $07 $41 $15 $43 $07 $62 $00 $15 $76 $07 $51 $23 $76 $00 $31 $01 $52 $76 $00 $21 $42 $77 $00 $00 $9D $FF $F1 $1D $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F5 $F0 $01 $F0 $01 $F0 $01 $90 $01 $55 $12 $E1 $50 $13 $E6 $DF $F0 $01 $13 $A7 $55 $13 $CC $23 $A7 $20 $2D $13 $F7 $03 $BC $3E $05 $60 $03 $E9 $13 $FA $17 $9B $10 $04 $14 $21 $66 $6A $56 $00 $4C $20 $0B $00 $10 $4F $50 $04 $2F $55 $7E $05 $24 $2B $00 $14 $13 $28 $00 $01 $44 $16 $10 $28 $05 $D6 $10 $03 $04 $39 $14 $00 $63 $11 $00 $62 $10 $65 $77 $D0 $10 $21 $04 $62 $55 $50 $97 $62 $66 $24 $31 $08 $21 $45 $13 $11 $10 $3B $77 $77 $77 $F0 $27 $B2 $20 $68 $14 $7C $00 $38 $66 $56 $21 $64 $0C $63 $24 $11 $63 $90 $1F $98 $76 $37 $42 $00 $15 $65 $57 $21 $21 $64 $67 $34 $18 $65 $76 $07 $40 $1F $90 $01 $36 $51 $45 $00 $26 $56 $11 $42 $56 $67 $55 $66 $0A $67 $00 $77 $77 $83 $90 $55 $10 $DE $60 $20 $31 $21 $14 $1A $76 $13 $56 $65 $77 $98 $00 $5F $07 $70 $81 $17 $20 $D5 $51 $76 $00 $11 $40 $21 $74 $05 $11 $76 $00 $60 $00 $5D $C8 $14 $BF $04 $B7 $60 $31 $04 $C2 $65 $05 $00 $00 $47 $76 $11 $64 $07 $00 $21 $74 $25 $07 $00 $00 $27 $00 $61 $00 $7D $63 $00 $61 $0E $76 $07 $00 $50 $10 $88 $F3 $FD $50 $79 $56 $7F $06 $35 $4F $15 $79 $F0 $01 $F9 $5E $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $B6 $28 $23 $55 $08 $25 $02 $88 $50 $F7 $E9 $58 $43 $66 $F7 $10 $04 $14 $68 $47 $EB $A4 $6B $56 $08 $3B $03 $46 $14 $0B $FF $00 $05 $F2 $D3 $34 $07 $13 $6F $04 $77 $F0 $5F $24 $4D $34 $75 $7F $56 $F3 $2B $10 $3E $04 $60 $20 $23 $F0 $3F $90 $C2 $24 $9D $FE $F0 $1B $00 $9F $00 $5D $10 $93 $00 $5E $F5 $23 $20 $17 $75 $31 $77 $50 $F0 $3F $E3 $A7 $66 $66 $65 $14 $4F $93 $F0 $01 $00 $50 $05 $61 $65 $66 $01 $22 $F0 $1F $FF $30 $DF $00 $D8 $F1 $5D $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $E0 $F0 $01 $F0 $01 $F0 $01 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00
+
+
+
+ALIGN 4 
+SomeTestEvent: 
+EVBIT_MODIFY 3 // No pressing start (this causes an extra fade to black) 
+
+LOAD1 1 BlairGroup 
+ENUN 
+SET_ACTIVE 1 // Just in case LOADFACE 0xFFFF is used  
+SetDefaultName(SwordDefault) //for horatio talks
+MUSI 
+TEXTSTART 
+CALL 0x89EE2E8 // Fade to background in s2 
+SADD s2 s3 s0 
+TEXTSHOW (-1) 
+TEXTEND 
+TEXTCONT // Just in case they used LoadOverworldFaces 
+TEXTEND 
+TEXTCONT 
+TEXTEND 
+REMA 
+MUNO 
+// Don't clear the BG in the event 
+NoFade 
+ENDA 
+
+
+BlairGroup: 
+UNIT Blair BlairLord 0x1 Level(1,Ally,False)   [5,5] 0b 0x0 0x0 0x0 [0] [0x0]
+UNIT 
+
+
+
+/*ALIGN 4 
+NarrationEvent: 
+EVBIT_MODIFY 3 // No pressing start (this causes an extra fade to black) 
+
+MUSI 
+SVAL 0xB 0x00B4FFFF
+TUTORIALTEXTBOXSTART
+SVAL s2 0x2
+CALL 0x89EE2E8 // Fade to background in s2 
+SADD s2 s3 s0 
+TEXTSHOW (-1)
+TEXTEND
+REMA 
+MUNO 
+// Don't clear the BG in the event 
+NoFade 
+ENDA */
+
+
+//AB89C add item to start menu 
+
+//AB932 as disable support viewer 
+
+// RunSupportEvent by 7743 keeps the menu but allows for specific events for each support level for each char 
+
+// 0x80AA158 at 0x80AA1AE calls 
+	// 0x80A1984 starts the proc 0x8A1975C support room stuff I think 
+// 0x80AA1BC is called after exiting support viewer 
+
+

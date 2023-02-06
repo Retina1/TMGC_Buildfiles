@@ -207,13 +207,13 @@ Narration(MapCG,ChZ2_Narration)
 ENUT 0x23
 ENUT 0x24
 MUSC S_Terra
-CleanText(PathCG,Z2Opening)
+CleanText(YgstraCG,Z2Opening)
 SystemText(Z2Note)
 EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-CleanTextNoMap(PathCG,Z2Ending)
+CleanTextNoMap(YgstraCG,Z2Ending)
 MoveToChapter(ChapterZ3)
 EndEvent
 

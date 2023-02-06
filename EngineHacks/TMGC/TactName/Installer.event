@@ -1,0 +1,6 @@
+ALIGN 4
+
+#define SetDefaultName(id) "BYTE 0x40 0x0D; SHORT id ; POIN TactNameFunction+1"
+
+TactNameFunction:
+#incbin "CopyTactName.dmp"

@@ -28,6 +28,18 @@
 #include "BattleMenus/BattleMenuInstaller.txt"
 
 PUSH
+ORG $A8F34
+POIN MenuNames
+ORG $A9a60
+POIN MenuNames
+//ORG $A8EE4
+//POIN MenuNamesPal
+POP
+ALIGN 4
+MenuNames:
+#incbin "MenuText.png.dmp"
+
+PUSH
 ORG 0x43ad4
 POIN NameEntry
 ORG 0x447dc

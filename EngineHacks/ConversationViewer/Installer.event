@@ -41,6 +41,8 @@ POIN Chapter3Conversations
 POIN Chapter4Conversations
 POIN Chapter5Conversations
 POIN Interlude1Conversations
+POIN Chapter6Conversations
+POIN Chapter7Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN DeathQuoteConversations 
@@ -129,7 +131,7 @@ ConversationEntry(EC3Warning,C3Hint,OutdoorCastleCG,Chapter3)
 ConversationEntry(EC3BossGen,C3HelgaBattle,HallCG,Chapter3)
 ConversationEntry(EC3BossDie,C3HelgaDeath,HallCG,Chapter3)
 ConversationEntry(EC3JosefDie,AllyJosefDeath,HallCG,Chapter3)
-ConversationEntry(EC3End1,Ch3_Ending,OutdoorCastleCG,Chapter3,VictoryMinor)
+ConversationEntry(EC3End1,Ch3_Ending,HallCG,Chapter3,VictoryMinor)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -194,6 +196,65 @@ ConversationEntry(EI1End1,I1ReleaseMe,StreetCG,Interlude1)
 ConversationEntryTerminator
 
 ALIGN 4
+Chapter6Conversations:
+ConversationEntry(EC6Open1,Ch6_Opening,JungleCG,Chapter6,S_Terra)
+ConversationEntry(EC6Warning,C6Warning,OuterRuinCG,Chapter6)
+ConversationEntry(EC6WarningPlus,C6WarningHard,OuterRuinCG,Chapter6)
+ConversationEntry(EC6Village1,Ch6_NorthVillage,VillageCG,Chapter6)
+ConversationEntry(EC6Village2,Ch6_SouthVillage,VillageCG,Chapter6)
+ConversationEntry(EC6House1,Ch6_NorthHouse,HouseCG,Chapter6)
+ConversationEntry(EC6House2,Ch6_MidHouse,House2CG,Chapter6)
+ConversationEntry(EC6House3,Ch6_SouthHouse,HouseCG,Chapter6)
+ConversationEntry(EC6BossGen,C6AmundsenBattle,OuterRuinCG,Chapter6)
+ConversationEntry(EC6BossButch,C6AmundsenButchBattle,OuterRuinCG,Chapter6)
+ConversationEntry(EC6BossPeggy,C6AmundsenPeggyBattle,OuterRuinCG,Chapter6)
+ConversationEntry(EC6BossDie,C6AmundsenDeath,OuterRuinCG,Chapter6)
+ConversationEntry(EC6End1,Ch6_Ending,OuterRuinCG,Chapter6,VictoryTheme)
+ConversationEntry(EC6End1Alt1,Ch6_Ending_Dead_Cassius,OuterRuinCG,Chapter6,VictoryMinor)
+ConversationEntry(EC6End1Alt2,Ch6_Ending_Dead_Rachael,OuterRuinCG,Chapter6,VictoryMinor)
+ConversationEntry(EC6End1Alt3,Ch6_Ending_Dead_Rachael_and_Cassius,OuterRuinCG,Chapter6,VictoryMinor)
+ConversationEntry(EC6End2,Ch6_Ending2,BlankCG,Chapter6,S_Chaos)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter7Conversations:
+ConversationEntry(EC7Open1,Ch7_Opening,HillCG,Chapter7,S_Terra)
+ConversationEntry(EC7Open1Alt1,Ch7_Opening_Dead_Cassius,HillCG,Chapter7,S_Terra)
+ConversationEntry(EC7Open1Alt2,Ch7_Opening_Dead_Rachael,HillCG,Chapter7,S_Terra)
+ConversationEntry(EC7Open1Alt3,Ch7_Opening_Dead_Rachael_and_Cassius,HillCG,Chapter7)
+ConversationEntry(EC7Open2,Ch7_Opening2,HillCG,Chapter7,S_Crisis)
+ConversationEntry(EC7Open2Alt1,Ch7_Opening_Dead_Cassius2,HillCG,Chapter7,S_Crisis)
+ConversationEntry(EC7Open2Alt2,Ch7_Opening_Dead_Rachael2,HillCG,Chapter7,S_Crisis)
+ConversationEntry(EC7Open2Alt3,Ch7_Opening_Dead_Rachael_and_Cassius2,HillCG,Chapter7,S_Crisis)
+ConversationEntry(EC7EmileSpawn,Ch7_Emile_Spawn,HillCG,Chapter7)
+ConversationEntry(EC7AlexisWilhelm,C7WilhelmAlexisTalk,HillCG,Chapter7)
+ConversationEntry(EC7RecruitEmile,Ch7_Emile_Talk,HillCG,Chapter7,RecruitmentTheme)
+ConversationEntry(EC7House1,Ch7_NorthHouse,HouseCG,Chapter7)
+ConversationEntry(EC7House2,Ch7_Mid1House,HouseCG,Chapter7)
+ConversationEntry(EC7House3,Ch7_Mid2House,House2CG,Chapter7)
+ConversationEntry(EC7House4,Ch7_SouthHouse,HouseCG,Chapter7)
+ConversationEntry(EC7BrandlBlair,BrandlBlairTalk,HillCG,Chapter7,S_TMSQuestBattle)
+ConversationEntry(EC7BrandlRachael,BrandlRachaelTalk,HillCG,Chapter7,S_TMSQuestBattle)
+ConversationEntry(EC7BrandlCassius,BrandlCassiusTalk,HillCG,Chapter7,S_TMSQuestBattle)
+ConversationEntry(EC7ZaineSpawn,Ch7_Zaine_Spawn,HillCG,Chapter7)
+ConversationEntry(EC7BossGen,C7ZaineBattle,HillCG,Chapter7)
+ConversationEntry(EC7BossKenneth,C7ZaineKennethBattle,HillCG,Chapter7)
+ConversationEntry(EC7BossEmile,C7ZaineEmileBattle,HillCG,Chapter7)
+ConversationEntry(EC7BossDie,C7ZaineDeath,HillCG,Chapter7)
+ConversationEntry(EC7EmileDie,AllyEmileDeath,HillCG,Chapter7)
+ConversationEntry(EC7BrandlDie,C7BrandlDeath,HillCG,Chapter7)
+ConversationEntry(EC7HyperiusDie,C7HyperiusDeath,HillCG,Chapter7)
+ConversationEntry(EC7AlexisDie,C7AlexisDeath,HillCG,Chapter7)
+ConversationEntry(EC7WilhelmDie,C7WilhelmDeath,HillCG,Chapter7)
+ConversationEntry(EC7End1,Ch7_Ending,OutdoorCastleCG,Chapter7,VictoryTheme)
+ConversationEntry(EC7End1Alt1,Ch7_Ending_Dead_Cassius,OutdoorCastleCG,Chapter7,VictoryMinor)
+ConversationEntry(EC7End1Alt2,Ch7_Ending_Dead_Rachael,OutdoorCastleCG,Chapter7,VictoryMinor)
+ConversationEntry(EC7End1Alt3,Ch7_Ending_Dead_Rachael_and_Cassius,OutdoorCastleCG,Chapter7,VictoryMinor)
+ConversationEntry(EC7End2,Ch7_Ending2,ElbaCorCastleCG,Chapter7,VictoryTheme)
+ConversationEntry(EC7End3,Ch7_Ending3,HallCG,Chapter7,S_RigorousJustice)
+ConversationEntryTerminator
+
+ALIGN 4
 BaseConversations:
 ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
 ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
@@ -238,10 +299,21 @@ ConversationEntry(EBlairNatasiaC,C4_Blair_Natasia,PathCG,Support1Viewer)
 ConversationEntry(EBlairNatasiaCP,C8_Blair_Natasia_Base,VolcanoCG,Support1Viewer)
 ConversationEntry(EArinDesmondC,C4_Arin_Desmond,PathCG,Support1Viewer)
 ConversationEntry(EArinDesmondCP,C9_Arin_Desmond_Base,BoatCG,Support1Viewer)
+ConversationEntry(EArinSamC,C7_Sam_Arin_Base,HillCG,Support1Viewer)
+ConversationEntry(EArinSamCP,C13_Arin_Sam_Base,YgstraCG,Support1Viewer)
 ConversationEntry(EKennethNatasiaC,C3_Kenneth_Natasia,PathCG,Support1Viewer)
 ConversationEntry(EKennethNatasiaCP,C8_Kenneth_Natasia_Base,VolcanoCG,Support1Viewer)
 ConversationEntry(EKennethStefanC,C5_Kenneth_Stefan_Base,JungleCG,Support1Viewer)
 ConversationEntry(EKennethStefanCP,C9_Kenneth_Stefan_Base,BoatCG,Support1Viewer)
+ConversationEntry(ENatasiaPeggyC,C6_Natasia_Peggy_Base,JungleCG,Support1Viewer)
+ConversationEntry(ENatasiaPeggyCP,C12_Natasia_Peggy_Base,HallCG,Support1Viewer)
+ConversationEntry(EStefanJosefC,C7_Stefan_Josef_Base,HillCG,Support1Viewer)
+ConversationEntry(EStefanJosefCP,C12_Stefan_Josef_Base,HallCG,Support1Viewer)
+ConversationEntry(ESamJosefC,C6_Sam_Josef_Base,JungleCG,Support1Viewer)
+ConversationEntry(ESamJosefCP,C10_Sam_Josef_Base,BoatCG,Support1Viewer)
+ConversationEntry(EPeggyButchCP,C9_Peggy_Butch_Base,BoatCG,Support1Viewer)
+ConversationEntry(ERachaelCassiusC,C7_Rachael_Cassius_Base,HillCG,Support1Viewer)
+ConversationEntry(ERachaelCassiusCP,C11_Rachael_Cassius_Base,HallCG,Support1Viewer)
 ConversationEntryTerminator
 
 /*ALIGN 4

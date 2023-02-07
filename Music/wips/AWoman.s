@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song92_grp, voicegroup000
-	.equ	song92_pri, 0
-	.equ	song92_rev, 0
-	.equ	song92_mvl, 127
-	.equ	song92_key, 0
-	.equ	song92_tbs, 1
-	.equ	song92_exg, 0
-	.equ	song92_cmp, 1
+	.equ	AWoman_grp, voicegroup000
+	.equ	AWoman_pri, 0
+	.equ	AWoman_rev, 0
+	.equ	AWoman_mvl, 127
+	.equ	AWoman_key, 0
+	.equ	AWoman_tbs, 1
+	.equ	AWoman_exg, 0
+	.equ	AWoman_cmp, 1
 
 	.section .rodata
-	.global	song92
+	.global	AWoman
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song92_001:
+AWoman_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song92_key+0
+ .byte   KEYSH , AWoman_key+0
 Label_0110A606:
- .byte   TEMPO , 70*song92_tbs/2
+ .byte   TEMPO , 70*AWoman_tbs/2
  .byte   VOICE , 1
- .byte   VOL , 27*song92_mvl/mxv
+ .byte   VOL , 27*AWoman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N32 ,En2 ,v080
  .byte   N32 ,Gn2
@@ -176,7 +176,7 @@ Label_0110A6A8:
  .byte   GOTO
   .word Label_0110A606
 @  #01 @031   ----------------------------------------
- .byte   TEMPO , 70*song92_tbs/2
+ .byte   TEMPO , 70*AWoman_tbs/2
  .byte   N32 ,En2 ,v080
  .byte   N32 ,Gn2
  .byte   N32 ,Bn2
@@ -275,12 +275,12 @@ Label_0110A6A8:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song92_002:
+AWoman_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song92_key+0
+ .byte   KEYSH , AWoman_key+0
 Label_0110A796:
  .byte   VOICE , 1
- .byte   VOL , 23*song92_mvl/mxv
+ .byte   VOL , 23*AWoman_mvl/mxv
  .byte   N32 ,En1 ,v080
  .byte   W36
  .byte   N11
@@ -478,12 +478,12 @@ Label_0110A7EB:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song92_003:
+AWoman_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song92_key+0
+ .byte   KEYSH , AWoman_key+0
 Label_0110A8B6:
  .byte   VOICE , 107
- .byte   VOL , 54*song92_mvl/mxv
+ .byte   VOL , 54*AWoman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -678,12 +678,12 @@ Label_0110A90A:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song92_004:
+AWoman_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song92_key+0
+ .byte   KEYSH , AWoman_key+0
 Label_0110A97A:
  .byte   VOICE , 28
- .byte   VOL , 90*song92_mvl/mxv
+ .byte   VOL , 90*AWoman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -883,12 +883,12 @@ Label_0110A9E5:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song92_005:
+AWoman_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song92_key+0
+ .byte   KEYSH , AWoman_key+0
 Label_0110AA56:
  .byte   VOICE , 18
- .byte   VOL , 18*song92_mvl/mxv
+ .byte   VOL , 18*AWoman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #05 @001   ----------------------------------------
@@ -1156,12 +1156,12 @@ Label_0110AB2A:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song92_006:
+AWoman_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song92_key+0
+ .byte   KEYSH , AWoman_key+0
 Label_0110ABE2:
  .byte   VOICE , 38
- .byte   VOL , 41*song92_mvl/mxv
+ .byte   VOL , 41*AWoman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N32 ,En0 ,v080
  .byte   W36
@@ -1384,12 +1384,12 @@ Label_0110AC6D:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song92_007:
+AWoman_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song92_key+0
+ .byte   KEYSH , AWoman_key+0
 Label_0110AD4A:
  .byte   VOICE , 124
- .byte   VOL , 41*song92_mvl/mxv
+ .byte   VOL , 41*AWoman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,En3 ,v052
  .byte   W12
@@ -1645,12 +1645,12 @@ Label_0110AD71:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song92_008:
+AWoman_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song92_key+0
+ .byte   KEYSH , AWoman_key+0
 Label_0110AEEA:
  .byte   VOICE , 124
- .byte   VOL , 31*song92_mvl/mxv
+ .byte   VOL , 31*AWoman_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N32 ,Cn1 ,v080
  .byte   N11 ,Fs1
@@ -1898,21 +1898,21 @@ Label_0110AF0C:
 @******************************************************@
 	.align	2
 
-song92:
+AWoman:
 	.byte	8	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song92_pri	@ Priority
-	.byte	song92_rev	@ Reverb.
+	.byte	AWoman_pri	@ Priority
+	.byte	AWoman_rev	@ Reverb.
     
-	.word	song92_grp
+	.word	AWoman_grp
     
-	.word	song92_001
-	.word	song92_002
-	.word	song92_003
-	.word	song92_004
-	.word	song92_005
-	.word	song92_006
-	.word	song92_007
-	.word	song92_008
+	.word	AWoman_001
+	.word	AWoman_002
+	.word	AWoman_003
+	.word	AWoman_004
+	.word	AWoman_005
+	.word	AWoman_006
+	.word	AWoman_007
+	.word	AWoman_008
 
 	.end

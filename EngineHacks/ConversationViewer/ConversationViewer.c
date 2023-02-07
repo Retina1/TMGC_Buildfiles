@@ -418,7 +418,7 @@ static int CharacterInputLoop(struct MenuProc* menu, struct MenuCommandProc* com
 
 
 
-
+extern u16 ConversationViewer_DefaultBGM; 
 void ConversationViewer_StartMenu(struct Struct_ConversationViewerProc* proc)
 {
 
@@ -435,6 +435,15 @@ void ConversationViewer_StartMenu(struct Struct_ConversationViewerProc* proc)
 	if (NumberOfChapters>6) NumberOfChapters = 6; 
 	menu->commandCount = NumberOfChapters; 
 	Menu_Draw(menu); 
+	
+	//int Sound_GetCurrentSong(void); //! FE8U = 0x8002259
+	//s8 Sound_IsSongPlaying(void); //! FE8U = 0x8002265
+	int currBGM = Sound_GetCurrentSong();
+	if (currBGM != ConversationViewer_DefaultBGM) 
+	{
+		//return;
+		Sound_PlaySongSmooth(ConversationViewer_DefaultBGM, 0); 
+	}
 }
 
 
@@ -508,8 +517,6 @@ static void DrawChapterTitle(struct MenuProc* menu, struct MenuCommandProc* comm
 	
 }
 
-//extern void m4aSongNumStart(u16 
-extern u16 ConversationViewer_DefaultBGM; 
 static int SelectYes(struct MenuProc* menu, struct MenuCommandProc* command)
 {
 	
@@ -530,7 +537,15 @@ static int SelectYes(struct MenuProc* menu, struct MenuCommandProc* command)
 				u16 bgm = ConvoEntry->bgm; 
 				if (ConvoEntry->bg == 0xFF) gEventSlot[0x2] = 0x37; // 0x37 is reserved for random BGs in vanilla 
 				if (bgm == 0xFFFF || bgm == 0) bgm = ConversationViewer_DefaultBGM; // default bgm as Distant Roads 
-				Sound_PlaySong(bgm, 0);
+				//Sound_PlaySong(bgm, 0);
+				int currBGM = Sound_GetCurrentSong();
+				if (currBGM != bgm) 
+				{
+					Sound_FadeSongOut((-1)); //! FE8U = 0x800231D
+					Sound_FadeOut_800237C((-1)); //! FE8U = 0x800237D
+					Sound_FadeOut_80023E0((-1)); //! FE8U = 0x80023E1
+					Sound_PlaySongSmooth(bgm, 0); 
+				}
 				CallMapEventEngine((void*) ((int)&SomeTestEvent), 3); 
 			} 
 		}
@@ -559,7 +574,12 @@ void ConversationViewerMenuEnd_ReturnTrue(void) // Did some event
 {
 	Struct_ConversationViewerProc* proc = (Struct_ConversationViewerProc*)ProcFind(&ProcInstruction_ConversationViewer);
 	ProcGoto((Proc*)proc,5); // Destructor sequence 
-	Sound_PlaySongSmooth(0x43, 0); // main theme bgm or 0x43 
+	//m4aSongNumStart(0x43); 
+	//Sound_FadeSongOut((-1)); //! FE8U = 0x800231D
+	//Sound_FadeOut_800237C((-1)); //! FE8U = 0x800237D
+	//Sound_FadeOut_80023E0((-1)); //! FE8U = 0x80023E1
+	//CancelPlaySongDelayed();
+	Sound_PlaySongSmooth(0x43, 0);
 }
 
 void ConversationViewerMenuEnd_ReturnFalse(void)

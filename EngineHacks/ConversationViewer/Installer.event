@@ -43,6 +43,9 @@ POIN Chapter5Conversations
 POIN Interlude1Conversations
 POIN Chapter6Conversations
 POIN Chapter7Conversations
+POIN Chapter8Conversations
+POIN Interlude2Conversations
+POIN Chapter9Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN DeathQuoteConversations 
@@ -255,6 +258,65 @@ ConversationEntry(EC7End3,Ch7_Ending3,HallCG,Chapter7,S_RigorousJustice)
 ConversationEntryTerminator
 
 ALIGN 4
+Chapter8Conversations:
+ConversationEntry(EC8Open0,Ch8_ColdOpening,ElbaCorCastleCG,Chapter8)
+ConversationEntry(EC8Open1,Ch8_Opening,VolcanoCG,Chapter8,S_Terra)
+ConversationEntry(EC8Open1Alt1,Ch8_Opening_Dead_Rachael,VolcanoCG,Chapter8,S_Terra)
+ConversationEntry(EC8Open1Alt2,Ch8_Opening_Dead_Cassius,VolcanoCG,Chapter8,S_Terra)
+ConversationEntry(EC8Open1Alt3,Ch8_Opening_Dead_Rachael_and_Cassius,VolcanoCG,Chapter8,S_Terra)
+ConversationEntry(EC8BossGen,C8EsmeBattle,VolcanoCG,Chapter8)
+ConversationEntry(EC8BossRachael,C8EsmeRachaelBattle,VolcanoCG,Chapter8)
+ConversationEntry(EC8BossCassius,C8EsmeCassiusBattle,VolcanoCG,Chapter8)
+ConversationEntry(EC8BossDie,C8EsmeDeath,VolcanoCG,Chapter8)
+ConversationEntry(CidRetreat,C8CidDeath,VolcanoCG,Chapter8)
+ConversationEntry(EC8End1,Ch8_Ending,VolcanoCG,Chapter8,VictoryTheme)
+ConversationEntryTerminator
+
+ALIGN 4
+Interlude2Conversations:
+ConversationEntry(EI2Open1,I2_Opening,PortCG,Interlude2)
+ConversationEntry(EI2Hyperius,I2HyperiusTalk,PortCG,Interlude2)
+ConversationEntry(EI2Alexis,I2AlexisTalk,PortCG,Interlude2)
+ConversationEntry(EI2Charley,I2CharleyTalk,PortCG,Interlude2)
+ConversationEntry(EI2ManfredWilhelm,I2ManfredWilhelmTalk,PortCG,Interlude2)
+ConversationEntry(EI2House1,I2MidText,HouseCG,Interlude2)
+ConversationEntry(EI2House2,I2NorthText,HouseCG,Interlude2)
+ConversationEntry(EI2House3,I2SouthText,House2CG,Interlude2)
+ConversationEntry(EI2House4,I2InnText,House2CG,Interlude2)
+ConversationEntry(EI2Cit1,I2CitTalk,StreetCG,Interlude2)
+ConversationEntry(EI2Cit2,I2Cit2Talk,StreetCG,Interlude2)
+ConversationEntry(EI2Merchant,I2MerchantTalk,PortCG,Interlude2)
+ConversationEntry(EI2MerchantPoor,I2NoMoneyHa,PortCG,Interlude2)
+ConversationEntry(EI2MerchantDeny,I2SkillDenied,PortCG,Interlude2)
+ConversationEntry(EI2MerchantBuy,I2SkillPurchased,PortCG,Interlude2)
+ConversationEntry(EI2Leave,I2ConfirmLeave,BoatCG,Interlude2)
+ConversationEntry(EI2NotYet,I2NotYet,BoatCG,Interlude2)
+ConversationEntry(EI2End1,I2ReleaseMe,BoatCG,Interlude2)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter9Conversations:
+ConversationEntry(EC9Open1,Ch9_Opening,BoatCG,Chapter9,S_Terra)
+ConversationEntry(EC9Open2,Ch9_Opening2,BoatCG,Chapter9,S_Crisis)
+ConversationEntry(EC9Open3,Ch9_Opening3,BoatCG,Chapter9,S_Crisis)
+ConversationEntry(EC9ApolloHint,C9T1Apollo,BoatCG,Chapter9)
+ConversationEntry(EC9BechamelHint,C9T1Bechamel,BoatCG,Chapter9)
+ConversationEntry(EC9Barrels,C9BarrelWarning,BoatCG,Chapter9)
+ConversationEntry(EC9RecruitApollo,Ch9_Apollo_Talk,BoatCG,Chapter9,RecruitmentTheme)
+ConversationEntry(EC9RecruitBechamel,Ch9_Bechamel_Talk,BoatCG,Chapter9,RecruitmentTheme)
+ConversationEntry(EC9BossGen,C9PeteBattle,BoatCG,Chapter9)
+ConversationEntry(EC9BossCid,C9PeteCidBattle,BoatCG,Chapter9)
+ConversationEntry(EC9BossBechamel,C9PeteBechamelBattle,BoatCG,Chapter9)
+ConversationEntry(EC9BossDie,C9PeteDeath,BoatCG,Chapter9)
+ConversationEntry(CidRetreat,C9CidDeath,BoatCG,Chapter9)
+ConversationEntry(EC9ApolloDie,AllyApolloDeath,BoatCG,Chapter9)
+ConversationEntry(EC9BechamelDie,EnemyBechamelDeath,BoatCG,Chapter9)
+ConversationEntry(EC9End1,Ch9_Ending,BoatCG,Chapter9,VictoryTheme)
+ConversationEntry(EC9End1Alt1,Ch9_Ending_Apollo_Dead,BoatCG,Chapter9,VictoryTheme)
+ConversationEntry(EC9End1Alt2,Ch9_Ending_Apollo_Unrecruited,BoatCG,Chapter9,VictoryTheme)
+ConversationEntryTerminator
+
+ALIGN 4
 BaseConversations:
 ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
 ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
@@ -297,63 +359,59 @@ ConversationEntry(EBlairKennethC,C2_Blair_Kenneth,OutdoorCastleCG,Support1Viewer
 ConversationEntry(EBlairKennethCP,C6_Blair_Kenneth_Base,JungleCG,Support1Viewer)
 ConversationEntry(EBlairNatasiaC,C4_Blair_Natasia,PathCG,Support1Viewer)
 ConversationEntry(EBlairNatasiaCP,C8_Blair_Natasia_Base,VolcanoCG,Support1Viewer)
+ConversationEntry(EBlairEmileC,C8_Blair_Emile_Base,VolcanoCG,Support1Viewer)
+ConversationEntry(EBlairEmileCP,C11_Blair_Emile_Base,DesertCG,Support1Viewer)
+ConversationEntry(EBlairCarbonC,C14_Blair_Carbon_Base,OutdoorCastleCG,Support1Viewer)
 ConversationEntry(EArinDesmondC,C4_Arin_Desmond,PathCG,Support1Viewer)
 ConversationEntry(EArinDesmondCP,C9_Arin_Desmond_Base,BoatCG,Support1Viewer)
 ConversationEntry(EArinSamC,C7_Sam_Arin_Base,HillCG,Support1Viewer)
 ConversationEntry(EArinSamCP,C13_Arin_Sam_Base,YgstraCG,Support1Viewer)
+ConversationEntry(EArinSveltzalusC,C12_Arin_Sveltzalus_Base,HallCG,Support1Viewer)
 ConversationEntry(EKennethNatasiaC,C3_Kenneth_Natasia,PathCG,Support1Viewer)
 ConversationEntry(EKennethNatasiaCP,C8_Kenneth_Natasia_Base,VolcanoCG,Support1Viewer)
 ConversationEntry(EKennethStefanC,C5_Kenneth_Stefan_Base,JungleCG,Support1Viewer)
 ConversationEntry(EKennethStefanCP,C9_Kenneth_Stefan_Base,BoatCG,Support1Viewer)
+ConversationEntry(EKennethHilbertC,C12_Kenneth_Hilbert_Base,HallCG,Support1Viewer)
 ConversationEntry(ENatasiaPeggyC,C6_Natasia_Peggy_Base,JungleCG,Support1Viewer)
 ConversationEntry(ENatasiaPeggyCP,C12_Natasia_Peggy_Base,HallCG,Support1Viewer)
+ConversationEntry(ENatasiaBechamelC,C11_Natasia_Bechamel_Base,DesertCG,Support1Viewer)
+ConversationEntry(EStefanDesmondC,C8_Stefan_Desmond_Base,VolcanoCG,Support1Viewer)
+ConversationEntry(EStefanDesmondCP,C10_Stefan_Desmond_Base,BoatCG,Support1Viewer)
 ConversationEntry(EStefanJosefC,C7_Stefan_Josef_Base,HillCG,Support1Viewer)
 ConversationEntry(EStefanJosefCP,C12_Stefan_Josef_Base,HallCG,Support1Viewer)
+ConversationEntry(EDesmondFlynnC,C14_Desmond_Flynn_Base,OutdoorCastleCG,Support1Viewer)
 ConversationEntry(ESamJosefC,C6_Sam_Josef_Base,JungleCG,Support1Viewer)
 ConversationEntry(ESamJosefCP,C10_Sam_Josef_Base,BoatCG,Support1Viewer)
+ConversationEntry(ESamEmileC,C10_Sam_Emile_Base,BoatCG,Support1Viewer)
+ConversationEntry(ESamBechamelC,C12_Sam_Bechamel_Base,HallCG,Support1Viewer)
+ConversationEntry(EJosefHilbertC,C13_Josef_Hilbert_Base,YgstraCG,Support1Viewer)
+ConversationEntry(EPeggyButchC,Ch5_Butch_Talk,JungleCG,Chapter5,RecruitmentTheme)
 ConversationEntry(EPeggyButchCP,C9_Peggy_Butch_Base,BoatCG,Support1Viewer)
+ConversationEntry(EPeggyApolloC,C11_Peggy_Apollo_Base,DesertCG,Support1Viewer)
+ConversationEntry(EButchCassiusC,C8_Butch_Cassius_Base,VolcanoCG,Support1Viewer)
+ConversationEntry(EButchCassiusCP,C14_Butch_Cassius_Base,OutdoorCastleCG,Support1Viewer)
+ConversationEntry(EButchJeffC,C9_Butch_Jeff_Base,BoatCG,Support1Viewer)
 ConversationEntry(ERachaelCassiusC,C7_Rachael_Cassius_Base,HillCG,Support1Viewer)
 ConversationEntry(ERachaelCassiusCP,C11_Rachael_Cassius_Base,HallCG,Support1Viewer)
+ConversationEntry(ERachaelJeffC,C10_Rachael_Jeff_Base,BoatCG,Support1Viewer)
+ConversationEntry(ECassiusMikeyC,C14_Cassius_Mikey_Base,OutdoorCastleCG,Support1Viewer)
+ConversationEntry(EEmileHilbertC,C13_Emile_Hilbert_Base,YgstraCG,Support1Viewer)
+ConversationEntry(EJeffSveltzalusC,C13_Jeff_Sveltzalus_Base,YgstraCG,Support1Viewer)
+ConversationEntry(EJeffHilbertC,C14_Jeff_Hilbert_Base,OutdoorCastleCG,Support1Viewer)
+ConversationEntry(EApolloBechamelC,C10_Apollo_Bechamel_Base,BoatCG,Support1Viewer)
+ConversationEntry(EApolloFlynnC,C13_Apollo_Flynn_Base,YgstraCG,Support1Viewer)
+ConversationEntry(EMikeyCarbonC,Ch13_Carbon_Talk,YgstraCG,Support1Viewer,RecruitmentTheme)
+ConversationEntry(EZekeHyperiusC,ZekeHyperiusCSupport,PathCG,Support1Viewer)
+ConversationEntry(EZekeHyperiusCP,ZekeHyperiusCPSupport,PathCG,Support1Viewer)
+ConversationEntry(EHyperiusAlexisCP,HyperiusAlexisCPSupport,PathCG,Support1Viewer)
+ConversationEntry(EHyperiusLeilaC,HyperiusLeilaCSupport,PathCG,Support1Viewer)
+ConversationEntry(ELeilaDamienC,LeilaDamienCSupport,YgstraCG,Support1Viewer)
+ConversationEntry(ELeilaZachariasC,LeilaZachariasCSupport,PathCG,Support1Viewer)
 ConversationEntryTerminator
 
-/*ALIGN 4
-NarrationEvents:
-NarrationEntry(_Prologue,Prologue_Narration,MapCG)
-NarrationEntry(_Chapt1,Ch1_Narration,MapCG)
-NarrationEntry(_Chapt2,Ch2_Narration,MapCG)
-NarrationEntry(_Chapt3,Ch3_Narration,MapCG)
-NarrationEntry(_Chapt4,Ch3_Narration,MapCG)
-NarrationEntry(_Chapt5,Ch5_Narration,MapCG)
-NarrationEntry(_Base5,Base1_Narration,MapCG)
-NarrationEntry(_Chapt6,Ch6_Narration,MapCG)
-NarrationEntry(_Chapt7,Ch7_Narration,MapCG)
-NarrationEntry(_Chapt8,Ch8_Narration,MapCG)
-NarrationEntry(_Base8,Base2_Narration,MapCG)
-NarrationEntry(_Chapt9,Ch9_Narration,MapCG)
-NarrationEntry(_Base9,Base3_Narration,MapCG)
-NarrationEntry(_Chapt10,Ch10_Narration,MapCG)
-NarrationEntry(_Chapt11,Ch11_Narration,MapCG)
-NarrationEntry(_Chapt12,Ch12_Narration,MapCG)
-NarrationEntry(_Base12,Base4_Narration,MapCG)
-NarrationEntry(_Chapt13,Ch13_Narration,MapCG)
-NarrationEntry(_Chapt14,Ch14_Narration,MapCG)
-NarrationEntry(_ChaptZ1,ChZ1_Narration,MapCG)
-NarrationEntry(_ChaptZ2,ChZ2_Narration,MapCG)
-NarrationEntry(_ChaptZ3,ChZ3_Narration,MapCG)
-NarrationEntry(_BaseZ3,Base5_Narration,MapCG)
-NarrationEntry(_Chapt15,Ch15_Narration,Map2CG)
-NarrationEntry(_Chapt16,Ch16_Narration,Map2CG)
-NarrationEntry(_Chapt17,Ch17_Narration,Map2CG)
-NarrationEntry(_Chapt18,Ch18_Narration,Map2CG)
-NarrationEntry(_Base18,Base6_Narration,Map2CG)
-NarrationEntry(_Chapt19,Ch19_Narration,Map2CG)
-NarrationEntry(_Chapt20,Ch20_Narration,Map2CG)
-NarrationEntry(_ChaptV1,ChV1_Narration,Map2CG)
-NarrationEntry(_ChaptV2,ChV2_Narration,Map2CG)
-NarrationEntry(_BaseV2,Base7_Narration,Map2CG)
-NarrationEntry(_ChaptV3,ChV3_Narration,Map2CG)
-//currently up to V3
-ConversationEntryTerminator*/
+//2nd support section will include 15-20 plus viridian arc
+
+//3rd support section will include 21-29
 
 ALIGN 4
 DeathQuoteConversations:

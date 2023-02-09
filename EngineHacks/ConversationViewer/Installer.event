@@ -46,6 +46,8 @@ POIN Chapter7Conversations
 POIN Chapter8Conversations
 POIN Interlude2Conversations
 POIN Chapter9Conversations
+POIN Interlude3Conversations
+POIN Chapter10Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN DeathQuoteConversations 
@@ -314,6 +316,59 @@ ConversationEntry(EC9BechamelDie,EnemyBechamelDeath,BoatCG,Chapter9)
 ConversationEntry(EC9End1,Ch9_Ending,BoatCG,Chapter9,VictoryTheme)
 ConversationEntry(EC9End1Alt1,Ch9_Ending_Apollo_Dead,BoatCG,Chapter9,VictoryTheme)
 ConversationEntry(EC9End1Alt2,Ch9_Ending_Apollo_Unrecruited,BoatCG,Chapter9,VictoryTheme)
+ConversationEntryTerminator
+
+ALIGN 4
+Interlude3Conversations:
+ConversationEntry(EI3Open1,I3_Opening,BoatCG,Interlude3)
+ConversationEntry(EI3Arin,I3ArinConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Kenneth,I3KennethConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Natasia,I3NatasiaConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Stefan,I3StefanConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Desmond,I3DesmondConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Sam,I3SamConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Josef,I3JosefConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Peggy,I3PeggyConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Butch,I3ButchConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Rachael,I3RachaelConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Cassius,I3CassiusConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Jeff,I3JeffConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Emile,I3EmileConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Apollo,I3ApolloConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Bechamel,I3BechamelConvo,BoatCG,Interlude3)
+ConversationEntry(EI3Leave,I3ConfirmLeave,BoatCG,Interlude3)
+ConversationEntry(EI3NotYet,I3NotYet,BoatCG,Interlude3)
+ConversationEntry(EI3End1,I3ReleaseMe,BoatCG,Interlude3)
+ConversationEntry(EI3End2,I3Ending,BoatCG,Interlude3,S_RightRoad)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter10Conversations:
+ConversationEntry(EC10Open1,Ch10_Opening,BoatCG,Chapter10)
+ConversationEntry(EC10Open2,Ch10_Opening2,BoatCG,Chapter10,S_Crisis)
+ConversationEntry(EC10Open3,Ch10_Opening3,BoatCG,Chapter10,S_Crisis)
+ConversationEntry(EC10RecruitSveltzalus,Ch10_Sveltzalus_Talk,BoatCG,Chapter10,S_CampIchigaya)
+ConversationEntry(EC10DeckLower,C10DeckLowering,BoatCG,Chapter10)
+ConversationEntry(EC10GregHere,C10OthersArrive,BoatCG,Chapter10)
+ConversationEntry(EC10Warning,C10_LazThreat,BoatCG,Chapter10)
+ConversationEntry(EC10TimeUp,C10GameOverMessage,BoatCG,Chapter10)
+ConversationEntry(EC10LazarusGen,C10LazarusBattle,BoatCG,Chapter10)
+ConversationEntry(EC10LazarusBlair,C10LazarusBlairBattle,BoatCG,Chapter10)
+ConversationEntry(EC10LazarusCid,C10LazarusCidBattle,BoatCG,Chapter10)
+ConversationEntry(EC10LazarusSvelt,C10LazarusSveltzalusBattle,BoatCG,Chapter10)
+ConversationEntry(ELazarusRetreat,C10LazarusDeath,BoatCG,Chapter10)
+ConversationEntry(EC10JonasGen,C10JonasBattle,BoatCG,Chapter10)
+ConversationEntry(EC10JonasSvelt,C10JonasSveltzalusBattle,BoatCG,Chapter10)
+ConversationEntry(EC10JonasDie,C10JonasDeath,BoatCG,Chapter10)
+ConversationEntry(EC10GregoriasGen,C10GregoriasBattle,BoatCG,Chapter10)
+ConversationEntry(EC10GregoriasBechamel,C10GregoriasBechamelBattle,BoatCG,Chapter10)
+ConversationEntry(EC10GregoriasSvelt,C10GregoriasSveltzalusBattle,BoatCG,Chapter10)
+ConversationEntry(EC10GregoriasDie,C10GregoriasDeath,BoatCG,Chapter10)
+ConversationEntry(EC10CidDie,C10CidDeath,BoatCG,Chapter10)
+ConversationEntry(EC10SveltDie,EnemySveltzalusDeath,BoatCG,Chapter10)
+ConversationEntry(EC10End1,Ch10_Ending,BoatCG,Chapter10,S_FE4Conversation)
+ConversationEntry(EC10End2,Ch10_Ending2,BoatCG,Chapter10,S_Chaos)
+ConversationEntry(EC10JonasBye,C10_JonasDips,BoatCG,Chapter10)
 ConversationEntryTerminator
 
 ALIGN 4

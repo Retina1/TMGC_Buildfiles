@@ -214,7 +214,33 @@ EndingScene:
 MUSC 0x0
 CleanTextNoMap(YgstraCG,V3Ending1)
 MUSC S_Chaos
-CleanTextNoMap(HallCG,V3Ending2)
+SetBackground(HallCG)
+TEXTSTART
+TEXTSHOW V3Ending2
+TEXTEND
+MUSC 0x0
+TEXTCONT
+TEXTEND
+MUSC S_RigorousJustice
+TEXTCONT
+TEXTEND
+MUSC 0x0
+TEXTCONT
+TEXTEND
+FADI 0x3C
+SetBackground(BlankCG)//murder sounds
+SOUN 0xCF
+STAL 40
+SOUN 0xD5
+STAL 30
+SOUN 0xD5
+STAL 50
+SOUN 0xD8
+STAL 80
+MUSC S_RigorousJustice
+CleanTextNoMap(HallCG,V3Ending3)
+MUSC S_WelcomeToLegend
+CleanTextNoMap(YgstraCG,V3Ending4)
 MoveToChapter(ChapterV4)
 EndEvent
 

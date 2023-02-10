@@ -48,6 +48,8 @@ POIN Interlude2Conversations
 POIN Chapter9Conversations
 POIN Interlude3Conversations
 POIN Chapter10Conversations
+POIN Chapter11Conversations
+POIN Chapter12Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN DeathQuoteConversations 
@@ -367,8 +369,47 @@ ConversationEntry(EC10GregoriasDie,C10GregoriasDeath,BoatCG,Chapter10)
 ConversationEntry(EC10CidDie,C10CidDeath,BoatCG,Chapter10)
 ConversationEntry(EC10SveltDie,EnemySveltzalusDeath,BoatCG,Chapter10)
 ConversationEntry(EC10End1,Ch10_Ending,BoatCG,Chapter10,S_FE4Conversation)
-ConversationEntry(EC10End2,Ch10_Ending2,BoatCG,Chapter10,S_Chaos)
+ConversationEntry(EC10End2,Ch10_Ending2,HallCG,Chapter10,S_Chaos)
 ConversationEntry(EC10JonasBye,C10_JonasDips,BoatCG,Chapter10)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter11Conversations:
+ConversationEntry(EC11Open1,Ch11_Opening,DesertCG,Chapter11,S_WhenMotherWasThereAlt)
+ConversationEntry(EC11Open2,Ch11_Opening2,DesertCG,Chapter11,S_Crisis)
+ConversationEntry(EC11Open3,Ch11_Opening3,DesertCG,Chapter11,S_Crisis)
+ConversationEntry(EC11RecruitHilbert,Ch11_Hilbert_Talk,DesertCG,Chapter11,RecruitmentTheme)
+ConversationEntry(EC11BossGen,C11SofiaBattle,HallCG,Chapter11)
+ConversationEntry(EC11BossKenneth,C11SofiaKennethBattle,HallCG,Chapter11)
+ConversationEntry(EC11BossEmile,C11SofiaEmileBattle,HallCG,Chapter11)
+ConversationEntry(EC11BossHilbert,C11SofiaHilbertBattle,HallCG,Chapter11)
+ConversationEntry(EC11BossSvelt,C11SofiaSveltzalusBattle,HallCG,Chapter11)
+ConversationEntry(EC11BossDie,C11SofiaDeath,HallCG,Chapter11)
+ConversationEntry(EC11HilbertDie,AllyHilbertDeath,DesertCG,Chapter11)
+ConversationEntry(EC11End1,Ch11_Ending,DesertCG,Chapter11,VictoryTheme)
+ConversationEntry(EC11End2,Ch11_Ending2,HallCG,Chapter11,VictoryTheme)
+ConversationEntry(EC11End3,Ch11_Ending3,HallCG,Chapter11,VictoryTheme)
+ConversationEntry(EC11AgnesRecruit,Ch11_Agnes,DesertCG,Chapter11)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter12Conversations:
+ConversationEntry(EC12Open1,Ch12_Opening,DesertCG,Chapter12)
+ConversationEntry(EC12Open2,Ch12_Opening2,HallCG,Chapter12,S_WhenMotherWasThereAlt)
+ConversationEntry(EC12Mid1,C12Huh,HallCG,Chapter12)
+ConversationEntry(EC12Mid2,C12OhNo,HallCG,Chapter12,S_HolyOrders)
+ConversationEntry(EC12DragonWarn,C12HeChargeth,HallCG,Chapter12,S_HolyOrders)
+ConversationEntry(EC12BossGen,C12LarondeBattle,HallCG,Chapter12)
+ConversationEntry(EC12BossDesmond,C12LarondeDesmondBattle,HallCG,Chapter12)
+ConversationEntry(EC12BossApollo,C12LarondeApolloBattle,HallCG,Chapter12)
+ConversationEntry(EC12BossFlynn,C12LarondeFlynnBattle,HallCG,Chapter12)
+ConversationEntry(EC12BossSvelt,C12LarondeSveltzalusBattle,HallCG,Chapter12)
+ConversationEntry(EC12BossDie,C12LarondeDeath,HallCG,Chapter12)
+ConversationEntry(EC12BossDie2,C12LarondeVsDragonDeath,HallCG,Chapter12)
+ConversationEntry(EC12FlynnDie,AllyFlynnDeath,HallCG,Chapter12)
+ConversationEntry(EC12End1,Ch12_Ending,HallCG,Chapter12,VictoryTheme)
+ConversationEntry(EC12End2,Ch12_Ending2,DesertCG,Chapter12,VictoryTheme)
+ConversationEntry(EC12End3,Ch12_Ending3,BlankCG,Chapter12,S_Chaos)
 ConversationEntryTerminator
 
 ALIGN 4

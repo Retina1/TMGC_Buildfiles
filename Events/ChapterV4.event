@@ -15,7 +15,7 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
-POIN V1Units V1Units
+POIN V4Units V4Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -44,44 +44,49 @@ ENDTRAP
 
 ALIGN 4
 
-V1Units:
-UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
-UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
-UNIT Dean Fighter 0x0 Level(15,Ally,0) [4,0] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
-UNIT Eliza Cleric 0x0 Level(12,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
-UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [3,1] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
-UNIT Rift SwMast 0x0 Level(6,Ally,0) [0,2] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
-UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
-UNIT Rose MageF 0x0 Level(9,Ally,0) [3,3] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
-UNIT Dirk Berserker 0x0 Level(7,Ally,0) [2,5] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
-UNIT Callum SwdPal 0x0 Level(11,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
-UNIT Manfred DarkM 0x0 Level(18,Ally,0) [3,5] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
-UNIT Wilhelm Soldier 0x0 Level(16,Ally,0) [2,4] 0x0 0x0 0x0 0x0 [HighRoller,Spear,Vulnerary] NoAI
-UNIT Argent BowGen 0x0 Level(14,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
+V4Units:
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [12,13] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
+UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [11,12] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [13,12] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
+UNIT Eliza Cleric 0x0 Level(12,Ally,0) [10,13] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
+UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [11,14] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
+UNIT Rift SwMast 0x0 Level(6,Ally,0) [13,14] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
+UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [9,14] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Rose MageF 0x0 Level(9,Ally,0) [8,15] 0x0 0x0 0x0 0x0 [Thunder,BlueGem,Vulnerary] NoAI
+UNIT Dirk Berserker 0x0 Level(7,Ally,0) [10,15] 0x0 0x0 0x0 0x0 [Swordslayer,HereticAxe,BraveAxe,Warp] NoAI
+UNIT Callum SwdPal 0x0 Level(11,Ally,0) [9,16] 0x0 0x0 0x0 0x0 [GildedSword,Armorslayer,Horseslayer,Wyrmslayer] NoAI
+UNIT Manfred DarkM 0x0 Level(18,Ally,0) [11,16] 0x0 0x0 0x0 0x0 [Fenrir, Nightfall, PureWater] NoAI
+UNIT Wilhelm Soldier 0x0 Level(16,Ally,0) [10,11] 0x0 0x0 0x0 0x0 [HighRoller,SteelLance,Javelin,Elixir] NoAI
+UNIT Argent BowGen 0x0 Level(14,Ally,0) [12,11] 0x0 0x0 0x0 0x0 [BraveBow,DousingLance,Hammer,Vulnerary] NoAI
 UNIT
 
-V1Easy:
+V4Easy:
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
 UNIT
 
-V1Normal:
+V4Normal:
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
 UNIT
 
-V1Hard:
-UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+V4Hard:
+UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [21,13] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [17,17] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [19,16] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Holanis Sorc 0x0 Level(3,Enemy,1) [1,21] DropItem 0x0 0x0 0x0 [Nightfall,MasterSeal] NeverMoveAI
+UNIT Holanis Hero 0x0 Level(4,Enemy,1) [24,1] DropItem 0x0 0x0 0x0 [MasterSword] AttackInRangeAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [24,13] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
 UNIT
 //make sure to drop 2 master seals
 
 ALIGN 4
 
 BeginningScene:
-LOAD1 0x1 V1Units
+LOAD1 0x1 V4Units
 ENUN
-LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
+LoadUnitsByDifficulty(V4Easy,V4Normal,V4Hard)
 MUSC NarrationTheme
-Narration(Map2CG,ChV1_Narration)
+Narration(Map2CG,ChV4_Narration)
 CleanText(PathCG,FillerDialogue)
 GotoPrepScreen
 EndEvent

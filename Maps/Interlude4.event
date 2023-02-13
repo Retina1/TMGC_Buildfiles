@@ -41,10 +41,15 @@ Map_Change_2:
   SHORT $ECC
 
 ALIGN 4
+Map_Change_3:
+  SHORT $ECC
+
+ALIGN 4
 MapChangesData:
   TileMap(0, 16, 29, 1, 1, Map_Change_0)
   TileMap(1, 2, 33, 1, 1, Map_Change_1)
   TileMap(2, 10, 32, 1, 1, Map_Change_2)
+  TileMap(3, 3, 29, 1, 1, Map_Change_3)
   TileMapEnd
 
 EventPointerTable(MapChangeI4, MapChangesData)

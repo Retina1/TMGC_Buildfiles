@@ -43,6 +43,10 @@ DarkFieldPalette:
 #incext Png2Dmp "Tilesets/DarkField.png" --palette-only
 
 ALIGN 4
+HolanisFieldPalette:
+#incext Png2Dmp "Tilesets/HolanisField.png" --palette-only
+
+ALIGN 4
 FieldTiles:
 #incext compress "Tilesets/Field.mapchip_config"
 
@@ -429,6 +433,7 @@ EventPointerTable(PALDalstField, DalstFieldPalette)
 EventPointerTable(PALElbaCorField, ElbaCorFieldPalette)
 EventPointerTable(PALLowlandsField, LowlandsFieldPalette)
 EventPointerTable(PALDarkField, DarkFieldPalette)
+EventPointerTable(PALHolanisField, HolanisFieldPalette)
 EventPointerTable(TILField, FieldTiles)
 EventPointerTable(ANIField, FieldAnims)
 

@@ -1,4 +1,4 @@
-@i fucking give up i'm just starting this bitch over
+@i fucking give up im just starting this bitch over
 
 .thumb
 .align

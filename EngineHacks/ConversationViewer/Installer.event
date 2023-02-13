@@ -50,6 +50,8 @@ POIN Interlude3Conversations
 POIN Chapter10Conversations
 POIN Chapter11Conversations
 POIN Chapter12Conversations
+POIN Interlude4Conversations
+POIN Chapter13Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN DeathQuoteConversations 
@@ -388,7 +390,7 @@ ConversationEntry(EC11BossDie,C11SofiaDeath,HallCG,Chapter11)
 ConversationEntry(EC11HilbertDie,AllyHilbertDeath,DesertCG,Chapter11)
 ConversationEntry(EC11End1,Ch11_Ending,DesertCG,Chapter11,VictoryTheme)
 ConversationEntry(EC11End2,Ch11_Ending2,HallCG,Chapter11,VictoryTheme)
-ConversationEntry(EC11End3,Ch11_Ending3,HallCG,Chapter11,VictoryTheme)
+ConversationEntry(EC11End3,Ch11_Ending3,HallCG,Chapter11,S_Stratagem)
 ConversationEntry(EC11AgnesRecruit,Ch11_Agnes,DesertCG,Chapter11)
 ConversationEntryTerminator
 
@@ -410,6 +412,72 @@ ConversationEntry(EC12FlynnDie,AllyFlynnDeath,HallCG,Chapter12)
 ConversationEntry(EC12End1,Ch12_Ending,HallCG,Chapter12,VictoryTheme)
 ConversationEntry(EC12End2,Ch12_Ending2,DesertCG,Chapter12,VictoryTheme)
 ConversationEntry(EC12End3,Ch12_Ending3,BlankCG,Chapter12,S_Chaos)
+ConversationEntryTerminator
+
+ALIGN 4
+Interlude4Conversations:
+ConversationEntry(EI4Open1,I4_Opening,HallCG,Interlude4)
+ConversationEntry(EI4Laronde,I4LarondeTalk,HallCG,Interlude4)
+ConversationEntry(EI4Leila,I4LeilaTalk,StreetCG,Interlude4)
+ConversationEntry(EI4DirkEliza,I4DirkElizaTalk,StreetCG,Interlude4)
+ConversationEntry(EI4Athena,I4AthenaTalk,StreetCG,Interlude4)
+ConversationEntry(EI4House1,I4LeftTalk,HouseCG,Interlude4)
+ConversationEntry(EI4House2,I4CenterTalk,HouseCG,Interlude4)
+ConversationEntry(EI4House3,I4RightTalk,HouseCG,Interlude4)
+ConversationEntry(EI4House4,I4InnText,HouseCG,Interlude4)//add this in sometime please
+ConversationEntry(EI4Cit1,I4Cit1Talk,StreetCG,Interlude4)
+ConversationEntry(EI4Cit2,I4Cit2Talk,StreetCG,Interlude4)
+ConversationEntry(EI4Merchant,I4MerchantTalk,StreetCG,Interlude4)
+ConversationEntry(EI4MerchantPoor,I4NoMoneyHa,StreetCG,Interlude4)
+ConversationEntry(EI4MerchantDeny,I4TomeDenied,StreetCG,Interlude4)
+ConversationEntry(EI4MerchantBuy,I4TomePurchased,StreetCG,Interlude4)
+ConversationEntry(EI4Liam,I4LiamTalk,StreetCG,Interlude4)
+ConversationEntry(EI4LiamNo,I4LiamNo,StreetCG,Interlude4)
+ConversationEntry(EI4LiamYes,I4LiamYes,StreetCG,Interlude4)
+ConversationEntry(EI4Leave,I4ConfirmLeave,BoatCG,Interlude4)
+ConversationEntry(EI4NotYet,I4NotYet,BoatCG,Interlude4)
+ConversationEntry(EI4End1,I4ReleaseMe,BoatCG,Interlude4)
+ConversationEntry(EI4Merchant2,I4Buyington,HallCG,Interlude4)
+ConversationEntry(EI4Merchant2Poor,I4BuyingtonBroke,HallCG,Interlude4)
+ConversationEntry(EI4Merchant2Deny,I4BuyingtonNo,HallCG,Interlude4)
+ConversationEntry(EI4Merchant2Buy,I4BuyingtonBought,HallCG,Interlude4)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter13Conversations:
+ConversationEntry(EC13Open1,Ch13_Opening,OutdoorCastleCG,Chapter13,S_Stratagem)
+ConversationEntry(EC13Open2,Ch13_OpeningCarbonMikey,YgstraCG,Chapter13,S_Stratagem)
+ConversationEntry(EC13Open3,Ch13_Opening2,YgstraCG,Chapter13,S_Trisection)
+ConversationEntry(EC13RecruitMikey,Ch13_Mikey_Talk,YgstraCG,Chapter13,RecruitmentTheme)
+ConversationEntry(EC13RecruitCarbon,Ch13_Carbon_Talk,YgstraCG,Chapter13,RecruitmentTheme)
+ConversationEntry(EC13Village1,C13WhoIsThisHorse,VillageCG,Chapter13,S_PascalTheDog)
+ConversationEntry(EC13Village2,C13WestVillageText,VillageCG,Chapter13)
+ConversationEntry(EC13Village3,C13EastVillageText,VillageCG,Chapter13)
+ConversationEntry(EC13Village4,C13SouthVillageText,VillageCG,Chapter13)
+ConversationEntry(EC13HorseTalk,C13HorseReunion,YgstraCG,Chapter13,S_EncountersAndReunions)
+ConversationEntry(EC13House1,C13House1Text,HouseCG,Chapter13)
+ConversationEntry(EC13House2,C13House2Text,HouseCG,Chapter13)
+ConversationEntry(EC13House3,C13House3Text,HouseCG,Chapter13)
+ConversationEntry(EC13House4,C13House4Text,HouseCG,Chapter13)
+ConversationEntry(EC13House5,C13House5Text,HouseCG,Chapter13)
+ConversationEntry(EC13House6,C13House6Text,HouseCG,Chapter13)
+ConversationEntry(EC13House7,C13House7Text,HouseCG,Chapter13)
+ConversationEntry(EC13ValdenLeaves,C13ValdenLeavesAmaraAlive,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13ValdenLeavesAlt,C13ValdenLeavesAmaraDead,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13AmaraGen,C13AmaraBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13AmaraNatasia,C13AmaraNatasiaBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13AmaraMikey,C13AmaraMikeyBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13AmaraCarbon,C13AmaraCarbonBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13AmaraSvelt,C13AmaraSveltzalusBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13AmaraDie,C13AmaraDeath,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13ValdenGen,C13ValdenBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13ValdenMikey,C13ValdenMikeyBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13ValdenCarbon,C13ValdenCarbonBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13ValdenSvelt,C13ValdenSveltzalusBattle,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13ValdenDie,C13ValdenDeath,OutdoorCastleCG,Chapter13)
+ConversationEntry(EC13MikeyDie,EnemyMikeyDeath,YgstraCG,Chapter13)
+ConversationEntry(EC13CarbonDie,EnemyCarbonDeath,YgstraCG,Chapter13)
+ConversationEntry(EC13End1,Ch13_Ending,OutdoorCastleCG,Chapter13,S_FE4Conversation)
 ConversationEntryTerminator
 
 ALIGN 4

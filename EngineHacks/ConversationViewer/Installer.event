@@ -55,6 +55,7 @@ POIN Chapter13Conversations
 POIN Chapter14Conversations
 POIN ChapterZ1Conversations
 POIN ChapterZ2Conversations
+POIN ChapterZ3Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN DeathQuoteConversations 
@@ -544,6 +545,29 @@ ConversationEntry(EZ2BossGen,Z2VultureBattle,YgstraCG,ChapterZ2,S_SonicBoss)
 ConversationEntry(EZ2BossZeke,Z2VultureZekeBattle,YgstraCG,ChapterZ2,S_SonicBoss)
 ConversationEntry(EZ2BossDie,Z2VultureDeath,YgstraCG,ChapterZ2,S_SonicBoss)
 ConversationEntry(EZ2End1,Z2Ending,YgstraCG,ChapterZ2,VictoryTheme)
+ConversationEntryTerminator
+
+ALIGN 4
+ChapterZ3Conversations:
+ConversationEntry(EZ3Open1,Z3Opening,PathCG,ChapterZ3,S_Terra)
+ConversationEntry(EZ3Open2,Z3Opening2,PathCG,ChapterZ3,S_Trisection)
+ConversationEntry(EZ3Recruit,Z3RecruitmentText,VillageCG,ChapterZ3,S_PascalTheDog)
+ConversationEntry(EZ3Recruit2,Z3RecruitmentText2,PathCG,ChapterZ3,RecruitmentTheme)
+ConversationEntry(EZ3Village1,Z3NorthVillageText,VillageCG,ChapterZ3)
+ConversationEntry(EZ3Village1Alt,Z3NorthVillageToddText,VillageCG,ChapterZ3)
+ConversationEntry(EZ3Village2,Z3SouthVillageText,VillageCG,ChapterZ3)
+ConversationEntry(EZ3House1,Z3House1Text,HouseCG,ChapterZ3)
+ConversationEntry(EZ3House2,Z3House2Text,HouseCG,ChapterZ3)
+ConversationEntry(EZ3House3,Z3House3Text,HouseCG,ChapterZ3)
+ConversationEntry(EZ3House4,Z3House4Text,HouseCG,ChapterZ3)
+ConversationEntry(EZ3BossGen,Z3ParqueBattle,PathCG,ChapterZ3,S_SonicBoss)
+ConversationEntry(EZ3BossZeke,Z3ParqueZekeBattle,PathCG,ChapterZ3,S_SonicBoss)
+ConversationEntry(EZ3BossDie,Z3ParqueDeath,PathCG,ChapterZ3,S_SonicBoss)
+ConversationEntry(EZ3GameOver,Z3Damn,PathCG,ChapterZ3)
+ConversationEntry(EZ3End1,Z3Ending,PathCG,ChapterZ3,VictoryTheme)
+ConversationEntry(EZ3End2,Z3Ending2,HouseCG,ChapterZ3,S_Chaos)
+ConversationEntry(EZ3End3,Z3Ending3,PathCG,ChapterZ3)
+ConversationEntry(EZ3End4,Z3Ending4,ElbaCorCastleCG,ChapterZ3,S_CircleOfTheMoon)
 ConversationEntryTerminator
 
 ALIGN 4

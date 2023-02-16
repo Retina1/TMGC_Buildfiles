@@ -115,7 +115,7 @@ ENUN
 MUSC NarrationTheme3
 Narration(MapCG,Base5_Narration)
 MUSC AmbientBirds
-CleanTextNoMap(HallCG,I5Opening)//blair returns after zeke
+CleanTextNoMap(StreetCG,I5Opening)//blair returns after zeke
 GotoPrepScreenNoBaseCheck
 ENDA
 
@@ -130,7 +130,7 @@ SetBackground(BlankCG)
 GiveItem(ResoluteSeal,Blair)
 CHECK_ALIVE Kenneth
 BEQ 0x1 0xc 0x0
-CleanTextNoMap(HallCG,I5KennethScene)//kenneth says hi to dad
+CleanTextNoMap(ElbaCorCastleCG,I5KennethScene)//kenneth says hi to dad
 LABEL 0x1
 CHECK_EVENTID 0x16
 BNE 0x2 0xc 0x0

@@ -56,8 +56,11 @@ POIN Chapter14Conversations
 POIN ChapterZ1Conversations
 POIN ChapterZ2Conversations
 POIN ChapterZ3Conversations
+POIN Interlude5Conversations
+POIN Chapter15Conversations
 POIN BaseConversations  
 POIN SupportConversations1
+POIN SupportConversations2
 POIN DeathQuoteConversations 
 POIN FinalDeathQuoteConversations 
 POIN EscapeQuoteConversations  
@@ -438,9 +441,9 @@ ConversationEntry(EI4MerchantBuy,I4TomePurchased,StreetCG,Interlude4)
 ConversationEntry(EI4Liam,I4LiamTalk,StreetCG,Interlude4)
 ConversationEntry(EI4LiamNo,I4LiamNo,StreetCG,Interlude4)
 ConversationEntry(EI4LiamYes,I4LiamYes,StreetCG,Interlude4)
-ConversationEntry(EI4Leave,I4ConfirmLeave,BoatCG,Interlude4)
-ConversationEntry(EI4NotYet,I4NotYet,BoatCG,Interlude4)
-ConversationEntry(EI4End1,I4ReleaseMe,BoatCG,Interlude4)
+ConversationEntry(EI4Leave,I4ConfirmLeave,StreetCG,Interlude4)
+ConversationEntry(EI4NotYet,I4NotYet,StreetCG,Interlude4)
+ConversationEntry(EI4End1,I4ReleaseMe,StreetCG,Interlude4)
 ConversationEntry(EI4Merchant2,I4Buyington,HallCG,Interlude4,S_CampIchigaya)
 ConversationEntry(EI4Merchant2Poor,I4BuyingtonBroke,HallCG,Interlude4,S_CampIchigaya)
 ConversationEntry(EI4Merchant2Deny,I4BuyingtonNo,HallCG,Interlude4,S_CampIchigaya)
@@ -571,6 +574,60 @@ ConversationEntry(EZ3End4,Z3Ending4,ElbaCorCastleCG,ChapterZ3,S_CircleOfTheMoon)
 ConversationEntryTerminator
 
 ALIGN 4
+Interlude5Conversations:
+ConversationEntry(EI5Open1,I5Opening,StreetCG,Interlude5)
+ConversationEntry(EI5Open2,I5StartText,StreetCG,Interlude5)
+ConversationEntry(EI5Hyperius,I5HyperiusText,StreetCG,Interlude5)
+ConversationEntry(Ei5Argent,I5ArgentText,StreetCG,Interlude5)
+ConversationEntry(EI5Viridian,I5ViridFredText,StreetCG,Interlude5)
+ConversationEntry(EI5Zeke,I5ZekeText,StreetCG,Interlude5,S_CircleOfTheMoon)
+ConversationEntry(EI5House2,I5House2Text,HouseCG,Interlude5)
+ConversationEntry(EI5House3,I5House3Text,HouseCG,Interlude5)
+ConversationEntry(EI5House4,I5House4Text,House2CG,Interlude5)
+ConversationEntry(EI5House5,I5House5Text,HouseCG,Interlude5)
+ConversationEntry(EI5House6,I5House6Text,House2CG,Interlude5)
+ConversationEntry(EI5House7,I5House7Text,House2CG,Interlude5)
+ConversationEntry(EI5House8,I5House8Text,HouseCG,Interlude5)
+ConversationEntry(EI5House1,I5InnText,House2CG,Interlude5)
+ConversationEntry(EI5Merchant,I5MerchantTalk,StreetCG,Interlude5)
+ConversationEntry(EI5MerchantPoor,I5NoMoneyHa,StreetCG,Interlude5)
+ConversationEntry(EI5MerchantDeny,I5ItemDenied,StreetCG,Interlude5)
+ConversationEntry(EI5MerchantBuy,I5ItemPurchased,StreetCG,Interlude5)
+ConversationEntry(EI5Merchant2,I5Merchant2Talk,StreetCG,Interlude5)
+ConversationEntry(EI5Merchant2Poor,I5NoMoneyHa2,StreetCG,Interlude5)
+ConversationEntry(EI5Merchant2Deny,I5StatDenied,StreetCG,Interlude5)
+ConversationEntry(EI5Merchant2Buy,I5StatPurchased,StreetCG,Interlude5)
+ConversationEntry(EI5Leave,I5ReadyText,StreetCG,Interlude5)
+ConversationEntry(EI5NotYet,I5NotYet,StreetCG,Interlude5)
+ConversationEntry(EI5End1,I5FreeMe,StreetCG,Interlude5)
+ConversationEntry(EI5End2,I5ElcorianGreeting,StreetCG,Interlude5)
+ConversationEntry(EI5End3,I5Ending2,ElbaCorCastleCG,Interlude5,S_RigorousJustice)
+ConversationEntry(EI5End4,I5KennethScene,ElbaCorCastleCG,Interlude5,S_RigorousJustice)
+ConversationEntry(EI5ViridianAlt,I5ViridFredPostmapText,StreetCG,Interlude5,S_TMSQuestBattle)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter15Conversations:
+ConversationEntry(EC15Open1,Ch15_Opening,HallCG,Chapter15,S_Terra)
+ConversationEntry(EC15Open2,Ch15_Opening2,HallCG,Chapter15,S_Crisis)
+ConversationEntry(EC15Open3,Ch15_Opening3,HallCG,Chapter15,S_Crisis)
+ConversationEntry(EC15Recruit,C15_Yuyu_Recruitment,House2CG,Chapter15,RecruitmentTheme)
+ConversationEntry(EC15Supply,Ch15_ZekeLearnsSupply,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15Unlock,Ch15_GateUnlock,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15Bridge,Ch15_BridgeTime,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15Warning,Ch15_NotOverYet,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15OhNo,Ch15_IKingTrabant,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15BossGen,C15BossBattle,OutdoorCastleCG,Chapter15,S_ClashOfCalamity)
+ConversationEntry(EC15BossSvelt,C15BossSveltzalusBattle,OutdoorCastleCG,Chapter15,S_ClashOfCalamity)
+ConversationEntry(EC15BossDie,C15BossDeath,OutdoorCastleCG,Chapter15,S_ClashOfCalamity)
+ConversationEntry(EC15BrandlDie,C15BrandlDeath,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15TimeUp,Ch15_ElcorianTheCamooIsHere,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15TimeUp2,Ch15_ElcorianTheCamooIsHere2,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15YouDidIt,Ch15_ElcorianTheCamooIsHereLate,OutdoorCastleCG,Chapter15)
+ConversationEntry(EC15End1,Ch15_Ending,HallCG,Chapter15,VictoryMinor)
+ConversationEntryTerminator
+
+ALIGN 4
 BaseConversations:
 ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
 ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
@@ -663,6 +720,80 @@ ConversationEntry(ELeilaDamienC,LeilaDamienCSupport,YgstraCG,Support1Viewer)
 ConversationEntry(ELeilaZachariasC,LeilaZachariasCSupport,PathCG,Support1Viewer)
 ConversationEntryTerminator
 
+ALIGN 4
+SupportConversations2:
+//blair arin B+
+//blair kenneth B
+//blair nat B
+//blair emile B
+//blair carbon C+, B
+//blair zeke C,+,B
+//blair avan C,+,B
+//blair yuyu C,+,B
+//arin desmond B
+//arin sam B
+//arin svelt C+,B
+//arin yuyu C,+
+//arin simone C
+//kenneth nat B
+//kenneth stefan B
+//kenneth hilbert C+,B
+//nat peggy B
+//nat bech C+,B
+//stefan desmond B
+//stefan josef B
+//stefan carbon C,+
+//desmond flynn C+,B
+//desmond mikey C,+
+//sam josef B
+//sam emile C+,B
+//sam bechamel C+
+//sam charley C,+
+//josef hilbert C+,B
+//josef athena C,+
+//peggy butch B,+
+//peggy apollo C+
+//peggy athena C,+
+//butch cassius B
+//butch jeff C+,B
+ConversationEntry(ERachaelCassiusB,C15_The_Devoted_Base,ElbaCorCastleCG,Support2Viewer,S_EncountersAndReunions)
+ConversationEntry(ERachaelCassiusBP,RachaelCassiusBPSupport,LowlandsCG,Support2Viewer)
+//rachael jeff C+,B
+//rachael hyperius C,C+
+//rachael leila C,C+
+//cassius mikey C+
+//cassius athena C,C+
+//cassius zeke C,C+
+//cassius hyperius C,C+
+//emile hilbert C+,B
+//emile vladmir C
+//emile simone C
+//jeff svelt C+
+//jeff hilbert C+
+//apollo bech C+,B
+//apollo flynn C+,B
+//apollo charley C,+
+//apollo avan C
+//apollo vladmir C
+//bech holly C,C+
+//svelt flynn C
+//svelt todd C
+//svelt simone C
+//flynn horatio C
+//mikey carbon C+,B
+//charley todd C
+//charley yuyu C
+//zeke hyperius B
+//hyperius alexis B
+//hyperius leila C+
+//alexis artemis C
+//leila damien C+
+//leila zach C+
+//damien zach C+,B
+//avan todd C+
+//artemis holly C
+//viridian arc stuff
+ConversationEntryTerminator
 //2nd support section will include 15-20 plus viridian arc
 
 //3rd support section will include 21-29

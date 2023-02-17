@@ -20,6 +20,11 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+//a few from the NW on turn 3
+//NW on turn 2
+//south on turn 4
+//stop by turn 5 or 6
+TurnEventPlayer(0x65,V4OutOfTime,12)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -27,6 +32,8 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Village(0x11,V4Village1,2,2)
+Village(0x12,V4Village2,22,19)
 END_MAIN
 
 MiscBasedEvents:
@@ -70,8 +77,21 @@ UNIT
 
 V4Hard:
 UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [21,13] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
-UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [17,17] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
-UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [19,16] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [17,17] 0x0 0x0 0x0 0x0 [Axereaver] DelayedAI
+UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [19,16] 0x0 0x0 0x0 0x0 [Swordreaver] DelayedAI
+UNIT Holanis SwdPal 0x0 Level(2,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
+UNIT Holanis LncPal 0x0 Level(2,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [SteelLance] GroupOneAI
+UNIT Holanis Merc 0x0 Level(20,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
+UNIT Holanis Soldier 0x0 Level(20,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [SteelLance] GroupOneAI
+UNIT Holanis Fighter 0x0 Level(20,Enemy,1) [2,10] 0x0 0x0 0x0 0x0 [Hammer] GroupTwoAI
+UNIT Holanis Warrior 0x0 Level(2,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [Swordreaver] GroupTwoAI
+UNIT Holanis FighterF 0x0 Level(20,Enemy,1) [2,8] 0x0 0x0 0x0 0x0 [SteelAxe] GroupTwoAI
+UNIT Holanis Mage 0x0 Level(20,Enemy,1) [15,4] 0x0 0x0 0x0 0x0 [Galewind] GroupThreeAI
+UNIT Holanis LightM 0x0 Level(20,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [Smite] GroupThreeAI
+UNIT Holanis DarkM 0x0 Level(20,Enemy,1) [18,2] 0x0 0x0 0x0 0x0 [Jormungandr] GroupThreeAI
+UNIT Holanis SwMast 0x0 Level(3,Enemy,1) [6,6] DropItem 0x0 0x0 0x0 [Armorslayer,MasterSeal] AttackInRangeAI
+UNIT Holanis Falco 0x0 Level(3,Enemy,1) [1,19] DropItem 0x0 0x0 0x0 [Axebuster,Implant] AttackInRangeAI
+UNIT Holanis Halberdier 0x0 Level(3,Enemy,1) [8,7] DropItem 0x0 0x0 0x0 [Spear,BraveLance] NeverMoveAI
 UNIT Holanis Sorc 0x0 Level(3,Enemy,1) [1,21] DropItem 0x0 0x0 0x0 [Nightfall,MasterSeal] NeverMoveAI
 UNIT Holanis Hero 0x0 Level(4,Enemy,1) [24,1] DropItem 0x0 0x0 0x0 [MasterSword] AttackInRangeAI
 UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
@@ -96,5 +116,16 @@ MUSC VictoryTheme
 Text(PathCG,FillerDialogue)
 MoveToChapter(Interlude8)
 EndEvent
+
+V4Village1:
+VillageEventItem(FillerDialogue, VillageCG, TorchStaff)//a very very very drunk man
+V4Village2:
+VillageEventItem(FillerDialogue, VillageCG, RealLastShield)
+
+V4OutOfTime:
+Text(FillerDialogue)
+CALL 0x592104
+EndEvent
+
 
 //MESSAGE Events end at offset CURRENTOFFSET

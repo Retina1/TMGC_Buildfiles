@@ -126,6 +126,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
 #define TonnaminPaletteID 0x81
 
+#define KennethBPaletteID 0x83
+
 #define CidPaletteID 0x2e
 #define BrandlPaletteID 0x53
 #define BriantPaletteID 0x54
@@ -171,9 +173,10 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 setPalette(BlairUPaletteID,BlairUPalette)
 setPalette(BlairPPaletteID,BlairPPalette)
 setPalette(ArinPaletteID,ArinPalette)
-//arin valk once biraku finishes the repal
+//arin valk is handled in class
 setPalette(KennethUPaletteID,KennethUPalette)
 setPalette(KennethPPaletteID,KennethPPalette)
+setPalette(KennethBPaletteID,KennethBPalette)
 setPalette(NatasiaUPaletteID,NatasiaUPalette)
 setPalette(NatasiaPPaletteID,NatasiaPPalette)
 setPalette(StefanUPaletteID,StefanUPalette)
@@ -308,7 +311,7 @@ setPalette(ArbordiaPaletteID,ArbordiaPalette)
 
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,BlairPPaletteID,BlairLordX,0x0,0x0)
 SetPaletteFull(Arin,ArinPaletteID,Trickster,0x0,ArinValk,0x0,0x0)
-SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,0x0,0x0)
+SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,KennethBPaletteID,Baron)
 SetPaletteFull(Natasia,NatasiaUPaletteID,FighterF,NatasiaPPaletteID,WarriorF,0x0,0x0)
 SetPaletteFull(Stefan,StefanUPaletteID,SwdCav,StefanPPaletteID,SwdPal,0x0,0x0)
 SetPaletteFull(Desmond,0x0,LncCav,DesmondPaletteID,Dismount,DesmondPalPaletteID,LncPal)
@@ -485,6 +488,9 @@ KennethUPalette:
 ALIGN 4
 KennethPPalette:
 #incbin "KennethPromoted.dmp"
+ALIGN 4
+KennethBPalette:
+#incbin "KennethBaron.dmp"
 ALIGN 4
 RachaelUPalette:
 #incbin "RachaelUnpromoted.dmp"

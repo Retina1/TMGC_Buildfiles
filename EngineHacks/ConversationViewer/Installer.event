@@ -61,6 +61,7 @@ POIN Chapter15Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN SupportConversations2
+POIN SupportConversations3
 POIN DeathQuoteConversations 
 POIN FinalDeathQuoteConversations 
 POIN EscapeQuoteConversations  
@@ -796,6 +797,10 @@ ConversationEntry(ERachaelCassiusBP,RachaelCassiusBPSupport,LowlandsCG,Support2V
 ConversationEntryTerminator
 //2nd support section will include 15-20 plus viridian arc
 
+ALIGN 4
+SupportConversations3:
+ConversationEntry(EBlairArinA,FillerDialogue,LowlandsCG,Support3Viewer,LoverConvoSong)
+ConversationEntryTerminator
 //3rd support section will include 21-29
 
 ALIGN 4

@@ -31,15 +31,18 @@ CheckDesperation:
 @check attacker's hp
 ldr r3, [sp]
 
-ldr r0, =0x203a4ec @no vantage + desp shenanigans, that's unfair lol
-cmp r3, r0
-bne NoSkill 
+@ldr r0, =0x203a4ec @no vantage + desp shenanigans, that's unfair lol, jk eat shit vantage desp is funny
+@cmp r3, r0
+@bne NoSkill 
 
-ldrb r0, [r3,#0x12] @max
-ldrb r1, [r3, #0x13] @curr
-lsr r0, #1
-cmp r1, r0
-bgt NoSkill
+  ldr r2, [sp] @attacker data
+  ldr r3, [sp, #4] @defender data
+mov r1, #0x5e
+ldsh r0, [r3,r1] @defender AS
+ldsh r1, [r2,r1] @attacker AS
+sub r1, r0 @attacker - defender
+cmp r1, #6
+blt NoSkill
 
 @now check if attacker has desperation
 ldr r0, SkillTester

@@ -25,6 +25,17 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x0,I8FreddricEvent,Viridian,Freddric)
+CharacterEvent(0x0,I8DeanEvent,Viridian,Dean)
+CharacterEvent(0x0,I8ElizaEvent,Viridian,Eliza)
+CharacterEvent(0x0,I8RiftEvent,Viridian,Rift)
+CharacterEvent(0x0,I8EstelleEvent,Viridian,Estelle)
+CharacterEvent(0x0,I8RoseEvent,Viridian,Rose)
+CharacterEvent(0x0,I8DirkEvent,Viridian,Dirk)
+CharacterEvent(0x0,I8CallumEvent,Viridian,Callum)
+CharacterEvent(0x0,I8ManfredEvent,Viridian,Manfred)
+CharacterEvent(0x0,I8WilhelmEvent,Viridian,Wilhelm)
+CharacterEvent(0x0,I8ArgentEvent,Viridian,Argent)
 END_MAIN
 
 LocationBasedEvents:
@@ -74,6 +85,298 @@ ALIGN 4
 //first chosen enables first, second the second, and third the third
 //once flag three is on, no more can be chosen
 //dedicate a few globals to specific units leaving for convenience? idk
+
+//special versions of dialogue when one of some pairs are snet
+//eliza/dirk
+//rift/estelle
+//manfred/wilhelm
+
+I8FreddricEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Freddric
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8DeanEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Dean
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8ElizaEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Eliza
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8EstelleEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Estelle
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8RiftEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Rift
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8RoseEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Rose
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8DirkEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Dirk
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8CallumEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Callum
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8ManfredEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Manfred
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8WilhelmEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Wilhelm
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+I8ArgentEvent:
+EVBIT_MODIFY 3
+Text(WhatDoIDo)//generic "what do i do"
+REMA
+ASMC prCallViridianMenu+1
+BNE 0x1 0xc 0x0
+Text(SendFreddric)//confirm sending them
+SystemText(I8SendOff)
+IfNoSelectedGoto(0x10)
+Text(SendFreddricYes)//they're gone
+FADI 0x10
+REMU Argent
+FADU 0x10
+CALL FlagHell
+GOTO 0x20
+LABEL 0x10
+Text(SendFreddricNo)//they're not gone
+GOTO 0x20
+LABEL 0x1
+SVAL 0x1 0x2
+BEQ 0x20 0xc 0x1
+Text(I8FreddricTalk)//we're just talking
+LABEL 0x20
+EndEvent
+
+FlagHell:
+CHECK_EVENTID 0x11
+BEQ 0x6 0xc 0x0
+CALL EndingScene
+LABEL 0x6
+CHECK_EVENTID 0x10
+BEQ 0x5 0xc 0x0
+ENUT 0x11
+LABEL 0x5
+ENUT 0x10
+EndEvent
 
 BeginningScene:
 EnableFreeMovement

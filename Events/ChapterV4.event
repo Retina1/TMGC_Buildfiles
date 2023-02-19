@@ -20,10 +20,14 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-//a few from the NW on turn 3
+//a few from the NE on turn 3
 //NW on turn 2
 //south on turn 4
 //stop by turn 5 or 6
+TurnEventPlayer(0x0,V4Turn2,2)
+TurnEventPlayer(0x0,V4Turn3,3)
+TurnEventPlayer(0x0,V4Turn4,4)
+TurnEventPlayer(0x0,V4Turn5,5)
 TurnEventPlayer(0x65,V4OutOfTime,12)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -78,7 +82,6 @@ UNIT
 V4Hard:
 UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [21,13] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
 UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [17,17] 0x0 0x0 0x0 0x0 [Axereaver] DelayedAI
-UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [19,16] 0x0 0x0 0x0 0x0 [Swordreaver] DelayedAI
 UNIT Holanis Soldier 0x0 Level(19,Enemy,1) [10,2] 0x0 0x0 0x0 0x0 [SteelLance] GroupFiveAI
 UNIT Holanis Merc 0x0 Level(19,Enemy,1) [11,8] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Holanis Soldier 0x0 Level(19,Enemy,1) [13,22] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
@@ -97,8 +100,7 @@ UNIT Holanis Fighter 0x0 Level(19,Enemy,1) [18,9] 0x0 0x0 0x0 0x0 [SteelAxe] Gro
 UNIT Holanis Sniper 0x0 Level(2,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [SteelBow] GroupFiveAI
 UNIT Holanis Halberdier 0x0 Level(2,Enemy,1) [24,5] 0x0 0x0 0x0 0x0 [SteelLance] GroupFourAI
 UNIT Holanis Soldier 0x0 Level(19,Enemy,1) [23,6] 0x0 0x0 0x0 0x0 [Axereaver] GroupFourAI
-UNIT Holanis SoldierF 0x0 Level(19,Enemy,1) [23,7] 0x0 0x0 0x0 0x0 [Spear] GroupFourAI
-UNIT Holanis Soldier 0x0 Level(19,Enemy,1) [24,8] 0x0 0x0 0x0 0x0 [Nuboko] GroupFourAI
+UNIT Holanis Soldier 0x0 Level(19,Enemy,1) [24,7] 0x0 0x0 0x0 0x0 [Nuboko] GroupFourAI
 UNIT Holanis SwdPal 0x0 Level(2,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
 UNIT Holanis LncPal 0x0 Level(2,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [SteelLance] GroupOneAI
 UNIT Holanis Merc 0x0 Level(20,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [SteelSword] GroupOneAI
@@ -115,11 +117,37 @@ UNIT Holanis Halberdier 0x0 Level(3,Enemy,1) [8,7] DropItem 0x0 0x0 0x0 [Spear,B
 UNIT Holanis Sorc 0x0 Level(3,Enemy,1) [1,21] DropItem 0x0 0x0 0x0 [Nightfall,MasterSeal] NeverMoveAI
 UNIT Holanis Hero 0x0 Level(4,Enemy,1) [24,1] DropItem 0x0 0x0 0x0 [MasterSword] AttackInRangeAI
 UNIT Holanis Halberdier 0x0 Level(4,Enemy,1) [21,0] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Holanis Warrior 0x0 Level(4,Enemy,1) [22,1] 0x0 0x0 0x0 0x0 [DevilAxe] AttackInRangeAI
+UNIT Holanis Warrior 0x0 Level(4,Enemy,1) [22,1] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
 UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
 UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [24,13] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
 UNIT
-//make sure to drop 2 master seals
+
+V4Turn2Group:
+UNIT Holanis Merc 0x0 Level(19,Enemy,1) [7,2] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Holanis Fighter 0x0 Level(19,Enemy,1) [6,3] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Holanis Mage 0x0 Level(19,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [Thunder] NoAI
+UNIT Holanis ArcherF 0x0 Level(19,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [ShiningBow] NoAI
+UNIT
+
+V4Turn3Group:
+UNIT Holanis Merc 0x0 Level(19,Enemy,1) [17,0] 0x0 0x0 0x1 REDA17R1 [SteelSword] NoAI
+UNIT Holanis MercF 0x0 Level(19,Enemy,1) [18,0] 0x0 0x0 0x1 REDA18R2 [SteelSword] NoAI
+UNIT Holanis Soldier 0x0 Level(19,Enemy,1) [21,0] 0x0 0x0 0x1 REDA21R2 [SteelSword] NoAI
+UNIT Holanis SoldierF 0x0 Level(19,Enemy,1) [22,0] 0x0 0x0 0x1 REDA22R3 [SteelSword] NoAI
+UNIT
+
+V4Turn4Group:
+UNIT Holanis SwdCav 0x0 Level(19,Enemy,1) [13,24] 0x0 0x0 0x1 REDA13R22 [Lancereaver] NoAI
+UNIT Holanis LncCav 0x0 Level(19,Enemy,1) [14,24] 0x0 0x0 0x1 REDA14R23 [Axereaver] NoAI
+UNIT Holanis BowCav 0x0 Level(19,Enemy,1) [14,24] 0x0 0x0 0x1 REDA14R21 [SteelBow] NoAI
+UNIT Holanis AxeCav 0x0 Level(19,Enemy,1) [15,24] 0x0 0x0 0x1 REDA15R22 [Swordreaver] NoAI
+UNIT
+
+V4Turn5Group:
+UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [4,12] 0x0 0x0 0x1 REDA3R12 [Axereaver] NoAI
+UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [4,12] 0x0 0x0 0x1 REDA4R11 [SteelLance] NoAI
+UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [4,12] 0x0 0x0 0x1 REDA5R13 [SteelAxe] NoAI
+UNIT
 
 ALIGN 4
 
@@ -143,6 +171,19 @@ V4Village1:
 VillageEventItem(FillerDialogue, VillageCG, TorchStaff)//a very very very drunk man
 V4Village2:
 VillageEventItem(FillerDialogue, VillageCG, RealLastShield)
+
+V4Turn2:
+Reinforcements(V4Turn2Group)
+EndEvent
+V4Turn3:
+Reinforcements(V4Turn3Group)
+EndEvent
+V4Turn4:
+Reinforcements(V4Turn4Group)
+EndEvent
+V4Turn5:
+Reinforcements(V4Turn5Group)
+EndEvent
 
 V4OutOfTime:
 Text(FillerDialogue)

@@ -467,13 +467,13 @@
 			support(CSupport,1,0,0,0,0,5)
 			support(CPSupport,1,0,5,0,0,10)
 			support(BSupport,2,0,10,0,0,10)//v1
-			support(BPSupport,2,1,15,0,0,10)
+			support(BPSupport,2,1,15,0,0,10)//v3
 			support(ASupport,3,2,30,0,0,10)
 		entry(Viridian,Chartreuse)
 			support(CSupport,0,1,0,0,0,5)
 			support(CPSupport,0,1,10,0,0,10)
 			support(BSupport,0,2,10,0,0,20)//v1
-			support(BPSupport,0,2,20,0,0,30)
+			support(BPSupport,0,2,20,0,0,30)//v4
 			support(ASupport,0,3,30,0,0,40)
 	//freddric (viridian)
 		entry(Freddric,Argent)
@@ -499,7 +499,7 @@
 		entry(Eliza,Rose)
 			support(CSupport,0,0,5,0,0,5)
 			support(CPSupport,0,0,10,0,0,10)//v2
-			support(BSupport,0,0,20,0,0,20)
+			support(BSupport,0,0,20,0,0,20)//v4
 			support(BPSupport,0,0,30,0,0,30)
 			support(ASupport,2,0,30,0,0,30)
 		entry(Eliza,Dirk)
@@ -512,14 +512,14 @@
 		entry(Chartreuse,Estelle)
 			support(CSupport,0,0,10,0,10,0)
 			support(CPSupport,0,0,15,0,15,0)//v1
-			support(BSupport,0,0,20,0,20,5)
+			support(BSupport,0,0,20,0,20,5)//v3
 			support(BPSupport,0,0,25,0,25,10)
 			support(ASupport,0,0,30,0,30,15)
 	//rift
 		entry(Rift,Estelle)
 			support(CSupport,0,0,0,10,0,0)
 			support(CPSupport,0,0,0,20,0,0)//v1
-			support(BSupport,0,1,10,20,0,0)
+			support(BSupport,0,1,10,20,0,0)//v4
 			support(BPSupport,0,1,20,20,0,10)
 			support(ASupport,0,2,30,30,0,20)
 		entry(Rift,Callum)
@@ -537,7 +537,7 @@
 			support(CSupport,1,0,0,0,0,5)
 			support(CPSupport,1,0,5,0,0,10)
 			support(BSupport,1,0,15,0,0,15)//v3
-			support(BPSupport,2,0,20,0,0,20)
+			support(BPSupport,2,0,20,0,0,20)//v4
 			support(ASupport,3,0,30,0,0,30)
 	//wilhelm (manfred)
 	//argent (freddric)

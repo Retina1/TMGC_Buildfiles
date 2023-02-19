@@ -1,0 +1,50 @@
+##I8ChooseYes
+Decide this unit's fate.[X]
+##I8ChooseTalk
+Talk to this unit.[X]
+##I8ChooseBack
+Abstain for the moment.[X]
+##I8SendOff
+Send this unit to scout?[N]
+[No][X]
+
+//dream or vision of the end
+
+##WhatDoIDo
+[OpenMidLeft][LoadViridian]
+[ToggleMouthMove]...[ToggleMouthMove]What do I do?[A][X]
+
+##SendFreddric
+[OpenMidLeft][LoadViridian][OpenMidRight][LoadFreddric]
+Viridian[ToggleMouthMove]...[ToggleMouthMove][N]
+My conviction is unshakeable.[A][N]
+I will do what I must.[N]
+Just[ToggleMouthMove]...[ToggleMouthMove] be careful.[A][X]
+
+##SendFreddricYes
+[OpenMidLeft][LoadViridian][OpenMidRight][LoadFreddric][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I'm sorry for this.[A][N][OpenMidRight]
+Don't be. I'm sure we'll[ToggleMouthMove]...[ToggleMouthMove][N]
+meet again.[A][N]
+I'd better[ToggleMouthMove]...[ToggleMouthMove] be off.[N]
+To prepare.[A][X]
+
+##SendFreddricNo
+[OpenMidLeft][LoadViridian][OpenMidRight][LoadFreddric][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]You've still time to decide.[N]
+I know[ToggleMouthMove]...[ToggleMouthMove] this isn't easy.[A][N]
+But whatever you decide,[N]
+we're here to the end.[A][X]
+
+##I8FreddricTalk
+[OpenMidLeft][LoadViridian][OpenMidRight][LoadFreddric]
+[ToggleMouthMove]...[ToggleMouthMove]I know the mood's harsh here,[N]
+but[ToggleMouthMove]...[ToggleMouthMove][A] I just wanted to thank[N]
+you. For everything.[A][N]
+While we still have the chance.[A][N][OpenMidLeft][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove]Thank you, Freddric.[A][N]
+But[ToggleMouthMove]...[ToggleMouthMove] There's no reason to[N]
+act like this'll be the end.[A][N]
+It[ToggleMouthMove]...[ToggleMouthMove] can't be.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]You're right.[A][X]

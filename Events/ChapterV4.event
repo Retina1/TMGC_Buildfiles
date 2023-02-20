@@ -114,12 +114,12 @@ UNIT Holanis DarkM 0x0 Level(20,Enemy,1) [18,2] 0x0 0x0 0x0 0x0 [Jormungandr] Gr
 UNIT Holanis SwMast 0x0 Level(3,Enemy,1) [6,6] DropItem 0x0 0x0 0x0 [Armorslayer,MasterSeal] AttackInRangeAI
 UNIT Holanis Falco 0x0 Level(3,Enemy,1) [1,19] DropItem 0x0 0x0 0x0 [Axebuster,Implant] AttackInRangeAI
 UNIT Holanis Halberdier 0x0 Level(3,Enemy,1) [8,7] DropItem 0x0 0x0 0x0 [Spear,BraveLance] NeverMoveAI
-UNIT Holanis Sorc 0x0 Level(3,Enemy,1) [1,21] DropItem 0x0 0x0 0x0 [Nightfall,MasterSeal] NeverMoveAI
+UNIT Holanis Sorc 0x0 Level(8,Enemy,1) [1,21] DropItem 0x0 0x0 0x0 [Nightfall,MasterSeal] NeverMoveAI
 UNIT Holanis Hero 0x0 Level(4,Enemy,1) [24,1] DropItem 0x0 0x0 0x0 [MasterSword] AttackInRangeAI
 UNIT Holanis Halberdier 0x0 Level(4,Enemy,1) [21,0] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
 UNIT Holanis Warrior 0x0 Level(4,Enemy,1) [22,1] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
-UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
-UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [24,13] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [1,15] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [24,12] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
 UNIT
 
 V4Turn2Group:
@@ -144,9 +144,11 @@ UNIT Holanis AxeCav 0x0 Level(19,Enemy,1) [15,24] 0x0 0x0 0x1 REDA15R22 [Swordre
 UNIT
 
 V4Turn5Group:
-UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [4,12] 0x0 0x0 0x1 REDA3R12 [Axereaver] NoAI
-UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [4,12] 0x0 0x0 0x1 REDA4R11 [SteelLance] NoAI
-UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [4,12] 0x0 0x0 0x1 REDA5R13 [SteelAxe] NoAI
+UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [0,11] 0x0 0x0 0x1 REDA1R11 [Axereaver] NoAI
+UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [0,12] 0x0 0x0 0x1 REDA2R12 [SteelLance] NoAI
+UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [0,13] 0x0 0x0 0x1 REDA1R13 [SteelAxe] NoAI
+UNIT Holanis LncPeg 0x0 Level(19,Enemy,1) [24,11] 0x0 0x0 0x1 REDA1R11 [SilverLance] NoAI
+UNIT Holanis SwdPeg 0x0 Level(19,Enemy,1) [24,13] 0x0 0x0 0x1 REDA2R12 [SilverSword] NoAI
 UNIT
 
 ALIGN 4
@@ -155,7 +157,7 @@ BeginningScene:
 LOAD1 0x1 V4Units
 ENUN
 LoadUnitsByDifficulty(V4Easy,V4Normal,V4Hard)
-MUSC NarrationTheme
+MUSC NarrationTheme4
 Narration(Map2CG,ChV4_Narration)
 CleanText(PathCG,FillerDialogue)
 GotoPrepScreen

@@ -15,13 +15,17 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
-POIN V1Units V1Units
+POIN V5Units V5Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,V5Turn1,1)
+TurnEventPlayer(0x0,V5Turn14,14)
 TurnEventPlayer(0x0,V5EndCheck,1,255)
 TurnEventEnemy(0x0,V5EndCheck,1,255)
+TurnEventPlayer(0x0,V5Goodbye,15,50)
+TurnEventPlayer(0x0,V5GoodbyeForReal,19,50)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -46,42 +50,90 @@ ENDTRAP
 
 ALIGN 4
 
-V1Units:
-UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
-UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [2,0] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
-UNIT Dean Fighter 0x0 Level(15,Ally,0) [4,0] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
-UNIT Eliza Cleric 0x0 Level(12,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
-UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [3,1] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
-UNIT Rift SwMast 0x0 Level(6,Ally,0) [0,2] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
-UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
-UNIT Rose MageF 0x0 Level(9,Ally,0) [3,3] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
-UNIT Dirk Berserker 0x0 Level(7,Ally,0) [2,5] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
-UNIT Callum SwdPal 0x0 Level(11,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
+V5Units:
+UNIT Viridian ViridianLord 0x0 Level(4,Ally,0) [17,18] 0x0 0x0 0x0 0x0 [Luckbow, SteelBow, Mend] NoAI
+UNIT Freddric WyvLord 0x0 Level(5,Ally,0) [16,17] 0x0 0x0 0x0 0x0 [SilverLance, Javelin, Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(15,Ally,0) [18,17] 0x0 0x0 0x0 0x0 [GildedAxe, HandAxe] NoAI
+UNIT Eliza Cleric 0x0 Level(12,Ally,0) [16,19] 0x0 0x0 0x0 0x0 [Recover, Physic, Rescue] NoAI
+UNIT Chartreuse BardF 0x0 Level(8,Ally,0) [18,19] 0x0 0x0 0x0 0x0 [LegRing, Elixir] NoAI
+UNIT Rift SwMast 0x0 Level(6,Ally,0) [19,18] 0x0 0x0 0x0 0x0 [SteelSword, FlameSword] NoAI
+UNIT Estelle BowCavF 0x0 Level(13,Ally,0) [17,20] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Rose MageF 0x0 Level(9,Ally,0) [20,17] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
+UNIT Dirk Berserker 0x0 Level(7,Ally,0) [19,16] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
+UNIT Callum SwdPal 0x0 Level(11,Ally,0) [17,16] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
 //UNIT Manfred DarkM 0x0 Level(18,Ally,0) [3,5] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
 //UNIT Wilhelm Soldier 0x0 Level(16,Ally,0) [2,4] 0x0 0x0 0x0 0x0 [IronBow, Longbow, Vulnerary] NoAI
 //UNIT Argent BowGen 0x0 Level(14,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [Thunder,WhiteGem] NoAI
 //remember, there's only 10 units here, there'll be some extra slots maybe
 UNIT
 
-V1Easy:
+V5Easy:
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
 UNIT
 
-V1Normal:
+V5Normal:
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
 UNIT
 
-V1Hard:
-UNIT Bandit Brigand 0x0 Level(14,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(12,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
-UNIT Holanis Sage 0x0 Level(20,Enemy,1) [7,7] 0x0 0x0 0x0 0x0 [Annihilation] NoAI
-UNIT Holanis Sage 0x0 Level(20,Enemy,1) [7,8] 0x0 0x0 0x0 0x0 [Annihilation] NoAI
-UNIT Holanis Sage 0x0 Level(20,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [Annihilation] NoAI
-UNIT Holanis Sage 0x0 Level(20,Enemy,1) [7,10] 0x0 0x0 0x0 0x0 [Annihilation] NoAI
-UNIT Holanis Sage 0x0 Level(20,Enemy,1) [7,11] 0x0 0x0 0x0 0x0 [Annihilation] NoAI
+V5Hard:
+UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [22,1] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Holanis AxeGen 0x0 Level(6,Enemy,1) [22,2] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Holanis AxeGen 0x0 Level(6,Enemy,1) [22,3] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [22,4] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [27,1] DropItem 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT Holanis SageF 0x0 Level(8,Enemy,1) [26,2] 0x0 0x0 0x0 0x0 [Calibur] GroupOneAI
+UNIT Holanis BishopF 0x0 Level(8,Enemy,1) [27,4] 0x0 0x0 0x0 0x0 [Resire] GroupOneAI
+UNIT Holanis SorcF 0x0 Level(8,Enemy,1) [28,3] 0x0 0x0 0x0 0x0 [Hell] GroupOneAI
+UNIT Holanis Ballistician 0x0 Level(20,Enemy,1) [29,1] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 UNIT
 
+V5Death1:
+UNIT V5Holanis WyvLord 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA27R4 [MasterLance] NoAI
+UNIT V5Holanis WyvLord 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R5 [MasterAxe] NoAI
+UNIT V5Holanis WyvLord 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R5 [MasterAxe] NoAI
+UNIT
+V5Death2:
+UNIT V5Holanis SageF 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA27R5 [Annihilation] NoAI
+UNIT V5Holanis Sage 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R4 [Annihilation] NoAI
+UNIT V5Holanis Sage 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R4 [Annihilation] NoAI
+UNIT
+V5GirardSpawn:
+UNIT V5Holanis Baron 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA27R2 [Avalon] NoAI
+UNIT V5Holanis Valk 0x0 Level(16,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R3 [FlameSword] NoAI
+UNIT
 ALIGN 4
+
+//use event id 0x66 to disable objective display
+
+BeginningScene:
+LOAD1 0x1 V5Units
+ENUN
+LoadUnitsByDifficulty(V5Easy,V5Normal,V5Hard)
+MUSC AmbientWind
+Narration(Map2CG,ChV5_Narration)
+CleanText(PathCG,FillerDialogue)
+GotoPrepScreen
+EndEvent
+
+V5Turn1:
+SystemText(_V5SysText)
+EndEvent
+
+V5Turn14:
+MUSC 0x0
+SystemText(ThereWillBeNoSalvation)
+TILECHANGE 0x0
+TILECHANGE 0x1
+ENUT 0x4
+ENUT 0x66
+EndEvent
+
+V5Goodbye:
+Reinforcements(V5Death1)
+EndEvent
+V5GoodbyeForReal:
+Reinforcements(V5Death2)
+EndEvent
 
 V5EndCheck:
 CHECK_DEPLOYED Viridian
@@ -149,21 +201,22 @@ BEQ 0xe 0xc 0x0
 CHECK_ALIVE Argent
 BNE 0x1 0xc 0x0
 LABEL 0xe
-Text(FillerDialogue)
+FADI 0x10
+CLEE 0
+TILECHANGE 0x0
+TILECHANGE 0x1
+FADU 0x10
+Reinforcements(V5GirardSpawn)
+CHECK_TURNS
+SVAL 0x1 14
+BLT 0x66 0xc 0x1
+Text(V5_Ending)//normal version
+GOTO 0x67
+LABEL 0x66
+Text(V5_EndingAlt)//slightly snarky variant for dying quickly
+LABEL 0x67
 CALL EndingScene
 LABEL 0x1
-EndEvent
-
-//use event id 0x66 to disable objective display
-
-BeginningScene:
-LOAD1 0x1 V1Units
-ENUN
-LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
-MUSC NarrationTheme
-Narration(Map2CG,ChV5_Narration)
-CleanText(PathCG,FillerDialogue)
-GotoPrepScreen
 EndEvent
 
 EndingScene:
@@ -243,11 +296,8 @@ DISA Argent
 LABEL 0x112
 EVBIT_MODIFY 4
 MUSC S_MainTheme
-Text(FillerDialogue)
-SystemText(ArcViridianEnding)
-CLEE 0
-CLEN 0
-CLEA 0
+CleanTextNoMap(OutdoorCastleCG,V5_Ending2)//girard's monologue
+SystemText(BlankCG,ArcViridianEnding)
 OffAllUnitState(Blair*0x100+Simone, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
 OffAllUnitState(Addington*0x100+Addington, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
 OffAllUnitState(Yuyu*0x100+Yuyu, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem) 

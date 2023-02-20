@@ -33,6 +33,10 @@ dalst
 //fix 55 (flute 73), 72 (oboe 68)
 // 1 - TEST SONG TO MAKE SURE THE INSTALLER WORKS-- DO NOT USE THIS IN YOUR GAME; IT DOESN'T SOUND GOOD
 {
+#include "Secret.event"
+SongTable(S_Secret,Secret,1)
+}
+{
 #include "AWoman.event"
 SongTable(S_AWoman,AWoman,1)
 }

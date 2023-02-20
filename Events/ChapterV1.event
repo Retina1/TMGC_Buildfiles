@@ -165,7 +165,7 @@ Write_Word(HereComesTheMoney)
 SVAL 0x2 0x0
 Write_Word(10000,HereIsTheMoney)
 LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
-MUSC NarrationTheme
+MUSC NarrationTheme4
 Narration(Map2CG,ChV1_Narration)
 CleanText(PathCG,V1Opening)
 EVBIT_T 9

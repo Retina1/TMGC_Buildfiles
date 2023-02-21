@@ -858,10 +858,11 @@
 //By Sme
 #define PushStrID 255
 #define PushMagID 255
-#define PushSklID 255
+#define PushSklID 114
 #define PushSpdID 155
 #define PushDefID 255
 #define PushResID 151
+#define PushMovID PushSklID
 
 //Lull Skills: Negate the effects of a rally for the given stat.
 //By Sme
@@ -979,7 +980,7 @@
 
 //Nihil: Cancels the opponent's skills in combat.
 //Author Unknown (Initial Commit)
-#define NihilID 114
+#define NihilID 255
 
 //Live to Serve: When healing an ally, also heals self.
 ////Author Unknown (Initial Commit) & Leonarth

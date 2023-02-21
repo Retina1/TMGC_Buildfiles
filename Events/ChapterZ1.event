@@ -179,7 +179,7 @@ LOAD1 0x1 Z1UnitsZeke
 ENUN
 MUSC NarrationTheme
 Narration(MapCG,ChZ1_Narration)
-CleanText(PathCG,Z1Opening)
+CleanText(EastHolanisCG,Z1Opening)
 LOAD1 0x1 Z1Units
 ENUN
 MUSC S_Neutral
@@ -239,7 +239,7 @@ EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-CleanTextNoMap(PathCG,Z1Ending)
+CleanTextNoMap(EastHolanisCG,Z1Ending)
 MoveToChapter(ChapterZ2)
 EndEvent
 

@@ -1,3 +1,11 @@
+//widen sound room
+PUSH
+ORG 0x0B0110
+BYTE 0x20
+ORG 0x0B0134
+BYTE 0x05
+POP
+
 //swap use and equip on item menu
 PUSH
 ORG 0x59C5B4

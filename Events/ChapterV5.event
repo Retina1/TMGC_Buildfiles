@@ -76,6 +76,30 @@ UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, J
 UNIT
 
 V5Hard:
+UNIT Holanis SwdPal 0x0 Level(3,Enemy,1) [2,5] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis LncPal 0x0 Level(3,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Holanis AxePal 0x0 Level(3,Enemy,1) [4,5] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Holanis Soldier 0x0 Level(20,Enemy,1) [24,14] DropItem 0x0 0x0 0x0 [TrueSaunion] NoAI
+UNIT Holanis Archer 0x0 Level(20,Enemy,1) [19,13] DropItem 0x0 0x0 0x0 [Stormbow] NoAI
+UNIT Holanis Falco 0x0 Level(2,Enemy,1) [15,4] DropItem 0x0 0x0 0x0 [LevinSword] NoAI
+UNIT Holanis SwdPeg 0x0 Level(20,Enemy,1) [10,1] 0x0 0x0 0x0 0x0 [SilverSword] DelayedAI
+UNIT Holanis Sniper 0x0 Level(3,Enemy,1) [3,12] 0x0 0x0 0x0 0x0 [Longbow] GroupFourPaceAI
+UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [4,13] 0x0 0x0 0x0 0x0 [Wardbow] GroupFourAI
+UNIT Holanis Merc 0x0 Level(20,Enemy,1) [4,14] 0x0 0x0 0x0 0x0 [Rapier] GroupFourAI
+UNIT Holanis AxeCav 0x0 Level(20,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
+UNIT Holanis Halberdier 0x0 Level(4,Enemy,1) [7,8] DropItem 0x0 0x0 0x0 [BraveLance,Speedwings] GroupTwoAI
+UNIT Holanis AxeCav 0x0 Level(20,Enemy,1) [8,9] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
+UNIT Holanis SwdCav 0x0 Level(20,Enemy,1) [9,7] 0x0 0x0 0x0 0x0 [SilverSword] GroupThreeAI
+UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [10,8] DropItem 0x0 0x0 0x0 [BraveSword,EnergyRing] GroupThreeAI
+UNIT Holanis LncCav 0x0 Level(20,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [SilverLance] GroupThreeAI
+UNIT Holanis Merc 0x0 Level(20,Enemy,1) [17,9] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Merc 0x0 Level(20,Enemy,1) [19,8] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Fighter 0x0 Level(20,Enemy,1) [28,11] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [18,4] 0x0 0x0 0x0 0x0 [Tomahawk] AttackInRangeAI
+UNIT Holanis Sorc 0x0 Level(6,Enemy,1) [15,8] DropItem 0x0 0x0 0x0 [Fenrir,Hell,Fortify] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [23,11] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [27,12] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+//the gate
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [22,1] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Holanis AxeGen 0x0 Level(6,Enemy,1) [22,2] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Holanis AxeGen 0x0 Level(6,Enemy,1) [22,3] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
@@ -84,7 +108,7 @@ UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [27,1] DropItem 0x0 0x0 0x0 [Starfall
 UNIT Holanis SageF 0x0 Level(8,Enemy,1) [26,2] 0x0 0x0 0x0 0x0 [Calibur] GroupOneAI
 UNIT Holanis BishopF 0x0 Level(8,Enemy,1) [27,4] 0x0 0x0 0x0 0x0 [Resire] GroupOneAI
 UNIT Holanis SorcF 0x0 Level(8,Enemy,1) [28,3] 0x0 0x0 0x0 0x0 [Hell] GroupOneAI
-UNIT Holanis Ballistician 0x0 Level(20,Enemy,1) [29,1] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Holanis Ballistician 0x0 Level(20,Enemy,1) [29,1] DropItem 0x0 0x0 0x0 [ArchBallista,SilverCard] NeverMoveAI
 UNIT
 
 V5Death1:
@@ -111,13 +135,25 @@ ENUN
 LoadUnitsByDifficulty(V5Easy,V5Normal,V5Hard)
 MUSC AmbientWind
 Narration(Map2CG,ChV5_Narration)
-CleanText(PathCG,FillerDialogue)
+CleanText(EastHolanisCG,FillerDialogue)//staking out fort until the others arrive
+CAM1 Ciraweiss
+FlashCursor(Ciraweiss,60)
+MUSC S_Chaos
+Text(FillerDialogue)//complaining about watch, sending troops off because of watchmen rumors
+CAM1 Viridian
+FlashCursor(Viridian,60)
+MUSC 0x0
+Text(FillerDialogue)//survive, hint to stay away from the fort unless absolutely necessary
 GotoPrepScreen
 EndEvent
 
 V5Turn1:
 SystemText(_V5SysText)
 EndEvent
+
+//if ethyl is alive by turn 7, she leaves to work on stuff
+//on turn 13, have viridian comment that they've held off the worst of it
+//turn 14 - ethyl/girard/whoever notes that the intruders are persistent and prepare to bring out the big guns
 
 V5Turn14:
 MUSC 0x0
@@ -132,6 +168,11 @@ V5Goodbye:
 Reinforcements(V5Death1)
 EndEvent
 V5GoodbyeForReal:
+CHECK_TURNS
+SVAL 0x1 19
+BEQ 0x1 0xc 0x1
+Text(FillerDialogue)//so begins death
+LABEL 0x1
 Reinforcements(V5Death2)
 EndEvent
 

@@ -159,13 +159,13 @@ ENUN
 LoadUnitsByDifficulty(V4Easy,V4Normal,V4Hard)
 MUSC NarrationTheme4
 Narration(Map2CG,ChV4_Narration)
-CleanText(PathCG,FillerDialogue)
+CleanText(EastHolanisCG,FillerDialogue)
 GotoPrepScreen
 EndEvent
 
 EndingScene:
 MUSC VictoryTheme
-Text(PathCG,FillerDialogue)
+Text(EastHolanisCG,FillerDialogue)
 MoveToChapter(Interlude8)
 EndEvent
 

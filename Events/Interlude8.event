@@ -382,7 +382,7 @@ BeginningScene:
 EnableFreeMovement
 MUSC AmbientWind
 Narration(Map2CG,Base8_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(EastHolanisCG,FillerDialogue)
 LOAD1 0x0 I8Units
 ENUN
 LOAD1 0x0 I8Props
@@ -392,7 +392,7 @@ ENDA
 
 EndingScene:
 DisableFreeMovement
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(EastHolanisCG,FillerDialogue)
 MoveToChapter(ChapterV5)
 ENDA
 

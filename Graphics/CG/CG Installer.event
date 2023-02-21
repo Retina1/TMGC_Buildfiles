@@ -8,6 +8,16 @@ SetConvoBackground(LowlandsCG,LowlandsImage,LowlandsTSA,LowlandsPalette)
 SetConvoBackground(TentInsideCG,TentInsideImage,TentInsideTSA,TentInsidePalette)
 SetConvoBackground(LowlandsRiverCG,LowlandsRiverImage,LowlandsRiverTSA,LowlandsRiverPalette)
 SetConvoBackground(YgstraCG,YgstraImage,YgstraTSA,YgstraPalette)
+SetConvoBackground(EastHolanisCG,EastHolanisImage,EastHolanisTSA,EastHolanisPalette)
+ALIGN 4
+EastHolanisImage:
+#incbin "holanis.png.dmp"
+ALIGN 4
+EastHolanisTSA:
+#incbin "holanis.png.tsa.dmp"
+ALIGN 4
+EastHolanisPalette:
+#incbin "holanis.png.pal.dmp"
 ALIGN 4
 MapImage:
 #incbin "map for real.png.dmp"

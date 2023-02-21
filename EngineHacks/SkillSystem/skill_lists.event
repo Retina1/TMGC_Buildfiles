@@ -160,7 +160,18 @@ BYTE 24 FocusedGoalID
 BYTE 39 LethalityID
 BYTE 00 00
 ALIGN 4
-
+ViridianSkillList:
+BYTE 27 AcrobatID 
+BYTE 00 00
+ALIGN 4
+FreddricSkillList:
+BYTE 29 RenewalID 
+BYTE 00 00
+ALIGN 4
+ChartreuseSkillList:
+BYTE 15 CharmID 
+BYTE 00 00
+ALIGN 4
 DeanSkillList:
 BYTE 26 FamilyManID 
 BYTE 00 00
@@ -169,14 +180,37 @@ ElizaSkillList:
 BYTE 15 PowerstaffID 
 BYTE 00 00
 ALIGN 4
-
-DirkSkillList:
-BYTE 27 DesperationID
+RiftSkillList:
+BYTE 33 KillingMachineID 
 BYTE 00 00
 ALIGN 4
-
+EstelleSkillList:
+BYTE 15 PushMovID 
+BYTE 00 00
+ALIGN 4
+RoseSkillList:
+BYTE 35 LifeAndDeathID
+BYTE 00 00
+ALIGN 4
+DirkSkillList:
+BYTE 27 DesperationID
+BYTE 32 FlowStateID
+BYTE 00 00
+ALIGN 4
+CallumSkillList:
+BYTE 40 ProvokeID
+BYTE 00 00
+ALIGN 4
 ManfredSkillList:
 BYTE 18 VantageID
+BYTE 00 00
+ALIGN 4
+WilhelmSkillList:
+BYTE 28 PressTurnID
+BYTE 00 00
+ALIGN 4
+ArgentSkillList:
+BYTE 37 DauntID 
 BYTE 00 00
 ALIGN 4
 

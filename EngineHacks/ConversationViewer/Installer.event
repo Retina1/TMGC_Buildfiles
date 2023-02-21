@@ -58,6 +58,9 @@ POIN ChapterZ2Conversations
 POIN ChapterZ3Conversations
 POIN Interlude5Conversations
 POIN Chapter15Conversations
+POIN Chapter16Conversations
+POIN Chapter17Conversations
+POIN Chapter18Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN SupportConversations2
@@ -527,7 +530,7 @@ ConversationEntryTerminator
 
 ALIGN 4
 ChapterZ1Conversations:
-ConversationEntry(EZ1Open1,Z1Opening,PathCG,ChapterZ1)
+ConversationEntry(EZ1Open1,Z1Opening,EastHolanisCG,ChapterZ1)
 ConversationEntry(EZ1Open2,Z1Opening2,PathCG,ChapterZ1,S_Neutral)
 ConversationEntry(EZ1Open3,Z1Opening3,HallCG,ChapterZ1,S_Crisis)
 ConversationEntry(EZ1Open4,Z1Opening4,HallCG,ChapterZ1,S_Crisis)
@@ -537,7 +540,7 @@ ConversationEntry(EZ1House,Z1HouseText,HouseCG,ChapterZ1)
 ConversationEntry(EZ1BossGen,Z1RoarkBattle,PathCG,ChapterZ1,S_SonicBoss)
 ConversationEntry(EZ1BossZeke,Z1RoarkZekeBattle,PathCG,ChapterZ1,S_SonicBoss)
 ConversationEntry(EZ1BossDie,Z1RoarkDeath,PathCG,ChapterZ1,S_SonicBoss)
-ConversationEntry(EZ1End1,Z1Ending,PathCG,ChapterZ1,VictoryTheme)
+ConversationEntry(EZ1End1,Z1Ending,EastHolanisCG,ChapterZ1,VictoryTheme)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -626,6 +629,80 @@ ConversationEntry(EC15TimeUp,Ch15_ElcorianTheCamooIsHere,OutdoorCastleCG,Chapter
 ConversationEntry(EC15TimeUp2,Ch15_ElcorianTheCamooIsHere2,OutdoorCastleCG,Chapter15)
 ConversationEntry(EC15YouDidIt,Ch15_ElcorianTheCamooIsHereLate,OutdoorCastleCG,Chapter15)
 ConversationEntry(EC15End1,Ch15_Ending,HallCG,Chapter15,VictoryMinor)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter16Conversations:
+ConversationEntry(EC16Open1,Ch16_Opening,HallCG,Chapter16)
+ConversationEntry(EC16Open2,Ch16_Opening2,HallCG,Chapter16)
+ConversationEntry(EC16Open3,Ch16_Opening3,OutdoorCastleCG,Chapter16,S_Crisis)
+ConversationEntry(EC16Warning,C16_ArtemisSpeaks,OutdoorCastleCG,Chapter16)
+ConversationEntry(EC16Recruit,C16_ArtemisBlairTalk,OutdoorCastleCG,Chapter16,RecruitmentTheme)
+ConversationEntry(EC16RecruitAlt,C16_ArtemisZekeTalk,OutdoorCastleCG,Chapter16,RecruitmentTheme)
+ConversationEntry(EC16Village1,C16VillageText1,HouseCG,Chapter16)
+ConversationEntry(EC16Village2,C16VillageText2,HouseCG,Chapter16)
+ConversationEntry(EC16Village3,C16VillageText3,HouseCG,Chapter16)
+ConversationEntry(EC16BossGen,C16NicoleBattle,HallCG,Chapter16,S_MechanicalRhythm)
+ConversationEntry(EC16BossArtemis,C16NicoleArtemisBattle,HallCG,Chapter16,S_MechanicalRhythm)
+ConversationEntry(EC16BossFlynn,C16NicoleFlynnBattle,HallCG,Chapter16,S_MechanicalRhythm)
+ConversationEntry(EC16BossSvelt,C16NicoleSveltzalusBattle,HallCG,Chapter16,S_MechanicalRhythm)
+ConversationEntry(EC16BossDie,C16NicoleDeath,HallCG,Chapter16,S_MechanicalRhythm)
+ConversationEntry(EC16ArtemisDie,EnemyArtemisDeath,OutdoorCastleCG,Chapter16,S_TimeToMakeHistory)
+ConversationEntry(EC16GameOver,C16_GameOver,HallCG,Chapter16)
+ConversationEntry(EC16End1,Ch16_Ending,HallCG,Chapter16,VictoryTheme)
+ConversationEntry(EC16Best,Ch16_Reward_Best,OutdoorCastleCG,Chapter16,VictoryTheme)
+ConversationEntry(EC16Good,Ch16_Reward_Good,OutdoorCastleCG,Chapter16,VictoryTheme)
+ConversationEntry(EC16Eh,Ch16_Reward_Eh,OutdoorCastleCG,Chapter16,VictoryTheme)
+ConversationEntry(EC16Bad,Ch16_Reward_Bad,OutdoorCastleCG,Chapter16,VictoryTheme)
+ConversationEntry(EC16YouTried,Ch16_Reward_YouTried,OutdoorCastleCG,Chapter16,VictoryTheme)
+ConversationEntry(EC16NoYouDidnt,Ch16_Reward_HowDidYouDoThisBad,OutdoorCastleCG,Chapter16,VictoryTheme)
+ConversationEntry(EC16End2,Ch16_Ending2,BlankCG,Chapter16,S_Chaos)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter17Conversations:
+ConversationEntry(EC17Open1,Ch17_Opening,LowlandsCG,Chapter17)
+ConversationEntry(EC17Open2,Ch17_Opening2,LowlandsCG,Chapter17,S_Crisis)
+ConversationEntry(EC17Open3,Ch17_Opening3,LowlandsCG,Chapter17,S_Crisis)
+ConversationEntry(EC17Recruit,Ch17_BechamelRecruitsHollandaise,LowlandsCG,Chapter17,RecruitmentTheme)
+ConversationEntry(EC17Talk,Ch17_BlairHollandaiseTalk,LowlandsCG,Chapter17)
+ConversationEntry(EC17Boss1Gen,C17EdwardBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss1Bech,C17EdwardBechamelBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss1Holl,C17EdwardHollandaiseBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss1Svelt,C17EdwardSveltzalusBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss1Die,C17EdwardDeath,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss2Gen,C17EddieBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss2Bech,C17EddieBechamelBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss2Holl,C17EddieHollandaiseBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss2Svelt,C17EddieSveltzalusBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss2Die,C17EddieDeath,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss3Gen,C17EduardoBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss3Bech,C17EduardoBechamelBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss3Holl,C17EduardoHollandaiseBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss3Svelt,C17EduardoSveltzalusBattle,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17Boss3Die,C17EduardoDeath,LowlandsCG,Chapter17,S_BattleA3)
+ConversationEntry(EC17HollDie,EnemyHollandaiseDeath,LowlandsCG,Chapter17,S_TimeToMakeHistory)
+ConversationEntry(EC17End1,Ch17_Ending,LowlandsCG,Chapter17,VictoryTheme)
+ConversationEntry(EC17Followup,Ch17_BlairHollandaiseFollowup,LowlandsCG,Chapter17,RecruitmentTheme)
+ConversationEntry(EC17Unprompted,Ch17_HollandaiseJoinsUnprompted,LowlandsCG,Chapter17,RecruitmentTheme)
+ConversationEntry(EC17CatchUp,Ch17_BechamelAndHollandaiseCatchUp,LowlandsCG,Chapter17,RecruitmentTheme)
+ConversationEntry(EC17End2,Ch17_Ending2,BlankCG,Chapter17,S_Chaos)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter18Conversations:
+ConversationEntry(EC18Open1,Ch18_Opening,LowlandsCG,Chapter18,S_Neutral)
+ConversationEntry(EC18Open2,Ch18_Opening2,LowlandsCG,Chapter18,S_Crisis)
+ConversationEntry(EC18Open3,Ch18_Opening3,LowlandsCG,Chapter18,S_Crisis)
+ConversationEntry(EC18Recruit,Ch18_VladmirJoin,LowlandsCG,Chapter18,S_EncountersAndReunions)
+ConversationEntry(EC18BossGen,C18BungalasBattle,LowlandsCG,Chapter18,S_BattleA3)
+ConversationEntry(EC18BossSvelt,C18BungalasSveltzalusBattle,LowlandsCG,Chapter18,S_BattleA3)
+ConversationEntry(EC18BossDie,C18BungalasDeath,LowlandsCG,Chapter18,S_BattleA3)
+ConversationEntry(EC18Light,Ch18_AllAlight,LowlandsCG,Chapter18)
+ConversationEntry(EC18End1,Ch18_Ending,LowlandsCG,Chapter18,VictoryTheme)
+ConversationEntry(EC18End1Alt,Ch18_EndingNoVladmir,LowlandsCG,Chapter18,VictoryTheme)
+ConversationEntry(EC18End1Alt2,Ch18_EndingVladmirDead,LowlandsCG,Chapter18,AmbientNight)
+ConversationEntry(EC18End2,Ch18_Ending2,LowlandsCG,Chapter18,S_RigorousJustice)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -777,6 +854,7 @@ ConversationEntry(ERachaelCassiusBP,RachaelCassiusBPSupport,LowlandsCG,Support2V
 //apollo avan C
 //apollo vladmir C
 //bech holly C,C+
+//ConversationEntry(EC17Recruit,Ch17_BechamelRecruitsHollandaise,LowlandsCG,Chapter17,RecruitmentTheme)
 //svelt flynn C
 //svelt todd C
 //svelt simone C

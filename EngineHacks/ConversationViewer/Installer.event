@@ -61,6 +61,7 @@ POIN Chapter15Conversations
 POIN Chapter16Conversations
 POIN Chapter17Conversations
 POIN Chapter18Conversations
+POIN Interlude6Conversations
 POIN BaseConversations  
 POIN SupportConversations1
 POIN SupportConversations2
@@ -702,7 +703,71 @@ ConversationEntry(EC18Light,Ch18_AllAlight,LowlandsCG,Chapter18)
 ConversationEntry(EC18End1,Ch18_Ending,LowlandsCG,Chapter18,VictoryTheme)
 ConversationEntry(EC18End1Alt,Ch18_EndingNoVladmir,LowlandsCG,Chapter18,VictoryTheme)
 ConversationEntry(EC18End1Alt2,Ch18_EndingVladmirDead,LowlandsCG,Chapter18,AmbientNight)
-ConversationEntry(EC18End2,Ch18_Ending2,LowlandsCG,Chapter18,S_RigorousJustice)
+ConversationEntry(EC18End2,Ch18_Ending2,HallCG,Chapter18,S_RigorousJustice)
+ConversationEntryTerminator
+
+ALIGN 4
+Interlude6Conversations:
+ConversationEntry(EI6Open,I6Opening,TentInsideCG,Interlude6)
+ConversationEntry(EI6Arin,I6ArinConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Kenneth,I6KennethConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6KennethAlt,I6KennethSpecialConvo,LowlandsCG,Interlude6)//blair/kenneth B
+ConversationEntry(EI6Natasia,I6NatasiaConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6NatasiaAlt,I6NatasiaSpecialConvo,LowlandsCG,Interlude6)//blair/natasia B
+ConversationEntry(EI6Stefan,I6StefanConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6StefanArin,I6StefanArinConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6StefanButch,I6StefanButchConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6StefanJeff,I6StefanJeffConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6StefanFlynn,I6StefanFlynnConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6StefanHyperius,I6StefanHyperiusConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6StefanLeila,I6StefanLeilaConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6StefanSolo,I6StefanSoloConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Desmond,I6DesmondConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Sam,I6SamConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Josef,I6JosefConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6JosefAlt,I6JosefSpecialConvo,LowlandsCG,Interlude6)//josef/hilbert B
+ConversationEntry(EI6Peggy,I6PeggyConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6PeggyAlt,I6PeggySpecialConvo,LowlandsCG,Interlude6)//natasia/peggy B
+ConversationEntry(EI6Butch,I6ButchConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Rachael,I6RachaelConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Cassius,I6CassiusConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Jeff,I6JeffConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Emile,I6EmileConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6EmileAnima,I6EmileConvoAnima,LowlandsCG,Interlude6)
+ConversationEntry(EI6EmileLight,I6EmileConvoLight,LowlandsCG,Interlude6)
+ConversationEntry(EI6EmileDark,I6EmileConvoDark,LowlandsCG,Interlude6)
+ConversationEntry(EI6EmileStaff,I6EmileConvoStaves,LowlandsCG,Interlude6)
+ConversationEntry(EI6Apollo,I6ApolloConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6ApolloAlt,I6ApolloSpecialConvo,LowlandsCG,Interlude6)//apollo/bechamel B
+ConversationEntry(EI6Bechamel,I6BechamelConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6BechamelAlt,I6BechamelSpecialConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Sveltzalus,I6SveltzalusConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Hilbert,I6HilbertConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Flynn,I6FlynnConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Addington,I6AddingtonConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Mikey,I6MikeyConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Carbon,I6CarbonConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6CarbonAlt,I6CarbonSpecialConvo,LowlandsCG,Interlude6)//blair/carbon B
+ConversationEntry(EI6Athena,I6AthenaConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Charley,I6CharleyConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Zeke,I6ZekeConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6ZekeAlt,I6ZekeSpecialConvo,LowlandsCG,Interlude6)//blair/zeke B
+ConversationEntry(EI6Hyperius,I6HyperiusConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Alexis,I6AlexisConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Leila,I6LeilaConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Damien,I6DamienConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Zacharias,I6ZachariasConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Avan,I6AvanConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6AvanAlt,I6AvanSpecialConvo,LowlandsCG,Interlude6)//blair/avan c+
+ConversationEntry(EI6Toddsworth,I6ToddsworthConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Toddsworth2,I6ToddsworthConvo2,LowlandsCG,Interlude6,S_BuddyHolly)
+ConversationEntry(EI6Yuyu,I6YuyuConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6YuyuAlt,I6YuyuSpecialConvo,LowlandsCG,Interlude6)//blair/yuyu c+
+ConversationEntry(EI6Artemis,I6ArtemisConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Hollandaise,I6HollandaiseConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6Vladmir,I6VladmirConvo,LowlandsCG,Interlude6)
+ConversationEntry(EI6End,I6Ending,TentInsideCG,Interlude6)
+ConversationEntry(EI6EndAlt,I6EndingShutUpTodd,TentInsideCG,Interlude6,S_BuddyHolly)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -801,13 +866,17 @@ ConversationEntryTerminator
 ALIGN 4
 SupportConversations2:
 //blair arin B+
-//blair kenneth B
-//blair nat B
+ConversationEntry(EBlairKennethB,I6KennethSpecialConvo,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairNatasiaB,I6NatasiaSpecialConvo,LowlandsCG,Support2Viewer)
 //blair emile B
-//blair carbon C+, B
-//blair zeke C,+,B
-//blair avan C,+,B
-//blair yuyu C,+,B
+//blair carbon C+
+ConversationEntry(EBlairCarbonB,I6CarbonSpecialConvo,LowlandsCG,Support2Viewer)
+//blair zeke C,+
+//ConversationEntry(EI6ZekeAlt,I6ZekeSpecialConvo,LowlandsCG,Support2Viewer)
+//blair avan C,B
+//ConversationEntry(EI6AvanAlt,I6AvanSpecialConvo,LowlandsCG,Support2Viewer)//blair/avan c+
+//blair yuyu C,B
+//ConversationEntry(EI6YuyuAlt,I6YuyuSpecialConvo,LowlandsCG,Support2Viewer)//blair/yuyu c+
 //arin desmond B
 //arin sam B
 //arin svelt C+,B
@@ -816,7 +885,7 @@ SupportConversations2:
 //kenneth nat B
 //kenneth stefan B
 //kenneth hilbert C+,B
-//nat peggy B
+ConversationEntry(ENatasiaPeggyB,I6PeggySpecialConvo,LowlandsCG,Support2Viewer)
 //nat bech C+,B
 //stefan desmond B
 //stefan josef B
@@ -827,7 +896,8 @@ SupportConversations2:
 //sam emile C+,B
 //sam bechamel C+
 //sam charley C,+
-//josef hilbert C+,B
+//josef hilbert C+
+ConversationEntry(EJosefHilbertB,I6JosefSpecialConvo,LowlandsCG,Support2Viewer)
 //josef athena C,+
 //peggy butch B,+
 //peggy apollo C+
@@ -848,7 +918,8 @@ ConversationEntry(ERachaelCassiusBP,RachaelCassiusBPSupport,LowlandsCG,Support2V
 //emile simone C
 //jeff svelt C+
 //jeff hilbert C+
-//apollo bech C+,B
+//apollo bech C+
+ConversationEntry(EApolloBechamelB,I6ApolloSpecialConvo,LowlandsCG,Support2Viewer)
 //apollo flynn C+,B
 //apollo charley C,+
 //apollo avan C

@@ -62,7 +62,8 @@ POIN Chapter16Conversations
 POIN Chapter17Conversations
 POIN Chapter18Conversations
 POIN Interlude6Conversations
-POIN BaseConversations  
+POIN Chapter19Conversations
+POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
 POIN SupportConversations3
@@ -771,6 +772,26 @@ ConversationEntry(EI6EndAlt,I6EndingShutUpTodd,TentInsideCG,Interlude6,S_BuddyHo
 ConversationEntryTerminator
 
 ALIGN 4
+Chapter19Conversations:
+ConversationEntry(EC19Open1,Ch19_Opening,LowlandsRiverCG,Chapter19)
+ConversationEntry(EC19Open2,Ch19_Opening2,LowlandsRiverCG,Chapter19,S_Chaos)
+ConversationEntry(EC19Open3,Ch19_Opening3,LowlandsRiverCG,Chapter19,S_Chaos)
+ConversationEntry(EC19Open4,Ch19_Opening4,LowlandsRiverCG,Chapter19,S_Crisis)
+ConversationEntry(EC19BlairFlood,Ch19_BlairFlood,HallCG,Chapter19)
+ConversationEntry(EC19ZekeFlood,Ch19_ZekeFlood,HallCG,Chapter19)
+ConversationEntry(EC19MichaelAngy,Ch19_MichaelIsAngy,HallCG,Chapter19)
+ConversationEntry(EC19House1,Ch19_NorthHouse,HouseCG,Chapter19)
+ConversationEntry(EC19House2,Ch19_SouthHouse1,HouseCG,Chapter19)
+ConversationEntry(EC19House3,Ch19_SouthHouse2,HouseCG,Chapter19)
+ConversationEntry(EC19BossGen,C19MichaelBattle,HallCG,Chapter19,S_MechanicalRhythm)
+ConversationEntry(EC19BossHoratio,C19MichaelHoratioBattle,HallCG,Chapter19,S_MechanicalRhythm)
+ConversationEntry(EC19BossSvelt,C19MichaelSveltzalusBattle,HallCG,Chapter19,S_MechanicalRhythm)
+ConversationEntry(EC19BossDie,C19MichaelDeath,HallCG,Chapter19,S_MechanicalRhythm)
+ConversationEntry(EC19End1,Ch19_Ending,LowlandsRiverCG,Chapter19,VictoryTheme)
+ConversationEntry(EC19End2,Ch19_Ending2,LowlandsRiverCG,Chapter19,S_Chaos)
+ConversationEntryTerminator
+
+ALIGN 4
 BaseConversations:
 ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
 ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
@@ -977,10 +998,10 @@ ConversationEntry(EMikeyDeath,MikeyDeath,YgstraCG,DeathQuoteViewer)
 ConversationEntry(ECarbonDeath,CarbonDeath,YgstraCG,DeathQuoteViewer)
 ConversationEntry(EAthenaDeath,AthenaDeath,HallCG,DeathQuoteViewer)
 ConversationEntry(ECharleyDeath,CharleyDeath,HallCG,DeathQuoteViewer)
-ConversationEntry(EZekeDeath,ZekeDeath,PathCG,DeathQuoteViewer)
-ConversationEntry(EHyperiusDeath,HyperiusDeath,PathCG,DeathQuoteViewer)
-ConversationEntry(EAlexisDeath,AlexisDeath,PathCG,DeathQuoteViewer)
-ConversationEntry(ELeilaDeath,LeilaDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EZekeDeath,ZekeDeath,EastHolanisCG,DeathQuoteViewer)
+ConversationEntry(EHyperiusDeath,HyperiusDeath,EastHolanisCG,DeathQuoteViewer)
+ConversationEntry(EAlexisDeath,AlexisDeath,EastHolanisCG,DeathQuoteViewer)
+ConversationEntry(ELeilaDeath,LeilaDeath,EastHolanisCG,DeathQuoteViewer)
 ConversationEntry(EDamienDeath,DamienDeath,YgstraCG,DeathQuoteViewer)
 ConversationEntry(EZachariasDeath,ZachariasDeath,YgstraCG,DeathQuoteViewer)
 ConversationEntry(EAvanDeath,AvanDeath,PathCG,DeathQuoteViewer)
@@ -1076,10 +1097,10 @@ ConversationEntry(EMikeyEscape,MikeyEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(ECarbonEscape,CarbonEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(EAthenaEscape,AthenaEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(ECharleyEscape,CharleyEscape,DungeonCG,EscapeQuoteViewer)
-ConversationEntry(EZekeEscape,ZekeEscape,PathCG,EscapeQuoteViewer)
-ConversationEntry(EHyperiusEscape,HyperiusEscape,PathCG,EscapeQuoteViewer)
-ConversationEntry(EAlexisEscape,AlexisEscape,PathCG,EscapeQuoteViewer)
-ConversationEntry(ELeilaEscape,LeilaEscape,PathCG,EscapeQuoteViewer)
+ConversationEntry(EZekeEscape,ZekeEscape,EastHolanisCG,EscapeQuoteViewer)
+ConversationEntry(EHyperiusEscape,HyperiusEscape,EastHolanisCG,EscapeQuoteViewer)
+ConversationEntry(EAlexisEscape,AlexisEscape,EastHolanisCG,EscapeQuoteViewer)
+ConversationEntry(ELeilaEscape,LeilaEscape,EastHolanisCG,EscapeQuoteViewer)
 ConversationEntry(EDamienEscape,DamienEscape,YgstraCG,EscapeQuoteViewer)
 ConversationEntry(EZachariasEscape,ZachariasEscape,YgstraCG,EscapeQuoteViewer)
 ConversationEntry(EAvanEscape,AvanEscape,PathCG,EscapeQuoteViewer)

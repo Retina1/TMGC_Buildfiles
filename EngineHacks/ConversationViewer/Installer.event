@@ -63,6 +63,7 @@ POIN Chapter17Conversations
 POIN Chapter18Conversations
 POIN Interlude6Conversations
 POIN Chapter19Conversations
+POIN Chapter20Conversations
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -789,6 +790,37 @@ ConversationEntry(EC19BossSvelt,C19MichaelSveltzalusBattle,HallCG,Chapter19,S_Me
 ConversationEntry(EC19BossDie,C19MichaelDeath,HallCG,Chapter19,S_MechanicalRhythm)
 ConversationEntry(EC19End1,Ch19_Ending,LowlandsRiverCG,Chapter19,VictoryTheme)
 ConversationEntry(EC19End2,Ch19_Ending2,LowlandsRiverCG,Chapter19,S_Chaos)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter20Conversations:
+ConversationEntry(EC20Open1,Ch20_Opening,LowlandsCG,Chapter20)
+ConversationEntry(EC20RecruitBlair,Ch20_BlairSimoneRecruit,LowlandsCG,Chapter20,RecruitmentTheme)
+ConversationEntry(EC20RecruitZeke,Ch20_ZekeSimoneRecruit,LowlandsCG,Chapter20,RecruitmentTheme)
+ConversationEntry(EC20RecruitArin,Ch20_ArinSimoneRecruit,LowlandsCG,Chapter20,RecruitmentTheme)
+ConversationEntry(EC20RecruitEmile,Ch20_EmileSimoneRecruit,LowlandsCG,Chapter20,RecruitmentTheme)
+ConversationEntry(EC20RecruitSveltzalus,Ch20_SveltzalusSimoneRecruit,LowlandsCG,Chapter20,S_CampIchigaya)
+ConversationEntry(EC20TalkArin,Ch20_ArinSimoneRecruited,LowlandsCG,Chapter20)
+ConversationEntry(EC20TalkEmile,Ch20_EmileSimoneRecruited,LowlandsCG,Chapter20)
+ConversationEntry(EC20TalkSveltzalus,Ch20_SveltzalusSimoneRecruited,LowlandsCG,Chapter20,S_CampIchigaya)
+ConversationEntry(EC20Village,C20VillageText,VillageCG,Chapter20)
+ConversationEntry(EC20Event1Blair,Ch20_Lore1Blair,DungeonCG,Chapter20)
+ConversationEntry(EC20Event2Blair,Ch20_Lore2Blair,DungeonCG,Chapter20)
+ConversationEntry(EC20Event3Blair,Ch20_Lore3Blair,DungeonCG,Chapter20)
+ConversationEntry(EC20Event4Blair,Ch20_Lore4Blair,DungeonCG,Chapter20)
+ConversationEntry(EC20Event5Blair,Ch20_Lore5Blair,DungeonCG,Chapter20)
+ConversationEntry(EC20Event1Zeke,Ch20_Lore1Zeke,DungeonCG,Chapter20)
+ConversationEntry(EC20Event2Zeke,Ch20_Lore2Zeke,DungeonCG,Chapter20)
+ConversationEntry(EC20Event3Zeke,Ch20_Lore3Zeke,DungeonCG,Chapter20)
+ConversationEntry(EC20Event4Zeke,Ch20_Lore4Zeke,DungeonCG,Chapter20)
+ConversationEntry(EC20Event5Zeke,Ch20_Lore5Zeke,DungeonCG,Chapter20)
+ConversationEntry(EC20BossBlair,C20BlairGuardianBattle,DungeonCG,Chapter20,S_CrimsonRidge)
+ConversationEntry(EC20BossArin,C20ArinGuardianBattle,DungeonCG,Chapter20,S_CrimsonRidge)
+ConversationEntry(EC20BossSimone,C20SimoneGuardianBattle,DungeonCG,Chapter20,S_CrimsonRidge)
+ConversationEntry(EC20BossHoratio,C20HoratioGuardianBattle,DungeonCG,Chapter20,S_CrimsonRidge)
+ConversationEntry(EC20End1,Ch20_EndingLore,HallCG,Chapter20,S_Chaos)
+ConversationEntry(EC20End2,Ch20_EndingOutside,VillageCG,Chapter20,S_Neutral)
+ConversationEntry(EC20End3,Ch20_EndingStinger,BlankCG,Chapter20,S_Chaos)
 ConversationEntryTerminator
 
 ALIGN 4

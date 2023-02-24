@@ -173,35 +173,35 @@ POP
 ALIGN 4
 
 ST_Con:
-  RMenu(PersonalDataRText,ST_Aid,ST_Str,0,0xA6,0x18,0x54e)
+  RMenu(PersonalDataRText,ST_Aid,ST_Str,0,0xAe,0x18,0x54e)
 ST_Aid:
-  RMenu(ST_Con,ST_Cond,ST_Mag,0,0xa6,0x28,0x54F)
+  RMenu(ST_Con,ST_Cond,ST_Mag,0,0xae,0x28,0x54F)
 ST_Cond:
-  RMenu(ST_Aid,ST_Affin,ST_Skl,0,0xa6,0x38,0x552,ConditionGetter)
+  RMenu(ST_Aid,ST_Affin,ST_Skl,0,0xae,0x38,0x552,ConditionGetter)
 ST_Affin:
   #ifdef LEADERSHIP_STARS
-    RMenu(ST_Cond,ST_Talk,ST_Spd,0,0xa6,0x48,LeadRText)
+    RMenu(ST_Cond,ST_Talk,ST_Spd,0,0xae,0x48,LeadRText)
   #else
-    RMenu(ST_Cond,ST_Talk,ST_Spd,0,0xa6,0x48,0x551)
+    RMenu(ST_Cond,ST_Talk,ST_Spd,0,0xae,0x48,0x551)
   #endif
 //ST_Cond:
   //RMenu(ST_Affin,ST_Talk,ST_Spd,0,0xA6,0x48,0x552,ConditionGetter)
 ST_Talk:
-  RMenu(ST_Affin,ST_Skills,ST_Luck,0,0xA6,0x58,SS_TalkRText)
+  RMenu(ST_Affin,ST_Skills,ST_Luck,0,0xAe,0x58,SS_TalkRText)
 ST_Skills:
-  RMenu(ST_Talk,ST_Skill1,ST_Def,0,0xA6,0x68,SS_SkillsRText)
+  RMenu(ST_Talk,ST_Skill1,ST_Def,0,0xAe,0x68,SS_SkillsRText)
 ST_Skill1:
-  RMenu(ST_Skills,ST_Skill4,ST_Res,ST_Skill2,0xa6,0x78,0,RTextLoop,SkillDescGetter)
+  RMenu(ST_Skills,ST_Skill4,ST_Res,ST_Skill2,0xae,0x78,0,RTextLoop,SkillDescGetter)
 ST_Skill2:
   RMenu(ST_Skills,ST_Skill5,ST_Skill1,ST_Skill3,0xbe,0x78,1,RTextLoop,SkillDescGetter+4)
 ST_Skill3:
-  RMenu(ST_Skills,ST_Skill6,ST_Skill2,0,0xd6,0x78,2,RTextLoop,SkillDescGetter+8)
+  RMenu(ST_Skills,ST_Skill6,ST_Skill2,0,0xce,0x78,2,RTextLoop,SkillDescGetter+8)
 ST_Skill4:
-  RMenu(ST_Skill1,0,ST_Mov,ST_Skill5,0xa6,0x88,3,RTextLoop,SkillDescGetter+12)
+  RMenu(ST_Skill1,0,ST_Mov,ST_Skill5,0xae,0x88,3,RTextLoop,SkillDescGetter+12)
 ST_Skill5:
   RMenu(ST_Skill2,0,ST_Skill4,ST_Skill6,0xbe,0x88,4,RTextLoop,SkillDescGetter+16)
 ST_Skill6:
-  RMenu(ST_Skill3,0,ST_Skill5,0,0xd6,0x88,5,RTextLoop,SkillDescGetter+20)
+  RMenu(ST_Skill3,0,ST_Skill5,0,0xce,0x88,5,RTextLoop,SkillDescGetter+20)
 #ifdef PRESS_SELECT_TO_VIEW_GROWTHS
   PersonalDataRText:
   RMenu(0,ST_Str,0,0,0x76,0x4,PersonalDataDesc1)

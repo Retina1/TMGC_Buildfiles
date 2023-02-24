@@ -223,6 +223,10 @@ ALIGN 4
 LeilaMug:
 #incext PortraitFormatter "Leila.png"
 setMugEntry(0x4e,LeilaMug,4,6,3,4)
+ALIGN 4
+LeilaPromoMug:
+#incext PortraitFormatter "LeilaPromo.png"
+setMugEntry(0x116,LeilaPromoMug,4,6,3,4)
 
 ALIGN 4
 DamienMug:

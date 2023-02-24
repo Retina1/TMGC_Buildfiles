@@ -95,28 +95,28 @@ b		ShowStats3
 
 NextColumn:
 
-draw_textID_at 21, 3, textID=0x4f7 @con
-draw_con_bar_with_getter_at 24, 3
+draw_textID_at 22, 3, textID=0x4f7 @con
+draw_con_bar_with_getter_at 25, 3
 
 
-draw_textID_at 21, 5, textID=0x4f8 @aid
-draw_number_at 25, 5, 0x80189B8, 2 @aid getter
-draw_aid_icon_at 26, 5
+draw_textID_at 22, 5, textID=0x4f8 @aid
+draw_number_at 26, 5, 0x80189B8, 2 @aid getter
+draw_aid_icon_at 27, 5
 
-draw_status_text_at 21, 7
+draw_status_text_at 22, 7
 
-draw_textID_at 21, 9, textID=0x4f9 @traveler
+draw_textID_at 22, 9, textID=0x4f9 @traveler
 
-draw_trv_text_at 21, 9
+draw_trv_text_at 22, 9
 
 
 ldr r0,=TalkTextIDLink
 ldrh r0,[r0]
-draw_talk_text_at 21, 11
+draw_talk_text_at 22, 11
 
 ldr r0,=SkillsTextIDLink
 ldrh r0, [r0]
-draw_textID_at 21, 13, colour=White @skills
+draw_textID_at 22, 13, colour=White @skills
 
 Nexty:
 
@@ -150,7 +150,7 @@ mov r6, r0
 ldrb r0, [r6] 
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 21, 15
+draw_skill_icon_at 22, 15
 
 ldrb r0, [r6,#1]
 cmp r0, #0
@@ -160,12 +160,12 @@ draw_skill_icon_at 24, 15
 ldrb r0, [r6, #2]
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 27, 15
+draw_skill_icon_at 26, 15
 
 ldrb r0, [r6, #3]
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 21, 17
+draw_skill_icon_at 22, 17
 
 ldrb r0, [r6, #4]
 cmp r0, #0
@@ -175,7 +175,7 @@ draw_skill_icon_at 24, 17
 ldrb r0, [r6, #5]
 cmp r0, #0
 beq SkillEnd
-draw_skill_icon_at 27, 17
+draw_skill_icon_at 26, 17
 
 SkillEnd:
 

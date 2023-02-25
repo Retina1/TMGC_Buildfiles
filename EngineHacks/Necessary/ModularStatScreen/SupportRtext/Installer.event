@@ -61,7 +61,7 @@ PUSH
 POP
 
 MSS_page4:
-  #incbin "mss_page4.dmp"
+  #include "mss_page4.lyn.event"
   ALIGN 4
 
 //Macros and stuff, remove if you have these defined already

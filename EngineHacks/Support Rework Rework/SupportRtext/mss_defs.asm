@@ -2,13 +2,7 @@
 .equ MovGetter, 0x8019224 @defined in the modularstatgetter
 .equ DebuffTable, 0x203f100
 .equ BufferText, 0x800A240
-.equ GetStringFromIndex, 0x800A240
-.equ FilterSomeTextFromStandardBuffer, 0x0800A3B8
-.equ Text_AppendString, 0x08004004
-.equ Text_Draw, 0x08003E70
-.equ Text_GetColorID, 0x08003E64
 .equ DrawText, 0x800443C
-.equ DrawItemOnStatscreen, 0x08016a2c
 .equ DrawBar, 0x80870BC
 .equ DrawStat, 0x8004B94
 .equ DrawStatBonus, 0x08004BF0
@@ -16,8 +10,8 @@
 .equ TileBufferBase, 0x2003c2c
 .equ MagCheck, 0x8018A58
 .equ AidCheck, 0x80189B8
-.equ MaxHPGetter, 0x8019190
 .equ StrGetter, 0x80191b0
+.equ MagGetter, 0x80191b8
 .equ SklGetter, 0x80191d0
 .equ SpdGetter, 0x8019210
 .equ LuckGetter, 0x8019298
@@ -40,34 +34,17 @@
 .equ Const_200472C, 0x200472C
 .equ Const_2023D40, 0x2023D40
 .equ tile_origin, 0x2003c94
-.equ ItemStruct, 0x08809B10
 .equ Green, 4
 .equ Yellow, 3
 .equ Blue, 2
 .equ Grey, 1
 .equ White, 0
 
-@86e44 may be what we're looking for
-@ custom code for mila icon (dummy 1 for now)
-  
-  @ mov r2, r8
-  @ ldr r0, [r2, #0x4]
-  @	ldrb r1, [r2, #0x8]		@unit's level
-  @ ldrb r0, [r0, #0x4]  	@unit's class
-  @	ldr r3, IsUnitEligibleToPromote
-  @ mov lr, r3
-  @ .short 0xf800
-  @ cmp r0, #0x0
-  @ beq DontDrawPromoIcon
-  
-@draw_icon_at 9, 11, 1
-  
-@DontDrawPromoIcon:
-
-
 .macro blh to, reg=r3
+  push {\reg}
   ldr \reg, =\to
   mov lr, \reg
+  pop {\reg}
   .short 0xf800
 .endm
 
@@ -106,9 +83,66 @@
   strb r1, [r3, #4] @store width
   strb r2, [r3, #8] @assign the next one.
   .if \textID
+    ldr r0, =\textID @otherwise assume it's in r0
+  .endif
+  blh BufferText
+  mov r2, #0x0
+  str r2, [sp]
+  str r0, [sp, #4]
+  mov r2, #\colour @colour
+  .ifge \growth_func
+  ldr r1,[sp,#0xC]			@growth getters table
+  mov r0,#\growth_func-1
+  lsl r0,#2
+  ldr r1,[r1,r0]			@relevant growth getter function
+  mov r0,r8
+  mov r14,r1
+  .short 0xF800				@returns growth
+  mov r1,sp
+  add r1,#0x18
+  ldr r2,[sp,#0x14]			@growth options word and'd with 0x10, so non-zero if stat name color should reflect growth
+  ldr r3,=Get_Palette_Index
+  mov r14,r3
+  .short 0xF800	@given growth, returns palette index, and does some shenanigans
+  mov r2,r0
+  .endif
+  mov r0, r7
+  ldr r1, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
+  mov r3, #0
+  blh DrawText, r4
+  .ifge \growth_func
+  ldr r1,[sp,#0x14]
+  ldr r0,[sp,#0x18]
+  bl  Restore_Palette		@see that func for an explanation (mss_page1_skills)
+  .endif
+  add r7, #8
+.endm
+
+.macro draw_buffered_text, tile_x, tile_y, width=10, colour=3
+  mov r0, sp
+  mov r1, #\width
+  str r1, [r0]
+  mov r0, #0
+  ldr r1, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
+  mov r2, #\colour
+  mov r3, #0
+  blh DrawText, r4
+  bl  Restore_Palette
+.endm
+
+.macro draw_skillname_at tile_x, tile_y, textID=0, width=14, colour=3, growth_func=-1		@growth func is # of growth getter in growth_getters_table; 0=hp, 1=str, 2=skl, etc
+  mov r3, r7
+  mov r1, #\width
+  @r3 is current buffer location, r1 is width.
+  ldrh r2,[r3] @current number
+  add r2,r1 @for the next one.
+  strb r1, [r3, #4] @store width
+  strb r2, [r3, #8] @assign the next one.
+  .if \textID
     ldr r0, =#\textID @otherwise assume it's in r0
   .endif
   blh BufferText
+  bl GetSkillNameFromSkillDesc
   mov r2, #0x0
   str r2, [sp]
   str r0, [sp, #4]
@@ -143,7 +177,7 @@
   .endif
   add r7, #8
 .endm
-
+ 
 .macro draw_bar_at bar_x, bar_y, getter, offset, bar_id
   mov r0, r8
   blh      \getter
@@ -153,6 +187,25 @@
   str     r0,[sp]     
   ldr     r0,[r1,#0x4]  @class
   ldrb    r0,[r0,#\offset]  @stat cap
+  lsl     r0,r0,#0x18    
+  asr     r0,r0,#0x18    
+  str     r0,[sp,#0x4]    
+  mov     r0,#(\bar_id)     
+  mov     r1,#(\bar_x-11)
+  mov     r2,#(\bar_y-2)
+  blh      DrawBar, r4
+.endm
+
+.macro draw_bar_at_with_cap_getter bar_x, bar_y, statgetter, capgetter, offset, bar_id  
+  mov r0, r8
+  blh      \statgetter
+  mov r1, r8  
+  mov     r3, #\offset
+  ldsb    r3,[r1,r3]     
+  str     r0,[sp]     
+  ldr     r0,[r1,#0x4]  @class
+  ldrb    r0,[r0,#0x4]  @class id
+  blh		\capgetter
   lsl     r0,r0,#0x18    
   asr     r0,r0,#0x18    
   str     r0,[sp,#0x4]    
@@ -185,20 +238,42 @@
   draw_bar_at \bar_x, \bar_y, StrGetter, 0x14, 0
 .endm
 
+.macro draw_mag_bar_at, bar_x, bar_y
+  mov r0, r8
+  blh     MagGetter
+  mov r1, r8  
+  mov     r3,#0x3A
+  ldsb    r3,[r1,r3]     
+  str     r0,[sp]     
+  ldr     r0,[r1,#0x4]  @class
+  ldrb    r0,[r0,#0x4]  @class id
+  lsl	  r0,#0x2
+  ldr 	  r1,=MagClassTable
+  add	  r0,r1
+  ldrb	  r0,[r0,#0x2]
+  lsl     r0,r0,#0x18    
+  asr     r0,r0,#0x18
+  str     r0,[sp,#0x4]    
+  mov     r0,#0x1  
+  mov     r1,#(\bar_x-11)
+  mov     r2,#(\bar_y-2)
+  blh      DrawBar, r4
+.endm
+
 .macro draw_skl_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, SklGetter, 0x15, 1
+  draw_bar_at \bar_x, \bar_y, SklGetter, 0x15, 2
 .endm
 
 .macro draw_skl_reduced_bar_at, bar_x, bar_y @for rescuing
-  draw_halved_bar_at \bar_x, \bar_y, SklGetter, 0x15, 1
+  draw_halved_bar_at \bar_x, \bar_y, SklGetter, 0x15, 2
 .endm
 
 .macro draw_spd_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 2
+  draw_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 3
 .endm
 
 .macro draw_spd_reduced_bar_at, bar_x, bar_y @for rescuing
-  draw_halved_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 2
+  draw_halved_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 3
 .endm
 
 .macro draw_luck_bar_at, bar_x, bar_y
@@ -208,20 +283,20 @@
   mov     r3, #0x19
   ldsb    r3,[r1,r3]     
   str     r0,[sp]     
-  mov r0, #0x28  @cap is always 40
+  mov r0, #0x1e  @cap is always 30
   str     r0,[sp,#0x4]    
-  mov     r0,#0x5     
+  mov     r0,#0x6   
   mov     r1,#(\bar_x-11)
   mov     r2,#(\bar_y-2)
   blh      DrawBar, r4
 .endm
 
 .macro draw_def_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, DefGetter, 0x17, 3
+  draw_bar_at \bar_x, \bar_y, DefGetter, 0x17, 4
 .endm
 
 .macro draw_res_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, ResGetter, 0x18, 4
+  draw_bar_at \bar_x, \bar_y, ResGetter, 0x18, 5
 .endm
 
 .macro draw_growth_at, bar_x, bar_y
@@ -297,7 +372,7 @@
   str r0, [sp] @final
   mov r6, #0xF
   str r6, [sp, #4]
-  mov     r0,#0x6      
+  mov     r0,#0x8    
   mov     r1,#(\bar_x-11)
   mov     r2,#(\bar_y-2)      
   blh DrawBar, r4
@@ -344,36 +419,6 @@
   mov     r1,#(\bar_x-11)
   mov     r2,#(\bar_y-2)      
   blh DrawBar, r4
-.endm
-
-.macro draw_rating_at, tile_x, tile_y
-  push {r4}
-  mov r4, #0x0
-  mov r0, r8
-  blh MaxHPGetter
-  add r4, r4, r0
-  mov r0, r8
-  blh StrGetter
-  add r4, r4, r0
-  mov r0, r8
-  blh SklGetter
-  add r4, r4, r0
-  mov r0, r8
-  blh SpdGetter
-  add r4, r4, r0
-  mov r0, r8
-  blh LuckGetter
-  add r4, r4, r0
-  mov r0, r8
-  blh DefGetter
-  add r4, r4, r0
-  mov r0, r8
-  blh ResGetter
-  add r4, r4, r0
-  mov r0, r4
-  pop {r4}
-  mov r1, #Blue
-  draw_number_at \tile_x, \tile_y
 .endm
 
 .macro draw_con_number_at, tile_x, tile_y
@@ -433,7 +478,7 @@
   blh \routine
   .endif
   mov r1, #\colour @defaults to blue
-  mov r2, r0 @amount goes in r2
+  mov r2, r0
   ldr r0, =(tile_origin+(0x20*2*\num_y)+(2*\num_x))
   blh 0x8004b94
 .endm
@@ -463,7 +508,9 @@
   ldr r1, [r2,#0x28]
   orr r0, r1
   blh 0x8018AF0 @takes ability bits and returns icon or -1
-  mov r1, r0
+  mov r1,#3 @sheet ID
+  lsl r1,r1,#8 @shifted 8 bits left
+  orr r1,r0
   mov r2, #0xA0
   lsl r2, #7
   ldr r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
@@ -485,14 +532,18 @@
 
 .macro draw_talk_text_at, tile_x, tile_y, colour=Blue
   draw_textID_at \tile_x, \tile_y, width=9 @ideally you want a diff id.
+  blh 0x8042e98, r4 @CheckLinkArenaBit
   mov r4, r7
   sub r4, #8
+  cmp r0,#1
+  beq DidntFindAPerson
   mov r0, r8
   ldr   r0,[r0]
   ldrb  r0,[r0,#0x4]    @char byte
   bl GetTalkee
   cmp   r0,#0x0
   bne   FoundAPerson
+  DidntFindAPerson:
   ldr   r1,=0x7f7f7f @---[X]
   ldr   r0,=0x202a6ac @text buffer
   str   r1,[r0]
@@ -553,7 +604,9 @@
   ldr r4, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
   mov r0, r8
   blh AffinityGetter
-  mov     r1,r0      
+  mov     r1,#2 @icon sheet ID
+  lsl     r1,r1,#8 @shifted 8 bits left
+  orr	  r1,r0 
   mov     r2,#0xA0       
   lsl     r2,r2,#0x7      
   mov     r0,r4    
@@ -584,7 +637,7 @@
   mov     r1,r4       @0808749A
   blh      #0x80D74A0       @0808749C
   ldr     r0,=#0x8205A24        @080874A0
-  blh      #0x8086E00        @080874A2 DrawUnitPortrait
+  blh      #0x8086E00        @080874A2
   @numbers
   ldr     r6,=StatScreenStruct        @08087532
   ldr     r0,[r6,#0xC]        @08087534
@@ -720,28 +773,6 @@
   add     r4,#0x1       @0808766C
   cmp     r4,#0x7       @0808766E
   ble     loc_0x8087660        @08087670
-  
-.endm
-
-.macro draw_item_at tile_x, tile_y, itemID=0, color=0, counter=r5
-  .if \itemID
-    ldr r1, =#\itemID @otherwise assume it's in r1
-  .endif
-  
-  lsl     r0,\counter,#0x3     
-  ldr     r2,=#0x2003C8C       
-  add     r0,r0,r2
-
-  lsl r2, r5, #0x1
-  mov r3, #0x3
-  add r2, r2, r3
-  lsl r2, r2, #0x6  @mul * 0x40
-  ldr r3, =(tile_origin+(2*\tile_x))
-  add r3, r3, r2
-  
-  mov r2, #\color
-  @ ldr r3, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
-  bl DrawItemNameAndIcon @params: r0=tile_origin, r1=itemID, r2=textcolor, r3=vram_coords
 .endm
 
 .macro draw_items_text
@@ -787,15 +818,15 @@
   lsl     r0,r0,#0x18       @08087502
   cmp     r0,#0x0       @08087504
   bne     loc_0x808750A       @08087506
-  mov     r2,#0x1       @08087508        -if not usable, color=gray
+  mov     r2,#0x1       @08087508
   loc_0x808750A:
   lsl     r0,r4,#0x3        @0808750A
   ldr     r1,=#0x2003C8C        @0808750C
   add     r0,r0,r1        @0808750E
-  ldr     r3,=#0x2003D2E        @08087510 -ypos?
+  ldr     r3,=#0x2003D2E        @08087510
   add     r3,r6,r3        @08087512
   mov     r1,r5       @08087514
-  blh      #0x8016A2C, r5       @08087516    -draw item
+  blh      #0x8016A2C, r5       @08087516
   mov     r0,#0x2       @0808751A
   add     r8,r0       @0808751C
   add     r6,#0x80        @0808751E
@@ -817,7 +848,8 @@
 .macro clear_buffers
   blh 0x8003c94
   blh 0x8003578
-  blh 0x8086df0 @clear 2003c00 region
+  @blh 0x8086df0 @clear 2003c00 region
+  blh DontBlinkLeft
   @blh 0x80790a4
   @ ldr r4, =StatScreenStruct
   @ ldr r0, [r4, #0xc]
@@ -825,7 +857,7 @@
   @ mov r2, #0x8A
   @blh 0x80784f4
   @ str r0, [r4, #0x10]
-  blh 0x8086e44
+  blh 0x8086e44 @this is the left panel
   mov r0, #0
   str r0, [sp]
   mov r0, sp
@@ -937,4 +969,254 @@
 		mov     r0,r4    
 		bl      DrawSkillIcon 
 	.endif
+.endm
+
+
+.macro draw_rating_icon_at, tile_x, tile_y, number=0
+	.if NoAltIconDraw
+		.if \number
+			mov r0, #\number
+		.endif
+		
+		@ r1 = 0x0100
+		mov r1, #1
+		lsl r1, #9
+		
+		@ r1 = [0x01][SkillIndex]
+		orr r1, r0
+		
+		@ r2 = 0x4000 (aka tiles have palette #4)
+		mov r2, #0x20
+		lsl r2, #8
+		
+		ldr r0, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
+		
+		blh DrawIcon
+	.else
+		@assumes icon number in r0 or else in number
+		.if \number
+			mov r0, #\number
+		.endif
+		
+		ldr r4, =(tile_origin+(0x20*2*\tile_y)+(2*\tile_x))
+		mov     r1,r0      
+		mov     r2,#0x80
+		lsl     r2,r2,#0x7      
+		mov     r0,r4    
+		bl      DrawSkillIcon 
+	.endif
+.endm
+
+.macro setup_menu
+ldr r0, =0x020234A8
+mov r1, #0
+blh #0x08001220+1 @FillBgMap
+ldr r0, =0xFFFFFFFF @-1
+blh #0x0804E0A8+1 @LoadUIWindowPalette
+.endm
+
+.macro draw_menu, tile_x, tile_y, width, height
+push {r4}
+sub sp, #4
+mov r0, #0
+str r0, [sp]
+mov r0, #\tile_x+0xC
+mov r1, #\tile_y+0x2
+mov r2, #\width
+mov r3, #\height
+blh #0x804E368+1, reg=r4 @MakeNewUiWindowTsa
+add sp, #4
+pop {r4}
+.endm
+
+
+.macro draw_character_name_at, tile_x, tile_y
+ldr	r0,[r7,#0xC]	@load unit's pointer
+ldr	r0,[r0]			@load character pointer
+ldrh	r0,[r0]		@load name
+blh	0x800A240		@GetStringFromIndex
+mov	r5,r0
+mov	r0,#0x30
+mov	r1,r5
+blh	0x8003F90		@GetStringTextCenteredPos
+mov	r6,r0
+
+mov	r0,r7
+add	r0,#0x18
+ldr	r1,=(0x20*2*\tile_y)+(2*\tile_x)
+add	r1,r8
+mov	r4,#0
+str	r4,[sp]
+str	r5,[sp,#4]
+mov	r2,#0
+mov	r3,r6
+add r3,#3
+blh	0x800443C	@DrawTextInline
+.endm
+
+.macro draw_class_name_at, tile_x, tile_y
+ldr	r0,[r7,#0xC]	@load unit's pointer
+ldr	r0,[r0,#4]	@load class pointer
+ldrh	r0,[r0]		@load class name
+blh	0x800A240	@GetStringFromIndex
+mov	r2,r7
+add	r2,#0x20
+ldr	r1,=(0x20*2*\tile_y)+(2*\tile_x) @#0x342
+add	r1,r8
+str	r4,[sp]
+str	r0,[sp,#4]
+mov	r0,r2
+mov	r2,#0
+mov	r3,#0
+blh	0x800443C	@DrawTextInline
+.endm
+
+.macro draw_lv_icon_at, tile_x, tile_y
+ldr	r0,=(0x20*2*\tile_y)+(2*\tile_x) @#0x3C2
+add	r0,r8
+mov	r1,#3
+mov	r2,#0x24
+mov	r3,#0x25
+blh	0x8004D5C	@no idea, probably draw something
+.endm
+
+.macro draw_exp_icon_at, tile_x, tile_y
+ldr	r0,=(0x20*2*\tile_y)+(2*\tile_x) @#0x3CA
+add	r0,r8
+mov	r1,#3
+mov	r2,#0x1D
+blh	0x8004B0C	@no idea, probably draw something
+.endm
+
+.macro draw_hp_icon_at, tile_x, tile_y
+ldr	r0,=(0x20*2*\tile_y)+(2*\tile_x) @#0x442
+add	r0,r8
+mov	r1,#3
+mov	r2,#0x22
+mov	r3,#0x23
+blh	0x8004D5C	@no idea, probably draw something
+.endm
+
+.macro draw_ui_slash_at, tile_x, tile_y
+ldr	r0,=(0x20*2*\tile_y)+(2*\tile_x) @#0x44A
+add	r0,r8
+mov	r1,#3
+mov	r2,#0x16
+blh	0x8004B0C	@no idea, probably draw something
+.endm
+
+.macro draw_level_at, tile_x, tile_y
+ldr r0,=(0x20*2*\tile_y)+(2*\tile_x) @#0xF2
+add	r0,r8
+ldr	r1,[r7,#0xC]	@unit pointer
+mov	r2,#8
+ldrb	r2,[r1,r2]	@level
+mov	r1,#2
+blh	0x8004B94	@DrawDecNumber
+.endm
+
+.macro draw_exp_at, tile_x, tile_y
+ldr r0,=(0x20*2*\tile_y)+(2*\tile_x) @#0x3CE
+add	r0,r8
+ldr	r1,[r7,#0xC]	@unit pointer
+ldrb	r2,[r1,#9]	@exp
+mov	r1,#2
+blh	0x8004B94	@DrawDecNumber
+.endm
+
+.macro draw_hp_at, tile_x, tile_y
+ldr	r0,[r7,#0xC]	@unit pointer
+blh	0x8019150	@GetUnitCurrentHP
+cmp	r0,#100
+ble	DrawHP
+mov r0,#0
+sub r0,#1
+DrawHP:
+mov	r4,#0x89
+lsl	r4,#3
+add	r4,r8
+@ldr	r0,[r7,#0xC]	@unit pointer
+@blh	0x8019150	@GetUnitCurrentHP
+mov	r2,r0
+mov	r0,r4
+mov	r1,#2
+blh	0x8004B94	@DrawDecNumber
+.endm
+
+.macro draw_max_hp
+ldr	r0,[r7,#0xC]	@unit pointer
+blh	0x8019190	@GetUnitMaxHP
+cmp	r0,#100
+blt	DrawMaxHP
+mov r0,#0
+sub r0,#1
+DrawMaxHP:
+ldr	r4,=#0x20230F6 @(???)
+mov	r2,r0
+mov	r0,r4
+mov	r1,#2
+blh	0x8004B94	@DrawDecNumber
+DrawMaxHP_End:
+.endm
+
+.macro leftpage_start
+  push    {r4-r7,r14}       @08087184 B570     
+  mov r7,r8
+  push {r7}
+  add     sp,#-0x50       @08087186 B094     
+  ldr r7, =TileBufferBase  @r7 contains the latest buffer. starts at 2003c2c.
+  ldr     r5,=StatScreenStruct
+  ldr     r0,[r5,#0xC]
+  mov r8, r0             @r8 contains the current unit's data
+  blh 0x8003c94
+  blh 0x8003578
+  @blh 0x8086df0 @clear 2003c00 region
+  blh DontBlinkLeft
+  mov r0, #0
+  str r0, [sp]
+  mov r0, sp
+  ldr r1, =0x6001380
+  ldr r2, =0x1000a68
+  swi 0xC @clear vram
+  ldr    r7,=0x2003BFC
+  ldr    r0,=0x2022CA8    @text buffer probably
+  mov    r8,r0
+  mov    r1,#0
+  blh    0x8001220    @FillBgMap
+  ldr    r4,[r7,#0xC]    @load unit's pointer
+  mov    r0,r4
+  blh    0x8016B58    @get equipped item index?
+  mov    r1,r0
+  lsl    r1,#0x18
+  lsr    r1,#0x18
+  mov    r0,r4
+  blh    0x802A400    @SetupBattleStructFromUnitAndWeapon
+.endm
+
+.macro draw_left_affinity_icon_at, tileX, tileY
+ldr	r0,[r7,#0xC]	@load unit's pointer
+blh 0x80286BC @ AffinityGetter
+mov r1,#2
+lsl r1,#8
+orr r1,r0      
+mov r2,#0xA0       
+lsl r2,r2,#0x7     
+ldr r0, =(0x2022CA8+(0x20*2*\tileY)+(2*\tileX))
+blh 0x80036BC @DrawIcon 
+.endm
+
+.macro draw_gaiden_spells_at, tile_x, tile_y, gaidenStatScreenRoutine
+@ This will do nothing if Gaiden Magic is not installed.
+ldr r0, =\gaidenStatScreenRoutine
+ldr r1, [ r0 ]
+cmp r1, #0x00
+beq SkipGaidenDraw
+	@ Gaiden magic is installed. Call the function for stat screen drawing.
+	mov lr, r0
+	mov r0, #\tile_x @ X coordinate.
+	mov r1, #\tile_y @ Y coordinate.
+	mov r2, r7  @ Current TextHandle.
+	.short 0xF800
+	mov r0, r7 @ Next "blank" TextHandle.
+SkipGaidenDraw:
 .endm

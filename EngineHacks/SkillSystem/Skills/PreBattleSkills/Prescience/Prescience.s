@@ -10,14 +10,6 @@ push {r4-r7,lr}
 mov r4, r0
 mov r5, r1
 
-ldr r0,=#0x203A4EC @attacker struct
-cmp r0,r4
-bne GoBack @if not attacker, don't do
-
-ldr r1, [r5,#4] @class data ptr
-cmp r1, #0 @if 0, this is prep screen
-beq GoBack
-
 ldr r0, SkillTester
 mov lr, r0
 mov r0, r4
@@ -26,18 +18,15 @@ ldr r1, PrescienceID
 cmp r0, #0
 beq GoBack
 
-mov r0, r4
-@hit
-add r0,#0x60
-ldrh r3,[r0]
-add r3,#15
-strh r3,[r0]
-
-@avoid
-add r0,#2
-ldrh r3,[r0]
-add r3,#15
-strh r3,[r0]
+ldrb  r0,[r4,#0x12] @attacker max hp
+ldrb  r1,[r4,#0x13] @attacker current hp
+sub   r0,r1
+mov r1,#0x5
+swi   #0x6 @missing hp div by 5
+mov   r2,#0x5c
+ldrh  r1,[r4,r2]
+add   r1,r0,r1
+strh  r1,[r4,r2]
 
 
 GoBack:

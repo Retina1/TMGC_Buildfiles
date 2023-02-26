@@ -918,28 +918,35 @@ ConversationEntryTerminator
 
 ALIGN 4
 SupportConversations2:
-//blair arin B+
+ConversationEntry(EBlairArinBP,C20_Blair_Arin_Base,LowlandsCG,Support2Viewer)
 ConversationEntry(EBlairKennethB,I6KennethSpecialConvo,LowlandsCG,Support2Viewer)
 ConversationEntry(EBlairNatasiaB,I6NatasiaSpecialConvo,LowlandsCG,Support2Viewer)
-//blair emile B
-//blair carbon C+
+ConversationEntry(EBlairNatasiaB,C18_Blair_Emile_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairCarbonCP,C16_Blair_Carbon_Base,LowlandsCG,Support2Viewer)
 ConversationEntry(EBlairCarbonB,I6CarbonSpecialConvo,LowlandsCG,Support2Viewer)
-//blair zeke C,+
-//ConversationEntry(EI6ZekeAlt,I6ZekeSpecialConvo,LowlandsCG,Support2Viewer)
-//blair avan C,B
-//ConversationEntry(EI6AvanAlt,I6AvanSpecialConvo,LowlandsCG,Support2Viewer)//blair/avan c+
-//blair yuyu C,B
-//ConversationEntry(EI6YuyuAlt,I6YuyuSpecialConvo,LowlandsCG,Support2Viewer)//blair/yuyu c+
-//arin desmond B
-//arin sam B
-//arin svelt C+,B
-//arin yuyu C,+
-//arin simone C
-//kenneth nat B
-//kenneth stefan B
-//kenneth hilbert C+,B
+ConversationEntry(EBlairZekeC,C15_Blair_Zeke_Base,ElbaCorCastleCG,Support2Viewer)
+ConversationEntry(EBlairZekeCP,C17_Blair_Zeke_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairZekeB,I6ZekeSpecialConvo,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairAvanC,C16_Blair_Avan_Base,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EBlairAvanCP,I6AvanSpecialConvo,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairAvanB,BlairAvanBSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairYuyuC,C17_Blair_Yuyu_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairYuyuCP,I6YuyuSpecialConvo,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairYuyuB,BlairYuyuBSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EArinDesmondB,C17_Arin_Desmond_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EArinSamB,ArinSamBSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EArinSveltzalusCP,ArinSveltzalusCPSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EArinSveltzalusB,ArinSveltzalusBSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EArinYuyuC,ArinYuyuCSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EArinYuyuCP,ArinYuyuCPSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EArinSimoneC,Ch20_ArinSimoneRecruit,LowlandsCG,Support2Viewer,RecruitmentTheme)
+ConversationEntry(EKennethNatasiaB,KennethNatasiaBSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EKennethStefanB,C17_Stefan_Kenneth_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EKennethHilbertCP,KennethHilbertCPSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EKennethHilbertB,C20_Kenneth_Hilbert_Base,LowlandsCG,Support2Viewer)
 ConversationEntry(ENatasiaPeggyB,I6PeggySpecialConvo,LowlandsCG,Support2Viewer)
-//nat bech C+,B
+ConversationEntry(ENatasiaBechamelCP,C16_Natasia_Bechamel_Base,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(ENatasiaBechamelB,NatasiaBechamelBSupport,LowlandsCG,Support2Viewer)
 //stefan desmond B
 //stefan josef B
 //stefan carbon C,+
@@ -969,6 +976,7 @@ ConversationEntry(ERachaelCassiusBP,RachaelCassiusBPSupport,LowlandsCG,Support2V
 //emile hilbert C+,B
 //emile vladmir C
 //emile simone C
+//ConversationEntry(EC20RecruitEmile,Ch20_EmileSimoneRecruit,LowlandsCG,Chapter20,RecruitmentTheme)
 //jeff svelt C+
 //jeff hilbert C+
 //apollo bech C+
@@ -982,6 +990,7 @@ ConversationEntry(EApolloBechamelB,I6ApolloSpecialConvo,LowlandsCG,Support2Viewe
 //svelt flynn C
 //svelt todd C
 //svelt simone C
+//ConversationEntry(EC20RecruitSveltzalus,Ch20_SveltzalusSimoneRecruit,LowlandsCG,Chapter20,S_CampIchigaya)
 //flynn horatio C
 //mikey carbon C+,B
 //charley todd C

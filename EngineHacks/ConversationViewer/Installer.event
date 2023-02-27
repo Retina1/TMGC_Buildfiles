@@ -191,6 +191,7 @@ ConversationEntry(EC5BossButch,C5MitchellButchBattle,JungleCG,Chapter5,S_SMT4B2)
 ConversationEntry(EC5BossPeggy,C5MitchellPeggyBattle,JungleCG,Chapter5,S_SMT4B2)
 ConversationEntry(EC5BossDie,C5MitchellDeath,JungleCG,Chapter5,S_SMT4B2)
 ConversationEntry(EC5ButchDie,EnemyButchDeath,JungleCG,Chapter5,S_TimeToMakeHistory)
+ConversationEntry(EC5PeggyDie,ButchKillsPeggy,JungleCG,Chapter5,S_TimeToMakeHistory)
 ConversationEntry(EC5End1,Ch5_Ending,JungleCG,Chapter5,S_FE4Conversation)
 ConversationEntry(EC5End1Alt,Ch5_Ending_Dead_Peggy,JungleCG,Chapter5,S_FE4Conversation)
 ConversationEntry(EC5End2,Ch5_Ending2,HallCG,Chapter5,S_Stratagem)
@@ -491,6 +492,8 @@ ConversationEntry(EC13ValdenSvelt,C13ValdenSveltzalusBattle,OutdoorCastleCG,Chap
 ConversationEntry(EC13ValdenDie,C13ValdenDeath,OutdoorCastleCG,Chapter13,S_FaceMyself)
 ConversationEntry(EC13MikeyDie,EnemyMikeyDeath,YgstraCG,Chapter13,S_TimeToMakeHistory)
 ConversationEntry(EC13CarbonDie,EnemyCarbonDeath,YgstraCG,Chapter13,S_TimeToMakeHistory)
+ConversationEntry(EC13MikeyDieAlt,CarbonKillsMikey,YgstraCG,Chapter13,S_TimeToMakeHistory)
+ConversationEntry(EC13CarbonDieAlt,MikeyKillsCarbon,YgstraCG,Chapter13,S_TimeToMakeHistory)
 ConversationEntry(EC13End1,Ch13_Ending,OutdoorCastleCG,Chapter13,S_FE4Conversation)
 ConversationEntryTerminator
 
@@ -921,7 +924,7 @@ SupportConversations2:
 ConversationEntry(EBlairArinBP,C20_Blair_Arin_Base,LowlandsCG,Support2Viewer)
 ConversationEntry(EBlairKennethB,I6KennethSpecialConvo,LowlandsCG,Support2Viewer)
 ConversationEntry(EBlairNatasiaB,I6NatasiaSpecialConvo,LowlandsCG,Support2Viewer)
-ConversationEntry(EBlairNatasiaB,C18_Blair_Emile_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EBlairEmileB,C18_Blair_Emile_Base,LowlandsCG,Support2Viewer)
 ConversationEntry(EBlairCarbonCP,C16_Blair_Carbon_Base,LowlandsCG,Support2Viewer)
 ConversationEntry(EBlairCarbonB,I6CarbonSpecialConvo,LowlandsCG,Support2Viewer)
 ConversationEntry(EBlairZekeC,C15_Blair_Zeke_Base,ElbaCorCastleCG,Support2Viewer)
@@ -947,41 +950,55 @@ ConversationEntry(EKennethHilbertB,C20_Kenneth_Hilbert_Base,LowlandsCG,Support2V
 ConversationEntry(ENatasiaPeggyB,I6PeggySpecialConvo,LowlandsCG,Support2Viewer)
 ConversationEntry(ENatasiaBechamelCP,C16_Natasia_Bechamel_Base,OutdoorCastleCG,Support2Viewer)
 ConversationEntry(ENatasiaBechamelB,NatasiaBechamelBSupport,LowlandsCG,Support2Viewer)
-//stefan desmond B
-//stefan josef B
-//stefan carbon C,+
-//desmond flynn C+,B
-//desmond mikey C,+
-//sam josef B
-//sam emile C+,B
-//sam bechamel C+
-//sam charley C,+
-//josef hilbert C+
+ConversationEntry(EStefanDesmondB,StefanDesmondBSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EStefanJosefB,C19_Stefan_Josef_Base,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(EStefanCarbonC,C15_Stefan_Carbon_Base,ElbaCorCastleCG,Support2Viewer)
+ConversationEntry(EStefanCarbonCP,StefanCarbonCPSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EDesmondFlynnCP,C18_Desmond_Flynn_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EDesmondFlynnB,DesmondFlynnBSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EDesmondMikeyC,DesmondMikeyCSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EDesmondMikeyCP,DesmondMikeyCPSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(ESamJosefB,SamJosefBSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(ESamEmileCP,C16_Sam_Emile_Base,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(ESamEmileB,C19_Sam_Emile_Base,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(ESamBechamelCP,C18_Sam_Bechamel_Base,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(ESamCharleyC,SamCharleyCSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(ESamCharleyCP,SamCharleyCPSupport,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(EJosefHilbertCP,JosefHilbertCPSupport,LowlandsCG,Support2Viewer)
 ConversationEntry(EJosefHilbertB,I6JosefSpecialConvo,LowlandsCG,Support2Viewer)
-//josef athena C,+
-//peggy butch B,+
-//peggy apollo C+
-//peggy athena C,+
-//butch cassius B
-//butch jeff C+,B
+ConversationEntry(EJosefAthenaC,JosefAthenaCSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EJosefAthenaCP,C19_Josef_Athena_Base,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(EPeggyButchB,C16_Peggy_Butch_Base,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EPeggyButchBP,PeggyButchBPSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EPeggyApolloCP,C17_Peggy_Apollo_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EPeggyAthenaC,PeggyAthenaCSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EPeggyAthenaCP,PeggyAthenaCPSupport,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(EButchCassiusB,C18_Butch_Cassius_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(EButchJeffCP,C15_Butch_Jeff_Base,ElbaCorCastleCG,Support2Viewer)
+ConversationEntry(EButchJeffB,C19_Butch_Jeff_Base,LowlandsRiverCG,Support2Viewer)
 ConversationEntry(ERachaelCassiusB,C15_The_Devoted_Base,ElbaCorCastleCG,Support2Viewer,S_EncountersAndReunions)
 ConversationEntry(ERachaelCassiusBP,RachaelCassiusBPSupport,LowlandsCG,Support2Viewer)
-//rachael jeff C+,B
-//rachael hyperius C,C+
-//rachael leila C,C+
-//cassius mikey C+
-//cassius athena C,C+
-//cassius zeke C,C+
-//cassius hyperius C,C+
-//emile hilbert C+,B
-//emile vladmir C
-//emile simone C
-//ConversationEntry(EC20RecruitEmile,Ch20_EmileSimoneRecruit,LowlandsCG,Chapter20,RecruitmentTheme)
-//jeff svelt C+
-//jeff hilbert C+
-//apollo bech C+
+ConversationEntry(ERachaelJeffCP,RachaelJeffCPSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(ERachaelJeffB,C20_Rachael_Jeff_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(ERachaelHyperiusC,C15_Rachael_Hyperius_Base,ElbaCorCastleCG,Support2Viewer)
+ConversationEntry(ERachaelHyperiusCP,RachaelHyperiusCPSupport,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(ERachaelLeilaC,C16_Rachael_Leila_Base,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(ERachaelLeilaCP,RachaelLeilaCPSupport,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(ECassiusMikeyCP,CassiusMikeyCPSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(ECassiusAthenaC,C16_Cassius_Athena_Base,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(ECassiusAthenaCP,C20_Cassius_Athena_Base,LowlandsCG,Support2Viewer)
+ConversationEntry(ECassiusZekeC,C15_Zeke_Cassius_Base,ElbaCorCastleCG,Support2Viewer)
+ConversationEntry(ECassiusZekeCP,C19_Zeke_Cassius_Base,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(EEmileHilbertCP,EmileHilbertCPSupport,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EEmileHilbertB,EmileHilbertBSupport,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(EEmileVladmirC,C19_Emile_Vladmir_Base,LowlandsRiverCG,Support2Viewer)
+ConversationEntry(EEmileSimoneC,Ch20_EmileSimoneRecruit,LowlandsCG,Chapter20,RecruitmentTheme)
+ConversationEntry(EJeffSveltzalusCP,JeffSveltzalusCPSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EJeffHilbertCP,JeffHilbertCPSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EApolloBechamelCP,ApolloBechamelCPSupport,OutdoorCastleCG,Support2Viewer)
 ConversationEntry(EApolloBechamelB,I6ApolloSpecialConvo,LowlandsCG,Support2Viewer)
-//apollo flynn C+,B
+ConversationEntry(EApolloFlynnCP,ApolloFlynnCPSupport,LowlandsCG,Support2Viewer)
+ConversationEntry(EApolloFlynnB,ApolloFlynnBSupport,LowlandsCG,Support2Viewer)
 //apollo charley C,+
 //apollo avan C
 //apollo vladmir C
@@ -992,7 +1009,8 @@ ConversationEntry(EApolloBechamelB,I6ApolloSpecialConvo,LowlandsCG,Support2Viewe
 //svelt simone C
 //ConversationEntry(EC20RecruitSveltzalus,Ch20_SveltzalusSimoneRecruit,LowlandsCG,Chapter20,S_CampIchigaya)
 //flynn horatio C
-//mikey carbon C+,B
+ConversationEntry(EMikeyCarbonCP,C16_Carbon_Mikey_Base,OutdoorCastleCG,Support2Viewer)
+ConversationEntry(EMikeyCarbonB,C19_Mikey_Carbon_Base,LowlandsRiverCG,Support2Viewer)
 //charley todd C
 //charley yuyu C
 //zeke hyperius B
@@ -1062,6 +1080,7 @@ ConversationEntry(ETobiasDeath,TobiasDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EIanDeath,IanDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EOlsenDeath,OlsenDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EElcorianDeath,ElcorianDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EAgnesDeath,AgnesDeath,DesertCG,DeathQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -1111,6 +1130,7 @@ ConversationEntry(ETobiasDeathEndgame,TobiasDeathEndgame,PathCG,FinalDeathQuoteV
 ConversationEntry(EIanDeathEndgame,IanDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(EOlsenDeathEndgame,OlsenDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(EElcorianDeathEndgame,ElcorianDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EAgnesDeathEndgame,AgnesDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -1161,6 +1181,7 @@ ConversationEntry(ETobiasEscape,TobiasEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EIanEscape,IanEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EOlsenEscape,OlsenEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EElcorianEscape,ElcorianEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EAgnesEscape,AgnesEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4 

@@ -4,19 +4,19 @@
 
 ALIGN 4
 TownObjects:
-#incext Png2Dmp "Tilesets/HolanisTown.png" --lz77
+#incbin "Tilesets/HolanisTown.dmp"
 
 ALIGN 4
 DalstTownPalette:
-#incext Png2Dmp "Tilesets/DalstTown.png" --palette-only
+#incbin "Tilesets/DalstTown_pal.dmp"
 
 ALIGN 4
 BoatyTownPalette:
-#incext Png2Dmp "Tilesets/BoatyTown.png" --palette-only
+#incbin "Tilesets/BoatyTown_pal.dmp"
 
 ALIGN 4
 HolanisTownPalette:
-#incext Png2Dmp "Tilesets/HolanisTown.png" --palette-only
+#incbin "Tilesets/HolanisTown_pal.dmp"
 
 ALIGN 4
 TownTiles:
@@ -24,27 +24,27 @@ TownTiles:
 
 ALIGN 4
 FieldObjects:
-#incext Png2Dmp "Tilesets/DalstField.png" --lz77
+#incbin "Tilesets/DalstField.dmp"
 
 ALIGN 4
 DalstFieldPalette:
-#incext Png2Dmp "Tilesets/DalstField.png" --palette-only
+#incbin "Tilesets/DalstField_pal.dmp"
 
 ALIGN 4
 ElbaCorFieldPalette:
-#incext Png2Dmp "Tilesets/ElbaCorField.png" --palette-only
+#incbin "Tilesets/ElbaCorField_pal.dmp"
 
 ALIGN 4
 LowlandsFieldPalette:
-#incext Png2Dmp "Tilesets/LowlandsField.png" --palette-only
+#incbin "Tilesets/LowlandsField_pal.dmp"
 
 ALIGN 4
 DarkFieldPalette:
-#incext Png2Dmp "Tilesets/DarkField.png" --palette-only
+#incbin "Tilesets/DarkField_pal.dmp"
 
 ALIGN 4
 HolanisFieldPalette:
-#incext Png2Dmp "Tilesets/HolanisField.png" --palette-only
+#incbin "Tilesets/HolanisField_pal.dmp"
 
 ALIGN 4
 FieldTiles:
@@ -52,20 +52,20 @@ FieldTiles:
 
 ALIGN 4
 CastleObjects:
-#incext Png2Dmp "Tilesets/LowlandsCastle.png" --lz77
+#incbin "Tilesets/LowlandsCastle.dmp"
 
 ALIGN 4
 LowlandsCastlePalette:
-#incext Png2Dmp "Tilesets/LowlandsCastle.png" --palette-only
+#incbin "Tilesets/LowlandsCastle_pal.dmp"
 ALIGN 4
 YgstraCastlePalette:
-#incext Png2Dmp "Tilesets/YgstraCastle.png" --palette-only
+#incbin "Tilesets/YgstraCastle_pal.dmp"
 ALIGN 4
 ElbaCorCastlePalette:
-#incext Png2Dmp "Tilesets/ElbaCorCastle.png" --palette-only
+#incbin "Tilesets/ElbaCorCastle_pal.dmp"
 ALIGN 4
 GreatRiverCastlePalette:
-#incext Png2Dmp "Tilesets/LowlandserCastle.png" --palette-only
+#incbin "Tilesets/LowlandserCastle_pal.dmp"
 
 ALIGN 4
 CastleTiles:
@@ -76,7 +76,7 @@ GreatRiverCastleTiles:
 
 ALIGN 4
 SwampObjects:
-#incext Png2Dmp "Tilesets/Swamp.png" --lz77
+#incbin "Tilesets/Swamp.dmp"
 //#incbin "Tilesets/Swamps.dmp"
 
 ALIGN 4
@@ -85,11 +85,11 @@ MevionSwampPalette:
 
 /*ALIGN 4
 MevionSwampObjects:
-#incext Png2Dmp "Tilesets/MevionSwamp.png" --lz77
+#incbin "Tilesets/MevionSwamp.dmp"
 
 ALIGN 4
 MevionSwampPalette:
-#incext Png2Dmp "Tilesets/MevionSwamp.png" --palette-only old palette stuff?*/
+#incbin "Tilesets/MevionSwamp_pal.dmp" old palette stuff?*/
 
 ALIGN 4
 SwampTiles:
@@ -97,19 +97,19 @@ SwampTiles:
 
 ALIGN 4
 CityObjects:
-#incext Png2Dmp "Tilesets/MevionCity.png" --lz77
+#incbin "Tilesets/MevionCity.dmp"
 
 ALIGN 4
 MevionCityPalette:
-#incext Png2Dmp "Tilesets/MevionCity.png" --palette-only
+#incbin "Tilesets/MevionCity_pal.dmp"
 
 ALIGN 4
 ElbaCorCityPalette:
-#incext Png2Dmp "Tilesets/ElbaCorCity.png" --palette-only
+#incbin "Tilesets/ElbaCorCity_pal.dmp"
 
 ALIGN 4
 DalstCityPalette:
-#incext Png2Dmp "Tilesets/DalstCity.png" --palette-only
+#incbin "Tilesets/DalstCity_pal.dmp"
 
 ALIGN 4
 CityTiles:
@@ -122,7 +122,7 @@ LavaCavePalette:
 ALIGN 4
 LavaCaveObjects:
 //#incbin "Tilesets/FE8LavaCave.img.bin"
-#incext Png2Dmp "Tilesets/Volcano.png" --lz77
+#incbin "Tilesets/Volcano.dmp"
 
 ALIGN 4
 LavaCaveConfig:
@@ -130,11 +130,11 @@ LavaCaveConfig:
 
 ALIGN 4
 DesertObjects:
-#incext Png2Dmp "Tilesets/Desert.png" --lz77
+#incbin "Tilesets/Desert.dmp"
 
 ALIGN 4
 DesertPalette:
-#incext Png2Dmp "Tilesets/Desert.png" --palette-only
+#incbin "Tilesets/Desert_pal.dmp"
 
 ALIGN 4
 DesertTiles:
@@ -142,11 +142,11 @@ DesertTiles:
 
 ALIGN 4
 FrontierObjects:
-#incext Png2Dmp "Tilesets/YgstraFrontier.png" --lz77
+#incbin "Tilesets/YgstraFrontier.dmp"
 
 ALIGN 4
 YgstraFrontierPalette:
-#incext Png2Dmp "Tilesets/YgstraFrontier.png" --palette-only
+#incbin "Tilesets/YgstraFrontier_pal.dmp"
 
 ALIGN 4
 FrontierTiles:
@@ -154,11 +154,11 @@ FrontierTiles:
 
 ALIGN 4
 StrongholdObjects:
-#incext Png2Dmp "Tilesets/Stronghold.png" --lz77
+#incbin "Tilesets/Stronghold.dmp"
 
 ALIGN 4
 StrongholdPalette:
-#incext Png2Dmp "Tilesets/Stronghold.png" --palette-only
+#incbin "Tilesets/Stronghold_pal.dmp"
 
 ALIGN 4
 StrongholdTiles:
@@ -166,11 +166,11 @@ StrongholdTiles:
 
 ALIGN 4
 RuinsObjects:
-#incext Png2Dmp "Tilesets/Ruins.png" --lz77
+#incbin "Tilesets/Ruins.dmp"
 
 ALIGN 4
 RuinsPalette:
-#incext Png2Dmp "Tilesets/Ruins.png" --palette-only
+#incbin "Tilesets/Ruins_pal.dmp"
 
 ALIGN 4
 RuinsTiles:
@@ -421,13 +421,13 @@ tilesetAnimation(0x1a,0x1000,TownFrame15)
 tilesetAnimation(0x1a,0x1000,TownFrame16)
 WORD 0 0
 
+ALIGN 4
 EventPointerTable(OBJTown, TownObjects)
 EventPointerTable(PALDalstTown, DalstTownPalette)
 EventPointerTable(PALBoatyTown, BoatyTownPalette)
 EventPointerTable(PALHolanisTown, HolanisTownPalette)
 EventPointerTable(TILTown, TownTiles)
 EventPointerTable(ANITown,TownAnims)
-
 EventPointerTable(OBJField, FieldObjects)
 EventPointerTable(PALDalstField, DalstFieldPalette)
 EventPointerTable(PALElbaCorField, ElbaCorFieldPalette)
@@ -436,17 +436,14 @@ EventPointerTable(PALDarkField, DarkFieldPalette)
 EventPointerTable(PALHolanisField, HolanisFieldPalette)
 EventPointerTable(TILField, FieldTiles)
 EventPointerTable(ANIField, FieldAnims)
-
 EventPointerTable(OBJSwamp, SwampObjects)
 EventPointerTable(PALMevionSwamp, MevionSwampPalette)
 EventPointerTable(TILSwamp, SwampTiles)
-
 EventPointerTable(OBJCity, CityObjects)
 EventPointerTable(PALMevionCity, MevionCityPalette)
 EventPointerTable(PALElbaCorCity, ElbaCorCityPalette)
 EventPointerTable(PALDalstCity, DalstCityPalette)
 EventPointerTable(TILCity, CityTiles)
-
 EventPointerTable(OBJCastle, CastleObjects)
 EventPointerTable(PALLowlandsCastle, LowlandsCastlePalette)
 EventPointerTable(PALGreatRiverCastle, GreatRiverCastlePalette)
@@ -455,26 +452,21 @@ EventPointerTable(PALElbaCorCastle, ElbaCorCastlePalette)
 EventPointerTable(TILCastle, CastleTiles)
 EventPointerTable(TILGreatRiver, GreatRiverCastleTiles)
 EventPointerTable(ANICastle, CastleAnims)
-
 EventPointerTable(OBJVolcano, LavaCaveObjects) 
 EventPointerTable(PALVolcano, LavaCavePalette) 
 EventPointerTable(TILVolcano, LavaCaveConfig) 
 EventPointerTable(ANILava, 0x59D800)
-
 EventPointerTable(OBJDesert, DesertObjects) 
 EventPointerTable(PALDesert, DesertPalette) 
 EventPointerTable(TILDesert, DesertTiles) 
-
 EventPointerTable(OBJFrontier, FrontierObjects) 
 EventPointerTable(PALYgstraFrontier, YgstraFrontierPalette) 
 EventPointerTable(TILFrontier, FrontierTiles) 
 EventPointerTable(ANIFrontier, FrontierAnims)
-
 EventPointerTable(OBJStronghold, StrongholdObjects)
 EventPointerTable(PALStronghold, StrongholdPalette)
 EventPointerTable(TILStronghold, StrongholdTiles)
 EventPointerTable(ANIStronghold, StrongholdAnims)
-
 EventPointerTable(OBJRuins, RuinsObjects) 
 EventPointerTable(PALRuins, RuinsPalette) 
 EventPointerTable(TILRuins, RuinsTiles) 

@@ -1,5 +1,6 @@
 #define AlwaysDeathQuote(arg000,arg001,arg002) "BYTE arg000 0x0 0xff 0xff arg001 0x0 ;SHORT arg002 ;WORD 0x0 "
 #define ChapterDeathQuote(arg000,arg001,arg002,arg003) "BYTE arg000 0x0 0xff arg001 arg002 0x0 ;SHORT arg003 ;WORD 0x0 "
+#define KillerDeathQuote(arg000,arg001,arg002,arg003,arg004) "BYTE arg000 arg001 0xff arg002 arg003 0x0 ;SHORT arg004 ;WORD 0x0 "
 #define EndDeathQuote "BYTE 0xff 0xff 0x0 0x0 0x0 0x0 ;SHORT 0x0 ;WORD 0x0 "
 #define DefeatBossFlag 0x2
 #define GameOverFlag 0x65
@@ -19,6 +20,7 @@ ChapterDeathQuote(Helga,Chapter3,DefeatBossFlag,C3HelgaDeath)
 ChapterDeathQuote(Starque,Chapter4,DefeatBossFlag,C4StarqueDeath)
 ChapterDeathQuote(Lazarus,Chapter4,0x0,C4LazarusDeath)
 // Ch5
+KillerDeathQuote(Peggy,Butch,Chapter5,0x0,ButchKillsPeggy)
 ChapterDeathQuote(Butch,Chapter5,0xa,EnemyButchDeath)
 ChapterDeathQuote(Mitchell,Chapter5,DefeatBossFlag,C5MitchellDeath)
 // Ch6
@@ -53,7 +55,9 @@ ChapterDeathQuote(Laronde,Chapter12,0x21,C12LarondeDeath)
 ChapterDeathQuote(Laronde,Chapter12,0x0,C12LarondeVsDragonDeath)
 ChapterDeathQuote(C12Dragon,Chapter12,DefeatBossFlag,0x0)
 // Ch13
+KillerDeathQuote(Mikey,Carbon,Chapter13,0x0,CarbonKillsMikey)
 ChapterDeathQuote(Mikey,Chapter13,0xa,EnemyMikeyDeath)
+KillerDeathQuote(Carbon,Mikey,Chapter13,0xb,MikeyKillsCarbon)
 ChapterDeathQuote(Carbon,Chapter13,0xb,EnemyCarbonDeath)
 ChapterDeathQuote(Valden,Chapter13,ValdenDeadFlag,C13ValdenDeath)
 ChapterDeathQuote(Amara,Chapter13,DefeatBossFlag,C13AmaraDeath)
@@ -91,10 +95,12 @@ ChapterDeathQuote(Michael,Chapter19,DefeatBossFlag,C19MichaelDeath)
 // ch20
 ChapterDeathQuote(Simone,Chapter20,0xa,AllySimoneDeath)
 // v1
+KillerDeathQuote(Clarque,Viridian,ChapterV1,DefeatBossFlag,V1ClarqueDeathAlt)
 ChapterDeathQuote(Clarque,ChapterV1,DefeatBossFlag,V1ClarqueDeath)
 // v2
 ChapterDeathQuote(DLDavelarn,ChapterV2,DefeatBossFlag,V2DavelarnDeath)
 // v3
+KillerDeathQuote(Reynard,Viridian,ChapterV3,DefeatBossFlag,V3ReynardDefeatAlt)
 ChapterDeathQuote(Reynard,ChapterV3,DefeatBossFlag,V3ReynardDefeat)
 // c23
 ChapterDeathQuote(Neillstrom,Chapter23,DefeatBossFlag,FillerDialogue)

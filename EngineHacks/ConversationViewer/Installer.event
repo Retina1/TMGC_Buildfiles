@@ -477,6 +477,7 @@ ConversationEntry(EC13House4,C13House4Text,HouseCG,Chapter13)
 ConversationEntry(EC13House5,C13House5Text,HouseCG,Chapter13)
 ConversationEntry(EC13House6,C13House6Text,HouseCG,Chapter13)
 ConversationEntry(EC13House7,C13House7Text,HouseCG,Chapter13)
+ConversationEntry(EC13GaylordSleep,C13GaylordSleeps,HouseCG,Chapter13)
 ConversationEntry(EC13ValdenLeaves,C13ValdenLeavesAmaraAlive,OutdoorCastleCG,Chapter13)
 ConversationEntry(EC13ValdenLeavesAlt,C13ValdenLeavesAmaraDead,OutdoorCastleCG,Chapter13)
 ConversationEntry(EC13AmaraGen,C13AmaraBattle,OutdoorCastleCG,Chapter13,S_PathsThatWillNeverCross)
@@ -495,6 +496,7 @@ ConversationEntry(EC13CarbonDie,EnemyCarbonDeath,YgstraCG,Chapter13,S_TimeToMake
 ConversationEntry(EC13MikeyDieAlt,CarbonKillsMikey,YgstraCG,Chapter13,S_TimeToMakeHistory)
 ConversationEntry(EC13CarbonDieAlt,MikeyKillsCarbon,YgstraCG,Chapter13,S_TimeToMakeHistory)
 ConversationEntry(EC13End1,Ch13_Ending,OutdoorCastleCG,Chapter13,S_FE4Conversation)
+ConversationEntry(EC13GaylordAwaken,C13GaylordAwakens,HouseCG,Chapter13,RecruitmentTheme)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -1081,6 +1083,7 @@ ConversationEntry(EIanDeath,IanDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EOlsenDeath,OlsenDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EElcorianDeath,ElcorianDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EAgnesDeath,AgnesDeath,DesertCG,DeathQuoteViewer)
+ConversationEntry(EGaylordDeath,GaylordDeath,YgstraCG,DeathQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -1131,6 +1134,7 @@ ConversationEntry(EIanDeathEndgame,IanDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(EOlsenDeathEndgame,OlsenDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(EElcorianDeathEndgame,ElcorianDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(EAgnesDeathEndgame,AgnesDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EGaylordDeathEndgame,GaylordDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -1182,6 +1186,7 @@ ConversationEntry(EIanEscape,IanEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EOlsenEscape,OlsenEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EElcorianEscape,ElcorianEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EAgnesEscape,AgnesEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EGaylordEscape,GaylordEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4 

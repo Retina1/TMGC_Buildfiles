@@ -41,6 +41,7 @@ House(0x0,C13House4,18,11)
 House(0x0,C13House5,13,13)
 House(0x0,C13House6,10,15)
 House(0x0,C13House7,18,23)
+House(0x1f,C13HouseGaylord,0,18)
 Village(0x11,C13NorthVillage,13,2)
 Village(0x12,C13SouthVillage,5,26)
 Village(0x13,C13WestVillage,17,16)
@@ -268,6 +269,10 @@ UNIT Blair BlairLord 0x0 Level(1,Ally,0) [0,21] 0x0 0x0 0x1 REDA4R21 [Fire, Awak
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,22] 0x0 0x0 0x1 REDA3R22 [0x0] NoAI
 UNIT
 
+GaylordJoins:
+UNIT Gaylord Troub 0x0 Level(6,Ally,0) [0,18] 0x0 0x0 0x1 REDA0R19 [Mend,Restore,Sleep] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -357,6 +362,37 @@ C13House6:
 HouseEvent(C13House6Text,HouseCG)
 C13House7:
 HouseEvent(C13House7Text,HouseCG)
+C13HouseGaylord:
+CHECK_EVENTID 0x1a
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0x1b
+BEQ 0x2 0xc 0x0
+CHECK_EVENTID 0x1c
+BEQ 0x3 0xc 0x0
+CHECK_EVENTID 0x1d
+BEQ 0x4 0xc 0x0
+CHECK_EVENTID 0x1e
+BEQ 0x5 0xc 0x0
+MUSC RecruitmentTheme
+CleanText(HouseCG,C13GaylordAwakens)
+Reinforcements(GaylordJoins)
+GOTO 0x6
+LABEL 0x5
+ENUT 0x1e
+LABEL 0x4
+ENUT 0x1d
+LABEL 0x3
+ENUT 0x1c
+LABEL 0x2
+ENUT 0x1b
+LABEL 0x1
+ENUT 0x1a
+ENUF 0x1f
+CleanText(HouseCG,C13GaylordSleeps)
+LABEL 0x6
+EndEvent
+
+
 
 C13ValdenHandoff:
 CHECK_EVENTID ValdenDeadFlag

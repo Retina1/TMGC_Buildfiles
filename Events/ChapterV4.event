@@ -154,12 +154,19 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+LocationText(HouseCG, V4_Opening,YgstraInnLabel)
+MUSC S_Neutral
+CleanTextNoMap(HouseCG,V4_Opening2)
 LOAD1 0x1 V4Units
 ENUN
 LoadUnitsByDifficulty(V4Easy,V4Normal,V4Hard)
 MUSC NarrationTheme4
 Narration(Map2CG,ChV4_Narration)
-CleanText(EastHolanisCG,FillerDialogue)
+MUSC AmbientWindBirds
+CleanTextNoMap(EastHolanisCG,V4_Opening3)
+//work some eventing magic
+MUSC S_Crisis
+CleanTextNoMap(EastHolanisCG,V4_Opening4)
 GotoPrepScreen
 EndEvent
 

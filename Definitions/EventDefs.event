@@ -11,6 +11,7 @@
 #define Narration(bgid,textid) "SetBackground(bgid); STAL 120; NarrationText(textid); MUSC 0x0; FADI 0x3c"
 #define CamOn "EVBIT_T 9"
 #define CamOff "EVBIT_F 9"
+#define StartGameOver "ASMC 0x800D391" // Game over ASMC 
 #define RefreshSMS "ASMC 0x8026689" //see how this looks when loading stuff
 #define Reinforcements(pointer) "CamOn ; LOAD1 0x0 pointer; ENUN; RefreshSMS; CamOff"
 #define HardReinforcements(pointer) "CHECK_HARD ; BNE 6789 rC r0 ; Reinforcements(pointer); LABEL 6789"

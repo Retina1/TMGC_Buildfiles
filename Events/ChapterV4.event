@@ -28,6 +28,10 @@ TurnEventPlayer(0x0,V4Turn2,2)
 TurnEventPlayer(0x0,V4Turn3,3)
 TurnEventPlayer(0x0,V4Turn4,4)
 TurnEventPlayer(0x0,V4Turn5,5)
+TurnEventPlayer(0x0,V4Turn8,8)
+TurnEventPlayer(0x0,V4Turn9,9)
+TurnEventPlayer(0x0,V4Turn10,10)
+TurnEventPlayer(0x0,V4Turn11,11)
 TurnEventPlayer(0x65,V4OutOfTime,12)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -164,22 +168,32 @@ MUSC NarrationTheme4
 Narration(Map2CG,ChV4_Narration)
 MUSC AmbientWindBirds
 CleanTextNoMap(EastHolanisCG,V4_Opening3)
-//work some eventing magic
+MUSC 0x0
+STAL 0x30
+SOUN 0xD0
+STAL 0x15
+SOUN 0x137
+STAL 0x30
 MUSC S_Crisis
 CleanTextNoMap(EastHolanisCG,V4_Opening4)
 GotoPrepScreen
 EndEvent
 
 EndingScene:
-MUSC VictoryTheme
-Text(EastHolanisCG,FillerDialogue)
+MUSC S_FE4Conversation
+CleanTextNoMap(EastHolanisCG,V4_Ending)//get moving to safer pastures
+MUSC AmbientNight
+LocationText(BlankCG, V4_Ending2,UnknownLocationLabel)
+STAL 0x30
+CleanTextNoMap(TentInsideCG,V4_Ending3)//ruminations
+LocationText(HallCG, V4_Ending4,ArbordiaMeetingHallLabel,S_RigorousJustice)//oh no
 MoveToChapter(Interlude8)
 EndEvent
 
 V4Village1:
-VillageEventItem(FillerDialogue, VillageCG, TorchStaff)//a very very very drunk man
+VillageEventItem(V4NorthVillage, VillageCG, Arbitrate)//torch staff will have its day
 V4Village2:
-VillageEventItem(FillerDialogue, VillageCG, RealLastShield)
+VillageEventItem(V4SouthVillage, VillageCG, RealLastShield)
 
 V4Turn2:
 Reinforcements(V4Turn2Group)
@@ -194,9 +208,38 @@ V4Turn5:
 Reinforcements(V4Turn5Group)
 EndEvent
 
+V4Turn8:
+FADI 30
+VCWF 0xc
+FADU 30
+Text(V4DarkeningBegins)
+EndEvent
+V4Turn9:
+FADI 30
+VCWF 0xa
+FADU 30
+EndEvent
+V4Turn10:
+FADI 30
+VCWF 0x9
+FADU 30
+Text(V4Hurry)
+EndEvent
+V4Turn11:
+FADI 30
+VCWF 0x7
+FADU 30
+EndEvent
+
 V4OutOfTime:
-Text(FillerDialogue)
-CALL 0x592104
+FADI 30
+VCWF 0x3
+FADU 30
+Text(V4GameOver)
+FADI 30
+VCWF 0x1
+FADU 30
+StartGameOver
 EndEvent
 
 

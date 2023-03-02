@@ -465,7 +465,7 @@ EndEvent
 
 C16OutOfTime:
 Text(C16_GameOver)
-CALL 0x592104
+StartGameOver
 EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

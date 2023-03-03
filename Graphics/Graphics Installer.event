@@ -220,36 +220,36 @@ NewEXPNumber:
 
 ALIGN 4
 LevelSelect:
-#incext Png2Dmp "Level Select.png" --lz77
+#incbin "Level Select.dmp" 
 
 ALIGN 4
 SaveSlot:
-#incext Png2Dmp "Save Slot.png" --lz77
+#incbin "Save Slot.dmp" 
 
 ALIGN 4
 MainMenu:
-#incext Png2Dmp "Main Menu.png" --lz77
+#incbin "Main Menu.dmp" 
 ALIGN 4
 MainMenuPal:
-#incext Png2Dmp "Main Menu.png" --palette-only
+#incbin "Main Menu_pal.dmp" 
 
 ALIGN 4
 ChapterTitle:
-#incext Png2Dmp "Chapter Title.png" --lz77
+#incbin "Chapter Title.dmp"
 ALIGN 4
 ChapterTitlePal:
-#incext Png2Dmp "Chapter Title.png" --palette-only
+#incbin "Chapter Title_pal.dmp" 
 
 ALIGN 4
 Title:
-#incext Png2Dmp "Game Title.png" --lz77
+#incbin "Game Title.dmp" 
 ALIGN 4
 TitlePal:
-#incext Png2Dmp "Game Title.png" --palette-only
+#incbin "Game Title_pal.dmp" 
 
 ALIGN 4
 LevelUpScreen:
-#incext Png2Dmp "Level Up Screen.png" --lz77
+#incbin "Level Up Screen.dmp" 
 ALIGN 4
 LevelUpScreenTSA:
 #incbin "Level Up Screen.png.tsa.dmp"

@@ -185,7 +185,7 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 	POP
 		ALIGN 4
 		Tileset:
-		#incext Png2Dmp --lz77 "TMGCMenuTiles.png"
+		#incbin "TMGCMenuTiles.dmp"
 
 		ALIGN 4
 		UnitMenu:
@@ -221,11 +221,11 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 
 		ALIGN 4
 		PrepOptions:
-		#incext Png2Dmp --lz77 "OptionBox.png"
+		#incbin "OptionBox.dmp"
 
 		ALIGN 4
 		PrepHeaderFunds:
-		#incext Png2Dmp --lz77 "HeaderFunds.png"
+		#incbin "HeaderFunds.dmp"
 
 		ALIGN 4
 		PrepItem2:
@@ -257,7 +257,7 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 
 		ALIGN 4
 		StatscreenPanel:
-		#incext Png2Dmp --lz77 "StatscreenPanel.png"
+		#incbin "StatscreenPanel.dmp"
 
 		ALIGN 4
 		UseMenu:
@@ -265,7 +265,7 @@ SHORT $01 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $02 $0401 $00   //Row1
 
 		ALIGN 4
 		ShopGold:
-		#incext Png2Dmp --lz77 "ShopGold.png"
+		#incbin "ShopGold.dmp"
 
 		ALIGN 4
 		MerchantPanel:

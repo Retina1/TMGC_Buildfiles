@@ -43,8 +43,8 @@
 	
 	ALIGN 4
 	New_Battle_Anims_Off_Graphics:
-	#incext Png2Dmp "Anims_Off_Battle_Graphic-New.png" --lz77
-	//#incbin "Anims_Off_Battle_Graphic New.dmp"
+	//#incext Png2Dmp "Anims_Off_Battle_Graphic-New.png" --lz77
+	#incbin "Anims_Off_Battle_Graphic-New.dmp"
 
 	ALIGN 4
 	New_Battle_Anims_Off_Single_TSA:
@@ -115,16 +115,16 @@
 
 	ALIGN 4
 	Battle_Screen_Tiles:
-	#incext Png2Dmp --lz77 "Battle_Screen_Tiles.png"
+	#incbin  "Battle_Screen_Tiles.dmp"
 	ALIGN 4
 	NAMELEFT:
-	#incext Png2Dmp --lz77 "NAMELEFT.png"
+	#incbin  "NAMELEFT.dmp"
 	ALIGN 4
 	NAMERIGHT:
-	#incext Png2Dmp --lz77 "NAMERIGHT.png"
+	#incbin  "NAMERIGHT.dmp"
 	ALIGN 4
 	ITEMLEFT:
-	#incext Png2Dmp --lz77 "ITEMLEFT.png"
+	#incbin  "ITEMLEFT.dmp"
 	ALIGN 4
 	ITEMRIGHT:
-	#incext Png2Dmp --lz77 "ITEMRIGHT.png"
+	#incbin  "ITEMRIGHT.dmp"

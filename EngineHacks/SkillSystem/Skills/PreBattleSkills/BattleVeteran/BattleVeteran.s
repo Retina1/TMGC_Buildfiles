@@ -2,6 +2,7 @@
 .align
 
 .equ DangerPickID,SkillTester+4
+.equ gBattleData, 0x203A4D4
 
 push {r4-r7,lr}
 @goes in the battle loop.
@@ -9,6 +10,12 @@ push {r4-r7,lr}
 @r1 is the defender
 mov r4, r0
 mov r5, r1
+
+ldr  r3, =gBattleData
+ldrb r3, [r3]
+mov  r0, #0x3
+tst  r0, r3
+beq  End
 
 @check for attacker w/ skill
 ldr r0, SkillTester
@@ -28,6 +35,7 @@ cmp r0, #0
 beq End
 
 DoIt:
+
 @set both attacker and defender attack and defense to 200 percent
 mov r1, #0x5a
 ldrsh r0, [r4, r1] @atk

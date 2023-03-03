@@ -5,21 +5,6 @@ push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
-@tile has no bonuses
-mov r1, #0x56
-ldrb r0, [r4,r1] @terrain def
-cmp r0, #0
-bne End
-add r1, #1
-ldrb r0, [r4,r1] @terrain avo
-cmp r0, #0
-bne End
-add r1, #1
-ldrb r0, [r4,r1] @terrain res
-cmp r0, #0
-bne End
-
-
 @has ElbowRoom
 ldr r0, SkillTester
 mov lr, r0

@@ -1,6 +1,8 @@
 .thumb
 @assassinate: When initiating battle at 1 range: +2 Damage, Double attacks occur before counter
 .equ AssassinateID, SkillTester+4
+.equ gBattleData, 0x203A4D4
+
 
 push {r4-r7, lr}
 mov r4, r0 @atkr
@@ -13,10 +15,11 @@ cmp r0,#1
 bne End
 
 @make sure we are in combat (or combat prep)
-ldrb	r3, =gBattleData
-ldrb	r3, [r3]
-cmp		r3, #4
-beq		End
+ldr  r3, =gBattleData
+ldrb r3, [r3]
+mov  r0, #0x3
+tst  r0, r3
+beq  End
 
 @has Assassinate
 ldr r0, SkillTester

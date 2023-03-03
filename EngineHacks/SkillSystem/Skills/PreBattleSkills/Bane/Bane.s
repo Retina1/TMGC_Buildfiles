@@ -17,11 +17,11 @@ cmp r0, #0
 beq GoBack
 
 @make sure in combat (or combat prep)
-ldrb r3, =gBattleData
+ldr  r3, =gBattleData
 ldrb r3, [r3]
-cmp r3, #4
-beq GoBack
-
+mov  r0, #0x3
+tst  r0, r3
+beq  GoBack
 
 @is the enemy a boss?
 ldr r0, [r5] @char

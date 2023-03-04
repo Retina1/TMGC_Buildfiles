@@ -70,7 +70,8 @@ POIN SupportConversations2
 POIN SupportConversations3
 POIN DeathQuoteConversations 
 POIN FinalDeathQuoteConversations 
-POIN EscapeQuoteConversations  
+POIN EscapeQuoteConversations
+POIN BonusConversations
 POIN 0 
 
 
@@ -1193,6 +1194,15 @@ ConversationEntry(EOlsenEscape,OlsenEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EElcorianEscape,ElcorianEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EAgnesEscape,AgnesEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(EGaylordEscape,GaylordEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntryTerminator
+
+ALIGN 4
+BonusConversations:
+ConversationEntry(EBonus1,BonusConvo1,HouseCG,BonusViewer)
+ConversationEntry(EBonus2,BonusConvo2,HouseCG,BonusViewer)
+ConversationEntry(EBonus3,BonusConvo3,HouseCG,BonusViewer)
+ConversationEntry(EBonus4,BonusConvo4,HouseCG,BonusViewer)
+ConversationEntry(EBonusPart1,BonusConvoPart1,HouseCG,BonusViewer)
 ConversationEntryTerminator
 
 ALIGN 4 

@@ -15,6 +15,11 @@ POP
 #include "Tools/Tool Helpers.txt"
 //(mouthx,mouthy,eyesx,eyesy)
 ALIGN 4
+RetinaMug:
+#incbin "dmps/Retina.dmp"
+setMugEntry(0x1fd,RetinaMug,3,6,3,4)
+
+ALIGN 4
 BlairMug:
 #incbin "dmps/Blair.dmp"
 setMugEntry(0x2,BlairMug,3,6,3,4)

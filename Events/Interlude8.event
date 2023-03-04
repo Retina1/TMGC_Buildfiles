@@ -36,6 +36,7 @@ CharacterEvent(0x0,I8CallumEvent,Viridian,Callum)
 CharacterEvent(0x0,I8ManfredEvent,Viridian,Manfred)
 CharacterEvent(0x0,I8WilhelmEvent,Viridian,Wilhelm)
 CharacterEvent(0x0,I8ArgentEvent,Viridian,Argent)
+CharacterEvent(0x12,I8ChartreuseEvent,Viridian,Chartreuse)
 END_MAIN
 
 LocationBasedEvents:
@@ -91,6 +92,10 @@ ALIGN 4
 //rift/estelle
 //manfred/wilhelm
 
+I8ChartreuseEvent:
+Text(I8ChartreuseTalk)
+EndEvent
+
 I8FreddricEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
@@ -122,22 +127,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendDean)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendDeanYes)//they're gone
 FADI 0x10
 REMU Dean
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendDeanNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8DeanTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -147,22 +152,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendEliza)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendElizaYes)//they're gone
 FADI 0x10
 REMU Eliza
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendElizaNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8ElizaTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -172,22 +177,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendEstelle)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendEstelleYes)//they're gone
 FADI 0x10
 REMU Estelle
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendEstelleNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8EstelleTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -197,22 +202,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendRift)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendRiftYes)//they're gone
 FADI 0x10
 REMU Rift
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendRiftNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8RiftTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -222,22 +227,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendRose)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendRoseYes)//they're gone
 FADI 0x10
 REMU Rose
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendRoseNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8RoseTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -247,22 +252,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendDirk)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendDirkYes)//they're gone
 FADI 0x10
 REMU Dirk
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendDirkNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8DirkTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -272,22 +277,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendCallum)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendCallumYes)//they're gone
 FADI 0x10
 REMU Callum
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendCallumNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8CallumTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -297,22 +302,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendManfred)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendManfredYes)//they're gone
 FADI 0x10
 REMU Manfred
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendManfredNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8ManfredTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -322,22 +327,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendWilhelm)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendWilhelmYes)//they're gone
 FADI 0x10
 REMU Wilhelm
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendWilhelmNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8WilhelmTalk)//we're just talking
 LABEL 0x20
 EndEvent
 
@@ -347,22 +352,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
-Text(SendFreddric)//confirm sending them
+Text(SendArgent)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
-Text(SendFreddricYes)//they're gone
+Text(SendArgentYes)//they're gone
 FADI 0x10
 REMU Argent
 FADU 0x10
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
-Text(SendFreddricNo)//they're not gone
+Text(SendArgentNo)//they're not gone
 GOTO 0x20
 LABEL 0x1
 SVAL 0x1 0x2
 BEQ 0x20 0xc 0x1
-Text(I8FreddricTalk)//we're just talking
+Text(I8ArgentTalk)//we're just talking
 LABEL 0x20
 EndEvent
 

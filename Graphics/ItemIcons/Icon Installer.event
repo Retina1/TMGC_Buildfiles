@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(ToddhandIcon)
+#incbin "Tomes/Dark/Jormungand.dmp"
+ALIGN 4
 ItemIconEntry(UnyieldingIcon)
 #incbin "Swords/Unyielding.dmp"
 ALIGN 4
@@ -595,7 +598,7 @@ ItemIconEntry(BookOfOpistusIcon)
 #incbin "Tomes/Light/Divine Mirror.dmp"
 ALIGN 4
 ItemIconEntry(SDarkIcon)
-#incbin "Tomes/Dark/Mire.dmp"
+#incbin "Tomes/Dark/Wurm.dmp"
 ALIGN 4
 ItemIconEntry(PrototypeIcon)
 #incbin "Staves/Old(bad)/Arectaris.dmp"

@@ -387,7 +387,7 @@ BeginningScene:
 EnableFreeMovement
 MUSC AmbientWind
 Narration(Map2CG,Base8_Narration)
-CleanTextNoMap(EastHolanisCG,FillerDialogue)
+CleanTextNoMap(TentInsideCG,I8Opening)
 LOAD1 0x0 I8Units
 ENUN
 LOAD1 0x0 I8Props
@@ -399,7 +399,8 @@ ENDA
 
 EndingScene:
 DisableFreeMovement
-CleanTextNoMap(EastHolanisCG,FillerDialogue)
+MUSC AmbientWind
+CleanTextNoMap(EastHolanisCG,I8Ending)
 MoveToChapter(ChapterV5)
 ENDA
 

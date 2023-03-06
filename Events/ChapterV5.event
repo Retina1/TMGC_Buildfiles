@@ -261,6 +261,7 @@ LABEL 0x1
 EndEvent
 
 EndingScene:
+ENUF 0x66
 //ClearSupport(Character1,Character2) do this a bunch when you disa characters so supports of survivors don't crash the game
 CHECK_ALIVE Viridian
 BNE 0x100 0xc 0x0
@@ -335,7 +336,7 @@ BNE 0x112 0xc 0x0
 ClearSupport(Argent,Freddric)
 DISA Argent
 LABEL 0x112
-EVBIT_MODIFY 4
+EVBIT_MODIFY 3
 MUSC S_MainTheme
 CleanTextNoMap(OutdoorCastleCG,V5_Ending2)//girard's monologue
 SystemText(BlankCG,ArcViridianEnding)

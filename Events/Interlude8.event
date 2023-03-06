@@ -159,6 +159,7 @@ Text(SendElizaYes)//they're gone
 FADI 0x10
 REMU Eliza
 FADU 0x10
+ENUT 0x13
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -252,10 +253,22 @@ Text(WhatDoIDo)//generic "what do i do"
 REMA
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
+CHECK_EVENTID 0x13
+BNE 0x80 0xc 0x0
 Text(SendDirk)//confirm sending them
+GOTO 0x81
+LABEL 0x80
+Text(SendDirkAndEliza)//confirm sending them
+LABEL 0x81
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
+CHECK_EVENTID 0x13
+BNE 0x85 0xc 0x0
 Text(SendDirkYes)//they're gone
+GOTO 0x86
+LABEL 0x85
+Text(SendDirkYesAndEliza)//confirm sending them
+LABEL 0x86
 FADI 0x10
 REMU Dirk
 FADU 0x10

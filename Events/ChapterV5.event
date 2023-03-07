@@ -21,6 +21,8 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,V5Turn1,1)
+TurnEventPlayer(0x0,V5Turn2,2)
+TurnEventPlayer(0x0,V5Turn9,9)
 TurnEventPlayer(0x0,V5Turn14,14)
 TurnEventPlayer(0x0,V5EndCheck,1,255)
 TurnEventEnemy(0x0,V5EndCheck,1,255)
@@ -125,6 +127,10 @@ V5GirardSpawn:
 UNIT V5Holanis Baron 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA27R2 [Avalon] NoAI
 UNIT V5Holanis Valk 0x0 Level(16,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R3 [FlameSword] NoAI
 UNIT
+V5OpeningFoe:
+UNIT Bandit Baron 0x0 Level(20,Enemy,1) [24,0] 0x0 0x0 0x1 REDA27R2 [Avalon] NoAI
+UNIT Unknown Valk 0x0 Level(16,Enemy,1) [24,0] 0x0 0x0 0x1 REDA28R3 [FlameSword] NoAI
+UNIT
 ALIGN 4
 
 //use event id 0x66 to disable objective display
@@ -135,11 +141,18 @@ ENUN
 LoadUnitsByDifficulty(V5Easy,V5Normal,V5Hard)
 MUSC AmbientWind
 Narration(Map2CG,ChV5_Narration)
-CleanText(EastHolanisCG,FillerDialogue)//staking out fort until the others arrive
+CleanText(EastHolanisCG,V5_Opening)//staking out fort until the others arrive
 CAM1 Ciraweiss
+Reinforcements(V5OpeningFoe)
 FlashCursor(Ciraweiss,60)
 MUSC S_Chaos
-Text(FillerDialogue)//complaining about watch, sending troops off because of watchmen rumors
+Text(V5_Opening2)//complaining about watch, sending troops off because of watchmen rumors
+MOVE 60 Bandit [27,1]
+MOVE 60 Unknown [27,1]
+ENUN
+SilentKillUnit(Bandit)
+SilentKillUnit(Unknown)
+Text(V5_Opening3)
 CAM1 Viridian
 FlashCursor(Viridian,60)
 MUSC 0x0
@@ -149,6 +162,27 @@ EndEvent
 
 V5Turn1:
 SystemText(_V5SysText)
+EndEvent
+
+V5Turn2:
+CAM1 Ciraweiss
+FlashCursor(Ciraweiss,60)
+Text(V5_CiraweissNotice)
+EndEvent
+
+V5Turn9:
+CHECK_ALIVE Ciraweiss
+BEQ 0x1 0xc 0x0
+CAM1 Ciraweiss
+FlashCursor(Ciraweiss,60)
+Text(V5_CiraweissLeaves)
+SilentKillUnit(Ciraweiss)
+GOTO 0x2
+LABEL 0x1
+CAM1 [27,1]
+STAL 0x30
+CleanText(HallCG,V5_CiraweissLeft)
+LABEL 0x2
 EndEvent
 
 //if ethyl is alive by turn 7, she leaves to work on stuff
@@ -170,7 +204,7 @@ EndEvent
 V5GoodbyeForReal:
 CHECK_TURNS
 SVAL 0x1 19
-BEQ 0x1 0xc 0x1
+BNE 0x1 0xc 0x1
 Text(FillerDialogue)//so begins death
 LABEL 0x1
 Reinforcements(V5Death2)

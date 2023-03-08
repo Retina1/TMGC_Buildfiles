@@ -22,7 +22,15 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x0,V5Turn1,1)
 TurnEventPlayer(0x0,V5Turn2,2)
+TurnEventPlayer(0x0,V5Turn3,3)
+TurnEventPlayer(0x0,V5Turn4,4)
+TurnEventPlayer(0x0,V5Turn5,5)
+TurnEventPlayer(0x0,V5Turn6,6)
+TurnEventPlayer(0x0,V5Turn7,7)
+TurnEventPlayer(0x0,V5Turn8,8)
 TurnEventPlayer(0x0,V5Turn9,9)
+TurnEventPlayer(0x0,V5Turn11,11)
+TurnEventPlayer(0x0,V5Turn12,12)
 TurnEventPlayer(0x0,V5Turn14,14)
 TurnEventPlayer(0x0,V5EndCheck,1,255)
 TurnEventEnemy(0x0,V5EndCheck,1,255)
@@ -114,9 +122,8 @@ UNIT Holanis Ballistician 0x0 Level(20,Enemy,1) [29,1] DropItem 0x0 0x0 0x0 [Arc
 UNIT
 
 V5Death1:
-UNIT V5Holanis WyvLord 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA27R4 [MasterLance] NoAI
-UNIT V5Holanis WyvLord 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R5 [MasterAxe] NoAI
-UNIT V5Holanis WyvLord 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R5 [MasterAxe] NoAI
+UNIT V5Holanis Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R5 [WyvernBreath] NoAI
+UNIT V5Holanis Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R5 [WyvernBreath] NoAI
 UNIT
 V5Death2:
 UNIT V5Holanis SageF 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA27R5 [Annihilation] NoAI
@@ -131,9 +138,56 @@ V5OpeningFoe:
 UNIT Bandit Baron 0x0 Level(20,Enemy,1) [24,0] 0x0 0x0 0x1 REDA27R2 [Avalon] NoAI
 UNIT Unknown Valk 0x0 Level(16,Enemy,1) [24,0] 0x0 0x0 0x1 REDA28R3 [FlameSword] NoAI
 UNIT
-ALIGN 4
 
-//use event id 0x66 to disable objective display
+V5Turn3Spawn:
+UNIT Holanis SwdCav 0x0 Level(20,Enemy,1) [0,1] 0x0 0x0 0x1 REDA1R5 [SilverSword] NoAI
+UNIT Holanis Valk 0x0 Level(2,Enemy,1) [0,1] DropItem 0x0 0x1 REDA2R4 [Rapier] NoAI
+UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [0,1] 0x0 0x0 0x1 REDA3R3 [SilverBow] NoAI
+UNIT
+V5Turn4Spawn:
+UNIT Holanis SwdPeg 0x0 Level(20,Enemy,1) [6,20] 0x0 0x0 0x1 REDA6R19 [SilverSword] NoAI
+UNIT Holanis Berserker 0x0 Level(3,Enemy,1) [7,20] 0x0 0x0 0x1 REDA7R18 [HandAxe] NoAI
+UNIT Holanis Pirate 0x0 Level(20,Enemy,1) [8,20] 0x0 0x0 0x1 REDA8R19 [SilverAxe] NoAI
+UNIT
+V5Turn5Spawn:
+UNIT Holanis Hero 0x0 Level(3,Enemy,1) [29,14] 0x0 0x0 0x1 REDA28R14 [SilverSword] NoAI
+UNIT Holanis HeroF 0x0 Level(3,Enemy,1) [29,15] 0x0 0x0 0x1 REDA27R15 [BraveSword] NoAI
+UNIT Holanis Hero 0x0 Level(3,Enemy,1) [29,16] 0x0 0x0 0x1 REDA28R16 [Tomahawk] NoAI
+UNIT
+V5Turn6Spawn:
+UNIT Holanis LncWyv 0x0 Level(20,Enemy,1) [4,19] DropItem 0x0 0x0 0x0 [Dragonpike] NoAI
+UNIT Holanis AxeWyv 0x0 Level(20,Enemy,1) [7,16] 0x0 0x0 0x0 0x0 [Halberd,Hammer] NoAI
+UNIT Holanis LncWyv 0x0 Level(20,Enemy,1) [9,19] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Holanis Sniper 0x0 Level(20,Enemy,1) [14,18] 0x0 0x0 0x0 0x0 [BraveBow,Longbow,Greatbow] NoAI
+UNIT Holanis Berserker 0x0 Level(3,Enemy,1) [26,18] 0x0 0x0 0x0 0x0 [DevilAxe] NoAI
+UNIT
+V5Turn7Spawn:
+UNIT Holanis LncPal 0x0 Level(2,Enemy,1) [0,1] 0x0 0x0 0x1 REDA1R5 [SilverLance] NoAI
+UNIT Holanis AxePal 0x0 Level(2,Enemy,1) [0,1] 0x0 0x0 0x1 REDA1R3 [SilverAxe] NoAI
+UNIT Holanis Valk 0x0 Level(2,Enemy,1) [0,1] 0x0 0x0 0x1 REDA2R4 [Rapier] NoAI
+UNIT Holanis BowPal 0x0 Level(2,Enemy,1) [0,1] 0x0 0x0 0x1 REDA3R3 [SilverBow] NoAI
+UNIT Holanis SwdPal 0x0 Level(2,Enemy,1) [0,1] 0x0 0x0 0x1 REDA3R5 [SilverSword] NoAI
+UNIT
+V5Turn8Spawn:
+UNIT Holanis Falco 0x0 Level(3,Enemy,1) [13,0] 0x0 0x0 0x1 REDA13R2 [SilverSword] NoAI
+UNIT Holanis WyvLord 0x0 Level(3,Enemy,1) [14,0] 0x0 0x0 0x1 REDA13R2 [SilverLance] NoAI
+UNIT Holanis Falco 0x0 Level(3,Enemy,1) [15,0] DropItem 0x0 0x1 REDA13R2 [Shockstick] NoAI
+UNIT
+V5Turn11Spawn:
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [25,0] 0x0 0x0 0x0 0x0 [Flare,Silence] NoAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [29,0] 0x0 0x0 0x0 0x0 [Flare,Sleep] NoAI
+UNIT Holanis BowPal 0x0 Level(3,Enemy,1) [25,4] 0x0 0x0 0x0 0x0 [Greatbow] NoAI
+UNIT Holanis BowPal 0x0 Level(3,Enemy,1) [29,4] 0x0 0x0 0x0 0x0 [Greatbow] NoAI
+UNIT
+V5Turn12Spawn:
+UNIT Holanis Sorc 0x0 Level(6,Enemy,1) [29,14] 0x0 0x0 0x1 REDA28R14 [Hell] NoAI
+UNIT Holanis Sorc 0x0 Level(6,Enemy,1) [29,15] 0x0 0x0 0x1 REDA27R15 [Hell] NoAI
+UNIT Holanis Sorc 0x0 Level(6,Enemy,1) [29,16] 0x0 0x0 0x1 REDA28R16 [Hell] NoAI
+UNIT Holanis Sorc 0x0 Level(6,Enemy,1) [29,14] 0x0 0x0 0x1 REDA27R14 [Hell] NoAI
+UNIT Holanis Sorc 0x0 Level(6,Enemy,1) [29,15] 0x0 0x0 0x1 REDA26R15 [Hell] NoAI
+UNIT
+
+ALIGN 4
 
 BeginningScene:
 LOAD1 0x1 V5Units
@@ -156,7 +210,7 @@ Text(V5_Opening3)
 CAM1 Viridian
 FlashCursor(Viridian,60)
 MUSC 0x0
-Text(FillerDialogue)//survive, hint to stay away from the fort unless absolutely necessary
+Text(V5_Opening4)//survive, hint to stay away from the fort unless absolutely necessary
 GotoPrepScreen
 EndEvent
 
@@ -169,6 +223,30 @@ CAM1 Ciraweiss
 FlashCursor(Ciraweiss,60)
 Text(V5_CiraweissNotice)
 EndEvent
+V5Turn3:
+Reinforcements(V5Turn3Spawn)
+EndEvent
+V5Turn4:
+Reinforcements(V5Turn4Spawn)
+EndEvent
+V5Turn5:
+Reinforcements(V5Turn5Spawn)
+EndEvent
+V5Turn6:
+Reinforcements(V5Turn6Spawn)
+EndEvent
+V5Turn7:
+Reinforcements(V5Turn7Spawn)
+EndEvent
+V5Turn8:
+Reinforcements(V5Turn8Spawn)
+EndEvent
+V5Turn11:
+Reinforcements(V5Turn11Spawn)
+EndEvent
+V5Turn12:
+Reinforcements(V5Turn12Spawn)
+EndEvent
 
 V5Turn9:
 CHECK_ALIVE Ciraweiss
@@ -180,7 +258,7 @@ SilentKillUnit(Ciraweiss)
 GOTO 0x2
 LABEL 0x1
 CAM1 [27,1]
-STAL 0x30
+FlashCursor(27,1,60)
 CleanText(HallCG,V5_CiraweissLeft)
 LABEL 0x2
 EndEvent
@@ -190,6 +268,9 @@ EndEvent
 //turn 14 - ethyl/girard/whoever notes that the intruders are persistent and prepare to bring out the big guns
 
 V5Turn14:
+CAM1 [27,1]
+FlashCursor(27,1,60)
+CleanText(HallCG,V5_CiraweissAndGirard)
 MUSC 0x0
 SystemText(ThereWillBeNoSalvation)
 TILECHANGE 0x0

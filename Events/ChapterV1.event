@@ -168,7 +168,7 @@ Write_Word(10000,HereIsTheMoney)
 LoadUnitsByDifficulty(V1Easy,V1Normal,V1Hard)
 MUSC NarrationTheme4
 Narration(Map2CG,ChV1_Narration)
-CleanText(PathCG,V1Opening)
+CleanText(JungleCG,V1Opening)
 EVBIT_T 9
 LOAD1 0x1 V1Units
 ENUN
@@ -185,11 +185,11 @@ EndingScene:
 CHECK_EVENTID ClarqueAliveFlag
 BEQ 0x1 0xc 0x0
 MUSC VictoryTheme
-CleanTextNoMap(PathCG,V1EndingClarqueAlive)//clarque lives
+CleanTextNoMap(JungleCG,V1EndingClarqueAlive)//clarque lives
 GOTO 0x2
 LABEL 0x1
 MUSC VictoryMinor
-CleanTextNoMap(PathCG,V1EndingClarqueDead)//he doesn't - either way group wraps up
+CleanTextNoMap(JungleCG,V1EndingClarqueDead)//he doesn't - either way group wraps up
 LABEL 0x2
 MUSC AmbientBirds
 CleanTextNoMap(VillageCG,V1EndingReconvene)//reconvene
@@ -204,9 +204,9 @@ EndEvent
 
 V1ClarqueEvent:
 MUSC S_FE4Conversation
-CleanTextNoMap(PathCG,V1ViridianClarqueConvo)
+CleanTextNoMap(JungleCG,V1ViridianClarqueConvo)
 LocationText(PathCG,V1Flashback,ThreeYearsAgoLabel,S_WelcomeToLegend)
-CleanText(PathCG,V1ViridianClarqueConvo2)
+CleanText(JungleCG,V1ViridianClarqueConvo2)
 GiveItem(MasterSeal,Viridian)
 GiveItem(MasterBow,Viridian)
 MOVE 60 Clarque [0,8]

@@ -64,6 +64,8 @@ POIN Chapter18Conversations
 POIN Interlude6Conversations
 POIN Chapter19Conversations
 POIN Chapter20Conversations
+POIN ChapterV1Conversations
+POIN ChapterV2Conversations
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -88,8 +90,8 @@ ConversationEntry(EC0BlairKenneth,Prologue_Opening,PathCG,Prologue)
 ConversationEntry(EC0Village1,PNVillageText,HouseCG,Prologue)
 ConversationEntry(EC0Village2,PSVillageText,House2CG,Prologue)
 ConversationEntry(EC0BlairFight,PBlairBattle,PathCG,Prologue,S_SMTVBattle)
-ConversationEntry(EC0BossGen,PDavelarnBattle,PathCG,Prologue,S_SMT4B2)
-ConversationEntry(EC0BossDie,PDavelarnDeath,PathCG,Prologue,S_SMT4B2)
+ConversationEntry(EC0BossGen,PDavelarnBattle,VillageCG,Prologue,S_SMT4B2)
+ConversationEntry(EC0BossDie,PDavelarnDeath,VillageCG,Prologue,S_SMT4B2)
 ConversationEntry(EC0End1,Prologue_Ending,PathCG,Prologue,VictoryTheme)
 ConversationEntry(EC0End1Alt,Prologue_Ending_Dead_Kenneth,PathCG,Prologue,VictoryMinor)
 ConversationEntryTerminator
@@ -830,6 +832,49 @@ ConversationEntry(EC20End3,Ch20_EndingStinger,BlankCG,Chapter20,S_Chaos)
 ConversationEntryTerminator
 
 ALIGN 4
+ChapterV1Conversations:
+ConversationEntry(EV1Open1,V1Opening,JungleCG,ChapterV1)
+ConversationEntry(EV1Open2,V1Opening2,JungleCG,ChapterV1,S_BattleForStormHill)
+ConversationEntry(EV1Turn2,V1ClarqueSpeaks,JungleCG,ChapterV1)
+ConversationEntry(EV1Turn2Part2,V1ViridianRebuts,JungleCG,ChapterV1)
+ConversationEntry(EV1Recruit,V1Arrival,JungleCG,ChapterV1,RecruitmentThemeVirid)
+ConversationEntry(EV1Rift,V1RiftAscends,JungleCG,ChapterV1)
+ConversationEntry(EV1Village1,V1EastVillageText,VillageCG,ChapterV1)
+ConversationEntry(EV1Village2,V1WestVillageText,VillageCG,ChapterV1)
+ConversationEntry(EV1House1,V1NorthHouse,HouseCG,ChapterV1)
+ConversationEntry(EV1House2,V1SouthHouse,HouseCG,ChapterV1)
+ConversationEntry(EV1ClarqueTalk,V1ViridianClarqueConvo,JungleCG,ChapterV1,S_FE4Conversation)
+ConversationEntry(EV1ClarqueTalk2,V1Flashback,PathCG,ChapterV1,S_WelcomeToLegend)
+ConversationEntry(EV1ClarqueTalk3,V1ViridianClarqueConvo2,JungleCG,ChapterV1,S_WelcomeToLegend)
+ConversationEntry(EV1BossGen,V1ClarqueBattle,JungleCG,ChapterV1,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV1BossViridian,V1ClarqueViridianBattle,JungleCG,ChapterV1,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV1BossDie,V1ClarqueDeath,JungleCG,ChapterV1,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV1BossDieAlt,V1ClarqueDeathAlt,JungleCG,ChapterV1,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV1End1,V1EndingClarqueAlive,JungleCG,ChapterV1,VictoryTheme)
+ConversationEntry(EV1End1Alt,V1EndingClarqueDead,JungleCG,ChapterV1,VictoryMinor)
+ConversationEntry(EV1End2,V1EndingReconvene,VillageCG,ChapterV1)
+ConversationEntry(EV1End3,V1ElcorianPanic,HallCG,ChapterV1,S_RigorousJustice)
+ConversationEntry(EV1End4,V1TheJob,VillageCG,ChapterV1)
+ConversationEntryTerminator
+
+ALIGN 4
+ChapterV2Conversations:
+ConversationEntry(EV2Open1,V2Opening1,VillageCG,ChapterV2)
+ConversationEntry(EV2Open2,V2Opening2,PathCG,ChapterV2,S_Chaos)
+ConversationEntry(EV2Open3,V2Opening3,VillageCG,ChapterV2,S_Chaos)
+ConversationEntry(EV2Open4,V2Opening4,VillageCG,ChapterV2,S_BattleForStormHill)
+ConversationEntry(EV2Recruit,V2DirkCallumJoin,PathCG,ChapterV2,RecruitmentThemeVirid)
+ConversationEntry(EV2Village1,V2Village1Text,HouseCG,ChapterV2)
+ConversationEntry(EV2Village2,V2Village2Text,HouseCG,ChapterV2)
+ConversationEntry(EV2Village3,V2Village3Text,HouseCG,ChapterV2)
+ConversationEntry(EV2Village4,V2Village4Text,HouseCG,ChapterV2)
+ConversationEntry(EV2BossGen,V2DavelarnBattle,VillageCG,ChapterV2,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV2BossDie,V2DavelarnDeath,VillageCG,ChapterV2,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV2End1,V2Ending1,VillageCG,ChapterV2,VictoryTheme)
+ConversationEntry(EV2End2,V2Ending2,PathCG,ChapterV2,S_Chaos)
+ConversationEntryTerminator
+
+ALIGN 4
 BaseConversations:
 ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
 ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
@@ -1080,6 +1125,19 @@ ConversationEntry(EHollandaiseDeath,HollandaiseDeath,LowlandsCG,DeathQuoteViewer
 ConversationEntry(EVladmirDeath,VladmirDeath,LowlandsCG,DeathQuoteViewer)
 ConversationEntry(EHoratioDeath,HoratioDeath,LowlandsRiverCG,DeathQuoteViewer)
 ConversationEntry(ESimoneDeath,SimoneDeath,LowlandsCG,DeathQuoteViewer)
+ConversationEntry(EViridianDeath,ViridianDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(EFreddricDeath,FreddricDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(EDeanDeath,DeanDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(EElizaDeath,ElizaDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(EChartreuseDeath,ChartreuseDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(ERiftDeath,RiftDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(EEstelleDeath,EstelleDeath,JungleCG,DeathQuoteViewer)
+ConversationEntry(ERoseDeath,RoseDeath,VillageCG,DeathQuoteViewer)
+ConversationEntry(EDirkDeath,DirkDeath,VillageCG,DeathQuoteViewer)
+ConversationEntry(ECallumDeath,CallumDeath,VillageCG,DeathQuoteViewer)
+ConversationEntry(EManfredDeath,ManfredDeath,YgstraCG,DeathQuoteViewer)
+ConversationEntry(EWilhelmDeath,WilhelmDeath,YgstraCG,DeathQuoteViewer)
+ConversationEntry(EArgentDeath,ArgentDeath,YgstraCG,DeathQuoteViewer)
 ConversationEntry(EPtolemyDeath,PtolemyDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EJohanDeath,JohanDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EPeterDeath,PeterDeath,PathCG,DeathQuoteViewer)
@@ -1131,6 +1189,19 @@ ConversationEntry(EHollandaiseDeathEndgame,HollandaiseDeathEndgame,PathCG,FinalD
 ConversationEntry(EVladmirDeathEndgame,VladmirDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(EHoratioDeathEndgame,HoratioDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(ESimoneDeathEndgame,SimoneDeathEndgame,PathCG,FinalDeathQuoteViewer)
+ConversationEntry(EViridianDeathEndgame,ViridianDeathEndgame,JungleCG,FinalDeathQuoteViewer)
+ConversationEntry(EFreddricDeathEndgame,FreddricDeathEndgame,JungleCG,FinalDeathQuoteViewer)
+ConversationEntry(EDeanDeathEndgame,DeanDeathEndgame,JungleCG,FinalDeathQuoteViewer)
+ConversationEntry(EElizaDeathEndgame,ElizaDeathEndgame,JungleCG,FinalDeathQuoteViewer)
+ConversationEntry(EChartreuseDeathEndgame,ChartreuseDeathEndgame,JungleCG,FinalDeathQuoteViewer)
+ConversationEntry(ERiftDeathEndgame,RiftDeathEndgame,JungleCG,FinalDeathQuoteViewer)
+ConversationEntry(EEstelleDeathEndgame,EstelleDeathEndgame,JungleCG,FinalDeathQuoteViewer)
+ConversationEntry(ERoseDeathEndgame,RoseDeathEndgame,VillageCG,FinalDeathQuoteViewer)
+ConversationEntry(EDirkDeathEndgame,DirkDeathEndgame,VillageCG,FinalDeathQuoteViewer)
+ConversationEntry(ECallumDeathEndgame,CallumDeathEndgame,VillageCG,FinalDeathQuoteViewer)
+ConversationEntry(EManfredDeathEndgame,ManfredDeathEndgame,YgstraCG,FinalDeathQuoteViewer)
+ConversationEntry(EWilhelmDeathEndgame,WilhelmDeathEndgame,YgstraCG,FinalDeathQuoteViewer)
+ConversationEntry(EArgentDeathEndgame,ArgentDeathEndgame,YgstraCG,FinalDeathQuoteViewer)
 ConversationEntry(EPtolemyDeathEndgame,PtolemyDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(EJohanDeathEndgame,JohanDeathEndgame,PathCG,FinalDeathQuoteViewer)
 ConversationEntry(EPeterDeathEndgame,PeterDeathEndgame,PathCG,FinalDeathQuoteViewer)

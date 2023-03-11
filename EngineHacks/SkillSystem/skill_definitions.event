@@ -811,6 +811,7 @@
 //Author Unknown (Initial Commit)
 #define ArmsthriftID 138
 
+
 //Dazzle: Opponents cannot counterattack this unit.
 //By circleseverywhere
 #define DazzleID 140
@@ -1062,8 +1063,10 @@
 #define BoonID 95
 
 //Synchronize: Statuses are also applied to the attacker.
+//prf unlocker
 //By Sme
 #define SynchronizeID 96
+#define VersatileID SynchronizeID
 
 //Bargain: Halves prices in shops.
 //By Sme

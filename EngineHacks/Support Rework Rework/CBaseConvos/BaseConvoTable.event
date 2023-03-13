@@ -608,6 +608,12 @@
 			bg(EastHolanisCG)
 			text(V4_Manfred_Wilhelm_Base)
 			baseSupport(Manfred,Wilhelm,BPSupport)
+	Chapter(ChapterV5)
+		Entry
+			bg(EastHolanisCG)
+			music(LoverConvoSong)
+			text(V5_Viridian_Freddric_Base)
+			baseSupport(Viridian,Freddric,ASupport)//make not happen if fred was sent in I8
 	POP
 	}
 #endif // BASE_CONVO_TABLE

@@ -1,8 +1,8 @@
-//game over fix?
-/*PUSH
-  ORG 0x59210C
-  POIN 0xD391
-POP*/
+//enemy healing - strange behaviors but might be worth examination
+/*PUSH 
+ORG $5A83A1
+BYTE 99 // Percentage of health to accept staff healing at when not in recovery mode, I guess 
+POP*/ 
 
 //kill supports
 PUSH

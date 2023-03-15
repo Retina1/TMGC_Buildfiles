@@ -66,6 +66,8 @@ POIN Chapter19Conversations
 POIN Chapter20Conversations
 POIN ChapterV1Conversations
 POIN ChapterV2Conversations
+POIN Interlude7Conversations
+POIN ChapterV3Conversations
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -875,6 +877,55 @@ ConversationEntry(EV2End2,V2Ending2,PathCG,ChapterV2,S_Chaos)
 ConversationEntryTerminator
 
 ALIGN 4
+Interlude7Conversations:
+ConversationEntry(EI7Open,I7Opening,StreetCG,Interlude7)
+ConversationEntry(EI7Gold,I7Gold,StreetCG,Interlude7)
+ConversationEntry(EI7EthylElcorian,I7ElcorianEthylConvo,StreetCG,Interlude7,S_Chaos)
+ConversationEntry(EI7Tarquin,I7TarquinConvo,StreetCG,Interlude7,S_RigorousJustice)
+ConversationEntry(EI7JoanSonia,I7JoanSoniaConvo,StreetCG,Interlude7)
+ConversationEntry(EI7Family,I7FamilyConvo,StreetCG,Interlude7,S_CircleOfTheMoon)
+ConversationEntry(EI7House1,I7House1Text,House2CG,Interlude7)
+ConversationEntry(EI7House2,I7House2Text,House2CG,Interlude7)
+ConversationEntry(EI7House3,I7House3Text,House2CG,Interlude7)
+ConversationEntry(EI7Inn,I7InnText,House2CG,Interlude7)
+ConversationEntry(EI7Merchant,I7MerchantTalk,StreetCG,Interlude7)
+ConversationEntry(EI7MerchantPoor,I7NoMoneyHa,StreetCG,Interlude7)
+ConversationEntry(EI7MerchantDeny,I7ScrollDenied,StreetCG,Interlude7)
+ConversationEntry(EI7MerchantBuy,I7ScrollPurchased,StreetCG,Interlude7)
+ConversationEntry(EI7LeaveAlt,I7TalkToYourFamilyGoober,StreetCG,Interlude7)
+ConversationEntry(EI7Leave,I7ConfirmLeave,StreetCG,Interlude7)
+ConversationEntry(EI7NotYet,I7NotYet,StreetCG,Interlude7)
+ConversationEntry(EI7End0,I7ReleaseMe,StreetCG,Interlude7)
+ConversationEntry(EI7End1,I7DinnerScene,HouseCG,Interlude7,S_WelcomeToLegend)
+ConversationEntry(EI7End2,I7TheNextJob,StreetCG,Interlude7,S_RigorousJustice)
+ConversationEntry(EI7End2Alt,I7TheNextJobTarquinKnown,StreetCG,Interlude7,S_RigorousJustice)
+ConversationEntry(EI7End3,I7WrapUp,HouseCG,Interlude7)
+ConversationEntryTerminator
+
+ALIGN 4
+ChapterV3Conversations:
+ConversationEntry(EV3Open1,V3_Opening1,YgstraCG,ChapterV3)
+ConversationEntry(EV3Open2,V3_Opening2,YgstraCG,ChapterV3,S_Stratagem)
+ConversationEntry(EV3Open3,V3_Opening3,YgstraCG,ChapterV3,S_Stratagem)
+ConversationEntry(EV3Open4,V3_Opening4,YgstraCG,ChapterV3,S_BattleForStormHill)
+ConversationEntry(EV3Arrival,V3_Arrival,YgstraCG,ChapterV3,RecruitmentThemeVirid)
+ConversationEntry(EV3Civ1,V3_Civ1,YgstraCG,ChapterV3)
+ConversationEntry(EV3Civ2,V3_Civ2,YgstraCG,ChapterV3)
+ConversationEntry(EV3Civ3,V3_Civ3,YgstraCG,ChapterV3)
+ConversationEntry(EV3Civ4,V3_Civ4,YgstraCG,ChapterV3)
+ConversationEntry(EV3BossGen,V3ReynardBattle,YgstraCG,ChapterV3,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV3BossCallum,V3ReynardCallumBattle,YgstraCG,ChapterV3,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV3BossDie,V3ReynardDefeat,YgstraCG,ChapterV3,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV3BossDieAlt,V3ReynardDefeatAlt,YgstraCG,ChapterV3,S_TheOnlyThingTheyFearIsYou)
+ConversationEntry(EV3SeizeAlt,V3_DoorsRemain,YgstraCG,ChapterV3)
+ConversationEntry(EV3Seize,V3_NoDoorsRemain,YgstraCG,ChapterV3)
+ConversationEntry(EV3End1,V3Ending1,YgstraCG,ChapterV3)
+ConversationEntry(EV3End2,V3Ending2,HallCG,ChapterV3,S_Chaos)
+ConversationEntry(EV3End3,V3Ending3,HallCG,ChapterV3,S_RigorousJustice)
+ConversationEntry(EV3End4,V3Ending4,YgstraCG,ChapterV3,S_WelcomeToLegend)
+ConversationEntryTerminator
+
+ALIGN 4
 BaseConversations:
 ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
 ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
@@ -1072,6 +1123,7 @@ ConversationEntry(EDamienZachariasB,DamienZachariasBSupport,LowlandsCG,Support2V
 ConversationEntry(EAvanToddsworthCP,C18_Avan_Toddsworth_Base,LowlandsCG,Support2Viewer)
 ConversationEntry(EArtemisHollandaiseC,C20_Artemis_Hollandaise_Base,LowlandsCG,Support2Viewer)
 ConversationEntry(EViridianFreddricBP,V3_Viridian_Freddric_Base,YgstraCG,Support2Viewer)
+ConversationEntry(EViridianFreddricA,V5_Viridian_Freddric_Base,EastHolanisCG,Support2Viewer,LoverConvoSong)
 ConversationEntry(EViridianChartreuseBP,V4_Viridian_Chartreuse_Base,EastHolanisCG,Support2Viewer)
 ConversationEntry(EElizaRoseB,V4_Eliza_Rose_Base,EastHolanisCG,Support2Viewer)
 ConversationEntry(EChartreuseEstelleB,V3_Chartreuse_Estelle_Base,YgstraCG,Support2Viewer)

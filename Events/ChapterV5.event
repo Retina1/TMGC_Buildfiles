@@ -31,6 +31,7 @@ TurnEventPlayer(0x0,V5Turn8,8)
 TurnEventPlayer(0x0,V5Turn9,9)
 TurnEventPlayer(0x0,V5Turn11,11)
 TurnEventPlayer(0x0,V5Turn12,12)
+TurnEventPlayer(0x0,V5Turn13,13)
 TurnEventPlayer(0x0,V5Turn14,14)
 TurnEventPlayer(0x0,V5EndCheck,1,255)
 TurnEventEnemy(0x0,V5EndCheck,1,255)
@@ -187,6 +188,10 @@ UNIT Holanis Sorc 0x0 Level(6,Enemy,1) [29,14] 0x0 0x0 0x1 REDA27R14 [Hell] NoAI
 UNIT Holanis Sorc 0x0 Level(6,Enemy,1) [29,15] 0x0 0x0 0x1 REDA26R15 [Hell] NoAI
 UNIT
 
+V5Turn13Spawn:
+UNIT SecretClarque BowPal 0x0 Level(1,NPC,1) [6,20] 0x0 0x0 0x1 REDA7R19 [0x0] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -247,6 +252,23 @@ EndEvent
 V5Turn12:
 Reinforcements(V5Turn12Spawn)
 EndEvent
+V5Turn13:
+CHECK_EVENTID ClarqueAliveFlag
+BEQ 0x1 0xc 0x0
+Reinforcements(V5Turn13Spawn)
+STAL 0x20
+MOVE 60 SecretClarque [8,17]
+ENUN
+STAL 0x30
+MOVE 60 SecretClarque [7,18]
+ENUN
+STAL 0x10
+MOVE 60 SecretClarque [7,20]
+ENUN
+SilentKillUnit(SecretClarque)
+ENUT ClarqueSeenFlag
+LABEL 0x1
+EndEvent
 
 V5Turn9:
 CHECK_ALIVE Ciraweiss
@@ -263,10 +285,6 @@ CleanText(HallCG,V5_CiraweissLeft)
 LABEL 0x2
 EndEvent
 
-//if ethyl is alive by turn 7, she leaves to work on stuff
-//on turn 13, have viridian comment that they've held off the worst of it
-//turn 14 - ethyl/girard/whoever notes that the intruders are persistent and prepare to bring out the big guns
-
 V5Turn14:
 CAM1 [27,1]
 FlashCursor(27,1,60)
@@ -278,6 +296,9 @@ TILECHANGE 0x1
 ENUT 0x4
 ENUT 0x66
 EndEvent
+
+
+
 
 V5Goodbye:
 Reinforcements(V5Death1)

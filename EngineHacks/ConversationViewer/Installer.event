@@ -68,6 +68,7 @@ POIN ChapterV1Conversations
 POIN ChapterV2Conversations
 POIN Interlude7Conversations
 POIN ChapterV3Conversations
+POIN ChapterV4Conversations
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -923,6 +924,23 @@ ConversationEntry(EV3End1,V3Ending1,YgstraCG,ChapterV3)
 ConversationEntry(EV3End2,V3Ending2,HallCG,ChapterV3,S_Chaos)
 ConversationEntry(EV3End3,V3Ending3,HallCG,ChapterV3,S_RigorousJustice)
 ConversationEntry(EV3End4,V3Ending4,YgstraCG,ChapterV3,S_WelcomeToLegend)
+ConversationEntryTerminator
+
+ALIGN 4
+ChapterV4Conversations:
+ConversationEntry(EV4Open1,V4_Opening,HouseCG,ChapterV4)
+ConversationEntry(EV4Open2,V4_Opening2,HouseCG,ChapterV4,S_Neutral)
+ConversationEntry(EV4Open3,V4_Opening3,EastHolanisCG,ChapterV4)
+ConversationEntry(EV4Open4,V4_Opening4,EastHolanisCG,ChapterV4,S_Crisis)
+ConversationEntry(EV4Village1,V4NorthVillage,VillageCG,ChapterV4)
+ConversationEntry(EV4Village2,V4SouthVillage,VillageCG,ChapterV4)
+ConversationEntry(EV4Dark1,V4DarkeningBegins,EastHolanisCG,ChapterV4)
+ConversationEntry(EV4Dark2,V4Hurry,EastHolanisCG,ChapterV4)
+ConversationEntry(EV4Dark3,V4GameOver,EastHolanisCG,ChapterV4)
+ConversationEntry(EV4End1,V4_Ending,EastHolanisCG,ChapterV4,S_FE4Conversation)
+ConversationEntry(EV4End2,V4_Ending2,BlankCG,ChapterV4)
+ConversationEntry(EV4End3,V4_Ending3,TentInsideCG,ChapterV4)
+ConversationEntry(EV4End4,V4_Ending4,HallCG,ChapterV4,S_RigorousJustice)
 ConversationEntryTerminator
 
 ALIGN 4

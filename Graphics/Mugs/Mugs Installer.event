@@ -282,6 +282,11 @@ HollandaiseMug:
 setMugEntry(0x2b,HollandaiseMug,3,5,3,3)
 
 ALIGN 4
+HollandaisePromoMug:
+#incbin "dmps/HollandaisePromo.dmp"
+setMugEntry(0x117,HollandaisePromoMug,3,5,3,3)
+
+ALIGN 4
 HoratioMug:
 #incbin "dmps/Horatio.dmp"
 setMugEntry(0x46,HoratioMug,3,6,3,4)

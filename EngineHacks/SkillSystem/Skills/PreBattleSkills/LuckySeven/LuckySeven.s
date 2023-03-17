@@ -32,6 +32,16 @@ ldrh	r1, [r4,r0]	@load avoid
 add	r1, #0x4d	@add 77 to avoid
 strh	r1, [r4,r0]     @store
 
+mov	r0, #0x66
+ldrh	r1, [r4,r0]	@load crit
+add	r1, #0x4d	@add 77 to crit
+strh	r1, [r4,r0]     @store
+
+mov	r0, #0x5e
+ldrh	r1, [r4,r0]	@load as
+add	r1, #0x4d	@add 77 to as
+strh	r1, [r4,r0]     @store
+
 End:
 pop	{r4, r15}
 .align

@@ -39,6 +39,11 @@
 
 
 {
+#include "CharacterSpecific\CassiusU\Axe Installer.event"
+#include "CharacterSpecific\CassiusU\Handaxe Installer.event"
+#include "CharacterSpecific\CassiusU\Unarmed Installer.event"
+}
+{
 #include "Brigand\Axe Installer.event"
 #include "Brigand\Handaxe Installer.event"
 #include "Brigand\Unarmed Installer.event"
@@ -450,6 +455,13 @@ ALIGN 4
 ApexAnims:
 MagicAnim(0xe7)
 StaffAnim(0xe6)
+EndAnim
+
+ALIGN 4
+CassiusUAnims:
+AxeAnim(0xe8)
+HandAxeAnim(0xe9)
+UnarmedAnim(0xea)
 EndAnim
 
 ALIGN 4

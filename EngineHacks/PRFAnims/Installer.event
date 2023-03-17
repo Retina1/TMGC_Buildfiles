@@ -24,6 +24,7 @@ POIN CustomAnimeTable
 
 #define CustomAnimationSet(unit,class,pointer) "BYTE unit; BYTE class; BYTE 0x00; BYTE 0x00; WORD pointer"
 CustomAnimeTable:
+CustomAnimationSet(Cassius,AxeCav,CassiusUAnims|IsPointer)
 CustomAnimationSet(Rift,SwMast,RiftAnims|IsPointer)
 CustomAnimationSet(Damien,Archer,DamienUAnims|IsPointer)
 CustomAnimationSet(Rose,SageF,RosePAnims|IsPointer)

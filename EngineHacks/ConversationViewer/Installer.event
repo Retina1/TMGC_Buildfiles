@@ -69,6 +69,8 @@ POIN ChapterV2Conversations
 POIN Interlude7Conversations
 POIN ChapterV3Conversations
 POIN ChapterV4Conversations
+POIN Interlude8Conversations
+POIN ChapterV5Conversations
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -941,6 +943,90 @@ ConversationEntry(EV4End1,V4_Ending,EastHolanisCG,ChapterV4,S_FE4Conversation)
 ConversationEntry(EV4End2,V4_Ending2,BlankCG,ChapterV4)
 ConversationEntry(EV4End3,V4_Ending3,TentInsideCG,ChapterV4)
 ConversationEntry(EV4End4,V4_Ending4,HallCG,ChapterV4,S_RigorousJustice)
+ConversationEntryTerminator
+
+ALIGN 4
+Interlude8Conversations:
+ConversationEntry(EI8Open,I8Opening,TentInsideCG,Interlude8)
+ConversationEntry(EI8TalkChartreuse,I8ChartreuseTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkFreddric,I8FreddricTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideFreddric,SendFreddric,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesFreddric,SendFreddricYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoFreddric,SendFreddricNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkDirk,I8DirkTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideDirk,SendDirk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesDirk,SendDirkYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoDirk,SendDirkNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkEliza,I8ElizaTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideEliza,SendEliza,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesEliza,SendElizaYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoEliza,SendElizaNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkRift,I8RiftTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideRift,SendRift,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesRift,SendRiftYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoRift,SendRiftNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkEstelle,I8EstelleTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideEstelle,SendEstelle,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesEstelle,SendEstelleYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoEstelle,SendEstelleNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkRose,I8RoseTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideRose,SendRose,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesRose,SendRoseYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoRose,SendRoseNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkDirk,I8DirkTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideDirk,SendDirk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesDirk,SendDirkYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideDirkAlt,SendDirkAndEliza,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesDirkAlt,SendDirkYesAndEliza,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoDirk,SendDirkNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkCallum,I8CallumTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideCallum,SendCallum,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesCallum,SendCallumYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoCallum,SendCallumNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkManfred,I8ManfredTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideManfred,SendManfred,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesManfred,SendManfredYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoManfred,SendManfredNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkWilhelm,I8WilhelmTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideWilhelm,SendWilhelm,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesWilhelm,SendWilhelmYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoWilhelm,SendWilhelmNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8TalkArgent,I8ArgentTalk,EastHolanisCG,Interlude8)
+ConversationEntry(EI8DecideArgent,SendArgent,EastHolanisCG,Interlude8)
+ConversationEntry(EI8YesArgent,SendArgentYes,EastHolanisCG,Interlude8)
+ConversationEntry(EI8NoArgent,SendArgentNo,EastHolanisCG,Interlude8)
+ConversationEntry(EI8End,I8Ending,EastHolanisCG,Interlude8)
+ConversationEntryTerminator
+
+ALIGN 4
+ChapterV5Conversations:
+ConversationEntry(EV5Open1,V5_Opening,EastHolanisCG,ChapterV5)
+ConversationEntry(EV5Open2,V5_Opening2,OutdoorCastleCG,ChapterV5,S_Chaos)
+ConversationEntry(EV5Open3,V5_Opening3,OutdoorCastleCG,ChapterV5,S_Chaos)
+ConversationEntry(EV5Open4,V5_Opening4,EastHolanisCG,ChapterV5)
+ConversationEntry(EV5Noticed,V5_CiraweissNotice,OutdoorCastleCG,ChapterV5)
+ConversationEntry(EV5Leaves,V5_CiraweissLeaves,OutdoorCastleCG,ChapterV5)
+ConversationEntry(EV5Left,V5_CiraweissLeft,HallCG,ChapterV5)
+ConversationEntry(EV5OhNo,V5_CiraweissAndGirard,HallCG,ChapterV5)
+ConversationEntry(EV5BossGen,V5CiraweissBattle,OutdoorCastleCG,ChapterV5,S_ClashOfCalamity)
+ConversationEntry(EV5BossViridian,V5CiraweissViridianBattle,OutdoorCastleCG,ChapterV5,S_ClashOfCalamity)
+ConversationEntry(EV5BossDie,V5CiraweissDefeat,OutdoorCastleCG,ChapterV5,S_ClashOfCalamity)
+ConversationEntry(EViridianDeath,V5ViridianDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EFreddricDeath,V5FreddricDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EDeanDeath,V5DeanDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EElizaDeath,V5ElizaDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EChartreuseDeath,V5ChartreuseDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(ERiftDeath,V5RiftDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EEstelleDeath,V5EstelleDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(ERoseDeath,V5RoseDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EDirkDeath,V5DirkDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(ECallumDeath,V5CallumDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EManfredDeath,V5ManfredDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EWilhelmDeath,V5WilhelmDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EArgentDeath,V5ArgentDeath,EastHolanisCG,ChapterV5)
+ConversationEntry(EV5End1,V5_Ending,OutdoorCastleCG,ChapterV5)
+ConversationEntry(EV5End1Alt,V5_EndingAlt,OutdoorCastleCG,ChapterV5)
+ConversationEntry(EV5End2,V5_Ending2,OutdoorCastleCG,ChapterV5,S_MainTheme)
 ConversationEntryTerminator
 
 ALIGN 4

@@ -61,6 +61,8 @@ CharacterEvent(BaseFlag1,I6ArtemisTalk,Blair,Artemis)//done
 CharacterEvent(BaseFlag2,I6HollandaiseTalk,Blair,Hollandaise)//done
 CharacterEvent(BaseFlag3,I6VladmirTalk,Blair,Vladmir)//done
 CharacterEvent(BaseFlag4,I6AddingtonTalk,Blair,Addington)//done
+CharacterEvent(BaseFlag5,I6AgnesTalk,Blair,Agnes)
+CharacterEvent(BaseFlag6,I6GaylordTalk,Blair,Gaylord)
 END_MAIN
 
 LocationBasedEvents:
@@ -169,6 +171,14 @@ SystemText(I6ApolloHPUp)
 AddUnitStatus(Apollo,MaxHP,5)
 SetSupport(Apollo,Bechamel,BSupport,1)
 LABEL 0x2
+EndEvent
+
+I6AgnesTalk:
+Text(I6AgnesConvo)
+EndEvent
+
+I6GaylordTalk:
+Text(I6GaylordConvo)
 EndEvent
 
 I6FlynnTalk:

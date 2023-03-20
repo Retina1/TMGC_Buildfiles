@@ -21,6 +21,11 @@ and r0,r1
 cmp r0,#0
 bne GoBack @if so, don't do durability loss
 
+@make sure this is the actual attacker so the ai doesn't lose durability ok thanks
+ldr r0,=#0x203A4EC
+cmp r0,r4
+bne GoBack
+
 @table indexed by attack type containing extra durability cost
 ldr r0,=CombatArtCostTable
 ldr r1,=#0x0203F101 @location of attack type byte 

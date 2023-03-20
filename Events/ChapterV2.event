@@ -81,11 +81,61 @@ UNIT Callum SwdPal 0x0 Level(11,Ally,0) [0,16] 0x0 0x0 0x1 REDA3R16 [GildedSword
 UNIT
 
 V2Easy:
-UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT DalstRebel Archer 0x0 Level(14,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [SteelBow] ChaseOnceApproachedAI
+UNIT DalstRebel AxeArm 0x0 Level(14,Enemy,1) [18,15] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Bruiser 0x0 Level(16,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT DalstRebel Hunter 0x0 Level(15,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [SteelBow] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [1,19] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [8,15] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel WarriorF 0x0 Level(1,Enemy,1) [13,6] DropItem 0x0 0x0 0x0 [SteelAxe,IronRune] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [17,10] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Archer 0x0 Level(16,Enemy,1) [18,1] DropItem 0x0 0x0 0x0 [SteelBow] GroupThreeAI
+UNIT DalstRebel Soldier 0x0 Level(14,Enemy,1) [17,2] DropItem 0x0 0x0 0x0 [Axereaver] GroupThreeAI
+UNIT DalstRebel Merc 0x0 Level(16,Enemy,1) [18,2] DropItem 0x0 0x0 0x0 [SteelSword,MasterSeal] GroupThreeAI
+UNIT DalstRebel SwdCav 0x0 Level(16,Enemy,1) [19,2] DropItem 0x0 0x0 0x0 [Lancereaver] GroupThreeAI
+UNIT DalstRebel Fighter 0x0 Level(14,Enemy,1) [18,3] DropItem 0x0 0x0 0x0 [Swordreaver] GroupThreeAI
+UNIT DalstRebel Brigand 0x0 Level(16,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT DalstRebel SwdCav 0x0 Level(16,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [SilverSword] DelayedAI
+UNIT DalstRebel LncCav 0x0 Level(16,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [SilverLance] DelayedAI
+UNIT DalstRebel Mage 0x0 Level(16,Enemy,1) [10,7] DropItem 0x0 0x0 0x0 [Sagittae] DelayedAI
+UNIT DalstRebel LncArm 0x0 Level(15,Enemy,1) [5,3] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT DalstRebel LncArm 0x0 Level(15,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT DalstRebel DarkM 0x0 Level(17,Enemy,1) [2,3] DropItem 0x0 0x0 0x0 [Nightfall,DoorKey] GroupOnePaceAI
+UNIT DalstRebel Merc 0x0 Level(16,Enemy,1) [1,4] DropItem 0x0 0x0 0x0 [SilverSword] GroupOnePaceAI
+UNIT DalstRebel Ballistician 0x0 Level(18,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
+UNIT DalstRebel Ballistician 0x0 Level(18,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
+UNIT DLDavelarn Deserter 0x0 Level(19,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [GildedLance, Spear] NeverMoveAI
 UNIT
 
 V2Normal:
-UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
+UNIT DalstRebel Archer 0x0 Level(14,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [SteelBow] ChaseOnceApproachedAI
+UNIT DalstRebel AxeArm 0x0 Level(14,Enemy,1) [18,15] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Bruiser 0x0 Level(16,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT DalstRebel Hunter 0x0 Level(15,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [SteelBow] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [1,19] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [8,15] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel WarriorF 0x0 Level(1,Enemy,1) [13,6] DropItem 0x0 0x0 0x0 [SteelAxe,IronRune] ChaseOnceApproachedAI
+UNIT DalstRebel Brigand 0x0 Level(14,Enemy,1) [17,10] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
+UNIT DalstRebel Sniper 0x0 Level(2,Enemy,1) [18,1] DropItem 0x0 0x0 0x0 [SteelBow] GroupThreeAI
+UNIT DalstRebel Soldier 0x0 Level(14,Enemy,1) [17,2] DropItem 0x0 0x0 0x0 [Axereaver] GroupThreeAI
+UNIT DalstRebel Hero 0x0 Level(2,Enemy,1) [18,2] DropItem 0x0 0x0 0x0 [SteelSword,MasterSeal] GroupThreeAI
+UNIT DalstRebel SwdCav 0x0 Level(16,Enemy,1) [19,2] DropItem 0x0 0x0 0x0 [Lancereaver] GroupThreeAI
+UNIT DalstRebel Fighter 0x0 Level(14,Enemy,1) [18,3] DropItem 0x0 0x0 0x0 [Swordreaver] GroupThreeAI
+UNIT DalstRebel Brigand 0x0 Level(16,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT DalstRebel SwdCav 0x0 Level(16,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [SilverSword] DelayedAI
+UNIT DalstRebel LncCav 0x0 Level(16,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [SilverLance] DelayedAI
+UNIT DalstRebel Mage 0x0 Level(16,Enemy,1) [10,7] DropItem 0x0 0x0 0x0 [Sagittae] DelayedAI
+UNIT DalstRebel AxeArm 0x0 Level(18,Enemy,1) [12,4] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT DalstRebel AxeArm 0x0 Level(18,Enemy,1) [14,4] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT DalstRebel LncArm 0x0 Level(15,Enemy,1) [5,3] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT DalstRebel LncArm 0x0 Level(15,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT DalstRebel DarkM 0x0 Level(17,Enemy,1) [2,3] DropItem 0x0 0x0 0x0 [Nightfall,DoorKey] GroupOnePaceAI
+UNIT DalstRebel Merc 0x0 Level(16,Enemy,1) [1,4] DropItem 0x0 0x0 0x0 [SilverSword] GroupOnePaceAI
+UNIT DalstRebel Ballistician 0x0 Level(18,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
+UNIT DalstRebel Ballistician 0x0 Level(18,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [MiniBallista] NeverMoveAI
+UNIT DLDavelarn Deserter 0x0 Level(19,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [GildedLance, Spear] NeverMoveAI
 UNIT
 
 V2Hard:

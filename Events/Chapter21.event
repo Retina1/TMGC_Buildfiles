@@ -28,6 +28,16 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+//escape
+//how to - assign the escapes a flag besides seize, turn it on at map start
+//once all greens exist, turn off that flag
+Escape(0x8,C21EscapeCheck,0,8)
+Escape(0x8,C21EscapeCheck,0,9)
+Escape(0x8,C21EscapeCheck,20,8)
+Escape(0x8,C21EscapeCheck,20,9)
+Escape(0x8,C21EscapeCheck,4,37)
+Escape(0x8,C21EscapeCheck,5,37)
+Escape(0x8,C21EscapeCheck,6,37)
 //prison doors
 Door(2,2)
 Door(3,2)
@@ -142,9 +152,19 @@ UNIT Holanis Mage 0x0 Level(15,Enemy,1) [5,15] DropItem 0x0 0x0 0x0 [Thunder,Doo
 UNIT
 
 C21Hard:
+UNIT Holanis Myrm 0x0 Level(20,Enemy,1) [7,21] 0x0 0x0 0x0 0x0 [FlameSword] NoAI
+UNIT Holanis Myrm 0x0 Level(20,Enemy,1) [11,21] 0x0 0x0 0x0 0x0 [Runesword] NoAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [20,20] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT Holanis SwMastF 0x0 Level(3,Enemy,1) [6,16] 0x0 0x0 0x0 0x0 [GildedSword] GroupTwoAI
+UNIT Holanis Sniper 0x0 Level(3,Enemy,1) [6,15] 0x0 0x0 0x0 0x0 [GildedBow] GroupTwoAI
+UNIT Holanis LncGen 0x0 Level(4,Enemy,1) [14,16] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(3,Enemy,1) [0,28] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
 UNIT Holanis MageF 0x0 Level(20,Enemy,1) [12,37] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
 UNIT Holanis MageF 0x0 Level(20,Enemy,1) [5,28] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [20,24] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [4,4] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [17,5] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
 UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [7,25] 0x0 0x0 0x0 0x0 [Fenrir] NoAI
 UNIT Holanis AxePal 0x0 Level(3,Enemy,1) [20,31] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
 UNIT Holanis BowPal 0x0 Level(3,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
@@ -153,11 +173,14 @@ UNIT Holanis Hero 0x0 Level(4,Enemy,1) [20,35] 0x0 0x0 0x0 0x0 [SilverAxe] Group
 UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [20,37] 0x0 0x0 0x0 0x0 [Greatbow] GroupOneAI
 UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [12,30] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [13,31] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [8,24] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Holanis SorcF 0x0 Level(3,Enemy,1) [2,27] 0x0 0x0 0x0 0x0 [Nosferatu] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(15,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [Stormbow] NeverMoveAI
-UNIT Nathaniel Sorc 0x0 Level(10,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Nocturne] NeverMoveAI
+UNIT Larson Assass 0x0 Level(10,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [GildedBow,GildedSword,Speedwings] ChaseOnceApproachedAI
+UNIT Nathaniel Sorc 0x0 Level(10,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Nocturne,Talisman] NeverMoveAI
 UNIT
 
 C21PtolemySpawn:
@@ -173,6 +196,13 @@ UNIT
 
 ALIGN 4
 
+C21EscapeCheck:
+CHECK_EVENTID 0x8
+BEQ 0x1 0xc 0x0
+CALL EndingScene
+LABEL 0x1
+EndEvent
+
 BeginningScene:
 ENUT GuideChpt21
 MUSC NarrationTheme5
@@ -185,6 +215,7 @@ LOAD1 0x0 C21PtolemySpawn
 ENUN
 LOAD1 0x0 C21Cell6Spawn
 ENUN
+ENUT 0x8
 GotoPrepScreen
 ENDA
 

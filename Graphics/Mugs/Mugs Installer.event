@@ -628,6 +628,11 @@ NathanielMug:
 #incbin "dmps/Nathaniel.dmp"
 setMugEntry(0xeb,NathanielMug,3,5,3,3)
 
+ALIGN 4
+LarsonMug:
+#incbin "dmps/Larson.dmp"
+setMugEntry(0xec,LarsonMug,3,5,2,3)
+
 
 
 

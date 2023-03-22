@@ -166,6 +166,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ClarquePaletteID 0x80
 #define ReynardPaletteID 0x82
 
+#define NathanielPaletteID 0x87
+#define LarsonPaletteID 0x88
+
 #define IneubrenosPaletteID 0x78
 
 #define LiamPaletteID 0x72
@@ -308,6 +311,8 @@ setPalette(BungalasPaletteID,BungalasPalette)
 setPalette(MichaelPaletteID,MichaelPalette)
 setPalette(ClarquePaletteID,ClarquePalette)
 setPalette(ReynardPaletteID,ReynardPalette)
+setPalette(LarsonPaletteID,LarsonPalette)
+setPalette(NathanielPaletteID,NathanielPalette)
 
 setPalette(IneubrenosPaletteID,IneubrenosPalette)
 
@@ -413,6 +418,8 @@ SetPaletteFull(Michael,0x0,0x0,MichaelPaletteID,Sniper,0x0,0x0)
 SetPaletteFull(Clarque,0x0,0x0,ClarquePaletteID,BowPal,0x0,0x0)
 SetPaletteFull(DLDavelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Reynard,0x0,0x0,ReynardPaletteID,Hero,0x0,0x0)
+SetPaletteFull(Nathaniel,0x0,0x0,NathanielPaletteID,Sorc,0x0,0x0)
+SetPaletteFull(Larson,0x0,0x0,LarsonPaletteID,Assass,0x0,0x0)
 
 SetPaletteFull(BossIneubrenos,0x0,0x0,IneubrenosPaletteID,SniperF,0x0,0x0)
 
@@ -832,6 +839,12 @@ ClarquePalette:
 ALIGN 4
 ReynardPalette:
 #incbin "Reynard.dmp"
+ALIGN 4
+NathanielPalette:
+#incbin "Nathaniel.dmp"
+ALIGN 4
+LarsonPalette:
+#incbin "Larson.dmp"
 
 
 ALIGN 4

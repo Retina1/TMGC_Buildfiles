@@ -104,6 +104,9 @@ KillerDeathQuote(Reynard,Viridian,ChapterV3,DefeatBossFlag,V3ReynardDefeatAlt)
 ChapterDeathQuote(Reynard,ChapterV3,DefeatBossFlag,V3ReynardDefeat)
 // v5
 ChapterDeathQuote(Ciraweiss,ChapterV5,DefeatBossFlag,V5CiraweissDefeat)
+// c21
+//i don't feel like making a new macro for this sorry
+BYTE Prisoner 0x0 0xff Chapter21 0x0 0x0 ;SHORT 0x0 ;WORD C21DeathCounter|IsPointer
 // c23
 ChapterDeathQuote(Neillstrom,Chapter23,DefeatBossFlag,FillerDialogue)
 // c25
@@ -319,3 +322,15 @@ PUSH
 ORG $8472C
 POIN DeathQuoteTable
 POP
+
+ALIGN 4
+C21DeathCounter:
+COUNTER_ADD 0x1 0x1
+COUNTER_CHECK 0x1
+SVAL 0x1 6
+BEQ 0x1 0xc 0x1
+GOTO 0x2
+LABEL 0x1
+ENUT 0x65
+LABEL 0x2
+EndEvent

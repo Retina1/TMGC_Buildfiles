@@ -367,7 +367,9 @@ V5GoodbyeForReal:
 CHECK_TURNS
 SVAL 0x1 19
 BNE 0x1 0xc 0x1
-Text(FillerDialogue)//so begins death
+CAM1 [27,1]
+FlashCursor(27,1,60)
+CleanText(HallCG,V5_CiraweissAndGirard2)//so begins death
 LABEL 0x1
 Reinforcements(V5Death2)
 EndEvent

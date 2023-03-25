@@ -119,13 +119,14 @@ Tutorial:
 END_MAIN
 
 TrapData:
-TelliusTorchOff(15,7,8)
-TelliusTorchOff(6,17,8)
-TelliusTorchOff(15,23,8)
-TelliusTorchOff(6,8,8)
-TelliusTorchOff(4,5,8)
-TelliusTorchOff(10,29,8)
-TelliusTorchOn(1,32,8)
+TelliusTorchOff(15,7,9)
+TelliusTorchOff(6,17,9)
+TelliusTorchOff(15,23,9)
+TelliusTorchOff(6,8,9)
+TelliusTorchOff(4,5,9)
+TelliusTorchOff(10,29,9)
+TelliusTorchOn(1,32,9)
+TelliusTorchOn(20,34,4)
 ENDTRAP
 TrapData2:
 ENDTRAP
@@ -187,15 +188,15 @@ UNIT Holanis AxePal 0x0 Level(3,Enemy,1) [20,31] 0x0 0x0 0x0 0x0 [SilverAxe] Att
 UNIT Holanis BowPal 0x0 Level(3,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
 UNIT Holanis Hero 0x0 Level(4,Enemy,1) [18,37] 0x0 0x0 0x0 0x0 [SilverSword] GroupOneAI
 UNIT Holanis Hero 0x0 Level(4,Enemy,1) [20,35] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOneAI
-UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [20,37] 0x0 0x0 0x0 0x0 [Greatbow] GroupOneAI
+UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [20,37] DropItem 0x0 0x0 0x0 [Greatbow,ChestKey] GroupOneAI
 UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [12,30] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [13,31] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
-UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [10,24] DropItem 0x0 0x0 0x0 [Spear,DoorKey] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [2,8] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [18,8] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [19,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
-UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [8,24] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [8,24] DropItem 0x0 0x0 0x0 [Tomahawk,DoorKey] NeverMoveAI
 UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Holanis SorcF 0x0 Level(3,Enemy,1) [2,27] 0x0 0x0 0x0 0x0 [Nosferatu] NeverMoveAI
@@ -208,11 +209,11 @@ UNIT Nathaniel Sorc 0x0 Level(10,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Nocturne,Talis
 UNIT
 
 C21Cell1Spawn:
-UNIT Prisoner Troub 0x0 Level(15,NPC,1) [0,22] 0x0 0x0 0x1 REDA1R23 [0x0] EscapeAI
+UNIT Prisoner LncArm 0x0 Level(15,NPC,1) [0,22] 0x0 0x0 0x1 REDA1R23 [0x0] EscapeAI
 UNIT Prisoner MageF 0x0 Level(15,NPC,1) [0,22] 0x0 0x0 0x1 REDA2R22 [0x0] EscapeAI
 UNIT
 C21Cell2Spawn:
-UNIT Prisoner LncArm 0x0 Level(15,NPC,1) [20,27] 0x0 0x0 0x1 REDA16R27 [0x0] EscapeAI
+UNIT Prisoner Troub 0x0 Level(15,NPC,1) [20,27] 0x0 0x0 0x1 REDA16R27 [0x0] EscapeAI
 UNIT Prisoner LightM 0x0 Level(15,NPC,1) [20,27] 0x0 0x0 0x1 REDA17R28 [0x0] EscapeAI
 UNIT
 C21Cell3Spawn:

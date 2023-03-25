@@ -55,8 +55,7 @@ UNIT
 ALIGN 4
 
 BeginningScene:
-MUSC NarrationTheme3
-Narration(Map2CG,Ch19_Narration)
+Narration(Map2CG,Epilogue_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
 REMA
 CLEN 0
@@ -64,7 +63,7 @@ CLEE 0
 CLEA 0
 SetBackground(BlankCG)
 ASMC 0xB8175 //turncounts
-MUSC S_MainTheme
+MUSC S_OurLight
 ASMC 0xC4879 //credits
 MoveToChapter(HubMap)
 ENDA

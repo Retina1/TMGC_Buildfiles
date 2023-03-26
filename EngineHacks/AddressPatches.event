@@ -1,3 +1,14 @@
+//Change Y location of map sprite in statscreen
+//On load
+PUSH
+ORG 0x886EC  //Y argument before function call
+BYTE 0x8C    //Y coord
+
+//Unit switch
+ORG 0x87E34  //Y argument before function call
+BYTE 0x8C    //Y coord
+POP
+
 //enemy healing - strange behaviors but might be worth examination
 /*PUSH 
 ORG $5A83A1

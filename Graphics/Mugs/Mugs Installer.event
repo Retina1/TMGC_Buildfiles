@@ -657,6 +657,22 @@ ALIGN 4
 JakeMug:
 #incbin "dmps/Jake.dmp"
 setMugEntry(0x64,JakeMug,2,5,3,3)
+ALIGN 4
+Jake2Mug:
+#incbin "dmps/Jake2.dmp"
+setMugEntry(0xed,Jake2Mug,2,5,3,3)
+ALIGN 4
+Jake3Mug:
+#incbin "dmps/Jake3.dmp"
+setMugEntry(0xee,Jake3Mug,2,5,2,3)
+ALIGN 4
+Jake4Mug:
+#incbin "dmps/Jake4.dmp"
+setMugEntry(0xef,Jake4Mug,3,5,3,3)
+ALIGN 4
+Jake5Mug:
+#incbin "dmps/Jake5.dmp"
+setMugEntry(0xf0,Jake5Mug,2,5,3,3)
 
 ALIGN 4
 ArenaGuyMug:

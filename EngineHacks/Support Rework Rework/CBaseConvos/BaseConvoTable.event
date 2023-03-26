@@ -615,6 +615,14 @@
 			text(V5_Viridian_Freddric_Base)
 			eventID(BaseFlag1)
 			baseSupport(Viridian,Freddric,ASupport)//make not happen if fred was sent in I8
+	Chapter(Chapter21)
+		Entry
+			name(Secret_Seller_Select)
+			bg(OutdoorCastleCG)
+			importance(2)
+			music(S_PascalTheDog)
+			text(C21_Secret_Seller)
+			eventID(BaseFlag1)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

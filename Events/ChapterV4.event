@@ -46,6 +46,7 @@ END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+DefeatAll(EndingScene)
 END_MAIN
 
 Dunno:
@@ -203,8 +204,8 @@ UNIT
 V4Turn3Group:
 UNIT Holanis Merc 0x0 Level(19,Enemy,1) [17,0] 0x0 0x0 0x1 REDA17R1 [SteelSword] NoAI
 UNIT Holanis MercF 0x0 Level(19,Enemy,1) [18,0] 0x0 0x0 0x1 REDA18R2 [SteelSword] NoAI
-UNIT Holanis Soldier 0x0 Level(19,Enemy,1) [21,0] 0x0 0x0 0x1 REDA21R2 [SteelSword] NoAI
-UNIT Holanis SoldierF 0x0 Level(19,Enemy,1) [22,0] 0x0 0x0 0x1 REDA22R3 [SteelSword] NoAI
+UNIT Holanis Soldier 0x0 Level(19,Enemy,1) [21,0] 0x0 0x0 0x1 REDA21R2 [SteelLance] NoAI
+UNIT Holanis SoldierF 0x0 Level(19,Enemy,1) [22,0] 0x0 0x0 0x1 REDA22R3 [SteelLance] NoAI
 UNIT
 
 V4Turn4Group:
@@ -218,8 +219,8 @@ V4Turn5Group:
 UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [0,11] 0x0 0x0 0x1 REDA1R11 [Axereaver] NoAI
 UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [0,12] 0x0 0x0 0x1 REDA2R12 [SteelLance] NoAI
 UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [0,13] 0x0 0x0 0x1 REDA1R13 [SteelAxe] NoAI
-UNIT Holanis LncPeg 0x0 Level(19,Enemy,1) [24,11] 0x0 0x0 0x1 REDA1R11 [SilverLance] NoAI
-UNIT Holanis SwdPeg 0x0 Level(19,Enemy,1) [24,13] 0x0 0x0 0x1 REDA2R12 [SilverSword] NoAI
+UNIT Holanis LncPeg 0x0 Level(19,Enemy,1) [24,11] 0x0 0x0 0x1 REDA22R11 [SilverLance] NoAI
+UNIT Holanis SwdPeg 0x0 Level(19,Enemy,1) [24,13] 0x0 0x0 0x1 REDA22R13 [SilverSword] NoAI
 UNIT
 
 ALIGN 4

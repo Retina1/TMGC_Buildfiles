@@ -21,6 +21,8 @@ mov r1, #2 @miss
 tst r0, r1
 bne End
 
+ldrb r1, [r5,#0x13] @current hp
+
 @check damage >= currhp
 mov r0, #4
 ldrsh r0, [r7, r0]

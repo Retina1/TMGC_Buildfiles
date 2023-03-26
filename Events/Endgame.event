@@ -89,9 +89,10 @@ ALIGN 4
 
 BeginningScene:
 ENUT GuideChptE
-MUSC NarrationTheme6
+MUSC 0x0
 Narration(Map2CG,Final_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(MoonCG,Final_Flashback)
+CleanTextNoMap(MoonCG,Final_Opening)
 LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
 LOAD1 0x0 C19Units
 ENUN

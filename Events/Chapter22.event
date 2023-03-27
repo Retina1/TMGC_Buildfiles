@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C22LiamSpawn,3)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -77,8 +78,23 @@ UNIT Dalst AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverM
 UNIT
 
 C22Hard:
-UNIT Mevion WyvLord 0x0 Level(1,Enemy,1) [11,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Peter WyvLord 0x0 Level(1,Enemy,0) [11,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Mevion WyvLord 0x0 Level(6,Enemy,1) [11,2] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
+UNIT Peter WyvLord 0x0 Level(8,Enemy,0) [11,3] 0x0 0x0 0x0 0x0 [Tomahawk,Dragonpike,Elixir] NoAI
+UNIT
+
+C22LiamAndFriends:
+UNIT Liams SwMast 0x0 Level(12,Enemy,1) [0,5] 0x0 0x0 0x1 REDA3R4 [GildedSword] NoAI
+UNIT Liams2 Halberdier 0x0 Level(12,Enemy,1) [0,5] 0x0 0x0 0x1 REDA2R5 [GildedLance] NoAI
+UNIT Liam Hero 0x0 Level(16,Enemy,0) [0,6] DropItem 0x0 0x1 REDA4R6 [Phalanotis] NoAI
+UNIT Liams3 Sniper 0x0 Level(12,Enemy,1) [0,7] 0x0 0x0 0x1 REDA2R7 [GildedBow] NoAI
+UNIT Liams4 Warrior 0x0 Level(12,Enemy,1) [0,7] 0x0 0x0 0x1 REDA3R8 [GildedAxe] NoAI
+UNIT
+
+C22Friends:
+UNIT Mevion SwMast 0x0 Level(9,Enemy,1) [0,5] 0x0 0x0 0x1 REDA3R4 [GildedSword] NoAI
+UNIT Mevion Halberdier 0x0 Level(9,Enemy,1) [0,5] 0x0 0x0 0x1 REDA2R5 [GildedLance] NoAI
+UNIT Mevion Sniper 0x0 Level(9,Enemy,1) [0,7] 0x0 0x0 0x1 REDA2R7 [GildedBow] NoAI
+UNIT Mevion Warrior 0x0 Level(9,Enemy,1) [0,7] 0x0 0x0 0x1 REDA3R8 [GildedAxe] NoAI
 UNIT
 
 ALIGN 4
@@ -95,6 +111,40 @@ LOAD1 0x0 C22Units
 ENUN
 GotoPrepScreen
 ENDA
+
+C22LiamSpawn:
+EVBIT_MODIFY 4
+CHECK_EVENTID LiamAcceptedFlag
+BEQ 0x10 0xc 0x0
+Reinforcements(C22LiamAndFriends)
+CAM1 Liam
+FlashCursor(Liam,60)
+Text(FillerDialogue)//hi liam
+CHECK_MONEY
+SVAL 0x1 0x2710
+BGE 0x1 0xc 0x1
+Text(FillerDialogue)//can't pay
+GOTO 0x20
+LABEL 0x1
+SystemText(C22PayForLiam)
+IfNoSelectedGoto(0x3)
+Text(FillerDialogue)//choose to pay
+SVAL 0x3 0x2710
+TAKEMONEY
+SetUnitStatus(Liam,MaxHP,80)
+TurnNPC(Liam)
+TurnNPC(Liams)
+TurnNPC(Liams2)
+TurnNPC(Liams3)
+TurnNPC(Liams4)
+GOTO 0x20
+LABEL 0x3
+Text(FillerDialogue)//won't pay
+GOTO 0x20
+LABEL 0x10
+Reinforcements(C22Friends)
+LABEL 0x20
+EndEvent
 
 SellToddToMevion:
 CHECK_ACTIVEID Toddsworth

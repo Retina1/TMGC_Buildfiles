@@ -30,7 +30,6 @@ CharacterEvent(0xf,SellToddToMevion,0x0,Mevion)
 END_MAIN
 
 LocationBasedEvents:
-Seize(0,0)
 END_MAIN
 
 ALIGN 4
@@ -85,9 +84,9 @@ UNIT Mevion WyvLord 0x0 Level(5,Enemy,1) [22,17] 0x0 0x0 0x0 0x0 [Hammer,Halberd
 UNIT Mevion Falco 0x0 Level(5,Enemy,1) [23,18] 0x0 0x0 0x0 0x0 [Rapier,BraveSword] GroupTwoPaceAI
 UNIT Mevion WyvLord 0x0 Level(5,Enemy,1) [24,17] 0x0 0x0 0x0 0x0 [Shatterspear,Horseslayer] GroupTwoPaceAI
 UNIT Mevion Falco 0x0 Level(6,Enemy,1) [2,16] 0x0 0x0 0x0 0x0 [Spear] GroupThreePaceAI
-UNIT Mevion WyvLord 0x0 Level(6,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [BraveLance] GroupThreePaceAI
+UNIT Mevion WyvLord 0x0 Level(6,Enemy,1) [4,16] DropItem 0x0 0x0 0x0 [DangerPick] GroupThreePaceAI
 UNIT Peter WyvLord 0x0 Level(8,Enemy,0) [3,17] 0x0 0x0 0x0 0x0 [Tomahawk,Dragonpike,Elixir] GroupThreePaceAI
-UNIT Mevion WyvLord 0x0 Level(6,Enemy,1) [2,18] 0x0 0x0 0x0 0x0 [Tomahawk,BraveAxe] GroupThreePaceAI
+UNIT Mevion WyvLord 0x0 Level(6,Enemy,1) [2,18] DropItem 0x0 0x0 0x0 [TrueSaunion] GroupThreePaceAI
 UNIT Mevion Falco 0x0 Level(6,Enemy,1) [4,18] 0x0 0x0 0x0 0x0 [Spear] GroupThreePaceAI
 UNIT
 

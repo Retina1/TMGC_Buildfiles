@@ -75,13 +75,15 @@ WORD WatchfulID
 	//Some AI (NOTE: MUST DO CMP R0,#0 BEFORE RETURNING)
 	ORG $3D4C4
 	SHORT 0x1C18 0 //mov r0,r3; nop
-	callHack_r3(Can_Unit_Steal)
+	//callHack_r3(Can_Unit_Steal)
+	SHORT 0 0 0 0 0x2000 0x2800
 	SHORT 0xD011 0x6830 //beq Somewhere; ldr r0,[r6]
 	
 	//Some other AI
 	ORG $3EE56
 	SHORT 0
-	callHack_r3(Can_Unit_Steal)
+	//callHack_r3(Can_Unit_Steal)
+	SHORT 0 0 0 0 0 0x2000
 	
 	POP
 	

@@ -25,11 +25,38 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x0,I9ReadyToEnd,Blair,Zeke)
 END_MAIN
 
 LocationBasedEvents:
+/* copied from I2 currently ha
+Village(0x21,I2NorthVillage,6,2)
+Village(0x22,I2SouthVillage,15,12)
+Village(0x23,I2MidVillage,1,5)
+*/
+House(0x24,I9Inn,9,6)
+Armory(I9Armory,15,2)
+Vendor(I9Vendor,3,2)
+Armory(I9Armory2,13,12)
+Vendor(I9Vendor2,5,4)
 END_MAIN
 
+ALIGN 4
+I9Armory:
+SHLI SilverSword GildedSword BraveSword Lancereaver Zanbato Armorslayer Wyrmslayer SilverLance GildedLance BraveLance Spear Axereaver Horseslayer Shatterspear Dragonpike
+BYTE 0x0 0x0
+ALIGN 4
+I9Armory2:
+SHLI SilverAxe GildedAxe BraveAxe Tomahawk Swordreaver Hammer Halberd Dracoaxe SilverBow GildedBow BraveBow Longbow Greatbow
+BYTE 0x0 0x0
+ALIGN 4
+I9Vendor:
+SHLI Elfire Fimbulvetr Flare Calibur Inversion Divine Aura Radiance Pierce Banish Nightfall Fenrir Nocturne Knoggelvi Corruption
+BYTE 0x0 0x0
+ALIGN 4
+I9Vendor2:
+SHLI Mend Physic Recover Barrier Yoink Runeward Implant Vulnerary Elixir PureWater
+BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
@@ -48,7 +75,8 @@ ENDTRAP
 ALIGN 4
 
 I6Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [9,3] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [21,7] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [22,7] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT
 
 ALIGN 4
@@ -68,5 +96,21 @@ DisableFreeMovement
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter23)
 ENDA
+
+I9ReadyToEnd:
+EVBIT_MODIFY 4
+Text(FillerDialogue)
+SystemText(I1LeavePrompt)
+IfNoSelectedGoto(0x2)
+CALL EndingScene
+GOTO 0x1
+LABEL 0x2
+Text(FillerDialogue)
+LABEL 0x1
+EndEvent
+
+
+I9Inn:
+HouseEvent(I9InnText, InnCG)
 
 //MESSAGE Events end at offset CURRENTOFFSET

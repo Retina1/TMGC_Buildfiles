@@ -1,7 +1,7 @@
 #include "Extensions/Hack Installation.txt"
 
 //Hook with r0 for compatibility.
-#define jumpToHack_r0(offset) "BYTE 0x00 0x48 0x87 0x46; POIN (offset|0x1)"
+//#define jumpToHack_r0(offset) "BYTE 0x00 0x48 0x87 0x46; POIN (offset|0x1)"
 
 PUSH
 ORG $571E8  //FE8U

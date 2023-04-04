@@ -1,0 +1,65 @@
+#include "Extensions/Hack Installation.txt"
+
+PUSH
+ORG $7AF3A
+SHORT 0x46C0 // NOP
+jumpToHack(InitializePhantom)
+POP
+
+PUSH //a bunch of stuff so sword can't do shit
+ORG 0x022BE8 //prevent unit mug from loading if generic
+BYTE 0x08 0x68 0xC0 0x88 0x00 0x28	//HINT=BIN
+ORG 0x07ADD0
+BYTE 0x1e
+ORG 0x18EDE
+BYTE 0x1e
+ORG 0x2304C
+BYTE 0x1e
+ORG 0x23F78
+BYTE 0x1e
+ORG 0x23FE2
+BYTE 0x1e
+ORG 0x2403E
+BYTE 0x1e
+ORG 0x2409A
+BYTE 0x1e
+ORG 0x2523E
+BYTE 0x1e
+ORG 0x25246
+BYTE 0x1e
+ORG 0x3122E
+BYTE 0x1e
+ORG 0x232CC
+BYTE 0x1e
+ORG 0x25366
+BYTE 0x1e
+ORG 0x2536E
+BYTE 0x1e
+POP
+
+ALIGN 4
+InitializePhantom:
+#incbin "InitializePhantom.dmp"
+POIN SummonSetupTable
+
+#define SummonSetupTableEntry(unitid, pointer) "BYTE unitid 0x0 0x0 0x0; POIN pointer"
+#define SummonSetupListEntry(classid, colortype, item1) "BYTE classid colortype item1 0x0 0x0 0x0 0x0 0x0"
+#define SummonSetupTerminator "BYTE 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0"
+#define BlueUnitSummon 0x00
+#define GreenUnitSummon 0x02
+// Testing
+
+ALIGN 4
+SummonSetupTable:
+SummonSetupTableEntry(0xd0,AddingtonSummon) // 0x3F - Default Phantom
+SummonSetupTableEntry(0xd2,HoratioSummon)
+SummonSetupTerminator
+
+ALIGN 4
+AddingtonSummon:
+SummonSetupListEntry(0x61,GreenUnitSummon,IronRune)
+SummonSetupTerminator
+ALIGN 4
+HoratioSummon:
+SummonSetupListEntry(0x1e,BlueUnitSummon,SummonBlade)
+SummonSetupTerminator

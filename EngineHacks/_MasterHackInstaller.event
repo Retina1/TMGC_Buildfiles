@@ -367,8 +367,9 @@ ALIGN 4
 
 //summon stuff (addington/horatio)
 //#include "TMGC/ModularSummon/Installer.event"
-#include "multi_summon_class/multi_class_summon.event"
-#include "multi_summon_items/Installer.event"
+//#include "multi_summon_class/multi_class_summon.event"
+//#include "multi_summon_items/Installer.event"
+#include "TMGC/PhantomCustomizing/Installer.event"
 
 //angel wings- disabled until acrobat compatibility figured out
 //#include "TMGC/FE8-Pathfinder/FE8-Pathfinder EA.event"
@@ -462,3 +463,5 @@ POP
 #include "TMGC/DeathQuotes/Installer.event"
 
 #include "TMGC/mug_exceed/EA.txt"
+
+//#include "NoUnbreakableDurability.lyn.event"

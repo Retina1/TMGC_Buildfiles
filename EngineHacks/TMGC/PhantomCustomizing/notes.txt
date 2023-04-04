@@ -1,0 +1,37 @@
+ai field starts at 0x40
+ai1 - 0x42
+ai2 - 0x44
+
+0x807AF4A - phantom id gotten (phantom exists)
+(weapon autolevel occurs after)
+
+0x807AFC0 - func end
+
+loadunits - 0x8017a34
+
+at 0x807AF3A - load units called using gSummonedUnitDefinitonBuffer (03001C38)
+
+org 7AF3A
+nop (short 46c0)
+jumpToHack()
+
+table struct
+
+class id / item 1 / item 2 / item 3 / item 4 / ai 1 / ai 2 / % chance
+
+table 2 struct
+
+phantom id / table pointer
+
+
+Summoned Unit Buffer (0x3001C38)
++0x0 - Unit ID
++0x1 - Class ID
++0xC - Item 1
++0xD - Item 2
++0xE - Item 3
++0xF - Item 4
++0x10 - Ai 1
++0x11 - Ai 2
++0x12 - Ai 3
++0x13 - Ai 4

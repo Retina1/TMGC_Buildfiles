@@ -366,7 +366,11 @@ setMugEntry(0x28,CallumMug,3,5,3,3)
 ALIGN 4
 WilhelmMug:
 #incbin "dmps/Wilhelm.dmp"
-setMugEntry(0x0d,WilhelmMug,3,5,3,3)
+setMugEntry(0x0d,WilhelmMug,3,6,3,4)
+ALIGN 4
+WilhelmPromoMug:
+#incbin "dmps/WilhelmPromo.dmp"
+setMugEntry(0x0118,WilhelmPromoMug,3,6,3,4)
 
 ALIGN 4
 ArgentMug:
@@ -377,6 +381,10 @@ ALIGN 4
 ManfredMug:
 #incbin "dmps/Manfred.dmp"
 setMugEntry(0x50,ManfredMug,3,4,3,2)
+ALIGN 4
+ManfredPromoMug:
+#incbin "dmps/ManfredPromo.dmp"
+setMugEntry(0x119,ManfredPromoMug,3,4,3,2)
 
 ALIGN 4
 PeterMug:

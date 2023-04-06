@@ -130,11 +130,11 @@ setMugEntry(0x10f,RachaelPromoMug,3,5,3,3)
 ALIGN 4
 JeffMug:
 #incbin "dmps/Jeff.dmp"
-setMugEntry(0x13,JeffMug,3,6,3,4)
+setMugEntry(0x13,JeffMug,3,5,3,3)
 ALIGN 4
 JeffPromoMug:
 #incbin "dmps/JeffPromo.dmp"
-setMugEntry(0x103,JeffPromoMug,3,6,3,4)
+setMugEntry(0x103,JeffPromoMug,3,5,3,3)
 
 ALIGN 4
 EmileMug:
@@ -315,6 +315,10 @@ ALIGN 4
 DeanMug:
 #incbin "dmps/Dean.dmp"
 setMugEntry(0x17,DeanMug,3,5,3,3)
+ALIGN 4
+DeanPromoMug:
+#incbin "dmps/DeanPromo.dmp"
+setMugEntry(0x11a,DeanPromoMug,3,5,3,3)
 
 ALIGN 4
 ElizaMug:

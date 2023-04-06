@@ -47,6 +47,60 @@ you're about to die.[A][N][ClearFace][OpenMidRight][LoadViridian]
 [ToggleMouthMove]...[ToggleMouthMove]This ends now.[A][N][ClearFace][OpenMidLeft][LoadCiraweiss][ToggleSmile]
 Yes. It does.[A][X]
 
+##V5CiraweissFreddricBattle
+[OpenMidRight][LoadFreddric]
+[ToggleMouthMove]...[ToggleMouthMove]I think I see now.[N]
+The Dalstians want us gone.[ClearFace][OpenMidLeft][LoadCiraweiss]
+Perhaps. But I'm sure you're[N]
+used to treacherous clients.[A][N]
+And I know what your group did.[N]
+Defying Tarquin. Not a good plan.[A][N]
+Really, you brought this all[N]
+upon yourselves.[ClearFace][OpenMidRight][LoadFreddric]
+[ToggleMouthMove]...[ToggleMouthMove]And you brought what's coming[N]
+to you upon yourself.[A][X]
+
+##V5CiraweissChartreuseBattle
+[OpenMidLeft][LoadCiraweiss]
+A harmless bard.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Well, she's one of them.[N]
+No helping this.[A][X]
+
+##V5CiraweissEstelleBattle
+[OpenMidRight][LoadEstelle]
+So, the benefactor becomes an[N]
+evil beyond all compare[ToggleMouthMove]...[ToggleMouthMove][A][N]
+I should've seen this coming.[A][N]
+It's[ToggleMouthMove]...[ToggleMouthMove] the crux of every[N]
+enduring tragedy.[A][N][ClearFace][OpenMidLeft][LoadCiraweiss]
+[ToggleMouthMove]...[ToggleMouthMove]Are you sure you're[N]
+in the right place?[A][X]
+
+##V5CiraweissManfredBattle
+[OpenMidLeft][LoadCiraweiss]
+A dark scholar, I see.[A][N][ClearFace][OpenMidRight][LoadManfred]
+That I am. I can simply tell[ToggleMouthMove]...[ToggleMouthMove][N]
+The secrets behind that door[ToggleMouthMove]...[ToggleMouthMove][A][N]
+They're beond compare! I[N]
+must see what lies within.[A][N][ClearFace][OpenMidLeft][LoadCiraweiss]
+Sorry to tell you, but we're[N]
+not looking for more reserachers.[A][N]
+Tell you what, though. Survive[N]
+this, and I'll put in a good word.[A][X]
+
+##V5CiraweissArgentBattle
+[OpenMidRight][LoadArgent]
+Ethyl von Ciraweiss.[A][N][ClearFace][OpenMidLeft][LoadCiraweiss]
+I feel like I should know you.[N]
+You're from[ToggleMouthMove]...[ToggleMouthMove] Mevion, right?[A][N][ClearFace][OpenMidRight][LoadArgent]
+Once, I was a revered general.[N]
+But now, I am but a warrior.[A][N]
+Tell me[ToggleMouthMove]...[ToggleMouthMove] Why is one[N]
+of your station here?[A][N][ClearFace][OpenMidLeft][LoadCiraweiss]
+I don't think I will.[A][N]
+And now I've gotta get[N]
+rid of you.[A][X]
+
 ##V5CiraweissDefeat
 [OpenMidLeft][LoadCiraweiss]
 You're[ToggleMouthMove]...[ToggleMouthMove] skilled.[N]
@@ -64,7 +118,7 @@ save you anyway[ToggleMouthMove]...[ToggleMouthMove][A][X]
 No matter what, we have[N]
 to hold this position.[A][N]
 Hopefully, we'll hear from[N]
-the scouts[ToggleMouthMove]...[ToggleMouthMove][OpenMidRight]
+the scouts[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
 I'm sure[ToggleMouthMove]...[ToggleMouthMove] it'll all be fine.[A][N][OpenMidLeft]
 [ToggleMouthMove]...[ToggleMouthMove]I truly hope so too.[A][N]
 [ToggleMouthMove]...[ToggleMouthMove]Will hope continue to[N]
@@ -232,6 +286,12 @@ Viridian[ToggleMouthMove]...[ToggleMouthMove] Where[ToggleMouthMove]...[ToggleMo
 Please[ToggleMouthMove]...[ToggleMouthMove] tell me[ToggleMouthMove]...[ToggleMouthMove][N]
 that[ToggleMouthMove]...[ToggleMouthMove] you're okay[ToggleMouthMove]...[ToggleMouthMove][A][X]
 
+##V5FreddricDeathAfterViridian
+[OpenMidRight][LoadFreddric][CloseEyes]
+This is[ToggleMouthMove]...[ToggleMouthMove] how I'll[ToggleMouthMove]...[ToggleMouthMove][N]
+see you again[ToggleMouthMove]...[ToggleMouthMove][A][N]
+Forgive me[ToggleMouthMove]...[ToggleMouthMove] Viridian[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
 ##V5DeanDeath
 [OpenMidRight][LoadDean]
 I'm sorry[ToggleMouthMove]...[ToggleMouthMove] everybody[ToggleMouthMove]...[ToggleMouthMove][N]
@@ -246,17 +306,35 @@ happen to us[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
 I just want[ToggleMouthMove]...[ToggleMouthMove] to[N]
 go[ToggleMouthMove]...[ToggleMouthMove] home[ToggleMouthMove]...[ToggleMouthMove][A][X]
 
+##V5ElizaDeathAfterDirk
+[OpenMidRight][LoadEliza][CloseEyes]
+It's[ToggleMouthMove]...[ToggleMouthMove] so dark[ToggleMouthMove]...[ToggleMouthMove][N]
+Brother[ToggleMouthMove]...[ToggleMouthMove][A][N]
+You won't have[ToggleMouthMove]...[ToggleMouthMove][N]
+to wait for me[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
 ##V5ChartreuseDeath
 [OpenMidRight][LoadChartreuse]
 Was this our fate[ToggleMouthMove]...[ToggleMouthMove]?[A][N][CloseEyes]
 Were we always[ToggleMouthMove]...[ToggleMouthMove] destined[N]
 to die[ToggleMouthMove]...[ToggleMouthMove] here[ToggleMouthMove]...[ToggleMouthMove]?[A][X]
 
+##V5ChartreuseDeathAfterViridian
+[OpenMidRight][LoadChartreuse]
+I never[ToggleMouthMove]...[ToggleMouthMove] got to[ToggleMouthMove]...[ToggleMouthMove][N]
+thank you[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
+Viridian[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
 ##V5RiftDeath
 [OpenMidRight][LoadRift]
 Damn[ToggleMouthMove]...[ToggleMouthMove] it[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
 This really makes[ToggleMouthMove]...[ToggleMouthMove] me miss[ToggleMouthMove]...[ToggleMouthMove][N]
 the good old[ToggleMouthMove]...[ToggleMouthMove] days[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
+##V5RiftDeathAfterEstelle
+[OpenMidRight][LoadRift]
+This is[ToggleMouthMove]...[ToggleMouthMove] what I deserve[ToggleMouthMove]...[ToggleMouthMove][N]
+for draggin' her into this[ToggleMouthMove]...[ToggleMouthMove][A][CloseEyes][X]
 
 ##V5EstelleDeath
 [OpenMidRight][LoadEstelle]
@@ -277,6 +355,10 @@ you've got[ToggleMouthMove]...[ToggleMouthMove]?[A][N][ToggleSmile][CloseEyes]
 You're gonna[ToggleMouthMove]...[ToggleMouthMove] have to[ToggleMouthMove]...[ToggleMouthMove][N]
 try harder[ToggleMouthMove]...[ToggleMouthMove] than that[ToggleMouthMove]...[ToggleMouthMove][A][X]
 
+##V5DirkDeathAfterEliza
+[OpenMidRight][LoadDirk][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove]Eliza[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
 ##V5CallumDeath
 [OpenMidRight][LoadCallum]
 Out[ToggleMouthMove]...[ToggleMouthMove] in a blaze[ToggleMouthMove]...[ToggleMouthMove] of[N]
@@ -291,6 +373,11 @@ to breathe[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
 What a truly[ToggleMouthMove]...[ToggleMouthMove][N]
 miserable end[ToggleMouthMove]...[ToggleMouthMove][A][X]
 
+##V5ManfredDeathAfterWilhelm
+[OpenMidRight][LoadManfred]
+You just[ToggleMouthMove]...[ToggleMouthMove] had to die on me[ToggleMouthMove]...[ToggleMouthMove][N]
+Well[ToggleMouthMove]...[ToggleMouthMove] I'm coming, friend[ToggleMouthMove]...[ToggleMouthMove][A][CloseEyes][X]
+
 ##V5WilhelmDeath
 [OpenMidRight][LoadWilhelm]
 It's funny[ToggleMouthMove]...[ToggleMouthMove] really[ToggleMouthMove]...[ToggleMouthMove][N]
@@ -298,9 +385,20 @@ After everything[ToggleMouthMove]...[ToggleMouthMove][A][N][ToggleSmile][CloseEy
 Dying here[ToggleMouthMove]...[ToggleMouthMove] isn't[N]
 so bad[ToggleMouthMove]...[ToggleMouthMove][A][X]
 
+##V5WilhelmDeathAfterManfred
+[OpenMidRight][LoadWilhelm]
+My luck[ToggleMouthMove]...[ToggleMouthMove] ran out[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
+We'll[ToggleMouthMove]...[ToggleMouthMove] drink again[ToggleMouthMove]...[ToggleMouthMove][N]
+real soon, Manfred[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
 ##V5ArgentDeath
 [OpenMidRight][LoadArgent]
 My tale[ToggleMouthMove]...[ToggleMouthMove] of sorrow[ToggleMouthMove]...[ToggleMouthMove][N]
 comes to[ToggleMouthMove]...[ToggleMouthMove] a close[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
 I truly wish[ToggleMouthMove]...[ToggleMouthMove] that this[N]
 wasn't[ToggleMouthMove]...[ToggleMouthMove] the end[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
+##V5ArgentDeathAfterViridian
+[OpenMidRight][LoadArgent][CloseEyes]
+I couldn't[ToggleMouthMove]...[ToggleMouthMove] protect you[ToggleMouthMove]...[ToggleMouthMove][N]
+I can't[ToggleMouthMove]...[ToggleMouthMove] protect anyone[ToggleMouthMove]...[ToggleMouthMove][A][X]

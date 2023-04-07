@@ -20,6 +20,8 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,V5EndCheck,1,255)
+TurnEventEnemy(0x0,V5EndCheck,1,255)
 TurnEventPlayer(0x0,V5Turn1,1)
 TurnEventPlayer(0x0,V5Turn2,2)
 TurnEventPlayer(0x0,V5Turn3,3)
@@ -33,8 +35,6 @@ TurnEventPlayer(0x0,V5Turn11,11)
 TurnEventPlayer(0x0,V5Turn12,12)
 TurnEventPlayer(0x0,V5Turn13,13)
 TurnEventPlayer(0x0,V5Turn14,14)
-TurnEventPlayer(0x0,V5EndCheck,1,255)
-TurnEventEnemy(0x0,V5EndCheck,1,255)
 TurnEventPlayer(0x0,V5Goodbye,15,50)
 TurnEventPlayer(0x0,V5GoodbyeForReal,19,50)
 END_MAIN
@@ -359,6 +359,7 @@ TILECHANGE 0x0
 TILECHANGE 0x1
 ENUT 0x4
 ENUT 0x66
+SetUnitStatusAll(Holanis*0x100+Holanis, UnitPointer, 0x8805EB4, Any, EnemyArmy, AnyClass, AnyRange, AnyItem)
 EndEvent
 
 

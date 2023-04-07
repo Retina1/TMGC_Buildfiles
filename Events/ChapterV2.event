@@ -25,6 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0xa,V2DirkElizaConvo,Dirk,Eliza)
 END_MAIN
 
 LocationBasedEvents:
@@ -212,6 +213,10 @@ CleanTextNoMap(VillageCG,V2Ending1)
 MUSC S_Chaos
 CleanTextNoMap(PathCG,V2Ending2)
 MoveToChapter(Interlude7)
+EndEvent
+
+V2DirkElizaConvo:
+Text(V2DirkElizaTalk)
 EndEvent
 
 V2Village1:

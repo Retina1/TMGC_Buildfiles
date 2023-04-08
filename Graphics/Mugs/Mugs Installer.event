@@ -254,7 +254,11 @@ setMugEntry(0x110,ZachariasPromoMug,3,5,3,3)
 ALIGN 4
 AvanMug:
 #incbin "dmps/Avan.dmp"
-setMugEntry(0x26,AvanMug,3,5,3,3)
+setMugEntry(0x26,AvanMug,3,6,3,4)
+ALIGN 4
+AvanPromoMug:
+#incbin "dmps/AvanPromo.dmp"
+setMugEntry(0x11b,AvanPromoMug,3,6,3,4)
 
 ALIGN 4
 ToddsworthMug:

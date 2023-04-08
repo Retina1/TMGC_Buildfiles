@@ -203,10 +203,9 @@ LOAD1 0x1 C2Cutscene1
 ENUN
 MUSC S_Chaos
 Text(C2Spooky)
-LOAD1 0x1 C2Cutscene2
-ENUN
-SetBackground(HallCG)
-Text(C2Spooky2)
+Reinforcements(C2Cutscene2)
+//SetBackground(HallCG)
+CleanTextNoMap(HallCG,C2Spooky2)
 REMOVEUNIT Aercolyn
 REMOVEUNIT Aercolyn
 REMOVEUNIT Aercolyn
@@ -215,9 +214,8 @@ REMOVEUNIT JohanC2
 REMOVEUNIT Holanis
 REMOVEUNIT Holanis
 ENUN
-FADI 0x10
 CLEAN
-FADU 0x10
+FADU 0xa
 MUSC 0x0
 EndEvent
 

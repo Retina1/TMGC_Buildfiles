@@ -11,9 +11,9 @@ mov r5, r1
 @now check for the skill
 ldr r0, AuraSkillCheck
 mov lr, r0
-mov r0, r5 @defender
+mov r0, r4 @attacker
 ldr r1, MaleficAuraID
-mov r2, #3 @are enemies
+mov r2, #0 @can trade
 mov r3, #2 @range
 .short 0xf800
 cmp r0, #0

@@ -248,11 +248,13 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
+ResetBaseFlags
 MUSC S_FE4Conversation
 CleanTextNoMap(EastHolanisCG,V4_Ending)//get moving to safer pastures
 MUSC AmbientNight
 LocationText(BlankCG, V4_Ending2,UnknownLocationLabel)
 STAL 0x30
+MUSC S_Nightfall
 CleanTextNoMap(TentInsideCG,V4_Ending3)//ruminations
 LocationText(HallCG, V4_Ending4,ArbordiaMeetingHallLabel,S_RigorousJustice)//oh no
 MoveToChapter(Interlude8)

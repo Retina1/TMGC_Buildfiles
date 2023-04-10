@@ -182,6 +182,7 @@ SetSupport(Dean,Eliza,CPSupport)
 EndEvent
 
 EndingScene:
+ResetBaseFlags
 CHECK_EVENTID ClarqueAliveFlag
 BEQ 0x1 0xc 0x0
 MUSC VictoryTheme

@@ -28,6 +28,77 @@
 #include "BattleMenus/BattleMenuInstaller.txt"
 
 PUSH
+ORG 0x2008c
+POIN PrepsImage
+ORG 0x86c44
+POIN PrepsImage
+ORG 0x86cdc
+POIN PrepsImage
+ORG 0x86db0
+POIN PrepsImage
+ORG 0xb0594
+POIN PrepsImage
+ORG 0xb0d0c
+POIN PrepsImage
+ORG 0xb4e18
+POIN PrepsImage
+ORG 0xb6808
+POIN PrepsImage
+ORG 0xc48dc
+POIN PrepsImage
+ORG 0x20088
+POIN PrepsPalette
+ORG 0x86bf8
+POIN PrepsPalette
+ORG 0x86c40
+POIN PrepsPalette
+ORG 0x86c8c
+POIN PrepsPalette
+ORG 0x86cd8
+POIN PrepsPalette
+ORG 0x86dac
+POIN PrepsPalette
+ORG 0x8e194
+POIN PrepsPalette
+ORG 0xb058c
+POIN PrepsPalette
+ORG 0xb0d04
+POIN PrepsPalette
+ORG 0xb4e14
+POIN PrepsPalette
+ORG 0xb6880
+POIN PrepsPalette
+ORG 0xB1756C
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB1758C
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB175aC
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB175cC
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB175eC
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB1760C
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB1762C
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB1764C
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB1766C
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB1768C
+#incbin "PrepsBG.png.pal.dmp"
+ORG 0xB176aC
+#incbin "PrepsBG.png.pal.dmp"
+POP
+PrepsImage:
+#incbin "PrepsBG.png.dmp"
+PrepsPalette:
+#incbin "PrepsBG.png.pal.dmp"
+
+
+
+PUSH
 ORG $A8F34
 POIN MenuNames
 ORG $A9a60

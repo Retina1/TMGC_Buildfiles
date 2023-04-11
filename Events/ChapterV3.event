@@ -267,6 +267,13 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
+CHECK_EXISTS Wilhelm
+BNE 0x1 0xc 0x0
+Reinforcements(V3MoreUnits)
+Text(V3_ArrivalLTC)
+SetSupport(Wilhelm,Manfred,BSupport)
+SetSupport(Argent,Freddric,CPSupport)
+LABEL 0x1
 ResetBaseFlags
 MUSC 0x0
 CleanTextNoMap(YgstraCG,V3Ending1)

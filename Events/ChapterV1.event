@@ -182,6 +182,13 @@ SetSupport(Dean,Eliza,CPSupport)
 EndEvent
 
 EndingScene:
+CHECK_EXISTS Rift
+BNE 0x10 0xc 0x0
+Reinforcements(V1MoreUnits)
+Text(V1ArrivalLTC)
+SetSupport(Rift,Estelle,CPSupport)
+SetSupport(Chartreuse,Estelle,CPSupport)
+LABEL 0x10
 ResetBaseFlags
 CHECK_EVENTID ClarqueAliveFlag
 BEQ 0x1 0xc 0x0

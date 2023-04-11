@@ -208,6 +208,14 @@ GotoPrepScreen
 EndEvent
 
 EndingScene:
+CHECK_EXISTS Dirk
+BNE 0x1 0xc 0x0
+Reinforcements(V2MoreUnits)
+Text(V2DirkCallumJoinLTC)
+SetSupport(Eliza,Dirk,BSupport)
+SetSupport(Dean,Dirk,CPSupport)
+SetSupport(Rift,Callum,CPSupport)
+LABEL 0x1
 ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(VillageCG,V2Ending1)

@@ -33,6 +33,11 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x10,C21JohanBlairRecruitment,Blair,Johan)
+CharacterEventBothWays(0x11,C21JohanStefanRecruitment,Johan,Stefan)
+CharacterEventBothWays(0x12,C21JohanDesmondRecruitment,Johan,Desmond)
+CharacterEventBothWays(0x13,C21JohanPtolemyRecruitment,Johan,Ptolemy)
+CharacterEvent(0x14,C21PtolemyBlairRecruitment,Blair,Ptolemy)
 END_MAIN
 
 LocationBasedEvents:
@@ -299,6 +304,69 @@ C21Turn1:
 SystemText(_Ch21SysText)
 EndEvent
 
+C21JohanBlairRecruitment:
+MUSC S_Chaos
+Text(FillerDialogue)
+TurnAlly(Johan)
+EndEvent
+
+C21JohanStefanRecruitment:
+MUSC S_Chaos
+CHECK_EVENTID 0x10
+BNE 0x1 0xc 0x0
+Text(FillerDialogue)//unrecruited
+TurnAlly(Johan)
+ENUT 0x10
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//recruited
+LABEL 0x2
+SetSupport(Johan,Stefan,BSupport,1)
+EndEvent
+
+C21JohanDesmondRecruitment:
+MUSC S_Chaos
+CHECK_EVENTID 0x10
+BNE 0x1 0xc 0x0
+Text(FillerDialogue)//unrecruited
+TurnAlly(Johan)
+ENUT 0x10
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//recruited
+LABEL 0x2
+SetSupport(Johan,Desmond,BSupport,1)
+EndEvent
+
+C21JohanPtolemyRecruitment:
+MUSC S_Chaos
+CHECK_EVENTID 0x10
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0x14
+BEQ 0x2 0xc 0x0
+GOTO 0x3
+LABEL 0x1
+Text(FillerDialogue)//johan unrecruited
+TurnAlly(Johan)
+GOTO 0x4
+LABEL 0x2
+Text(FillerDialogue)//ptolemy unrecruited
+TurnAlly(Ptolemy)
+GOTO 0x4
+LABEL 0x3
+Text(FillerDialogue)//both recruited
+LABEL 0x4
+ENUT 0x10
+ENUT 0x14
+SetSupport(Johan,Ptolemy,BSupport,1)
+EndEvent
+
+C21PtolemyBlairRecruitment:
+MUSC S_Chaos
+Text(FillerDialogue)
+TurnAlly(Ptolemy)
+EndEvent
+
 C21BigCheck:
 CHECK_EVENTID 0x9
 BEQ 0x1 0xc 0x0
@@ -377,7 +445,7 @@ Reinforcements(C21Cell3Spawn)
 GOTO 0x2
 LABEL 0x1
 CHECK_TURNS
-SVAL 0x1 6
+SVAL 0x1 7
 BNE 0x3 0xc 0x1
 CAM1 [17,18]
 FlashCursor(17,18,30)
@@ -386,7 +454,7 @@ FlashCursor(17,19,30)
 FlashCursor(18,19,30)
 GOTO 0x4
 LABEL 0x3
-SVAL 0x1 7
+SVAL 0x1 8
 BNE 0x4 0xc 0x1
 Reinforcements(C21Cell3SpawnBad)
 GOTO 0x2
@@ -402,7 +470,7 @@ Reinforcements(C21Cell4Spawn)
 GOTO 0x2
 LABEL 0x1
 CHECK_TURNS
-SVAL 0x1 12
+SVAL 0x1 13
 BNE 0x3 0xc 0x1
 CAM1 [2,2]
 FlashCursor(2,2,30)
@@ -411,7 +479,7 @@ FlashCursor(2,3,30)
 FlashCursor(3,3,30)
 GOTO 0x4
 LABEL 0x3
-SVAL 0x1 13
+SVAL 0x1 14
 BNE 0x4 0xc 0x1
 Reinforcements(C21Cell4SpawnBad)
 GOTO 0x2
@@ -427,7 +495,7 @@ Reinforcements(C21Cell5Spawn)
 GOTO 0x2
 LABEL 0x1
 CHECK_TURNS
-SVAL 0x1 13
+SVAL 0x1 14
 BNE 0x3 0xc 0x1
 CAM1 [9,2]
 FlashCursor(9,2,30)
@@ -436,7 +504,7 @@ FlashCursor(9,3,30)
 FlashCursor(10,3,30)
 GOTO 0x4
 LABEL 0x3
-SVAL 0x1 14
+SVAL 0x1 15
 BNE 0x4 0xc 0x1
 Reinforcements(C21Cell5SpawnBad)
 GOTO 0x2
@@ -449,10 +517,11 @@ C21Cell6Check:
 TileChangeCheck(0x2)
 BEQ 0x1 0xc 0x0
 Reinforcements(C21Cell6Spawn)
+Text(FillerDialogue)
 GOTO 0x2
 LABEL 0x1
 CHECK_TURNS
-SVAL 0x1 14
+SVAL 0x1 15
 BNE 0x3 0xc 0x1
 CAM1 [15,2]
 FlashCursor(15,2,30)
@@ -461,9 +530,10 @@ FlashCursor(15,3,30)
 FlashCursor(16,3,30)
 GOTO 0x4
 LABEL 0x3
-SVAL 0x1 15
+SVAL 0x1 16
 BNE 0x4 0xc 0x1
 Reinforcements(C21Cell6SpawnBad)
+Text(FillerDialogue)
 GOTO 0x2
 LABEL 0x4
 ENUF 0xe

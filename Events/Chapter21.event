@@ -22,6 +22,8 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C21Turn1,1)
+TurnEventPlayer(0x15,C21DoorCheck,1,255)
+TurnEventPlayer(0x17,C21AreaTrap,1,255)
 TurnEventPlayer(0x9,C21Cell1Check,1,255)
 TurnEventPlayer(0xa,C21Cell2Check,1,255)
 TurnEventPlayer(0xb,C21Cell3Check,1,255)
@@ -29,6 +31,7 @@ TurnEventPlayer(0xc,C21Cell4Check,1,255)
 TurnEventPlayer(0xd,C21Cell5Check,1,255)
 TurnEventPlayer(0xe,C21Cell6Check,1,255)
 TurnEventPlayer(0xf,C21BigCheck,1,255)
+//add something to make spawns near back after every door is open
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -114,6 +117,7 @@ BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
+AreaEvent(0x16,C21AreaTrigger,0,2,20,12)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -158,11 +162,83 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,36] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C21Easy:
-UNIT Holanis MercF 0x0 Level(13,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [LightBrand] ChaseOnceApproachedAI
+UNIT Holanis Warrior 0x0 Level(5,Enemy,1) [1,5] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Holanis Soldier 0x0 Level(20,Enemy,1) [19,4] DropItem 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Holanis Sage 0x0 Level(2,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [Thunder] GroupThreeAI
+UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [Nightfall] GroupThreeAI
+UNIT Holanis Sage 0x0 Level(2,Enemy,1) [7,10] DropItem 0x0 0x0 0x0 [Cloudburst] GroupThreeAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [SilverAxe] GroupFourAI
+UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [LightBrand] GroupFourAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [16,10] DropItem 0x0 0x0 0x0 [BraveSword] GroupFourAI
+UNIT Holanis Merc 0x0 Level(20,Enemy,1) [10,18] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Myrm 0x0 Level(20,Enemy,1) [7,21] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [20,20] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT Holanis SwMastF 0x0 Level(3,Enemy,1) [6,16] 0x0 0x0 0x0 0x0 [SilverSword] GroupTwoAI
+UNIT Holanis Sniper 0x0 Level(3,Enemy,1) [6,15] 0x0 0x0 0x0 0x0 [SilverBow] GroupTwoAI
+UNIT Holanis LncGen 0x0 Level(4,Enemy,1) [14,16] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis Sniper 0x0 Level(3,Enemy,1) [0,28] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [5,28] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [4,4] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [17,5] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [7,25] 0x0 0x0 0x0 0x0 [Nightfall] NoAI
+UNIT Holanis AxePal 0x0 Level(3,Enemy,1) [20,31] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Holanis BowPal 0x0 Level(3,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
+UNIT Holanis Hero 0x0 Level(4,Enemy,1) [18,37] 0x0 0x0 0x0 0x0 [SilverSword] GroupOneAI
+UNIT Holanis Hero 0x0 Level(4,Enemy,1) [20,35] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOneAI
+UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [20,37] DropItem 0x0 0x0 0x0 [Longbow,ChestKey] GroupOneAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [10,24] DropItem 0x0 0x0 0x0 [Spear,DoorKey] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [8,24] DropItem 0x0 0x0 0x0 [Tomahawk,DoorKey] NeverMoveAI
+UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Holanis SorcF 0x0 Level(3,Enemy,1) [2,27] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI
+UNIT Holanis Sniper 0x0 Level(15,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [Stormbow] NeverMoveAI
+UNIT Larson Assass 0x0 Level(10,Enemy,1) [6,12] DropItem 0x0 0x0 0x0 [SilverBow,SilverSword,Speedwings] ChaseOnceApproachedAI
+UNIT Holanis Sage 0x0 Level(6,Enemy,1) [7,5] DropItem 0x0 0x0 0x0 [ForceSpike] GroupFiveAI
+UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [12,4] DropItem 0x0 0x0 0x0 [MainGauche] GroupFiveAI
+UNIT Nathaniel Sorc 0x0 Level(10,Enemy,1) [10,5] DropItem 0x0 0x0 0x0 [Fenrir,Talisman] NeverMoveAI
 UNIT
 
 C21Normal:
-UNIT Holanis Mage 0x0 Level(15,Enemy,1) [5,15] DropItem 0x0 0x0 0x0 [Thunder,DoorKey] NoAI
+UNIT Holanis Warrior 0x0 Level(5,Enemy,1) [1,5] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Holanis Soldier 0x0 Level(20,Enemy,1) [19,4] DropItem 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Holanis Sage 0x0 Level(2,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [Thunder] GroupThreeAI
+UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [Nightfall] GroupThreeAI
+UNIT Holanis Sage 0x0 Level(2,Enemy,1) [7,10] DropItem 0x0 0x0 0x0 [Cloudburst] GroupThreeAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [SilverAxe] GroupFourAI
+UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [LightBrand] GroupFourAI
+UNIT Holanis Hero 0x0 Level(2,Enemy,1) [16,10] DropItem 0x0 0x0 0x0 [BraveSword] GroupFourAI
+UNIT Holanis Merc 0x0 Level(20,Enemy,1) [10,18] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Myrm 0x0 Level(20,Enemy,1) [7,21] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [20,20] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT Holanis Sage 0x0 Level(3,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [Elfire] AttackInRangeAI
+UNIT Holanis SwMastF 0x0 Level(3,Enemy,1) [6,16] 0x0 0x0 0x0 0x0 [GildedSword] GroupTwoAI
+UNIT Holanis Sniper 0x0 Level(3,Enemy,1) [6,15] 0x0 0x0 0x0 0x0 [GildedBow] GroupTwoAI
+UNIT Holanis LncGen 0x0 Level(4,Enemy,1) [14,16] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis Sniper 0x0 Level(3,Enemy,1) [0,28] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [5,28] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [4,4] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis MageF 0x0 Level(20,Enemy,1) [17,5] 0x0 0x0 0x0 0x0 [Sagittae] NoAI
+UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [7,25] 0x0 0x0 0x0 0x0 [Nightfall] NoAI
+UNIT Holanis AxePal 0x0 Level(3,Enemy,1) [20,31] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Holanis BowPal 0x0 Level(3,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
+UNIT Holanis Hero 0x0 Level(4,Enemy,1) [18,37] 0x0 0x0 0x0 0x0 [SilverSword] GroupOneAI
+UNIT Holanis Hero 0x0 Level(4,Enemy,1) [20,35] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOneAI
+UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [20,37] DropItem 0x0 0x0 0x0 [Longbow,ChestKey] GroupOneAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [12,30] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [13,31] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [10,24] DropItem 0x0 0x0 0x0 [Spear,DoorKey] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [2,8] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [8,24] DropItem 0x0 0x0 0x0 [Tomahawk,DoorKey] NeverMoveAI
+UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Holanis SorcF 0x0 Level(3,Enemy,1) [2,27] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI
+UNIT Holanis Sniper 0x0 Level(15,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [Stormbow] NeverMoveAI
+UNIT Larson Assass 0x0 Level(10,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [SilverBow,SilverSword,Speedwings] ChaseOnceApproachedAI
+UNIT Holanis Sage 0x0 Level(6,Enemy,1) [7,5] DropItem 0x0 0x0 0x0 [ForceSpike] GroupFiveAI
+UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [12,4] DropItem 0x0 0x0 0x0 [MainGauche] GroupFiveAI
+UNIT Nathaniel Sorc 0x0 Level(10,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Fenrir,Talisman] NeverMoveAI
 UNIT
 
 C21Hard:
@@ -206,11 +282,36 @@ UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningSta
 UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT Holanis SorcF 0x0 Level(3,Enemy,1) [2,27] 0x0 0x0 0x0 0x0 [Nosferatu] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(15,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [Stormbow] NeverMoveAI
-UNIT Larson Assass 0x0 Level(10,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [GildedBow,GildedSword,Speedwings] ChaseOnceApproachedAI
+UNIT Larson Assass 0x0 Level(10,Enemy,1) [6,12] 0x0 0x0 0x0 0x0 [GildedBow,GildedSword,Speedwings] ChaseOnceApproachedAI
 UNIT Holanis Sage 0x0 Level(6,Enemy,1) [7,5] DropItem 0x0 0x0 0x0 [ForceSpike] GroupFiveAI
 UNIT Holanis Sniper 0x0 Level(6,Enemy,1) [8,4] 0x0 0x0 0x0 0x0 [Wardbow,SilverBow] GroupFiveAI
 UNIT Holanis SwMast 0x0 Level(2,Enemy,1) [12,4] DropItem 0x0 0x0 0x0 [MainGauche] GroupFiveAI
 UNIT Nathaniel Sorc 0x0 Level(10,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Nocturne,Talisman] NeverMoveAI
+UNIT
+
+C21DoorSpawn:
+UNIT Holanis AxeWyv 0x0 Level(20,Enemy,1) [0,14] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Holanis SwdPeg 0x0 Level(20,Enemy,1) [0,15] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
+UNIT Holanis Halberdier 0x0 Level(5,Enemy,1) [20,13] 0x0 0x0 0x0 0x0 [Spear] NoAI
+UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [20,14] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT
+
+C21DoorSpawn2:
+UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [0,25] 0x0 0x0 0x1 REDA1R25 [BraveBow] NoAI
+UNIT Holanis Hero 0x0 Level(5,Enemy,1) [0,25] 0x0 0x0 0x1 REDA2R25 [BraveSword] NoAI
+UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [5,30] 0x0 0x0 0x0 0x0 [MorningStar] NoAI
+UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [BraveSword] AttackInRangeAI
+UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [9,8] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT
+
+C21AreaSpawn:
+UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [0,8] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Holanis Warrior 0x0 Level(4,Enemy,1) [0,9] 0x0 0x0 0x0 0x0 [Tomahawk] NoAI
+UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [20,8] 0x0 0x0 0x0 0x0 [Nightfall] NoAI
+UNIT Holanis Hero 0x0 Level(4,Enemy,1) [20,9] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Holanis SwdPal 0x0 Level(6,Enemy,1) [4,37] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
+UNIT Holanis LncPal 0x0 Level(6,Enemy,1) [5,37] 0x0 0x0 0x0 0x0 [GildedLance] NoAI
+UNIT Holanis AxePal 0x0 Level(6,Enemy,1) [6,37] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
 UNIT
 
 C21Cell1Spawn:
@@ -288,6 +389,7 @@ LoadUnitsByDifficulty(C21Easy,C21Normal,C21Hard)
 LOAD1 0x0 C21Units
 ENUN
 ENUT 0x8
+ENUT 0x17
 GotoPrepScreen
 ENDA
 
@@ -386,6 +488,33 @@ GOTO 0x2
 LABEL 0x1
 ENUF 0xf
 LABEL 0x2
+EndEvent
+
+C21DoorCheck:
+TileChangeCheck(0x6)
+BEQ 0x1 0xc 0x0
+Reinforcements(C21DoorSpawn)
+CHECK_HARD
+BEQ 0x2 0xc 0x0
+Reinforcements(C21DoorSpawn2)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x15
+LABEL 0x2
+EndEvent
+
+C21AreaTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x17
+GOTO 0x2
+LABEL 0x1
+ENUF 0x16
+LABEL 0x2
+EndEvent
+
+C21AreaTrap:
+Reinforcements(C21AreaSpawn)
 EndEvent
 
 C21Cell1Check:

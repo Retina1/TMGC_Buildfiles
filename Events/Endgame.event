@@ -16,7 +16,7 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
-POIN C19Units C19Units
+POIN EndgameUnits EndgameUnits
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -48,7 +48,7 @@ ENDTRAP
 
 ALIGN 4
 
-C19Units:
+EndgameUnits:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
@@ -71,15 +71,15 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
-C19Easy:
+EndgameEasy:
 UNIT Dalst AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
 
-C19Normal:
+EndgameNormal:
 UNIT Dalst AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
 
-C19Hard:
+EndgameHard:
 UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT FinalArbordia Liberator 0x0 Level(20,Enemy,1) [10,4] 0x0 0x0 0x0 0x0 [Aspect] NeverMoveAI
 UNIT Dalst Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
@@ -93,8 +93,8 @@ MUSC 0x0
 Narration(Map2CG,Final_Narration)
 CleanTextNoMap(MoonCG,Final_Flashback)
 CleanTextNoMap(MoonCG,Final_Opening)
-LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
-LOAD1 0x0 C19Units
+LoadUnitsByDifficulty(EndgameEasy,EndgameNormal,EndgameHard)
+LOAD1 0x0 EndgameUnits
 ENUN
 GotoPrepScreen
 ENDA

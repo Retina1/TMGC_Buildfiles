@@ -724,3 +724,44 @@ ALIGN 4
 ArchivistMug:
 #incbin "dmps/Archivist.dmp"
 setMugEntry(0xe5,ArchivistMug,3,6,3,4)
+
+ALIGN 4
+KyrieMug:
+#incbin "Kyrie/dmps/Kyrie.dmp"
+setMugEntry(0x11c,KyrieMug,3,6,3,4)
+ALIGN 4
+KyrieTenseMug:
+#incbin "Kyrie/dmps/KyrieTense.dmp"
+setMugEntry(0x11d,KyrieTenseMug,3,6,3,4)
+ALIGN 4
+KyrieH1Mug:
+#incbin "Kyrie/dmps/KyrieH1.dmp"
+setMugEntry(0x11e,KyrieH1Mug,3,6,3,4)
+ALIGN 4
+KyrieH2Mug:
+#incbin "Kyrie/dmps/KyrieH2.dmp"
+setMugEntry(0x11f,KyrieH2Mug,3,6,3,4)
+ALIGN 4
+KyrieH3Mug:
+#incbin "Kyrie/dmps/KyrieH3.dmp"
+setMugEntry(0x120,KyrieH3Mug,3,6,3,4)
+ALIGN 4
+KyrieH4Mug:
+#incbin "Kyrie/dmps/KyrieH4.dmp"
+setMugEntry(0x121,KyrieH4Mug,3,6,3,4)
+ALIGN 4
+KyrieTenseH1Mug:
+#incbin "Kyrie/dmps/KyrieTenseH1.dmp"
+setMugEntry(0x122,KyrieTenseH1Mug,3,6,3,4)
+ALIGN 4
+KyrieTenseH2Mug:
+#incbin "Kyrie/dmps/KyrieTenseH2.dmp"
+setMugEntry(0x123,KyrieTenseH2Mug,3,6,3,4)
+ALIGN 4
+KyrieTenseH3Mug:
+#incbin "Kyrie/dmps/KyrieTenseH3.dmp"
+setMugEntry(0x124,KyrieTenseH3Mug,3,6,3,4)
+ALIGN 4
+KyrieTenseH4Mug:
+#incbin "Kyrie/dmps/KyrieTenseH4.dmp"
+setMugEntry(0x125,KyrieTenseH4Mug,3,6,3,4)

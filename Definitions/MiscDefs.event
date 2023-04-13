@@ -158,6 +158,12 @@ POP
 #define ClarqueAliveFlag 0xc3
 #define ClarqueSeenFlag 0xc2
 
+#define HeatFlag1 0xc1
+#define HeatFlag2 0xc0
+#define HeatFlag3 0xbf
+#define HeatFlag4 0xbe
+#define TensionFlag 0xbd
+
 //movement types
 #define LordMovement 0x880B808
 #define BrigandMovement 0x880b90c

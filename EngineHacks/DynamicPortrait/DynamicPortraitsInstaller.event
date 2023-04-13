@@ -32,6 +32,53 @@ SHORT For the Event Flag ID that will trigger the portrait change (0 if you want
 BYTE  For the character ID who we will check to determine if we change the portrait (0 if you want no character)
 BYTE  For the class ID the character above must be to trigger the portrait change (0 if you don't care about their class)
 */
+//kyrie stuff - figure out how to make tension versions work
+SHORT 0x11c
+SHORT 0x11d
+SHORT TensionFlag
+BYTE Kyrie
+BYTE SwMastF
+SHORT 0x11c
+SHORT 0x11e
+SHORT HeatFlag1
+BYTE Kyrie
+BYTE SwMastF
+SHORT 0x11c
+SHORT 0x11f
+SHORT HeatFlag2
+BYTE Kyrie
+BYTE SwMastF
+SHORT 0x11c
+SHORT 0x120
+SHORT HeatFlag3
+BYTE Kyrie
+BYTE SwMastF
+SHORT 0x11c
+SHORT 0x121
+SHORT HeatFlag4
+BYTE Kyrie
+BYTE SwMastF
+SHORT 0x11d
+SHORT 0x122
+SHORT HeatFlag1
+BYTE Kyrie
+BYTE SwMastF
+SHORT 0x11d
+SHORT 0x121
+SHORT HeatFlag2
+BYTE Kyrie
+BYTE SwMastF
+SHORT 0x11d
+SHORT 0x124
+SHORT HeatFlag3
+BYTE Kyrie
+BYTE SwMastF
+SHORT 0x11d
+SHORT 0x125
+SHORT HeatFlag4
+BYTE Kyrie
+BYTE SwMastF
+
 //Blair
 //flower alt eventually
 SHORT 0x0002

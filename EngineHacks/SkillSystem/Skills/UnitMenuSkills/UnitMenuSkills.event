@@ -78,17 +78,17 @@ POIN SkillTester
 WORD FlowStateID
 
 ALIGN 4
-//POIN FlowEvent
 FlowEffect:
 #incbin "Flow/FlowEffect.dmp"
+POIN FlowEvent
 ALIGN 4
-//POIN FlowEvent
 UnflowEffect:
 #incbin "Flow/UnflowEffect.dmp"
+POIN FlowEvent
 
 FlowEvent:
 SOUN 0x10F
-STAL 0x10
+STAL 0x5
 NoFade
 ENDA
 

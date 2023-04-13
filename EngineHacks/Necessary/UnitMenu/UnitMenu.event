@@ -93,6 +93,7 @@ UnitMenuTable:
 	MenuCommand(UM_GaidenBlackMagic,UM_GaidenMagicDesc,NormalText,GaidenBlackMagicUMUsability,GaidenBlackMagicUMEffect,GaidenBlackMagicUMHover,GaidenMagicUMUnhover)
 	MenuCommand(UM_GaidenWhiteMagic,UM_GaidenMagicDesc,NormalText,GaidenWhiteMagicUMUsability,GaidenWhiteMagicUMEffect,GaidenWhiteMagicUMHover,GaidenMagicUMUnhover)
   #endif // GAIDEN_MAGIC
+  MenuCommand(UM_Tension, UM_TensionDesc, BlueText, UMTensionUsability, UMTensionEffect, $22c31, $22c99)
   #ifdef COMBAT_ARTS
 	MenuCommand(UM_CombatArts, UM_CombatArtsDesc, BlueText, CombatArtsUsability, CombatArtsEffect, $22c31, $22c99)
   #else // COMBAT_ARTS

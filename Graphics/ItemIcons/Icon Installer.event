@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(SootheswordIcon)
+#incbin "Swords/Slim Sword.dmp"
+ALIGN 4
 ItemIconEntry(ToddhandIcon)
 #incbin "Tomes/Dark/Jormungand.dmp"
 ALIGN 4

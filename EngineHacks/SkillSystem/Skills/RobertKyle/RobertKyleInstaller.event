@@ -1,0 +1,53 @@
+ALIGN 4
+#include "DrainEvent.event"
+ALIGN 4
+#include "HeatEvent.event"
+ALIGN 4
+#include "TensionEvent.event"
+ALIGN 4
+#include "SpendTensionEvent.event"
+
+ALIGN 4
+UMTensionUsability:
+#incbin "TensionUsability.dmp"
+POIN SkillTester
+WORD RoboKyID
+
+ALIGN 4
+//#include "TensionEffect.lyn.event"
+UMTensionEffect:
+#incbin "TensionEffect.dmp"
+POIN TensionEvent
+
+ALIGN 4
+PreCombatTension:
+#incbin "TensionInBattle.dmp"
+POIN SkillTester
+WORD RoboKyID
+
+ALIGN 4
+PostCombatTension:
+#incbin "TensionPostBattle.dmp"
+POIN SkillTester
+WORD RoboKyID
+POIN SpendTensionEvent
+
+ALIGN 4
+PreCombatHeat:
+#incbin "HeatInBattle.dmp"
+POIN SkillTester
+WORD RoboKyID
+
+ALIGN 4
+PostCombatHeat:
+#incbin "HeatPostBattle.dmp"
+POIN SkillTester
+WORD RoboKyID
+POIN HeatEvent
+
+ALIGN 4
+PostCombatHeatDrain:
+#incbin "HeatDrainPostBattle.dmp"
+POIN SkillTester
+WORD RoboKyDrainID
+POIN DrainEvent

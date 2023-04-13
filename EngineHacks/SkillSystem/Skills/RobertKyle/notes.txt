@@ -1,0 +1,9 @@
+need:
+PRF WEAPON SKILL
+-skill for heat draining PRF (has its own post-battle event? work it into other postbattle event?)
+GENERAL SKILL
+-prebattle pointer for heat calcs (+3 atk/as, +15 hit/crit/avo, -5 def/res per stack, bulk zeroed out at 4 for ultimate glass cannon)
+-postbattle pointer for boosting heat (4 flags, one for each heat state (i don't feel like using logic gates and can spare global flags))
+-unit menu stuff for tension builder (check if tension flag is on, call event to turn it on urgh)
+-prebattle or proc stuff for tension expender (+15 atk/luna effect/some other funny if tension flag on)
+-postbattle for tension expender (turn off tension if expended, this'll be fun to figure out)

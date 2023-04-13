@@ -16,7 +16,7 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData2
-POIN C19Units C19Units
+POIN C24Units C24Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -50,7 +50,7 @@ ENDTRAP
 
 ALIGN 4
 
-C19Units:
+C24Units:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
@@ -68,15 +68,15 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [5,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
-C19Easy:
+C24Easy:
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
 
-C19Normal:
+C24Normal:
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
 
-C19Hard:
+C24Hard:
 UNIT Dalst Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
 UNIT
@@ -88,8 +88,8 @@ ENUT GuideChpt24
 MUSC NarrationTheme5
 Narration(Map2CG,Ch24_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
-LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
-LOAD1 0x0 C19Units
+LoadUnitsByDifficulty(C24Easy,C24Normal,C24Hard)
+LOAD1 0x0 C24Units
 ENUN
 GotoPrepScreen
 ENDA

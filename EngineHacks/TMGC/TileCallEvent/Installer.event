@@ -1,0 +1,38 @@
+#include "eastdlib.event" 
+#include "HookButtonPress.lyn.event" 
+#include "TerrainCallEvent.lyn.event" 
+
+#ifndef callHackNew 
+	#define callHackNew(offset) 		"BYTE $01 $4B $9E $46 $00 $F8 $01 $E0; POIN (offset|0x1)"
+#endif 
+
+PUSH 
+ORG $1CA30
+callHackNew(HookButtonPressA) // in Procs PlayerPhase - mainLoop 
+POP 
+
+
+ALIGN 4 
+TerrainExecuteEventList: 
+// ChapterID (0xFF = any) 
+// Terrain (0 = any) 
+// UnitID (0 = any) 
+// ClassID (0 = any) 
+// TrapID (0 = any) 
+// Padding (does nothing) 
+// CompletionFlag (0 = never complete)  
+// EventLabel 
+BYTE 0xFF 0 	0 0 1 0; SHORT 0xA; POIN SomeEvent; // In any chapter, pressing A on a ballista (0x1) will show the event if completion flag A is off. 
+BYTE 0xFF 0 	0 0x79 0 0; SHORT 0xA; POIN SomeEvent; // In any chapter, pressing A on a player tent (0x79) will show the event if completion flag A is off. 
+BYTE 0xFF 0xA 	0 0 0 0; SHORT 0x8; POIN SomeEvent; // In any chapter, pressing A on a fort (0xA) will show the event if completion flag 8 is off. 
+WORD 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF // Terminator 
+
+
+
+ALIGN 4 
+SomeEvent: 
+Text(0x9df)
+NoFade 
+ENDA 
+
+

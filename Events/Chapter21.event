@@ -384,7 +384,9 @@ ENUT GuideChpt21
 LocationText(MoonCG,Ch21_Flashback,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
 Narration(Map2CG,Ch21_Narration)
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,Ch21_Opening)
+MUSC S_Nightfall
+CleanTextNoMap(TentInsideCG,Ch21_Opening2)
 LoadUnitsByDifficulty(C21Easy,C21Normal,C21Hard)
 LOAD1 0x0 C21Units
 ENUN

@@ -107,6 +107,9 @@ ChapterDeathQuote(Ciraweiss,ChapterV5,DefeatBossFlag,V5CiraweissDefeat)
 // c21
 //i don't feel like making a new macro for this sorry
 BYTE Prisoner 0x0 0xff Chapter21 0x0 0x0 ;SHORT 0x0 ;WORD C21DeathCounter|IsPointer
+ChapterDeathQuote(Larson,Chapter21,0x0,C21LarsonDeath)
+KillerDeathQuote(Nathaniel,Simone,Chapter21,DefeatBossFlag,C21NathanielSimoneDeath)
+ChapterDeathQuote(Nathaniel,Chapter21,DefeatBossFlag,C21NathanielDeath)
 // c23
 ChapterDeathQuote(Neillstrom,Chapter23,DefeatBossFlag,FillerDialogue)
 // c25

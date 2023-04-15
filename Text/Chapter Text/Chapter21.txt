@@ -2,6 +2,9 @@
 Free prisoners[N]
 and escape.[X]
 
+##FortJraeyanLabel ^
+Fort Jraeyan: Interior[X]
+
 ##_Ch21SysText
 Opening a cell will cause green[N]
 units to appear,[A] who'll advance[N]
@@ -26,8 +29,94 @@ To complete the map, open all 6 cells,[A][N]
 then escape with your entire army[N]
 at any carpets.[A][X]
 
+//ending outline - after the prisoners are secured, the army returns inside to search
+//scene with aercolyn knights/johan/desmond/stefan/ptolemy
+//inside, eventually find experimental logs that show how long this has happened
+//end with a log from girard and elcorian (perhaps THE chapter 20/V5 stuff) to reveal the twist to blair and crew
+//also have more simone/arin lore
+
 ##TowerPeakLabel ^
 Tower of Opistus: Apex[X]
+
+##C21LarsonBattle
+[OpenMidLeft][LoadLarson]
+[ToggleMouthMove]...[ToggleMouthMove]I don't know you.[N]
+You don't know me.[A][N]
+Nothing more to say.[A][X]
+
+##C21LarsonSveltzalusBattle
+[OpenMidLeft][LoadLarson]
+[ToggleMouthMove]...[ToggleMouthMove]This is a joke, right?[N]
+A big eyeball?[A][N]
+You're just an elaborate[N]
+joke, right?[A][X]
+
+##C21LarsonDeath
+[OpenMidLeft][LoadLarson]
+[ToggleMouthMove]...[ToggleMouthMove]Not[ToggleMouthMove]...[ToggleMouthMove] bad[ToggleMouthMove]...[ToggleMouthMove][N]
+Not bad at all[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
+##C21NathanielBattle
+[OpenMidLeft][LoadNathaniel]
+This place is my life's work![N]
+Stand down, or die![A][X]
+
+##C21NathanielJohanBattle
+[OpenMidLeft][LoadNathaniel]
+You're one of the subjects.[A][N]
+It'd be great if you could scream[N]
+some empirical data as you die.[A][N][ClearFace][OpenMidRight][LoadJohan]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][ClearFace][OpenMidLeft][LoadNathaniel]
+Silence? That works too.[A][X]
+
+##C21NathanielPtolemyBattle
+[OpenMidLeft][LoadNathaniel]
+[ToggleMouthMove]...[ToggleMouthMove]The first rule of this all.[N]
+Distance yourself from them.[A][N]
+Really, this is what you deserve[N]
+for interfering with our work.[A][N][ClearFace][OpenMidRight][LoadPtolemy]
+You're[ToggleMouthMove]...[ToggleMouthMove] horrible. I'll[ToggleMouthMove]...[ToggleMouthMove] bring[N]
+you down, for my friends.[A][X]
+
+##C21NathanielSimoneBattle
+[OpenMidLeft][LoadNathaniel]
+Simone! Where in the hell[N]
+have you been?[A][N][ClearFace][OpenMidRight][LoadSimone]
+Places. Got tired of this[N]
+whole gig, you know?[A][N][ClearFace][OpenMidLeft][LoadNathaniel]
+You won't stand in our way.[N]
+You've given too much to us.[A][N][ClearFace][OpenMidRight][LoadSimone]
+Perhaps. But I've also[ToggleMouthMove]...[ToggleMouthMove][N]
+taken so very much.[A][N]
+And I think taking down this[N]
+whole operation[ToggleMouthMove]...[ToggleMouthMove][A][N]
+It'll make for a better story.[A][N][ClearFace][OpenMidLeft][LoadNathaniel]
+[ToggleMouthMove]...[ToggleMouthMove]Very well. I see our years[N]
+as colleagues meant nothing.[A][X]
+
+##C21NathanielSveltzalusBattle
+[OpenMidLeft][LoadNathaniel]
+[ToggleMouthMove]...[ToggleMouthMove]Surveil. I remember you.[N]
+Good times.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]But you seem to be[N]
+against me, now.[A][N]
+A shame.[A][X]
+
+##C21NathanielDeath
+[OpenMidLeft][LoadNathaniel]
+I've[ToggleMouthMove]...[ToggleMouthMove] done nothing wrong[ToggleMouthMove]...[ToggleMouthMove][N]
+All was for[ToggleMouthMove]...[ToggleMouthMove] knowledge[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
+##C21NathanielSimoneDeath
+[OpenMidLeft][LoadNathaniel]
+You[ToggleMouthMove]...[ToggleMouthMove] traitor[ToggleMouthMove]...[ToggleMouthMove][A][N][ClearFace][OpenMidRight][LoadSimone]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][ClearFace][OpenMidLeft][LoadNathaniel]
+[ToggleMouthMove]...[ToggleMouthMove]Before[ToggleMouthMove]...[ToggleMouthMove] I die[ToggleMouthMove]...[ToggleMouthMove] Tell me[ToggleMouthMove]...[ToggleMouthMove][N]
+The breach thirteen years ago[ToggleMouthMove]...[ToggleMouthMove][N]
+Was that[ToggleMouthMove]...[ToggleMouthMove] your doing[ToggleMouthMove]...[ToggleMouthMove]?[A][N][ClearFace][OpenMidRight][LoadSimone][ToggleSmile]
+[ToggleMouthMove]...[ToggleMouthMove]Perhaps.[A][N][ClearFace][OpenMidLeft][LoadNathaniel]
+Ha[ToggleMouthMove]...[ToggleMouthMove] At least[ToggleMouthMove]...[ToggleMouthMove] that's[N]
+one mystery[ToggleMouthMove]...[ToggleMouthMove] solved[ToggleMouthMove]...[ToggleMouthMove][A][X]
 
 ##Ch21_Opening
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
@@ -108,6 +197,71 @@ Stop selling yourself short.[N]
 You got us this far.[A][N]
 [ToggleMouthMove]...[ToggleMouthMove]We'd better move. We've got[N]
 to press every advantage we can.[A][X]
+
+##Ch21_Opening3
+[OpenMidRight][LoadNathaniel][OpenMidLeft][LoadLarson][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Still can't believe the boss.[N]
+Why's he ending this whole operation?[A][N]
+We[ToggleMouthMove]...[ToggleMouthMove] had a good thing going.[N]
+All the secrets we could want.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Are you finished moping?[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I suppose so. Better to destroy and[N]
+uncover again,[A] than to let the[N]
+secrets of the world slip free.[A][N]
+Speaking of destroy, I suppose it's[N]
+time to clean up our subjects.[A][N]
+Just gotta get-[A][N][OpenFarRight][LoadSoldier2][OpenMidRight][MoveRight][OpenFarRight]
+Sir! Enemies have entered the fort![A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]What? That[ToggleMouthMove]...[ToggleMouthMove] can't be.[A][N]
+The boss had all those mercs[N]
+killed![A] And he's already[N]
+left for Dalst again![A][N]
+What in the hell is he doing?[A][N][OpenFarRight]
+What shall I do?[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]I[ToggleMouthMove]...[ToggleMouthMove] don't know! This isn't my wheelhouse![A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I'll lend a hand. You're clearly hopeless.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]If you insist. Sortie everyone we have.[N]
+Get executioners towards the cells.[A][N]
+Do everything in your power to kill[N]
+those who approach.[A][N][OpenMidLeft]
+Very well. I expect[ToggleMouthMove]...[ToggleMouthMove] ample compensation.[A][N][OpenRight]
+Sure, sure. Just[ToggleMouthMove]...[ToggleMouthMove] go![A][X]
+
+##Ch21_Opening4
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadPtolemy]
+Do[ToggleMouthMove]...[ToggleMouthMove] you hear something?[A][N][OpenMidRight]
+It's probably[ToggleMouthMove]...[ToggleMouthMove] nothing.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidRight]
+I'm[ToggleMouthMove]...[ToggleMouthMove] sorry for dragging you into this.[A][N]
+Spending your last days in a cell[N]
+all for showing kindness.[A][N][OpenMidLeft]
+Don't[ToggleMouthMove]...[ToggleMouthMove] talk like that.[N]
+I'm[ToggleMouthMove]...[ToggleMouthMove] hopeful.[A][N][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]You'd even bid the headsman[N]
+a good day, I'm sure.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Still[ToggleMouthMove]...[ToggleMouthMove] To die here[ToggleMouthMove]...[ToggleMouthMove] Never[N]
+again seeing Aercolyn[ToggleMouthMove]...[ToggleMouthMove][A][N][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
+##Ch21_Opening5
+[OpenMidRight][LoadBlair][OpenMidLeft][LoadZeke]
+[ToggleMouthMove]...[ToggleMouthMove]It's dark in here. But I think[N]
+I see[ToggleMouthMove]...[ToggleMouthMove] cells?[A][N]
+No clue who they'd be keeping[N]
+prisoner here,[A] but their[N]
+enemy is our ally.[A][N][OpenMidRight]
+I ag[ToggleMouthMove]...[ToggleMouthMove]ree[ToggleMouthMove]...[ToggleMouthMove][A][N]
+Wait[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidLeft]
+What[ToggleMouthMove]...[ToggleMouthMove] is it?[A][N][OpenMidRight]
+It's dim[ToggleMouthMove]...[ToggleMouthMove] But I can see into[N]
+that cell there.[A][N]
+And[ToggleMouthMove]...[ToggleMouthMove] that outfit is unmistakable.[A][N][CloseEyes][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I don't follow.[A][N][OpenMidRight][OpenEyes][ToggleSmile]
+[ToggleMouthMove]...[ToggleMouthMove]Everyone! Prepare to move out![N]
+Leave no cell unopened![A][N]
+Today, we liberate our proud[N]
+soldiers of Aercolyn![A][X]
+
 
 ##Ch21_Flashback
 [OpenMidLeft][LoadArbordia]

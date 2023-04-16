@@ -38,6 +38,60 @@ at any carpets.[A][X]
 ##TowerPeakLabel ^
 Tower of Opistus: Apex[X]
 
+##C21_GetOut
+[OpenMidLeft][LoadBlair]
+I think that's every cell[N]
+we can reach.[A][N]
+Now, we just have to get out[N]
+safely. To the exits, everyone![A][X]
+
+##Ch21_JohanBlairRecruitment
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadBlair]
+woah[A][X]
+
+##Ch21_PtolemyBlairRecruitment
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadPtolemy]
+woah[A][X]
+
+##Ch21_JohanDesmondRecruitment
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadDesmond]
+woah[A][X]
+##Ch21_JohanDesmondRecruited
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadDesmond]
+woah[A][X]
+
+##Ch21_JohanStefanRecruitment
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadStefan]
+woah[A][X]
+##Ch21_JohanStefanRecruited
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadStefan]
+woah[A][X]
+
+##Ch21_JohanRecruitsPtolemy
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadPtolemy]
+woah[A][X]
+##Ch21_PtolemyRecruitsJohan
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadPtolemy]
+woah[A][X]
+##Ch21_PtolemyJohanTalk
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadPtolemy]
+woah[A][X]
+
+##Ch21_PtolemyJohanSpawn
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadPtolemy]
+we're free[A][X]
+##Ch21_PtolemyJohanSpawnBad
+[OpenMidRight][LoadJohan][OpenMidLeft][LoadPtolemy]
+we're dead[A][X]
+
+
+##C21_LightsOff
+[OpenMidLeft][LoadNathaniel]
+Douse the lights! We know these[N]
+halls better than the intruders![A][N]
+And get those executions going.[N]
+Don't let anyone escape![A][X]
+
 ##C21LarsonBattle
 [OpenMidLeft][LoadLarson]
 [ToggleMouthMove]...[ToggleMouthMove]I don't know you.[N]
@@ -152,7 +206,7 @@ They[ToggleMouthMove]...[ToggleMouthMove] slew the mercenaries.[A][N][OpenLeft]
 That's[ToggleMouthMove]...[ToggleMouthMove] unbelievable.[N]
 They were[ToggleMouthMove]...[ToggleMouthMove] our trump card.[A][N]
 We came here knowing full[N]
-well we'd need the backuo[ToggleMouthMove]...[ToggleMouthMove][A][N]
+well we'd need the backup[ToggleMouthMove]...[ToggleMouthMove][A][N]
 And now they're gone.[A][N]
 [ToggleMouthMove]...[ToggleMouthMove]Damn it[ToggleMouthMove]...[ToggleMouthMove] Damn it![A][N][OpenMidRight]
 [ToggleMouthMove]...[ToggleMouthMove][A][N][OpenLeft]

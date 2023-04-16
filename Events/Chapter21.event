@@ -168,7 +168,7 @@ UNIT Holanis Sage 0x0 Level(2,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [Thunder] GroupThr
 UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [Nightfall] GroupThreeAI
 UNIT Holanis Sage 0x0 Level(2,Enemy,1) [7,10] DropItem 0x0 0x0 0x0 [Cloudburst] GroupThreeAI
 UNIT Holanis Hero 0x0 Level(2,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [SilverAxe] GroupFourAI
-UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [LightBrand] GroupFourAI
+UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [SilverSword] GroupFourAI
 UNIT Holanis Hero 0x0 Level(2,Enemy,1) [16,10] DropItem 0x0 0x0 0x0 [BraveSword] GroupFourAI
 UNIT Holanis Merc 0x0 Level(20,Enemy,1) [10,18] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
 UNIT Holanis Myrm 0x0 Level(20,Enemy,1) [7,21] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
@@ -190,7 +190,7 @@ UNIT Holanis Sniper 0x0 Level(4,Enemy,1) [20,37] DropItem 0x0 0x0 0x0 [Longbow,C
 UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [10,24] DropItem 0x0 0x0 0x0 [Spear,DoorKey] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [8,24] DropItem 0x0 0x0 0x0 [Tomahawk,DoorKey] NeverMoveAI
 UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningStar] NeverMoveAI
-UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] DropItem 0x0 0x0 0x0 [Greatbow,DoorKey] NeverMoveAI
 UNIT Holanis SorcF 0x0 Level(3,Enemy,1) [2,27] 0x0 0x0 0x0 0x0 [Nightfall] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(15,Enemy,1) [13,7] DropItem 0x0 0x0 0x0 [Stormbow] NeverMoveAI
 UNIT Larson Assass 0x0 Level(10,Enemy,1) [6,12] DropItem 0x0 0x0 0x0 [SilverBow,SilverSword,Speedwings] ChaseOnceApproachedAI
@@ -206,7 +206,7 @@ UNIT Holanis Sage 0x0 Level(2,Enemy,1) [5,10] 0x0 0x0 0x0 0x0 [Thunder] GroupThr
 UNIT Holanis Sorc 0x0 Level(4,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [Nightfall] GroupThreeAI
 UNIT Holanis Sage 0x0 Level(2,Enemy,1) [7,10] DropItem 0x0 0x0 0x0 [Cloudburst] GroupThreeAI
 UNIT Holanis Hero 0x0 Level(2,Enemy,1) [14,10] 0x0 0x0 0x0 0x0 [SilverAxe] GroupFourAI
-UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [LightBrand] GroupFourAI
+UNIT Holanis SwMast 0x0 Level(4,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [SilverSword] GroupFourAI
 UNIT Holanis Hero 0x0 Level(2,Enemy,1) [16,10] DropItem 0x0 0x0 0x0 [BraveSword] GroupFourAI
 UNIT Holanis Merc 0x0 Level(20,Enemy,1) [10,18] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
 UNIT Holanis Myrm 0x0 Level(20,Enemy,1) [7,21] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
@@ -229,7 +229,7 @@ UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [12,30] 0x0 0x0 0x0 0x0 [Spear] NeverM
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [13,31] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [10,24] DropItem 0x0 0x0 0x0 [Spear,DoorKey] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [2,8] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
-UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [1,9] DropItem 0x0 0x0 0x0 [Spear,DoorKey] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [8,24] DropItem 0x0 0x0 0x0 [Tomahawk,DoorKey] NeverMoveAI
 UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
@@ -276,7 +276,7 @@ UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [10,24] DropItem 0x0 0x0 0x0 [Spear,Do
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [2,8] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [18,8] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
-UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [19,9] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Holanis LncArm 0x0 Level(20,Enemy,1) [19,9] DropItem 0x0 0x0 0x0 [Spear,DoorKey] NeverMoveAI
 UNIT Holanis AxeArm 0x0 Level(20,Enemy,1) [8,24] DropItem 0x0 0x0 0x0 [Tomahawk,DoorKey] NeverMoveAI
 UNIT Holanis Bishop 0x0 Level(5,Enemy,1) [8,30] DropItem 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Holanis Sniper 0x0 Level(5,Enemy,1) [10,27] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
@@ -420,24 +420,34 @@ ENDA
 
 C21Turn1:
 SystemText(_Ch21SysText)
+CAM1 Nathaniel
+FlashCursor(Nathaniel,60)
+Text(C21_LightsOff)
+FADI 30
+VCWF 0x7
+FADU 30
 EndEvent
 
 C21JohanBlairRecruitment:
 MUSC S_Chaos
-Text(FillerDialogue)
+Text(Ch21_JohanBlairRecruitment)
 TurnAlly(Johan)
+GiveItem(Axereaver,Johan)
+GiveItem(Javelin,Johan)
 EndEvent
 
 C21JohanStefanRecruitment:
 MUSC S_Chaos
 CHECK_EVENTID 0x10
 BNE 0x1 0xc 0x0
-Text(FillerDialogue)//unrecruited
+Text(Ch21_JohanStefanRecruitment)//unrecruited
 TurnAlly(Johan)
+GiveItem(Axereaver,Johan)
+GiveItem(Javelin,Johan)
 ENUT 0x10
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)//recruited
+Text(Ch21_JohanStefanRecruited)//recruited
 LABEL 0x2
 SetSupport(Johan,Stefan,BSupport,1)
 EndEvent
@@ -446,12 +456,14 @@ C21JohanDesmondRecruitment:
 MUSC S_Chaos
 CHECK_EVENTID 0x10
 BNE 0x1 0xc 0x0
-Text(FillerDialogue)//unrecruited
+Text(Ch21_JohanDesmondRecruitment)//unrecruited
 TurnAlly(Johan)
+GiveItem(Axereaver,Johan)
+GiveItem(Javelin,Johan)
 ENUT 0x10
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)//recruited
+Text(Ch21_JohanDesmondRecruited)//recruited
 LABEL 0x2
 SetSupport(Johan,Desmond,BSupport,1)
 EndEvent
@@ -464,15 +476,17 @@ CHECK_EVENTID 0x14
 BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
-Text(FillerDialogue)//johan unrecruited
+Text(Ch21_PtolemyRecruitsJohan)//johan unrecruited
 TurnAlly(Johan)
+GiveItem(Axereaver,Johan)
+GiveItem(Javelin,Johan)
 GOTO 0x4
 LABEL 0x2
-Text(FillerDialogue)//ptolemy unrecruited
+Text(Ch21_JohanRecruitsPtolemy)//ptolemy unrecruited
 TurnAlly(Ptolemy)
 GOTO 0x4
 LABEL 0x3
-Text(FillerDialogue)//both recruited
+Text(Ch21_PtolemyJohanTalk)//both recruited
 LABEL 0x4
 ENUT 0x10
 ENUT 0x14
@@ -481,7 +495,7 @@ EndEvent
 
 C21PtolemyBlairRecruitment:
 MUSC S_Chaos
-Text(FillerDialogue)
+Text(Ch21_PtolemyBlairRecruitment)
 TurnAlly(Ptolemy)
 EndEvent
 
@@ -498,7 +512,7 @@ CHECK_EVENTID 0xd
 BEQ 0x1 0xc 0x0
 CHECK_EVENTID 0xe
 BEQ 0x1 0xc 0x0
-Text(FillerDialogue)
+Text(C21_GetOut)
 Reinforcements(C21BigSpawn)
 ENUF 0x8
 GOTO 0x2
@@ -663,7 +677,7 @@ C21Cell6Check:
 TileChangeCheck(0x2)
 BEQ 0x1 0xc 0x0
 Reinforcements(C21Cell6Spawn)
-Text(FillerDialogue)
+Text(Ch21_PtolemyJohanSpawn)
 GOTO 0x2
 LABEL 0x1
 CHECK_TURNS
@@ -679,7 +693,7 @@ LABEL 0x3
 SVAL 0x1 16
 BNE 0x4 0xc 0x1
 Reinforcements(C21Cell6SpawnBad)
-Text(FillerDialogue)
+Text(Ch21_PtolemyJohanSpawnBad)
 GOTO 0x2
 LABEL 0x4
 ENUF 0xe

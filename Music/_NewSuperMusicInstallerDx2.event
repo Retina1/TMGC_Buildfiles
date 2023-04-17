@@ -1178,7 +1178,7 @@ VoiceDummy(BCVoices,0x71)
 //114
 VoiceDummy(BCVoices,0x72)
 //115
-VoiceDummy(BCVoices,0x73)
+VoiceDrum(BCVoices,0x73,SFXTable1)
 //116 melodic bass drum - C3
 VoiceDirect(BCVoices,0x74,0x3c,0x0502CB4,0x0,0x0,0x0,0xff,0xfc,0x0,0xc0)
 //117 melodic tom (12's high mid tom) - C3
@@ -1198,9 +1198,13 @@ VoiceDrum(BCVoices,0x7b,DrumsElec)
 //124 drums standard
 VoiceDrum(BCVoices,0x7c,DrumsRock)
 //125
-VoiceDrum(BCVoices,0x7d,SFXTable1)
+//VoiceDrum(BCVoices,0x7d,SFXTable1)
 //126 ambient sfx (e.g. arena crowd; ambient birds chirping)
-VoiceDrum(BCVoices,0x7e,SFXTable1)
+//VoiceDrum(BCVoices,0x7e,SFXTable1)
+//125 white noise
+VoiceDirect(BCVoices,0x7d,0x3c,0x0516680,0x0,0x0,0x0,0xff,0x0,0xff,0xa0)
+//126 applause (fun to use as a background-noise special effect at lower or higher pitches, but also used in stuff like the FE8 arena entrance theme)
+VoiceDirect(BCVoices,0x7e,0x3c,0x02AF0B0,0x0,0x0,0x0,0xff,0x0,0xff,0xa0)
 //127 drums orchestral
 VoiceDrum(BCVoices,0x7f,DrumsOrch)
 ORG BCVoices+0x600

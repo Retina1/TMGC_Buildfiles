@@ -114,7 +114,7 @@ ENUT 0xcb
 SetBackground(BlankCG)
 CheckNewGameFlag(12)
 BEQ 0x999 0xc 0x0
-SystemText(NewGamePlusPrompt)
+SystemText(NewGamePlusPrompt)//add an old school cassius toggle
 IfNoSelectedGoto(0x999)
 ENUT NewGamePlusFlag
 SystemText(EarlyFlowerPrompt)

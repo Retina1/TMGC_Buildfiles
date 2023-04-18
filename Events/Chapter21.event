@@ -411,10 +411,65 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
+//oh god do branches to autorecruit them if alive/be sad if they're dead
 TurnAllyIfAlive(Ptolemy)
 TurnAllyIfAlive(Johan)
 MUSC S_MainTheme
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)//catharsis, relief
+COUNTER_CHECK 0x1 //check counter 1 - number of deaths in slot C
+BNE 0x100 0xc 0x0
+//none dead - bragging rights award
 CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+REMA
+SetBackground(BlankCG)
+GiveItem(Memento,Blair)
+GiveItem(Boots,Blair)
+GiveItemWithDurability(SkillScroll,VengeanceID,Blair)
+GiveItem(ArmsScroll,Blair)
+GOTO 0x103
+LABEL 0x100
+SVAL 0x1 0x2
+BGT 0x101 0xc 0x1
+//1-2 dead - best practical award
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+REMA
+SetBackground(BlankCG)
+GiveItem(Boots,Blair)
+GiveItemWithDurability(SkillScroll,VengeanceID,Blair)
+GiveItem(ArmsScroll,Blair)
+GOTO 0x103
+LABEL 0x101
+SVAL 0x1 0x4
+BGT 0x102 0xc 0x1
+//3-4 dead - alright award
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+REMA
+SetBackground(BlankCG)
+GiveItemWithDurability(SkillScroll,VengeanceID,Blair)
+GiveItem(ArmsScroll,Blair)
+GOTO 0x103
+LABEL 0x102
+//5 dead - don't feel too bad award
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+REMA
+SetBackground(BlankCG)
+GiveItem(ArmsScroll,Blair)
+LABEL 0x103
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)//scene with desmond/stefan/johan if all alive, alt with desmond/stefan, desmond/johan, stefan/johan
+MUSC 0x0
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)//ask who did it, return inside to find truth
+MUSC S_Chaos
+CleanTextNoMap(DungeonCG,FillerDialogue)//find the stones that record logs, one in particular reveals identities
+//logs also reference things like surveil, artificial myrmidons
+CHECK_ALIVE Simone
+BEQ 0x201 0xc 0x0
+CleanTextNoMap(HallCG,FillerDialogue)//simone drops truth if alive, if not, figure out a way to incoporate it
+GOTO 0x202
+LABEL 0x201
+CleanTextNoMap(HallCG,FillerDialogue)//arin discovers some of it on her own
+LABEL 0x202
+MUSC S_Nightfall
+CleanTextNoMap(OutdoorCastleCG,FillerDialogue)//end of chapter, going forward
 MoveToChapter(Chapter22)
 ENDA
 

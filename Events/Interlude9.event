@@ -79,6 +79,10 @@ UNIT Blair BlairLord 0x0 Level(1,Ally,0) [21,7] 0x0 0x0 0x0 0x0 [Fire, Awaken, V
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [22,7] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT
 
+TonnaminJoin:
+UNIT Tonnamin AxeGen 0x0 Level(7,Ally,0) [10,8] 0x0 0x0 0x0 0x0 [Hurlbat] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -109,8 +113,30 @@ Text(FillerDialogue)
 LABEL 0x1
 EndEvent
 
-
+//check for other inn flags
 I9Inn:
-HouseEvent(I9InnText, InnCG)
+MUSI
+CHECK_EVENTID TavernI1Flag
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID TavernI2Flag
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID TavernI4Flag
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID TavernI5Flag
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID TavernI7Flag
+BEQ 0x1 0xc 0x0
+SetBackground(InnCG)
+Text(I9InnTextAlt)
+FADI 60
+Reinforcements(TonnaminJoin)
+CLEAN
+FADU 60
+GOTO 0x2
+LABEL 0x1
+CleanText(InnCG,I9InnText)
+LABEL 0x2
+MUNO
+EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

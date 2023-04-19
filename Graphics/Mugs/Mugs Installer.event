@@ -85,7 +85,11 @@ setMugEntry(0x108,SamPromoMug,2,6,3,4)
 ALIGN 4
 CassiusMug:
 #incbin "dmps/Cassius.dmp"
-setMugEntry(0x3,CassiusMug,4,5,4,3)
+setMugEntry(0x3,CassiusMug,3,5,3,3)
+ALIGN 4
+CassiusPromoMug:
+#incbin "dmps/CassiusPromo.dmp"
+setMugEntry(0x126,CassiusPromoMug,3,5,3,3)
 
 ALIGN 4
 DesmondMug:

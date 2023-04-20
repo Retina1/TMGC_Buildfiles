@@ -22,15 +22,21 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C22LiamSpawn,3)
+TurnEventPlayer(0x0,C22ClarqueSpawn,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-CharacterEvent(0xf,SellToddToMevion,0x0,Mevion)
-//CharacterEvent(0xa,C22PeterBlairRecruit,Blair,Peter)
+//CharacterEvent(0xf,SellToddToMevion,0x0,Mevion)
+CharacterEventBothWays(0x8,C22ClarqueBlairTalk,SecretClarque,Blair)
+CharacterEventBothWays(0x9,C22ClarqueZekeTalk,SecretClarque,Zeke)
+CharacterEvent(0xa,C22PeterBlairRecruit,Blair,Peter)
+CharacterEventBothWays(0xb,C22PeterButchRecruit,Butch,Peter)
 END_MAIN
 
 LocationBasedEvents:
+Village(0x11,C22Village1,4,2)
+Village(0x12,C22Village2,17,6)
 END_MAIN
 
 ALIGN 4
@@ -79,6 +85,18 @@ UNIT Dalst AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverM
 UNIT
 
 C22Hard:
+UNIT Bandit Berserker 0x0 Level(4,Enemy,1) [33,18] 0x0 0x0 0x0 0x0 [GildedAxe] BrigandAI
+UNIT Bandit Berserker 0x0 Level(4,Enemy,1) [37,16] 0x0 0x0 0x0 0x0 [KillerAxe] BrigandAI
+UNIT Bandit Berserker 0x0 Level(4,Enemy,1) [35,19] 0x0 0x0 0x0 0x0 [Tomahawk] BrigandAI
+UNIT Bandit Berserker 0x0 Level(4,Enemy,1) [14,19] 0x0 0x0 0x0 0x0 [Hammer] BrigandAI
+UNIT Bandit Berserker 0x0 Level(4,Enemy,1) [15,0] 0x0 0x0 0x0 0x0 [BraveAxe] BrigandAI
+
+UNIT Mevion LncGen 0x0 Level(3,Enemy,1) [10,12] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Mevion LncGen 0x0 Level(3,Enemy,1) [10,13] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Mevion LncGen 0x0 Level(3,Enemy,1) [19,13] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Mevion AxeGen 0x0 Level(3,Enemy,1) [24,9] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Mevion AxeGen 0x0 Level(3,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+
 UNIT Mevion WyvLord 0x0 Level(5,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [Swordslayer] GroupOnePaceAI
 UNIT Mevion Falco 0x0 Level(5,Enemy,1) [17,1] 0x0 0x0 0x0 0x0 [SilverLance] GroupOnePaceAI
 UNIT Mevion WyvLord 0x0 Level(5,Enemy,1) [18,2] 0x0 0x0 0x0 0x0 [Axebuster] GroupOnePaceAI
@@ -107,6 +125,10 @@ UNIT Mevion Sniper 0x0 Level(9,Enemy,1) [0,7] 0x0 0x0 0x1 REDA2R7 [GildedBow] No
 UNIT Mevion Warrior 0x0 Level(9,Enemy,1) [0,7] 0x0 0x0 0x1 REDA3R8 [GildedAxe] NoAI
 UNIT
 
+ClarqueShallPierceTheHeavens:
+UNIT SecretClarque BowPal 0x0 Level(7,Ally,0) [39,4] 0x0 0x0 0x1 REDA35R5 [SilverSword,SilverBow,Luckbow] NoAI
+UNIT
+
 ALIGN 4
 
 //parque joins, liam appears, peter appears, you can sell out todd/get toddhand (make sure to erase supports if he's disa-ed)
@@ -121,6 +143,49 @@ LOAD1 0x0 C22Units
 ENUN
 GotoPrepScreen
 ENDA
+
+C22ClarqueSpawn:
+CHECK_EVENTID ClarqueSeenFlag
+BEQ 0x1 0xc 0x0
+Reinforcements(ClarqueShallPierceTheHeavens)
+MUSC RecruitmentThemeVirid
+Text(FillerDialogue)//regret at not acting sooner, resolution to end things
+LABEL 0x1
+EndEvent
+
+C22PeterBlairRecruit:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Peter)
+EndEvent
+
+C22ClarqueBlairTalk:
+Text(FillerDialogue)
+EndEvent
+
+C22ClarqueZekeTalk:
+Text(FillerDialogue)
+EndEvent
+
+C22Village1:
+VillageEventItem(FillerDialogue, VillageCG, Rescue)
+C22Village2:
+VillageEventItem(FillerDialogue, VillageCG, MasterBow)
+
+C22PeterButchRecruit:
+CHECK_EVENTID 0xa
+BNE 0x1 0xc 0x0
+MUSC RecruitmentTheme
+Text(FillerDialogue)//unrecruited
+TurnAlly(Peter)
+ENUT 0xa
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//recruited
+LABEL 0x2
+SetSupport(Butch,Peter,CPSupport,1)
+EndEvent
+
 
 C22LiamSpawn:
 EVBIT_MODIFY 4
@@ -179,7 +244,6 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
-TurnAllyIfAlive(Peter)
 MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Interlude9)

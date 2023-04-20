@@ -389,6 +389,8 @@ CALL EndingScene
 LABEL 0x1
 EndEvent
 
+
+//stil have 1d and onwards for supports
 BeginningScene:
 ENUT GuideChpt21
 LocationText(MoonCG,Ch21_Flashback,TowerPeakLabel,0x0)
@@ -411,15 +413,27 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-//oh god do branches to autorecruit them if alive/be sad if they're dead
+MUSC S_MainTheme
+CleanTextNoMap(OutdoorCastleCG,C21Ending1)//catharsis, relief
+CHECK_ALIVE Ptolemy
+BEQ 0x400 0xc 0x0
+CHECK_ALIVE Johan
+BEQ 0x401 0xc 0x0
+CleanTextNoMap(OutdoorCastleCG,C21EndingPJAlive)//johan and ptolemy alive
+GOTO 0x500
+LABEL 0x401
+CleanTextNoMap(OutdoorCastleCG,C21EndingPAlive)//ptolemy alive, johan dead
+LABEL 0x400
+CHECK_ALIVE Johan
+BEQ 0x500 0xc 0x0
+CleanTextNoMap(OutdoorCastleCG,C21EndingJAlive)//ptolemy dead, johan alive
+LABEL 0x500
 TurnAllyIfAlive(Ptolemy)
 TurnAllyIfAlive(Johan)
-MUSC S_MainTheme
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)//catharsis, relief
 COUNTER_CHECK 0x1 //check counter 1 - number of deaths in slot C
 BNE 0x100 0xc 0x0
 //none dead - bragging rights award
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,C21EndingAwardBest)
 REMA
 SetBackground(BlankCG)
 GiveItem(Memento,Blair)
@@ -431,7 +445,7 @@ LABEL 0x100
 SVAL 0x1 0x2
 BGT 0x101 0xc 0x1
 //1-2 dead - best practical award
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,C21EndingAwardGood)
 REMA
 SetBackground(BlankCG)
 GiveItem(Boots,Blair)
@@ -442,7 +456,7 @@ LABEL 0x101
 SVAL 0x1 0x4
 BGT 0x102 0xc 0x1
 //3-4 dead - alright award
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,C21EndingAwardOK)
 REMA
 SetBackground(BlankCG)
 GiveItemWithDurability(SkillScroll,VengeanceID,Blair)
@@ -450,26 +464,61 @@ GiveItem(ArmsScroll,Blair)
 GOTO 0x103
 LABEL 0x102
 //5 dead - don't feel too bad award
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)
+CleanTextNoMap(OutdoorCastleCG,C21EndingAwardEh)
 REMA
 SetBackground(BlankCG)
 GiveItem(ArmsScroll,Blair)
 LABEL 0x103
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)//scene with desmond/stefan/johan if all alive, alt with desmond/stefan, desmond/johan, stefan/johan
+CHECK_ALIVE Desmond
+BEQ 0x1000 0xc 0x0
+	CHECK_ALIVE Johan
+	BEQ 0x1001 0xc 0x0
+		CHECK_ALIVE Stefan
+		BEQ 0x1002 0xc 0x0
+		CleanTextNoMap(OutdoorCastleCG,C21EndingSDJAlive)//all three alive		
+		GOTO 0x2000
+		LABEL 0x1002
+		CleanTextNoMap(OutdoorCastleCG,C21EndingDJAlive)//desmond/johan alive		
+		GOTO 0x2000
+	LABEL 0x1001		
+		CHECK_ALIVE Stefan
+		BEQ 0x1003 0xc 0x0
+		CleanTextNoMap(OutdoorCastleCG,C21EndingSDAlive)//desmond/stefan alive
+		GOTO 0x2000
+		LABEL 0x1003	
+		CleanTextNoMap(OutdoorCastleCG,C21EndingDAlone)//desmond alive
+		GOTO 0x2000
+LABEL 0x1000		
+	CHECK_ALIVE Johan
+	BEQ 0x1004 0xc 0x0	
+		CHECK_ALIVE Stefan
+		BEQ 0x1005 0xc 0x0
+		CleanTextNoMap(OutdoorCastleCG,C21EndingSJAlive)//johan/stefan alive
+		GOTO 0x2000
+		LABEL 0x1005
+		CleanTextNoMap(OutdoorCastleCG,C21EndingJAlone)//johan alive
+	LABEL 0x1004
+		CHECK_ALIVE Stefan
+		BEQ 0x2000 0xc 0x0
+		CleanTextNoMap(OutdoorCastleCG,C21EndingSAlone)//stefan alive
+LABEL 0x2000
 MUSC 0x0
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)//ask who did it, return inside to find truth
+CleanTextNoMap(OutdoorCastleCG,C21Ending2)//ask who did it, return inside to find truth
 MUSC S_Chaos
-CleanTextNoMap(DungeonCG,FillerDialogue)//find the stones that record logs, one in particular reveals identities
+CleanTextNoMap(DungeonCG,C21Ending3)//find the stones that record logs, one in particular reveals identities
 //logs also reference things like surveil, artificial myrmidons
 CHECK_ALIVE Simone
 BEQ 0x201 0xc 0x0
-CleanTextNoMap(HallCG,FillerDialogue)//simone drops truth if alive, if not, figure out a way to incoporate it
+CleanTextNoMap(HallCG,C21Ending4)//simone drops truth if alive, if not, figure out a way to incoporate it
+REMA
+SetBackground(BlankCG)
+SetSupport(Arin,Simone,CPSupport,1)
 GOTO 0x202
 LABEL 0x201
-CleanTextNoMap(HallCG,FillerDialogue)//arin discovers some of it on her own
+CleanTextNoMap(HallCG,C21Ending4Alt)//arin discovers some of it on her own
 LABEL 0x202
 MUSC S_Nightfall
-CleanTextNoMap(OutdoorCastleCG,FillerDialogue)//end of chapter, going forward
+CleanTextNoMap(OutdoorCastleCG,C21Ending5)//end of chapter, going forward
 MoveToChapter(Chapter22)
 ENDA
 

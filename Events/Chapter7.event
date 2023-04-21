@@ -320,10 +320,11 @@ LABEL 0x9
 CleanTextNoMap(HillCG,Ch7_Opening2)
 LABEL 0x10
 SetBackground(BlankCG)
+SystemText(BaseJoinNotice)
+FADI 60
 LOAD1 0x0 C7Units
 ENUN
 ENUT 0x21
-SystemText(BaseJoinNotice)
 GotoPrepScreen
 EndEvent
 

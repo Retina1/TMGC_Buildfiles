@@ -22,7 +22,7 @@
 			support(CSupport,0,1,0,0,0,0)//c2
 			support(CPSupport,0,1,0,5,0,0)//c6
 			support(BSupport,0,2,0,5,0,0)//c18x
-			support(BPSupport,0,2,0,10,0,5)
+			support(BPSupport,0,2,0,10,0,5)//c21 in map
 			support(ASupport,0,3,0,20,0,15)
 		entry(Blair,Natasia)
 			support(CSupport,1,0,0,0,0,0)//c4
@@ -46,7 +46,7 @@
 			support(CSupport,1,0,5,0,0,0)//c15
 			support(CPSupport,2,0,5,0,0,5)//c17
 			support(BSupport,2,0,10,0,0,5)//c18x
-			support(BPSupport,2,0,20,0,0,10)
+			support(BPSupport,2,0,20,0,0,10)//c21 in map
 			support(ASupport,3,0,25,0,0,15)
 		entry(Blair,Avan)
 			support(CSupport,0,0,10,0,0,0)//c16
@@ -115,7 +115,7 @@
 			support(CSupport,1,0,0,0,0,0)//c6
 			support(CPSupport,2,0,0,0,0,0)//c12
 			support(BSupport,3,0,0,0,0,0)//c18x
-			support(BPSupport,4,0,0,0,0,0)
+			support(BPSupport,4,0,0,0,0,0)//c21 in map
 			support(ASupport,5,0,0,0,0,0)
 		entry(Natasia,Bechamel)
 			support(CSupport,0,0,0,0,5,5)//c11
@@ -128,7 +128,7 @@
 			support(CSupport,0,0,5,5,0,0)//c8
 			support(CPSupport,0,1,5,5,0,0)//c10
 			support(BSupport,0,1,10,10,0,0)//c17 in map
-			support(BPSupport,0,0,0,0,0,0)
+			support(BPSupport,0,0,0,0,0,0)//c21 in map
 			support(ASupport,0,2,20,15,0,0)
 		entry(Stefan,Josef)
 			support(CSupport,0,0,0,0,5,0)//c7
@@ -253,7 +253,7 @@
 		entry(Rachael,Hyperius)
 			support(CSupport,0,1,0,0,0,0)//c15
 			support(CPSupport,1,1,0,0,0,0)//c19 in battle
-			support(BSupport,1,1,10,0,0,0)
+			support(BSupport,1,1,10,0,0,0)//c21 in battle
 			support(BPSupport,1,1,20,0,0,0)
 			support(ASupport,2,2,20,0,0,0)
 		entry(Rachael,Leila)
@@ -266,7 +266,7 @@
 		entry(Cassius,Mikey)
 			support(CSupport,1,0,0,0,0,0)//c14
 			support(CPSupport,1,1,0,0,0,0)//c18 battle
-			support(BSupport,1,1,10,0,0,0)
+			support(BSupport,1,1,10,0,0,0)//c21 battle
 			support(BPSupport,1,1,10,10,0,0)
 			support(ASupport,1,1,10,10,10,10)
 		entry(Cassius,Athena)
@@ -340,7 +340,7 @@
 			support(ASupport,1,2,30,0,0,0)			//lover convo?
 		entry(Apollo,Avan)
 			support(CSupport,0,1,5,0,0,0)//c19 in battle
-			support(CPSupport,0,1,10,0,0,5)
+			support(CPSupport,0,1,10,0,0,5)//c21 in battle
 			support(BSupport,0,2,10,0,0,10)
 			support(BPSupport,0,2,15,0,0,20)
 			support(ASupport,0,3,30,0,0,20)
@@ -389,7 +389,7 @@
 			support(CSupport,0,0,0,0,5,5)//c13 battle
 			support(CPSupport,0,0,0,0,10,10)//c16
 			support(BSupport,1,1,0,0,10,10)//c19
-			support(BPSupport,1,1,10,0,10,10)
+			support(BPSupport,1,1,10,0,10,10)//c21 in battle
 			support(ASupport,1,1,15,0,15,15)
 	//carbon (blair, stefan, mikey)
 	//athena (josef, peggy, cassius)
@@ -429,7 +429,7 @@
 	//alexis (hyperius)
 		entry(Alexis,Artemis)
 			support(CSupport,1,0,5,0,0,0)//c18
-			support(CPSupport,1,0,10,5,0,0)
+			support(CPSupport,1,0,10,5,0,0)//c21 battle
 			support(BSupport,2,0,10,5,0,0)
 			support(BPSupport,2,0,15,10,0,0)
 			support(ASupport,2,1,20,10,0,0)
@@ -437,7 +437,7 @@
 		entry(Leila,Damien)
 			support(CSupport,0,1,0,0,0,0)//z2
 			support(CPSupport,0,2,0,0,0,0)//c18 battle
-			support(BSupport,0,3,0,0,0,0)
+			support(BSupport,0,3,0,0,0,0)//c21 battle
 			support(BPSupport,0,4,0,0,0,0)
 			support(ASupport,0,5,0,0,0,0)			//lover convo
 		entry(Leila,Zacharias)

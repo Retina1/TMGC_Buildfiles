@@ -155,6 +155,15 @@ ALIGN 4
 HoratioSkillList:
 BYTE 00 00
 ALIGN 4
+PtolemySkillList:
+BYTE 28 StaffSavantID
+BYTE 00 00
+ALIGN 4
+JohanSkillList:
+BYTE 15 WrathID
+BYTE 35 ResolveID
+BYTE 00 00
+ALIGN 4
 SimoneSkillList:
 BYTE 24 FocusedGoalID
 BYTE 39 LethalityID
@@ -239,6 +248,11 @@ ALIGN 4
 
 GaylordSkillList:
 BYTE 15 MiracleID
+BYTE 00 00
+ALIGN 4
+
+ClarqueSkillList:
+BYTE 30 SureShotID
 BYTE 00 00
 ALIGN 4
 

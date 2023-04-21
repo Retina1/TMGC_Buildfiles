@@ -31,7 +31,6 @@ TurnEventPlayer(0xc,C21Cell4Check,1,255)
 TurnEventPlayer(0xd,C21Cell5Check,1,255)
 TurnEventPlayer(0xe,C21Cell6Check,1,255)
 TurnEventPlayer(0xf,C21BigCheck,1,255)
-//add something to make spawns near back after every door is open
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -41,6 +40,16 @@ CharacterEventBothWays(0x11,C21JohanStefanRecruitment,Johan,Stefan)
 CharacterEventBothWays(0x12,C21JohanDesmondRecruitment,Johan,Desmond)
 CharacterEventBothWays(0x13,C21JohanPtolemyRecruitment,Johan,Ptolemy)
 CharacterEvent(0x14,C21PtolemyBlairRecruitment,Blair,Ptolemy)
+CharacterEventBothWays(0x1d,C21BlairKennethSupport,Blair,Kenneth)//B+
+CharacterEventBothWays(0x1e,C21BlairZekeSupport,Blair,Zeke)//B+
+CharacterEventBothWays(0x1f,C21NatasiaPeggySupport,Natasia,Peggy)//give natasia staves, B+
+CharacterEventBothWays(0x20,C21StefanDesmondSupport,Stefan,Desmond)//B+
+CharacterEventBothWays(0x21,C21RachaelHyperiusSupport,Rachael,Hyperius)//B
+CharacterEventBothWays(0x22,C21CassiusMikeySupport,Cassius,Mikey)//B
+CharacterEventBothWays(0x23,C21ApolloAvanSupport,Apollo,Avan)//C+
+CharacterEventBothWays(0x24,C21MikeyCarbonSupport,Mikey,Carbon)//B+
+CharacterEventBothWays(0x25,C21AlexisArtemisSupport,Alexis,Artemis)//C+
+CharacterEventBothWays(0x26,C21LeilaDamienSupport,Leila,Damien)//B
 END_MAIN
 
 LocationBasedEvents:
@@ -389,6 +398,49 @@ CALL EndingScene
 LABEL 0x1
 EndEvent
 
+C21BlairKennethSupport:
+Text(BlairKennethBPSupport)
+SetSupport(Blair,Kenneth,BPSupport,1)
+EndEvent
+C21BlairZekeSupport:
+Text(BlairZekeBPSupport)
+SetSupport(Blair,Zeke,BPSupport,1)
+EndEvent
+C21NatasiaPeggySupport:
+Text(PeggyNatasiaBPSupport)
+SystemText(C21NatasiaStaffRank)
+SetUnitStatus(Natasia,StaffExp,1)
+SetSupport(Natasia,Peggy,BPSupport,1)
+EndEvent
+C21StefanDesmondSupport:
+Text(StefanDesmondBPSupport)
+SetSupport(Stefan,Desmond,BPSupport,1)
+EndEvent
+C21RachaelHyperiusSupport:
+Text(RachaelHyperiusBSupport)
+SetSupport(Rachael,Hyperius,BSupport,1)
+EndEvent
+C21CassiusMikeySupport:
+Text(CassiusMikeyBSupport)
+SetSupport(Cassius,Mikey,BSupport,1)
+EndEvent
+C21ApolloAvanSupport:
+Text(ApolloAvanCPSupport)
+SetSupport(Apollo,Avan,CPSupport,1)
+EndEvent
+C21MikeyCarbonSupport:
+Text(MikeyCarbonBPSupport)
+SetSupport(Mikey,Carbon,BPSupport,1)
+EndEvent
+C21AlexisArtemisSupport:
+Text(AlexisArtemisCPSupport)
+SetSupport(Alexis,Artemis,CPSupport,1)
+EndEvent
+C21LeilaDamienSupport:
+Text(LeilaDamienBSupport)
+SetSupport(Leila,Damien,BSupport,1)
+EndEvent
+
 
 //stil have 1d and onwards for supports
 BeginningScene:
@@ -408,12 +460,22 @@ LOAD1 0x0 C21Units
 ENUN
 ENUT 0x8
 ENUT 0x17
+SupportFlagOn(Blair,Kenneth,0x1d,BSupport)
+SupportFlagOn(Blair,Zeke,0x1e,BSupport)
+SupportFlagOn(Natasia,Peggy,0x1f,BSupport)
+SupportFlagOn(Stefan,Desmond,0x20,BSupport)
+SupportFlagOn(Rachael,Hyperius,0x21,CPSupport)
+SupportFlagOn(Cassius,Mikey,0x22,CPSupport)
+SupportFlagOn(Apollo,Avan,0x23,CSupport)
+SupportFlagOn(Mikey,Carbon,0x24,BSupport)
+SupportFlagOn(Alexis,Artemis,0x25,CSupport)
+SupportFlagOn(Leila,Damien,0x26,CPSupport)
 GotoPrepScreen
 ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC S_MainTheme
+MUSC S_Nightfall
 CleanTextNoMap(OutdoorCastleCG,C21Ending1)//catharsis, relief
 CHECK_ALIVE Ptolemy
 BEQ 0x400 0xc 0x0

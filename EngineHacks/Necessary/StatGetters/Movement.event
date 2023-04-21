@@ -4,7 +4,7 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prNullifyIfGuardAI prArmorMarchCheck prPushMov 
+	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prNullifyIfGuardAI prArmorMarchCheck prPushMov prMaxFifteen
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
@@ -49,5 +49,16 @@ prAddEquipMov:
 ALIGN 4
 prItemPassiveMov:
 	rPassiveStatBoosts(STAT_MOV)
+ALIGN 4	
+prMaxFifteen:
+{
+	rIfNot(Check)
+	ConstantFifteen:
+	rConstant(15)
+
+	Check:
+	prCheckLessThan(ConstantFifteen)
+}
+
 
 #endif // MODULAR_GETTER_MOVEMENT_EVENT

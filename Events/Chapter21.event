@@ -569,6 +569,7 @@ CleanTextNoMap(OutdoorCastleCG,C21Ending2)//ask who did it, return inside to fin
 MUSC S_Chaos
 CleanTextNoMap(DungeonCG,C21Ending3)//find the stones that record logs, one in particular reveals identities
 //logs also reference things like surveil, artificial myrmidons
+LocationText(DungeonCG,C21Ending3Part2,LaterLabel)
 CHECK_ALIVE Simone
 BEQ 0x201 0xc 0x0
 CleanTextNoMap(HallCG,C21Ending4)//simone drops truth if alive, if not, figure out a way to incoporate it

@@ -209,6 +209,10 @@ ALIGN 4
 ZekeMug:
 #incbin "dmps/Zeke.dmp"
 setMugEntry(0x21,ZekeMug,4,6,4,4)
+ALIGN 4
+ZekePromoMug:
+#incbin "dmps/ZekePromo.dmp"
+setMugEntry(0x127,ZekePromoMug,3,5,3,3)
 
 ALIGN 4
 HyperiusMug:

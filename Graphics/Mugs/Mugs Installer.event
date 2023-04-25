@@ -656,7 +656,10 @@ ALIGN 4
 LarsonMug:
 #incbin "dmps/Larson.dmp"
 setMugEntry(0xec,LarsonMug,3,5,2,3)
-
+ALIGN 4
+FioraMug:
+#incbin "dmps/Fiora.dmp"
+setMugEntry(0xf2,FioraMug,2,5,3,3)
 
 
 

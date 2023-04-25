@@ -1,3 +1,29 @@
 ##C22PayForLiam
 Give Liam 10000 gold?[N]
 [Yes][X]
+
+##AllyLiamBattle
+[OpenMidRight][LoadLiam]
+You made a mistake[N]
+fightin' me.[A][N]
+And now I'll rip ya'[N]
+to shreds, pal.[A][X]
+
+##LiamBattle
+[OpenMidLeft][LoadLiam]
+You made a mistake[N]
+fightin' me.[A][N]
+And now I'll rip ya'[N]
+to shreds, pal.[A][X]
+
+##AllyLiamDeath
+[OpenMidRight][LoadLiam]
+Well[ToggleMouthMove]...[ToggleMouthMove] I'm done here.[N]
+Not dyin' for you.[A][N]
+Real pleasure doin' business.[A][X]
+
+##LiamDeath
+[OpenMidLeft][LoadLiam]
+[ToggleMouthMove]...[ToggleMouthMove]To fell a legend[ToggleMouthMove]...[ToggleMouthMove][N]
+Who the hell are you[ToggleMouthMove]...[ToggleMouthMove]?[A][N]
+Why'd you[ToggleMouthMove]...[ToggleMouthMove] need me[ToggleMouthMove]...[ToggleMouthMove]?[A][X]

@@ -113,10 +113,14 @@ ChapterDeathQuote(Larson,Chapter21,0x0,C21LarsonDeath)
 KillerDeathQuote(Nathaniel,Simone,Chapter21,DefeatBossFlag,C21NathanielSimoneDeath)
 ChapterDeathQuote(Nathaniel,Chapter21,DefeatBossFlag,C21NathanielDeath)
 // c22
+ChapterDeathQuote(Liam,Chapter22,0xc,AllyLiamDeath)
+ChapterDeathQuote(Liam,Chapter22,0x0,LiamDeath)
 ChapterDeathQuote(Peter,Chapter22,0xa,EnemyPeterDeath)
 ChapterDeathQuote(Fiora,Chapter22,DefeatBossFlag,FillerDialogue)
 // c23
-ChapterDeathQuote(Neillstrom,Chapter23,DefeatBossFlag,FillerDialogue)
+KillerDeathQuote(Kenneth,Neillstrom,Chapter23,0x0,FillerDialogue)
+KillerDeathQuote(Neillstrom,Kenneth,Chapter23,DefeatBossFlag,C23TarquinDeathAlt)
+ChapterDeathQuote(Neillstrom,Chapter23,DefeatBossFlag,C23TarquinDeath)
 // c25
 ChapterDeathQuote(Bobert,Chapter25,DefeatBossFlag,FillerDialogue)
 // c26

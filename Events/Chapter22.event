@@ -242,9 +242,12 @@ TurnNPC(Liams)
 TurnNPC(Liams2)
 TurnNPC(Liams3)
 TurnNPC(Liams4)
+ENUT 0xe
 GOTO 0x20
 LABEL 0x3
 Text(FillerDialogue)//won't pay
+ENUT 0xc
+ENUT 0xd
 GOTO 0x20
 LABEL 0x10
 Reinforcements(C22Friends)

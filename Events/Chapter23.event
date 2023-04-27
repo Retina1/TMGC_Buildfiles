@@ -28,12 +28,12 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Seize(0,0)
 END_MAIN
 
 ALIGN 4
 
 MiscBasedEvents:
+SHORT 1 DefeatBossFlag; WORD 1; SHORT KennethTarquinKillFlag 0
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -71,15 +71,70 @@ UNIT
 C23Easy:
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
+C23Easy2:
+UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT
 
 C23Normal:
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
+C23Normal2:
+UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT
 
 C23Hard:
-UNIT Remnant Brigand 0x0 Level(19,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Dalst Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Neillstrom WyvLord 0x0 Level(17,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [MasterLance,MasterAxe,ZoryaShield] NeverMoveAI
+UNIT Dalst AxePal 0x0 Level(4,Enemy,1) [3,0] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Dalst LncPal 0x0 Level(4,Enemy,1) [1,0] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Dalst SwdPal 0x0 Level(4,Enemy,1) [2,1] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Dalst BowPal 0x0 Level(4,Enemy,1) [2,0] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [0,28] 0x0 0x0 0x0 0x0 [Swordslayer,HereticAxe] NoAI
+UNIT Remnant LncPal 0x0 Level(4,Enemy,1) [1,29] 0x0 0x0 0x0 0x0 [Axebuster,DousingLance] NoAI
+UNIT Remnant SwdPal 0x0 Level(4,Enemy,1) [2,28] 0x0 0x0 0x0 0x0 [Lancesnapper,Shimmersword] NoAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [1,20] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [7,24] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [6,21] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [8,17] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [16,15] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [19,17] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [22,13] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [11,5] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [4,7] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Halberdier 0x0 Level(5,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [BraveLance] GroupOnePaceAI
+UNIT Remnant Hero 0x0 Level(5,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [BraveAxe] GroupOnePaceAI
+UNIT Remnant Sage 0x0 Level(7,Enemy,1) [7,5] 0x0 0x0 0x0 0x0 [Bolting,Sagittae,Galewind] NeverMoveAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [10,1] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Bishop 0x0 Level(7,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Purge,Sleep] NeverMoveAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [20,9] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [24,8] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [19,4] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT
+
+C23Hard2:
+UNIT Remnant Halberdier 0x0 Level(4,Enemy,1) [15,25] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Remnant SwMastF 0x0 Level(4,Enemy,1) [16,27] 0x0 0x0 0x0 0x0 [Rapier] NoAI
+UNIT Remnant Warrior 0x0 Level(4,Enemy,1) [18,26] 0x0 0x0 0x0 0x0 [Tomahawk] NoAI
+UNIT Remnant Sorc 0x0 Level(4,Enemy,1) [21,24] 0x0 0x0 0x0 0x0 [Fenrir] NoAI
+UNIT Remnant AxeGen 0x0 Level(5,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Remnant AxeGen 0x0 Level(5,Enemy,1) [11,25] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Remnant LncGen 0x0 Level(5,Enemy,1) [18,20] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Remnant LncGen 0x0 Level(5,Enemy,1) [21,20] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Remnant Sniper 0x0 Level(5,Enemy,1) [14,20] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Remnant Sniper 0x0 Level(5,Enemy,1) [19,0] 0x0 0x0 0x0 0x0 [Greatbow] NoAI
+UNIT Remnant Sage 0x0 Level(4,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [Sagittae] AttackInRangeAI
+UNIT Remnant Sage 0x0 Level(4,Enemy,1) [26,19] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT Remnant HeroF 0x0 Level(4,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [SilverAxe,BraveSword] GroupTwoPaceAI
+UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [26,7] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoPaceAI
+UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [26,9] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoPaceAI
+UNIT Joan HeroF 0x0 Level(11,Enemy,0) [6,13] 0x0 0x0 0x0 0x0 [SilverSword,BraveAxe,Tomahawk] GroupTwoAI
+UNIT Sonia HalberdierF 0x0 Level(13,Enemy,0) [26,1] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NeverMoveAI
+UNIT Tobias Warrior 0x0 Level(16,Enemy,0) [26,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Longbow] GroupFourPaceAI
+UNIT DLReynard Hero 0x0 Level(12,Enemy,0) [11,16] 0x0 0x0 0x0 0x0 [Tomahawk,BraveSword] AttackInRangeAI
+UNIT Elite WyvLord 0x0 Level(7,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [GildedLance,Axebuster] GroupOnePaceAI
+UNIT Elite WyvLord 0x0 Level(7,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [GildedAxe,Swordslayer] GroupOnePaceAI
+UNIT Neillstrom WyvLord 0x0 Level(17,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk,ZoryaShield] GroupOnePaceAI
 UNIT
 
 ALIGN 4
@@ -90,6 +145,7 @@ MUSC NarrationTheme5
 Narration(Map2CG,Ch23_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C23Easy,C23Normal,C23Hard)
+LoadUnitsByDifficulty2(C23Easy2,C23Normal2,C23Hard2)
 LOAD1 0x0 C23Units
 ENUN
 GotoPrepScreen
@@ -99,8 +155,18 @@ EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
+CheckForItem(UnknownPage)
+BEQ 0x1 0xc 0x0
+AnnihilateItem(UnknownPage)
+SilentGiveItem(TheSDarkTome)
+LABEL 0x1
 MoveToChapter(Chapter24)
 ENDA
 
+/*put this in sonia's recruit kthx
+SVAL 0x1 0x00040000
+CHAI Sonia
+LABEL 0x1
+EndEvent*/
 
 //MESSAGE Events end at offset CURRENTOFFSET

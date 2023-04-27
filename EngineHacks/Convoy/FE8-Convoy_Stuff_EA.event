@@ -23,6 +23,12 @@ WORD 0 //terminator
 
 PUSH
 
+//fix things for asmcs
+ORG $315bc
+BYTE 0x95
+ORG $315b4
+WORD gConvoyItemArray
+
 //GetConvoyItemArray
 ORG $31504
 WORD gConvoyItemArray

@@ -21,13 +21,14 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C22HunterSpawn,4)
 TurnEventPlayer(0x0,C22LiamSpawn,3)
 TurnEventPlayer(0x0,C22ClarqueSpawn,2)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//CharacterEvent(0xf,SellToddToMevion,0x0,Mevion)
+CharacterEvent(0xf,SellToddToMevion,0x0,BountyHunter)
 CharacterEventBothWays(0x8,C22ClarqueBlairTalk,SecretClarque,Blair)
 CharacterEventBothWays(0x9,C22ClarqueZekeTalk,SecretClarque,Zeke)
 CharacterEvent(0xa,C22PeterBlairRecruit,Blair,Peter)
@@ -155,6 +156,10 @@ UNIT Mevion Sniper 0x0 Level(9,Enemy,1) [0,7] 0x0 0x0 0x1 REDA2R7 [GildedBow] No
 UNIT Mevion Warrior 0x0 Level(9,Enemy,1) [0,7] 0x0 0x0 0x1 REDA3R8 [GildedAxe] NoAI
 UNIT
 
+C22ToddHunter:
+UNIT BountyHunter Assass 0x0 Level(7,Enemy,1) [28,0] 0x0 0x0 0x1 REDA28R4 [GildedSword] NoAI
+UNIT
+
 ClarqueShallPierceTheHeavens:
 UNIT SecretClarque BowPal 0x0 Level(7,Ally,0) [39,4] 0x0 0x0 0x1 REDA35R5 [SilverSword,SilverBow,Luckbow] NoAI
 UNIT
@@ -181,6 +186,13 @@ Reinforcements(ClarqueShallPierceTheHeavens)
 MUSC RecruitmentThemeVirid
 Text(FillerDialogue)//regret at not acting sooner, resolution to end things
 LABEL 0x1
+EndEvent
+
+C22HunterSpawn:
+Reinforcements(C22ToddHunter)
+CAM1 BountyHunter
+FlashCursor(BountyHunter,60)
+Text(FillerDialogue)
 EndEvent
 
 C22PeterBlairRecruit:
@@ -258,20 +270,41 @@ SellToddToMevion:
 CHECK_ACTIVEID Toddsworth
 BEQ 0x1 0xc 0x0
 Text(FillerDialogue)//todd
+StartBattle
+CriticalHit(0,99)
+EndAttack
+FIG1 Toddsworth BountyHunter Toddhand
+SFXKillUnit(BountyHunter)
+Text(FillerDialogue)//todd
+GiveItem(Toddhand,Toddsworth)
+SET_ACTIVE Toddsworth
 GOTO 0x2
+
 LABEL 0x1 //not todd
-Text(FillerDialogue)
+CHECK_ALIVE Toddsworth
+BEQ 0x4 0xc 0x0
+Text(FillerDialogue)//i want one todd
+SystemText(SellToddChoice)
+IfNoSelectedGoto(0x3)
+Text(FillerDialogue)//moners
 GiveMoney(0x4b0)
 FADI 0x1c
 DISA_IF Toddsworth
 DISA Toddsworth
 ENUN
 FADU 0x1c
-MOVE 60 Mevion [0,6]
+MOVE 60 BountyHunter [0,6]
 ENUN
-DISA_IF Mevion
-DISA Mevion
+DISA_IF BountyHunter
+DISA BountyHunter
 ENUN
+GOTO 0x2
+LABEL 0x3
+Text(FillerDialogue)//if you change your mind i'll take 'im
+ENUF 0xf
+GOTO 0x2
+LABEL 0x4
+Text(FillerDialogue)//well that's awkward
 LABEL 0x2
 EndEvent
 

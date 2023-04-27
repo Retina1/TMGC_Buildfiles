@@ -1,4 +1,5 @@
 #define LoadUnitsByDifficulty(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
+#define LoadUnitsByDifficulty2(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4064 rC r0 ; CHECK_HARD ; BNE 4065 rC r0 ; LOAD1 0x1 normal ; GOTO 4066 ; LABEL 4064 ; LOAD1 0x1 easy ; GOTO 4066 ; LABEL 4065 ; LOAD1 0x1 hard ; LABEL 4066 ; ENUN;"
 #define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; REMA"
 #define SystemText(bgid,textid) "CenterTutorialTextBox; SetBackground(bgid); TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
 #define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND"

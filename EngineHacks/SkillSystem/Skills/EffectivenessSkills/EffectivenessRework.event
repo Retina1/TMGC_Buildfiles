@@ -65,6 +65,12 @@ SetWeaponEffectiveness(LightType, 6)
 SetWeaponEffectiveness(DarkType, 6)
 SetWeaponEffectiveness(StaffType, 6)
 WORD 0
+SDarkEffectiveness:
+SetWeaponEffectiveness(BowType, 24)
+SetWeaponEffectiveness(StaffType, 8)
+SetWeaponEffectiveness(HorseType, 3)
+SetWeaponEffectiveness(SwordType, 1)
+WORD 0
 UberEffectiveness:
 SetWeaponEffectiveness(ArmorType, 6)
 SetWeaponEffectiveness(HorseType, 6)

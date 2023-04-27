@@ -4,3 +4,12 @@ ALIGN 4
 //also eventually add mass check for things like axe handle and unknown page
 ItemCollectionFunction:
 #incbin "item_collect.bin"
+ALIGN 4
+#define CheckForItem(item) "BYTE 0x40 0x0D item 0x00; POIN ItemCheckFunction+1"
+ItemCheckFunction:
+#incbin "item_find.bin"
+ALIGN 4
+#define SilentGiveItem(item) "BYTE 0x42 0x0D 0x00 item; POIN SilentGiveFunction+1"
+//#define SilentGiveItem(item) "SVAL 0x1 item; ASMC SendToConvoy|1"
+SilentGiveFunction:
+#incbin "SilentGiveItem.dmp"

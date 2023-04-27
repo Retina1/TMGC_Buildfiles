@@ -142,7 +142,7 @@ Reblow,NReblow,DReblow,UPhysic,0x8b,0x4,IsStaff,0x0,0x0,10,20,100,5,30,0x1C,250,
 Prototype,NPrototype,DPrototype,0x4be,0x8c,0x4,IsStaff|Unsellable,0x0,0x0,3,0,100,5,0,0xff,0,SRank,PrototypeIcon,0x37,NoEffect,1,0x0,0x0,0x0
 Dragonpike,NDragonpike,DDragonpike,UDragonpike,0x8d,0x1,IsWeapon|ReverseTriangle,0x0,DragonEffectiveness|IsPointer,20,12,85,13,0,0x11,100,BRank,DragonpikeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Nuiusseon,NNuiusseon,DNuiusseon,UNuiusseon,0x8e,0x1,IsWeapon|Unsellable,NuiusseonBoost|IsPointer,0x0,30,26,110,10,0,0x12,0,SRank,NuiusseonIcon,0x0,NoEffect,1,0x0,0x0,0x0
-S-Dark(?),NSDark,DSDark,USDark,0x8f,0x7,IsWeapon|IsMagic|Unsellable,0x0,0x0,30,31,95,18,0,0x12,0,SRank,SDarkIcon,0x0,NoEffect,1,0x0,0x0,0x0
+S-Dark(?),NSDark,DSDark,USDark,0x8f,0x7,IsWeapon|IsMagic|Unsellable|ReverseTriangle|MagicDamage,SDarkBoost|IsPointer,SDarkEffectiveness|IsPointer,30,34,97,15,12,0x12,0,SRank,SDarkIcon,0x0,NoEffect,1,0x0,0x0,TriAdeptPlusID
 Resire,NResire,DResire,UResire,0x90,0x6,IsWeapon|IsMagic,0x0,0x0,20,9,95,7,0,0x12,160,BRank,ResireIcon,0x0,NosferatuEffect,1,0x0,0x0,0x0
 Phalanotis,NPhalanotis,DPhalanotis,UPhalanotis,0x91,0x0,IsWeapon|Unsellable,PhalanotisBoost|IsPointer,0x0,30,24,120,8,50,0x11,0,SRank,PhalanotisIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Stalwart,NStalwart,DStalwart,UStalwart,0x92,0x1,IsWeapon|Unsellable|ZekeLocked,0x0,0x0,30,17,160,10,0,0x11,0,NoRank,StalwartIcon,0x0,NoEffect,2,0x0,0x0,MiracullahanID

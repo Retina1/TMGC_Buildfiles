@@ -66,6 +66,9 @@ ElbaCorCastlePalette:
 ALIGN 4
 GreatRiverCastlePalette:
 #incbin "Tilesets/LowlandserCastle_pal.dmp"
+ALIGN 4
+DalstCastlePalette:
+#incbin "Tilesets/DalstCastle_pal.dmp"
 
 ALIGN 4
 CastleTiles:
@@ -449,6 +452,7 @@ EventPointerTable(PALLowlandsCastle, LowlandsCastlePalette)
 EventPointerTable(PALGreatRiverCastle, GreatRiverCastlePalette)
 EventPointerTable(PALYgstraCastle, YgstraCastlePalette)
 EventPointerTable(PALElbaCorCastle, ElbaCorCastlePalette)
+EventPointerTable(PALDalstCastle, DalstCastlePalette)
 EventPointerTable(TILCastle, CastleTiles)
 EventPointerTable(TILGreatRiver, GreatRiverCastleTiles)
 EventPointerTable(ANICastle, CastleAnims)

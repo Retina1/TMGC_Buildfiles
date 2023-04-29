@@ -24,8 +24,29 @@
 
 ALIGN 4
 MapData:
-  #incbin "Interlude1_data.dmp"
+  #incbin "Chapter27_data.dmp"
 
-SetChapterData(Interlude1, OBJCity, 0, PALMevionCity, TILCity, MapI1, MapData, ANIField, 0, 0)
+SetChapterData(Chapter27, OBJCity, 0, PALDalstCity, TILCity, Map27, MapData, ANIField, 0, MapChange27)
+
+ALIGN 4
+Map_Change_0:
+  SHORT $28C
+
+ALIGN 4
+Map_Change_1:
+  SHORT $D84
+
+ALIGN 4
+Map_Change_2:
+  SHORT $D84
+
+ALIGN 4
+MapChangesData:
+  TileMap(0, 25, 4, 1, 1, Map_Change_0)
+  TileMap(1, 20, 24, 1, 1, Map_Change_1)
+  TileMap(2, 9, 33, 1, 1, Map_Change_2)
+  TileMapEnd
+
+EventPointerTable(MapChange27, MapChangesData)
 
 }

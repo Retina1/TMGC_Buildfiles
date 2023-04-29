@@ -19,14 +19,8 @@ ldr r1, ChargePlusID
 cmp r0, #0
 beq GoBack
 
-@get unit's move
-ldr r0,MovGetter
-mov r14,r0
-mov r0,r4
-mov r1,#0
-.short 0xF800
-@r0= unit's move *2 for some reason
-lsr r0,r0,#1 @r0 = unit's move
+@get the number 7
+mov r0,#0x7
 
 @get unit's used up movement from action struct
 ldr r1,=0x203A958 @action struct

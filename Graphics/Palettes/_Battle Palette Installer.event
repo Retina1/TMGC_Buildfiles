@@ -169,6 +169,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
 #define NathanielPaletteID 0x87
 #define LarsonPaletteID 0x88
+#define FioraPaletteID 0x8a
 
 #define IneubrenosPaletteID 0x78
 
@@ -315,6 +316,7 @@ setPalette(ClarquePaletteID,ClarquePalette)
 setPalette(ReynardPaletteID,ReynardPalette)
 setPalette(LarsonPaletteID,LarsonPalette)
 setPalette(NathanielPaletteID,NathanielPalette)
+setPalette(FioraPaletteID,FioraPalette)
 
 setPalette(IneubrenosPaletteID,IneubrenosPalette)
 
@@ -424,6 +426,7 @@ SetPaletteFull(DLDavelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Reynard,0x0,0x0,ReynardPaletteID,Hero,0x0,0x0)
 SetPaletteFull(Nathaniel,0x0,0x0,NathanielPaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Larson,0x0,0x0,LarsonPaletteID,Assass,0x0,0x0)
+SetPaletteFull(Fiora,0x0,0x0,FioraPaletteID,HalberdierF,0x0,0x0)
 SetPaletteFull(DLReynard,0x0,0x0,ReynardPaletteID,Hero,0x0,0x0)
 
 SetPaletteFull(BossIneubrenos,0x0,0x0,IneubrenosPaletteID,SniperF,0x0,0x0)
@@ -856,6 +859,9 @@ NathanielPalette:
 ALIGN 4
 LarsonPalette:
 #incbin "Larson.dmp"
+ALIGN 4
+FioraPalette:
+#incbin "Fiora.dmp"
 
 
 ALIGN 4

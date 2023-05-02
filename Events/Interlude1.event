@@ -149,6 +149,12 @@ EndEvent
 I1Ptolemy:
 Text(I1PtolemyTalk)
 GiveItem(HoneyCharm,Blair)
+CHECK_EVENTID 0xef
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0xee
+BEQ 0x1 0xc 0x0
+SystemText(GrowthModDisclaimer)
+LABEL 0x1
 EndEvent
 
 I1Estelle:

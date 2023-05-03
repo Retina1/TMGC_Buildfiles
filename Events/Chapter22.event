@@ -192,7 +192,7 @@ C22HunterSpawn:
 Reinforcements(C22ToddHunter)
 CAM1 BountyHunter
 FlashCursor(BountyHunter,60)
-Text(FillerDialogue)
+Text(C22BountyHunterArrives)
 EndEvent
 
 C22PeterBlairRecruit:
@@ -269,13 +269,13 @@ EndEvent
 SellToddToMevion:
 CHECK_ACTIVEID Toddsworth
 BEQ 0x1 0xc 0x0
-Text(FillerDialogue)//todd
+Text(C22BountyHunterTalkTodd)//todd
 StartBattle
 CriticalHit(0,99)
 EndAttack
 FIG1 Toddsworth BountyHunter Toddhand
 SFXKillUnit(BountyHunter)
-Text(FillerDialogue)//todd
+Text(C22BountyHunterTalkTodd2)//todd
 GiveItem(Toddhand,Toddsworth)
 SET_ACTIVE Toddsworth
 GOTO 0x2
@@ -283,12 +283,15 @@ GOTO 0x2
 LABEL 0x1 //not todd
 CHECK_ALIVE Toddsworth
 BEQ 0x4 0xc 0x0
-Text(FillerDialogue)//i want one todd
+Text(C22BountyHunterTalkNotTodd)//i want one todd
 SystemText(SellToddChoice)
 IfNoSelectedGoto(0x3)
-Text(FillerDialogue)//moners
+Text(C22BountyHunterTalkSellTodd)//moners
 GiveMoney(0x4b0)
 FADI 0x1c
+ClearSupport(Toddsworth,Avan)
+ClearSupport(Toddsworth,Sveltzalus)
+ClearSupport(Toddsworth,Charley)
 DISA_IF Toddsworth
 DISA Toddsworth
 ENUN
@@ -300,11 +303,11 @@ DISA BountyHunter
 ENUN
 GOTO 0x2
 LABEL 0x3
-Text(FillerDialogue)//if you change your mind i'll take 'im
+Text(C22BountyHunterTalkDoNotSellTodd)//if you change your mind i'll take 'im
 ENUF 0xf
 GOTO 0x2
 LABEL 0x4
-Text(FillerDialogue)//well that's awkward
+Text(C22BountyHunterTalkToddDead)//well that's awkward
 LABEL 0x2
 EndEvent
 

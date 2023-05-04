@@ -184,7 +184,7 @@ CHECK_EVENTID ClarqueSeenFlag
 BEQ 0x1 0xc 0x0
 Reinforcements(ClarqueShallPierceTheHeavens)
 MUSC RecruitmentThemeVirid
-Text(FillerDialogue)//regret at not acting sooner, resolution to end things
+Text(C22ClarqueJoin)//regret at not acting sooner, resolution to end things
 LABEL 0x1
 EndEvent
 
@@ -202,17 +202,17 @@ TurnAlly(Peter)
 EndEvent
 
 C22ClarqueBlairTalk:
-Text(FillerDialogue)
+Text(C22ClarqueBlairTalkConvo)
 EndEvent
 
 C22ClarqueZekeTalk:
-Text(FillerDialogue)
+Text(C22ClarqueZekeTalkConvo)
 EndEvent
 
 C22Village1:
-VillageEventItem(FillerDialogue, VillageCG, Rescue)
+VillageEventItem(C22Village1Text, VillageCG, Rescue)
 C22Village2:
-VillageEventItem(FillerDialogue, VillageCG, MasterBow)
+VillageEventItem(C22Village2Text, VillageCG, MasterBow)
 
 C22PeterButchRecruit:
 CHECK_EVENTID 0xa

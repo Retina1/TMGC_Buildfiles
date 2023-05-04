@@ -6,6 +6,47 @@ Give Liam 10000 gold?[N]
 Sell Toddsworth out?[N]
 [Yes][X]
 
+##C22ClarqueJoin
+[OpenMidRight][LoadClarque][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove][A][OpenEyes]I've run far too long.[N]
+It's[ToggleMouthMove]...[ToggleMouthMove] time to fight.[A][N]
+Time to make things right.[A][N][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove]I'm sorry, Viridian.[N]
+[ToggleMouthMove]...[ToggleMouthMove]I'll[ToggleMouthMove]...[ToggleMouthMove] repent.[A][N]
+Somehow.[A][X]
+
+##C22ClarqueBlairTalkConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadClarque]
+hi[A][X]
+
+##C22ClarqueZekeTalkConvo
+[OpenMidLeft][LoadZeke][OpenMidRight][LoadClarque]
+hi[A][X]
+
+##C22Village1Text
+[OpenMidLeft][LoadMan2][OpenMidRight][LoadCurrent][OpenMidLeft]
+I've got a saying. Never leave[N]
+home without a Rescue staff.[A][N]
+It's the safest way to help[N]
+someone out of a bind.[A][N]
+Sure, Yoinks are a thing.[N]
+But they're underpowered.[A][N]
+Sometimes, you need obscene[N]
+magical power to command.[A][N]
+I've got a few extras around.[N]
+Don't be shy. Take one.[A][X]
+
+##C22Village2Text
+[OpenMidLeft][LoadMan5][OpenMidRight][LoadCurrent][OpenMidLeft]
+I came to this land to explore.[A][N]
+It's an ancient civilization -[N]
+they gotta have some good treasure![A][N]
+All I've found so far is this junk,[N]
+unfortunately.[A] You probably don't[N]
+need it either, but why not.[A][N]
+One man's trash is another[N]
+man's problem.[A][X]
+
 ##C22BountyHunterArrives
 [OpenMidRight][LoadBaddie3]
 [ToggleMouthMove]...[ToggleMouthMove]Hm[ToggleMouthMove]...[ToggleMouthMove] Toddsworth Toddington[ToggleMouthMove]...[ToggleMouthMove][N]
@@ -91,6 +132,27 @@ Well, then. I can kill now.[N]
 That'll test my morals.[A][N][ToggleSmile]
 [ToggleMouthMove]...[ToggleMouthMove]THROW YOURSELVES UNTO TODD![A][X]
 
+##C22FioraBattle
+[OpenMidLeft][LoadFiora]
+Don't feel too bad.[N]
+Dalst wants you dead.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Probably shouldn't have[N]
+said that.[A][N]
+But you'll be dead anyway.[A][X]
+
+##C22FioraSveltzalusBattle
+[OpenMidLeft][LoadFiora]
+[ToggleMouthMove]...[ToggleMouthMove]You're a bit gross.[N]
+Please[ToggleMouthMove]...[ToggleMouthMove] stand back.[A][X]
+
+##C22FioraDeath
+[OpenMidLeft][LoadFiora]
+Damn[ToggleMouthMove]...[ToggleMouthMove] This was gonna[ToggleMouthMove]...[ToggleMouthMove][N]
+pay the bills[ToggleMouthMove]...[ToggleMouthMove][A][N]
+I would've lived[ToggleMouthMove]...[ToggleMouthMove][N]
+in luxury[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
+
 ##AllyLiamBattle
 [OpenMidRight][LoadLiam]
 You made a mistake[N]
@@ -105,6 +167,15 @@ fightin' me.[A][N]
 And now I'll rip ya'[N]
 to shreds, pal.[A][X]
 
+##LiamSveltzalusBattle
+[OpenMidLeft][LoadLiam]
+[ToggleMouthMove]...[ToggleMouthMove]I've seen your type[N]
+in days long past.[A][N]
+Are you gonna multiply?[N]
+We can't have that.[A][N]
+Gotta cut you off at[N]
+the source right now.[A][X]
+
 ##AllyLiamDeath
 [OpenMidRight][LoadLiam]
 Well[ToggleMouthMove]...[ToggleMouthMove] I'm done here.[N]
@@ -116,3 +187,4 @@ Real pleasure doin' business.[A][X]
 [ToggleMouthMove]...[ToggleMouthMove]To fell a legend[ToggleMouthMove]...[ToggleMouthMove][N]
 Who the hell are you[ToggleMouthMove]...[ToggleMouthMove]?[A][N]
 Why'd you[ToggleMouthMove]...[ToggleMouthMove] need me[ToggleMouthMove]...[ToggleMouthMove]?[A][X]
+

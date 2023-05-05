@@ -21,6 +21,15 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+//10 flags total - joan, joan/mikey, joan/sonia, joan/tobias, sonia, sonia/tobias, tobias, tobias/leila, tobias/damien, tobias/zacharias
+//10 more flags for battle quotes
+//oh god we might need to dip into base flags and globals
+//joan recruitable by mikey (support), carbon, sonia (support), tobias (support) - 4 flags
+//sonia recruitable by mikey, desmond, joan (support), tobias (support) - 2 flags plus reuse from joan flags
+//tobias recruitable by leila (support), damien (support), zacharias (support), joan (support), sonia (support) - 3 flags plus 2 reused from other members, and one for being recruited/death quote
+//pair specific death quotes that don't need flags thank god
+//tarquin battle quotes - generic, svelt, blair, kenneth, natasia, desmond, zeke, hyperius, dalstian
+//reynard battle quotes - generic
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -34,6 +43,7 @@ ALIGN 4
 
 MiscBasedEvents:
 SHORT 1 DefeatBossFlag; WORD 1; SHORT KennethTarquinKillFlag 0
+SHORT 1 0x7; POIN EndingSceneCheck; SHORT DefeatBossFlag 0
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -150,6 +160,39 @@ LOAD1 0x0 C23Units
 ENUN
 GotoPrepScreen
 ENDA
+
+EndingSceneCheck:
+//we know tarq's dead - check status of joan, sonia, tobias, and reynard
+//allegiance returns 0 if blue, 2 if red
+CHECK_ALIVE DLReynard //reynard has to be dead
+BNE 0x1 0xc 0x0
+	CHECK_ALIVE Joan
+	BNE 0x2 0xc 0x0
+		LABEL 0x5
+		CHECK_ALIVE Sonia
+		BNE 0x3 0xc 0x0
+			LABEL 0x6
+			CHECK_ALIVE Tobias
+			BNE 0x4 0xc 0x0
+			LABEL 0x7
+			CALL EndingScene
+			GOTO 0x11
+		LABEL 0x2
+	CHECK_ALLEGIANCE Joan
+	BEQ 0x5 0xc 0x0
+	GOTO 0x1
+		LABEL 0x3
+	CHECK_ALLEGIANCE Sonia
+	BEQ 0x6 0xc 0x0
+	GOTO 0x1
+		LABEL 0x4
+	CHECK_ALLEGIANCE Tobias
+	BEQ 0x7 0xc 0x0
+	GOTO 0x1
+LABEL 0x1
+ENUF 0x7
+LABEL 0x11
+EndEvent
 
 EndingScene:
 ResetBaseFlags

@@ -39,7 +39,7 @@ Door(2,13)
 Door(16,17)
 Door(10,1)
 Door(18,5)
-Seize(0x3,SeizeCheck,2,1)//check all doors open before seize works (if doors not open, viridian says "hey dummy, open doors")
+Seize(0x7,SeizeCheck,2,1)//check all doors open before seize works (if doors not open, viridian says "hey dummy, open doors")
 END_MAIN
 
 ALIGN 4
@@ -322,7 +322,7 @@ CALL EndingScene
 GOTO 0x2
 LABEL 0x1
 Text(V3_DoorsRemain)//you're not done
-ENUF 0x3
+ENUF 0x7
 LABEL 0x2
 EndEvent
 

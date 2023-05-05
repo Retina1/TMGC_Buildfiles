@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C22LastSpawn,7)
 TurnEventPlayer(0x0,C22HunterSpawn,4)
 TurnEventPlayer(0x0,C22LiamSpawn,3)
 TurnEventPlayer(0x0,C22ClarqueSpawn,2)
@@ -115,18 +116,18 @@ UNIT Mevion SwdCav 0x0 Level(20,Enemy,1) [33,12] 0x0 0x0 0x0 0x0 [GildedSword] N
 
 UNIT Mevion Warrior 0x0 Level(5,Enemy,1) [25,6] 0x0 0x0 0x0 0x0 [GildedAxe,Elixir] NoAI
 UNIT Mevion Halberdier 0x0 Level(4,Enemy,1) [27,3] 0x0 0x0 0x0 0x0 [Spear,Axebuster] NoAI
-UNIT Mevion Sage 0x0 Level(3,Enemy,1) [20,11] DropItem 0x0 0x0 0x0 [Fimbulvetr] NoAI
+UNIT Mevion Sage 0x0 Level(4,Enemy,1) [20,11] DropItem 0x0 0x0 0x0 [Fimbulvetr] NoAI
 UNIT Mevion SwMast 0x0 Level(7,Enemy,1) [23,12] DropItem 0x0 0x0 0x0 [Rapier] NoAI
 
-UNIT Mevion Sniper 0x0 Level(3,Enemy,1) [13,11] 0x0 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
+UNIT Mevion Sniper 0x0 Level(4,Enemy,1) [13,11] 0x0 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
 UNIT Mevion Hero 0x0 Level(5,Enemy,1) [14,12] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
 
-UNIT Mevion Hero 0x0 Level(3,Enemy,1) [16,7] 0x0 0x0 0x0 0x0 [SilverAxe,Dracoaxe] GroupFourAI
-UNIT Mevion HeroF 0x0 Level(3,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Runesword,SilverSword] GroupFourAI
-UNIT Mevion Hero 0x0 Level(3,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Wyrmslayer,SilverSword] GroupFourAI
+UNIT Mevion Hero 0x0 Level(4,Enemy,1) [16,7] 0x0 0x0 0x0 0x0 [SilverAxe,Dracoaxe] GroupFourAI
+UNIT Mevion HeroF 0x0 Level(4,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Runesword,SilverSword] GroupFourAI
+UNIT Mevion Hero 0x0 Level(4,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Wyrmslayer,SilverSword] GroupFourAI
 UNIT Fiora HalberdierF 0x0 Level(12,Enemy,1) [9,9] DropItem 0x0 0x0 0x0 [TrueSaunion] GroupFourAI
-UNIT Mevion Warrior 0x0 Level(3,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [BraveAxe,Swordslayer,Halberd] GroupFourAI
-UNIT Mevion WarriorF 0x0 Level(3,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [BraveAxe,Hammer,Tomahawk] GroupFourAI
+UNIT Mevion Warrior 0x0 Level(4,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [BraveAxe,Swordslayer,Halberd] GroupFourAI
+UNIT Mevion WarriorF 0x0 Level(4,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [BraveAxe,Hammer,Tomahawk] GroupFourAI
 
 UNIT Mevion WyvLord 0x0 Level(5,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [Swordslayer] GroupOnePaceAI
 UNIT Mevion Falco 0x0 Level(5,Enemy,1) [17,1] 0x0 0x0 0x0 0x0 [SilverLance] GroupOnePaceAI
@@ -164,6 +165,14 @@ ClarqueShallPierceTheHeavens:
 UNIT SecretClarque BowPal 0x0 Level(7,Ally,0) [39,4] 0x0 0x0 0x1 REDA35R5 [SilverSword,SilverBow,Luckbow] NoAI
 UNIT
 
+C22ReinforcementGang:
+UNIT Mevion Sorc 0x0 Level(4,Enemy,1) [0,5] 0x0 0x0 0x1 REDA2R5 [Fenrir] NoAI
+UNIT Mevion SwdGen 0x0 Level(4,Enemy,1) [0,5] 0x0 0x0 0x1 REDA4R5 [SilverSword] NoAI
+UNIT Mevion SageF 0x0 Level(8,Enemy,1) [0,6] 0x0 0x0 0x1 REDA3R6 [ForceSpike] NoAI
+UNIT Mevion SwdGen 0x0 Level(4,Enemy,1) [0,7] 0x0 0x0 0x1 REDA2R7 [SilverSword] NoAI
+UNIT Mevion Sorc 0x0 Level(4,Enemy,1) [0,7] 0x0 0x0 0x1 REDA4R7 [Fenrir] NoAI
+UNIT
+
 ALIGN 4
 
 //parque joins, liam appears, peter appears, you can sell out todd/get toddhand (make sure to erase supports if he's disa-ed)
@@ -186,6 +195,10 @@ Reinforcements(ClarqueShallPierceTheHeavens)
 MUSC RecruitmentThemeVirid
 Text(C22ClarqueJoin)//regret at not acting sooner, resolution to end things
 LABEL 0x1
+EndEvent
+
+C22LastSpawn:
+Reinforcements(C22ReinforcementGang)
 EndEvent
 
 C22HunterSpawn:

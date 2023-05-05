@@ -568,8 +568,10 @@
 #define BarrierEffectID TowerShieldPlusID
 
 //Trample: +5 damage to unmounted units.
+//actually it adds to your stats based on opponent weapon
 //By Tequila
 #define TrampleID 232
+#define AdaptiveID TrampleID
 
 //Vanity: Gain +2 Damage and +10 Hit when fighting enemy at 2 range.
 //By Datagne

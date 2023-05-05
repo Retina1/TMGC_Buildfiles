@@ -1,40 +1,77 @@
 .thumb
-.org 0x0
-.equ TrampleID, SkillTester+4
-push	{r4,r5,r14}
-mov		r4,r0
-mov		r5,r1
-ldr		r0,[r5,#0x4]
-cmp		r0,#0
-beq		GoBack
-mov		r0,r4
-ldr		r1,SkillTester
-mov		r14,r1
-ldr		r1, TrampleID
-.short  0xF800
-cmp		r0,#0x0
-beq		GoBack
+.equ ItemTable, SkillTester+4
+.equ AdaptiveID, ItemTable+4
+.equ gBattleData, 0x203A4D4
 
-ldr		r0,[r5]
-ldr		r0,[r0,#0x28]
-ldr		r1,[r5,#0x4]
-ldr		r1,[r1,#0x28]
-orr		r0,r1
-mov		r1,#0x1			@is defender mounted
-tst		r0,r1
-bne		GoBack
+push {r4-r7, lr}
+mov r4, r0 @atkr
+mov r5, r1 @dfdr
 
-add		r4,#0x5A
-ldrh	r0,[r4]
-add		r0,#5
-strh	r0,[r4]
+@has skill
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker data
+ldr r1, AdaptiveID
+.short 0xf800
+cmp r0, #0
+beq End
 
-GoBack:
-pop		{r4-r5}
-pop		{r0}
-bx		r0
+@make sure in combat (or combat prep)
+ldr  r3, =gBattleData
+ldrb r3, [r3]
+mov  r0, #0x3
+tst  r0, r3
+beq End
 
+mov r3,#0x4a
+ldrb r2,[r5,r3]
+mov r3,#36
+mul r2,r3
+ldr r3,ItemTable
+add r2,r3
+mov r3,#0x15 @atk
+ldrb r2,[r2,r3]
+
+mov r1, #0x5a
+ldrh r0, [r4, r1]
+add r0, r2
+strh r0, [r4,r1]
+
+mov r3,#0x4a
+ldrb r2,[r5,r3]
+mov r3,#36
+mul r2,r3
+ldr r3,ItemTable
+add r2,r3
+mov r3,#0x18 @crit
+ldrb r2,[r2,r3]
+
+mov r1, #0x66
+ldrh r0, [r4, r1]
+add r0, r2
+strh r0, [r4,r1]
+
+mov r3,#0x4a
+ldrb r2,[r5,r3]
+mov r3,#36
+mul r2,r3
+ldr r3,ItemTable
+add r2,r3
+mov r3,#0x17 @wt
+ldrb r2,[r2,r3] @r2 has enemy weapon weight
+lsr r2,#0x1
+
+mov r1, #0x5e
+ldrh r0, [r4, r1]
+add r0, r2
+strh r0, [r4,r1]
+
+End:
+pop {r4-r7, r15}
 .align
+.ltorg
 SkillTester:
-@POIN SkillTester
-@WORD TrampleID
+@Poin SkillTester
+@poin itemtable
+@WORD AdaptiveID
+

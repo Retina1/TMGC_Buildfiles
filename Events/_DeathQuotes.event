@@ -118,6 +118,9 @@ ChapterDeathQuote(Liam,Chapter22,0x0,LiamDeath)
 ChapterDeathQuote(Peter,Chapter22,0xa,EnemyPeterDeath)
 ChapterDeathQuote(Fiora,Chapter22,DefeatBossFlag,C22FioraDeath)
 // c23
+ChapterDeathQuote(Joan,Chapter23,0xd,EnemyJoanDeath)
+ChapterDeathQuote(Sonia,Chapter23,0xf,EnemySoniaDeath)
+ChapterDeathQuote(Tobias,Chapter23,0x13,EnemyTobiasDeath)
 KillerDeathQuote(Kenneth,Neillstrom,Chapter23,0x0,FillerDialogue)
 KillerDeathQuote(Neillstrom,Kenneth,Chapter23,KennethTarquinKillFlag,C23TarquinDeathAlt)
 ChapterDeathQuote(Neillstrom,Chapter23,DefeatBossFlag,C23TarquinDeath)
@@ -338,6 +341,7 @@ AlwaysDeathQuote(Yuyu,0x0,YuyuDeath)
 AlwaysDeathQuote(Agnes,0x0,AgnesDeath)
 AlwaysDeathQuote(Gaylord,0x0,GaylordDeath)
 AlwaysDeathQuote(Kyrie,0x0,KyrieDeath)
+AlwaysDeathQuote(UnitQ,0x0,QDeath)
 EndDeathQuote
 
 PUSH

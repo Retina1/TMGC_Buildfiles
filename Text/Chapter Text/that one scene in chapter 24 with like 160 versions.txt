@@ -1,5 +1,16 @@
 //chain of command: freddric>dean>wilhelm>manfred>rift>callum>estelle>rose>eliza>dirk>argent
-//158 remain
+//154 remain
+//fred - this is it everyone thank you for everything
+//dean - it's time are you ready
+//wilhelm - hold you two
+//manfred - i believe we're finally upon the lady's army
+//rift
+//callum
+//estelle
+//rose - never opens
+//eliza
+//dirk - never opens
+//argent - here we are
 
 ##Ch24_FreddricDeanEliza
 [OpenMidLeft][LoadFreddric][OpenRight][LoadDean][OpenFarRight][LoadEliza][OpenMidLeft]
@@ -108,8 +119,31 @@ pain[X]
 pain[X]
 ##Ch24_FreddricCallumArgent
 pain[X]
+
 ##Ch24_FreddricManfredWilhelm
-pain[X]
+[OpenMidLeft][LoadFreddric][OpenRight][LoadWilhelm][OpenFarRight][LoadManfred][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]This is it, everyone.[N]
+Thank you[ToggleMouthMove]...[ToggleMouthMove] for everything.[A][N][OpenRight]
+I've been through[ToggleMouthMove]...[ToggleMouthMove][N]
+Well, not worse.[A][N]
+Nothing even close.[A][N][OpenFarRight]
+Must you ruin the mood with your[N]
+feeble attempts at sympathy?[A][N][OpenRight]
+The mood's ruined anyway.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Anyway. We've[ToggleMouthMove]...[ToggleMouthMove] been left with[N]
+a lot.[A][CloseEyes] I'm[ToggleMouthMove]...[ToggleMouthMove] not sure I'll[N]
+ever live up to it.[A][N]
+But I[ToggleMouthMove]...[ToggleMouthMove] We owe it to[N]
+everyone to try.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]You've long earned our[N]
+respect, Fred.[A] We'll fight[N]
+by your side until the end.[A][N][OpenRight]
+It'll be a hell of a way to die.[N]
+Or a hell of a way to live.[A][N]
+Either way, I'm in for the long haul.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Thank you.[A][N][OpenEyes]
+[ToggleMouthMove]...[ToggleMouthMove]Onwards! For Viridian![A][X]
+
 ##Ch24_FreddricManfredArgent
 pain[X]
 ##Ch24_FreddricWilhelmArgent
@@ -364,8 +398,30 @@ pain[X]
 pain[X]
 ##Ch24_RiftDirkManfred
 pain[X]
+
 ##Ch24_RiftDirkWilhelm
-pain[X]
+[OpenMidLeft][LoadDirk][OpenRight][LoadRift][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N]
+Perhaps ravaged by time, but[ToggleMouthMove]...[ToggleMouthMove][N]
+Well, who hasn't been ravaged, lately?[A][N][OpenMidLeft][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]We've all lost[ToggleMouthMove]...[ToggleMouthMove] so much, lately.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]A good leader would try and come[N]
+up with some motivational schlock.[A][N][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove]Unfortunately[ToggleMouthMove]...[ToggleMouthMove] We're[N]
+all we've got.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]It's truly dire, friend.[N]
+[ToggleMouthMove]...[ToggleMouthMove]But still, we must fight.[A][N]
+Make something of this.[A][N]
+Give reason to all that has[N]
+happened.[A][N][OpenMidLeft][OpenEyes]
+[ToggleMouthMove]...[ToggleMouthMove]What're we doing, then?[N]
+[ToggleMouthMove]...[ToggleMouthMove]Let's go.[A][N][OpenFarRight][OpenEyes]
+[ToggleMouthMove]...[ToggleMouthMove]Onwards.[A][X]
+
 ##Ch24_RiftDirkArgent
 pain[X]
 ##Ch24_RiftCallumManfred
@@ -416,8 +472,23 @@ pain[X]
 pain[X]
 ##Ch24_RoseDirkWilhelm
 pain[X]
+
 ##Ch24_RoseDirkArgent
-pain[X]
+[OpenMidLeft][LoadArgent][OpenRight][LoadRose][OpenFarRight][LoadDirk][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Here we are.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]It's[ToggleMouthMove]...[ToggleMouthMove] unfortunate that all[N]
+has come to this.[A][N]
+Youths like you[ToggleMouthMove]...[ToggleMouthMove] suffering[N]
+through all of this.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Whatever time I've got left[ToggleMouthMove]...[ToggleMouthMove][N]
+I swear I'll make a better world.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]T-thank you. Miss Argent.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Let's get on with this.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Of course. I'll keep you[N]
+two alive. No matter what.[A][X]
+
 ##Ch24_RoseCallumManfred
 pain[X]
 ##Ch24_RoseCallumWilhelm
@@ -501,5 +572,29 @@ Time to raise some hell.[A][X]
 pain[X]
 ##Ch24_CallumWilhelmArgent
 pain[X]
+
 ##Ch24_ManfredWilhelmArgent
-pain[X]
+[OpenMidLeft][LoadArgent][OpenRight][LoadManfred][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N]
+Perhaps ravaged by time, but[ToggleMouthMove]...[ToggleMouthMove][N]
+Well, who hasn't been ravaged, lately?[A][N][OpenRight]
+Truly, friend. What a cruel[N]
+mistress time is.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Glad to see you two still[N]
+got that routine going.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Any last regrets?[A][N][OpenFarRight]
+Far too many to count.[N]
+But surely not as many as you.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I suppose so. I fight to ease[N]
+my regrets.[A] [ToggleMouthMove]...[ToggleMouthMove]But that just[N]
+creates new ones.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]It's time. Wilhelm.[N]
+It's been an honor.[A][N]
+You too, Argent.[A][N][OpenFarRight]
+We're not dying today.[N]
+No need to speak like that.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Onwards. For them.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Indeed. We fight[N]
+for the fallen.[A][X]

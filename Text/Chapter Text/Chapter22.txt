@@ -6,6 +6,53 @@ Give Liam 10000 gold?[N]
 Sell Toddsworth out?[N]
 [Yes][X]
 
+##C22ClarqueBlairTalkConvo
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadClarque]
+hi[A][X]
+
+##C22ClarqueZekeTalkConvo
+[OpenMidLeft][LoadZeke][OpenMidRight][LoadClarque]
+hi[A][X]
+
+##C22LiamSpawns
+[OpenMidRight][LoadBlair][OpenMidLeft][LoadLiam]
+Well. Funny 'ow this works out.[N]
+Ey! Lady! Remember our deal?[A][N]
+Well, I'd say now's a good time[N]
+to work it out.[A][N]
+You gonna hand over[ToggleMouthMove]...[ToggleMouthMove][N]
+let's say, 10000 gold?[A][N]
+I think that's a fair rate[N]
+to show these fools up.[A][X]
+
+##C22LiamDenied
+[OpenMidRight][LoadBlair][OpenMidLeft][LoadLiam][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I've changed my mind.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Well, then. That's unfortunate.[A][N]
+Don't worry. I won't let[N]
+this opportunity go to waste.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]I'm sure we can loot somethin'[N]
+real nice from your corpses.[A][X]
+
+##C22LiamPoor
+[OpenMidRight][LoadBlair][OpenMidLeft][LoadLiam][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]I don't believe we[N]
+can afford that.[A][N][OpenMidLeft]
+Oof. Tough luck. Well,[N]
+a deal's a deal.[A][N]
+I DID tell ya' to save some[N]
+gold.[A] Now you're gonna[N]
+regret your mistake.[A][X]
+
+##C22LiamAccepted
+[OpenMidRight][LoadBlair][OpenMidLeft][LoadLiam][OpenMidRight]
+[ToggleMouthMove]...[ToggleMouthMove]Sounds good to me.[A][N][OpenMidLeft]
+Excellent. My boys'll tear[N]
+them up like nothin' else.[A][N]
+Just don't expect us to[N]
+hand over their loot.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Fellas. It's payday![A][X]
+
 ##C22ClarqueJoin
 [OpenMidRight][LoadClarque][CloseEyes]
 [ToggleMouthMove]...[ToggleMouthMove][A][OpenEyes]I've run far too long.[N]
@@ -14,14 +61,6 @@ Time to make things right.[A][N][CloseEyes]
 [ToggleMouthMove]...[ToggleMouthMove]I'm sorry, Viridian.[N]
 [ToggleMouthMove]...[ToggleMouthMove]I'll[ToggleMouthMove]...[ToggleMouthMove] repent.[A][N]
 Somehow.[A][X]
-
-##C22ClarqueBlairTalkConvo
-[OpenMidLeft][LoadBlair][OpenMidRight][LoadClarque]
-hi[A][X]
-
-##C22ClarqueZekeTalkConvo
-[OpenMidLeft][LoadZeke][OpenMidRight][LoadClarque]
-hi[A][X]
 
 ##C22Village1Text
 [OpenMidLeft][LoadMan2][OpenMidRight][LoadCurrent][OpenMidLeft]
@@ -92,9 +131,9 @@ to you.[A][X]
 
 ##C22BountyHunterTalkDoNotSellTodd
 [OpenMidLeft][LoadCurrent][OpenMidRight][LoadBaddie3]
-[ToggleMouthMove]...[ToggleMouthMove]No? Understandable.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]No? I see.[A][N]
 [ToggleMouthMove]...[ToggleMouthMove]If you change your mind,[N]
-i'll just[ToggleMouthMove]...[ToggleMouthMove] be here.[A][N]
+I'll just[ToggleMouthMove]...[ToggleMouthMove] be here.[A][N]
 Just stand back. I might try[N]
 and stab you instinctually.[A][X]
 

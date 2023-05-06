@@ -21,19 +21,25 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-//10 flags total - joan, joan/mikey, joan/sonia, joan/tobias, sonia, sonia/tobias, tobias, tobias/leila, tobias/damien, tobias/zacharias
-//10 more flags for battle quotes
-//oh god we might need to dip into base flags and globals
-//joan recruitable by mikey (support), carbon, sonia (support), tobias (support) - 4 flags
-//sonia recruitable by mikey, desmond, joan (support), tobias (support) - 2 flags plus reuse from joan flags
-//tobias recruitable by leila (support), damien (support), zacharias (support), joan (support), sonia (support) - 3 flags plus 2 reused from other members, and one for being recruited/death quote
-//pair specific death quotes that don't need flags thank god
-//tarquin battle quotes - generic, svelt, blair, kenneth, natasia, desmond, zeke, hyperius, dalstian
-//reynard battle quotes - generic
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0xa,C23JoanMikeyRecruitment,Joan,Mikey)
+CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,Joan,Sonia)
+CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,Joan,Tobias)
+CharacterEvent(0xd,C23JoanCarbonRecruitment,Carbon,Joan)
+CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,Sonia,Tobias)
+CharacterEvent(0xf,C23SoniaDesmondRecruitment,Desmond,Sonia)
+CharacterEvent(0xf,C23SoniaMikeyRecruitment,Mikey,Sonia)
+CharacterEventBothWays(0x10,C23TobiasLeilaRecruitment,Tobias,Leila)
+CharacterEventBothWays(0x11,C23TobiasDamienRecruitment,Tobias,Damien)
+CharacterEventBothWays(0x12,C23TobiasZachariasRecruitment,Tobias,Zacharias)//all tobias recruits should also trigger flag 0x13
+//10 more flags for battle quotes
+//oh god we might need to dip into base flags and globals
+//pair specific death quotes that don't need flags thank god
+//tarquin battle quotes - generic, svelt, blair, kenneth, natasia, desmond, zeke, hyperius, dalstian
+//reynard battle quotes - generic
 END_MAIN
 
 LocationBasedEvents:
@@ -160,6 +166,155 @@ LOAD1 0x0 C23Units
 ENUN
 GotoPrepScreen
 ENDA
+
+C23JoanSoniaRecruitment:
+MUSC S_EncountersAndReunions
+CHECK_EVENTID 0xd
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0xf
+BEQ 0x2 0xc 0x0
+GOTO 0x3
+LABEL 0x1
+Text(FillerDialogue)//joan unrecruited
+TurnAlly(Joan)
+GOTO 0x4
+LABEL 0x2
+Text(FillerDialogue)//sonia unrecruited
+TurnAlly(Sonia)
+GOTO 0x4
+LABEL 0x3
+Text(FillerDialogue)//both recruited
+LABEL 0x4
+ENUT 0xd
+ENUT 0xf
+SetSupport(Joan,Sonia,BPSupport,1)
+EndEvent
+
+C23JoanTobiasRecruitment:
+MUSC RecruitmentTheme
+CHECK_EVENTID 0xd
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0x13
+BEQ 0x2 0xc 0x0
+GOTO 0x3
+LABEL 0x1
+Text(FillerDialogue)//joan unrecruited
+TurnAlly(Joan)
+GOTO 0x4
+LABEL 0x2
+Text(FillerDialogue)//tobias unrecruited
+TurnAlly(Tobias)
+GOTO 0x4
+LABEL 0x3
+Text(FillerDialogue)//both recruited
+LABEL 0x4
+ENUT 0xd
+ENUT 0x13
+SetSupport(Joan,Tobias,BSupport,1)
+EndEvent
+
+C23SoniaTobiasRecruitment:
+MUSC RecruitmentTheme
+CHECK_EVENTID 0xf
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0x13
+BEQ 0x2 0xc 0x0
+GOTO 0x3
+LABEL 0x1
+Text(FillerDialogue)//sonia unrecruited
+TurnAlly(Sonia)
+GOTO 0x4
+LABEL 0x2
+Text(FillerDialogue)//tobias unrecruited
+TurnAlly(Tobias)
+GOTO 0x4
+LABEL 0x3
+Text(FillerDialogue)//both recruited
+LABEL 0x4
+ENUT 0xf
+ENUT 0x13
+SetSupport(Sonia,Tobias,BSupport,1)
+EndEvent
+
+C23SoniaDesmondRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Sonia)
+EndEvent
+
+C23SoniaMikeyRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Sonia)
+EndEvent
+
+C23JoanMikeyRecruitment:
+MUSC S_EncountersAndReunions
+CHECK_EVENTID 0xd
+BNE 0x1 0xc 0x0
+Text(FillerDialogue)//unrecruited
+TurnAlly(Joan)
+ENUT 0xd
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//recruited
+LABEL 0x2
+SetSupport(Joan,Mikey,BSupport,1)
+EndEvent
+
+C23JoanCarbonRecruitment:
+MUSC RecruitmentTheme
+CHECK_ALIVE Mikey
+BEQ 0x1 0xc 0x0
+Text(FillerDialogue)//mikey alive
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//mikey dead
+LABEL 0x2
+TurnAlly(Joan)
+EndEvent
+
+C23TobiasLeilaRecruitment:
+CHECK_EVENTID 0x13
+BNE 0x1 0xc 0x0
+MUSC RecruitmentTheme
+Text(FillerDialogue)//unrecruited
+TurnAlly(Tobias)
+ENUT 0x13
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//recruited
+LABEL 0x2
+SetSupport(Tobias,Leila,BSupport,1)
+EndEvent
+
+C23TobiasDamienRecruitment:
+CHECK_EVENTID 0x13
+BNE 0x1 0xc 0x0
+MUSC RecruitmentTheme
+Text(FillerDialogue)//unrecruited
+TurnAlly(Tobias)
+ENUT 0x13
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//recruited
+LABEL 0x2
+SetSupport(Tobias,Damien,BSupport,1)
+EndEvent
+
+C23TobiasZachariasRecruitment:
+CHECK_EVENTID 0x13
+BNE 0x1 0xc 0x0
+MUSC RecruitmentTheme
+Text(FillerDialogue)//unrecruited
+TurnAlly(Tobias)
+ENUT 0x13
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)//recruited
+LABEL 0x2
+SetSupport(Tobias,Zacharias,BSupport,1)
+EndEvent
 
 EndingSceneCheck:
 //we know tarq's dead - check status of joan, sonia, tobias, and reynard

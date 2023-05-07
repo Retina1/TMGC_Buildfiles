@@ -55,7 +55,7 @@ EndRanks:
 pop {r5-r7}
 
 
-draw_textID_at 13, 11, textID=0xd4c, width=16, colour=Blue
+draw_textID_at 13, 11, textID=0x211, width=16, colour=Blue
 
 @ first skill
 mov    r0,r8

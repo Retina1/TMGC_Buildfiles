@@ -37,8 +37,9 @@ Total Turns[X]
 # 0x01CD
 Swamp[X]
 
-# 0x0211
-3 years ago[.][X]
+# 0x0211 LikesText
+//first text ID in the free block
+Skills:[X]
 
 #include "UnitNames.txt"
 
@@ -128,57 +129,13 @@ a swell day, pal![A][X]
 //first text ID in the free block- was 3D
 Learned  [X]
 
-#include "MenuStuff.txt"
-
-#0x577
-Base[X]
-
-# 0x057A ^
-Select who to deploy.[N]
-Blair must always be deployed,[N]
-and certain maps require[N]
-other units to be deployed.[X]
-
-# 0x057C ^
-Manage your units' items.[N]
-An armory with some basic[N]
-equipment is also available.[X]
-
-# 0x057D ^
-No new base conversations are[N]
-available at this time.[N]
-Come back again later.[X]
-
-# 0x057E ^
-Read any Base Conversations.[N]
-These can have many effects,[N]
-such as increasing support[N]
-levels and granting items.[X]
-
-# 0x0580 ^
-View the map and reposition[N]
-your allies. You can also[N]
-check enemy formations and[N]
-shop inventories.[X]
-
-# 0x0581 ^
-Save any changes to your[N]
-unit formation, items,[N]
-and read conversations.[NL]
-Choose Restart Chapter[NL]
-to continue your game.[X]
-
-#0xd4c LikesText
-//first text ID in the free block
-Skills:[X]
-
-#0xd4d DislikesText
+##DislikesText
 [0x9E]i[0x90]li[0x8A][0x85][0x90]:[X]
 
-#0xd4e HeightText
+##HeightText
 Height:[X]
 
-#0xd4f AgeText
+##AgeText
 Age:[X]
 
 ## HouseText
@@ -361,6 +318,7 @@ a torch's flame.[X]
 #include "EventViewerSupports.txt"
 #include "EventViewerMisc.txt"
 #include "BonusConvos.txt"
+#include "Chapter Text/TheReturn.txt"
 
 # 0x0533 ^
 Prf[X]
@@ -397,7 +355,10 @@ He's for sale in Chapter 12x.[A][N]
 Interact with the cracked tile[N]
 near the staircase to buy him.[A][N]
 As for Tonnamin, the wayward brother[ToggleMouthMove]...[ToggleMouthMove][N]
-Well, I'm not sure yet. Come back later.[A][N]
+Visit every inn you can in every[N]
+interlude you visit![A][N]
+I'm sure he'll appreciate a well[N]
+traveled youngster.[A][N]
 Third is Laronde, the devoted brother![N]
 Man, there's a lot of brothers[ToggleMouthMove]...[ToggleMouthMove][A][N]
 For him, make sure the young mage Rose[N]
@@ -456,3 +417,43 @@ thanks to Force Spike.[X]
 Assist Anims[X]
 # 0x00B9
 Disable staff/dance animations[X]
+
+#include "MenuStuff.txt"
+
+#0x577
+Base[X]
+
+# 0x057A ^
+Select who to deploy.[N]
+Blair must always be deployed,[N]
+and certain maps require[N]
+other units to be deployed.[X]
+
+# 0x057C ^
+Manage your units' items.[N]
+An armory with some basic[N]
+equipment is also available.[X]
+
+# 0x057D ^
+No new base conversations are[N]
+available at this time.[N]
+Come back again later.[X]
+
+# 0x057E ^
+Read any Base Conversations.[N]
+These can have many effects,[N]
+such as increasing support[N]
+levels and granting items.[X]
+
+# 0x0580 ^
+View the map and reposition[N]
+your allies. You can also[N]
+check enemy formations and[N]
+shop inventories.[X]
+
+# 0x0581 ^
+Save any changes to your[N]
+unit formation, items,[N]
+and read conversations.[NL]
+Choose Restart Chapter[NL]
+to continue your game.[X]

@@ -173,9 +173,14 @@ ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt22
+LocationText(MoonCG,Ch22_Flashback,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
 Narration(Map2CG,Ch22_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+MUSC S_Nightfall
+CleanText(EastHolanisCG,C22_Opening)
+//aw shit enemies or something
+MUSC S_Crisis
+CleanTextNoMap(EastHolanisCG,FillerDialogue)
 LoadUnitsByDifficulty(C22Easy,C22Normal,C22Hard)
 LOAD1 0x0 C22Units
 ENUN

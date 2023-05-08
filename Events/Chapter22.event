@@ -34,6 +34,31 @@ CharacterEventBothWays(0x8,C22ClarqueBlairTalk,SecretClarque,Blair)
 CharacterEventBothWays(0x9,C22ClarqueZekeTalk,SecretClarque,Zeke)
 CharacterEvent(0xa,C22PeterBlairRecruit,Blair,Peter)
 CharacterEventBothWays(0xb,C22PeterButchRecruit,Butch,Peter)
+//map supports
+CharacterEventBothWays(0x14,C22BlairCarbonSupport,Blair,Carbon)
+CharacterEventBothWays(0x15,C22ArinYuyuSupport,Arin,Yuyu)
+CharacterEventBothWays(0x16,C22KennethStefanSupport,Kenneth,Stefan)
+CharacterEventBothWays(0x17,C22SamJosefSupport,Sam,Josef)
+CharacterEventBothWays(0x18,C22SamBechamelSupport,Sam,Bechamel)
+CharacterEventBothWays(0x19,C22RachaelLeilaSupport,Rachael,Leila)
+CharacterEventBothWays(0x1a,C22EmileSimoneSupport,Emile,Simone)
+CharacterEventBothWays(0x1b,C22ApolloBechamelSupport,Apollo,Bechamel)
+CharacterEventBothWays(0x1c,C22CharleyToddsworthSupport,Charley,Toddsworth)
+CharacterEventBothWays(0x1d,C22FlynnHoratioSupport,Flynn,Horatio)
+CharacterEventBothWays(0x1e,C22EmileHilbertSupport,Emile,Hilbert)
+CharacterEventBothWays(0x1f,C22PeggyAthenaSupport,Peggy,Athena)
+//blair carbon b+
+//arin yuyu b
+//kenneth stefan b+
+//sam josef b+
+//sam bechamel b
+//rachael leila b
+//emile simone c+
+//apollo bechamel b+
+//charley todd c+
+//flynn horatio c+
+//emile hilbert b+
+//peggy athena b
 //flag 14 and onwards available for supports
 END_MAIN
 
@@ -170,7 +195,6 @@ UNIT
 ALIGN 4
 
 //parque joins, liam appears, peter appears, you can sell out todd/get toddhand (make sure to erase supports if he's disa-ed)
-
 BeginningScene:
 ENUT GuideChpt22
 LocationText(MoonCG,Ch22_Flashback,TowerPeakLabel,0x0)
@@ -184,8 +208,69 @@ CleanTextNoMap(EastHolanisCG,FillerDialogue)
 LoadUnitsByDifficulty(C22Easy,C22Normal,C22Hard)
 LOAD1 0x0 C22Units
 ENUN
+SupportFlagOn(Blair,Carbon,0x14,BSupport)
+SupportFlagOn(Arin,Yuyu,0x15,CPSupport)
+SupportFlagOn(Kenneth,Stefan,0x16,BSupport)
+SupportFlagOn(Sam,Josef,0x17,BSupport)
+SupportFlagOn(Sam,Bechamel,0x18,CPSupport)
+SupportFlagOn(Rachael,Leila,0x19,CPSupport)
+SupportFlagOn(Emile,Simone,0x1a,CSupport)
+SupportFlagOn(Apollo,Bechamel,0x1b,BSupport)
+SupportFlagOn(Charley,Toddsworth,0x1c,CSupport)
+SupportFlagOn(Flynn,Horatio,0x1d,CSupport)
+SupportFlagOn(Emile,Hilbert,0x1e,BSupport)
+SupportFlagOn(Peggy,Athena,0x1f,CPSupport)
 GotoPrepScreen
 ENDA
+
+C22BlairCarbonSupport:
+Text(FillerDialogue)
+SetSupport(Blair,Carbon,BPSupport,1)
+EndEvent
+C22ArinYuyuSupport:
+Text(FillerDialogue)
+SetSupport(Arin,Yuyu,BSupport,1)
+EndEvent
+C22KennethStefanSupport:
+Text(FillerDialogue)
+SetSupport(Kenneth,Stefan,BPSupport,1)
+EndEvent
+C22SamJosefSupport:
+Text(FillerDialogue)
+SetSupport(Sam,Josef,BPSupport,1)
+EndEvent
+C22SamBechamelSupport:
+Text(FillerDialogue)
+SetSupport(Sam,Bechamel,BSupport,1)
+EndEvent
+C22RachaelLeilaSupport:
+Text(FillerDialogue)
+SetSupport(Rachael,Leila,BSupport,1)
+EndEvent
+C22EmileSimoneSupport:
+Text(FillerDialogue)
+SetSupport(Emile,Simone,CPSupport,1)
+EndEvent
+C22ApolloBechamelSupport:
+Text(FillerDialogue)
+SetSupport(Apollo,Bechamel,BPSupport,1)
+EndEvent
+C22CharleyToddsworthSupport:
+Text(FillerDialogue)
+SetSupport(Charley,Toddsworth,CPSupport,1)
+EndEvent
+C22FlynnHoratioSupport:
+Text(FillerDialogue)
+SetSupport(Flynn,Horatio,CPSupport,1)
+EndEvent
+C22EmileHilbertSupport:
+Text(FillerDialogue)
+SetSupport(Emile,Hilbert,BPSupport,1)
+EndEvent
+C22PeggyAthenaSupport:
+Text(FillerDialogue)
+SetSupport(Peggy,Athena,BSupport,1)
+EndEvent
 
 C22ClarqueSpawn:
 CHECK_EVENTID ClarqueSeenFlag

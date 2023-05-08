@@ -71,6 +71,7 @@ POIN ChapterV3Conversations
 POIN ChapterV4Conversations
 POIN Interlude8Conversations
 POIN ChapterV5Conversations
+POIN Chapter21Conversations
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -705,6 +706,7 @@ ConversationEntry(EC17End1,Ch17_Ending,LowlandsCG,Chapter17,VictoryTheme)
 ConversationEntry(EC17Followup,Ch17_BlairHollandaiseFollowup,LowlandsCG,Chapter17,RecruitmentTheme)
 ConversationEntry(EC17Unprompted,Ch17_HollandaiseJoinsUnprompted,LowlandsCG,Chapter17,RecruitmentTheme)
 ConversationEntry(EC17CatchUp,Ch17_BechamelAndHollandaiseCatchUp,LowlandsCG,Chapter17,RecruitmentTheme)
+ConversationEntry(EC17CatchUpAlt,Ch17_BechamelAndHollandaiseBeatenUp,LowlandsCG,Chapter17)
 ConversationEntry(EC17End2,Ch17_Ending2,BlankCG,Chapter17,S_Chaos)
 ConversationEntryTerminator
 
@@ -1055,6 +1057,61 @@ ConversationEntry(EV5End2,V5_Ending2,OutdoorCastleCG,ChapterV5,S_MainTheme)
 ConversationEntryTerminator
 
 ALIGN 4
+Chapter21Conversations:
+ConversationEntry(EC21Open0,Ch21_Flashback,MoonCG,Chapter21)
+ConversationEntry(EC21Open1,Ch21_Opening,OutdoorCastleCG,Chapter21)
+ConversationEntry(EC21Open2,Ch21_Opening2,TentInsideCG,Chapter21)
+ConversationEntry(EC21Open3,Ch21_Opening3,HallCG,Chapter21,S_Chaos)
+ConversationEntry(EC21Open4,Ch21_Opening4,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21Open5,Ch21_Opening5,HallCG,Chapter21)
+ConversationEntry(EC21LightsOff,C21_LightsOff,HallCG,Chapter21)
+ConversationEntry(EC21Spawn,Ch21_PtolemyJohanSpawn,DungeonCG,Chapter21)
+ConversationEntry(EC21SpawnBad,Ch21_PtolemyJohanSpawnBad,DungeonCG,Chapter21)
+ConversationEntry(EC21AllOpen,C21_GetOut,HallCG,Chapter21)
+ConversationEntry(EC21BlairRecruitJohan,Ch21_JohanBlairRecruitment,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21BlairRecruitPtolemy,Ch21_PtolemyBlairRecruitment,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21StefanRecruitJohan,Ch21_JohanStefanRecruitment,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21DesmondRecruitJohan,Ch21_JohanDesmondRecruitment,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21PtolemyRecruitJohan,Ch21_PtolemyRecruitsJohan,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21JohanRecruitPtolemy,Ch21_JohanRecruitsPtolemy,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21StefanTalkJohan,Ch21_JohanStefanRecruited,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21DesmondTalkJohan,Ch21_JohanDesmondRecruited,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21PtolemyTalkJohan,Ch21_PtolemyJohanTalk,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21Boss2,C21LarsonBattle,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21Boss2Svelt,C21LarsonSveltzalusBattle,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21Boss2Die,C21LarsonDeath,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21BossGen,C21NathanielBattle,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21BossSimone,C21NathanielSimoneBattle,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21BossPtolemy,C21NathanielPtolemyBattle,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21BossJohan,C21NathanielJohanBattle,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21BossSvelt,C21NathanielSveltzalusBattle,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21BossDie,C21NathanielDeath,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21BossDieAlt,C21NathanielSimoneDeath,HallCG,Chapter21,S_GraspFate)
+ConversationEntry(EC21End1,C21Ending1,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21End2,C21Ending2,OutdoorCastleCG,Chapter21)
+ConversationEntry(EC21End3,C21Ending3,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21End3P2,C21Ending3Part2,DungeonCG,Chapter21,S_Chaos)
+ConversationEntry(EC21End4,C21Ending4,HallCG,Chapter21,S_Chaos)
+ConversationEntry(EC21End4Alt,C21Ending4Alt,HallCG,Chapter21,S_Chaos)
+ConversationEntry(EC21End5,C21Ending5,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndPrize1,C21EndingAwardBest,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndPrize2,C21EndingAwardGood,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndPrize3,C21EndingAwardOK,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndPrize4,C21EndingAwardEh,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndSDJ,C21EndingSDJAlive,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndDJ,C21EndingDJAlive,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndSJ,C21EndingSJAlive,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndSD,C21EndingSDAlive,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndS,C21EndingSAlone,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndD,C21EndingDAlone,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndJ,C21EndingJAlone,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndPJ,C21EndingPJAlive,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndPNoJ,C21EndingPAlive,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntry(EC21EndJNoP,C21EndingJAlive,OutdoorCastleCG,Chapter21,S_Nightfall)
+ConversationEntryTerminator
+
+
+ALIGN 4
 BaseConversations:
 ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
 ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
@@ -1320,18 +1377,24 @@ ConversationEntry(ECallumDeath,CallumDeath,VillageCG,DeathQuoteViewer)
 ConversationEntry(EManfredDeath,ManfredDeath,YgstraCG,DeathQuoteViewer)
 ConversationEntry(EWilhelmDeath,WilhelmDeath,YgstraCG,DeathQuoteViewer)
 ConversationEntry(EArgentDeath,ArgentDeath,YgstraCG,DeathQuoteViewer)
-ConversationEntry(EPtolemyDeath,PtolemyDeath,PathCG,DeathQuoteViewer)
-ConversationEntry(EJohanDeath,JohanDeath,PathCG,DeathQuoteViewer)
-ConversationEntry(EPeterDeath,PeterDeath,PathCG,DeathQuoteViewer)
-ConversationEntry(EJoanDeath,JoanDeath,PathCG,DeathQuoteViewer)
-ConversationEntry(ESoniaDeath,SoniaDeath,PathCG,DeathQuoteViewer)
-ConversationEntry(ETobiasDeath,TobiasDeath,PathCG,DeathQuoteViewer)
+ConversationEntry(EPtolemyDeath,PtolemyDeath,DungeonCG,DeathQuoteViewer)
+ConversationEntry(EJohanDeath,JohanDeath,DungeonCG,DeathQuoteViewer)
+ConversationEntry(EPeterDeath,PeterDeath,EastHolanisCG,DeathQuoteViewer)
+ConversationEntry(EJoanDeath,JoanDeath,EastHolanisCG,DeathQuoteViewer)
+ConversationEntry(ESoniaDeath,SoniaDeath,EastHolanisCG,DeathQuoteViewer)
+ConversationEntry(ETobiasDeath,TobiasDeath,EastHolanisCG,DeathQuoteViewer)
 ConversationEntry(EIanDeath,IanDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EOlsenDeath,OlsenDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EElcorianDeath,ElcorianDeath,PathCG,DeathQuoteViewer)
 ConversationEntry(EAgnesDeath,AgnesDeath,DesertCG,DeathQuoteViewer)
+ConversationEntry(EAddingtonDeath,AddingtonDeath,DesertCG,DeathQuoteViewer)
 ConversationEntry(EGaylordDeath,GaylordDeath,YgstraCG,DeathQuoteViewer)
-ConversationEntry(EKyrieDeath,KyrieDeath,LowlandsCG,DeathQuoteViewer)
+ConversationEntry(EQDeath,QDeath,MoonCG,DeathQuoteViewer)
+ConversationEntry(ETonnaminDeath,TonnaminDeath,VillageCG,DeathQuoteViewer)
+ConversationEntry(ELarondeDeath,SecretLarondeDeath,LowlandsCG,DeathQuoteViewer)
+ConversationEntry(EKyrieDeath,KyrieDeath,MoonCG,DeathQuoteViewer)
+ConversationEntry(EJonasDeath,SecretJonasDeath,MoonCG,DeathQuoteViewer)
+ConversationEntry(EValeriaDeath,ValeriaDeath,MoonCG,DeathQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -1396,7 +1459,12 @@ ConversationEntry(EOlsenDeathEndgame,OlsenDeathEndgame,MoonCG,FinalDeathQuoteVie
 ConversationEntry(EElcorianDeathEndgame,ElcorianDeathEndgame,MoonCG,FinalDeathQuoteViewer)
 ConversationEntry(EAgnesDeathEndgame,AgnesDeathEndgame,MoonCG,FinalDeathQuoteViewer)
 ConversationEntry(EGaylordDeathEndgame,GaylordDeathEndgame,MoonCG,FinalDeathQuoteViewer)
+ConversationEntry(EQDeathEndgame,QDeathEndgame,MoonCG,FinalDeathQuoteViewer)
+ConversationEntry(ETonnaminDeathEndgame,TonnaminDeathEndgame,MoonCG,FinalDeathQuoteViewer)
+ConversationEntry(ELarondeDeathEndgame,SecretLarondeDeathEndgame,MoonCG,FinalDeathQuoteViewer)
 ConversationEntry(EKyrieDeathEndgame,KyrieDeathEndgame,MoonCG,FinalDeathQuoteViewer)
+ConversationEntry(EJonasDeathEndgame,SecretJonasDeathEndgame,MoonCG,FinalDeathQuoteViewer)
+ConversationEntry(EValeriaDeathEndgame,ValeriaDeathEndgame,MoonCG,FinalDeathQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4

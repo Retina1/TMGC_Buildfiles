@@ -315,6 +315,8 @@ EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(LowlandsCG,Ch17_Ending)
+CHECK_EVENTID 0x8
+BNE 0x5 0xc 0x0
 CHECK_EVENTID 0xa
 BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
@@ -334,6 +336,17 @@ BEQ 0x1 0xc 0x0
 CleanTextNoMap(LowlandsCG,Ch17_BechamelAndHollandaiseCatchUp)//bechamel support level
 REMA
 AddSupport(Bechamel,Hollandaise,1)
+GOTO 0x1
+LABEL 0x5
+	CHECK_ALIVE Bechamel
+	BEQ 0x1 0xc 0x0
+	MUSC 0x0
+	LOAD1 0x0 C17EndingCutscene
+	ENUN
+	TurnAlly(Hollandaise)
+	CleanTextNoMap(LowlandsCG,Ch17_BechamelAndHollandaiseBeatenUp)//bechamel support level
+	REMA
+	AddSupport(Bechamel,Hollandaise,1)
 LABEL 0x1
 LocationText(BlankCG,Ch17_Ending2,UnknownLocationLabel,S_Chaos)
 MoveToChapter(Chapter18)

@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C24TheReturn,3)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -90,6 +91,40 @@ UNIT Dalst Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
 UNIT
 
+FreddricRejoin:
+UNIT Freddric 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA22R17 [0x0] NoAI
+UNIT
+DeanRejoin:
+UNIT Dean 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA20R17 [0x0] NoAI
+UNIT
+ElizaRejoin:
+UNIT Eliza 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA19R18 [0x0] NoAI
+UNIT
+EstelleRejoin:
+UNIT Estelle 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA21R19 [0x0] NoAI
+UNIT
+RiftRejoin:
+UNIT Rift 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA20R15 [0x0] NoAI
+UNIT
+RoseRejoin:
+UNIT Rose 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA19R20 [0x0] NoAI
+UNIT
+DirkRejoin:
+UNIT Dirk 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA22R18 [0x0] NoAI
+UNIT
+CallumRejoin:
+UNIT Callum 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA21R16 [0x0] NoAI
+UNIT
+ManfredRejoin:
+UNIT Manfred 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA21R18 [0x0] NoAI
+UNIT
+WilhelmRejoin:
+UNIT Wilhelm 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA21R20 [0x0] NoAI
+UNIT
+ArgentRejoin:
+UNIT Argent 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA20R19 [0x0] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -110,5 +145,71 @@ CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter25)
 ENDA
 
+C24TheReturn:
+CHECK_ALIVE Freddric
+BEQ 0x1 0xc 0x0
+UnremoveUnit(Freddric)
+Reinforcements(FreddricRejoin)
+LABEL 0x1
+CHECK_ALIVE Dean
+BEQ 0x2 0xc 0x0
+UnremoveUnit(Dean)
+Reinforcements(DeanRejoin)
+LABEL 0x2
+CHECK_ALIVE Eliza
+BEQ 0x3 0xc 0x0
+UnremoveUnit(Eliza)
+Reinforcements(ElizaRejoin)
+LABEL 0x3
+CHECK_ALIVE Rift
+BEQ 0x4 0xc 0x0
+UnremoveUnit(Rift)
+Reinforcements(RiftRejoin)
+LABEL 0x4
+CHECK_ALIVE Estelle
+BEQ 0x5 0xc 0x0
+UnremoveUnit(Estelle)
+Reinforcements(EstelleRejoin)
+LABEL 0x5
+CHECK_ALIVE Rose
+BEQ 0x6 0xc 0x0
+UnremoveUnit(Rose)
+Reinforcements(RoseRejoin)
+LABEL 0x6
+CHECK_ALIVE Dirk
+BEQ 0x7 0xc 0x0
+UnremoveUnit(Dirk)
+Reinforcements(DirkRejoin)
+LABEL 0x7
+CHECK_ALIVE Callum
+BEQ 0x8 0xc 0x0
+UnremoveUnit(Callum)
+Reinforcements(CallumRejoin)
+LABEL 0x8
+CHECK_ALIVE Manfred
+BEQ 0x9 0xc 0x0
+UnremoveUnit(Manfred)
+Reinforcements(ManfredRejoin)
+LABEL 0x9
+CHECK_ALIVE Wilhelm
+BEQ 0xa 0xc 0x0
+UnremoveUnit(Wilhelm)
+Reinforcements(WilhelmRejoin)
+LABEL 0xa
+CHECK_ALIVE Argent
+BEQ 0xb 0xc 0x0
+UnremoveUnit(Argent)
+Reinforcements(ArgentRejoin)
+LABEL 0xb
+CALL ohgodnotthis
+EndEvent
+
+ohgodnotthis://text branch hell
+MUSC 0x0
+//first check if fred's alive, if so, check if dean's alive, if so, check every fred/dean convo
+//if dean not alive, check fred/eliza, then fred/eliza/x, and so on
+//this'll be painful
+Text(FillerDialogue)
+EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

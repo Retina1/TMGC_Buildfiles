@@ -294,8 +294,8 @@
 #include "SorcM(Eldritch)\Staff Installer.event"
 }
 {
-#include "SorcF(TytheBub)\magic Installer.event"
-#include "SorcF(TytheBub)\staff Installer.event"
+#include "SorcF(Biraku)\Magic Installer.event"
+#include "SorcF(Biraku)\staff Installer.event"
 }
 {
 #include "SageM(Levin64)\Magic Installer.event"
@@ -719,7 +719,7 @@ EndAnim
 ALIGN 4
 SorcFAnims:
 MagicAnim(0x79)
-StaffAnim(0x7a)
+StaffAnim(0x79)//swap to 0x7a once biraku finishes staff
 EndAnim
 
 ALIGN 4

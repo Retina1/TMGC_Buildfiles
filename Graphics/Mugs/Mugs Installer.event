@@ -1,6 +1,6 @@
 #define PortraitTable NewPortraitTable
 #define MaxPortraitEntries 0x1ff
-
+#define setMugEntryExtend(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, extend1X, extend1Y, extend2X, extend2Y)"PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x1624; POIN mugLocation+0x1604; POIN mugLocation+0x1004; BYTE extend1X extend1Y extend2X extend2Y; BYTE mouthX mouthY eyeX eyeY; BYTE 1 0 1 0; POP"
 ALIGN 4
 NewPortraitTable:
 	#incbin "NewPortraitTable.bin"
@@ -425,7 +425,8 @@ setMugEntry(0x43,JoanMug,3,5,3,3)
 ALIGN 4
 TobiasMug:
 #incbin "dmps/Tobias.dmp"
-setMugEntry(0x51,TobiasMug,2,5,3,3)
+setMugEntry(0x51,TobiasMug,4,4,4,2)
+setMugEntryExtend(0x51, TobiasMug,4,4,4,2, 0, 4,0,0)
 
 ALIGN 4
 IanMug:

@@ -125,6 +125,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define YuyuPaletteID 0x79
 #define QUPaletteID 0x8b
 #define QPPaletteID 0x8c
+#define JonasPPaletteID 0x8d
 
 #define TonnaminPaletteID 0x81
 
@@ -277,6 +278,7 @@ setPalette(WilhelmUPaletteID,WilhelmUPalette)
 setPalette(WilhelmPPaletteID,WilhelmPPalette)
 setPalette(ArgentPaletteID,ArgentPalette)
 setPalette(TonnaminPaletteID,TonnaminPalette)
+setPalette(JonasPPaletteID,JonasPPalette)
 //player jonas, laronde is down further
 setPalette(YuyuPaletteID,YuyuPalette)
 setPalette(AgnesPaletteID,AgnesPalette)
@@ -389,7 +391,7 @@ SetPaletteFull(Wilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x
 SetPaletteFull(Argent,0x0,BowArm,ArgentPaletteID,BowGen,0x0,0x0)
 SetPaletteFull(Addington,0x0,Automaton,0x0,0x0,0x0,0x0)
 SetPaletteFull(Tonnamin,0x0,AxeArm,TonnaminPaletteID,AxeGen,0x0,0x0)
-SetPaletteFull(SecretJonas,JonasPaletteID,LncWyv,0x0,WyvLord,0x0,0x0)
+SetPaletteFull(SecretJonas,JonasPaletteID,LncWyv,JonasPPaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(SecretLaronde,0x0,Soldier,LarondePaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(SecretClarque,0x0,BowCav,ClarquePaletteID,BowPal,0x0,0x0)
 SetPaletteFull(Yuyu,YuyuPaletteID,Freelancer,0x0,0x0,0x0,0x0)
@@ -397,6 +399,7 @@ SetPaletteFull(Agnes,AgnesPaletteID,MercF,AgnesPaletteID,HeroF,0x0,0x0)
 SetPaletteFull(Gaylord,GaylordUPaletteID,Troub,GaylordPPaletteID,Valk,0x0,0x0)
 SetPaletteFull(Kyrie,0x0,MyrmF,KyriePaletteID,SwMastF,0x0,0x0)
 SetPaletteFull(UnitQ,QUPaletteID,SwdCavF,QPPaletteID,SwdPalF,0x0,0x0)
+SetPaletteFull(Valeria,0x0,LncPeg,0x0,Falco,0x0,0x0)
 
 SetPaletteFull(Davelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Marque,MarqueStarquePaletteID,AxeCav,0x0,0x0,0x0,0x0)
@@ -810,6 +813,9 @@ PetePalette:
 ALIGN 4
 JonasPalette:
 #incbin "Jonas.dmp"
+ALIGN 4
+JonasPPalette:
+#incbin "JonasPromoted.dmp"
 ALIGN 4
 GregoriasPalette:
 #incbin "Gregorias.dmp"

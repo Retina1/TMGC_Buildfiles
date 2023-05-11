@@ -153,6 +153,12 @@ UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [GildedAxe,Swordsl
 UNIT Neillstrom WyvLord 0x0 Level(17,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk,ZoryaShield] GroupOnePaceAI
 UNIT
 
+C23LowerLeftSpawn:
+UNIT Remnant BowPal 0x0 Level(4,Enemy,1) [0,30] 0x0 0x0 0x1 REDA0R28 [SilverBow] NoAI
+UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [1,30] 0x0 0x0 0x1 REDA1R27 [BraveAxe] NoAI
+UNIT Remnant BowPal 0x0 Level(4,Enemy,1) [2,30] 0x0 0x0 0x1 REDA2R28 [SilverBow] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:

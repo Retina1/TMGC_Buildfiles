@@ -50,7 +50,7 @@ Map_Change_4:
 
 ALIGN 4
 Map_Change_5:
-  SHORT $818 $710
+  SHORT $BB4 $2D0 $818 $710
 
 ALIGN 4
 Map_Change_6:
@@ -63,7 +63,7 @@ MapChangesData:
   TileMap(2, 8, 2, 1, 1, Map_Change_2)
   TileMap(3, 3, 5, 3, 2, Map_Change_3)
   TileMap(4, 4, 6, 1, 1, Map_Change_4)
-  TileMap(5, 11, 5, 2, 1, Map_Change_5)
+  TileMap(5, 11, 4, 2, 2, Map_Change_5)
   TileMap(6, 9, 8, 1, 1, Map_Change_6)
   TileMapEnd
 

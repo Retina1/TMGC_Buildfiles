@@ -126,6 +126,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define QUPaletteID 0x8b
 #define QPPaletteID 0x8c
 #define JonasPPaletteID 0x8d
+#define ButchPPaletteID 0x8e
 
 #define TonnaminPaletteID 0x81
 
@@ -202,6 +203,7 @@ setPalette(JosefPPaletteID,JosefPPalette)
 setPalette(PeggyUPaletteID,PeggyUPalette)
 setPalette(PeggyPPaletteID,PeggyPPalette)
 setPalette(ButchUPaletteID,ButchUPalette)
+setPalette(ButchPPaletteID,ButchPPalette)
 setPalette(CassiusUPaletteID,CassiusUPalette)
 setPalette(CassiusPPaletteID,CassiusPPalette)
 setPalette(RachaelUPaletteID,RachaelUPalette)
@@ -340,7 +342,7 @@ SetPaletteFull(Desmond,0x0,LncCav,DesmondPaletteID,Dismount,DesmondPalPaletteID,
 SetPaletteFull(Sam,SamUPaletteID,ArcherF,SamPPaletteID,SniperF,0x0,0x0)
 SetPaletteFull(Josef,JosefUPaletteID,LncArm,JosefPPaletteID,LncGen,0x0,0x0)
 SetPaletteFull(Peggy,PeggyUPaletteID,Cleric,PeggyPPaletteID,BishopF,0x0,0x0)
-SetPaletteFull(Butch,ButchUPaletteID,Merc,ButchUPaletteID,Hero,0x0,0x0)
+SetPaletteFull(Butch,ButchUPaletteID,Merc,ButchPPaletteID,Hero,0x0,0x0)
 SetPaletteFull(Cassius,CassiusUPaletteID,AxeCav,CassiusPPaletteID,AxePal,0x0,0x0)
 SetPaletteFull(Rachael,RachaelUPaletteID,LncPeg,RachaelPPaletteID,Falco,0x0,0x0)
 SetPaletteFull(Emile,0x0,Mage,EmilePaletteID,Sage,0x0,0x0)
@@ -505,6 +507,9 @@ PeggyPPalette:
 ALIGN 4
 ButchUPalette:
 #incbin "ButchUnpromoted.dmp"
+ALIGN 4
+ButchPPalette:
+#incbin "ButchPromoted.dmp"
 ALIGN 4
 CassiusUPalette:
 #incbin "CassiusUnpromoted.dmp"

@@ -39,6 +39,12 @@
 
 
 {
+#include "CharacterSpecific\ButchP\Sword Installer.event"
+#include "CharacterSpecific\ButchP\Axe Installer.event"
+#include "CharacterSpecific\ButchP\Handaxe Installer.event"
+#include "CharacterSpecific\ButchP\Unarmed Installer.event"
+}
+{
 #include "CharacterSpecific\CassiusU\Axe Installer.event"
 #include "CharacterSpecific\CassiusU\Handaxe Installer.event"
 #include "CharacterSpecific\CassiusU\Unarmed Installer.event"
@@ -453,8 +459,17 @@
 
 ALIGN 4
 ApexAnims:
+SwordAnim(0x74)//fix later once biraku done
 MagicAnim(0xe7)
 StaffAnim(0xe6)
+EndAnim
+
+ALIGN 4
+ButchPAnims:
+SwordAnim(0xeb)
+AxeAnim(0xec)
+HandAxeAnim(0xed)
+UnarmedAnim(0xee)
 EndAnim
 
 ALIGN 4

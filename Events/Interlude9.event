@@ -16,7 +16,7 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
-POIN I6Units I6Units
+POIN I9Units I9Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -25,15 +25,15 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x15,I9Merchant,Blair,Merchant)
 CharacterEvent(0x0,I9ReadyToEnd,Blair,Zeke)
 END_MAIN
 
 LocationBasedEvents:
-/* copied from I2 currently ha
-Village(0x21,I2NorthVillage,6,2)
-Village(0x22,I2SouthVillage,15,12)
-Village(0x23,I2MidVillage,1,5)
-*/
+//copied from I2 currently ha
+House(0x21,I9NorthVillage,18,1)
+Village(0x22,I9SouthVillage,9,13)
+Village(0x23,I9MidVillage,4,10)
 House(0x24,I9Inn,9,6)
 Armory(I9Armory,15,2)
 Vendor(I9Vendor,3,2)
@@ -74,9 +74,13 @@ ENDTRAP
 
 ALIGN 4
 
-I6Units:
+I9Units:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [21,7] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [22,7] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
+I9NPC:
+UNIT Merchant BowGen 0x0 Level(12,NPC,1) [20,14] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 TonnaminJoin:
@@ -90,7 +94,9 @@ EnableFreeMovement
 MUSC NarrationTheme5
 Narration(Map2CG,Base9_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
-LOAD1 0x0 I6Units
+LOAD1 0x0 I9Units
+ENUN
+LOAD1 0x0 I9NPC
 ENUN
 GotoPrepScreen
 ENDA
@@ -111,6 +117,68 @@ GOTO 0x1
 LABEL 0x2
 Text(FillerDialogue)
 LABEL 0x1
+EndEvent
+
+I9NorthVillage:
+EVBIT_MODIFY 4
+SetBackground(House2CG)
+CheckForItem(ArkhinalHandle)
+BEQ 0x1 0xc 0x0
+Text(I9HandleAsk)//notices handle
+SystemText(I9HandlePrompt)//prompt to turn in handle
+IfNoSelectedGoto(0x3)
+AnnihilateItem(ArkhinalHandle)
+Text(I9ReforgeArkhinal)
+REMA
+SetBackground(BlankCG)
+GiveItem(Arkhinal,Blair)
+FADI 60
+CLEAN
+FADU 60
+TILECHANGE 0x1
+GOTO 0x2
+LABEL 0x1
+Text(I9WeaponryTalk)//no handle
+FADI 60
+CLEAN
+FADU 60
+TILECHANGE 0x1
+GOTO 0x2
+LABEL 0x3
+Text(I9Refusal)//refuse to give up handle
+ENUF 0x21
+LABEL 0x2
+EndEvent
+
+
+I9MidVillage:
+HouseEvent(FillerDialogue, HouseCG)
+
+I9SouthVillage:
+HouseEvent(FillerDialogue, HouseCG)
+
+I9Merchant:
+//weird guy sells torch staff for 19998 gold
+EVBIT_MODIFY 4
+Text(I9MerchantTalk)
+CHECK_MONEY
+SVAL 0x1 0x4E1E
+BGE 0x1 0xc 0x1
+Text(I9NoMoneyHa)
+ENUF 0x15
+GOTO 0x2
+LABEL 0x1
+SystemText(I4BuyingtonPrompt)
+IfNoSelectedGoto(0x3)
+Text(I9TreasurePurchased)
+SVAL 0x3 0x4E1E
+TAKEMONEY
+GiveItem(TorchStaff,Blair)
+GOTO 0x2
+LABEL 0x3
+Text(I9TreasureDenied)
+ENUF 0x15
+LABEL 0x2
 EndEvent
 
 //check for other inn flags

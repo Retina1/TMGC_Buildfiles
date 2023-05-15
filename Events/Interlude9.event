@@ -93,7 +93,7 @@ BeginningScene:
 EnableFreeMovement
 MUSC NarrationTheme5
 Narration(Map2CG,Base9_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(EastHolanisCG,I9Opening)
 LOAD1 0x0 I9Units
 ENUN
 LOAD1 0x0 I9NPC
@@ -120,7 +120,7 @@ LABEL 0x1
 EndEvent
 
 I9NorthVillage:
-EVBIT_MODIFY 4
+EVBIT_MODIFY 3
 SetBackground(House2CG)
 CheckForItem(ArkhinalHandle)
 BEQ 0x1 0xc 0x0
@@ -155,7 +155,7 @@ I9MidVillage:
 HouseEvent(FillerDialogue, HouseCG)
 
 I9SouthVillage:
-HouseEvent(FillerDialogue, HouseCG)
+HouseEvent(I9SouthHouseTalk, HouseCG)
 
 I9Merchant:
 //weird guy sells torch staff for 19998 gold

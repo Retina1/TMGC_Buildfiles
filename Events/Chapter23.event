@@ -26,15 +26,22 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEventBothWays(0xa,C23JoanMikeyRecruitment,Joan,Mikey)
-CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,Joan,Sonia)
-CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,Joan,Tobias)
-CharacterEvent(0xd,C23JoanCarbonRecruitment,Carbon,Joan)
-CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,Sonia,Tobias)
-CharacterEvent(0xf,C23SoniaDesmondRecruitment,Desmond,Sonia)
-CharacterEvent(0xf,C23SoniaMikeyRecruitment,Mikey,Sonia)
+CharacterEventBothWays(0xa,C23JoanMikeyRecruitment,EnemyJoan,Mikey)
+CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,EnemyJoan,Sonia)
+CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,Joan,EnemySonia)
+CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,EnemyJoan,Tobias)
+CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,Joan,EnemyTobias)
+CharacterEvent(0xd,C23JoanCarbonRecruitment,Carbon,EnemyJoan)
+CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,EnemySonia,Tobias)
+CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,Sonia,EnemyTobias)
+CharacterEvent(0xf,C23SoniaDesmondRecruitment,Desmond,EnemySonia)
+CharacterEvent(0xf,C23SoniaMikeyRecruitment,Mikey,EnemySonia)
 CharacterEventBothWays(0x10,C23TobiasLeilaRecruitment,Tobias,Leila)
+CharacterEventBothWays(0x10,C23TobiasLeilaRecruitment,EnemyTobias,Leila)
 CharacterEventBothWays(0x11,C23TobiasDamienRecruitment,Tobias,Damien)
-CharacterEventBothWays(0x12,C23TobiasZachariasRecruitment,Tobias,Zacharias)//all tobias recruits should also trigger flag 0x13
+CharacterEventBothWays(0x11,C23TobiasDamienRecruitment,EnemyTobias,Damien)
+CharacterEventBothWays(0x12,C23TobiasZachariasRecruitment,Tobias,Zacharias)
+CharacterEventBothWays(0x12,C23TobiasZachariasRecruitment,EnemyTobias,Zacharias)//all tobias recruits should also trigger flag 0x13
 //10 more flags for battle quotes
 //oh god we might need to dip into base flags and globals
 //pair specific death quotes that don't need flags thank god
@@ -144,9 +151,9 @@ UNIT Dalst Sage 0x0 Level(4,Enemy,1) [26,19] 0x0 0x0 0x0 0x0 [Bolting] NeverMove
 UNIT Remnant HeroF 0x0 Level(4,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [SilverAxe,BraveSword] GroupTwoPaceAI
 UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [26,7] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoPaceAI
 UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [26,9] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoPaceAI
-UNIT Joan HeroF 0x0 Level(11,Enemy,0) [6,13] 0x0 0x0 0x0 0x0 [SilverSword,BraveAxe,Tomahawk] GroupTwoAI
-UNIT Sonia HalberdierF 0x0 Level(13,Enemy,0) [26,1] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NeverMoveAI
-UNIT Tobias Warrior 0x0 Level(16,Enemy,0) [26,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Longbow] [0x6,0x3,0x4,0x0]
+UNIT EnemyJoan HeroF 0x0 Level(11,Enemy,0) [6,13] 0x0 0x0 0x0 0x0 [SilverSword,BraveAxe,Tomahawk] GroupTwoAI
+UNIT EnemySonia HalberdierF 0x0 Level(13,Enemy,0) [26,1] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NeverMoveAI
+UNIT EnemyTobias Warrior 0x0 Level(16,Enemy,0) [26,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Longbow] [0x6,0x3,0x4,0x0]
 UNIT DLReynard Hero 0x0 Level(12,Enemy,0) [11,16] 0x0 0x0 0x0 0x0 [Tomahawk,BraveSword] AttackInRangeAI
 UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [GildedLance,Axebuster] GroupOnePaceAI
 UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [GildedAxe,Swordslayer] GroupOnePaceAI
@@ -170,6 +177,9 @@ LoadUnitsByDifficulty(C23Easy,C23Normal,C23Hard)
 LoadUnitsByDifficulty2(C23Easy2,C23Normal2,C23Hard2)
 LOAD1 0x0 C23Units
 ENUN
+Write_Byte(0x06,$203eb05)
+Write_Byte(0x06,$203eb15)
+Write_Byte(0x06,$203eb25)
 GotoPrepScreen
 ENDA
 
@@ -182,11 +192,15 @@ BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
 Text(FillerDialogue)//joan unrecruited
+SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
 GOTO 0x4
 LABEL 0x2
 Text(FillerDialogue)//sonia unrecruited
+SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
+SVAL 0x1 0x00040000
+CHAI Sonia
 GOTO 0x4
 LABEL 0x3
 Text(FillerDialogue)//both recruited
@@ -205,10 +219,12 @@ BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
 Text(FillerDialogue)//joan unrecruited
+SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
 GOTO 0x4
 LABEL 0x2
 Text(FillerDialogue)//tobias unrecruited
+SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 GOTO 0x4
 LABEL 0x3
@@ -228,10 +244,14 @@ BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
 Text(FillerDialogue)//sonia unrecruited
+SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
+SVAL 0x1 0x00040000
+CHAI Sonia
 GOTO 0x4
 LABEL 0x2
 Text(FillerDialogue)//tobias unrecruited
+SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 GOTO 0x4
 LABEL 0x3
@@ -245,13 +265,19 @@ EndEvent
 C23SoniaDesmondRecruitment:
 MUSC RecruitmentTheme
 Text(FillerDialogue)
+SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
+SVAL 0x1 0x00040000
+CHAI Sonia
 EndEvent
 
 C23SoniaMikeyRecruitment:
 MUSC RecruitmentTheme
 Text(FillerDialogue)
+SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
+SVAL 0x1 0x00040000
+CHAI Sonia
 EndEvent
 
 C23JoanMikeyRecruitment:
@@ -259,6 +285,7 @@ MUSC S_EncountersAndReunions
 CHECK_EVENTID 0xd
 BNE 0x1 0xc 0x0
 Text(FillerDialogue)//unrecruited
+SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
 ENUT 0xd
 GOTO 0x2
@@ -277,6 +304,7 @@ GOTO 0x2
 LABEL 0x1
 Text(FillerDialogue)//mikey dead
 LABEL 0x2
+SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
 EndEvent
 
@@ -285,6 +313,7 @@ CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
 Text(FillerDialogue)//unrecruited
+SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 ENUT 0x13
 GOTO 0x2
@@ -299,6 +328,7 @@ CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
 Text(FillerDialogue)//unrecruited
+SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 ENUT 0x13
 GOTO 0x2
@@ -313,6 +343,7 @@ CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
 Text(FillerDialogue)//unrecruited
+SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 ENUT 0x13
 GOTO 0x2
@@ -327,13 +358,13 @@ EndingSceneCheck:
 //allegiance returns 0 if blue, 2 if red
 CHECK_ALIVE DLReynard //reynard has to be dead
 BNE 0x1 0xc 0x0
-	CHECK_ALIVE Joan
+	CHECK_ALIVE EnemyJoan
 	BNE 0x2 0xc 0x0
 		LABEL 0x5
-		CHECK_ALIVE Sonia
+		CHECK_ALIVE EnemySonia
 		BNE 0x3 0xc 0x0
 			LABEL 0x6
-			CHECK_ALIVE Tobias
+			CHECK_ALIVE EnemyTobias
 			BNE 0x4 0xc 0x0
 			LABEL 0x7
 			CALL EndingScene

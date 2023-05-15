@@ -18,6 +18,10 @@ ALIGN 4
 RetinaMug:
 #incbin "dmps/Retina.dmp"
 setMugEntry(0x1fd,RetinaMug,3,6,3,4)
+ALIGN 4
+InterludeGuyMug:
+#incbin "dmps/Interlude9Guy.dmp"
+setMugEntry(0xf4,InterludeGuyMug,2,5,2,3)
 
 ALIGN 4
 BlairMug:

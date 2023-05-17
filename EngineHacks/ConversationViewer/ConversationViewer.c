@@ -280,43 +280,58 @@ extern void SetupSupportPalettes(int offset, int id);
 static int ConversationViewerInputLoop(struct MenuProc* menu, struct MenuCommandProc* command)
 {
 	struct Struct_ConversationViewerProc* proc = (Struct_ConversationViewerProc*)ProcFind(&ProcInstruction_ConversationViewer);
-	//struct Struct_ConversationViewerProc* proc = (void*) menu->parent; 
-    if (gKeyState.repeatedKeys & KEY_DPAD_UP)
-    {
-		int NumberOfChapters = CountChapters(); 
-		if (NumberOfChapters>6) NumberOfChapters = 6; 
-		NumberOfChapters--; // to make it 0-indexed 
-		
-		if (menu->commandIndex == NumberOfChapters) { 
-        if (proc->currOptionIndex != 0)
-            proc->currOptionIndex--;
-		proc->updated = true; 
-		menu->commandIndex = 0; 
-		} 
-        PlaySfx(0x66);
+
+    //Pressed-on-frame inputs
+    
+    /* Refresh menu when down is pressed at bottom of list, or up is pressed at top of list.
+     * This is to prevent a graphical glitch where the cursor and background highlight are misaligned.
+     */
+    if (gKeyState.pressedKeys & KEY_DPAD_UP) {
+        if (menu->prevCommandIndex == 0) {
+            menu->commandIndex = menu->prevCommandIndex;
+            proc->updated = true;
+        }
+    }
+    else if (gKeyState.pressedKeys & KEY_DPAD_DOWN) {
+        if (menu->prevCommandIndex == menu->commandCount - 1) {
+            menu->commandIndex = menu->prevCommandIndex;
+            proc->updated = true;
+        }
     }
 
-    if (gKeyState.repeatedKeys & KEY_DPAD_DOWN)
-    {
-		if (menu->commandIndex == 0) {
-		int NumberOfChapters = CountChapters(); 
-		
-        if (proc->currOptionIndex < (NumberOfChapters-6))
-		{
-            proc->currOptionIndex++;
-		} 
-		if (NumberOfChapters>6) NumberOfChapters = 6; 
-		menu->commandIndex = NumberOfChapters-1; // to make it 0-indexed 
-		proc->updated = true; 
-		}
-        PlaySfx(0x66);
+    //Repeated inputs
+
+    if (gKeyState.repeatedKeys & KEY_DPAD_UP) {
+        //When at top of screeen, keep commandIndex in same position
+        if (menu->prevCommandIndex == 0) { 
+            menu->commandIndex = menu->prevCommandIndex;
+            //If not at top of chapter list, scroll menu up one entry
+            if (proc->currOptionIndex > 0) {
+                proc->currOptionIndex--;
+                proc->updated = true;
+                PlaySfx(0x66);
+            }
+        }
+    }
+
+    if (gKeyState.repeatedKeys & KEY_DPAD_DOWN) {
+        if (proc->currOptionIndex + menu->prevCommandIndex + 1 == CountChapters()) {
+            menu->commandIndex = menu->prevCommandIndex;
+        }
+        //When at bottom of screen, keep commandIndex in same position and refresh text
+        else if (menu->prevCommandIndex == menu->commandCount - 1) { 
+            menu->commandIndex = menu->prevCommandIndex;
+            //If not at bottom of chapter list, scroll menu down one entry
+            if (proc->currOptionIndex < CountChapters() - menu->commandCount) {
+                proc->currOptionIndex++;
+                proc->updated = true;
+                PlaySfx(0x66);
+            }
+        }
     }
 	
-	
-	if (proc->updated) 
-	{ 
+	if (proc->updated) { 
 		proc->updated = false; 
-		
 		Menu_Draw(menu); 
 	}
 	//SetupSupportPalettes(0x5000, 5); 
@@ -334,8 +349,6 @@ static int ConversationViewerInputLoop(struct MenuProc* menu, struct MenuCommand
 	// 0x20 size 
 	
 	return 0; 
-
-
 }
 
 
@@ -369,49 +382,63 @@ int CountEvents(int entry)
 static int CharacterInputLoop(struct MenuProc* menu, struct MenuCommandProc* command)
 {
 	struct Struct_ConversationViewerProc* proc = (Struct_ConversationViewerProc*)ProcFind(&ProcInstruction_ConversationViewer);
-	//struct Struct_ConversationViewerProc* proc = (void*) menu->parent; 
-    if (gKeyState.repeatedKeys & KEY_DPAD_UP)
-    {
-		struct MenuProc* parentMenu = menu->parent;
-		int NumberOfEvents = CountEvents(proc->currOptionIndex+parentMenu->commandIndex); 
-		if (NumberOfEvents>6) NumberOfEvents = 6; 
-		NumberOfEvents--; // to make it 0-indexed 
-		
-		
-		if (menu->commandIndex == NumberOfEvents) { 
-        if (proc->charOptionIndex != 0)
-            proc->charOptionIndex--;
-		proc->updated = true; 
-		menu->commandIndex = 0; 
-		} 
-        PlaySfx(0x66);
+
+    //Pressed-on-frame inputs
+
+    /* Refresh menu when down is pressed at bottom of list, or up is pressed at top of list.
+     * This is to prevent a graphical glitch where the cursor and background highlight are misaligned.
+     */
+    if (gKeyState.pressedKeys & KEY_DPAD_UP) {
+        if (menu->prevCommandIndex == 0) {
+            menu->commandIndex = menu->prevCommandIndex;
+            proc->updated = true;
+        }
+    }
+    else if (gKeyState.pressedKeys & KEY_DPAD_DOWN) {
+        if (menu->prevCommandIndex == menu->commandCount - 1) {
+            menu->commandIndex = menu->prevCommandIndex;
+            proc->updated = true;
+        }
     }
 
-    if (gKeyState.repeatedKeys & KEY_DPAD_DOWN)
-    {
-		if (menu->commandIndex == 0) { 
-		struct MenuProc* parentMenu = menu->parent;
-		int NumberOfEvents = CountEvents(proc->currOptionIndex+parentMenu->commandIndex); 
-        if (proc->charOptionIndex < (NumberOfEvents-6))
-		{
-            proc->charOptionIndex++;
-		} 
-		if (NumberOfEvents>6) NumberOfEvents = 6; 
-		menu->commandIndex = NumberOfEvents-1; // to make it 0-indexed 
-		proc->updated = true; 
-		}
-        PlaySfx(0x66);
+    //Repeated inputs
+
+    if (gKeyState.repeatedKeys & KEY_DPAD_UP) {
+        //When at top of screeen, keep commandIndex in same position
+        if (menu->prevCommandIndex == 0) { 
+            menu->commandIndex = menu->prevCommandIndex;
+            //If not at top of chapter list, scroll menu up one entry
+            if (proc->charOptionIndex > 0) {
+                proc->charOptionIndex--;
+                proc->updated = true;
+                PlaySfx(0x66);
+            }
+        }
     }
-	
-	
-	if (proc->updated) 
-	{ 
-		proc->updated = false; 
-		
+
+    if (gKeyState.repeatedKeys & KEY_DPAD_DOWN) {
+        struct MenuProc* parentMenu = menu->parent;
+        int eventsInChapter = CountEvents(proc->currOptionIndex+parentMenu->commandIndex);
+        if (proc->charOptionIndex + menu->prevCommandIndex + 1 == eventsInChapter) {
+            menu->commandIndex = menu->prevCommandIndex;
+        }
+        //When at bottom of screen, keep commandIndex in same position and refresh text
+        else if (menu->prevCommandIndex == menu->commandCount - 1) { 
+            menu->commandIndex = menu->prevCommandIndex;
+            //If not at bottom of chapter list, scroll menu up one entry
+            if (proc->charOptionIndex < eventsInChapter - menu->commandCount) {
+                proc->charOptionIndex++;
+                proc->updated = true;
+                PlaySfx(0x66);
+            }
+        }
+    }
+
+	if (proc->updated)  { 
+		proc->updated = false; 	
 		Menu_Draw(menu); 
 	}
 	return 0; 
-
 
 }
 

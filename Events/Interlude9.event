@@ -103,19 +103,21 @@ ENDA
 
 EndingScene:
 DisableFreeMovement
-CleanTextNoMap(HallCG,FillerDialogue)
+Text(I9ConfirmLeave)
+MUSC AmbientWind
+CleanTextNoMap(EastHolanisCG,I9Ending)
 MoveToChapter(Chapter23)
 ENDA
 
 I9ReadyToEnd:
 EVBIT_MODIFY 4
-Text(FillerDialogue)
+Text(I9ConfirmLeave)
 SystemText(I1LeavePrompt)
 IfNoSelectedGoto(0x2)
 CALL EndingScene
 GOTO 0x1
 LABEL 0x2
-Text(FillerDialogue)
+Text(I9NotYet)
 LABEL 0x1
 EndEvent
 

@@ -25,6 +25,7 @@ TurnEventPlayer(0x0,C22LastSpawn,7)
 TurnEventPlayer(0x0,C22HunterSpawn,4)
 TurnEventPlayer(0x0,C22LiamSpawn,3)
 TurnEventPlayer(0x0,C22ClarqueSpawn,2)
+TurnEventPlayer(0x0,C22PeterNotice,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -304,6 +305,27 @@ SupportFlagOn(Peggy,Athena,0x1f,CPSupport)
 GotoPrepScreen
 ENDA
 
+C22PeterButchRecruit:
+CHECK_EVENTID 0xa
+BNE 0x1 0xc 0x0
+MUSC RecruitmentTheme
+Text(C22PeterRecruitButch)//unrecruited
+TurnAlly(Peter)
+ENUT 0xa
+GOTO 0x2
+LABEL 0x1
+Text(C22PeterButchTalk)//recruited
+LABEL 0x2
+SetSupport(Butch,Peter,CPSupport,1)
+EndEvent
+
+C22PeterBlairRecruit:
+MUSC RecruitmentTheme
+Text(C22PeterRecruit)
+TurnAlly(Peter)
+EndEvent
+
+
 C22BlairCarbonSupport:
 Text(BlairCarbonBPSupport)
 SetSupport(Blair,Carbon,BPSupport,1)
@@ -373,10 +395,10 @@ FlashCursor(BountyHunter,60)
 Text(C22BountyHunterArrives)
 EndEvent
 
-C22PeterBlairRecruit:
-MUSC RecruitmentTheme
-Text(FillerDialogue)
-TurnAlly(Peter)
+C22PeterNotice:
+CAM1 Peter
+FlashCursor(Peter,60)
+Text(C22_PeterTalks)
 EndEvent
 
 C22ClarqueBlairTalk:
@@ -391,21 +413,6 @@ C22Village1:
 VillageEventItem(C22Village1Text, VillageCG, Rescue)
 C22Village2:
 VillageEventItem(C22Village2Text, VillageCG, MasterBow)
-
-C22PeterButchRecruit:
-CHECK_EVENTID 0xa
-BNE 0x1 0xc 0x0
-MUSC RecruitmentTheme
-Text(FillerDialogue)//unrecruited
-TurnAlly(Peter)
-ENUT 0xa
-GOTO 0x2
-LABEL 0x1
-Text(FillerDialogue)//recruited
-LABEL 0x2
-SetSupport(Butch,Peter,CPSupport,1)
-EndEvent
-
 
 C22LiamSpawn:
 EVBIT_MODIFY 4

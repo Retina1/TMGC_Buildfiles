@@ -23,8 +23,13 @@ TomeRangeBonus:
 #incbin "TomeRange/TomeRange.dmp"
 
 ALIGN 4
+ReadyAimBonus:
+#incbin "ReadyAim/ReadyAim.dmp"
+
+ALIGN 4
 RangeSkillList:
 RangeSkill(BowRangeUpID, BowRangeBonus|1)
+RangeSkill(ReadyAimID, ReadyAimBonus|1)
 RangeSkill(StaffSavantID, StaffSavantBonus|1)
 RangeSkill(PointBlankID, PointBlankBonus|1)
 RangeSkill(TomeRangeUpID, TomeRangeBonus|1)

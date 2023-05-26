@@ -92,5 +92,25 @@ STAL 0x5
 NoFade
 ENDA
 
+ALIGN 4
+AimUsability:
+#incbin "ReadyAim/AimUsability.dmp"
+POIN SkillTester
+WORD ReadyAimID
+ALIGN 4
+AimEffect:
+#incbin "ReadyAim/AimEffect.dmp"
+POIN AimEvent
+ALIGN 4
+AimPostBattle:
+#incbin "ReadyAim/AimPostBattle.dmp"
+POIN SkillTester
+WORD ReadyAimID
+POIN SpendAimEvent
+ALIGN 4
+#include "ReadyAim/AimEvent.event"
+ALIGN 4
+#include "ReadyAim/SpendAimEvent.event"
+ALIGN 4
 #include "CombatArts/CombatArts.event"
 

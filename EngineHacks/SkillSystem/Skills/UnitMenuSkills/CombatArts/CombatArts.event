@@ -56,6 +56,8 @@ SetCombatArtCost(16,100) //Lethality
 ALIGN 4
 CombatArtsMenu:
 
+MenuCommand(UM_ReadyAim, UM_ReadyAimDesc, NormalText, AimUsability, AimEffect, $22c31, $22c99)
+
 MenuCommand(UM_Flow, UM_FlowDesc, NormalText, FlowUsability, FlowEffect, $22c31, $22c99)
 
 MenuCommand(UM_Unflow, UM_UnflowDesc, NormalText, UnflowUsability, UnflowEffect, $22c31, $22c99)

@@ -198,6 +198,10 @@ ALIGN 4
 CarbonMug:
 #incbin "dmps/Carbon.dmp"
 setMugEntry(0x1c,CarbonMug,3,5,3,3)
+ALIGN 4
+CarbonPromoMug:
+#incbin "dmps/CarbonPromo.dmp"
+setMugEntry(0x128,CarbonPromoMug,3,5,3,3)
 
 ALIGN 4
 AthenaMug:

@@ -28,8 +28,14 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Seize(0,0)
+Seize(2,5)
+SecretShop(Ch25SecretShop,7,18) 
 END_MAIN
+
+ALIGN 4
+Ch25SecretShop:
+SHLI MasterSword MasterLance MasterAxe MasterBow Sagittae Bolting Resire Purge Hell Fortify Again ParagonRing KnightRing LegRing EnergyRing SpiritDust Speedwings Dracoshield
+BYTE 0x0 0x0
 
 ALIGN 4
 

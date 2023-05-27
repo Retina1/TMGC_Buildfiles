@@ -28,8 +28,13 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Seize(0,0)
+SecretShop(Ch28SecretShop,12,24) 
 END_MAIN
+
+ALIGN 4
+Ch28SecretShop:
+SHLI Rewarp Rescue Warp Again ParagonRing KnightRing LegRing AngelicRobe EnergyRing SpiritDust SecretBook Speedwings GoddessIcon Dracoshield Talisman BodyRing Boots Eyedrops
+BYTE 0x0 0x0
 
 ALIGN 4
 

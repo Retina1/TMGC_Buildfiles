@@ -11,6 +11,10 @@
 #include "CombatArtsRestrictDoubling.lyn.event"
 
 ALIGN 4
+KnightAspirantIDLink:
+BYTE KnightAspirantID
+
+ALIGN 4
 CombatArtDoubleOptionLink:
 BYTE ARTS_HIT_ONCE
 

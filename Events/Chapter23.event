@@ -217,6 +217,14 @@ UNIT Remnant Sorc 0x0 Level(4,Enemy,1) [14,30] 0x0 0x0 0x1 REDA14R29 [Corruption
 UNIT Remnant WyvLord 0x0 Level(4,Enemy,1) [15,30] 0x0 0x0 0x1 REDA15R28 [SilverAxe] NoAI
 UNIT
 
+C23OpeningBlair:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [26,28] 0x0 0x0 0x1 REDA23R26 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [26,30] 0x0 0x0 0x1 REDA24R25  [IronBow] NoAI
+UNIT
+
+C23OpeningTarquin:
+UNIT 0xa3 WyvLord 0x0 Level(17,Enemy,1) [12,18] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk,ZoryaShield] GroupOnePaceAI
+UNIT
 
 ALIGN 4
 
@@ -225,7 +233,19 @@ ENUT GuideChpt23
 LocationText(MoonCG,Ch23_Flashback,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
 Narration(Map2CG,Ch23_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+MUSC AmbientWater
+LOAD1 0x1 C23OpeningTarquin
+ENUN
+CleanText(EastHolanisCG,C23_Opening)
+Reinforcements(C23OpeningBlair)
+CAM1 0xa3
+MOVE 30 0xa3 [21,25]
+ENUN
+CAM1 [28,30]
+FlashCursor(0xa3,60)
+MUSC S_RigorousJustice
+CleanTextNoMap(EastHolanisCG,C23_Opening2)
+SilentKillUnit(0xa3)
 LoadUnitsByDifficulty(C23Easy,C23Normal,C23Hard)
 LoadUnitsByDifficulty2(C23Easy2,C23Normal2,C23Hard2)
 LOAD1 0x0 C23Units
@@ -233,6 +253,8 @@ ENUN
 Write_Byte(0x06,$203eb05)
 Write_Byte(0x06,$203eb15)
 Write_Byte(0x06,$203eb25)
+SetUnitStatus(DLReynard,LuckStat,0)
+//kenneth base convo
 GotoPrepScreen
 ENDA
 

@@ -26,6 +26,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,C26OlsenRecruitment,Blair,Olsen)
 END_MAIN
 
 LocationBasedEvents:
@@ -78,7 +79,7 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C26Hard:
-UNIT Dalst Brigand 0x0 Level(19,Enemy,1) [18,15] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [18,15] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
 UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [18,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
 UNIT Dalst LightM 0x0 Level(20,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
@@ -98,6 +99,12 @@ LOAD1 0x0 C26Units
 ENUN
 GotoPrepScreen
 ENDA
+
+C26OlsenRecruitment:
+MUSC RecruitmentTheme
+Text(FillerDialogue)
+TurnAlly(Olsen)
+EndEvent
 
 EndingScene:
 ResetBaseFlags

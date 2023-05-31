@@ -203,6 +203,7 @@ CAM1 Viridian
 FlashCursor(Viridian,60)
 MUSC S_BattleForStormHill
 Text(V2Opening4)
+SetUnitStatus(DLDavelarn,LuckStat,0)
 SetSupport(Eliza,Rose,CPSupport)
 GotoPrepScreen
 EndEvent

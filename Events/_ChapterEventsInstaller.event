@@ -163,3 +163,43 @@ ALIGN 4
 {
 #include "Blank.event"
 }
+
+ALIGN 4
+EscapePointPointerTable(Prologue,BlankEscape)
+EscapePointPointerTable(Chapter1,BlankEscape)
+EscapePointPointerTable(Chapter4,BlankEscape)
+EscapePointPointerTable(Chapter5,BlankEscape)
+EscapePointPointerTable(Chapter6,BlankEscape)
+EscapePointPointerTable(Chapter9,BlankEscape)
+EscapePointPointerTable(Chapter10,BlankEscape)
+EscapePointPointerTable(Chapter11,BlankEscape)
+EscapePointPointerTable(Chapter13,BlankEscape)
+EscapePointPointerTable(ChapterZ1,BlankEscape)
+EscapePointPointerTable(ChapterZ2,BlankEscape)
+EscapePointPointerTable(ChapterZ3,BlankEscape)
+EscapePointPointerTable(Chapter15,BlankEscape)
+EscapePointPointerTable(Chapter16,BlankEscape)
+EscapePointPointerTable(Chapter17,BlankEscape)
+EscapePointPointerTable(Chapter18,BlankEscape)
+EscapePointPointerTable(Chapter20,BlankEscape)
+EscapePointPointerTable(ChapterV1,BlankEscape)
+EscapePointPointerTable(ChapterV2,BlankEscape)
+EscapePointPointerTable(ChapterV3,BlankEscape)
+EscapePointPointerTable(ChapterV4,BlankEscape)
+EscapePointPointerTable(ChapterV5,BlankEscape)
+EscapePointPointerTable(Chapter22,BlankEscape)
+EscapePointPointerTable(Chapter23,BlankEscape)
+
+EscapePointPointerTable(Interlude1,BlankEscape)
+EscapePointPointerTable(Interlude2,BlankEscape)
+EscapePointPointerTable(Interlude3,BlankEscape)
+EscapePointPointerTable(Interlude4,BlankEscape)
+EscapePointPointerTable(Interlude5,BlankEscape)
+EscapePointPointerTable(Interlude6,BlankEscape)
+EscapePointPointerTable(Interlude7,BlankEscape)
+EscapePointPointerTable(Interlude8,BlankEscape)
+EscapePointPointerTable(Interlude9,BlankEscape)
+EscapePointPointerTable(Interlude10,BlankEscape)
+ALIGN 4
+BlankEscape:
+EscapePointEnd

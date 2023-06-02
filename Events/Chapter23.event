@@ -254,6 +254,10 @@ Write_Byte(0x06,$203eb05)
 Write_Byte(0x06,$203eb15)
 Write_Byte(0x06,$203eb25)
 SetUnitStatus(DLReynard,LuckStat,0)
+CHECK_ALIVE Kenneth
+BNE 0x1 0xc 0x0
+ENUT BaseFlag1
+LABEL 0x1
 //kenneth base convo
 GotoPrepScreen
 ENDA

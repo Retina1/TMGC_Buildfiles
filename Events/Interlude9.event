@@ -27,6 +27,8 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 CharacterBasedEvents:
 CharacterEvent(0x15,I9Merchant,Blair,Merchant)
 CharacterEvent(0x0,I9ReadyToEnd,Blair,Zeke)
+CharacterEvent(0xf,I9Cit,Blair,Citizen)
+CharacterEvent(0x10,I9Cit2,Blair,Citizen2)
 END_MAIN
 
 LocationBasedEvents:
@@ -81,6 +83,12 @@ UNIT
 
 I9NPC:
 UNIT Merchant BowGen 0x0 Level(12,NPC,1) [20,14] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen CitizenM 0x0 Level(1,NPC,1) [2,5] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Citizen2 CitizenF 0x0 Level(1,NPC,1) [13,10] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,NPC,1) [17,5] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Holanis AxeArm 0x0 Level(20,NPC,1) [17,9] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Holanis MageF 0x0 Level(20,NPC,1) [6,14] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Holanis Archer 0x0 Level(20,NPC,1) [16,0] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 TonnaminJoin:
@@ -104,7 +112,7 @@ ENDA
 EndingScene:
 DisableFreeMovement
 EVBIT_MODIFY 3
-Text(I9ConfirmLeave)
+Text(I9ReleaseMe)
 MUSC AmbientWind
 CleanTextNoMap(EastHolanisCG,I9Ending)
 MoveToChapter(Chapter23)
@@ -151,6 +159,14 @@ LABEL 0x3
 Text(I9Refusal)//refuse to give up handle
 ENUF 0x21
 LABEL 0x2
+EndEvent
+
+I9Cit:
+Text(I9CitTalk)
+EndEvent
+
+I9Cit2:
+Text(I9Cit2Talk)
 EndEvent
 
 

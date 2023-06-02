@@ -638,7 +638,7 @@
 		Entry
 			bg(HallCG)
 			text(C21_Zeke_Cassius_Base)
-			baseSupport(Zeke,Cassius,BPSupport)
+			baseSupport(Zeke,Cassius,BSupport)
 		Entry
 			bg(HallCG)
 			text(C21_Apollo_Vladmir_Base)
@@ -679,7 +679,14 @@
 		Entry
 			bg(EastHolanisCG)
 			text(C22_Jeff_Hilbert_Base)
-			baseSupport(Jeff,Hilbert,BSupport)				
+			baseSupport(Jeff,Hilbert,BSupport)
+	Chapter(Chapter23)
+		Entry
+			name(C23_Father_Select)
+			bg(EastHolanisCG)
+			importance(2)
+			text(C23_Father_Base)
+			eventID(BaseFlag1)			
 	POP
 	}
 #endif // BASE_CONVO_TABLE

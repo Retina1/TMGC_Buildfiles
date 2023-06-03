@@ -1,4 +1,5 @@
 //unit shop stuff
+#include "MoreShops/MoreShops.event"
 #include "ShopUnit.lyn.event"
 
 SetUnitAction(0x28, ActionRoutine(ActionShopUnit))

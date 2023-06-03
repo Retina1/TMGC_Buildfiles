@@ -283,19 +283,19 @@ CHECK_EVENTID 0xf
 BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
-Text(FillerDialogue)//joan unrecruited
+Text(C23SoniaRecruitsJoan)//joan unrecruited
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
 GOTO 0x4
 LABEL 0x2
-Text(FillerDialogue)//sonia unrecruited
+Text(C23JoanRecruitsSonia)//sonia unrecruited
 SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
 SVAL 0x1 0x00040000
 CHAI Sonia
 GOTO 0x4
 LABEL 0x3
-Text(FillerDialogue)//both recruited
+Text(C23SoniaJoanTalk)//both recruited
 LABEL 0x4
 ENUT 0xd
 ENUT 0xf
@@ -310,17 +310,17 @@ CHECK_EVENTID 0x13
 BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
-Text(FillerDialogue)//joan unrecruited
+Text(C23TobiasRecruitsJoan)//joan unrecruited
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
 GOTO 0x4
 LABEL 0x2
-Text(FillerDialogue)//tobias unrecruited
+Text(C23JoanRecruitsTobias)//tobias unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 GOTO 0x4
 LABEL 0x3
-Text(FillerDialogue)//both recruited
+Text(C23TobiasJoanTalk)//both recruited
 LABEL 0x4
 ENUT 0xd
 ENUT 0x13
@@ -335,19 +335,19 @@ CHECK_EVENTID 0x13
 BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
-Text(FillerDialogue)//sonia unrecruited
+Text(C23TobiasRecruitsSonia)//sonia unrecruited
 SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
 SVAL 0x1 0x00040000
 CHAI Sonia
 GOTO 0x4
 LABEL 0x2
-Text(FillerDialogue)//tobias unrecruited
+Text(C23SoniaRecruitsTobias)//tobias unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 GOTO 0x4
 LABEL 0x3
-Text(FillerDialogue)//both recruited
+Text(C23SoniaTobiasTalk)//both recruited
 LABEL 0x4
 ENUT 0xf
 ENUT 0x13
@@ -356,7 +356,7 @@ EndEvent
 
 C23SoniaDesmondRecruitment:
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(C23DesmondRecruitsSonia)
 SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
 SVAL 0x1 0x00040000
@@ -365,7 +365,7 @@ EndEvent
 
 C23SoniaMikeyRecruitment:
 MUSC RecruitmentTheme
-Text(FillerDialogue)
+Text(C23MikeyRecruitsSonia)
 SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
 SVAL 0x1 0x00040000
@@ -376,13 +376,13 @@ C23JoanMikeyRecruitment:
 MUSC S_EncountersAndReunions
 CHECK_EVENTID 0xd
 BNE 0x1 0xc 0x0
-Text(FillerDialogue)//unrecruited
+Text(C23MikeyRecruitsJoan)//unrecruited
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
 ENUT 0xd
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)//recruited
+Text(C23MikeyTalksJoan)//recruited
 LABEL 0x2
 SetSupport(Joan,Mikey,BSupport,1)
 EndEvent
@@ -391,10 +391,10 @@ C23JoanCarbonRecruitment:
 MUSC RecruitmentTheme
 CHECK_ALIVE Mikey
 BEQ 0x1 0xc 0x0
-Text(FillerDialogue)//mikey alive
+Text(C23CarbonRecruitsJoan)//mikey alive
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)//mikey dead
+Text(C23CarbonRecruitsJoanAlt)//mikey dead
 LABEL 0x2
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
@@ -404,13 +404,13 @@ C23TobiasLeilaRecruitment:
 CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
-Text(FillerDialogue)//unrecruited
+Text(C23LeilaRecruitsTobias)//unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 ENUT 0x13
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)//recruited
+Text(C23LeilaTalksTobias)//recruited
 LABEL 0x2
 SetSupport(Tobias,Leila,BSupport,1)
 EndEvent
@@ -419,13 +419,13 @@ C23TobiasDamienRecruitment:
 CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
-Text(FillerDialogue)//unrecruited
+Text(C23DamienRecruitsTobias)//unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 ENUT 0x13
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)//recruited
+Text(C23DamienTalksTobias)//recruited
 LABEL 0x2
 SetSupport(Tobias,Damien,BSupport,1)
 EndEvent
@@ -434,13 +434,13 @@ C23TobiasZachariasRecruitment:
 CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme
-Text(FillerDialogue)//unrecruited
+Text(C23ZachariasRecruitsTobias)//unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
 ENUT 0x13
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)//recruited
+Text(C23ZachariasTalksTobias)//recruited
 LABEL 0x2
 SetSupport(Tobias,Zacharias,BSupport,1)
 EndEvent
@@ -487,6 +487,24 @@ BEQ 0x1 0xc 0x0
 AnnihilateItem(UnknownPage)
 SilentGiveItem(TheSDarkTome)
 LABEL 0x1
+CHECK_ALIVE Joan
+BEQ 0x10 0xc 0x0
+CHECK_ALIVE Sonia
+BEQ 0x10 0xc 0x0
+SetSupport(Joan,Sonia,BPSupport,0)
+LABEL 0x10
+CHECK_ALIVE Joan
+BEQ 0x11 0xc 0x0
+CHECK_ALIVE Tobias
+BEQ 0x11 0xc 0x0
+SetSupport(Joan,Tobias,BSupport,0)
+LABEL 0x11
+CHECK_ALIVE Tobias
+BEQ 0x12 0xc 0x0
+CHECK_ALIVE Sonia
+BEQ 0x12 0xc 0x0
+SetSupport(Tobias,Sonia,BSupport,0)
+LABEL 0x12
 MoveToChapter(Chapter24)
 ENDA
 

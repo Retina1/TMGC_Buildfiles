@@ -21,33 +21,22 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C23Turn1Stuff,1)
 TurnEventPlayer(0x0,C23SouthWestSpawn,3)
-
 TurnEventPlayer(0x0,C23NorthEastSpawn,4)
-
 TurnEventPlayer(0x0,C23NorthSpawn,5)
-
 TurnEventPlayer(0x0,C23SouthWestSpawn,6)
-
 TurnEventPlayer(0x0,C23NorthEastSpawn,7)
 TurnEventPlayer(0x0,C23SouthSpawn,7)
-
 TurnEventPlayer(0x0,C23NorthSpawn,8)
-
 TurnEventPlayer(0x0,C23SouthWestSpawn,9)
-
 TurnEventPlayer(0x0,C23NorthEastSpawn,10)
 TurnEventPlayer(0x0,C23NorthSpawn,10)
-
 TurnEventPlayer(0x0,C23SouthSpawn,11)
-
 TurnEventPlayer(0x0,C23SouthWestSpawn,12)
-
 TurnEventPlayer(0x0,C23NorthEastSpawn,13)
 TurnEventPlayer(0x0,C23NorthSpawn,14)
-
 TurnEventPlayer(0x0,C23SouthWestSpawn,15)
-
 TurnEventPlayer(0x0,C23SouthSpawn,16)
 TurnEventPlayer(0x0,C23SouthWestSpawn,16)
 TurnEventPlayer(0x0,C23NorthEastSpawn,16)
@@ -262,6 +251,24 @@ LABEL 0x1
 GotoPrepScreen
 ENDA
 
+C23Turn1Stuff:
+CAM1 Neillstrom
+FlashCursor(Neillstrom,60)
+Text(C23Turn1Tarquin)
+CAM1 DLReynard
+FlashCursor(DLReynard,60)
+Text(C23Turn1Reynard)
+CAM1 EnemyJoan
+FlashCursor(EnemyJoan,60)
+Text(C23Turn1Joan)
+CAM1 EnemySonia
+FlashCursor(EnemySonia,60)
+Text(C23Turn1Sonia)
+CAM1 EnemyTobias
+FlashCursor(EnemyTobias,60)
+Text(C23Turn1Tobias)
+EndEvent
+
 C23SouthWestSpawn:
 Reinforcements(C23LowerLeftSpawn)
 EndEvent
@@ -412,7 +419,7 @@ GOTO 0x2
 LABEL 0x1
 Text(C23LeilaTalksTobias)//recruited
 LABEL 0x2
-SetSupport(Tobias,Leila,BSupport,1)
+SetSupport(Tobias,Leila,CPSupport,1)
 EndEvent
 
 C23TobiasDamienRecruitment:

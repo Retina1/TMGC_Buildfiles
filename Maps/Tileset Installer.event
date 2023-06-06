@@ -143,6 +143,10 @@ DesertPalette:
 #incbin "Tilesets/Desert_pal.dmp"
 
 ALIGN 4
+EndgamePalette:
+#incbin "Tilesets/Endgame_pal.dmp"
+
+ALIGN 4
 DesertTiles:
 #incext compress "Tilesets/Desert.mapchip_config"
 
@@ -466,6 +470,7 @@ EventPointerTable(TILVolcano, LavaCaveConfig)
 EventPointerTable(ANILava, 0x59D800)
 EventPointerTable(OBJDesert, DesertObjects) 
 EventPointerTable(PALDesert, DesertPalette) 
+EventPointerTable(PALEndgame, EndgamePalette) 
 EventPointerTable(TILDesert, DesertTiles) 
 EventPointerTable(OBJFrontier, FrontierObjects) 
 EventPointerTable(PALYgstraFrontier, YgstraFrontierPalette) 

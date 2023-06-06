@@ -16,7 +16,7 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData
-POIN I6Units I6Units
+POIN I10Units I10Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -25,6 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)
 END_MAIN
 
 LocationBasedEvents:
@@ -47,11 +48,14 @@ ENDTRAP
 
 ALIGN 4
 
-I6Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [9,3] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+I10Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [17,33] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(1,Ally,0) [18,34] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT
 
 ALIGN 4
+
+//brandl is here, hyperius gets prf
 
 BeginningScene:
 EnableFreeMovement
@@ -61,7 +65,7 @@ STAL 120
 NarrationText(Base10_Narration)
 FADI 0x3c
 CleanTextNoMap(HallCG,FillerDialogue)
-LOAD1 0x0 I6Units
+LOAD1 0x0 I10Units
 ENUN
 GotoPrepScreen
 ENDA
@@ -69,7 +73,20 @@ ENDA
 //special thing where blair's closest support partner gets a skill that gives obscene bonuses if they're adjacent
 //power of love/power of oomf
 
+I10ReadyToEnd:
+EVBIT_MODIFY 4
+Text(FillerDialogue)//confirm
+SystemText(I1LeavePrompt)
+IfNoSelectedGoto(0x2)
+CALL EndingScene
+GOTO 0x1
+LABEL 0x2
+Text(FillerDialogue)//no
+LABEL 0x1
+EndEvent
+
 EndingScene:
+EVBIT_MODIFY 3
 DisableFreeMovement
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter26)

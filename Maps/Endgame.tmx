@@ -5,7 +5,15 @@
  </tileset>
  <layer id="1" name="Tile Layer 1" width="19" height="47">
   <properties>
+   <property name="Anims1" value="ANIField"/>
+   <property name="Anims2" value="0"/>
+   <property name="ChapterID" value="Endgame"/>
    <property name="Main" value=""/>
+   <property name="MapChangesID" value="MapChangeEndgame"/>
+   <property name="MapID" value="MapEndgame"/>
+   <property name="ObjectType" value="OBJDesert"/>
+   <property name="PaletteID" value="PALEndgame"/>
+   <property name="TileConfig" value="TILDesert"/>
   </properties>
   <data>
    <tile gid="431"/>
@@ -17,7 +25,7 @@
    <tile gid="431"/>
    <tile gid="431"/>
    <tile gid="431"/>
-   <tile gid="431"/>
+   <tile gid="902"/>
    <tile gid="431"/>
    <tile gid="431"/>
    <tile gid="431"/>
@@ -36,7 +44,7 @@
    <tile gid="431"/>
    <tile gid="902"/>
    <tile gid="902"/>
-   <tile gid="845"/>
+   <tile gid="934"/>
    <tile gid="902"/>
    <tile gid="902"/>
    <tile gid="431"/>
@@ -55,7 +63,7 @@
    <tile gid="902"/>
    <tile gid="971"/>
    <tile gid="934"/>
-   <tile gid="877"/>
+   <tile gid="971"/>
    <tile gid="934"/>
    <tile gid="971"/>
    <tile gid="902"/>

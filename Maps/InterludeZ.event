@@ -24,8 +24,8 @@
 
 ALIGN 4
 MapData:
-  #incbin "TestMap_data.dmp"
+  #incbin "InterludeZ_data.dmp"
 
-SetChapterData(0x33, OBJField, 0, PALDalstField, TILField, MapTest, MapData, ANIField, 0, 0)
+SetChapterData(InterludeZ, OBJFrontier, 0, PALYgstraFrontier, TILFrontier, MapIZ, MapData, ANIFrontier, 0, 0)
 
 }

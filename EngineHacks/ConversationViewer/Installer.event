@@ -55,6 +55,7 @@ POIN Chapter13Conversations
 POIN Chapter14Conversations
 POIN ChapterZ1Conversations
 POIN ChapterZ2Conversations
+POIN InterludeZConversations
 POIN ChapterZ3Conversations
 POIN Interlude5Conversations
 POIN Chapter15Conversations
@@ -570,6 +571,18 @@ ConversationEntry(EZ2BossGen,Z2VultureBattle,YgstraCG,ChapterZ2,S_SonicBoss)
 ConversationEntry(EZ2BossZeke,Z2VultureZekeBattle,YgstraCG,ChapterZ2,S_SonicBoss)
 ConversationEntry(EZ2BossDie,Z2VultureDeath,YgstraCG,ChapterZ2,S_SonicBoss)
 ConversationEntry(EZ2End1,Z2Ending,YgstraCG,ChapterZ2,VictoryTheme)
+ConversationEntryTerminator
+
+ALIGN 4
+InterludeZConversations:
+ConversationEntry(EIZOpen1,IZOpening,YgstraCG,InterludeZ)
+ConversationEntry(EIZOpen2,IZOpening2,YgstraCG,InterludeZ)
+ConversationEntry(EIZHyperius,IZHyperiusConvo,YgstraCG,InterludeZ)
+ConversationEntry(EIZAlexis,IZAlexisConvo,YgstraCG,InterludeZ)
+ConversationEntry(EIZLeila,IZLeilaConvo,YgstraCG,InterludeZ)
+ConversationEntry(EIZDamien,IZDamienConvo,YgstraCG,InterludeZ)
+ConversationEntry(EIZZacharias,IZZachariasConvo,YgstraCG,InterludeZ)
+ConversationEntry(EIZEnd1,IZEnding,YgstraCG,InterludeZ)
 ConversationEntryTerminator
 
 ALIGN 4

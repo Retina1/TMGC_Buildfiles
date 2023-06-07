@@ -173,7 +173,7 @@ UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [26,9] 0x0 0x0 0x0 0x0 [SilverAxe] Grou
 UNIT EnemyJoan HeroF 0x0 Level(11,Enemy,0) [6,13] 0x0 0x0 0x0 0x0 [SilverSword,BraveAxe,Tomahawk] GroupTwoAI
 UNIT EnemySonia HalberdierF 0x0 Level(13,Enemy,0) [26,1] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NeverMoveAI
 UNIT EnemyTobias Warrior 0x0 Level(16,Enemy,0) [26,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Longbow] [0x6,0x3,0x4,0x0]
-UNIT DLReynard Hero 0x0 Level(12,Enemy,0) [11,16] 0x0 0x0 0x0 0x0 [Tomahawk,BraveSword] AttackInRangeAI
+UNIT DLReynard Hero 0x0 Level(12,Enemy,0) [11,16] DropItem 0x0 0x0 0x0 [Tomahawk,BraveSword,SoulHilt] AttackInRangeAI
 UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [GildedLance,Axebuster] GroupOnePaceAI
 UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [GildedAxe,Swordslayer] GroupOnePaceAI
 UNIT Neillstrom WyvLord 0x0 Level(17,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk,ZoryaShield] GroupOnePaceAI

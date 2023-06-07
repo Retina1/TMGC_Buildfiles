@@ -12,6 +12,12 @@ POIN SkillTester
 WORD BaneID
 
 ALIGN 4
+SoulHiltPointer:
+#incbin "SoulHilt/SoulHilt.dmp"
+POIN SkillTester
+WORD SoulHiltID
+
+ALIGN 4
 BattleVeteran:
 #incbin "BattleVeteran/BattleVeteran.dmp"
 POIN SkillTester

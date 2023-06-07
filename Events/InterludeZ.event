@@ -1,0 +1,132 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsIZ,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN IZUnits IZUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x0,IZMapStart,1)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+CharacterEvent(0x1f,IZHyperiusTalk,Blair,Hyperius)//don't ask
+CharacterEvent(0x20,IZAlexisTalk,Blair,Alexis)
+CharacterEvent(0x21,IZLeilaTalk,Blair,Leila)
+CharacterEvent(0x22,IZDamienTalk,Blair,Damien)
+CharacterEvent(0x23,IZZachariasTalk,Blair,Zacharias)
+CharacterEvent(0x0,IZReadyToEnd,Blair,ElbaCor)
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+ALIGN 4
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+IZUnits:
+UNIT Blair ZekeLord 0x0 Level(7,Ally,0) [3,2] 0x0 0x0 0x0 0x0 [IronLance, IronBow, Elixir, ChestKey] NoAI
+UNIT Hyperius SwdGen 0x0 Level(12,Ally,0) [11,6] 0x0 0x0 0x0 0x0 [SilverSword, IronSword, Vulnerary] NoAI
+UNIT Alexis AxeArm 0x0 Level(8,Ally,0) [8,1] 0x0 0x0 0x0 0x0 [IronAxe, HandAxe, Vulnerary] NoAI
+UNIT Leila SwdPeg 0x0 Level(13,Ally,0) [2,5] 0x0 0x0 0x0 0x0 [Rapier, SteelSword, AngelicRobe] NoAI
+UNIT Damien Archer 0x0 Level(15,Ally,0) [8,6] 0x0 0x0 0x0 0x0 [SteelBow, IronBow, Vulnerary] NoAI
+UNIT Zacharias Fighter 0x0 Level(12,Ally,0) [6,5] 0x0 0x0 0x0 0x0 [SteelAxe, Halberd, Vulnerary] NoAI
+UNIT
+
+IZProps:
+UNIT ElbaCor 0x34 0x0 Level(3,Enemy,0) [6,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+
+
+IZAlexisTalk:
+Text(IZAlexisConvo)
+EndEvent
+
+IZLeilaTalk:
+Text(IZLeilaConvo)
+EndEvent
+
+IZHyperiusTalk:
+Text(IZHyperiusConvo)
+EndEvent
+
+IZZachariasTalk:
+Text(IZZachariasConvo)
+EndEvent
+
+IZDamienTalk:
+Text(IZDamienConvo)
+EndEvent
+
+
+BeginningScene:
+OnAllUnitState(Zeke*0x100+Zeke, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+SetUnitStatus(Blair, ClassPointer, 0x88098C4)
+EnableFreeMovement
+MUSC NarrationTheme2
+LOAD1 0x0 IZUnits
+ENUN
+LOAD1 0x0 IZProps
+ENUN
+Narration(Map2CG,BaseZ_Narration)
+MUSC AmbientBirds
+CleanTextNoMap(YgstraCG,IZOpening)
+LocationText(YgstraCG,IZOpening2,IZLaterLabel)
+EndEvent
+
+IZMapStart:
+SystemText(IZNote)
+//SET_ACTIVE Zeke
+EndEvent
+
+EndingScene:
+EVBIT_MODIFY 3
+DisableFreeMovement
+ResetBaseFlags
+CleanTextNoMap(YgstraCG,IZEnding)
+OffAllUnitState(Zeke*0x100+Zeke, Escaped, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+SetUnitStatus(Blair, ClassPointer, 0x88071B8)
+MoveToChapter(ChapterZ3)
+ENDA
+
+IZReadyToEnd:
+EVBIT_MODIFY 4
+SystemText(I1LeavePrompt)
+IfNoSelectedGoto(0x2)
+CALL EndingScene
+LABEL 0x2
+EndEvent
+
+//MESSAGE Events end at offset CURRENTOFFSET

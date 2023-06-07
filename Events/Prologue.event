@@ -116,10 +116,15 @@ CheckNewGameFlag(12)
 BEQ 0x999 0xc 0x0
 SystemText(NewGamePlusPrompt)//add an old school cassius toggle
 IfNoSelectedGoto(0x999)
-ENUT NewGamePlusFlag
-SystemText(EarlyFlowerPrompt)
-IfNoSelectedGoto(0x999)
-ENUT BlairFlowerFlag
+				ENUT NewGamePlusFlag
+				SystemText(EarlyFlowerPrompt)
+				IfNoSelectedGoto(0x998)
+				ENUT BlairFlowerFlag
+				LABEL 0x998
+				SystemText(ParagonModePrompt)
+				IfNoSelectedGoto(0x997)
+				ENUT ParagonModeFlag
+				LABEL 0x997
 LABEL 0x999
 ASMC prCallGrowthMenu+1
 SVAL 0x1 0x1

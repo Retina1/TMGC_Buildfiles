@@ -397,6 +397,12 @@
 			support(BSupport,1,1,0,0,10,10)//c19
 			support(BPSupport,1,1,10,0,10,10)//c21 in battle
 			support(ASupport,1,1,15,0,15,15)
+		entry(Mikey,Joan)	
+			support(CSupport,0,1,0,0,0,0)
+			support(CPSupport,0,2,0,0,0,10)
+			support(BSupport,0,2,0,0,0,20)//c23
+			support(BPSupport,0,3,10,0,10,20)
+			support(ASupport,1,3,25,0,0,25)
 	//carbon (blair, stefan, mikey)
 	//athena (josef, peggy, cassius)
 	//charley (sam, apollo)
@@ -458,6 +464,12 @@
 			support(BSupport,0,0,0,0,30,0)
 			support(BPSupport,0,0,0,0,40,0)
 			support(ASupport,0,0,0,0,50,0)
+		entry(Leila,Tobias)	
+			support(CSupport,1,0,0,0,0,0)
+			support(CPSupport,1,1,0,0,0,10)//c23
+			support(BSupport,1,2,0,0,0,10)
+			support(BPSupport,1,2,10,0,10,20)
+			support(ASupport,2,3,25,20,20,35)
 	//damien (leila)
 		entry(Damien,Zacharias)
 			support(CSupport,1,0,0,0,0,0)//base
@@ -465,7 +477,19 @@
 			support(BSupport,2,0,10,0,0,0)//c19 battle
 			support(BPSupport,2,0,15,0,0,5)
 			support(ASupport,2,0,25,0,0,10)
+		entry(Damien,Tobias)	
+			support(CSupport,1,0,0,0,0,0)
+			support(CPSupport,2,0,0,0,0,0)
+			support(BSupport,2,0,5,0,0,10)//c23
+			support(BPSupport,2,0,10,0,0,20)
+			support(ASupport,2,0,25,0,20,25)
 	//zacharias (leila, damien)
+		entry(Zacharias,Tobias)	
+			support(CSupport,0,1,0,0,0,0)
+			support(CPSupport,0,2,0,0,5,0)
+			support(BSupport,0,2,5,0,10,0)//c23
+			support(BPSupport,0,2,15,0,20,0)
+			support(ASupport,0,3,25,0,30,10)
 	//avan (blair, apollo)
 		entry(Avan,Toddsworth)
 			support(CSupport,0,0,5,5,0,0)//base
@@ -500,6 +524,28 @@
 			support(BPSupport,0,2,10,0,0,30)
 			support(ASupport,0,3,20,0,0,40)
 	//johan (stefan,desmond,ptolemy)
+	//peter (butch)
+	//joan (mikey)
+		entry(Joan,Sonia)	
+			support(CSupport,0,0,10,0,0,0)
+			support(CPSupport,1,0,10,0,0,0)
+			support(BSupport,2,0,20,0,0,0)
+			support(BPSupport,3,0,30,0,0,5)//c23
+			support(ASupport,4,0,40,0,0,10)
+		entry(Joan,Tobias)	
+			support(CSupport,0,1,0,0,0,0)
+			support(CPSupport,0,2,0,0,0,20)
+			support(BSupport,0,2,10,0,0,20)//c23
+			support(BPSupport,0,3,10,0,0,20)
+			support(ASupport,1,3,30,0,0,30)
+	//sonia (joan)
+		entry(Sonia,Tobias)	
+			support(CSupport,1,1,0,0,0,0)
+			support(CPSupport,2,2,0,0,0,0)
+			support(BSupport,2,3,0,0,0,0)//c23
+			support(BPSupport,3,3,0,0,0,0)
+			support(ASupport,4,4,0,0,0,0)
+	//tobias (leila,damien,zacharias,joan,sonia)
 	//peter/dean support where peter calls dean a family guy
 	//callum/zach where callum laments the state of yg'stra
 	//rose/manfred - rose makes cold drinks (maybe it's sad and only happens if wilhelm's dead)

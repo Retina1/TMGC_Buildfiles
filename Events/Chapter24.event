@@ -202,6 +202,7 @@ BEQ 0xb 0xc 0x0
 UnremoveUnit(Argent)
 Reinforcements(ArgentRejoin)
 LABEL 0xb
+OffAllUnitState(Freddric*0x100+Argent, Undeployed, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
 CALL ohgodnotthis
 EndEvent
 

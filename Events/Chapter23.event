@@ -487,8 +487,15 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryTheme
-CleanTextNoMap(HallCG,FillerDialogue)
+MUSC S_Nightfall
+CleanTextNoMap(EastHolanisCG,C23_Ending)
+CHECK_EVENTID KennethTarquinKillFlag
+BEQ 0x20 0xc 0x0
+CHECK_ALIVE Kenneth
+BEQ 0x20 0xc 0x0
+CleanTextNoMap(EastHolanisCG,C23_EndingKenneth)
+LABEL 0x20
+LocationText(HallCG, C23_Ending2,ArbordiaMeetingHallLabel,S_Chaos)
 CheckForItem(UnknownPage)
 BEQ 0x1 0xc 0x0
 AnnihilateItem(UnknownPage)

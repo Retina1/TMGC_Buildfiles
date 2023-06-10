@@ -52,7 +52,7 @@
 			support(CSupport,0,0,10,0,0,0)//c16
 			support(CPSupport,0,0,15,0,5,0)//c18x
 			support(BSupport,1,0,20,0,0,0)//c20 in battle
-			support(BPSupport,1,0,25,0,0,0)
+			support(BPSupport,1,0,25,0,0,0)//c23
 			support(ASupport,2,0,30,0,10,0)			//lover convo
 		entry(Blair,Yuyu)
 			support(CSupport,1,0,0,0,0,0)//c17
@@ -71,7 +71,7 @@
 			support(CSupport,0,0,5,0,0,5)//c7
 			support(CPSupport,0,0,10,0,0,10)//c13
 			support(BSupport,0,0,15,0,0,15)//c18
-			support(BPSupport,0,0,20,0,0,20)
+			support(BPSupport,0,0,20,0,0,20)//c23
 			support(ASupport,0,0,25,0,0,25)			//lover convo?
 		entry(Arin,Sveltzalus)
 			support(CSupport,0,0,5,0,0,5)//c12
@@ -158,7 +158,7 @@
 		entry(Desmond,Mikey)
 			support(CSupport,0,0,5,0,0,0)//c15 battle
 			support(CPSupport,1,1,5,0,0,0)//c18 battle
-			support(BSupport,1,1,10,0,0,0)
+			support(BSupport,1,1,10,0,0,0)//c23
 			support(BPSupport,2,2,10,0,0,0)
 			support(ASupport,2,2,20,0,5,0)
 		entry(Desmond,Johan)
@@ -235,7 +235,7 @@
 			support(CSupport,0,0,0,0,5,0)//c9
 			support(CPSupport,0,0,10,0,5,0)//c15
 			support(BSupport,0,0,15,0,10,0)//c19
-			support(BPSupport,1,0,0,0,10,0)
+			support(BPSupport,1,0,0,0,10,0)//c23
 			support(ASupport,2,0,15,0,20,0)
 		entry(Butch,Peter)
 			support(CSupport,0,0,0,0,10,0)
@@ -360,7 +360,7 @@
 		entry(Bechamel,Hollandaise)
 			support(CSupport,1,0,0,0,0,0)//c17 recruitment
 			support(CPSupport,2,0,0,0,0,0)//c20
-			support(BSupport,2,0,10,0,0,0)
+			support(BSupport,2,0,10,0,0,0)//c23
 			support(BPSupport,2,0,20,0,0,0)
 			support(ASupport,2,0,20,0,20,0)
 	//sveltzalus (arin, jeff)
@@ -455,7 +455,7 @@
 		entry(Leila,Zacharias)
 			support(CSupport,1,0,0,0,0,0)//z3
 			support(CPSupport,2,0,0,0,0,0)//c18 battle
-			support(BSupport,3,0,0,0,0,0)
+			support(BSupport,3,0,0,0,0,0)//c23
 			support(BPSupport,4,0,0,0,0,0)
 			support(ASupport,5,0,0,0,0,0)
 		entry(Leila,Wilhelm)
@@ -494,9 +494,15 @@
 		entry(Avan,Toddsworth)
 			support(CSupport,0,0,5,5,0,0)//base
 			support(CPSupport,0,0,10,10,0,0)//c18 battle
-			support(BSupport,1,1,10,10,0,0)
+			support(BSupport,1,1,10,10,0,0)//c22
 			support(BPSupport,2,1,10,15,0,0)
 			support(ASupport,2,1,15,25,0,0)
+		entry(Avan,Ptolemy)
+			support(CSupport,0,1,5,0,0,0)//c23
+			support(CPSupport,0,1,10,0,0,5)
+			support(BSupport,0,2,15,0,0,10)
+			support(BPSupport,0,2,20,0,0,10)
+			support(ASupport,0,3,30,0,0,20)
 	//toddsworth (sveltzalus, charley, avan)
 	//yuyu (blair, arin, charley)
 	//artemis (alexis)
@@ -516,7 +522,7 @@
 			support(BPSupport,0,4,0,0,0,0)
 			support(ASupport,5,0,20,0,0,0)
 	//simone (arin,emile,svelt,horatio)
-	//ptolemy
+	//ptolemy (avan)
 		entry(Ptolemy,Johan)
 			support(CSupport,0,0,0,0,0,10)
 			support(CPSupport,0,0,0,0,0,20)

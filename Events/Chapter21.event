@@ -408,8 +408,12 @@ SetSupport(Blair,Zeke,BPSupport,1)
 EndEvent
 C21NatasiaPeggySupport:
 Text(PeggyNatasiaBPSupport)
-SystemText(C21NatasiaStaffRank)
+FADI 60
+VCWF 0x0
 SetUnitStatus(Natasia,StaffExp,1)
+VCWF 0x7
+FADU 60
+SystemText(C21NatasiaStaffRank)
 GiveItem(Heal,Natasia)
 SetSupport(Natasia,Peggy,BPSupport,1)
 EndEvent

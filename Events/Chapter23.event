@@ -25,14 +25,10 @@ TurnEventPlayer(0x0,C23Turn1Stuff,1)
 TurnEventPlayer(0x0,C23SouthWestSpawn,3)
 TurnEventPlayer(0x0,C23NorthEastSpawn,4)
 TurnEventPlayer(0x0,C23NorthSpawn,5)
-TurnEventPlayer(0x0,C23SouthWestSpawn,6)
-TurnEventPlayer(0x0,C23NorthEastSpawn,7)
 TurnEventPlayer(0x0,C23SouthSpawn,7)
-TurnEventPlayer(0x0,C23NorthSpawn,8)
 TurnEventPlayer(0x0,C23SouthWestSpawn,9)
 TurnEventPlayer(0x0,C23NorthEastSpawn,10)
 TurnEventPlayer(0x0,C23NorthSpawn,10)
-TurnEventPlayer(0x0,C23SouthSpawn,11)
 TurnEventPlayer(0x0,C23SouthWestSpawn,12)
 TurnEventPlayer(0x0,C23NorthEastSpawn,13)
 TurnEventPlayer(0x0,C23NorthSpawn,14)
@@ -125,85 +121,83 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C23Hard:
-UNIT Dalst AxePal 0x0 Level(4,Enemy,1) [3,0] 0x0 0x0 0x0 0x0 [SilverAxe,Elixir] NoAI
-UNIT Dalst LncPal 0x0 Level(4,Enemy,1) [1,0] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
-UNIT Dalst SwdPal 0x0 Level(4,Enemy,1) [2,1] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
-UNIT Dalst BowPal 0x0 Level(4,Enemy,1) [2,0] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
-UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [0,28] 0x0 0x0 0x0 0x0 [Swordslayer,HereticAxe] NoAI
-UNIT Remnant LncPal 0x0 Level(4,Enemy,1) [1,29] 0x0 0x0 0x0 0x0 [Axebuster,DousingLance] NoAI
-UNIT Remnant SwdPal 0x0 Level(4,Enemy,1) [2,28] 0x0 0x0 0x0 0x0 [Lancesnapper,Shimmersword] NoAI
-UNIT Remnant Berserker 0x0 Level(4,Enemy,1) [1,20] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Dalst AxePal 0x0 Level(6,Enemy,1) [3,0] 0x0 0x0 0x0 0x0 [SilverAxe,Elixir] NoAI
+UNIT Dalst LncPal 0x0 Level(6,Enemy,1) [1,0] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Dalst SwdPal 0x0 Level(6,Enemy,1) [2,1] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Dalst BowPal 0x0 Level(6,Enemy,1) [2,0] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT Remnant AxePal 0x0 Level(5,Enemy,1) [0,28] 0x0 0x0 0x0 0x0 [Swordslayer,HereticAxe] NoAI
+UNIT Remnant LncPal 0x0 Level(5,Enemy,1) [1,29] 0x0 0x0 0x0 0x0 [Axebuster,DousingLance] NoAI
+UNIT Remnant SwdPal 0x0 Level(5,Enemy,1) [2,28] 0x0 0x0 0x0 0x0 [Lancesnapper,Shimmersword] NoAI
+UNIT Remnant Berserker 0x0 Level(5,Enemy,1) [1,20] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
 UNIT Remnant SwdGen 0x0 Level(6,Enemy,1) [7,24] 0x0 0x0 0x0 0x0 [GildedSword] AttackInRangeAI
-UNIT Remnant Warrior 0x0 Level(4,Enemy,1) [6,21] 0x0 0x0 0x0 0x0 [SilverAxe] ChaseOnceApproachedAI
-UNIT Dalst Sage 0x0 Level(4,Enemy,1) [8,17] 0x0 0x0 0x0 0x0 [Fimbulvetr] ChaseOnceApproachedAI
+UNIT Remnant Warrior 0x0 Level(5,Enemy,1) [6,21] 0x0 0x0 0x0 0x0 [SilverAxe] ChaseOnceApproachedAI
+UNIT Dalst Sage 0x0 Level(6,Enemy,1) [8,17] 0x0 0x0 0x0 0x0 [Fimbulvetr] ChaseOnceApproachedAI
 UNIT Remnant BowPal 0x0 Level(5,Enemy,1) [13,13] 0x0 0x0 0x0 0x0 [SilverBow] ChaseOnceApproachedAI
-UNIT Remnant Sorc 0x0 Level(4,Enemy,1) [16,15] DropItem 0x0 0x0 0x0 [Nosferatu] ChaseOnceApproachedAI
-UNIT Remnant Halberdier 0x0 Level(4,Enemy,1) [19,17] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Remnant Sniper 0x0 Level(4,Enemy,1) [22,13] 0x0 0x0 0x0 0x0 [SilverBow] ChaseOnceApproachedAI
-UNIT Dalst Sage 0x0 Level(4,Enemy,1) [11,5] 0x0 0x0 0x0 0x0 [Bolting,Silence,SpiritDust] NeverMoveAI
+UNIT Remnant Sorc 0x0 Level(5,Enemy,1) [16,15] DropItem 0x0 0x0 0x0 [Nosferatu] ChaseOnceApproachedAI
+UNIT Remnant Halberdier 0x0 Level(5,Enemy,1) [19,17] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT Remnant Sniper 0x0 Level(5,Enemy,1) [22,13] 0x0 0x0 0x0 0x0 [SilverBow] ChaseOnceApproachedAI
+UNIT Dalst Sage 0x0 Level(6,Enemy,1) [11,5] 0x0 0x0 0x0 0x0 [Bolting,Silence,SpiritDust] NeverMoveAI
 UNIT Dalst AxeCav 0x0 Level(20,Enemy,1) [4,7] 0x0 0x0 0x0 0x0 [MasterAxe] GroupFiveAI
-UNIT Remnant LncGen 0x0 Level(4,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [GildedLance,Elixir] ChaseOnceApproachedAI
-UNIT Dalst Halberdier 0x0 Level(5,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [BraveLance] GroupOnePaceAI
-UNIT Dalst Hero 0x0 Level(5,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [BraveAxe] GroupOnePaceAI
+UNIT Remnant LncGen 0x0 Level(5,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [GildedLance,Elixir] ChaseOnceApproachedAI
+UNIT Dalst Halberdier 0x0 Level(6,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [BraveLance] GroupOnePaceAI
+UNIT Dalst Hero 0x0 Level(6,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [BraveAxe] GroupOnePaceAI
 UNIT Dalst Sage 0x0 Level(7,Enemy,1) [7,5] 0x0 0x0 0x0 0x0 [Bolting,Sagittae,Galewind] NeverMoveAI
 UNIT Dalst LncCav 0x0 Level(20,Enemy,1) [10,1] 0x0 0x0 0x0 0x0 [MasterLance] GroupFiveAI
 UNIT Dalst Bishop 0x0 Level(7,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Purge,Sleep,WhiteGem] NeverMoveAI
-UNIT Remnant Warrior 0x0 Level(4,Enemy,1) [20,9] 0x0 0x0 0x0 0x0 [BraveAxe] GroupFourAI
-UNIT Remnant Hero 0x0 Level(4,Enemy,1) [24,8] DropItem 0x0 0x0 0x0 [SilverAxe,Runesword] AttackInRangeAI
+UNIT Remnant Warrior 0x0 Level(5,Enemy,1) [20,9] 0x0 0x0 0x0 0x0 [BraveAxe] GroupFourAI
+UNIT Remnant Hero 0x0 Level(5,Enemy,1) [24,8] DropItem 0x0 0x0 0x0 [SilverAxe,Runesword] AttackInRangeAI
 UNIT Remnant Ballistician 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 UNIT Remnant DarkF 0x0 Level(20,Enemy,1) [19,4] 0x0 0x0 0x0 0x0 [Nocturne] ChaseOnceApproachedAI
 UNIT
 
 C23Hard2:
-UNIT Remnant Halberdier 0x0 Level(4,Enemy,1) [15,25] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
-UNIT Remnant SwMastF 0x0 Level(4,Enemy,1) [16,27] 0x0 0x0 0x0 0x0 [Rapier] NoAI
-UNIT Remnant Warrior 0x0 Level(4,Enemy,1) [18,26] 0x0 0x0 0x0 0x0 [Tomahawk] NoAI
-UNIT Remnant Sorc 0x0 Level(4,Enemy,1) [21,24] 0x0 0x0 0x0 0x0 [Fenrir] NoAI
+UNIT Remnant Halberdier 0x0 Level(5,Enemy,1) [15,25] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Remnant SwMastF 0x0 Level(5,Enemy,1) [16,27] 0x0 0x0 0x0 0x0 [Rapier] NoAI
+UNIT Remnant Warrior 0x0 Level(5,Enemy,1) [18,26] 0x0 0x0 0x0 0x0 [Tomahawk] NoAI
+UNIT Remnant Sorc 0x0 Level(5,Enemy,1) [21,24] 0x0 0x0 0x0 0x0 [Fenrir] NoAI
 UNIT Remnant AxeGen 0x0 Level(5,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Remnant AxeGen 0x0 Level(5,Enemy,1) [11,25] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
 UNIT Remnant LncGen 0x0 Level(5,Enemy,1) [18,20] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Remnant LncGen 0x0 Level(5,Enemy,1) [21,20] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
 UNIT Remnant Ballistician 0x0 Level(20,Enemy,1) [14,20] 0x0 0x0 0x0 0x0 [ArchBallista,IronRune] NeverMoveAI
 UNIT Remnant Sniper 0x0 Level(5,Enemy,1) [19,0] 0x0 0x0 0x0 0x0 [Greatbow,GildedBow] NoAI
-UNIT Dalst Sage 0x0 Level(4,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [Sagittae] AttackInRangeAI
-UNIT Dalst Sage 0x0 Level(4,Enemy,1) [26,19] DropItem 0x0 0x0 0x0 [Bolting] NeverMoveAI
-UNIT Remnant HeroF 0x0 Level(4,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [SilverAxe,BraveSword] GroupTwoPaceAI
-UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [26,7] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoPaceAI
-UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [26,9] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoPaceAI
+UNIT Dalst Sage 0x0 Level(6,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [Sagittae] AttackInRangeAI
+UNIT Dalst Sage 0x0 Level(6,Enemy,1) [26,19] DropItem 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT Remnant HeroF 0x0 Level(5,Enemy,1) [5,12] 0x0 0x0 0x0 0x0 [SilverAxe,BraveSword] GroupTwoPaceAI
+UNIT Remnant AxePal 0x0 Level(5,Enemy,1) [26,7] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoPaceAI
+UNIT Remnant AxePal 0x0 Level(5,Enemy,1) [26,9] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoPaceAI
 UNIT EnemyJoan HeroF 0x0 Level(11,Enemy,0) [6,13] 0x0 0x0 0x0 0x0 [SilverSword,BraveAxe,Tomahawk] GroupTwoAI
 UNIT EnemySonia HalberdierF 0x0 Level(13,Enemy,0) [26,1] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NeverMoveAI
 UNIT EnemyTobias Warrior 0x0 Level(16,Enemy,0) [26,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Longbow] [0x6,0x3,0x4,0x0]
 UNIT DLReynard Hero 0x0 Level(12,Enemy,0) [11,16] DropItem 0x0 0x0 0x0 [Tomahawk,BraveSword,SoulHilt] AttackInRangeAI
-UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [GildedLance,Axebuster] GroupOnePaceAI
-UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [GildedAxe,Swordslayer] GroupOnePaceAI
-UNIT Neillstrom WyvLord 0x0 Level(17,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk,ZoryaShield] GroupOnePaceAI
+UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [4,3] 0x0 0x0 0x0 0x0 [GildedLance,Axebuster] GroupOneAI
+UNIT Dalst WyvLord 0x0 Level(7,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [GildedAxe,Swordslayer] GroupOneAI
+UNIT Neillstrom WyvLord 0x0 Level(17,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk,ZoryaShield] GroupOneAI
 UNIT
 
 C23LowerLeftSpawn:
-UNIT Remnant BowPal 0x0 Level(4,Enemy,1) [0,30] 0x0 0x0 0x1 REDA0R28 [SilverBow] NoAI
-UNIT Remnant AxePal 0x0 Level(4,Enemy,1) [1,30] 0x0 0x0 0x1 REDA1R27 [BraveAxe] NoAI
-UNIT Remnant BowPal 0x0 Level(4,Enemy,1) [2,30] 0x0 0x0 0x1 REDA2R28 [SilverBow] NoAI
+UNIT Remnant BowPal 0x0 Level(6,Enemy,1) [0,30] 0x0 0x0 0x1 REDA0R28 [SilverBow] NoAI
+UNIT Remnant AxePal 0x0 Level(6,Enemy,1) [1,30] 0x0 0x0 0x1 REDA1R27 [BraveAxe] NoAI
+UNIT Remnant BowPal 0x0 Level(6,Enemy,1) [2,30] 0x0 0x0 0x1 REDA2R28 [SilverBow] NoAI
 UNIT
 
 C23UpperRightSpawn:
-UNIT Remnant Halberdier 0x0 Level(4,Enemy,1) [26,0] 0x0 0x0 0x1 REDA26R2 [SilverLance] NoAI
-UNIT Remnant Hero 0x0 Level(4,Enemy,1) [26,0] 0x0 0x0 0x1 REDA25R1 [SilverSword] NoAI
-UNIT Remnant Warrior 0x0 Level(4,Enemy,1) [25,0] 0x0 0x0 0x1 REDA24R2 [SilverAxe] NoAI
+UNIT Remnant Halberdier 0x0 Level(6,Enemy,1) [26,0] 0x0 0x0 0x1 REDA26R2 [SilverLance] NoAI
+UNIT Remnant Hero 0x0 Level(6,Enemy,1) [26,0] 0x0 0x0 0x1 REDA25R1 [SilverSword] NoAI
+UNIT Remnant Warrior 0x0 Level(6,Enemy,1) [25,0] 0x0 0x0 0x1 REDA24R2 [SilverAxe] NoAI
 UNIT
 
 C23NorthernSpawn:
-UNIT Remnant Hero 0x0 Level(4,Enemy,1) [13,0] 0x0 0x0 0x1 REDA13R1 [SilverAxe] NoAI
-UNIT Dalst Sage 0x0 Level(4,Enemy,1) [14,0] 0x0 0x0 0x1 REDA14R2 [Inversion] NoAI
-UNIT Remnant SwMast 0x0 Level(4,Enemy,1) [15,0] 0x0 0x0 0x1 REDA15R1 [SilverSword] NoAI
-UNIT Dalst Sage 0x0 Level(4,Enemy,1) [16,0] 0x0 0x0 0x1 REDA16R2 [Elfire] NoAI
-UNIT Remnant Hero 0x0 Level(4,Enemy,1) [17,0] 0x0 0x0 0x1 REDA17R1 [SilverAxe] NoAI
+UNIT Dalst Sage 0x0 Level(6,Enemy,1) [14,0] 0x0 0x0 0x1 REDA14R2 [Inversion] NoAI
+UNIT Remnant SwMast 0x0 Level(6,Enemy,1) [15,0] 0x0 0x0 0x1 REDA15R1 [SilverSword] NoAI
+UNIT Dalst Sage 0x0 Level(6,Enemy,1) [16,0] 0x0 0x0 0x1 REDA16R2 [Elfire] NoAI
 UNIT
 
 C23SouthernSpawn:
-UNIT Remnant WyvLord 0x0 Level(4,Enemy,1) [12,30] 0x0 0x0 0x1 REDA12R28 [SilverLance] NoAI
-UNIT Remnant Sorc 0x0 Level(4,Enemy,1) [13,30] 0x0 0x0 0x1 REDA13R29 [Fenrir] NoAI
-UNIT Remnant Sorc 0x0 Level(4,Enemy,1) [14,30] 0x0 0x0 0x1 REDA14R29 [Corruption] NoAI
-UNIT Remnant WyvLord 0x0 Level(4,Enemy,1) [15,30] 0x0 0x0 0x1 REDA15R28 [SilverAxe] NoAI
+UNIT Remnant WyvLord 0x0 Level(6,Enemy,1) [12,30] 0x0 0x0 0x1 REDA12R28 [SilverLance] NoAI
+UNIT Remnant Sorc 0x0 Level(6,Enemy,1) [13,30] 0x0 0x0 0x1 REDA13R29 [Fenrir] NoAI
+UNIT Remnant Sorc 0x0 Level(6,Enemy,1) [14,30] 0x0 0x0 0x1 REDA14R29 [Corruption] NoAI
+UNIT Remnant WyvLord 0x0 Level(6,Enemy,1) [15,30] 0x0 0x0 0x1 REDA15R28 [SilverAxe] NoAI
 UNIT
 
 C23OpeningBlair:
@@ -453,33 +447,16 @@ SetSupport(Tobias,Zacharias,BSupport,1)
 EndEvent
 
 EndingSceneCheck:
-//we know tarq's dead - check status of joan, sonia, tobias, and reynard
-//allegiance returns 0 if blue, 2 if red
-CHECK_ALIVE DLReynard //reynard has to be dead
+CHECK_ALIVE DLReynard
 BNE 0x1 0xc 0x0
 	CHECK_ALIVE EnemyJoan
-	BNE 0x2 0xc 0x0
-		LABEL 0x5
+	BNE 0x1 0xc 0x0
 		CHECK_ALIVE EnemySonia
-		BNE 0x3 0xc 0x0
-			LABEL 0x6
+		BNE 0x1 0xc 0x0
 			CHECK_ALIVE EnemyTobias
-			BNE 0x4 0xc 0x0
-			LABEL 0x7
+			BNE 0x1 0xc 0x0
 			CALL EndingScene
 			GOTO 0x11
-		LABEL 0x2
-	CHECK_ALLEGIANCE Joan
-	BEQ 0x5 0xc 0x0
-	GOTO 0x1
-		LABEL 0x3
-	CHECK_ALLEGIANCE Sonia
-	BEQ 0x6 0xc 0x0
-	GOTO 0x1
-		LABEL 0x4
-	CHECK_ALLEGIANCE Tobias
-	BEQ 0x7 0xc 0x0
-	GOTO 0x1
 LABEL 0x1
 ENUF 0x7
 LABEL 0x11

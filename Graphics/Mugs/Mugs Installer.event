@@ -207,6 +207,10 @@ ALIGN 4
 AthenaMug:
 #incbin "dmps/Athena.dmp"
 setMugEntry(0x1e,AthenaMug,3,6,3,4)
+ALIGN 4
+AthenaPromoMug:
+#incbin "dmps/AthenaPromo.dmp"
+setMugEntry(0x129,AthenaPromoMug,3,6,3,4)
 
 ALIGN 4
 CharleyMug:

@@ -27,9 +27,11 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 //yuyu talks to ineubrenos for sorrow's pilgrim and bow rank
+CharacterEvent(0x21,C24Pilgrim,Yuyu,BossIneubrenos)
 END_MAIN
 
 LocationBasedEvents:
+House(0x20,C24Ruins,6,15)
 Escape(0,6)
 Escape(0,7)
 Escape(0,8)
@@ -53,6 +55,15 @@ Tutorial:
 END_MAIN
 
 TrapData:
+TelliusTorchOn(28,9,5)
+TelliusTorchOn(14,10,5)
+TelliusTorchOff(20,14,9)
+TelliusTorchOff(31,20,9)
+TelliusTorchOff(28,6,9)
+TelliusTorchOff(19,5,9)
+TelliusTorchOff(9,1,9)
+TelliusTorchOff(11,20,9)
+TelliusTorchOff(29,13,9)
 ENDTRAP
 TrapData2:
 ENDTRAP
@@ -88,8 +99,14 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C24Hard:
-UNIT Dalst Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Lowlands Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+//dalst faction in main and upper areas
+UNIT Dalst Warrior 0x0 Level(7,Enemy,1) [30,8] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+//lowlands faction in village ruins and forest
+UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,14] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NeverMoveAI
+UNIT
+
+C24IneubrenosSpawn:
+UNIT BossIneubrenos SniperF 0x0 Level(17,Enemy,1) [6,15] DropItem 0x0 0x1 REDA6R17 [Ineubrenos] NoAI
 UNIT
 
 FreddricRejoin:
@@ -126,14 +143,23 @@ ArgentRejoin:
 UNIT Argent 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA20R19 [0x0] NoAI
 UNIT
 
+C24OpeningBlair:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [35,3] 0x0 0x0 0x1 REDA33R4 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [35,4] 0x0 0x0 0x1 REDA34R5 [IronBow] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
+LoadUnitsByDifficulty(C24Easy,C24Normal,C24Hard)
 ENUT GuideChpt24
 MUSC NarrationTheme5
 Narration(Map2CG,Ch24_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
-LoadUnitsByDifficulty(C24Easy,C24Normal,C24Hard)
+MUSC AmbientNight
+CleanText(LowlandsCG,C24_Opening)
+Reinforcements(C24OpeningBlair)
+Text(C24_Opening2)
+FADI 30
 LOAD1 0x0 C24Units
 ENUN
 GotoPrepScreen
@@ -145,6 +171,31 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter25)
 ENDA
+
+C24Pilgrim:
+Text(FillerDialogue)
+FADI 60
+VCWF 0x0
+SetUnitStatus(Yuyu,BowExp,1)
+VCWF 0x7
+FADU 60
+SystemText(C24YuyuBowRank)
+GiveItem(SorrowsPilgrim,Yuyu)
+EndEvent
+
+C24Ruins:
+CleanText(LowlandsCG,FillerDialogue)
+SystemText(C24SummonIneubrenos)
+IfNoSelectedGoto(0x3)
+Text(FillerDialogue)
+Reinforcements(C24IneubrenosSpawn)
+SetUnitStatus(BossIneubrenos, State, Acted)
+GOTO 0x2
+LABEL 0x3
+Text(FillerDialogue)
+ENUF 0x20
+LABEL 0x2
+EndEvent
 
 C24TheReturn:
 CHECK_ALIVE Freddric

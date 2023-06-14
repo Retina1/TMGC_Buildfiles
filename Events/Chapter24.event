@@ -257,12 +257,12 @@ OffAllUnitState(Freddric*0x100+Argent, Undeployed, AnyDeployed, AnyArmy, AnyClas
 CALL ohgodnotthis
 EndEvent
 
+#define TheGrandReturn(character1,character2,character3,textid) "CHECK_ALIVE character1; BEQ textid 0xc 0x0; CHECK_ALIVE character2; BEQ textid 0xc 0x0; CHECK_ALIVE character3; BEQ textid 0xc 0x0; Text(textid); SetSupport(character1,character2,BPSupport,0); SetSupport(character1,character3,BPSupport,0); SetSupport(character2,character3,BPSupport,0); GOTO TheFunnyLabel; LABEL textid"
+#define TheFunnyLabel 0xe
 ohgodnotthis://text branch hell
-MUSC 0x0
-//first check if fred's alive, if so, check if dean's alive, if so, check every fred/dean convo
-//if dean not alive, check fred/eliza, then fred/eliza/x, and so on
-//this'll be painful
-Text(FillerDialogue)
+MUSC RecruitmentThemeVirid
+TheGrandReturn(Freddric,Dean,Eliza,Ch24_FreddricDeanEliza)
+LABEL TheFunnyLabel
 EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

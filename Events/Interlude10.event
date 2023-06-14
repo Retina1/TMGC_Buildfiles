@@ -29,7 +29,48 @@ CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)
 END_MAIN
 
 LocationBasedEvents:
+Armory(I10SwordArmory,10,24)
+Armory(I10LanceArmory,7,25)
+Armory(I10AxeArmory,4,23)
+Armory(I10BowArmory,1,22)
+Vendor(I10AnimaVendor,25,22)
+Vendor(I10LightVendor,28,25)
+Vendor(I10DarkVendor,31,23)
+Vendor(I10StaffVendor,34,24)
 END_MAIN
+
+ALIGN 4
+I10SwordArmory:
+SHLI IronSword SteelSword SilverSword GildedSword BraveSword KillingEdge Lancereaver Lancesnapper Zanbato Armorslayer Rapier Wyrmslayer Shimmersword Kagutsuchi LevinSword LightBrand Runesword
+BYTE 0x0 0x0
+ALIGN 4
+I10LanceArmory:
+SHLI IronLance SteelLance SilverLance GildedLance BraveLance Javelin Spear KillerLance Axereaver Axebuster Horseslayer Shatterspear Dragonpike DousingLance Nuboko Shockstick
+BYTE 0x0 0x0
+ALIGN 4
+I10AxeArmory:
+SHLI IronAxe SteelAxe SilverAxe GildedAxe BraveAxe HandAxe Tomahawk KillerAxe Swordreaver Swordslayer Halberd Hammer Dracoaxe HereticAxe Ukonvasara VoidCleaver
+BYTE 0x0 0x0
+ALIGN 4
+I10BowArmory:
+SHLI IronBow SteelBow SilverBow GildedBow BraveBow KillerBow Longbow Greatbow Wardbow BarrierBow ShiningBow
+BYTE 0x0 0x0
+ALIGN 4
+I10AnimaVendor:
+SHLI Fire Thunder Elfire Fimbulvetr Flare Inversion Calibur Galewind Trisagion Cloudburst Sagittae
+BYTE 0x0 0x0
+ALIGN 4
+I10LightVendor:
+SHLI Lightning Shine Divine Aura Radiance Banish Pierce Smite JavelinRain LuxAurumque Resire
+BYTE 0x0 0x0
+ALIGN 4
+I10DarkVendor:
+SHLI Flux Nightfall Fenrir Nocturne Nosferatu Corruption Knoggelvi Jormungandr NoxAurumque Freikugel
+BYTE 0x0 0x0
+ALIGN 4
+I10StaffVendor:
+SHLI Heal Mend Recover Physic Fortify Restore Barrier Yoink Runeward Implant Vulnerary Elixir PureWater MasterSeal GoddessIcon SecretBook
+BYTE 0x0 0x0
 
 ALIGN 4
 

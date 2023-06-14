@@ -564,6 +564,8 @@
 	//already in table but leila/wilhelm where they hate on the army
 	//wilhelm/alexis - duh
 	//secret supports - agnes/bechamel, gaylord/sam
+	
+	//make every viridian support every other viridian for the return
 	//viridian
 		entry(Viridian,Freddric)
 			support(CSupport,1,0,0,0,0,5)
@@ -577,6 +579,15 @@
 			support(BSupport,0,2,10,0,0,20)//v1 innate
 			support(BPSupport,0,2,20,0,0,30)//v4
 			support(ASupport,0,3,30,0,0,40)
+	//chartreuse (viridian)
+		entry(Chartreuse,Estelle)
+			support(CSupport,0,0,10,0,10,0)
+			support(CPSupport,0,0,15,0,15,0)//v1 innate
+			support(BSupport,0,0,20,0,20,5)//v3
+			support(BPSupport,0,0,25,0,25,10)
+			support(ASupport,0,0,30,0,30,15)
+
+
 	//freddric (viridian)
 		entry(Freddric,Argent)
 			support(CSupport,0,0,0,0,0,10)
@@ -610,13 +621,6 @@
 			support(BSupport,3,3,0,0,0,0)//v2 innate
 			support(BPSupport,4,4,0,0,0,0)
 			support(ASupport,5,5,0,0,0,0)
-	//chartreuse (viridian)
-		entry(Chartreuse,Estelle)
-			support(CSupport,0,0,10,0,10,0)
-			support(CPSupport,0,0,15,0,15,0)//v1 innate
-			support(BSupport,0,0,20,0,20,5)//v3
-			support(BPSupport,0,0,25,0,25,10)
-			support(ASupport,0,0,30,0,30,15)
 	//rift
 		entry(Rift,Estelle)
 			support(CSupport,0,0,0,10,0,0)

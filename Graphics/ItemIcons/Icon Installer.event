@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(BigIronIcon)
+#incbin "BigIron.dmp"
+ALIGN 4
 ItemIconEntry(SorrowsPilgrimIcon)
 #incbin "Bows/{2WB} (Icon Blitz 1) Bodkin Arch.dmp"
 ALIGN 4

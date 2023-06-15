@@ -82,6 +82,7 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C27Hard:
+UNIT BladeGuy SwMast 0x0 Level(20,Enemy,1) [1,2] DropItem 0x0 0x0 0x0 [BigIron] NoAI
 UNIT Elite BowPal 0x0 Level(14,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NoAI
 UNIT Elite BowPal 0x0 Level(14,Enemy,1) [11,8] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NoAI
 UNIT Elite BowPal 0x0 Level(14,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NoAI
@@ -115,6 +116,8 @@ CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C27Easy,C27Normal,C27Hard)
 LOAD1 0x0 C27Units
 ENUN
+SetUnitStatus(BladeGuy,MaxHP,120)
+SetUnitStatus(BladeGuy,CurrentHP,120)
 GotoPrepScreen
 ENDA
 

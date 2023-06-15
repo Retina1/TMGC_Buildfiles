@@ -57,11 +57,16 @@ CharacterEventBothWays(0x11,C23TobiasDamienRecruitment,Tobias,Damien)
 CharacterEventBothWays(0x11,C23TobiasDamienRecruitment,EnemyTobias,Damien)
 CharacterEventBothWays(0x12,C23TobiasZachariasRecruitment,Tobias,Zacharias)
 CharacterEventBothWays(0x12,C23TobiasZachariasRecruitment,EnemyTobias,Zacharias)//all tobias recruits should also trigger flag 0x13
-//10 more flags for battle quotes
-//oh god we might need to dip into base flags and globals
-//pair specific death quotes that don't need flags thank god
-//tarquin battle quotes - generic, svelt, blair, kenneth, natasia, desmond, zeke, hyperius, dalstian
-//reynard battle quotes - generic
+//0x1b-27 for supports are open
+CharacterEventBothWays(0x1b,C23StefanJosefSupport,Stefan,Josef)//b+
+CharacterEventBothWays(0x1c,C23SamEmileSupport,Sam,Emile)//b+
+CharacterEventBothWays(0x1d,C23RachaelJeffSupport,Rachael,Jeff)//b+
+CharacterEventBothWays(0x1e,C23CassiusAthenaSupport,Cassius,Athena)//b
+CharacterEventBothWays(0x1f,C23EmileVladmirSupport,Emile,Vladmir)//c+
+CharacterEventBothWays(0x20,C23ApolloFlynnSupport,Apollo,Flynn)//b+
+CharacterEventBothWays(0x21,C23CharleyYuyuSupport,Charley,Yuyu)//c+
+CharacterEventBothWays(0x22,C23DamienZachariasSupport,Damien,Zacharias)//b+
+CharacterEventBothWays(0x23,C23ArtemisHollandaiseSupport,Artemis,Hollandaise)//c+
 END_MAIN
 
 LocationBasedEvents:
@@ -242,8 +247,55 @@ BNE 0x1 0xc 0x0
 ENUT BaseFlag1
 LABEL 0x1
 //kenneth base convo
+SupportFlagOn(Stefan,Josef,0x1b,BSupport)
+SupportFlagOn(Sam,Emile,0x1c,BSupport)
+SupportFlagOn(Rachael,Jeff,0x1d,BSupport)
+SupportFlagOn(Cassius,Athena,0x1e,CPSupport)
+SupportFlagOn(Emile,Vladmir,0x1f,CSupport)
+SupportFlagOn(Apollo,Flynn,0x20,BSupport)
+SupportFlagOn(Charley,Yuyu,0x21,CSupport)
+SupportFlagOn(Damien,Zacharias,0x22,BSupport)
+SupportFlagOn(Artemis,Hollandaise,0x23,CSupport)
 GotoPrepScreen
 ENDA
+
+C23StefanJosefSupport:
+Text(FillerDialogue)
+SetSupport(Stefan,Josef,BPSupport,1)
+EndEvent
+C23SamEmileSupport:
+Text(FillerDialogue)
+SetSupport(Sam,Emile,BPSupport,1)
+EndEvent
+C23RachaelJeffSupport:
+Text(FillerDialogue)
+SetSupport(Rachael,Jeff,BPSupport,1)
+EndEvent
+C23CassiusAthenaSupport:
+Text(FillerDialogue)
+SetSupport(Cassius,Athena,BSupport,1)
+EndEvent
+C23EmileVladmirSupport:
+Text(FillerDialogue)
+SetSupport(Emile,Vladmir,CPSupport,1)
+EndEvent
+C23ApolloFlynnSupport:
+Text(FillerDialogue)
+SetSupport(Apollo,Flynn,BPSupport,1)
+EndEvent
+C23CharleyYuyuSupport:
+Text(FillerDialogue)
+SetSupport(Charley,Yuyu,CPSupport,1)
+EndEvent
+C23DamienZachariasSupport:
+Text(FillerDialogue)
+SetSupport(Damien,Zacharias,BPSupport,1)
+EndEvent
+C23ArtemisHollandaiseSupport:
+Text(FillerDialogue)
+SetSupport(Artemis,Hollandaise,CPSupport,1)
+EndEvent
+
 
 C23Turn1Stuff:
 CAM1 Neillstrom

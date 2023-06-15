@@ -134,7 +134,7 @@
 			support(CSupport,0,0,0,0,5,0)//c7
 			support(CPSupport,0,0,0,0,10,0)//c12
 			support(BSupport,0,0,0,0,15,0)//c19
-			support(BPSupport,0,0,0,0,20,0)
+			support(BPSupport,0,0,0,0,20,0)//c23 in battle
 			support(ASupport,0,0,0,0,25,0)
 		entry(Stefan,Carbon)
 			support(CSupport,0,0,0,0,0,5)//c15
@@ -178,7 +178,7 @@
 			support(CSupport,0,0,10,0,0,0)//c10
 			support(CPSupport,0,0,10,0,5,0)//c16
 			support(BSupport,0,0,15,0,10,0)//c19
-			support(BPSupport,0,0,20,0,15,0)
+			support(BPSupport,0,0,20,0,15,0)//c23 in battle
 			support(ASupport,0,0,20,0,25,0)			//lover convo?
 		entry(Sam,Bechamel)
 			support(CSupport,1,0,0,0,0,0)//c12
@@ -254,7 +254,7 @@
 			support(CSupport,0,0,0,0,0,0)//c10
 			support(CPSupport,0,0,5,0,0,0)//c15 in battle
 			support(BSupport,0,0,15,0,0,0)//c20
-			support(BPSupport,0,0,30,10,0,0)
+			support(BPSupport,0,0,30,10,0,0)//c23 in battle
 			support(ASupport,0,0,30,30,0,0)
 		entry(Rachael,Hyperius)
 			support(CSupport,0,1,0,0,0,0)//c15
@@ -278,7 +278,7 @@
 		entry(Cassius,Athena)
 			support(CSupport,0,0,10,0,0,0)//c16
 			support(CPSupport,0,1,10,0,0,0)//c20
-			support(BSupport,0,1,15,0,0,0)
+			support(BSupport,0,1,15,0,0,0)//c23 in battle
 			support(BPSupport,0,1,20,0,0,5)
 			support(ASupport,0,2,20,0,0,10)
 		entry(Cassius,Zeke)
@@ -302,7 +302,7 @@
 			support(ASupport,2,2,20,0,0,15)
 		entry(Emile,Vladmir)
 			support(CSupport,0,0,0,0,0,10)//c19
-			support(CPSupport,0,1,0,0,0,15)
+			support(CPSupport,0,1,0,0,0,15)//c23 in battle
 			support(BSupport,0,2,0,0,0,25)
 			support(BPSupport,0,2,15,0,0,40)
 			support(ASupport,0,3,25,0,0,50)
@@ -336,7 +336,7 @@
 			support(CSupport,1,0,0,0,0,5)//c13
 			support(CPSupport,1,0,5,0,0,10)//c17 battle
 			support(BSupport,2,0,15,0,0,10)//c20 battle
-			support(BPSupport,2,0,25,0,0,10)
+			support(BPSupport,2,0,25,0,0,10)//c23 battle
 			support(ASupport,3,1,25,0,0,10)			//lover convo?
 		entry(Apollo,Charley)
 			support(CSupport,0,0,10,0,0,0)//c15
@@ -414,7 +414,7 @@
 			support(ASupport,0,0,0,0,50,0)
 		entry(Charley,Yuyu)
 			support(CSupport,1,0,5,0,0,0)//c19 in battle
-			support(CPSupport,1,0,10,0,5,0)
+			support(CPSupport,1,0,10,0,5,0)//c23 in battle
 			support(BSupport,2,0,10,0,10,0)
 			support(BPSupport,2,0,15,0,20,0)
 			support(ASupport,2,0,15,0,30,0)
@@ -475,7 +475,7 @@
 			support(CSupport,1,0,0,0,0,0)//base
 			support(CPSupport,1,0,10,0,0,0)//c17 base
 			support(BSupport,2,0,10,0,0,0)//c19 battle
-			support(BPSupport,2,0,15,0,0,5)
+			support(BPSupport,2,0,15,0,0,5)//c23 battle
 			support(ASupport,2,0,25,0,0,10)
 		entry(Damien,Tobias)	
 			support(CSupport,1,0,0,0,0,0)
@@ -508,7 +508,7 @@
 	//artemis (alexis)
 		entry(Artemis,Hollandaise)
 			support(CSupport,1,0,0,0,0,0)//c20
-			support(CPSupport,2,0,0,0,0,0)
+			support(CPSupport,2,0,0,0,0,0)//c23 battle
 			support(BSupport,2,0,10,0,0,0)
 			support(BPSupport,2,0,20,0,10,0)
 			support(ASupport,3,0,25,0,10,0)

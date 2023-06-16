@@ -1,6 +1,6 @@
-#define AlwaysDeathQuote(arg000,arg001,arg002) "BYTE arg000 0x0 0xff 0xff arg001 0x0 ;SHORT arg002 ;WORD 0x0 "
-#define ChapterDeathQuote(arg000,arg001,arg002,arg003) "BYTE arg000 0x0 0xff arg001 arg002 0x0 ;SHORT arg003 ;WORD 0x0 "
-#define KillerDeathQuote(arg000,arg001,arg002,arg003,arg004) "BYTE arg000 arg001 0xff arg002 arg003 0x0 ;SHORT arg004 ;WORD 0x0 "
+#define AlwaysDeathQuote(arg000,arg001,arg002) "BYTE arg000 0x0 0xff 0xff; SHORT arg001;SHORT arg002 ;WORD 0x0 "
+#define ChapterDeathQuote(arg000,arg001,arg002,arg003) "BYTE arg000 0x0 0xff arg001; SHORT arg002 ;SHORT arg003 ;WORD 0x0 "
+#define KillerDeathQuote(arg000,arg001,arg002,arg003,arg004) "BYTE arg000 arg001 0xff arg002; SHORT arg003;SHORT arg004 ;WORD 0x0 "
 #define EndDeathQuote "BYTE 0xff 0xff 0x0 0x0 0x0 0x0 ;SHORT 0x0 ;WORD 0x0 "
 #define DefeatBossFlag 0x2
 #define GameOverFlag 0x65
@@ -119,6 +119,18 @@ ChapterDeathQuote(Peter,Chapter22,0xa,EnemyPeterDeath)
 ChapterDeathQuote(Fiora,Chapter22,DefeatBossFlag,C22FioraDeath)
 // c23
 ChapterDeathQuote(DLReynard,Chapter23,0x0,C23DLReynardDeath)
+
+KillerDeathQuote(EnemyJoan,Mikey,Chapter23,BaseFlag2,C23MikeyDefeatsJoan)
+KillerDeathQuote(EnemyJoan,Carbon,Chapter23,BaseFlag2,C23CarbonDefeatsJoan)
+KillerDeathQuote(EnemyJoan,Sonia,Chapter23,BaseFlag2,C23SoniaDefeatsJoan)
+KillerDeathQuote(EnemyJoan,Tobias,Chapter23,BaseFlag2,C23TobiasDefeatsJoan)
+KillerDeathQuote(EnemySonia,Mikey,Chapter23,BaseFlag3,C23MikeyDefeatsSonia)
+KillerDeathQuote(EnemySonia,Joan,Chapter23,BaseFlag3,C23JoanDefeatsSonia)
+KillerDeathQuote(EnemySonia,Tobias,Chapter23,BaseFlag3,C23TobiasDefeatsSonia)
+KillerDeathQuote(EnemyTobias,Damien,Chapter23,BaseFlag4,C23DamienDefeatsTobias)
+KillerDeathQuote(EnemyTobias,Zacharias,Chapter23,BaseFlag4,C23ZachariasDefeatsTobias)
+KillerDeathQuote(EnemyTobias,Joan,Chapter23,BaseFlag4,C23JoanDefeatsTobias)
+KillerDeathQuote(EnemyTobias,Sonia,Chapter23,BaseFlag4,C23SoniaDefeatsTobias)
 ChapterDeathQuote(EnemyJoan,Chapter23,0xd,EnemyJoanDeath)
 ChapterDeathQuote(EnemySonia,Chapter23,0xf,EnemySoniaDeath)
 ChapterDeathQuote(EnemyTobias,Chapter23,0x13,EnemyTobiasDeath)

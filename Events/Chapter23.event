@@ -214,6 +214,16 @@ C23OpeningTarquin:
 UNIT 0xa3 WyvLord 0x0 Level(17,Enemy,1) [12,18] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk,ZoryaShield] GroupOnePaceAI
 UNIT
 
+C23EndingJoan:
+UNIT Joan HeroF 0x0 Level(11,Enemy,0) [6,13] 0x0 0x0 0x0 0x0 [SilverSword,BraveAxe,Tomahawk] NoAI
+UNIT
+C23EndingSonia:
+UNIT Sonia HalberdierF 0x0 Level(13,Enemy,0) [26,1] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NoAI
+UNIT
+C23EndingTobias:
+UNIT Tobias Warrior 0x0 Level(16,Enemy,0) [26,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Longbow] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -339,6 +349,8 @@ LABEL 0x1
 Text(C23SoniaRecruitsJoan)//joan unrecruited
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
+SVAL 0x1 0x00000000
+CHAI Joan
 GOTO 0x4
 LABEL 0x2
 Text(C23JoanRecruitsSonia)//sonia unrecruited
@@ -366,7 +378,8 @@ LABEL 0x1
 Text(C23TobiasRecruitsJoan)//joan unrecruited
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
-GOTO 0x4
+SVAL 0x1 0x00000000
+CHAI Joan
 LABEL 0x2
 Text(C23JoanRecruitsTobias)//tobias unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
@@ -432,6 +445,8 @@ BNE 0x1 0xc 0x0
 Text(C23MikeyRecruitsJoan)//unrecruited
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
+SVAL 0x1 0x00000000
+CHAI Joan
 ENUT 0xd
 GOTO 0x2
 LABEL 0x1
@@ -451,6 +466,8 @@ Text(C23CarbonRecruitsJoanAlt)//mikey dead
 LABEL 0x2
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
+SVAL 0x1 0x00000000
+CHAI Joan
 EndEvent
 
 C23TobiasLeilaRecruitment:
@@ -515,7 +532,6 @@ LABEL 0x11
 EndEvent
 
 EndingScene:
-ResetBaseFlags
 MUSC S_Nightfall
 CleanTextNoMap(EastHolanisCG,C23_Ending)
 CHECK_EVENTID KennethTarquinKillFlag
@@ -524,12 +540,36 @@ CHECK_ALIVE Kenneth
 BEQ 0x20 0xc 0x0
 CleanTextNoMap(EastHolanisCG,C23_EndingKenneth)
 LABEL 0x20
+//secret recruit methods
+CHECK_EVENTID BaseFlag2
+BEQ 0x30 0xc 0x0
+	LOAD1 0x1 C23EndingJoan
+	ENUN
+	TurnAlly(Joan)
+	CleanTextNoMap(EastHolanisCG,C23JoanPostBattle)
+LABEL 0x30
+CHECK_EVENTID BaseFlag3
+BEQ 0x31 0xc 0x0
+	LOAD1 0x1 C23EndingSonia
+	ENUN
+	TurnAlly(Sonia)
+	CleanTextNoMap(EastHolanisCG,C23SoniaPostBattle)
+LABEL 0x31
+CHECK_EVENTID BaseFlag4
+BEQ 0x32 0xc 0x0
+	LOAD1 0x1 C23EndingTobias
+	ENUN
+	TurnAlly(Tobias)
+	CleanTextNoMap(EastHolanisCG,C23TobiasPostBattle)
+LABEL 0x32
 LocationText(HallCG, C23_Ending2,ArbordiaMeetingHallLabel,S_Chaos)
+//the funny
 CheckForItem(UnknownPage)
 BEQ 0x1 0xc 0x0
 AnnihilateItem(UnknownPage)
 SilentGiveItem(TheSDarkTome)
 LABEL 0x1
+//support shit
 CHECK_ALIVE Joan
 BEQ 0x10 0xc 0x0
 CHECK_ALIVE Sonia
@@ -548,13 +588,8 @@ CHECK_ALIVE Sonia
 BEQ 0x12 0xc 0x0
 SetSupport(Tobias,Sonia,BSupport,0)
 LABEL 0x12
+ResetBaseFlags
 MoveToChapter(Chapter24)
 ENDA
-
-/*put this in sonia's recruit kthx
-SVAL 0x1 0x00040000
-CHAI Sonia
-LABEL 0x1
-EndEvent*/
 
 //MESSAGE Events end at offset CURRENTOFFSET

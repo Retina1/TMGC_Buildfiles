@@ -22,6 +22,7 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C24TheReturn,3)
+TurnEventPlayer(0x65,C24OutOfTime,21)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -196,6 +197,12 @@ Text(FillerDialogue)
 ENUF 0x20
 LABEL 0x2
 EndEvent
+
+C24OutOfTime:
+Text(FillerDialogue)
+StartGameOver
+EndEvent
+
 
 C24TheReturn:
 CHECK_ALIVE Freddric

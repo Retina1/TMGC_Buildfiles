@@ -1,52 +1,31 @@
 .thumb
-.equ ItemTable, SkillTester+4
-.equ HolyAuraID, ItemTable+4
+.equ HolyAuraID, SkillTester+4
+.equ gBattleData, 0x203A4D4
 
 push {r4-r7, lr}
 mov r4, r0 @atkr
 mov r5, r1 @dfdr
 
-mov r0,#0x1e
-ldrb r0,[r4,r0] @ItemID
-ldr r1,ItemTable
-mov r2,#36
-mul r2,r0
-add r1,r2
-ldrb r1,[r1,#0x7]
-cmp r1,#0x6
-bne End
-
-
-
-@has HolyAura
 ldr r0, SkillTester
 mov lr, r0
-mov r0, r4 @defender data
+mov r0, r4 @attacker data
 ldr r1, HolyAuraID
 .short 0xf800
 cmp r0, #0
 beq End
 
+@check light
+mov	r1,#0x50
+ldrb r0,[r4,r1] @weapon type
+cmp r0,#0x6
+bne End
 
-
-mov r1, #0x5a
-ldrh r0, [r4, r1]
-add r0, #1
-strh r0, [r4,r1]
-
-mov r1, #0x60
-ldrh r0, [r4, r1]
-add r0, #5
-strh r0, [r4,r1]
-
-mov r1, #0x62
-ldrh r0, [r4, r1]
-add r0, #5
-strh r0, [r4,r1]
-
+mov r1, #0x2c
+ldrh r2, [r4, r1]
+lsr r2,#0x2
 mov r1, #0x66
 ldrh r0, [r4, r1]
-add r0, #5
+add r0,r0,r2
 strh r0, [r4,r1]
 
 End:

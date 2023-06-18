@@ -1,10 +1,4 @@
-
 #define ArmsScrollEffectID 0x46
-
-/*
-## ArmsScrollPopupText
-Ranks increased.[X]
-*/
 
 ALIGN 4
 ArmsScrollPopup:
@@ -32,10 +26,3 @@ WORD ArmsScrollPopupText
 #define ArmsScrollTargetting 0x2905C
 #define ArmsScrollPrepScreenUsability ArmsScrollPrepScreenUsabilityFunc
 #define ArmsScrollPrepScreenEffect ArmsScrollPrepScreenEffectFunc
-
-/*PUSH
-	ORG IERevampTable + (ArmsScrollEffectID * 16)
-	POIN ArmsScrollUsability ArmsScrollPrepScreenUsability ArmsScrollTargetting ArmsScrollEffect
-	ORG IBArray + (ArmsScrollEffectID * 4)
-	POIN ArmsScrollPrepScreenEffect
-POP*/

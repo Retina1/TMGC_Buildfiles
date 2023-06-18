@@ -1,3 +1,9 @@
+//dancer ring
+PUSH
+ORG 0x16ed0
+SHORT 0x2900
+POP
+
 //Change Y location of map sprite in statscreen
 //On load
 PUSH

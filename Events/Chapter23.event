@@ -25,17 +25,21 @@ TurnEventPlayer(0x0,C23Turn1Stuff,1)
 TurnEventPlayer(0x0,C23SouthWestSpawn,3)
 TurnEventPlayer(0x0,C23NorthEastSpawn,4)
 TurnEventPlayer(0x0,C23NorthSpawn,5)
+TurnEventPlayer(0x0,C23EastSpawn,6)
 TurnEventPlayer(0x0,C23SouthSpawn,7)
-TurnEventPlayer(0x0,C23SouthWestSpawn,9)
-TurnEventPlayer(0x0,C23NorthEastSpawn,10)
+TurnEventPlayer(0x0,C23SouthWestSpawn,8)
+TurnEventPlayer(0x0,C23NorthEastSpawn,9)
 TurnEventPlayer(0x0,C23NorthSpawn,10)
+TurnEventPlayer(0x0,C23EastSpawn,11)
 TurnEventPlayer(0x0,C23SouthWestSpawn,12)
 TurnEventPlayer(0x0,C23NorthEastSpawn,13)
 TurnEventPlayer(0x0,C23NorthSpawn,14)
 TurnEventPlayer(0x0,C23SouthWestSpawn,15)
-TurnEventPlayer(0x0,C23SouthSpawn,16)
-TurnEventPlayer(0x0,C23SouthWestSpawn,16)
-TurnEventPlayer(0x0,C23NorthEastSpawn,16)
+TurnEventPlayer(0x0,C23NorthSpawn,16,3)
+TurnEventPlayer(0x0,C23SouthSpawn,16,3)
+TurnEventPlayer(0x0,C23SouthWestSpawn,16,3)
+TurnEventPlayer(0x0,C23NorthEastSpawn,16,3)
+TurnEventPlayer(0x0,C23EastSpawn,16,3)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -44,11 +48,14 @@ CharacterEventBothWays(0xa,C23JoanMikeyRecruitment,Joan,Mikey)
 CharacterEventBothWays(0xa,C23JoanMikeyRecruitment,EnemyJoan,Mikey)
 CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,EnemyJoan,Sonia)
 CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,Joan,EnemySonia)
+CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,Joan,Sonia)
 CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,EnemyJoan,Tobias)
 CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,Joan,EnemyTobias)
+CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,Joan,Tobias)
 CharacterEvent(0xd,C23JoanCarbonRecruitment,Carbon,EnemyJoan)
 CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,EnemySonia,Tobias)
 CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,Sonia,EnemyTobias)
+CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,Sonia,Tobias)
 CharacterEvent(0xf,C23SoniaDesmondRecruitment,Desmond,EnemySonia)
 CharacterEvent(0xf,C23SoniaMikeyRecruitment,Mikey,EnemySonia)
 CharacterEventBothWays(0x10,C23TobiasLeilaRecruitment,Tobias,Leila)
@@ -294,6 +301,12 @@ UNIT Remnant Sorc 0x0 Level(6,Enemy,1) [14,30] 0x0 0x0 0x1 REDA14R29 [Corruption
 UNIT Remnant WyvLord 0x0 Level(6,Enemy,1) [15,30] 0x0 0x0 0x1 REDA15R28 [SilverAxe] NoAI
 UNIT
 
+C23EasternSpawn:
+UNIT Remnant AxeGen 0x0 Level(6,Enemy,1) [26,7] 0x0 0x0 0x1 REDA25R7 [Hammer] NoAI
+UNIT Remnant SwdGen 0x0 Level(6,Enemy,1) [26,8] 0x0 0x0 0x1 REDA26R8 [Rapier] NoAI
+UNIT Remnant LncGen 0x0 Level(6,Enemy,1) [26,9] 0x0 0x0 0x1 REDA25R9 [Horseslayer] NoAI
+UNIT
+
 C23OpeningBlair:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [26,28] 0x0 0x0 0x1 REDA23R26 [Fire, Awaken, Vulnerary] NoAI
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [26,30] 0x0 0x0 0x1 REDA24R25  [IronBow] NoAI
@@ -425,6 +438,9 @@ Reinforcements(C23NorthernSpawn)
 EndEvent
 C23SouthSpawn:
 Reinforcements(C23SouthernSpawn)
+EndEvent
+C23EastSpawn:
+Reinforcements(C23EasternSpawn)
 EndEvent
 
 C23JoanSoniaRecruitment:

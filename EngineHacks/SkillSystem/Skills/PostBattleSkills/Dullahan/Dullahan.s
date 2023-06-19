@@ -37,6 +37,13 @@ mov	lr, r3
 .short	0xf800
 cmp	r0,#0x00
 beq	SkillEnd
+@check for tension
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0xb4 @holy mantle flag
+.short 0xF800
+cmp r0,#1
+beq	SkillEnd
 
 ldrb r0, [r4, #0x12] @maxhp
 strb r0, [r4, #0x13] @currhp

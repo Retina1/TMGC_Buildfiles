@@ -118,8 +118,37 @@ strb    r0, [r5]//mag
 sub r5,#0x3a
 ldrb    r0,[r6,#0x1D]//move
 strb    r0,[r5,#0x1D]//move
-ldr     r0,[r6,#0x28]//Sw Ln Ax Bw Wrank
-str     r0,[r5,#0x28]//Sw Ln Ax Bw Wrank
+add r6,#0x28
+ldrb    r0, [r6]//swd
+sub r6,#0x28
+add r5,#0x28
+strb    r0, [r5]//swd
+sub r5,#0x28
+add r6,#0x29
+ldrb    r0, [r6]//lnc
+sub r6,#0x29
+add r5,#0x29
+strb    r0, [r5]//lnc
+sub r5,#0x29
+add r6,#0x2a
+ldrb    r0, [r6]//axe
+sub r6,#0x2a
+add r5,#0x2a
+strb    r0, [r5]//axe
+sub r5,#0x2a
+add r5,#0x2b
+ldrb    r0, [r5]//bow
+sub r5,#0x2b
+cmp r0,#0xfb
+beq SkipBow
+add r6,#0x2b
+ldrb    r0, [r6]//bow
+sub r6,#0x2b
+add r5,#0x2b
+strb    r0, [r5]//bow
+sub r5,#0x2b
+
+SkipBow:
 ldr     r0,[r6,#0x2C]//St An Lt Dk Wrank
 str     r0,[r5,#0x2C]//St An Lt Dk Wrank
 

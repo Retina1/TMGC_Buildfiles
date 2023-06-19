@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C12Notice,1)
 TurnEventPlayer(0x23,C12AIChange,1,255)
 TurnEventPlayer(0x0,C12Turn9,9)
 END_MAIN
@@ -230,7 +231,28 @@ LABEL 0x22
 GotoPrepScreen
 ENDA
 
+#define UnkillUnit(flagid,unkillunitid) "CHECK_EVENTID flagid; BEQ flagid 0xc 0x0; OffAllUnitState(unkillunitid*0x100+unkillunitid, Dead, Dead, 0xff, 0xff, 0xff, 0xff); LABEL flagid"
+
 EndingScene:
+UnkillUnit(0x8,Arin)
+UnkillUnit(0x9,Kenneth)
+UnkillUnit(0xb,Natasia)
+UnkillUnit(0xc,Stefan)
+UnkillUnit(0xd,Desmond)
+UnkillUnit(0xe,Sam)
+UnkillUnit(0xf,Josef)
+UnkillUnit(0x10,Peggy)
+UnkillUnit(0x11,Butch)
+UnkillUnit(0x12,Cassius)
+UnkillUnit(0x13,Rachael)
+UnkillUnit(0x14,Jeff)
+UnkillUnit(0x15,Emile)
+UnkillUnit(0x16,Apollo)
+UnkillUnit(0x17,Bechamel)
+UnkillUnit(0x18,Sveltzalus)
+UnkillUnit(0x19,Agnes)
+UnkillUnit(0x1d,Hilbert)
+UnkillUnit(0x1e,Flynn)
 ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(HallCG,Ch12_Ending)
@@ -240,6 +262,10 @@ GiveMoney(0x2710)
 LocationText(BlankCG,Ch12_Ending3,UnknownLocationLabel,S_Chaos)
 MoveToChapter(Interlude4)
 ENDA
+
+C12Notice:
+SystemText(Ch12CasualNote)
+EndEvent
 
 C12FlynnRecruitment:
 EVBIT_MODIFY 3

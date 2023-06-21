@@ -53,7 +53,7 @@ Brave Bow,NBraveBow,DBraveBow,UBraveBow,0x32,0x3,IsWeapon|IsBrave,0x0,FlierEffec
 Barrier Bow,NBarrierBow,DBarrierBow,UBarrierBow,0x33,0x3,IsWeapon,0x0,FlierEffectiveness|IsPointer,40,14,120,5,0,0x22,250,ARank,BarrierBowIcon,0x0,NoEffect,1,0x0,0x0,BarrierEffectID
 Longbow,NLongbow,DLongbow,ULongbow,0x34,0x3,IsWeapon,0x0,FlierEffectiveness|IsPointer,20,10,85,9,0,0x23,60,CRank,LongbowIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Arch Ballista,NArchBallista,DArchBallista,UMiniBallista,0x35,0x3,IsWeapon|Uncounterable|Indestructible,0x0,FlierEffectiveness|IsPointer,3,16,80,20,0,0x3c,0,ERank,ArchBallistaIcon,0x0,CannotDoubleEffect,4,0x0,0x0,0x0
-Beelista,NBeelista,DBeelista,UBeelista,0x36,0x3,IsWeapon|Uncounterable|PtolemyLocked,0x0,FlierEffectiveness|IsPointer,10,12,85,15,10,0x37,0,NoRank,BeelistaIcon,0x0,CannotDoubleEffect,4,0x0,0x0,0x0
+Beelista,NBeelista,DBeelista,UBeelista,0x36,0x3,IsWeapon|Uncounterable|PtolemyLocked,0x0,FlierEffectiveness|IsPointer,10,12,85,15,10,0x37,1000,NoRank,BeelistaIcon,0x0,CannotDoubleEffect,4,0x0,0x0,0x0
 Mini Ballista,NMiniBallista,DMiniBallista,UMiniBallista,0x37,0x3,IsWeapon|Uncounterable|Indestructible,0x0,FlierEffectiveness|IsPointer,5,7,90,20,0,0x38,0,ERank,MiniBallistaIcon,0x0,CannotDoubleEffect,4,0x0,0x0,0x0
 Fire,NFire,DFire,UFire,0x38,0x5,IsWeapon|IsMagic,0x0,0x0,50,8,95,1,0,0x12,8,ERank,FireIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Thunder,NThunder,DThunder,UThunder,0x39,0x5,IsWeapon|IsMagic,0x0,0x0,40,11,85,3,0,0x12,20,DRank,ThunderIcon,0x0,NoEffect,1,0x0,0x0,0x0
@@ -168,7 +168,7 @@ Partisan,NPartisan,DPartisan,UPartisan,0xa5,0x1,IsWeapon|Unsellable|ZekeLocked,0
 Mine Staff,NMine,DMine,UMine,0xa6,0x4,IsStaff,0x0,0x0,5,0,100,2,30,0x15,1000,BRank,MineStaffIcon,0x44,NoEffect,4,0x0,0x0,0x0
 Evil Eye,NEvilEye,DEvilEye,USlam,0xa7,0x7,IsWeapon|Indestructible|SveltzalusLocked|IsMagic|Unsellable,0x0,0x0,0,9,90,5,0,0x12,0,NoRank,EvilEyeIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Slam,NSlam,DSlam,USlam,0xa8,0xb,IsWeapon|Indestructible|SveltzalusLocked|Unsellable,0x0,0x0,0,11,95,2,0,0x11,0,NoRank,SlamIcon,0x0,NoEffect,0,0x0,0x0,0x0
-Beecurve Bow,NBeecurveBow,DBeecurveBow,UBeecurveBow,0xa9,0x3,IsWeapon|PtolemyLocked,0x0,FlierEffectiveness|IsPointer,40,14,95,5,30,0x22,70,NoRank,BeecurveBowIcon,0x0,NoEffect,2,0x0,0x0,0x0
+Beecurve Bow,NBeecurveBow,DBeecurveBow,UBeecurveBow,0xa9,0x3,IsWeapon|PtolemyLocked,0x0,FlierEffectiveness|IsPointer,40,14,95,5,30,0x22,140,NoRank,BeecurveBowIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Wardwood,NWardwood,DWardwood,UGrowthBooster,0xaa,0x9,PassiveBoosts|Indestructible,WardwoodBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,WardwoodIcon,0x0,NoEffect,0,0x0,1,0x0
 Live Goose,NLiveGoose,DLiveGoose,UGrowthBooster,0xab,0x9,PassiveBoosts|Indestructible,LiveGooseBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,LiveGooseIcon,0x0,NoEffect,0,0x0,1,0x0
 Mercury Boots,NMercuryBoots,DMercuryBoots,UGrowthBooster,0xac,0x9,PassiveBoosts|Indestructible,MercuryBootsBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,MercuryBootsIcon,0x0,NoEffect,0,0x0,1,0x0

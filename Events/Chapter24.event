@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C24Turn1,1)
 TurnEventPlayer(0x0,C24TheReturn,3)
 TurnEventPlayer(0x65,C24OutOfTime,21)
 END_MAIN
@@ -56,6 +57,7 @@ Tutorial:
 END_MAIN
 
 TrapData:
+TelliusTorchOn(5,7,3)
 TelliusTorchOn(28,9,5)
 TelliusTorchOn(14,10,5)
 TelliusTorchOff(20,14,9)
@@ -103,6 +105,8 @@ C24Hard:
 //dalst faction in main and upper areas
 UNIT Dalst Warrior 0x0 Level(7,Enemy,1) [30,8] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Dalst Bishop 0x0 Level(7,Enemy,1) [31,10] DropItem 0x0 0x0 0x0 [Aura,ThiefStaff,Scripture] NoAI
+UNIT Mason Valk 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [LightBrand,GildedSword,Sleep,AngelWings] AttackInRangeAI
+UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips?
 //lowlands faction in village ruins and forest
 UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,14] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NeverMoveAI
 UNIT
@@ -155,8 +159,8 @@ ALIGN 4
 BeginningScene:
 LoadUnitsByDifficulty(C24Easy,C24Normal,C24Hard)
 ENUT GuideChpt24
-MUSC NarrationTheme5
 LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
+MUSC NarrationTheme5
 Narration(Map2CG,Ch24_Narration)
 MUSC AmbientNight
 CleanText(LowlandsCG,C24_Opening)
@@ -174,6 +178,17 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter25)
 ENDA
+
+C24Turn1:
+FlashCursor(EnemyElcorian,60)
+MUSC S_Chaos
+Text(FillerDialogue)
+CLEAN
+MOVE 60 EnemyElcorian [0,7]
+ENUN
+SilentKillUnit(EnemyElcorian)
+ENUN
+EndEvent
 
 C24Pilgrim:
 Text(FillerDialogue)

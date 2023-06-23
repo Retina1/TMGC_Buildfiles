@@ -27,10 +27,15 @@ ReadyAimBonus:
 #incbin "ReadyAim/ReadyAim.dmp"
 
 ALIGN 4
+CreatorBonus:
+#incbin "Creator/Creator.dmp"
+
+ALIGN 4
 RangeSkillList:
 RangeSkill(BowRangeUpID, BowRangeBonus|1)
 RangeSkill(ReadyAimID, ReadyAimBonus|1)
 RangeSkill(StaffSavantID, StaffSavantBonus|1)
 RangeSkill(PointBlankID, PointBlankBonus|1)
 RangeSkill(TomeRangeUpID, TomeRangeBonus|1)
+RangeSkill(CreatorSkillID, CreatorBonus|1)
 RangeSkill(0,0)	//End of list

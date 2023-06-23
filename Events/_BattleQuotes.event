@@ -147,8 +147,6 @@ SpecifiedBattleConvo(Manfred,Ciraweiss,ChapterV5,0xc,V5CiraweissManfredBattle)
 SpecifiedBattleConvo(Argent,Ciraweiss,ChapterV5,0xd,V5CiraweissArgentBattle)
 UnspecifiedBattleConvo(Ciraweiss,ChapterV5,0x1,V5CiraweissBattle)
 //c21
-//have 27, 28, base flags 2-8
-//horatio, kenneth, blair, yuyu, arin, zeke, artemis, stefan, desmond
 SpecifiedBattleConvo(Sveltzalus,Larson,Chapter21,0x18,C21LarsonSveltzalusBattle)
 UnspecifiedBattleConvo(Larson,Chapter21,0x1c,C21LarsonBattle)
 SpecifiedBattleConvo(Johan,Nathaniel,Chapter21,0x18,C21NathanielJohanBattle)
@@ -166,7 +164,6 @@ SpecifiedBattleConvo(Desmond,Nathaniel,Chapter21,BaseFlag7,C21NathanielDesmondBa
 SpecifiedBattleConvo(Zeke,Nathaniel,Chapter21,BaseFlag8,C21NathanielZekeBattle)
 UnspecifiedBattleConvo(Nathaniel,Chapter21,0x1,C21NathanielBattle)
 //c22
-//have 20-28, base flags
 //hunter for todd (also give a hunter killing todd line)
 UnspecifiedBattleConvo(Liam,Chapter22,0xd,AllyLiamBattle)
 SpecifiedBattleConvo(Horatio,Liam,Chapter22,0x20,LiamHoratioBattle)
@@ -182,9 +179,9 @@ SpecifiedBattleConvo(Sveltzalus,Fiora,Chapter22,0x10,C22FioraSveltzalusBattle)
 UnspecifiedBattleConvo(Fiora,Chapter22,0x1,C22FioraBattle)
 //c23
 UnspecifiedBattleConvo(Reynard,Chapter23,0x24,C23DLReynardBattle)
-UnspecifiedBattleConvo(Joan,Chapter23,0x25,C23JoanBattle)
-UnspecifiedBattleConvo(Sonia,Chapter23,0x26,C23SoniaBattle)
-UnspecifiedBattleConvo(Tobias,Chapter23,0x27,C23TobiasBattle)
+UnspecifiedBattleConvo(EnemyJoan,Chapter23,0x25,C23JoanBattle)
+UnspecifiedBattleConvo(EnemySonia,Chapter23,0x26,C23SoniaBattle)
+UnspecifiedBattleConvo(EnemyTobias,Chapter23,0x27,C23TobiasBattle)
 SpecifiedBattleConvo(Sveltzalus,Neillstrom,Chapter23,0x14,C23TarquinSveltzalusBattle)
 SpecifiedBattleConvo(Desmond,Neillstrom,Chapter23,0x15,C23TarquinDesmondBattle)
 SpecifiedBattleConvo(Hyperius,Neillstrom,Chapter23,0x16,C23TarquinHyperiusBattle)

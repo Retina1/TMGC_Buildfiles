@@ -271,6 +271,12 @@ POIN SkillTester
 WORD TowerShieldPlusID
 
 ALIGN 4
+OutdoorFighter:
+#incbin "TowerShieldPlus/TowerShieldPlus.dmp"
+POIN SkillTester
+WORD CreatorSkillID
+
+ALIGN 4
 TraceSkill:
 #incbin "Trace/trace.dmp"
 POIN SkillTester

@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(TheCreatorIcon)
+#incbin "TheCreator.dmp"
+ALIGN 4
 ItemIconEntry(ScriptureIcon)
 #incbin "Scripture.dmp"
 ALIGN 4

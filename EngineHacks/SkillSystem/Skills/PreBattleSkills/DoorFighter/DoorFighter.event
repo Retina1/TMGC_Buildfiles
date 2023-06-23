@@ -6,12 +6,12 @@ POIN SkillTester
 WORD IndoorFighterID
 POIN IndoorTerrainList
 
-ALIGN 4
+/*ALIGN 4
 OutdoorFighter:
 #incbin "OutdoorFighter.dmp"
 POIN SkillTester
 WORD OutdoorFighterID
-POIN OutdoorTerrainList
+POIN OutdoorTerrainList*/
 
 ALIGN 4
 IndoorTerrainList: //null terminator

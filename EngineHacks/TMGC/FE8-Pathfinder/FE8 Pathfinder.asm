@@ -63,6 +63,7 @@ add		r2,#0x1
 cmp		r2,#0x40
 ble		ModifyCosts
 AcrobatTime:
+mov   r0,r3
 mov   r4,r0
 ldr   r0,SkillChecker
 mov   r14,r0

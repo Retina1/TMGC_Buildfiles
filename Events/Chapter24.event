@@ -109,6 +109,14 @@ UNIT Mason Valk 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [LightBrand,GildedSw
 UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips?
 //lowlands faction in village ruins and forest
 UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,14] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NeverMoveAI
+UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [32,18] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOnePaceAI
+UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [35,12] 0x0 0x0 0x0 0x0 [Hammer,Halberd] NoAI
+UNIT Lowlands Hero 0x0 Level(6,Enemy,1) [27,19] 0x0 0x0 0x0 0x0 [GildedSword] GroupOnePaceAI
+UNIT Lowlands Sorc 0x0 Level(6,Enemy,1) [34,20] DropItem 0x0 0x0 0x0 [Hell,Sleep] NeverMoveAI
+UNIT Lowlands Sorc 0x0 Level(6,Enemy,1) [28,21] 0x0 0x0 0x0 0x0 [Nocturne] GroupOnePaceAI
+UNIT Lowlands Warrior 0x0 Level(6,Enemy,1) [30,21] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,21] 0x0 0x0 0x0 0x0 [SilverBow,ShiningBow] NoAI
+UNIT Lowlands Assassin 0x0 Level(6,Enemy,1) [32,21] DropItem 0x0 0x0 0x0 [GildedSword] NoAI
 UNIT
 
 C24IneubrenosSpawn:
@@ -174,15 +182,16 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryTheme
-CleanTextNoMap(HallCG,FillerDialogue)
+MUSC S_FE4Conversation
+CleanTextNoMap(LowlandsCG,FillerDialogue)
 MoveToChapter(Chapter25)
 ENDA
 
 C24Turn1:
+CAM1 EnemyElcorian
 FlashCursor(EnemyElcorian,60)
 MUSC S_Chaos
-Text(FillerDialogue)
+Text(C24MasonElcorianTalk)
 CLEAN
 MOVE 60 EnemyElcorian [0,7]
 ENUN

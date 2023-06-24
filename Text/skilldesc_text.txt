@@ -811,7 +811,7 @@ Silent Pride: Gain 2 damage and take[N]
 -2 damage per 25% below max HP.[X]
 
 ## SD_Loyalty
-Loyalty: When within 2 spaces of[N]
+Loyalty: When within 2 tiles of[N]
 a Lord, -3 damage taken, +15 Hit.[X]
 
 ## SD_Thunderstorm
@@ -820,7 +820,7 @@ W. Weight, +2 dmg, +15% hit, +5% crit.[X]
 
 ## SD_Outrider
 Outrider: Take -1 damage and[N]
-gain +3 crit per space moved.[X]
+gain +3 crit per movement used.[X]
 
 ## SD_HeavyStrikes
 Heavy Strikes: Add weapon[N]
@@ -828,11 +828,11 @@ weight to critical chance.[X]
 
 ## SD_Charge
 Charge: Gain +1 damage for every[N]
-square moved when attacking.[X]
+movement point used when attacking.[X]
 
 ## SD_Infiltrator
 Family Man: +3 damage per ally[N]
-within 2 spaces of this unit.[X]
+within 2 tiles of this unit.[X]
 
 ## SD_Vanity
 Vanity: Gain +2 Damage and +10 Hit[N]
@@ -840,7 +840,7 @@ when fighting enemy at 2 range.[X]
 
 ## SD_MageSlayer
 Protective: +3 Atk/AS, +15 Hit[N]
-when within 2 spaces of an[N]
+when within 2 tiles of an[N]
 allied female magic user.[X]
 
 ## SD_KnightAspirant
@@ -870,31 +870,31 @@ after using a staff.[X]
 
 ## SD_DriveStr
 Drive Strength: Allies within[N]
-2 spaces receive +2 strength.[X]
+2 tiles receive +2 strength.[X]
 
 ## SD_DriveMag
 Drive Magic: Allies within[N]
-2 spaces receive +2 magic.[X]
+2 tiles receive +2 magic.[X]
 
 ## SD_DriveSkl
 Drive Skill: Allies within[N]
-2 spaces receive +2 skill.[X]
+2 tiles receive +2 skill.[X]
 
 ## SD_DriveSpd
 Drive Speed: Allies within[N]
-2 spaces receive +2 speed.[X]
+2 tiles receive +2 speed.[X]
 
 ## SD_DriveLck
 Drive Luck: Allies within[N]
-2 spaces receive +2 luck.[X]
+2 tiles receive +2 luck.[X]
 
 ## SD_DriveDef
 Drive Defense: Allies within[N]
-2 spaces receive +2 defense.[X]
+2 tiles receive +2 defense.[X]
 
 ## SD_DriveRes
 Drive Resistance: Allies within[N]
-2 spaces receive +2 resistance.[X]
+2 tiles receive +2 resistance.[X]
 
 ## SD_Blossom
 Blossom: 2x growth rates,[N]
@@ -1178,7 +1178,7 @@ of enemy's weapon by User's level[N]
 
 ## SD_KeepUp
 Keep Up: If unit is within 3[N]
-spaces of an ally with Canto[N]
+tiles of an ally with Canto[N]
 or Canto+, unit gains +2 Mov.[X]
 
 ## SD_IndoorMarch
@@ -1209,12 +1209,12 @@ next player phase attack.[X]
 ## SD_Horseguard
 Horseguard: +4 defense against[N]
 horseback enemies if within 3[N]
-spaces of an ally horse rider.[X]
+tiles of an ally horse rider.[X]
 
 ## SD_Armorboost
 Armorboost: +4 attack and defense[N]
 against armored enemies if within[N]
-3 spaces of an armored ally.[X]
+3 tiles of an armored ally.[X]
 
 ## SD_TriAdeptPlus
 Triangle Adept+: Doubles[N]

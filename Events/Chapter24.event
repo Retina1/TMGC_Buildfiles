@@ -103,8 +103,11 @@ UNIT
 
 C24Hard:
 //dalst faction in main and upper areas
-UNIT Dalst Warrior 0x0 Level(7,Enemy,1) [30,8] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Dalst Warrior 0x0 Level(7,Enemy,1) [30,8] DropItem 0x0 0x0 0x0 [SilverAxe,Restore] NoAI
 UNIT Dalst Bishop 0x0 Level(7,Enemy,1) [31,10] DropItem 0x0 0x0 0x0 [Aura,ThiefStaff,Scripture] NoAI
+UNIT Dalst SageF 0x0 Level(7,Enemy,1) [12,10] 0x0 0x0 0x0 0x0 [Bolting,Calibur] NeverMoveAI
+UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge,Aura] NeverMoveAI
+UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
 UNIT Mason Valk 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [LightBrand,GildedSword,Sleep,AngelWings] AttackInRangeAI
 UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips?
 //lowlands faction in village ruins and forest

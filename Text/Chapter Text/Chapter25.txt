@@ -1,6 +1,20 @@
 ##_Ch25Seize
 Seize the gate.[X]
 
+##C25BobertBattle
+[OpenMidLeft][LoadBobert]
+Lord Arbordia's counting on me.[N]
+And so, I shall do my duty.[A][N]
+On the honor of House Barford,[N]
+I shall not waver![A][X]
+
+##C25BobertDeath
+[OpenMidLeft][LoadBobert]
+[ToggleMouthMove]...[ToggleMouthMove]I have[ToggleMouthMove]...[ToggleMouthMove] lost[ToggleMouthMove]...[ToggleMouthMove][N]
+Proceed[ToggleMouthMove]...[ToggleMouthMove] insurgents[ToggleMouthMove]...[ToggleMouthMove][A][N]
+Enjoy what peace[ToggleMouthMove]...[ToggleMouthMove][N]
+you have left[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
 ##C25BobertSamTalk
 [OpenMidLeft][LoadBobert][OpenMidRight][LoadSam]
 [ToggleMouthMove]...[ToggleMouthMove]Brother[ToggleMouthMove]...[ToggleMouthMove] Is that you?[A][N][OpenMidLeft][CloseEyes]

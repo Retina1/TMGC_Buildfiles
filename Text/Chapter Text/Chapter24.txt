@@ -10,6 +10,21 @@ E rank in bows![A][X]
 Fight Ineubrenos?[N]
 [Yes][X]
 
+##C24MasonBattle
+[OpenMidLeft][LoadMason]
+Tremble before me, insurgents![A][N]
+I am Mason, disciple[N]
+of Lord Tarquin![A][N]
+I[ToggleMouthMove]...[ToggleMouthMove] am[ToggleMouthMove]...[ToggleMouthMove] untouchable![A][X]
+
+##C24MasonDeath
+[OpenMidLeft][LoadMason]
+No[ToggleMouthMove]...[ToggleMouthMove] Please[ToggleMouthMove]...[ToggleMouthMove][A][N]
+So much I[ToggleMouthMove]...[ToggleMouthMove] haven't[ToggleMouthMove]...[ToggleMouthMove][N]
+done[ToggleMouthMove]...[ToggleMouthMove][A][N]
+So many treasures[ToggleMouthMove]...[ToggleMouthMove][N]
+not mine[ToggleMouthMove]...[ToggleMouthMove][A][X]
+
 ##C24MasonElcorianTalk
 [OpenMidLeft][LoadMason][OpenMidRight][LoadElcorian]
 [ToggleMouthMove]...[ToggleMouthMove]Well, I must be off.[N]
@@ -41,9 +56,6 @@ I just know my place in the world.[A][N][OpenMidRight]
 Perform well, and more relics[N]
 may be in your future.[A][N][OpenMidLeft]
 [ToggleMouthMove]...[ToggleMouthMove]Sir, yes, sir.[A][X]
-
-
-
 
 ##C24_Opening
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke][OpenMidLeft]

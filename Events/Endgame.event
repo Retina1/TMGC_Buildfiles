@@ -86,7 +86,16 @@ UNIT
 EndgameHard:
 UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT FinalArbordia Liberator 0x0 Level(20,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [Aspect] NeverMoveAI
-UNIT Dalst Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+UNIT EndgameSimulacrum Sniper 0x0 Level(18,Enemy,1) [8,24] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
+UNIT EndgameSimulacrum Sniper 0x0 Level(18,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
+UNIT EndgameSimulacrum SwdPal 0x0 Level(18,Enemy,1) [8,32] 0x0 0x0 0x0 0x0 [GildedSword,Lancesnapper] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum LncPal 0x0 Level(18,Enemy,1) [9,33] 0x0 0x0 0x0 0x0 [GildedLance,Axebuster] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum AxePal 0x0 Level(18,Enemy,1) [10,32] 0x0 0x0 0x0 0x0 [GildedAxe,Swordslayer] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum Hero 0x0 Level(18,Enemy,1) [4,29] 0x0 0x0 0x0 0x0 [GildedSword,MasterSword] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum Warrior 0x0 Level(18,Enemy,1) [14,29] 0x0 0x0 0x0 0x0 [GildedAxe,MasterAxe] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [4,21] 0x0 0x0 0x0 0x0 [Nocturne,Hell] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [14,21] 0x0 0x0 0x0 0x0 [ForceSpike,Flare] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum AxeGen 0x0 Level(18,Enemy,1) [9,17] 0x0 0x0 0x0 0x0 [MasterAxe,DangerPick] ChaseOnceApproachedAI
 UNIT
 
 ALIGN 4
@@ -98,6 +107,7 @@ MUSC 0x0
 Narration(Map2CG,Final_Narration)
 CleanTextNoMap(MoonCG,Final_Opening)
 LoadUnitsByDifficulty(EndgameEasy,EndgameNormal,EndgameHard)
+SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
 LOAD1 0x0 EndgameUnits
 ENUN
 GotoPrepScreen

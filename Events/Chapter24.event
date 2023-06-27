@@ -29,6 +29,7 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 //yuyu talks to ineubrenos for sorrow's pilgrim and bow rank
+//blair yuyu B+
 CharacterEvent(0x21,C24Pilgrim,Yuyu,BossIneubrenos)
 END_MAIN
 
@@ -102,15 +103,28 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C24Hard:
-//dalst faction in main and upper areas
+//northern block
+UNIT Dalst SwdPal 0x0 Level(7,Enemy,1) [15,1] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
+UNIT Dalst Valk 0x0 Level(7,Enemy,1) [15,2] DropItem 0x0 0x0 0x0 [LightBrand,Physic] NoAI
+UNIT Dalst SwdPal 0x0 Level(7,Enemy,1) [15,3] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
+UNIT Dalst BowPal 0x0 Level(7,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [BraveBow] GroupTwoPaceAI
+UNIT Elite LncPal 0x0 Level(7,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [Spear,GildedLance] GroupTwoPaceAI
+UNIT Dalst BowPal 0x0 Level(7,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [GildedBow] GroupTwoPaceAI
+UNIT Dalst AxePal 0x0 Level(7,Enemy,1) [17,1] DropItem 0x0 0x0 0x0 [GildedAxe] GroupThreeAI
+UNIT Dalst Valk 0x0 Level(7,Enemy,1) [17,2] DropItem 0x0 0x0 0x0 [Rapier] GroupThreeAI
+UNIT Dalst AxePal 0x0 Level(7,Enemy,1) [17,3] 0x0 0x0 0x0 0x0 [BraveAxe] GroupThreeAI
+//opening area
 UNIT Dalst Warrior 0x0 Level(7,Enemy,1) [30,8] DropItem 0x0 0x0 0x0 [SilverAxe,Restore] NoAI
 UNIT Dalst Bishop 0x0 Level(7,Enemy,1) [31,10] DropItem 0x0 0x0 0x0 [Aura,ThiefStaff,Scripture] NoAI
+UNIT Elite Berserker 0x0 Level(7,Enemy,1) [23,5] DropItem 0x0 0x0 0x0 [KillerAxe,SavageGauntlet] NoAI
+
+//middle island
 UNIT Dalst SageF 0x0 Level(7,Enemy,1) [12,10] 0x0 0x0 0x0 0x0 [Bolting,Calibur] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge,Aura] NeverMoveAI
 UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
-UNIT Mason Valk 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [LightBrand,GildedSword,Sleep,AngelWings] AttackInRangeAI
-UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips?
-//lowlands faction in village ruins and forest
+
+
+//lowlands faction in village ruins
 UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,14] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NeverMoveAI
 UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [32,18] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOnePaceAI
 UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [35,12] 0x0 0x0 0x0 0x0 [Hammer,Halberd] NoAI
@@ -120,6 +134,12 @@ UNIT Lowlands Sorc 0x0 Level(6,Enemy,1) [28,21] 0x0 0x0 0x0 0x0 [Nocturne] Group
 UNIT Lowlands Warrior 0x0 Level(6,Enemy,1) [30,21] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
 UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,21] 0x0 0x0 0x0 0x0 [SilverBow,ShiningBow] NoAI
 UNIT Lowlands Assassin 0x0 Level(6,Enemy,1) [32,21] DropItem 0x0 0x0 0x0 [GildedSword] NoAI
+//forest
+UNIT Lowlands WarriorF 0x0 Level(6,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+
+//bosses
+UNIT Mason Valk 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [LightBrand,GildedSword,Sleep,AngelWings] AttackInRangeAI
+UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips
 UNIT
 
 C24IneubrenosSpawn:

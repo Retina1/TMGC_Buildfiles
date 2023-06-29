@@ -21,8 +21,8 @@ beq GoBack
 ldrb  r0,[r4,#0x12] @attacker max hp
 ldrb  r1,[r4,#0x13] @attacker current hp
 sub   r0,r1
-mov r1,#0x5
-swi   #0x6 @missing hp div by 5
+mov r1,#0x3
+swi   #0x6 @missing hp div by 3
 mov   r2,#0x5c
 ldrh  r1,[r4,r2]
 add   r1,r0,r1

@@ -23,6 +23,7 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x0,C24Turn1,1)
 TurnEventPlayer(0x0,C24TheReturn,3)
+TurnEventPlayer(0x0,C24LarondeSpawn,5)
 TurnEventPlayer(0x65,C24OutOfTime,21)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -31,6 +32,7 @@ CharacterBasedEvents:
 //yuyu talks to ineubrenos for sorrow's pilgrim and bow rank
 //blair yuyu B+
 CharacterEvent(0x21,C24Pilgrim,Yuyu,BossIneubrenos)
+CharacterEvent(0x23,C24Dracopope,Vladmir,SecretLaronde)
 END_MAIN
 
 LocationBasedEvents:
@@ -122,8 +124,11 @@ UNIT Elite Berserker 0x0 Level(7,Enemy,1) [23,5] DropItem 0x0 0x0 0x0 [KillerAxe
 UNIT Dalst SageF 0x0 Level(7,Enemy,1) [12,10] 0x0 0x0 0x0 0x0 [Bolting,Calibur] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge,Aura] NeverMoveAI
 UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
-
-
+//boss area
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [ArchBallista,SilverCard] NeverMoveAI
+UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
+UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [BraveLance] DelayedAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
 //lowlands faction in village ruins
 UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,14] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NeverMoveAI
 UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [32,18] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOnePaceAI
@@ -136,6 +141,11 @@ UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,21] 0x0 0x0 0x0 0x0 [SilverBow,Shi
 UNIT Lowlands Assassin 0x0 Level(6,Enemy,1) [32,21] DropItem 0x0 0x0 0x0 [GildedSword] NoAI
 //forest
 UNIT Lowlands WarriorF 0x0 Level(6,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Lowlands Halberdier 0x0 Level(6,Enemy,1) [4,19] 0x0 0x0 0x0 0x0 [BraveLance] ChaseOnceApproachedAI
+UNIT Lowlands Sage 0x0 Level(6,Enemy,1) [13,21] 0x0 0x0 0x0 0x0 [Galewind] ChaseOnceApproachedAI
+UNIT Lowlands Hero 0x0 Level(6,Enemy,1) [7,18] 0x0 0x0 0x0 0x0 [BraveAxe,BraveSword] ChaseOnceApproachedAI
+UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [4,14] 0x0 0x0 0x0 0x0 [BraveBow] NoAI
+UNIT Lowlands SwdGen 0x0 Level(6,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
 
 //bosses
 UNIT Mason Valk 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [LightBrand,GildedSword,Sleep,AngelWings] AttackInRangeAI
@@ -180,6 +190,13 @@ ArgentRejoin:
 UNIT Argent 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA20R19 [0x0] NoAI
 UNIT
 
+C24LarondeSpawn1:
+UNIT Opistia Wyvern 0x0 Level(10,NPC,0) [24,0] 0x0 0x0 0x1 REDA25R3 [0x0] NoAI
+UNIT
+C24LarondeSpawn2:
+UNIT SecretLaronde Halberdier 0x0 Level(10,NPC,0) [25,3] 0x0 0x0 0x1 REDA25R4 [Spear,Nuboko,Elixir,GoddessIcon] NeverMoveAI
+UNIT
+
 C24OpeningBlair:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [35,3] 0x0 0x0 0x1 REDA33R4 [Fire, Awaken, Vulnerary] NoAI
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [35,4] 0x0 0x0 0x1 REDA34R5 [IronBow] NoAI
@@ -209,6 +226,39 @@ MUSC S_FE4Conversation
 CleanTextNoMap(LowlandsCG,FillerDialogue)
 MoveToChapter(Chapter25)
 ENDA
+
+C24LarondeSpawn:
+Reinforcements(C24LarondeSpawn1)
+Reinforcements(C24LarondeSpawn2)
+Text(FillerDialogue)//laronde tells wendell to wait offscreen (saving me the trouble of having to deal with him on map)
+CLEAN
+MOVE 60 Opistia [24,0]
+ENUN
+SilentKillUnit(Opistia)
+ENUN
+ENUT 0x22 //turn blair talk flag on
+CHECK_ALIVE Vladmir
+BNE 0x1 0xc 0x0
+ENUF 0x22 //unless he's dead
+LABEL 0x1
+CHECK_DEPLOYED Vladmir
+BNE 0x2 0xc 0x0
+ENUF 0x22 //or undeployed
+LABEL 0x2
+EndEvent
+
+//todo: vlad/laronde talk for promotion, rose/laronde talk for recruitment, some complicated viridian-based chain for another variant
+//something with blair available if vlad's dead/undeployed - if undeployed, set a flag so promotion happens at end of map, if dead, laronde joins automatically
+
+C24Dracopope:
+MUSC S_EncountersAndReunions
+SetBackground(LowlandsCG)
+Text(FillerDialogue)
+PROMOTE Vladmir Draco GoddessIcon
+FADI 16
+CLEAN
+FADU 16
+EndEvent
 
 C24Turn1:
 CAM1 EnemyElcorian

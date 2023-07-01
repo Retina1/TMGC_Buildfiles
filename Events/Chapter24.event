@@ -98,10 +98,16 @@ UNIT
 
 C24Easy:
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+//bosses
+UNIT Mason Sage 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [Fimbulvetr,Silence,AngelWings] AttackInRangeAI
+UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips
 UNIT
 
 C24Normal:
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+//bosses
+UNIT Mason Sage 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [Flare,Sleep,AngelWings] AttackInRangeAI
+UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips
 UNIT
 
 C24Hard:
@@ -119,12 +125,16 @@ UNIT Dalst AxePal 0x0 Level(7,Enemy,1) [17,3] 0x0 0x0 0x0 0x0 [BraveAxe] GroupTh
 UNIT Dalst Warrior 0x0 Level(7,Enemy,1) [30,8] DropItem 0x0 0x0 0x0 [SilverAxe,Restore] NoAI
 UNIT Dalst Bishop 0x0 Level(7,Enemy,1) [31,10] DropItem 0x0 0x0 0x0 [Aura,ThiefStaff,Scripture] NoAI
 UNIT Elite Berserker 0x0 Level(7,Enemy,1) [23,5] DropItem 0x0 0x0 0x0 [KillerAxe,SavageGauntlet] NoAI
-
+UNIT Dalst Halberdier 0x0 Level(7,Enemy,1) [25,9] 0x0 0x0 0x0 0x0 [Horseslayer,Axebuster] ChaseOnceApproachedAI
+UNIT Dalst Hero 0x0 Level(7,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Hammer,Swordslayer] ChaseOnceApproachedAI
+UNIT Dalst SwMast 0x0 Level(7,Enemy,1) [23,15] 0x0 0x0 0x0 0x0 [BraveSword,Lancesnapper] ChaseOnceApproachedAI
+UNIT Dalst Berserker 0x0 Level(7,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Dalst Berserker 0x0 Level(7,Enemy,1) [15,16] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
 //middle island
 UNIT Dalst SageF 0x0 Level(7,Enemy,1) [12,10] 0x0 0x0 0x0 0x0 [Bolting,Calibur] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge,Aura] NeverMoveAI
 UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
-//boss area
+//boss area - reinforce after snag breaks
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [ArchBallista,SilverCard] NeverMoveAI
 UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
 UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [BraveLance] DelayedAI
@@ -206,6 +216,12 @@ ALIGN 4
 
 BeginningScene:
 LoadUnitsByDifficulty(C24Easy,C24Normal,C24Hard)
+CHECK_HARD
+BNE 0x2 0xc 0x0
+VCWF 0x0
+SetUnitStatus(Mason,SwordExp,0)
+VCWF 0x7
+LABEL 0x2
 ENUT GuideChpt24
 LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
@@ -217,6 +233,10 @@ Text(C24_Opening2)
 FADI 30
 LOAD1 0x0 C24Units
 ENUN
+CHECK_ALIVE Vladmir
+BNE 0x3 0xc 0x0
+ENUT BaseFlag1
+LABEL 0x3
 GotoPrepScreen
 ENDA
 

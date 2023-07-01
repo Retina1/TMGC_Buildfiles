@@ -176,6 +176,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define FioraPaletteID 0x8a
 
 #define IneubrenosPaletteID 0x78
+#define BobertPaletteID 0x8f
+#define MasonSagePaletteID 0x90
+#define MasonValkPaletteID 0x91
 
 #define LiamPaletteID 0x72
 #define NeillstromPaletteID 0x73
@@ -441,7 +444,8 @@ SetPaletteFull(DLReynard,0x0,0x0,ReynardPaletteID,Hero,0x0,0x0)
 SetPaletteFull(EnemySonia,0x0,SoldierF,SoniaPaletteID,HalberdierF,0x0,0x0)
 SetPaletteFull(EnemyJoan,0x0,MercF,JoanPaletteID,HeroF,0x0,0x0)
 SetPaletteFull(EnemyTobias,0x0,Fighter,TobiasPaletteID,Warrior,0x0,0x0)
-
+SetPaletteFull(Mason,0x0,0x0,MasonValkPaletteID,Valk,MasonSagePaletteID,Sage)
+SetPaletteFull(Bobert,0x0,0x0,BobertPaletteID,BowPal,0x0,0x0)
 SetPaletteFull(BossIneubrenos,0x0,0x0,IneubrenosPaletteID,SniperF,0x0,0x0)
 
 SetPaletteFull(EnemyElcorian,0x0,Troub,ElcorianPaletteID,Valk,0x0,0x0)

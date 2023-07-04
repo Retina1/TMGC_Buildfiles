@@ -314,6 +314,10 @@ ALIGN 4
 HoratioMug:
 #incbin "dmps/Horatio.dmp"
 setMugEntry(0x46,HoratioMug,3,6,3,4)
+ALIGN 4
+HoratioPromoMug:
+#incbin "dmps/HoratioPromo.dmp"
+setMugEntry(0x12a,HoratioPromoMug,3,6,3,4)
 
 ALIGN 4
 SimoneMug:

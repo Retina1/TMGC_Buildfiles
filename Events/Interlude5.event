@@ -175,7 +175,12 @@ HouseEvent(I5House5Text,HouseCG)
 I5House6:
 HouseEvent(I5House6Text,House2CG)
 I5House7:
-HouseEvent(I5House7Text,House2CG)
+MUSC S_Ameno
+SMOV 2 House2CG
+SMOV 3 I5House7Text
+CALL $9EE310
+EVBIT_T 0x7
+ENDA
 I5House8:
 HouseEvent(I5House8Text,HouseCG)
 

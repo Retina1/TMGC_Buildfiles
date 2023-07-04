@@ -25,6 +25,7 @@ TurnEventPlayer(0x0,C24Turn1,1)
 TurnEventPlayer(0x0,C24TheReturn,3)
 TurnEventPlayer(0x0,C24LarondeSpawn,5)
 TurnEventPlayer(0x65,C24OutOfTime,21)
+TurnEventPlayer(0x9,C24Trap1,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -51,6 +52,7 @@ ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AreaEvent(0x8,C24AreaTrigger1,0,0,11,9)
 END_MAIN
 
 Dunno:
@@ -130,6 +132,7 @@ UNIT Dalst Hero 0x0 Level(7,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Hammer,Swordslayer]
 UNIT Dalst SwMast 0x0 Level(7,Enemy,1) [23,15] 0x0 0x0 0x0 0x0 [BraveSword,Lancesnapper] ChaseOnceApproachedAI
 UNIT Dalst Berserker 0x0 Level(7,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
 UNIT Dalst Berserker 0x0 Level(7,Enemy,1) [15,16] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
+UNIT Dalst Hero 0x0 Level(7,Enemy,1) [27,13] 0x0 0x0 0x0 0x0 [GildedSword] AttackInRangeAI
 //middle island
 UNIT Dalst SageF 0x0 Level(7,Enemy,1) [12,10] 0x0 0x0 0x0 0x0 [Bolting,Calibur] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge,Aura] NeverMoveAI
@@ -139,6 +142,10 @@ UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [ArchBallist
 UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
 UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [BraveLance] DelayedAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
+UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [DemonBreath] GroupFourPaceAI
+UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [6,2] 0x0 0x0 0x0 0x0 [DemonBreath] ChaseOnceApproachedAI
+UNIT Simulacrum EarthDragon 0x0 Level(10,Enemy,1) [2,6] 0x0 0x0 0x0 0x0 [EarthBreath] GroupFourPaceAI
+UNIT Simulacrum EarthDragon 0x0 Level(10,Enemy,1) [9,6] 0x0 0x0 0x0 0x0 [EarthBreath] GroupFourAI
 //lowlands faction in village ruins
 UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,14] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NeverMoveAI
 UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [32,18] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOnePaceAI
@@ -160,6 +167,15 @@ UNIT Lowlands SwdGen 0x0 Level(6,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [BraveSword] N
 //bosses
 UNIT Mason Valk 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [LightBrand,GildedSword,Sleep,AngelWings] AttackInRangeAI
 UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips
+UNIT
+
+C24BossAreaTrap:
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R0 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [0,0] 0x0 0x0 0x1 REDA0R1 [WyvernBreath] NoAI
+UNIT Dalst Sage 0x0 Level(7,Enemy,1) [0,6] 0x0 0x0 0x0 0x0 [Calibur,Inversion] NoAI
+UNIT Dalst Sage 0x0 Level(7,Enemy,1) [0,7] 0x0 0x0 0x0 0x0 [Fimbulvetr] NoAI
+UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [0,8] DropItem 0x0 0x0 0x0 [Wardbow,BarrierBow] NoAI
+UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [0,9] 0x0 0x0 0x0 0x0 [GildedBow] NoAI
 UNIT
 
 C24IneubrenosSpawn:
@@ -223,7 +239,7 @@ SetUnitStatus(Mason,SwordExp,0)
 VCWF 0x7
 LABEL 0x2
 ENUT GuideChpt24
-LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
+LocationText(MoonCG,Ch24_Flashback,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
 Narration(Map2CG,Ch24_Narration)
 MUSC AmbientNight
@@ -237,6 +253,7 @@ CHECK_ALIVE Vladmir
 BNE 0x3 0xc 0x0
 ENUT BaseFlag1
 LABEL 0x3
+ENUT 0x9
 GotoPrepScreen
 ENDA
 
@@ -269,6 +286,8 @@ EndEvent
 
 //todo: vlad/laronde talk for promotion, rose/laronde talk for recruitment, some complicated viridian-based chain for another variant
 //something with blair available if vlad's dead/undeployed - if undeployed, set a flag so promotion happens at end of map, if dead, laronde joins automatically
+//laronde/rose is easy recruitment, laronde with viridians not rose for harder, extremely sad dialogue if rose was a survivor and then died here
+//also make sure he retreats on defeat if green
 
 C24Dracopope:
 MUSC S_EncountersAndReunions
@@ -278,6 +297,20 @@ PROMOTE Vladmir Draco GoddessIcon
 FADI 16
 CLEAN
 FADU 16
+EndEvent
+
+C24Trap1:
+Reinforcements(C24BossAreaTrap)
+EndEvent
+
+C24AreaTrigger1:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0x9
+GOTO 0x2
+LABEL 0x1
+ENUF 0x8
+LABEL 0x2
 EndEvent
 
 C24Turn1:
@@ -383,11 +416,832 @@ OffAllUnitState(Freddric*0x100+Argent, Undeployed, AnyDeployed, AnyArmy, AnyClas
 CALL ohgodnotthis
 EndEvent
 
-#define TheGrandReturn(character1,character2,character3,textid) "CHECK_ALIVE character1; BEQ textid 0xc 0x0; CHECK_ALIVE character2; BEQ textid 0xc 0x0; CHECK_ALIVE character3; BEQ textid 0xc 0x0; Text(textid); SetSupport(character1,character2,BPSupport,0); SetSupport(character1,character3,BPSupport,0); SetSupport(character2,character3,BPSupport,0); GOTO TheFunnyLabel; LABEL textid"
-#define TheFunnyLabel 0xe
+#define TheGrandReturn(character1,character2,character3,textid) "Text(textid); SetSupport(character1,character2,BPSupport,0); SetSupport(character1,character3,BPSupport,0); SetSupport(character2,character3,BPSupport,0); GOTO TheFunnyLabel"
+#define TheFunnyLabel 0x9999
 ohgodnotthis://text branch hell
 MUSC RecruitmentThemeVirid
-TheGrandReturn(Freddric,Dean,Eliza,Ch24_FreddricDeanEliza)
+CHECK_ALIVE Freddric
+BEQ 0x1 0xc 0x0
+	CHECK_ALIVE Dean
+	BEQ 0x2 0xc 0x0
+		CHECK_ALIVE Eliza
+		BEQ 0x3 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Eliza,Ch24_FreddricDeanEliza)
+		LABEL 0x3
+		CHECK_ALIVE Rift
+		BEQ 0x4 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Rift,Ch24_FreddricDeanRift)
+		LABEL 0x4
+		CHECK_ALIVE Estelle
+		BEQ 0x5 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Estelle,Ch24_FreddricDeanEstelle)
+		LABEL 0x5
+		CHECK_ALIVE Rose
+		BEQ 0x6 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Rose,Ch24_FreddricDeanRose)
+		LABEL 0x6
+		CHECK_ALIVE Dirk
+		BEQ 0x7 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Dirk,Ch24_FreddricDeanDirk)
+		LABEL 0x7
+		CHECK_ALIVE Callum
+		BEQ 0x8 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Callum,Ch24_FreddricDeanCallum)
+		LABEL 0x8
+		CHECK_ALIVE Manfred
+		BEQ 0x9 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Manfred,Ch24_FreddricDeanManfred)
+		LABEL 0x9
+		CHECK_ALIVE Wilhelm
+		BEQ 0xa 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Wilhelm,Ch24_FreddricDeanWilhelm)
+		LABEL 0xa
+		CHECK_ALIVE Argent
+		BEQ 0xb 0xc 0x0
+		TheGrandReturn(Freddric,Dean,Argent,Ch24_FreddricDeanArgent)
+		LABEL 0xb
+	LABEL 0x2
+	CHECK_ALIVE Eliza
+	BEQ 0xc 0xc 0x0
+		CHECK_ALIVE Rift
+		BEQ 0xd 0xc 0x0
+		TheGrandReturn(Freddric,Eliza,Rift,Ch24_FreddricElizaRift)
+		LABEL 0xd
+		CHECK_ALIVE Estelle
+		BEQ 0xe 0xc 0x0
+		TheGrandReturn(Freddric,Eliza,Estelle,Ch24_FreddricElizaEstelle)
+		LABEL 0xe
+		CHECK_ALIVE Rose
+		BEQ 0xf 0xc 0x0
+		TheGrandReturn(Freddric,Eliza,Rose,Ch24_FreddricElizaRose)
+		LABEL 0xf
+		CHECK_ALIVE Dirk
+		BEQ 0x10 0xc 0x0
+		TheGrandReturn(Freddric,Eliza,Dirk,Ch24_FreddricElizaDirk)
+		LABEL 0x10
+		CHECK_ALIVE Callum
+		BEQ 0x11 0xc 0x0
+		TheGrandReturn(Freddric,Eliza,Callum,Ch24_FreddricElizaCallum)
+		LABEL 0x11
+		CHECK_ALIVE Manfred
+		BEQ 0x12 0xc 0x0
+		TheGrandReturn(Freddric,Eliza,Manfred,Ch24_FreddricElizaManfred)
+		LABEL 0x12
+		CHECK_ALIVE Wilhelm
+		BEQ 0x13 0xc 0x0
+		TheGrandReturn(Freddric,Eliza,Wilhelm,Ch24_FreddricElizaWilhelm)
+		LABEL 0x13
+		CHECK_ALIVE Argent
+		BEQ 0x14 0xc 0x0
+		TheGrandReturn(Freddric,Eliza,Argent,Ch24_FreddricElizaArgent)
+		LABEL 0x14
+	LABEL 0xc
+	CHECK_ALIVE Rift
+	BEQ 0x15 0xc 0x0
+		CHECK_ALIVE Estelle
+		BEQ 0x16 0xc 0x0
+		TheGrandReturn(Freddric,Rift,Estelle,Ch24_FreddricRiftEstelle)
+		LABEL 0x16
+		CHECK_ALIVE Rose
+		BEQ 0x17 0xc 0x0
+		TheGrandReturn(Freddric,Rift,Rose,Ch24_FreddricRiftRose)
+		LABEL 0x17
+		CHECK_ALIVE Dirk
+		BEQ 0x18 0xc 0x0
+		TheGrandReturn(Freddric,Rift,Dirk,Ch24_FreddricRiftDirk)
+		LABEL 0x18
+		CHECK_ALIVE Callum
+		BEQ 0x19 0xc 0x0
+		TheGrandReturn(Freddric,Rift,Callum,Ch24_FreddricRiftCallum)
+		LABEL 0x19
+		CHECK_ALIVE Manfred
+		BEQ 0x1a 0xc 0x0
+		TheGrandReturn(Freddric,Rift,Manfred,Ch24_FreddricRiftManfred)
+		LABEL 0x1a
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1b 0xc 0x0
+		TheGrandReturn(Freddric,Rift,Wilhelm,Ch24_FreddricRiftWilhelm)
+		LABEL 0x1b
+		CHECK_ALIVE Argent
+		BEQ 0x1c 0xc 0x0
+		TheGrandReturn(Freddric,Rift,Argent,Ch24_FreddricRiftArgent)
+		LABEL 0x1c
+	LABEL 0x15
+	CHECK_ALIVE Estelle
+	BEQ 0x1d 0xc 0x0
+		CHECK_ALIVE Rose
+		BEQ 0x1e 0xc 0x0
+		TheGrandReturn(Freddric,Estelle,Rose,Ch24_FreddricEstelleRose)
+		LABEL 0x1e
+		CHECK_ALIVE Dirk
+		BEQ 0x1f 0xc 0x0
+		TheGrandReturn(Freddric,Estelle,Dirk,Ch24_FreddricEstelleDirk)
+		LABEL 0x1f
+		CHECK_ALIVE Callum
+		BEQ 0x20 0xc 0x0
+		TheGrandReturn(Freddric,Estelle,Callum,Ch24_FreddricEstelleCallum)
+		LABEL 0x20
+		CHECK_ALIVE Manfred
+		BEQ 0x21 0xc 0x0
+		TheGrandReturn(Freddric,Estelle,Manfred,Ch24_FreddricEstelleManfred)
+		LABEL 0x21
+		CHECK_ALIVE Wilhelm
+		BEQ 0x22 0xc 0x0
+		TheGrandReturn(Freddric,Estelle,Wilhelm,Ch24_FreddricEstelleWilhelm)
+		LABEL 0x22
+		CHECK_ALIVE Argent
+		BEQ 0x23 0xc 0x0
+		TheGrandReturn(Freddric,Estelle,Argent,Ch24_FreddricEstelleArgent)
+		LABEL 0x23
+	LABEL 0x1d
+	CHECK_ALIVE Rose
+	BEQ 0x24 0xc 0x0
+		CHECK_ALIVE Dirk
+		BEQ 0x25 0xc 0x0
+		TheGrandReturn(Freddric,Rose,Dirk,Ch24_FreddricRoseDirk)
+		LABEL 0x25
+		CHECK_ALIVE Callum
+		BEQ 0x26 0xc 0x0
+		TheGrandReturn(Freddric,Rose,Callum,Ch24_FreddricRoseCallum)
+		LABEL 0x26
+		CHECK_ALIVE Manfred
+		BEQ 0x27 0xc 0x0
+		TheGrandReturn(Freddric,Rose,Manfred,Ch24_FreddricRoseManfred)
+		LABEL 0x27
+		CHECK_ALIVE Wilhelm
+		BEQ 0x28 0xc 0x0
+		TheGrandReturn(Freddric,Rose,Wilhelm,Ch24_FreddricRoseWilhelm)
+		LABEL 0x28
+		CHECK_ALIVE Argent
+		BEQ 0x29 0xc 0x0
+		TheGrandReturn(Freddric,Rose,Argent,Ch24_FreddricRoseArgent)
+		LABEL 0x29
+	LABEL 0x24
+	CHECK_ALIVE Dirk
+	BEQ 0x2a 0xc 0x0
+		CHECK_ALIVE Callum
+		BEQ 0x2b 0xc 0x0
+		TheGrandReturn(Freddric,Dirk,Callum,Ch24_FreddricDirkCallum)
+		LABEL 0x2b
+		CHECK_ALIVE Manfred
+		BEQ 0x2c 0xc 0x0
+		TheGrandReturn(Freddric,Dirk,Manfred,Ch24_FreddricDirkManfred)
+		LABEL 0x2c
+		CHECK_ALIVE Wilhelm
+		BEQ 0x2d 0xc 0x0
+		TheGrandReturn(Freddric,Dirk,Wilhelm,Ch24_FreddricDirkWilhelm)
+		LABEL 0x2d
+		CHECK_ALIVE Argent
+		BEQ 0x2e 0xc 0x0
+		TheGrandReturn(Freddric,Dirk,Argent,Ch24_FreddricDirkArgent)
+		LABEL 0x2e
+	LABEL 0x2a
+	CHECK_ALIVE Callum
+	BEQ 0x2f 0xc 0x0
+		CHECK_ALIVE Manfred
+		BEQ 0x30 0xc 0x0
+		TheGrandReturn(Freddric,Callum,Manfred,Ch24_FreddricCallumManfred)
+		LABEL 0x30
+		CHECK_ALIVE Wilhelm
+		BEQ 0x31 0xc 0x0
+		TheGrandReturn(Freddric,Callum,Wilhelm,Ch24_FreddricCallumWilhelm)
+		LABEL 0x31
+		CHECK_ALIVE Argent
+		BEQ 0x32 0xc 0x0
+		TheGrandReturn(Freddric,Callum,Argent,Ch24_FreddricCallumArgent)
+		LABEL 0x32
+	LABEL 0x2f
+	CHECK_ALIVE Manfred
+	BEQ 0x33 0xc 0x0
+		CHECK_ALIVE Wilhelm
+		BEQ 0x34 0xc 0x0
+		TheGrandReturn(Freddric,Manfred,Wilhelm,Ch24_FreddricManfredWilhelm)
+		LABEL 0x34
+		CHECK_ALIVE Argent
+		BEQ 0x35 0xc 0x0
+		TheGrandReturn(Freddric,Manfred,Argent,Ch24_FreddricManfredArgent)
+		LABEL 0x35
+	LABEL 0x33
+	CHECK_ALIVE Wilhelm
+	BEQ 0x36 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x37 0xc 0x0
+		TheGrandReturn(Freddric,Wilhelm,Argent,Ch24_FreddricWilhelmArgent)
+		LABEL 0x37
+	LABEL 0x36
+LABEL 0x1
+CHECK_ALIVE Dean
+BEQ 0x38 0xc 0x0
+	CHECK_ALIVE Eliza
+	BEQ 0x10c 0xc 0x0
+		CHECK_ALIVE Rift
+		BEQ 0x10d 0xc 0x0
+		TheGrandReturn(Dean,Eliza,Rift,Ch24_DeanElizaRift)
+		LABEL 0x10d
+		CHECK_ALIVE Estelle
+		BEQ 0x10e 0xc 0x0
+		TheGrandReturn(Dean,Eliza,Estelle,Ch24_DeanElizaEstelle)
+		LABEL 0x10e
+		CHECK_ALIVE Rose
+		BEQ 0x10f 0xc 0x0
+		TheGrandReturn(Dean,Eliza,Rose,Ch24_DeanElizaRose)
+		LABEL 0x10f
+		CHECK_ALIVE Dirk
+		BEQ 0x1010 0xc 0x0
+		TheGrandReturn(Dean,Eliza,Dirk,Ch24_DeanElizaDirk)
+		LABEL 0x1010
+		CHECK_ALIVE Callum
+		BEQ 0x1011 0xc 0x0
+		TheGrandReturn(Dean,Eliza,Callum,Ch24_DeanElizaCallum)
+		LABEL 0x1011
+		CHECK_ALIVE Manfred
+		BEQ 0x1012 0xc 0x0
+		TheGrandReturn(Dean,Eliza,Manfred,Ch24_DeanElizaManfred)
+		LABEL 0x1012
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1013 0xc 0x0
+		TheGrandReturn(Dean,Eliza,Wilhelm,Ch24_DeanElizaWilhelm)
+		LABEL 0x1013
+		CHECK_ALIVE Argent
+		BEQ 0x1014 0xc 0x0
+		TheGrandReturn(Dean,Eliza,Argent,Ch24_DeanElizaArgent)
+		LABEL 0x1014
+	LABEL 0x10c
+	CHECK_ALIVE Rift
+	BEQ 0x1015 0xc 0x0
+		CHECK_ALIVE Estelle
+		BEQ 0x1016 0xc 0x0
+		TheGrandReturn(Dean,Rift,Estelle,Ch24_DeanRiftEstelle)
+		LABEL 0x1016
+		CHECK_ALIVE Rose
+		BEQ 0x1017 0xc 0x0
+		TheGrandReturn(Dean,Rift,Rose,Ch24_DeanRiftRose)
+		LABEL 0x1017
+		CHECK_ALIVE Dirk
+		BEQ 0x1018 0xc 0x0
+		TheGrandReturn(Dean,Rift,Dirk,Ch24_DeanRiftDirk)
+		LABEL 0x1018
+		CHECK_ALIVE Callum
+		BEQ 0x1019 0xc 0x0
+		TheGrandReturn(Dean,Rift,Callum,Ch24_DeanRiftCallum)
+		LABEL 0x1019
+		CHECK_ALIVE Manfred
+		BEQ 0x101a 0xc 0x0
+		TheGrandReturn(Dean,Rift,Manfred,Ch24_DeanRiftManfred)
+		LABEL 0x101a
+		CHECK_ALIVE Wilhelm
+		BEQ 0x101b 0xc 0x0
+		TheGrandReturn(Dean,Rift,Wilhelm,Ch24_DeanRiftWilhelm)
+		LABEL 0x101b
+		CHECK_ALIVE Argent
+		BEQ 0x101c 0xc 0x0
+		TheGrandReturn(Dean,Rift,Argent,Ch24_DeanRiftArgent)
+		LABEL 0x101c
+	LABEL 0x1015
+	CHECK_ALIVE Estelle
+	BEQ 0x101d 0xc 0x0
+		CHECK_ALIVE Rose
+		BEQ 0x101e 0xc 0x0
+		TheGrandReturn(Dean,Estelle,Rose,Ch24_DeanEstelleRose)
+		LABEL 0x101e
+		CHECK_ALIVE Dirk
+		BEQ 0x101f 0xc 0x0
+		TheGrandReturn(Dean,Estelle,Dirk,Ch24_DeanEstelleDirk)
+		LABEL 0x101f
+		CHECK_ALIVE Callum
+		BEQ 0x1020 0xc 0x0
+		TheGrandReturn(Dean,Estelle,Callum,Ch24_DeanEstelleCallum)
+		LABEL 0x1020
+		CHECK_ALIVE Manfred
+		BEQ 0x1021 0xc 0x0
+		TheGrandReturn(Dean,Estelle,Manfred,Ch24_DeanEstelleManfred)
+		LABEL 0x1021
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1022 0xc 0x0
+		TheGrandReturn(Dean,Estelle,Wilhelm,Ch24_DeanEstelleWilhelm)
+		LABEL 0x1022
+		CHECK_ALIVE Argent
+		BEQ 0x1023 0xc 0x0
+		TheGrandReturn(Dean,Estelle,Argent,Ch24_DeanEstelleArgent)
+		LABEL 0x1023
+	LABEL 0x101d
+	CHECK_ALIVE Rose
+	BEQ 0x1024 0xc 0x0
+		CHECK_ALIVE Dirk
+		BEQ 0x1025 0xc 0x0
+		TheGrandReturn(Dean,Rose,Dirk,Ch24_DeanRoseDirk)
+		LABEL 0x1025
+		CHECK_ALIVE Callum
+		BEQ 0x1026 0xc 0x0
+		TheGrandReturn(Dean,Rose,Callum,Ch24_DeanRoseCallum)
+		LABEL 0x1026
+		CHECK_ALIVE Manfred
+		BEQ 0x1027 0xc 0x0
+		TheGrandReturn(Dean,Rose,Manfred,Ch24_DeanRoseManfred)
+		LABEL 0x1027
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1028 0xc 0x0
+		TheGrandReturn(Dean,Rose,Wilhelm,Ch24_DeanRoseWilhelm)
+		LABEL 0x1028
+		CHECK_ALIVE Argent
+		BEQ 0x1029 0xc 0x0
+		TheGrandReturn(Dean,Rose,Argent,Ch24_DeanRoseArgent)
+		LABEL 0x1029
+	LABEL 0x1024
+	CHECK_ALIVE Dirk
+	BEQ 0x102a 0xc 0x0
+		CHECK_ALIVE Callum
+		BEQ 0x102b 0xc 0x0
+		TheGrandReturn(Dean,Dirk,Callum,Ch24_DeanDirkCallum)
+		LABEL 0x102b
+		CHECK_ALIVE Manfred
+		BEQ 0x102c 0xc 0x0
+		TheGrandReturn(Dean,Dirk,Manfred,Ch24_DeanDirkManfred)
+		LABEL 0x102c
+		CHECK_ALIVE Wilhelm
+		BEQ 0x102d 0xc 0x0
+		TheGrandReturn(Dean,Dirk,Wilhelm,Ch24_DeanDirkWilhelm)
+		LABEL 0x102d
+		CHECK_ALIVE Argent
+		BEQ 0x102e 0xc 0x0
+		TheGrandReturn(Dean,Dirk,Argent,Ch24_DeanDirkArgent)
+		LABEL 0x102e
+	LABEL 0x102a
+	CHECK_ALIVE Callum
+	BEQ 0x102f 0xc 0x0
+		CHECK_ALIVE Manfred
+		BEQ 0x1030 0xc 0x0
+		TheGrandReturn(Dean,Callum,Manfred,Ch24_DeanCallumManfred)
+		LABEL 0x1030
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1031 0xc 0x0
+		TheGrandReturn(Dean,Callum,Wilhelm,Ch24_DeanCallumWilhelm)
+		LABEL 0x1031
+		CHECK_ALIVE Argent
+		BEQ 0x1032 0xc 0x0
+		TheGrandReturn(Dean,Callum,Argent,Ch24_DeanCallumArgent)
+		LABEL 0x1032
+	LABEL 0x102f
+	CHECK_ALIVE Manfred
+	BEQ 0x1033 0xc 0x0
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1034 0xc 0x0
+		TheGrandReturn(Dean,Manfred,Wilhelm,Ch24_DeanManfredWilhelm)
+		LABEL 0x1034
+		CHECK_ALIVE Argent
+		BEQ 0x1035 0xc 0x0
+		TheGrandReturn(Dean,Manfred,Argent,Ch24_DeanManfredArgent)
+		LABEL 0x1035
+	LABEL 0x1033
+	CHECK_ALIVE Wilhelm
+	BEQ 0x1036 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x1037 0xc 0x0
+		TheGrandReturn(Dean,Wilhelm,Argent,Ch24_DeanWilhelmArgent)
+		LABEL 0x1037
+	LABEL 0x1036
+LABEL 0x38
+CHECK_ALIVE Eliza
+BEQ 0x39 0xc 0x0
+	CHECK_ALIVE Rift
+	BEQ 0x1115 0xc 0x0
+		CHECK_ALIVE Estelle
+		BEQ 0x1116 0xc 0x0
+		TheGrandReturn(Eliza,Rift,Estelle,Ch24_ElizaRiftEstelle)
+		LABEL 0x1116
+		CHECK_ALIVE Rose
+		BEQ 0x1117 0xc 0x0
+		TheGrandReturn(Eliza,Rift,Rose,Ch24_ElizaRiftRose)
+		LABEL 0x1117
+		CHECK_ALIVE Dirk
+		BEQ 0x1118 0xc 0x0
+		TheGrandReturn(Eliza,Rift,Dirk,Ch24_ElizaRiftDirk)
+		LABEL 0x1118
+		CHECK_ALIVE Callum
+		BEQ 0x1119 0xc 0x0
+		TheGrandReturn(Eliza,Rift,Callum,Ch24_ElizaRiftCallum)
+		LABEL 0x1119
+		CHECK_ALIVE Manfred
+		BEQ 0x111a 0xc 0x0
+		TheGrandReturn(Eliza,Rift,Manfred,Ch24_ElizaRiftManfred)
+		LABEL 0x111a
+		CHECK_ALIVE Wilhelm
+		BEQ 0x111b 0xc 0x0
+		TheGrandReturn(Eliza,Rift,Wilhelm,Ch24_ElizaRiftWilhelm)
+		LABEL 0x111b
+		CHECK_ALIVE Argent
+		BEQ 0x111c 0xc 0x0
+		TheGrandReturn(Eliza,Rift,Argent,Ch24_ElizaRiftArgent)
+		LABEL 0x111c
+	LABEL 0x1115
+	CHECK_ALIVE Estelle
+	BEQ 0x111d 0xc 0x0
+		CHECK_ALIVE Rose
+		BEQ 0x111e 0xc 0x0
+		TheGrandReturn(Eliza,Estelle,Rose,Ch24_ElizaEstelleRose)
+		LABEL 0x111e
+		CHECK_ALIVE Dirk
+		BEQ 0x111f 0xc 0x0
+		TheGrandReturn(Eliza,Estelle,Dirk,Ch24_ElizaEstelleDirk)
+		LABEL 0x111f
+		CHECK_ALIVE Callum
+		BEQ 0x1120 0xc 0x0
+		TheGrandReturn(Eliza,Estelle,Callum,Ch24_ElizaEstelleCallum)
+		LABEL 0x1120
+		CHECK_ALIVE Manfred
+		BEQ 0x1121 0xc 0x0
+		TheGrandReturn(Eliza,Estelle,Manfred,Ch24_ElizaEstelleManfred)
+		LABEL 0x1121
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1122 0xc 0x0
+		TheGrandReturn(Eliza,Estelle,Wilhelm,Ch24_ElizaEstelleWilhelm)
+		LABEL 0x1122
+		CHECK_ALIVE Argent
+		BEQ 0x1123 0xc 0x0
+		TheGrandReturn(Eliza,Estelle,Argent,Ch24_ElizaEstelleArgent)
+		LABEL 0x1123
+	LABEL 0x111d
+	CHECK_ALIVE Rose
+	BEQ 0x1124 0xc 0x0
+		CHECK_ALIVE Dirk
+		BEQ 0x1125 0xc 0x0
+		TheGrandReturn(Eliza,Rose,Dirk,Ch24_ElizaRoseDirk)
+		LABEL 0x1125
+		CHECK_ALIVE Callum
+		BEQ 0x1126 0xc 0x0
+		TheGrandReturn(Eliza,Rose,Callum,Ch24_ElizaRoseCallum)
+		LABEL 0x1126
+		CHECK_ALIVE Manfred
+		BEQ 0x1127 0xc 0x0
+		TheGrandReturn(Eliza,Rose,Manfred,Ch24_ElizaRoseManfred)
+		LABEL 0x1127
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1128 0xc 0x0
+		TheGrandReturn(Eliza,Rose,Wilhelm,Ch24_ElizaRoseWilhelm)
+		LABEL 0x1128
+		CHECK_ALIVE Argent
+		BEQ 0x1129 0xc 0x0
+		TheGrandReturn(Eliza,Rose,Argent,Ch24_ElizaRoseArgent)
+		LABEL 0x1129
+	LABEL 0x1124
+	CHECK_ALIVE Dirk
+	BEQ 0x112a 0xc 0x0
+		CHECK_ALIVE Callum
+		BEQ 0x112b 0xc 0x0
+		TheGrandReturn(Eliza,Dirk,Callum,Ch24_ElizaDirkCallum)
+		LABEL 0x112b
+		CHECK_ALIVE Manfred
+		BEQ 0x112c 0xc 0x0
+		TheGrandReturn(Eliza,Dirk,Manfred,Ch24_ElizaDirkManfred)
+		LABEL 0x112c
+		CHECK_ALIVE Wilhelm
+		BEQ 0x112d 0xc 0x0
+		TheGrandReturn(Eliza,Dirk,Wilhelm,Ch24_ElizaDirkWilhelm)
+		LABEL 0x112d
+		CHECK_ALIVE Argent
+		BEQ 0x112e 0xc 0x0
+		TheGrandReturn(Eliza,Dirk,Argent,Ch24_ElizaDirkArgent)
+		LABEL 0x112e
+	LABEL 0x112a
+	CHECK_ALIVE Callum
+	BEQ 0x112f 0xc 0x0
+		CHECK_ALIVE Manfred
+		BEQ 0x1130 0xc 0x0
+		TheGrandReturn(Eliza,Callum,Manfred,Ch24_ElizaCallumManfred)
+		LABEL 0x1130
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1131 0xc 0x0
+		TheGrandReturn(Eliza,Callum,Wilhelm,Ch24_ElizaCallumWilhelm)
+		LABEL 0x1131
+		CHECK_ALIVE Argent
+		BEQ 0x1132 0xc 0x0
+		TheGrandReturn(Eliza,Callum,Argent,Ch24_ElizaCallumArgent)
+		LABEL 0x1132
+	LABEL 0x112f
+	CHECK_ALIVE Manfred
+	BEQ 0x1133 0xc 0x0
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1134 0xc 0x0
+		TheGrandReturn(Eliza,Manfred,Wilhelm,Ch24_ElizaManfredWilhelm)
+		LABEL 0x1134
+		CHECK_ALIVE Argent
+		BEQ 0x1135 0xc 0x0
+		TheGrandReturn(Eliza,Manfred,Argent,Ch24_ElizaManfredArgent)
+		LABEL 0x1135
+	LABEL 0x1133
+	CHECK_ALIVE Wilhelm
+	BEQ 0x1136 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x1137 0xc 0x0
+		TheGrandReturn(Eliza,Wilhelm,Argent,Ch24_ElizaWilhelmArgent)
+		LABEL 0x1137
+	LABEL 0x1136
+LABEL 0x39
+CHECK_ALIVE Rift
+BEQ 0x3a 0xc 0x0
+	CHECK_ALIVE Estelle
+	BEQ 0x121d 0xc 0x0
+		CHECK_ALIVE Rose
+		BEQ 0x121e 0xc 0x0
+		TheGrandReturn(Rift,Estelle,Rose,Ch24_RiftEstelleRose)
+		LABEL 0x121e
+		CHECK_ALIVE Dirk
+		BEQ 0x121f 0xc 0x0
+		TheGrandReturn(Rift,Estelle,Dirk,Ch24_RiftEstelleDirk)
+		LABEL 0x121f
+		CHECK_ALIVE Callum
+		BEQ 0x1220 0xc 0x0
+		TheGrandReturn(Rift,Estelle,Callum,Ch24_RiftEstelleCallum)
+		LABEL 0x1220
+		CHECK_ALIVE Manfred
+		BEQ 0x1221 0xc 0x0
+		TheGrandReturn(Rift,Estelle,Manfred,Ch24_RiftEstelleManfred)
+		LABEL 0x1221
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1222 0xc 0x0
+		TheGrandReturn(Rift,Estelle,Wilhelm,Ch24_RiftEstelleWilhelm)
+		LABEL 0x1222
+		CHECK_ALIVE Argent
+		BEQ 0x1223 0xc 0x0
+		TheGrandReturn(Rift,Estelle,Argent,Ch24_RiftEstelleArgent)
+		LABEL 0x1223
+	LABEL 0x121d
+	CHECK_ALIVE Rose
+	BEQ 0x1224 0xc 0x0
+		CHECK_ALIVE Dirk
+		BEQ 0x1225 0xc 0x0
+		TheGrandReturn(Rift,Rose,Dirk,Ch24_RiftRoseDirk)
+		LABEL 0x1225
+		CHECK_ALIVE Callum
+		BEQ 0x1226 0xc 0x0
+		TheGrandReturn(Rift,Rose,Callum,Ch24_RiftRoseCallum)
+		LABEL 0x1226
+		CHECK_ALIVE Manfred
+		BEQ 0x1227 0xc 0x0
+		TheGrandReturn(Rift,Rose,Manfred,Ch24_RiftRoseManfred)
+		LABEL 0x1227
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1228 0xc 0x0
+		TheGrandReturn(Rift,Rose,Wilhelm,Ch24_RiftRoseWilhelm)
+		LABEL 0x1228
+		CHECK_ALIVE Argent
+		BEQ 0x1229 0xc 0x0
+		TheGrandReturn(Rift,Rose,Argent,Ch24_RiftRoseArgent)
+		LABEL 0x1229
+	LABEL 0x1224
+	CHECK_ALIVE Dirk
+	BEQ 0x122a 0xc 0x0
+		CHECK_ALIVE Callum
+		BEQ 0x122b 0xc 0x0
+		TheGrandReturn(Rift,Dirk,Callum,Ch24_RiftDirkCallum)
+		LABEL 0x122b
+		CHECK_ALIVE Manfred
+		BEQ 0x122c 0xc 0x0
+		TheGrandReturn(Rift,Dirk,Manfred,Ch24_RiftDirkManfred)
+		LABEL 0x122c
+		CHECK_ALIVE Wilhelm
+		BEQ 0x122d 0xc 0x0
+		TheGrandReturn(Rift,Dirk,Wilhelm,Ch24_RiftDirkWilhelm)
+		LABEL 0x122d
+		CHECK_ALIVE Argent
+		BEQ 0x122e 0xc 0x0
+		TheGrandReturn(Rift,Dirk,Argent,Ch24_RiftDirkArgent)
+		LABEL 0x122e
+	LABEL 0x122a
+	CHECK_ALIVE Callum
+	BEQ 0x122f 0xc 0x0
+		CHECK_ALIVE Manfred
+		BEQ 0x1230 0xc 0x0
+		TheGrandReturn(Rift,Callum,Manfred,Ch24_RiftCallumManfred)
+		LABEL 0x1230
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1231 0xc 0x0
+		TheGrandReturn(Rift,Callum,Wilhelm,Ch24_RiftCallumWilhelm)
+		LABEL 0x1231
+		CHECK_ALIVE Argent
+		BEQ 0x1232 0xc 0x0
+		TheGrandReturn(Rift,Callum,Argent,Ch24_RiftCallumArgent)
+		LABEL 0x1232
+	LABEL 0x122f
+	CHECK_ALIVE Manfred
+	BEQ 0x1233 0xc 0x0
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1234 0xc 0x0
+		TheGrandReturn(Rift,Manfred,Wilhelm,Ch24_RiftManfredWilhelm)
+		LABEL 0x1234
+		CHECK_ALIVE Argent
+		BEQ 0x1235 0xc 0x0
+		TheGrandReturn(Rift,Manfred,Argent,Ch24_RiftManfredArgent)
+		LABEL 0x1235
+	LABEL 0x1233
+	CHECK_ALIVE Wilhelm
+	BEQ 0x1236 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x1237 0xc 0x0
+		TheGrandReturn(Rift,Wilhelm,Argent,Ch24_RiftWilhelmArgent)
+		LABEL 0x1237
+	LABEL 0x1236
+LABEL 0x3a
+CHECK_ALIVE Estelle
+BEQ 0x3b 0xc 0x0
+	CHECK_ALIVE Rose
+	BEQ 0x1324 0xc 0x0
+		CHECK_ALIVE Dirk
+		BEQ 0x1325 0xc 0x0
+		TheGrandReturn(Estelle,Rose,Dirk,Ch24_EstelleRoseDirk)
+		LABEL 0x1325
+		CHECK_ALIVE Callum
+		BEQ 0x1326 0xc 0x0
+		TheGrandReturn(Estelle,Rose,Callum,Ch24_EstelleRoseCallum)
+		LABEL 0x1326
+		CHECK_ALIVE Manfred
+		BEQ 0x1327 0xc 0x0
+		TheGrandReturn(Estelle,Rose,Manfred,Ch24_EstelleRoseManfred)
+		LABEL 0x1327
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1328 0xc 0x0
+		TheGrandReturn(Estelle,Rose,Wilhelm,Ch24_EstelleRoseWilhelm)
+		LABEL 0x1328
+		CHECK_ALIVE Argent
+		BEQ 0x1329 0xc 0x0
+		TheGrandReturn(Estelle,Rose,Argent,Ch24_EstelleRoseArgent)
+		LABEL 0x1329
+	LABEL 0x1324
+	CHECK_ALIVE Dirk
+	BEQ 0x132a 0xc 0x0
+		CHECK_ALIVE Callum
+		BEQ 0x132b 0xc 0x0
+		TheGrandReturn(Estelle,Dirk,Callum,Ch24_EstelleDirkCallum)
+		LABEL 0x132b
+		CHECK_ALIVE Manfred
+		BEQ 0x132c 0xc 0x0
+		TheGrandReturn(Estelle,Dirk,Manfred,Ch24_EstelleDirkManfred)
+		LABEL 0x132c
+		CHECK_ALIVE Wilhelm
+		BEQ 0x132d 0xc 0x0
+		TheGrandReturn(Estelle,Dirk,Wilhelm,Ch24_EstelleDirkWilhelm)
+		LABEL 0x132d
+		CHECK_ALIVE Argent
+		BEQ 0x132e 0xc 0x0
+		TheGrandReturn(Estelle,Dirk,Argent,Ch24_EstelleDirkArgent)
+		LABEL 0x132e
+	LABEL 0x132a
+	CHECK_ALIVE Callum
+	BEQ 0x132f 0xc 0x0
+		CHECK_ALIVE Manfred
+		BEQ 0x1330 0xc 0x0
+		TheGrandReturn(Estelle,Callum,Manfred,Ch24_EstelleCallumManfred)
+		LABEL 0x1330
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1331 0xc 0x0
+		TheGrandReturn(Estelle,Callum,Wilhelm,Ch24_EstelleCallumWilhelm)
+		LABEL 0x1331
+		CHECK_ALIVE Argent
+		BEQ 0x1332 0xc 0x0
+		TheGrandReturn(Estelle,Callum,Argent,Ch24_EstelleCallumArgent)
+		LABEL 0x1332
+	LABEL 0x132f
+	CHECK_ALIVE Manfred
+	BEQ 0x1333 0xc 0x0
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1334 0xc 0x0
+		TheGrandReturn(Estelle,Manfred,Wilhelm,Ch24_EstelleManfredWilhelm)
+		LABEL 0x1334
+		CHECK_ALIVE Argent
+		BEQ 0x1335 0xc 0x0
+		TheGrandReturn(Estelle,Manfred,Argent,Ch24_EstelleManfredArgent)
+		LABEL 0x1335
+	LABEL 0x1333
+	CHECK_ALIVE Wilhelm
+	BEQ 0x1336 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x1337 0xc 0x0
+		TheGrandReturn(Estelle,Wilhelm,Argent,Ch24_EstelleWilhelmArgent)
+		LABEL 0x1337
+	LABEL 0x1336
+LABEL 0x3b
+CHECK_ALIVE Rose
+BEQ 0x3c 0xc 0x0
+	CHECK_ALIVE Dirk
+	BEQ 0x142a 0xc 0x0
+		CHECK_ALIVE Callum
+		BEQ 0x142b 0xc 0x0
+		TheGrandReturn(Rose,Dirk,Callum,Ch24_RoseDirkCallum)
+		LABEL 0x142b
+		CHECK_ALIVE Manfred
+		BEQ 0x142c 0xc 0x0
+		TheGrandReturn(Rose,Dirk,Manfred,Ch24_RoseDirkManfred)
+		LABEL 0x142c
+		CHECK_ALIVE Wilhelm
+		BEQ 0x142d 0xc 0x0
+		TheGrandReturn(Rose,Dirk,Wilhelm,Ch24_RoseDirkWilhelm)
+		LABEL 0x142d
+		CHECK_ALIVE Argent
+		BEQ 0x142e 0xc 0x0
+		TheGrandReturn(Rose,Dirk,Argent,Ch24_RoseDirkArgent)
+		LABEL 0x142e
+	LABEL 0x142a
+	CHECK_ALIVE Callum
+	BEQ 0x142f 0xc 0x0
+		CHECK_ALIVE Manfred
+		BEQ 0x1430 0xc 0x0
+		TheGrandReturn(Rose,Callum,Manfred,Ch24_RoseCallumManfred)
+		LABEL 0x1430
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1431 0xc 0x0
+		TheGrandReturn(Rose,Callum,Wilhelm,Ch24_RoseCallumWilhelm)
+		LABEL 0x1431
+		CHECK_ALIVE Argent
+		BEQ 0x1432 0xc 0x0
+		TheGrandReturn(Rose,Callum,Argent,Ch24_RoseCallumArgent)
+		LABEL 0x1432
+	LABEL 0x142f
+	CHECK_ALIVE Manfred
+	BEQ 0x1433 0xc 0x0
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1434 0xc 0x0
+		TheGrandReturn(Rose,Manfred,Wilhelm,Ch24_RoseManfredWilhelm)
+		LABEL 0x1434
+		CHECK_ALIVE Argent
+		BEQ 0x1435 0xc 0x0
+		TheGrandReturn(Rose,Manfred,Argent,Ch24_RoseManfredArgent)
+		LABEL 0x1435
+	LABEL 0x1433
+	CHECK_ALIVE Wilhelm
+	BEQ 0x1436 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x1437 0xc 0x0
+		TheGrandReturn(Rose,Wilhelm,Argent,Ch24_RoseWilhelmArgent)
+		LABEL 0x1437
+	LABEL 0x1436
+LABEL 0x3c
+CHECK_ALIVE Dirk
+BEQ 0x3d 0xc 0x0
+	CHECK_ALIVE Callum
+	BEQ 0x152f 0xc 0x0
+		CHECK_ALIVE Manfred
+		BEQ 0x1530 0xc 0x0
+		TheGrandReturn(Dirk,Callum,Manfred,Ch24_DirkCallumManfred)
+		LABEL 0x1530
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1531 0xc 0x0
+		TheGrandReturn(Dirk,Callum,Wilhelm,Ch24_DirkCallumWilhelm)
+		LABEL 0x1531
+		CHECK_ALIVE Argent
+		BEQ 0x1532 0xc 0x0
+		TheGrandReturn(Dirk,Callum,Argent,Ch24_DirkCallumArgent)
+		LABEL 0x1532
+	LABEL 0x152f
+	CHECK_ALIVE Manfred
+	BEQ 0x1533 0xc 0x0
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1534 0xc 0x0
+		TheGrandReturn(Dirk,Manfred,Wilhelm,Ch24_DirkManfredWilhelm)
+		LABEL 0x1534
+		CHECK_ALIVE Argent
+		BEQ 0x1535 0xc 0x0
+		TheGrandReturn(Dirk,Manfred,Argent,Ch24_DirkManfredArgent)
+		LABEL 0x1535
+	LABEL 0x1533
+	CHECK_ALIVE Wilhelm
+	BEQ 0x1536 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x1537 0xc 0x0
+		TheGrandReturn(Dirk,Wilhelm,Argent,Ch24_DirkWilhelmArgent)
+		LABEL 0x1537
+	LABEL 0x1536
+LABEL 0x3d
+CHECK_ALIVE Callum
+BEQ 0x3e 0xc 0x0
+	CHECK_ALIVE Manfred
+	BEQ 0x1633 0xc 0x0
+		CHECK_ALIVE Wilhelm
+		BEQ 0x1634 0xc 0x0
+		TheGrandReturn(Callum,Manfred,Wilhelm,Ch24_CallumManfredWilhelm)
+		LABEL 0x1634
+		CHECK_ALIVE Argent
+		BEQ 0x1635 0xc 0x0
+		TheGrandReturn(Callum,Manfred,Argent,Ch24_CallumManfredArgent)
+		LABEL 0x1635
+	LABEL 0x1633
+	CHECK_ALIVE Wilhelm
+	BEQ 0x1636 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x1637 0xc 0x0
+		TheGrandReturn(Callum,Wilhelm,Argent,Ch24_CallumWilhelmArgent)
+		LABEL 0x1637
+	LABEL 0x1636
+LABEL 0x3e
+CHECK_ALIVE Manfred
+BEQ 0x3f 0xc 0x0
+	CHECK_ALIVE Wilhelm
+	BEQ 0x1736 0xc 0x0
+		CHECK_ALIVE Argent
+		BEQ 0x1737 0xc 0x0
+		TheGrandReturn(Manfred,Wilhelm,Argent,Ch24_ManfredWilhelmArgent)
+		LABEL 0x1737
+	LABEL 0x1736
+LABEL 0x3f
 LABEL TheFunnyLabel
 EndEvent
 

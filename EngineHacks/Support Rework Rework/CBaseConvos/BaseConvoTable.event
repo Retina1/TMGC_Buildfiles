@@ -730,6 +730,14 @@
 			text(C24_Blair_Arin_Base)
 			baseSupport(Blair,Arin,ASupport)
 		//c24 has a thing hinting that laronde will arrive
+	Chapter(Chapter25)
+		Entry
+			name(C25_Youth_Select)
+			bg(PathCG)
+			importance(3)
+			text(FillerDialogue)
+			unit(C25Ian)
+			eventID(BaseFlag1)
 		//c25 has ian and maybe a kyrie hint?
 		//c26
 		//c27
@@ -799,4 +807,9 @@ UNIT
 ALIGN 4
 C19Horatio:
 UNIT Horatio Rune 0x0 Level(17,Ally,0) [22,6] 0x0 0x0 0x0 0x0 [HoratioBlade] NoAI
+UNIT
+
+ALIGN 4
+C25Ian:
+UNIT Ian CivilM 0x0 Level(1,Ally,0) [31,13] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT

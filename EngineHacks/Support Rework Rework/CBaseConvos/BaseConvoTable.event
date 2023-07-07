@@ -738,9 +738,24 @@
 			text(FillerDialogue)
 			unit(C25Ian)
 			eventID(BaseFlag1)
+		Entry
+			name(Secret_Seller_Select)
+			bg(PathCG)
+			importance(2)
+			music(S_PascalTheDog)//buck
+			text(FillerDialogue)
+			eventID(BaseFlag2)
 		//c25 has ian and maybe a kyrie hint?
 		//c26
 		//c27
+	Chapter(Chapter28)
+		Entry
+			name(Secret_Seller_Select)
+			bg(HallCG)
+			importance(2)
+			music(S_PascalTheDog)//kelik
+			text(FillerDialogue)
+			eventID(BaseFlag1)
 		//c28
 		//endgame
 	POP

@@ -1,5 +1,5 @@
 //chain of command: freddric>dean>wilhelm>manfred>rift>callum>estelle>rose>eliza>dirk>argent
-//142 remain
+//138 remain
 //fred - this is it everyone thank you for everything
 //dean - it's time are you ready
 //wilhelm - hold you two
@@ -272,13 +272,83 @@ We must begin.[A][N]
 [ToggleMouthMove]...[ToggleMouthMove]Onwards![A][X]
 
 ##Ch24_FreddricElizaCallum
-pain[X]
+[OpenMidLeft][LoadFreddric][OpenRight][LoadCallum][OpenFarRight][LoadEliza][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]This is it, everyone.[N]
+Thank you[ToggleMouthMove]...[ToggleMouthMove] for everything.[A][N][OpenRight]
+Yup. [ToggleMouthMove]...[ToggleMouthMove]Let's get on with this.[A][N]
+Not to offend, but I'm hardly[N]
+what you'd call sentimental.[A][N]
+All I'm here to do is swing[N]
+a sword.[A] [ToggleMouthMove]...[ToggleMouthMove]All I can do.[A][N][OpenFarRight]
+It's[ToggleMouthMove]...[ToggleMouthMove] what we need now.[A][N]
+All I can do is keep you[N]
+alive to keep swinging.[A][N][OpenMidLeft]
+I never would've imagined[N]
+it just being us.[A][N]
+But[ToggleMouthMove]...[ToggleMouthMove] We'll make it.[N]
+I'm sure of it.[A][N][OpenRight]
+That we will. [ToggleMouthMove]...[ToggleMouthMove]It's showtime.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Onwards, friends![A][X]
+
 ##Ch24_FreddricElizaManfred
-pain[X]
+[OpenMidLeft][LoadFreddric][OpenRight][LoadManfred][OpenFarRight][LoadEliza][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]This is it, everyone.[N]
+Thank you[ToggleMouthMove]...[ToggleMouthMove] for everything.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]I[ToggleMouthMove]...[ToggleMouthMove] need to thank[N]
+you two, as well.[A][N][OpenRight]
+No need, young lady.[A][N]
+Just doing what anyone would.[A][N]
+Holding a band together in[N]
+the face of the insurmountable.[A][N]
+But, hey. We've clearly[N]
+surmounted something.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]That we have. It's not[ToggleMouthMove]...[ToggleMouthMove][N]
+been easy at all.[A][N]
+But we will prevail.[N]
+[ToggleMouthMove]...[ToggleMouthMove]We must.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]We will. I trust you.[A][N][OpenRight]
+As do I, boss.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Thank you.[N]
+[ToggleMouthMove]...[ToggleMouthMove]Onwards.[A][X]
+
 ##Ch24_FreddricElizaWilhelm
-pain[X]
+[OpenMidLeft][LoadFreddric][OpenRight][LoadEliza][OpenFarRight][LoadWilhelm][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]This is it, everyone.[N]
+Thank you[ToggleMouthMove]...[ToggleMouthMove] for everything.[A][N][OpenFarRight]
+Sure thing. Nothing to do[N]
+but ride this out to the end.[A][N]
+And it's been something of[N]
+an honor, I guess.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenFarRight]
+Still scared[ToggleMouthMove]...[ToggleMouthMove] Well, kid.[N]
+I get it.[A][N]
+I'm sweating arrowheads underneath[N]
+all of this armor.[A][N]
+But we'll protect ya'.[A][N][OpenRight]
+Please[ToggleMouthMove]...[ToggleMouthMove] you two.[N]
+Stay alive.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]We'll do our best.[N]
+[ToggleMouthMove]...[ToggleMouthMove]Onwards, friends.[A][X]
+
 ##Ch24_FreddricElizaArgent
-pain[X]
+[OpenMidLeft][LoadFreddric][OpenRight][LoadEliza][OpenFarRight][LoadArgent][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]This is it, everyone.[N]
+Thank you[ToggleMouthMove]...[ToggleMouthMove] for everything.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]This may very well be my[N]
+last chance to succeed.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]I swear that I shall[N]
+fall before you two.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]I won't let that happen.[N]
+I won't[ToggleMouthMove]...[ToggleMouthMove] let you die.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]If you insist I'm[N]
+worth it.[A][N][OpenMidLeft]
+You are, Argent. No matter[N]
+your past,[A] you've been[N]
+a faithful ally now.[A][N]
+Sticking through[ToggleMouthMove]...[ToggleMouthMove] everything.[A][N][OpenRight]
+We'll[ToggleMouthMove]...[ToggleMouthMove] all get through this.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]That we will.[N]
+[ToggleMouthMove]...[ToggleMouthMove]Onwards![A][X]
 
 ##Ch24_FreddricRiftEstelle
 pain[X]
@@ -294,6 +364,7 @@ pain[X]
 pain[X]
 ##Ch24_FreddricRiftArgent
 pain[X]
+
 ##Ch24_FreddricEstelleRose
 pain[X]
 ##Ch24_FreddricEstelleDirk
@@ -306,6 +377,7 @@ pain[X]
 pain[X]
 ##Ch24_FreddricEstelleArgent
 pain[X]
+
 ##Ch24_FreddricRoseDirk
 pain[X]
 ##Ch24_FreddricRoseCallum
@@ -316,6 +388,7 @@ pain[X]
 pain[X]
 ##Ch24_FreddricRoseArgent
 pain[X]
+
 ##Ch24_FreddricDirkCallum
 pain[X]
 ##Ch24_FreddricDirkManfred
@@ -324,6 +397,7 @@ pain[X]
 pain[X]
 ##Ch24_FreddricDirkArgent
 pain[X]
+
 ##Ch24_FreddricCallumManfred
 pain[X]
 ##Ch24_FreddricCallumWilhelm
@@ -357,6 +431,7 @@ Either way, I'm in for the long haul.[A][N][OpenMidLeft]
 
 ##Ch24_FreddricManfredArgent
 pain[X]
+
 ##Ch24_FreddricWilhelmArgent
 pain[X]
 
@@ -397,6 +472,7 @@ pain[X]
 pain[X]
 ##Ch24_DeanElizaArgent
 pain[X]
+
 ##Ch24_DeanRiftEstelle
 pain[X]
 ##Ch24_DeanRiftRose
@@ -411,6 +487,7 @@ pain[X]
 pain[X]
 ##Ch24_DeanRiftArgent
 pain[X]
+
 ##Ch24_DeanEstelleRose
 pain[X]
 ##Ch24_DeanEstelleDirk
@@ -423,6 +500,7 @@ pain[X]
 pain[X]
 ##Ch24_DeanEstelleArgent
 pain[X]
+
 ##Ch24_DeanRoseDirk
 pain[X]
 ##Ch24_DeanRoseCallum
@@ -433,6 +511,7 @@ pain[X]
 pain[X]
 ##Ch24_DeanRoseArgent
 pain[X]
+
 ##Ch24_DeanDirkCallum
 pain[X]
 ##Ch24_DeanDirkManfred
@@ -441,16 +520,19 @@ pain[X]
 pain[X]
 ##Ch24_DeanDirkArgent
 pain[X]
+
 ##Ch24_DeanCallumManfred
 pain[X]
 ##Ch24_DeanCallumWilhelm
 pain[X]
 ##Ch24_DeanCallumArgent
 pain[X]
+
 ##Ch24_DeanManfredWilhelm
 pain[X]
 ##Ch24_DeanManfredArgent
 pain[X]
+
 ##Ch24_DeanWilhelmArgent
 pain[X]
 
@@ -468,6 +550,7 @@ pain[X]
 pain[X]
 ##Ch24_ElizaRiftArgent
 pain[X]
+
 ##Ch24_ElizaEstelleRose
 pain[X]
 ##Ch24_ElizaEstelleDirk
@@ -480,6 +563,7 @@ pain[X]
 pain[X]
 ##Ch24_ElizaEstelleArgent
 pain[X]
+
 ##Ch24_ElizaRoseDirk
 pain[X]
 ##Ch24_ElizaRoseCallum
@@ -490,6 +574,7 @@ pain[X]
 pain[X]
 ##Ch24_ElizaRoseArgent
 pain[X]
+
 ##Ch24_ElizaDirkCallum
 pain[X]
 
@@ -541,16 +626,19 @@ I'm not gonna let that happen.[A][N][OpenFarRight]
 
 ##Ch24_ElizaDirkArgent
 pain[X]
+
 ##Ch24_ElizaCallumManfred
 pain[X]
 ##Ch24_ElizaCallumWilhelm
 pain[X]
 ##Ch24_ElizaCallumArgent
 pain[X]
+
 ##Ch24_ElizaManfredWilhelm
 pain[X]
 ##Ch24_ElizaManfredArgent
 pain[X]
+
 ##Ch24_ElizaWilhelmArgent
 pain[X]
 
@@ -598,6 +686,7 @@ Thanks[ToggleMouthMove]...[ToggleMouthMove] for getting me this far.)[A][X]
 
 ##Ch24_RiftEstelleArgent
 pain[X]
+
 ##Ch24_RiftRoseDirk
 pain[X]
 ##Ch24_RiftRoseCallum
@@ -608,6 +697,7 @@ pain[X]
 pain[X]
 ##Ch24_RiftRoseArgent
 pain[X]
+
 ##Ch24_RiftDirkCallum
 pain[X]
 ##Ch24_RiftDirkManfred
@@ -638,16 +728,19 @@ happened.[A][N][OpenMidLeft][OpenEyes]
 
 ##Ch24_RiftDirkArgent
 pain[X]
+
 ##Ch24_RiftCallumManfred
 pain[X]
 ##Ch24_RiftCallumWilhelm
 pain[X]
 ##Ch24_RiftCallumArgent
 pain[X]
+
 ##Ch24_RiftManfredWilhelm
 pain[X]
 ##Ch24_RiftManfredArgent
 pain[X]
+
 ##Ch24_RiftWilhelmArgent
 pain[X]
 
@@ -661,6 +754,7 @@ pain[X]
 pain[X]
 ##Ch24_EstelleRoseArgent
 pain[X]
+
 ##Ch24_EstelleDirkCallum
 pain[X]
 ##Ch24_EstelleDirkManfred
@@ -669,16 +763,19 @@ pain[X]
 pain[X]
 ##Ch24_EstelleDirkArgent
 pain[X]
+
 ##Ch24_EstelleCallumManfred
 pain[X]
 ##Ch24_EstelleCallumWilhelm
 pain[X]
 ##Ch24_EstelleCallumArgent
 pain[X]
+
 ##Ch24_EstelleManfredWilhelm
 pain[X]
 ##Ch24_EstelleManfredArgent
 pain[X]
+
 ##Ch24_EstelleWilhelmArgent
 pain[X]
 
@@ -739,6 +836,7 @@ more years, friend.[A][X]
 
 ##Ch24_RoseManfredArgent
 pain[X]
+
 ##Ch24_RoseWilhelmArgent
 pain[X]
 
@@ -748,10 +846,12 @@ pain[X]
 pain[X]
 ##Ch24_DirkCallumArgent
 pain[X]
+
 ##Ch24_DirkManfredWilhelm
 pain[X]
 ##Ch24_DirkManfredArgent
 pain[X]
+
 ##Ch24_DirkWilhelmArgent
 pain[X]
 
@@ -787,6 +887,7 @@ Time to raise some hell.[A][X]
 
 ##Ch24_CallumManfredArgent
 pain[X]
+
 ##Ch24_CallumWilhelmArgent
 pain[X]
 

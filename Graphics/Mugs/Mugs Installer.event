@@ -49,6 +49,10 @@ ALIGN 4
 KennethMug:
 #incbin "dmps/Kenneth.dmp"
 setMugEntry(0x7,KennethMug,3,5,3,3)
+ALIGN 4
+KennethPromoMug:
+#incbin "dmps/KennethPromo.dmp"
+setMugEntry(0xf6,KennethPromoMug,3,5,3,3)
 
 ALIGN 4
 NatasiaMug:
@@ -593,6 +597,10 @@ ALIGN 4
 NeillstromMug:
 #incbin "dmps/Neillstrom.dmp"
 setMugEntry(0x4f,NeillstromMug,2,5,2,3)
+ALIGN 4
+YoungNeillstromMug:
+#incbin "dmps/YoungNeillstrom.dmp"
+setMugEntry(0xf7,YoungNeillstromMug,2,5,2,3)
 
 ALIGN 4
 CiraweissMug:

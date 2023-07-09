@@ -33,7 +33,8 @@ CharacterBasedEvents:
 //yuyu talks to ineubrenos for sorrow's pilgrim and bow rank
 //blair yuyu B+
 CharacterEvent(0x21,C24Pilgrim,Yuyu,BossIneubrenos)
-CharacterEvent(0x23,C24Dracopope,Vladmir,SecretLaronde)
+CharacterEventBothWays(0x23,C24Dracopope,Vladmir,SecretLaronde)
+CharacterEvent(0x24,C24RoseLarondeRecruitment,Rose,SecretLaronde)
 END_MAIN
 
 LocationBasedEvents:
@@ -220,7 +221,7 @@ C24LarondeSpawn1:
 UNIT Opistia Wyvern 0x0 Level(10,NPC,0) [24,0] 0x0 0x0 0x1 REDA25R3 [0x0] NoAI
 UNIT
 C24LarondeSpawn2:
-UNIT SecretLaronde Halberdier 0x0 Level(10,NPC,0) [25,3] 0x0 0x0 0x1 REDA25R4 [Spear,Nuboko,Elixir,GoddessIcon] NeverMoveAI
+UNIT SecretLaronde Halberdier 0x0 Level(6,NPC,0) [25,3] 0x0 0x0 0x1 REDA25R4 [Spear,Nuboko,Elixir,GoddessIcon] NeverMoveAI
 UNIT
 
 C24OpeningBlair:
@@ -297,6 +298,12 @@ PROMOTE Vladmir Draco GoddessIcon
 FADI 16
 CLEAN
 FADU 16
+EndEvent
+
+C24RoseLarondeRecruitment:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+TurnAlly(SecretLaronde)
 EndEvent
 
 C24Trap1:

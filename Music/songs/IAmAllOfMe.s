@@ -1,30 +1,30 @@
 	.include "MPlayDef.s"
 
-	.equ	song0197_grp, voicegroup000
-	.equ	song0197_pri, 0
-	.equ	song0197_rev, 0
-	.equ	song0197_mvl, 127
-	.equ	song0197_key, 0
-	.equ	song0197_tbs, 1
-	.equ	song0197_exg, 0
-	.equ	song0197_cmp, 1
+	.equ	IAmAllOfMe_grp, voicegroup000
+	.equ	IAmAllOfMe_pri, 0
+	.equ	IAmAllOfMe_rev, 0
+	.equ	IAmAllOfMe_mvl, 127
+	.equ	IAmAllOfMe_key, 0
+	.equ	IAmAllOfMe_tbs, 1
+	.equ	IAmAllOfMe_exg, 0
+	.equ	IAmAllOfMe_cmp, 1
 
 	.section .rodata
-	.global	song0197
+	.global	IAmAllOfMe
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0197_001:
+IAmAllOfMe_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0197_key+0
+ .byte   KEYSH , IAmAllOfMe_key+0
 Label_014B9146:
- .byte   TEMPO , 190*song0197_tbs/2
+ .byte   TEMPO , 190*IAmAllOfMe_tbs/2
  .byte   VOICE , 30
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 55*song0197_mvl/mxv
+ .byte   VOL , 55*IAmAllOfMe_mvl/mxv
  .byte   N24 ,Cn1 ,v072
  .byte   N24 ,Gn1
  .byte   N24 ,Cn2
@@ -1434,14 +1434,14 @@ Label_014B96AF:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0197_002:
+IAmAllOfMe_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0197_key+0
+ .byte   KEYSH , IAmAllOfMe_key+0
 Label_014B997E:
  .byte   VOICE , 38
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 34*song0197_mvl/mxv
+ .byte   VOL , 34*IAmAllOfMe_mvl/mxv
  .byte   N24 ,Cn1 ,v072
  .byte   W24
  .byte   N24
@@ -1480,7 +1480,7 @@ Label_014B99A2:
  .byte   W24
  .byte   PEND 
 @  #02 @004   ----------------------------------------
- .byte   VOL , 34*song0197_mvl/mxv
+ .byte   VOL , 34*IAmAllOfMe_mvl/mxv
  .byte   N24 ,Cn1
  .byte   W24
  .byte   N24
@@ -2118,7 +2118,7 @@ Label_014B9C6F:
  .byte   W12
  .byte   Gn1
  .byte   W12
- .byte   VOL , 34*song0197_mvl/mxv
+ .byte   VOL , 34*IAmAllOfMe_mvl/mxv
  .byte   W12
  .byte   N24 ,Cn1
  .byte   W12
@@ -2444,14 +2444,14 @@ Label_014B9C6F:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0197_003:
+IAmAllOfMe_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0197_key+0
+ .byte   KEYSH , IAmAllOfMe_key+0
 Label_014B858E:
  .byte   VOICE , 104
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 62*song0197_mvl/mxv
+ .byte   VOL , 62*IAmAllOfMe_mvl/mxv
  .byte   W96
 @  #03 @001   ----------------------------------------
  .byte   W96
@@ -3191,14 +3191,14 @@ Label_014B885E:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0197_004:
+IAmAllOfMe_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0197_key+0
+ .byte   KEYSH , IAmAllOfMe_key+0
 Label_014B8C5E:
  .byte   VOICE , 104
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 54*song0197_mvl/mxv
+ .byte   VOL , 54*IAmAllOfMe_mvl/mxv
  .byte   W96
 @  #04 @001   ----------------------------------------
  .byte   W96
@@ -3897,14 +3897,14 @@ Label_014B8EF4:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0197_005:
+IAmAllOfMe_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0197_key+0
+ .byte   KEYSH , IAmAllOfMe_key+0
 Label_015DB6A2:
  .byte   VOICE , 81
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 49*song0197_mvl/mxv
+ .byte   VOL , 49*IAmAllOfMe_mvl/mxv
  .byte   W96
 @  #05 @001   ----------------------------------------
  .byte   W96
@@ -4433,14 +4433,14 @@ Label_015DB769:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song0197_006:
+IAmAllOfMe_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song0197_key+0
+ .byte   KEYSH , IAmAllOfMe_key+0
 Label_015DB516:
  .byte   VOICE , 81
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 34*song0197_mvl/mxv
+ .byte   VOL , 34*IAmAllOfMe_mvl/mxv
  .byte   W96
 @  #06 @001   ----------------------------------------
  .byte   W96
@@ -4845,14 +4845,14 @@ Label_015DB576:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song0197_007:
+IAmAllOfMe_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song0197_key+0
+ .byte   KEYSH , IAmAllOfMe_key+0
 Label_014B9EA6:
  .byte   VOICE , 121
  .byte   MODT 0
  .byte   LFOS 44
- .byte   VOL , 44*song0197_mvl/mxv
+ .byte   VOL , 44*IAmAllOfMe_mvl/mxv
  .byte   N06 ,Cn1 ,v100
  .byte   N06 ,Fs1 ,v072
  .byte   W12
@@ -5566,7 +5566,7 @@ Label_014BA2C8:
  .byte   PATT
   .word Label_014BA2C8
 @  #07 @076   ----------------------------------------
- .byte   VOL , 44*song0197_mvl/mxv
+ .byte   VOL , 44*IAmAllOfMe_mvl/mxv
  .byte   N06 ,Cn1 ,v100
  .byte   N06 ,As1 ,v072
  .byte   W12
@@ -6112,20 +6112,20 @@ Label_014BA619:
 @******************************************************@
 	.align	2
 
-song0197:
+IAmAllOfMe:
 	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0197_pri	@ Priority
-	.byte	song0197_rev	@ Reverb.
+	.byte	IAmAllOfMe_pri	@ Priority
+	.byte	IAmAllOfMe_rev	@ Reverb.
     
-	.word	song0197_grp
+	.word	IAmAllOfMe_grp
     
-	.word	song0197_001
-	.word	song0197_002
-	.word	song0197_003
-	.word	song0197_004
-	.word	song0197_005
-	.word	song0197_006
-	.word	song0197_007
+	.word	IAmAllOfMe_001
+	.word	IAmAllOfMe_002
+	.word	IAmAllOfMe_003
+	.word	IAmAllOfMe_004
+	.word	IAmAllOfMe_005
+	.word	IAmAllOfMe_006
+	.word	IAmAllOfMe_007
 
 	.end

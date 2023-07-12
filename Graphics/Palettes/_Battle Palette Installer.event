@@ -29,6 +29,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
 #define SetPaletteFull(Character,UnpromotedPalette,UnpromotedClass,FirstPromotionPalette,FirstPromotionClass,SecondPromotionPalette,SecondPromotionClass) "setCharPalette(Character,0x00,UnpromotedPalette,0x00,FirstPromotionPalette,SecondPromotionPalette,0x00,0x00) ; setCharClass(Character,0x00,UnpromotedClass,0x00,FirstPromotionClass,SecondPromotionClass,0x00,0x00)"
 #define SetPaletteFuller(Character,UnpromotedPalette,UnpromotedClass,UnpromotedPalette2,UnpromotedClass2,FirstPromotionPalette,FirstPromotionClass,SecondPromotionPalette,SecondPromotionClass,ThirdPromotionPalette,ThirdPromotionClass,FourthPromotionPalette,FourthPromotionClass) "setCharPalette(Character,0x00,UnpromotedPalette,UnpromotedPalette2,FirstPromotionPalette,SecondPromotionPalette,ThirdPromotionPalette,FourthPromotionPalette) ; setCharClass(Character,0x00,UnpromotedClass,UnpromotedClass2,FirstPromotionClass,SecondPromotionClass,ThirdPromotionClass,FourthPromotionClass)"
+#define SetPaletteSimulacrum(Character,FirstPromotionPalette,FirstPromotionClass,SecondPromotionPalette,SecondPromotionClass,ThirdPromotionPalette,ThirdPromotionClass,FourthPromotionPalette,FourthPromotionClass) "setCharPalette(Character,0x00,0x00,0x00,FirstPromotionPalette,SecondPromotionPalette,ThirdPromotionPalette,FourthPromotionPalette) ; setCharClass(Character,0x00,0x00,0x00,FirstPromotionClass,SecondPromotionClass,ThirdPromotionClass,FourthPromotionClass)"
 
 #define BlairUPaletteID 0x1
 #define NatasiaUPaletteID 0x2
@@ -477,6 +478,14 @@ SetPaletteFull(Cid,0x0,0x0,CidPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(C7Hyperius,0x0,0x0,HyperiusPaletteID,SwdGen,0x0,0x0)
 SetPaletteFull(C7Alexis,AlexisUPaletteID,AxeArm,0x0,0x0,0x0,0x0)
 SetPaletteFull(C7Wilhelm,WilhelmUPaletteID,Soldier,0x0,0x0,0x0,0x0)
+
+SetPaletteSimulacrum(BossSimulacrum1,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPaletteID,LncGen)
+SetPaletteSimulacrum(BossSimulacrum2,HelgaPaletteID,WarriorF,MitchellPaletteID,Hero,AmundsenPaletteID,Bruiser,ZainePaletteID,Sorc)
+SetPaletteSimulacrum(BossSimulacrum3,EsmePaletteID,WyvLord,PetePaletteID,Berserker,SofiaPaletteID,SorcF,AmaraPaletteID,Amara)
+SetPaletteSimulacrum(BossSimulacrum4,ValdenPaletteID,LncPal,GregoriasPaletteID,Berserker,MasonValkPaletteID,Valk,RoarkPaletteID,Warrior)
+SetPaletteSimulacrum(BossSimulacrum5,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPaletteID,LncGen)
+SetPaletteSimulacrum(BossSimulacrum6,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPaletteID,LncGen)
+SetPaletteSimulacrum(BossSimulacrum7,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPaletteID,LncGen)
 // I'm commenting the classes out that don't have palettes yet.
 
 ALIGN 4

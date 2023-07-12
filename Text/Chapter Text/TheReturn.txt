@@ -1,11 +1,11 @@
 //chain of command: freddric>dean>wilhelm>manfred>rift>callum>estelle>rose>eliza>dirk>argent
-//134 remain
+//130 remain
 //fred - this is it everyone thank you for everything
 //dean - it's time are you ready
 //wilhelm - hold you two
 //manfred - i believe we're finally upon the lady's army
 //rift
-//callum
+//callum - here we go time to raise some hell fellas
 //estelle
 //rose - never opens
 //eliza
@@ -881,16 +881,106 @@ pain[X]
 pain[X]
 ##Ch24_DirkCallumWilhelm
 pain[X]
+
 ##Ch24_DirkCallumArgent
-pain[X]
+[OpenMidLeft][LoadDirk][OpenRight][LoadCallum][OpenFarRight][LoadArgent][OpenRight]
+Here we go. Time to raise[N]
+some hell, fellas.[A][N][OpenFarRight]
+You're quite adept at that.[N]
+[ToggleMouthMove]...[ToggleMouthMove]It's a fine skill.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Thanks. I think.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenRight]
+Ah. Right. On with this.[N]
+Apologies.[A][N]
+If I were one of you, I'd[N]
+hate me for wasting time too.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Not sure why I'm the[N]
+one leading here.[A][N][OpenFarRight]
+It is not my place. And Dirk's[ToggleMouthMove]...[ToggleMouthMove][N]
+He's hurting.[A][N]
+You're our most capable.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]That feels[ToggleMouthMove]...[ToggleMouthMove] good.[N]
+Hearing that.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Thanks.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Well, no more dawdling.[N]
+Hit them where it hurts![A][N]
+And then hit them again![N]
+And again![A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I can do that.[A][X]
 
 ##Ch24_DirkManfredWilhelm
-pain[X]
+[OpenMidLeft][LoadDirk][OpenRight][LoadManfred][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N]
+Perhaps ravaged by time, but[ToggleMouthMove]...[ToggleMouthMove][N]
+Well, who hasn't been ravaged, lately?[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Let's go.[A][N][OpenRight]
+You heard the kid. No comedy[N]
+routine for us today.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]All the same, then.[A][N]
+There's no cutting this tension[N]
+anyway.[A][N][OpenRight]
+Perhaps later we can revel.[A][N]
+But for now, we must do what[N]
+we swore.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Let's[ToggleMouthMove]...[ToggleMouthMove] get this done.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Yup. Onwards, gentlemen.[N]
+Don't show them any mercy![A][X]
+
 ##Ch24_DirkManfredArgent
-pain[X]
+[OpenMidLeft][LoadManfred][OpenRight][LoadDirk][OpenFarRight][LoadArgent][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I believe we're finally[N]
+upon the lady's army.[A][N]
+How do we proceed?[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]How else? We seek[N]
+vengeance.[A][N][OpenFarRight]
+Succinct. I agree. But it's[N]
+up to you, Manfred.[A][N][OpenMidLeft]
+Vengeance[ToggleMouthMove]...[ToggleMouthMove] That sounds good[N]
+right about now.[A][N]
+We've been through hell.[A][N][OpenRight][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenFarRight]
+Indeed we have.[A][N][OpenMidLeft]
+And now, it's time we turn[N]
+the tables.[A] Show them our[N]
+own brand of hell.[A][N][OpenRight][OpenEyes]
+[ToggleMouthMove]...[ToggleMouthMove]Let's move, then.[A][N][OpenMidLeft]
+Alright. On my mark.[N]
+We stand as one.[A][N][OpenFarRight]
+And I'll stand with you[N]
+until my bitter end.[A][X]
 
 ##Ch24_DirkWilhelmArgent
-pain[X]
+[OpenMidLeft][LoadArgent][OpenRight][LoadDirk][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]On with it, then.[A][N][OpenMidLeft]
+I agree. Time's wasting as long[N]
+as we're standing here.[A][N]
+I've learned something from[N]
+my many long years:[A][N]
+You've gotta act.[A][N][OpenFarRight]
+That[ToggleMouthMove]...[ToggleMouthMove] was my plan. Deliberation's[N]
+never been me, either.[A][N]
+Lived a life at the whim of[N]
+the cards and the kingdom.[A][N]
+Leading[ToggleMouthMove]...[ToggleMouthMove] Deciding[ToggleMouthMove]...[ToggleMouthMove][N]
+That's all new.[A][N][OpenMidLeft]
+You're doing as well as[N]
+we could hope.[A][N]
+Better than either of us.[A][N][OpenRight][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenFarRight]
+I've seen that look many times.[N]
+Despondence. Indignation.[A][N]
+Well, friend. Today, you'll[N]
+get what you want.[A][N]
+One way or another.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]We all shall.[A][N][OpenFarRight]
+Ayup. Anyway, it's time.[N]
+On my mark.[A][X]
 
 ##Ch24_CallumManfredWilhelm
 [OpenMidLeft][LoadCallum][OpenRight][LoadManfred][OpenFarRight][LoadWilhelm]

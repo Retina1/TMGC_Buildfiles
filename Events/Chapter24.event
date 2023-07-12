@@ -24,6 +24,7 @@ TurnBasedEvents:
 TurnEventPlayer(0x0,C24Turn1,1)
 TurnEventPlayer(0x0,C24TheReturn,3)
 TurnEventPlayer(0x0,C24LarondeSpawn,5)
+TurnEventPlayer(0x0,C24ChaserSpawn,10,20)
 TurnEventPlayer(0x65,C24OutOfTime,21)
 TurnEventPlayer(0x9,C24Trap1,1,255)
 END_MAIN
@@ -183,6 +184,15 @@ C24IneubrenosSpawn:
 UNIT BossIneubrenos SniperF 0x0 Level(17,Enemy,1) [6,15] DropItem 0x0 0x1 REDA6R17 [Ineubrenos] NoAI
 UNIT
 
+C24HahaEatShit:
+UNIT Elite AxePal 0x0 Level(10,Enemy,1) [35,5] 0x0 0x0 0x0 0x0 [MasterAxe,Hammer] NoAI
+UNIT Elite LncPal 0x0 Level(10,Enemy,1) [35,6] 0x0 0x0 0x0 0x0 [MasterLance,Shatterspear] NoAI
+UNIT Elite SwdPal 0x0 Level(10,Enemy,1) [35,7] 0x0 0x0 0x0 0x0 [MasterSword,Runesword] NoAI
+UNIT MagElite Sage 0x0 Level(10,Enemy,1) [35,16] 0x0 0x0 0x0 0x0 [Galewind,Sagittae] NoAI
+UNIT MagElite Bishop 0x0 Level(10,Enemy,1) [35,17] 0x0 0x0 0x0 0x0 [Radiance,Smite] NoAI
+UNIT MagElite Sorc 0x0 Level(10,Enemy,1) [35,18] 0x0 0x0 0x0 0x0 [Nocturne,Hell] NoAI
+UNIT
+
 FreddricRejoin:
 UNIT Freddric 0x0 0x0 Level(1,Ally,0) [20,21] 0x0 0x0 0x1 REDA22R17 [0x0] NoAI
 UNIT
@@ -264,6 +274,10 @@ MUSC S_FE4Conversation
 CleanTextNoMap(LowlandsCG,FillerDialogue)
 MoveToChapter(Chapter25)
 ENDA
+
+C24ChaserSpawn:
+Reinforcements(C24HahaEatShit)
+EndEvent
 
 C24LarondeSpawn:
 Reinforcements(C24LarondeSpawn1)

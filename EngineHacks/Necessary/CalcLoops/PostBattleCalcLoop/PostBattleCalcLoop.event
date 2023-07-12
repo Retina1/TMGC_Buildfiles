@@ -1,6 +1,10 @@
 
 	/* Post-battle calculation loop*/
-
+//this one gives infinite turns?
+//PUSH 
+//ORG $37748 // HandlePostActionTraps occurs before the hook at $1D308 and sets action to "wait" when standing on a trap 
+//jumpToHack(PostCombatLoop)
+//POP  
 PUSH
 ORG $1D308 //hook just before the check for misc event
 jumpToHack(PostCombatLoop)

@@ -363,7 +363,7 @@ SystemText(C24SummonIneubrenos)
 IfNoSelectedGoto(0x3)
 Text(FillerDialogue)
 Reinforcements(C24IneubrenosSpawn)
-SetUnitStatus(BossIneubrenos, State, Acted)
+SetUnitStatus(BossIneubrenos, State, 0x1002)
 GOTO 0x2
 LABEL 0x3
 Text(FillerDialogue)

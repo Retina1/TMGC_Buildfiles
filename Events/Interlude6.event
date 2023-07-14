@@ -427,6 +427,13 @@ SystemText(StefanInvalidPartner)
 ClearBackgroundSmooth
 GOTO 0x40
 LABEL 0x66
+RANDOMNUMBER 10
+BGT 0x999 0xc 0x0
+Text(I6StefanSoloConvoAlt)
+LearnSkill(Stefan,SummonID)
+SystemText(I6SoloTrainedAlt)
+GOTO 0x68
+LABEL 0x999
 Text(I6StefanSoloConvo)
 AddUnitStatus(Stefan,MaxHP,4)
 AddUnitStatus(Stefan,Strength,4)

@@ -16,6 +16,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define BattleSpriteTable ClassAnimTable
 
 #define setPalette(index, palette) "PUSH; ORG (PaletteTable + index * 0x10); POIN palette; POP"
+#define setFunnyText(index, bytes) "PUSH; ORG (PaletteTable + index * 0x10 - 12); BYTE bytes; POP"
 //set the generic palette to a class animation
 #define setGenericPalette(index, genpal) "PUSH; ORG ((BattleSpriteTable - 0x4) + (index * 0x20)); POIN genpal; POP"
 
@@ -186,18 +187,27 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define CiraweissPaletteID 0x74
 #define ArbordiaPaletteID 0x3d
 
-//to do: unpromoted pals for promoted units?
+//to do: unpromoted pals for promoted units, cheeky text
 setPalette(BlairUPaletteID,BlairUPalette)
 setPalette(BlairPPaletteID,BlairPPalette)
+	setFunnyText(BlairUPaletteID, 0x62 0x6c 0x65 0x61 0x72)
+	setFunnyText(BlairPPaletteID, 0x62 0x6c 0x65 0x61 0x72)
 setPalette(ArinPaletteID,ArinPalette)
 //arin valk is handled in class
 setPalette(KennethUPaletteID,KennethUPalette)
 setPalette(KennethPPaletteID,KennethPPalette)
 setPalette(KennethBPaletteID,KennethBPalette)
+	setFunnyText(KennethUPaletteID, 0x76 0x69 0x6e 0x63 0x65 0x6e 0x74)
+	setFunnyText(KennethPPaletteID, 0x76 0x69 0x6e 0x63 0x65 0x6e 0x74)
+	setFunnyText(KennethBPaletteID, 0x76 0x69 0x6e 0x63 0x65 0x6e 0x74)
 setPalette(NatasiaUPaletteID,NatasiaUPalette)
 setPalette(NatasiaPPaletteID,NatasiaPPalette)
+	setFunnyText(NatasiaUPaletteID, 0x6b 0x65 0x6e 0x6e 0x79)
+	setFunnyText(NatasiaPPaletteID, 0x6b 0x65 0x6e 0x6e 0x79)
 setPalette(StefanUPaletteID,StefanUPalette)
 setPalette(StefanPPaletteID,StefanPPalette)
+	setFunnyText(StefanUPaletteID, 0x73 0x74 0x65 0x76 0x65 0x6e)
+	setFunnyText(StefanPPaletteID, 0x73 0x74 0x65 0x76 0x65 0x6e)
 setPalette(DesmondPaletteID,DesmondPalette)
 setPalette(DesmondPalPaletteID,DesmondPalPalette)
 setPalette(SamUPaletteID,SamUPalette)
@@ -224,6 +234,8 @@ setPalette(HilbertUPaletteID,HilbertUPalette)
 setPalette(HilbertPPaletteID,HilbertPPalette)
 setPalette(FlynnUPaletteID,FlynnUPalette)
 setPalette(FlynnPPaletteID,FlynnPPalette)
+	setFunnyText(FlynnUPaletteID, 0x65 0x64 0x67 0x65)
+	setFunnyText(FlynnPPaletteID, 0x65 0x64 0x67 0x65)
 setPalette(MikeyUPaletteID,MikeyUPalette)
 setPalette(MikeyPPaletteID,MikeyPPalette)
 setPalette(CarbonUPaletteID,CarbonUPalette)
@@ -255,8 +267,12 @@ setPalette(HoratioPPaletteID,HoratioPPalette)
 setPalette(SimonePaletteID,SimonePalette)
 setPalette(PtolemyUPaletteID,PtolemyUPalette)
 setPalette(PtolemyPPaletteID,PtolemyPPalette)
+	setFunnyText(PtolemyUPaletteID, 0x42 0x45 0x45 0x45 0x45 0x45 0x45 0x45 0x45 0x45 0x53)
+	setFunnyText(PtolemyPPaletteID, 0x42 0x45 0x45 0x45 0x45 0x45 0x45 0x45 0x45 0x45 0x53)
 setPalette(JohanUPaletteID,JohanUPalette)
 setPalette(JohanPPaletteID,JohanPPalette)
+	setFunnyText(JohanUPaletteID, 0x6a 0x6f 0x6e 0x61 0x68)
+	setFunnyText(JohanPPaletteID, 0x6a 0x6f 0x6e 0x61 0x68)
 setPalette(PeterPaletteID,PeterPalette)
 setPalette(SoniaPaletteID,SoniaPalette)
 setPalette(JoanPaletteID,JoanPalette)
@@ -270,6 +286,8 @@ setPalette(DeanUPaletteID,DeanUPalette)
 setPalette(DeanPPaletteID,DeanPPalette)
 setPalette(ElizaUPaletteID,ElizaUPalette)
 setPalette(ElizaPPaletteID,ElizaPPalette)
+	setFunnyText(ElizaUPaletteID, 0x64 0x61 0x77 0x6e)
+	setFunnyText(ElizaPPaletteID, 0x64 0x61 0x77 0x6e)
 setPalette(ChartreusePaletteID,ChartreusePalette)
 setPalette(RiftPaletteID,RiftPalette)
 setPalette(EstelleUPaletteID,EstelleUPalette)
@@ -329,8 +347,12 @@ setPalette(ReynardPaletteID,ReynardPalette)
 setPalette(LarsonPaletteID,LarsonPalette)
 setPalette(NathanielPaletteID,NathanielPalette)
 setPalette(FioraPaletteID,FioraPalette)
+setPalette(MasonValkPaletteID,MasonValkPalette)
+setPalette(MasonSagePaletteID,MasonSagePalette)
+setPalette(BobertPaletteID,BobertPalette)
 
 setPalette(IneubrenosPaletteID,IneubrenosPalette)
+	setFunnyText(IneubrenosPaletteID,0x67 0x6f 0x6c 0x64 0x62 0x6c 0x69 0x74 0x7a 0x78)
 
 setPalette(LiamPaletteID,LiamPalette)
 setPalette(NeillstromPaletteID,NeillstromPalette)
@@ -901,6 +923,15 @@ LarsonPalette:
 ALIGN 4
 FioraPalette:
 #incbin "Fiora.dmp"
+ALIGN 4
+MasonValkPalette:
+#incbin "MasonValk.dmp"
+ALIGN 4
+MasonSagePalette:
+#incbin "MasonSage.dmp"
+ALIGN 4
+BobertPalette:
+#incbin "Bobert.dmp"
 
 
 ALIGN 4

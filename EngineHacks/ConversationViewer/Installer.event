@@ -406,7 +406,8 @@ ConversationEntryTerminator
 ALIGN 4
 Chapter11Conversations:
 ConversationEntry(EC11Open1,Ch11_Opening,DesertCG,Chapter11,S_WhenMotherWasThereAlt)
-ConversationEntry(EC11Open2,Ch11_Opening2,DesertCG,Chapter11,S_Crisis)
+ConversationEntry(EC11Open21,Ch11_Opening2Part1,HallCG,Chapter11,S_Chaos)
+ConversationEntry(EC11Open22,Ch11_Opening2Part2,HallCG,Chapter11,S_Chaos)
 ConversationEntry(EC11Open3,Ch11_Opening3,DesertCG,Chapter11,S_Crisis)
 ConversationEntry(EC11RecruitHilbert,Ch11_Hilbert_Talk,DesertCG,Chapter11,RecruitmentTheme)
 ConversationEntry(EC11BossGen,C11SofiaBattle,HallCG,Chapter11,S_SMT4B2)
@@ -1095,7 +1096,7 @@ ALIGN 4
 Chapter21Conversations:
 ConversationEntry(EC21Open0,Ch21_Flashback,MoonCG,Chapter21)
 ConversationEntry(EC21Open1,Ch21_Opening,OutdoorCastleCG,Chapter21)
-ConversationEntry(EC21Open2,Ch21_Opening2,TentInsideCG,Chapter21)
+ConversationEntry(EC21Open2,Ch21_Opening2,TentInsideCG,Chapter21,S_Nightfall)
 ConversationEntry(EC21Open3,Ch21_Opening3,HallCG,Chapter21,S_Chaos)
 ConversationEntry(EC21Open4,Ch21_Opening4,DungeonCG,Chapter21,S_Chaos)
 ConversationEntry(EC21Open5,Ch21_Opening5,HallCG,Chapter21)
@@ -1198,6 +1199,8 @@ ConversationEntry(V3_Family_Select,V3_Family,YgstraCG,BaseConvoViewer)
 ConversationEntry(V3_Way_Select,V3_Way,YgstraCG,BaseConvoViewer)
 ConversationEntry(SSCh21,C21_Secret_Seller,HallCG,BaseConvoViewer,S_PascalTheDog)
 ConversationEntry(C23_Father_Select,C23_Father_Base,EastHolanisCG,BaseConvoViewer)
+ConversationEntry(SSCh25,C25_Secret_Seller,PathCG,BaseConvoViewer,S_PascalTheDog)
+ConversationEntry(SSCh28,C28_Secret_Seller,HallCG,BaseConvoViewer,S_PascalTheDog)
 ConversationEntryTerminator
 
 ALIGN 4

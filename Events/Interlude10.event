@@ -75,6 +75,7 @@ BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
+//range based events to enter the sealed door and get the foundation
 CauseGameOverIfLordDies
 END_MAIN
 

@@ -1,5 +1,5 @@
 //chain of command: freddric>dean>wilhelm>manfred>rift>callum>estelle>rose>eliza>dirk>argent
-//130 remain
+//129 remain
 //fred - this is it everyone thank you for everything
 //dean - it's time are you ready
 //wilhelm - hold you two
@@ -879,8 +879,25 @@ pain[X]
 
 ##Ch24_DirkCallumManfred
 pain[X]
+
 ##Ch24_DirkCallumWilhelm
-pain[X]
+[OpenMidLeft][LoadCallum][OpenRight][LoadDirk][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N][OpenMidLeft]
+Well, then. On with it.[N]
+We're raring to go.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Yeah.[A][N][OpenFarRight]
+Welp. No holding the two of[N]
+you back.[A] Hell, not sure why[N]
+I'm holding myself back.[A][N]
+We're just three vengeful men[N]
+with nothing left to lose.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Wouldn't say nothing.[A][N][OpenRight][CloseEyes]
+[ToggleMouthMove]...[ToggleMouthMove][A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Let's just[ToggleMouthMove]...[ToggleMouthMove] get on with it.[N]
+Good luck, gentlemen.[N]
+[ToggleMouthMove]...[ToggleMouthMove]We're gonna need it.[A][X]
 
 ##Ch24_DirkCallumArgent
 [OpenMidLeft][LoadDirk][OpenRight][LoadCallum][OpenFarRight][LoadArgent][OpenRight]

@@ -53,6 +53,7 @@ ALIGN 4
 SummonSetupTable:
 SummonSetupTableEntry(0xd0,AddingtonSummon) // 0x3F - Default Phantom
 SummonSetupTableEntry(0xd2,HoratioSummon)
+SummonSetupTableEntry(0xd4,DummySummon)
 SummonSetupTerminator
 
 ALIGN 4
@@ -62,4 +63,8 @@ SummonSetupTerminator
 ALIGN 4
 HoratioSummon:
 SummonSetupListEntry(0x1e,BlueUnitSummon,SummonBlade)
+SummonSetupTerminator
+ALIGN 4
+DummySummon:
+SummonSetupListEntry(0x7e,GreenUnitSummon,IronSword)
 SummonSetupTerminator

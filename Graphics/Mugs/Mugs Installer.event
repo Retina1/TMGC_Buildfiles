@@ -77,11 +77,11 @@ setMugEntry(0x4,ArinMug,3,6,3,4)
 ALIGN 4
 KennethMug:
 #incbin "dmps/Kenneth.dmp"
-setMugEntry(0x7,KennethMug,3,5,3,3)
+setMugEntry(0x7,KennethMug,2,5,2,3)
 ALIGN 4
 KennethPromoMug:
 #incbin "dmps/KennethPromo.dmp"
-setMugEntry(0xf6,KennethPromoMug,3,5,3,3)
+setMugEntry(0xf6,KennethPromoMug,2,5,2,3)
 
 ALIGN 4
 NatasiaMug:
@@ -491,6 +491,10 @@ ALIGN 4
 ElcorianMug:
 #incbin "dmps/Elcorian.dmp"
 setMugEntry(0xB,ElcorianMug,3,5,3,2)
+ALIGN 4
+YoungElcorianMug:
+#incbin "dmps/YoungElcorian.dmp"
+setMugEntry(0xf8,YoungElcorianMug,3,5,3,3)
 
 
 //temporary

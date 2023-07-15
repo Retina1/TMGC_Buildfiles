@@ -589,6 +589,33 @@
 
 
 	//freddric (viridian)
+		entry(Freddric,Dean)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Freddric,Eliza)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Freddric,Rift)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Freddric,Estelle)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Freddric,Rose)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Freddric,Dirk)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Freddric,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Freddric,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Freddric,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 		entry(Freddric,Argent)
 			support(CSupport,0,0,0,0,0,10)
 			support(CPSupport,0,0,0,0,10,10)//v3 innate
@@ -608,6 +635,27 @@
 			support(BSupport,0,3,10,0,0,0)
 			support(BPSupport,0,4,20,0,0,0)
 			support(ASupport,0,5,30,0,0,0)
+		entry(Dean,Rift)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Estelle)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Rose)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	//eliza (dean)
 		entry(Eliza,Rose)
 			support(CSupport,0,0,5,0,0,5)
@@ -621,6 +669,24 @@
 			support(BSupport,3,3,0,0,0,0)//v2 innate
 			support(BPSupport,4,4,0,0,0,0)
 			support(ASupport,5,5,0,0,0,0)
+		entry(Eliza,Rift)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Estelle)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	//rift
 		entry(Rift,Estelle)
 			support(CSupport,0,0,0,10,0,0)
@@ -634,10 +700,79 @@
 			support(BSupport,0,0,20,0,10,0)
 			support(BPSupport,0,0,30,0,20,0)
 			support(ASupport,0,0,30,0,30,0)
+		entry(Rift,Rose)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rift,Dirk)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rift,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rift,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rift,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	//estelle (chartreuse, rift)
+		entry(Estelle,Rose)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Dirk)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	//rose (eliza)
+		entry(Rose,Dirk)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	//dirk (dean, eliza) 
+		entry(Dirk,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dirk,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dirk,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dirk,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)			
 	//callum (rift)
+		entry(Callum,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Callum,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Callum,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	//manfred
 		entry(Manfred,Wilhelm)
 			support(CSupport,1,0,0,0,0,5)
@@ -645,7 +780,13 @@
 			support(BSupport,1,0,15,0,0,15)//v3 innate
 			support(BPSupport,2,0,20,0,0,20)//v4
 			support(ASupport,3,0,30,0,0,30)
+		entry(Manfred,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	//wilhelm (manfred)
+		entry(Wilhelm,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	//argent (freddric)
 	entry(0,0) // Terminator
 	}

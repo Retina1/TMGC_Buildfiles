@@ -282,6 +282,22 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
+CHECK_ALIVE Cid
+BEQ 0x1 0xc 0x0
+MUSC 0x0
+CAM1 Cid
+FlashCursor(Cid,60)
+Text(C10_CidDoesAFunny)
+SetBackground(BlankCG)
+SOUN 0xD8
+STAL 40
+SOUN 0xD8
+STAL 50
+SOUN 0xD8
+STAL 70
+SOUN 0xD8
+STAL 100
+LABEL 0x1
 ResetBaseFlags
 MUSC S_FE4Conversation
 CleanTextNoMap(BoatCG,Ch10_Ending)

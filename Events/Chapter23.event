@@ -485,6 +485,7 @@ SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
 SVAL 0x1 0x00000000
 CHAI Joan
+GOTO 0x4
 LABEL 0x2
 Text(C23JoanRecruitsTobias)//tobias unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)

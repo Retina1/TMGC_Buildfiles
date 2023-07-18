@@ -75,6 +75,7 @@ POIN ChapterV5Conversations
 POIN Chapter21Conversations
 POIN Chapter22Conversations
 POIN Interlude9Conversations
+POIN Chapter23Conversations
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -1161,11 +1162,72 @@ ConversationEntryTerminator
 ALIGN 4
 Chapter22Conversations:
 ConversationEntry(EC22Open0,Ch22_Flashback,MoonCG,Chapter22)
+ConversationEntry(EC22Open1,C22_Opening,EastHolanisCG,Chapter22,S_Nightfall)
+ConversationEntry(EC22Open2,C22_Opening2,EastHolanisCG,Chapter22,S_Crisis)
+ConversationEntry(EC22PeterNotice,C22_PeterTalks,EastHolanisCG,Chapter22)
+ConversationEntry(EC22Clarque,C22ClarqueJoin,EastHolanisCG,Chapter22,RecruitmentThemeVirid)
+ConversationEntry(EC22ClarqueBlair,C22ClarqueBlairTalkConvo,EastHolanisCG,Chapter22)
+ConversationEntry(EC22ClarqueZeke,C22ClarqueZekeTalkConvo,EastHolanisCG,Chapter22)
+ConversationEntry(EC22PeterBlair,C22PeterRecruit,EastHolanisCG,Chapter22,RecruitmentTheme)
+ConversationEntry(EC22PeterButch,C22PeterRecruitButch,EastHolanisCG,Chapter22,RecruitmentTheme)
+ConversationEntry(EC22PeterButchAlt,C22PeterButchTalk,EastHolanisCG,Chapter22)
+ConversationEntry(EC22Village1,C22Village1Text,VillageCG,Chapter22)
+ConversationEntry(EC22Village2,C22Village2Text,VillageCG,Chapter22)
+ConversationEntry(EC22BountyArrive,C22BountyHunterArrives,EastHolanisCG,Chapter22)
+ConversationEntry(EC22BountyTalk,C22BountyHunterTalkNotTodd,EastHolanisCG,Chapter22)
+ConversationEntry(EC22BountyDead,C22BountyHunterTalkToddDead,EastHolanisCG,Chapter22)
+ConversationEntry(EC22BountyDeny,C22BountyHunterTalkDoNotSellTodd,EastHolanisCG,Chapter22)
+ConversationEntry(EC22BountySell,C22BountyHunterTalkSellTodd,EastHolanisCG,Chapter22)
+ConversationEntry(EC22Toddhand,C22BountyHunterTalkTodd,EastHolanisCG,Chapter22)
+ConversationEntry(EC22Toddhand2,C22BountyHunterTalkTodd2,EastHolanisCG,Chapter22)
+ConversationEntry(EC22LiamSpawn,C22LiamSpawns,EastHolanisCG,Chapter22)
+ConversationEntry(EC22LiamPay,C22LiamAccepted,EastHolanisCG,Chapter22)
+ConversationEntry(EC22LiamDeny,C22LiamDenied,EastHolanisCG,Chapter22)
+ConversationEntry(EC22LiamPoor,C22LiamPoor,EastHolanisCG,Chapter22)
+ConversationEntry(EC22PeterDie,EnemyPeterDeath,EastHolanisCG,Chapter22,S_TimeToMakeHistory)
+ConversationEntry(EC22LiamBattle,LiamBattle,EastHolanisCG,Chapter22,S_CrimsonRidge)
+ConversationEntry(EC22LiamHilbert,LiamHilbertBattle,EastHolanisCG,Chapter22,S_CrimsonRidge)
+ConversationEntry(EC22LiamTodd,LiamToddsworthBattle,EastHolanisCG,Chapter22,S_CrimsonRidge)
+ConversationEntry(EC22LiamHoratio,LiamHoratioBattle,EastHolanisCG,Chapter22,S_CrimsonRidge)
+ConversationEntry(EC22LiamClarque,LiamClarqueBattle,EastHolanisCG,Chapter22,S_CrimsonRidge)
+ConversationEntry(EC22LiamSvelt,LiamSveltzalusBattle,EastHolanisCG,Chapter22,S_CrimsonRidge)
+ConversationEntry(EC22LiamDie,LiamDeath,EastHolanisCG,Chapter22,S_CrimsonRidge)
+ConversationEntry(EC22LiamDieAlt,AllyLiamDeath,EastHolanisCG,Chapter22,S_CrimsonRidge)
+ConversationEntry(EC22BossGen,C22FioraBattle,EastHolanisCG,Chapter22,S_GraspFate)
+ConversationEntry(EC22BossPeter,C22FioraPeterBattle,EastHolanisCG,Chapter22,S_GraspFate)
+ConversationEntry(EC22BossAvan,C22FioraAvanBattle,EastHolanisCG,Chapter22,S_GraspFate)
+ConversationEntry(EC22BossButch,C22FioraButchBattle,EastHolanisCG,Chapter22,S_GraspFate)
+ConversationEntry(EC22BossSvelt,C22FioraSveltzalusBattle,EastHolanisCG,Chapter22,S_GraspFate)
+ConversationEntry(EC22BossDie,C22FioraDeath,EastHolanisCG,Chapter22,S_GraspFate)
+ConversationEntry(EC22End1,C22_Ending,EastHolanisCG,Chapter22)
 ConversationEntryTerminator
 
 ALIGN 4
 Interlude9Conversations:
 ConversationEntry(EI9Open,I9Opening,EastHolanisCG,Interlude9)
+ConversationEntry(EI9Cit,I9CitTalk,StreetCG,Interlude9)
+ConversationEntry(EI9Cit2,I9Cit2Talk,StreetCG,Interlude9)
+ConversationEntry(EI9House1,I9MidHouseTalk,HouseCG,Interlude9)
+ConversationEntry(EI9House2,I9SouthHouseTalk,HouseCG,Interlude9)
+ConversationEntry(EI9ArkhinalHouse,I9HandleAsk,House2CG,Interlude9)
+ConversationEntry(EI9ArkhinalHouseAgree,I9ReforgeArkhinal,House2CG,Interlude9)
+ConversationEntry(EI9ArkhinalHouseDisagree,I9Refusal,House2CG,Interlude9)
+ConversationEntry(EI9ArkhinalHouseAlt,I9WeaponryTalk,House2CG,Interlude9)
+ConversationEntry(EI9Inn,I9InnText,InnCG,Interlude9)
+ConversationEntry(EI9InnAlt,I9InnTextAlt,InnCG,Interlude9)
+ConversationEntry(EI9Merchant,I9MerchantTalk,EastHolanisCG,Interlude9)
+ConversationEntry(EI9MerchantPoor,I9NoMoneyHa,EastHolanisCG,Interlude9)
+ConversationEntry(EI9MerchantDeny,I9TreasureDenied,EastHolanisCG,Interlude9)
+ConversationEntry(EI9MerchantBuy,I9TreasurePurchased,EastHolanisCG,Interlude9)
+ConversationEntry(EI9Leave,I9ConfirmLeave,EastHolanisCG,Interlude9)
+ConversationEntry(EI9NotYet,I9NotYet,EastHolanisCG,Interlude9)
+ConversationEntry(EI9End1,I9ReleaseMe,EastHolanisCG,Interlude9)
+ConversationEntry(EI9End2,I9Ending,EastHolanisCG,Interlude9)
+ConversationEntryTerminator
+
+ALIGN 4
+Chapter23Conversations:
+ConversationEntry(EC23Open0,Ch23_Flashback,MoonCG,Chapter23)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -1607,6 +1669,19 @@ ConversationEntry(EHollandaiseEscape,HollandaiseEscape,DungeonCG,EscapeQuoteView
 ConversationEntry(EVladmirEscape,VladmirEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(EHoratioEscape,HoratioEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(ESimoneEscape,SimoneEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EViridianEscape,ViridianEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EFreddricEscape,FreddricEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EDeanEscape,DeanEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EElizaEscape,ElizaEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EChartreuseEscape,ChartreuseEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(ERiftEscape,RiftEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EEstelleEscape,EstelleEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(ERoseEscape,RoseEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EDirkEscape,DirkEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(ECallumEscape,CallumEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EManfredEscape,ManfredEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EWilhelmEscape,WilhelmEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EArgentEscape,ArgentEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EPtolemyEscape,PtolemyEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(EJohanEscape,JohanEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(EPeterEscape,PeterEscape,LowlandsCG,EscapeQuoteViewer)
@@ -1618,6 +1693,12 @@ ConversationEntry(EOlsenEscape,OlsenEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EElcorianEscape,ElcorianEscape,LowlandsCG,EscapeQuoteViewer)
 ConversationEntry(EAgnesEscape,AgnesEscape,DungeonCG,EscapeQuoteViewer)
 ConversationEntry(EGaylordEscape,GaylordEscape,DungeonCG,EscapeQuoteViewer)
+ConversationEntry(EQEscape,QEscape,MoonCG,EscapeQuoteViewer)
+ConversationEntry(ETonnaminEscape,TonnaminEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(ELarondeEscape,LarondeEscape,LowlandsCG,EscapeQuoteViewer)
+ConversationEntry(EKyrieEscape,KyrieEscape,MoonCG,EscapeQuoteViewer)
+ConversationEntry(EJonasEscape,JonasEscape,MoonCG,EscapeQuoteViewer)
+ConversationEntry(EValeriaEscape,ValeriaEscape,MoonCG,EscapeQuoteViewer)
 ConversationEntryTerminator
 
 ALIGN 4

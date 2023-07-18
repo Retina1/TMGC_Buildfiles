@@ -133,6 +133,12 @@ Narration(Map2CG,Final_Narration)
 CleanTextNoMap(MoonCG,Final_Opening)
 LoadUnitsByDifficulty(EndgameEasy,EndgameNormal,EndgameHard)
 SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
+SetUnitStatusAll(BossSimulacrum1, LuckStat, 0)
+SetUnitStatusAll(BossSimulacrum2, LuckStat, 0)
+SetUnitStatusAll(BossSimulacrum3, LuckStat, 0)
+SetUnitStatusAll(BossSimulacrum4, LuckStat, 0)
+SetUnitStatusAll(BossSimulacrum5, LuckStat, 0)
+SetUnitStatusAll(BossSimulacrum6, LuckStat, 0)
 LOAD1 0x0 EndgameUnits
 ENUN
 GotoPrepScreen

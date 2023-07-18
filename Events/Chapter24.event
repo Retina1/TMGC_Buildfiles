@@ -350,7 +350,8 @@ C24Pilgrim:
 Text(FillerDialogue)
 FADI 60
 VCWF 0x0
-SetUnitStatus(Yuyu,BowExp,1)
+SetUnitStatus(Yuyu,BowExp,251)
+SetUnitStatus(FreelancerTempCloneID,BowExp,251)
 VCWF 0x7
 FADU 60
 SystemText(C24YuyuBowRank)

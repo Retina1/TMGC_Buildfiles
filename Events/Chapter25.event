@@ -29,7 +29,9 @@ END_MAIN
 
 LocationBasedEvents:
 Seize(2,5)
-SecretShop(Ch25SecretShop,7,18) 
+SecretShop(Ch25SecretShop,7,18)
+Village(0x8,C25VillageSouth,14,22)
+Village(0x9,C25VillageNorth,11,4)
 END_MAIN
 
 ALIGN 4
@@ -87,7 +89,15 @@ UNIT
 C25Hard:
 UNIT Dalst Brigand 0x0 Level(19,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Remnant Hunter 0x0 Level(20,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [2,7] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum DivineDragon 0x0 Level(12,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [DivineBreath] ChaseOnceApproachedAI
 UNIT Bobert BowPal 0x0 Level(15,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [MasterBow,MasterSword] NoAI
+UNIT
+
+C25Kyrie:
+UNIT Kyrie SwMastF 0x0 Level(11,Ally,0) [14,22] 0x0 0x0 0x1 REDA14R23 [Soothesword,MasterSword] NoAI
 UNIT
 
 ALIGN 4
@@ -103,6 +113,29 @@ LOAD1 0x0 C25Units
 ENUN
 GotoPrepScreen
 ENDA
+
+C25VillageNorth:
+VillageEventItem(C20VillageText, VillageCG, EarthPower)
+
+C25VillageSouth:
+GetUnitStatus((-1), Item1Uses)
+SVAL 0x1 0x2
+BNE 0x1 0xc 0x1
+GetUnitStatus((-1), Item2Uses)
+SVAL 0x1 0x3
+BNE 0x1 0xc 0x1
+GetUnitStatus((-1), Item3Uses)
+SVAL 0x1 0x6
+BNE 0x1 0xc 0x1
+MUSC RecruitmentTheme
+Text(VillageCG, FillerDialogue)//kyrie joins
+Reinforcements(C25Kyrie)
+GOTO 0x2
+LABEL 0x1
+MUSI; SMOV 0x2 VillageCG; SMOV 0x3 FillerDialogue; CALL $9EE310; MUNO; CALL $591F40; SMOV 0x3 MasterSword; GIVEITEMTO 0xFFFF; //give master sword, no kyrie join
+LABEL 0x2
+EndEvent
+
 
 EndingScene:
 ResetBaseFlags

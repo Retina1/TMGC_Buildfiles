@@ -29,6 +29,16 @@ ldrb	r0, [r4, #0x13]	@currhp
 cmp	r0, #0
 bne	SkillEnd
 
+@check if not rescuing
+push {r2}
+ldr r2,=#0x203A56C
+ldr	r0, [r2,#0x0C]	@status bitfield
+pop {r2}
+mov	r1, #0x10
+and	r0, r1
+cmp	r0, #0x00
+bne	SkillEnd
+
 @check for skill
 mov	r0, r4
 ldr	r1, DullahanID

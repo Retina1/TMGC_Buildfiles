@@ -89,7 +89,7 @@ strh	r0,[r4,r1]
 b End
 
 Starfall:
-cmp r2,#0x85
+cmp r2,#0x86
 bne Calibur
 mov r0,r4
 add r0,#0x4C @item ability word
@@ -140,7 +140,7 @@ b End
 
 Awaken:
 cmp r2,#0x78
-bne ErrorHandler
+bne MiscTomesWithoutPrebattleEffects
 ldrb r0, [r4, #0x12]
 lsr r0, #1 @max hp/2
 ldrb r1, [r4, #0x13] @currhp
@@ -154,6 +154,11 @@ mul r0,r2
 lsr r0,#1
 strh r0, [r4,r1]
 b End
+
+MiscTomesWithoutPrebattleEffects:
+cmp r2,#0xc7 @inversion
+beq End
+
 
 ErrorHandler:
 mov		r1,#0x60

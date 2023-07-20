@@ -577,6 +577,8 @@ CleanTextNoMap(DungeonCG,C21Ending3)//find the stones that record logs, one in p
 LocationText(DungeonCG,C21Ending3Part2,LaterLabel)
 CHECK_ALIVE Simone
 BEQ 0x201 0xc 0x0
+CHECK_ALIVE Arin
+BEQ 0x201 0xc 0x0
 CleanTextNoMap(HallCG,C21Ending4)//simone drops truth if alive, if not, figure out a way to incoporate it
 REMA
 SetBackground(BlankCG)

@@ -729,7 +729,30 @@
 			music(LoverConvoSong)
 			text(C24_Blair_Arin_Base)
 			baseSupport(Blair,Arin,ASupport)
-		//c24 has a thing hinting that laronde will arrive
+		Entry
+			bg(LowlandsCG)
+			text(FillerDialogue)
+			baseSupport(Stefan,Johan,BPSupport)
+		Entry
+			bg(LowlandsCG)
+			text(FillerDialogue)
+			baseSupport(Sam,Charley,BSupport)
+		Entry
+			bg(LowlandsCG)
+			text(FillerDialogue)
+			baseSupport(Butch,Cassius,BPSupport)
+		Entry
+			bg(LowlandsCG)
+			text(FillerDialogue)
+			baseSupport(Apollo,Vladmir,BSupport)
+		Entry
+			bg(LowlandsCG)
+			text(FillerDialogue)
+			baseSupport(Zeke,Hyperius,BPSupport)
+		Entry
+			bg(LowlandsCG)
+			text(FillerDialogue)
+			baseSupport(Leila,Tobias,BSupport)//do we go for the explicit reveal this early?
 	Chapter(Chapter25)
 		Entry
 			name(C25_Youth_Select)

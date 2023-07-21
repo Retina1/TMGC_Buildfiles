@@ -45,25 +45,25 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEventBothWays(0xa,C23JoanMikeyRecruitment,Joan,Mikey)
-CharacterEventBothWays(0xa,C23JoanMikeyRecruitment,EnemyJoan,Mikey)
+CharacterEvent(0xa,C23JoanMikeyRecruitment,Mikey,EnemyJoan)
 CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,EnemyJoan,Sonia)
-CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,Joan,EnemySonia)
+CharacterEvent(0xb,C23JoanSoniaRecruitment,Joan,EnemySonia)
 CharacterEventBothWays(0xb,C23JoanSoniaRecruitment,Joan,Sonia)
-CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,EnemyJoan,Tobias)
-CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,Joan,EnemyTobias)
+CharacterEvent(0xc,C23JoanTobiasRecruitment,Tobias,EnemyJoan)
+CharacterEvent(0xc,C23JoanTobiasRecruitment,Joan,EnemyTobias)
 CharacterEventBothWays(0xc,C23JoanTobiasRecruitment,Joan,Tobias)
 CharacterEvent(0xd,C23JoanCarbonRecruitment,Carbon,EnemyJoan)
-CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,EnemySonia,Tobias)
-CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,Sonia,EnemyTobias)
+CharacterEvent(0xe,C23SoniaTobiasRecruitment,Tobias,EnemySonia)
+CharacterEvent(0xe,C23SoniaTobiasRecruitment,Sonia,EnemyTobias)
 CharacterEventBothWays(0xe,C23SoniaTobiasRecruitment,Sonia,Tobias)
 CharacterEvent(0xf,C23SoniaDesmondRecruitment,Desmond,EnemySonia)
 CharacterEvent(0xf,C23SoniaMikeyRecruitment,Mikey,EnemySonia)
 CharacterEventBothWays(0x10,C23TobiasLeilaRecruitment,Tobias,Leila)
-CharacterEventBothWays(0x10,C23TobiasLeilaRecruitment,EnemyTobias,Leila)
+CharacterEvent(0x10,C23TobiasLeilaRecruitment,Leila,EnemyTobias)
 CharacterEventBothWays(0x11,C23TobiasDamienRecruitment,Tobias,Damien)
-CharacterEventBothWays(0x11,C23TobiasDamienRecruitment,EnemyTobias,Damien)
+CharacterEvent(0x11,C23TobiasDamienRecruitment,Damien,EnemyTobias)
 CharacterEventBothWays(0x12,C23TobiasZachariasRecruitment,Tobias,Zacharias)
-CharacterEventBothWays(0x12,C23TobiasZachariasRecruitment,EnemyTobias,Zacharias)//all tobias recruits should also trigger flag 0x13
+CharacterEvent(0x12,C23TobiasZachariasRecruitment,Zacharias,EnemyTobias)//all tobias recruits should also trigger flag 0x13
 //0x1b-27 for supports are open
 CharacterEventBothWays(0x1b,C23StefanJosefSupport,Stefan,Josef)//b+
 CharacterEventBothWays(0x1c,C23SamEmileSupport,Sam,Emile)//b+

@@ -5,14 +5,14 @@ fimbulvetr - -8 damage taken,precombat,0x3c/
 flare - +100 crit if foe at full hp,precombat,0x3d/
 starfall - can't counter/be countered,precombat to toggle uncounterable bit?,0x86/ doesn't work in prebattle - maybe check dazzle? maybe replace effect
 calibur - +60 crit,precombat,0x3e/
-inversion - multiplies weapon triangle by 16,wta calc loop (check triadept),0xc7
+inversion - multiplies weapon triangle by 16,wta calc loop (check triadept),0xc7/
 galewind - ,0xc2
-sagittae - +15 damage, targets def,precombat,0x97
-bolting - pierce res,precombat,0x3b
+sagittae - +15 damage, targets def,precombat,0x97/
+bolting - pierce res,precombat,0x3b/
 cloudburst - +80 avoid,precombat,0xa4/
 trisagion - ,0xb4
 force spike - ,0xeb
-mazandyne - multiplies weapon triangle by 16, +40 hit,precombat AND wta loop,0xcc
+mazandyne - multiplies weapon triangle by 16, +40 hit,precombat AND wta loop,0xcc/
 awaken - resolve effect also buffs damage by 50%,precombat,0x78/
 waning - ,0x85
 fallback effect as an error handler - +40 Hit/Avo/Crit/Dodge,precombat/

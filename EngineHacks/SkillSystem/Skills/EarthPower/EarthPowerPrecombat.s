@@ -13,14 +13,18 @@ mov r0, r4 @Attacker data
 ldr r1, EarthPowerID
 .short 0xf800
 cmp r0, #0
-beq End
+bne NextStep
+bl End
 
+NextStep:
 @check anima
 mov		r1,#0x50
 ldrb r0,[r4,r1] @weapon type
 cmp r0,#0x5
-bne End
+beq NexterStep
+bl End
 
+NexterStep:
 @get weapon id
 mov r3,#0x4a
 ldrb r2,[r4,r3]
@@ -36,7 +40,7 @@ mov		r1,#0x62
 ldrh	r0,[r4,r1]
 add		r0,#30 @add 60 avo
 strh	r0,[r4,r1]
-b End
+bl End
 
 Thunder:@39
 cmp r2,#0x39
@@ -47,7 +51,7 @@ ldr r1,[r0]
 mov r2,#0x20 @brave flag
 orr r1,r2
 str r1,[r0]
-b End
+bl End
 
 Elfire:
 cmp r2,#0x3a
@@ -64,7 +68,7 @@ add		r4,#0x5A
 ldrh	r0,[r4]
 add		r0,#20 @if not, add 20 damage
 strh	r0,[r4]
-b End
+bl End
 
 Fimbulvetr:
 cmp r2,#0x3c
@@ -73,7 +77,7 @@ mov		r1,#0x5c
 ldrh	r0,[r4,r1]
 add		r0,#8 @add 8 def/res
 strh	r0,[r4,r1]
-b End
+bl End
 
 Flare:
 cmp r2,#0x3d
@@ -86,18 +90,13 @@ mov		r1,#0x66
 ldrh	r0,[r4,r1]
 add		r0,#100 @if so, add 100 crit
 strh	r0,[r4,r1]
-b End
+bl End
 
 Starfall:
 cmp r2,#0x86
 bne Calibur
-mov r0,r4
-add r0,#0x4C @item ability word
-ldr r1,[r0]
-mov r2,#0x80 @uncounterable flag
-orr r1,r2
-str r1,[r0]
-b End
+
+bl End
 
 Calibur:
 cmp r2,#0x3e
@@ -106,19 +105,43 @@ mov		r1,#0x66
 ldrh	r0,[r4,r1]
 add		r0,#60 @add 60 crit
 strh	r0,[r4,r1]
-b End
+bl End
 
-Sagittae:
+Sagittae: @doing it this way makes it stack with invert i think
 cmp r2,#0x97
 bne Bolting
-
-b End
+mov r1, #0x5a    @Move to the attacker's damage
+ldrh r3, [r4,r1]
+add r3,#15 @add damage
+strh r3, [r4,r1]
+mov r1, #0x4c    @Move to the attacker's weapon ability
+ldr r1, [r4,r1]
+mov r2, #0x42
+tst r1, r2
+bne     TargetDef @do nothing if magic bit is set
+mov     r1,#0x4c    @Move to the attacker's weapon bit
+ldrh r3, [r4,r1]
+mov  r2, #0x2
+orr  r3, r2 @set the second bit
+strh r3, [r4,r1]
+b		End
+TargetDef:
+mov     r1,#0x4c    @Move to the attacker's weapon bit
+ldrh    r3,[r4,r1]     @Load the attacker's weapon bit into r3.
+mov		r2, #0x42
+bic		r3, r2
+strh    r3,[r4,r1]     @Store bit
+bl End
 
 Bolting:
 cmp r2,#0x3b
 bne Cloudburst
-
-b End
+@apply luna effect
+add r0,#0x4e
+ldrh r3,[r0]
+mov r3,#2
+strh r3,[r0]
+bl End
 
 Cloudburst:
 cmp r2,#0xa4
@@ -127,7 +150,7 @@ mov		r1,#0x62
 ldrh	r0,[r4,r1]
 add		r0,#80 @add 80 avoid
 strh	r0,[r4,r1]
-b End
+bl End
 
 MazandyneHit:
 cmp r2,#0xcc
@@ -136,7 +159,7 @@ mov		r1,#0x60
 ldrh	r0,[r4,r1]
 add		r0,#40 @add 40 hit
 strh	r0,[r4,r1]
-b End
+bl End
 
 Awaken:
 cmp r2,#0x78
@@ -153,7 +176,7 @@ mov r2, #3
 mul r0,r2
 lsr r0,#1
 strh r0, [r4,r1]
-b End
+bl End
 
 MiscTomesWithoutPrebattleEffects:
 cmp r2,#0xc7 @inversion
@@ -177,7 +200,7 @@ mov		r1,#0x68
 ldrh	r0,[r4,r1]
 add		r0,#40 @add 40 to stats
 strh	r0,[r4,r1]
-b End
+bl End
 
 End:
 pop {r4-r7, r15}

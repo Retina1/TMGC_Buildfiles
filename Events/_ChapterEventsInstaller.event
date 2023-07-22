@@ -12,6 +12,37 @@
 #include "_BossMusic.event"
 #include "_ForceDeployer.event"
 
+#define ResetViridianConvoy "CHECK_EVENTID ConvoyInitializeFlag; BNE 0x1876 0xc 0x0; CALL ConvoyClearEvent; LABEL 0x1876"
+ALIGN 4
+ConvoyClearEvent:
+Write_Word(0x00000000,$203B32C)
+Write_Word(0x00000000,$203B330)
+Write_Word(0x00000000,$203B334)
+Write_Word(0x00000000,$203B338)
+Write_Word(0x00000000,$203B33c)
+Write_Word(0x00000000,$203B340)
+Write_Word(0x00000000,$203B344)
+Write_Word(0x00000000,$203B348)
+Write_Word(0x00000000,$203B34c)
+Write_Word(0x00000000,$203B350)
+Write_Word(0x00000000,$203B354)
+Write_Word(0x00000000,$203B358)
+Write_Word(0x00000000,$203B35c)
+Write_Word(0x00000000,$203B360)
+Write_Word(0x00000000,$203B364)
+Write_Word(0x00000000,$203B368)
+Write_Word(0x00000000,$203B36c)
+Write_Word(0x00000000,$203B370)
+Write_Word(0x00000000,$203B374)
+Write_Word(0x00000000,$203B378)
+Write_Word(0x00000000,$203B37c)
+Write_Word(0x00000000,$203B380)
+Write_Word(0x00000000,$203B384)
+Write_Word(0x00000000,$203B388)
+Write_Word(0x00000000,$203B38c)
+ENUT ConvoyInitializeFlag
+EndEvent
+
 ALIGN 4
 {
 #include "Prologue.event"

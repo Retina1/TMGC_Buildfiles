@@ -242,6 +242,7 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+ResetViridianConvoy
 LoadUnitsByDifficulty(C24Easy,C24Normal,C24Hard)
 CHECK_HARD
 BNE 0x2 0xc 0x0

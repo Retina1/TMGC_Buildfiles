@@ -93,6 +93,12 @@ UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [EarthBr
 UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [2,7] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Simulacrum DivineDragon 0x0 Level(12,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [DivineBreath] ChaseOnceApproachedAI
+
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [1,15] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [17,21] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [0,1] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 UNIT Bobert BowPal 0x0 Level(15,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [MasterBow,MasterSword] NoAI
 UNIT
 
@@ -103,6 +109,7 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+ResetViridianConvoy
 ENUT GuideChpt25
 LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
 MUSC NarrationTheme5

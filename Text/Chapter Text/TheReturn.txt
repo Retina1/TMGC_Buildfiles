@@ -1,5 +1,5 @@
 //chain of command: freddric>dean>wilhelm>manfred>rift>callum>estelle>rose>eliza>dirk>argent
-//110 remain
+//108 remain
 //fred - this is it everyone thank you for everything
 //dean - it's time are you ready
 //wilhelm - hold you two
@@ -788,10 +788,50 @@ pain[X]
 pain[X]
 ##Ch24_EstelleRoseManfred
 pain[X]
+
 ##Ch24_EstelleRoseWilhelm
-pain[X]
+[OpenMidLeft][LoadRose][OpenRight][LoadEstelle][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N][OpenMidLeft]
+Excellent! Well, what're we[N]
+waiting for?[A][N]
+We've got some revenge to serve![A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]The kid likes revenge that much?[N]
+You're scary.[A][N][OpenRight]
+I mustn't lie, it sounds pretty[N]
+nice right around now.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Not saying it doesn't.[A][N]
+Just sits weird with the kid.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Okay. And?[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Anyway. I assume you're both[N]
+prepared to fight, then.[A][N]
+No more holding off.[A][N][OpenRight]
+Of course! Together, we ride![A][X]
+
 ##Ch24_EstelleRoseArgent
-pain[X]
+[OpenMidLeft][LoadArgent][OpenRight][LoadRose][OpenFarRight][LoadEstelle]
+The time has come for our[N]
+grand entrance.[A][N]
+Are you ready, comrades?[A][N][OpenMidLeft]
+Ready as these bones'll ever be.[N]
+What about you, kid?[A][N][OpenRight]
+I'm[ToggleMouthMove]...[ToggleMouthMove] ready. We'll crush[N]
+those bastards.[A][N][OpenFarRight]
+Spoken like a true heroine[N]
+in the making, Rose![A][N]
+When we make it through to[N]
+the day's end,[A] we'll be[N]
+immortalized in history![A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]History can forget me.[N]
+But I appreciate the enthusiasm.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Hm[ToggleMouthMove]...[ToggleMouthMove] Maybe history shouldn't[N]
+focus on me either.[A][N]
+No reason for that. Of course.[A][N][OpenFarRight]
+I could hardly have all the[N]
+glory for myself.[A][N]
+But enough talk of glory.[N]
+Now's our time to fight.[A][X]
 
 ##Ch24_EstelleDirkCallum
 [OpenMidLeft][LoadEstelle][OpenRight][LoadCallum][OpenFarRight][LoadDirk][OpenRight]

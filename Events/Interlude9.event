@@ -98,7 +98,6 @@ UNIT
 ALIGN 4
 
 BeginningScene:
-ResetViridianConvoy
 EnableFreeMovement
 MUSC NarrationTheme5
 Narration(Map2CG,Base9_Narration)
@@ -107,6 +106,7 @@ LOAD1 0x0 I9Units
 ENUN
 LOAD1 0x0 I9NPC
 ENUN
+ResetViridianConvoy
 GotoPrepScreen
 ENDA
 

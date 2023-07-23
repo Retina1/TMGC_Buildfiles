@@ -277,7 +277,6 @@ ALIGN 4
 
 //parque joins, liam appears, peter appears, you can sell out todd/get toddhand (make sure to erase supports if he's disa-ed)
 BeginningScene:
-ResetViridianConvoy
 ENUT GuideChpt22
 LocationText(MoonCG,Ch22_Flashback,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
@@ -303,6 +302,7 @@ SupportFlagOn(Charley,Toddsworth,0x1c,CSupport)
 SupportFlagOn(Flynn,Horatio,0x1d,CSupport)
 SupportFlagOn(Emile,Hilbert,0x1e,BSupport)
 SupportFlagOn(Peggy,Athena,0x1f,CPSupport)
+ResetViridianConvoy
 GotoPrepScreen
 ENDA
 

@@ -34,6 +34,10 @@
   #define ClassDescGetter 0x88c01
   #define ConditionGetter 0x88a2d
   #define StrMagGetter 0x88b09
+  #define ItemDescGetter 0x88A01
+  #define ItemDescLooper 0x88B41
+  #define WRankGetter 0x88B95
+  #define SupportsConditional 0x88C15
 
 
   #ifndef USE_STRMAG_SPLIT

@@ -329,7 +329,6 @@ UNIT
 ALIGN 4
 
 BeginningScene:
-ResetViridianConvoy
 ENUT GuideChpt23
 LocationText(MoonCG,Ch23_Flashback,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
@@ -369,6 +368,7 @@ SupportFlagOn(Apollo,Flynn,0x20,BSupport)
 SupportFlagOn(Charley,Yuyu,0x21,CSupport)
 SupportFlagOn(Damien,Zacharias,0x22,BSupport)
 SupportFlagOn(Artemis,Hollandaise,0x23,CSupport)
+ResetViridianConvoy
 GotoPrepScreen
 ENDA
 

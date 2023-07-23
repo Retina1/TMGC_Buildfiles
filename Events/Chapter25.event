@@ -109,7 +109,6 @@ UNIT
 ALIGN 4
 
 BeginningScene:
-ResetViridianConvoy
 ENUT GuideChpt25
 LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
@@ -118,6 +117,7 @@ CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C25Easy,C25Normal,C25Hard)
 LOAD1 0x0 C25Units
 ENUN
+ResetViridianConvoy
 GotoPrepScreen
 ENDA
 

@@ -1,5 +1,5 @@
 //chain of command: freddric>dean>wilhelm>manfred>rift>callum>estelle>rose>eliza>dirk>argent
-//108 remain
+//106 remain
 //fred - this is it everyone thank you for everything
 //dean - it's time are you ready
 //wilhelm - hold you two
@@ -784,10 +784,52 @@ pain[X]
 
 ##Ch24_EstelleRoseDirk
 pain[X]
+
 ##Ch24_EstelleRoseCallum
-pain[X]
+[OpenMidLeft][LoadRose][OpenRight][LoadCallum][OpenFarRight][LoadEstelle][OpenRight]
+Here we go. Time to raise[N]
+some hell, fellas.[A][N][OpenMidLeft]
+Of course, boss. Sounds fun.[A][N][OpenFarRight]
+'Tis hardly a joyful occasion,[N]
+but[ToggleMouthMove]...[ToggleMouthMove][A] I suppose we[N]
+can get joy some from it.[A][N][OpenRight]
+What's not to love about revenge?[A][N]
+Tearing those who've wronged you[N]
+limb from limb.[A] [ToggleMouthMove]...[ToggleMouthMove]Catharsis.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Fair enough.[A][N][OpenMidLeft]
+Can't really tear. So I guess[N]
+I'll just fry 'em all.[A][N][OpenRight]
+Ha! Have at them, kid.[N]
+I'll watch over ya'.[A][N][OpenFarRight]
+As shall I. Now, then.[N]
+Let us ride![A][X]
+
 ##Ch24_EstelleRoseManfred
-pain[X]
+[OpenMidLeft][LoadManfred][OpenRight][LoadRose][OpenFarRight][LoadEstelle][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I believe we're finally[N]
+upon the lady's army.[A][N]
+How do we proceed?[A][N][OpenFarRight]
+Need you say more?[A][N][OpenRight]
+Yeah, mister? Need you?[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]You have a plan?[A][N][OpenFarRight]
+But of course! It's one so[N]
+brilliant I need not spell it out![A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]It is?[A][N][OpenFarRight]
+Of course! Follow my lead![A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I'd rather not bank it all[N]
+on something from you.[A][N]
+Not without explanation, at least.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Fine. We'll follow your plan.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Rats. I was excited.[A][N][OpenMidLeft]
+Look[ToggleMouthMove]...[ToggleMouthMove] Just[ToggleMouthMove]...[ToggleMouthMove] Stay behind me,[N]
+the two of you.[A][N]
+That's the least I can[N]
+do for us now.[A][N]
+It's[ToggleMouthMove]...[ToggleMouthMove] penance, in a sense.[A][N][OpenFarRight]
+Fine. Just don't expect to[N]
+take them all on your own.[A][N][OpenMidLeft]
+Certainly. Back me up out there.[N]
+Now then. Onwards![A][X]
 
 ##Ch24_EstelleRoseWilhelm
 [OpenMidLeft][LoadRose][OpenRight][LoadEstelle][OpenFarRight][LoadWilhelm]

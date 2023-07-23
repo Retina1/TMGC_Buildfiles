@@ -100,7 +100,6 @@ ALIGN 4
 //brandl is here, hyperius gets prf
 
 BeginningScene:
-ResetViridianConvoy
 EnableFreeMovement
 MUSC NarrationTheme5
 SetBackground(Map2CG)
@@ -110,6 +109,7 @@ FADI 0x3c
 CleanTextNoMap(HallCG,FillerDialogue)
 LOAD1 0x0 I10Units
 ENUN
+ResetViridianConvoy
 GotoPrepScreen
 ENDA
 

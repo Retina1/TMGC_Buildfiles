@@ -449,7 +449,6 @@ EndEvent
 
 //stil have 1d and onwards for supports
 BeginningScene:
-ResetViridianConvoy
 ENUT GuideChpt21
 LocationText(MoonCG,Ch21_Flashback,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
@@ -476,6 +475,7 @@ SupportFlagOn(Apollo,Avan,0x23,CSupport)
 SupportFlagOn(Mikey,Carbon,0x24,BSupport)
 SupportFlagOn(Alexis,Artemis,0x25,CSupport)
 SupportFlagOn(Leila,Damien,0x26,CPSupport)
+ResetViridianConvoy
 GotoPrepScreen
 ENDA
 

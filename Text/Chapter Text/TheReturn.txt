@@ -1,5 +1,5 @@
 //chain of command: freddric>dean>wilhelm>manfred>rift>callum>estelle>rose>eliza>dirk>argent
-//106 remain
+//104 remain
 //fred - this is it everyone thank you for everything
 //dean - it's time are you ready
 //wilhelm - hold you two
@@ -780,10 +780,58 @@ pain[X]
 pain[X]
 
 ##Ch24_RiftWilhelmArgent
-pain[X]
+[OpenMidLeft][LoadRift][OpenRight][LoadArgent][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N][OpenRight]
+Are you ready, gentlemen?[A][N]
+Any lingering regrets?[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Yeah. But they're small[N]
+potatoes compared to[ToggleMouthMove]...[ToggleMouthMove][A][N]
+Well, everything that has[N]
+happened.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]The debtors coming for my[N]
+kneecaps seem so distant.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]I'll take that as a no.[N]
+I've long had many.[A][N]
+But regrets of the one are[N]
+nothing,[A] compared to those[N]
+of the many who've fallen.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Look. Don't go souring[N]
+the mood, please.[A][N][OpenMidLeft]
+Bit late for that. But a sour[N]
+mood has never dulled my blade.[A][N]
+I'll[ToggleMouthMove]...[ToggleMouthMove] shred them all.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Good to hear. Argent.[N]
+You and I make for the lady.[A][N]
+We're in this until we die.[A][N][OpenRight]
+Very well. It has truly[N]
+been a pleasure.[A][X]
 
 ##Ch24_EstelleRoseDirk
-pain[X]
+[OpenMidLeft][LoadRose][OpenRight][LoadDirk][OpenFarRight][LoadEstelle]
+The time has come for our[N]
+grand entrance.[A][N]
+Are you ready, comrades?[A][N][OpenMidLeft]
+Ma'am, yes, ma'am![A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Sure.[A][N][OpenFarRight]
+We're quite the[ToggleMouthMove]...[ToggleMouthMove] unusual bunch,[N]
+I must admit.[A][N]
+But that makes us the underdogs.[N]
+The ones with nothing to lose.[A][N]
+The ones who'll win the day,[N]
+because that it how it goes.[A][N][OpenMidLeft]
+Are you saying we'll win because[N]
+we're the underdogs?[A][N]
+Not true. We'll win because[N]
+you have me![A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Rose. You are not an enduring[N]
+trope of the dramatic tradition.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Today'll solidify me as one.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Can[ToggleMouthMove]...[ToggleMouthMove] we go?[A][N][OpenFarRight]
+Ah. Of course. We can discuss tropes[N]
+later, child.[A] For now, we fight[N]
+for all we hold dear![A][X]
 
 ##Ch24_EstelleRoseCallum
 [OpenMidLeft][LoadRose][OpenRight][LoadCallum][OpenFarRight][LoadEstelle][OpenRight]

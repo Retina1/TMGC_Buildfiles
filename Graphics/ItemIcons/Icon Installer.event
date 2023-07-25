@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(CaduceusIcon)
+#incbin "Caduceus.dmp"
+ALIGN 4
 ItemIconEntry(EarthPowerIcon)
 #incbin "EarthPower.dmp"
 ALIGN 4

@@ -515,7 +515,10 @@ EnableFreeMovement
 MUSC NarrationTheme3
 Narration(Map2CG,Base6_Narration)
 MUSC AmbientNight
-CleanTextNoMap(TentInsideCG,I6Opening)
+CleanTextNoMap(TentInsideCG,I6Opening0)
+SystemText(BlankCG,MercenaryPetition)
+TakeItemAll(MercFlier)
+LocationText(TentInsideCG,I6Opening,I6Timecard)
 LOAD1 0x0 I6Units
 ENUN
 LOAD1 0x0 I6Props

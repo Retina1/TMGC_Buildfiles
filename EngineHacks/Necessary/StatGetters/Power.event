@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pPowerModifiers: // Power
-	POIN prAddUnitPower prHalveIfCapturing prDebuffStr prAddEquipPower prItemPassivePow prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prDefiantStr prPushStr
+	POIN prAddUnitPower prHalveIfCapturing prDebuffStr prAddEquipPower prItemPassivePow prRallyStr prLifeAndDeathBonus prSkillFury prFortressDefensePow VigorDanceCheck prFortressResistancePow prResolve prDefiantStr prPushStr prCaduceusBonus
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
@@ -39,5 +39,9 @@ prFortressResistancePow:
 
 prItemPassivePow:
 	rPassiveStatBoosts(STAT_POWER)
+	
+prCaduceusBonus:
+  rIfUnitHasSkill(CaduceusID)
+	rMulConst(3)
 
 #endif // MODULAR_GETTER_POWER_EVENT

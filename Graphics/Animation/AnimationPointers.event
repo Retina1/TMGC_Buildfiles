@@ -45,6 +45,9 @@
 #include "CharacterSpecific\ButchP\Unarmed Installer.event"
 }
 {
+#include "Book/Magic Installer.event"
+}
+{
 #include "CharacterSpecific\CassiusU\Axe Installer.event"
 #include "CharacterSpecific\CassiusU\Handaxe Installer.event"
 #include "CharacterSpecific\CassiusU\Unarmed Installer.event"
@@ -456,6 +459,11 @@
 #include "Apex\Staff Installer.event"
 #include "Apex\Magic Installer.event"
 }
+
+ALIGN 4
+BookAnims:
+MagicAnim(0xef)
+EndAnim
 
 ALIGN 4
 ApexAnims:

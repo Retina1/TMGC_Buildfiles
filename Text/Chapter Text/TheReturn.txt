@@ -1,5 +1,5 @@
 //chain of command: freddric>dean>wilhelm>manfred>rift>callum>estelle>rose>eliza>dirk>argent
-//90 remain
+//81 remain
 //fred - this is it everyone thank you for everything
 //dean - it's time are you ready
 //wilhelm - hold you two
@@ -402,7 +402,6 @@ pain[X]
 pain[X]
 ##Ch24_FreddricRiftArgent
 pain[X]
-
 ##Ch24_FreddricEstelleRose
 pain[X]
 ##Ch24_FreddricEstelleDirk
@@ -415,7 +414,6 @@ pain[X]
 pain[X]
 ##Ch24_FreddricEstelleArgent
 pain[X]
-
 ##Ch24_FreddricRoseDirk
 pain[X]
 ##Ch24_FreddricRoseCallum
@@ -426,7 +424,6 @@ pain[X]
 pain[X]
 ##Ch24_FreddricRoseArgent
 pain[X]
-
 ##Ch24_FreddricDirkCallum
 pain[X]
 ##Ch24_FreddricDirkManfred
@@ -435,7 +432,6 @@ pain[X]
 pain[X]
 ##Ch24_FreddricDirkArgent
 pain[X]
-
 ##Ch24_FreddricCallumManfred
 pain[X]
 ##Ch24_FreddricCallumWilhelm
@@ -469,10 +465,8 @@ Either way, I'm in for the long haul.[A][N][OpenMidLeft]
 
 ##Ch24_FreddricManfredArgent
 pain[X]
-
 ##Ch24_FreddricWilhelmArgent
 pain[X]
-
 ##Ch24_DeanElizaRift
 pain[X]
 ##Ch24_DeanElizaEstelle
@@ -510,7 +504,6 @@ pain[X]
 pain[X]
 ##Ch24_DeanElizaArgent
 pain[X]
-
 ##Ch24_DeanRiftEstelle
 pain[X]
 ##Ch24_DeanRiftRose
@@ -525,20 +518,41 @@ pain[X]
 pain[X]
 ##Ch24_DeanRiftArgent
 pain[X]
-
 ##Ch24_DeanEstelleRose
 pain[X]
 ##Ch24_DeanEstelleDirk
 pain[X]
 ##Ch24_DeanEstelleCallum
 pain[X]
+
 ##Ch24_DeanEstelleManfred
-pain[X]
+[OpenMidLeft][LoadDean][OpenRight][LoadManfred][OpenFarRight][LoadEstelle][OpenMidLeft]
+It's time. Are you ready?[A][N][OpenFarRight]
+As I ever shall be.[A][N]
+Life doesn't give us the luxury[N]
+of a rehearsal,[A] but I trust[N]
+that we'll make it through this.[A][N][OpenRight]
+Indeed. All we can do is[N]
+believe in our instincts.[A][N]
+Not what I'm normally apt[N]
+to do, but, hey.[A][N]
+This has been a[ToggleMouthMove]...[ToggleMouthMove] new[N]
+experience, in many ways.[A][N]
+Some good. Many bad.[N]
+What's one more change?[A][N][OpenMidLeft]
+You adapt well, bud.[A][N]
+I'll see that you both[N]
+make it outta this.[A][N][OpenFarRight]
+And we'll see to your survival[N]
+too, leader.[A] Today, we'll[N]
+triumph after so long.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Ready whenever you are.[A][N][OpenMidLeft]
+Sure thing. Let's do this![A][X]
+
 ##Ch24_DeanEstelleWilhelm
 pain[X]
 ##Ch24_DeanEstelleArgent
 pain[X]
-
 ##Ch24_DeanRoseDirk
 pain[X]
 ##Ch24_DeanRoseCallum
@@ -549,7 +563,6 @@ pain[X]
 pain[X]
 ##Ch24_DeanRoseArgent
 pain[X]
-
 ##Ch24_DeanDirkCallum
 pain[X]
 ##Ch24_DeanDirkManfred
@@ -558,19 +571,16 @@ pain[X]
 pain[X]
 ##Ch24_DeanDirkArgent
 pain[X]
-
 ##Ch24_DeanCallumManfred
 pain[X]
 ##Ch24_DeanCallumWilhelm
 pain[X]
 ##Ch24_DeanCallumArgent
 pain[X]
-
 ##Ch24_DeanManfredWilhelm
 pain[X]
 ##Ch24_DeanManfredArgent
 pain[X]
-
 ##Ch24_DeanWilhelmArgent
 pain[X]
 
@@ -588,7 +598,6 @@ pain[X]
 pain[X]
 ##Ch24_ElizaRiftArgent
 pain[X]
-
 ##Ch24_ElizaEstelleRose
 pain[X]
 ##Ch24_ElizaEstelleDirk
@@ -601,7 +610,6 @@ pain[X]
 pain[X]
 ##Ch24_ElizaEstelleArgent
 pain[X]
-
 ##Ch24_ElizaRoseDirk
 pain[X]
 ##Ch24_ElizaRoseCallum
@@ -612,7 +620,6 @@ pain[X]
 pain[X]
 ##Ch24_ElizaRoseArgent
 pain[X]
-
 ##Ch24_ElizaDirkCallum
 pain[X]
 
@@ -667,27 +674,205 @@ pain[X]
 
 ##Ch24_ElizaCallumManfred
 pain[X]
+
 ##Ch24_ElizaCallumWilhelm
 pain[X]
+
 ##Ch24_ElizaCallumArgent
-pain[X]
+[OpenMidLeft][LoadEliza][OpenRight][LoadCallum][OpenFarRight][LoadArgent][OpenRight]
+Here we go. Time to raise[N]
+some hell, fellas.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Or, as much hell as a little[N]
+girl and old woman can.[A][N][OpenFarRight]
+I may be beyond my prime.[A][N]
+But I can still brawl with[N]
+the best of them.[A][N]
+That's the power of experience.[A][N][OpenMidLeft]
+I[ToggleMouthMove]...[ToggleMouthMove] I may not be able[N]
+to raise[ToggleMouthMove]...[ToggleMouthMove] hell[ToggleMouthMove]...[ToggleMouthMove][A][N]
+But I can help you raise it[ToggleMouthMove]...[ToggleMouthMove][N]
+By keeping you alive.[A][N][OpenRight]
+That'll do for me. In fact,[N]
+almost more fun that way.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]I'm glad fun's a priority[N]
+for you right now.[A][N][OpenRight]
+What can I say> It's just[N]
+who I am.[A] But enough[N]
+about me.[A] Let's make it[N]
+about our enemies.[A] And about[N]
+crushing them into dust.[A][X]
 
 ##Ch24_ElizaManfredWilhelm
-pain[X]
+[OpenMidLeft][LoadEliza][OpenRight][LoadManfred][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N]
+Perhaps ravaged by time, but[ToggleMouthMove]...[ToggleMouthMove][N]
+Well, who hasn't been ravaged, lately?[A][N][OpenRight]
+Indeed, friend. But today,[N]
+that shall all change.[A][N]
+You and I[ToggleMouthMove]...[ToggleMouthMove] And the kid[ToggleMouthMove]...[ToggleMouthMove][N]
+We'll show them.[A][N][OpenMidLeft]
+Will[ToggleMouthMove]...[ToggleMouthMove] I really be helpful?[A][N][OpenFarRight]
+Of course. You've been an asset[N]
+far longer than you think.[A][N]
+Keeping us alive is[ToggleMouthMove]...[ToggleMouthMove][N]
+a challenge, I'll admit.[A][N]
+And you've risen to it many[N]
+times.[A] That's not nothing.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Really?[A][N][OpenRight]
+You've nothing to fear with us.[N]
+Just do what you've been doing.[A][N]
+With your help, we'll live.[A][N][OpenFarRight]
+Live we shall, friend.[N]
+[ToggleMouthMove]...[ToggleMouthMove]On with it, then.[A][N]
+Follow my lead, you two![A][X]
+
 ##Ch24_ElizaManfredArgent
-pain[X]
+[OpenMidLeft][LoadManfred][OpenRight][LoadEliza][OpenFarRight][LoadArgent][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I believe we're finally[N]
+upon the lady's army.[A][N]
+How do we proceed?[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]That's your call.[A][N]
+It has never been my place[N]
+to make decisions.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Of course. What about[N]
+you, Eliza?[A][N][OpenRight]
+W-what[ToggleMouthMove]...[ToggleMouthMove] would I know?[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]We should help them.[N]
+But that's[ToggleMouthMove]...[ToggleMouthMove] obvious.[A][N][OpenMidLeft]
+I suppose it is.[A][N]
+Well, we've fought without[N]
+strategy many times.[A][N]
+Improvisation suits us[N]
+well enough, I guess.[A][N][OpenRight]
+I'll[ToggleMouthMove]...[ToggleMouthMove] do what I can.[N]
+To keep you both safe.[A][N][OpenFarRight]
+As long as you keep yourself[N]
+alive, I will be satisfied.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I'd rather us all alive.[N]
+Personally, at least.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Well, if we're improvising,[N]
+let's get started.[A][N]
+Good luck, you two.[N]
+We'll need it.[A][X]
 
 ##Ch24_ElizaWilhelmArgent
-pain[X]
+[OpenMidLeft][LoadEliza][OpenRight][LoadArgent][OpenFarRight][LoadWilhelm]
+Hold, you two. I believe that's them.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Yup, no mistaking it. Those're the faces[N]
+from my final day in Elba Cor.[A][N][OpenRight]
+So they are. Shall we take[N]
+the fight to them?[A][N][OpenFarRight]
+Fine by me. No point[N]
+delaying.[A] What about[N]
+you, kid?[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I'm[ToggleMouthMove]...[ToggleMouthMove] not ready. But[ToggleMouthMove]...[ToggleMouthMove][N]
+I don't think I'll be.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]I can still help you.[N]
+[ToggleMouthMove]...[ToggleMouthMove]I'm sorry.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Nobody's ready for this.[N]
+Nobody deserves this.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Indeed. This world's[ToggleMouthMove]...[ToggleMouthMove] cruel.[A][N]
+I[ToggleMouthMove]...[ToggleMouthMove] wish to better it.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Let's go. Don't[ToggleMouthMove]...[ToggleMouthMove][N]
+worry for me.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]If you insist.[N]
+We'll protect you, kid.[A][X]
 
 ##Ch24_RiftEstelleRose
-pain[X]
+[OpenMidLeft][LoadRift][OpenRight][LoadEstelle][OpenFarRight][LoadRose][OpenMidLeft]
+Time to see what we're made of.[A][N][OpenFarRight]
+I'm[ToggleMouthMove]...[ToggleMouthMove] excited.[A][N]
+This is gonna feel real[N]
+good, boss.[A][N][OpenRight]
+Catharsis, young one.[A][N]
+It is[ToggleMouthMove]...[ToggleMouthMove] a feeling truly[N]
+most potent.[A][N][OpenMidLeft]
+That it is. [ToggleMouthMove]...[ToggleMouthMove]It won't make[N]
+up for all we've lost.[A][N]
+But it'll[ToggleMouthMove]...[ToggleMouthMove] dull our pain.[A][N]
+That's[ToggleMouthMove]...[ToggleMouthMove] enough for me.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]I'll[ToggleMouthMove]...[ToggleMouthMove] get them back.[N]
+For all they've done.[A][N]
+They won't[ToggleMouthMove]...[ToggleMouthMove] escape me.[A][N][OpenRight]
+Nor shall they escape my[N]
+righteous fury.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I see we're all ready[N]
+to lay waste.[A][N]
+Onwards, then![N]
+Give them hell![A][X]
+
 ##Ch24_RiftEstelleDirk
-pain[X]
+[OpenMidLeft][LoadRift][OpenRight][LoadEstelle][OpenFarRight][LoadDirk][OpenMidLeft]
+Time to see what we're made of.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Indeed. We shall prove that[N]
+we're more than a sorrowful triad.[A][N]
+That we can make our mark on[N]
+this unforgiving world.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Must you be so verbose?[A][N][OpenRight]
+'Tis who I am. I shan't[N]
+apologize, friend.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I'm[ToggleMouthMove]...[ToggleMouthMove] sorry, Dirk.[N]
+For all this.[A][N]
+But all we can do now[N]
+is live up to their legacy.[A][N][OpenFarRight]
+I[ToggleMouthMove]...[ToggleMouthMove] I know.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Then let's get to it.[N]
+Onwards, you two![A][N]
+We'll sear the name of[N]
+Viridian into this land![A][X]
+
 ##Ch24_RiftEstelleCallum
-pain[X]
+[OpenMidLeft][LoadRift][OpenRight][LoadCallum][OpenFarRight][LoadEstelle][OpenMidLeft]
+Time to see what we're made of.[A][N][OpenRight]
+You and I? We know what[N]
+we're made of.[A][N]
+We've known our whole lives.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Not sure about her.[A][N][OpenFarRight]
+Don't worry. I've long known[N]
+my purpose.[A] What I can and[N]
+cannot do.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Even so, this experience[N]
+has changed me.[A][N][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]Sure has changed all of us.[A][N][OpenRight]
+I feel the same as always.[N]
+[ToggleMouthMove]...[ToggleMouthMove]Sorry to disappoint.[A][N][OpenMidLeft]
+Honestly, I envy that.[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Being able to walk away[N]
+from all of this.[A][N]
+Unscarred.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Yup.[A][N][OpenFarRight]
+Before we confront our own[N]
+wounds,[A] we should probably[N]
+deal some to our adversaries.[A][N][OpenMidLeft]
+Of course. Of course.[N]
+You both ready?[A][N]
+[ToggleMouthMove]...[ToggleMouthMove]Then let's get this done.[A][X]
+
 ##Ch24_RiftEstelleManfred
-pain[X]
+[OpenMidLeft][LoadManfred][OpenRight][LoadRift][OpenFarRight][LoadEstelle][OpenMidLeft]
+[ToggleMouthMove]...[ToggleMouthMove]I believe we're finally[N]
+upon the lady's army.[A][N]
+How do we proceed?[A][N][OpenRight]
+Leave it to me. I'll take[N]
+the whole world on.[A][N][OpenFarRight]
+No need for that, comrade.[A][N]
+We're allies for life. You're not[N]
+charging off and dying without us.[A][N][OpenMidLeft]
+The vigor is nice, but I would[N]
+also appreciate you back alive.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Fine. Not like I was[N]
+in any danger anyway.[A][N][OpenMidLeft]
+I'm just saying. Overconfidence[N]
+will lead us to a swift reunion.[A][N]
+And we've got too much left to[N]
+do before we see them again.[A][N][OpenFarRight]
+[ToggleMouthMove]...[ToggleMouthMove]Indeed. Let us make good[N]
+of everyone who fell.[A][N][OpenRight]
+[ToggleMouthMove]...[ToggleMouthMove]Alright. Counting on[N]
+you two, then.[A][N][OpenMidLeft]
+I shan't let you down.[A][X]
 
 ##Ch24_RiftEstelleWilhelm
 [OpenMidLeft][LoadRift][OpenRight][LoadEstelle][OpenFarRight][LoadWilhelm]

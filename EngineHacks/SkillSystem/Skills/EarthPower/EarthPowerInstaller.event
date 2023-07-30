@@ -8,3 +8,16 @@ EarthPowerWTA:
 #incbin "EarthPowerWTA.dmp"
 POIN SkillTester
 WORD EarthPowerID
+ALIGN 4
+EarthPowerPostcombat:
+#incbin "EarthPowerPostcombat.dmp"
+POIN SkillTester
+WORD EarthPowerID
+POIN EarthPowerEvent
+
+ALIGN 4
+EarthPowerEvent:
+SOUN 0xbc
+STAL 5
+NoFade
+ENDA

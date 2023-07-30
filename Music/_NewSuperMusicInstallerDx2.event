@@ -33,6 +33,10 @@ dalst
 //fix 55 (flute 73), 72 (oboe 68)
 // 1 - TEST SONG TO MAKE SURE THE INSTALLER WORKS-- DO NOT USE THIS IN YOUR GAME; IT DOESN'T SOUND GOOD
 {
+#include "WistfulWild.event"
+SongTable(S_WistfulWild,WistfulWild,1)
+}
+{
 #include "UnmarkedGrave.event"
 SongTable(S_UnmarkedGrave,UnmarkedGrave,1)
 }

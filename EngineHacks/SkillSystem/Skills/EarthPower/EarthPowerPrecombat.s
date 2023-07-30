@@ -181,6 +181,8 @@ bl End
 MiscTomesWithoutPrebattleEffects:
 cmp r2,#0xc7 @inversion
 beq End
+cmp r2,#0xeb @forcespike
+beq End
 
 
 ErrorHandler:

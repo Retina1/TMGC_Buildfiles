@@ -65,6 +65,7 @@ ALIGN 4
 MiscBasedEvents:
 CauseGameOverIfLordDies
 AreaEvent(0x23,C19AreaTrigger,0,0,8,13)
+AreaEvent(0x1f,C19SecretUnit,10,30,10,30)
 END_MAIN
 
 Dunno:
@@ -288,6 +289,10 @@ UNIT Holanis Warrior 0x0 Level(2,Enemy,1) [19,31] 0x0 0x0 0x1 REDA19R30 [BraveAx
 UNIT Holanis Halberdier 0x0 Level(4,Enemy,1) [20,31] 0x0 0x0 0x1 REDA20R29 [BraveLance] ChaseOnceApproachedAI
 UNIT
 
+C19QJoins:
+UNIT UnitQ SwdPalF 0x0 Level(1,Ally,0) [10,30] 0x0 0x0 0x1 REDA10R31 [LevinSword,SteelBow,GoddessIcon] NoAI
+UNIT
+
 ALIGN 4
 
 C19SamCharleySupport:
@@ -430,6 +435,20 @@ CAM1 Michael
 FlashCursor(Michael,60)
 Text(Ch19_MichaelIsAngy) //michael's angy that someone flooded his river, and hints at reinforcements
 ENUF 0x24 //here's the fucking flag, finally
+EndEvent
+
+C19SecretUnit:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_EVENTID 0x11
+BEQ 0x1 0xc 0x0
+MUSC RecruitmentTheme
+Text(Ch19_Q)
+Reinforcements(C19QJoins)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x1f
+LABEL 0x2
 EndEvent
 
 ALIGN 4

@@ -1,0 +1,52 @@
+#ifdef _FE8_
+
+#include "EAstdlib.event"
+#include "Extensions/Hack Installation.txt"
+#endif
+
+PUSH
+//ORG $8AE60		//FE8J	{J}
+ORG $88BD4		//FE8U	{U}
+jumpToHack(ChangeUnitDesc)
+POP
+
+ALIGN 4
+ChangeUnitDesc:
+#incbin "ChangeUnitDesc.dmp"
+POIN ChangeUnitDesc_Table
+
+#define UnitDescTable(descid,unitid,classid,mapid,flagid) "SHORT descid; BYTE unitid classid mapid 0xFF; SHORT flagid; "
+
+ALIGN 4
+ChangeUnitDesc_Table:
+UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Chapter24,0x0)  //kenneth ascend
+UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Chapter25,0x0)  //kenneth ascend
+UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Interlude10,0x0)  //kenneth ascend
+UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Chapter26,0x0)  //kenneth ascend
+UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Chapter27,0x0)  //kenneth ascend
+UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Chapter28,0x0)  //kenneth ascend
+UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Endgame,0x0)  //kenneth ascend
+UnitDescTable(Desc_Arin2,Arin,0x0,0xff,ArinOriginFlag)
+UnitDescTable(Desc_Simone2,Simone,0x0,0xff,ArinOriginFlag)
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter22,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Interlude9,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter23,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter24,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter25,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Interlude10,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter26,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter27,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter28,0x0)//svelt is known by this point
+UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Endgame,0x0)//svelt is known by this point
+SHORT 0x0; BYTE 0x0 0x0 0x0 0x0; SHORT 0x0  // term
+//@struct ChangeUnitDesc_Table
+//@{
+//@	short	new_desc_id				require
+//@	byte	unit_id;				require
+//@	byte	class_id;				00=ANY or FF=any
+//@	byte	map_id;		章			FF=ANY
+//@	byte	editon		編			FF=ANY
+//@	ushort	flag_id;	Flag		00=ANY
+//@}//sizeof(16bytes)
+
+

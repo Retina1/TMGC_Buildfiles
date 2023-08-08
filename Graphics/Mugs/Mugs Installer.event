@@ -639,6 +639,10 @@ ALIGN 4
 CiraweissMug:
 #incbin "dmps/Ciraweiss.dmp"
 setMugEntry(0x3c,CiraweissMug,3,6,3,4)
+ALIGN 4
+YoungCiraweissMug:
+#incbin "dmps/YoungCiraweiss.dmp"
+setMugEntry(0xf9,YoungCiraweissMug,3,6,3,4)
 
 ALIGN 4
 ArbordiaMug:

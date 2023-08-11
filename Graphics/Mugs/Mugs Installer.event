@@ -47,6 +47,13 @@ ALIGN 4
 RetinaMug:
 #incbin "dmps/Retina.dmp"
 setMugEntry(0x1fd,RetinaMug,3,6,3,4)
+//fillers to make list show everything
+setMugEntry(0xfa,RetinaMug,3,6,3,4)
+setMugEntry(0xfb,RetinaMug,3,6,3,4)
+setMugEntry(0xfc,RetinaMug,3,6,3,4)
+setMugEntry(0xfd,RetinaMug,3,6,3,4)
+setMugEntry(0xff,RetinaMug,3,6,3,4)
+setMugEntry(0x100,RetinaMug,3,6,3,4)
 ALIGN 4
 InterludeGuyMug:
 #incbin "dmps/Interlude9Guy.dmp"
@@ -799,7 +806,7 @@ setMugEntry(0xc8,AddingtonMug,4,7,4,5)
 ALIGN 4
 TonnaminMug:
 #incbin "dmps/Tonnamin.dmp"
-setMugEntry(0x1fe,TonnaminMug,3,5,3,3)
+setMugEntry(0xfe,TonnaminMug,3,5,3,3)
 
 ALIGN 4
 ArchivistMug:

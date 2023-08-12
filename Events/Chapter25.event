@@ -109,6 +109,8 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+//for testing
+//SetSupport(Cassius,Rachael,BPSupport,1)
 ENUT GuideChpt25
 LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
@@ -118,6 +120,7 @@ LoadUnitsByDifficulty(C25Easy,C25Normal,C25Hard)
 LOAD1 0x0 C25Units
 ENUN
 ResetViridianConvoy
+SupportFlagOn(Rachael,Cassius,BaseFlag3,BPSupport)
 GotoPrepScreen
 ENDA
 

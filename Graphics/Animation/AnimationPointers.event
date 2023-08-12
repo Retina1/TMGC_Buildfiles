@@ -325,6 +325,7 @@
 #include "BishopF(Eldritch)\Unarmed Installer.event"
 }
 {
+#include "Desmond(Nuramon)\Sword Installer.event"
 #include "Desmond(Nuramon)\Lance Installer.event"
 #include "Desmond(Nuramon)\Axe Installer.event"
 #include "Desmond(Nuramon)\Handaxe Installer.event"
@@ -346,11 +347,16 @@
 {
 #include "Peg(Flasuban)\Lance Installer.event"
 #include "Peg(Flasuban)\Sword Installer.event"
+#include "Peg(Flasuban)\Axe Installer.event"
+#include "Peg(Flasuban)\Handaxe Installer.event"
 #include "Peg(Flasuban)\Unarmed Installer.event"
 }
 {
 #include "Falco\Lance Installer.event"
 #include "Falco\Sword Installer.event"
+#include "Falco\Axe Installer.event"
+#include "Falco\Handaxe Installer.event"
+#include "Falco\Bow Installer.event"
 #include "Falco\Unarmed Installer.event"
 }
 {
@@ -655,6 +661,8 @@ ALIGN 4
 PegAnims:
 SwordAnim(0xa1)
 LanceAnim(0x66)
+AxeAnim(0xf3)
+HandAxeAnim(0xf4)
 UnarmedAnim(0x67)
 EndAnim
 
@@ -662,6 +670,9 @@ ALIGN 4
 FalcoAnims:
 SwordAnim(0x68)
 LanceAnim(0x69)
+AxeAnim(0xf0)
+HandAxeAnim(0xf1)
+BowAnim(0xf2)
 UnarmedAnim(0x6a)
 EndAnim
 
@@ -942,6 +953,7 @@ DesmondAnims:
 LanceAnim(0x62)
 AxeAnim(0x63)
 HandAxeAnim(0x64)
+SwordAnim(0xf5)
 UnarmedAnim(0x65)
 EndAnim
 

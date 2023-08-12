@@ -299,6 +299,9 @@ POP
 
   #endif // USE_SAVE_EXPANSION
   
+  //setstatus
+#include "TMGC/SetStatus/SetStatusInstaller.event"
+  
   //support rework, base convos
 #include "Support Rework Rework/SupportRework.event"
 #include "Support Rework Rework/ASMCCheckBaseConvo.event"
@@ -382,9 +385,6 @@ ALIGN 4
 
 //nosresire palette
 #include "TMGC/NosResire/NosResire.event"
-
-//setstatus
-#include "TMGC/SetStatus/SetStatusInstaller.event"
 
 //hopefully fix help text- not working yet but may as well keep this for when it does- haha jk here's some patch
 PUSH

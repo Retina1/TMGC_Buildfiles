@@ -768,6 +768,12 @@
 			music(S_PascalTheDog)//buck
 			text(C25_Secret_Seller)
 			eventID(BaseFlag2)
+		Entry
+			name(Rachael_Cassius_Support_Label)
+			importance(0)
+			event(C25RachaelCassiusEvent)
+			eventID(BaseFlag3)
+			//baseSupport(Rachael,Cassius,ASupport)
 		//c25 has ian and maybe a kyrie hint?
 		//c26
 		//c27
@@ -784,6 +790,20 @@
 	POP
 	}
 #endif // BASE_CONVO_TABLE
+
+ALIGN 4
+C25RachaelCassiusEvent:
+SetBackground(PathCG)
+MUSC LoverConvoSong
+Text(FillerDialogue)
+SystemText(C25RachaelCassiusRankSwap)
+SetSupport(Cassius,Rachael,ASupport,1)
+FADI 0x5
+SetUnitStatus(Rachael,AxeExp,71)
+SetUnitStatus(Cassius,LanceExp,71)
+CLEAN
+NoFade
+ENDA
 
 ALIGN 4
 C4HonorEvent:

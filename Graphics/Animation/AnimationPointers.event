@@ -465,6 +465,15 @@
 #include "Apex\Staff Installer.event"
 #include "Apex\Magic Installer.event"
 }
+{
+#include "CharacterSpecific\PeggyU\Staff Installer.event"
+#include "CharacterSpecific\PeggyU\Unarmed Installer.event"
+}
+ALIGN 4
+PeggyUAnims:
+StaffAnim(0xf6)
+UnarmedAnim(0xf7)
+EndAnim
 
 ALIGN 4
 BookAnims:

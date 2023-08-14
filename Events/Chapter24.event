@@ -366,7 +366,11 @@ SystemText(C24SummonIneubrenos)
 IfNoSelectedGoto(0x3)
 Text(FillerDialogue)
 Reinforcements(C24IneubrenosSpawn)
+//FADI 60 might only be needed for talks
+//VCWF 0x0
 SetUnitStatus(BossIneubrenos, State, 0x1002)
+//VCWF 0x7
+//FADU 60
 GOTO 0x2
 LABEL 0x3
 Text(FillerDialogue)
@@ -436,7 +440,11 @@ BEQ 0xb 0xc 0x0
 UnremoveUnit(Argent)
 Reinforcements(ArgentRejoin)
 LABEL 0xb
+//FADI 60
+//VCWF 0x0
 OffAllUnitState(Freddric*0x100+Argent, Undeployed, AnyDeployed, AnyArmy, AnyClass, AnyRange, AnyItem)
+//VCWF 0x7
+//FADU 60
 CALL ohgodnotthis
 EndEvent
 

@@ -1,38 +1,38 @@
 	.include "MPlayDef.s"
 
-	.equ	song57_grp, voicegroup000
-	.equ	song57_pri, 0
-	.equ	song57_rev, 0
-	.equ	song57_mvl, 127
-	.equ	song57_key, 0
-	.equ	song57_tbs, 1
-	.equ	song57_exg, 0
-	.equ	song57_cmp, 1
+	.equ	DestructionBegetsDecay_grp, voicegroup000
+	.equ	DestructionBegetsDecay_pri, 0
+	.equ	DestructionBegetsDecay_rev, 0
+	.equ	DestructionBegetsDecay_mvl, 127
+	.equ	DestructionBegetsDecay_key, 0
+	.equ	DestructionBegetsDecay_tbs, 1
+	.equ	DestructionBegetsDecay_exg, 0
+	.equ	DestructionBegetsDecay_cmp, 1
 
 	.section .rodata
-	.global	song57
+	.global	DestructionBegetsDecay
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song57_001:
+DestructionBegetsDecay_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song57_key+0
- .byte   TEMPO , 160*song57_tbs/2
+ .byte   KEYSH , DestructionBegetsDecay_key+0
+ .byte   TEMPO , 160*DestructionBegetsDecay_tbs/2
  .byte   VOICE , 89
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -144,32 +144,32 @@ Label_014C5DE2:
 @  #01 @044   ----------------------------------------
  .byte   VOICE , 89
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-20
- .byte   VOL , 52*song57_mvl/mxv
+ .byte   VOL , 52*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song57_002:
+DestructionBegetsDecay_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song57_key+0
+ .byte   KEYSH , DestructionBegetsDecay_key+0
  .byte   VOICE , 30
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #02 @001   ----------------------------------------
@@ -526,32 +526,32 @@ Label_014C57B3:
  .byte   W96
 @  #02 @046   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song57_003:
+DestructionBegetsDecay_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song57_key+0
+ .byte   KEYSH , DestructionBegetsDecay_key+0
  .byte   VOICE , 30
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -819,32 +819,32 @@ Label_014C5FC7:
  .byte   W96
 @  #03 @044   ----------------------------------------
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v-50
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song57_004:
+DestructionBegetsDecay_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song57_key+0
+ .byte   KEYSH , DestructionBegetsDecay_key+0
  .byte   VOICE , 36
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N05 ,Cs1 ,v092
  .byte   W12
@@ -1295,32 +1295,32 @@ Label_014C59D3:
 @  #04 @044   ----------------------------------------
  .byte   VOICE , 36
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 49*song57_mvl/mxv
+ .byte   VOL , 49*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song57_005:
+DestructionBegetsDecay_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song57_key+0
+ .byte   KEYSH , DestructionBegetsDecay_key+0
  .byte   VOICE , 81
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N05 ,Cs2 ,v080
  .byte   W06
@@ -1791,32 +1791,32 @@ Label_014C5C5C:
 @  #05 @045   ----------------------------------------
  .byte   VOICE , 81
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 39*song57_mvl/mxv
+ .byte   VOL , 39*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song57_006:
+DestructionBegetsDecay_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song57_key+0
+ .byte   KEYSH , DestructionBegetsDecay_key+0
  .byte   VOICE , 81
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W12
  .byte   N05 ,Cs2 ,v060
@@ -2409,32 +2409,32 @@ Label_014C54B3:
 @  #06 @045   ----------------------------------------
  .byte   VOICE , 81
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 33*song57_mvl/mxv
+ .byte   VOL , 33*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song57_007:
+DestructionBegetsDecay_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song57_key+0
+ .byte   KEYSH , DestructionBegetsDecay_key+0
  .byte   VOICE , 28
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -2671,32 +2671,32 @@ Label_014C5022:
 @  #07 @044   ----------------------------------------
  .byte   VOICE , 28
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+50
- .byte   VOL , 29*song57_mvl/mxv
+ .byte   VOL , 29*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song57_008:
+DestructionBegetsDecay_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song57_key+0
+ .byte   KEYSH , DestructionBegetsDecay_key+0
  .byte   VOICE , 124
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   N05 ,Cn1 ,v120
  .byte   N05 ,Fs1 ,v100
@@ -3079,32 +3079,32 @@ Label_014C4BA5:
  .byte   W96
 @  #08 @044   ----------------------------------------
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   PAN , c_v+0
- .byte   VOL , 48*song57_mvl/mxv
+ .byte   VOL , 48*DestructionBegetsDecay_mvl/mxv
  .byte   BEND , c_v+0
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-song57:
+DestructionBegetsDecay:
 	.byte	8	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song57_pri	@ Priority
-	.byte	song57_rev	@ Reverb.
+	.byte	DestructionBegetsDecay_pri	@ Priority
+	.byte	DestructionBegetsDecay_rev	@ Reverb.
     
-	.word	song57_grp
+	.word	DestructionBegetsDecay_grp
     
-	.word	song57_001
-	.word	song57_002
-	.word	song57_003
-	.word	song57_004
-	.word	song57_005
-	.word	song57_006
-	.word	song57_007
-	.word	song57_008
+	.word	DestructionBegetsDecay_001
+	.word	DestructionBegetsDecay_002
+	.word	DestructionBegetsDecay_003
+	.word	DestructionBegetsDecay_004
+	.word	DestructionBegetsDecay_005
+	.word	DestructionBegetsDecay_006
+	.word	DestructionBegetsDecay_007
+	.word	DestructionBegetsDecay_008
 
 	.end

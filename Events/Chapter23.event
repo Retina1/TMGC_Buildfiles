@@ -474,7 +474,7 @@ SetSupport(Joan,Sonia,BPSupport,1)
 EndEvent
 
 C23JoanTobiasRecruitment:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 CHECK_EVENTID 0xd
 BEQ 0x1 0xc 0x0
 CHECK_EVENTID 0x13
@@ -501,7 +501,7 @@ SetSupport(Joan,Tobias,BSupport,1)
 EndEvent
 
 C23SoniaTobiasRecruitment:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 CHECK_EVENTID 0xf
 BEQ 0x1 0xc 0x0
 CHECK_EVENTID 0x13
@@ -528,7 +528,7 @@ SetSupport(Sonia,Tobias,BSupport,1)
 EndEvent
 
 C23SoniaDesmondRecruitment:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(C23DesmondRecruitsSonia)
 SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
@@ -537,7 +537,7 @@ CHAI Sonia
 EndEvent
 
 C23SoniaMikeyRecruitment:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(C23MikeyRecruitsSonia)
 SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
@@ -563,7 +563,7 @@ SetSupport(Joan,Mikey,BSupport,1)
 EndEvent
 
 C23JoanCarbonRecruitment:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 CHECK_ALIVE Mikey
 BEQ 0x1 0xc 0x0
 Text(C23CarbonRecruitsJoan)//mikey alive
@@ -580,7 +580,7 @@ EndEvent
 C23TobiasLeilaRecruitment:
 CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(C23LeilaRecruitsTobias)//unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
@@ -595,7 +595,7 @@ EndEvent
 C23TobiasDamienRecruitment:
 CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(C23DamienRecruitsTobias)//unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
@@ -610,7 +610,7 @@ EndEvent
 C23TobiasZachariasRecruitment:
 CHECK_EVENTID 0x13
 BNE 0x1 0xc 0x0
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(C23ZachariasRecruitsTobias)//unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)

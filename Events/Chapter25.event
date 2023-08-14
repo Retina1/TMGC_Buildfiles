@@ -137,7 +137,7 @@ BNE 0x1 0xc 0x1
 GetUnitStatus((-1), Item3Uses)
 SVAL 0x1 0x6
 BNE 0x1 0xc 0x1
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(VillageCG, FillerDialogue)//kyrie joins
 Reinforcements(C25Kyrie)
 GOTO 0x2

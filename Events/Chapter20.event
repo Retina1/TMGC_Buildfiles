@@ -420,7 +420,7 @@ C20Village:
 VillageEventItem(C20VillageText, VillageCG, IronRune)
 
 C20SimoneBlairRecruitment:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(Ch20_BlairSimoneRecruit)
 TurnAlly(Simone)
 EndEvent
@@ -428,7 +428,7 @@ EndEvent
 C20SimoneArinRecruitment:
 CHECK_EVENTID 0xa
 BNE 0x1 0xc 0x0
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(Ch20_ArinSimoneRecruit)
 TurnAlly(Simone)
 ENUT 0xa
@@ -442,7 +442,7 @@ EndEvent
 C20SimoneEmileRecruitment:
 CHECK_EVENTID 0xa
 BNE 0x1 0xc 0x0
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(Ch20_EmileSimoneRecruit)
 TurnAlly(Simone)
 ENUT 0xa
@@ -468,7 +468,7 @@ SetSupport(Sveltzalus,Simone,CSupport,1)
 EndEvent
 
 C20SimoneZekeRecruitment:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(Ch20_ZekeSimoneRecruit)
 TurnAlly(Simone)
 EndEvent

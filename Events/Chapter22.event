@@ -309,7 +309,7 @@ ENDA
 C22PeterButchRecruit:
 CHECK_EVENTID 0xa
 BNE 0x1 0xc 0x0
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(C22PeterRecruitButch)//unrecruited
 TurnAlly(Peter)
 ENUT 0xa
@@ -321,7 +321,7 @@ SetSupport(Butch,Peter,CPSupport,1)
 EndEvent
 
 C22PeterBlairRecruit:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(C22PeterRecruit)
 TurnAlly(Peter)
 EndEvent

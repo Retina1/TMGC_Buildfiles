@@ -319,7 +319,7 @@ CHECK_EVENTID 0x8
 BNE 0x5 0xc 0x0
 CHECK_EVENTID 0xa
 BNE 0x1 0xc 0x0
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 SilentKillUnit(Hollandaise)
 LOAD1 0x0 C17EndingCutscene
 ENUN
@@ -359,7 +359,7 @@ CHAI Hollandaise
 EndEvent
 
 C17HollandaiseRecruitment:
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(Ch17_BechamelRecruitsHollandaise)
 TurnAlly(Hollandaise)
 AddSupport(Bechamel,Hollandaise,1)

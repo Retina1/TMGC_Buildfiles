@@ -442,7 +442,7 @@ CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
 CHECK_EVENTID 0x11
 BEQ 0x1 0xc 0x0
-MUSC RecruitmentTheme
+MUSC RecruitmentTheme2
 Text(Ch19_Q)
 Reinforcements(C19QJoins)
 GOTO 0x2

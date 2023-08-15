@@ -34,8 +34,28 @@ CharacterBasedEvents:
 //yuyu talks to ineubrenos for sorrow's pilgrim and bow rank
 //blair yuyu B+
 CharacterEvent(0x21,C24Pilgrim,Yuyu,BossIneubrenos)
+CharacterEvent(0x22,C24BlairLarondeTalk,Blair,SecretLaronde)
 CharacterEventBothWays(0x23,C24Dracopope,Vladmir,SecretLaronde)
 CharacterEvent(0x24,C24RoseLarondeRecruitment,Rose,SecretLaronde)
+//viridian step
+CharacterEvent(0x25,C24FreddricLarondeTalk,Freddric,SecretLaronde)
+CharacterEvent(0x25,C24DeanLarondeTalk,Dean,SecretLaronde)
+CharacterEvent(0x25,C24ElizaLarondeTalk,Eliza,SecretLaronde)
+CharacterEvent(0x25,C24RiftLarondeTalk,Rift,SecretLaronde)
+CharacterEvent(0x25,C24EstelleLarondeTalk,Estelle,SecretLaronde)
+CharacterEvent(0x25,C24DirkLarondeTalk,Dirk,SecretLaronde)
+CharacterEvent(0x25,C24CallumLarondeTalk,Callum,SecretLaronde)
+CharacterEvent(0x25,C24ManfredLarondeTalk,Manfred,SecretLaronde)
+CharacterEvent(0x25,C24WilhelmLarondeTalk,Wilhelm,SecretLaronde)
+CharacterEvent(0x25,C24ArgentLarondeTalk,Argent,SecretLaronde)
+//opistian step
+CharacterEvent(0x26,C24ApolloLarondeTalk,Apollo,SecretLaronde,0x25)
+CharacterEvent(0x26,C24HilbertLarondeTalk,Hilbert,SecretLaronde,0x25)
+CharacterEvent(0x26,C24FlynnLarondeTalk,Flynn,SecretLaronde,0x25)
+CharacterEvent(0x26,C24AthenaLarondeTalk,Athena,SecretLaronde,0x25)
+CharacterEvent(0x26,C24CharleyLarondeTalk,Charley,SecretLaronde,0x25)
+//final step
+CharacterEvent(0x27,C24BlairLarondeAltRecruitment,Blair,SecretLaronde,0x26)
 END_MAIN
 
 LocationBasedEvents:
@@ -274,6 +294,26 @@ EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
 CleanTextNoMap(LowlandsCG,FillerDialogue)
+
+CHECK_ALIVE Simone
+BEQ 0x2 0xc 0x0
+	MUSC S_Chaos
+	CleanTextNoMap(LowlandsCG,FillerDialogue)
+	REMA
+	SetBackground(BlankCG)
+	SetSupport(Arin,Simone,BSupport,1)
+LABEL 0x2
+
+CHECK_EVENTID 0x23
+BNE 0x1 0xc 0x0
+	MUSC AmbientNight
+	CleanTextNoMap(LowlandsCG,FillerDialogue)//laronde says hi
+	REMA
+	PROMOTE Vladmir Draco GoddessIcon
+	FADI 16
+	CLEAN
+LABEL 0x1
+
 MoveToChapter(Chapter25)
 ENDA
 
@@ -284,7 +324,7 @@ EndEvent
 C24LarondeSpawn:
 Reinforcements(C24LarondeSpawn1)
 Reinforcements(C24LarondeSpawn2)
-Text(FillerDialogue)//laronde tells wendell to wait offscreen (saving me the trouble of having to deal with him on map)
+Text(Ch24_LarondeAppears)//laronde tells wendell to wait offscreen (saving me the trouble of having to deal with him on map)
 CLEAN
 MOVE 60 Opistia [24,0]
 ENUN
@@ -299,6 +339,10 @@ CHECK_DEPLOYED Vladmir
 BNE 0x2 0xc 0x0
 ENUF 0x22 //or undeployed
 LABEL 0x2
+CHECK_ALIVE Rose
+BEQ 0x3 0xc 0x0
+ENUT 0x25
+LABEL 0x3
 EndEvent
 
 //todo: vlad/laronde talk for promotion, rose/laronde talk for recruitment, some complicated viridian-based chain for another variant
@@ -318,6 +362,97 @@ EndEvent
 
 C24RoseLarondeRecruitment:
 MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+TurnAlly(SecretLaronde)
+EndEvent
+
+C24BlairLarondeTalk:
+CHECK_ALIVE Vladmir
+BNE 0x1 0xc 0x0
+MUSC RecruitmentTheme2
+Text(FillerDialogue)
+TurnAlly(SecretLaronde)
+ENUT 0x27
+GOTO 0x2
+LABEL 0x1
+Text(FillerDialogue)
+LABEL 0x2
+EndEvent
+
+C24FreddricLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24DeanLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24ElizaLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24RiftLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24EstelleLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24DirkLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24CallumLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24ManfredLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24WilhelmLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+C24ArgentLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+ENUT 0x22
+EndEvent
+
+C24ApolloLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+EndEvent
+C24HilbertLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+EndEvent
+C24FlynnLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+EndEvent
+C24AthenaLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+EndEvent
+C24CharleyLarondeTalk:
+MUSC S_CircleOfTheMoon
+Text(FillerDialogue)
+EndEvent
+
+C24BlairLarondeAltRecruitment:
+MUSC RecruitmentTheme2
 Text(FillerDialogue)
 TurnAlly(SecretLaronde)
 EndEvent
@@ -349,7 +484,8 @@ ENUN
 EndEvent
 
 C24Pilgrim:
-Text(FillerDialogue)
+MUSC S_IAmAllOfMe
+Text(C24_YuyuIneubrenosTalk)
 FADI 60
 VCWF 0x0
 SetUnitStatus(Yuyu,BowExp,251)

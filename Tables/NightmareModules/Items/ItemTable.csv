@@ -106,7 +106,7 @@ Thief,NThief,DThief,UThief,0x67,0x4,IsStaff,0x0,0x0,3,0,0,2,100,0x10,9000,SRank,
 Ladymace,NLadymace,DLadymace,ULadymace,0x68,0x2,IsWeapon|WomanLocked,0x0,ArmorEffectiveness|IsPointer,15,16,85,9,0,0x11,200,NoRank,LadymaceIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Chest Key,NChestKey,DChestKey,ULockpick,0x69,0x9,0x0,0x0,0x0,3,0,0,0,0,0x11,50,NoRank,ChestKeyIcon,0x1e,NoEffect,0,0x0,0x0,0x0
 Door Key,NDoorKey,DDoorKey,ULockpick,0x6a,0x9,0x0,0x0,0x0,3,0,0,0,0,0x11,50,NoRank,DoorKeyIcon,0x1f,NoEffect,0,0x0,0x0,0x0
-Unyielding,NUnyielding,DUnyielding,UUnyielding,0x6b,0x0,IsWeapon|HyperiusLocked|Unsellable|Indestructible,0x0,0x0,30,14,100,10,0,0x11,100,NoRank,UnyieldingIcon,0x0,NoEffect,2,0x0,0x0,UnyieldingID
+Unyielding,NUnyielding,DUnyielding,UUnyielding,0x6b,0x0,IsWeapon|HyperiusLocked|Unsellable|Indestructible,0x0,0x0,1,14,100,10,0,0x11,6000,NoRank,UnyieldingIcon,0x0,NoEffect,2,0x0,0x0,UnyieldingID
 Vulnerary,NVulnerary,DVulnerary,UHeal,0x6c,0x9,0x0,0x0,0x0,5,0,0,0,0,0x11,100,NoRank,VulneraryIcon,0x21,NoEffect,0,0x0,0x0,0x0
 Elixir,NElixir,DElixir,UHeal,0x6d,0x9,0x0,0x0,0x0,5,0,0,0,0,0x11,300,NoRank,ElixirIcon,0x22,NoEffect,0,0x0,0x0,0x0
 Pure Water,NPureWater,DPureWater,UPureWater,0x6e,0x9,0x0,0x0,0x0,5,0,0,0,0,0x11,150,NoRank,PureWaterIcon,0x23,NoEffect,0,0x0,0x0,0x0
@@ -240,7 +240,7 @@ Voulche,NVoulche,DVoulche,UVoulche,0xed,0x7,IsWeapon|IsMagic|Indestructible,0x0,
 High Roller,NHighRoller,DHighRoller,UHighRoller,0xee,0x1,IsWeapon|WilhelmLocked,0x0,0x0,25,0,120,8,10,0x11,200,NoRank,HighRollerIcon,0x0,NoEffect,2,0x0,0x0,HighRollerID
 Hurlbat,NHurlbat,DHurlbat,UHurlbat,0xef,0x2,IsWeapon|TonnaminLocked,0x0,0x0,61,4,83,3,17,0x19,52,NoRank,HurlbatIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Soulbow,NSoulbow,DSoulbow,USoulbow,0xf0,0x3,IsWeapon|Unsellable|Indestructible,0x0,FlierEffectiveness|IsPointer,40,26,150,6,0,0x23,0,SRank,LuckbowIcon,0x0,NoEffect,2,0x0,0x0,LuckbowSkillID
-Sorrow's Pilgrim,NSorrowsPilgrim,DSorrowsPilgrim,USorrowsPilgrim,0xf1,0x3,IsWeapon|YuyuLocked,0x0,FlierEffectiveness|IsPointer,25,12,100,3,20,0x22,300,NoRank,SorrowsPilgrimIcon,0x0,NoEffect,250,0x0,0x0,CantoPlusID
+Sorrow's Pilgrim,NSorrowsPilgrim,DSorrowsPilgrim,USorrowsPilgrim,0xf1,0x3,IsWeapon|YuyuLocked|Indestructible|Unsellable,0x0,FlierEffectiveness|IsPointer,1,12,100,3,20,0x22,5000,NoRank,SorrowsPilgrimIcon,0x0,NoEffect,250,0x0,0x0,CantoPlusID
 Aspect,NAspect,DAspect,0x0,0xf2,0xb,IsWeapon|Indestructible|IsMagic|MagicDamage,AspectBoost|IsPointer,0x0,1,0,200,0,255,0x1a,60000,NoRank,0x0,0x0,CannotDoubleEffect,0,0x0,0x0,AspectSkillID
 Soothesword,NSoothesword,DSoothesword,USoothesword,0xf3,0x0,IsWeapon|Indestructible|Unsellable|KyrieLocked,0x0,0x0,1,3,250,4,255,0x11,0,NoRank,SootheswordIcon,0x0,NoEffect,2,0x0,0x0,RoboKyDrainID
 Memento,NMemento,DMemento,UMemento,0xf4,0x9,Unsellable|Indestructible|PassiveBoosts,MementoBoost|IsPointer,0x0,0,0,0,0,0,0x11,0,NoRank,MementoIcon,0x0,NoEffect,0,0x0,0x0,0x0

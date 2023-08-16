@@ -132,6 +132,9 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 
 #define TonnaminPaletteID 0x81
 
+#define ValeriaPaletteID 0x92
+
+
 #define KennethBPaletteID 0x83
 
 #define AgnesPaletteID 0x84
@@ -315,6 +318,7 @@ setPalette(GaylordPPaletteID,GaylordPPalette)
 setPalette(KyriePaletteID,KyriePalette)
 setPalette(QUPaletteID,QUPalette)
 setPalette(QPPaletteID,QPPalette)
+setPalette(ValeriaPaletteID,ValeriaPalette)
 
 setPalette(CidPaletteID,CidPalette)
 setPalette(BrandlPaletteID,BrandlPalette)
@@ -431,7 +435,7 @@ SetPaletteFull(Agnes,AgnesPaletteID,MercF,AgnesPaletteID,HeroF,0x0,0x0)
 SetPaletteFull(Gaylord,GaylordUPaletteID,Troub,GaylordPPaletteID,Valk,0x0,0x0)
 SetPaletteFull(Kyrie,0x0,MyrmF,KyriePaletteID,SwMastF,0x0,0x0)
 SetPaletteFull(UnitQ,QUPaletteID,SwdCavF,QPPaletteID,SwdPalF,0x0,0x0)
-SetPaletteFull(Valeria,0x0,LncPeg,0x0,Falco,0x0,0x0)
+SetPaletteFull(Valeria,0x0,LncPeg,ValeriaPaletteID,Falco,0x0,0x0)
 
 SetPaletteFull(Davelarn,DavelarnPaletteID,Deserter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Marque,MarqueStarquePaletteID,AxeCav,0x0,0x0,0x0,0x0)
@@ -824,6 +828,9 @@ GaylordPPalette:
 ALIGN 4
 KyriePalette:
 #incbin "Kyrie.dmp"
+ALIGN 4
+ValeriaPalette:
+#incbin "Valeria.dmp"
 ALIGN 4
 QUPalette:
 #incbin "QUnpromoted.dmp"

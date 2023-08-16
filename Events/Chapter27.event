@@ -22,7 +22,8 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 //blade guy hunts you down if both lords have capped sword rank
-//deploy all possible viridians for valeria
+//deploy all possible viridians plus clarque for valeria
+TurnEventPlayer(0x0,C27ValeriaCheck,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -106,6 +107,10 @@ UNIT Elite BowGen 0x0 Level(13,Enemy,1) [26,8] 0x0 0x0 0x0 0x0 [GildedBow,Greatb
 UNIT Arbordia Baron 0x0 Level(20,Enemy,1) [0,29] 0x0 0x0 0x0 0x0 [Nocturne,RealLastShield] NeverMoveAI
 UNIT
 
+C27ValeriaJoin:
+UNIT Valeria Falco 0x0 Level(16,Ally,0) [12,0] 0x0 0x0 0x1 REDA12R2 [SilverSword,SilverLance] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -128,6 +133,30 @@ MUSC VictoryTheme
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter28)
 ENDA
+
+#define C27Counter(unit) "CHECK_DEPLOYED unit; BEQ unit 0xc 0x0; COUNTER_ADD 1 1; LABEL unit"
+C27ValeriaCheck:
+COUNTER_SET 1 0
+C27Counter(Freddric)
+C27Counter(Dean)
+C27Counter(Eliza)
+C27Counter(Rift)
+C27Counter(Estelle)
+C27Counter(Rose)
+C27Counter(Dirk)
+C27Counter(Callum)
+C27Counter(Manfred)
+C27Counter(Wilhelm)
+C27Counter(Argent)
+C27Counter(SecretClarque)
+COUNTER_CHECK 1
+SVAL 0x1 0x4
+BNE 0x9 0xc 0x1
+Reinforcements(C27ValeriaJoin)
+MUSC RecruitmentThemeVirid
+Text(FillerDialogue)
+LABEL 0x9
+EndEvent
 
 
 //MESSAGE Events end at offset CURRENTOFFSET

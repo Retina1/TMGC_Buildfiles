@@ -170,6 +170,14 @@ BYTE 0x00 //always zero
 BYTE 0x00
 #incbin "upz.img.bin"
 
+UpSglyph_Devvy:
+WORD 0x00000000 //empty pointer (no Shift-JIS)
+BYTE 0x00 //empty code-page # (no Shift-JIS)
+BYTE 0x10 //character width
+BYTE 0x00 //always zero
+BYTE 0x00
+#incbin "Devvy.img.bin"
+
 tGlyphEntry(0x9B, UpSglyph_a)
 tGlyphEntry(0x9C, UpSglyph_b)
 tGlyphEntry(0x9D, UpSglyph_c)
@@ -191,6 +199,7 @@ tGlyphEntry(0xAF, UpSglyph_v)
 tGlyphEntry(0xB0, UpSglyph_x)
 tGlyphEntry(0xB1, UpSglyph_y)
 tGlyphEntry(0xB2, UpSglyph_z)
+tGlyphEntry(0xc3, UpSglyph_Devvy)
 
 
 

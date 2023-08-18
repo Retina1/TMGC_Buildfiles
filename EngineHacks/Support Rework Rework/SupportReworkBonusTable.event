@@ -108,7 +108,7 @@
 			support(CSupport,0,1,0,0,0,0)//c12
 			support(CPSupport,0,1,5,0,0,5)//c15 in battle
 			support(BSupport,0,1,10,0,0,10)//c20
-			support(BPSupport,0,2,15,0,0,10)
+			support(BPSupport,0,2,15,0,0,10)//c25, hilbert learns dark
 			support(ASupport,0,2,25,0,0,20)
 	//natasia (blair, kenneth)
 		entry(Natasia,Peggy)
@@ -121,7 +121,7 @@
 			support(CSupport,0,0,0,0,5,5)//c11
 			support(CPSupport,0,0,0,0,10,10)//c16
 			support(BSupport,0,0,10,0,15,15)//c20 in battle
-			support(BPSupport,0,0,15,0,20,15)
+			support(BPSupport,0,0,15,0,20,15)//c24 battle
 			support(ASupport,0,0,25,0,25,15)
 	//stefan (kenneth)
 		entry(Stefan,Desmond)
@@ -153,7 +153,7 @@
 			support(CSupport,0,1,0,0,5,0)//c14
 			support(CPSupport,0,1,5,0,10,0)//c18
 			support(BSupport,0,2,10,0,10,0)//c20 battle
-			support(BPSupport,0,2,15,0,15,0)
+			support(BPSupport,0,2,15,0,15,0)//c24 battle
 			support(ASupport,0,3,20,0,20,5)
 		entry(Desmond,Mikey)
 			support(CSupport,0,0,5,0,0,0)//c15 battle
@@ -197,7 +197,7 @@
 			support(CSupport,0,1,0,0,0,0)//c13
 			support(CPSupport,0,2,0,0,0,0)//c17 battle
 			support(BSupport,0,3,0,0,0,0)//c18x
-			support(BPSupport,0,4,0,0,0,0)
+			support(BPSupport,0,4,0,0,0,0)//c24
 			support(ASupport,0,5,0,0,0,0)
 		entry(Josef,Athena)
 			support(CSupport,0,1,0,0,0,0)//c15 in battle
@@ -240,7 +240,7 @@
 		entry(Butch,Peter)
 			support(CSupport,0,0,0,0,10,0)
 			support(CPSupport,0,0,0,0,15,0)//c22
-			support(BSupport,0,0,10,0,15,0)
+			support(BSupport,0,0,10,0,15,0)//c24 battle
 			support(BPSupport,0,0,20,0,20,0)
 			support(ASupport,1,0,25,0,30,0)
 	//rachael
@@ -260,7 +260,7 @@
 			support(CSupport,0,1,0,0,0,0)//c15
 			support(CPSupport,1,1,0,0,0,0)//c19 in battle
 			support(BSupport,1,1,10,0,0,0)//c21 in battle
-			support(BPSupport,1,1,20,0,0,0)
+			support(BPSupport,1,1,20,0,0,0)//c24 battle
 			support(ASupport,2,2,20,0,0,0)
 		entry(Rachael,Leila)
 			support(CSupport,0,0,0,0,0,0)//c16
@@ -285,7 +285,7 @@
 			support(CSupport,0,2,0,0,0,0)//c15
 			support(CPSupport,0,2,10,0,0,0)//c19
 			support(BSupport,0,2,15,0,0,0)//c21
-			support(BPSupport,0,2,20,0,0,5)
+			support(BPSupport,0,2,20,0,0,5)//c24 battle
 			support(ASupport,0,3,30,0,0,10)			//lover convo?
 		entry(Cassius,Hyperius)
 			support(CSupport,1,0,0,0,0,0)//c16 in battle
@@ -347,7 +347,7 @@
 		entry(Apollo,Avan)
 			support(CSupport,0,1,5,0,0,0)//c19 in battle
 			support(CPSupport,0,1,10,0,0,5)//c21 in battle
-			support(BSupport,0,2,10,0,0,10)
+			support(BSupport,0,2,10,0,0,10)//c24 battle
 			support(BPSupport,0,2,15,0,0,20)
 			support(ASupport,0,3,30,0,0,20)
 		entry(Apollo,Vladmir)
@@ -517,7 +517,7 @@
 	//horatio (flynn)
 		entry(Horatio,Simone)
 			support(CSupport,1,0,0,0,0,0)//c22
-			support(CPSupport,0,2,0,0,0,0)//c24, gives sword summoning? or maybe B gives it
+			support(CPSupport,0,2,0,0,0,0)//c24 battle, gives sword summoning? or maybe B gives it
 			support(BSupport,3,0,10,0,0,0)//also idk have horatio kill simone at too high a rank
 			support(BPSupport,0,4,0,0,0,0)
 			support(ASupport,5,0,20,0,0,0)
@@ -527,7 +527,7 @@
 			support(CSupport,0,0,0,0,0,10)
 			support(CPSupport,0,0,0,0,0,20)
 			support(BSupport,0,1,0,0,0,30)//c21 at base
-			support(BPSupport,0,2,10,0,0,30)
+			support(BPSupport,0,2,10,0,0,30)//c25?
 			support(ASupport,0,3,20,0,0,40)
 	//johan (stefan,desmond,ptolemy)
 	//peter (butch)
@@ -552,6 +552,7 @@
 			support(BPSupport,3,3,0,0,0,0)
 			support(ASupport,4,4,0,0,0,0)
 	//tobias (leila,damien,zacharias,joan,sonia)
+	//olsen rose better be a thing where olsen teaches rose murder (assassin class change)
 	//peter/dean support where peter calls dean a family guy
 	//callum/zach where callum laments the state of yg'stra
 	//rose/manfred - rose makes cold drinks (maybe it's sad and only happens if wilhelm's dead)
@@ -586,9 +587,174 @@
 			support(BSupport,0,0,20,0,20,5)//v3
 			support(BPSupport,0,0,25,0,25,10)
 			support(ASupport,0,0,30,0,30,15)
-
-
 	//freddric (viridian)
+		entry(Freddric,Argent)
+			support(CSupport,0,0,0,0,0,10)
+			support(CPSupport,0,0,0,0,10,10)//v3 innate
+			support(BSupport,0,1,0,0,20,10)
+			support(BPSupport,0,2,0,0,20,10)//the return
+			support(ASupport,1,2,0,0,25,20)
+	//dean
+		entry(Dean,Eliza)
+			support(CSupport,1,0,0,0,5,0)
+			support(CPSupport,1,0,5,0,10,0)//v1 innate
+			support(BSupport,2,0,10,0,10,0)
+			support(BPSupport,2,1,15,0,15,0)
+			support(ASupport,2,2,20,0,20,0)
+		entry(Dean,Dirk)
+			support(CSupport,0,2,0,0,0,0)
+			support(CPSupport,0,2,10,0,0,0)//v2 innate
+			support(BSupport,0,3,10,0,0,0)
+			support(BPSupport,0,4,20,0,0,0)
+			support(ASupport,0,5,30,0,0,0)
+	//eliza (dean)
+		entry(Eliza,Rose)
+			support(CSupport,0,0,5,0,0,5)
+			support(CPSupport,0,0,10,0,0,10)//v2 innate
+			support(BSupport,0,0,20,0,0,20)//v4
+			support(BPSupport,0,0,30,0,0,30)
+			support(ASupport,2,0,30,0,0,30)
+		entry(Eliza,Dirk)
+			support(CSupport,1,1,0,0,0,0)
+			support(CPSupport,2,2,0,0,0,0)
+			support(BSupport,3,3,0,0,0,0)//v2 innate
+			support(BPSupport,4,4,0,0,0,0)
+			support(ASupport,5,5,0,0,0,0)
+		entry(Eliza,Estelle)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+	//rift
+		entry(Rift,Estelle)
+			support(CSupport,0,0,0,10,0,0)
+			support(CPSupport,0,0,0,20,0,0)//v1 innate
+			support(BSupport,0,1,10,20,0,0)//v4
+			support(BPSupport,0,1,20,20,0,10)
+			support(ASupport,0,2,30,30,0,20)
+		entry(Rift,Callum)
+			support(CSupport,0,0,10,0,0,0)
+			support(CPSupport,0,0,20,0,0,0)//v2 innate
+			support(BSupport,0,0,20,0,10,0)
+			support(BPSupport,0,0,30,0,20,0)
+			support(ASupport,0,0,30,0,30,0)
+		entry(Rift,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+	//estelle (chartreuse, rift)
+	//rose (eliza)
+		entry(Rose,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+	//dirk (dean, eliza) 		
+	//callum (rift)
+	//manfred
+		entry(Manfred,Wilhelm)
+			support(CSupport,1,0,0,0,0,5)
+			support(CPSupport,1,0,5,0,0,10)
+			support(BSupport,1,0,15,0,0,15)//v3 innate
+			support(BPSupport,2,0,20,0,0,20)//v4
+			support(ASupport,3,0,30,0,0,30)
+	//wilhelm (manfred)
+	//argent (freddric)
+	//the return (move supports that go above B+)
+		entry(Dean,Rift)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Estelle)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Rose)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dean,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Rift)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Eliza,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rift,Rose)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rift,Dirk)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rift,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rift,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Rose)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Dirk)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Estelle,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Dirk)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dirk,Callum)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dirk,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dirk,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Dirk,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)	
+		entry(Callum,Manfred)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Callum,Wilhelm)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
+		entry(Callum,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 		entry(Freddric,Dean)
 			support(BPSupport,1,1,15,0,0,10)//the return
 			support(ASupport,2,2,20,0,0,20)
@@ -616,178 +782,12 @@
 		entry(Freddric,Wilhelm)
 			support(BPSupport,1,1,15,0,0,10)//the return
 			support(ASupport,2,2,20,0,0,20)
-		entry(Freddric,Argent)
-			support(CSupport,0,0,0,0,0,10)
-			support(CPSupport,0,0,0,0,10,10)//v3 innate
-			support(BSupport,0,1,0,0,20,10)
-			support(BPSupport,0,2,0,0,20,10)
-			support(ASupport,1,2,0,0,25,20)
-	//dean
-		entry(Dean,Eliza)
-			support(CSupport,1,0,0,0,5,0)
-			support(CPSupport,1,0,5,0,10,0)//v1 innate
-			support(BSupport,2,0,10,0,10,0)
-			support(BPSupport,2,1,15,0,15,0)
-			support(ASupport,2,2,20,0,20,0)
-		entry(Dean,Dirk)
-			support(CSupport,0,2,0,0,0,0)
-			support(CPSupport,0,2,10,0,0,0)//v2 innate
-			support(BSupport,0,3,10,0,0,0)
-			support(BPSupport,0,4,20,0,0,0)
-			support(ASupport,0,5,30,0,0,0)
-		entry(Dean,Rift)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dean,Estelle)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dean,Rose)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dean,Callum)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dean,Manfred)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dean,Wilhelm)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dean,Argent)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-	//eliza (dean)
-		entry(Eliza,Rose)
-			support(CSupport,0,0,5,0,0,5)
-			support(CPSupport,0,0,10,0,0,10)//v2 innate
-			support(BSupport,0,0,20,0,0,20)//v4
-			support(BPSupport,0,0,30,0,0,30)
-			support(ASupport,2,0,30,0,0,30)
-		entry(Eliza,Dirk)
-			support(CSupport,1,1,0,0,0,0)
-			support(CPSupport,2,2,0,0,0,0)
-			support(BSupport,3,3,0,0,0,0)//v2 innate
-			support(BPSupport,4,4,0,0,0,0)
-			support(ASupport,5,5,0,0,0,0)
-		entry(Eliza,Rift)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Eliza,Estelle)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Eliza,Callum)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Eliza,Manfred)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Eliza,Wilhelm)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Eliza,Argent)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-	//rift
-		entry(Rift,Estelle)
-			support(CSupport,0,0,0,10,0,0)
-			support(CPSupport,0,0,0,20,0,0)//v1 innate
-			support(BSupport,0,1,10,20,0,0)//v4
-			support(BPSupport,0,1,20,20,0,10)
-			support(ASupport,0,2,30,30,0,20)
-		entry(Rift,Callum)
-			support(CSupport,0,0,10,0,0,0)
-			support(CPSupport,0,0,20,0,0,0)//v2 innate
-			support(BSupport,0,0,20,0,10,0)
-			support(BPSupport,0,0,30,0,20,0)
-			support(ASupport,0,0,30,0,30,0)
-		entry(Rift,Rose)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Rift,Dirk)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Rift,Manfred)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Rift,Wilhelm)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Rift,Argent)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-	//estelle (chartreuse, rift)
-		entry(Estelle,Rose)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Estelle,Dirk)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Estelle,Callum)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Estelle,Manfred)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Estelle,Wilhelm)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Estelle,Argent)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-	//rose (eliza)
-		entry(Rose,Dirk)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Rose,Callum)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Rose,Manfred)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Rose,Wilhelm)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Rose,Argent)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-	//dirk (dean, eliza) 
-		entry(Dirk,Callum)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dirk,Manfred)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dirk,Wilhelm)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Dirk,Argent)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)			
-	//callum (rift)
-		entry(Callum,Manfred)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Callum,Wilhelm)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-		entry(Callum,Argent)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-	//manfred
-		entry(Manfred,Wilhelm)
-			support(CSupport,1,0,0,0,0,5)
-			support(CPSupport,1,0,5,0,0,10)
-			support(BSupport,1,0,15,0,0,15)//v3 innate
-			support(BPSupport,2,0,20,0,0,20)//v4
-			support(ASupport,3,0,30,0,0,30)
-		entry(Manfred,Argent)
-			support(BPSupport,1,1,15,0,0,10)//the return
-			support(ASupport,2,2,20,0,0,20)
-	//wilhelm (manfred)
 		entry(Wilhelm,Argent)
 			support(BPSupport,1,1,15,0,0,10)//the return
 			support(ASupport,2,2,20,0,0,20)
-	//argent (freddric)
+		entry(Manfred,Argent)
+			support(BPSupport,1,1,15,0,0,10)//the return
+			support(ASupport,2,2,20,0,0,20)
 	entry(0,0) // Terminator
 	}
 

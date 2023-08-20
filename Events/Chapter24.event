@@ -334,7 +334,14 @@ CleanTextNoMap(LowlandsCG,FillerDialogue)
 CHECK_ALIVE Simone
 BEQ 0x2 0xc 0x0
 	MUSC S_Chaos
-	CleanTextNoMap(LowlandsCG,FillerDialogue)
+	GetSupportLevel(Blair,Arin)
+	SVAL 0x2 0x4
+	BEQ 0x3 0x2 0x1
+		CleanTextNoMap(LowlandsCG,C24ArinSimoneScene)//blair/arin not A
+		GOTO 0x4
+	LABEL 0x3
+		CleanTextNoMap(LowlandsCG,C24ArinSimoneSceneAlt)//blair/arin A
+	LABEL 0x4
 	REMA
 	SetBackground(BlankCG)
 	SetSupport(Arin,Simone,BSupport,1)
@@ -343,7 +350,7 @@ LABEL 0x2
 CHECK_EVENTID 0x23
 BNE 0x1 0xc 0x0
 	MUSC AmbientNight
-	CleanTextNoMap(LowlandsCG,FillerDialogue)//laronde says hi
+	CleanTextNoMap(LowlandsCG,C24DracoPromoAlt)//laronde says hi
 	REMA
 	PROMOTE Vladmir Draco GoddessIcon
 	FADI 16
@@ -417,7 +424,16 @@ SetSupport(Natasia,Bechamel,BPSupport,1)
 EndEvent
 
 C24ChaserSpawn:
+CHECK_HARD
+BEQ 0x1 0xc 0x0
+LABEL 0x3
 Reinforcements(C24HahaEatShit)
+GOTO 0x2
+LABEL 0x1
+CHECK_TURNS
+SVAL 0x1 13
+BLE 0x3 0xc 0x1
+LABEL 0x2
 EndEvent
 
 C24LarondeSpawn:
@@ -452,7 +468,7 @@ EndEvent
 C24Dracopope:
 MUSC S_EncountersAndReunions
 SetBackground(LowlandsCG)
-Text(FillerDialogue)
+Text(C24DracoPromo)
 PROMOTE Vladmir Draco GoddessIcon
 FADI 16
 CLEAN
@@ -461,7 +477,7 @@ EndEvent
 
 C24RoseLarondeRecruitment:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24RoseRecruitsLaronde)
 TurnAlly(SecretLaronde)
 EndEvent
 
@@ -469,91 +485,115 @@ C24BlairLarondeTalk:
 CHECK_ALIVE Vladmir
 BNE 0x1 0xc 0x0
 MUSC RecruitmentTheme2
-Text(FillerDialogue)
+Text(C24LarondeBlairTalkDeadVlad)
 TurnAlly(SecretLaronde)
 ENUT 0x27
 GOTO 0x2
 LABEL 0x1
-Text(FillerDialogue)
+Text(C24LarondeBlairTalkNormal)
 LABEL 0x2
+EndEvent
+
+
+C24Ruins:
+CleanText(LowlandsCG,C24RuinsVisit)
+SystemText(C24SummonIneubrenos)
+IfNoSelectedGoto(0x3)
+Text(C24RuinsVisitAgree)
+Reinforcements(C24IneubrenosSpawn)
+//FADI 60 might only be needed for talks
+//VCWF 0x0
+SetUnitStatus(BossIneubrenos, State, 0x1002)
+//VCWF 0x7
+//FADU 60
+GOTO 0x2
+LABEL 0x3
+Text(C24RuinsVisitDeny)
+ENUF 0x20
+LABEL 0x2
+EndEvent
+
+C24OutOfTime:
+Text(C24GameOverWords)
+StartGameOver
+EndEvent
+
+C24BlairLarondeAltRecruitment:
+MUSC RecruitmentTheme2
+Text(C24LarondeBlairTalkRecruitSad)
+TurnAlly(SecretLaronde)
 EndEvent
 
 C24FreddricLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeFreddricTalk)
 ENUT 0x22
 EndEvent
 C24DeanLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeDeanTalk)
 ENUT 0x22
 EndEvent
 C24ElizaLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeElizaTalk)
 ENUT 0x22
 EndEvent
 C24RiftLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeRiftTalk)
 ENUT 0x22
 EndEvent
 C24EstelleLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeEstelleTalk)
 ENUT 0x22
 EndEvent
 C24DirkLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeDirkTalk)
 ENUT 0x22
 EndEvent
 C24CallumLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeCallumTalk)
 ENUT 0x22
 EndEvent
 C24ManfredLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeManfredTalk)
 ENUT 0x22
 EndEvent
 C24WilhelmLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeWilhelmTalk)
 ENUT 0x22
 EndEvent
 C24ArgentLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeArgentTalk)
 ENUT 0x22
 EndEvent
 
 C24ApolloLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeApolloTalk)
 EndEvent
 C24HilbertLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeHilbertTalk)
 EndEvent
 C24FlynnLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeFlynnTalk)
 EndEvent
 C24AthenaLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
+Text(C24LarondeAthenaTalk)
 EndEvent
 C24CharleyLarondeTalk:
 MUSC S_CircleOfTheMoon
-Text(FillerDialogue)
-EndEvent
-
-C24BlairLarondeAltRecruitment:
-MUSC RecruitmentTheme2
-Text(FillerDialogue)
-TurnAlly(SecretLaronde)
+Text(C24LarondeCharleyTalk)
 EndEvent
 
 C24Trap1:
@@ -594,30 +634,6 @@ FADU 60
 SystemText(C24YuyuBowRank)
 GiveItem(SorrowsPilgrim,Yuyu)
 EndEvent
-
-C24Ruins:
-CleanText(LowlandsCG,FillerDialogue)
-SystemText(C24SummonIneubrenos)
-IfNoSelectedGoto(0x3)
-Text(FillerDialogue)
-Reinforcements(C24IneubrenosSpawn)
-//FADI 60 might only be needed for talks
-//VCWF 0x0
-SetUnitStatus(BossIneubrenos, State, 0x1002)
-//VCWF 0x7
-//FADU 60
-GOTO 0x2
-LABEL 0x3
-Text(FillerDialogue)
-ENUF 0x20
-LABEL 0x2
-EndEvent
-
-C24OutOfTime:
-Text(FillerDialogue)
-StartGameOver
-EndEvent
-
 
 C24TheReturn:
 CHECK_ALIVE Freddric

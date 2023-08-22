@@ -110,7 +110,7 @@ Unyielding,NUnyielding,DUnyielding,UUnyielding,0x6b,0x0,IsWeapon|HyperiusLocked|
 Vulnerary,NVulnerary,DVulnerary,UHeal,0x6c,0x9,0x0,0x0,0x0,5,0,0,0,0,0x11,100,NoRank,VulneraryIcon,0x21,NoEffect,0,0x0,0x0,0x0
 Elixir,NElixir,DElixir,UHeal,0x6d,0x9,0x0,0x0,0x0,5,0,0,0,0,0x11,300,NoRank,ElixirIcon,0x22,NoEffect,0,0x0,0x0,0x0
 Pure Water,NPureWater,DPureWater,UPureWater,0x6e,0x9,0x0,0x0,0x0,5,0,0,0,0,0x11,150,NoRank,PureWaterIcon,0x23,NoEffect,0,0x0,0x0,0x0
-Angel Wings (not working),NAngelWings,DAngelWings,UAngelWings,0x6f,0x9,Indestructible,0x0,0x0,1,0,0,0,0,0x11,6000,NoRank,AngelWingsIcon,0x0,NoEffect,0,0x0,0x0,0x0
+Angel Wings (not working),NAngelWings,DAngelWings,UAngelWings,0x6f,0x9,Indestructible|PassiveBoosts,0x0,0x0,1,0,0,0,0,0x11,6000,NoRank,AngelWingsIcon,0x0,NoEffect,0,0x0,0x0,AngelWingsID
 Big Shield,NBigShield,DBigShield,UBigShield,0x70,0x9,Indestructible|NegateFlyingEffectiveness,0x0,ArmorProtection|IsPointer,5,0,0,0,0,0x11,3000,NoRank,BigShieldIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Filli Shield,NZoryaShield,DZoryaShield,UZoryaShield,0x71,0x9,Indestructible|NegateFlyingEffectiveness,0x0,FlierProtection|IsPointer,0,0,0,0,0,0x11,3000,NoRank,ZoryaShieldIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Member Card,NMemberCard,DMemberCard,UMemberCard,0x72,0x9,Indestructible,0x0,0x0,1,0,0,0,0,0x11,2000,NoRank,MemberCardIcon,0x0,NoEffect,0,0x0,0x0,0x0
@@ -221,7 +221,7 @@ Wardbow,NWardbow,DWardbow,UWardbow,0xda,0x3,IsWeapon,AntimageBoost|IsPointer,Mag
 Avalon,NAvalon,DAvalon,UAvalon,0xdb,0x5,IsWeapon|IsMagic|Unsellable|Indestructible,AvalonBoost|IsPointer,0x0,30,30,120,18,0,0x13,0,SRank,AvalonIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Luckbow,NLuckbow,DLuckbow,ULuckbow,0xdc,0x3,IsWeapon|Unsellable|ViridianLocked,0x0,FlierEffectiveness|IsPointer,40,12,125,6,0,0x22,0,NoRank,LuckbowIcon,0x0,NoEffect,2,0x0,0x0,LuckbowSkillID
 Courante,NCourante,DCourante,UCourante,0xdd,0x0,IsWeapon|LeilaLocked,0x0,0x0,40,12,100,5,20,0x11,90,NoRank,CouranteIcon,0x0,NoEffect,2,0x0,0x0,ChargePlusID
-Fire Emblem,NFireEmblem,DFireEmblem,UFireEmblem,0xde,0x9,Unsellable|Indestructible|NegateFlyingEffectiveness|PassiveBoosts,FireEmblemBoost|IsPointer,OmniProtection|IsPointer,1,0,0,0,0,0x11,60000,NoRank,FireEmblemIcon,0x2d,NoEffect,0,0x0,1,AetherID
+Fire Emblem,NFireEmblem,DFireEmblem,UFireEmblem,0xde,0x9,Unsellable|Indestructible|NegateFlyingEffectiveness|PassiveBoosts,FireEmblemBoost|IsPointer,OmniProtection|IsPointer,1,0,0,0,0,0x11,0,NoRank,FireEmblemIcon,0x2d,NoEffect,0,0x0,1,AetherID
 Unknown Page,NUnknownPage,DUnknownPage,0x0,0xdf,0x9,Unsellable|Indestructible,0x0,0x0,40,12,85,9,0,0x12,0,NoRank,NoteIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Frontier Justice,NFrontierJustice,DFrontierJustice,UFrontierJustice,0xe0,0x3,IsWeapon|DamienLocked,0x0,FlierEffectiveness|IsPointer,40,12,85,9,0,0x22,40,NoRank,FrontierJusticeIcon,0x0,NoEffect,1,0x0,0x0,FrenzyID
 Soul Hilt,NSoulHilt,DSoulHilt,USoulHilt,0xe1,0x9,PassiveBoosts|Indestructible,0x0,0x0,1,0,0,0,0,0x12,15000,NoRank,SoulHiltIcon,0x0,NoEffect,0,0x0,0x0,SoulHiltID

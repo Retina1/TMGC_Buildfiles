@@ -210,7 +210,7 @@ UNIT Lowlands SwdGen 0x0 Level(6,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [BraveSword] N
 
 //bosses
 UNIT Mason Valk 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [LightBrand,GildedSword,Sleep,AngelWings] AttackInRangeAI
-UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips
+UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype,Foundation] NoAI //here for cutscene in opening then dips
 UNIT
 
 C24BossAreaTrap:
@@ -326,6 +326,10 @@ EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
 CleanTextNoMap(LowlandsCG,FillerDialogue)
+
+//dialogue with highest ranked living viridian
+//fred>dean>wil>man>rift>callum>estelle>eliza>argent>rose>dirk
+//big sad if all dead
 
 //have simone talk also change if blair/arin is at A
 //if at A, arin starts more resolute/accepting of self

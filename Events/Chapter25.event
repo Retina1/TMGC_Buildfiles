@@ -156,8 +156,11 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryTheme
+MUSC S_Nightfall
 CleanTextNoMap(HallCG,FillerDialogue)
+REMA
+SetBackground(BlankCG)
+GiveItem(Foundation,Blair)
 MoveToChapter(Interlude10)
 ENDA
 

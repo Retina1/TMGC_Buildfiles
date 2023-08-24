@@ -126,7 +126,7 @@ SHLI Lightning Shine Divine Aura Radiance Banish Pierce Smite JavelinRain LuxAur
 BYTE 0x0 0x0
 ALIGN 4
 I10DarkVendor:
-SHLI Flux Nightfall Fenrir Nocturne Nosferatu Corruption Knoggelvi Jormungandr NoxAurumque Freikugel
+SHLI Flux Nightfall Fenrir Nocturne Nosferatu Corruption Knoggelvi Jormungandr Freikugel NoxAurumque
 BYTE 0x0 0x0
 ALIGN 4
 I10StaffVendor:
@@ -202,6 +202,10 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [0,35] 0x0 0x0 0x0 0x0 [0x0] NoAI
 //47 slots
 UNIT
 
+I10NPC:
+UNIT Brandl Sniper 0x0 Level(11,NPC,0) [16,15] 0x0 0x0 0x0 0x0 [Longbow, Elixir] NeverMoveAI
+UNIT
+
 ALIGN 4
 
 //brandl is here, hyperius gets prf
@@ -215,6 +219,8 @@ NarrationText(Base10_Narration)
 FADI 0x3c
 CleanTextNoMap(HallCG,FillerDialogue)
 LOAD1 0x0 I10Units
+ENUN
+LOAD1 0x0 I10NPC
 ENUN
 ResetViridianConvoy
 GotoPrepScreen
@@ -239,6 +245,13 @@ EndingScene:
 EVBIT_MODIFY 3
 DisableFreeMovement
 CleanTextNoMap(HallCG,FillerDialogue)
+CHECK_EVENTID KennethTarquinKillFlag
+BEQ 0x1 0xc 0x0
+CHECK_ALIVE Kenneth
+BEQ 0x1 0xc 0x0
+CleanTextNoMap(HallCG,FillerDialogue)//kenneth says he's gotta go
+REMU Kenneth
+LABEL 0x1
 MoveToChapter(Chapter26)
 ENDA
 

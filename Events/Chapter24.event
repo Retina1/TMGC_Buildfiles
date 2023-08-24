@@ -351,14 +351,16 @@ BEQ 0x2 0xc 0x0
 	SetSupport(Arin,Simone,BSupport,1)
 LABEL 0x2
 
-CHECK_EVENTID 0x23
-BNE 0x1 0xc 0x0
-	MUSC AmbientNight
-	CleanTextNoMap(LowlandsCG,C24DracoPromoAlt)//laronde says hi
-	REMA
-	PROMOTE Vladmir Draco GoddessIcon
-	FADI 16
-	CLEAN
+CHECK_ALIVE Vladmir
+BEQ 0x1 0xc 0x0
+	CHECK_EVENTID 0x23
+	BNE 0x1 0xc 0x0
+		MUSC AmbientNight
+		CleanTextNoMap(LowlandsCG,C24DracoPromoAlt)//laronde says hi
+		REMA
+		PROMOTE Vladmir Draco GoddessIcon
+		FADI 16
+		CLEAN
 LABEL 0x1
 
 MoveToChapter(Chapter25)
@@ -383,6 +385,7 @@ SetUnitStatus(Leila,BowExp,71)
 VCWF 0x7
 FADU 60
 SystemText(C24LeilaBowRank)
+GiveItem(KillerBow,Leila)
 SetSupport(Leila,Damien,BPSupport,1)
 EndEvent
 
@@ -414,6 +417,7 @@ SetUnitStatus(Hilbert,LanceExp,31)
 VCWF 0x7
 FADU 60
 SystemText(C24HilbertLanceRank)
+GiveItem(Javelin,Hilbert)
 SetSupport(Josef,Hilbert,BPSupport,1)
 EndEvent
 
@@ -479,10 +483,12 @@ CLEAN
 FADU 16
 EndEvent
 
+//variant if laronde already recruited via dead vlad, turn on dead vlad flag if done
 C24RoseLarondeRecruitment:
 MUSC S_CircleOfTheMoon
 Text(C24RoseRecruitsLaronde)
 TurnAlly(SecretLaronde)
+SetSupport(Rose,SecretLaronde,BSupport,1)
 EndEvent
 
 C24BlairLarondeTalk:

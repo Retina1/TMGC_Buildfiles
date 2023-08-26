@@ -15,6 +15,10 @@ StaffSavantBonus:
 #incbin "StaffSavant/StaffSavant.dmp"
 
 ALIGN 4
+StaffMasteryBonus:
+#incbin "StaffMastery/StaffMastery.dmp"
+
+ALIGN 4
 PointBlankBonus:
 #incbin "PointBlank/PointBlank.dmp"
 
@@ -35,6 +39,7 @@ RangeSkillList:
 RangeSkill(BowRangeUpID, BowRangeBonus|1)
 RangeSkill(ReadyAimID, ReadyAimBonus|1)
 RangeSkill(StaffSavantID, StaffSavantBonus|1)
+RangeSkill(StaffMasteryID, StaffMasteryBonus|1)
 RangeSkill(PointBlankID, PointBlankBonus|1)
 RangeSkill(TomeRangeUpID, TomeRangeBonus|1)
 RangeSkill(CreatorSkillID, CreatorBonus|1)

@@ -324,13 +324,66 @@ ENDA
 EndingScene:
 //todo - arin/simone confrontation/B support if both alive
 ResetBaseFlags
-MUSC S_FE4Conversation
+MUSC S_Nightfall
 CleanTextNoMap(LowlandsCG,FillerDialogue)
-
-//dialogue with highest ranked living viridian
-//fred>dean>wil>man>rift>callum>estelle>eliza>argent>rose>dirk
-//big sad if all dead
-
+//viridian followup
+CHECK_ALIVE Freddric
+BEQ 0x10 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingFreddric)
+GOTO 0x1f
+LABEL 0x10
+CHECK_ALIVE Dean
+BEQ 0x11 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingDean)
+GOTO 0x1f
+LABEL 0x11
+CHECK_ALIVE Wilhelm
+BEQ 0x12 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingWilhelm)
+GOTO 0x1f
+LABEL 0x12
+CHECK_ALIVE Manfred
+BEQ 0x13 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingManfred)
+GOTO 0x1f
+LABEL 0x13
+CHECK_ALIVE Rift
+BEQ 0x14 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingRift)
+GOTO 0x1f
+LABEL 0x14
+CHECK_ALIVE Callum
+BEQ 0x15 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingCallum)
+GOTO 0x1f
+LABEL 0x15
+CHECK_ALIVE Estelle
+BEQ 0x16 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingEstelle)
+GOTO 0x1f
+LABEL 0x16
+CHECK_ALIVE Argent
+BEQ 0x17 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingArgent)
+GOTO 0x1f
+LABEL 0x17
+CHECK_ALIVE Eliza
+BEQ 0x18 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingEliza)
+GOTO 0x1f
+LABEL 0x18
+CHECK_ALIVE Rose
+BEQ 0x19 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingRose)
+GOTO 0x1f
+LABEL 0x19
+CHECK_ALIVE Dirk
+BEQ 0x1a 0xc 0x0
+CleanTextNoMap(LowlandsCG,C24EndingDirk)
+GOTO 0x1f
+LABEL 0x1a
+CleanTextNoMap(LowlandsCG,C24EndingNone)
+LABEL 0x1f
 //have simone talk also change if blair/arin is at A
 //if at A, arin starts more resolute/accepting of self
 //if not at A, arin builds resolve within convo
@@ -350,7 +403,7 @@ BEQ 0x2 0xc 0x0
 	SetBackground(BlankCG)
 	SetSupport(Arin,Simone,BSupport,1)
 LABEL 0x2
-
+//vlad thing
 CHECK_ALIVE Vladmir
 BEQ 0x1 0xc 0x0
 	CHECK_EVENTID 0x23

@@ -101,6 +101,8 @@ UNIT Dalst SwdPal 0x0 Level(8,Enemy,1) [0,9] 0x0 0x0 0x0 0x0 [MainGauche,KnightR
 UNIT Dalst AxePal 0x0 Level(8,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [DangerPick] NoAI
 UNIT Dalst Sage 0x0 Level(8,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [ForceSpike,LegRing] NoAI
 
+UNIT Elite BishopF 0x0 Level(15,Enemy,1) [6,8] DropItem 0x0 0x0 0x0 [Caduceus] NoAI
+
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [1,15] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [17,21] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
@@ -128,6 +130,7 @@ LOAD1 0x0 C25Units
 ENUN
 ResetViridianConvoy
 SupportFlagOn(Rachael,Cassius,BaseFlag3,BPSupport)
+SetUnitStatusAll(Elite*0x100+Elite, Strength, 24, Any, Any, Any, Range(6,8,6,8), Any)
 GotoPrepScreen
 ENDA
 

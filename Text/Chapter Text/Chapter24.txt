@@ -35,18 +35,98 @@ Let our bond take flight.[A][X]
 
 ##C24RuinsVisit
 [OpenMidLeft][LoadCurrent][OpenFarFarRight][LoadIneubrenos]
-hi i'm spooky and will walk onscreen[N]
-wanna beat me to death[A][X]
+[...]Who goes there?[A][N]
+Are you some bandit?[N]
+Do you wish to die?[A][N][OpenMidLeft][MoveFarLeft][OpenFarFarRight]
+[...]Coward.[A][N][MoveMidRight][OpenFarRight]
+I was just messin' with you.[N]
+The name's Ineubrenos.[A][N]
+[...]What's that look for?[A][N]
+Have you never seen the ancient[N]
+guardian spirit of a weapon before?[A][N]
+[...]No? Damn.[A][N]
+Anyways[...] You're the first civilized[N]
+person I've seen in centuries.[A][N]
+Hooray for you.[A][N]
+[...]Say. I've got a fun idea.[N]
+And it'll work out well for you.[A][N]
+I'm bored as hell. Show me a[N]
+good time, and I'll reward ya.[A][N]
+All you need to do is take me[N]
+down in combat.[A][N]
+I won't hold back. That'll[N]
+make it fun.[A][N]
+If you win, I'll lend you the[N]
+might of my bow.[A][N]
+If you don't[...] Well, you die.[N]
+Tough luck![A][N]
+Sound good, mortal?[A][X]
 
 ##C24RuinsVisitAgree
-[OpenMidLeft][LoadCurrent][OpenMidRight][LoadIneubrenos]
-Legend of John Ch. 4[N]
-Prepare for Die[A][X]
+[OpenFarLeft][LoadCurrent][OpenMidRight][LoadIneubrenos]
+Excellent. Let's make this[N]
+sound somewhat official.[A][N]
+[...]Child of man. Show me the[N]
+extent of your will.[A][N][ToggleSmile]
+[...]Prepare yourself.[A][X]
 
 ##C24RuinsVisitDeny
-[OpenMidLeft][LoadCurrent][OpenMidRight][LoadIneubrenos]
-coward[N]
-come back later imo[A][X]
+[OpenFarLeft][LoadCurrent][OpenMidRight][LoadIneubrenos]
+[...]No? Damn.[A][N]
+Well, if you change your mind,[N]
+I'll be here.[A][N]
+Might even repeat my whole speech.[N]
+[...]What? I've rehearsed it for decades.[A][N]
+Not gonna waste it like that.[A][X]
+
+##C24EndingFreddric
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadFreddric]
+hi[A][X]
+
+##C24EndingDean
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadDean]
+hi[A][X]
+
+##C24EndingWilhelm
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadWilhelm]
+hi[A][X]
+
+##C24EndingManfred
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadManfred]
+hi[A][X]
+
+##C24EndingRift
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadRift]
+hi[A][X]
+
+##C24EndingCallum
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadCallum]
+hi[A][X]
+
+##C24EndingEstelle
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadEstelle]
+hi[A][X]
+
+##C24EndingArgent
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadArgent]
+hi[A][X]
+
+##C24EndingEliza
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadEliza]
+hi[A][X]
+
+##C24EndingRose
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadRose]
+hi[A][X]
+
+##C24EndingDirk
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadDirk]
+hi[A][X]
+
+##C24EndingNone
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
+fuck[A][X]
+
 
 ##C24RoseRecruitsLaronde
 [OpenMidLeft][LoadRose][OpenMidRight][LoadLaronde]
@@ -71,7 +151,7 @@ to go silent.[A][N][OpenMidLeft]
 It's[...] a long story.[A][N]
 But I was making money[N]
 for mom and dad![A][N][OpenMidRight]
-I[...] understand that. Still[...]
+I[...] understand that. Still[...][N]
 Couldn't you do something safer?[A][N][OpenMidLeft]
 [...]The safe stuff's illegal.[A][N][OpenMidRight]
 [...]What?[A][N][OpenMidLeft]
@@ -438,8 +518,26 @@ will never hurt like this again.[A][N]
 
 ##C24LarondeCharleyTalk
 [OpenMidRight][LoadLaronde][CloseEyes][OpenMidLeft][LoadCharley]
-hi[A][N][X]
-//
+[...]Is that you, Laronde?[N]
+[...]What's the matter?[A][N][OpenMidRight][OpenEyes]
+[...]You remember me?[A][N][OpenMidLeft]
+Of course. It'd be wrong of[N]
+me to forget a bodyguard.[A][N]
+[...]Still strange that Opistia thought[N]
+a mere archer needed one.[A][N]
+[...]Are[...] you alright?[A][N][OpenMidRight]
+[...]I won't lie to you.[N]
+I'm[...] far from it.[A][N]
+I've just learned that[N]
+my sister[...] She[...][A][N][CloseEyes][OpenMidLeft]
+[...]I'm so sorry to hear.[A][N]
+Is[...] there anything I can do?[A][N][OpenMidRight]
+[...]I don't know.[A][N][OpenMidLeft]
+[...]We didn't know each other too well.[N]
+But I'll still be here for you.[A][N]
+Know that.[A][N][ClearFace][OpenMidRight]
+[...]I[...] don't deserve this.[N]
+[...][A][X]
 
 ##C24LarondeBlairTalkRecruitSad
 [OpenMidLeft][LoadLaronde][OpenMidRight][LoadBlair][OpenMidLeft]

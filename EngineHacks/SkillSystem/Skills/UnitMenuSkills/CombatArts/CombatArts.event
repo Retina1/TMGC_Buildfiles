@@ -60,12 +60,6 @@ SetCombatArtCost(16,100) //Lethality
 ALIGN 4
 CombatArtsMenu:
 
-MenuCommand(UM_ReadyAim, UM_ReadyAimDesc, NormalText, AimUsability, AimEffect, $22c31, $22c99)
-
-MenuCommand(UM_Flow, UM_FlowDesc, NormalText, FlowUsability, FlowEffect, $22c31, $22c99)
-
-MenuCommand(UM_Unflow, UM_UnflowDesc, NormalText, UnflowUsability, UnflowEffect, $22c31, $22c99)
-
 MenuCommand(UM_Adept, UM_AdeptDesc, NormalText, AdeptUsability, AdeptEffect, $22c31, $22c99)
 
 MenuCommand(UM_Aether, UM_AetherDesc, NormalText, AetherUsability, AetherEffect, $22c31, $22c99)
@@ -110,7 +104,7 @@ MenuCommand(UM_Pivot,      UM_PivotDesc,      NormalText, prPivotCommand_Usabili
 MenuCommand(UM_Reposition, UM_RepositionDesc, NormalText, prRepositionCommand_Usability, prRepositionCommand_Effect)
 MenuCommand(UM_Swap,       UM_SwapDesc,       NormalText, prSwapCommand_Usability,       prSwapCommand_Effect)
 MenuCommand(UM_Swarp,      UM_SwarpDesc,      NormalText, prSwarpCommand_Usability,      prSwarpCommand_Effect)
-
+MenuCommand(UM_ReadyAim, UM_ReadyAimDesc, NormalText, AimUsability, AimEffect, $22c31, $22c99)
 #ifdef HAX_RALLIES
   // Rally preview conflicts with window semitransparency changes
   // So we only add that in if it is disabled
@@ -122,6 +116,10 @@ MenuCommand(UM_Swarp,      UM_SwarpDesc,      NormalText, prSwarpCommand_Usabili
 
 
 #endif // HAX_RALLIES
+
+MenuCommand(UM_Flow, UM_FlowDesc, NormalText, FlowUsability, FlowEffect, $22c31, $22c99)
+
+MenuCommand(UM_Unflow, UM_UnflowDesc, NormalText, UnflowUsability, UnflowEffect, $22c31, $22c99)
 
 UM_Separator 
 

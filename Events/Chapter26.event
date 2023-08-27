@@ -118,11 +118,11 @@ MUSC RecruitmentTheme2
 SetBackground(PathCG)
 Text(FillerDialogue)//he returns, explains that he found no help but will kick ass anyway
 REMA
-PROMOTE Kenneth Baron Starfall
+PROMOTE Kenneth Baron Voidwake
 FADI 16
 CLEAN
 FADU 16
-GiveItem(Starfall,Kenneth)//prf here
+GiveItem(Voidwake,Kenneth)//prf here
 AddUnitStatus(Kenneth,MovBonus,1)
 LABEL 0x1
 EndEvent

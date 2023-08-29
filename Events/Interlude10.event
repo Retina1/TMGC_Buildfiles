@@ -252,6 +252,12 @@ BEQ 0x1 0xc 0x0
 CleanTextNoMap(HallCG,FillerDialogue)//kenneth says he's gotta go
 REMU Kenneth
 LABEL 0x1
+//just for testing
+GiveItem(HolyBrand,Arin)
+REMA
+PROMOTE Arin ArinValk HolyBrand
+FADI 16
+CLEAN
 MoveToChapter(Chapter26)
 ENDA
 

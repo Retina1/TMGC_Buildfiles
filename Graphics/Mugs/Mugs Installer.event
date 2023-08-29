@@ -224,6 +224,10 @@ ALIGN 4
 FlynnPromoMug:
 #incbin "dmps/FlynnPromo.dmp"
 setMugEntry(0x115,FlynnPromoMug,3,5,3,3)
+ALIGN 4
+FlynnRangerMug:
+#incbin "dmps/FlynnRanger.dmp"
+setMugEntry(0x12b,FlynnRangerMug,3,5,3,3)
 
 ALIGN 4
 MikeyMug:

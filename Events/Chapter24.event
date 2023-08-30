@@ -325,7 +325,7 @@ EndingScene:
 //todo - arin/simone confrontation/B support if both alive
 ResetBaseFlags
 MUSC S_Nightfall
-CleanTextNoMap(LowlandsCG,FillerDialogue)
+CleanTextNoMap(LowlandsCG,C24Ending)
 //viridian followup
 CHECK_ALIVE Freddric
 BEQ 0x10 0xc 0x0
@@ -420,18 +420,18 @@ MoveToChapter(Chapter25)
 ENDA
 
 C24BlairYuyuSupport:
-Text(FillerDialogue)
+Text(BlairYuyuBPSupport)
 SetSupport(Blair,Yuyu,BPSupport,1)
 EndEvent
 
 C24HoratioSimoneSupport:
 //summons? set flag to replace horatio music with his world?
-Text(FillerDialogue)
+Text(HoratioSimoneCPSupport)
 SetSupport(Horatio,Simone,CPSupport,1)
 EndEvent
 
 C24LeilaDamienSupport:
-Text(FillerDialogue)
+Text(LeilaDamienBPSupport)
 FADI 60
 VCWF 0x0
 SetUnitStatus(Leila,BowExp,71)
@@ -443,27 +443,27 @@ SetSupport(Leila,Damien,BPSupport,1)
 EndEvent
 
 C24ApolloAvanSupport:
-Text(FillerDialogue)
+Text(ApolloAvanBSupport)
 SetSupport(Apollo,Avan,BSupport,1)
 EndEvent
 
 C24ZekeCassiusSupport:
-Text(FillerDialogue)
+Text(ZekeCassiusBPSupport)
 SetSupport(Zeke,Cassius,BPSupport,1)
 EndEvent
 
 C24RachaelHyperiusSupport:
-Text(FillerDialogue)
+Text(RachaelHyperiusBPSupport)
 SetSupport(Rachael,Hyperius,BPSupport,1)
 EndEvent
 
 C24ButchPeterSupport:
-Text(FillerDialogue)
+Text(ButchPeterBSupport)
 SetSupport(Butch,Peter,BSupport,1)
 EndEvent
 
 C24JosefHilbertSupport:
-Text(FillerDialogue)
+Text(JosefHilbertBPSupport)
 FADI 60
 VCWF 0x0
 SetUnitStatus(Hilbert,LanceExp,31)
@@ -475,12 +475,12 @@ SetSupport(Josef,Hilbert,BPSupport,1)
 EndEvent
 
 C24DesmondFlynnSupport:
-Text(FillerDialogue)
+Text(DesmondFlynnBPSupport)
 SetSupport(Desmond,Flynn,BPSupport,1)
 EndEvent
 
 C24NatasiaBechamelSupport:
-Text(FillerDialogue)
+Text(NatasiaBechamelBPSupport)
 SetSupport(Natasia,Bechamel,BPSupport,1)
 EndEvent
 
@@ -542,6 +542,7 @@ MUSC S_CircleOfTheMoon
 Text(C24RoseRecruitsLaronde)
 TurnAlly(SecretLaronde)
 SetSupport(Rose,SecretLaronde,BSupport,1)
+ENUT 0x27
 EndEvent
 
 C24BlairLarondeTalk:
@@ -585,6 +586,7 @@ C24BlairLarondeAltRecruitment:
 MUSC RecruitmentTheme2
 Text(C24LarondeBlairTalkRecruitSad)
 TurnAlly(SecretLaronde)
+ENUT 0x27
 EndEvent
 
 C24FreddricLarondeTalk:

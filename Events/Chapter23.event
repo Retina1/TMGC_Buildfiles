@@ -474,13 +474,13 @@ SetSupport(Joan,Sonia,BPSupport,1)
 EndEvent
 
 C23JoanTobiasRecruitment:
-MUSC RecruitmentTheme2
 CHECK_EVENTID 0xd
 BEQ 0x1 0xc 0x0
 CHECK_EVENTID 0x13
 BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
+MUSC RecruitmentTheme2
 Text(C23TobiasRecruitsJoan)//joan unrecruited
 SetUnitStatus(EnemyJoan, UnitPointer, 0x8804584)
 TurnAlly(Joan)
@@ -488,6 +488,7 @@ SVAL 0x1 0x00000000
 CHAI Joan
 GOTO 0x4
 LABEL 0x2
+MUSC RecruitmentTheme2
 Text(C23JoanRecruitsTobias)//tobias unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)
@@ -501,13 +502,13 @@ SetSupport(Joan,Tobias,BSupport,1)
 EndEvent
 
 C23SoniaTobiasRecruitment:
-MUSC RecruitmentTheme2
 CHECK_EVENTID 0xf
 BEQ 0x1 0xc 0x0
 CHECK_EVENTID 0x13
 BEQ 0x2 0xc 0x0
 GOTO 0x3
 LABEL 0x1
+MUSC RecruitmentTheme2
 Text(C23TobiasRecruitsSonia)//sonia unrecruited
 SetUnitStatus(EnemySonia, UnitPointer, 0x8804550)
 TurnAlly(Sonia)
@@ -515,6 +516,7 @@ SVAL 0x1 0x00040000
 CHAI Sonia
 GOTO 0x4
 LABEL 0x2
+MUSC RecruitmentTheme2
 Text(C23SoniaRecruitsTobias)//tobias unrecruited
 SetUnitStatus(EnemyTobias, UnitPointer, 0x88045B8)
 TurnAlly(Tobias)

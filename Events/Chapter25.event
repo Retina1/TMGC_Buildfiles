@@ -90,6 +90,13 @@ C25Hard:
 UNIT Bandit Berserker 0x0 Level(8,Enemy,1) [2,21] 0x0 0x0 0x0 0x0 [GildedAxe] BrigandAI
 UNIT Bandit Berserker 0x0 Level(8,Enemy,1) [23,0] 0x0 0x0 0x0 0x0 [GildedAxe] BrigandAI
 
+UNIT Elite AxeGen 0x0 Level(10,Enemy,1) [5,15] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Elite AxeGen 0x0 Level(10,Enemy,1) [7,13] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+
+UNIT MagElite Sorc 0x0 Level(15,Enemy,1) [18,12] DropItem 0x0 0x0 0x0 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT Dalst Sage 0x0 Level(10,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [Galewind,Silence,Sleep] NeverMoveAI
+UNIT Simulacrum IceDragon 0x0 Level(15,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
+UNIT Simulacrum IceDragon 0x0 Level(15,Enemy,1) [9,6] 0x0 0x0 0x0 0x0 [IceBreath] NeverMoveAI
 UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [2,7] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
@@ -108,7 +115,7 @@ UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [1,15] 0x0 0x0 0x0 0x0 [ArchBallis
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [17,21] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [0,1] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
-UNIT Bobert BowPal 0x0 Level(15,Enemy,1) [2,5] 0x0 0x0 0x0 0x0 [MasterSword,MasterBow] NeverMoveAI
+UNIT Bobert BowPal 0x0 Level(15,Enemy,1) [2,5] DropItem 0x0 0x0 0x0 [MasterSword,MasterBow,BlackGem] NeverMoveAI
 UNIT
 
 C25Kyrie:

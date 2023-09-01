@@ -50,32 +50,32 @@ CharacterEventBothWays(0x1c,C24ApolloAvanSupport,Apollo,Avan)
 CharacterEventBothWays(0x1d,C24ZekeCassiusSupport,Zeke,Cassius)
 CharacterEventBothWays(0x1e,C24RachaelHyperiusSupport,Rachael,Hyperius)
 CharacterEventBothWays(0x1f,C24ButchPeterSupport,Butch,Peter)
-CharacterEventBothWays(BaseFlag2,C24JosefHilbertSupport,Josef,Hilbert)
-CharacterEventBothWays(BaseFlag3,C24DesmondFlynnSupport,Desmond,Flynn)
-CharacterEventBothWays(BaseFlag4,C24NatasiaBechamelSupport,Natasia,Bechamel)
+CharacterEventBothWays(0x22,C24JosefHilbertSupport,Josef,Hilbert)
+CharacterEventBothWays(0x24,C24DesmondFlynnSupport,Desmond,Flynn)
+CharacterEventBothWays(0x25,C24NatasiaBechamelSupport,Natasia,Bechamel)
 //probably a bit rude to do immediate viridian supports
 
 CharacterEvent(0x21,C24Pilgrim,Yuyu,BossIneubrenos)
-CharacterEvent(0x22,C24BlairLarondeTalk,Blair,SecretLaronde)
+CharacterEvent(BaseFlag2,C24BlairLarondeTalk,Blair,SecretLaronde)
 CharacterEventBothWays(0x23,C24Dracopope,Vladmir,SecretLaronde)
-CharacterEvent(0x24,C24RoseLarondeRecruitment,Rose,SecretLaronde)
+CharacterEvent(BaseFlag3,C24RoseLarondeRecruitment,Rose,SecretLaronde)
 //viridian step
-CharacterEvent(0x25,C24FreddricLarondeTalk,Freddric,SecretLaronde)
-CharacterEvent(0x25,C24DeanLarondeTalk,Dean,SecretLaronde)
-CharacterEvent(0x25,C24ElizaLarondeTalk,Eliza,SecretLaronde)
-CharacterEvent(0x25,C24RiftLarondeTalk,Rift,SecretLaronde)
-CharacterEvent(0x25,C24EstelleLarondeTalk,Estelle,SecretLaronde)
-CharacterEvent(0x25,C24DirkLarondeTalk,Dirk,SecretLaronde)
-CharacterEvent(0x25,C24CallumLarondeTalk,Callum,SecretLaronde)
-CharacterEvent(0x25,C24ManfredLarondeTalk,Manfred,SecretLaronde)
-CharacterEvent(0x25,C24WilhelmLarondeTalk,Wilhelm,SecretLaronde)
-CharacterEvent(0x25,C24ArgentLarondeTalk,Argent,SecretLaronde)
+CharacterEvent(BaseFlag4,C24FreddricLarondeTalk,Freddric,SecretLaronde)
+CharacterEvent(BaseFlag4,C24DeanLarondeTalk,Dean,SecretLaronde)
+CharacterEvent(BaseFlag4,C24ElizaLarondeTalk,Eliza,SecretLaronde)
+CharacterEvent(BaseFlag4,C24RiftLarondeTalk,Rift,SecretLaronde)
+CharacterEvent(BaseFlag4,C24EstelleLarondeTalk,Estelle,SecretLaronde)
+CharacterEvent(BaseFlag4,C24DirkLarondeTalk,Dirk,SecretLaronde)
+CharacterEvent(BaseFlag4,C24CallumLarondeTalk,Callum,SecretLaronde)
+CharacterEvent(BaseFlag4,C24ManfredLarondeTalk,Manfred,SecretLaronde)
+CharacterEvent(BaseFlag4,C24WilhelmLarondeTalk,Wilhelm,SecretLaronde)
+CharacterEvent(BaseFlag4,C24ArgentLarondeTalk,Argent,SecretLaronde)
 //opistian step
-CharacterEvent(0x26,C24ApolloLarondeTalk,Apollo,SecretLaronde,0x25)
-CharacterEvent(0x26,C24HilbertLarondeTalk,Hilbert,SecretLaronde,0x25)
-CharacterEvent(0x26,C24FlynnLarondeTalk,Flynn,SecretLaronde,0x25)
-CharacterEvent(0x26,C24AthenaLarondeTalk,Athena,SecretLaronde,0x25)
-CharacterEvent(0x26,C24CharleyLarondeTalk,Charley,SecretLaronde,0x25)
+CharacterEvent(0x26,C24ApolloLarondeTalk,Apollo,SecretLaronde,BaseFlag4)
+CharacterEvent(0x26,C24HilbertLarondeTalk,Hilbert,SecretLaronde,BaseFlag4)
+CharacterEvent(0x26,C24FlynnLarondeTalk,Flynn,SecretLaronde,BaseFlag4)
+CharacterEvent(0x26,C24AthenaLarondeTalk,Athena,SecretLaronde,BaseFlag4)
+CharacterEvent(0x26,C24CharleyLarondeTalk,Charley,SecretLaronde,BaseFlag4)
 //final step
 CharacterEvent(0x27,C24BlairLarondeAltRecruitment,Blair,SecretLaronde,0x26)
 END_MAIN
@@ -143,14 +143,102 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [31,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C24Easy:
-UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+//northern block
+UNIT Dalst SwdPal 0x0 Level(7,Enemy,1) [15,1] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Dalst Valk 0x0 Level(7,Enemy,1) [15,2] DropItem 0x0 0x0 0x0 [LevinSword,Physic] NoAI
+UNIT Dalst SwdPal 0x0 Level(7,Enemy,1) [15,3] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
+UNIT Dalst BowPal 0x0 Level(7,Enemy,1) [16,1] DropItem 0x0 0x0 0x0 [BraveBow,GildedAxe] GroupTwoPaceAI
+UNIT Elite LncPal 0x0 Level(7,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [Spear] GroupTwoPaceAI
+UNIT Dalst BowPal 0x0 Level(7,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [SilverBow] GroupTwoPaceAI
+//opening area
+UNIT Dalst Warrior 0x0 Level(7,Enemy,1) [30,8] DropItem 0x0 0x0 0x0 [SilverAxe,Restore] NoAI
+UNIT Dalst Bishop 0x0 Level(7,Enemy,1) [31,10] DropItem 0x0 0x0 0x0 [Divine,Recover,Scripture] NoAI
+UNIT Elite Berserker 0x0 Level(7,Enemy,1) [23,5] DropItem 0x0 0x0 0x0 [KillerAxe,SavageGauntlet] NoAI
+UNIT Dalst Halberdier 0x0 Level(7,Enemy,1) [25,9] DropItem 0x0 0x0 0x0 [Horseslayer,ThiefStaff] ChaseOnceApproachedAI
+UNIT Dalst Hero 0x0 Level(7,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Hammer] ChaseOnceApproachedAI
+UNIT Dalst SwMast 0x0 Level(7,Enemy,1) [23,15] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
+UNIT Dalst Berserker 0x0 Level(7,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Dalst Berserker 0x0 Level(7,Enemy,1) [15,16] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Dalst Hero 0x0 Level(7,Enemy,1) [27,13] DropItem 0x0 0x0 0x0 [Rapier] AttackInRangeAI
+//middle island
+UNIT Dalst SageF 0x0 Level(7,Enemy,1) [12,10] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
+//boss area - reinforce after snag breaks
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [ArchBallista,SilverCard] NeverMoveAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
+UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [DemonBreath] GroupFourPaceAI
+UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [6,2] 0x0 0x0 0x0 0x0 [DemonBreath] ChaseOnceApproachedAI
+UNIT Simulacrum EarthDragon 0x0 Level(10,Enemy,1) [2,6] 0x0 0x0 0x0 0x0 [EarthBreath] GroupFourPaceAI
+UNIT Simulacrum EarthDragon 0x0 Level(10,Enemy,1) [9,6] 0x0 0x0 0x0 0x0 [EarthBreath] GroupFourAI
+//lowlands faction in village ruins
+UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [32,18] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOnePaceAI
+UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [35,12] 0x0 0x0 0x0 0x0 [Hammer,Halberd] NoAI
+UNIT Lowlands Hero 0x0 Level(6,Enemy,1) [27,19] 0x0 0x0 0x0 0x0 [SilverSword] GroupOnePaceAI
+UNIT Lowlands Sorc 0x0 Level(6,Enemy,1) [34,20] DropItem 0x0 0x0 0x0 [Hell] NeverMoveAI
+UNIT Lowlands Sorc 0x0 Level(6,Enemy,1) [28,21] 0x0 0x0 0x0 0x0 [Fenrir] GroupOnePaceAI
+UNIT Lowlands Warrior 0x0 Level(6,Enemy,1) [30,21] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,21] 0x0 0x0 0x0 0x0 [ShiningBow] NoAI
+UNIT Lowlands Assassin 0x0 Level(6,Enemy,1) [32,21] DropItem 0x0 0x0 0x0 [GildedSword] NoAI
+//forest
+UNIT Lowlands WarriorF 0x0 Level(6,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [Swordreaver] ChaseOnceApproachedAI
+UNIT Lowlands Halberdier 0x0 Level(6,Enemy,1) [4,19] 0x0 0x0 0x0 0x0 [Axereaver] ChaseOnceApproachedAI
+UNIT Lowlands Sage 0x0 Level(6,Enemy,1) [13,21] 0x0 0x0 0x0 0x0 [Inversion] ChaseOnceApproachedAI
+UNIT Lowlands Hero 0x0 Level(6,Enemy,1) [7,18] 0x0 0x0 0x0 0x0 [Swordreaver,Lancereaver] ChaseOnceApproachedAI
+UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [4,14] 0x0 0x0 0x0 0x0 [BarrierBow] NoAI
+UNIT Lowlands SwdGen 0x0 Level(6,Enemy,1) [10,21] 0x0 0x0 0x0 0x0 [Lancereaver] NoAI
 //bosses
 UNIT Mason Sage 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [Fimbulvetr,Silence,AngelWings] AttackInRangeAI
 UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips
 UNIT
 
 C24Normal:
-UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+//northern block
+UNIT Dalst SwdPal 0x0 Level(7,Enemy,1) [15,1] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Dalst Valk 0x0 Level(7,Enemy,1) [15,2] DropItem 0x0 0x0 0x0 [LevinSword,Physic] NoAI
+UNIT Dalst SwdPal 0x0 Level(7,Enemy,1) [15,3] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
+UNIT Dalst BowPal 0x0 Level(7,Enemy,1) [16,1] DropItem 0x0 0x0 0x0 [BraveBow,GildedAxe] GroupTwoPaceAI
+UNIT Elite LncPal 0x0 Level(7,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [Spear] GroupTwoPaceAI
+UNIT Dalst BowPal 0x0 Level(7,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [SilverBow] GroupTwoPaceAI
+//opening area
+UNIT Dalst Warrior 0x0 Level(7,Enemy,1) [30,8] DropItem 0x0 0x0 0x0 [SilverAxe,Restore] NoAI
+UNIT Dalst Bishop 0x0 Level(7,Enemy,1) [31,10] DropItem 0x0 0x0 0x0 [Divine,ThiefStaff,Scripture] NoAI
+UNIT Elite Berserker 0x0 Level(7,Enemy,1) [23,5] DropItem 0x0 0x0 0x0 [KillerAxe,SavageGauntlet] NoAI
+UNIT Dalst Halberdier 0x0 Level(7,Enemy,1) [25,9] 0x0 0x0 0x0 0x0 [Horseslayer] ChaseOnceApproachedAI
+UNIT Dalst Hero 0x0 Level(7,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Hammer] ChaseOnceApproachedAI
+UNIT Dalst SwMast 0x0 Level(7,Enemy,1) [23,15] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
+UNIT Dalst Berserker 0x0 Level(7,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Dalst Berserker 0x0 Level(7,Enemy,1) [15,16] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Dalst Hero 0x0 Level(7,Enemy,1) [27,13] 0x0 0x0 0x0 0x0 [GildedSword] AttackInRangeAI
+//middle island
+UNIT Dalst SageF 0x0 Level(7,Enemy,1) [12,10] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
+UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [Greatbow] AttackInRangeAI
+//boss area - reinforce after snag breaks
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [ArchBallista,SilverCard] NeverMoveAI
+UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
+UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [BraveLance] DelayedAI
+UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
+UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [DemonBreath] GroupFourPaceAI
+UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [6,2] 0x0 0x0 0x0 0x0 [DemonBreath] ChaseOnceApproachedAI
+UNIT Simulacrum EarthDragon 0x0 Level(10,Enemy,1) [2,6] 0x0 0x0 0x0 0x0 [EarthBreath] GroupFourPaceAI
+UNIT Simulacrum EarthDragon 0x0 Level(10,Enemy,1) [9,6] 0x0 0x0 0x0 0x0 [EarthBreath] GroupFourAI
+//lowlands faction in village ruins
+UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,14] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [32,18] 0x0 0x0 0x0 0x0 [SilverAxe] GroupOnePaceAI
+UNIT Lowlands Berserker 0x0 Level(6,Enemy,1) [35,12] 0x0 0x0 0x0 0x0 [Hammer,Halberd] NoAI
+UNIT Lowlands Hero 0x0 Level(6,Enemy,1) [27,19] 0x0 0x0 0x0 0x0 [GildedSword] GroupOnePaceAI
+UNIT Lowlands Sorc 0x0 Level(6,Enemy,1) [34,20] DropItem 0x0 0x0 0x0 [Hell] NeverMoveAI
+UNIT Lowlands Sorc 0x0 Level(6,Enemy,1) [28,21] 0x0 0x0 0x0 0x0 [Fenrir] GroupOnePaceAI
+UNIT Lowlands Warrior 0x0 Level(6,Enemy,1) [30,21] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [31,21] 0x0 0x0 0x0 0x0 [ShiningBow] NoAI
+UNIT Lowlands Assassin 0x0 Level(6,Enemy,1) [32,21] DropItem 0x0 0x0 0x0 [GildedSword] NoAI
+//forest
+UNIT Lowlands WarriorF 0x0 Level(6,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [Hammer] ChaseOnceApproachedAI
+UNIT Lowlands Halberdier 0x0 Level(6,Enemy,1) [4,19] 0x0 0x0 0x0 0x0 [Horseslayer] ChaseOnceApproachedAI
+UNIT Lowlands Sage 0x0 Level(6,Enemy,1) [13,21] 0x0 0x0 0x0 0x0 [Calibur] ChaseOnceApproachedAI
+UNIT Lowlands Hero 0x0 Level(6,Enemy,1) [7,18] 0x0 0x0 0x0 0x0 [Dracoaxe,Zanbato] ChaseOnceApproachedAI
+UNIT Lowlands Sniper 0x0 Level(6,Enemy,1) [4,14] 0x0 0x0 0x0 0x0 [Wardbow] NoAI
+UNIT Lowlands SwdGen 0x0 Level(6,Enemy,1) [10,21] DropItem 0x0 0x0 0x0 [Rapier] NoAI
 //bosses
 UNIT Mason Sage 0x0 Level(14,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [Flare,Sleep,AngelWings] AttackInRangeAI
 UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI //here for cutscene in opening then dips
@@ -315,9 +403,9 @@ SupportFlagOn(Apollo,Avan,0x1c,CPSupport)
 SupportFlagOn(Zeke,Cassius,0x1d,BSupport)
 SupportFlagOn(Rachael,Hyperius,0x1e,BSupport)
 SupportFlagOn(Butch,Peter,0x1f,CPSupport)
-SupportFlagOn(Josef,Hilbert,BaseFlag2,BSupport)
-SupportFlagOn(Desmond,Flynn,BaseFlag3,BSupport)
-SupportFlagOn(Natasia,Bechamel,BaseFlag4,BSupport)
+SupportFlagOn(Josef,Hilbert,0x22,BSupport)
+SupportFlagOn(Desmond,Flynn,0x24,BSupport)
+SupportFlagOn(Natasia,Bechamel,0x25,BSupport)
 GotoPrepScreen
 ENDA
 
@@ -506,18 +594,18 @@ MOVE 60 Opistia [24,0]
 ENUN
 SilentKillUnit(Opistia)
 ENUN
-ENUT 0x22 //turn blair talk flag on
+ENUT BaseFlag2 //turn blair talk flag on
 CHECK_ALIVE Vladmir
 BNE 0x1 0xc 0x0
-ENUF 0x22 //unless he's dead
+ENUF BaseFlag2 //unless he's dead
 LABEL 0x1
 CHECK_DEPLOYED Vladmir
 BNE 0x2 0xc 0x0
-ENUF 0x22 //or undeployed
+ENUF BaseFlag2 //or undeployed
 LABEL 0x2
 CHECK_ALIVE Rose
 BEQ 0x3 0xc 0x0
-ENUT 0x25
+ENUT BaseFlag4
 LABEL 0x3
 EndEvent
 
@@ -592,52 +680,52 @@ EndEvent
 C24FreddricLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeFreddricTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24DeanLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeDeanTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24ElizaLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeElizaTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24RiftLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeRiftTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24EstelleLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeEstelleTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24DirkLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeDirkTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24CallumLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeCallumTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24ManfredLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeManfredTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24WilhelmLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeWilhelmTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 C24ArgentLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeArgentTalk)
-ENUT 0x22
+ENUT BaseFlag2
 EndEvent
 
 C24ApolloLarondeTalk:

@@ -277,6 +277,12 @@ POIN SkillTester
 WORD CreatorSkillID
 
 ALIGN 4
+VoidBracerEffect:
+#incbin "DoorFighter/IndoorFighter.dmp"
+POIN SkillTester
+WORD VoidBracersID
+
+ALIGN 4
 TraceSkill:
 #incbin "Trace/trace.dmp"
 POIN SkillTester

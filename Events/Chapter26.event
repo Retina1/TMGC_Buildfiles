@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,JonasArrives,1)
 TurnEventPlayer(0x0,KennethReturns,4)
 TurnEventPlayer(0x3,EndingScene,16)
 END_MAIN
@@ -89,7 +90,11 @@ UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [Galewind,Pur
 UNIT
 
 C26Kenneth:
-UNIT Kenneth DarkM 0x0 Level(2,Ally,1) [0,16] 0x0 0x0 0x1 REDA2R14 [0x0] NoAI
+UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [0,16] 0x0 0x0 0x1 REDA2R14 [0x0] NoAI
+UNIT
+
+C26Jonas:
+UNIT SecretJonas WyvLord 0x0 Level(18,Ally,0) [35,15] 0x0 0x0 0x1 REDA17R8 [MasterAxe,DangerPick,MasterLance,TrueSaunion] NoAI
 UNIT
 
 ALIGN 4
@@ -105,6 +110,15 @@ LOAD1 0x0 C26Units
 ENUN
 GotoPrepScreen
 ENDA
+
+JonasArrives:
+CHECK_EVENTID JonasAliveFlag
+BEQ 0x1 0xc 0x0
+MUSC RecruitmentTheme2
+Reinforcements(C26Jonas)
+Text(FillerDialogue)//talks to blair because while they did kill his lover they're also fighting the greater evil
+LABEL 0x1
+EndEvent
 
 KennethReturns:
 CHECK_EVENTID KennethTarquinKillFlag

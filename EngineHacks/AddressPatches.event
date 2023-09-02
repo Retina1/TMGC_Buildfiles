@@ -1,4 +1,5 @@
 //Prep screen text width
+PUSH
 ORG 0x99554 //Prep screen item menu selected pixel width
 BYTE 0x2B
 ORG 0x9878C //Prep screen item menu selected tile width
@@ -7,6 +8,7 @@ ORG 0x9A820 //Prep screen item menu tile width
 BYTE 0x6
 ORG 0x98728 //Prep screen pick units tile width
 BYTE 0x6
+POP
 
 //dancer ring
 PUSH

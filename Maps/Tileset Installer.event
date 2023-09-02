@@ -224,42 +224,6 @@ tilesetAnimation(0xf,0x1000,FrontierFrame8)
 WORD 0 0
 
 ALIGN 4
-StrongholdFrame1:
-#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_000.dmp"
-ALIGN 4
-StrongholdFrame2:
-#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_001.dmp"
-ALIGN 4
-StrongholdFrame3:
-#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_002.dmp"
-ALIGN 4
-StrongholdFrame4:
-#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_003.dmp"
-ALIGN 4
-StrongholdFrame5:
-#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_004.dmp"
-ALIGN 4
-StrongholdFrame6:
-#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_005.dmp"
-ALIGN 4
-StrongholdFrame7:
-#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_006.dmp"
-ALIGN 4
-StrongholdFrame8:
-#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_007.dmp"
-ALIGN 4
-StrongholdAnims:
-tilesetAnimation(0xb,0x800,StrongholdFrame1)
-tilesetAnimation(0xb,0x800,StrongholdFrame2)
-tilesetAnimation(0xb,0x800,StrongholdFrame3)
-tilesetAnimation(0xb,0x800,StrongholdFrame4)
-tilesetAnimation(0xb,0x800,StrongholdFrame5)
-tilesetAnimation(0xb,0x800,StrongholdFrame6)
-tilesetAnimation(0xb,0x800,StrongholdFrame7)
-tilesetAnimation(0xb,0x800,StrongholdFrame8)
-WORD 0 0
-
-ALIGN 4
 CastleFrame1:
 #incbin "CastleAnim/CastleFrame1.dmp"
 ALIGN 4
@@ -429,6 +393,74 @@ tilesetAnimation(0x1a,0x1000,TownFrame13)
 tilesetAnimation(0x1a,0x1000,TownFrame14)
 tilesetAnimation(0x1a,0x1000,TownFrame15)
 tilesetAnimation(0x1a,0x1000,TownFrame16)
+WORD 0 0
+
+ALIGN 4
+StrongholdFrame1:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_000.dmp"
+ALIGN 4
+StrongholdFrame2:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_001.dmp"
+ALIGN 4
+StrongholdFrame3:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_002.dmp"
+ALIGN 4
+StrongholdFrame4:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_003.dmp"
+ALIGN 4
+StrongholdFrame5:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_004.dmp"
+ALIGN 4
+StrongholdFrame6:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_005.dmp"
+ALIGN 4
+StrongholdFrame7:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_006.dmp"
+ALIGN 4
+StrongholdFrame8:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_007.dmp"
+ALIGN 4
+StrongholdFrame9:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_008.dmp"
+ALIGN 4
+StrongholdFrame10:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_009.dmp"
+ALIGN 4
+StrongholdFrame11:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_010.dmp"
+ALIGN 4
+StrongholdFrame12:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_011.dmp"
+ALIGN 4
+StrongholdFrame13:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_012.dmp"
+ALIGN 4
+StrongholdFrame14:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_013.dmp"
+ALIGN 4
+StrongholdFrame15:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_014.dmp"
+ALIGN 4
+StrongholdFrame16:
+#incbin "Tilesets/StrongholdAnimation/tile_animasinos.mapanime_1_015.dmp"
+ALIGN 4
+StrongholdAnims:
+tilesetAnimation(0x1a,0x1000,StrongholdFrame1)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame2)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame3)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame4)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame5)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame6)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame7)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame8)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame9)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame10)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame11)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame12)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame13)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame14)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame15)
+tilesetAnimation(0x1a,0x1000,StrongholdFrame16)
 WORD 0 0
 
 ALIGN 4

@@ -53,6 +53,10 @@
 #include "CharacterSpecific\CassiusU\Unarmed Installer.event"
 }
 {
+#include "CharacterSpecific\Kyrie\Sword Installer.event"
+#include "CharacterSpecific\Kyrie\Unarmed Installer.event"
+}
+{
 #include "Brigand\Axe Installer.event"
 #include "Brigand\Handaxe Installer.event"
 #include "Brigand\Unarmed Installer.event"
@@ -71,6 +75,10 @@
 {
 #include "CharacterSpecific\DamienU\Bow Installer.event"
 #include "CharacterSpecific\DamienU\Unarmed Installer.event"
+}
+{
+#include "CharacterSpecific\CarbonU\Bow Installer.event"
+#include "CharacterSpecific\CarbonU\Unarmed Installer.event"
 }
 {
 #include "CharacterSpecific\Rift\Sword Installer.event"
@@ -469,6 +477,18 @@
 #include "CharacterSpecific\PeggyU\Staff Installer.event"
 #include "CharacterSpecific\PeggyU\Unarmed Installer.event"
 }
+ALIGN 4
+CarbonUAnims:
+BowAnim(0xfa)
+UnarmedAnim(0xfb)
+EndAnim
+
+ALIGN 4
+KyrieAnims:
+SwordAnim(0xf8)
+UnarmedAnim(0xf9)
+EndAnim
+
 ALIGN 4
 PeggyUAnims:
 StaffAnim(0xf6)

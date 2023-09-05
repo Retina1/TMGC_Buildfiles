@@ -129,6 +129,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define QPPaletteID 0x8c
 #define JonasPPaletteID 0x8d
 #define ButchPPaletteID 0x8e
+#define RangerFlynnPaletteID 0x93
 
 #define TonnaminPaletteID 0x81
 
@@ -237,6 +238,7 @@ setPalette(HilbertUPaletteID,HilbertUPalette)
 setPalette(HilbertPPaletteID,HilbertPPalette)
 setPalette(FlynnUPaletteID,FlynnUPalette)
 setPalette(FlynnPPaletteID,FlynnPPalette)
+setPalette(RangerFlynnPaletteID,RangerFlynnPalette)
 	setFunnyText(FlynnUPaletteID, 0x65 0x64 0x67 0x65)
 	setFunnyText(FlynnPPaletteID, 0x65 0x64 0x67 0x65)
 setPalette(MikeyUPaletteID,MikeyUPalette)
@@ -367,6 +369,68 @@ setPalette(NeillstromPaletteID,NeillstromPalette)
 setPalette(CiraweissPaletteID,CiraweissPalette)
 setPalette(ArbordiaPaletteID,ArbordiaPalette)
 
+//animus reference list
+//kenneth - troub/valk
+//natasia - soldier/halberdier
+//stefan - archer/sniper
+//desmond - berserker
+//sam - peg/falco
+//josef - axewyv/wyvlord
+//peggy - mage/sage
+//butch - fighter/warrior
+//cassius - myrm/swmast
+//rachael - axecav/axepal
+//emile - sorc
+//jeff - lnccav/lncpal
+//apollo - magic myrm/runemaster/sage
+//bechamel - soldier/halberdier
+//hilbert - dark/sorc
+//flynn - bowcav/ranger
+//mikey - merc/hero
+//carobn - thief/assass
+//athena - swdarm/swdgen
+//charley - falco
+//hyperius - bowwyv
+//alexis - bowarm/bowwyv/bowgen
+//leila - thief/assass/axepal
+//damien - axecav/axepal
+//zacharias - swdcav/swdpal
+//avan - darkf/sorc
+//artemis - swmastf
+//hollandaise - swgpeg/falco/assass
+//vladmir - sage
+//horatio - priest/bishop
+//simone - bishop
+//ptolemy - lncarm/lncgen/axegen
+//johan - pirate/berserker
+//peter - swdgen
+//sonia - swdpal
+//joan - sniper
+//tobias - swdpal
+//olsen - bowpal
+//elcorian - runemaster
+//freddric - swdgen
+//dean - swdcav/pal
+//eliza - mage/sage
+//estelle - lnccav/lncpal
+//rift - ranger
+//rose - troub/valk
+//dirk - halberdier
+//callum - sniper
+//manfred - troub/valk
+//wilhelm - merc/hero
+//argent - lncgen
+//agnes - archer/sniper
+//gaylord - lightm/bishop/runemaster
+//q - berserker
+//clarque - assass
+//tonnamin - bowgen
+//laronde - hero
+//kyrie - warrior
+//jonas - swdgen
+//valeria - axepal
+//97 total i think
+
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,BlairPPaletteID,BlairLordX,0x0,0x0)
 SetPaletteFull(Arin,ArinPaletteID,Trickster,0x0,ArinValk,0x0,0x0)
 SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,KennethBPaletteID,Baron)
@@ -385,7 +449,7 @@ SetPaletteFull(Apollo,ApolloUPaletteID,LightM,ApolloPPaletteID,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
 SetPaletteFull(Hilbert,HilbertUPaletteID,Mage,HilbertPPaletteID,Sage,0x0,0x0)
-SetPaletteFull(Flynn,FlynnUPaletteID,Myrm,FlynnPPaletteID,SwMast,0x0,0x0)
+SetPaletteFull(Flynn,FlynnUPaletteID,Myrm,FlynnPPaletteID,SwMast,RangerFlynnPaletteID,BowPal)
 SetPaletteFull(Mikey,MikeyUPaletteID,Soldier,MikeyPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Carbon,CarbonUPaletteID,BowCav,CarbonPPaletteID,BowPal,0x0,0x0)
 SetPaletteFull(Athena,AthenaUPaletteID,AxeWyv,AthenaPPaletteID,WyvLord,0x0,0x0)
@@ -623,6 +687,9 @@ FlynnUPalette:
 ALIGN 4
 FlynnPPalette:
 #incbin "FlynnPromoted.dmp"
+ALIGN 4
+RangerFlynnPalette:
+#incbin "RangerFlynn.dmp"
 ALIGN 4
 MikeyUPalette:
 #incbin "MikeyUnpromoted.dmp"

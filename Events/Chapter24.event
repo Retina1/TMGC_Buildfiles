@@ -563,8 +563,17 @@ SetSupport(Josef,Hilbert,BPSupport,1)
 EndEvent
 
 C24DesmondFlynnSupport:
+EVBIT_MODIFY 3
 Text(DesmondFlynnBPSupport)
+SetBackground(BlankCG)
 SetSupport(Desmond,Flynn,BPSupport,1)
+PROMOTE Flynn BowPal SteelBow
+FADI 16
+CLEAN
+FADU 16
+LearnSkill(Flynn,CritBoostID)
+GiveItem(SteelBow,Flynn)
+MUSC 0x0
 EndEvent
 
 C24NatasiaBechamelSupport:
@@ -615,6 +624,7 @@ EndEvent
 //also make sure he retreats on defeat if green
 
 C24Dracopope:
+EVBIT_MODIFY 3
 MUSC S_EncountersAndReunions
 SetBackground(LowlandsCG)
 Text(C24DracoPromo)

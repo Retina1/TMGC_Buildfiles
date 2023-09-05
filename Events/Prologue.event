@@ -114,7 +114,7 @@ ENUT 0xcb
 SetBackground(BlankCG)
 CheckNewGameFlag(12)
 BEQ 0x999 0xc 0x0
-SystemText(NewGamePlusPrompt)//add an old school cassius toggle
+SystemText(NewGamePlusPrompt)//add an old school cassius toggle, ANIMUS MODE (flag that causes certain maps (maybe interludes) to give you an animus seal upon stating them)
 IfNoSelectedGoto(0x999)
 				ENUT NewGamePlusFlag
 				SystemText(EarlyFlowerPrompt)
@@ -193,6 +193,21 @@ MUSC RecruitmentTheme
 Text(PKennethText)
 FlashCursor(9,8,60)
 SystemText(SavepointExplanation)
+CHECK_TUTORIAL
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0xed
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0xaf
+BEQ 0x1 0xc 0x0
+GetUnitStatus(Arin, Item1)
+BNE 0x1 0xc 0x0
+GetUnitStatus(Blair, XCoord)
+BNE 0x1 0xc 0x0
+GetUnitStatus(Blair, YCoord)
+BNE 0x1 0xc 0x0
+SystemText(DamnYouFoundIt)
+SetNewGameFlag(12)
+LABEL 0x1
 EndEvent
 
 PBlairKennethTalkConvo:

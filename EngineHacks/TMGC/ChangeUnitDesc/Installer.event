@@ -19,6 +19,9 @@ POIN ChangeUnitDesc_Table
 
 ALIGN 4
 ChangeUnitDesc_Table:
+UnitDescTable(Desc_BlairNGP,Blair,0x0,0xff,NewGamePlusFlag)  //new game plus proof
+UnitDescTable(Desc_ZekeNGP,Zeke,0x0,0xff,NewGamePlusFlag)  //new game plus proof
+UnitDescTable(Desc_ViridianNGP,Viridian,0x0,0xff,NewGamePlusFlag)  //new game plus proof
 UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Chapter24,0x0)  //kenneth ascend
 UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Chapter25,0x0)  //kenneth ascend
 UnitDescTable(Desc_Kenneth2,Kenneth,0x0,Interlude10,0x0)  //kenneth ascend

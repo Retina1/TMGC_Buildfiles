@@ -48,6 +48,11 @@
 #include "Book/Magic Installer.event"
 }
 {
+#include "CharacterSpecific\RangerFlynn\Sword Installer.event"
+#include "CharacterSpecific\RangerFlynn\Bow Installer.event"
+#include "CharacterSpecific\RangerFlynn\Unarmed Installer.event"
+}
+{
 #include "CharacterSpecific\CassiusU\Axe Installer.event"
 #include "CharacterSpecific\CassiusU\Handaxe Installer.event"
 #include "CharacterSpecific\CassiusU\Unarmed Installer.event"
@@ -477,6 +482,13 @@
 #include "CharacterSpecific\PeggyU\Staff Installer.event"
 #include "CharacterSpecific\PeggyU\Unarmed Installer.event"
 }
+ALIGN 4
+RangerFlynnAnims:
+SwordAnim(0xfc)
+BowAnim(0xfd)
+UnarmedAnim(0xfe)
+EndAnim
+
 ALIGN 4
 CarbonUAnims:
 BowAnim(0xfa)

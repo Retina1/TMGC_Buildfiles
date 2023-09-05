@@ -159,8 +159,11 @@ ENDA
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryTheme
+MUSC S_Nightfall
 CleanTextNoMap(HallCG,FillerDialogue)
+REMA
+SetBackground(BlankCG)
+GiveItem(Soulbow,Zeke)
 MoveToChapter(Endgame)
 ENDA
 

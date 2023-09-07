@@ -513,9 +513,9 @@ SetSupport(Blair,Yuyu,BPSupport,1)
 EndEvent
 
 C24HoratioSimoneSupport:
-//summons? set flag to replace horatio music with his world?
 Text(HoratioSimoneCPSupport)
 SetSupport(Horatio,Simone,CPSupport,1)
+AnnihilateItem(HoratioBlade)
 EndEvent
 
 C24LeilaDamienSupport:

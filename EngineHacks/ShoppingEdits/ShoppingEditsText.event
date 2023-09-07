@@ -1,0 +1,67 @@
+
+#ifdef USE_SHOPPING_EDITS_TEXT
+	
+	#ifndef setText 
+		#define setText(textID, offset) "PUSH; ORG (TextTable+4*textID); POIN (offset | 0x80000000); POP" 
+	#endif
+	
+	#ifdef USE_BARGAINS
+		
+		#define BargainItemSoldOut 0x02bf
+		#define BargainItemSoldOutVendor 0x02c0
+		#define BargainItemSoldOutSecret 0x02c1		
+		setText(BargainItemSoldOut,BargainItemSoldOutText)
+		setText(BargainItemSoldOutVendor,BargainItemSoldOutText)
+		setText(BargainItemSoldOutSecret,BargainItemSoldOutText)
+		
+		BargainItemSoldOutText:
+		String("Sorry, that's out of stock.")
+		BYTE 3 0 //[A][X]
+		
+		ALIGN 4
+
+	#endif
+	
+	#ifdef USE_COUPONS
+	
+		#define FullInventoryCoupon 0x02c2
+		#define FullInventoryCouponVendor 0x02c3
+		#define FullInventoryCouponSecret 0x02c4
+		
+		setText(FullInventoryCoupon,FullInventoryCouponText)
+		setText(FullInventoryCouponVendor,FullInventoryCouponText)
+		setText(FullInventoryCouponSecret,FullInventoryCouponText)
+		
+		FullInventoryCouponText:
+		String("I'll take your coupon. Do you")
+		BYTE 1 //[N]
+		String("want this with you?")
+		BYTE 0x18 0 //[Yes][X]
+		
+		ALIGN 4
+	
+	#endif
+
+#endif
+
+/*
+## BargainItemSoldOut
+Sorry, that's out of stock.[A][X]
+
+If you'd like something to use for coupon item text:
+
+## FullInventoryCoupon
+I'll take your coupon. Do you[N]
+want this with you?[Yes][X]
+
+## CouponName
+Coupon[X]
+
+## CouponDesc
+Lowers one non-coupon price by 50%.[NL]
+Doesn't stack with anything else.[X]
+
+## CouponUseDesc
+Reduces one price[NL]
+by 50%.[X]
+*/

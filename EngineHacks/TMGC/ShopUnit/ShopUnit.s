@@ -1,4 +1,4 @@
-@i fucking give up im just starting this bitch over
+@i fucking give up i'm just starting this bitch over
 
 .thumb
 .align
@@ -58,9 +58,7 @@
 .equ prChangeActiveUnitFacing,0x801F50C @ arguments: r0 = xTarget, r1 = yTarget
 .equ GetUnit,0x8019430
 .equ MakeShop,0x80b4240 @r0 = visiting unit, r1 = shop list(?), r2 = shop type, r3 = ???
-.equ InitTargets, 0x804F8A4
-.equ gTargetPosition, 0x203DDE8 
-.equ gTargetArraySize, 0x203E0EC 
+
 
 ShopUnitUsability:
 push {r14}
@@ -84,9 +82,6 @@ bx r1
 
 ShopUnit_MakeTargetList:
 push {r14}
-mov r0, #0 @ xx (vanilla does this too) 
-mov r1, #0 @ yy 
-blh InitTargets @ so we do not attack and do event simultaneously 
 bl ClearRangeMap
 
 ldr r3,=#0x3004E50
@@ -382,10 +377,6 @@ bx r2
 
 .ltorg
 .align
-
-
-
-
 
 
 

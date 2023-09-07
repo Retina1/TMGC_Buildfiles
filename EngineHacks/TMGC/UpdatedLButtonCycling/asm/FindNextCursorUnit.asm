@@ -5,25 +5,30 @@
 @r6 = faction
 @r7 = faction cap for memory
 
-
 .global FindNextCursorUnit
 .type FindNextCursorUnit, %function
 
+.equ origin, 0x0801DB4C
+
+.equ gMapUnit, 0x0202E4D8
+.equ blCheckIfValidForLPressCursor, . + 0x0801DADC - origin
 
 		FindNextCursorUnit:
 		push	{r4-r7,r14}
+		ldr		r2, =gMapUnit
+		ldr		r2, [r2]
+		lsl		r1, #2
+		ldr		r1, [r2,r1]
+		ldrb	r0, [r1,r0]
 		mov		r5, r0
 		
 		@determine faction
 		mov		r6, #0x80
-		and		r0, r6
-		cmp		r0, #0
+		tst		r0, r6
 		bne		CycleEnemyFaction		
 		
-		mov		r0, r5
 		mov		r6, #0x40
-		and		r0, r6
-		cmp		r0, #0
+		tst		r0, r6
 		bne		CycleNPCFaction
 		
 		@Player Faction
@@ -46,9 +51,7 @@
 		
 		CheckIfValidForLPressCursorLoop:
 		mov		r0, r4
-		ldr		r3, CheckIfValidForLPressCursor
-		mov		lr, r3
-		.short	0xF800
+		bl		blCheckIfValidForLPressCursor
 		
 		lsl		r0, #0x18
 		cmp		r0, #0
@@ -77,8 +80,6 @@
 
 
 		.align
-		
-		CheckIfValidForLPressCursor:
-		.long	0x0801DADC
+		.ltorg
 
 

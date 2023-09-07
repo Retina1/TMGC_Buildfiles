@@ -1,0 +1,148 @@
+#include "Extensions/Hack Installation.txt"
+#define jumpToHackr2(offset) "BYTE 0x00 0x4A 0x10 0x47; POIN (offset|0x1)" 
+#ifndef FreeSpace
+  #define FreeSpace 0xF423D0
+  ORG FreeSpace
+#endif
+
+PUSH
+
+	#ifdef USE_BARGAINS
+		ORG   0xB4288
+		SHORT 0x1C38 0 //mov r0, r7; lsl r0, #0
+	#else
+		ORG   0xB4274
+	#endif
+	
+	jumpToHack(ListingRework)
+	
+	ORG   0xB4F90
+	jumpToHack(Display)
+	ORG   0xB45A8
+	jumpToHack(Pricing)
+	
+	/*Commented out for ShoppingEdits's AfterPurchase
+	ORG   0xB545C
+	jumpToHack(Purchase)
+	*/
+	
+	ORG   0xB42B4
+	jumpToHack(ShopItemCount)
+	ORG   0xB43E8
+	jumpToHack(ShopScrolling)
+	
+	/*Commented out for Icon Rework compatibility
+	ORG   0xB5194
+	jumpToHack(ItemIcons)
+	*/
+	ORG   0xB4FE0
+	jumpToHackr2(ItemNames)
+	ORG   0xB4590
+	jumpToHack(ItemDescription)
+	ORG   0xB4524
+	jumpToHack(ItemDescriptionSwitching)
+
+	ORG   0xB4B3C
+	jumpToHack(ItemDescriptionMapView)
+	ORG   0xB4AD0
+	jumpToHack(ItemDescriptionMapViewSwitching)
+
+	/*Commented out for Icon Rework compatibility
+	ORG   0xB51D0
+	jumpToHack(SellingIcons)
+	*/
+	
+	#ifndef USE_COUPONS
+		ORG   0xB4690
+		jumpToHack(BuyItem)
+	#endif
+	
+	ORG   0xB4704
+	jumpToHack(BuyItemConvoy)
+
+	ORG   0xB5164
+	BYTE  0x08 0xB4 0x00 0x00
+	jumpToHack(ItemClearer)
+	
+	ORG   0xB500C
+	SHORT 0x00//nop
+	ORG   0x3642
+	BYTE  0xFF 0x2A
+	ORG   0xB4F9E
+	BYTE  0x38 0x1C
+	ORG   0xB4FC0
+	BYTE  0x38 0x1C
+	ORG   0xB4FCC
+	BYTE  0x38 0x1C
+POP
+
+ALIGN 4
+ListingRework:
+#incbin "ListingRework.dmp"
+
+ALIGN 4
+Display:
+#incbin "Display.dmp"
+
+ALIGN 4
+Pricing:
+#incbin "Pricing.dmp"
+
+/* Commented out for ShoppingEdits's AfterPurchase
+ALIGN 4
+Purchase:
+#incbin "Purchase.dmp"
+*/
+
+ALIGN 4
+ShopItemCount:
+#incbin "ShopItemCount.dmp"
+
+ALIGN 4
+ShopScrolling:
+#incbin "ShopScrolling.dmp"
+
+/*
+ALIGN 4
+ItemIcons:
+#include "ItemIcons.lyn.event"
+
+ALIGN 4
+SellingIcons:
+#incbin "SellingIcons.dmp"
+*/
+
+ALIGN 4
+ItemNames:
+#incbin "ItemNames.dmp"
+
+ALIGN 4
+ItemDescription:
+#incbin "ItemDescription.dmp"
+
+ALIGN 4
+ItemDescriptionSwitching:
+#incbin "ItemDescriptionSwitching.dmp"
+
+ALIGN 4
+ItemDescriptionMapView:
+#incbin "ItemDescriptionMapView.dmp"
+
+ALIGN 4
+ItemDescriptionMapViewSwitching:
+#incbin "ItemDescriptionMapViewSwitching.dmp"
+
+#ifndef USE_COUPONS
+	ALIGN 4
+	BuyItem:
+	#incbin "BuyItem.dmp"
+#endif
+
+ALIGN 4
+BuyItemConvoy:
+#incbin "BuyItemConvoy.dmp"
+
+ALIGN 4
+ItemClearer:
+#incbin "ItemClearer.dmp"
+

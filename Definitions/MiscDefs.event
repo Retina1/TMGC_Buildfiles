@@ -180,6 +180,15 @@ POP
 
 #define ArinOriginFlag 0xb2
 
+//track bargain flags, use base flags when possible to save globals
+//ch15
+#define DisciplineScrollFlag BaseFlag3
+//ch25
+#define SwapScrollFlag BaseFlag4
+#define PivotScrollFlag BaseFlag5
+#define RepoScrollFlag BaseFlag6
+#define SmiteScrollFlag BaseFlag7
+
 //movement types
 #define LordMovement 0x880B808
 #define BrigandMovement 0x880b90c

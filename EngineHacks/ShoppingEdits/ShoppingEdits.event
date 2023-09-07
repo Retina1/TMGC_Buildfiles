@@ -1,0 +1,415 @@
+
+/*
+Shopping Edits
+This changes how shops normally work in a few different ways. While several of these changes are mandatory (unless you take it upon yourself to make that not the case), there are a few optional changes that you can toggle below this large commented section.
+
+Forced Modifications
+- Adds functionality for reading price multipliers and discounts off of easily accessible lists. Also allows defining set values for variables such as price minimums and discount maximums.
+- Changes the prep shop loading so that the shop list is determined by the current chapter.
+- Installs a modified version of Scraiza's ShopListExpansion asm. You can still have up to 255 items, but due to the increased complexity that ShoppingEdits brings, you may notice more lag in larger shop lists.
+
+Optional Modifications
+- Bargain functionality: By allowing an event ID to be set if the player purchases a specific item, you can have one-stock items. If you want to reuse an event ID, you will have to do that yourself in that chapter's events. To make this limited stock effect possible, items with a price of 0 cannot be bought from the shop. This assembly was originally intended to be used with the prep shop only, but it can also be used for shops the player will access during the chapter itself. Keep in mind that events are usually included in a scope ("{#include ...}"), so you will need to have the shop included outside of the scope if you want it to be on ShopBargainPairingList.
+- Coupon functionality: Lower next purchase's price by a set percentage, then disappear from the unit's inventory. If a unit has a full inventory, but a coupon would be removed due to the purchase, the shopkeeper will ask the player if they want the purchased item with the unit before asking to send to convoy. To see the coupon functionality without having the actual item in your hack, IronSword will function as a Coupon if Coupon is not defined.
+*/
+
+#define USE_SHOPPING_EDITS_TEXT
+
+#define USE_BARGAINS
+//#define USE_COUPONS
+
+ALIGN 4
+#include "ShoppingEditsText.event"
+ALIGN 4
+
+//Include RemoveItem routine if not already included
+#ifndef RemoveItem
+	#include "RemoveItem/RemoveItem.lyn.event"
+	ALIGN 4
+#endif
+
+//Price modifying lists and values
+
+PriceBaseModifierFunctions:
+#ifdef USE_BARGAINS
+	POIN BargainSetNewBasePrice
+#endif
+WORD 0 //Terminator
+
+PriceMultiplierFunctions:
+//POIN PrepScreenMultiplier
+WORD 0 //Terminator
+
+PriceDiscountFunctions:
+#ifdef USE_COUPONS
+	POIN CouponDiscount
+#endif
+POIN SilverCardDiscount
+WORD 0 //Terminator
+
+PriceFinalModifierFunctions:
+#ifdef USE_BARGAINS
+	POIN BargainPriceZeroIfPurchased
+#endif
+WORD 0 //Terminator
+
+PriceMultiplierCapLink:
+WORD 150 //this is a percent
+
+PriceDiscountCapLink:
+BYTE 50 //this is a percent
+ALIGN 4
+
+PriceMaximumLink:
+WORD 65535 //(if you want a higher value, I think you'll have to edit other vanilla code?)
+
+PriceMinimumLink:
+WORD 0
+
+/*
+#include "asm/PrepScreenMultiplier.lyn.event"
+ALIGN 4
+*/
+
+#include "asm/SilverCardDiscount.lyn.event"
+ALIGN 4
+
+SilverCardInfoLink:
+//itemId, discountAmount (percent)
+BYTE SilverCard 50
+ALIGN 4
+
+#ifdef USE_COUPONS
+	
+	//If coupons do not have an item id, give IronSword that functionality
+	#ifndef Coupon
+		#define Coupon IronSword
+	#endif
+	
+	CouponInfoLink:
+	//itemId, discountAmount (percent)
+	BYTE Coupon 50
+	ALIGN 4
+	
+#endif
+
+ChapterBattlePrepShopTable: //indexed by chapter id
+//0x00 - 0x0F
+POIN 0
+WORD PrepShop1 //no prep shop
+WORD PrepShop1
+WORD PrepShop1
+POIN PrepShop1
+WORD PrepShop1
+POIN PrepShop1
+POIN PrepShop1
+POIN PrepShop1
+POIN PrepShop1
+POIN PrepShop1
+POIN PrepShop1
+POIN PrepShop1
+POIN PrepShop2//ch13
+POIN PrepShop2
+POIN PrepShop2Discipline
+
+//0x10 - 0x1F
+POIN PrepShop2
+POIN PrepShop2
+POIN PrepShop2
+POIN PrepShop2
+POIN PrepShop2
+POIN PrepShop3//ch21
+POIN PrepShop3
+POIN PrepShop3
+POIN PrepShop3
+POIN PrepShop3Movement
+POIN PrepShop4//ch26
+POIN PrepShop4
+POIN PrepShop4
+POIN PrepShop4
+WORD 0
+WORD 0
+
+//0x20 - 0x2F
+WORD 0
+WORD 0
+POIN PrepShop3
+POIN PrepShop3
+POIN PrepShop3
+POIN PrepShop3
+POIN PrepShop1
+POIN PrepShop1
+POIN PrepShop1
+POIN PrepShop2
+POIN PrepShop2
+POIN PrepShop2
+POIN PrepShop3
+POIN PrepShop3
+POIN PrepShop3
+POIN PrepShop4
+
+//0x30 - 0x3F
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+
+//0x40 - 0x4E
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+WORD 0
+
+ALIGN 4
+
+//BYTE 0xBC 1 //Canto Scroll
+
+ALIGN 4
+PrepShop1:
+SHLI IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop2:
+SHLI IronSword SteelSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop2Discipline:
+BYTE 0xbc DisciplineID
+SHLI IronSword SteelSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary
+BYTE 0x0 0x0
+
+
+ALIGN 4
+PrepShop3:
+BYTE 0xbc DisciplineID
+BYTE 0xbc CantoID
+SHLI IronSword SteelSword SilverSword IronLance SteelLance SilverLance Javelin IronAxe SteelAxe SilverAxe HandAxe IronBow SteelBow SilverBow Longbow Fire Thunder Elfire Lightning Shine Divine Flux Nightfall Heal Mend Recover Vulnerary Elixir
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop3Movement:
+BYTE 0xbc PivotID
+BYTE 0xbc SwapID
+BYTE 0xbc SmiteID
+BYTE 0xbc RepositionID
+SHLI IronSword SteelSword SilverSword IronLance SteelLance SilverLance Javelin IronAxe SteelAxe SilverAxe HandAxe IronBow SteelBow SilverBow Longbow Fire Thunder Elfire Lightning Shine Divine Flux Nightfall Heal Mend Recover Vulnerary Elixir
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop4:
+SHLI IronSword SteelSword SilverSword GildedSword IronLance SteelLance SilverLance GildedLance Javelin Spear IronAxe SteelAxe SilverAxe GildedAxe HandAxe Tomahawk IronBow SteelBow SilverBow GildedBow Longbow Fire Thunder Elfire Fimbulvetr Flare Lightning Shine Divine Aura Radiance Flux Nightfall Fenrir Nocturne Heal Mend Recover Physic Vulnerary Elixir
+BYTE 0x0 0x0
+ALIGN 4
+
+#ifdef USE_BARGAINS
+
+	ShopBargainPairingList:
+	//POIN ShopListPointer BargainPointer
+	POIN PrepShop2Discipline PrepShop2DisciplineBargains
+	POIN PrepShop3Movement PrepShop3MovementBargains
+	WORD 0 //Terminator
+	
+	PrepShop2DisciplineBargains:
+	//SHORT itemShort eventIdWhenBought
+	//WORD price (if 0, default price is used)
+	
+	BYTE 0xbc DisciplineID
+	SHORT DisciplineScrollFlag
+	WORD 1000
+
+	//Terminator
+	WORD 0
+	
+	PrepShop3MovementBargains:
+	BYTE 0xbc PivotID
+	SHORT PivotScrollFlag
+	WORD 500
+	BYTE 0xbc SwapID
+	SHORT SwapScrollFlag
+	WORD 1000
+	BYTE 0xbc SmiteID
+	SHORT SmiteScrollFlag
+	WORD 2000
+	BYTE 0xbc RepositionID
+	SHORT RepoScrollFlag
+	WORD 5000
+	//Terminator
+	WORD 0	
+	
+
+#endif
+
+
+
+//-------------------------------------------
+//WIZARD CHECKPOINT
+//Do not touch anything below unless you know what you're doing
+//-------------------------------------------
+
+
+
+#include "ShopListExpansion/Installer.txt"
+
+PUSH
+
+ORG 0xB5220
+jumpToHack(PriceModifiersMainLoop)
+
+ORG 0x99E48
+jumpToHack(SetUpBattlePrepShop)
+
+POP
+
+#include "asm/PriceModifiersMainLoop.lyn.event"
+ALIGN 4
+
+#include "asm/GetDiscountPercentage.lyn.event"
+ALIGN 4
+
+#include "asm/SetUpBattlePrepShop.lyn.event"
+ALIGN 4
+
+PUSH 
+ORG 0xB4270
+SHORT 0x2100 0x6381 //mov r1, #0; str r1, [r0,#0x38]
+PROTECT 0xB4270 CURRENTOFFSET-1
+
+POP
+
+#ifdef USE_BARGAINS
+
+	PUSH
+
+	ORG 0x99E50 //free space made by jumpToHack(SetUpBattlePrepShop)
+	SHORT 0xB500 0x2800 //push {r14}; cmp r0, #0
+	SHORT 0xD100 0x3202 //bne (0x99E58); add r2, #2
+	SHORT 0x4678 0x5A80 //mov r0, r15; ldrh r0, [r0,r2]
+	BL(0xB4168)
+	SHORT 0xBC01 0x4700 //pop {r0}; bx r0
+	SHORT 0x08B2 //Text: You don't have the money!
+	SHORT BargainItemSoldOut //New text
+	PROTECT 0x99E50 CURRENTOFFSET-1
+
+	ORG 0xB45C8
+	SHORT 0x2C00 0xD003 //cmp r4, #0; beq (0xB45D4)
+	BL(0x24DE8)
+	SHORT 0x4284 0xDD09 //cmp r4, r0; ble (0xB45E8)
+	SHORT 0x1C20 0x1C29 //mov r0, r4; mov r1, r5
+	SHORT 0x2208 //mov r2, #8
+	BL(0x99E50)
+	SHORT 0x1C28 0x2101 //mov r0, r5; mov r1, #1
+	BL(0x2F24)
+	SHORT 0xE01E //b (0xB4626)
+	PROTECT 0xB45C8 CURRENTOFFSET-1
+	
+	ORG 0xB4274
+	SHORT 0x1C07 0x633E //mov r7, r0; str r6, [r7,#0x30]
+	SHORT 0x1C30 0x4902 //mov r0, r6; ldr r1, =PairShopListWithBargainInfo
+	SHORT 0x468E 0xF800 //mov lr, r1; bl lr+0
+	SHORT 0x6378 0xE001 //str r0, [r7,#0x34]; b 0xB4288
+	POIN PairShopListWithBargainInfo
+	PROTECT 0xB4274 CURRENTOFFSET-1
+
+	POP
+	
+	#include "asm/PairShopListWithBargainInfo.lyn.event"
+	ALIGN 4
+
+	#include "asm/SetPurchasedBargainItem.lyn.event"
+	ALIGN 4
+
+	#include "asm/BargainPriceZeroIfPurchased.lyn.event"
+	ALIGN 4
+	
+	#include "asm/BargainSetNewBasePrice.lyn.event"
+	ALIGN 4
+
+#endif
+
+#ifdef USE_COUPONS
+
+	PUSH
+	
+	ORG 0xB464C
+	jumpToHack(OnPurchase)
+	
+	ORG 0xB46B0
+	jumpToHack(CheckOnPurchasePlayerAnswer)
+	
+	POP
+	
+	#include "asm/CouponDiscount.lyn.event"
+	ALIGN 4
+	
+	#include "asm/ShouldCouponBeRemoved.lyn.event"
+	ALIGN 4
+	
+	#include "asm/OnPurchase.lyn.event"
+	ALIGN 4
+	
+	#include "asm/CheckOnPurchasePlayerAnswer.lyn.event"
+	ALIGN 4
+	
+	FullInventoryCouponTextLink:
+	SHORT FullInventoryCoupon
+	
+	FullInventoryConvoyShopTextLink:
+	SHORT 0x08BE
+	
+	FullInventoryNoConvoyShopTextLink:
+	SHORT 0x08C1
+	ALIGN 4
+
+#endif
+
+PUSH
+
+ORG 0xB5440
+jumpToHack(AfterPurchase)
+
+POP
+
+#ifdef USE_BARGAINS
+
+	#ifdef USE_COUPONS
+		#include "asmAfterPurchase/AfterPurchase_BargainsCoupons.lyn.event"
+	#else
+		#include "asmAfterPurchase/AfterPurchase_Bargains.lyn.event"
+	#endif
+	
+#else
+
+	#ifdef USE_COUPONS
+		#include "asmAfterPurchase/AfterPurchase_Coupons.lyn.event"
+	#else
+		#include "asmAfterPurchase/AfterPurchase_Neither.lyn.event"
+	#endif
+	
+#endif
+
+ALIGN 4

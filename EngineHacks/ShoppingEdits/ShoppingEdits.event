@@ -102,12 +102,12 @@ WORD PrepShop1
 POIN PrepShop1
 WORD PrepShop1
 POIN PrepShop1
+POIN PrepShop1HorseEffectives
 POIN PrepShop1
 POIN PrepShop1
 POIN PrepShop1
 POIN PrepShop1
-POIN PrepShop1
-POIN PrepShop1
+POIN PrepShop1Awaken
 POIN PrepShop2//ch13
 POIN PrepShop2
 POIN PrepShop2Discipline
@@ -120,7 +120,7 @@ POIN PrepShop2
 POIN PrepShop2
 POIN PrepShop3//ch21
 POIN PrepShop3
-POIN PrepShop3
+POIN PrepShop3ArmsScroll
 POIN PrepShop3
 POIN PrepShop3Movement
 POIN PrepShop4//ch26
@@ -191,6 +191,14 @@ ALIGN 4
 PrepShop1:
 SHLI IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary
 BYTE 0x0 0x0
+ALIGN 4
+PrepShop1Awaken:
+SHLI Awaken LightBrand Shockstick VoidCleaver ShiningBow IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary
+BYTE 0x0 0x0
+ALIGN 4
+PrepShop1HorseEffectives:
+SHLI Zanbato Horseslayer Halberd IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary
+BYTE 0x0 0x0
 
 ALIGN 4
 PrepShop2:
@@ -199,16 +207,21 @@ BYTE 0x0 0x0
 
 ALIGN 4
 PrepShop2Discipline:
+BYTE 0xbc ShoveID
 BYTE 0xbc DisciplineID
+BYTE 0xbc CantoID
 SHLI IronSword SteelSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary
 BYTE 0x0 0x0
 
 
 ALIGN 4
 PrepShop3:
-BYTE 0xbc DisciplineID
-BYTE 0xbc CantoID
 SHLI IronSword SteelSword SilverSword IronLance SteelLance SilverLance Javelin IronAxe SteelAxe SilverAxe HandAxe IronBow SteelBow SilverBow Longbow Fire Thunder Elfire Lightning Shine Divine Flux Nightfall Heal Mend Recover Vulnerary Elixir
+BYTE 0x0 0x0
+
+ALIGN 4
+PrepShop3ArmsScroll:
+SHLI ArmsScroll IronSword SteelSword SilverSword IronLance SteelLance SilverLance Javelin IronAxe SteelAxe SilverAxe HandAxe IronBow SteelBow SilverBow Longbow Fire Thunder Elfire Lightning Shine Divine Flux Nightfall Heal Mend Recover Vulnerary Elixir
 BYTE 0x0 0x0
 
 ALIGN 4
@@ -230,9 +243,35 @@ ALIGN 4
 
 	ShopBargainPairingList:
 	//POIN ShopListPointer BargainPointer
+	POIN PrepShop1HorseEffectives PrepShop1HorseEffectivesBargains
+	POIN PrepShop1Awaken PrepShop1AwakenBargains
 	POIN PrepShop2Discipline PrepShop2DisciplineBargains
 	POIN PrepShop3Movement PrepShop3MovementBargains
+	POIN PrepShop3ArmsScroll PrepShop3ArmsScrollBargains
 	WORD 0 //Terminator
+	
+	PrepShop1HorseEffectivesBargains:
+	SHORT Zanbato ZabatoFlag
+	WORD 0
+	SHORT Zanbato HorseslayerFlag
+	WORD 0
+	SHORT Zanbato HalberdFlag
+	WORD 0
+	WORD 0
+	
+	PrepShop1AwakenBargains:
+	SHORT Awaken AwakenFlag
+	WORD 1000
+	SHORT LightBrand LightBrandFlag
+	WORD 1800
+	SHORT Shockstick ShockstickFlag
+	WORD 1800
+	SHORT VoidCleaver VoidCleaverFlag
+	WORD 1800
+	SHORT ShiningBow ShiningBowFlag
+	WORD 1800
+	WORD 0
+			
 	
 	PrepShop2DisciplineBargains:
 	//SHORT itemShort eventIdWhenBought
@@ -240,7 +279,13 @@ ALIGN 4
 	
 	BYTE 0xbc DisciplineID
 	SHORT DisciplineScrollFlag
-	WORD 1000
+	WORD 1200
+	BYTE 0xbc CantoID
+	SHORT CantoScrollFlag
+	WORD 3000
+	BYTE 0xbc ShoveID
+	SHORT ShoveScrollFlag
+	WORD 1000	
 
 	//Terminator
 	WORD 0
@@ -260,7 +305,10 @@ ALIGN 4
 	WORD 5000
 	//Terminator
 	WORD 0	
-	
+	PrepShop3ArmsScrollBargains:
+	SHORT ArmsScroll ArmsScrollFlag
+	WORD 3000
+	WORD 0
 
 #endif
 

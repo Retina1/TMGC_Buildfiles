@@ -181,6 +181,10 @@ POP
 #define ArinOriginFlag 0xb2
 
 //track bargain flags, use base flags when possible to save globals
+//ch4
+#define KillingEdgeFlag BaseFlag4
+#define KillerLanceFlag BaseFlag5
+#define KillerAxeFlag BaseFlag6
 //ch7
 #define ZabatoFlag BaseFlag2
 #define HorseslayerFlag BaseFlag3
@@ -195,6 +199,8 @@ POP
 #define DisciplineScrollFlag BaseFlag3
 #define CantoScrollFlag BaseFlag4
 #define ShoveScrollFlag BaseFlag5
+//chv4
+#define BootsFlag BaseFlag1
 //ch23
 #define ArmsScrollFlag BaseFlag2
 //ch25

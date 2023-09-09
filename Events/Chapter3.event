@@ -105,7 +105,7 @@ UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOn
 UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Swordreaver,MiniGem] ChaseOnceApproachedAI
 UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] DropItem 0x0 0x0 0x0 [IronSword,RedGem] ChaseOnceApproachedAI
 UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [16,4] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
 UNIT Ygstra SwdCav 0x0 Level(3,Enemy,1) [0,2] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
 UNIT Ygstra AxeCav 0x0 Level(3,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
@@ -133,7 +133,7 @@ UNIT Ygstra LncWyv 0x0 Level(3,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [SteelLance] Chas
 UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Swordreaver,MiniGem] ChaseOnceApproachedAI
 UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] DropItem 0x0 0x0 0x0 [SteelSword,RedGem] ChaseOnceApproachedAI
 UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [16,4] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
 UNIT Ygstra SwdCav 0x0 Level(3,Enemy,1) [0,2] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
 UNIT Ygstra SwdCavF 0x0 Level(3,Enemy,1) [0,4] 0x0 0x0 0x0 0x0 [Lancereaver] ChaseOnceApproachedAI
@@ -163,7 +163,7 @@ UNIT Ygstra LncWyv 0x0 Level(3,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [SteelLance] Grou
 UNIT Ygstra AxeWyv 0x0 Level(3,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Swordreaver,MiniGem] GroupTwoPaceAI
 UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Ygstra SoldierF 0x0 Level(3,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
-UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] 0x0 0x0 0x0 0x0 [SteelSword,Lancereaver] ChaseOnceApproachedAI
+UNIT Ygstra Merc 0x0 Level(4,Enemy,1) [16,3] DropItem 0x0 0x0 0x0 [SteelSword,Lancereaver,RedGem] ChaseOnceApproachedAI
 UNIT Ygstra Fighter 0x0 Level(4,Enemy,1) [16,4] 0x0 0x0 0x0 0x0 [HandAxe,Hammer] ChaseOnceApproachedAI
 UNIT Ygstra SwdCav 0x0 Level(3,Enemy,1) [0,2] 0x0 0x0 0x0 0x0 [SteelSword] ChaseOnceApproachedAI
 UNIT Ygstra SwdCavF 0x0 Level(3,Enemy,1) [0,4] 0x0 0x0 0x0 0x0 [Lancereaver] ChaseOnceApproachedAI

@@ -228,6 +228,9 @@ ENUT BaseFlag2
 LABEL 0x12
 MUSC S_SMTLevelUp
 CleanTextNoMap(PathCG,Ch4_Opening)
+SetBackground(BlankCG)
+SystemText(BargainsNotice)
+FADI 60
 GotoPrepScreen
 ENDA
 

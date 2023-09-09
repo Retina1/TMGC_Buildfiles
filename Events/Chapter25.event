@@ -107,6 +107,15 @@ UNIT Dalst SwdPal 0x0 Level(8,Enemy,1) [0,9] 0x0 0x0 0x0 0x0 [MainGauche,KnightR
 UNIT Dalst AxePal 0x0 Level(8,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [DangerPick] NoAI
 UNIT Dalst Sage 0x0 Level(8,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [ForceSpike,LegRing] NoAI
 
+UNIT Dalst Halberdier 0x0 Level(8,Enemy,1) [22,6] 0x0 0x0 0x0 0x0 [SilverLance] ChaseOnceApproachedAI
+UNIT Dalst Hero 0x0 Level(8,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [SilverAxe] ChaseOnceApproachedAI
+
+UNIT Dalst Hero 0x0 Level(8,Enemy,1) [5,6] 0x0 0x0 0x0 0x0 [SilverSword,Halberd] ChaseOnceApproachedAI
+UNIT Dalst Sniper 0x0 Level(8,Enemy,1) [5,3] 0x0 0x0 0x0 0x0 [SilverBow,Longbow] ChaseOnceApproachedAI
+UNIT Dalst Warrior 0x0 Level(8,Enemy,1) [4,11] 0x0 0x0 0x0 0x0 [BraveAxe,SilverBow] ChaseOnceApproachedAI
+
+UNIT Elite WyvLord 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [Tomahawk,BraveAxe] ChaseOnceApproachedAI
+
 UNIT Elite BishopF 0x0 Level(15,Enemy,1) [6,8] DropItem 0x0 0x0 0x0 [Caduceus] NoAI
 
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
@@ -121,19 +130,31 @@ C25Kyrie:
 UNIT Kyrie SwMastF 0x0 Level(11,Ally,0) [14,22] 0x0 0x0 0x1 REDA14R23 [Soothesword,MasterSword] NoAI
 UNIT
 
+C25Cutscene:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [31,12] 0x0 0x0 0x1 REDA29R12 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [31,14] 0x0 0x0 0x1 REDA29R14 [IronBow] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
-//for testing
-//SetSupport(Cassius,Rachael,BPSupport,1)
+LoadUnitsByDifficulty(C25Easy,C25Normal,C25Hard)
 ENUT GuideChpt25
 LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
 MUSC NarrationTheme5
 Narration(Map2CG,Ch25_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
-LoadUnitsByDifficulty(C25Easy,C25Normal,C25Hard)
-LOAD1 0x0 C25Units
+MUSC AmbientWindBirds
+CleanText(PathCG,FillerDialogue)//they're here
+LOAD1 0x0 C25Cutscene
 ENUN
+CAM1 Bobert
+FlashCursor(Bobert,60)
+CleanTextNoMap(PathCG,FillerDialogue)//bobert talking to self, pondering sam, whatever the fuck elcorian and girard are doing in there
+MUSC S_Chaos
+CleanText(HouseCG,FillerDialogue)//elcorian preparing self, maybe girard, lead into battle
+CAM1 Blair
+MUSC 0x0
+Text(FillerDialogue)//charge or someting
 ResetViridianConvoy
 SupportFlagOn(Rachael,Cassius,BaseFlag3,BPSupport)
 SetUnitStatusAll(Elite*0x100+Elite, Strength, 24, Any, Any, Any, Range(6,8,6,8), Any)
@@ -165,11 +186,15 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
-MUSC S_Nightfall
-CleanTextNoMap(HallCG,FillerDialogue)
+MUSC S_FE4Conversation
+CleanTextNoMap(PathCG,FillerDialogue)//they arrive, elcorian steps out to speak alone, blair accepts possible trap (figure out why?)
+MUSC S_Chaos
+CleanTextNoMap(HouseCG,C25EndingDebate)//the scene (ideology debate, betrayaly stuff, warning of the incoming storm, leaving her with the foundation)
 REMA
 SetBackground(BlankCG)
 GiveItem(Foundation,Blair)
+MUSC S_Nightfall
+CleanTextNoMap(PathCG,FillerDialogue)//return home, noting their apparent civility despite atrocities
 MoveToChapter(Interlude10)
 ENDA
 

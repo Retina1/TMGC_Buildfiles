@@ -99,7 +99,7 @@ POIN 0
 WORD PrepShop1 //no prep shop
 WORD PrepShop1
 WORD PrepShop1
-POIN PrepShop1
+POIN PrepShop1Killers
 WORD PrepShop1
 POIN PrepShop1
 POIN PrepShop1HorseEffectives
@@ -135,7 +135,7 @@ WORD 0
 WORD 0
 POIN PrepShop3
 POIN PrepShop3
-POIN PrepShop3
+POIN PrepShop3Boots
 POIN PrepShop3
 POIN PrepShop1
 POIN PrepShop1
@@ -192,6 +192,10 @@ PrepShop1:
 SHLI IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary
 BYTE 0x0 0x0
 ALIGN 4
+PrepShop1Killers:
+SHLI KillingEdge KillerLance KillerAxe IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary
+BYTE 0x0 0x0
+ALIGN 4
 PrepShop1Awaken:
 SHLI Awaken LightBrand Shockstick VoidCleaver ShiningBow IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Vulnerary
 BYTE 0x0 0x0
@@ -225,6 +229,11 @@ SHLI ArmsScroll IronSword SteelSword SilverSword IronLance SteelLance SilverLanc
 BYTE 0x0 0x0
 
 ALIGN 4
+PrepShop3Boots:
+SHLI Boots IronSword SteelSword SilverSword IronLance SteelLance SilverLance Javelin IronAxe SteelAxe SilverAxe HandAxe IronBow SteelBow SilverBow Longbow Fire Thunder Elfire Lightning Shine Divine Flux Nightfall Heal Mend Recover Vulnerary Elixir
+BYTE 0x0 0x0
+
+ALIGN 4
 PrepShop3Movement:
 BYTE 0xbc PivotID
 BYTE 0xbc SwapID
@@ -243,12 +252,23 @@ ALIGN 4
 
 	ShopBargainPairingList:
 	//POIN ShopListPointer BargainPointer
+	POIN PrepShop1Killers PrepShop1KillersBargains
 	POIN PrepShop1HorseEffectives PrepShop1HorseEffectivesBargains
 	POIN PrepShop1Awaken PrepShop1AwakenBargains
 	POIN PrepShop2Discipline PrepShop2DisciplineBargains
 	POIN PrepShop3Movement PrepShop3MovementBargains
 	POIN PrepShop3ArmsScroll PrepShop3ArmsScrollBargains
+	POIN PrepShop3Boots PrepShop3BootsBargains
 	WORD 0 //Terminator
+	
+	PrepShop1KillersBargains:
+	SHORT KillingEdge KillingEdgeFlag
+	WORD 1200
+	SHORT KillerLance KillerLanceFlag
+	WORD 1200
+	SHORT KillerAxe KillerAxeFlag
+	WORD 1200
+	WORD 0
 	
 	PrepShop1HorseEffectivesBargains:
 	SHORT Zanbato ZabatoFlag
@@ -307,7 +327,11 @@ ALIGN 4
 	WORD 0	
 	PrepShop3ArmsScrollBargains:
 	SHORT ArmsScroll ArmsScrollFlag
-	WORD 3000
+	WORD 2700
+	WORD 0
+	PrepShop3BootsBargains:
+	SHORT Boots BootsFlag
+	WORD 6000
 	WORD 0
 
 #endif

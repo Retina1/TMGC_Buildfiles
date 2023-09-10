@@ -215,8 +215,8 @@ UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge] NeverMov
 UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [Greatbow] AttackInRangeAI
 //boss area - reinforce after snag breaks
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [ArchBallista,SilverCard] NeverMoveAI
-UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
-UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [BraveLance] DelayedAI
+UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [BraveSword,Wyrmslayer] DelayedAI
+UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [BraveLance,Dragonpike] DelayedAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
 UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [DemonBreath] GroupFourPaceAI
 UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [6,2] 0x0 0x0 0x0 0x0 [DemonBreath] ChaseOnceApproachedAI
@@ -271,8 +271,8 @@ UNIT Dalst BishopF 0x0 Level(7,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [Purge,Aura] Nev
 UNIT Dalst Sniper 0x0 Level(7,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
 //boss area - reinforce after snag breaks
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [ArchBallista,SilverCard] NeverMoveAI
-UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
-UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [BraveLance] DelayedAI
+UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [BraveSword,Wyrmslayer] DelayedAI
+UNIT Dalst Falco 0x0 Level(7,Enemy,1) [8,10] 0x0 0x0 0x0 0x0 [BraveLance,Dragonpike] DelayedAI
 UNIT Simulacrum Wyvern 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
 UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [DemonBreath] GroupFourPaceAI
 UNIT Simulacrum DemonDragon 0x0 Level(10,Enemy,1) [6,2] 0x0 0x0 0x0 0x0 [DemonBreath] ChaseOnceApproachedAI

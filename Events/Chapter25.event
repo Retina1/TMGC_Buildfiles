@@ -32,6 +32,12 @@ Seize(2,5)
 SecretShop(Ch25SecretShop,7,18)
 Village(0x8,C25VillageSouth,14,22)
 Village(0x9,C25VillageNorth,11,4)
+House(0x0,C25House1,2,0)
+House(0x0,C25House2,21,2)
+House(0x0,C25House3,25,9)
+House(0x0,C25House4,17,15)
+House(0x0,C25House5,22,16)
+House(0x0,C25House6,0,22)
 END_MAIN
 
 ALIGN 4
@@ -99,30 +105,51 @@ UNIT Simulacrum IceDragon 0x0 Level(15,Enemy,1) [9,6] 0x0 0x0 0x0 0x0 [IceBreath
 UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [2,7] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Simulacrum EarthDragon 0x0 Level(13,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
-UNIT Simulacrum DivineDragon 0x0 Level(12,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [DivineBreath] ChaseOnceApproachedAI
-UNIT Elite Warrior 0x0 Level(18,Enemy,1) [2,6] 0x0 0x0 0x0 0x0 [Tomahawk] NeverMoveAI
+UNIT Simulacrum DivineDragon 0x0 Level(12,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [DivineBreath] GroupFourAI
+UNIT Elite Warrior 0x0 Level(18,Enemy,1) [2,6] 0x0 0x0 0x0 0x0 [Tomahawk,Dracoaxe] NeverMoveAI
 
-UNIT Dalst LncPal 0x0 Level(8,Enemy,1) [0,8] 0x0 0x0 0x0 0x0 [TrueSaunion] NoAI
-UNIT Dalst SwdPal 0x0 Level(8,Enemy,1) [0,9] 0x0 0x0 0x0 0x0 [MainGauche,KnightRing] NoAI
-UNIT Dalst AxePal 0x0 Level(8,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [DangerPick] NoAI
-UNIT Dalst Sage 0x0 Level(8,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [ForceSpike,LegRing] NoAI
+UNIT Dalst LncPal 0x0 Level(8,Enemy,1) [0,8] 0x0 0x0 0x0 0x0 [TrueSaunion] GroupTwoAI
+UNIT Dalst SwdPal 0x0 Level(8,Enemy,1) [0,9] 0x0 0x0 0x0 0x0 [MainGauche,KnightRing] GroupTwoAI
+UNIT Dalst AxePal 0x0 Level(8,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [DangerPick] GroupThreeAI
+UNIT Dalst Sage 0x0 Level(8,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [ForceSpike,LegRing] GroupThreeAI
 
 UNIT Dalst Halberdier 0x0 Level(8,Enemy,1) [22,6] 0x0 0x0 0x0 0x0 [SilverLance] ChaseOnceApproachedAI
 UNIT Dalst Hero 0x0 Level(8,Enemy,1) [23,4] 0x0 0x0 0x0 0x0 [SilverAxe] ChaseOnceApproachedAI
 
-UNIT Dalst Hero 0x0 Level(8,Enemy,1) [5,6] 0x0 0x0 0x0 0x0 [SilverSword,Halberd] ChaseOnceApproachedAI
+UNIT Dalst Hero 0x0 Level(8,Enemy,1) [5,6] 0x0 0x0 0x0 0x0 [SilverSword,Halberd] GroupFourAI
 UNIT Dalst Sniper 0x0 Level(8,Enemy,1) [5,3] 0x0 0x0 0x0 0x0 [SilverBow,Longbow] ChaseOnceApproachedAI
 UNIT Dalst Warrior 0x0 Level(8,Enemy,1) [4,11] 0x0 0x0 0x0 0x0 [BraveAxe,SilverBow] ChaseOnceApproachedAI
 
-UNIT Elite WyvLord 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [Tomahawk,BraveAxe] ChaseOnceApproachedAI
+UNIT Dalst Sniper 0x0 Level(8,Enemy,1) [17,7] 0x0 0x0 0x0 0x0 [Longbow,BraveBow] GroupOnePaceAI
+UNIT Dalst Sage 0x0 Level(8,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Fimbulvetr] GroupOnePaceAI
+UNIT Dalst Sage 0x0 Level(8,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Calibur,Inversion] GroupOnePaceAI
+UNIT Dalst SwMast 0x0 Level(8,Enemy,1) [18,8] 0x0 0x0 0x0 0x0 [SilverSword] GroupOnePaceAI
+
+UNIT Dalst HeroF 0x0 Level(8,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [GildedSword] ChaseOnceApproachedAI
+UNIT Dalst HeroF 0x0 Level(8,Enemy,1) [15,23] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI
+UNIT Dalst Halberdier 0x0 Level(8,Enemy,1) [15,17] 0x0 0x0 0x0 0x0 [Spear] ChaseOnceApproachedAI
+UNIT Dalst Warrior 0x0 Level(8,Enemy,1) [16,19] 0x0 0x0 0x0 0x0 [SilverBow,SilverAxe,SpiritDust] ChaseOnceApproachedAI
+UNIT Dalst BowPalF 0x0 Level(8,Enemy,1) [4,23] 0x0 0x0 0x0 0x0 [BraveBow,Wardbow] ChaseOnceApproachedAI
+UNIT Dalst LncPalF 0x0 Level(8,Enemy,1) [5,22] 0x0 0x0 0x0 0x0 [Horseslayer,Shatterspear,Dragonpike] GroupTwoAI
+
+UNIT Elite WyvLord 0x0 Level(10,Enemy,1) [7,9] 0x0 0x0 0x0 0x0 [Tomahawk,BraveAxe,Dracoaxe] ChaseOnceApproachedAI
 
 UNIT Elite BishopF 0x0 Level(15,Enemy,1) [6,8] DropItem 0x0 0x0 0x0 [Caduceus] NoAI
 
-UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
-UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [1,15] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Hero 0x0 Level(8,Enemy,1) [15,13] 0x0 0x0 0x0 0x0 [Rapier,Tomahawk] ChaseOnceApproachedAI
+
+UNIT Simulacrum DemonDragon 0x0 Level(14,Enemy,1) [11,21] 0x0 0x0 0x0 0x0 [DemonBreath] ChaseOnceApproachedAI
+UNIT MagElite SwdPal 0x0 Level(10,Enemy,1) [10,16] 0x0 0x0 0x0 0x0 [Wyrmslayer,Runesword] AttackInRangeAI
+UNIT Dalst BishopF 0x0 Level(8,Enemy,1) [23,17] 0x0 0x0 0x0 0x0 [Smite,JavelinRain] ChaseOnceApproachedAI
+UNIT Dalst SwdGen 0x0 Level(8,Enemy,1) [21,18] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
+UNIT Dalst SorcF 0x0 Level(8,Enemy,1) [27,6] 0x0 0x0 0x0 0x0 [Nocturne,Freikugel] ChaseOnceApproachedAI
+UNIT Dalst LncGen 0x0 Level(8,Enemy,1) [24,8] 0x0 0x0 0x0 0x0 [BraveLance] ChaseOnceApproachedAI
+
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [ArchBallista] [0x00,0x03,0x04,0x23]
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [1,15] 0x0 0x0 0x0 0x0 [ArchBallista] [0x00,0x03,0x04,0x22]
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [17,21] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
-UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [0,1] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [0,1] 0x0 0x0 0x0 0x0 [ArchBallista] [0x00,0x03,0x04,0x24]
 UNIT Bobert BowPal 0x0 Level(15,Enemy,1) [2,5] DropItem 0x0 0x0 0x0 [MasterSword,MasterBow,BlackGem] NeverMoveAI
 UNIT
 
@@ -182,6 +209,19 @@ LABEL 0x1
 MUSI; SMOV 0x2 VillageCG; SMOV 0x3 FillerDialogue; CALL $9EE310; MUNO; CALL $591F40; SMOV 0x3 MasterSword; GIVEITEMTO 0xFFFF; //give master sword, no kyrie join
 LABEL 0x2
 EndEvent
+
+C25House1:
+HouseEvent(FillerDialogue,HouseCG)
+C25House2:
+HouseEvent(FillerDialogue,HouseCG)
+C25House3:
+HouseEvent(FillerDialogue,HouseCG)
+C25House4:
+HouseEvent(FillerDialogue,HouseCG)
+C25House5:
+HouseEvent(FillerDialogue,HouseCG)
+C25House6:
+HouseEvent(FillerDialogue,HouseCG)
 
 
 EndingScene:

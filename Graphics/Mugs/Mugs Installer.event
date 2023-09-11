@@ -48,7 +48,6 @@ RetinaMug:
 #incbin "dmps/Retina.dmp"
 setMugEntry(0x1fd,RetinaMug,3,6,3,4)
 //fillers to make list show everything
-setMugEntry(0xfa,RetinaMug,3,6,3,4)
 setMugEntry(0xfb,RetinaMug,3,6,3,4)
 setMugEntry(0xfc,RetinaMug,3,6,3,4)
 setMugEntry(0xfd,RetinaMug,3,6,3,4)
@@ -112,6 +111,10 @@ ALIGN 4
 JohanMug:
 #incbin "dmps/Johan.dmp"
 setMugEntry(0x3f,JohanMug,3,5,3,3)
+ALIGN 4
+EarlyJohanMug:
+#incbin "dmps/EarlyJohan.dmp"
+setMugEntry(0xfa,EarlyJohanMug,3,5,3,3)
 ALIGN 4
 JohanPromoMug:
 #incbin "dmps/JohanPromo.dmp"

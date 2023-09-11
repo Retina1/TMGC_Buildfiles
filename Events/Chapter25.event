@@ -25,6 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x28,C25Passacaglia,Sam,Bobert)
 END_MAIN
 
 LocationBasedEvents:
@@ -208,6 +209,12 @@ GOTO 0x2
 LABEL 0x1
 MUSI; SMOV 0x2 VillageCG; SMOV 0x3 FillerDialogue; CALL $9EE310; MUNO; CALL $591F40; SMOV 0x3 MasterSword; GIVEITEMTO 0xFFFF; //give master sword, no kyrie join
 LABEL 0x2
+EndEvent
+
+C25Passacaglia:
+MUSC S_WelcomeToLegend
+Text(C25BobertSamTalk)
+GiveItem(Passacaglia,Sam)
 EndEvent
 
 C25House1:

@@ -20,6 +20,9 @@ WORD 0 //terminator
 LordWeaponEffectiveness:
 SetWeaponEffectiveness(ArmorType|HorseType, 6)
 WORD 0 //terminator
+BowpierEffectiveness:
+SetWeaponEffectiveness(FlierType|ArmorType|HorseType, 6)
+WORD 0 //terminator
 ArmorEffectiveness:
 SetWeaponEffectiveness(ArmorType, 6)
 WORD 0

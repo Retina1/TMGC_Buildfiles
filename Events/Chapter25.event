@@ -21,6 +21,10 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0xb,C25AreaTrap,1,255)
+TurnEventPlayer(0xd,C25AreaTrap2,1,255)
+TurnEventPlayer(0xf,C25AreaTrap3,1,255)
+TurnEventPlayer(0x0,C25MoveNow,10)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -50,6 +54,9 @@ ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AreaEvent(0xa,C25AreaTrigger,9,0,19,11)
+AreaEvent(0xc,C25AreaTrigger2,5,16,17,23)
+AreaEvent(0xe,C25AreaTrigger3,0,0,8,12)
 END_MAIN
 
 Dunno:
@@ -163,6 +170,76 @@ UNIT Blair BlairLord 0x0 Level(1,Ally,0) [31,12] 0x0 0x0 0x1 REDA29R12 [Fire, Aw
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [31,14] 0x0 0x0 0x1 REDA29R14 [IronBow] NoAI
 UNIT
 
+//wyvlords mark spawns that have to be either fliers or siege
+C25AreaSpawn1Wave1:
+UNIT Dalst WyvLord 0x0 Level(8,Enemy,1) [21,8] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Dalst Falco 0x0 Level(8,Enemy,1) [23,11] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Dalst Halberdier 0x0 Level(8,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT
+C25AreaSpawn1Wave2:
+UNIT Dalst LncPal 0x0 Level(8,Enemy,1) [18,3] 0x0 0x0 0x1 REDA18R2 [Axebuster,GildedLance] NoAI
+UNIT Dalst SwdPal 0x0 Level(8,Enemy,1) [18,3] 0x0 0x0 0x1 REDA19R3 [GildedSword,Lancesnapper] NoAI
+UNIT Dalst Sage 0x0 Level(8,Enemy,1) [19,4] 0x0 0x0 0x1 REDA20R4 [Inversion,Fimbulvetr] NoAI
+UNIT Dalst Sorc 0x0 Level(8,Enemy,1) [19,4] 0x0 0x0 0x1 REDA19R5 [Fenrir,Corruption] NoAI
+UNIT
+C25AreaSpawn1Wave3:
+UNIT Dalst Falco 0x0 Level(8,Enemy,1) [21,8] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Dalst WyvLord 0x0 Level(8,Enemy,1) [23,11] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Dalst Warrior 0x0 Level(8,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Dalst Sage 0x0 Level(8,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
+UNIT
+
+C25AreaSpawn2Wave1:
+UNIT Dalst Sage 0x0 Level(8,Enemy,1) [21,14] 0x0 0x0 0x0 0x0 [Fimbulvetr,Galewind] NoAI
+UNIT Dalst SwMast 0x0 Level(8,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [LightBrand] NoAI
+UNIT Dalst Warrior 0x0 Level(8,Enemy,1) [5,20] 0x0 0x0 0x0 0x0 [BraveAxe,Hammer] NoAI
+UNIT
+C25AreaSpawn2Wave2:
+UNIT Dalst WyvLord 0x0 Level(8,Enemy,1) [2,19] 0x0 0x0 0x1 REDA3R18 [SilverLance] NoAI
+UNIT Dalst WyvLord 0x0 Level(8,Enemy,1) [2,19] 0x0 0x0 0x1 REDA4R19 [Spear,Ukonvasara] NoAI
+UNIT Dalst WyvLord 0x0 Level(8,Enemy,1) [2,19] 0x0 0x0 0x1 REDA3R20 [SilverAxe] NoAI
+UNIT
+C25AreaSpawn2Wave3:
+UNIT Dalst AxePal 0x0 Level(8,Enemy,1) [4,23] 0x0 0x0 0x1 REDA3R21 [GildedAxe,Swordslayer] NoAI
+UNIT Dalst BowPal 0x0 Level(8,Enemy,1) [4,23] 0x0 0x0 0x1 REDA4R21 [BarrierBow,Wardbow] NoAI
+UNIT Dalst Bishop 0x0 Level(8,Enemy,1) [5,23] 0x0 0x0 0x1 REDA4R22 [Banish,Radiance] NoAI
+UNIT Dalst Sniper 0x0 Level(8,Enemy,1) [5,23] 0x0 0x0 0x1 REDA5R22 [BraveBow] NoAI
+UNIT
+
+C25AreaSpawn3Wave1:
+UNIT Elite WyvLord 0x0 Level(10,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [Spear,BraveAxe] NoAI
+UNIT Dalst Bishop 0x0 Level(8,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [Purge,Sleep] NoAI
+UNIT Dalst Bishop 0x0 Level(8,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [Purge,Silence] NoAI
+UNIT
+C25AreaSpawn3Wave2:
+UNIT Dalst Hero 0x0 Level(8,Enemy,1) [0,7] 0x0 0x0 0x1 REDA1R7 [BraveSword,GildedAxe] NoAI
+UNIT Dalst Halberdier 0x0 Level(8,Enemy,1) [0,8] 0x0 0x0 0x1 REDA2R8 [BraveLance] NoAI
+UNIT Dalst Warrior 0x0 Level(8,Enemy,1) [0,9] 0x0 0x0 0x1 REDA1R9 [BraveAxe,SilverBow] NoAI
+UNIT
+C25AreaSpawn3Wave3:
+UNIT Dalst Sorc 0x0 Level(8,Enemy,1) [4,0] 0x0 0x0 0x1 REDA4R1 [Fenrir] NoAI
+UNIT Dalst LncGen 0x0 Level(8,Enemy,1) [4,0] 0x0 0x0 0x1 REDA4R2 [Spear] NoAI
+UNIT Elite Valk 0x0 Level(10,Enemy,1) [5,0] 0x0 0x0 0x1 REDA5R2 [LightBrand] NoAI
+UNIT Dalst SwMast 0x0 Level(8,Enemy,1) [5,0] 0x0 0x0 0x1 REDA5R3 [GildedSword] NoAI
+UNIT Dalst Sage 0x0 Level(8,Enemy,1) [6,0] 0x0 0x0 0x1 REDA6R1 [Fimbulvetr,Sagittae] NoAI
+UNIT Dalst LncGen 0x0 Level(8,Enemy,1) [6,0] 0x0 0x0 0x1 REDA6R2 [Spear] NoAI
+UNIT
+
+C25BackSpawn:
+UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [31,10] 0x0 0x0 0x1 REDA30R9 [MasterAxe] NoAI
+UNIT Dalst Halberdier 0x0 Level(15,Enemy,1) [31,10] 0x0 0x0 0x1 REDA29R10 [MasterLance] NoAI
+UNIT Dalst SwdGen 0x0 Level(15,Enemy,1) [31,11] 0x0 0x0 0x1 REDA30R11 [Lancesnapper,MasterSword] NoAI
+UNIT Dalst HeroF 0x0 Level(15,Enemy,1) [31,11] 0x0 0x0 0x1 REDA28R11 [GildedAxe,BraveSword] NoAI
+UNIT Dalst Sorc 0x0 Level(15,Enemy,1) [31,12] 0x0 0x0 0x1 REDA29R12 [Hell,Nocturne] NoAI
+UNIT Dalst Bishop 0x0 Level(15,Enemy,1) [31,12] 0x0 0x0 0x1 REDA30R12 [Radiance,Resire] NoAI
+UNIT Dalst Sorc 0x0 Level(15,Enemy,1) [31,13] 0x0 0x0 0x1 REDA29R13 [Nocturne,Knoggelvi] NoAI
+UNIT Dalst Bishop 0x0 Level(15,Enemy,1) [31,13] 0x0 0x0 0x1 REDA30R13 [Radiance,Smite] NoAI
+UNIT Dalst HeroF 0x0 Level(15,Enemy,1) [31,14] 0x0 0x0 0x1 REDA28R14 [GildedSword,BraveAxe] NoAI
+UNIT Dalst SwdGen 0x0 Level(15,Enemy,1) [31,14] 0x0 0x0 0x1 REDA30R14 [Rapier,MasterSword] NoAI
+UNIT Dalst Halberdier 0x0 Level(15,Enemy,1) [31,15] 0x0 0x0 0x1 REDA29R15 [MasterLance] NoAI
+UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [31,15] 0x0 0x0 0x1 REDA30R16 [MasterAxe] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -186,6 +263,9 @@ Text(FillerDialogue)//charge or someting
 ResetViridianConvoy
 SupportFlagOn(Rachael,Cassius,BaseFlag3,BPSupport)
 SetUnitStatusAll(Elite*0x100+Elite, Strength, 24, Any, Any, Any, Range(6,8,6,8), Any)
+ENUT 0xb
+ENUT 0xd
+ENUT 0xf
 GotoPrepScreen
 ENDA
 
@@ -230,6 +310,10 @@ HouseEvent(FillerDialogue,HouseCG)
 C25House6:
 HouseEvent(FillerDialogue,HouseCG)
 
+C25MoveNow:
+Reinforcements(C25BackSpawn)
+EndEvent
+
 
 EndingScene:
 ResetBaseFlags
@@ -244,6 +328,91 @@ MUSC S_Nightfall
 CleanTextNoMap(PathCG,FillerDialogue)//return home, noting their apparent civility despite atrocities
 MoveToChapter(Interlude10)
 ENDA
+
+C25AreaTrap:
+COUNTER_INC 0x1
+SVAL 0x3 0x1
+COUNTER_CHECK 0x1
+BNE 0x10 0xc 0x3
+	Reinforcements(C25AreaSpawn1Wave1)
+	ENUF 0xb
+	GOTO 0x20
+LABEL 0x10
+SVAL 0x3 0x2
+BNE 0x11 0xc 0x3
+	Reinforcements(C25AreaSpawn1Wave2)
+	ENUF 0xb
+	GOTO 0x20
+LABEL 0x11
+	Reinforcements(C25AreaSpawn1Wave3)
+LABEL 0x20
+EndEvent
+
+C25AreaTrap2:
+COUNTER_INC 0x2
+SVAL 0x3 0x1
+COUNTER_CHECK 0x2
+BNE 0x10 0xc 0x3
+	Reinforcements(C25AreaSpawn2Wave1)
+	ENUF 0xd
+	GOTO 0x20
+LABEL 0x10
+SVAL 0x3 0x2
+BNE 0x11 0xc 0x3
+	Reinforcements(C25AreaSpawn2Wave2)
+	ENUF 0xd
+	GOTO 0x20
+LABEL 0x11
+	Reinforcements(C25AreaSpawn2Wave3)
+LABEL 0x20
+EndEvent
+
+C25AreaTrap3:
+COUNTER_INC 0x3
+SVAL 0x3 0x1
+COUNTER_CHECK 0x3
+BNE 0x10 0xc 0x3
+	Reinforcements(C25AreaSpawn3Wave1)
+	ENUF 0xf
+	GOTO 0x20
+LABEL 0x10
+SVAL 0x3 0x2
+BNE 0x11 0xc 0x3
+	Reinforcements(C25AreaSpawn3Wave2)
+	ENUF 0xf
+	GOTO 0x20
+LABEL 0x11
+	Reinforcements(C25AreaSpawn3Wave3)
+LABEL 0x20
+EndEvent
+
+C25AreaTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0xa
+GOTO 0x2
+LABEL 0x1
+ENUF 0xb
+LABEL 0x2
+EndEvent
+C25AreaTrigger2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0xc
+GOTO 0x2
+LABEL 0x1
+ENUF 0xd
+LABEL 0x2
+EndEvent
+C25AreaTrigger3:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0xe
+GOTO 0x2
+LABEL 0x1
+ENUF 0xf
+LABEL 0x2
+EndEvent
 
 
 //MESSAGE Events end at offset CURRENTOFFSET

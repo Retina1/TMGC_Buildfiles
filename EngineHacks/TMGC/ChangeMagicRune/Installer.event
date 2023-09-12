@@ -12,47 +12,47 @@ POIN ChangeMagicRune_PaletteTable
 
 ALIGN 4
 ChangeMagicRune_Palette_Red:
-#incbin "RedRunePalette.dmp"
+#incbin "RedRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_YellowRune:
-#incbin "YellowRunePalette.dmp"
+#incbin "YellowRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_GreenRune:
-#incbin "GreenRunePalette.dmp"
+#incbin "GreenRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_LightBlueRune:
-#incbin "LightBlueRunePalette.dmp"
+#incbin "LightBlueRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_LightGreenRune:
-#incbin "LightGreenRunePalette.dmp"
+#incbin "LightGreenRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_OrangeRune:
-#incbin "OrangeRunePalette.dmp"
+#incbin "OrangeRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_PinkRune:
-#incbin "PinkRunePalette.dmp"
+#incbin "PinkRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_PurpleRune:
-#incbin "PurpleRunePalette.dmp"
+#incbin "PurpleRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_DarkGreenRune:
-#incbin "DarkGreenRunePalette.dmp"
+#incbin "DarkGreenRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_LightYellowRune:
-#incbin "LightYellowRunePalette.dmp"
+#incbin "LightYellowRune_pal.dmp"
 
 ALIGN 4
 ChangeMagicRune_WhiteRunePalette:
-#incbin "WhiteRunePalette.dmp"
+#incbin "WhiteRune_pal.dmp"
 
 //パレットを変更する条件テーブル
 ALIGN 4
@@ -61,7 +61,7 @@ ChangeMagicRune_Table:
 BYTE	0x0		0x0		Fire	0x0;SHORT	0x0		1			
 BYTE	0x0		0x0		Thunder	0x0;SHORT	0x0		2			
 BYTE	0x0		0x0		Elfire	0x0;SHORT	0x0		6			
-BYTE	0x0		0x0		Bolting	0x0;SHORT	0x0		2			
+BYTE	0x0		0x0		Bolting	0x0;SHORT	0x0		4			
 BYTE	0x0		0x0		Fimbulvetr	0x0;SHORT	0x0		0			
 BYTE	0x0		0x0		Flare	0x0;SHORT	0x0		6			
 BYTE	0x0		0x0		Calibur	0x0;SHORT	0x0		5		
@@ -69,7 +69,7 @@ BYTE	0x0		0x0		Inversion	0x0;SHORT	0x0		4
 BYTE	0x0		0x0		Galewind	0x0;SHORT	0x0		3
 BYTE	0x0		0x0		Trisagion	0x0;SHORT	0x0		1
 BYTE	0x0		0x0		Cloudburst	0x0;SHORT	0x0		4		
-BYTE	0x0		0x0		Sagittae	0x0;SHORT	0x0		11
+BYTE	0x0		0x0		Sagittae	0x0;SHORT	0x0		4
 BYTE	0x0		0x0		Lightning	0x0;SHORT	0x0		10	
 BYTE	0x0		0x0		Shine	0x0;SHORT	0x0		10	
 BYTE	0x0		0x0		Divine	0x0;SHORT	0x0		10	
@@ -87,9 +87,9 @@ BYTE	0x0		0x0		Nightfall	0x0;SHORT	0x0		8
 BYTE	0x0		0x0		Fenrir	0x0;SHORT	0x0		8	
 BYTE	0x0		0x0		Nocturne	0x0;SHORT	0x0		8	
 BYTE	0x0		0x0		Corruption	0x0;SHORT	0x0		8
-BYTE	0x0		0x0		Knoggelvi	0x0;SHORT	0x0		9
-BYTE	0x0		0x0		Freikugel	0x0;SHORT	0x0		9
-BYTE	0x0		0x0		Jormungandr	0x0;SHORT	0x0		9
+BYTE	0x0		0x0		Knoggelvi	0x0;SHORT	0x0		8
+BYTE	0x0		0x0		Freikugel	0x0;SHORT	0x0		8
+BYTE	0x0		0x0		Jormungandr	0x0;SHORT	0x0		8
 BYTE	0x0		0x0		NoxAurumque	0x0;SHORT	0x0		10
 BYTE	0x0		0x0		Nosferatu	0x0;SHORT	0x0		8
 BYTE	0x0		0x0		Hell	0x0;SHORT	0x0		1

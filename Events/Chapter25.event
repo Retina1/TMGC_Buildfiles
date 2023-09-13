@@ -29,7 +29,9 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+//18, 19, 1a-1f, 20-27 available currently
 CharacterEvent(0x28,C25Passacaglia,Sam,Bobert)
+CharacterEventBothWays(ArinOriginFlag,C25ArinSimoneEvent,Arin,Simone)
 END_MAIN
 
 LocationBasedEvents:
@@ -128,10 +130,10 @@ UNIT Dalst Hero 0x0 Level(8,Enemy,1) [5,6] 0x0 0x0 0x0 0x0 [SilverSword,Halberd]
 UNIT Dalst Sniper 0x0 Level(8,Enemy,1) [5,3] 0x0 0x0 0x0 0x0 [SilverBow,Longbow] ChaseOnceApproachedAI
 UNIT Dalst Warrior 0x0 Level(8,Enemy,1) [4,11] 0x0 0x0 0x0 0x0 [BraveAxe,SilverBow] ChaseOnceApproachedAI
 
-UNIT Dalst Sniper 0x0 Level(8,Enemy,1) [17,7] 0x0 0x0 0x0 0x0 [Longbow,BraveBow] GroupOnePaceAI
+UNIT Dalst Sniper 0x0 Level(8,Enemy,1) [14,4] 0x0 0x0 0x0 0x0 [Longbow,BraveBow] GroupOnePaceAI
 UNIT Dalst Sage 0x0 Level(8,Enemy,1) [18,7] 0x0 0x0 0x0 0x0 [Fimbulvetr] GroupOnePaceAI
 UNIT Dalst Sage 0x0 Level(8,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [Calibur,Inversion] GroupOnePaceAI
-UNIT Dalst SwMast 0x0 Level(8,Enemy,1) [18,8] 0x0 0x0 0x0 0x0 [SilverSword] GroupOnePaceAI
+UNIT Dalst SwMast 0x0 Level(8,Enemy,1) [13,8] 0x0 0x0 0x0 0x0 [SilverSword] GroupOnePaceAI
 
 UNIT Dalst HeroF 0x0 Level(8,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [GildedSword] ChaseOnceApproachedAI
 UNIT Dalst HeroF 0x0 Level(8,Enemy,1) [15,23] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI
@@ -219,7 +221,7 @@ UNIT
 C25AreaSpawn3Wave3:
 UNIT Dalst Sorc 0x0 Level(8,Enemy,1) [4,0] 0x0 0x0 0x1 REDA4R1 [Fenrir] NoAI
 UNIT Dalst LncGen 0x0 Level(8,Enemy,1) [4,0] 0x0 0x0 0x1 REDA4R2 [Spear] NoAI
-UNIT Elite Valk 0x0 Level(10,Enemy,1) [5,0] 0x0 0x0 0x1 REDA5R2 [LightBrand] NoAI
+UNIT MagElite Valk 0x0 Level(10,Enemy,1) [5,0] 0x0 0x0 0x1 REDA5R2 [LightBrand] NoAI
 UNIT Dalst SwMast 0x0 Level(8,Enemy,1) [5,0] 0x0 0x0 0x1 REDA5R3 [GildedSword] NoAI
 UNIT Dalst Sage 0x0 Level(8,Enemy,1) [6,0] 0x0 0x0 0x1 REDA6R1 [Fimbulvetr,Sagittae] NoAI
 UNIT Dalst LncGen 0x0 Level(8,Enemy,1) [6,0] 0x0 0x0 0x1 REDA6R2 [Spear] NoAI
@@ -245,7 +247,7 @@ ALIGN 4
 BeginningScene:
 LoadUnitsByDifficulty(C25Easy,C25Normal,C25Hard)
 ENUT GuideChpt25
-LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
+LocationText(MoonCG,Ch25_Flashback,Flashback13YearLabel,0x0)
 MUSC NarrationTheme5
 Narration(Map2CG,Ch25_Narration)
 MUSC AmbientWindBirds
@@ -289,6 +291,12 @@ GOTO 0x2
 LABEL 0x1
 MUSI; SMOV 0x2 VillageCG; SMOV 0x3 FillerDialogue; CALL $9EE310; MUNO; CALL $591F40; SMOV 0x3 MasterSword; GIVEITEMTO 0xFFFF; //give master sword, no kyrie join
 LABEL 0x2
+EndEvent
+
+C25ArinSimoneEvent:
+MUSC S_Chaos
+Text(C25ArinSimoneTalk)
+SetSupport(Arin,Simone,BPSupport,1)
 EndEvent
 
 C25Passacaglia:
@@ -389,28 +397,28 @@ EndEvent
 C25AreaTrigger:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
-ENUF 0xa
+ENUF 0xb
 GOTO 0x2
 LABEL 0x1
-ENUF 0xb
+ENUF 0xa
 LABEL 0x2
 EndEvent
 C25AreaTrigger2:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
-ENUF 0xc
+ENUF 0xd
 GOTO 0x2
 LABEL 0x1
-ENUF 0xd
+ENUF 0xc
 LABEL 0x2
 EndEvent
 C25AreaTrigger3:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
-ENUF 0xe
+ENUF 0xf
 GOTO 0x2
 LABEL 0x1
-ENUF 0xf
+ENUF 0xe
 LABEL 0x2
 EndEvent
 

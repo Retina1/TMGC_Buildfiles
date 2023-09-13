@@ -249,15 +249,20 @@ CHECK_EVENTID KennethTarquinKillFlag
 BEQ 0x1 0xc 0x0
 CHECK_ALIVE Kenneth
 BEQ 0x1 0xc 0x0
-CleanTextNoMap(HallCG,FillerDialogue)//kenneth says he's gotta go
-REMU Kenneth
+	CleanTextNoMap(HallCG,FillerDialogue)//kenneth says he's gotta go
+	REMU Kenneth
 LABEL 0x1
-//just for testing
-GiveItem(HolyBrand,Arin)
-REMA
-PROMOTE Arin ArinValk HolyBrand
-FADI 16
-CLEAN
+CHECK_EVENTID ArinOriginFlag
+BEQ 0x2 0xc 0x0
+	CleanTextNoMap(HallCG,FillerDialogue)//arin simone scene where she promotes
+	REMA
+	SetBackground(BlankCG)
+	GiveItem(HolyBrand,Arin)
+	REMA
+	PROMOTE Arin ArinValk HolyBrand
+	FADI 16
+	CLEAN
+LABEL 0x2
 MoveToChapter(Chapter26)
 ENDA
 

@@ -162,7 +162,8 @@ ChapterDeathQuote(SecretLaronde,Chapter24,0x27,C24LarondeRetreats)
 ChapterDeathQuote(Mason,Chapter24,DefeatBossFlag,C24MasonDeath)
 ChapterDeathQuote(BossIneubrenos,Chapter24,0x0,C24IneubrenosDefeat)
 // c25
-//special quote for sam killing bobert
+KillerDeathQuote(Sam,Bobert,Chapter25,0x0,C25BobertKillsSam)
+KillerDeathQuote(Bobert,Sam,Chapter25,SamBobertKillFlag,C25BobertDeathAlt)
 ChapterDeathQuote(Bobert,Chapter25,DefeatBossFlag,C25BobertDeath)
 // c26
 ChapterDeathQuote(Olsen,Chapter26,0xa,EnemyOlsenDeath)

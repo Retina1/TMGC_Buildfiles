@@ -31,18 +31,6 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//19 1a 1b 1c 1d 1e 1f plus base flags for supports
-
-//blair yuyu B+
-//horatio simone C+ (summon unshackled?)
-//leila damien b+ (leila bows)
-//apollo avan b
-//zeke cassius B+
-//rachael hyperius b+
-//butch peter b
-//josef hilbert b+ (give bert lances)
-//desmond flynn b+
-//natasia bechamel b+
 CharacterEventBothWays(0x19,C24BlairYuyuSupport,Blair,Yuyu)
 CharacterEventBothWays(0x1a,C24HoratioSimoneSupport,Horatio,Simone)
 CharacterEventBothWays(0x1b,C24LeilaDamienSupport,Leila,Damien)

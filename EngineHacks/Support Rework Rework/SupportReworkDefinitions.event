@@ -35,5 +35,6 @@
 	
 	#define SupportFlagOn(unit1,unit2,flag,supportrank) "GetSupportLevel(unit1,unit2); SVAL 0x2 supportrank; BEQ flag 0x1 0x2; ENUT flag; LABEL flag"
 	#define BranchIfSupport(unit1,unit2,supportrank,condid) "GetSupportLevel(unit1,unit2); SVAL 0x2 supportrank; BEQ condid 0x1 0x2"
+	#define MutualASupport(unit1,unit2,flag) "GetSupportLevel(unit1,unit2); SVAL 0x2 ASupport; BNE flag 0x1 0x2; ENUT flag; LABEL flag"
 	
 #endif

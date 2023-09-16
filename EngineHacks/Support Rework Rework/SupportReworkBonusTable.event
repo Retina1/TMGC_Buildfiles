@@ -23,50 +23,56 @@
 			support(CPSupport,0,1,0,5,0,0)//c6
 			support(BSupport,0,2,0,5,0,0)//c18x
 			support(BPSupport,0,2,0,10,0,5)//c21 in map
-			support(ASupport,0,3,0,20,0,15)
+			support(ASupport,0,3,0,20,0,15)//c25x
 		entry(Blair,Natasia)
 			support(CSupport,1,0,0,0,0,0)//c4
 			support(CPSupport,1,0,5,0,0,0)//c8
 			support(BSupport,2,0,5,0,0,0)//c18x
 			support(BPSupport,2,0,10,0,5,0)//c22
-			support(ASupport,3,0,20,0,15,0)			//lover convo
+			support(ASupport,3,0,20,0,15,0)//c25, lover convo
 		entry(Blair,Emile)
 			support(CSupport,0,0,5,5,0,0)//c8
 			support(CPSupport,0,0,10,5,0,5)//c11
 			support(BSupport,0,0,10,10,0,5)//c18
 			support(BPSupport,0,0,15,10,0,10)//c21
-			support(ASupport,0,2,25,15,0,15)
+			support(ASupport,0,2,25,15,0,15)//c25x
 		entry(Blair,Carbon)
 			support(CSupport,0,0,0,0,0,5)//c14
 			support(CPSupport,0,0,0,0,0,10)//c16
 			support(BSupport,0,0,5,0,0,15)//c18x
 			support(BPSupport,1,1,10,0,0,25)//c22 in map
-			support(ASupport,3,3,25,0,0,30)
+			support(ASupport,3,3,25,0,0,30)//c25x
 		entry(Blair,Zeke)
 			support(CSupport,1,0,5,0,0,0)//c15
 			support(CPSupport,2,0,5,0,0,5)//c17
 			support(BSupport,2,0,10,0,0,5)//c18x
 			support(BPSupport,2,0,20,0,0,10)//c21 in map
-			support(ASupport,3,0,25,0,0,15)
+			support(ASupport,3,0,25,0,0,15)//c25x
 		entry(Blair,Avan)
 			support(CSupport,0,0,10,0,0,0)//c16
 			support(CPSupport,0,0,15,0,5,0)//c18x
 			support(BSupport,1,0,20,0,0,0)//c20 in battle
 			support(BPSupport,1,0,25,0,0,0)//c23
-			support(ASupport,2,0,30,0,10,0)			//lover convo
+			support(ASupport,2,0,30,0,10,0)//c25x,lover convo
 		entry(Blair,Yuyu)
 			support(CSupport,1,0,0,0,0,0)//c17
 			support(CPSupport,2,0,0,0,0,0)//c18x
 			support(BSupport,2,1,10,0,0,0)//c20 in battle
 			support(BPSupport,3,1,15,0,0,0)//c24 in battle
-			support(ASupport,3,2,25,0,0,0)
+			support(ASupport,3,2,25,0,0,0)//c25x, lover convo? check ages
+		entry(Blair,Estelle)
+			support(CSupport,0,1,0,0,0,0)
+			support(CPSupport,0,2,0,0,0,0)
+			support(BSupport,1,2,10,0,0,0)//c25 in battle
+			support(BPSupport,1,3,15,0,0,10)
+			support(ASupport,2,3,25,0,0,20)		//lover convo?
 	//arin (blair)
 		entry(Arin,Desmond)
 			support(CSupport,0,0,10,0,0,0)//c4
 			support(CPSupport,0,0,20,0,0,0)//c9
 			support(BSupport,0,0,30,0,0,0)//c17
 			support(BPSupport,0,0,40,0,0,0)//c21
-			support(ASupport,0,0,50,0,0,0)
+			support(ASupport,0,0,50,0,0,0)//c25
 		entry(Arin,Sam)
 			support(CSupport,0,0,5,0,0,5)//c7
 			support(CPSupport,0,0,10,0,0,10)//c13
@@ -89,7 +95,7 @@
 			support(CSupport,1,0,0,0,0,0)//c20 battle
 			support(CPSupport,1,1,0,0,0,0)//c21 post-map
 			support(BSupport,1,1,20,0,0,0)//c24 post-map
-			support(BPSupport,2,2,20,0,0,0)
+			support(BPSupport,2,2,20,0,0,0)//c25 in map
 			support(ASupport,3,2,30,0,0,0)
 	//kenneth (blair)
 		entry(Kenneth,Natasia)
@@ -129,7 +135,7 @@
 			support(CPSupport,0,1,5,5,0,0)//c10
 			support(BSupport,0,1,10,10,0,0)//c17 in map
 			support(BPSupport,0,0,0,0,0,0)//c21 in map
-			support(ASupport,0,2,20,15,0,0)
+			support(ASupport,0,2,20,15,0,0)//c25 battle
 		entry(Stefan,Josef)
 			support(CSupport,0,0,0,0,5,0)//c7
 			support(CPSupport,0,0,0,0,10,0)//c12
@@ -184,7 +190,7 @@
 			support(CSupport,1,0,0,0,0,0)//c12
 			support(CPSupport,1,0,10,0,0,0)//c18
 			support(BSupport,1,0,20,0,0,0)//c22 in battle
-			support(BPSupport,2,0,20,0,0,0)
+			support(BPSupport,2,0,20,0,0,0)//c25 battle
 			support(ASupport,3,0,25,0,0,0)
 		entry(Sam,Charley)
 			support(CSupport,0,0,0,0,5,0)//c15 in battle
@@ -211,7 +217,7 @@
 			support(CPSupport,1,0,5,0,5,0)//c9
 			support(BSupport,1,0,10,0,10,0)//c16
 			support(BPSupport,2,0,10,0,10,0)//c20 in battle
-			support(ASupport,3,0,15,0,15,0)
+			support(ASupport,3,0,15,0,15,0)//c25 in battle
 		entry(Peggy,Apollo)
 			support(CSupport,0,1,0,0,0,0)//c11
 			support(CPSupport,1,1,0,0,0,0)//c17
@@ -224,6 +230,13 @@
 			support(BSupport,0,0,0,0,20,0)//c22 in map
 			support(BPSupport,0,0,0,0,20,10)
 			support(ASupport,0,0,0,0,30,10)
+		//peggy/dirk - protecc cleric (make it very sad if eliza died)
+		entry(Peggy,Dirk)
+			support(CSupport,0,0,0,0,10,0)
+			support(CPSupport,0,0,0,0,20,0)//c25
+			support(BSupport,0,0,0,0,30,0)
+			support(BPSupport,0,0,0,0,40,0)
+			support(ASupport,0,0,0,0,50,0)
 	//butch (peggy)
 		entry(Butch,Cassius)
 			support(CSupport,0,0,0,0,5,0)//c8
@@ -266,14 +279,14 @@
 			support(CSupport,0,0,0,0,0,0)//c16
 			support(CPSupport,1,0,0,0,0,0)//c19 in battle
 			support(BSupport,2,0,0,0,0,0)//c22 in battle
-			support(BPSupport,4,0,0,0,0,0)
+			support(BPSupport,4,0,0,0,0,0)//c25 in battle
 			support(ASupport,8,0,0,0,0,0)
 	//cassius (butch, rachael)
 		entry(Cassius,Mikey)
 			support(CSupport,1,0,0,0,0,0)//c14
 			support(CPSupport,1,1,0,0,0,0)//c18 battle
 			support(BSupport,1,1,10,0,0,0)//c21 battle
-			support(BPSupport,1,1,10,10,0,0)
+			support(BPSupport,1,1,10,10,0,0)//c25 battle
 			support(ASupport,1,1,10,10,10,10)
 		entry(Cassius,Athena)
 			support(CSupport,0,0,10,0,0,0)//c16
@@ -290,7 +303,7 @@
 		entry(Cassius,Hyperius)
 			support(CSupport,1,0,0,0,0,0)//c16 in battle
 			support(CPSupport,1,1,0,0,0,0)//c20 in battle
-			support(BSupport,1,1,0,10,0,0)
+			support(BSupport,1,1,0,10,0,0)//c25
 			support(BPSupport,1,1,0,20,0,0)
 			support(ASupport,2,2,0,20,0,0)
 	//emile (blair, sam)
@@ -309,7 +322,7 @@
 		entry(Emile,Simone)
 			support(CSupport,0,1,0,0,0,0)//c20 battle
 			support(CPSupport,1,1,0,0,0,0)//c22 battle
-			support(BSupport,1,1,0,10,0,0)
+			support(BSupport,1,1,0,10,0,0)//c25
 			support(BPSupport,2,2,0,20,0,0)
 			support(ASupport,2,3,0,30,0,0)
 	//jeff (butch, rachael)
@@ -341,7 +354,7 @@
 		entry(Apollo,Charley)
 			support(CSupport,0,0,10,0,0,0)//c15
 			support(CPSupport,0,0,20,0,0,0)//c20
-			support(BSupport,0,1,20,0,0,0)
+			support(BSupport,0,1,20,0,0,0)//c25
 			support(BPSupport,1,1,20,0,0,0)
 			support(ASupport,1,2,30,0,0,0)			//lover convo?
 		entry(Apollo,Avan)
@@ -361,7 +374,7 @@
 			support(CSupport,1,0,0,0,0,0)//c17 recruitment
 			support(CPSupport,2,0,0,0,0,0)//c20
 			support(BSupport,2,0,10,0,0,0)//c23
-			support(BPSupport,2,0,20,0,0,0)
+			support(BPSupport,2,0,20,0,0,0)//c25 battle
 			support(ASupport,2,0,20,0,20,0)
 	//sveltzalus (arin, jeff)
 		entry(Sveltzalus,Flynn)
@@ -409,7 +422,7 @@
 		entry(Charley,Toddsworth)
 			support(CSupport,0,0,0,0,5,0)//c20 in battle
 			support(CPSupport,0,0,0,0,15,0)//c22 in battle
-			support(BSupport,0,0,0,0,25,0)
+			support(BSupport,0,0,0,0,25,0)//c25 battle
 			support(BPSupport,0,0,0,0,30,0)
 			support(ASupport,0,0,0,0,50,0)
 		entry(Charley,Yuyu)
@@ -433,16 +446,23 @@
 			support(BPSupport,1,1,15,0,0,15)//c22
 			support(ASupport,1,2,20,0,0,15)
 		entry(Hyperius,Leila)
-			support(CSupport,1,0,0,0,0,5)//z1
-			support(CPSupport,1,0,10,0,0,5)//c18
-			support(BSupport,2,0,10,0,0,5)//c21
+			support(CSupport,1,0,0,0,0,5)
+			support(CPSupport,1,0,10,0,0,5)
+			support(BSupport,2,0,10,0,0,5)//c25
 			support(BPSupport,2,0,15,0,0,5)
 			support(ASupport,3,0,20,0,0,5)
+		//argent/hyperius - clashes in the revolution
+		entry(Hyperius,Argent)
+			support(CSupport,0,1,0,0,0,5)//z1
+			support(CPSupport,0,2,0,0,0,5)//c18
+			support(BSupport,1,2,0,0,0,5)//c21
+			support(BPSupport,1,3,10,0,0,15)
+			support(ASupport,1,3,20,0,0,25)
 	//alexis (hyperius)
 		entry(Alexis,Artemis)
 			support(CSupport,1,0,5,0,0,0)//c18
 			support(CPSupport,1,0,10,5,0,0)//c21 battle
-			support(BSupport,2,0,10,5,0,0)
+			support(BSupport,2,0,10,5,0,0)//c25 battle
 			support(BPSupport,2,0,15,10,0,0)
 			support(ASupport,2,1,20,10,0,0)
 	//leila (rachael, hyperius)
@@ -461,7 +481,7 @@
 		entry(Leila,Wilhelm)
 			support(CSupport,0,0,0,0,20,0)
 			support(CPSupport,0,0,0,0,25,0)
-			support(BSupport,0,0,0,0,30,0)
+			support(BSupport,0,0,0,0,30,0)//c25 battle
 			support(BPSupport,0,0,0,0,40,0)
 			support(ASupport,0,0,0,0,50,0)
 		entry(Leila,Tobias)	
@@ -490,6 +510,13 @@
 			support(BSupport,0,2,5,0,10,0)//c23
 			support(BPSupport,0,2,15,0,20,0)
 			support(ASupport,0,3,25,0,30,10)
+		//callum/zach where callum laments the state of yg'stra
+		entry(Zacharias,Callum)	
+			support(CSupport,1,0,0,0,0,0)
+			support(CPSupport,2,0,0,0,5,0)
+			support(BSupport,2,0,10,0,10,0)//c25
+			support(BPSupport,3,0,15,0,20,0)
+			support(ASupport,4,0,25,0,20,0)
 	//avan (blair, apollo)
 		entry(Avan,Toddsworth)
 			support(CSupport,0,0,5,5,0,0)//base
@@ -499,7 +526,7 @@
 			support(ASupport,2,1,15,25,0,0)
 		entry(Avan,Ptolemy)
 			support(CSupport,0,1,5,0,0,0)//c23
-			support(CPSupport,0,1,10,0,0,5)
+			support(CPSupport,0,1,10,0,0,5)//c25
 			support(BSupport,0,2,15,0,0,10)
 			support(BPSupport,0,2,20,0,0,10)
 			support(ASupport,0,3,30,0,0,20)
@@ -527,10 +554,17 @@
 			support(CSupport,0,0,0,0,0,10)
 			support(CPSupport,0,0,0,0,0,20)
 			support(BSupport,0,1,0,0,0,30)//c21 at base
-			support(BPSupport,0,2,10,0,0,30)//c25?
+			support(BPSupport,0,2,10,0,0,30)//c25 battle
 			support(ASupport,0,3,20,0,0,40)
 	//johan (stefan,desmond,ptolemy)
 	//peter (butch)
+		//peter/dean support where peter calls dean a family guy
+		entry(Peter,Dean)	
+			support(CSupport,1,0,0,0,0,0)
+			support(CPSupport,2,0,0,0,0,5)//c25 battle
+			support(BSupport,2,1,0,0,0,10)
+			support(BPSupport,3,1,0,0,0,15)
+			support(ASupport,3,2,0,0,10,20)
 	//joan (mikey)
 		entry(Joan,Sonia)	
 			support(CSupport,0,0,10,0,0,0)
@@ -553,16 +587,11 @@
 			support(ASupport,4,4,0,0,0,0)
 	//tobias (leila,damien,zacharias,joan,sonia)
 	//olsen rose better be a thing where olsen teaches rose murder (assassin class change)
-	//peter/dean support where peter calls dean a family guy
-	//callum/zach where callum laments the state of yg'stra
 	//rose/manfred - rose makes cold drinks (maybe it's sad and only happens if wilhelm's dead)
 	//manfred/horatio - horatio lore
 	//rose/jeff - funnies
 	//argent/hilbert - depressed mentor and excitable young lad
-	//argent/hyperius - clashes in the revolution
-	//peggy/dirk - protecc cleric (make it very sad if eliza died)
 	//svelt/eliza - eyeball
-	//already in table but leila/wilhelm where they hate on the army
 	//wilhelm/alexis - duh
 	//secret supports - agnes/bechamel, gaylord/sam
 	
@@ -644,6 +673,10 @@
 		entry(Rose,Manfred)
 			support(BPSupport,1,1,15,0,0,10)//the return
 			support(ASupport,2,2,20,0,0,20)
+		entry(Rose,Laronde)
+			support(BSupport,0,3,0,0,0,0)
+			support(BPSupport,3,3,0,0,0,10)
+			support(ASupport,6,6,0,0,0,20)
 	//dirk (dean, eliza) 		
 	//callum (rift)
 	//manfred

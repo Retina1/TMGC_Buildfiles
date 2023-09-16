@@ -728,6 +728,7 @@
 			bg(LowlandsCG)
 			music(LoverConvoSong)
 			text(C24_Blair_Arin_Base)
+			importance(4)
 			baseSupport(Blair,Arin,ASupport)
 		Entry
 			bg(LowlandsCG)
@@ -770,10 +771,32 @@
 			eventID(BaseFlag2)
 		Entry
 			name(Rachael_Cassius_Support_Label)
-			importance(0)
+			importance(4)
 			event(C25RachaelCassiusEvent)
 			eventID(BaseFlag3)
 			//baseSupport(Rachael,Cassius,ASupport)
+		Entry
+			bg(PathCG)
+			music(LoverConvoSong)
+			text(FillerDialogue)
+			baseSupport(Blair,Natasia,ASupport)
+			eventID(BaseFlag4)
+		Entry
+			bg(PathCG)
+			text(FillerDialogue)
+			baseSupport(Arin,Desmond,ASupport)
+		Entry
+			bg(PathCG)
+			text(FillerDialogue)
+			baseSupport(Cassius,Hyperius,BPSupport)
+		Entry
+			bg(PathCG)
+			text(FillerDialogue)
+			baseSupport(Apollo,Charley,BSupport)
+		Entry
+			bg(PathCG)
+			text(FillerDialogue)
+			baseSupport(Emile,Simone,BSupport)
 		//c25 has ian and maybe a kyrie hint?
 		//c26
 		//c27

@@ -29,8 +29,26 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//18, 19, 1a-1f, 20-27 available currently
-CharacterEvent(0x28,C25Passacaglia,Sam,Bobert)
+//18, 19, 1a-1f, 20-27 available currently, we're gonna have so many fucking supports
+//make some of the viridian arc supports skip to high ranks?
+CharacterEventBothWays(0x7,C25KennethHilbertSupport,Kenneth,Hilbert)
+CharacterEventBothWays(0x18,C25StefanDesmondSupport,Stefan,Desmond)
+CharacterEventBothWays(0x19,C25SamBechamelSupport,Sam,Bechamel)
+CharacterEventBothWays(0x1a,C25PeggyButchSupport,Peggy,Butch)
+CharacterEventBothWays(0x1b,C25RachaelLeilaSupport,Rachael,Leila)
+CharacterEventBothWays(0x1c,C25CassiusMikeySupport,Cassius,Mikey)
+CharacterEventBothWays(0x1d,C25BechamelHollandaiseSupport,Bechamel,Hollandaise)
+CharacterEventBothWays(0x1e,C25CharleyToddsworthSupport,Charley,Toddsworth)
+CharacterEventBothWays(0x1f,C25AlexisArtemisSupport,Alexis,Artemis)
+CharacterEventBothWays(0x20,C25LeilaWilhelmSupport,Leila,Wilhelm)
+CharacterEventBothWays(0x21,C25AvanPtolemySupport,Avan,Ptolemy)
+CharacterEventBothWays(0x22,C25PtolemyJohanSupport,Ptolemy,Johan)
+CharacterEventBothWays(0x23,C25PeterDeanSupport,Peter,Dean)
+CharacterEventBothWays(0x24,C25ZachariasCallumSupport,Zacharias,Callum)
+CharacterEventBothWays(0x25,C25HyperiusArgentSupport,Hyperius,Argent)
+CharacterEventBothWays(0x26,C25PeggyDirkSupport,Peggy,Dirk)
+CharacterEventBothWays(0x27,C25BlairEstelleSupport,Blair,Estelle)
+CharacterEventBothWays(0x28,C25Passacaglia,Sam,Bobert)
 CharacterEventBothWays(ArinOriginFlag,C25ArinSimoneEvent,Arin,Simone)
 END_MAIN
 
@@ -251,19 +269,31 @@ LocationText(MoonCG,Ch25_Flashback,Flashback13YearLabel,0x0)
 MUSC NarrationTheme5
 Narration(Map2CG,Ch25_Narration)
 MUSC AmbientWindBirds
-CleanText(PathCG,FillerDialogue)//they're here
+CleanText(PathCG,C25Opening)//they're here
 LOAD1 0x0 C25Cutscene
 ENUN
 CAM1 Bobert
 FlashCursor(Bobert,60)
-CleanTextNoMap(PathCG,FillerDialogue)//bobert talking to self, pondering sam, whatever the fuck elcorian and girard are doing in there
+CleanTextNoMap(PathCG,C25Opening2)//bobert talking to self, pondering sam, whatever the fuck elcorian and girard are doing in there
 MUSC S_Chaos
-CleanText(HouseCG,FillerDialogue)//elcorian preparing self, maybe girard, lead into battle
+CleanText(HouseCG,C25Opening3)//elcorian preparing self, maybe girard, lead into battle
 CAM1 Blair
 MUSC 0x0
-Text(FillerDialogue)//charge or someting
+Text(C25Opening4)//charge or someting
 ResetViridianConvoy
+SupportFlagOn(Kenneth,Hilbert,0x7,BSupport)
+SupportFlagOn(Stefan,Desmond,0x18,BPSupport)
+SupportFlagOn(Sam,Bechamel,0x19,BSupport)
+SupportFlagOn(Peggy,Butch,0x1a,BPSupport)
+SupportFlagOn(Rachael,Leila,0x1b,BSupport)
+SupportFlagOn(Cassius,Mikey,0x1c,BSupport)
+SupportFlagOn(Bechamel,Hollandaise,0x1d,BSupport)
+SupportFlagOn(Charley,Toddsworth,0x1e,CPSupport)
+SupportFlagOn(Alexis,Artemis,0x1f,CPSupport)
+SupportFlagOn(Avan,Ptolemy,0x21,CSupport)
+SupportFlagOn(Ptolemy,Johan,0x22,BSupport)
 SupportFlagOn(Rachael,Cassius,BaseFlag3,BPSupport)
+MutualASupport(Blair,Arin,BaseFlag4)//blair/natasia check
 SetUnitStatusAll(Elite*0x100+Elite, Strength, 24, Any, Any, Any, Range(6,8,6,8), Any)
 ENUT 0xb
 ENUT 0xd
@@ -271,8 +301,96 @@ ENUT 0xf
 GotoPrepScreen
 ENDA
 
+C25StefanDesmondSupport:
+Text(FillerDialogue)
+SetSupport(Stefan,Desmond,ASupport,1)
+EndEvent
+
+C25SamBechamelSupport:
+Text(FillerDialogue)
+SetSupport(Sam,Bechamel,BPSupport,1)
+EndEvent
+
+C25PeggyButchSupport:
+Text(FillerDialogue)
+SetSupport(Peggy,Butch,ASupport,1)
+EndEvent
+
+C25RachaelLeilaSupport:
+Text(FillerDialogue)
+SetSupport(Rachael,Leila,BPSupport,1)
+EndEvent
+
+C25CassiusMikeySupport:
+Text(FillerDialogue)
+SetSupport(Cassius,Mikey,BPSupport,1)
+EndEvent
+
+C25BechamelHollandaiseSupport:
+Text(FillerDialogue)
+SetSupport(Bechamel,Hollandaise,BPSupport,1)
+EndEvent
+
+C25CharleyToddsworthSupport:
+Text(FillerDialogue)
+SetSupport(Charley,Toddsworth,BSupport,1)
+EndEvent
+
+C25AlexisArtemisSupport:
+Text(FillerDialogue)
+SetSupport(Alexis,Artemis,BSupport,1)
+EndEvent
+
+C25LeilaWilhelmSupport:
+Text(FillerDialogue)
+SetSupport(Leila,Wilhelm,BSupport,1)
+EndEvent
+
+C25AvanPtolemySupport:
+Text(FillerDialogue)
+SetSupport(Avan,Ptolemy,CPSupport,1)
+EndEvent
+
+C25PtolemyJohanSupport:
+Text(FillerDialogue)
+SetSupport(Ptolemy,Johan,BPSupport,1)
+EndEvent
+
+C25PeterDeanSupport:
+Text(FillerDialogue)
+SetSupport(Peter,Dean,CPSupport,1)
+EndEvent
+
+C25ZachariasCallumSupport:
+Text(FillerDialogue)
+SetSupport(Zacharias,Callum,BSupport,1)
+EndEvent
+
+C25HyperiusArgentSupport:
+Text(FillerDialogue)
+SetSupport(Hyperius,Argent,BSupport,1)
+EndEvent
+
+C25PeggyDirkSupport:
+Text(FillerDialogue)
+SetSupport(Peggy,Dirk,CPSupport,1)
+EndEvent
+
+C25BlairEstelleSupport:
+Text(FillerDialogue)
+SetSupport(Blair,Estelle,BSupport,1)
+EndEvent
+
+C25KennethHilbertSupport:
+Text(FillerDialogue)
+SetUnitStatus(Hilbert,DarkExp,31)
+SystemText(C25HilbertDarkRank)
+GiveItem(Flux,Hilbert)
+SetSupport(Kenneth,Hilbert,BPSupport,1)
+EndEvent
+
 C25VillageNorth:
-VillageEventItem(C20VillageText, VillageCG, EarthPower)
+VillageEventItem(C25NorthVillage, VillageCG, EarthPower)
 
 C25VillageSouth:
 GetUnitStatus((-1), Item1Uses)
@@ -285,11 +403,11 @@ GetUnitStatus((-1), Item3Uses)
 SVAL 0x1 0x6
 BNE 0x1 0xc 0x1
 MUSC RecruitmentTheme2
-Text(VillageCG, FillerDialogue)//kyrie joins
+Text(VillageCG, C25SouthVillageAlt)//kyrie joins
 Reinforcements(C25Kyrie)
 GOTO 0x2
 LABEL 0x1
-MUSI; SMOV 0x2 VillageCG; SMOV 0x3 FillerDialogue; CALL $9EE310; MUNO; CALL $591F40; SMOV 0x3 MasterSword; GIVEITEMTO 0xFFFF; //give master sword, no kyrie join
+MUSI; SMOV 0x2 VillageCG; SMOV 0x3 C25SouthVillage; CALL $9EE310; MUNO; CALL $591F40; SMOV 0x3 MasterSword; GIVEITEMTO 0xFFFF; //give master sword, no kyrie join
 LABEL 0x2
 EndEvent
 
@@ -306,17 +424,17 @@ GiveItem(Passacaglia,Sam)
 EndEvent
 
 C25House1:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C25House1Text,HouseCG)
 C25House2:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C25House2Text,HouseCG)
 C25House3:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C25House3Text,HouseCG)
 C25House4:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C25House4Text,HouseCG)
 C25House5:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C25House5Text,HouseCG)
 C25House6:
-HouseEvent(FillerDialogue,HouseCG)
+HouseEvent(C25House6Text,HouseCG)
 
 C25MoveNow:
 Reinforcements(C25BackSpawn)
@@ -326,14 +444,14 @@ EndEvent
 EndingScene:
 ResetBaseFlags
 MUSC S_FE4Conversation
-CleanTextNoMap(PathCG,FillerDialogue)//they arrive, elcorian steps out to speak alone, blair accepts possible trap (figure out why?)
+CleanTextNoMap(PathCG,C25Ending)//they arrive, elcorian steps out to speak alone, blair accepts possible trap (figure out why?)
 MUSC S_Chaos
 CleanTextNoMap(HouseCG,C25EndingDebate)//the scene (ideology debate, betrayaly stuff, warning of the incoming storm, leaving her with the foundation)
 REMA
 SetBackground(BlankCG)
 GiveItem(Foundation,Blair)
 MUSC S_Nightfall
-CleanTextNoMap(PathCG,FillerDialogue)//return home, noting their apparent civility despite atrocities
+CleanTextNoMap(PathCG,C25EndingResolution)//return home, noting their apparent civility despite atrocities
 MoveToChapter(Interlude10)
 ENDA
 

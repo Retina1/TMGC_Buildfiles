@@ -67,12 +67,13 @@ pActionRoutineTable:
 	NoActionRoutine               // 0x20 ?
 	NoActionRoutine               // 0x21 Ride Ballista
 	NoActionRoutine               // 0x22 Exit Ballista
-	NoActionRoutine               // 0x23 FREE
-	NoActionRoutine               // 0x24 FREE
-	NoActionRoutine               // 0x25 FREE
-	NoActionRoutine               // 0x26 FREE
-	NoActionRoutine               // 0x27 FREE
-	NoActionRoutine               // 0x28 FREE
+	ActionRoutine(_prMoveTargetUnitAction+1)     // 0x23 ACTION_MOVETARGET
+	ActionRoutine(_prMoveActiveUnitAction+1)     // 0x24 ACTION_MOVEACTIVE
+	ActionRoutine(_prSwapAction+1)               // 0x25 ACTION_SWAP
+	ActionRoutine(_prPushAction+1)               // 0x26 ACTION_PUSH
+	ActionRoutine(_prSwapAction+1)               // 0x27 ACTION_SWARP
+	//ActionRoutine(DrawBackAction) // 0x28 
+	NoActionRoutine               // 0x28 FREE until i do draw back ig
 	NoActionRoutine               // 0x29 FREE
 	NoActionRoutine               // 0x2A FREE
 	NoActionRoutine               // 0x2B FREE

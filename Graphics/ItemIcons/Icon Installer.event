@@ -10,6 +10,15 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(HopesingerIcon)
+#incbin "Hopesinger.dmp"
+ALIGN 4
+ItemIconEntry(SoaringShaftIcon)
+#incbin "SoaringShaft.dmp"
+ALIGN 4
+ItemIconEntry(VoidBracersIcon)
+#incbin "VoidBracers.dmp"
+ALIGN 4
 ItemIconEntry(VoidwakeIcon)
 #incbin "Tomes/Dark/Brynhildr.dmp"
 ALIGN 4

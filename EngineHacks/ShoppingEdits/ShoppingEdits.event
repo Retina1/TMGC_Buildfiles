@@ -96,11 +96,11 @@ ALIGN 4
 ChapterBattlePrepShopTable: //indexed by chapter id
 //0x00 - 0x0F
 POIN 0
-WORD PrepShop1 //no prep shop
-WORD PrepShop1
-WORD PrepShop1
+POIN PrepShop1 //no prep shop
+POIN PrepShop1
+POIN PrepShop1
 POIN PrepShop1Killers
-WORD PrepShop1
+POIN PrepShop1
 POIN PrepShop1
 POIN PrepShop1HorseEffectives
 POIN PrepShop1

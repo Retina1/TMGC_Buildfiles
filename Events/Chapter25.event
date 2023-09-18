@@ -190,6 +190,15 @@ UNIT Blair BlairLord 0x0 Level(1,Ally,0) [31,12] 0x0 0x0 0x1 REDA29R12 [Fire, Aw
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [31,14] 0x0 0x0 0x1 REDA29R14 [IronBow] NoAI
 UNIT
 
+C25EndCutscene:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [3,6] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,6] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT
+
+C25EndCutscene2:
+UNIT Elcorian Valk 0x0 Level(1,Enemy,0) [2,5] 0x0 0x0 0x1 REDA2R6 [Fire, Awaken, Vulnerary] NoAI
+UNIT
+
 //wyvlords mark spawns that have to be either fliers or siege
 C25AreaSpawn1Wave1:
 UNIT Dalst WyvLord 0x0 Level(8,Enemy,1) [21,8] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
@@ -246,18 +255,18 @@ UNIT Dalst LncGen 0x0 Level(8,Enemy,1) [6,0] 0x0 0x0 0x1 REDA6R2 [Spear] NoAI
 UNIT
 
 C25BackSpawn:
-UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [31,10] 0x0 0x0 0x1 REDA30R9 [MasterAxe] NoAI
-UNIT Dalst Halberdier 0x0 Level(15,Enemy,1) [31,10] 0x0 0x0 0x1 REDA29R10 [MasterLance] NoAI
-UNIT Dalst SwdGen 0x0 Level(15,Enemy,1) [31,11] 0x0 0x0 0x1 REDA30R11 [Lancesnapper,MasterSword] NoAI
-UNIT Dalst HeroF 0x0 Level(15,Enemy,1) [31,11] 0x0 0x0 0x1 REDA28R11 [GildedAxe,BraveSword] NoAI
-UNIT Dalst Sorc 0x0 Level(15,Enemy,1) [31,12] 0x0 0x0 0x1 REDA29R12 [Hell,Nocturne] NoAI
-UNIT Dalst Bishop 0x0 Level(15,Enemy,1) [31,12] 0x0 0x0 0x1 REDA30R12 [Radiance,Resire] NoAI
-UNIT Dalst Sorc 0x0 Level(15,Enemy,1) [31,13] 0x0 0x0 0x1 REDA29R13 [Nocturne,Knoggelvi] NoAI
-UNIT Dalst Bishop 0x0 Level(15,Enemy,1) [31,13] 0x0 0x0 0x1 REDA30R13 [Radiance,Smite] NoAI
-UNIT Dalst HeroF 0x0 Level(15,Enemy,1) [31,14] 0x0 0x0 0x1 REDA28R14 [GildedSword,BraveAxe] NoAI
-UNIT Dalst SwdGen 0x0 Level(15,Enemy,1) [31,14] 0x0 0x0 0x1 REDA30R14 [Rapier,MasterSword] NoAI
-UNIT Dalst Halberdier 0x0 Level(15,Enemy,1) [31,15] 0x0 0x0 0x1 REDA29R15 [MasterLance] NoAI
-UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [31,15] 0x0 0x0 0x1 REDA30R16 [MasterAxe] NoAI
+UNIT Elite Warrior 0x0 Level(15,Enemy,1) [31,10] 0x0 0x0 0x1 REDA30R9 [MasterAxe] NoAI
+UNIT Elite Halberdier 0x0 Level(15,Enemy,1) [31,10] 0x0 0x0 0x1 REDA29R10 [MasterLance] NoAI
+UNIT Elite SwdGen 0x0 Level(15,Enemy,1) [31,11] 0x0 0x0 0x1 REDA30R11 [Lancesnapper,MasterSword] NoAI
+UNIT Elite HeroF 0x0 Level(15,Enemy,1) [31,11] 0x0 0x0 0x1 REDA28R11 [GildedAxe,BraveSword] NoAI
+UNIT MagElite Sorc 0x0 Level(15,Enemy,1) [31,12] 0x0 0x0 0x1 REDA29R12 [Hell,Nocturne] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,12] 0x0 0x0 0x1 REDA30R12 [Radiance,Resire] NoAI
+UNIT MagElite Sorc 0x0 Level(15,Enemy,1) [31,13] 0x0 0x0 0x1 REDA29R13 [Nocturne,Knoggelvi] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,13] 0x0 0x0 0x1 REDA30R13 [Radiance,Smite] NoAI
+UNIT Elite HeroF 0x0 Level(15,Enemy,1) [31,14] 0x0 0x0 0x1 REDA28R14 [GildedSword,BraveAxe] NoAI
+UNIT Elite SwdGen 0x0 Level(15,Enemy,1) [31,14] 0x0 0x0 0x1 REDA30R14 [Rapier,MasterSword] NoAI
+UNIT Elite Halberdier 0x0 Level(15,Enemy,1) [31,15] 0x0 0x0 0x1 REDA29R15 [MasterLance] NoAI
+UNIT Elite Warrior 0x0 Level(15,Enemy,1) [31,15] 0x0 0x0 0x1 REDA30R16 [MasterAxe] NoAI
 UNIT
 
 ALIGN 4
@@ -302,87 +311,87 @@ GotoPrepScreen
 ENDA
 
 C25StefanDesmondSupport:
-Text(FillerDialogue)
+Text(StefanDesmondASupport)
 SetSupport(Stefan,Desmond,ASupport,1)
 EndEvent
 
 C25SamBechamelSupport:
-Text(FillerDialogue)
+Text(SamBechamelBPSupport)
 SetSupport(Sam,Bechamel,BPSupport,1)
 EndEvent
 
 C25PeggyButchSupport:
-Text(FillerDialogue)
+Text(PeggyButchASupport)
 SetSupport(Peggy,Butch,ASupport,1)
 EndEvent
 
 C25RachaelLeilaSupport:
-Text(FillerDialogue)
+Text(RachaelLeilaBPSupport)
 SetSupport(Rachael,Leila,BPSupport,1)
 EndEvent
 
 C25CassiusMikeySupport:
-Text(FillerDialogue)
+Text(CassiusMikeyBPSupport)
 SetSupport(Cassius,Mikey,BPSupport,1)
 EndEvent
 
 C25BechamelHollandaiseSupport:
-Text(FillerDialogue)
+Text(BechamelHollandaiseBPSupport)
 SetSupport(Bechamel,Hollandaise,BPSupport,1)
 EndEvent
 
 C25CharleyToddsworthSupport:
-Text(FillerDialogue)
+Text(CharleyToddsworthBSupport)
 SetSupport(Charley,Toddsworth,BSupport,1)
 EndEvent
 
 C25AlexisArtemisSupport:
-Text(FillerDialogue)
+Text(AlexisArtemisBSupport)
 SetSupport(Alexis,Artemis,BSupport,1)
 EndEvent
 
 C25LeilaWilhelmSupport:
-Text(FillerDialogue)
+Text(LeilaWilhelmBSupport)
 SetSupport(Leila,Wilhelm,BSupport,1)
 EndEvent
 
 C25AvanPtolemySupport:
-Text(FillerDialogue)
+Text(AvanPtolemyCPSupport)
 SetSupport(Avan,Ptolemy,CPSupport,1)
 EndEvent
 
 C25PtolemyJohanSupport:
-Text(FillerDialogue)
+Text(PtolemyJohanBPSupport)
 SetSupport(Ptolemy,Johan,BPSupport,1)
 EndEvent
 
 C25PeterDeanSupport:
-Text(FillerDialogue)
+Text(PeterDeanCPSupport)
 SetSupport(Peter,Dean,CPSupport,1)
 EndEvent
 
 C25ZachariasCallumSupport:
-Text(FillerDialogue)
+Text(ZachariasCallumBSupport)
 SetSupport(Zacharias,Callum,BSupport,1)
 EndEvent
 
 C25HyperiusArgentSupport:
-Text(FillerDialogue)
+Text(HyperiusArgentBSupport)
 SetSupport(Hyperius,Argent,BSupport,1)
 EndEvent
 
 C25PeggyDirkSupport:
-Text(FillerDialogue)
+Text(PeggyDirkCPSupport)
 SetSupport(Peggy,Dirk,CPSupport,1)
 EndEvent
 
 C25BlairEstelleSupport:
-Text(FillerDialogue)
+Text(BlairEstelleBSupport)
 SetSupport(Blair,Estelle,BSupport,1)
 EndEvent
 
 C25KennethHilbertSupport:
-Text(FillerDialogue)
+Text(KennethHilbertBPSupport)
 SetUnitStatus(Hilbert,DarkExp,31)
 SystemText(C25HilbertDarkRank)
 GiveItem(Flux,Hilbert)
@@ -443,8 +452,18 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
+CLEN 0
+CLEE 0
+CLEA 0
+MUSC 0x0
+SetBackground(PathCG); TEXTSTART; TEXTSHOW C25Ending; TEXTEND
+LOAD1 0x1 C25EndCutscene
+ClearBackgroundSmooth
+Reinforcements(C25EndCutscene2)
+CAM1 Elcorian
+FlashCursor(Elcorian,60)
 MUSC S_FE4Conversation
-CleanTextNoMap(PathCG,C25Ending)//they arrive, elcorian steps out to speak alone, blair accepts possible trap (figure out why?)
+Text(C25Ending2)//they arrive, elcorian steps out to speak alone, blair accepts possible trap (figure out why?)
 MUSC S_Chaos
 CleanTextNoMap(HouseCG,C25EndingDebate)//the scene (ideology debate, betrayaly stuff, warning of the incoming storm, leaving her with the foundation)
 REMA

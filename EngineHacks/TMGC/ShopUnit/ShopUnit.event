@@ -2,7 +2,7 @@
 //#include "MoreShops/MoreShops.event"
 #include "ShopUnit.lyn.event"
 
-SetUnitAction(0x28, ActionRoutine(ActionShopUnit))
+SetUnitAction(0x2f, ActionRoutine(ActionShopUnit))
 
 #define ShopUnitListEntry(charID,shopTypeID,shopListPtr) "BYTE charID shopTypeID 0 0; POIN shopListPtr"
 #define ShopUnitListEnd "WORD 0 0"

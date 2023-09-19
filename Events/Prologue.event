@@ -62,8 +62,8 @@ UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [IronSword] 
 UNIT DalstRebel Fighter 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
 UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [8,2] DropItem 0x0 0x0 0x0 [IronSword, Vulnerary] NeverMoveAI
 UNIT DalstRebel Brigand 0x0 Level(3,Enemy,1) [4,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
-UNIT DalstRebel Hunter 0x0 Level(2,Enemy,1) [14,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
-UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT DalstRebel Hunter 0x0 Level(2,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
 UNIT DalstRebel Deserter 0x0 Level(2,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT DalstRebel Bruiser 0x0 Level(2,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
@@ -76,12 +76,12 @@ UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [IronAxe] Cha
 UNIT DalstRebel Fighter 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
 UNIT DalstRebel Bruiser 0x0 Level(2,Enemy,1) [8,2] DropItem 0x0 0x0 0x0 [IronSword, Vulnerary] NeverMoveAI
 UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [4,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
-UNIT DalstRebel Hunter 0x0 Level(1,Enemy,1) [14,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
-UNIT DalstRebel Hunter 0x0 Level(1,Enemy,1) [12,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
-UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT DalstRebel Hunter 0x0 Level(1,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT DalstRebel Hunter 0x0 Level(1,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
 UNIT DalstRebel Deserter 0x0 Level(1,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
-UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT DalstRebel Brigand 0x0 Level(1,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [IronLance, Javelin] NeverMoveAI
 UNIT
 
@@ -93,12 +93,12 @@ UNIT DalstRebel Fighter 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [IronAxe] Cha
 UNIT DalstRebel Bruiser 0x0 Level(1,Enemy,1) [8,2] 0x0 0x0 0x0 0x0 [IronSword, Vulnerary] NeverMoveAI
 UNIT DalstRebel Bruiser 0x0 Level(2,Enemy,1) [9,3] 0x0 0x0 0x0 0x0 [IronSword] ChaseOnceApproachedAI
 UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [4,6] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
-UNIT DalstRebel Hunter 0x0 Level(2,Enemy,1) [14,2] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
-UNIT DalstRebel Hunter 0x0 Level(1,Enemy,1) [12,2] 0x0 0x0 0x0 0x0 [IronBow] NoAI
-UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT DalstRebel Hunter 0x0 Level(2,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT DalstRebel Hunter 0x0 Level(1,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
+UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
 UNIT DalstRebel Deserter 0x0 Level(2,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT DalstRebel Bruiser 0x0 Level(2,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [IronSword] NoAI
-UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [13,3] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
+UNIT DalstRebel Brigand 0x0 Level(2,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Davelarn Deserter 0x0 Level(5,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [SteelLance, Javelin] NeverMoveAI
 UNIT
 
@@ -169,6 +169,8 @@ Narration(MapCG,Prologue_Narration)
 CleanText(PathCG,Prologue_Opening)
 ENUT AllUnitsMustEscapeFlag
 ENUT LordMustEscapeLastFlag
+SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 5, Any, Any, Brigand, Any, Any)
+SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 6, Any, Any, Bruiser, Any, Any)
 AltOST(S_FootstepsOfFate,S_FootstepsOfFate,S_FootstepsOfFate)
 EndEvent
 

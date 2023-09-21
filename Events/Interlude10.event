@@ -136,7 +136,9 @@ BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
-//range based events to enter the sealed door and get the foundation
+//range based events to enter the sealed door and get the hopesinger
+AreaEvent(0xa,I10DoorTrigger,9,4,11,4)
+AreaEvent(0xb,I10ChestTrigger,10,0,10,0)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -228,6 +230,21 @@ ENDA
 
 //special thing where blair's closest support partner gets a skill that gives obscene bonuses if they're adjacent
 //power of love/power of oomf
+
+I10DoorTrigger:
+Text(FillerDialogue)
+SOUN 0xB1
+TILECHANGE 0x0
+STAL 15
+EndEvent
+
+I10ChestTrigger:
+Text(FillerDialogue)
+SOUN 0xB1
+TILECHANGE 0x1
+STAL 15
+GiveItem(Hopesinger,Blair)
+EndEvent
 
 I10ReadyToEnd:
 EVBIT_MODIFY 4

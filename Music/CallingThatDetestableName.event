@@ -197,15 +197,15 @@ Label_0153FF92:
  BYTE   Gn4
  BYTE   W01
 //  #01 //062   ----------------------------------------
- BYTE   TIE  Gn3  v048
- BYTE   TIE  An3  v060
  BYTE   TIE  Cn4
  BYTE   TIE  En4
+ BYTE   TIE  Gn3  v048
+ BYTE   TIE  An3  v060
  BYTE   W96
 //  #01 //063   ----------------------------------------
  BYTE   W92
+ BYTE 	EOT
  BYTE   W03
- BYTE   EOT
  BYTE   Gn3  v069
  BYTE   Cn4  v076
  BYTE   W01
@@ -236,7 +236,7 @@ CallingThatDetestableName_002:
 //  #02 //000   ----------------------------------------
  BYTE   KEYSH   CallingThatDetestableName_key+0
 Label_015400C6:
- BYTE   VOICE   1
+ BYTE   VOICE   62
  BYTE   VOL   43*CallingThatDetestableName_mvl/mxv
  BYTE   PAN   c_v+62
  BYTE   N11  En2  v072

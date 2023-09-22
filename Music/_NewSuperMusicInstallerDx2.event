@@ -33,6 +33,10 @@ dalst
 //fix 55 (flute 73), 72 (oboe 68)
 // 1 - TEST SONG TO MAKE SURE THE INSTALLER WORKS-- DO NOT USE THIS IN YOUR GAME; IT DOESN'T SOUND GOOD
 {
+#include "TheirOwnBrandOfJustice.event"
+SongTable(S_TheirOwnBrandOfJustice,TheirOwnBrandOfJustice,0)
+}
+{
 #include "CallingThatDetestableName.event"
 SongTable(S_CallingThatDetestableName,CallingThatDetestableName,0)
 }

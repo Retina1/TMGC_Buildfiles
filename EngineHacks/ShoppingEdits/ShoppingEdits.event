@@ -9,8 +9,11 @@ Forced Modifications
 - Installs a modified version of Scraiza's ShopListExpansion asm. You can still have up to 255 items, but due to the increased complexity that ShoppingEdits brings, you may notice more lag in larger shop lists.
 
 Optional Modifications
-- Bargain functionality: By allowing an event ID to be set if the player purchases a specific item, you can have one-stock items. If you want to reuse an event ID, you will have to do that yourself in that chapter's events. To make this limited stock effect possible, items with a price of 0 cannot be bought from the shop. This assembly was originally intended to be used with the prep shop only, but it can also be used for shops the player will access during the chapter itself. Keep in mind that events are usually included in a scope ("{#include ...}"), so you will need to have the shop included outside of the scope if you want it to be on ShopBargainPairingList.
-- Coupon functionality: Lower next purchase's price by a set percentage, then disappear from the unit's inventory. If a unit has a full inventory, but a coupon would be removed due to the purchase, the shopkeeper will ask the player if they want the purchased item with the unit before asking to send to convoy. To see the coupon functionality without having the actual item in your hack, IronSword will function as a Coupon if Coupon is not defined.
+- Bargain functionality: By allowing an event ID to be set if the player purchases a specific item, you can have one-stock items. If you want to reuse an event ID, you will have to do that yourself in that chapter's events.
+To make this limited stock effect possible, items with a price of 0 cannot be bought from the shop. This assembly was originally intended to be used with the prep shop only, but it can also be used for shops the player will access during the chapter itself.
+Keep in mind that events are usually included in a scope ("{#include ...}"), so you will need to have the shop included outside of the scope if you want it to be on ShopBargainPairingList.
+- Coupon functionality: Lower next purchase's price by a set percentage, then disappear from the unit's inventory. If a unit has a full inventory, but a coupon would be removed due to the purchase,
+the shopkeeper will ask the player if they want the purchased item with the unit before asking to send to convoy. To see the coupon functionality without having the actual item in your hack, IronSword will function as a Coupon if Coupon is not defined.
 */
 
 #define USE_SHOPPING_EDITS_TEXT
@@ -95,7 +98,7 @@ ALIGN 4
 
 ChapterBattlePrepShopTable: //indexed by chapter id
 //0x00 - 0x0F
-POIN 0
+WORD 0
 POIN PrepShop1 //no prep shop
 POIN PrepShop1
 POIN PrepShop1

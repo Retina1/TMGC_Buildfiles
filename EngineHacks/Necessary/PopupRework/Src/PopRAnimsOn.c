@@ -2,10 +2,10 @@
 
 // TODO: add to libgbafe {
 
-extern const u8 gGfx_BattlePopup[];
-extern const u16 gPal_BattlePopup[];
-extern const u8 gTsa_BattlePopup[];
-extern const u8 gGfx_BattlePopupTextBg[];
+extern const u8 gGfx_BattlePopupLabel[];
+extern const u16 gPal_BattlePopupLabel[];
+extern const u8 gTsa_BattlePopupLabel[];
+extern const u8 gGfx_BattlePopupTextBgLabel[];
 extern const u32 gAnimScr_PopupIcon[];
 
 extern u8 gSpellFxTsaBuffer[];
@@ -94,17 +94,17 @@ static void PopR_AnimsOnDraw(struct PopupReworkAnimsOnProc* proc) {
 	struct TextHandle text;
 	Text_InitClear(&text, xTileSize);
 
-	CopyToPaletteBuffer(gPal_BattlePopup, BOX_PAL * 0x20, 0x20);
+	CopyToPaletteBuffer(gPal_BattlePopupLabel, BOX_PAL * 0x20, 0x20);
 	gPaletteBuffer[0x10 * TEXT_PAL + 14] = gPaletteBuffer[0x10 * BOX_PAL + 14];
 
-	Decompress(gGfx_BattlePopup, BOX_GFX_VRAM);
-	Decompress(gGfx_BattlePopupTextBg, TEXT_GFX_VRAM);
+	Decompress(gGfx_BattlePopupLabel, BOX_GFX_VRAM);
+	Decompress(gGfx_BattlePopupTextBgLabel, TEXT_GFX_VRAM);
 
 	Text_SetXCursor(&text, xStartOffset);
 
 	PopR_DisplayComponents(&proc->popr, &text);
 
-	Decompress(gTsa_BattlePopup, gSpellFxTsaBuffer);
+	Decompress(gTsa_BattlePopupLabel, gSpellFxTsaBuffer);
 	MakeBattlePopupTileMapFromTSA(gBg1MapBuffer, xTileSize);
 
 	Text_Display(&text, BG_LOCATED_TILE(gBg1MapBuffer, 2, 1));

@@ -1,0 +1,25 @@
+
+PUSH
+ORG $75D14
+POIN gGfx_BattlePopupLabel
+ORG $75D1C
+POIN gTsa_BattlePopupLabel
+ORG $75D2C
+POIN gPal_BattlePopupLabel
+ORG $75DDC
+POIN gGfx_BattlePopupTextBgLabel
+
+POP
+
+ALIGN 4
+gGfx_BattlePopupLabel:
+#incbin "Main.png.dmp"
+ALIGN 4
+gTsa_BattlePopupLabel:
+#incbin "Main.png.tsa.dmp"
+ALIGN 4
+gPal_BattlePopupLabel:
+#incbin "Main.png.pal.dmp"
+ALIGN 4
+gGfx_BattlePopupTextBgLabel:
+#incbin "Secondary.png.dmp"

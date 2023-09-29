@@ -95,7 +95,9 @@ bl End
 Starfall:
 cmp r2,#0x86
 bne Calibur
-
+mov		r1,#0x5e
+ldrh		r0,[r5,r1] @get foe AS
+strh		r0,[r4,r1] @store foe AS in player AS
 bl End
 
 Calibur:
@@ -182,6 +184,8 @@ MiscTomesWithoutPrebattleEffects:
 cmp r2,#0xc7 @inversion
 beq End
 cmp r2,#0xeb @forcespike
+beq End
+cmp r2,#0xc2 @galewind
 beq End
 
 

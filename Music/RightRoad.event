@@ -6410,14 +6410,15 @@ Label_4_0134AF80:
  BYTE   GoTo
   POIN2 Label_4_0134AF32
 // 044   ----------------------------------------
- BYTE   N05  Cn5  v040
+  BYTE W02
+/* BYTE   N05  Cn5  v040
  BYTE   W12
  BYTE   Dn5  v052
  BYTE   W12
  BYTE   Gn4
  BYTE   W12
  BYTE   Cn5  v028
- BYTE   W05
+ BYTE   W05*/
  BYTE   FINE
 
 //**************** Track 6 (Midi-Chn.5) ****************//
@@ -6627,7 +6628,8 @@ Label_5_01ACD587:
  BYTE   GoTo
   POIN2 Label_5_01ACD536
 // 044   ----------------------------------------
- BYTE   W06
+ BYTE W02
+ /*BYTE   W06
  BYTE   N05  Cn5  v040
  BYTE   W12
  BYTE   Dn5  v052
@@ -6635,7 +6637,7 @@ Label_5_01ACD587:
  BYTE   Gn4
  BYTE   W12
  BYTE   Cn5  v028
- BYTE   W05
+ BYTE   W05*/
  BYTE   FINE
 
 //**************** Track 7 (Midi-Chn.6) ****************//

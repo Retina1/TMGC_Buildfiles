@@ -276,7 +276,8 @@ EmptySkillList:
 BYTE 00 00
 ALIGN 4
 
-LordSkillList:
-BYTE 1 SupplyID
+ArinValkSkillList:
+BYTE 1 CantoID
+BYTE 21 CantoID
 BYTE 00 00
 ALIGN 4

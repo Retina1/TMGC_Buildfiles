@@ -23,9 +23,9 @@ TheirOwnBrandOfJustice_001:
 Label_01541DBE:
  BYTE   TEMPO   180*TheirOwnBrandOfJustice_tbs/2
  BYTE   VOICE   124
- BYTE   VOL   45*TheirOwnBrandOfJustice_mvl/mxv
+ BYTE   VOL   28*TheirOwnBrandOfJustice_mvl/mxv
  BYTE   PAN   c_v+0
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N92  Dn2  v127
  BYTE   W24
  BYTE   N05  Ds2  v076
@@ -38,7 +38,7 @@ Label_01541DBE:
  BYTE   W72
 //  #01 //002   ----------------------------------------
 Label_01541DD6:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N92  Dn2  v127
  BYTE   W24
  BYTE   N05  Ds2  v076
@@ -56,7 +56,7 @@ Label_01541DD6:
  BYTE   N05  Ds2  v076
  BYTE   W72
 //  #01 //006   ----------------------------------------
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N92  Dn2  v127
  BYTE   W96
 //  #01 //007   ----------------------------------------
@@ -67,135 +67,135 @@ Label_01541DD6:
  BYTE   W96
 //  #01 //010   ----------------------------------------
 Label_01541DF9:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N92  Dn2  v127
  BYTE   W15
- BYTE   N02  Cn1  v076
+ BYTE   N02  Dn1  v076
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
- BYTE   Cs1  v124
+ BYTE   Dn1  v124
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W09
  BYTE   N02
  BYTE   W07
  BYTE   N02
  BYTE   W01
- BYTE   N07  Cs1  v120
+ BYTE   N07  Dn1  v120
  BYTE   W15
- BYTE   N02  Cn1  v096
+ BYTE   N02  Dn1  v096
  BYTE   W09
- BYTE   Cn1  v092
- BYTE   N02  Cs1  v124
+ BYTE   Dn1  v092
+ BYTE   N02  Dn1  v124
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W01
  BYTE   PEND 
 //  #01 //011   ----------------------------------------
 Label_01541E2F:
- BYTE   N07  Cs1  v120
+ BYTE   N07  Dn1  v120
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W01
- BYTE   N07  Cs1  v124
+ BYTE   N07  Dn1  v124
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v120
+ BYTE   N07  Dn1  v120
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W01
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W07
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v084
- BYTE   N07  Cs1  v116
+ BYTE   Dn1  v084
+ BYTE   N07  Dn1  v116
  BYTE   W08
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   PEND 
 //  #01 //012   ----------------------------------------
 Label_01541E6B:
- BYTE   N07  Cs1  v120
+ BYTE   N07  Dn1  v120
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v120
+ BYTE   N07  Dn1  v120
  BYTE   W07
- BYTE   N02  Cn1  v080
+ BYTE   N02  Dn1  v080
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v120
+ BYTE   N07  Dn1  v120
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v124
+ BYTE   N07  Dn1  v124
  BYTE   W07
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W08
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W01
  BYTE   PEND 
 //  #01 //013   ----------------------------------------
 Label_01541EA4:
- BYTE   N07  Cs1  v120
+ BYTE   N07  Dn1  v120
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v124
+ BYTE   N07  Dn1  v124
  BYTE   W08
- BYTE   N02  Cn1  v084
+ BYTE   N02  Dn1  v084
  BYTE   W07
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W01
- BYTE   N07  Cs1  v120
+ BYTE   N07  Dn1  v120
  BYTE   W15
- BYTE   N02  Cn1  v108
+ BYTE   N02  Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1
+ BYTE   N07  Dn1
  BYTE   W07
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W07
- BYTE   Cn1  v104
- BYTE   N02  Cs1  v116
+ BYTE   Dn1  v104
+ BYTE   N02  Dn1  v116
  BYTE   W09
- BYTE   Cn1  v112
+ BYTE   Dn1  v112
  BYTE   W08
  BYTE   PEND 
 //  #01 //014   ----------------------------------------
@@ -212,239 +212,239 @@ Label_01541EA4:
   POIN2 Label_01541EA4
 //  #01 //018   ----------------------------------------
 Label_01541EF0:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N92  Dn2  v127
  BYTE   W15
- BYTE   N02  Cn1  v076
+ BYTE   N02  Dn1  v076
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
- BYTE   Cs1  v116
+ BYTE   Dn1  v116
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W09
  BYTE   N02
  BYTE   W07
  BYTE   N02
  BYTE   W01
- BYTE   N07  Cs1  v112
+ BYTE   N07  Dn1  v112
  BYTE   W07
- BYTE   N02  Cn1  v076
+ BYTE   N02  Dn1  v076
  BYTE   W08
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W09
- BYTE   Cn1  v092
- BYTE   N02  Cs1  v116
+ BYTE   Dn1  v092
+ BYTE   N02  Dn1  v116
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W01
  BYTE   PEND 
 //  #01 //019   ----------------------------------------
 Label_01541F29:
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W01
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v096
+ BYTE   N07  Dn1  v096
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W01
- BYTE   N07  Cs1  v096
+ BYTE   N07  Dn1  v096
  BYTE   W07
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W07
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   PEND 
 //  #01 //020   ----------------------------------------
 Label_01541F66:
- BYTE   N07  Cs1  v112
+ BYTE   N07  Dn1  v112
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v112
+ BYTE   N07  Dn1  v112
  BYTE   W07
- BYTE   N02  Cn1  v080
+ BYTE   N02  Dn1  v080
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v112
+ BYTE   N07  Dn1  v112
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v116
+ BYTE   N07  Dn1  v116
  BYTE   W07
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W08
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W01
  BYTE   PEND 
 //  #01 //021   ----------------------------------------
 Label_01541F9F:
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W08
- BYTE   N02  Cn1  v084
+ BYTE   N02  Dn1  v084
  BYTE   W07
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W01
- BYTE   N07  Cs1  v096
+ BYTE   N07  Dn1  v096
  BYTE   W15
- BYTE   N02  Cn1  v108
+ BYTE   N02  Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v096
+ BYTE   N07  Dn1  v096
  BYTE   W07
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W07
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W01
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W08
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   W07
  BYTE   N02
  BYTE   W01
  BYTE   PEND 
 //  #01 //022   ----------------------------------------
 Label_01541FDC:
- BYTE   N07  Cs1  v112
+ BYTE   N07  Dn1  v112
  BYTE   W15
- BYTE   N02  Cn1  v084
+ BYTE   N02  Dn1  v084
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v112
+ BYTE   N07  Dn1  v112
  BYTE   W07
- BYTE   N02  Cn1  v080
+ BYTE   N02  Dn1  v080
  BYTE   W08
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W08
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W01
- BYTE   N07  Cs1  v112
+ BYTE   N07  Dn1  v112
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v116
+ BYTE   N07  Dn1  v116
  BYTE   W07
- BYTE   N02  Cn1  v080
+ BYTE   N02  Dn1  v080
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W08
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W01
  BYTE   PEND 
 //  #01 //023   ----------------------------------------
 Label_01542015:
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W15
- BYTE   N02  Cn1  v084
+ BYTE   N02  Dn1  v084
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W07
- BYTE   N02  Cn1  v080
+ BYTE   N02  Dn1  v080
  BYTE   W08
  BYTE   N02
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v096
+ BYTE   N07  Dn1  v096
  BYTE   W15
- BYTE   N02  Cn1  v080
+ BYTE   N02  Dn1  v080
  BYTE   W01
- BYTE   N07  Cs1  v096
+ BYTE   N07  Dn1  v096
  BYTE   W07
- BYTE   N02  Cn1  v104
+ BYTE   N02  Dn1  v104
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W01
- BYTE   N07  Cs1  v108
+ BYTE   N07  Dn1  v108
  BYTE   W07
- BYTE   N02  Cn1  v084
+ BYTE   N02  Dn1  v084
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   PEND 
 //  #01 //024   ----------------------------------------
 Label_01542052:
- BYTE   N07  Cs1  v112
+ BYTE   N07  Dn1  v112
  BYTE   W15
- BYTE   N02  Cn1  v084
+ BYTE   N02  Dn1  v084
  BYTE   W08
- BYTE   Cn1  v116
+ BYTE   Dn1  v116
  BYTE   W01
- BYTE   Cs1  v112
+ BYTE   Dn1  v112
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W08
  BYTE   N02
  BYTE   W08
- BYTE   Cn1  v108
- BYTE   N07  Cs1  v112
+ BYTE   Dn1  v108
+ BYTE   N07  Dn1  v112
  BYTE   W15
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
- BYTE   Cs1  v116
+ BYTE   Dn1  v116
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W09
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
  BYTE   PEND 
 //  #01 //025   ----------------------------------------
@@ -452,27 +452,27 @@ Label_01542082:
  BYTE   N02  Dn1  v127
  BYTE   N92  Dn2  v100
  BYTE   W08
- BYTE   N02  Cn1  v108
+ BYTE   N02  Dn1  v108
  BYTE   W07
  BYTE   Bn3  v112
  BYTE   W09
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
  BYTE   An3  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W09
  BYTE   An3  v127
  BYTE   W09
  BYTE   An3  v112
  BYTE   W07
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W08
- BYTE   Cn1  v112
+ BYTE   Dn1  v112
  BYTE   W08
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W09
  BYTE   PEND 
 //  #01 //026   ----------------------------------------
@@ -525,17 +525,17 @@ Label_01542082:
   POIN2 Label_01542082
 //  #01 //042   ----------------------------------------
 Label_015420FC:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N92  Dn2  v127
  BYTE   W15
- BYTE   N02  Cn1  v076
+ BYTE   N02  Dn1  v076
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   N02  Ds2  v088
  BYTE   W07
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W09
  BYTE   N02
  BYTE   W07
@@ -543,114 +543,114 @@ Label_015420FC:
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W15
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W09
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   N02  Ds2  v084
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W01
  BYTE   PEND 
 //  #01 //043   ----------------------------------------
 Label_01542130:
  BYTE   N02  Ds2  v092
  BYTE   W15
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   N02  Ds2  v088
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W15
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W01
  BYTE   Ds2  v084
  BYTE   W07
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   PEND 
 //  #01 //044   ----------------------------------------
 Label_01542160:
  BYTE   N02  Ds2  v092
  BYTE   W15
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   N02  Dn1  v127
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W15
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W01
  BYTE   Ds2  v084
  BYTE   W07
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W08
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W01
  BYTE   PEND 
 //  #01 //045   ----------------------------------------
 Label_01542191:
  BYTE   N02  Ds2  v092
  BYTE   W15
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W07
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W15
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W08
  BYTE   Dn1  v127
  BYTE   W01
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   N02  Ds2  v084
  BYTE   W07
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W09
- BYTE   Cn1  v112
+ BYTE   Dn1  v112
  BYTE   W08
  BYTE   PEND 
 //  #01 //046   ----------------------------------------
@@ -666,66 +666,66 @@ Label_01542191:
  BYTE   W96
 //  #01 //050   ----------------------------------------
 Label_015421D0:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N72  Dn2  v127
  BYTE   W15
- BYTE   N02  Cn1  v076
+ BYTE   N02  Dn1  v076
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
- BYTE   Cs1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W08
  BYTE   N02
  BYTE   W08
  BYTE   N02
  BYTE   W07
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
- BYTE   N07  Cs1  v088
+ BYTE   N07  Dn1  v088
  BYTE   N02  Dn1  v127
  BYTE   W24
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   N23  Dn2
  BYTE   W23
- BYTE   N02  Cn1  v096
+ BYTE   N02  Dn1  v096
  BYTE   W01
  BYTE   PEND 
 //  #01 //051   ----------------------------------------
 Label_015421FF:
  BYTE   N68  Dn2  v127
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W01
- BYTE   N07  Cs1  v080
+ BYTE   N07  Dn1  v080
  BYTE   W07
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W01
- BYTE   N07  Cs1  v072
+ BYTE   N07  Dn1  v072
  BYTE   W07
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v076
+ BYTE   N07  Dn1  v076
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W01
- BYTE   N07  Cs1  v076
+ BYTE   N07  Dn1  v076
  BYTE   W07
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
- BYTE   N07  Cs1
+ BYTE   N07  Dn1
  BYTE   W07
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   W08
@@ -738,133 +738,133 @@ Label_015421FF:
   POIN2 Label_015421FF
 //  #01 //054   ----------------------------------------
 Label_0154224B:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N92  Dn2  v124
  BYTE   W15
- BYTE   N02  Cn1  v076
+ BYTE   N02  Dn1  v076
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
- BYTE   Cs1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W09
  BYTE   N02
  BYTE   W07
  BYTE   N02
  BYTE   W01
- BYTE   N07  Cs1  v088
+ BYTE   N07  Dn1  v088
  BYTE   W15
- BYTE   N02  Cn1  v096
+ BYTE   N02  Dn1  v096
  BYTE   W09
- BYTE   Cn1  v092
- BYTE   N07  Cs1
+ BYTE   Dn1  v092
+ BYTE   N07  Dn1
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W01
  BYTE   PEND 
 //  #01 //055   ----------------------------------------
 Label_01542280:
- BYTE   N07  Cs1  v084
+ BYTE   N07  Dn1  v084
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W01
- BYTE   N07  Cs1  v080
+ BYTE   N07  Dn1  v080
  BYTE   W07
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W01
- BYTE   N07  Cs1  v072
+ BYTE   N07  Dn1  v072
  BYTE   W07
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v076
+ BYTE   N07  Dn1  v076
  BYTE   W15
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W01
- BYTE   N07  Cs1  v076
+ BYTE   N07  Dn1  v076
  BYTE   W07
- BYTE   N02  Cn1  v092
+ BYTE   N02  Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
- BYTE   N07  Cs1
+ BYTE   N07  Dn1
  BYTE   W07
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   PEND 
 //  #01 //056   ----------------------------------------
- BYTE   N07  Cs1  v088
+ BYTE   N07  Dn1  v088
  BYTE   W15
- BYTE   N02  Cn1
+ BYTE   N02  Dn1
  BYTE   W08
- BYTE   Cn1  v100
- BYTE   N02  Cs1  v088
+ BYTE   Dn1  v100
+ BYTE   N02  Dn1  v088
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
- BYTE   N02  Cs1  v088
+ BYTE   Dn1  v108
+ BYTE   N02  Dn1  v088
  BYTE   W16
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W08
- BYTE   Cn1  v108
- BYTE   N02  Cs1  v092
+ BYTE   Dn1  v108
+ BYTE   N02  Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W08
- BYTE   Cn1  v104
- BYTE   N08  Cs1  v084
+ BYTE   Dn1  v104
+ BYTE   N08  Dn1  v084
  BYTE   W01
 //  #01 //057   ----------------------------------------
  BYTE   W15
- BYTE   N02  Cn1  v088
- BYTE   N07  Cs1  v076
+ BYTE   N02  Dn1  v088
+ BYTE   N07  Dn1  v076
  BYTE   W08
- BYTE   N02  Cn1  v108
+ BYTE   N02  Dn1  v108
  BYTE   N02  Dn1  v127
  BYTE   W09
- BYTE   Cn1  v084
- BYTE   N07  Cs1  v080
+ BYTE   Dn1  v084
+ BYTE   N07  Dn1  v080
  BYTE   W07
- BYTE   N02  Cn1  v088
+ BYTE   N02  Dn1  v088
  BYTE   W08
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W01
- BYTE   N07  Cs1  v088
+ BYTE   N07  Dn1  v088
  BYTE   W15
- BYTE   N02  Cn1  v108
+ BYTE   N02  Dn1  v108
  BYTE   W01
- BYTE   N07  Cs1  v080
+ BYTE   N07  Dn1  v080
  BYTE   W07
  BYTE   N02  Dn1  v127
  BYTE   W01
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   W07
- BYTE   Cn1  v104
- BYTE   N02  Cs1  v084
+ BYTE   Dn1  v104
+ BYTE   N02  Dn1  v084
  BYTE   W09
- BYTE   Cn1  v112
+ BYTE   Dn1  v112
  BYTE   W08
 //  #01 //058   ----------------------------------------
  BYTE   PATT
@@ -885,30 +885,30 @@ Label_01542280:
  BYTE   PATT
   POIN2 Label_01542280
 //  #01 //064   ----------------------------------------
- BYTE   N07  Cs1  v088
+ BYTE   N07  Dn1  v088
  BYTE   W15
- BYTE   N02  Cn1
+ BYTE   N02  Dn1
  BYTE   W08
- BYTE   Cn1  v100
- BYTE   N02  Cs1  v088
+ BYTE   Dn1  v100
+ BYTE   N02  Dn1  v088
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v108
- BYTE   N02  Cs1  v088
+ BYTE   Dn1  v108
+ BYTE   N02  Dn1  v088
  BYTE   W16
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W08
- BYTE   Cn1  v108
- BYTE   N02  Cs1  v092
+ BYTE   Dn1  v108
+ BYTE   N02  Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W09
 //  #01 //065   ----------------------------------------
  BYTE   W96
@@ -931,33 +931,33 @@ Label_01542280:
 Label_01542392:
  BYTE   N02  Ds2  v092
  BYTE   W15
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   N02  Ds2  v088
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W15
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W01
  BYTE   Ds2  v084
  BYTE   W07
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   N01  Cn1  v108
+ BYTE   N01  Dn1  v108
  BYTE   W01
  BYTE   PEND 
 //  #01 //072   ----------------------------------------
@@ -979,17 +979,17 @@ Label_01542392:
  BYTE   PATT
   POIN2 Label_01542392
 //  #01 //078   ----------------------------------------
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N02  Ds2  v127
  BYTE   W15
- BYTE   Cn1  v076
+ BYTE   Dn1  v076
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   N48  Dn2
  BYTE   W07
- BYTE   N02  Cn1  v084
+ BYTE   N02  Dn1  v084
  BYTE   W09
  BYTE   N02
  BYTE   W07
@@ -997,23 +997,23 @@ Label_01542392:
  BYTE   W01
  BYTE   Ds2  v127
  BYTE   W15
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W09
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   N44  Dn2
  BYTE   W07
- BYTE   N02  Cn1  v080
+ BYTE   N02  Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W01
 //  #01 //079   ----------------------------------------
  BYTE   W96
 //  #01 //080   ----------------------------------------
 Label_01542414:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N48  Dn2  v127
  BYTE   W24
  BYTE   N02  En2
@@ -1022,7 +1022,7 @@ Label_01542414:
  BYTE   W08
  BYTE   Dn1  v072
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W01
  BYTE   Dn1
  BYTE   N44  Dn2
@@ -1033,14 +1033,14 @@ Label_01542414:
  BYTE   PEND 
 //  #01 //081   ----------------------------------------
 Label_01542430:
- BYTE   N02  Cn1  v127
+ BYTE   N02  Dn1  v127
  BYTE   N02  Dn1
  BYTE   W08
  BYTE   N02
  BYTE   W08
  BYTE   N02
  BYTE   W08
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   N02  Dn1
  BYTE   W24
  BYTE   An2  v084
@@ -1061,7 +1061,7 @@ Label_01542430:
  BYTE   PATT
   POIN2 Label_01542430
 //  #01 //086   ----------------------------------------
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N92  Dn2  v127
  BYTE   W24
  BYTE   N02  En2
@@ -1070,7 +1070,7 @@ Label_01542430:
  BYTE   W08
  BYTE   Dn1  v072
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W01
  BYTE   Dn1
  BYTE   N02  En2
@@ -1082,7 +1082,7 @@ Label_01542430:
  BYTE   Dn1  v072
  BYTE   W08
 //  #01 //087   ----------------------------------------
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   N02  Dn1
  BYTE   N92  Dn2
  BYTE   W24
@@ -1092,7 +1092,7 @@ Label_01542430:
  BYTE   W08
  BYTE   Dn1  v072
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W01
  BYTE   Dn1
  BYTE   N02  En2
@@ -1104,17 +1104,17 @@ Label_01542430:
  BYTE   Dn1  v072
  BYTE   W08
 //  #01 //088   ----------------------------------------
- BYTE   Cn1  v112
+ BYTE   Dn1  v112
  BYTE   N92  Dn2  v127
  BYTE   W24
- BYTE   N02  Cn1
+ BYTE   N02  Dn1
  BYTE   N02  Dn1
  BYTE   W08
  BYTE   Dn1  v048
  BYTE   W08
  BYTE   Dn1  v072
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W01
  BYTE   Dn1
  BYTE   W08
@@ -1122,7 +1122,7 @@ Label_01542430:
  BYTE   W08
  BYTE   Dn1  v072
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W01
  BYTE   Dn1
  BYTE   W08
@@ -1130,7 +1130,7 @@ Label_01542430:
  BYTE   W08
  BYTE   Dn1  v072
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W01
 //  #01 //089   ----------------------------------------
  BYTE   Dn1
@@ -1139,7 +1139,7 @@ Label_01542430:
  BYTE   W08
  BYTE   Dn1  v108
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W01
  BYTE   Dn1
  BYTE   W08
@@ -1147,7 +1147,7 @@ Label_01542430:
  BYTE   W08
  BYTE   N02
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W01
  BYTE   Dn1
  BYTE   W08
@@ -1175,17 +1175,17 @@ Label_01542430:
   POIN2 Label_01542392
 //  #01 //094   ----------------------------------------
 Label_015424F8:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N02  Ds2  v084
  BYTE   W15
- BYTE   Cn1  v076
+ BYTE   Dn1  v076
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   N92  Dn2
  BYTE   W07
- BYTE   N02  Cn1  v084
+ BYTE   N02  Dn1  v084
  BYTE   W09
  BYTE   N02
  BYTE   W07
@@ -1193,50 +1193,50 @@ Label_015424F8:
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W15
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W09
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   N02  Ds2  v092
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v096
+ BYTE   Dn1  v096
  BYTE   W01
  BYTE   PEND 
 //  #01 //095   ----------------------------------------
 Label_0154252B:
  BYTE   N02  Ds2  v084
  BYTE   W15
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N92  Dn2  v127
  BYTE   W01
  BYTE   N02  Dn1
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W08
- BYTE   Cn1  v108
+ BYTE   Dn1  v108
  BYTE   W01
  BYTE   Ds2  v088
  BYTE   W15
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W08
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W01
  BYTE   Ds2  v092
  BYTE   W07
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   W08
- BYTE   Cn1  v088
+ BYTE   Dn1  v088
  BYTE   W08
- BYTE   N01  Cn1  v108
+ BYTE   N01  Dn1  v108
  BYTE   W01
  BYTE   PEND 
 //  #01 //096   ----------------------------------------
@@ -1247,33 +1247,33 @@ Label_0154252B:
   POIN2 Label_0154252B
 //  #01 //098   ----------------------------------------
 Label_01542567:
- BYTE   N02  Cn1  v112
+ BYTE   N02  Dn1  v112
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   N02  Dn1  v124
  BYTE   W08
- BYTE   Cn1  v076
+ BYTE   Dn1  v076
  BYTE   N02  Dn1  v127
  BYTE   W08
- BYTE   Cn1  v084
+ BYTE   Dn1  v084
  BYTE   N02  Dn1  v127
  BYTE   N02  Ds2  v120
  BYTE   W24
  BYTE   Ds2  v127
  BYTE   W24
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   N02  Dn1  v127
  BYTE   W07
- BYTE   Cn1  v080
+ BYTE   Dn1  v080
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   W07
- BYTE   Cn1  v092
+ BYTE   Dn1  v092
  BYTE   W01
  BYTE   Dn1  v127
  BYTE   W07
- BYTE   Cn1
+ BYTE   Dn1
  BYTE   W01
  BYTE   PEND 
 //  #01 //099   ----------------------------------------
@@ -1305,7 +1305,7 @@ TheirOwnBrandOfJustice_002:
  BYTE   KEYSH   TheirOwnBrandOfJustice_key+0
 Label_01540582:
  BYTE   VOICE   124
- BYTE   VOL   45*TheirOwnBrandOfJustice_mvl/mxv
+ BYTE   VOL   28*TheirOwnBrandOfJustice_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   W96
 //  #02 //001   ----------------------------------------
@@ -1313,9 +1313,9 @@ Label_01540582:
  BYTE   N01  Dn1  v124
  BYTE   N07  Cn2  v088
  BYTE   W07
- BYTE   N08  Cs1  v124
+ BYTE   N08  Dn1  v124
  BYTE   W09
- BYTE   N07  Cn1  v127
+ BYTE   N07  Dn1  v127
  BYTE   W08
 //  #02 //002   ----------------------------------------
  BYTE   W96
@@ -1336,18 +1336,18 @@ Label_01540582:
  BYTE   W09
  BYTE   N07  Dn1  v124
  BYTE   W07
- BYTE   N01  Cs1  v127
+ BYTE   N01  Dn1  v127
  BYTE   W01
  BYTE   N07  Cn2  v088
  BYTE   W07
- BYTE   Cs1  v116
+ BYTE   Dn1  v116
  BYTE   W08
- BYTE   N08  Cs1  v127
+ BYTE   N08  Dn1  v127
  BYTE   W09
- BYTE   N01  Cs1  v116
+ BYTE   N01  Dn1  v116
  BYTE   N07  Cn2  v088
  BYTE   W07
- BYTE   N08  Cn1  v127
+ BYTE   N08  Dn1  v127
  BYTE   W09
  BYTE   N07
  BYTE   W08
@@ -1391,9 +1391,9 @@ Label_01540582:
  BYTE   N01  Dn1  v124
  BYTE   N07  Cn2  v088
  BYTE   W07
- BYTE   N08  Cs1  v124
+ BYTE   N08  Dn1  v124
  BYTE   W09
- BYTE   N07  Cn1  v127
+ BYTE   N07  Dn1  v127
  BYTE   W08
 //  #02 //010   ----------------------------------------
  BYTE   W96
@@ -1477,27 +1477,27 @@ Label_01540582:
  BYTE   N02  Dn1
  BYTE   N08  Fn4  v100
  BYTE   W08
- BYTE   N06  Cn1  v092
+ BYTE   N06  Dn1  v092
  BYTE   W07
  BYTE   N08  Dn1  v112
  BYTE   W09
- BYTE   Cn1  v076
+ BYTE   Dn1  v076
  BYTE   W08
- BYTE   N07  Cs1  v127
+ BYTE   N07  Dn1  v127
  BYTE   W07
- BYTE   N08  Cn1  v068
+ BYTE   N08  Dn1  v068
  BYTE   W09
- BYTE   Cs1  v127
+ BYTE   Dn1  v127
  BYTE   W09
- BYTE   N06  Cs1  v112
+ BYTE   N06  Dn1  v112
  BYTE   W07
- BYTE   N07  Cn1  v084
+ BYTE   N07  Dn1  v084
  BYTE   W08
- BYTE   Cn1  v112
+ BYTE   Dn1  v112
  BYTE   W08
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W09
 //  #02 //050   ----------------------------------------
  BYTE   W96
@@ -1552,12 +1552,12 @@ Label_01540582:
  BYTE   W08
  BYTE   N08  Dn1  v127
  BYTE   W09
- BYTE   N01  Cn1  v108
+ BYTE   N01  Dn1  v108
  BYTE   N07  Cn2  v088
  BYTE   W07
  BYTE   N08  En1  v127
  BYTE   W09
- BYTE   N07  Cn1
+ BYTE   N07  Dn1
  BYTE   W08
 //  #02 //066   ----------------------------------------
  BYTE   W96
@@ -1586,31 +1586,31 @@ Label_01540582:
 //  #02 //078   ----------------------------------------
  BYTE   W96
 //  #02 //079   ----------------------------------------
- BYTE   Cn1  v100
+ BYTE   Dn1  v100
  BYTE   N07  Gn2  v127
  BYTE   W15
- BYTE   Cn1  v060
+ BYTE   Dn1  v060
  BYTE   W08
- BYTE   N02  Cn1  v072
+ BYTE   N02  Dn1  v072
  BYTE   W01
  BYTE   N07  Dn1  v127
  BYTE   N02  Fn4
  BYTE   W07
- BYTE   Cn1  v072
+ BYTE   Dn1  v072
  BYTE   W09
  BYTE   N08
  BYTE   W08
- BYTE   Cs1  v127
+ BYTE   Dn1  v127
  BYTE   W09
- BYTE   N06  Cs1  v112
+ BYTE   N06  Dn1  v112
  BYTE   W07
- BYTE   N07  Cn1  v084
+ BYTE   N07  Dn1  v084
  BYTE   W08
- BYTE   Cn1  v112
+ BYTE   Dn1  v112
  BYTE   W08
- BYTE   Cn1  v104
+ BYTE   Dn1  v104
  BYTE   W07
- BYTE   Cn1  v127
+ BYTE   Dn1  v127
  BYTE   W09
 //  #02 //080   ----------------------------------------
  BYTE   W96
@@ -1660,11 +1660,11 @@ Label_01540582:
  BYTE   W03
  BYTE   N12
  BYTE   W13
- BYTE   N01  Cs1
+ BYTE   N01  Dn1
  BYTE   W01
  BYTE   N14
  BYTE   W15
- BYTE   N15  Cn1  v092
+ BYTE   N15  Dn1  v092
  BYTE   W16
 //  #02 //102   ----------------------------------------
  BYTE   GoTo

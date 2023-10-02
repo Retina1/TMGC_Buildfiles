@@ -820,6 +820,8 @@ SetBackground(PathCG)
 MUSC LoverConvoSong
 Text(C25_Rachael_Cassius_Base)
 SystemText(C25RachaelCassiusRankSwap)
+GiveItem(Axereaver,Cassius)
+GiveItem(KillerAxe,Rachael)
 SetSupport(Cassius,Rachael,ASupport,1)
 FADI 0x5
 SetUnitStatus(Rachael,AxeExp,71)

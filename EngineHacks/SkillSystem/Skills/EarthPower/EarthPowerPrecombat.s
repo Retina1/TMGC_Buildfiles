@@ -63,11 +63,12 @@ ldr		r1,[r1,#0x28]
 orr		r0,r1
 mov		r1,#0x1			@is defender mounted
 tst		r0,r1
-beq		End
+beq		ElfireDone
 add		r4,#0x5A
 ldrh	r0,[r4]
 add		r0,#20 @if not, add 20 damage
 strh	r0,[r4]
+ElfireDone:
 bl End
 
 Fimbulvetr:
@@ -85,11 +86,12 @@ bne Starfall
 ldrb		r0,[r5,#0x12]
 ldrb		r1,[r5,#0x13]
 cmp		r0,r1 @is foe current hp=max hp
-bne		End
+bne		FlareDone
 mov		r1,#0x66
 ldrh	r0,[r4,r1]
 add		r0,#100 @if so, add 100 crit
 strh	r0,[r4,r1]
+FlareDone:
 bl End
 
 Starfall:
@@ -165,12 +167,12 @@ bl End
 
 Awaken:
 cmp r2,#0x78
-bne MiscTomesWithoutPrebattleEffects
+bne Trisagion
 ldrb r0, [r4, #0x12]
 lsr r0, #1 @max hp/2
 ldrb r1, [r4, #0x13] @currhp
 cmp r1, r0
-bgt End
+bgt AwakenDone
 @add 50% atk
 mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
@@ -178,7 +180,30 @@ mov r2, #3
 mul r0,r2
 lsr r0,#1
 strh r0, [r4,r1]
+AwakenDone:
 bl End
+
+Trisagion:
+cmp r2,#0xb4
+bne MiscTomesWithoutPrebattleEffects
+@check if press turned this turn
+ldr	r0, [r4,#0x0C]	@status bitfield
+mov	r1, #0x04
+lsl	r1, #0x08
+and	r0, r1
+cmp	r0, #0x00
+beq	TrisagionDone
+mov		r1,#0x5e
+ldrh	r0,[r4,r1]
+add		r0,#50 @add 50 as
+strh	r0,[r4,r1]
+mov		r1,#0x5a
+ldrh	r0,[r4,r1]
+add		r0,#50 @add 50 atk
+strh	r0,[r4,r1]
+TrisagionDone:
+bl End
+
 
 MiscTomesWithoutPrebattleEffects:
 cmp r2,#0xc7 @inversion

@@ -20,6 +20,7 @@ BtlLoopList:
 POIN BC_DefRes BC_Power BC_ASpd BC_Hit BC_Avo BC_Crit CritUpSkill BC_Dodge BC_Support BC_WRank BC_Status //these are the existing battle calculation routines
 POIN InitializePreBattleLoop
 POIN Lull //This is effectively a stat modifier routine, so it has to go first
+POIN BonusHitForEffectives
 POIN SoulHiltPointer
 POIN FaireCheck
 POIN BreakerCheck MageSlayer

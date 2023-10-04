@@ -24,7 +24,9 @@ TurnBasedEvents:
 TurnEventPlayer(0x0,C16Turn1,1)
 TurnEventPlayer(0x0,C16Turn2,2)
 TurnEventPlayer(0x0,C16BookScatter1,3)
+TurnEventPlayer(0x0,C16RedSpawns1,5)
 TurnEventPlayer(0x0,C16BookScatter2,6)
+TurnEventPlayer(0x0,C16RedSpawns2,8)
 TurnEventPlayer(0x0,C16BookScatter3,9)
 TurnEventPlayer(0x0,C16BookScatter4,12)
 TurnEventPlayer(0x65,C16OutOfTime,15)
@@ -230,6 +232,19 @@ UNIT Dragon IceDragon 0x0 Level(3,Enemy,1) [11,19] 0x0 0x0 0x0 0x0 [IceBreath] N
 UNIT Dragon DemonDragon 0x0 Level(3,Enemy,1) [23,9] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
 UNIT Dragon FireDragon 0x0 Level(5,Enemy,1) [3,1] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
 UNIT Nicole SwMastF 0x0 Level(4,Enemy,1) [4,1] DropItem 0x0 0x0 0x0 [FlameSword,GildedSword,MasterSeal] NeverMoveAI
+UNIT
+
+C16Reinforce1:
+UNIT Holanis AxePal 0x0 Level(1,Enemy,1) [8,0] 0x0 0x0 0x1 REDA8R1 [Swordreaver] NoAI
+UNIT Holanis SwdPal 0x0 Level(1,Enemy,1) [9,0] 0x0 0x0 0x1 REDA9R2 [Lancereaver] NoAI
+UNIT Holanis LncPal 0x0 Level(1,Enemy,1) [10,0] 0x0 0x0 0x1 REDA10R1 [Axereaver] NoAI
+UNIT
+
+C16Reinforce2:
+UNIT Holanis Merc 0x0 Level(18,Enemy,1) [2,0] 0x0 0x0 0x1 REDA5R0 [SilverSword] NoAI
+UNIT Holanis Hero 0x0 Level(3,Enemy,1) [2,0] 0x0 0x0 0x1 REDA5R1 [Swordslayer,Lancesnapper] NoAI
+UNIT Holanis Merc 0x0 Level(18,Enemy,1) [3,0] 0x0 0x0 0x1 REDA5R2 [SilverSword] NoAI
+UNIT Holanis Fighter 0x0 Level(18,Enemy,1) [3,0] 0x0 0x0 0x1 REDA6R1 [SilverAxe] NoAI
 UNIT
 
 C16Books1:
@@ -439,6 +454,12 @@ Reinforcements(C16Books41)
 Reinforcements(C16Books42)
 Reinforcements(C16Books43)
 Reinforcements(C16Books44)
+EndEvent
+C16RedSpawns1:
+Reinforcements(C16Reinforce1)
+EndEvent
+C16RedSpawns2:
+Reinforcements(C16Reinforce2)
 EndEvent
 
 C16Village:

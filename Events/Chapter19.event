@@ -432,6 +432,8 @@ TILEREVERSE 0x3
 TILEREVERSE 0x4
 TILEREVERSE 0x5
 TILEREVERSE 0x6
+//SetUnitStatus(Michael, State, 0x1002)
+SetUnitStatusAll(Holanis*0x100+Holanis, State, 0x2, Any, Any, Any, Range(16,12,18,13), Any)
 CAM1 Michael
 FlashCursor(Michael,60)
 Text(Ch19_MichaelIsAngy) //michael's angy that someone flooded his river, and hints at reinforcements

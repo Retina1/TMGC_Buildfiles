@@ -97,9 +97,13 @@ bl End
 Starfall:
 cmp r2,#0x86
 bne Calibur
+mov		r1,#0x16
+ldrb		r0,[r4,r1] @get player speed
 mov		r1,#0x5e
-ldrh		r0,[r5,r1] @get foe AS
-strh		r0,[r4,r1] @store foe AS in player AS
+strh		r0,[r4,r1] @store player speed in player AS
+mov		r1,#0x5c
+mov		r0,#0x0
+strh		r0,[r4,r1] @zero def lol
 bl End
 
 Calibur:
@@ -185,7 +189,7 @@ bl End
 
 Trisagion:
 cmp r2,#0xb4
-bne MiscTomesWithoutPrebattleEffects
+bne Waning
 @check if press turned this turn
 ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x04
@@ -202,6 +206,21 @@ ldrh	r0,[r4,r1]
 add		r0,#50 @add 50 atk
 strh	r0,[r4,r1]
 TrisagionDone:
+bl End
+
+Waning:
+cmp r2,#0x85
+bne MiscTomesWithoutPrebattleEffects
+ldrb		r0,[r5,#0x12]
+lsr r0, #1 @max hp/2
+ldrb		r1,[r5,#0x13]
+cmp r1, r0 @current hp vs maxhp/2
+ble		WaningDone
+mov		r1,#0x5c
+ldrh	r0,[r4,r1]
+add		r0,#100 @if so, add 100 def
+strh	r0,[r4,r1]
+WaningDone:
 bl End
 
 

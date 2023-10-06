@@ -103,7 +103,7 @@ UNIT Elite Halberdier 0x0 Level(12,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [Horseslayer
 UNIT MagElite SageF 0x0 Level(12,Enemy,1) [21,11] 0x0 0x0 0x0 0x0 [Galewind] NoAI
 UNIT MagElite ValkF 0x0 Level(12,Enemy,1) [20,12] 0x0 0x0 0x0 0x0 [FlameSword,Rapier] NoAI
 UNIT Elite BowGen 0x0 Level(13,Enemy,1) [26,8] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] NeverMoveAI
-UNIT Arbordia Baron 0x0 Level(20,Enemy,1) [0,29] 0x0 0x0 0x0 0x0 [Nocturne,RealLastShield] NeverMoveAI
+UNIT Arbordia Baron 0x0 Level(20,Enemy,1) [0,29] 0x0 0x0 0x0 0x0 [Nocturne,MasterLance,RealLastShield] NeverMoveAI
 UNIT
 
 C27ValeriaJoin:
@@ -136,6 +136,10 @@ ENUN
 SetUnitStatus(BladeGuy,MaxHP,120)
 SetUnitStatus(BladeGuy,CurrentHP,120)
 LABEL 0x1
+CheckForItem(RealLastShield)
+BEQ 0x2 0xc 0x0
+SetUnitStatus(Arbordia,Item3,0)
+LABEL 0x2
 GotoPrepScreen
 ENDA
 

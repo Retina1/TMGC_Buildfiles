@@ -53,6 +53,8 @@
 #define RemoveItem(unit,item) "SVAL 1 unit; BYTE 0x40 0x0D ; SHORT item ; POIN TakeUnitOneItem|1"
 #define TakeItemAll(ITEM) "BYTE 0x40 0x0D ; SHORT ITEM ; POIN TakeItemAll|1"
 
+#define Interlude10GlobalFlagOff "ENUF BaseFlag1;ENUF BaseFlag2;ENUF BaseFlag3;ENUF BaseFlag4;ENUF BaseFlag5;ENUF BaseFlag6;ENUF BaseFlag7;ENUF BaseFlag8; ENUF GuideChpt1; ENUF GuideChpt2; ENUF GuideChpt3; ENUF GuideChpt4; ENUF GuideChpt5; ENUF GuideChpt6; ENUF GuideChpt7; ENUF GuideChpt8; ENUF GuideChpt9; ENUF GuideChpt10; ENUF GuideChpt11; ENUF GuideChpt12; ENUF GuideChpt13; ENUF GuideChpt14; ENUF GuideChpt15; ENUF GuideChpt16; ENUF GuideChpt17; ENUF GuideChpt18; ENUF GuideChpt19; ENUF GuideChpt20; ENUF GuideChpt21; ENUF GuideChpt22"
+#define Interlude10GlobalFlagOn "ResetBaseFlags; ENUT GuideChpt1; ENUT GuideChpt2; ENUT GuideChpt3; ENUT GuideChpt4; ENUT GuideChpt5; ENUT GuideChpt6; ENUT GuideChpt7; ENUT GuideChpt8; ENUT GuideChpt9; ENUT GuideChpt10; ENUT GuideChpt11; ENUT GuideChpt12; ENUT GuideChpt13; ENUT GuideChpt14; ENUT GuideChpt15; ENUT GuideChpt16; ENUT GuideChpt17; ENUT GuideChpt18; ENUT GuideChpt19; ENUT GuideChpt20; ENUT GuideChpt21; ENUT GuideChpt22"
 //DeathBranchText(char1,char2,deadmus,alivemus,background,bothalive,char1dead,char2dead,bothdead) i'm sorry
 //SupportFlagOn(unit1,unit2,flag,supportrank)
 //SupportBranch(unit1,unit2,supportrank,condid)

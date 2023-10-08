@@ -37,7 +37,10 @@
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define EndAnim "WORD 0x0 0x0"
 
-
+{
+#include "CharacterSpecific\Laronde\Lance Installer.event"
+#include "CharacterSpecific\Laronde\Unarmed Installer.event"
+}
 {
 #include "CharacterSpecific\ButchP\Sword Installer.event"
 #include "CharacterSpecific\ButchP\Axe Installer.event"
@@ -482,6 +485,12 @@
 #include "CharacterSpecific\PeggyU\Staff Installer.event"
 #include "CharacterSpecific\PeggyU\Unarmed Installer.event"
 }
+ALIGN 4
+LarondeAnims:
+LanceAnim(0xff)
+UnarmedAnim(0x100)
+EndAnim
+
 ALIGN 4
 RangerFlynnAnims:
 SwordAnim(0xfc)

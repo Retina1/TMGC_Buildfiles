@@ -759,6 +759,9 @@ ConversationEntry(EC18Open2,Ch18_Opening2,LowlandsCG,Chapter18,S_Crisis)
 ConversationEntry(EC18Open3,Ch18_Opening3,LowlandsCG,Chapter18,S_Crisis)
 ConversationEntry(EC18Recruit,Ch18_VladmirJoin,LowlandsCG,Chapter18,S_EncountersAndReunions)
 ConversationEntry(EC18BossGen,C18BungalasBattle,LowlandsCG,Chapter18,S_BattleA3)
+ConversationEntry(EC18BossJosef,C18BungalasJosefBattle,LowlandsCG,Chapter18,S_BattleA3)
+ConversationEntry(EC18BossHyperius,C18BungalasHyperiusBattle,LowlandsCG,Chapter18,S_BattleA3)
+ConversationEntry(EC18BossAlexis,C18BungalasAlexisBattle,LowlandsCG,Chapter18,S_BattleA3)
 ConversationEntry(EC18BossSvelt,C18BungalasSveltzalusBattle,LowlandsCG,Chapter18,S_BattleA3)
 ConversationEntry(EC18BossDie,C18BungalasDeath,LowlandsCG,Chapter18,S_BattleA3)
 ConversationEntry(EC18Light,Ch18_AllAlight,LowlandsCG,Chapter18)
@@ -1380,7 +1383,7 @@ ConversationEntryTerminator
 
 ALIGN 4
 Chapter25Conversations:
-ConversationEntry(EC25Open0,Ch25_Flashback,PathCG,Chapter25)
+ConversationEntry(EC25Open0,Ch25_Flashback,MoonCG,Chapter25)
 ConversationEntry(EC25Open1,C25Opening,PathCG,Chapter25)
 ConversationEntry(EC25Open2,C25Opening2,PathCG,Chapter25)
 ConversationEntry(EC25Open3,C25Opening3,HouseCG,Chapter25,S_Chaos)
@@ -1448,6 +1451,8 @@ ConversationEntry(V3_Family_Select,V3_Family,YgstraCG,BaseConvoViewer)
 ConversationEntry(V3_Way_Select,V3_Way,YgstraCG,BaseConvoViewer)
 ConversationEntry(SSCh21,C21_Secret_Seller,HallCG,BaseConvoViewer,S_PascalTheDog)
 ConversationEntry(C23_Father_Select,C23_Father_Base,EastHolanisCG,BaseConvoViewer)
+ConversationEntry(C24_Holy_Land_Select,C24_Holy_Land_Base,LowlandsCG,BaseConvoViewer)
+ConversationEntry(C25_Youth_Select,C25_Youth,TentInsideCG,BaseConvoViewer)
 ConversationEntry(SSCh25,C25_Secret_Seller,PathCG,BaseConvoViewer,S_PascalTheDog)
 ConversationEntry(SSCh28,C28_Secret_Seller,HallCG,BaseConvoViewer,S_PascalTheDog)
 ConversationEntryTerminator
@@ -1627,19 +1632,22 @@ ConversationEntryTerminator
 
 ALIGN 4
 SupportConversations3:
-//todo: c24 supports 
+//todo: 23/24/25 map supports/simone events/ch23 recruit variants
 ConversationEntry(EBlairArinA,C24_Blair_Arin_Base,LowlandsCG,Support3Viewer,LoverConvoSong)
 ConversationEntry(EBlairKennethBP,BlairKennethBPSupport,DungeonCG,Support3Viewer)
 ConversationEntry(EBlairNatasiaBP,C22_Blair_Natasia_Base,EastHolanisCG,Support3Viewer)
+ConversationEntry(EBlairNatasiaA,C25_Blair_Natasia_Base,PathCG,Support3Viewer,LoverConvoSong)
 ConversationEntry(EBlairEmileBP,C21_Blair_Emile_Base,HallCG,Support3Viewer)
 ConversationEntry(EBlairCarbonBP,BlairCarbonBPSupport,EastHolanisCG,Support3Viewer)
 ConversationEntry(EBlairZekeBP,BlairZekeBPSupport,DungeonCG,Support3Viewer)
 ConversationEntry(EBlairAvanBP,C23_Blair_Avan_Base,EastHolanisCG,Support3Viewer)
 ConversationEntry(EArinDesmondBP,C21_Arin_Desmond_Base,HallCG,Support3Viewer)
+ConversationEntry(EArinDesmondA,C25_Arin_Desmond_Base,PathCG,Support3Viewer)
 ConversationEntry(EArinSamBP,C23_Arin_Sam_Base,EastHolanisCG,Support3Viewer)
 ConversationEntry(EArinYuyuB,ArinYuyuBSupport,EastHolanisCG,Support3Viewer)
 ConversationEntry(EArinSimoneCP,C21Ending4,HallCG,Support3Viewer,S_Chaos)
 ConversationEntry(EArinSimoneB,C24ArinSimoneSceneAlt,LowlandsCG,Support3Viewer,S_Chaos)
+ConversationEntry(EArinSimoneBP,C25ArinSimoneTalk,PathCG,Support3Viewer,S_Chaos)
 ConversationEntry(EKennethNatasiaBP,C22_Kenneth_Natasia_Base,EastHolanisCG,Support3Viewer)
 //kenneth stefan b+
 ConversationEntry(ENatasiaPeggyBP,PeggyNatasiaBPSupport,DungeonCG,Support3Viewer)
@@ -1647,47 +1655,55 @@ ConversationEntry(EStefanDesmondBP,StefanDesmondBPSupport,DungeonCG,Support3View
 //stefan josef
 //probably more c23 supports i didn't type here
 ConversationEntry(EStefanCarbonB,C22_Stefan_Carbon_Base,EastHolanisCG,Support3Viewer)
-//stefan johan
-//desmond mikey
+ConversationEntry(EStefanJohanBP,C24_Stefan_Johan_Base,LowlandsCG,Support3Viewer)
+ConversationEntry(EDesmondMikeyB,C23_Desmond_Mikey_Base,EastHolanisCG,Support3Viewer)
 //desmond johan
 //sam josef b+
 //sam emile
 //sam bechamel b
+ConversationEntry(ESamCharleyB,C24_Sam_Charley_Base,LowlandsCG,Support3Viewer)
 ConversationEntry(EJosefAthenaB,C22_Josef_Athena_Base,EastHolanisCG,Support3Viewer)
 ConversationEntry(EPeggyApolloB,C21_Peggy_Apollo_Base,HallCG,Support3Viewer)
 //peggy athena b
-//butch jeff
-//ConversationEntry(EButchPeterCP,C22PeterRecruitButch,EastHolanisCG,Chapter22,RecruitmentTheme)
+ConversationEntry(EButchCassiusBP,C24_Butch_Cassius_Base,LowlandsCG,Support3Viewer)
+ConversationEntry(EButchJeffBP,C23_Butch_Jeff_Base,EastHolanisCG,Support3Viewer)
+ConversationEntry(EButchPeterCP,C22PeterRecruitButch,EastHolanisCG,Support3Viewer,RecruitmentTheme)
+ConversationEntry(ERachaelCassiusA,C25_Rachael_Cassius_Base,PathCG,Support3Viewer,LoverConvoSong)
 ConversationEntry(ERachaelJeffBP,RachaelJeffBPSupport,EastHolanisCG,Support3Viewer)
 ConversationEntry(ERachaelHyperiusB,RachaelHyperiusBSupport,DungeonCG,Support3Viewer)
 ConversationEntry(ERachaelLeilaB,RachaelLeilaBSupport,EastHolanisCG,Support3Viewer)
 ConversationEntry(ECassiusMikeyB,CassiusMikeyBSupport,DungeonCG,Support3Viewer)
 //cassius athena
 ConversationEntry(ECassiusZekeB,C21_Zeke_Cassius_Base,HallCG,Support3Viewer)
+ConversationEntry(ECassiusHyperiusBP,C25_Cassius_Hyperius_Base,PathCG,Support3Viewer)
 ConversationEntry(EJeffHilbertB,C22_Jeff_Hilbert_Base,EastHolanisCG,Support3Viewer)
 //emile hilbert b+
 //emile vladmir
 ConversationEntry(EEmileSimoneCP,EmileSimoneCPSupport,EastHolanisCG,Support3Viewer)
+ConversationEntry(EEmileSimoneB,C25_Emile_Simone_Base,PathCG,Support3Viewer)
 //apollo bechamel b+
 //apollo flynn
+ConversationEntry(EApolloCharleyB,C25_Apollo_Charley_Base,PathCG,Support3Viewer)
 ConversationEntry(EApolloAvanCP,ApolloAvanCPSupport,DungeonCG,Support3Viewer)
 ConversationEntry(EApolloVladmirCP,C21_Apollo_Vladmir_Base,HallCG,Support3Viewer)
-//bechamel hollandaise
+ConversationEntry(EApolloVladmirB,C24_Apollo_Vladmir_Base,LowlandsCG,Support3Viewer)
+ConversationEntry(EBechamelHollandaiseB,C23_Bechamel_Hollandaise_Base,EastHolanisCG,Support3Viewer)
 ConversationEntry(EFlynnHoratioCP,FlynnHoratioCPSupport,EastHolanisCG,Support3Viewer,S_Ameno)
 ConversationEntry(EMikeyCarbonBP,MikeyCarbonBPSupport,DungeonCG,Support3Viewer)
 ConversationEntry(ECharleyToddsworthCP,CharleyToddsworthCPSupport,EastHolanisCG,Support3Viewer)
 //charley yuyu
+ConversationEntry(EZekeHyperiusBP,C24_Zeke_Hyperius_Base,LowlandsCG,Support3Viewer)
 ConversationEntry(EHyperiusAlexisBP,C22_Hyperius_Alexis_Base,EastHolanisCG,Support3Viewer)
 ConversationEntry(EHyperiusLeilaB,C21_Hyperius_Leila_Base,HallCG,Support3Viewer)
 ConversationEntry(EAlexisArtemisCP,AlexisArtemisCPSupport,DungeonCG,Support3Viewer)
 ConversationEntry(ELeilaDamienB,LeilaDamienBSupport,DungeonCG,Support3Viewer)
-//leila zach
+ConversationEntry(ELeilaZachariasB,C23_Leila_Zacharias_Base,EastHolanisCG,Support3Viewer)
+ConversationEntry(ELeilaTobiasB,C24_Leila_Tobias_Base,LowlandsCG,Support3Viewer)
 //damien zach
 ConversationEntry(EAvanToddsworthB,C22_Avan_Toddsworth_Base,EastHolanisCG,Support3Viewer)
-//avan ptolemy
+ConversationEntry(EAvanPtolemyC,C23_Avan_Ptolemy_Base,EastHolanisCG,Support3Viewer)
 //artemis hollandaise
 ConversationEntry(EHoratioSimoneC,C22_Horatio_Simone_Base,EastHolanisCG,Support3Viewer,S_Ameno)
-//add in 23 stuff later
 ConversationEntryTerminator
 //3rd support section will include 21-29
 

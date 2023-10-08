@@ -25,68 +25,69 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Arin)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Kenneth)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Natasia)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Stefan)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Desmond)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Sam)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Josef)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Peggy)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Butch)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Rachael)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Cassius)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Jeff)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Emile)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Apollo)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Bechamel)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Sveltzalus)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Hilbert)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Agnes)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Flynn)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Addington)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Mikey)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Carbon)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Gaylord)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Athena)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Charley)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Hyperius)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Alexis)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Leila)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Damien)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Zacharias)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Avan)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Toddsworth)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Yuyu)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Artemis)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Hollandaise)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Vladmir)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Horatio)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,UnitQ)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Simone)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Ptolemy)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Johan)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,SecretClarque)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Peter)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Tonnamin)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Joan)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Sonia)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Tobias)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Freddric)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Dean)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Eliza)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Rift)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Estelle)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Rose)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Dirk)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Callum)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Manfred)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Wilhelm)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Argent)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,SecretLaronde)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Ian)
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Kyrie)
+CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//unlock A rank postmap?
+CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
+CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
+CharacterEvent(0x9,I10ReadyToEnd,Blair,Natasia)//special if A rank
+CharacterEvent(0xa,I10ReadyToEnd,Blair,Stefan)//show character growth - maybe reflect on his prior brash recklessness and how he's changed over the journey
+CharacterEvent(0xb,I10ReadyToEnd,Blair,Desmond)//preparing a rousing/comforting speech
+CharacterEvent(0xc,I10ReadyToEnd,Blair,Sam)//growth reflection, will she head her house? idk
+CharacterEvent(0xd,I10ReadyToEnd,Blair,Josef)
+CharacterEvent(0xe,I10ReadyToEnd,Blair,Peggy)
+CharacterEvent(0xf,I10ReadyToEnd,Blair,Butch)
+CharacterEvent(0x10,I10ReadyToEnd,Blair,Rachael)
+CharacterEvent(0x11,I10ReadyToEnd,Blair,Cassius)//maturity but he's still a goofy guy
+CharacterEvent(0x12,I10ReadyToEnd,Blair,Jeff)
+CharacterEvent(0x13,I10ReadyToEnd,Blair,Emile)//unlock A rank
+CharacterEvent(0x14,I10ReadyToEnd,Blair,Apollo)
+CharacterEvent(0x15,I10ReadyToEnd,Blair,Bechamel)
+CharacterEvent(0x16,I10ReadyToEnd,Blair,Sveltzalus)
+CharacterEvent(0x17,I10ReadyToEnd,Blair,Hilbert)//realize that blind distinction between good and evil isn't real
+CharacterEvent(0x18,I10ReadyToEnd,Blair,Agnes)
+CharacterEvent(0x19,I10ReadyToEnd,Blair,Flynn)
+CharacterEvent(0x1a,I10ReadyToEnd,Blair,Addington)
+CharacterEvent(0x1b,I10ReadyToEnd,Blair,Mikey)
+CharacterEvent(0x1c,I10ReadyToEnd,Blair,Carbon)//unlock A rank
+CharacterEvent(0x1d,I10ReadyToEnd,Blair,Gaylord)
+CharacterEvent(0x1e,I10ReadyToEnd,Blair,Athena)
+CharacterEvent(0x1f,I10ReadyToEnd,Blair,Charley)
+CharacterEvent(0x20,I10ReadyToEnd,Blair,Hyperius)
+CharacterEvent(0x21,I10ReadyToEnd,Blair,Alexis)
+CharacterEvent(0x22,I10ReadyToEnd,Blair,Leila)
+CharacterEvent(0x23,I10ReadyToEnd,Blair,Damien)
+CharacterEvent(0x24,I10ReadyToEnd,Blair,Zacharias)
+CharacterEvent(0x25,I10ReadyToEnd,Blair,Avan)//unlock A rank (mutually exclusive)
+CharacterEvent(0x26,I10ReadyToEnd,Blair,Toddsworth)
+CharacterEvent(0x27,I10ReadyToEnd,Blair,Yuyu)
+CharacterEvent(0x28,I10ReadyToEnd,Blair,Artemis)
+CharacterEvent(BaseFlag1,I10ReadyToEnd,Blair,Hollandaise)
+CharacterEvent(BaseFlag2,I10ReadyToEnd,Blair,Vladmir)//discuss opistia's willingness to assist in conflict despite alliance with dalst
+CharacterEvent(BaseFlag3,I10ReadyToEnd,Blair,Horatio)//unlock summoning if he doesn't have his sword
+CharacterEvent(BaseFlag4,I10ReadyToEnd,Blair,UnitQ)
+CharacterEvent(BaseFlag5,I10ReadyToEnd,Blair,Simone)
+CharacterEvent(BaseFlag6,I10ReadyToEnd,Blair,Ptolemy)
+CharacterEvent(BaseFlag7,I10ReadyToEnd,Blair,Johan)
+CharacterEvent(BaseFlag8,I10ReadyToEnd,Blair,SecretClarque)
+CharacterEvent(GuideChpt1,I10ReadyToEnd,Blair,Peter)
+CharacterEvent(GuideChpt2,I10ReadyToEnd,Blair,Tonnamin)
+CharacterEvent(GuideChpt3,I10ReadyToEnd,Blair,Joan)
+CharacterEvent(GuideChpt4,I10ReadyToEnd,Blair,Sonia)
+CharacterEvent(GuideChpt5,I10ReadyToEnd,Blair,Tobias)
+CharacterEvent(GuideChpt6,I10ReadyToEnd,Blair,Freddric)
+CharacterEvent(GuideChpt7,I10ReadyToEnd,Blair,Dean)
+CharacterEvent(GuideChpt8,I10ReadyToEnd,Blair,Eliza)
+CharacterEvent(GuideChpt9,I10ReadyToEnd,Blair,Rift)
+CharacterEvent(GuideChpt10,I10ReadyToEnd,Blair,Estelle)//unlock B+ rank
+CharacterEvent(GuideChpt11,I10ReadyToEnd,Blair,Rose)
+CharacterEvent(GuideChpt12,I10ReadyToEnd,Blair,Dirk)
+CharacterEvent(GuideChpt13,I10ReadyToEnd,Blair,Callum)
+CharacterEvent(GuideChpt14,I10ReadyToEnd,Blair,Manfred)
+CharacterEvent(GuideChpt15,I10ReadyToEnd,Blair,Wilhelm)
+CharacterEvent(GuideChpt16,I10ReadyToEnd,Blair,Argent)
+CharacterEvent(GuideChpt17,I10ReadyToEnd,Blair,SecretLaronde)
+CharacterEvent(GuideChpt18,I10ReadyToEnd,Blair,Ian)
+CharacterEvent(GuideChpt19,I10ReadyToEnd,Blair,Kyrie)
+CharacterEvent(GuideChpt20,I10ReadyToEnd,Blair,Brandl)//give the unyielding if hyperius is alive
 END_MAIN
 
 LocationBasedEvents:
@@ -98,6 +99,11 @@ Vendor(I10AnimaVendor,25,22)
 Vendor(I10LightVendor,28,25)
 Vendor(I10DarkVendor,31,23)
 Vendor(I10StaffVendor,34,24)
+Village(0x0,I10Village1,14,29)//item
+Village(0x0,I10Village2,28,33)//item
+Village(0x0,I10Village3,31,30)
+Village(0x0,I10Village4,1,33)
+Village(0x0,I10TheInn,14,24)
 END_MAIN
 
 ALIGN 4
@@ -137,8 +143,8 @@ ALIGN 4
 
 MiscBasedEvents:
 //range based events to enter the sealed door and get the hopesinger
-AreaEvent(0xa,I10DoorTrigger,9,4,11,4)
-AreaEvent(0xb,I10ChestTrigger,10,0,10,0)
+AreaEvent(GuideChpt21,I10DoorTrigger,9,4,11,4)
+AreaEvent(GuideChpt22,I10ChestTrigger,10,0,10,0)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -219,27 +225,26 @@ SetBackground(Map2CG)
 STAL 120
 NarrationText(Base10_Narration)
 FADI 0x3c
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(PathCG,I10Opening)
 LOAD1 0x0 I10Units
 ENUN
 LOAD1 0x0 I10NPC
 ENUN
 ResetViridianConvoy
+Interlude10GlobalFlagOff
 GotoPrepScreen
 ENDA
 
-//special thing where blair's closest support partner gets a skill that gives obscene bonuses if they're adjacent
-//power of love/power of oomf
-
 I10DoorTrigger:
-Text(FillerDialogue)
+Text(I10DoorText)
 SOUN 0xB1
 TILECHANGE 0x0
 STAL 15
 EndEvent
 
 I10ChestTrigger:
-Text(FillerDialogue)
+MUSC S_WelcomeToLegend
+Text(I10ChestText)
 SOUN 0xB1
 TILECHANGE 0x1
 STAL 15
@@ -258,15 +263,37 @@ Text(FillerDialogue)//no
 LABEL 0x1
 EndEvent
 
+I10Village1:
+VillageEventItem(FillerDialogue, HouseCG, AngelicRobe)
+I10Village2:
+VillageEventItem(FillerDialogue, HouseCG, WhiteGem)
+I10Village3:
+HouseEvent(FillerDialogue, HouseCG)
+I10Village4:
+HouseEvent(FillerDialogue, HouseCG)
+I10TheInn:
+HouseEvent(I10InnText, InnCG)
+
 EndingScene:
+Interlude10GlobalFlagOn
 EVBIT_MODIFY 3
 DisableFreeMovement
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(HallCG,FillerDialogue)//general end event
+//johan/stefan event
+//kenneth/natasia event
+//joan/sonia/carbon/mikey event
+//rose/laronde event
+//damien/zacharias/tobias/leila event
+//apollo/bechamel event
+//zeke and blair hit A rank here if they have B+
+//special scenes here for romantic blair A ranks (alt for arin if she's doing the simone events)
+//special thing where blair's closest support partner gets a skill that gives obscene bonuses if they're adjacent?
+//power of love/power of oomf?
 CHECK_EVENTID KennethTarquinKillFlag
 BEQ 0x1 0xc 0x0
 CHECK_ALIVE Kenneth
 BEQ 0x1 0xc 0x0
-	CleanTextNoMap(HallCG,FillerDialogue)//kenneth says he's gotta go
+	CleanTextNoMap(HallCG,FillerDialogue)//kenneth says he's gotta go (maybe have an alt for A rank)
 	REMU Kenneth
 LABEL 0x1
 CHECK_EVENTID ArinOriginFlag

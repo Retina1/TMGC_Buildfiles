@@ -244,10 +244,10 @@ EndEvent
 
 I10ChestTrigger:
 MUSC S_WelcomeToLegend
-Text(I10ChestText)
 SOUN 0xB1
 TILECHANGE 0x1
 STAL 15
+Text(I10ChestText)
 GiveItem(Hopesinger,Blair)
 EndEvent
 

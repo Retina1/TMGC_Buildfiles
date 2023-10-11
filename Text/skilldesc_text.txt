@@ -38,7 +38,7 @@ a nonlethal strike.[N]
 (Cost: 2 Durability/Hit)[X]
 
 ## SD_Frenzy
-Frenzy: +2 crit per point[N]
+Frenzy: +2 Crit per point[N]
 of HP below this unit's max.[X]
 
 ## SD_Canto
@@ -126,8 +126,8 @@ Darting Blow: +5 Attack Speed[N]
 when initiating battle.[X]
 
 ## SD_WardingBlow
-Sturdy Blow: Doubles Def/Res[N]
-when initiating battle.[X]
+Sturdy Blow: Doubles Def/Res when[N]
+initiating battle (including bonuses).[X]
 
 ## SD_CertainBlow
 Certain Blow: +40 Hit[N]
@@ -142,12 +142,11 @@ Vantage: If HP < 50%,[N]
 strike first when attacked.[X]
 
 ## SD_Desperation
-Alacrity: If unit AS is 6 or more faster[N]
+Alacrity: If unit AS is 6 or more greater[N]
 than foe AS, double before counters.[X]
 
 ## SD_Wrath
-Wrath: If HP < 50%,[N]
-+50 critical rate.[X]
+Wrath: If HP < 50%, +50 Crit.[X]
 
 ## SD_Counter
 Counter: Reflect physical damage[N]
@@ -162,27 +161,27 @@ Miracle: Survive a lethal[N]
 attack if HP > 50%.[X]
 
 ## SD_Swordfaire
-Swordfaire: +4 damage[N]
-when equipping a sword.[X]
+Swordfaire: +4 Atk when[N]
+equipping a sword.[X]
 
 ## SD_Lancefaire
-Lancefaire: +4 damage[N]
-when equipping a lance.[X]
+Lancefaire: +4 Atk when[N]
+equipping a lance.[X]
 
 ## SD_Axefaire
-Axefaire: +4 damage[N]
-when equipping an axe.[X]
+Axefaire: +4 Atk when[N]
+equipping an axe.[X]
 
 ## SD_Bowfaire
-Bowfaire: +4 damage[N]
-when equipping a bow.[X]
+Bowfaire: +4 Atk when[N]
+equipping a bow.[X]
 
 ## SD_Tomefaire
-Tomefaire: +4 damage[N]
-when equipping a tome.[X]
+Tomefaire: +4 Atk when[N]
+equipping a tome.[X]
 
 ## SD_CritUp
-Crit Boost: +30 critical rate.[X]
+Crit Boost: +30 Crit.[X]
 
 ## SD_Slayer
 Slayer: Deal effective damage[N]
@@ -215,7 +214,7 @@ Items are still emptied to the convoy.[X]
 
 ## SD_Demoiselle
 Demoiselle: Male allies within[N]
-2 tiles receive -2 damage.[X]
+2 tiles receive +2 Prt.[X]
 
 ## SD_Gentilhomme
 Killer Tactics: Adjacent allies with[N]
@@ -226,16 +225,16 @@ Invert: On player phase, allies within 2[N]
 tiles swap which defensive stat they target.[X]
 
 ## SD_Inspiration
-Inspiration: Allies within 2 tiles[N]
-deal +2 damage and receive -2 damage.[X]
+Inspiration: Allies within[N]
+2 tiles have +2 Atk/Prt.[X]
 
 ## SD_Charm
-Charm: Allies within 2[N]
-tiles deal +2 damage.[X]
+Charm: Allies within[N]
+2 tiles have +2 Atk.[X]
 
 ## SD_VoiceOfPeace
 Voice of Peace: Enemies within[N]
-2 tiles deal -2 damage.[X]
+2 tiles have -2 Atk.[X]
 
 ## SD_Amaterasu
 Amaterasu: Allies within 2 tiles[N]
@@ -335,8 +334,7 @@ to damage dealt.[N]
 (Cost: 4 Durability/Hit)[X]
 
 ## SD_LifeAndDeath
-Life and Death: +10 to[N]
-damage dealt and taken.[X]
+Life and Death: +10 Atk, -10 Prt.[X]
 
 ## SD_LockTouch
 Locktouch: Can open locks[N]
@@ -352,8 +350,8 @@ Intimidate: -10 Avoid to[N]
 all enemies within 2 tiles.[X]
 
 ## SD_Opportunist
-Opportunist: +4 damage[N]
-if the foe cannot counter.[X]
+Opportunist: +4 Atk if[N]
+foe cannot counter.[X]
 
 ## SD_Trample
 Adaptive: Enemy weapon Mt and Crit[N]
@@ -377,8 +375,8 @@ Staff Mastery: +2 staff range.[N]
 Stacks with Staff Savant.[X]
 
 ## SD_Tantivy
-Just Cause: +5 damage, +15 hit while[N]
-adjacent to an ally, -1 damage otherwise.[X]
+Just Cause: +5 Atk, +15 Hit while[N]
+adjacent to an ally, -1 Atk otherwise.[X]
 
 ## SD_Focus
 Lone Wolf: +3 Atk/AS, +15 Hit[N]
@@ -394,7 +392,7 @@ enemies within 3 tiles.[X]
 
 ## SD_LilysPoise
 Veteran's Eye: Adjacent allies will[N]
-never miss, but have 0 avoid.[X]
+never miss, but have 0 Avoid.[X]
 
 ## SD_Expertise
 Expertise: Reduce bonus damage[N]
@@ -404,11 +402,11 @@ from critical hits by 50%.[X]
 Celerity: Movement +2.[X]
 
 ## SD_FieryBlood
-Fiery Blood: +4 damage[N]
+Fiery Blood: +4 Atk[N]
 when HP is not at max.[X]
 
 ## SD_ElbowRoom
-Elbow Room: +3 damage dealt[N]
+Elbow Room: +3 Atk[N]
 when on open terrain.[X]
 
 ## SD_NaturalCover
@@ -470,31 +468,30 @@ attack, Attack +3. [X]
 
 ## SD_Patience
 Patience: When under[N]
-attack, avoid +10. [X]
+attack, Avoid +10. [X]
 
 ## SD_Pursuit
-Pursuit: When under attack,[N]
-attack speed +3. [X]
+Pursuit: When under attack, +3 AS.[X]
 
 ## SD_LightWeight
 Light Weight: If not weighed down,[N]
 add (Con-Wt)/2 to AS.[X]
 
 ## SD_KillingMachine
-Killing Machine: Total critical[N]
-rate is doubled.[X]
+Killing Machine: Unit's[N]
+Crit is doubled.[X]
 
 ## SD_CriticalForce
 Critical Force: Base critical is[N]
 Skl * 1.5.[X]
 
 ## SD_Chivalry
-Chivalry: When foe is at full HP,[N]
-Atk +2, Def/Res +2.[X]
+Chivalry: When foe is at[N]
+full HP, Atk +2, Prt +2.[X]
 
 ## SD_Pragmatic
-Pragmatic: When foe is not at full HP,[N]
-Atk +3, Def/Res+1.[X]
+Pragmatic: When foe is not[N]
+at full HP, Atk +3, Prt +1.[X]
 
 ## SD_Armsthrift
 Armsthrift: Luck % chance to not[N]
@@ -518,8 +515,8 @@ instantly kill the enemy unit.[N]
 (Only if name starts with "Arch")[X]
 
 ## SD_UpWithArch
-Resonance: Adjacent ally units deal extra[N]
-damage equal to half this unit's magic.[X]
+Resonance: Adjacent allies have +X Atk.[N]
+X = Half of this unit's magic.[X]
 
 ## SD_RightfulArch
 Rightful Arch: Sets Skill[N]
@@ -531,7 +528,7 @@ this unit's lineage.[X]
 
 ## SD_RightfulGod ^
 Metered: +1 heat/combat (4 max). +3 Atk/AS,[N]
-+15 Crit, -5 Def/Res per heat. 0 D/R at 4 heat.[N]
++15 Crit, -5 Prt per heat. 0 Prt at 4 heat.[N]
 Charge builds tension, initiate for +15 Atk.[X]
 
 ## SD_LuckySeven
@@ -547,7 +544,7 @@ Even Rhythm: +10 Hit and Avoid[N]
 on even numbered turns.[X]
 
 ## SD_QuickBurn
-Deep Pockets: +1 crit per[N]
+Deep Pockets: +1 Crit per[N]
 2500 gold in army's treasury.[X]
 
 ## SD_SlowBurn
@@ -609,8 +606,8 @@ Identity Problems: This unit can't[N]
 decide on a name or face.[X]
 
 ## SD_Charisma
-Charisma: Grants +10 Hit/Avoid[N]
-to all allies within 3 tiles.[X]
+Charisma: Allies within[N]
+3 tiles have +10 Hit/Avo.[X]
 
 ## SD_HeroesDeathBlow
 Death Blow: +6 Attack[N]
@@ -633,8 +630,8 @@ Hawkeye: User will[N]
 always hit the enemy.[X]
 
 ## SD_Solidarity
-Solidarity: Critical and Critical[N]
-Avoid +10 to adjacent allies.[X]
+Solidarity: +10 Crit/Dodge[N]
+to adjacent allies.[X]
 
 ## SD_Bracing_Stance
 Bracing Stance: +4 defense[N]
@@ -774,7 +771,7 @@ to 20% of the enemy's max[N]
 HP after every battle.[X]
 
 ## SD_Hex
-Hex: -15 avoid to all[N]
+Hex: -15 Avoid to all[N]
 adjacent enemies.[X]
 
 ## SD_Barricade
@@ -795,7 +792,7 @@ Perfectionist: +15 Hit/Avoid when[N]
 user's HP is at maximum.[X]
 
 ## SD_Puissance
-Puissance: +3 Damage when the user's[N]
+Puissance: +3 Atk when the user's[N]
 Strength is higher than the enemy's.[X]
 
 ## SD_BattleVeteran
@@ -812,30 +809,30 @@ Silent Pride: Gain 2 damage and take[N]
 
 ## SD_Loyalty
 Loyalty: When within 2 tiles of[N]
-a Lord, -3 damage taken, +15 Hit.[X]
+a Lord, +3 Prt, +15 Hit.[X]
 
 ## SD_Thunderstorm
 Thunderstorm: If weapon weight > enemy[N]
 W. Weight, +2 dmg, +15% hit, +5% crit.[X]
 
 ## SD_Outrider
-Outrider: Take -1 damage and[N]
-gain +3 crit per movement used.[X]
+Outrider: +1 Prt and +3 Crit[N]
+per movement used when attacking.[X]
 
 ## SD_HeavyStrikes
 Heavy Strikes: Add weapon[N]
-weight to critical chance.[X]
+weight to unit's Crit.[X]
 
 ## SD_Charge
-Charge: Gain +1 damage for every[N]
+Charge: Gain +1 Atk for every[N]
 movement point used when attacking.[X]
 
 ## SD_Infiltrator
-Family Man: +3 damage per ally[N]
+Family Man: +3 Atk per ally[N]
 within 2 tiles of this unit.[X]
 
 ## SD_Vanity
-Vanity: Gain +2 Damage and +10 Hit[N]
+Vanity: Gain +2 Atk and +10 Hit[N]
 when fighting enemy at 2 range.[X]
 
 ## SD_MageSlayer
@@ -845,7 +842,7 @@ allied female magic user.[X]
 
 ## SD_KnightAspirant
 Knight Aspirant: When above 75%[N]
-health, +2 Damage, +15 Avoid, and[N]
+health, +2 Atk, +15 Avoid, and[N]
 arts don't cost extra durability.[X]
 
 ## SD_Watchful
@@ -882,7 +879,7 @@ Drive Skill: Allies within[N]
 
 ## SD_DriveSpd
 Drive Speed: Allies within[N]
-2 tiles receive +2 speed.[X]
+2 tiles have +2 AS.[X]
 
 ## SD_DriveLck
 Drive Luck: Allies within[N]
@@ -932,7 +929,7 @@ White Pool: Atk and AS +5[N]
 to adjacent allies.[X]
 
 ## SD_NightTide
-Night Tide: Def and Res +5[N]
+Night Tide: Prt +5[N]
 to adjacent allies.[X]
 
 ## SD_Prescience
@@ -1052,11 +1049,11 @@ cannot be crit.[X]
 
 ## SD_Assassinate
 Assassinate: When initiating battle[N]
-at 1 range: +2 Damage, double[N]
+at 1 range: +2 Atk, double[N]
 attacks occur before counter.[X]
 
 ## SD_ArcaneBlade
-Arcane Blade: +Mag/2 Damage when[N]
+Arcane Blade: +Mag/2 Atk when[N]
 initiating with a sword at 1 range.[X]
 
 ## SD_Poise
@@ -1200,7 +1197,7 @@ damage dealt. (Cost: 4 Durability/Hit)[X]
 
 ## SD_Gridmaster
 Flow State: Toggle Flow in Skills for[N]
-+5 Atk/AS, +15 Hit/Crit, -10 Def/Res.[X]
++5 Atk/AS, +15 Hit/Crit, -10 Prt.[X]
 
 ## SD_Skyguard
 Ready Aim: Use Aim in Skills to gain[N]

@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song33_grp, voicegroup000
-	.equ	song33_pri, 0
-	.equ	song33_rev, 101
-	.equ	song33_mvl, 127
-	.equ	song33_key, 0
-	.equ	song33_tbs, 1
-	.equ	song33_exg, 0
-	.equ	song33_cmp, 1
+	.equ	NormalBattle_grp, voicegroup000
+	.equ	NormalBattle_pri, 0
+	.equ	NormalBattle_rev, 101
+	.equ	NormalBattle_mvl, 127
+	.equ	NormalBattle_key, 0
+	.equ	NormalBattle_tbs, 1
+	.equ	NormalBattle_exg, 0
+	.equ	NormalBattle_cmp, 1
 
 	.section .rodata
-	.global	song33
+	.global	NormalBattle
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song33_001:
+NormalBattle_001:
 @  #01 @000   ----------------------------------------
- .byte   VOL , 48*song33_mvl/mxv
- .byte   KEYSH , song33_key+0
+ .byte   VOL , 48*NormalBattle_mvl/mxv
+ .byte   KEYSH , NormalBattle_key+0
 Label_01727768:
- .byte   TEMPO , 160*song33_tbs/2
+ .byte   TEMPO , 160*NormalBattle_tbs/2
  .byte   VOICE , 100
  .byte   N12 ,Dn3 ,v100
  .byte   W12
@@ -338,10 +338,10 @@ Label_0172787F:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song33_002:
+NormalBattle_002:
 @  #02 @000   ----------------------------------------
- .byte   VOL , 48*song33_mvl/mxv
- .byte   KEYSH , song33_key+0
+ .byte   VOL , 48*NormalBattle_mvl/mxv
+ .byte   KEYSH , NormalBattle_key+0
 Label_017285D8:
  .byte   VOICE , 48
  .byte   W96
@@ -547,10 +547,10 @@ Label_0172862D:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song33_003:
+NormalBattle_003:
 @  #03 @000   ----------------------------------------
- .byte   VOL , 48*song33_mvl/mxv
- .byte   KEYSH , song33_key+0
+ .byte   VOL , 48*NormalBattle_mvl/mxv
+ .byte   KEYSH , NormalBattle_key+0
 Label_017275E8:
  .byte   VOICE , 51
  .byte   W96
@@ -812,10 +812,10 @@ Label_01727627:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song33_004:
+NormalBattle_004:
 @  #04 @000   ----------------------------------------
- .byte   VOL , 33*song33_mvl/mxv
- .byte   KEYSH , song33_key+0
+ .byte   VOL , 33*NormalBattle_mvl/mxv
+ .byte   KEYSH , NormalBattle_key+0
 Label_01726AA8:
  .byte   VOICE , 80
  .byte   W96
@@ -1143,10 +1143,10 @@ Label_01726BBF:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song33_005:
+NormalBattle_005:
 @  #05 @000   ----------------------------------------
- .byte   VOL , 48*song33_mvl/mxv
- .byte   KEYSH , song33_key+0
+ .byte   VOL , 48*NormalBattle_mvl/mxv
+ .byte   KEYSH , NormalBattle_key+0
 Label_017271CC:
  .byte   VOICE , 81
  .byte   N12 ,Bn2 ,v100
@@ -1467,10 +1467,10 @@ Label_01727304:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song33_006:
+NormalBattle_006:
 @  #06 @000   ----------------------------------------
- .byte   VOL , 48*song33_mvl/mxv
- .byte   KEYSH , song33_key+0
+ .byte   VOL , 48*NormalBattle_mvl/mxv
+ .byte   KEYSH , NormalBattle_key+0
 Label_01727A8C:
  .byte   VOICE , 124
  .byte   N06 ,Cn1 ,v127
@@ -1755,19 +1755,19 @@ Label_01727B7A:
 @******************************************************@
 	.align	2
 
-song33:
+NormalBattle:
 	.byte	6	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song33_pri	@ Priority
-	.byte	song33_rev	@ Reverb.
+	.byte	NormalBattle_pri	@ Priority
+	.byte	NormalBattle_rev	@ Reverb.
     
-	.word	song33_grp
+	.word	NormalBattle_grp
     
-	.word	song33_001
-	.word	song33_002
-	.word	song33_003
-	.word	song33_004
-	.word	song33_005
-	.word	song33_006
+	.word	NormalBattle_001
+	.word	NormalBattle_002
+	.word	NormalBattle_003
+	.word	NormalBattle_004
+	.word	NormalBattle_005
+	.word	NormalBattle_006
 
 	.end

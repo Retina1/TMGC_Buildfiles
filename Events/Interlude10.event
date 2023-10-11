@@ -25,6 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+//progress - 1/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//unlock A rank postmap?
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
@@ -87,7 +88,7 @@ CharacterEvent(GuideChpt16,I10ReadyToEnd,Blair,Argent)
 CharacterEvent(GuideChpt17,I10ReadyToEnd,Blair,SecretLaronde)
 CharacterEvent(GuideChpt18,I10ReadyToEnd,Blair,Ian)
 CharacterEvent(GuideChpt19,I10ReadyToEnd,Blair,Kyrie)
-CharacterEvent(GuideChpt20,I10ReadyToEnd,Blair,Brandl)//give the unyielding if hyperius is alive
+CharacterEvent(GuideChpt20,I10Brandl,Blair,Brandl)//DONE
 END_MAIN
 
 LocationBasedEvents:
@@ -264,15 +265,26 @@ LABEL 0x1
 EndEvent
 
 I10Village1:
-VillageEventItem(FillerDialogue, HouseCG, AngelicRobe)
+VillageEventItem(I10House1Text, HouseCG, AngelicRobe)
 I10Village2:
-VillageEventItem(FillerDialogue, HouseCG, WhiteGem)
+VillageEventItem(I10House2Text, HouseCG, WhiteGem)
 I10Village3:
-HouseEvent(FillerDialogue, HouseCG)
+HouseEvent(I10House3Text, HouseCG)
 I10Village4:
-HouseEvent(FillerDialogue, HouseCG)
+HouseEvent(I10House4Text, HouseCG)
 I10TheInn:
 HouseEvent(I10InnText, InnCG)
+
+I10Brandl:
+CHECK_ALIVE Hyperius
+BEQ 0x1 0xc 0x0
+Text(I10BrandlTalk)
+GiveItem(Unyielding,Blair)
+GOTO 0x2
+LABEL 0x1
+Text(I10BrandlTalkHyperiusDead)
+LABEL 0x2
+EndEvent
 
 EndingScene:
 Interlude10GlobalFlagOn

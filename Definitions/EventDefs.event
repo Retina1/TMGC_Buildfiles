@@ -46,6 +46,8 @@
 
 #define GotoPrepScreenNoBaseCheck "CALL $591FD8; EndEvent"
 
+#define HoratioMusicChooser "CHECK_EVENTID HoratioMusicFlag; BNE 0x666 0xc 0x0; MUSC S_Ameno; GOTO 0x667; LABEL 0x666; MUSC S_HisWorld; LABEL 0x667"
+
 #define LearnSkill(charID,skillID) "SVAL 1 skillID; SVAL 2 charID; ASMC ASMC_LearnNewSkill|1"
 #define CurrentUnitLearnSkill(skillID) "SVAL 1 skillID; SVAL 2 (-1); ASMC ASMC_LearnNewSkill|1"
 #define CurrentUnitForgetSkill(skillID) "SVAL 1 skillID; SVAL 2 (-1); ASMC ASMC_ForgetSkill|1"

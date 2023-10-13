@@ -43,6 +43,100 @@ Write_Word(0x00000000,$203B38c)
 ENUT ConvoyInitializeFlag
 EndEvent
 
+//add thing with laronde to prevent shopping with him/make him say why
+#define RoseShopMacro "CharacterEvent(0x0,RoseShopEvent,0x0,Rose)"
+ALIGN 4
+RoseShopEvent:
+CHECK_ACTIVEID SecretLaronde
+BEQ 0x40 0xc 0x0
+Text(RoseShopIntro)
+REMA
+LABEL 0x500
+ASMC prCallRoseShopMenu+1
+BNE 0x10 0xc 0x0
+	CHECK_MONEY
+	SVAL 0x1 6000
+	BLT 0x1 0xc 0x1
+	SystemText(RoseShopBuy)//systemtext
+	IfNoSelectedGoto(0x3)
+	Text(RoseShopBought)
+	REMA
+	SVAL 0x3 6000
+	TAKEMONEY
+	GiveItem(Galewind)
+	GOTO 0x500
+LABEL 0x10
+SVAL 0x1 0x1
+BNE 0x11 0xc 0x1
+	CHECK_MONEY
+	SVAL 0x1 6000
+	BLT 0x1 0xc 0x1
+	SystemText(RoseShopBuy)//systemtext
+	IfNoSelectedGoto(0x3)
+	Text(RoseShopBought)
+	REMA
+	SVAL 0x3 6000
+	TAKEMONEY
+	GiveItem(Smite)
+	GOTO 0x500
+LABEL 0x11
+SVAL 0x1 0x2
+BNE 0x12 0xc 0x1
+	CHECK_MONEY
+	SVAL 0x1 6000
+	BLT 0x1 0xc 0x1
+	SystemText(RoseShopBuy)//systemtext
+	IfNoSelectedGoto(0x3)
+	Text(RoseShopBought)
+	REMA
+	SVAL 0x3 6000
+	TAKEMONEY
+	GiveItem(Jormungandr)
+	GOTO 0x500
+LABEL 0x12
+SVAL 0x1 0x3
+BNE 0x13 0xc 0x1
+	CHECK_MONEY
+	SVAL 0x1 2500
+	BLT 0x1 0xc 0x1
+	SystemText(RoseShopBuy)//systemtext
+	IfNoSelectedGoto(0x3)
+	Text(RoseShopBought)
+	REMA
+	SVAL 0x3 2500
+	TAKEMONEY
+	GiveItem(Physic)
+	GOTO 0x500
+LABEL 0x13
+SVAL 0x1 0x4
+BNE 0x14 0xc 0x1
+	CHECK_MONEY
+	SVAL 0x1 10000
+	BLT 0x1 0xc 0x1
+	SystemText(RoseShopBuy)//systemtext
+	IfNoSelectedGoto(0x3)
+	Text(RoseShopBought)
+	REMA
+	SVAL 0x3 10000
+	TAKEMONEY
+	GiveItem(BlackLotus)
+	GOTO 0x500
+LABEL 0x14
+	Text(RoseShopBye)
+	GOTO 0x2
+LABEL 0x1
+	Text(RoseShopBroke)
+	REMA
+	GOTO 0x500
+LABEL 0x3
+	Text(RoseShopDenyBuy)
+	REMA
+	GOTO 0x500
+LABEL 0x40
+	Text(NoStinkyLarondesAllowed)
+LABEL 0x2
+EndEvent
+
 ALIGN 4
 {
 #include "Prologue.event"

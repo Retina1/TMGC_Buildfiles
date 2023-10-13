@@ -51,6 +51,9 @@ str r0, [r2, #0x14] // item id (0x77 for gold)
 ldrh r0, [r3, #0x6]
 str r0, [r2, #0x10] // gold amount
 
+mov r0, #0x0
+strb r0, [r1] // zero it back out
+
 mov r0, #0x1
 b End
 

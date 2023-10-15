@@ -35,6 +35,8 @@ ALIGN 4
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+AFEV 0x7 EndgamePhase2Begin 0x4
+DefeatBoss(EndingScene)
 END_MAIN
 
 Dunno:
@@ -85,7 +87,6 @@ UNIT
 
 EndgameHard:
 UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
-UNIT FinalArbordia Liberator 0x0 Level(20,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [Aspect] NeverMoveAI
 UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [4,21] 0x0 0x0 0x0 0x0 [Nocturne,Hell] ChaseOnceApproachedAI
 UNIT EndgameSimulacrum Sniper 0x0 Level(18,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
 UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [14,21] 0x0 0x0 0x0 0x0 [ForceSpike,Flare] ChaseOnceApproachedAI
@@ -132,6 +133,10 @@ UNIT DLEthyl SageF 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Starfall] Chase
 
 UNIT
 
+FinalArbordiaSpawn:
+UNIT FinalArbordia Liberator 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x1 REDA9R2 [Aspect] NeverMoveAI
+UNIT
+
 //if we wanna make every boss that hasn't already been deadlorded get a palette reference
 //3 arque cavs, brentson LncGen, helga warriorF, mitchell hero, amundsen bruiser, zaine sorc, esme wyvernlord, pete berserker, gregorias berserker, sofia sorcF
 //amara warriorF, valden lancpal, lazarus axegen, roark warrior, vulture bowgen, nicole swmastf, eds berserker x2 and warrior, bungalas lncgen, michael sniper
@@ -172,6 +177,17 @@ LOAD1 0x0 EndgameUnits
 ENUN
 GotoPrepScreen
 ENDA
+
+//maybe clear all enemies, move allies up, and summon spawns?
+EndgamePhase2Begin:
+MUSC 0x0
+CleanText(MoonCG,FillerDialogue)
+LOAD1 0x0 FinalArbordiaSpawn
+SetUnitStatus(FinalArbordia, State, 0x2)
+Text(FillerDialogue)
+BREAKING_SACRED_STONE FinalArbordia
+Text(FillerDialogue)
+EndEvent
 
 EndingScene:
 ResetBaseFlags

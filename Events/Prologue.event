@@ -172,6 +172,7 @@ ENUT LordMustEscapeLastFlag
 SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 5, Any, Any, Brigand, Any, Any)
 SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 6, Any, Any, Bruiser, Any, Any)
 AltOST(S_FootstepsOfFate,S_FootstepsOfFate,S_FootstepsOfFate)
+SystemText(GameIntroText)
 EndEvent
 
 EndingScene:

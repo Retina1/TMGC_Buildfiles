@@ -25,13 +25,13 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 6/63
+//progress - 11/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//unlock A rank postmap?
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
 CharacterEvent(0x9,I10ReadyToEnd,Blair,Natasia)//special if A rank
 CharacterEvent(0xa,I10ReadyToEnd,Blair,Stefan)//show character growth - maybe reflect on his prior brash recklessness and how he's changed over the journey
-CharacterEvent(0xb,I10ReadyToEnd,Blair,Desmond)//preparing a rousing/comforting speech
+CharacterEvent(0xb,I10Desmond,Blair,Desmond)//DONE
 CharacterEvent(0xc,I10Sam,Blair,Sam)//DONE
 CharacterEvent(0xd,I10ReadyToEnd,Blair,Josef)
 CharacterEvent(0xe,I10ReadyToEnd,Blair,Peggy)
@@ -62,13 +62,13 @@ CharacterEvent(0x26,I10ReadyToEnd,Blair,Toddsworth)
 CharacterEvent(0x27,I10ReadyToEnd,Blair,Yuyu)
 CharacterEvent(0x28,I10ReadyToEnd,Blair,Artemis)
 CharacterEvent(BaseFlag1,I10ReadyToEnd,Blair,Hollandaise)
-CharacterEvent(BaseFlag2,I10ReadyToEnd,Blair,Vladmir)//discuss opistia's willingness to assist in conflict despite alliance with dalst
+CharacterEvent(BaseFlag2,I10Vladmir,Blair,Vladmir)//DONE
 CharacterEvent(BaseFlag3,I10Horatio,Blair,Horatio)//EMBERS ENTWINED, use HoratioMusicChooser
-CharacterEvent(BaseFlag4,I10ReadyToEnd,Blair,UnitQ)
+CharacterEvent(BaseFlag4,I10Q,Blair,UnitQ)//DONE
 CharacterEvent(BaseFlag5,I10ReadyToEnd,Blair,Simone)
 CharacterEvent(BaseFlag6,I10ReadyToEnd,Blair,Ptolemy)
 CharacterEvent(BaseFlag7,I10ReadyToEnd,Blair,Johan)
-CharacterEvent(BaseFlag8,I10ReadyToEnd,Blair,SecretClarque)
+CharacterEvent(BaseFlag8,I10Clarque,Blair,SecretClarque)//DONE
 CharacterEvent(GuideChpt1,I10ReadyToEnd,Blair,Peter)
 CharacterEvent(GuideChpt2,I10Tonnamin,Blair,Tonnamin)//DONE
 CharacterEvent(GuideChpt3,I10ReadyToEnd,Blair,Joan)
@@ -87,7 +87,7 @@ CharacterEvent(GuideChpt15,I10ReadyToEnd,Blair,Wilhelm)
 CharacterEvent(GuideChpt16,I10ReadyToEnd,Blair,Argent)
 CharacterEvent(GuideChpt17,I10ReadyToEnd,Blair,SecretLaronde)
 CharacterEvent(GuideChpt18,I10Ian,Blair,Ian)//DONE
-CharacterEvent(GuideChpt19,I10ReadyToEnd,Blair,Kyrie)
+CharacterEvent(GuideChpt19,I10Kyrie,Blair,Kyrie)//DONE
 CharacterEvent(GuideChpt20,I10Brandl,Blair,Brandl)//DONE
 END_MAIN
 
@@ -302,8 +302,23 @@ EndEvent
 
 
 //block of pure convos
+I10Kyrie:
+	Text(I10KyrieTalk)
+	EndEvent
+I10Clarque:
+	Text(I10ClarqueTalk)
+	EndEvent
+I10Desmond:
+	Text(I10DesmondTalk)
+	EndEvent
+I10Vladmir:
+	Text(I10VladmirTalk)
+	EndEvent
+I10Q:
+	Text(I10QTalk)
+	EndEvent
 I10Addington:
-	Text(I10Addington)
+	Text(I10AddingtonTalk)
 	EndEvent
 I10Tonnamin:
 	Text(I10TonnaminTalk)
@@ -439,7 +454,7 @@ BEQ 0x11 0xc 0x0
 		CHECK_ALIVE Leila
 		BEQ 0x17 0xc 0x0
 			CHECK_ALIVE Tobias
-			BEQ 0x18 0xc 0x0
+			BEQ 0x19 0xc 0x0
 				GetSupportLevel(Leila,Tobias)
 				SVAL 0x2 0x2
 				BNE 0x1b 0x2 0x1
@@ -537,6 +552,14 @@ BEQ 0x13 0xc 0x0
 		REMA
 		SetSupport(Leila,Tobias,BPSupport,1)
 LABEL 0x13
+//clarque/fred talk
+CHECK_ALIVE SecretClarque
+BEQ 0x1d 0xc 0x0
+	CHECK_ALIVE Freddric
+	BEQ 0x1d 0xc 0x0
+	CleanTextNoMap(HallCG,I10EndingClarqueFreddric)
+LABEL 0x1d
+
 //apollo/bechamel event (nevermind i don't wanna force a romantic A rank
 //zeke and blair hit A rank here if they have B+
 GetSupportLevel(Blair,Zeke)

@@ -20,6 +20,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C1Turn1,1)
 TurnEventPlayer(0x0,C1Turn2,2)
 TurnEventPlayer(0x0,C1Turn3,3)
 TurnEventPlayer(0x0,C1Turn4,4)
@@ -182,16 +183,16 @@ DeathBranchText(Kenneth,Natasia,VictoryMinor,VictoryTheme,0x3,Ch1_Ending,Ch1_End
 MoveToChapter(Chapter2)
 EndEvent
 
+C1Turn1:
+CAM1 [1,9]
+FlashCursor(1,9,60)
+CleanText(VillageCG,Ch1_NatasiaScene)
+EndEvent
+
 C1Turn2:
 CAM1 Marque
 FlashCursor(Marque,60)
 Text(C1Warning)
-CHECK_EVENTID 0x10
-BNE 0x1 0xc 0x0
-CAM1 [1,9]
-FlashCursor(1,9,60)
-CleanText(VillageCG,Ch1_NatasiaScene)
-LABEL 0x1
 EndEvent
 
 C1Turn3:

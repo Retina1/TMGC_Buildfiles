@@ -86,7 +86,6 @@ UNIT Dalst AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverM
 UNIT
 
 EndgameHard:
-UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [4,21] 0x0 0x0 0x0 0x0 [Nocturne,Hell] ChaseOnceApproachedAI
 UNIT EndgameSimulacrum Sniper 0x0 Level(18,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
 UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [14,21] 0x0 0x0 0x0 0x0 [ForceSpike,Flare] ChaseOnceApproachedAI
@@ -126,11 +125,16 @@ UNIT BossSimulacrum7 BowPal 0x0 Level(20,Enemy,1) [12,9] 0x0 0x0 0x0 0x0 [Master
 UNIT BossSimulacrum7 Deserter 0x0 Level(20,Enemy,1) [3,7] 0x0 0x0 0x0 0x0 [GildedLance,Spear] ChaseOnceApproachedAI//davelarn
 UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [BraveSword,Tomahawk] ChaseOnceApproachedAI//reynard
 
+UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [BookOfOpistus] AttackInRangeAI
+UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis] AttackInRangeAI
+UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
+
 UNIT DLNathaniel Sorc 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [TheSDarkTome] ChaseOnceApproachedAI
 UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal] ChaseOnceApproachedAI
 UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [Nuiusseon] ChaseOnceApproachedAI
 UNIT DLEthyl SageF 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Starfall] ChaseOnceApproachedAI
 
+UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT
 
 FinalArbordiaSpawn:

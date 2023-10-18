@@ -25,7 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 11/63
+//progress - 20/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//unlock A rank postmap?
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
@@ -44,12 +44,12 @@ CharacterEvent(0x14,I10ReadyToEnd,Blair,Apollo)
 CharacterEvent(0x15,I10ReadyToEnd,Blair,Bechamel)
 CharacterEvent(0x16,I10ReadyToEnd,Blair,Sveltzalus)
 CharacterEvent(0x17,I10ReadyToEnd,Blair,Hilbert)//realize that blind distinction between good and evil isn't real
-CharacterEvent(0x18,I10ReadyToEnd,Blair,Agnes)
+CharacterEvent(0x18,I10Agnes,Blair,Agnes)//DONE
 CharacterEvent(0x19,I10ReadyToEnd,Blair,Flynn)
 CharacterEvent(0x1a,I10Addington,Blair,Addington)//DONE
 CharacterEvent(0x1b,I10ReadyToEnd,Blair,Mikey)
 CharacterEvent(0x1c,I10ReadyToEnd,Blair,Carbon)//unlock A rank
-CharacterEvent(0x1d,I10ReadyToEnd,Blair,Gaylord)
+CharacterEvent(0x1d,I10Gaylord,Blair,Gaylord)//DONE
 CharacterEvent(0x1e,I10ReadyToEnd,Blair,Athena)
 CharacterEvent(0x1f,I10ReadyToEnd,Blair,Charley)
 CharacterEvent(0x20,I10ReadyToEnd,Blair,Hyperius)
@@ -79,13 +79,13 @@ CharacterEvent(GuideChpt7,I10ReadyToEnd,Blair,Dean)
 CharacterEvent(GuideChpt8,I10ReadyToEnd,Blair,Eliza)
 CharacterEvent(GuideChpt9,I10ReadyToEnd,Blair,Rift)
 CharacterEvent(GuideChpt10,I10ReadyToEnd,Blair,Estelle)//unlock B+ rank
-CharacterEvent(GuideChpt11,I10ReadyToEnd,Blair,Rose)
-CharacterEvent(GuideChpt12,I10ReadyToEnd,Blair,Dirk)
-CharacterEvent(GuideChpt13,I10ReadyToEnd,Blair,Callum)
-CharacterEvent(GuideChpt14,I10ReadyToEnd,Blair,Manfred)
-CharacterEvent(GuideChpt15,I10ReadyToEnd,Blair,Wilhelm)
-CharacterEvent(GuideChpt16,I10ReadyToEnd,Blair,Argent)
-CharacterEvent(GuideChpt17,I10ReadyToEnd,Blair,SecretLaronde)
+CharacterEvent(GuideChpt11,I10Rose,Blair,Rose)//DONE
+CharacterEvent(GuideChpt12,I10Dirk,Blair,Dirk)//DONE
+CharacterEvent(GuideChpt13,I10Callum,Blair,Callum)//DONE
+CharacterEvent(GuideChpt14,I10Manfred,Blair,Manfred)//DONE
+CharacterEvent(GuideChpt15,I10Wilhelm,Blair,Wilhelm)//DONE
+CharacterEvent(GuideChpt16,I10Argent,Blair,Argent)//DONE
+CharacterEvent(GuideChpt17,I10Laronde,Blair,SecretLaronde)//DONE
 CharacterEvent(GuideChpt18,I10Ian,Blair,Ian)//DONE
 CharacterEvent(GuideChpt19,I10Kyrie,Blair,Kyrie)//DONE
 CharacterEvent(GuideChpt20,I10Brandl,Blair,Brandl)//DONE
@@ -217,8 +217,6 @@ UNIT
 
 ALIGN 4
 
-//brandl is here, hyperius gets prf
-
 BeginningScene:
 EnableFreeMovement
 MUSC NarrationTheme5
@@ -237,45 +235,6 @@ Interlude10GlobalFlagOff
 //SetSupport(Horatio,Simone,CPSupport,1)
 GotoPrepScreen
 ENDA
-
-I10DoorTrigger:
-Text(I10DoorText)
-SOUN 0xB1
-TILECHANGE 0x0
-STAL 15
-EndEvent
-
-I10ChestTrigger:
-MUSC S_WelcomeToLegend
-SOUN 0xB1
-TILECHANGE 0x1
-STAL 15
-Text(I10ChestText)
-GiveItem(Hopesinger,Blair)
-EndEvent
-
-I10ReadyToEnd:
-EVBIT_MODIFY 4
-Text(FillerDialogue)//confirm
-SystemText(I1LeavePrompt)
-IfNoSelectedGoto(0x2)
-CALL EndingScene
-GOTO 0x1
-LABEL 0x2
-Text(FillerDialogue)//no
-LABEL 0x1
-EndEvent
-
-I10Village1:
-VillageEventItem(I10House1Text, HouseCG, AngelicRobe)
-I10Village2:
-VillageEventItem(I10House2Text, HouseCG, WhiteGem)
-I10Village3:
-HouseEvent(I10House3Text, HouseCG)
-I10Village4:
-HouseEvent(I10House4Text, HouseCG)
-I10TheInn:
-HouseEvent(I10InnText, InnCG)
 
 I10Horatio:
 MUSC S_Ameno
@@ -302,6 +261,36 @@ EndEvent
 
 
 //block of pure convos
+I10Rose:
+	Text(I10RoseTalk)
+	EndEvent
+I10Dirk:
+	CHECK_ALIVE Eliza
+	BEQ 0x1 0xc 0x0
+	Text(I10DirkTalk)
+	GOTO 0x2
+	LABEL 0x1
+	Text(I10DirkTalkAlt)
+	LABEL 0x2
+	EndEvent
+I10Callum:
+	Text(I10CallumTalk)
+	EndEvent
+I10Manfred:
+	Text(I10ManfredTalk)
+	EndEvent
+I10Agnes:
+	Text(I10AgnesTalk)
+	EndEvent
+I10Gaylord:
+	Text(I10GaylordTalk)
+	EndEvent
+I10Wilhelm:
+	Text(I10WilhelmTalk)
+	EndEvent
+I10Argent:
+	Text(I10ArgentTalk)
+	EndEvent
 I10Kyrie:
 	Text(I10KyrieTalk)
 	EndEvent
@@ -334,7 +323,16 @@ I10Sam:
 	LABEL 0x1
 	Text(I10SamTalkAlt)//subtle change
 	LABEL 0x2
-EndEvent
+	EndEvent
+I10Laronde:
+	CHECK_ALIVE Rose
+	BEQ 0x1 0xc 0x0
+	Text(I10LarondeTalk)
+	GOTO 0x2
+	LABEL 0x1
+	Text(I10LarondeTalkAlt)
+	LABEL 0x2
+	EndEvent
 
 I10Brandl:
 CHECK_ALIVE Hyperius
@@ -597,5 +595,45 @@ BEQ 0x2 0xc 0x0
 LABEL 0x2
 MoveToChapter(Chapter26)
 ENDA
+
+I10DoorTrigger:
+Text(I10DoorText)
+SOUN 0xB1
+TILECHANGE 0x0
+STAL 15
+EndEvent
+
+I10ChestTrigger:
+MUSC S_WelcomeToLegend
+SOUN 0xB1
+TILECHANGE 0x1
+STAL 15
+Text(I10ChestText)
+GiveItem(Hopesinger,Blair)
+EndEvent
+
+I10ReadyToEnd:
+EVBIT_MODIFY 4
+Text(I10ConfirmLeave)//confirm
+SystemText(I1LeavePrompt)
+IfNoSelectedGoto(0x2)
+Text(I10TheTime)//confirm
+CALL EndingScene
+GOTO 0x1
+LABEL 0x2
+Text(I10NotYet)//no
+LABEL 0x1
+EndEvent
+
+I10Village1:
+VillageEventItem(I10House1Text, HouseCG, AngelicRobe)
+I10Village2:
+VillageEventItem(I10House2Text, HouseCG, WhiteGem)
+I10Village3:
+HouseEvent(I10House3Text, HouseCG)
+I10Village4:
+HouseEvent(I10House4Text, HouseCG)
+I10TheInn:
+HouseEvent(I10InnText, InnCG)
 
 //MESSAGE Events end at offset CURRENTOFFSET

@@ -38,6 +38,7 @@ CharacterEventBothWays(0x17,C18LeilaZachariasSupport,Leila,Zacharias)
 CharacterEventBothWays(0x18,C18DesmondMikeySupport,Desmond,Mikey)
 CharacterEventBothWays(0x1a,C18ArinSamSupport,Arin,Sam)
 CharacterEventBothWays(0x21,C18ApolloVladmirSupport,Apollo,Vladmir)
+CharacterEventBothWays(0x21,C18YuyuHollandaiseSupport,Yuyu,Hollandaise)
 END_MAIN
 
 LocationBasedEvents:
@@ -303,6 +304,10 @@ EndEvent
 C18ArinSamSupport:
 Text(ArinSamBSupport)
 SetSupport(Arin,Sam,BSupport,1)
+EndEvent
+C18YuyuHollandaiseSupport:
+Text(YuyuHollandaiseCSupport)
+SetSupport(Yuyu,Hollandaise,CSupport,1)
 EndEvent
 
 BeginningScene:

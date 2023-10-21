@@ -553,6 +553,11 @@ lsl		r1,#8				@ 0x200, L button
 tst		r0,r1
 beq		End_CombineWhenTaking
 mov		r0,r4
+ldr		r3,=#0x80174EC	@ GetItemIndex
+mov		r14,r3
+.short	0xF800
+cmp		r0,#0xbc
+beq		End_CombineWhenTaking	@ if skill scroll, can't combine
 ldr		r3,=#0x80175B0		@ GetItemMaxUses
 mov		r14,r3
 .short	0xF800
@@ -632,6 +637,11 @@ TryToCombineInConvoy:
 @ r0=item id/uses; return the updated id/uses (or 0 if item was used up)
 push	{r4-r7,r14}
 mov		r4,r0
+ldr		r3,=#0x80174EC	@ GetItemIndex
+mov		r14,r3
+.short	0xF800
+cmp		r0,#0xbc
+beq		End_TryToCombineInConvoy	@ if skill scroll, can't combine
 ldr		r3,=#0x80175B0		@ GetItemMaxUses
 mov		r14,r3
 .short	0xF800

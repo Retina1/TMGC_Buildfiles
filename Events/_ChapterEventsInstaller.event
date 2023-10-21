@@ -48,7 +48,7 @@ EndEvent
 ALIGN 4
 RoseShopEvent:
 CHECK_ACTIVEID SecretLaronde
-BEQ 0x40 0xc 0x0
+BNE 0x40 0xc 0x0
 Text(RoseShopIntro)
 REMA
 LABEL 0x500

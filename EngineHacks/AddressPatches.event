@@ -1,13 +1,34 @@
-//Prep screen text width
+//Vanilla width is 5
+#define UnitNameTileWidth 6
+
+//Prep screen name text width
 PUSH
 ORG 0x99554 //Prep screen item menu selected pixel width
 BYTE 0x2B
 ORG 0x9878C //Prep screen item menu selected tile width
-BYTE 0x6
+BYTE UnitNameTileWidth
 ORG 0x9A820 //Prep screen item menu tile width
-BYTE 0x6
+BYTE UnitNameTileWidth
 ORG 0x98728 //Prep screen pick units tile width
-BYTE 0x6
+BYTE UnitNameTileWidth
+ORG 0x9EF18 //List menu tile width
+BYTE UnitNameTileWidth
+POP
+
+PUSH
+//Stat screen class name tile width
+ORG 0xA00708
+BYTE 9
+POP
+
+//Prevent Portraits being semi-transparent when loaded before text box
+PUSH
+ORG 0x13BEA
+BYTE 0x0
+ORG 0x13BEE
+BYTE 0x0
+ORG 0x13BF0
+BYTE 0x0
 POP
 
 //sacred weapons

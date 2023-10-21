@@ -25,8 +25,8 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 20/63
-CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//unlock A rank postmap?
+//progress - 29/63
+CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
 CharacterEvent(0x9,I10ReadyToEnd,Blair,Natasia)//special if A rank
@@ -42,7 +42,7 @@ CharacterEvent(0x12,I10ReadyToEnd,Blair,Jeff)
 CharacterEvent(0x13,I10ReadyToEnd,Blair,Emile)//unlock A rank
 CharacterEvent(0x14,I10ReadyToEnd,Blair,Apollo)
 CharacterEvent(0x15,I10ReadyToEnd,Blair,Bechamel)
-CharacterEvent(0x16,I10ReadyToEnd,Blair,Sveltzalus)
+CharacterEvent(0x16,I10Sveltzalus,Blair,Sveltzalus)//DONE
 CharacterEvent(0x17,I10ReadyToEnd,Blair,Hilbert)//realize that blind distinction between good and evil isn't real
 CharacterEvent(0x18,I10Agnes,Blair,Agnes)//DONE
 CharacterEvent(0x19,I10ReadyToEnd,Blair,Flynn)
@@ -71,14 +71,14 @@ CharacterEvent(BaseFlag7,I10ReadyToEnd,Blair,Johan)
 CharacterEvent(BaseFlag8,I10Clarque,Blair,SecretClarque)//DONE
 CharacterEvent(GuideChpt1,I10ReadyToEnd,Blair,Peter)
 CharacterEvent(GuideChpt2,I10Tonnamin,Blair,Tonnamin)//DONE
-CharacterEvent(GuideChpt3,I10ReadyToEnd,Blair,Joan)
+CharacterEvent(GuideChpt3,I10Joan,Blair,Joan)//DONE
 CharacterEvent(GuideChpt4,I10ReadyToEnd,Blair,Sonia)
-CharacterEvent(GuideChpt5,I10ReadyToEnd,Blair,Tobias)
-CharacterEvent(GuideChpt6,I10ReadyToEnd,Blair,Freddric)
-CharacterEvent(GuideChpt7,I10ReadyToEnd,Blair,Dean)
-CharacterEvent(GuideChpt8,I10ReadyToEnd,Blair,Eliza)
-CharacterEvent(GuideChpt9,I10ReadyToEnd,Blair,Rift)
-CharacterEvent(GuideChpt10,I10ReadyToEnd,Blair,Estelle)//unlock B+ rank
+CharacterEvent(GuideChpt5,I10Tobias,Blair,Tobias)//DONE
+CharacterEvent(GuideChpt6,I10Freddric,Blair,Freddric)//DONE
+CharacterEvent(GuideChpt7,I10Dean,Blair,Dean)//DONE
+CharacterEvent(GuideChpt8,I10Eliza,Blair,Eliza)//DONE
+CharacterEvent(GuideChpt9,I10Rift,Blair,Rift)//DONE
+CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE
 CharacterEvent(GuideChpt11,I10Rose,Blair,Rose)//DONE
 CharacterEvent(GuideChpt12,I10Dirk,Blair,Dirk)//DONE
 CharacterEvent(GuideChpt13,I10Callum,Blair,Callum)//DONE
@@ -260,7 +260,42 @@ LABEL 0x4
 EndEvent
 
 
+//blair support events
+I10Estelle:
+	GetSupportLevel(Blair,Estelle)
+	SVAL 0x2 0x2
+	BEQ 0x3 0x2 0x1
+	Text(I10EstelleTalk)
+	GOTO 0x4
+	LABEL 0x3
+	Text(I10EstelleTalkAlt)
+	SetSupport(Blair,Estelle,BPSupport,1)
+	LABEL 0x4
+	EndEvent
+
+
 //block of pure convos
+I10Joan:
+	Text(I10JoanTalk)
+	EndEvent
+I10Tobias:
+	Text(I10TobiasTalk)
+	EndEvent
+I10Sveltzalus:
+	Text(I10SveltzalusTalk)
+	EndEvent
+I10Eliza:
+	Text(I10ElizaTalk)
+	EndEvent
+I10Dean:
+	Text(I10DeanTalk)
+	EndEvent
+I10Freddric:
+	Text(I10FreddricTalk)
+	EndEvent
+I10Rift:
+	Text(I10RiftTalk)
+	EndEvent
 I10Rose:
 	Text(I10RoseTalk)
 	EndEvent

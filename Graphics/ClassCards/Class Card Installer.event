@@ -104,7 +104,20 @@
 #define ThiefMCard 0x8e
 #define ThiefFCard 0xd7
 #define BookCard 0xf1
+
+#define ViridianLordCard 0x12c
+#define BardFCard 0x12d
 ALIGN 4
+
+ViridianLordPortrait:
+#incbin "ViridianLord.dmp"
+ViridianLordPortraitPalette:
+#incbin "ViridianLordPalette.dmp"
+
+BardFPortrait:
+#incbin "BardF.dmp"
+BardFPortraitPalette:
+#incbin "BardFPalette.dmp"
 
 BookPortrait:
 #incbin "Book.dmp"
@@ -633,6 +646,9 @@ setCardEntry(PirateFCard,PirateFPortrait,PirateFPortraitPalette)
 setCardEntry(BerserkFCard,BerserkFPortrait,BerserkFPortraitPalette)
 
 setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
+
+setCardEntry(ViridianLordCard,ViridianLordPortrait,ViridianLordPortraitPalette)
+setCardEntry(BardFCard,BardFPortrait,BardFPortraitPalette)
 
 setCardEntry(CrateCard,CratePortrait,CratePortraitPalette)
 setCardEntry(HorseCard,HorsePortrait,HorsePortraitPalette)

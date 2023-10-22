@@ -56,15 +56,15 @@ ENDTRAP
 ALIGN 4
 
 C1Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [9,4] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Arin Trickster 0x0 Level(1,Ally,0) [8,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [10,5] 0x0 0x0 0x0 0x0 [Flux, Vulnerary] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [9,5] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(1,Ally,0) [10,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [8,6] 0x0 0x0 0x0 0x0 [Flux, Vulnerary] NoAI
 UNIT
 
 C1CutsceneUnits:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [18,8] 0x0 0x0 0x1 REDA9R4 [Fire, Awaken, Vulnerary] NoAI
-UNIT Arin Trickster 0x0 Level(1,Ally,0) [18,8] 0x0 0x0 0x1 REDA8R5 [0x0] NoAI
-UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [18,8] 0x0 0x0 0x1 REDA10R5 [Flux, Vulnerary] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [18,8] 0x0 0x0 0x1 REDA9R6 [Fire, Awaken, Vulnerary] NoAI
+UNIT Arin Trickster 0x0 Level(1,Ally,0) [18,8] 0x0 0x0 0x1 REDA10R6 [0x0] NoAI
+UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [18,8] 0x0 0x0 0x1 REDA8R6 [Flux, Vulnerary] NoAI
 UNIT
 
 C1Easy:
@@ -74,10 +74,10 @@ UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [10,12] 0x0 0x0 0x0 0x0 [SteelLance] No
 UNIT Mevion SoldierF 0x0 Level(3,Enemy,1) [12,12] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT Mevion Merc 0x0 Level(3,Enemy,1) [17,7] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT Mevion MercF 0x0 Level(1,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [IronSword] NoAI
-UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
+UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] DropItem 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
 UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [17,1] 0x0 0x0 0x0 0x0 [IronLance] DelayedAI
 UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
-UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [SteelSword,Vulnerary] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [Lancereaver,Vulnerary] NoAI
 UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] DropItem 0x0 0x0 0x0 [IronAxe, RedGem] AttackInRangeAI
 UNIT
 
@@ -91,10 +91,10 @@ UNIT Mevion MercF 0x0 Level(1,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Mevion SwdArm 0x0 Level(3,Enemy,1) [4,1] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Mevion SwdCav 0x0 Level(3,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
 UNIT Mevion LncCav 0x0 Level(2,Enemy,1) [17,15] 0x0 0x0 0x0 0x0 [Javelin] AttackInRangeAI
-UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
+UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] DropItem 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
 UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [17,1] 0x0 0x0 0x0 0x0 [IronLance] DelayedAI
 UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
-UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [SteelSword,Vulnerary] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [Lancereaver,Vulnerary] NoAI
 UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] DropItem 0x0 0x0 0x0 [SteelAxe, HandAxe, RedGem] NeverMoveAI
 UNIT
 
@@ -104,16 +104,16 @@ UNIT Mevion LncArm 0x0 Level(2,Enemy,1) [18,6] 0x0 0x0 0x0 0x0 [Javelin] NeverMo
 UNIT Mevion AxeArm 0x0 Level(2,Enemy,1) [6,10] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT Mevion LncArm 0x0 Level(2,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [Javelin] NeverMoveAI
 UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [9,12] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
-UNIT Mevion SoldierF 0x0 Level(3,Enemy,1) [11,12] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion SoldierF 0x0 Level(3,Enemy,1) [11,13] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT Mevion Merc 0x0 Level(3,Enemy,1) [16,7] 0x0 0x0 0x0 0x0 [IronSword] NoAI
 UNIT Mevion MercF 0x0 Level(1,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
 UNIT Mevion SwdArm 0x0 Level(3,Enemy,1) [4,1] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
-UNIT Mevion SwdCav 0x0 Level(3,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
+UNIT Mevion SwdCav 0x0 Level(3,Enemy,1) [16,15] 0x0 0x0 0x0 0x0 [IronSword] AttackInRangeAI
 UNIT Mevion LncCav 0x0 Level(2,Enemy,1) [17,15] 0x0 0x0 0x0 0x0 [Javelin] AttackInRangeAI
-UNIT Mevion Archer 0x0 Level(3,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [IronBow, Vulnerary] NoAI
+UNIT Mevion Archer 0x0 Level(3,Enemy,1) [14,11] DropItem 0x0 0x0 0x0 [IronBow, Vulnerary] NeverMoveAI
 UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [17,1] 0x0 0x0 0x0 0x0 [IronLance] DelayedAI
 UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
-UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [SteelSword,Vulnerary] NoAI
+UNIT Mevion Merc 0x0 Level(3,Enemy,1) [0,13] DropItem 0x0 0x0 0x0 [Lancereaver,Vulnerary] NoAI
 UNIT Marque AxeCav 0x0 Level(8,Enemy,1) [16,2] DropItem 0x0 0x0 0x0 [SteelAxe, HandAxe, RedGem] NeverMoveAI
 UNIT
 
@@ -128,7 +128,7 @@ UNIT Mevion FighterF 0x0 Level(3,Enemy,1) [3,0] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT
 
 C1T5:
-UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [14,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
+UNIT Mevion Soldier 0x0 Level(2,Enemy,1) [14,15] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Mevion SoldierF 0x0 Level(2,Enemy,1) [16,15] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT
 
@@ -186,7 +186,11 @@ EndEvent
 C1Turn1:
 CAM1 [1,9]
 FlashCursor(1,9,60)
+MUSC RecruitmentTheme
 CleanText(VillageCG,Ch1_NatasiaScene)
+Reinforcements(NatasiaRecruitment)
+ENUT 0x10
+TILECHANGE 0x1
 EndEvent
 
 C1Turn2:

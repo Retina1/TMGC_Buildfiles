@@ -107,6 +107,22 @@
 
 #define ViridianLordCard 0x12c
 #define BardFCard 0x12d
+#define DLFreddricCard 0x12e
+#define DLDeanCard 0x12f
+#define DLElizaCard 0x130
+#define DLRiftCard 0x131
+#define DLEstelleCard 0x132
+#define DLRoseCard 0x133
+#define DLDirkCard 0x134
+#define DLCallumCard 0x135
+#define DLManfredCard 0x136
+#define DLWilhelmCard 0x137
+#define DLArgentCard 0x138
+
+#define DLLazarusCard 0x139
+#define DLNathanielCard 0x13a
+#define DLTarquinCard 0x13b
+#define DLEthylCard 0x13c
 ALIGN 4
 
 ViridianLordPortrait:
@@ -118,6 +134,82 @@ BardFPortrait:
 #incbin "BardF.dmp"
 BardFPortraitPalette:
 #incbin "BardFPalette.dmp"
+
+DLLazarusPortrait:
+#incbin "cry/DLLazarus.dmp"
+DLLazarusPortraitPalette:
+#incbin "cry/DLLazarusPalette.dmp"
+
+DLNathanielPortrait:
+#incbin "cry/DLNathaniel.dmp"
+DLNathanielPortraitPalette:
+#incbin "cry/DLNathanielPalette.dmp"
+
+DLTarquinPortrait:
+#incbin "cry/DLTarquin.dmp"
+DLTarquinPortraitPalette:
+#incbin "cry/DLTarquinPalette.dmp"
+
+DLEthylPortrait:
+#incbin "cry/DLEthyl.dmp"
+DLEthylPortraitPalette:
+#incbin "cry/DLEthylPalette.dmp"
+
+DLArgentPortrait:
+#incbin "cry/DLArgent.dmp"
+DLArgentPortraitPalette:
+#incbin "cry/DLArgentPalette.dmp"
+
+DLFreddricPortrait:
+#incbin "cry/DLFreddric.dmp"
+DLFreddricPortraitPalette:
+#incbin "cry/DLFreddricPalette.dmp"
+
+DLDeanPortrait:
+#incbin "cry/DLDean.dmp"
+DLDeanPortraitPalette:
+#incbin "cry/DLDeanPalette.dmp"
+
+DLElizaPortrait:
+#incbin "cry/DLEliza.dmp"
+DLElizaPortraitPalette:
+#incbin "cry/DLElizaPalette.dmp"
+
+DLRiftPortrait:
+#incbin "cry/DLRift.dmp"
+DLRiftPortraitPalette:
+#incbin "cry/DLRiftPalette.dmp"
+
+DLEstellePortrait:
+#incbin "cry/DLEstelle.dmp"
+DLEstellePortraitPalette:
+#incbin "cry/DLEstellePalette.dmp"
+
+DLRosePortrait:
+#incbin "cry/DLRose.dmp"
+DLRosePortraitPalette:
+#incbin "cry/DLRosePalette.dmp"
+
+DLDirkPortrait:
+#incbin "cry/DLDirk.dmp"
+DLDirkPortraitPalette:
+#incbin "cry/DLDirkPalette.dmp"
+
+DLCallumPortrait:
+#incbin "cry/DLCallum.dmp"
+DLCallumPortraitPalette:
+#incbin "cry/DLCallumPalette.dmp"
+
+DLManfredPortrait:
+#incbin "cry/DLManfred.dmp"
+DLManfredPortraitPalette:
+#incbin "cry/DLManfredPalette.dmp"
+
+DLWilhelmPortrait:
+#incbin "cry/DLWilhelm.dmp"
+DLWilhelmPortraitPalette:
+#incbin "cry/DLWilhelmPalette.dmp"
+
 
 BookPortrait:
 #incbin "Book.dmp"
@@ -649,6 +741,22 @@ setCardEntry(CivilianCard,CivilianPortrait,CivilianPortraitPalette)
 
 setCardEntry(ViridianLordCard,ViridianLordPortrait,ViridianLordPortraitPalette)
 setCardEntry(BardFCard,BardFPortrait,BardFPortraitPalette)
+setCardEntry(DLFreddricCard,DLFreddricPortrait,DLFreddricPortraitPalette)
+setCardEntry(DLDeanCard,DLDeanPortrait,DLDeanPortraitPalette)
+setCardEntry(DLElizaCard,DLElizaPortrait,DLElizaPortraitPalette)
+setCardEntry(DLRiftCard,DLRiftPortrait,DLRiftPortraitPalette)
+setCardEntry(DLEstelleCard,DLEstellePortrait,DLEstellePortraitPalette)
+setCardEntry(DLRoseCard,DLRosePortrait,DLRosePortraitPalette)
+setCardEntry(DLDirkCard,DLDirkPortrait,DLDirkPortraitPalette)
+setCardEntry(DLCallumCard,DLCallumPortrait,DLCallumPortraitPalette)
+setCardEntry(DLManfredCard,DLManfredPortrait,DLManfredPortraitPalette)
+setCardEntry(DLWilhelmCard,DLWilhelmPortrait,DLWilhelmPortraitPalette)
+setCardEntry(DLArgentCard,DLArgentPortrait,DLArgentPortraitPalette)
+
+setCardEntry(DLLazarusCard,DLLazarusPortrait,DLLazarusPortraitPalette)
+setCardEntry(DLNathanielCard,DLNathanielPortrait,DLNathanielPortraitPalette)
+setCardEntry(DLTarquinCard,DLTarquinPortrait,DLTarquinPortraitPalette)
+setCardEntry(DLEthylCard,DLEthylPortrait,DLEthylPortraitPalette)
 
 setCardEntry(CrateCard,CratePortrait,CratePortraitPalette)
 setCardEntry(HorseCard,HorsePortrait,HorsePortraitPalette)

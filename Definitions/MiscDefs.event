@@ -184,6 +184,9 @@ POP
 
 #define HoratioMusicFlag 0xb0
 
+//af is reverse mode
+#define SupportAnimFlag 0xae
+
 //track bargain flags, use base flags when possible to save globals
 //ch4
 #define KillingEdgeFlag BaseFlag4

@@ -25,7 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 29/63
+//progress - 31/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
@@ -69,10 +69,10 @@ CharacterEvent(BaseFlag5,I10ReadyToEnd,Blair,Simone)
 CharacterEvent(BaseFlag6,I10ReadyToEnd,Blair,Ptolemy)
 CharacterEvent(BaseFlag7,I10ReadyToEnd,Blair,Johan)
 CharacterEvent(BaseFlag8,I10Clarque,Blair,SecretClarque)//DONE
-CharacterEvent(GuideChpt1,I10ReadyToEnd,Blair,Peter)
+CharacterEvent(GuideChpt1,I10Peter,Blair,Peter)//
 CharacterEvent(GuideChpt2,I10Tonnamin,Blair,Tonnamin)//DONE
 CharacterEvent(GuideChpt3,I10Joan,Blair,Joan)//DONE
-CharacterEvent(GuideChpt4,I10ReadyToEnd,Blair,Sonia)
+CharacterEvent(GuideChpt4,I10Sonia,Blair,Sonia)//DONE
 CharacterEvent(GuideChpt5,I10Tobias,Blair,Tobias)//DONE
 CharacterEvent(GuideChpt6,I10Freddric,Blair,Freddric)//DONE
 CharacterEvent(GuideChpt7,I10Dean,Blair,Dean)//DONE
@@ -275,6 +275,12 @@ I10Estelle:
 
 
 //block of pure convos
+I10Peter:
+	Text(I10PeterTalk)
+	EndEvent
+I10Sonia:
+	Text(I10SoniaTalk)
+	EndEvent
 I10Joan:
 	Text(I10JoanTalk)
 	EndEvent

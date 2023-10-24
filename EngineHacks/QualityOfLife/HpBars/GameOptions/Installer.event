@@ -2,13 +2,31 @@
 //Options Menu reconfiguration by Vesly
 
 #define GameOptionsMaxEntries 0x12 // There are a couple places where the game checks the size of this table. 
-#define NumberOfOptionsToDisplay 13
+#define NumberOfOptionsToDisplay 14
 
+#include "GenericToggle.lyn.event"
 #include "Internals.event"
+
+#define SupportAnimOpt 0x11 // New entries start at 0x11
+
+//if flag on, no support animations
+
+ALIGN 4
+SupportAnimToggleFunc:
+BYTE  SupportAnimFlag $20 // mov r0, #Index
+GenericToggleFunctionCode
+
+ALIGN 4
+SupportAnimCheckCurrentOption:
+BYTE  SupportAnimFlag $20 // mov r0, #Index
+GenericCheckCurrentOptionCode
+
+GameOptionsEntry(SupportAnimOpt, 0x9d, 0xb9, 0xbd, 624, 0xb9, 0xbe, 647, 0x20, SupportAnimCheckCurrentOption, SupportAnimToggleFunc) 
 
 ALIGN 4
 GameOptionsOrderList:
 BYTE AnimationOpt
+BYTE SupportAnimOpt
 BYTE GameSpeedOpt 
 BYTE TextSpeedOpt 
 BYTE TerrainOpt 
@@ -23,3 +41,13 @@ BYTE SoundFXOpt
 BYTE WindowColorOpt
 
 BYTE 0 0  // Terminator
+
+PUSH
+ORG 0x057AB6	//{U}
+BYTE 0x00 0x00
+jumpToHack(ForceBattleOffWithDanceAndStaff)
+POP
+
+ALIGN 4
+ForceBattleOffWithDanceAndStaff:
+#incbin "ForceBattleOffWithDanceAndStaff.dmp"

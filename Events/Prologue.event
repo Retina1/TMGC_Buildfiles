@@ -112,6 +112,9 @@ BeginningScene:
 EVBIT_MODIFY 4
 ENUT 0xcb
 SetBackground(BlankCG)
+SVAL 0x1 0x1
+SystemText(GameModifierPrompt)
+BNE 0x668 0xC 0x1
 CheckNewGameFlag(12)
 BEQ 0x999 0xc 0x0
 SystemText(NewGamePlusPrompt)//add an old school cassius toggle, ANIMUS MODE (flag that causes certain maps (maybe interludes) to give you an animus seal upon stating them)
@@ -157,6 +160,14 @@ SystemText(ReversePrompt)
 BNE 0x666 0xC 0x1
 ENUT 0xAF
 LABEL 0x666
+SystemText(WhyDoYouDoThisPrompt)
+BNE 0x667 0xC 0x1
+SystemText(SaveYourselfPrompt)
+BNE 0x667 0xC 0x1
+SystemText(YouHaveDoneThisToYourself)
+ENUT WhyDoYouDoThisFlag
+LABEL 0x667
+LABEL 0x668
 SVAL 0x1 0x0
 FADI 0x3c
 CLEAN

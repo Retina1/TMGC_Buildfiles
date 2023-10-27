@@ -190,8 +190,10 @@ Z2WyvernGroup:
 UNIT Z2Wyvern Wyvern 0x0 Level(2,Enemy,1) [11,29] DropItem 0x0 0x1 REDA9R26 [WyvernBreath,MasterSeal] NoAI
 UNIT
 
-Z2WyvernGroupHard:
+Z2WyvernGroupHard1:
 UNIT Z2Wyvern Wyvern 0x0 Level(2,Enemy,1) [11,29] DropItem 0x0 0x1 REDA12R27 [WyvernBreath,MasterSeal] NoAI
+UNIT
+Z2WyvernGroupHard2:
 UNIT Dragon Wyvern 0x0 Level(1,Enemy,1) [0,23] 0x0 0x0 0x1 REDA3R20 [WyvernBreath] NoAI
 UNIT Dragon Wyvern 0x0 Level(1,Enemy,1) [0,23] 0x0 0x0 0x1 REDA7R24 [WyvernBreath] NoAI
 UNIT
@@ -232,7 +234,8 @@ EndEvent
 Z2DragonSpawn:
 CHECK_HARD
 BEQ 0x1 0xc 0x0
-Reinforcements(Z2WyvernGroupHard)
+Reinforcements(Z2WyvernGroupHard1)
+Reinforcements(Z2WyvernGroupHard2)
 GOTO 0x2
 LABEL 0x1
 Reinforcements(Z2WyvernGroup)

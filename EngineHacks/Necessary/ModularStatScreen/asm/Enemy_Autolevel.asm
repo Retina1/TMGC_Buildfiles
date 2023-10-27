@@ -6,21 +6,17 @@
 
 push	{r4,r14}
 mov		r4,r0
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0xad @tf flag
+.short 0xF800
+cmp r0,#0
+beq	SkipBoost
+lsr		r4,#0x1		@divide by 2, then add self 3 times
+add		r4,r4
+add		r4,r4
+SkipBoost:
 mul		r4,r1
-ldr		r0,Growth_Options
-mov		r1,#0x1		@ is fixed mode even available
-tst		r0,r1
-beq		NormalGrowths
-mov		r1,#0x8		@ if it is on, does fixed mode affect enemy autolevelling
-tst		r0,r1
-beq		NormalGrowths
-lsr		r0,#0x10	@ event id
-ldr		r1,Check_Event_ID
-mov		r14,r1
-.short	0xF800
-cmp		r0,#0x0
-beq		NormalGrowths
-
 @Fixed growths mode
 mov		r0,#0x0
 FixedLoop:
@@ -30,29 +26,6 @@ sub		r4,#100
 add		r0,#1
 b		FixedLoop
 
-NormalGrowths:
-ldr		r0,Generate_RN
-mov		r14,r0
-mov		r0,r4
-cmp		r4,#0
-bge		Label1
-add		r0,r4,#3
-Label1:
-asr		r0,#2
-.short	0xF800
-mov		r1,r0
-ldr		r0,Func_2B9A0
-mov		r14,r0
-mov		r0,r4
-cmp		r4,#0
-bge		Label2
-add		r0,r4,#7
-Label2:
-asr		r0,#0x3
-sub		r0,r1,r0
-add		r0,r4
-.short	0xF800
-
 GoBack:
 pop		{r4}
 pop		{r1}
@@ -61,9 +34,4 @@ bx		r1
 .align
 Check_Event_ID:
 .long 0x08083DA8
-Generate_RN:
-.long 0x08000C80
-Func_2B9A0:
-.long 0x0802B9A0
-Growth_Options:
 @

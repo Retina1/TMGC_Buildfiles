@@ -3,97 +3,70 @@
   mov lr, \reg
   .short 0xf800
 .endm
-.equ FuryID, SkillTester+4
-.equ FuryEvent, FuryID+4
-.equ furydamage, 6
+.equ GaleforceID, SkillTester+4
+.equ GaleforceEvent, GaleforceID+4
+.equ GetItemType, 0x8017549
+.equ GetUnitEquippedWeapon, 0x8016B29
 .thumb
 push	{lr}
-@check if dead
+@check if user alive and WTA exploited
 ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
+
+@check bow
+mov r0, r4                @r0 = Unit data pointer
+blh GetUnitEquippedWeapon @r0 = Equipped weapon
+blh GetItemType           @r0 = Equiped weapon type
+cmp r0,#0x3
+bne End
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
 cmp	r0, #0x2 @attack
 bne	End
+ldrb 	r0, [r6,#0x0C]	@allegiance byte of the current character taking action
+ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
+cmp	r0, r1		@check if same character
+bne	End
 
 @check for skill
 mov	r0, r4
-ldr	r1, FuryID
+ldr	r1, GaleforceID
 ldr	r3, SkillTester
 mov	lr, r3
 .short	0xf800
 cmp	r0,#0x00
-beq	CheckDefender
+beq	End
 
-@take 7 damage
-ldrb	r1, [r4,#0x12]	@r1=maxhp
-mov r0, #furydamage
-ldrb	r2, [r4,#0x13]	@r2=currhp
-@cmp	r1, r2		@check if hp is already max
-@beq	End
-sub	r2, r0		@total healing
-cmp r2, #1    @is new hp<1?
-bge	StoreHP
-mov	r2, #1		@if so, set to 1
-StoreHP:
-strb	r2, [r4,#0x13]
+@if killed enemy, unset 0x2 and 0x40, set 0x400, write to status
+ldr	r0, [r4,#0x0C]	@status bitfield
+mov	r1, #0x42
+mvn	r1, r1
+and	r0, r1		@unset bits 0x42
+mov	r1, #0x04
+lsl	r1, #0x08
+orr	r0, r1
+str	r0, [r4,#0x0C]
+
+@add unit to the AI list so enemies act twice
+ldr	r0,=#0x203AA03
+ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
+AddAILoop:
+add	r0, #0x01
+ldrb	r2, [r0]
+cmp	r2, #0x00
+bne	AddAILoop
+strb	r1, [r0]
+add	r0, #0x01
+strb	r2, [r0]
 
 Event:
-mov	r3, #0x00
-ldrb	r0, [r4,#0x11]		@load y coordinate of character
-lsl	r0, #0x10
-add	r3, r0
-ldrb	r0, [r4,#0x10]		@load x coordinate of character
-add	r3, r0
-ldr	r1,=#0x30004E4		@and store them for the event engine
-str	r3, [r1]
-
 ldr	r0,=#0x800D07C		@event engine thingy
 mov	lr, r0
-ldr	r0, FuryEvent	@this event is just "play sound"
+ldr	r0, GaleforceEvent	@this event is just "play some sound effects"
 mov	r1, #0x01		@0x01 = wait for events
 .short	0xF800
-
-CheckDefender:
-@check for skill
-mov r0, r5
-ldr r1, FuryID
-ldr r3, SkillTester
-mov lr, r3
-.short  0xf800
-cmp r0,#0x00
-beq End
-
-@take 7 damage
-ldrb  r1, [r5,#0x12]  @r1=maxhp
-mov r0, #furydamage
-ldrb  r2, [r5,#0x13]  @r2=currhp
-@cmp  r1, r2    @check if hp is already max
-@beq  End
-sub r2, r0    @total healing
-cmp r2, #1    @is new hp<1?
-bge StoreHP2
-mov r2, #1    @if so, set to 1
-StoreHP2:
-strb  r2, [r5,#0x13]
-
-Event2:
-mov r3, #0x00
-ldrb  r0, [r5,#0x11]    @load y coordinate of character
-lsl r0, #0x10
-add r3, r0
-ldrb  r0, [r5,#0x10]    @load x coordinate of character
-add r3, r0
-ldr r1,=#0x30004E4    @and store them for the event engine
-str r3, [r1]
-
-ldr r0,=#0x800D07C    @event engine thingy
-mov lr, r0
-ldr r0, FuryEvent @this event is just "play sound"
-mov r1, #0x01   @0x01 = wait for events
-.short  0xF800
 
 End:
 pop	{r0}
@@ -102,5 +75,5 @@ bx	r0
 .align
 SkillTester:
 @POIN SkillTester
-@WORD FuryID
-@POIN FuryEvent
+@WORD GaleforceID
+@POIN GaleforceEvent

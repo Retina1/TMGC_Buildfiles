@@ -216,10 +216,13 @@ UNIT Holanis BowCav 0x0 Level(19,Enemy,1) [14,24] 0x0 0x0 0x1 REDA14R21 [SteelBo
 UNIT Holanis AxeCav 0x0 Level(19,Enemy,1) [15,24] 0x0 0x0 0x1 REDA15R22 [Swordreaver] NoAI
 UNIT
 
-V4Turn5Group:
+V4Turn5Group1:
 UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [0,11] 0x0 0x0 0x1 REDA1R11 [Axereaver] NoAI
 UNIT Holanis LncWyv 0x0 Level(19,Enemy,1) [0,12] 0x0 0x0 0x1 REDA2R12 [SteelLance] NoAI
 UNIT Holanis AxeWyv 0x0 Level(19,Enemy,1) [0,13] 0x0 0x0 0x1 REDA1R13 [SteelAxe] NoAI
+UNIT
+
+V4Turn5Group2:
 UNIT Holanis LncPeg 0x0 Level(19,Enemy,1) [24,11] 0x0 0x0 0x1 REDA22R11 [SilverLance] NoAI
 UNIT Holanis SwdPeg 0x0 Level(19,Enemy,1) [24,13] 0x0 0x0 0x1 REDA22R13 [SilverSword] NoAI
 UNIT
@@ -276,7 +279,8 @@ V4Turn4:
 Reinforcements(V4Turn4Group)
 EndEvent
 V4Turn5:
-Reinforcements(V4Turn5Group)
+Reinforcements(V4Turn5Group1)
+Reinforcements(V4Turn5Group2)
 EndEvent
 
 V4Turn8:

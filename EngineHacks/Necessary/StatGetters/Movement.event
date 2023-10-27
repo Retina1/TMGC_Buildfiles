@@ -4,7 +4,7 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prNullifyIfGuardAI prArmorMarchCheck prPushMov prMaxFifteen
+	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prNullifyIfGuardAI prArmorMarchCheck prPushMov prMaxFifteen prBiasedQuiver
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
@@ -40,6 +40,10 @@ prNullifyIfFreeze:
 prRallyMov:
 	#include "_asm/RallyMov.lyn.event"
 	POIN GetDebuffs|1
+	
+prBiasedQuiver:
+	rIfUnitHasSkill(BiasedQuiverID)
+		rConstant(0)
 
 ALIGN 4
 prAddEquipMov:

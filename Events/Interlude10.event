@@ -25,7 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 31/63
+//progress - 34/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
@@ -65,11 +65,11 @@ CharacterEvent(BaseFlag1,I10ReadyToEnd,Blair,Hollandaise)
 CharacterEvent(BaseFlag2,I10Vladmir,Blair,Vladmir)//DONE
 CharacterEvent(BaseFlag3,I10Horatio,Blair,Horatio)//EMBERS ENTWINED, use HoratioMusicChooser
 CharacterEvent(BaseFlag4,I10Q,Blair,UnitQ)//DONE
-CharacterEvent(BaseFlag5,I10ReadyToEnd,Blair,Simone)
-CharacterEvent(BaseFlag6,I10ReadyToEnd,Blair,Ptolemy)
-CharacterEvent(BaseFlag7,I10ReadyToEnd,Blair,Johan)
+CharacterEvent(BaseFlag5,I10Simone,Blair,Simone)//DONE
+CharacterEvent(BaseFlag6,I10Ptolemy,Blair,Ptolemy)//DONE
+CharacterEvent(BaseFlag7,I10Johan,Blair,Johan)//DONE
 CharacterEvent(BaseFlag8,I10Clarque,Blair,SecretClarque)//DONE
-CharacterEvent(GuideChpt1,I10Peter,Blair,Peter)//
+CharacterEvent(GuideChpt1,I10Peter,Blair,Peter)//DONE
 CharacterEvent(GuideChpt2,I10Tonnamin,Blair,Tonnamin)//DONE
 CharacterEvent(GuideChpt3,I10Joan,Blair,Joan)//DONE
 CharacterEvent(GuideChpt4,I10Sonia,Blair,Sonia)//DONE
@@ -272,9 +272,32 @@ I10Estelle:
 	SetSupport(Blair,Estelle,BPSupport,1)
 	LABEL 0x4
 	EndEvent
+	
+
+I10Simone:
+	CHECK_EVENTID ArinOriginFlag
+	BEQ 0x1 0xc 0x0
+		GetSupportLevel(Blair,Arin)
+		SVAL 0x2 0x4
+		BEQ 0x3 0x2 0x1
+		Text(I10SimoneTalkAlt)//arin event incoming
+		GOTO 0x2
+		LABEL 0x3
+		Text(I10SimoneTalkAlt2)//arin event and blair/arin A support
+		GOTO 0x2
+	LABEL 0x1
+	Text(I10SimoneTalk)//regular talk
+	LABEL 0x2
+	EndEvent
 
 
 //block of pure convos
+I10Ptolemy:
+	Text(I10PtolemyTalk)
+	EndEvent
+I10Johan:
+	Text(I10JohanTalk)
+	EndEvent
 I10Peter:
 	Text(I10PeterTalk)
 	EndEvent

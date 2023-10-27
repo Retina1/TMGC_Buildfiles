@@ -234,9 +234,11 @@ UNIT Ygstra LncCav 0x0 Level(8,Enemy,1) [27,16] 0x0 0x0 0x0 0x0 [SteelLance] NoA
 UNIT Ygstra LncCavF 0x0 Level(8,Enemy,1) [27,17] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT
 
-C7YgstraAirBolster:
+C7YgstraAirBolster1:
 UNIT Ygstra AxeWyv 0x0 Level(8,Enemy,1) [13,20] 0x0 0x0 0x1 REDA12R19 [IronAxe] NoAI
 UNIT Ygstra LncPeg 0x0 Level(8,Enemy,1) [13,20] 0x0 0x0 0x1 REDA14R19 [IronLance] NoAI
+UNIT
+C7YgstraAirBolster2:
 UNIT Ygstra LncWyv 0x0 Level(10,Enemy,1) [27,0] 0x0 0x0 0x1 REDA25R1 [IronLance] NoAI
 UNIT Ygstra SwdPeg 0x0 Level(10,Enemy,1) [27,0] 0x0 0x0 0x1 REDA26R2 [SteelSword] NoAI
 UNIT
@@ -364,7 +366,8 @@ EndEvent
 C7Turn9:
 CHECK_HARD
 BEQ 0x1 0xC 0x0
-Reinforcements(C7YgstraAirBolster)
+Reinforcements(C7YgstraAirBolster1)
+Reinforcements(C7YgstraAirBolster2)
 LABEL 0x1
 EndEvent
 
@@ -373,7 +376,8 @@ Reinforcements(C7YgstraBolster)
 Reinforcements(C7BanditBolster)
 CHECK_HARD
 BEQ 0x1 0xc 0x0
-Reinforcements(C7YgstraAirBolster)
+Reinforcements(C7YgstraAirBolster1)
+Reinforcements(C7YgstraAirBolster2)
 LABEL 0x1
 EndEvent
 

@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pDefenseModifiers: // Defense
-	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prLifeAndDeathMinus VigorDanceCheck prSkillFury prFortressDefenseDef prDefiantDef prPushDef
+	POIN prAddUnitDefense prHalveIfCapturing prDebuffDef prAddEquipDefense prItemPassiveDefense prRallyDef prLifeAndDeathMinus VigorDanceCheck prFortressDefenseDef prDefiantDef prPushDef
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif

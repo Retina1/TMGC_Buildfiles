@@ -23,61 +23,61 @@ SkyBattle_001:
 Label_01988A7E:
  BYTE   TEMPO   112*SkyBattle_tbs/2
  BYTE   VOICE   73
- BYTE   VOL   28*SkyBattle_mvl/mxv
+ BYTE   VOL   38*SkyBattle_mvl/mxv
  BYTE   PAN   c_v-56
  BYTE   BEND   c_v+0
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #01 //001   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W72
- BYTE   En4
+ BYTE   En3
  BYTE   W72
 //  #01 //002   ----------------------------------------
- BYTE   An4
+ BYTE   An3
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #01 //003   ----------------------------------------
 Label_01988A96:
- BYTE   N36  Gn4  v096
+ BYTE   N36  Gn3  v096
  BYTE   W36
- BYTE   Cn5
+ BYTE   Cn4
  BYTE   W36
  BYTE   PEND 
- BYTE   N72  En4
+ BYTE   N72  En3
  BYTE   W72
 //  #01 //004   ----------------------------------------
 Label_01988AA0:
- BYTE   N12  Dn4  v096
+ BYTE   N12  Dn3  v096
  BYTE   W12
- BYTE   En4
+ BYTE   En3
  BYTE   W12
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W12
- BYTE   N72  An4
+ BYTE   N72  An3
  BYTE   W36
  BYTE   PEND 
 Label_01988AAC:
  BYTE   W36
 //  #01 //005   ----------------------------------------
- BYTE   N12  Fn4  v096
+ BYTE   N12  Fn3  v096
  BYTE   W12
- BYTE   En4
+ BYTE   En3
  BYTE   W12
- BYTE   Dn4
+ BYTE   Dn3
  BYTE   W12
  BYTE   PEND 
 Label_01988AB6:
- BYTE   N12  En4  v096
+ BYTE   N12  En3  v096
  BYTE   W12
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W12
- BYTE   En4
+ BYTE   En3
  BYTE   W12
- BYTE   TIE  Cn4
+ BYTE   TIE  Cn3
  BYTE   W36
  BYTE   PEND 
 //  #01 //006   ----------------------------------------
@@ -89,190 +89,190 @@ Label_01988AB6:
 //  #01 //008   ----------------------------------------
 Label_01988AC9:
  BYTE   W36
- BYTE   N12  An4  v096
+ BYTE   N12  An3  v096
  BYTE   W12
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W12
- BYTE   Dn4
+ BYTE   Dn3
  BYTE   W12
  BYTE   PEND 
 Label_01988AD3:
- BYTE   N36  En4  v096
+ BYTE   N36  En3  v096
  BYTE   W36
 //  #01 //009   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W36
  BYTE   PEND 
 Label_01988ADA:
- BYTE   N36  An4  v096
+ BYTE   N36  An3  v096
  BYTE   W36
- BYTE   An5
+ BYTE   An4
  BYTE   W36
  BYTE   PEND 
 //  #01 //010   ----------------------------------------
- BYTE   N72  An4
+ BYTE   N72  An3
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #01 //011   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W72
- BYTE   En4
+ BYTE   En3
  BYTE   W72
 //  #01 //012   ----------------------------------------
- BYTE   An4
+ BYTE   An3
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #01 //013   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988A96
 //  #01 //014   ----------------------------------------
- BYTE   N72  En4  v096
+ BYTE   N72  En3  v096
  BYTE   W72
 Label_01988AF7:
- BYTE   N48  Dn4  v096
+ BYTE   N48  Dn3  v096
  BYTE   W48
 //  #01 //015   ----------------------------------------
- BYTE   N12  En4
+ BYTE   N12  En3
  BYTE   W12
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W12
  BYTE   PEND 
- BYTE   N72  An4
+ BYTE   N72  An3
  BYTE   W72
 //  #01 //016   ----------------------------------------
 Label_01988B04:
- BYTE   N48  En4  v096
+ BYTE   N48  En3  v096
  BYTE   W48
- BYTE   N12  Fn4
+ BYTE   N12  Fn3
  BYTE   W12
- BYTE   En4
+ BYTE   En3
  BYTE   W12
  BYTE   PEND 
- BYTE   N72  Cn4
+ BYTE   N72  Cn3
  BYTE   W72
 //  #01 //017   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988AF7
 //  #01 //018   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 //  #01 //019   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988AD3
 //  #01 //020   ----------------------------------------
 Label_01988B1F:
- BYTE   N36  An4  v096
+ BYTE   N36  An3  v096
  BYTE   W36
  BYTE   N36
  BYTE   W36
  BYTE   PEND 
- BYTE   TIE  An5
+ BYTE   TIE  An4
  BYTE   W72
 //  #01 //021   ----------------------------------------
  BYTE   W72
  BYTE   EOT
- BYTE   TIE  Gn5
+ BYTE   TIE  Gn4
  BYTE   W72
 //  #01 //022   ----------------------------------------
  BYTE   W72
  BYTE   EOT
- BYTE   TIE  As5
+ BYTE   TIE  As4
  BYTE   W72
 //  #01 //023   ----------------------------------------
  BYTE   W72
  BYTE   EOT
- BYTE   N72  An5
+ BYTE   N72  An4
  BYTE   W72
 //  #01 //024   ----------------------------------------
 Label_01988B38:
- BYTE   N36  En5  v096
+ BYTE   N36  En4  v096
  BYTE   W36
- BYTE   N12  Dn4
+ BYTE   N12  Dn3
  BYTE   W12
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W12
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W12
  BYTE   PEND 
 Label_01988B44:
- BYTE   N60  An4  v096
+ BYTE   N60  An3  v096
  BYTE   W60
 //  #01 //025   ----------------------------------------
  BYTE   N06
  BYTE   W06
- BYTE   Dn5
+ BYTE   Dn4
  BYTE   W06
  BYTE   PEND 
 Label_01988B4D:
- BYTE   N48  An5  v096
+ BYTE   N48  An4  v096
  BYTE   W48
- BYTE   N12  Gn5
+ BYTE   N12  Gn4
  BYTE   W12
- BYTE   Fn5
+ BYTE   Fn4
  BYTE   W12
  BYTE   PEND 
 Label_01988B57:
- BYTE   N24  Gn5  v096
+ BYTE   N24  Gn4  v096
  BYTE   W24
 //  #01 //026   ----------------------------------------
- BYTE   En5
+ BYTE   En4
  BYTE   W24
- BYTE   Cn5
+ BYTE   Cn4
  BYTE   W24
  BYTE   PEND 
- BYTE   N72  An4
+ BYTE   N72  An3
  BYTE   W72
 //  #01 //027   ----------------------------------------
 Label_01988B63:
- BYTE   N60  Gn4  v096
+ BYTE   N60  Gn3  v096
  BYTE   W60
  BYTE   N06
  BYTE   W06
- BYTE   Cn5
+ BYTE   Cn4
  BYTE   W06
  BYTE   PEND 
 Label_01988B6C:
- BYTE   N48  Gn5  v096
+ BYTE   N48  Gn4  v096
  BYTE   W48
 //  #01 //028   ----------------------------------------
- BYTE   N12  Fn5
+ BYTE   N12  Fn4
  BYTE   W12
- BYTE   Dn5
+ BYTE   Dn4
  BYTE   W12
  BYTE   PEND 
 Label_01988B76:
- BYTE   N48  En5  v096
+ BYTE   N48  En4  v096
  BYTE   W48
- BYTE   N24  Dn5
+ BYTE   N24  Dn4
  BYTE   W24
  BYTE   PEND 
 //  #01 //029   ----------------------------------------
- BYTE   N72  Cs5
+ BYTE   N72  Cs4
  BYTE   W72
  BYTE   GoTo
   POIN2 Label_01988A7E
 //  #01 //030   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #01 //031   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W72
- BYTE   En4
+ BYTE   En3
  BYTE   W72
 //  #01 //032   ----------------------------------------
- BYTE   An4
+ BYTE   An3
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #01 //033   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988A96
 //  #01 //034   ----------------------------------------
- BYTE   N72  En4  v096
+ BYTE   N72  En3  v096
  BYTE   W72
 //  #01 //035   ----------------------------------------
  BYTE   PATT
@@ -286,7 +286,7 @@ Label_01988B76:
 //  #01 //038   ----------------------------------------
  BYTE   W72
  BYTE   EOT
- BYTE   Cn4
+ BYTE   Cn3
 //  #01 //039   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988AA0
@@ -300,43 +300,43 @@ Label_01988B76:
  BYTE   PATT
   POIN2 Label_01988ADA
 //  #01 //043   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #01 //044   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W72
- BYTE   En4
+ BYTE   En3
  BYTE   W72
 //  #01 //045   ----------------------------------------
- BYTE   An4
+ BYTE   An3
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #01 //046   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988A96
 //  #01 //047   ----------------------------------------
- BYTE   N72  En4  v096
+ BYTE   N72  En3  v096
  BYTE   W72
 //  #01 //048   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988AF7
 //  #01 //049   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 //  #01 //050   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988B04
 //  #01 //051   ----------------------------------------
- BYTE   N72  Cn4  v096
+ BYTE   N72  Cn3  v096
  BYTE   W72
 //  #01 //052   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01988AF7
 //  #01 //053   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 //  #01 //054   ----------------------------------------
  BYTE   PATT
@@ -345,22 +345,22 @@ Label_01988B76:
  BYTE   PATT
   POIN2 Label_01988B1F
 //  #01 //056   ----------------------------------------
- BYTE   TIE  An5  v096
+ BYTE   TIE  An4  v096
  BYTE   W72
  BYTE   W72
 //  #01 //057   ----------------------------------------
  BYTE   EOT
- BYTE   TIE  Gn5
+ BYTE   TIE  Gn4
  BYTE   W72
  BYTE   W72
 //  #01 //058   ----------------------------------------
  BYTE   EOT
- BYTE   TIE  As5
+ BYTE   TIE  As4
  BYTE   W72
  BYTE   W72
 //  #01 //059   ----------------------------------------
  BYTE   EOT
- BYTE   N72  An5
+ BYTE   N72  An4
  BYTE   W72
 //  #01 //060   ----------------------------------------
  BYTE   PATT
@@ -375,7 +375,7 @@ Label_01988B76:
  BYTE   PATT
   POIN2 Label_01988B57
 //  #01 //064   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 //  #01 //065   ----------------------------------------
  BYTE   PATT
@@ -387,7 +387,7 @@ Label_01988B76:
  BYTE   PATT
   POIN2 Label_01988B76
 //  #01 //068   ----------------------------------------
- BYTE   N72  Cs5  v096
+ BYTE   N72  Cs4  v096
  BYTE   W72
  BYTE   FINE
 
@@ -827,120 +827,120 @@ SkyBattle_003:
  BYTE   KEYSH   SkyBattle_key+0
 Label_01005462:
  BYTE   VOICE   75
- BYTE   VOL   28*SkyBattle_mvl/mxv
+ BYTE   VOL   38*SkyBattle_mvl/mxv
  BYTE   PAN   c_v+56
  BYTE   BEND   c_v+0
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #03 //001   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W72
- BYTE   En4
+ BYTE   En3
  BYTE   W72
 //  #03 //002   ----------------------------------------
- BYTE   An4
+ BYTE   An3
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #03 //003   ----------------------------------------
 Label_01005478:
- BYTE   N36  Gn4  v096
+ BYTE   N36  Gn3  v096
  BYTE   W36
- BYTE   Cn5
+ BYTE   Cn4
  BYTE   W36
  BYTE   PEND 
- BYTE   N72  En4
+ BYTE   N72  En3
  BYTE   W72
 //  #03 //004   ----------------------------------------
 Label_01005482:
- BYTE   N48  Dn4  v096
+ BYTE   N48  Dn3  v096
  BYTE   W48
- BYTE   N12  En4
+ BYTE   N12  En3
  BYTE   W12
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W12
  BYTE   PEND 
- BYTE   N72  An4
+ BYTE   N72  An3
  BYTE   W72
 //  #03 //005   ----------------------------------------
 Label_0100548F:
- BYTE   N48  En4  v096
+ BYTE   N48  En3  v096
  BYTE   W48
- BYTE   N12  Fn4
+ BYTE   N12  Fn3
  BYTE   W12
- BYTE   En4
+ BYTE   En3
  BYTE   W12
  BYTE   PEND 
- BYTE   N72  Cn4
+ BYTE   N72  Cn3
  BYTE   W72
 //  #03 //006   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01005482
 //  #03 //007   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 Label_010054A5:
- BYTE   N36  En4  v096
+ BYTE   N36  En3  v096
  BYTE   W36
 //  #03 //008   ----------------------------------------
- BYTE   N72  Gn4
+ BYTE   N72  Gn3
  BYTE   W36
  BYTE   PEND 
  BYTE   W36
- BYTE   N36  An4
+ BYTE   N36  An3
  BYTE   W36
 //  #03 //009   ----------------------------------------
  BYTE   N72
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #03 //010   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W72
- BYTE   En4
+ BYTE   En3
  BYTE   W72
 //  #03 //011   ----------------------------------------
- BYTE   An4
+ BYTE   An3
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #03 //012   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01005478
 //  #03 //013   ----------------------------------------
- BYTE   N72  En4  v096
+ BYTE   N72  En3  v096
  BYTE   W72
 Label_010054C6:
- BYTE   N12  Dn4  v096
+ BYTE   N12  Dn3  v096
  BYTE   W12
- BYTE   En4
+ BYTE   En3
  BYTE   W12
 //  #03 //014   ----------------------------------------
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W12
- BYTE   N72  An4
+ BYTE   N72  An3
  BYTE   W36
  BYTE   PEND 
 Label_010054D2:
  BYTE   W36
- BYTE   N12  Fn4  v096
+ BYTE   N12  Fn3  v096
  BYTE   W12
 //  #03 //015   ----------------------------------------
- BYTE   En4
+ BYTE   En3
  BYTE   W12
- BYTE   Dn4
+ BYTE   Dn3
  BYTE   W12
  BYTE   PEND 
 Label_010054DC:
- BYTE   N12  En4  v096
+ BYTE   N12  En3  v096
  BYTE   W12
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W12
- BYTE   En4
+ BYTE   En3
  BYTE   W12
- BYTE   TIE  Cn4
+ BYTE   TIE  Cn3
  BYTE   W36
  BYTE   PEND 
 //  #03 //016   ----------------------------------------
@@ -952,168 +952,168 @@ Label_010054DC:
 //  #03 //018   ----------------------------------------
 Label_010054EF:
  BYTE   W36
- BYTE   N12  An4  v096
+ BYTE   N12  An3  v096
  BYTE   W12
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W12
- BYTE   Dn4
+ BYTE   Dn3
  BYTE   W12
  BYTE   PEND 
 Label_010054F9:
- BYTE   N36  En4  v096
+ BYTE   N36  En3  v096
  BYTE   W36
 //  #03 //019   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W36
  BYTE   PEND 
- BYTE   N72  An4
+ BYTE   N72  An3
  BYTE   W72
 //  #03 //020   ----------------------------------------
 Label_01005503:
- BYTE   N60  An4  v096
+ BYTE   N60  An3  v096
  BYTE   W60
  BYTE   N06
  BYTE   W06
- BYTE   Dn5
+ BYTE   Dn4
  BYTE   W06
  BYTE   PEND 
 Label_0100550C:
- BYTE   N48  An5  v096
+ BYTE   N48  An4  v096
  BYTE   W48
 //  #03 //021   ----------------------------------------
- BYTE   N12  Gn5
+ BYTE   N12  Gn4
  BYTE   W12
- BYTE   Fn5
+ BYTE   Fn4
  BYTE   W12
  BYTE   PEND 
 Label_01005516:
- BYTE   N24  Gn5  v096
+ BYTE   N24  Gn4  v096
  BYTE   W24
- BYTE   En5
+ BYTE   En4
  BYTE   W24
- BYTE   Cn5
+ BYTE   Cn4
  BYTE   W24
  BYTE   PEND 
 //  #03 //022   ----------------------------------------
- BYTE   N72  An4
+ BYTE   N72  An3
  BYTE   W72
 Label_01005522:
- BYTE   N60  Gn4  v096
+ BYTE   N60  Gn3  v096
  BYTE   W60
 //  #03 //023   ----------------------------------------
  BYTE   N06
  BYTE   W06
- BYTE   Cn5
+ BYTE   Cn4
  BYTE   W06
  BYTE   PEND 
 Label_0100552B:
- BYTE   N48  Gn5  v096
+ BYTE   N48  Gn4  v096
  BYTE   W48
- BYTE   N12  Fn5
+ BYTE   N12  Fn4
  BYTE   W12
- BYTE   Dn5
+ BYTE   Dn4
  BYTE   W12
  BYTE   PEND 
 Label_01005535:
- BYTE   N48  En5  v096
+ BYTE   N48  En4  v096
  BYTE   W48
 //  #03 //024   ----------------------------------------
- BYTE   N24  Dn5
+ BYTE   N24  Dn4
  BYTE   W24
  BYTE   PEND 
 Label_0100553D:
- BYTE   N36  An4  v096
+ BYTE   N36  An3  v096
  BYTE   W36
- BYTE   N12  Dn4
+ BYTE   N12  Dn3
  BYTE   W12
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W12
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W12
  BYTE   PEND 
 //  #03 //025   ----------------------------------------
- BYTE   TIE  An5
+ BYTE   TIE  An4
  BYTE   W72
  BYTE   W72
 //  #03 //026   ----------------------------------------
  BYTE   EOT
- BYTE   TIE  Gn5
+ BYTE   TIE  Gn4
  BYTE   W72
  BYTE   W72
 //  #03 //027   ----------------------------------------
  BYTE   EOT
- BYTE   TIE  As5
+ BYTE   TIE  As4
  BYTE   W72
  BYTE   W72
 //  #03 //028   ----------------------------------------
  BYTE   EOT
- BYTE   N72  En5
+ BYTE   N72  En4
  BYTE   W72
- BYTE   Cs5
+ BYTE   Cs4
  BYTE   W72
 //  #03 //029   ----------------------------------------
  BYTE   GoTo
   POIN2 Label_01005462
 //  #03 //030   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #03 //031   ----------------------------------------
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W72
- BYTE   En4
+ BYTE   En3
  BYTE   W72
 //  #03 //032   ----------------------------------------
- BYTE   An4
+ BYTE   An3
  BYTE   W72
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #03 //033   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01005478
 //  #03 //034   ----------------------------------------
- BYTE   N72  En4  v096
+ BYTE   N72  En3  v096
  BYTE   W72
 //  #03 //035   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01005482
 //  #03 //036   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 //  #03 //037   ----------------------------------------
  BYTE   PATT
   POIN2 Label_0100548F
 //  #03 //038   ----------------------------------------
- BYTE   N72  Cn4  v096
+ BYTE   N72  Cn3  v096
  BYTE   W72
 //  #03 //039   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01005482
 //  #03 //040   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 //  #03 //041   ----------------------------------------
  BYTE   PATT
   POIN2 Label_010054A5
 //  #03 //042   ----------------------------------------
  BYTE   W36
- BYTE   N36  An4  v096
+ BYTE   N36  An3  v096
  BYTE   W36
  BYTE   N72
  BYTE   W72
 //  #03 //043   ----------------------------------------
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
- BYTE   Gn4
+ BYTE   Gn3
  BYTE   W72
 //  #03 //044   ----------------------------------------
- BYTE   En4
+ BYTE   En3
  BYTE   W72
- BYTE   An4
+ BYTE   An3
  BYTE   W72
 //  #03 //045   ----------------------------------------
- BYTE   Fn4
+ BYTE   Fn3
  BYTE   W72
 //  #03 //046   ----------------------------------------
  BYTE   PATT
@@ -1133,7 +1133,7 @@ Label_0100553D:
 //  #03 //051   ----------------------------------------
  BYTE   W72
  BYTE   EOT
- BYTE   Cn4
+ BYTE   Cn3
 //  #03 //052   ----------------------------------------
  BYTE   PATT
   POIN2 Label_010054C6
@@ -1144,7 +1144,7 @@ Label_0100553D:
  BYTE   PATT
   POIN2 Label_010054F9
 //  #03 //055   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 //  #03 //056   ----------------------------------------
  BYTE   PATT
@@ -1156,7 +1156,7 @@ Label_0100553D:
  BYTE   PATT
   POIN2 Label_01005516
 //  #03 //059   ----------------------------------------
- BYTE   N72  An4  v096
+ BYTE   N72  An3  v096
  BYTE   W72
 //  #03 //060   ----------------------------------------
  BYTE   PATT
@@ -1171,24 +1171,24 @@ Label_0100553D:
  BYTE   PATT
   POIN2 Label_0100553D
 //  #03 //064   ----------------------------------------
- BYTE   TIE  An5  v096
+ BYTE   TIE  An4  v096
  BYTE   W72
  BYTE   W72
 //  #03 //065   ----------------------------------------
  BYTE   EOT
- BYTE   TIE  Gn5
+ BYTE   TIE  Gn4
  BYTE   W72
  BYTE   W72
 //  #03 //066   ----------------------------------------
  BYTE   EOT
- BYTE   TIE  As5
+ BYTE   TIE  As4
  BYTE   W72
  BYTE   W72
 //  #03 //067   ----------------------------------------
  BYTE   EOT
- BYTE   N72  En5
+ BYTE   N72  En4
  BYTE   W72
- BYTE   Cs5
+ BYTE   Cs4
  BYTE   W72
  BYTE   FINE
 

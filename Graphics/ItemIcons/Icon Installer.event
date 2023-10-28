@@ -10,6 +10,12 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(ShortBowIcon)
+#incbin "Bows/Shortbow.dmp"
+ALIGN 4
+ItemIconEntry(BiasedQuiverIcon)
+#incbin "BiasedQuiver.dmp"
+ALIGN 4
 ItemIconEntry(HopesingerIcon)
 #incbin "Hopesinger.dmp"
 ALIGN 4
@@ -592,9 +598,9 @@ ItemIconEntry(DoorKeyIcon)
 ALIGN 4
 ItemIconEntry(ElixirIcon)
 #incbin "Basics/Elixir.dmp"
-ALIGN 4
-ItemIconEntry(JunaFruitIcon)
-#incbin "Basics/JunaFruit.dmp"
+//ALIGN 4
+//ItemIconEntry(JunaFruitIcon)
+//#incbin "Basics/JunaFruit.dmp"
 ALIGN 4
 ItemIconEntry(MemberCardIcon)
 #incbin "Basics/MemberCard.dmp"

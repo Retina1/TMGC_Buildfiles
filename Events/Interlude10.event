@@ -25,7 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 34/63
+//progress - 36/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
@@ -51,7 +51,7 @@ CharacterEvent(0x1b,I10ReadyToEnd,Blair,Mikey)
 CharacterEvent(0x1c,I10ReadyToEnd,Blair,Carbon)//unlock A rank
 CharacterEvent(0x1d,I10Gaylord,Blair,Gaylord)//DONE
 CharacterEvent(0x1e,I10ReadyToEnd,Blair,Athena)
-CharacterEvent(0x1f,I10ReadyToEnd,Blair,Charley)
+CharacterEvent(0x1f,I10Charley,Blair,Charley)//DONE
 CharacterEvent(0x20,I10ReadyToEnd,Blair,Hyperius)
 CharacterEvent(0x21,I10ReadyToEnd,Blair,Alexis)
 CharacterEvent(0x22,I10ReadyToEnd,Blair,Leila)
@@ -61,7 +61,7 @@ CharacterEvent(0x25,I10ReadyToEnd,Blair,Avan)//unlock A rank (mutually exclusive
 CharacterEvent(0x26,I10ReadyToEnd,Blair,Toddsworth)
 CharacterEvent(0x27,I10ReadyToEnd,Blair,Yuyu)
 CharacterEvent(0x28,I10ReadyToEnd,Blair,Artemis)
-CharacterEvent(BaseFlag1,I10ReadyToEnd,Blair,Hollandaise)
+CharacterEvent(BaseFlag1,I10Hollandaise,Blair,Hollandaise)//DONE
 CharacterEvent(BaseFlag2,I10Vladmir,Blair,Vladmir)//DONE
 CharacterEvent(BaseFlag3,I10Horatio,Blair,Horatio)//EMBERS ENTWINED, use HoratioMusicChooser
 CharacterEvent(BaseFlag4,I10Q,Blair,UnitQ)//DONE
@@ -289,9 +289,18 @@ I10Simone:
 	Text(I10SimoneTalk)//regular talk
 	LABEL 0x2
 	EndEvent
+	
+	
+I10Charley:
+Text(I10CharleyTalk)
+GiveItem(ShortBow,Charley)
+EndEvent
 
 
 //block of pure convos
+I10Hollandaise:
+	Text(I10HollandaiseTalk)
+	EndEvent
 I10Ptolemy:
 	Text(I10PtolemyTalk)
 	EndEvent

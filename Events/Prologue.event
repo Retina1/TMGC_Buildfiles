@@ -167,6 +167,13 @@ BNE 0x667 0xC 0x1
 SystemText(YouHaveDoneThisToYourself)
 ENUT WhyDoYouDoThisFlag
 LABEL 0x667
+SystemText(WhatTheActualFuckPrompt)
+BNE 0x669 0xC 0x1
+SystemText(SaveYourselfPrompt)
+BNE 0x669 0xC 0x1
+SystemText(YouHaveDoneThisToYourself)
+ENUT WhatTheActualFuckFlag
+LABEL 0x669
 LABEL 0x668
 SVAL 0x1 0x0
 FADI 0x3c

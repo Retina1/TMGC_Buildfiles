@@ -86,8 +86,24 @@ UnflowEffect:
 #incbin "Flow/UnflowEffect.dmp"
 POIN FlowEvent
 
+ALIGN 4
 FlowEvent:
 SOUN 0x10F
+STAL 0x5
+NoFade
+ENDA
+
+ALIGN 4
+WhirrUsability:
+#incbin "Addington/WhirrUsability.dmp"
+ALIGN 4
+WhirrEffect:
+#incbin "Addington/WhirrEffect.dmp"
+POIN WhirrEvent
+
+ALIGN 4
+WhirrEvent:
+SOUN 0x2f9
 STAL 0x5
 NoFade
 ENDA

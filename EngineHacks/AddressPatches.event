@@ -21,6 +21,13 @@ ORG 0xA00708
 BYTE 9
 POP
 
+PUSH
+ORG 0x2c1a2
+BYTE 251
+ORG 0x2c1a6
+BYTE 251
+POP
+
 //Prevent Portraits being semi-transparent when loaded before text box
 PUSH
 ORG 0x13BEA

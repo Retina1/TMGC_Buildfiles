@@ -131,7 +131,9 @@ UNIT Elite LncGen 0x0 Level(18,Enemy,1) [7,23] 0x0 0x0 0x0 0x0 [BraveLance] Grou
 UNIT Elite LncGen 0x0 Level(15,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [TrueSaunion] GroupSixAI
 
 UNIT Elite Sage 0x0 Level(16,Enemy,1) [1,26] 0x0 0x0 0x0 0x0 [Bolting,EarthPower,Sleep,Silence] NoAI
-//bosses i cry
+UNIT
+
+C28BossGroup:
 UNIT DL1 ViridianLord 0x0 Level(15,Enemy,1) [11,2] DropItem 0x0 0x0 0x0 [Soulbow,SkillScroll] GroupFourAI
 UNIT DL2 WyvLord 0x0 Level(18,Enemy,1) [10,1] DropItem 0x0 0x0 0x0 [TrueSaunion,GildedLance,SkillScroll] GroupFourAI
 UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [14,22] DropItem 0x0 0x0 0x0 [GildedAxe,GildedBow,SkillScroll] GroupThreeAI
@@ -146,6 +148,10 @@ UNIT DL11 Sorc 0x0 Level(11,Enemy,1) [8,26] DropItem 0x0 0x0 0x0 [Nocturne,Hell,
 UNIT DL12 Halberdier 0x0 Level(13,Enemy,1) [7,25] DropItem 0x0 0x0 0x0 [MasterLance,HighRoller,SkillScroll] GroupTwoAI
 UNIT DL13 BowGen 0x0 Level(16,Enemy,1) [9,25] DropItem 0x0 0x0 0x0 [BarrierBow,MasterBow,Stormbow,SkillScroll] GroupTwoAI
 UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [11,9] DropItem 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI
+UNIT
+
+C28ElcorianJoin:
+UNIT Elcorian Valk 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI
 UNIT
 
 C28DoorsOpenGroup11:
@@ -177,6 +183,8 @@ MUSC NarrationTheme6
 Narration(Map2CG,Ch28_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C28Easy,C28Normal,C28Hard)
+LOAD1 0x1 C28BossGroup
+ENUN
 SetUnitItemDurability(DL1, 1, InspirationID)
 SetUnitItemDurability(DL2, 2, KillerTacticsID)
 SetUnitItemDurability(DL3, 2, DragonFangID)
@@ -295,6 +303,9 @@ EndingScene:
 ResetBaseFlags
 MUSC S_Nightfall
 CleanTextNoMap(HallCG,FillerDialogue)
+//make join conditional later
+LOAD1 0x1 C28ElcorianJoin
+TurnAlly(Elcorian)
 REMA
 SetBackground(BlankCG)
 GiveItem(Soulbow,Zeke)

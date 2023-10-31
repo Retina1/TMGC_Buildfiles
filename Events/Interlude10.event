@@ -25,15 +25,15 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 40/63
+//progress - 42/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
 CharacterEvent(0x9,I10ReadyToEnd,Blair,Natasia)//special if A rank
-CharacterEvent(0xa,I10ReadyToEnd,Blair,Stefan)//show character growth - maybe reflect on his prior brash recklessness and how he's changed over the journey
+CharacterEvent(0xa,I10Stefan,Blair,Stefan)//DONE
 CharacterEvent(0xb,I10Desmond,Blair,Desmond)//DONE
 CharacterEvent(0xc,I10Sam,Blair,Sam)//DONE
-CharacterEvent(0xd,I10ReadyToEnd,Blair,Josef)
+CharacterEvent(0xd,I10Josef,Blair,Josef)//DONE
 CharacterEvent(0xe,I10ReadyToEnd,Blair,Peggy)
 CharacterEvent(0xf,I10ReadyToEnd,Blair,Butch)
 CharacterEvent(0x10,I10ReadyToEnd,Blair,Rachael)
@@ -230,6 +230,7 @@ ENUN
 LOAD1 0x0 I10NPC
 ENUN
 ResetViridianConvoy
+SetUnitStatus(Kyrie, ClassPointer, 0x8809ABC)
 Interlude10GlobalFlagOff
 //debug support setter
 //SetSupport(Horatio,Simone,CPSupport,1)
@@ -298,6 +299,12 @@ EndEvent
 
 
 //block of pure convos
+I10Josef:
+	Text(I10JosefTalk)
+	EndEvent
+I10Stefan:
+	Text(I10StefanTalk)
+	EndEvent
 I10Zacharias:
 	Text(I10ZachariasTalk)
 	EndEvent
@@ -456,10 +463,10 @@ BEQ 0x6 0xc 0x0
 			GetSupportLevel(Blair,Natasia)
 			SVAL 0x2 0x3
 			BNE 0x7 0x2 0x1
-			CleanTextNoMap(HallCG,FillerDialogue)//natasia and blair at A
+			CleanTextNoMap(VillageCG,FillerDialogue)//natasia and blair at A
 			GOTO 0x8
 			LABEL 0x7
-			CleanTextNoMap(HallCG,FillerDialogue)//natasia and blair not at A
+			CleanTextNoMap(VillageCG,FillerDialogue)//natasia and blair not at A
 			LABEL 0x8
 			REMA
 			SetSupport(Kenneth,Natasia,ASupport,1)
@@ -473,20 +480,20 @@ BEQ 0x9 0xc 0x0
 		BEQ 0xc 0xc 0x0
 			CHECK_ALIVE Carbon
 			BEQ 0xd 0xc 0x0
-			CleanTextNoMap(HallCG,FillerDialogue)//all alive
+			CleanTextNoMap(HouseCG,FillerDialogue)//all alive
 			REMA
 			SetSupport(Joan,Sonia,ASupport,1)
 			SetSupport(Joan,Mikey,BPSupport,1)
 			SetSupport(Mikey,Carbon,ASupport,1)
 			GOTO 0xa
 			LABEL 0xd
-			CleanTextNoMap(HallCG,FillerDialogue)//all but carbon alive
+			CleanTextNoMap(HouseCG,FillerDialogue)//all but carbon alive
 			REMA
 			SetSupport(Joan,Sonia,ASupport,1)
 			SetSupport(Joan,Mikey,BPSupport,1)
 			GOTO 0xa
 		LABEL 0xc
-		CleanTextNoMap(HallCG,FillerDialogue)//joan and sonia alive
+		CleanTextNoMap(HouseCG,FillerDialogue)//joan and sonia alive
 		REMA
 		SetSupport(Joan,Sonia,ASupport,1)
 		GOTO 0xa
@@ -496,35 +503,35 @@ BEQ 0x9 0xc 0x0
 		BEQ 0xe 0xc 0x0
 			CHECK_ALIVE Carbon
 			BEQ 0xd 0xc 0x0
-			CleanTextNoMap(HallCG,FillerDialogue)//mikey carbon joan
+			CleanTextNoMap(HouseCG,FillerDialogue)//mikey carbon joan
 			REMA
 			SetSupport(Joan,Mikey,BPSupport,1)
 			SetSupport(Mikey,Carbon,ASupport,1)
 			GOTO 0xa
 			LABEL 0xd
-			CleanTextNoMap(HallCG,FillerDialogue)//mikey and joan
+			CleanTextNoMap(HouseCG,FillerDialogue)//mikey and joan
 			REMA
 			SetSupport(Joan,Mikey,BPSupport,1)
 			GOTO 0xa
 		LABEL 0xe
-		CleanTextNoMap(HallCG,FillerDialogue)//mikey and sonia dead, sad joan scene
+		CleanTextNoMap(HouseCG,FillerDialogue)//mikey and sonia dead, sad joan scene
 		GOTO 0xa
 LABEL 0x9
 CHECK_ALIVE Sonia
 BEQ 0xa 0xc 0x0
-CleanTextNoMap(HallCG,FillerDialogue)//sonia alive, joan dead, who cares about the scrubs
+CleanTextNoMap(HouseCG,FillerDialogue)//sonia alive, joan dead, who cares about the scrubs
 LABEL 0xa
 //rose/laronde event
 CHECK_ALIVE SecretLaronde
 BEQ 0xf 0xc 0x0
 	CHECK_ALIVE Rose
 	BEQ 0x10 0xc 0x0
-	CleanTextNoMap(HallCG,FillerDialogue)//rose and laronde alive
+	CleanTextNoMap(SunsetPathCG,FillerDialogue)//rose and laronde alive
 	REMA
 	SetSupport(Rose,SecretLaronde,BPSupport,1)
 	GOTO 0xf
 	LABEL 0x10
-	CleanTextNoMap(HallCG,FillerDialogue)//laronde alive and sad that rose isn't
+	CleanTextNoMap(SunsetPathCG,FillerDialogue)//laronde alive and sad that rose isn't
 LABEL 0xf
 //damien/zacharias/tobias/leila event
 CHECK_ALIVE Damien
@@ -538,7 +545,7 @@ BEQ 0x11 0xc 0x0
 				GetSupportLevel(Leila,Tobias)
 				SVAL 0x2 0x2
 				BNE 0x1b 0x2 0x1
-				CleanTextNoMap(HallCG,FillerDialogue)//DZLT know
+				CleanTextNoMap(VillageCG,FillerDialogue)//DZLT know
 				REMA
 				SetSupport(Leila,Tobias,BPSupport,1)
 				SetSupport(Damien,Tobias,BPSupport,1)	
@@ -546,7 +553,7 @@ BEQ 0x11 0xc 0x0
 				SetSupport(Damien,Zacharias,ASupport,1)	
 				GOTO 0x13
 				LABEL 0x1b
-				CleanTextNoMap(HallCG,FillerDialogue)//DZLT
+				CleanTextNoMap(VillageCG,FillerDialogue)//DZLT
 				REMA
 				SetSupport(Damien,Tobias,BPSupport,1)	
 				SetSupport(Zacharias,Tobias,BPSupport,1)	
@@ -555,14 +562,14 @@ BEQ 0x11 0xc 0x0
 		LABEL 0x17
 		CHECK_ALIVE Tobias
 		BEQ 0x19 0xc 0x0
-			CleanTextNoMap(HallCG,FillerDialogue)//DZT
+			CleanTextNoMap(VillageCG,FillerDialogue)//DZT
 			REMA
 			SetSupport(Damien,Tobias,BPSupport,1)	
 			SetSupport(Zacharias,Tobias,BPSupport,1)	
 			SetSupport(Damien,Zacharias,ASupport,1)	
 			GOTO 0x13
 		LABEL 0x19
-			CleanTextNoMap(HallCG,FillerDialogue)//DZ
+			CleanTextNoMap(VillageCG,FillerDialogue)//DZ
 			REMA
 			SetSupport(Damien,Zacharias,ASupport,1)	
 			GOTO 0x13
@@ -574,20 +581,20 @@ BEQ 0x11 0xc 0x0
 				GetSupportLevel(Leila,Tobias)
 				SVAL 0x2 0x2
 				BNE 0x1c 0x2 0x1
-				CleanTextNoMap(HallCG,FillerDialogue)//DLT know
+				CleanTextNoMap(VillageCG,FillerDialogue)//DLT know
 				REMA
 				SetSupport(Leila,Tobias,BPSupport,1)
 				SetSupport(Damien,Tobias,BPSupport,1)	
 				GOTO 0x13
 				LABEL 0x1c
-				CleanTextNoMap(HallCG,FillerDialogue)//DLT
+				CleanTextNoMap(VillageCG,FillerDialogue)//DLT
 				REMA
 				SetSupport(Damien,Tobias,BPSupport,1)	
 				GOTO 0x13			
 	LABEL 0x1a
 	CHECK_ALIVE Tobias
 	BEQ 0x13 0xc 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//DT
+		CleanTextNoMap(VillageCG,FillerDialogue)//DT
 		REMA
 		SetSupport(Damien,Tobias,BPSupport,1)	
 		GOTO 0x13	
@@ -602,20 +609,20 @@ BEQ 0x12 0xc 0x0
 			GetSupportLevel(Leila,Tobias)
 			SVAL 0x2 0x2
 			BNE 0x15 0x2 0x1
-			CleanTextNoMap(HallCG,FillerDialogue)//ZLT know
+			CleanTextNoMap(VillageCG,FillerDialogue)//ZLT know
 			REMA
 			SetSupport(Leila,Tobias,BPSupport,1)
 			SetSupport(Zacharias,Tobias,BPSupport,1)
 			GOTO 0x13
 			LABEL 0x15
-			CleanTextNoMap(HallCG,FillerDialogue)//ZLT
+			CleanTextNoMap(VillageCG,FillerDialogue)//ZLT
 			REMA
 			SetSupport(Zacharias,Tobias,BPSupport,1)
 			GOTO 0x13
 	LABEL 0x14
 	CHECK_ALIVE Tobias
 	BEQ 0x13 0xc 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//ZT
+		CleanTextNoMap(VillageCG,FillerDialogue)//ZT
 		REMA
 		SetSupport(Zacharias,Tobias,BPSupport,1)	
 		GOTO 0x13
@@ -628,7 +635,7 @@ BEQ 0x13 0xc 0x0
 		GetSupportLevel(Leila,Tobias)
 		SVAL 0x2 0x2
 		BNE 0x13 0x2 0x1
-		CleanTextNoMap(HallCG,FillerDialogue)//LT know
+		CleanTextNoMap(VillageCG,FillerDialogue)//LT know
 		REMA
 		SetSupport(Leila,Tobias,BPSupport,1)
 LABEL 0x13
@@ -637,7 +644,7 @@ CHECK_ALIVE SecretClarque
 BEQ 0x1d 0xc 0x0
 	CHECK_ALIVE Freddric
 	BEQ 0x1d 0xc 0x0
-	CleanTextNoMap(HallCG,I10EndingClarqueFreddric)
+	CleanTextNoMap(StreetCG,I10EndingClarqueFreddric)
 LABEL 0x1d
 
 //apollo/bechamel event (nevermind i don't wanna force a romantic A rank
@@ -666,7 +673,10 @@ CHECK_ALIVE Simone
 BEQ 0x2 0xc 0x0
 	CHECK_EVENTID ArinOriginFlag
 	BEQ 0x2 0xc 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//arin simone scene where she promotes
+		MUSC 0x0
+		CleanTextNoMap(HallCG,FillerDialogue)//simone brings her to pretty lake
+		MUSC S_MainTheme
+		CleanTextNoMap(TitleCG,FillerDialogue)//arin simone scene where she promotes
 		REMA
 		SetBackground(BlankCG)
 		GiveItem(HolyBrand,Arin)

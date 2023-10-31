@@ -10,6 +10,16 @@ SetConvoBackground(LowlandsRiverCG,LowlandsRiverImage,LowlandsRiverTSA,LowlandsR
 SetConvoBackground(YgstraCG,YgstraImage,YgstraTSA,YgstraPalette)
 SetConvoBackground(EastHolanisCG,EastHolanisImage,EastHolanisTSA,EastHolanisPalette)
 SetConvoBackground(MoonCG,MoonImage,MoonTSA,MoonPalette)
+SetConvoBackground(TitleCG,TitleImage,TitleTSA,TitlePalette)
+ALIGN 4
+TitleImage:
+#incbin "title.png.dmp"
+ALIGN 4
+TitleTSA:
+#incbin "title.png.tsa.dmp"
+ALIGN 4
+TitlePalette:
+#incbin "title.png.pal.dmp"
 ALIGN 4
 MoonImage:
 #incbin "moon.png.dmp"

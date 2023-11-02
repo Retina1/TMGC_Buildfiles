@@ -25,7 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 42/63
+//progress - 43/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
@@ -34,9 +34,9 @@ CharacterEvent(0xa,I10Stefan,Blair,Stefan)//DONE
 CharacterEvent(0xb,I10Desmond,Blair,Desmond)//DONE
 CharacterEvent(0xc,I10Sam,Blair,Sam)//DONE
 CharacterEvent(0xd,I10Josef,Blair,Josef)//DONE
-CharacterEvent(0xe,I10ReadyToEnd,Blair,Peggy)
+CharacterEvent(0xe,I10Peggy,Blair,Peggy)//DONE
 CharacterEvent(0xf,I10ReadyToEnd,Blair,Butch)
-CharacterEvent(0x10,I10ReadyToEnd,Blair,Rachael)
+CharacterEvent(0x10,I10Rachael,Blair,Rachael)//DONE
 CharacterEvent(0x11,I10ReadyToEnd,Blair,Cassius)//maturity but he's still a goofy guy
 CharacterEvent(0x12,I10ReadyToEnd,Blair,Jeff)
 CharacterEvent(0x13,I10ReadyToEnd,Blair,Emile)//unlock A rank
@@ -299,6 +299,12 @@ EndEvent
 
 
 //block of pure convos
+I10Rachael:
+	Text(I10RachaelTalk)
+	EndEvent
+I10Peggy:
+	Text(I10PeggyTalk)
+	EndEvent
 I10Josef:
 	Text(I10JosefTalk)
 	EndEvent

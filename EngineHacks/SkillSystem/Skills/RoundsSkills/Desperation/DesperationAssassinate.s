@@ -11,6 +11,14 @@
 .equ DesperationID, SkillTester+4
 .equ AssassinateID, DesperationID+4
 
+@check if reverse mode's on, end if so
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0xAF @rev flag
+.short 0xF800
+cmp r0,#1
+beq	NoSkill
+
 @check range
 ldr r0,=#0x203A4D4 @battle stats
 ldrb r0,[r0,#2] @range

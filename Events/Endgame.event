@@ -198,7 +198,7 @@ EndingScene:
 ResetBaseFlags
 CleanTextNoMap(HallCG,FillerDialogue)
 MUSC S_MainTheme
-SystemText(FinalArcEnding)
+SystemText(BlankCG,FinalArcEnding)
 SetNewGameFlag(12)
 MoveToChapter(AfterTheEnd)
 ENDA

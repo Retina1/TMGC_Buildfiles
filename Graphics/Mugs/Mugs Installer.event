@@ -78,7 +78,11 @@ setMugEntry(0x112,BlairPromoFlowerMug,3,6,3,4)
 ALIGN 4
 ArinMug:
 #incbin "dmps/Arin.dmp"
-setMugEntry(0x4,ArinMug,3,6,3,4)
+setMugEntry(0x4,ArinMug,3,5,3,3)
+ALIGN 4
+ArinPromoMug:
+#incbin "dmps/ArinPromo.dmp"
+setMugEntry(0x13d,ArinPromoMug,3,5,3,3)
 
 ALIGN 4
 KennethMug:

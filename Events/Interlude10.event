@@ -25,11 +25,16 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 43/63
+//progress - 48/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
 CharacterEvent(0x9,I10ReadyToEnd,Blair,Natasia)//special if A rank
+CharacterEvent(0x13,I10ReadyToEnd,Blair,Emile)//unlock A rank
+CharacterEvent(0x1c,I10ReadyToEnd,Blair,Carbon)//unlock A rank
+CharacterEvent(0x25,I10ReadyToEnd,Blair,Avan)//unlock A rank (mutually exclusive)
+CharacterEvent(0x27,I10ReadyToEnd,Blair,Yuyu)//unlock A rank (mutually exclusive?)
+CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE
 CharacterEvent(0xa,I10Stefan,Blair,Stefan)//DONE
 CharacterEvent(0xb,I10Desmond,Blair,Desmond)//DONE
 CharacterEvent(0xc,I10Sam,Blair,Sam)//DONE
@@ -37,18 +42,16 @@ CharacterEvent(0xd,I10Josef,Blair,Josef)//DONE
 CharacterEvent(0xe,I10Peggy,Blair,Peggy)//DONE
 CharacterEvent(0xf,I10ReadyToEnd,Blair,Butch)
 CharacterEvent(0x10,I10Rachael,Blair,Rachael)//DONE
-CharacterEvent(0x11,I10ReadyToEnd,Blair,Cassius)//maturity but he's still a goofy guy
-CharacterEvent(0x12,I10ReadyToEnd,Blair,Jeff)
-CharacterEvent(0x13,I10ReadyToEnd,Blair,Emile)//unlock A rank
-CharacterEvent(0x14,I10ReadyToEnd,Blair,Apollo)
-CharacterEvent(0x15,I10ReadyToEnd,Blair,Bechamel)
+CharacterEvent(0x11,I10Cassius,Blair,Cassius)//DONE
+CharacterEvent(0x12,I10Jeff,Blair,Jeff)//DONE
+CharacterEvent(0x14,I10Apollo,Blair,Apollo)//DONE
+CharacterEvent(0x15,I10Bechamel,Blair,Bechamel)//DONE
 CharacterEvent(0x16,I10Sveltzalus,Blair,Sveltzalus)//DONE
-CharacterEvent(0x17,I10ReadyToEnd,Blair,Hilbert)//realize that blind distinction between good and evil isn't real
+CharacterEvent(0x17,I10Hilbert,Blair,Hilbert)//realize that blind distinction between good and evil isn't real
 CharacterEvent(0x18,I10Agnes,Blair,Agnes)//DONE
 CharacterEvent(0x19,I10ReadyToEnd,Blair,Flynn)
 CharacterEvent(0x1a,I10Addington,Blair,Addington)//DONE
 CharacterEvent(0x1b,I10ReadyToEnd,Blair,Mikey)
-CharacterEvent(0x1c,I10ReadyToEnd,Blair,Carbon)//unlock A rank
 CharacterEvent(0x1d,I10Gaylord,Blair,Gaylord)//DONE
 CharacterEvent(0x1e,I10ReadyToEnd,Blair,Athena)
 CharacterEvent(0x1f,I10Charley,Blair,Charley)//DONE
@@ -57,9 +60,7 @@ CharacterEvent(0x21,I10ReadyToEnd,Blair,Alexis)
 CharacterEvent(0x22,I10ReadyToEnd,Blair,Leila)
 CharacterEvent(0x23,I10ReadyToEnd,Blair,Damien)
 CharacterEvent(0x24,I10Zacharias,Blair,Zacharias)//DONE
-CharacterEvent(0x25,I10ReadyToEnd,Blair,Avan)//unlock A rank (mutually exclusive)
 CharacterEvent(0x26,I10Toddsworth,Blair,Toddsworth)//DONE
-CharacterEvent(0x27,I10ReadyToEnd,Blair,Yuyu)//unlock A rank (mutually exclusive?)
 CharacterEvent(0x28,I10Artemis,Blair,Artemis)//DONE
 CharacterEvent(BaseFlag1,I10Hollandaise,Blair,Hollandaise)//DONE
 CharacterEvent(BaseFlag2,I10Vladmir,Blair,Vladmir)//DONE
@@ -78,7 +79,6 @@ CharacterEvent(GuideChpt6,I10Freddric,Blair,Freddric)//DONE
 CharacterEvent(GuideChpt7,I10Dean,Blair,Dean)//DONE
 CharacterEvent(GuideChpt8,I10Eliza,Blair,Eliza)//DONE
 CharacterEvent(GuideChpt9,I10Rift,Blair,Rift)//DONE
-CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE
 CharacterEvent(GuideChpt11,I10Rose,Blair,Rose)//DONE
 CharacterEvent(GuideChpt12,I10Dirk,Blair,Dirk)//DONE
 CharacterEvent(GuideChpt13,I10Callum,Blair,Callum)//DONE
@@ -299,6 +299,21 @@ EndEvent
 
 
 //block of pure convos
+I10Apollo:
+	Text(I10ApolloTalk)
+	EndEvent
+I10Bechamel:
+	Text(I10BechamelTalk)
+	EndEvent
+I10Hilbert:
+	Text(I10HilbertTalk)
+	EndEvent
+I10Jeff:
+	Text(I10JeffTalk)
+	EndEvent
+I10Cassius:
+	Text(I10CassiusTalk)
+	EndEvent
 I10Rachael:
 	Text(I10RachaelTalk)
 	EndEvent

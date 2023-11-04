@@ -15,6 +15,12 @@ ORG 0x9EF18 //List menu tile width
 BYTE UnitNameTileWidth
 POP
 
+//diable support room music
+PUSH
+ORG 0x951fc
+SHORT 0x0000 0x0000
+POP
+
 PUSH
 //Stat screen class name tile width
 ORG 0xA00708

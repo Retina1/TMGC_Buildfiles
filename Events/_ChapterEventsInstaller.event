@@ -291,6 +291,9 @@ ALIGN 4
 {
 #include "Blank.event"
 }
+{
+#include "Tales/TalesHub.event"
+}
 
 ALIGN 4
 EscapePointPointerTable(Prologue,BlankEscape)

@@ -33,12 +33,24 @@ dalst
 //fix 55 (flute 73), 72 (oboe 68)
 // 1 - TEST SONG TO MAKE SURE THE INSTALLER WORKS-- DO NOT USE THIS IN YOUR GAME; IT DOESN'T SOUND GOOD
 {
+#include "FeldschlactIII.event"
+SongTable(S_FeldschlactIII,FeldschlactIII,1)
+}
+{
+#include "DONTWANNASLEEP.event"
+SongTable(S_DONTWANNASLEEP,DONTWANNASLEEP,1)
+}
+{
 #include "Expedition.event"
 SongTable(S_Expedition,Expedition,1)
 }
 {
 #include "AFarAwayPromise.event"
 SongTable(S_AFarAwayPromise,AFarAwayPromise,1)
+}
+{
+#include "WaterBattle.event"
+SongTable(S_WaterBattle,WaterBattle,1)
 }
 {
 #include "NormalBattle.event"

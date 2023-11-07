@@ -25,7 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 48/63
+//progress - 49/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
@@ -58,7 +58,7 @@ CharacterEvent(0x1f,I10Charley,Blair,Charley)//DONE
 CharacterEvent(0x20,I10ReadyToEnd,Blair,Hyperius)
 CharacterEvent(0x21,I10ReadyToEnd,Blair,Alexis)
 CharacterEvent(0x22,I10ReadyToEnd,Blair,Leila)
-CharacterEvent(0x23,I10ReadyToEnd,Blair,Damien)
+CharacterEvent(0x23,I10Damien,Blair,Damien)//DONE
 CharacterEvent(0x24,I10Zacharias,Blair,Zacharias)//DONE
 CharacterEvent(0x26,I10Toddsworth,Blair,Toddsworth)//DONE
 CharacterEvent(0x28,I10Artemis,Blair,Artemis)//DONE
@@ -299,6 +299,9 @@ EndEvent
 
 
 //block of pure convos
+I10Damien:
+	Text(I10DamienTalk)
+	EndEvent
 I10Apollo:
 	Text(I10ApolloTalk)
 	EndEvent

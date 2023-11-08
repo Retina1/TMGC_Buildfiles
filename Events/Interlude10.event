@@ -25,7 +25,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 49/63
+//progress - 53/63
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
@@ -34,20 +34,20 @@ CharacterEvent(0x13,I10ReadyToEnd,Blair,Emile)//unlock A rank
 CharacterEvent(0x1c,I10ReadyToEnd,Blair,Carbon)//unlock A rank
 CharacterEvent(0x25,I10ReadyToEnd,Blair,Avan)//unlock A rank (mutually exclusive)
 CharacterEvent(0x27,I10ReadyToEnd,Blair,Yuyu)//unlock A rank (mutually exclusive?)
-CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE
+CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE, make the A support say "how did you get to be here? what was the moment?"
 CharacterEvent(0xa,I10Stefan,Blair,Stefan)//DONE
 CharacterEvent(0xb,I10Desmond,Blair,Desmond)//DONE
 CharacterEvent(0xc,I10Sam,Blair,Sam)//DONE
 CharacterEvent(0xd,I10Josef,Blair,Josef)//DONE
 CharacterEvent(0xe,I10Peggy,Blair,Peggy)//DONE
-CharacterEvent(0xf,I10ReadyToEnd,Blair,Butch)
+CharacterEvent(0xf,I10Butch,Blair,Butch)//DONE
 CharacterEvent(0x10,I10Rachael,Blair,Rachael)//DONE
 CharacterEvent(0x11,I10Cassius,Blair,Cassius)//DONE
 CharacterEvent(0x12,I10Jeff,Blair,Jeff)//DONE
 CharacterEvent(0x14,I10Apollo,Blair,Apollo)//DONE
 CharacterEvent(0x15,I10Bechamel,Blair,Bechamel)//DONE
 CharacterEvent(0x16,I10Sveltzalus,Blair,Sveltzalus)//DONE
-CharacterEvent(0x17,I10Hilbert,Blair,Hilbert)//realize that blind distinction between good and evil isn't real
+CharacterEvent(0x17,I10Hilbert,Blair,Hilbert)//DONE
 CharacterEvent(0x18,I10Agnes,Blair,Agnes)//DONE
 CharacterEvent(0x19,I10ReadyToEnd,Blair,Flynn)
 CharacterEvent(0x1a,I10Addington,Blair,Addington)//DONE
@@ -55,9 +55,9 @@ CharacterEvent(0x1b,I10ReadyToEnd,Blair,Mikey)
 CharacterEvent(0x1d,I10Gaylord,Blair,Gaylord)//DONE
 CharacterEvent(0x1e,I10ReadyToEnd,Blair,Athena)
 CharacterEvent(0x1f,I10Charley,Blair,Charley)//DONE
-CharacterEvent(0x20,I10ReadyToEnd,Blair,Hyperius)
-CharacterEvent(0x21,I10ReadyToEnd,Blair,Alexis)
-CharacterEvent(0x22,I10ReadyToEnd,Blair,Leila)
+CharacterEvent(0x20,I10Hyperius,Blair,Hyperius)//DONE
+CharacterEvent(0x21,I10Alexis,Blair,Alexis)//DONE
+CharacterEvent(0x22,I10Leila,Blair,Leila)//DONE
 CharacterEvent(0x23,I10Damien,Blair,Damien)//DONE
 CharacterEvent(0x24,I10Zacharias,Blair,Zacharias)//DONE
 CharacterEvent(0x26,I10Toddsworth,Blair,Toddsworth)//DONE
@@ -238,27 +238,27 @@ GotoPrepScreen
 ENDA
 
 I10Horatio:
-MUSC S_Ameno
-GetSupportLevel(Horatio,Simone)
-SVAL 0x2 0x1
-BEQ 0x3 0x2 0x1
-Text(I10HoratioTalk)
-GOTO 0x4
-LABEL 0x3
-TEXTSTART
-TEXTSHOW I10HoratioTalkAlt
-TEXTEND
-MUSC 0x0
-TEXTCONT
-TEXTEND
-MUSC S_HisWorld
-TEXTCONT
-TEXTEND
-REMA
-LearnSkill(Horatio,SummonID)
-ENUT HoratioMusicFlag
-LABEL 0x4
-EndEvent
+	MUSC S_Ameno
+	GetSupportLevel(Horatio,Simone)
+	SVAL 0x2 0x1
+	BEQ 0x3 0x2 0x1
+		Text(I10HoratioTalk)
+	GOTO 0x4
+	LABEL 0x3
+		TEXTSTART
+		TEXTSHOW I10HoratioTalkAlt
+		TEXTEND
+		MUSC 0x0
+		TEXTCONT
+		TEXTEND
+		MUSC S_HisWorld
+		TEXTCONT
+		TEXTEND
+		REMA
+		LearnSkill(Horatio,SummonID)
+		ENUT HoratioMusicFlag
+	LABEL 0x4
+	EndEvent
 
 
 //blair support events
@@ -293,12 +293,24 @@ I10Simone:
 	
 	
 I10Charley:
-Text(I10CharleyTalk)
-GiveItem(ShortBow,Charley)
-EndEvent
+	Text(I10CharleyTalk)
+	GiveItem(ShortBow,Charley)
+	EndEvent
 
 
 //block of pure convos
+I10Butch:
+	Text(I10ButchTalk)
+	EndEvent
+I10Leila:
+	Text(I10LeilaTalk)
+	EndEvent
+I10Alexis:
+	Text(I10AlexisTalk)
+	EndEvent
+I10Hyperius:
+	Text(I10HyperiusTalk)
+	EndEvent
 I10Damien:
 	Text(I10DamienTalk)
 	EndEvent
@@ -495,7 +507,7 @@ BEQ 0x6 0xc 0x0
 			REMA
 			SetSupport(Kenneth,Natasia,ASupport,1)
 LABEL 0x6
-//joan/sonia/carbon/mikey event (basically get smoked mikey carbon fans if joan dies
+//joan/sonia/carbon/mikey event (basically get smoked mikey carbon fans if joan dies)
 CHECK_ALIVE Joan
 BEQ 0x9 0xc 0x0
 	CHECK_ALIVE Sonia

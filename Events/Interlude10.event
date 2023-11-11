@@ -25,15 +25,15 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 53/63
+//progress - 6 LEFT
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
-CharacterEvent(0x7,I10ReadyToEnd,Blair,Arin)//special if A rank
-CharacterEvent(0x8,I10ReadyToEnd,Blair,Kenneth)//unlock A rank
-CharacterEvent(0x9,I10ReadyToEnd,Blair,Natasia)//special if A rank
-CharacterEvent(0x13,I10ReadyToEnd,Blair,Emile)//unlock A rank
-CharacterEvent(0x1c,I10ReadyToEnd,Blair,Carbon)//unlock A rank
-CharacterEvent(0x25,I10ReadyToEnd,Blair,Avan)//unlock A rank (mutually exclusive)
-CharacterEvent(0x27,I10ReadyToEnd,Blair,Yuyu)//unlock A rank (mutually exclusive?)
+CharacterEvent(0x7,I10Arin,Blair,Arin)//special if A rank
+CharacterEvent(0x8,I10Kenneth,Blair,Kenneth)//DONE
+CharacterEvent(0x9,I10Natasia,Blair,Natasia)//special if A rank
+CharacterEvent(0x13,I10Emile,Blair,Emile)//unlock A rank
+CharacterEvent(0x1c,I10Carbon,Blair,Carbon)//unlock A rank
+CharacterEvent(0x25,I10Avan,Blair,Avan)//unlock A rank (mutually exclusive)
+CharacterEvent(0x27,I10Yuyu,Blair,Yuyu)//unlock A rank (mutually exclusive?)
 CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE, make the A support say "how did you get to be here? what was the moment?"
 CharacterEvent(0xa,I10Stefan,Blair,Stefan)//DONE
 CharacterEvent(0xb,I10Desmond,Blair,Desmond)//DONE
@@ -49,11 +49,11 @@ CharacterEvent(0x15,I10Bechamel,Blair,Bechamel)//DONE
 CharacterEvent(0x16,I10Sveltzalus,Blair,Sveltzalus)//DONE
 CharacterEvent(0x17,I10Hilbert,Blair,Hilbert)//DONE
 CharacterEvent(0x18,I10Agnes,Blair,Agnes)//DONE
-CharacterEvent(0x19,I10ReadyToEnd,Blair,Flynn)
+CharacterEvent(0x19,I10Flynn,Blair,Flynn)//DONE
 CharacterEvent(0x1a,I10Addington,Blair,Addington)//DONE
-CharacterEvent(0x1b,I10ReadyToEnd,Blair,Mikey)
+CharacterEvent(0x1b,I10Mikey,Blair,Mikey)//DONE
 CharacterEvent(0x1d,I10Gaylord,Blair,Gaylord)//DONE
-CharacterEvent(0x1e,I10ReadyToEnd,Blair,Athena)
+CharacterEvent(0x1e,I10Athena,Blair,Athena)//DONE
 CharacterEvent(0x1f,I10Charley,Blair,Charley)//DONE
 CharacterEvent(0x20,I10Hyperius,Blair,Hyperius)//DONE
 CharacterEvent(0x21,I10Alexis,Blair,Alexis)//DONE
@@ -236,239 +236,6 @@ Interlude10GlobalFlagOff
 //SetSupport(Horatio,Simone,CPSupport,1)
 GotoPrepScreen
 ENDA
-
-I10Horatio:
-	MUSC S_Ameno
-	GetSupportLevel(Horatio,Simone)
-	SVAL 0x2 0x1
-	BEQ 0x3 0x2 0x1
-		Text(I10HoratioTalk)
-	GOTO 0x4
-	LABEL 0x3
-		TEXTSTART
-		TEXTSHOW I10HoratioTalkAlt
-		TEXTEND
-		MUSC 0x0
-		TEXTCONT
-		TEXTEND
-		MUSC S_HisWorld
-		TEXTCONT
-		TEXTEND
-		REMA
-		LearnSkill(Horatio,SummonID)
-		ENUT HoratioMusicFlag
-	LABEL 0x4
-	EndEvent
-
-
-//blair support events
-I10Estelle:
-	GetSupportLevel(Blair,Estelle)
-	SVAL 0x2 0x2
-	BEQ 0x3 0x2 0x1
-	Text(I10EstelleTalk)
-	GOTO 0x4
-	LABEL 0x3
-	Text(I10EstelleTalkAlt)
-	SetSupport(Blair,Estelle,BPSupport,1)
-	LABEL 0x4
-	EndEvent
-	
-
-I10Simone:
-	CHECK_EVENTID ArinOriginFlag
-	BEQ 0x1 0xc 0x0
-		GetSupportLevel(Blair,Arin)
-		SVAL 0x2 0x4
-		BEQ 0x3 0x2 0x1
-		Text(I10SimoneTalkAlt)//arin event incoming
-		GOTO 0x2
-		LABEL 0x3
-		Text(I10SimoneTalkAlt2)//arin event and blair/arin A support
-		GOTO 0x2
-	LABEL 0x1
-	Text(I10SimoneTalk)//regular talk
-	LABEL 0x2
-	EndEvent
-	
-	
-I10Charley:
-	Text(I10CharleyTalk)
-	GiveItem(ShortBow,Charley)
-	EndEvent
-
-
-//block of pure convos
-I10Butch:
-	Text(I10ButchTalk)
-	EndEvent
-I10Leila:
-	Text(I10LeilaTalk)
-	EndEvent
-I10Alexis:
-	Text(I10AlexisTalk)
-	EndEvent
-I10Hyperius:
-	Text(I10HyperiusTalk)
-	EndEvent
-I10Damien:
-	Text(I10DamienTalk)
-	EndEvent
-I10Apollo:
-	Text(I10ApolloTalk)
-	EndEvent
-I10Bechamel:
-	Text(I10BechamelTalk)
-	EndEvent
-I10Hilbert:
-	Text(I10HilbertTalk)
-	EndEvent
-I10Jeff:
-	Text(I10JeffTalk)
-	EndEvent
-I10Cassius:
-	Text(I10CassiusTalk)
-	EndEvent
-I10Rachael:
-	Text(I10RachaelTalk)
-	EndEvent
-I10Peggy:
-	Text(I10PeggyTalk)
-	EndEvent
-I10Josef:
-	Text(I10JosefTalk)
-	EndEvent
-I10Stefan:
-	Text(I10StefanTalk)
-	EndEvent
-I10Zacharias:
-	Text(I10ZachariasTalk)
-	EndEvent
-I10Toddsworth:
-	Text(I10ToddsworthTalk)
-	EndEvent
-I10Artemis:
-	Text(I10ArtemisTalk)
-	EndEvent
-I10Hollandaise:
-	Text(I10HollandaiseTalk)
-	EndEvent
-I10Ptolemy:
-	Text(I10PtolemyTalk)
-	EndEvent
-I10Johan:
-	Text(I10JohanTalk)
-	EndEvent
-I10Peter:
-	Text(I10PeterTalk)
-	EndEvent
-I10Sonia:
-	Text(I10SoniaTalk)
-	EndEvent
-I10Joan:
-	Text(I10JoanTalk)
-	EndEvent
-I10Tobias:
-	Text(I10TobiasTalk)
-	EndEvent
-I10Sveltzalus:
-	Text(I10SveltzalusTalk)
-	EndEvent
-I10Eliza:
-	Text(I10ElizaTalk)
-	EndEvent
-I10Dean:
-	Text(I10DeanTalk)
-	EndEvent
-I10Freddric:
-	Text(I10FreddricTalk)
-	EndEvent
-I10Rift:
-	Text(I10RiftTalk)
-	EndEvent
-I10Rose:
-	Text(I10RoseTalk)
-	EndEvent
-I10Dirk:
-	CHECK_ALIVE Eliza
-	BEQ 0x1 0xc 0x0
-	Text(I10DirkTalk)
-	GOTO 0x2
-	LABEL 0x1
-	Text(I10DirkTalkAlt)
-	LABEL 0x2
-	EndEvent
-I10Callum:
-	Text(I10CallumTalk)
-	EndEvent
-I10Manfred:
-	Text(I10ManfredTalk)
-	EndEvent
-I10Agnes:
-	Text(I10AgnesTalk)
-	EndEvent
-I10Gaylord:
-	Text(I10GaylordTalk)
-	EndEvent
-I10Wilhelm:
-	Text(I10WilhelmTalk)
-	EndEvent
-I10Argent:
-	Text(I10ArgentTalk)
-	EndEvent
-I10Kyrie:
-	Text(I10KyrieTalk)
-	EndEvent
-I10Clarque:
-	Text(I10ClarqueTalk)
-	EndEvent
-I10Desmond:
-	Text(I10DesmondTalk)
-	EndEvent
-I10Vladmir:
-	Text(I10VladmirTalk)
-	EndEvent
-I10Q:
-	Text(I10QTalk)
-	EndEvent
-I10Addington:
-	Text(I10AddingtonTalk)
-	EndEvent
-I10Tonnamin:
-	Text(I10TonnaminTalk)
-	EndEvent
-I10Ian:
-	Text(I10IanTalk)
-	EndEvent
-I10Sam:
-	CHECK_EVENTID SamBobertKillFlag
-	BNE 0x1 0xc 0x0
-	Text(I10SamTalk)
-	GOTO 0x2
-	LABEL 0x1
-	Text(I10SamTalkAlt)//subtle change
-	LABEL 0x2
-	EndEvent
-I10Laronde:
-	CHECK_ALIVE Rose
-	BEQ 0x1 0xc 0x0
-	Text(I10LarondeTalk)
-	GOTO 0x2
-	LABEL 0x1
-	Text(I10LarondeTalkAlt)
-	LABEL 0x2
-	EndEvent
-
-I10Brandl:
-CHECK_ALIVE Hyperius
-BEQ 0x1 0xc 0x0
-Text(I10BrandlTalk)
-GiveItem(Unyielding,Blair)
-GOTO 0x2
-LABEL 0x1
-Text(I10BrandlTalkHyperiusDead)
-LABEL 0x2
-EndEvent
 
 EndingScene:
 Interlude10GlobalFlagOn
@@ -682,7 +449,6 @@ BEQ 0x1d 0xc 0x0
 	BEQ 0x1d 0xc 0x0
 	CleanTextNoMap(StreetCG,I10EndingClarqueFreddric)
 LABEL 0x1d
-
 //apollo/bechamel event (nevermind i don't wanna force a romantic A rank
 //zeke and blair hit A rank here if they have B+
 GetSupportLevel(Blair,Zeke)
@@ -723,6 +489,374 @@ BEQ 0x2 0xc 0x0
 LABEL 0x2
 MoveToChapter(Chapter26)
 ENDA
+
+I10Horatio:
+	MUSC S_Ameno
+	GetSupportLevel(Horatio,Simone)
+	SVAL 0x2 0x1
+	BEQ 0x3 0x2 0x1
+		Text(I10HoratioTalk)
+	GOTO 0x4
+	LABEL 0x3
+		TEXTSTART
+		TEXTSHOW I10HoratioTalkAlt
+		TEXTEND
+		MUSC 0x0
+		TEXTCONT
+		TEXTEND
+		MUSC S_HisWorld
+		TEXTCONT
+		TEXTEND
+		REMA
+		LearnSkill(Horatio,SummonID)
+		ENUT HoratioMusicFlag
+	LABEL 0x4
+	EndEvent
+	
+//blair pre-established romantic talks
+I10Arin:
+	GetSupportLevel(Blair,Arin)
+	SVAL 0x2 0x4
+	BEQ 0x3 0x2 0x1
+	Text(I10ArinTalk)
+	GOTO 0x4
+	LABEL 0x3
+	MUSC LoverConvoSong
+	Text(I10ArinTalkAlt)
+	LABEL 0x4
+	EndEvent
+	
+I10Natasia:
+	GetSupportLevel(Blair,Natasia)
+	SVAL 0x2 0x4
+	BEQ 0x3 0x2 0x1
+	Text(I10NatasiaTalk)
+	GOTO 0x4
+	LABEL 0x3
+	MUSC LoverConvoSong
+	Text(I10NatasiaTalkAlt)
+	LABEL 0x4
+	EndEvent
+	
+	
+//blair romantic choices
+I10Avan:
+		GetSupportLevel(Blair,Arin)
+		SVAL 0x2 0x4
+		BEQ 0x3 0x2 0x1
+		GetSupportLevel(Blair,Natasia)
+		SVAL 0x2 0x4
+		BEQ 0x3 0x2 0x1
+		GetSupportLevel(Blair,Yuyu)
+		SVAL 0x2 0x4
+		BEQ 0x3 0x2 0x1
+		GetSupportLevel(Blair,Avan)
+		SVAL 0x2 0x3
+		BNE 0x3 0x2 0x1
+			EVBIT_MODIFY 3
+			SystemText(I10LoverNotice)//do i smooch
+			REMA
+			ASMC prCallLoverMenu+1
+			BNE 0x1 0xc 0x0
+			MUSC LoverConvoSong
+			Text(I10AvanLoverTalk)//girls smooch
+			SetSupport(Blair,Avan,ASupport,1)
+			GOTO 0x2
+			LABEL 0x1
+			SVAL 0x1 0x2
+			BNE 0x3 0xc 0x1
+			ENUF 0x25
+			GOTO 0x2
+		LABEL 0x3 //platonic
+		Text(I10AvanTalk)//girls don't smooch		
+	LABEL 0x2
+	EndEvent
+
+I10Yuyu:
+		GetSupportLevel(Blair,Arin)
+		SVAL 0x2 0x4
+		BEQ 0x3 0x2 0x1
+		GetSupportLevel(Blair,Natasia)
+		SVAL 0x2 0x4
+		BEQ 0x3 0x2 0x1
+		GetSupportLevel(Blair,Avan)
+		SVAL 0x2 0x4
+		BEQ 0x3 0x2 0x1
+		GetSupportLevel(Blair,Yuyu)
+		SVAL 0x2 0x3
+		BNE 0x3 0x2 0x1
+			EVBIT_MODIFY 3
+			SystemText(I10LoverNotice)//do i smooch
+			REMA
+			ASMC prCallLoverMenu+1
+			BNE 0x1 0xc 0x0
+			MUSC LoverConvoSong
+			Text(I10YuyuLoverTalk)//girls smooch
+			SetSupport(Blair,Yuyu,ASupport,1)
+			GOTO 0x2
+			LABEL 0x1
+			SVAL 0x1 0x2
+			BNE 0x3 0xc 0x1
+			ENUF 0x27
+			GOTO 0x2
+		LABEL 0x3 //platonic
+		Text(I10YuyuTalk)//girls don't smooch		
+	LABEL 0x2
+	EndEvent
+
+//blair support events
+I10Kenneth:
+	GetSupportLevel(Blair,Kenneth)
+	SVAL 0x2 0x3
+	BEQ 0x3 0x2 0x1
+	Text(I10KennethTalk)
+	GOTO 0x4
+	LABEL 0x3
+	Text(I10KennethTalkAlt)
+	SetSupport(Blair,Kenneth,ASupport,1)
+	LABEL 0x4
+	EndEvent
+
+I10Carbon:
+	GetSupportLevel(Blair,Carbon)
+	SVAL 0x2 0x3
+	BEQ 0x3 0x2 0x1
+	Text(I10CarbonTalk)
+	GOTO 0x4
+	LABEL 0x3
+	Text(I10CarbonTalkAlt)
+	SetSupport(Blair,Carbon,ASupport,1)
+	LABEL 0x4
+	EndEvent
+
+I10Emile:
+	GetSupportLevel(Blair,Emile)
+	SVAL 0x2 0x3
+	BEQ 0x3 0x2 0x1
+	Text(I10EmileTalk)
+	GOTO 0x4
+	LABEL 0x3
+	Text(I10EmileTalkAlt)
+	SetSupport(Blair,Emile,ASupport,1)
+	LABEL 0x4
+	EndEvent
+
+I10Estelle:
+	GetSupportLevel(Blair,Estelle)
+	SVAL 0x2 0x2
+	BEQ 0x3 0x2 0x1
+	Text(I10EstelleTalk)
+	GOTO 0x4
+	LABEL 0x3
+	Text(I10EstelleTalkAlt)
+	SetSupport(Blair,Estelle,BPSupport,1)
+	LABEL 0x4
+	EndEvent
+	
+
+I10Simone:
+	CHECK_EVENTID ArinOriginFlag
+	BEQ 0x1 0xc 0x0
+		GetSupportLevel(Blair,Arin)
+		SVAL 0x2 0x4
+		BEQ 0x3 0x2 0x1
+		Text(I10SimoneTalkAlt)//arin event incoming
+		GOTO 0x2
+		LABEL 0x3
+		Text(I10SimoneTalkAlt2)//arin event and blair/arin A support
+		GOTO 0x2
+	LABEL 0x1
+	Text(I10SimoneTalk)//regular talk
+	LABEL 0x2
+	EndEvent
+	
+	
+I10Charley:
+	Text(I10CharleyTalk)
+	GiveItem(ShortBow,Charley)
+	EndEvent
+
+
+//block of pure convos
+I10Flynn:
+	Text(I10FlynnTalk)
+	EndEvent
+I10Mikey:
+	Text(I10MikeyTalk)
+	EndEvent
+I10Athena:
+	Text(I10AthenaTalk)
+	EndEvent
+I10Butch:
+	Text(I10ButchTalk)
+	EndEvent
+I10Leila:
+	Text(I10LeilaTalk)
+	EndEvent
+I10Alexis:
+	Text(I10AlexisTalk)
+	EndEvent
+I10Hyperius:
+	Text(I10HyperiusTalk)
+	EndEvent
+I10Damien:
+	Text(I10DamienTalk)
+	EndEvent
+I10Apollo:
+	Text(I10ApolloTalk)
+	EndEvent
+I10Bechamel:
+	Text(I10BechamelTalk)
+	EndEvent
+I10Hilbert:
+	Text(I10HilbertTalk)
+	EndEvent
+I10Jeff:
+	Text(I10JeffTalk)
+	EndEvent
+I10Cassius:
+	Text(I10CassiusTalk)
+	EndEvent
+I10Rachael:
+	Text(I10RachaelTalk)
+	EndEvent
+I10Peggy:
+	Text(I10PeggyTalk)
+	EndEvent
+I10Josef:
+	Text(I10JosefTalk)
+	EndEvent
+I10Stefan:
+	Text(I10StefanTalk)
+	EndEvent
+I10Zacharias:
+	Text(I10ZachariasTalk)
+	EndEvent
+I10Toddsworth:
+	Text(I10ToddsworthTalk)
+	EndEvent
+I10Artemis:
+	Text(I10ArtemisTalk)
+	EndEvent
+I10Hollandaise:
+	Text(I10HollandaiseTalk)
+	EndEvent
+I10Ptolemy:
+	Text(I10PtolemyTalk)
+	EndEvent
+I10Johan:
+	Text(I10JohanTalk)
+	EndEvent
+I10Peter:
+	Text(I10PeterTalk)
+	EndEvent
+I10Sonia:
+	Text(I10SoniaTalk)
+	EndEvent
+I10Joan:
+	Text(I10JoanTalk)
+	EndEvent
+I10Tobias:
+	Text(I10TobiasTalk)
+	EndEvent
+I10Sveltzalus:
+	Text(I10SveltzalusTalk)
+	EndEvent
+I10Eliza:
+	Text(I10ElizaTalk)
+	EndEvent
+I10Dean:
+	Text(I10DeanTalk)
+	EndEvent
+I10Freddric:
+	Text(I10FreddricTalk)
+	EndEvent
+I10Rift:
+	Text(I10RiftTalk)
+	EndEvent
+I10Rose:
+	Text(I10RoseTalk)
+	EndEvent
+I10Dirk:
+	CHECK_ALIVE Eliza
+	BEQ 0x1 0xc 0x0
+	Text(I10DirkTalk)
+	GOTO 0x2
+	LABEL 0x1
+	Text(I10DirkTalkAlt)
+	LABEL 0x2
+	EndEvent
+I10Callum:
+	Text(I10CallumTalk)
+	EndEvent
+I10Manfred:
+	Text(I10ManfredTalk)
+	EndEvent
+I10Agnes:
+	Text(I10AgnesTalk)
+	EndEvent
+I10Gaylord:
+	Text(I10GaylordTalk)
+	EndEvent
+I10Wilhelm:
+	Text(I10WilhelmTalk)
+	EndEvent
+I10Argent:
+	Text(I10ArgentTalk)
+	EndEvent
+I10Kyrie:
+	Text(I10KyrieTalk)
+	EndEvent
+I10Clarque:
+	Text(I10ClarqueTalk)
+	EndEvent
+I10Desmond:
+	Text(I10DesmondTalk)
+	EndEvent
+I10Vladmir:
+	Text(I10VladmirTalk)
+	EndEvent
+I10Q:
+	Text(I10QTalk)
+	EndEvent
+I10Addington:
+	Text(I10AddingtonTalk)
+	EndEvent
+I10Tonnamin:
+	Text(I10TonnaminTalk)
+	EndEvent
+I10Ian:
+	Text(I10IanTalk)
+	EndEvent
+I10Sam:
+	CHECK_EVENTID SamBobertKillFlag
+	BNE 0x1 0xc 0x0
+	Text(I10SamTalk)
+	GOTO 0x2
+	LABEL 0x1
+	Text(I10SamTalkAlt)//subtle change
+	LABEL 0x2
+	EndEvent
+I10Laronde:
+	CHECK_ALIVE Rose
+	BEQ 0x1 0xc 0x0
+	Text(I10LarondeTalk)
+	GOTO 0x2
+	LABEL 0x1
+	Text(I10LarondeTalkAlt)
+	LABEL 0x2
+	EndEvent
+
+I10Brandl:
+CHECK_ALIVE Hyperius
+BEQ 0x1 0xc 0x0
+Text(I10BrandlTalk)
+GiveItem(Unyielding,Blair)
+GOTO 0x2
+LABEL 0x1
+Text(I10BrandlTalkHyperiusDead)
+LABEL 0x2
+EndEvent
 
 I10DoorTrigger:
 Text(I10DoorText)

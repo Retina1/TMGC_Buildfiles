@@ -25,15 +25,15 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 6 LEFT
+//progress - 4 LEFT
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10Arin,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10Kenneth,Blair,Kenneth)//DONE
 CharacterEvent(0x9,I10Natasia,Blair,Natasia)//special if A rank
-CharacterEvent(0x13,I10Emile,Blair,Emile)//unlock A rank
+CharacterEvent(0x13,I10Emile,Blair,Emile)//DONE
 CharacterEvent(0x1c,I10Carbon,Blair,Carbon)//unlock A rank
 CharacterEvent(0x25,I10Avan,Blair,Avan)//unlock A rank (mutually exclusive)
-CharacterEvent(0x27,I10Yuyu,Blair,Yuyu)//unlock A rank (mutually exclusive?)
+CharacterEvent(0x27,I10Yuyu,Blair,Yuyu)//DONE
 CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE, make the A support say "how did you get to be here? what was the moment?"
 CharacterEvent(0xa,I10Stefan,Blair,Stefan)//DONE
 CharacterEvent(0xb,I10Desmond,Blair,Desmond)//DONE
@@ -563,11 +563,14 @@ I10Avan:
 			SetSupport(Blair,Avan,ASupport,1)
 			GOTO 0x2
 			LABEL 0x1
-			SVAL 0x1 0x2
-			BNE 0x3 0xc 0x1
+			SVAL 0x1 0x1
+			BNE 0x4 0xc 0x1
+			Text(I10AvanPlatonicTalk)
+			GOTO 0x2
+			LABEL 0x4
 			ENUF 0x25
 			GOTO 0x2
-		LABEL 0x3 //platonic
+		LABEL 0x3 //no B+ rank
 		Text(I10AvanTalk)//girls don't smooch		
 	LABEL 0x2
 	EndEvent
@@ -595,11 +598,14 @@ I10Yuyu:
 			SetSupport(Blair,Yuyu,ASupport,1)
 			GOTO 0x2
 			LABEL 0x1
-			SVAL 0x1 0x2
-			BNE 0x3 0xc 0x1
+			SVAL 0x1 0x1
+			BNE 0x4 0xc 0x1
+			Text(I10YuyuPlatonicTalk)
+			GOTO 0x2
+			LABEL 0x4
 			ENUF 0x27
 			GOTO 0x2
-		LABEL 0x3 //platonic
+		LABEL 0x3 //no B+ rank
 		Text(I10YuyuTalk)//girls don't smooch		
 	LABEL 0x2
 	EndEvent

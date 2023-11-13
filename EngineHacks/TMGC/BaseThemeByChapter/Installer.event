@@ -1,0 +1,34 @@
+#define ChaptersWithBaseThemeEntry(chapter, theme) "PUSH; ORG ChaptersWithBaseThemeList+(chapter*2); SHORT theme; POP"
+
+ALIGN 4
+ChaptersWithBaseThemeList:
+FILL 0xFF*2
+
+// Example macro usage
+// ChaptersWithBaseThemeEntry(0x0, TreasureTownID)
+
+ChaptersWithBaseThemeEntry(Chapter1, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter2, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter3, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter4, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter5, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter6, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter7, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter8, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter9, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter10, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter11, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter12, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter13, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter15, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter16, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter19, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter21, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter22, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter23, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(Chapter25, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(ChapterV2, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(ChapterV3, S_ShadowOfTheLowland)
+ChaptersWithBaseThemeEntry(ChapterV4, S_ShadowOfTheLowland)
+
+#include "ChaptersWithBaseTheme.lyn.event"

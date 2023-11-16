@@ -25,13 +25,13 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 4 LEFT
+//progress - 3 LEFT
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
 CharacterEvent(0x7,I10Arin,Blair,Arin)//special if A rank
 CharacterEvent(0x8,I10Kenneth,Blair,Kenneth)//DONE
 CharacterEvent(0x9,I10Natasia,Blair,Natasia)//special if A rank
 CharacterEvent(0x13,I10Emile,Blair,Emile)//DONE
-CharacterEvent(0x1c,I10Carbon,Blair,Carbon)//unlock A rank
+CharacterEvent(0x1c,I10Carbon,Blair,Carbon)//DONE
 CharacterEvent(0x25,I10Avan,Blair,Avan)//unlock A rank (mutually exclusive)
 CharacterEvent(0x27,I10Yuyu,Blair,Yuyu)//DONE
 CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE, make the A support say "how did you get to be here? what was the moment?"
@@ -100,8 +100,8 @@ Vendor(I10AnimaVendor,25,22)
 Vendor(I10LightVendor,28,25)
 Vendor(I10DarkVendor,31,23)
 Vendor(I10StaffVendor,34,24)
-Village(0x0,I10Village1,14,29)//item
-Village(0x0,I10Village2,28,33)//item
+Village(0x0,I10Village1,14,29)
+Village(0x0,I10Village2,28,33)
 Village(0x0,I10Village3,31,30)
 Village(0x0,I10Village4,1,33)
 Village(0x0,I10TheInn,14,24)
@@ -459,7 +459,7 @@ BNE 0x3 0x2 0x1
 	REMA
 	SetSupport(Blair,Zeke,ASupport,1)
 LABEl 0x3
-//special scenes here for romantic blair A ranks (alt for arin if she's doing the simone events)
+//special scenes here for romantic blair A ranks (alt for arin if she's doing the simone events)?
 //special thing where blair's closest support partner gets a skill that gives obscene bonuses if they're adjacent?
 //power of love/power of oomf?
 //kenneth goes off to promote

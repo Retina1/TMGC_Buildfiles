@@ -25,14 +25,13 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-//progress - 3 LEFT
 CharacterEvent(0x0,I10ReadyToEnd,Blair,Zeke)//MAP TALK DONE, A RANK POSTMAP (will write later)
-CharacterEvent(0x7,I10Arin,Blair,Arin)//special if A rank
+CharacterEvent(0x7,I10Arin,Blair,Arin)//DONE
 CharacterEvent(0x8,I10Kenneth,Blair,Kenneth)//DONE
-CharacterEvent(0x9,I10Natasia,Blair,Natasia)//special if A rank
+CharacterEvent(0x9,I10Natasia,Blair,Natasia)//DONE
 CharacterEvent(0x13,I10Emile,Blair,Emile)//DONE
 CharacterEvent(0x1c,I10Carbon,Blair,Carbon)//DONE
-CharacterEvent(0x25,I10Avan,Blair,Avan)//unlock A rank (mutually exclusive)
+CharacterEvent(0x25,I10Avan,Blair,Avan)//DONE
 CharacterEvent(0x27,I10Yuyu,Blair,Yuyu)//DONE
 CharacterEvent(GuideChpt10,I10Estelle,Blair,Estelle)//DONE, make the A support say "how did you get to be here? what was the moment?"
 CharacterEvent(0xa,I10Stefan,Blair,Stefan)//DONE

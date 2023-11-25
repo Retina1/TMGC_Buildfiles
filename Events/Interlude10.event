@@ -249,10 +249,11 @@ BEQ 0x4 0xc 0x0
 	BEQ 0x4 0xc 0x0
 		CHECK_ALIVE Desmond
 		BEQ 0x5 0xc 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//desmond alive
+		CleanTextNoMap(HallCG,I10EndingStefanJohanDesmond)//desmond alive
+		SetSupport(Desmond,Johan,BPSupport,1)
 		GOTO 0x4
 		LABEL 0x5
-		CleanTextNoMap(HallCG,FillerDialogue)//desmond dead
+		CleanTextNoMap(HallCG,I10EndingStefanJohan)//desmond dead
 LABEL 0x4
 //kenneth/natasia event
 CHECK_ALIVE Kenneth
@@ -265,10 +266,10 @@ BEQ 0x6 0xc 0x0
 			GetSupportLevel(Blair,Natasia)
 			SVAL 0x2 0x3
 			BNE 0x7 0x2 0x1
-			CleanTextNoMap(VillageCG,FillerDialogue)//natasia and blair at A
+			CleanTextNoMap(VillageCG,I10EndingKennethNatasiaAlt)//natasia and blair at A
 			GOTO 0x8
 			LABEL 0x7
-			CleanTextNoMap(VillageCG,FillerDialogue)//natasia and blair not at A
+			CleanTextNoMap(VillageCG,I10EndingKennethNatasia)//natasia and blair not at A
 			LABEL 0x8
 			REMA
 			SetSupport(Kenneth,Natasia,ASupport,1)
@@ -282,20 +283,20 @@ BEQ 0x9 0xc 0x0
 		BEQ 0xc 0xc 0x0
 			CHECK_ALIVE Carbon
 			BEQ 0xd 0xc 0x0
-			CleanTextNoMap(HouseCG,FillerDialogue)//all alive
+			CleanTextNoMap(HouseCG,I10EndingJoanSoniaMikeyCarbon)//all alive
 			REMA
 			SetSupport(Joan,Sonia,ASupport,1)
 			SetSupport(Joan,Mikey,BPSupport,1)
 			SetSupport(Mikey,Carbon,ASupport,1)
 			GOTO 0xa
 			LABEL 0xd
-			CleanTextNoMap(HouseCG,FillerDialogue)//all but carbon alive
+			CleanTextNoMap(HouseCG,I10EndingJoanSoniaMikey)//all but carbon alive
 			REMA
 			SetSupport(Joan,Sonia,ASupport,1)
 			SetSupport(Joan,Mikey,BPSupport,1)
 			GOTO 0xa
 		LABEL 0xc
-		CleanTextNoMap(HouseCG,FillerDialogue)//joan and sonia alive
+		CleanTextNoMap(HouseCG,I10EndingJoanSonia)//joan and sonia alive
 		REMA
 		SetSupport(Joan,Sonia,ASupport,1)
 		GOTO 0xa
@@ -305,35 +306,35 @@ BEQ 0x9 0xc 0x0
 		BEQ 0xe 0xc 0x0
 			CHECK_ALIVE Carbon
 			BEQ 0xd 0xc 0x0
-			CleanTextNoMap(HouseCG,FillerDialogue)//mikey carbon joan
+			CleanTextNoMap(HouseCG,I10EndingJoanMikeyCarbon)//mikey carbon joan
 			REMA
 			SetSupport(Joan,Mikey,BPSupport,1)
 			SetSupport(Mikey,Carbon,ASupport,1)
 			GOTO 0xa
 			LABEL 0xd
-			CleanTextNoMap(HouseCG,FillerDialogue)//mikey and joan
+			CleanTextNoMap(HouseCG,I10EndingJoanMikey)//mikey and joan
 			REMA
 			SetSupport(Joan,Mikey,BPSupport,1)
 			GOTO 0xa
 		LABEL 0xe
-		CleanTextNoMap(HouseCG,FillerDialogue)//mikey and sonia dead, sad joan scene
+		CleanTextNoMap(HouseCG,I10EndingJoan)//mikey and sonia dead, sad joan scene
 		GOTO 0xa
 LABEL 0x9
 CHECK_ALIVE Sonia
 BEQ 0xa 0xc 0x0
-CleanTextNoMap(HouseCG,FillerDialogue)//sonia alive, joan dead, who cares about the scrubs
+CleanTextNoMap(HouseCG,I10EndingSonia)//sonia alive, joan dead, who cares about the scrubs
 LABEL 0xa
 //rose/laronde event
 CHECK_ALIVE SecretLaronde
 BEQ 0xf 0xc 0x0
 	CHECK_ALIVE Rose
 	BEQ 0x10 0xc 0x0
-	CleanTextNoMap(SunsetPathCG,FillerDialogue)//rose and laronde alive
+	CleanTextNoMap(SunsetPathCG,I10EndingLarondeRose)//rose and laronde alive
 	REMA
 	SetSupport(Rose,SecretLaronde,BPSupport,1)
 	GOTO 0xf
 	LABEL 0x10
-	CleanTextNoMap(SunsetPathCG,FillerDialogue)//laronde alive and sad that rose isn't
+	CleanTextNoMap(SunsetPathCG,I10EndingLaronde)//laronde alive and sad that rose isn't
 LABEL 0xf
 //damien/zacharias/tobias/leila event
 CHECK_ALIVE Damien

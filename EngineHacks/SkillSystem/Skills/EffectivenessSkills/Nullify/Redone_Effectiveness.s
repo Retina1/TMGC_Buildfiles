@@ -19,6 +19,83 @@ beq		RetFalse			@if weapon isn't effective, end
 ldr		r1,[r5,#0x4]
 mov		r6,#0x50
 ldr		r6,[r1,r6]			@class weaknesses
+
+@set different weaknesses depending on defender's weapon
+push	{r0-r3}
+mov		r0, #0x4a
+ldrb	r0, [r5,r0]
+ldr		r1, =#0x8017548 @GetItemType
+mov		r14, r1
+.short 0xF800
+cmp		r0, #0x0
+beq		Sword
+cmp		r0, #0x1
+beq		Lance
+cmp		r0, #0x2
+beq		Axe
+cmp 	r0, #0x3
+beq		Bow
+@cmp 	r0, #0x4
+@beq		Staff
+cmp		r0, #0x5
+beq		Anima
+cmp		r0, #0x6
+beq		Light
+cmp		r0, #0x7
+beq		Dark
+b		EndWeaponType
+
+Sword:
+mov		r0, #0x10
+lsl		r0, #0x1
+orr		r6, r0
+b 		EndWeaponType
+
+Lance:
+mov		r0, #0x10
+lsl		r0, #0x2
+orr		r6, r0
+b 		EndWeaponType
+
+Axe:
+mov		r0, #0x10
+lsl		r0, #0x3
+orr		r6, r0
+b 		EndWeaponType
+
+Bow:
+mov		r0, #0x10
+lsl		r0, #0x4
+orr		r6, r0
+b 		EndWeaponType
+
+@Staff:
+@mov		r0, #0x10
+@lsl		r0, #0x1
+@orr		r6, r0
+@b 		EndWeaponType
+
+Anima:
+mov		r0, #0x10
+lsl		r0, #0x5
+orr		r6, r0
+b 		EndWeaponType
+
+Light:
+mov		r0, #0x10
+lsl		r0, #0x6
+orr		r6, r0
+b 		EndWeaponType
+
+Dark:
+mov		r0, #0x10
+lsl		r0, #0x7
+orr		r6, r0
+b 		EndWeaponType
+
+EndWeaponType:
+pop {r0-r3}
+
 cmp		r6,#0
 beq		RetFalse			@if class has no weaknesses, end
 
@@ -82,4 +159,4 @@ bx		r1
 
 .ltorg
 SkillTester:
-@
+@WORD NullifyID

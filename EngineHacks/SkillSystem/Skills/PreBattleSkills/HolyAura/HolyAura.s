@@ -21,7 +21,7 @@ cmp r0,#0x6
 bne End
 
 mov r1, #0x2c
-ldrh r2, [r4, r1]
+ldrb r2, [r4, r1]
 lsr r2,#0x2
 mov r1, #0x66
 ldrh r0, [r4, r1]

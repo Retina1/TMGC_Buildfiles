@@ -220,9 +220,10 @@ Demoiselle: Male allies within[N]
 Killer Tactics: Adjacent allies with[N]
 HP < 50% get -30 Hit and are brave.[X]
 
-## SD_MaleficAura ^
-Invert: On player phase, allies within 2[N]
-tiles swap which defensive stat they target.[X]
+## SD_MaleficAura
+Invert: On player phase, allies[N]
+within 2 tiles swap which defensive[N]
+stat they target (Def <-> Res).[X]
 
 ## SD_Inspiration
 Inspiration: Allies within[N]
@@ -545,7 +546,7 @@ on even numbered turns.[X]
 
 ## SD_QuickBurn
 Deep[0xBC]Pockets: +1 Crit per[N]
-2500 gold in army's treasury.[X]
+1000 gold in army's treasury.[X]
 
 ## SD_SlowBurn
 Slow Burn: +1 Hit and Avoid for[N]

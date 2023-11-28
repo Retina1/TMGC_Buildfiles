@@ -7,6 +7,8 @@
 
 ALIGN 4
 DeathQuoteTable:
+//ratio
+BYTE 0xd2 0x0 0xff 0xff 0x0 0x0 ;SHORT 0x0 ;WORD HoratioSummonDeath|IsPointer
 // Prologue
 ChapterDeathQuote(Davelarn,Prologue,DefeatBossFlag,PDavelarnDeath)
 // Ch1
@@ -412,4 +414,11 @@ GOTO 0x2
 LABEL 0x1
 ENUT 0x65
 LABEL 0x2
+EndEvent
+
+ALIGN 4
+HoratioSummonDeath:
+MUSC S_HisWorld
+Text(HoratioWeep)
+AnnihilateItem(SummonBlade)
 EndEvent

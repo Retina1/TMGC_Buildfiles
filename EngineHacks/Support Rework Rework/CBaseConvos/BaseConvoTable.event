@@ -804,6 +804,12 @@
 			baseSupport(Emile,Simone,BSupport)
 		//c25 has ian and maybe a kyrie hint?
 		//c26
+	Chapter(Chapter26)
+		Entry
+			name(Girlkissing_Label)
+			importance(5)
+			event(C26GirlkissingEvent)
+			eventID(BaseFlag1)		
 		//c27
 	Chapter(Chapter28)
 		Entry
@@ -818,6 +824,22 @@
 	POP
 	}
 #endif // BASE_CONVO_TABLE
+
+ALIGN 4
+C26GirlkissingEvent:
+SetBackground(PathCG)
+MUSC LoverConvoSong
+Text(FillerDialogue)
+SetSupport(Blair,Arin,ASupport,1)
+SetSupport(Blair,Natasia,ASupport,1)
+SetSupport(Blair,Avan,ASupport,1)
+SetSupport(Blair,Yuyu,ASupport,1)
+SetSupport(Blair,Estelle,ASupport,1)
+FADI 0x5
+ENUT GirlkissingFlag
+CLEAN
+NoFade
+ENDA
 
 ALIGN 4
 C25RachaelCassiusEvent:

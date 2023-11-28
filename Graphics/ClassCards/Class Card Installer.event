@@ -123,7 +123,13 @@
 #define DLNathanielCard 0x13a
 #define DLTarquinCard 0x13b
 #define DLEthylCard 0x13c
+#define EmptyCard 0x13e
 ALIGN 4
+
+EmptyPortrait:
+#incbin "Empty.dmp"
+EmptyPortraitPalette:
+#incbin "EmptyPalette.dmp"
 
 ViridianLordPortrait:
 #incbin "ViridianLord.dmp"
@@ -757,6 +763,7 @@ setCardEntry(DLLazarusCard,DLLazarusPortrait,DLLazarusPortraitPalette)
 setCardEntry(DLNathanielCard,DLNathanielPortrait,DLNathanielPortraitPalette)
 setCardEntry(DLTarquinCard,DLTarquinPortrait,DLTarquinPortraitPalette)
 setCardEntry(DLEthylCard,DLEthylPortrait,DLEthylPortraitPalette)
+setCardEntry(EmptyCard,EmptyPortrait,EmptyPortraitPalette)
 
 setCardEntry(CrateCard,CratePortrait,CratePortraitPalette)
 setCardEntry(HorseCard,HorsePortrait,HorsePortraitPalette)

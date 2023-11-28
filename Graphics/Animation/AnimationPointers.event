@@ -42,6 +42,9 @@
 #include "CharacterSpecific\Laronde\Unarmed Installer.event"
 }
 {
+#include "Liberation\Magic Installer.event"
+}
+{
 #include "CharacterSpecific\ButchP\Sword Installer.event"
 #include "CharacterSpecific\ButchP\Axe Installer.event"
 #include "CharacterSpecific\ButchP\Handaxe Installer.event"
@@ -485,6 +488,11 @@
 #include "CharacterSpecific\PeggyU\Staff Installer.event"
 #include "CharacterSpecific\PeggyU\Unarmed Installer.event"
 }
+ALIGN 4
+LiberationAnims:
+SpecialAnim(0x101,Aspect)
+EndAnim
+
 ALIGN 4
 LarondeAnims:
 LanceAnim(0xff)

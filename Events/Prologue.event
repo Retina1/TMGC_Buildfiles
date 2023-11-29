@@ -111,6 +111,7 @@ ALIGN 4
 BeginningScene:
 EVBIT_MODIFY 4
 ENUT 0xcb
+ASMC OptionBitSetterASMC|1
 SetBackground(BlankCG)
 SVAL 0x1 0x1
 SystemText(GameModifierPrompt)

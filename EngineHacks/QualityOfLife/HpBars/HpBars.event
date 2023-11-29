@@ -6,6 +6,19 @@
 
 #ifdef _FE8_
 
+MESSAGE kid named scraiza776
+//this is here because optionystuff
+ALIGN 4	//  ASMC that sets the option bit to the difficutly set, use this for chapter 1
+OptionBitSetterASMC:
+#incbin "GameOptions/OptionBitSetter.dmp"
+
+ALIGN 4//  Brendor's FE8-Difficulty-Switching ASM lightly edited.
+//This ASMC does not set difficulty on map ID 00, since on
+//the first chapter you select the difficulty from the main menu.
+//This changes difficulty depending on your option.
+DifficultySetterByOptionBitASMC:
+#incbin "GameOptions/DifficultySetterByOptionBit.dmp"
+
   {
   
   #include "GameOptions/Installer.event"

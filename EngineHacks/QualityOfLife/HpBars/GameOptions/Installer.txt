@@ -1,0 +1,63 @@
+#include "Extensions/Hack Installation.txt"
+#include EAstdlib.event
+#include "Tools/Tool Helpers.txt"
+
+#ifndef FreeSpace
+    #define FreeSpace 0xDF2800
+    ORG FreeSpace
+#endif
+
+//Add the OptionBitSetterASMC to the start events of your first chapter!
+//Otherwise it will use the standard setting for combat window,
+//and it'll jank the difficulty up.
+
+#define ChangeDifficultyBottomTextID 0xAF //Vanilla combat window info text ID,
+										  //change if needed
+#define EasyTextID   0xC8  //0x1000
+#define NormalTextID 0xC9  //0x1001
+#define HardTextID   0x11A7//0x1002//change these to wherever your easy normal hard text is
+
+PUSH
+
+	ORG 0xA2EB58
+	SHORT ChangeDifficultyBottomTextID
+	ORG 0xA2EB5A
+	SHORT EasyTextID
+	//ORG 0xA2EB5C
+	//SHORT 0x0370 EasyTextLocation
+
+	ORG 0xA2EB60
+	SHORT ChangeDifficultyBottomTextID
+	ORG 0xA2EB62
+	SHORT NormalTextID
+	ORG 0xA2EB64
+	SHORT 0x0397//NormalTextLocation
+	//This location makes the text look nicer
+	
+	ORG 0xA2EB68
+	SHORT ChangeDifficultyBottomTextID
+	ORG 0xA2EB6A
+	SHORT HardTextID
+	//ORG 0xA2EB6C
+	//SHORT 0x02B6 HardTextLocation
+	
+	ORG  0x37318
+	BYTE 0x06 0x20
+	ORG  0x37350
+	BYTE 0x06 0x20//null out the vanilla battle preview panel checks
+	
+	
+POP	
+
+ALIGN 4//  ASMC that sets the option bit to the difficutly set, use this for chapter 1
+MESSAGE Option Bit Setter at CURRENTOFFSET
+OptionBitSetterASMC:
+#incbin "OptionBitSetter.dmp"
+
+ALIGN 4//  Brendor's FE8-Difficulty-Switching ASM lightly edited.
+MESSAGE Difficulty Setter CURRENTOFFSET
+//This ASMC does not set difficulty on map ID 00, since on
+//the first chapter you select the difficulty from the main menu.
+//This changes difficulty depending on your option.
+DifficultySetterByOptionBitASMC:
+#incbin "DifficultySetterByOptionBit.dmp"

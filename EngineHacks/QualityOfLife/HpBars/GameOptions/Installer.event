@@ -8,8 +8,16 @@
 #include "Internals.event"
 
 #define SupportAnimOpt 0x11 // New entries start at 0x11
+#define DifficultyOpt 0xa // replace 9 because lol
 
 //if flag on, no support animations
+
+PUSH	
+	ORG  0x37318
+	BYTE 0x06 0x20
+	ORG  0x37350
+	BYTE 0x06 0x20//null out the vanilla battle preview panel checks
+POP
 
 ALIGN 4
 SupportAnimToggleFunc:
@@ -22,6 +30,7 @@ BYTE  SupportAnimFlag $20 // mov r0, #Index
 GenericCheckCurrentOptionCode
 
 GameOptionsEntry(SupportAnimOpt, 0x9d, 0xb9, 0xbd, 624, 0xb9, 0xbe, 647, 0x20, SupportAnimCheckCurrentOption, SupportAnimToggleFunc) 
+GameOptionsEntry(DifficultyOpt, 0x9b, 0xb8, 0x262, 880, 0xb8, 0x263, 919, 0xb8, 0x264, 694, 0x12) 
 
 ALIGN 4
 GameOptionsOrderList:
@@ -31,13 +40,14 @@ BYTE GameSpeedOpt
 BYTE TextSpeedOpt 
 BYTE TerrainOpt 
 BYTE UnitOpt
-BYTE CombatOpt 
+//BYTE CombatOpt 
 BYTE ShowObjectiveOpt
 BYTE HPBarsOpt 
 BYTE AutocursorOpt 
 BYTE AutoendTurnsOpt
 BYTE MusicOpt 
 BYTE SoundFXOpt 
+BYTE DifficultyOpt
 BYTE WindowColorOpt
 
 BYTE 0 0  // Terminator

@@ -190,6 +190,10 @@ POP
 #define WhatTheActualFuckFlag 0xac
 #define GirlkissingFlag 0xab
 
+//luna doesn't get a flag
+#define HMFlag 0xaa
+#define NMFlag 0xa9
+
 //track bargain flags, use base flags when possible to save globals
 //ch4
 #define KillingEdgeFlag BaseFlag4

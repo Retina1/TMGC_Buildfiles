@@ -38,6 +38,9 @@
 #define EndAnim "WORD 0x0 0x0"
 
 {
+#include "Sword/Sword Installer.event"
+}
+{
 #include "CharacterSpecific\Laronde\Lance Installer.event"
 #include "CharacterSpecific\Laronde\Unarmed Installer.event"
 }
@@ -491,6 +494,11 @@
 ALIGN 4
 LiberationAnims:
 SpecialAnim(0x101,Aspect)
+EndAnim
+
+ALIGN 4
+HoratioSwordAnims:
+SwordAnim(0x102)
 EndAnim
 
 ALIGN 4

@@ -136,7 +136,7 @@ SHLI Flux Nightfall Fenrir Nocturne Nosferatu Corruption Knoggelvi Jormungandr F
 BYTE 0x0 0x0
 ALIGN 4
 I10StaffVendor:
-SHLI Heal Mend Recover Physic Fortify Restore Barrier Yoink Runeward Implant Vulnerary Elixir PureWater MasterSeal GoddessIcon SecretBook
+SHLI Heal Mend Recover Physic Fortify Restore Barrier Yoink Runeward Implant Vulnerary Elixir PureWater GoddessIcon SecretBook
 BYTE 0x0 0x0
 
 ALIGN 4
@@ -349,7 +349,7 @@ BEQ 0x11 0xc 0x0
 				GetSupportLevel(Leila,Tobias)
 				SVAL 0x2 0x2
 				BNE 0x1b 0x2 0x1
-				CleanTextNoMap(VillageCG,FillerDialogue)//DZLT know
+				CleanTextNoMap(VillageCG,I10EndingDZLTKnow)//DZLT know
 				REMA
 				SetSupport(Leila,Tobias,BPSupport,1)
 				SetSupport(Damien,Tobias,BPSupport,1)	
@@ -357,7 +357,7 @@ BEQ 0x11 0xc 0x0
 				SetSupport(Damien,Zacharias,ASupport,1)	
 				GOTO 0x13
 				LABEL 0x1b
-				CleanTextNoMap(VillageCG,FillerDialogue)//DZLT
+				CleanTextNoMap(VillageCG,I10EndingDZLT)//DZLT
 				REMA
 				SetSupport(Damien,Tobias,BPSupport,1)	
 				SetSupport(Zacharias,Tobias,BPSupport,1)	
@@ -366,14 +366,14 @@ BEQ 0x11 0xc 0x0
 		LABEL 0x17
 		CHECK_ALIVE Tobias
 		BEQ 0x19 0xc 0x0
-			CleanTextNoMap(VillageCG,FillerDialogue)//DZT
+			CleanTextNoMap(VillageCG,I10EndingDZT)//DZT
 			REMA
 			SetSupport(Damien,Tobias,BPSupport,1)	
 			SetSupport(Zacharias,Tobias,BPSupport,1)	
 			SetSupport(Damien,Zacharias,ASupport,1)	
 			GOTO 0x13
 		LABEL 0x19
-			CleanTextNoMap(VillageCG,FillerDialogue)//DZ
+			CleanTextNoMap(VillageCG,I10EndingDZ)//DZ
 			REMA
 			SetSupport(Damien,Zacharias,ASupport,1)	
 			GOTO 0x13
@@ -385,20 +385,20 @@ BEQ 0x11 0xc 0x0
 				GetSupportLevel(Leila,Tobias)
 				SVAL 0x2 0x2
 				BNE 0x1c 0x2 0x1
-				CleanTextNoMap(VillageCG,FillerDialogue)//DLT know
+				CleanTextNoMap(VillageCG,I10EndingDLTKnow)//DLT know
 				REMA
 				SetSupport(Leila,Tobias,BPSupport,1)
 				SetSupport(Damien,Tobias,BPSupport,1)	
 				GOTO 0x13
 				LABEL 0x1c
-				CleanTextNoMap(VillageCG,FillerDialogue)//DLT
+				CleanTextNoMap(VillageCG,I10EndingDLT)//DLT
 				REMA
 				SetSupport(Damien,Tobias,BPSupport,1)	
 				GOTO 0x13			
 	LABEL 0x1a
 	CHECK_ALIVE Tobias
 	BEQ 0x13 0xc 0x0
-		CleanTextNoMap(VillageCG,FillerDialogue)//DT
+		CleanTextNoMap(VillageCG,I10EndingDT)//DT
 		REMA
 		SetSupport(Damien,Tobias,BPSupport,1)	
 		GOTO 0x13	
@@ -413,20 +413,20 @@ BEQ 0x12 0xc 0x0
 			GetSupportLevel(Leila,Tobias)
 			SVAL 0x2 0x2
 			BNE 0x15 0x2 0x1
-			CleanTextNoMap(VillageCG,FillerDialogue)//ZLT know
+			CleanTextNoMap(VillageCG,I10EndingZLTKnow)//ZLT know
 			REMA
 			SetSupport(Leila,Tobias,BPSupport,1)
 			SetSupport(Zacharias,Tobias,BPSupport,1)
 			GOTO 0x13
 			LABEL 0x15
-			CleanTextNoMap(VillageCG,FillerDialogue)//ZLT
+			CleanTextNoMap(VillageCG,I10EndingZLT)//ZLT
 			REMA
 			SetSupport(Zacharias,Tobias,BPSupport,1)
 			GOTO 0x13
 	LABEL 0x14
 	CHECK_ALIVE Tobias
 	BEQ 0x13 0xc 0x0
-		CleanTextNoMap(VillageCG,FillerDialogue)//ZT
+		CleanTextNoMap(VillageCG,I10EndingZT)//ZT
 		REMA
 		SetSupport(Zacharias,Tobias,BPSupport,1)	
 		GOTO 0x13
@@ -439,7 +439,7 @@ BEQ 0x13 0xc 0x0
 		GetSupportLevel(Leila,Tobias)
 		SVAL 0x2 0x2
 		BNE 0x13 0x2 0x1
-		CleanTextNoMap(VillageCG,FillerDialogue)//LT know
+		CleanTextNoMap(VillageCG,I10EndingLTKnow)//LT know
 		REMA
 		SetSupport(Leila,Tobias,BPSupport,1)
 LABEL 0x13
@@ -456,7 +456,7 @@ GetSupportLevel(Blair,Zeke)
 SVAL 0x2 0x3
 BNE 0x3 0x2 0x1
 	MUSC S_CircleOfTheMoon
-	CleanTextNoMap(HallCG,FillerDialogue)
+	CleanTextNoMap(HallCG,I10EndingBlairZekeA)
 	REMA
 	SetSupport(Blair,Zeke,ASupport,1)
 LABEl 0x3
@@ -468,7 +468,7 @@ CHECK_EVENTID KennethTarquinKillFlag
 BEQ 0x1 0xc 0x0
 	CHECK_ALIVE Kenneth
 	BEQ 0x1 0xc 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//kenneth says he's gotta go (maybe have an alt for A rank)
+		CleanTextNoMap(HallCG,I10EndingKennethLeaves)//kenneth says he's gotta go (maybe have an alt for A rank)
 		REMU Kenneth
 LABEL 0x1
 //arin promotion event
@@ -477,9 +477,9 @@ BEQ 0x2 0xc 0x0
 	CHECK_EVENTID ArinOriginFlag
 	BEQ 0x2 0xc 0x0
 		MUSC 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//simone brings her to pretty lake
+		CleanTextNoMap(HallCG,I10EndingArin)//simone brings her to pretty lake
 		MUSC S_MainTheme
-		CleanTextNoMap(TitleCG,FillerDialogue)//arin simone scene where she promotes
+		CleanTextNoMap(TitleCG,I10EndingArinPart2)//arin simone scene where she promotes
 		REMA
 		SetBackground(BlankCG)
 		GiveItem(HolyBrand,Arin)

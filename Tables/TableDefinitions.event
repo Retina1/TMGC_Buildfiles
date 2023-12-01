@@ -40,7 +40,9 @@
 #define MagicDamage 0x00000040
 #define Uncounterable 0x00000080
 #define ReverseTriangle 0x00000100
-#define CannotRepair 0x00000200
+#ifndef CannotRepair
+	#define CannotRepair 0x00000200
+#endif
 #define MonsterWeapon 0x00000400
 #define WeaponLock1 0x00000800
 #define SwordmasterLock 0x00001000

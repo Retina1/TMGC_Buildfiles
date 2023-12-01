@@ -7,7 +7,10 @@
 
 //Steal Staff cannot steal items with given attributes
 //set to 0 to let everything be stolen
-#define StealStaff_BanAttributes "0"
+#ifndef CannotRepair
+	#define CannotRepair 0x00000200
+#endif
+#define StealStaff_BanAttributes CannotRepair
 
 #include "../_StaffTemplates.event"
 

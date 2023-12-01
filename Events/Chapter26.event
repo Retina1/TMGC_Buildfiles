@@ -106,6 +106,8 @@ UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [18,30] 0x0 0x0 0x0 0x0 [Purge] NeverMo
 UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
 UNIT Dalst LightM 0x0 Level(20,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Dalst LightM 0x0 Level(20,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+//annihilationers
+UNIT Annihilator Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [Galewind,Purge,Nocturne,Starfall] NeverMoveAI
 UNIT
 
@@ -158,6 +160,8 @@ GOTO 0x2
 LABEL 0x1
 ENUT BaseFlag1
 LABEL 0x2
+//make annihilation in general lunatic exclusive? make silence longer on lower difficulties?
+SetUnitStatusAll(Annihilator, BadStatus, 0x43)
 GotoPrepScreen
 ENDA
 

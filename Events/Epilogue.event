@@ -20,33 +20,6 @@ POIN EpilogueUnits EpilogueUnits
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
-TurnBasedEvents:
-END_MAIN
-ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
-
-CharacterBasedEvents:
-END_MAIN
-
-LocationBasedEvents:
-END_MAIN
-
-ALIGN 4
-
-MiscBasedEvents:
-CauseGameOverIfLordDies
-END_MAIN
-
-Dunno:
-END_MAIN
-
-Tutorial:
-END_MAIN
-
-TrapData:
-ENDTRAP
-
-ALIGN 4
-
 EpilogueUnits:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
@@ -72,5 +45,26 @@ EndingScene:
 MoveToChapter(HubMap)
 ENDA
 
+
+
+ALIGN 4
+TurnBasedEvents:
+END_MAIN
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+LocationBasedEvents:
+END_MAIN
+ALIGN 4
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+Dunno:
+END_MAIN
+Tutorial:
+END_MAIN
+TrapData:
+ENDTRAP
+ALIGN 4
 
 //MESSAGE Events end at offset CURRENTOFFSET

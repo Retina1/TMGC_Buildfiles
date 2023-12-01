@@ -126,8 +126,8 @@ UNIT BossSimulacrum7 Deserter 0x0 Level(20,Enemy,1) [3,7] 0x0 0x0 0x0 0x0 [Gilde
 UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [BraveSword,Tomahawk] ChaseOnceApproachedAI//reynard
 
 UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [BookOfOpistus] AttackInRangeAI
-UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis] AttackInRangeAI
-UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
+UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis] AttackInRangeAI //change to liam conditionally (maybe if he came to 22 at all)
+UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
 
 UNIT DLNathaniel Sorc 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [TheSDarkTome] ChaseOnceApproachedAI
 UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal] ChaseOnceApproachedAI
@@ -145,6 +145,7 @@ UNIT
 //3 arque cavs, brentson LncGen, helga warriorF, mitchell hero, amundsen bruiser, zaine sorc, esme wyvernlord, pete berserker, gregorias berserker, sofia sorcF
 //amara warriorF, valden lancpal, lazarus axegen, roark warrior, vulture bowgen, nicole swmastf, eds berserker x2 and warrior, bungalas lncgen, michael sniper
 //larson assass, nathaniel sorc, fiora halberdierf, tarquin wyvlord, mason mage knight (sage on normal/hard), bobert ranger, ethyl sagef
+//hero liam, ranger clarque
 
 //simualcrum1 - 3 arques, brentson
 //2 - helga, mitchell, amundsen, zaine

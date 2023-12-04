@@ -419,7 +419,7 @@ BEQ 0x12 0xc 0x0
 			SetSupport(Zacharias,Tobias,BPSupport,1)
 			GOTO 0x13
 			LABEL 0x15
-			CleanTextNoMap(VillageCG,I10EndingZLT)//ZLT
+			CleanTextNoMap(VillageCG,I10EndingZT)//ZLT except why would zacharias bring her into this so it's just zach tobias
 			REMA
 			SetSupport(Zacharias,Tobias,BPSupport,1)
 			GOTO 0x13
@@ -468,7 +468,8 @@ CHECK_EVENTID KennethTarquinKillFlag
 BEQ 0x1 0xc 0x0
 	CHECK_ALIVE Kenneth
 	BEQ 0x1 0xc 0x0
-		CleanTextNoMap(HallCG,I10EndingKennethLeaves)//kenneth says he's gotta go (maybe have an alt for A rank)
+		MUSC AmbientWind
+		CleanTextNoMap(StreetCG,I10EndingKennethLeaves)//kenneth says he's gotta go (maybe have an alt for A rank)
 		REMU Kenneth
 LABEL 0x1
 //arin promotion event

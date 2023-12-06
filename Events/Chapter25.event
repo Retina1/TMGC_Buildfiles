@@ -25,6 +25,7 @@ TurnEventPlayer(0xb,C25AreaTrap,1,255)
 TurnEventPlayer(0xd,C25AreaTrap2,1,255)
 TurnEventPlayer(0xf,C25AreaTrap3,1,255)
 TurnEventPlayer(0x0,C25MoveNow,10)
+TurnEventPlayer(0x0,C25MorningComes,13)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -378,6 +379,17 @@ UNIT Elite Halberdier 0x0 Level(15,Enemy,1) [31,15] 0x0 0x0 0x1 REDA29R15 [Maste
 UNIT Elite Warrior 0x0 Level(15,Enemy,1) [31,15] 0x0 0x0 0x1 REDA30R16 [MasterAxe] NoAI
 UNIT
 
+C25MorningSpawn:
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,12] 0x0 0x0 0x1 REDA29R12 [MorningStar] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,12] 0x0 0x0 0x1 REDA30R12 [MorningStar] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,13] 0x0 0x0 0x1 REDA29R13 [MorningStar] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,13] 0x0 0x0 0x1 REDA30R13 [MorningStar] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,11] 0x0 0x0 0x1 REDA30R11 [Resire,Radiance] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,11] 0x0 0x0 0x1 REDA28R11 [Purge] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,14] 0x0 0x0 0x1 REDA28R14 [Purge] NoAI
+UNIT MagElite Bishop 0x0 Level(15,Enemy,1) [31,14] 0x0 0x0 0x1 REDA30R14 [Resire,Radiance] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -557,7 +569,9 @@ HouseEvent(C25House6Text,HouseCG)
 C25MoveNow:
 Reinforcements(C25BackSpawn)
 EndEvent
-
+C25MorningComes:
+Reinforcements(C25MorningSpawn)
+EndEvent
 
 EndingScene:
 ResetBaseFlags

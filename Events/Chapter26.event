@@ -82,6 +82,8 @@ UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] Neve
 UNIT
 
 C26Hard:
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 //funny blocks
 UNIT Dalst LncPal 0x0 Level(14,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Spear,GildedLance] DelayedAI
 UNIT Dalst BowPal 0x0 Level(14,Enemy,1) [6,7] 0x0 0x0 0x0 0x0 [BraveBow,Longbow] DelayedAI
@@ -104,8 +106,7 @@ UNIT Elite LncPal 0x0 Level(16,Enemy,1) [19,27] DropItem 0x0 0x0 0x0 [TrueSaunio
 UNIT Elite Sniper 0x0 Level(16,Enemy,1) [19,23] DropItem 0x0 0x0 0x0 [Greatbow,BraveBow,Wardbow,BiasedQuiver] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [18,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
-UNIT Dalst LightM 0x0 Level(20,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
-UNIT Dalst LightM 0x0 Level(20,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+
 //annihilationers
 UNIT Annihilator Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [Galewind,Purge,Nocturne,Starfall] NeverMoveAI

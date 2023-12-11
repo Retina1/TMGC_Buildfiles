@@ -350,23 +350,6 @@ ArmsScrollCanUnitGetSRank:
 	push {lr}
 	push {r4-r7}
 
-	mov r4, r0 // r4 = unit
-
-	// is promoted?
-	mov r2, #0x29
-
-	ldr r0, [r4, #4] // class data
-	ldrb r0, [r0, r2] // ability 2
-
-	ldr r1, [r4, #0] // char data
-	ldrb r1, [r1, r2] // ability 2
-
-	orr r0, r1
-	mov r1, #0x1
-	and r0, r1
-	cmp r0, #0
-	beq ArmsScrollCanUnitGetSRankRetFalse
-
 	b ArmsScrollCanUnitGetSRankRetTrue
 
 	ArmsScrollCanUnitGetSRankRetFalse:

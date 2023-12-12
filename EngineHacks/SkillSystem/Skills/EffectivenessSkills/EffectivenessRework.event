@@ -88,6 +88,9 @@ SetWeaponEffectiveness(LightType, 6)
 SetWeaponEffectiveness(DarkType, 6)
 SetWeaponEffectiveness(StaffType, 6)
 WORD 0
+SwallowEffectiveness:
+SetWeaponEffectiveness(BowType, 6)
+WORD 0
 
 #define SetProtection(type_list) "SHORT 0 type_list"
 FlierProtection:

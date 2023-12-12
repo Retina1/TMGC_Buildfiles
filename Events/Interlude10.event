@@ -488,7 +488,10 @@ BEQ 0x2 0xc 0x0
 		PROMOTE Arin ArinValk HolyBrand
 		FADI 16
 		CLEAN
+		GOTO 0x801
 LABEL 0x2
+SetBackground(BlankCG)
+LABEL 0x801
 MoveToChapter(Chapter26)
 ENDA
 

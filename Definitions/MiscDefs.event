@@ -194,6 +194,8 @@ POP
 #define HMFlag 0xaa
 #define NMFlag 0xa9
 
+#define PressTurnModeFlag 0xa8
+
 //track bargain flags, use base flags when possible to save globals
 //ch4
 #define KillingEdgeFlag BaseFlag4

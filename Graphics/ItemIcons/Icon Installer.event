@@ -10,6 +10,9 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(GreatSwallowIcon)
+#incbin "GreatSwallow.dmp"
+ALIGN 4
 ItemIconEntry(ShortBowIcon)
 #incbin "Bows/Shortbow.dmp"
 ALIGN 4

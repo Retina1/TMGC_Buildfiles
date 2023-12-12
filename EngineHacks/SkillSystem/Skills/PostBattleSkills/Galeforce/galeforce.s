@@ -37,6 +37,14 @@ and	r0, r1
 cmp	r0, #0x00
 bne	End
 
+@check for press turn flag
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0xa8 @press turn flag
+.short 0xF800
+cmp r0,#1
+beq	PressTurnFlagOn
+
 @check for skill
 mov	r0, r4
 ldr	r1, GaleforceID
@@ -46,6 +54,7 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
+PressTurnFlagOn:
 @if killed enemy, unset 0x2 and 0x40, set 0x400, write to status
 ldr	r0, [r4,#0x0C]	@status bitfield
 mov	r1, #0x42

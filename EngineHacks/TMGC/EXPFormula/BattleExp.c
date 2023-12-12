@@ -10,6 +10,10 @@ int GetUnitExpMultiplier(struct Unit* actor, struct Unit* target);
 int GetUnitKillExpBonus(struct Unit* actor, struct Unit* target);
 extern bool CanBattleUnitGainLevels(BattleUnit* bu);
 int GetBattleUnitExpGain(struct BattleUnit* actor, struct BattleUnit* target);
+extern bool CheckEventId_(u16 flag); 
+
+extern bool SkillTester(Unit* unit, int skillID);
+
 enum PlaySt_chapterStateBits {
     PLAY_FLAG_STATSCREENPAGE0 = (1 << 0),
     PLAY_FLAG_STATSCREENPAGE1 = (1 << 1),
@@ -110,12 +114,40 @@ if (!gChapterData.unk42_6)
 	result = result * 13/10;
 if (gChapterData.chapterStateBits & PLAY_FLAG_HARD)
 	result = result * 9/10;
+if (CheckEventId_(0xb5))
+	result = result * 2;
 
     if (result > 100)
         result = 100;
 
     if (result < 1)
         result = 1;
+
+    return result;
+}
+
+int GetBattleUnitStaffExp(struct BattleUnit* bu) {
+    int result;
+
+    if (!CanBattleUnitGainLevels(bu))
+        return 0;
+
+    if (gBattleHitArray->attributes & BATTLE_HIT_ATTR_MISS)
+        return 1;
+
+    result = GetItemCrit(bu->weapon);
+
+    if (UNIT_CATTRIBUTES(&bu->unit) & CA_PROMOTED)
+        result = result / 2;
+
+ if (SkillTester(&gBattleActor.unit, 49))//unit with paragon
+	result = result * 2;
+	
+if (CheckEventId_(0xb5))
+	result = result * 2;
+
+    if (result > 100)
+        result = 100;
 
     return result;
 }

@@ -412,12 +412,6 @@ ORG $180FA
 BYTE 0xFF 0xF7 0x63 0xFF
 POP
 
-//staff exp formula
-PUSH
-ORG $2C66A
-BL(0x17624) //gets item crit
-SHORT 0x1C02 0xE002 //mov r2,r0; b 2C678
-POP
 
 //anti-stone hardcoding
 PUSH

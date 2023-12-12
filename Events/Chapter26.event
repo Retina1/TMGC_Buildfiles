@@ -74,14 +74,20 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [20,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C26Easy:
+UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [16,4] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
+
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
 
 C26Normal:
+UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [18,15] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
+
 UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
 UNIT
 
 C26Hard:
+UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [19,25] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
+
 UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 //funny blocks
@@ -101,14 +107,30 @@ UNIT Dalst Hero 0x0 Level(14,Enemy,1) [29,7] 0x0 0x0 0x0 0x0 [GildedSword,Lances
 UNIT Dalst Sniper 0x0 Level(14,Enemy,1) [30,7] 0x0 0x0 0x0 0x0 [BraveBow,GildedBow] NoAI
 UNIT MagElite SwMast 0x0 Level(16,Enemy,1) [29,6] 0x0 0x0 0x0 0x0 [FlameSword] DelayedAI
 
-UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [18,15] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
-UNIT Elite LncPal 0x0 Level(16,Enemy,1) [19,27] DropItem 0x0 0x0 0x0 [TrueSaunion,SoaringShaft] ChaseOnceApproachedAI
+UNIT Dalst LncPal 0x0 Level(13,Enemy,1) [21,16] 0x0 0x0 0x0 0x0 [Horseslayer,Shatterspear] NoAI
+UNIT Dalst SwdPal 0x0 Level(13,Enemy,1) [20,17] 0x0 0x0 0x0 0x0 [Lancesnapper,Wyrmslayer] NoAI
+UNIT Dalst BowPal 0x0 Level(13,Enemy,1) [21,17] 0x0 0x0 0x0 0x0 [GildedBow] NoAI
+UNIT Elite AxePal 0x0 Level(14,Enemy,1) [22,17] 0x0 0x0 0x0 0x0 [KillerAxe,SavageGauntlet] NoAI
+
+UNIT Dalst LncPal 0x0 Level(13,Enemy,1) [14,13] 0x0 0x0 0x0 0x0 [GildedLance] DelayedAI
+UNIT Dalst BowPal 0x0 Level(13,Enemy,1) [13,14] 0x0 0x0 0x0 0x0 [BraveBow] DelayedAI
+UNIT MagElite SwdPal 0x0 Level(14,Enemy,1) [14,14] 0x0 0x0 0x0 0x0 [GildedSword,SoulHilt] DelayedAI
+UNIT Dalst AxePal 0x0 Level(13,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [BraveAxe] DelayedAI
+
+UNIT Elite LncPal 0x0 Level(16,Enemy,1) [19,27] DropItem 0x0 0x0 0x0 [TrueSaunion,SoaringShaft] GroupOnePaceAI
+UNIT Dalst SwdPal 0x0 Level(13,Enemy,1) [18,28] 0x0 0x0 0x0 0x0 [Kagutsuchi,Shimmersword,BraveSword] GroupOneAI
+UNIT Dalst BowPal 0x0 Level(13,Enemy,1) [19,28] 0x0 0x0 0x0 0x0 [BarrierBow] GroupOneAI
+UNIT Dalst AxePal 0x0 Level(13,Enemy,1) [20,28] 0x0 0x0 0x0 0x0 [Ukonvasara,HereticAxe,BraveAxe] GroupOneAI
+
 UNIT Elite Sniper 0x0 Level(16,Enemy,1) [19,23] DropItem 0x0 0x0 0x0 [Greatbow,BraveBow,Wardbow,BiasedQuiver] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [18,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
 UNIT Dalst BishopF 0x0 Level(14,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [Purge] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [16,31] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [22,31] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
 
 //annihilationers
-UNIT Annihilator Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT Annihilator1 Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT Annihilator2 Sage 0x0 Level(18,Enemy,1) [19,30] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [Galewind,Purge,Nocturne,Starfall] NeverMoveAI
 UNIT
 
@@ -162,7 +184,8 @@ LABEL 0x1
 ENUT BaseFlag1
 LABEL 0x2
 //make annihilation in general lunatic exclusive? make silence longer on lower difficulties?
-SetUnitStatusAll(Annihilator, BadStatus, 0x43)
+SetUnitStatusAll(Annihilator1, BadStatus, 0x43)//4 turns of status 3 (silence)
+SetUnitStatusAll(Annihilator2, BadStatus, 0x93)//9 turns of silence
 GotoPrepScreen
 ENDA
 

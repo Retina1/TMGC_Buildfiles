@@ -37,10 +37,9 @@ static int ValueChooserIdle (MenuProc* menu, MenuCommandProc* command) {
 static int ValueChooserEffect(MenuProc* menu, MenuCommandProc* command) {
     ValueChooserProc* const proc = (void*) menu->parent;
 
-    //store index to memory slot
-	gEventSlot[0xC] = proc->menuIndex;
-	PlaySfx(0x6A);
-    return ME_END;
+    //store index to memory slot 2
+	gEventSlot[0x2] = proc->menuIndex;
+    return ME_END | ME_PLAY_BEEP | ME_CLEAR_GFX;
 }
 
 //Draws the UI
@@ -55,8 +54,8 @@ static int ValueChooserDraw(MenuProc* menu, MenuCommandProc* command) {
     Text_SetColorId(&command->text, TEXT_COLOR_NORMAL);
 
     //Display Menu Index
-    Text_SetXCursor(&command->text, 0xD);
-    Text_DrawNumberOr2Dashes(&command->text, proc->menuIndex);
+    Text_SetXCursor(&command->text, 0x14);
+    Text_DrawNumber(&command->text, proc->menuIndex);
     
 
 

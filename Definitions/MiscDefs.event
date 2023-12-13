@@ -186,8 +186,10 @@ POP
 
 //af is reverse mode
 #define SupportAnimFlag 0xae
+//deprecate these two eventually
 #define WhyDoYouDoThisFlag 0xad
 #define WhatTheActualFuckFlag 0xac
+
 #define GirlkissingFlag 0xab
 
 //luna doesn't get a flag
@@ -195,6 +197,15 @@ POP
 #define NMFlag 0xa9
 
 #define PressTurnModeFlag 0xa8
+
+#define CustomGrowthsFlag 0xa7
+//ram at
+//$030017c5 mult
+//$030017c6 div
+//$030017c7 add
+#define gMultRAMAddress $030017c5
+#define gDivRAMAddress $030017c6
+#define gAddRAMAddress $030017c7
 
 //track bargain flags, use base flags when possible to save globals
 //ch4

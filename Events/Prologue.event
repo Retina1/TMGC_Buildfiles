@@ -165,21 +165,23 @@ SystemText(ReversePrompt)
 BNE 0x666 0xC 0x1
 ENUT 0xAF
 LABEL 0x666
-
+		SystemText(SetEnemyGrowthsPrompt)
+		IfNoSelectedGoto(0x668)
+		ENUT CustomGrowthsFlag
+		SystemText(SetMultiplierPrompt)
 		ASMC ValueChooser_OnSelect|1
-		SystemText(WhyDoYouDoThisPrompt)
-		BNE 0x667 0xC 0x1
-		SystemText(SaveYourselfPrompt)
-		BNE 0x667 0xC 0x1
-		SystemText(YouHaveDoneThisToYourself)
-		ENUT WhyDoYouDoThisFlag
-		LABEL 0x667
-		SystemText(WhatTheActualFuckPrompt)
-		BNE 0x669 0xC 0x1
-		SystemText(SaveYourselfPrompt)
-		BNE 0x669 0xC 0x1
-		SystemText(YouHaveDoneThisToYourself)
-		ENUT WhatTheActualFuckFlag
+		SETVAL 0x3 $030017c5; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+			LABEL 0x667
+			SystemText(SetDivisorPrompt)
+			ASMC ValueChooser_OnSelect|1
+				BNE 0x669 0x2 0x0
+				SystemText(PleaseDoNotDivideByZero)
+				GOTO 0x667
+				LABEL 0x669
+			SETVAL 0x3 $030017c6; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+		SystemText(SetAdditivePrompt)
+		ASMC ValueChooser_OnSelect|1
+		SETVAL 0x3 $030017c7; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
 		LABEL 0x669
 		
 		

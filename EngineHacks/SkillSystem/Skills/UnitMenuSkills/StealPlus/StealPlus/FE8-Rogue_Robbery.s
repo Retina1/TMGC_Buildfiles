@@ -20,6 +20,20 @@ add		r6,#0x1E
 ldrh	r6,[r4,r6]		@item id
 cmp		r6,#0
 beq		RetFalse
+cmp		r6,#0xe1			@check the unstealable S ranks
+beq		RetFalse
+cmp		r6,#0xf6
+beq		RetFalse
+cmp		r6,#0xf7
+beq		RetFalse
+cmp		r6,#0xf8
+beq		RetFalse
+cmp		r6,#0xf9
+beq		RetFalse
+cmp		r6,#0xfa
+beq		RetFalse
+cmp		r6,#0xfb
+beq		RetFalse
 mov		r0,r6
 ldr		r3,=#0x8017548	@get item type
 mov		r14,r3

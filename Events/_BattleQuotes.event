@@ -97,6 +97,7 @@ SpecifiedBattleConvo(Zeke,Parque,ChapterZ3,0x1f,Z3ParqueZekeBattle)
 UnspecifiedBattleConvo(Parque,ChapterZ3,0x1,Z3ParqueBattle)
 //ch 15
 SpecifiedBattleConvo(Sveltzalus,C15Boss,Chapter15,0x18,C15BossSveltzalusBattle)
+SpecifiedBattleConvo(Brandl,C15Boss,Chapter15,0x19,C15BossBrandlBattle)
 UnspecifiedBattleConvo(C15Boss,Chapter15,0x1,C15BossBattle)
 //ch 16
 SpecifiedBattleConvo(Sveltzalus,Nicole,Chapter16,0x26,C16NicoleSveltzalusBattle)
@@ -182,7 +183,10 @@ SpecifiedBattleConvo(Butch,Fiora,Chapter22,0x24,C22FioraButchBattle)
 SpecifiedBattleConvo(Sveltzalus,Fiora,Chapter22,0x10,C22FioraSveltzalusBattle)
 UnspecifiedBattleConvo(Fiora,Chapter22,0x1,C22FioraBattle)
 //c23
-UnspecifiedBattleConvo(Reynard,Chapter23,0x24,C23DLReynardBattle)
+//base flag 5,6 for berserked reynard/tarquin
+SHORT DLReynard Neillstrom Chapter23 BaseFlag5 C23ReynardAttacksTarquin 0x0 0x0 0x0
+SHORT Neillstrom DLReynard Chapter23 BaseFlag6 C23TarquinAttacksReynard 0x0 0x0 0x0
+UnspecifiedBattleConvo(DLReynard,Chapter23,0x24,C23DLReynardBattle)
 UnspecifiedBattleConvo(EnemyJoan,Chapter23,0x25,C23JoanBattle)
 UnspecifiedBattleConvo(EnemySonia,Chapter23,0x26,C23SoniaBattle)
 UnspecifiedBattleConvo(EnemyTobias,Chapter23,0x27,C23TobiasBattle)
@@ -208,6 +212,9 @@ SpecifiedBattleConvo(Blair,Neillstrom,Chapter23,0x8,C23TarquinBlairBattle)
 UnspecifiedBattleConvo(Neillstrom,Chapter23,0x1,C23TarquinBattle)
 UnspecifiedBattleConvo(DLReynard,Chapter23,0x28,C23DLReynardBattle)
 //c24
+//base flag 5,6 for berserked mason/ineubrenos
+SHORT Mason BossIneubrenos Chapter23 BaseFlag5 C24MasonAttacksIneubrenos 0x0 0x0 0x0
+SHORT BossIneubrenos Mason Chapter23 BaseFlag6 C24IneubrenosAttacksMason 0x0 0x0 0x0
 SpecifiedBattleConvo(Blair,Mason,Chapter24,0xa,C24MasonBlairBattle)
 SpecifiedBattleConvo(Kenneth,Mason,Chapter24,0xb,C24MasonKennethBattle)
 	SpecifiedBattleConvo(Arin,Mason,Chapter24,0xc,C24MasonDalstianBattle)

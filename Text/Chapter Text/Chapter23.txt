@@ -2,6 +2,40 @@
 Neutralize every[N]
 enemy commander.[X]
 
+##C23ReynardAttacksTarquin
+[OpenMidLeft][LoadTarquin]
+[...]Husk. Do you know what[N]
+exactly you're doing?[A][N][ClearFace][OpenMidRight][ToggleInvert][LoadBlank]
+T[...]ar[...]qui[...]n[...][A][N][ClearFace][OpenMidLeft][ToggleInvert][LoadTarquin]
+[...]You wish to have your[N]
+vengeance.[A][N]
+Have at me, then.[A][X]
+
+##C23TarquinAttacksReynard
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadTarquin]
+[...]You seem[...] defiant.[A][N]
+You need to be put in your[N]
+place.[A] Just like everyone[N]
+in your forsaken country.[A][N]
+And if I kill you again,[N]
+we can bring you back again.[A][N][ToggleSmile]
+Make a real example of what'll[N]
+happen to our enemies.[A][N]
+There will be no escape.[N]
+[...]Are you afraid?[A][N]
+Afraid to die over and[N]
+over again?[A][N][ToggleSmile]
+Then you shouldn't have[N]
+made an enemy of us![A][N]
+Of me! Tarquin![A][X]
+
+##C23ReynardKillsTarquin
+[OpenMidLeft][LoadTarquin]
+[...]I should've[...] seen[...][A][N][CloseEyes]
+You are a[...] detestable[...][N]
+stain on this land[...][A][X]
+
 ##C23Turn1Tarquin
 [OpenMidLeft][LoadTarquin]
 There will be no quarter[N]

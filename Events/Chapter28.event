@@ -44,6 +44,7 @@ BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
+AFEV 0x4 C28EndChecker DefeatBossFlag
 CauseGameOverIfLordDies
 AreaEvent(0x8,C28LeftSwitch,8,23,8,26)
 AreaEvent(0x8,C28LeftSwitch,7,24,9,25)
@@ -118,7 +119,7 @@ UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [FlameSword] NoAI
 
 UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [18,10] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI
 UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [GildedBow,Longbow] ChaseOnceApproachedAI
-UNIT Dalst Sage 0x0 Level(15,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Flare] ChaseOnceApproachedAI
+UNIT Dalst Sage 0x0 Level(15,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Flare,EarthPower] ChaseOnceApproachedAI
 
 UNIT Dalst AxePal 0x0 Level(15,Enemy,1) [4,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Hammer] ChaseOnceApproachedAI
 UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [GildedLance,Dragonpike] ChaseOnceApproachedAI
@@ -163,14 +164,14 @@ UNIT Elite Warrior 0x0 Level(16,Enemy,1) [20,0] 0x0 0x0 0x1 REDA20R1 [MasterAxe]
 UNIT Elite Sniper 0x0 Level(16,Enemy,1) [21,0] 0x0 0x0 0x1 REDA21R2 [MasterBow] NoAI
 UNIT
 C28DoorsOpenGroup21:
-UNIT Elite BishopF 0x0 Level(16,Enemy,1) [0,1] 0x0 0x0 0x1 REDA1R1 [Smite] NoAI
-UNIT Elite SwMastF 0x0 Level(16,Enemy,1) [0,2] 0x0 0x0 0x1 REDA2R2 [FlameSword] NoAI
-UNIT Elite BishopF 0x0 Level(16,Enemy,1) [0,3] 0x0 0x0 0x1 REDA1R3 [Radiance] NoAI
+UNIT Elite BishopF 0x0 Level(16,Enemy,1) [0,1] 0x0 0x0 0x1 REDA1R1 [Smite,Scripture] NoAI
+UNIT Elite SwMastF 0x0 Level(16,Enemy,1) [0,2] 0x0 0x0 0x1 REDA2R2 [FlameSword,SoulHilt] NoAI
+UNIT Elite BishopF 0x0 Level(16,Enemy,1) [0,3] 0x0 0x0 0x1 REDA1R3 [Radiance,Scripture] NoAI
 UNIT
 C28DoorsOpenGroup22:
-UNIT Elite SorcF 0x0 Level(16,Enemy,1) [22,1] 0x0 0x0 0x1 REDA21R1 [Nocturne] NoAI
-UNIT Elite SageF 0x0 Level(16,Enemy,1) [22,2] 0x0 0x0 0x1 REDA20R2 [ForceSpike] NoAI
-UNIT Elite SorcF 0x0 Level(16,Enemy,1) [22,3] 0x0 0x0 0x1 REDA21R3 [Nosferatu] NoAI
+UNIT Elite SorcF 0x0 Level(16,Enemy,1) [22,1] 0x0 0x0 0x1 REDA21R1 [Nocturne,VoidBracers] NoAI
+UNIT Elite SageF 0x0 Level(16,Enemy,1) [22,2] 0x0 0x0 0x1 REDA20R2 [ForceSpike,EarthPower] NoAI
+UNIT Elite SorcF 0x0 Level(16,Enemy,1) [22,3] 0x0 0x0 0x1 REDA21R3 [Nosferatu,VoidBracers] NoAI
 UNIT
 
 ALIGN 4
@@ -255,6 +256,55 @@ BEQ 0x1 0xc 0x0
 LABEL 0x1
 EndEvent
 
+C28EndChecker:
+CHECK_ALIVE DL1
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL2
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL5
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL13
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL11
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL12
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL3
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL9
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL4
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL6
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL7
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL10
+BNE 0x1 0xc 0x0
+CHECK_ALIVE DL8
+BNE 0x1 0xc 0x0
+CHECK_ALIVE EnemyElcorian
+BNE 0x1 0xc 0x0
+CALL EndingScene
+GOTO 0x2
+LABEL 0x1
+ENUF 0x4
+LABEL 0x2
+EndEvent
+
+EndingScene:
+ResetBaseFlags
+MUSC S_Nightfall
+CleanTextNoMap(HallCG,FillerDialogue)
+//make join conditional later
+LOAD1 0x1 C28ElcorianJoin
+TurnAlly(Elcorian)
+REMA
+SetBackground(BlankCG)
+GiveItem(Soulbow,Zeke)
+MoveToChapter(Endgame)
+ENDA
+
 C28LeftSwitch:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
@@ -298,19 +348,4 @@ LABEL 0x1
 ENUF 0x9
 LABEL 0x2
 EndEvent
-
-EndingScene:
-ResetBaseFlags
-MUSC S_Nightfall
-CleanTextNoMap(HallCG,FillerDialogue)
-//make join conditional later
-LOAD1 0x1 C28ElcorianJoin
-TurnAlly(Elcorian)
-REMA
-SetBackground(BlankCG)
-GiveItem(Soulbow,Zeke)
-MoveToChapter(Endgame)
-ENDA
-
-
 //MESSAGE Events end at offset CURRENTOFFSET

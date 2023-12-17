@@ -944,7 +944,7 @@ Keep yourself safe, child.[A][X]
 
 ##C24IneubrenosDefeat
 [OpenMidLeft][LoadIneubrenos]
-Oof[...][N]
+Oof[...][A][N]
 Well done, child of man.[N]
 My power is now yours.[A][N]
 Use it to bring about[N]
@@ -1049,6 +1049,36 @@ Surveil? Here?[A][N]
 all exterminated.[A][N]
 [...]Well, you'll be the jewel[N]
 of my collection.[A][X]
+
+##C24IneubrenosAttacksMason
+[OpenMidRight][LoadIneubrenos]
+Child of man.[A][N]
+You're not part of this[N]
+trial.[A] But I think being[N]
+a pain in your ass sounds fun.[A][N]
+Toodles![A][N][ClearFace][OpenMidLeft][LoadMason]
+[...]Who in the hell are you?[N]
+Soldiers! Kill them![A][X]
+
+##C24MasonAttacksIneubrenos
+[OpenMidRight][LoadMason][ToggleSmile]
+You! Ashy face! You[...][N]
+smell like treasure![A][N]
+Give it to me[...][N]
+GIVE ME![A][N][ClearFace][OpenMidLeft][ToggleSmile][LoadIneubrenos]
+[...]Ah.[A][X]
+
+##C24MasonBeatsIneubrenos
+[OpenMidLeft][LoadIneubrenos]
+Oof[...][A][N]
+Well done, child of man.[N]
+My power is now yours.[A][N]
+Use it to bring about[N]
+the world you desire.[A][N][ClearFace][OpenMidRight][LoadMason]
+[...]This is just a bow.[A][N]
+[...]What the fuck am I[N]
+supposed to do with this?[A][N]
+I wanted REAL treasure![A][X]
 
 ##C24IneubrenosBattle
 [OpenMidLeft][LoadIneubrenos]

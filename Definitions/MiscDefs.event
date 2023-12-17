@@ -207,6 +207,9 @@ POP
 #define gDivRAMAddress $030017c6
 #define gAddRAMAddress $030017c7
 
+#define EndgameSaveFlag GuideChptE
+#define EpilogueSaveFlag 0xa6
+
 //track bargain flags, use base flags when possible to save globals
 //ch4
 #define KillingEdgeFlag BaseFlag4

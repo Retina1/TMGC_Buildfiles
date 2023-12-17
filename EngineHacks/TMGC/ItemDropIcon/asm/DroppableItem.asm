@@ -90,6 +90,20 @@ cmp     r1,#0x00
 beq     Cont
 mov     r2,#0xFF
 and     r2,r1//r2 has item id
+cmp		r2,#0xe1
+beq		NotItemDr
+cmp		r2,#0xf6
+beq		NotItemDr
+cmp		r2,#0xf7
+beq		NotItemDr
+cmp		r2,#0xf8
+beq		NotItemDr
+cmp		r2,#0xf9
+beq		NotItemDr
+cmp		r2,#0xfa
+beq		NotItemDr
+cmp		r2,#0xfb
+beq		NotItemDr
 mov     r3,r2
 eor     r3,r1
 lsr     r3,#0x08//r3 has durability
@@ -210,6 +224,20 @@ cmp     r1,#0x00
 beq     Return
 mov     r2,#0xFF
 and     r2,r1//r2 has item id
+cmp		r2,#0xe1
+beq		NotItem
+cmp		r2,#0xf6
+beq		NotItem
+cmp		r2,#0xf7
+beq		NotItem
+cmp		r2,#0xf8
+beq		NotItem
+cmp		r2,#0xf9
+beq		NotItem
+cmp		r2,#0xfa
+beq		NotItem
+cmp		r2,#0xfb
+beq		NotItem
 mov     r3,r2
 eor     r3,r1
 lsr     r3,#0x08//r3 has durability
@@ -307,7 +335,7 @@ bhi		Return
 	mov		r0 ,r2
 	add		r0, #0x10
 	cmp		r0, #0xb0	@ Off screen, perhaps.
-	bhi		Return
+	bhi		ReturnLabel
 		ldr		r5, =xMask1
 		add		r0 ,r3, r5		@ X += #0x209 vanilla sets bit 9, despite...
 		ldr		r1, =xMask2
@@ -320,6 +348,7 @@ bhi		Return
 		ldr		r3, =IconStealableDroppable		@ Icon location and priority=2.
 		ldr		r5, =CallARM_PushToSecondaryOAM
 		bl		GOTO_R5
+		ReturnLabel:
 		b       Return
 
 .align

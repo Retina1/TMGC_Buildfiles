@@ -54,6 +54,9 @@ Village(0x0,C26Village3,9,17)
 Village(0x0,C26Village4,1,25)
 Village(0x0,C26Village5,31,25)
 Village(0x0,C26Village6,11,28)
+Village(0x0,C26Village7,19,13)
+House(0x0,C26House1,12,0)
+House(0x0,C26House2,12,2)
 END_MAIN
 
 ALIGN 4
@@ -202,6 +205,54 @@ UNIT Dalst Hero 0x0 Level(13,Enemy,1) [34,9] 0x0 0x0 0x1 REDA34R8 [GildedSword] 
 UNIT Annihilator4 Sage 0x0 Level(18,Enemy,1) [34,9] 0x0 0x0 0x1 REDA34R9 [Annihilation] NeverMoveAI
 UNIT
 
+C26Turn5Spawn:
+UNIT Dalst LncPal 0x0 Level(11,Enemy,1) [16,31] 0x0 0x0 0x1 REDA15R30 [Spear] NoAI
+UNIT Dalst Valk 0x0 Level(13,Enemy,1) [16,31] 0x0 0x0 0x1 REDA16R29 [LightBrand] NoAI
+UNIT Dalst LncPal 0x0 Level(11,Enemy,1) [16,31] 0x0 0x0 0x1 REDA17R30 [Horseslayer,Shatterspear] NoAI
+UNIT
+C26Turn5Spawn2:
+UNIT Dalst BowPal 0x0 Level(11,Enemy,1) [22,31] 0x0 0x0 0x1 REDA21R30 [Wardbow] NoAI
+UNIT Dalst Valk 0x0 Level(13,Enemy,1) [22,31] 0x0 0x0 0x1 REDA22R29 [Runesword] NoAI
+UNIT Dalst BowPal 0x0 Level(11,Enemy,1) [22,31] 0x0 0x0 0x1 REDA23R30 [BraveBow] NoAI
+UNIT
+C26Turn5Spawn3:
+UNIT Dalst Hero 0x0 Level(11,Enemy,1) [33,0] 0x0 0x0 0x1 REDA33R1 [Rapier,BraveSword] NoAI
+UNIT Dalst Halberdier 0x0 Level(11,Enemy,1) [33,0] 0x0 0x0 0x1 REDA33R2 [Spear] NoAI
+UNIT Dalst Sorc 0x0 Level(11,Enemy,1) [34,0] 0x0 0x0 0x1 REDA34R1 [Fenrir] NoAI
+UNIT Dalst Sniper 0x0 Level(11,Enemy,1) [34,0] 0x0 0x0 0x1 REDA34R2 [GildedBow] NoAI
+UNIT
+
+C26Turn6Spawn:
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [0,24] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [0,26] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [2,26] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
+UNIT
+C26Turn6Spawn2:
+UNIT Annihilator5 Sage 0x0 Level(18,Enemy,1) [11,22] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT Elite Berserker 0x0 Level(16,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [Tomahawk,SavageGauntlet] AttackInRangeAI
+UNIT Elite Berserker 0x0 Level(16,Enemy,1) [25,23] 0x0 0x0 0x0 0x0 [Tomahawk,SavageGauntlet] AttackInRangeAI
+UNIT Annihilator6 Sage 0x0 Level(18,Enemy,1) [27,22] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT
+
+C26Turn7Spawn:
+UNIT Dalst Hero 0x0 Level(12,Enemy,1) [5,31] 0x0 0x0 0x1 REDA5R29 [GildedSword] NoAI
+UNIT Dalst Warrior 0x0 Level(12,Enemy,1) [5,31] 0x0 0x0 0x1 REDA5R30 [Tomahawk,Hammer] NoAI
+UNIT Dalst Hero 0x0 Level(12,Enemy,1) [6,31] 0x0 0x0 0x1 REDA6R29 [BraveSword,Rapier] NoAI
+UNIT Dalst Warrior 0x0 Level(12,Enemy,1) [6,31] 0x0 0x0 0x1 REDA6R30 [Tomahawk,Halberd] NoAI
+UNIT
+C26Turn7Spawn2:
+UNIT Dalst Sniper 0x0 Level(12,Enemy,1) [28,31] 0x0 0x0 0x1 REDA28R29 [GildedBow] NoAI
+UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [28,31] 0x0 0x0 0x1 REDA28R30 [Nosferatu,Corruption] NoAI
+UNIT Dalst Sniper 0x0 Level(12,Enemy,1) [29,31] 0x0 0x0 0x1 REDA29R29 [BraveBow,Wardbow] NoAI
+UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [29,31] 0x0 0x0 0x1 REDA29R30 [Fenrir,Knoggelvi] NoAI
+UNIT
+C26Turn7Spawn3:
+UNIT Dalst Valk 0x0 Level(12,Enemy,1) [35,8] 0x0 0x0 0x1 REDA33R8 [Rapier,Physic] NoAI
+UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [35,8] 0x0 0x0 0x1 REDA34R8 [GildedBow] NoAI
+UNIT Dalst Valk 0x0 Level(12,Enemy,1) [35,9] 0x0 0x0 0x1 REDA33R9 [SilverSword,Physic] NoAI
+UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [35,9] 0x0 0x0 0x1 REDA34R9 [BraveBow,Longbow] NoAI
+UNIT
+
 ALIGN 4
 
 C26Turn1:
@@ -233,12 +284,22 @@ SetUnitStatusAll(Annihilator4, BadStatus, 0x43)//4 turns of status 3 (silence)
 EndEvent
 
 C26Turn5:
+Reinforcements(C26Turn5Spawn)
+Reinforcements(C26Turn5Spawn2)
+Reinforcements(C26Turn5Spawn3)
 EndEvent
 
 C26Turn6:
+Reinforcements(C26Turn6Spawn)
+Reinforcements(C26Turn6Spawn2)
+SetUnitStatusAll(Annihilator5, BadStatus, 0x33)//3(!) turns of status 3 (silence)
+SetUnitStatusAll(Annihilator6, BadStatus, 0x33)//3(!) turns of status 3 (silence)
 EndEvent
 
 C26Turn7:
+Reinforcements(C26Turn7Spawn)
+Reinforcements(C26Turn7Spawn2)
+Reinforcements(C26Turn7Spawn3)
 EndEvent
 
 C26Turn8:
@@ -277,13 +338,21 @@ C26Village5:
 VillageEventItem(FillerDialogue, HouseCG, Sleep)
 C26Village6:
 VillageEventItem(FillerDialogue, HouseCG, ArmsScroll)
+C26Village7:
+VillageEventItem(FillerDialogue, HouseCG, ParagonRing)
+C26House1:
+HouseEvent(FillerDialogue,HouseCG)
+C26House2:
+HouseEvent(FillerDialogue,HouseCG)
 
 BeginningScene:
 ENUT GuideChpt26
-LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
+LocationText(MoonCG,Ch26_Flashback,Flashback10YearLabel,0x0)
 MUSC NarrationTheme6
-Narration(Map2CG,Ch26_Narration)
-CleanTextNoMap(HallCG,FillerDialogue)
+SetBackground(Map2CG); STAL 120; NarrationText(Ch26_Narration); FADI 0x3c
+CleanTextNoMap(HallCG,FillerDialogue)//they're here
+CleanTextNoMap(PathCG,FillerDialogue)//ethyl dialogue
+CleanTextNoMap(HallCG,FillerDialogue)//it's time
 LoadUnitsByDifficulty(C26Easy,C26Normal,C26Hard)
 LOAD1 0x0 C26Units
 ENUN
@@ -317,6 +386,13 @@ GOTO 0x2
 LABEL 0x1
 ENUT BaseFlag1
 LABEL 0x2
+//horatio stuff - simone support only available if he has summoning
+	SVAL 1 SummonID
+	SVAL 2 Horatio
+	ASMC (ASMC_HasSkill|1)
+BNE 0x3 0xc 0x0
+ENUT BaseFlag2
+LABEL 0x3
 //make annihilation in general lunatic exclusive? make silence longer on lower difficulties?
 SetUnitStatusAll(Annihilator1, BadStatus, 0x43)//4 turns of status 3 (silence)
 SetUnitStatusAll(Annihilator2, BadStatus, 0x93)//9 turns of silence

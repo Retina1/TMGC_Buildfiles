@@ -1,3 +1,9 @@
+//heal staff hp threshold
+PUSH
+ORG 0xD8671
+BYTE 0x64
+POP
+
 //Vanilla width is 5
 #define UnitNameTileWidth 6
 

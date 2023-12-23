@@ -145,10 +145,10 @@ Bolting:
 cmp r2,#0x3b
 bne Cloudburst
 @apply luna effect
-add r0,#0x4e
-ldrh r3,[r0]
+mov r1,#0x4e
+ldrh r3,[r4,r1]
 mov r3,#2
-strh r3,[r0]
+strh r3,[r4,r1]
 bl End
 
 Cloudburst:

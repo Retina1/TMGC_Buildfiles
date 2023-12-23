@@ -809,7 +809,39 @@
 			name(Girlkissing_Label)
 			importance(5)
 			event(C26GirlkissingEvent)
-			eventID(BaseFlag1)		
+			eventID(BaseFlag1)
+		Entry
+			bg(StreetCG)
+			importance(4)
+			music(LoverConvoSong)
+			text(FillerDialogue)
+			baseSupport(Apollo,Bechamel,ASupport)	
+		Entry
+			bg(StreetCG)
+			text(FillerDialogue)
+			baseSupport(Natasia,Peggy,ASupport)			
+		Entry
+			bg(StreetCG)
+			text(FillerDialogue)
+			baseSupport(Stefan,Carbon,BPSupport)	
+		Entry
+			bg(StreetCG)
+			text(FillerDialogue)
+			baseSupport(Butch,Peter,BPSupport)	
+		Entry
+			bg(StreetCG)
+			text(FillerDialogue)
+			baseSupport(Jeff,Hilbert,ASupport)	
+		Entry
+			bg(StreetCG)
+			text(FillerDialogue)
+			baseSupport(Yuyu,Hollandaise,BSupport)
+		Entry
+			bg(StreetCG)
+			eventID(BaseFlag2)
+			music(S_HisWorld)
+			text(FillerDialogue)
+			baseSupport(Horatio,Simone,BSupport)					
 		//c27
 	Chapter(Chapter28)
 		Entry
@@ -827,7 +859,7 @@
 
 ALIGN 4
 C26GirlkissingEvent:
-SetBackground(PathCG)
+SetBackground(StreetCG)
 MUSC LoverConvoSong
 Text(C26Girlkissing)
 SetSupport(Blair,Arin,ASupport,1)

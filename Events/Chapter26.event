@@ -243,7 +243,7 @@ UNIT
 C26Turn7Spawn2:
 UNIT Dalst Sniper 0x0 Level(12,Enemy,1) [28,31] 0x0 0x0 0x1 REDA28R29 [GildedBow] NoAI
 UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [28,31] 0x0 0x0 0x1 REDA28R30 [Nosferatu,Corruption] NoAI
-UNIT Dalst Sniper 0x0 Level(12,Enemy,1) [29,31] 0x0 0x0 0x1 REDA29R29 [BraveBow,Wardbow] NoAI
+UNIT Dalst Sniper 0x0 Level(12,Enemy,1) [29,31] 0x0 0x0 0x1 REDA27R30 [BraveBow,Wardbow] NoAI
 UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [29,31] 0x0 0x0 0x1 REDA29R30 [Fenrir,Knoggelvi] NoAI
 UNIT
 C26Turn7Spawn3:
@@ -251,6 +251,67 @@ UNIT Dalst Valk 0x0 Level(12,Enemy,1) [35,8] 0x0 0x0 0x1 REDA33R8 [Rapier,Physic
 UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [35,8] 0x0 0x0 0x1 REDA34R8 [GildedBow] NoAI
 UNIT Dalst Valk 0x0 Level(12,Enemy,1) [35,9] 0x0 0x0 0x1 REDA33R9 [SilverSword,Physic] NoAI
 UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [35,9] 0x0 0x0 0x1 REDA34R9 [BraveBow,Longbow] NoAI
+UNIT
+
+C26Turn8Spawn:
+UNIT Dalst WyvLord 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x1 REDA13R20 [Horseslayer,Shatterspear] NoAI
+UNIT Dalst Falco 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x1 REDA13R18 [BraveLance,Spear] NoAI
+UNIT Dalst WyvLord 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x1 REDA12R19 [Halberd,Hammer] NoAI
+UNIT Dalst Falco 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x1 REDA14R19 [BraveSword,FlameSword] NoAI
+UNIT
+C26Turn8Spawn2:
+UNIT Dalst Falco 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x1 REDA24R17 [Zanbato,Armorslayer] NoAI
+UNIT Dalst WyvLord 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x1 REDA24R19 [BraveAxe,Tomahawk] NoAI
+UNIT Dalst Falco 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x1 REDA23R18 [Horseslayer,Shatterspear] NoAI
+UNIT Dalst WyvLord 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x1 REDA25R18 [BraveLance,Spear] NoAI
+UNIT
+C26Turn8Spawn3:
+UNIT Annihilator7 Sage 0x0 Level(18,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT Annihilator8 Sage 0x0 Level(18,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT Annihilator9 Sage 0x0 Level(18,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT
+
+C26Turn9Spawn:
+UNIT Annihilator10 Sage 0x0 Level(18,Enemy,1) [0,14] 0x0 0x0 0x1 REDA2R14 [Annihilation] NeverMoveAI
+UNIT Annihilator11 Sage 0x0 Level(18,Enemy,1) [0,15] 0x0 0x0 0x1 REDA1R15 [Annihilation] NeverMoveAI
+UNIT Dalst BowGen 0x0 Level(12,Enemy,1) [0,12] 0x0 0x0 0x1 REDA1R12 [GildedBow,Greatbow] AttackInRangeAI
+UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [0,13] 0x0 0x0 0x1 REDA2R13 [Nocturne] AttackInRangeAI
+UNIT Elite WyvLord 0x0 Level(15,Enemy,1) [0,14] 0x0 0x0 0x1 REDA3R14 [BraveAxe,Shatterspear] NoAI
+UNIT Elite WyvLord 0x0 Level(15,Enemy,1) [0,15] 0x0 0x0 0x1 REDA3R15 [BraveLance,DousingLance] NoAI
+UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [0,16] 0x0 0x0 0x1 REDA1R16 [Corruption,Nosferatu] AttackInRangeAI
+UNIT Dalst BowGen 0x0 Level(12,Enemy,1) [0,17] 0x0 0x0 0x1 REDA2R17 [Wardbow,Greatbow] AttackInRangeAI
+UNIT
+
+C26Turn15Spawn:
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [6,0] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [29,0] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [1,8] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [34,9] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [22,19] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [30,19] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [31,20] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [11,22] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [22,22] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [27,22] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [25,23] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [0,24] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [0,26] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [2,26] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [4,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [7,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [9,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [15,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [23,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [26,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [31,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
 UNIT
 
 ALIGN 4
@@ -303,9 +364,18 @@ Reinforcements(C26Turn7Spawn3)
 EndEvent
 
 C26Turn8:
+Reinforcements(C26Turn8Spawn)
+Reinforcements(C26Turn8Spawn2)
+Reinforcements(C26Turn8Spawn3)
+SetUnitStatusAll(Annihilator7, BadStatus, 0x53)//5 turns of status 3 (silence)
+SetUnitStatusAll(Annihilator8, BadStatus, 0x53)//5 turns of status 3 (silence)
+SetUnitStatusAll(Annihilator9, BadStatus, 0x33)//3(!) turns of status 3 (silence)
 EndEvent
 
 C26Turn9:
+Reinforcements(C26Turn9Spawn)
+SetUnitStatusAll(Annihilator10, BadStatus, 0x43)//4 turns of status 3 (silence)
+SetUnitStatusAll(Annihilator11, BadStatus, 0x43)//4 turns of status 3 (silence)
 EndEvent
 
 C26Turn10:
@@ -324,6 +394,7 @@ C26Turn14:
 EndEvent
 
 C26Turn15:
+Reinforcements(C26Turn15Spawn)
 EndEvent
 
 C26Village1:
@@ -437,7 +508,7 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
-MUSC VictoryTheme
+MUSC S_Nightfall
 CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter27)
 ENDA

@@ -57,8 +57,28 @@ Village(0x0,C26Village6,11,28)
 Village(0x0,C26Village7,19,13)
 House(0x0,C26House1,12,0)
 House(0x0,C26House2,12,2)
+Armory(C26Armory,22,1)
+Armory(C26Armory2,23,0)
+Vendor(C26Vendor,23,2)
+Vendor(C26Vendor2,24,1)
 END_MAIN
 
+ALIGN 4
+C26Armory:
+SHLI IronSword SteelSword SilverSword GildedSword IronLance SteelLance SilverLance GildedLance Javelin Spear
+BYTE 0x0 0x0
+ALIGN 4
+C26Armory2:
+SHLI IronAxe SteelAxe SilverAxe GildedAxe HandAxe Tomahawk IronBow SteelBow SilverBow GildedBow Longbow
+BYTE 0x0 0x0
+ALIGN 4
+C26Vendor:
+SHLI Fire Thunder Elfire Fimbulvetr Flare Lightning Shine Divine Aura Radiance Flux Nightfall Fenrir Nocturne
+BYTE 0x0 0x0
+ALIGN 4
+C26Vendor2:
+SHLI Heal Mend Recover Physic Restore Yoink Barrier Vulnerary Elixir
+BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
@@ -429,12 +449,74 @@ UNIT Annihilator15 Sage 0x0 Level(18,Enemy,1) [23,31] 0x0 0x0 0x0 0x0 [Annihilat
 UNIT
 
 C26Turn12Spawn:
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [35,15] 0x0 0x0 0x1 REDA34R15 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [35,16] 0x0 0x0 0x1 REDA33R16 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [35,17] 0x0 0x0 0x1 REDA32R17 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [35,18] 0x0 0x0 0x1 REDA32R18 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [35,19] 0x0 0x0 0x1 REDA33R19 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [35,20] 0x0 0x0 0x1 REDA34R20 [WyvernBreath] NoAI
+UNIT
+C26Turn12Spawn2:
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [0,22] 0x0 0x0 0x1 REDA1R22 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [0,23] 0x0 0x0 0x1 REDA2R23 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [0,24] 0x0 0x0 0x1 REDA3R24 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [0,25] 0x0 0x0 0x1 REDA3R25 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [0,26] 0x0 0x0 0x1 REDA2R26 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(13,Enemy,1) [0,27] 0x0 0x0 0x1 REDA1R27 [WyvernBreath] NoAI
 UNIT
 
 C26Turn13Spawn:
+UNIT Dalst Hero 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x1 REDA12R18 [Lancesnapper] NoAI
+UNIT Dalst Halberdier 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x1 REDA12R19 [Axebuster] NoAI
+UNIT Dalst Warrior 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x1 REDA12R20 [Swordslayer] NoAI
+UNIT Dalst SwdPal 0x0 Level(12,Enemy,1) [9,23] 0x0 0x0 0x1 REDA8R22 [GildedSword] NoAI
+UNIT Dalst LncPal 0x0 Level(12,Enemy,1) [9,23] 0x0 0x0 0x1 REDA8R23 [GildedLance] NoAI
+UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [9,23] 0x0 0x0 0x1 REDA9R24 [GildedAxe] NoAI
 UNIT
 
+C26Turn13Spawn2:
+UNIT Dalst SageF 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x1 REDA24R19 [Fimbulvetr] NoAI
+UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x1 REDA25R19 [Fenrir] NoAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x1 REDA25R20 [Aura] NoAI
+UNIT Dalst SwMast 0x0 Level(12,Enemy,1) [22,22] 0x0 0x0 0x1 REDA22R21 [BraveSword] NoAI
+UNIT Dalst Sniper 0x0 Level(12,Enemy,1) [22,22] 0x0 0x0 0x1 REDA23R22 [BraveBow] NoAI
+UNIT Dalst Berserker 0x0 Level(12,Enemy,1) [22,22] 0x0 0x0 0x1 REDA24R22 [BraveAxe] NoAI
+UNIT
+
+C26Turn14SpawnWeak:
+UNIT Elite Hero 0x0 Level(15,Enemy,1) [15,31] 0x0 0x0 0x1 REDA15R30 [GildedSword] NoAI
+UNIT Elite Halberdier 0x0 Level(15,Enemy,1) [16,31] 0x0 0x0 0x1 REDA16R29 [Spear] NoAI
+UNIT Elite Warrior 0x0 Level(15,Enemy,1) [17,31] 0x0 0x0 0x1 REDA17R30 [Tomahawk] NoAI
+UNIT Elite Sniper 0x0 Level(15,Enemy,1) [18,31] 0x0 0x0 0x1 REDA18R29 [BraveBow,Wardbow] NoAI
+UNIT Elite Sniper 0x0 Level(15,Enemy,1) [20,31] 0x0 0x0 0x1 REDA20R29 [BarrierBow,GildedBow] NoAI
+UNIT Elite Warrior 0x0 Level(15,Enemy,1) [21,31] 0x0 0x0 0x1 REDA21R30 [BraveAxe] NoAI
+UNIT Elite Halberdier 0x0 Level(15,Enemy,1) [22,31] 0x0 0x0 0x1 REDA22R29 [Dragonpike] NoAI
+UNIT Elite Hero 0x0 Level(15,Enemy,1) [23,31] 0x0 0x0 0x1 REDA23R30 [BraveSword] NoAI
+UNIT Elite SageF 0x0 Level(15,Enemy,1) [15,31] 0x0 0x0 0x1 REDA15R31 [Bolting] NoAI
+UNIT Elite BowPal 0x0 Level(15,Enemy,1) [17,31] 0x0 0x0 0x1 REDA17R31 [GildedBow] NoAI
+UNIT Elite WyvLord 0x0 Level(15,Enemy,1) [19,31] 0x0 0x0 0x1 REDA19R31 [MasterLance] NoAI
+UNIT Elite BowPal 0x0 Level(15,Enemy,1) [21,31] 0x0 0x0 0x1 REDA21R31 [GildedBow] NoAI
+UNIT Elite SageF 0x0 Level(15,Enemy,1) [23,31] 0x0 0x0 0x1 REDA23R31 [Bolting] NoAI
+UNIT
 C26Turn14Spawn:
+UNIT Elite Hero 0x0 Level(15,Enemy,1) [15,31] 0x0 0x0 0x1 REDA15R30 [GildedSword] NoAI
+UNIT Elite Halberdier 0x0 Level(15,Enemy,1) [16,31] 0x0 0x0 0x1 REDA16R29 [Spear,Nuboko] NoAI
+UNIT Elite Warrior 0x0 Level(15,Enemy,1) [17,31] 0x0 0x0 0x1 REDA17R30 [DevilAxe,Tomahawk,SavageGauntlet] NoAI
+UNIT Elite Sniper 0x0 Level(15,Enemy,1) [18,31] 0x0 0x0 0x1 REDA18R29 [BraveBow,Wardbow] NoAI
+UNIT Elite Bishop 0x0 Level(15,Enemy,1) [19,31] 0x0 0x0 0x1 REDA19R30 [Smite,Radiance,Fortify,Scripture] NoAI
+UNIT Elite Sniper 0x0 Level(15,Enemy,1) [20,31] 0x0 0x0 0x1 REDA20R29 [BarrierBow,GildedBow] NoAI
+UNIT Elite Warrior 0x0 Level(15,Enemy,1) [21,31] 0x0 0x0 0x1 REDA21R30 [MasterAxe] NoAI
+UNIT Elite Halberdier 0x0 Level(15,Enemy,1) [22,31] 0x0 0x0 0x1 REDA22R29 [Spear,Dragonpike] NoAI
+UNIT Elite Hero 0x0 Level(15,Enemy,1) [23,31] 0x0 0x0 0x1 REDA23R30 [BraveSword] NoAI
+UNIT Elite SageF 0x0 Level(15,Enemy,1) [15,31] 0x0 0x0 0x1 REDA15R31 [Bolting,EarthPower] NoAI
+UNIT Elite BowPal 0x0 Level(15,Enemy,1) [16,31] 0x0 0x0 0x1 REDA16R31 [BraveBow] NoAI
+UNIT Elite BowPal 0x0 Level(15,Enemy,1) [17,31] 0x0 0x0 0x1 REDA17R31 [GildedBow] NoAI
+UNIT Elite BowPal 0x0 Level(15,Enemy,1) [18,31] 0x0 0x0 0x1 REDA18R31 [Greatbow] NoAI
+UNIT Elite WyvLord 0x0 Level(15,Enemy,1) [19,31] 0x0 0x0 0x1 REDA19R31 [MasterLance,SoaringShaft] NoAI
+UNIT Elite BowPal 0x0 Level(15,Enemy,1) [20,31] 0x0 0x0 0x1 REDA20R31 [Greatbow] NoAI
+UNIT Elite BowPal 0x0 Level(15,Enemy,1) [21,31] 0x0 0x0 0x1 REDA21R31 [GildedBow] NoAI
+UNIT Elite BowPal 0x0 Level(15,Enemy,1) [22,31] 0x0 0x0 0x1 REDA22R31 [BraveBow] NoAI
+UNIT Elite SageF 0x0 Level(15,Enemy,1) [23,31] 0x0 0x0 0x1 REDA23R31 [Bolting,EarthPower] NoAI
 UNIT
 
 C26Turn15Spawn:
@@ -488,7 +570,7 @@ Reinforcements(C26Turn2Spawn)
 EndEvent
 
 C26Turn3:
-DifficultyReinforcements2(C26Turn3SpawnWeak,C26Turn3SpawnWeak,C26Turn3Spawn)
+DifficultyReinforcements(C26Turn3SpawnWeak,C26Turn3SpawnWeak,C26Turn3Spawn)
 DifficultyReinforcements2(C26Turn3Spawn2Weak,C26Turn3Spawn2Weak,C26Turn3Spawn2)
 EndEvent
 
@@ -541,7 +623,7 @@ Reinforcements(C26Turn9Spawn2)
 EndEvent
 
 C26Turn10:
-DifficultyReinforcements2(C26Turn10SpawnWeak,C26Turn10SpawnWeak,C26Turn10Spawn)
+DifficultyReinforcements(C26Turn10SpawnWeak,C26Turn10SpawnWeak,C26Turn10Spawn)
 EndEvent
 
 C26Turn11:
@@ -562,12 +644,17 @@ LABEL 0x2
 EndEvent
 
 C26Turn12:
+Reinforcements(C26Turn12Spawn)
+Reinforcements(C26Turn12Spawn2)
 EndEvent
 
 C26Turn13:
+Reinforcements(C26Turn13Spawn)
+Reinforcements(C26Turn13Spawn2)
 EndEvent
 
 C26Turn14:
+DifficultyReinforcements(C26Turn14SpawnWeak,C26Turn14SpawnWeak,C26Turn14Spawn)
 EndEvent
 
 C26Turn15:
@@ -690,6 +777,15 @@ EndingScene:
 ResetBaseFlags
 MUSC S_Nightfall
 CleanTextNoMap(HallCG,FillerDialogue)
+//skeleton for starfall giver stuff - make sure the player didn't nick it
+CheckForItem(Starfall)
+BNE 0x1 0xc 0x0
+CHECK_EVENTID DefeatBossFlag
+BEQ 0x1 0xc 0x0
+CleanTextNoMap(HallCG,FillerDialogue)
+REMA
+GiveItem(Starfall,Blair)
+LABEL 0x1
 MoveToChapter(Chapter27)
 ENDA
 

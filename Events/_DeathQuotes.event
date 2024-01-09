@@ -8,7 +8,8 @@
 ALIGN 4
 DeathQuoteTable:
 //ratio
-BYTE 0xd2 0x0 0xff 0xff 0x0 0x0 ;SHORT 0x0 ;WORD HoratioSummonDeath|IsPointer
+AlwaysDeathQuote(0xd2,0x0,HoratioWeep)
+//BYTE 0xd2 0x0 0xff 0xff 0x0 0x0 ;SHORT 0x0 ;WORD HoratioSummonDeath|IsPointer
 // Prologue
 ChapterDeathQuote(Davelarn,Prologue,DefeatBossFlag,PDavelarnDeath)
 // Ch1
@@ -173,6 +174,7 @@ KillerDeathQuote(Sam,Bobert,Chapter25,0x0,C25BobertKillsSam)
 KillerDeathQuote(Bobert,Sam,Chapter25,SamBobertKillFlag,C25BobertDeathAlt)
 ChapterDeathQuote(Bobert,Chapter25,DefeatBossFlag,C25BobertDeath)
 // c26
+BYTE EthylClone 0x0 0xff Chapter26 0x0 0x0 ;SHORT 0x0 ;WORD C26DeathCounter|IsPointer
 ChapterDeathQuote(Olsen,Chapter26,0xa,EnemyOlsenDeath)
 KillerDeathQuote(Blair,Ciraweiss,Chapter26,GameOverFlag,C26EthylKillsBlair)
 KillerDeathQuote(Zeke,Ciraweiss,Chapter26,GameOverFlag,C26EthylKillsZeke)
@@ -446,8 +448,14 @@ LABEL 0x2
 EndEvent
 
 ALIGN 4
+C26DeathCounter:
+COUNTER_ADD 0x1 0x1
+EndEvent
+
+ALIGN 4
 HoratioSummonDeath:
 MUSC S_HisWorld
 Text(HoratioWeep)
+//ASMC ReturnToMapBGM
 AnnihilateItem(SummonBlade)
 EndEvent

@@ -2,8 +2,8 @@
 10 years ago...[X]
 
 ##_Ch26Survive
-Survive for[N]
-15 turns.[X]
+Survive or defeat[N]
+bosses & Annihilators.[X]
 
 ##C26Opening1
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
@@ -11,14 +11,14 @@ they're here[A][X]
 
 ##C26Opening2
 [OpenMidLeft][LoadSoldier2][OpenMidRight][LoadCiraweiss]
-we're here
-hint at olsen existing
-hint at annhilation
+we're here[A][N]
+hint at olsen existing[A][N]
+hint at annhilation[A][N]
 hint that you're fucked[A][X]
 
 ##C26Opening3
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
-time to die
+time to die[A][N]
 hint at forced survive[A][X]
 
 ##C26JonasJoin
@@ -29,8 +29,59 @@ hi it's me[A][X]
 [OpenMidLeft][LoadKenneth]
 i will kill[A][X]
 
+##C26Ending
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
+that was hard[A][X]
+
+##C26EndingRouted
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
+i've been dummied out[A][X]
+
+##C26StarfallGet
+[OpenMidLeft][LoadBlair]
+book and rumination[A][X]
+
+##C26End2EthylDead
+[OpenMidLeft][LoadArbordia][OpenMidRight][LoadElcorian]
+she's dead[A][X]
+
+##C26End2EthylAlive
+[OpenFarLeft][LoadArbordia][OpenLeft][LoadElcorian][OpenMidRight][LoadCiraweiss]
+screw this[A][N][OpenFarLeft]
+kill[A][N][OpenLeft][MoveRight][OpenRight][MoveRight]
+sorry[A][N][OpenMidRight]
+the fuck man[A][N][ClearFace][OpenRight]
+now i have become sneed[A][X]
+
+##C26TurnsUpEthylAlive
+[OpenMidLeft][LoadCiraweiss]
+How[...] How are they still[N]
+alive? After all of this?[A][N]
+[...]Forget this. I've thrown[N]
+too much at this problem.[A][N]
+If Girard wants her dead, he[N]
+can do it himself for once.[A][X]
+
+##C26TurnsUp
+[OpenMidLeft][LoadBlair]
+I think[...] it's over.[A][N]
+We've lasted through the worst of[N]
+what they have to throw at us.[A][N][OpenMidRight][LoadZeke]
+[...]Are they[...] retreating?[A][N]
+[...]Let us reconvene, then.[N]
+We still have much to prepare.[A][X]
+
+##C26MapRouted
+[OpenMidLeft][LoadBlair]
+We've[...] pushed their forces back?[N]
+That's incredible![A][N][OpenMidRight][LoadZeke]
+[...]Are they[...] already retreating?[A][N]
+We'd better keep this momentum[N]
+going, then.[A][N]
+But first, we ought to reconvene.[A][X]
+
 ##C26Village1Text
-[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan2]
+[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan1]
 You're fighting for Lady Blair?[A][N]
 [...]Well. This won't be easy for you.[N]
 But I have something that might help.[A][N]
@@ -50,7 +101,7 @@ Hm[...] Guess you can borrow my[N]
 old walkin' stick for a few.[A][N]
 [...]Wait. What am I doin'? I got[N]
 this fancy staff right 'ere![A][N]
-[...]I'm gettin' on in years,[A]N]
+[...]I'm gettin' on in years,[A][N]
 but you'd think I could tell my[N]
 walkin' stick from a magical rod.[A][N]
 Good thing I noticed quick, at[N]
@@ -60,7 +111,7 @@ Surely couldn't handle my[N]
 weight all day.[A][X]
 
 ##C26Village3Text
-[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan1]
+[OpenMidLeft][LoadCurrent][OpenMidRight][LoadMan2]
 Used to be a real accomplished[N]
 lumberjack back in my prime.[A][N]
 Still got myself an axe for every[N]
@@ -124,10 +175,14 @@ field today.[A] I can't say if she's[N]
 ever taken it before,[A] but I'd[N]
 think the army can function without her.[A][N]
 Taking her out early would certainly[N]
-help our defese,[A] but would by no[N]
+help our defense,[A] but would by no[N]
 means halt the enemy.[A][N]
-No matter what, I think we'll just[N]
-have to hold out.[A][X]
+[...]Then again, maybe if you take[N]
+out her AND her doubles[...][A][N]
+[...]And maybe for good measure,[N]
+their Annihilation users[...][A][N]
+That'd be enough to demoralize them?[N]
+Might be worth a shot.[A][X]
 
 ##C26House2Text
 [OpenMidLeft][LoadCurrent][OpenMidRight][LoadSoldier5]
@@ -157,7 +212,9 @@ to wreak such havok on its users.[A][N]
 I suppose our sages will need a moment[N]
 to adjust to the tome's power.[A][N]
 No matter. Once that moment passes,[N]
-none shall survive our assault.[A][X]
+none shall survive our assault.[A][N]
+Between Annihilation and our simulacra[...][N]
+The traitor shall kneel before us.[A][X]
 
 ##C26OlsenAppearance
 [OpenMidLeft][LoadOlsen][ToggleSmile]
@@ -211,6 +268,53 @@ Welcome to the team, Ser[N]
 Duke-Duchess Olsen von Dalst.[A][N][OpenMidRight][ToggleSmile]
 Of course, boss. Just point me at[N]
 what you want to stop breathing.[A][X]
+
+##C26OlsenRecruitZeke
+[OpenMidLeft][LoadZeke][OpenMidRight][LoadOlsen]
+You must be Zeke, right?[A][N][ToggleSmile]
+Pleased to meet you![N]
+The name's Olsen.[A][N][OpenMidLeft][ToggleSmile]
+[...]Huh?[A][N][OpenMidRight]
+World-renowned assassin Olsen?[N]
+Doesn't ring a bell?[A][N]
+[...]Rats. Then again, you seem a[N]
+bit young to need an assassin[...][A][N][OpenMidLeft]
+[...]Did you just say assassin?[A][N][OpenMidRight]
+Ah. Right. Technically, I'm[N]
+supposed to kill you now.[A][N]
+But I've snuck a look at some[N]
+of my client's records.[A][N]
+And now I'm on shaky moral[N]
+grounds with her.[A][N][OpenMidLeft]
+I[...] see.[A][N][OpenMidRight]
+Sure, I'm an assassin. But.[N]
+An assassin with a heart![A][N][OpenMidLeft]
+[...]I see.[A][N][OpenMidRight]
+Well, do you have any suggestions?[N]
+It'd feel rude to kill you now.[A][N][OpenMidLeft]
+[...]We could hire you, I suppose.[N]
+Blair would be fine with it.[A][N]
+[...]Probably.[A][N][OpenMidRight]
+[...]A bidding war for my services?[N]
+How exciting![A][N][OpenMidLeft]
+[...]Don't call it that.[A][N][OpenMidRight]
+[...]Oh. [...]Well[...] How about instead of[N]
+money, you give me a fun title?[A][N]
+[...]Ser Duke-Duchess Olsen von Dalst.[A][N][OpenMidLeft]
+[...]This[...] isn't a joke, right?[N]
+You're not messing with me?[A][N][OpenMidRight]
+Do you doubt my credentials?[A][N]
+I have killed before,[N]
+and will kill again.[A][N][ToggleSmile]
+I just also know how to enjoy[N]
+the small things.[A][N][OpenMidLeft][ToggleSmile]
+[...]Very well. You're hired.[A][N]
+And if Blair's somehow not alright[N]
+giving you a title[...][A][N]
+I'll give you something[N]
+in Elba Cor.[A][N][OpenMidRight][ToggleSmile]
+Hooray! Well, then, Zeke.[N]
+Point, and I'll shoot.[A][X]
 
 ##C26EthylBattle
 [OpenMidLeft][LoadCiraweiss]

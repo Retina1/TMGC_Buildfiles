@@ -103,6 +103,9 @@ int GetBattleUnitExpGain(struct BattleUnit* actor, struct BattleUnit* target) {
 
     if (!CanBattleUnitGainLevels(actor) || (actor->unit.curHP == 0) || UNIT_CATTRIBUTES(&target->unit) & CA_NEGATE_LETHALITY)
         return 0;
+	
+	if (actor->unit.pClassData->classRelativePower == 9)
+		return 0;
 
     if (!actor->nonZeroDamage)
         return 1;

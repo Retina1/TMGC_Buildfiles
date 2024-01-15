@@ -9,14 +9,14 @@
 .equ GetUnitEquippedWeapon, 0x8016B29
 .thumb
 push	{lr}
-@check if user and target alive
+@check if user alive
 ldrb	r0, [r4,#0x13]
 cmp	r0, #0x00
 beq	End
 
-ldrb    r0, [r5,#0x13]
-cmp    r0, #0x00
-beq    End
+@ldrb    r0, [r5,#0x13]
+@cmp    r0, #0x00
+@beq    End
 
 @check bow
 mov r0, r4                @r0 = Unit data pointer

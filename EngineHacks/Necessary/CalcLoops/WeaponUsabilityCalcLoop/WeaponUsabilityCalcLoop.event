@@ -11,7 +11,7 @@ POP
 
 ALIGN 4
 WLockLookupList:
-//WORD 0x003C1C00 0xF0070000
+WORD 0x003C1C00 0xF0070000
 WORD 0x00000400 0x00040000 	//Monster Lock
 WORD 0x00000800 0x00010000	//Roy Lock
 WORD 0x00001000 0x00020000	//Myrm Lock
@@ -19,7 +19,8 @@ WORD 0x00010000 0x00000000  //Unusable
 WORD 0x00040000 0x10000000  //Eirika Lock
 WORD 0x00080000 0x20000000  //Ephraim Lock
 WORD 0x00100000 0x40000000  //Lyn Lock
-WORD 0x00200000 0x80000000  //Athos Lock
+WORD 0x00200000 0x80000000
+//Athos Lock now used for durabiliy
 WORD 0xFFFFFFFF 			//Terminator
 
 ALIGN 4
@@ -39,5 +40,7 @@ WeaponLockLoop: //r0 = character pointer, r1 = item halfword, r2 = rank; functio
 #endif // ADV_WEAPON_LOCKS
 POIN Amische
 POIN DoesUnitHaveWRank //contains Lumina/Shadowgift
+POIN ZeroDurabilityWeaponUsability
 WORD 0
 
+//#include "UnbreakableStuff/UnbreakableDur.lyn.event"

@@ -23,7 +23,7 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x3,TurnLimitIntoEndingScene,16)
 TurnEventPlayer(0x0,JonasArrives,1)
-TurnEventPlayer(0x0,KennethReturns,4)
+TurnEventPlayer(0x0,KennethReturns,2)
 TurnEventPlayer(0x0,C26Turn1,1)
 TurnEventPlayer(0x0,C26Turn2,2)
 TurnEventPlayer(0x0,C26Turn3,3)
@@ -45,6 +45,25 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 CharacterBasedEvents:
 CharacterEvent(0xa,C26OlsenRecruitment,Blair,Olsen)
 CharacterEvent(0xa,C26OlsenRecruitmentZeke,Zeke,Olsen)
+//flags 18 onwards
+CharacterEventBothWays(0x18,C26ArinYuyuSupport,Arin,Yuyu)//B+
+CharacterEventBothWays(0x19,C26StefanJosefSupport,Stefan,Josef)//A
+CharacterEventBothWays(0x1a,C26DesmondMikeySupport,Desmond,Mikey)//B+
+CharacterEventBothWays(0x1b,C26SamCharleySupport,Sam,Charley)//B+
+CharacterEventBothWays(0x1c,C26JosefAthenaSupport,Josef,Athena)//B+
+CharacterEventBothWays(0x1d,C26PeggyApolloSupport,Peggy,Apollo)//B+
+CharacterEventBothWays(0x1e,C26ButchJeffSupport,Butch,Jeff)//A
+CharacterEventBothWays(0x1f,C26ApolloVladmirSupport,Apollo,Vladmir)//B+
+CharacterEventBothWays(0x20,C26FlynnHoratioSupport,Flynn,Horatio)//B
+CharacterEventBothWays(0x21,C26CharleyToddsworthSupport,Charley,Toddsworth)//B+
+CharacterEventBothWays(0x22,C26ElizaDirkSupport,Eliza,Dirk)//A
+CharacterEventBothWays(0x23,C26FreddricArgentSupport,Freddric,Argent)//A
+CharacterEventBothWays(0x24,C26RiftEstelleSupport,Rift,Estelle)//A
+CharacterEventBothWays(0x25,C26RoseManfredSupport,Rose,Manfred)//A
+CharacterEventBothWays(0x26,C26ManfredWilhelmSupport,Manfred,Wilhelm)//A
+CharacterEventBothWays(0x27,C26AlexisWilhelmSupport,Alexis,Wilhelm)//B
+CharacterEventBothWays(0x28,C26ClarqueArgentSupport,Clarque,Argent)//B
+
 RoseShopMacro
 END_MAIN
 
@@ -100,28 +119,28 @@ ENDTRAP
 ALIGN 4
 
 C26Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [17,6] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [18,6] 0x0 0x0 0x0 0x0 [IronBow] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [17,9] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [18,9] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [19,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [20,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [19,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [19,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [20,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [16,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [19,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [17,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [18,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [20,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [15,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [20,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C26Easy:
-UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [16,4] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
+UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [16,7] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
 
 UNIT Dalst LightM 0x0 Level(20,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Dalst LightM 0x0 Level(20,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
@@ -233,8 +252,8 @@ UNIT
 C26Hard:
 UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [19,25] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
 
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar,Again,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar,Scripture] NeverMoveAI
 //funny blocks
 UNIT Dalst LncPal 0x0 Level(14,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Spear,GildedLance] DelayedAI
 UNIT Dalst BowPal 0x0 Level(14,Enemy,1) [6,7] 0x0 0x0 0x0 0x0 [BraveBow,Longbow] DelayedAI
@@ -550,38 +569,109 @@ UNIT Dalst BowPal 0x0 Level(15,Enemy,1) [29,31] 0x0 0x0 0x1 REDA29R31 [BraveBow]
 UNIT
 
 C26Turn15Spawn:
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [19,1] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [1,8] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [34,9] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [22,19] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [30,19] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [31,20] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [11,22] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [22,22] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [27,22] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [25,23] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [0,24] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [0,26] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [2,26] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [4,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [7,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [9,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [15,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [23,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [26,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
-UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [31,31] 0x0 0x0 0x0 0x0 [MorningStar,Fortify,Scripture] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [19,1] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [2,4] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [1,8] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [34,9] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [22,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [30,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [31,20] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [11,22] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [22,22] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [27,22] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [25,23] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [0,24] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [0,26] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [2,26] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [4,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [7,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [9,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [15,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [23,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [26,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [31,31] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT
 
 ALIGN 4
+
+C26ArinYuyuSupport:
+Text(ArinYuyuBPSupport)
+SetSupport(Arin,Yuyu,BPSupport,1)
+EndEvent
+C26StefanJosefSupport:
+Text(StefanJosefASupport)
+SetSupport(Stefan,Josef,ASupport,1)
+EndEvent
+C26DesmondMikeySupport:
+Text(DesmondMikeyBPSupport)
+SetSupport(Desmond,Mikey,BPSupport,1)
+EndEvent
+C26SamCharleySupport:
+Text(SamCharleyBPSupport)
+SetSupport(Sam,Charley,BPSupport,1)
+EndEvent
+C26JosefAthenaSupport:
+Text(JosefAthenaBPSupport)
+SetSupport(Josef,Athena,BPSupport,1)
+EndEvent
+C26PeggyApolloSupport:
+Text(PeggyApolloBPSupport)
+SetSupport(Peggy,Apollo,BPSupport,1)
+EndEvent
+C26ButchJeffSupport:
+Text(ButchJeffASupport)
+ENUT JeffUnmaskFlag
+SetSupport(Butch,Jeff,ASupport,1)
+EndEvent
+C26ApolloVladmirSupport:
+Text(ApolloVladmirBPSupport)
+SetSupport(Apollo,Vladmir,BPSupport,1)
+EndEvent
+C26FlynnHoratioSupport:
+HoratioMusicChooser
+Text(FlynnHoratioBSupport)
+SetSupport(Flynn,Horatio,BSupport,1)
+EndEvent
+C26CharleyToddsworthSupport:
+Text(CharleyToddsworthBPSupport)
+SetSupport(Charley,Toddsworth,BPSupport,1)
+EndEvent
+C26ElizaDirkSupport:
+Text(ElizaDirkASupport)
+SetSupport(Eliza,Dirk,ASupport,1)
+EndEvent
+C26FreddricArgentSupport:
+Text(FreddricArgentASupport)
+SetSupport(Freddric,Argent,ASupport,1)
+EndEvent
+C26RiftEstelleSupport:
+Text(RiftEstelleASupport)
+SetSupport(Rift,Estelle,ASupport,1)
+EndEvent
+C26RoseManfredSupport:
+Text(RoseManfredASupport)
+SetSupport(Rose,Manfred,ASupport,1)
+EndEvent
+C26ManfredWilhelmSupport:
+Text(ManfredWilhelmASupport)
+SetSupport(Manfred,Wilhelm,ASupport,1)
+EndEvent
+C26AlexisWilhelmSupport:
+Text(AlexisWilhelmBSupport)
+SetSupport(Alexis,Wilhelm,BSupport,1)
+EndEvent
+C26ClarqueArgentSupport:
+Text(ClarqueArgentBSupport)
+SetSupport(Clarque,Argent,BSupport,1)
+EndEvent
 
 C26EndChecker:
 COUNTER_CHECK 0x1
@@ -732,6 +822,10 @@ SetUnitStatus(Annihilator11, BadStatus, 0x43)//4 turns of status 3 (silence)
 CAM1 Annihilator11
 FlashCursor(Annihilator11,60)
 Reinforcements(C26Turn9Spawn2)
+CHECK_TUTORIAL
+BEQ 0x1 0xc 0x0
+Text(C26LastAnnihilatorMessage)
+LABEL 0x1
 EndEvent
 
 C26Turn10:
@@ -749,7 +843,6 @@ Reinforcements(C26Turn11Spawn2)
 SetUnitStatus(Annihilator13, BadStatus, 0x43)//4 turns of status 3 (silence)
 CAM1 Annihilator13
 FlashCursor(Annihilator13,60)
-LABEL 0x1
 CHECK_HARD
 BEQ 0x2 0xc 0x0
 Reinforcements(C26Turn11Spawn3)
@@ -761,6 +854,8 @@ SetUnitStatus(Annihilator15, BadStatus, 0x43)//4 turns of status 3 (silence)
 CAM1 Annihilator15
 FlashCursor(Annihilator15,60)
 LABEL 0x2
+Text(C26LastAnnihilatorMessage)
+LABEL 0x1
 EndEvent
 
 C26Turn12:
@@ -854,6 +949,16 @@ LABEL 0x2
 BNE 0x3 0xc 0x0
 ENUT BaseFlag2
 LABEL 0x3
+SupportFlagOn(Arin,Yuyu,0x18,BSupport)
+SupportFlagOn(Stefan,Josef,0x19,BPSupport)
+SupportFlagOn(Desmond,Mikey,0x1a,BSupport)
+SupportFlagOn(Sam,Charley,0x1b,BSupport)
+SupportFlagOn(Josef,Athena,0x1c,BSupport)
+SupportFlagOn(Peggy,Apollo,0x1d,BSupport)
+SupportFlagOn(Butch,Jeff,0x1e,BPSupport)
+SupportFlagOn(Apollo,Vladmir,0x1f,BSupport)
+SupportFlagOn(Flynn,Horatio,0x20,CPSupport)
+SupportFlagOn(Charley,Toddsworth,0x21,BSupport)
 SetUnitStatusAll(EthylClone, LuckStat, 0)
 SetUnitStatusAll(EthylClone*0x100+EthylClone, Strength, 24, Any, Any, Any, Range(30,26,30,26), Any)
 SetUnitStatus(Annihilator1, BadStatus, 0x33)//3(!) turns of status 3 (silence)

@@ -58,8 +58,8 @@ POIN /*Proc_Bane*/ DownWithArch CombatArt_Lethality	//skills that set damage to 
 POIN Proc_CapDamage	//check that damage is not over cap
 
 POIN DullahanCost
-POIN Proc_Foresight Proc_Miracle Proc_Miracullahan Proc_Mercy Proc_MorningStar Proc_Aegis Proc_Pavise Proc_GreatShield 	//skills that set damage to 0 or lower it
-
+POIN Proc_Foresight Proc_Miracle Proc_Miracullahan Proc_Mercy Proc_Aegis Proc_Pavise Proc_GreatShield 	//skills that set damage to 0 or lower it
+//POIN Proc_MorningStar
 POIN Proc_StealHP 
 
 #ifndef COMBAT_ARTS

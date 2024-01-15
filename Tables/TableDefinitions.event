@@ -64,7 +64,7 @@
   #define AthosLock 0x00200000
 #endif
 #define PassiveBoosts 0x00800000
-
+#define DurabilityRecharge 0x00200000
 // Weapon Effect
 #define NoEffect 0x0
 #define PoisonEffect 0x1
@@ -121,7 +121,7 @@
   #define UnlockLock3 0x40000000
   #define UnlockLock4 0x80000000
 #endif
-
+#define TheyExist 0x80000000
 // Affinity
 #define NoAffinity 0
 #define FireAffinity 1

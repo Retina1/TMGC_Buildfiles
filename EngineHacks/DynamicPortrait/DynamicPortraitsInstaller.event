@@ -161,7 +161,17 @@ BYTE  Cassius
 BYTE  AxePal
 //Jeff
 SHORT 0x0013
-SHORT 0x0103 //mask
+SHORT 0x013f
+SHORT JeffUnmaskFlag
+BYTE  Jeff
+BYTE  Thief
+SHORT 0x0013
+SHORT 0x0140
+SHORT JeffUnmaskFlag
+BYTE  Jeff
+BYTE  Assassin
+SHORT 0x0013
+SHORT 0x0103
 SHORT 0x0000
 BYTE  Jeff
 BYTE  Assassin

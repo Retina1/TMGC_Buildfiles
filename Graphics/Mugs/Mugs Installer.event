@@ -191,6 +191,14 @@ ALIGN 4
 JeffPromoMug:
 #incbin "dmps/JeffPromo.dmp"
 setMugEntry(0x103,JeffPromoMug,3,5,3,3)
+ALIGN 4
+JeffUnmaskedMug:
+#incbin "dmps/JeffUnmasked.dmp"
+setMugEntry(0x13f,JeffUnmaskedMug,3,5,3,3)
+ALIGN 4
+JeffUnmaskedPromoMug:
+#incbin "dmps/JeffUnmaskedPromo.dmp"
+setMugEntry(0x140,JeffUnmaskedPromoMug,3,5,3,3)
 
 ALIGN 4
 EmileMug:

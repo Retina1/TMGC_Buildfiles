@@ -24,6 +24,7 @@ enum text_colors {
     // TEXT_COLOR_TALK_...
 };
 
+extern u8 gHitCountRAMAddress;
 extern u8 PerChapterItemsList[];
 int GetBattleUnitHitCount(struct BattleUnit* attacker);
 s8 BattleGenerateHit(struct BattleUnit* attacker, struct BattleUnit* defender);
@@ -37,6 +38,10 @@ u16 GetItemAfterUse(int item) {
 	int i = 0;
 	while(PerChapterItemsList[i] != 0) {
 		if(GetItemIndex(item) == PerChapterItemsList[i]) {
+			    if (item < (1 << 8))
+				{
+					item = GetItemIndex(item);
+				}
 			return item;
 		}
 		i++;
@@ -49,16 +54,18 @@ u16 GetItemAfterUse(int item) {
 }
 
 s8 BattleGenerateRoundHits(struct BattleUnit* attacker, struct BattleUnit* defender) {
-    int i, count;
+    int i;
     u16 attrs; // NOTE: this is a bug! attrs are 19 bits in FE8 (they're 16 bits in previous games)
 
     if (GetItemUses(attacker->weapon) <= 0)
         return FALSE;
 
     attrs = gBattleHitIterator->attributes;
-    count = GetBattleUnitHitCount(attacker);
+    gHitCountRAMAddress = GetBattleUnitHitCount(attacker);
 
-    for (i = 0; i < count; ++i) {
+//	gHitCountRAMAddress = count;
+
+    for (i = 0; i < gHitCountRAMAddress; ++i) {
         gBattleHitIterator->attributes |= attrs;
 
         if (BattleGenerateHit(attacker, defender))

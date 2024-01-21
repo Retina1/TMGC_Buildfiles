@@ -133,6 +133,10 @@ IfNoSelectedGoto(0x999)
 				IfNoSelectedGoto(0x996)
 				ENUT PressTurnModeFlag
 				LABEL 0x996
+				SystemText(DeploymentCutModePrompt)
+				IfNoSelectedGoto(0x995)
+				ENUT HHMDeploymentFlag
+				LABEL 0x995
 LABEL 0x999
 ASMC prCallGrowthMenu+1
 SVAL 0x1 0x1
@@ -200,7 +204,7 @@ ENUT AllUnitsMustEscapeFlag
 ENUT LordMustEscapeLastFlag
 SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 5, Any, Any, Brigand, Any, Any)
 SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 6, Any, Any, Bruiser, Any, Any)
-AltOST(S_FootstepsOfFate,S_FootstepsOfFate,S_FootstepsOfFate)
+//AltOST(S_FootstepsOfFate,S_FootstepsOfFate,S_FootstepsOfFate)
 SystemText(GameIntroText)
 EndEvent
 

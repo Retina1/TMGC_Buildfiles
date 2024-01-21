@@ -203,6 +203,7 @@ POP
 //$030017c5 mult
 //$030017c6 div
 //$030017c7 add
+#define gHitCountRAMAddress $030017c4
 #define gMultRAMAddress $030017c5
 #define gDivRAMAddress $030017c6
 #define gAddRAMAddress $030017c7
@@ -211,6 +212,7 @@ POP
 #define EpilogueSaveFlag 0xa6
 
 #define JeffUnmaskFlag 0xa5
+#define HHMDeploymentFlag 0xa4
 
 //track bargain flags, use base flags when possible to save globals
 //ch4

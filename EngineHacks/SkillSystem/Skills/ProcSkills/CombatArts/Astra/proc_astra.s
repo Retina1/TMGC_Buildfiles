@@ -7,6 +7,7 @@
 .equ AstraID, SkillTester+4
 .equ d100Result, 0x802a52c
 .equ recurse_round, 0x802b83c
+.equ gHitCountRAMAddress, 0x030017c4
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
 mov r4, r0 @attacker
@@ -111,11 +112,10 @@ ldrb    r0, AstraID
 strb    r0,[r6,#4] @save the thing
 
 @now add the number of rounds - 
-mov r1, #0x38
-mov r2, sp
-ldr r0, [r2,r1] @location of number of rounds on the stack... hopefully
-add r0, #4
-str r0, [r2,r1]
+ldr	r1, =gHitCountRAMAddress 
+ldrb r2,[r1,#0x0]
+add 	r2, #4
+strb r2,[r1,#0x0]
 
 @HERES THE TRICKY BIT: UPDATE A NEW ROUND OF BATTLE AND SET THE OFFENSIVE SKILL FLAG
 mov r4, r6

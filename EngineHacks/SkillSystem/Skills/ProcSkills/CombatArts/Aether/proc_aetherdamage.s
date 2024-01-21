@@ -7,6 +7,7 @@
 .equ AetherID, SkillTester+4
 .equ d100Result, 0x802a52c
 .equ recurse_round, 0x802b83c
+.equ gHitCountRAMAddress, 0x030017c4
 
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -81,11 +82,10 @@ ldrb r0, AetherID
 strb r0, [r6,#4] @save the skill ID at byte #4
 
 @now add the number of rounds - 
-mov r1, #0x38
-mov r2, sp
-ldr r0, [r2,r1] @location of number of rounds on the stack... hopefully
-add r0, #1
-str r0, [r2,r1]
+ldr	r1, =gHitCountRAMAddress 
+ldrb r2,[r1,#0x0]
+add 	r2, #1
+strb r2,[r1,#0x0]
 b End
 
 SecondHit:

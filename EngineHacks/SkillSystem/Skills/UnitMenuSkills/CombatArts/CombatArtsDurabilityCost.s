@@ -66,12 +66,18 @@ and r2,r1
 mov r3,#0xFF
 and r1,r3
 
-@now we can subtract from the durability and floor at 0
+cmp r2,#0
+bgt NotZeroYet
+mov r2,#0
+b NotNegative
+
+NotZeroYet:
 sub r2,r0
 cmp r2,#0
-bgt NotNegative 
+bgt NotNegative
 mov r2,#0
-mov r1,#0
+@mov r1,#0
+b NotNegative
 
 NotNegative:
 @recombine them

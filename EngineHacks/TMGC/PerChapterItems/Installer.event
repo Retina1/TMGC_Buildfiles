@@ -1,6 +1,10 @@
 #include "PerChapterItems.lyn.event"
 
 ALIGN 4
+ConvoySize_Link:
+WORD 200
+
+ALIGN 4
 PerChapterItemsList:
 BYTE MainGauche TrueSaunion DangerPick Stormbow ForceSpike MorningStar Voulche
 BYTE 0 // terminator

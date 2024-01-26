@@ -191,6 +191,12 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define CiraweissPaletteID 0x74
 #define ArbordiaPaletteID 0x3d
 
+#define BrentsonPPaletteID 0x94
+#define HelgaPPaletteID 0x95
+#define GregoriasPPaletteID 0x96
+#define RoarkPPaletteID 0x97
+#define VulturePPaletteID 0x98
+
 //to do: unpromoted pals for promoted units, cheeky text
 setPalette(BlairUPaletteID,BlairUPalette)
 setPalette(BlairPPaletteID,BlairPPalette)
@@ -330,6 +336,8 @@ setPalette(DavelarnPaletteID,DavelarnPalette)
 setPalette(MarqueStarquePaletteID,MarqueStarquePalette)
 setPalette(BrentsonPaletteID,BrentsonPalette)
 setPalette(HelgaPaletteID,HelgaPalette)
+setPalette(BrentsonPPaletteID,BrentsonPPalette)
+setPalette(HelgaPPaletteID,HelgaPPalette)
 setPalette(MitchellPaletteID,MitchellPalette)
 setPalette(AmundsenPaletteID,AmundsenPalette)
 setPalette(ZainePaletteID,ZainePalette)
@@ -337,6 +345,7 @@ setPalette(EsmePaletteID,EsmePalette)
 setPalette(PetePaletteID,PetePalette)
 setPalette(JonasPaletteID,JonasPalette)
 setPalette(GregoriasPaletteID,GregoriasPalette)
+setPalette(GregoriasPPaletteID,GregoriasPPalette)
 setPalette(SofiaPaletteID,SofiaPalette)
 setPalette(LarondePaletteID,LarondePalette)
 setPalette(AmaraPaletteID,AmaraPalette)
@@ -344,6 +353,8 @@ setPalette(ValdenPaletteID,ValdenPalette)
 setPalette(LazarusPaletteID,LazarusPalette)
 setPalette(RoarkPaletteID,RoarkPalette)
 setPalette(VulturePaletteID,VulturePalette)
+setPalette(RoarkPPaletteID,RoarkPPalette)
+setPalette(VulturePPaletteID,VulturePPalette)
 setPalette(ParquePaletteID,ParquePalette)
 setPalette(UnknownPaletteID,UnknownPalette)
 setPalette(NicolePaletteID,NicolePalette)
@@ -579,13 +590,13 @@ SetPaletteFull(C7Hyperius,0x0,0x0,HyperiusPaletteID,SwdGen,0x0,0x0)
 SetPaletteFull(C7Alexis,AlexisUPaletteID,AxeArm,0x0,0x0,0x0,0x0)
 SetPaletteFull(C7Wilhelm,WilhelmUPaletteID,Soldier,0x0,0x0,0x0,0x0)
 
-SetPaletteSimulacrum(BossSimulacrum1,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPaletteID,LncGen)
-SetPaletteSimulacrum(BossSimulacrum2,HelgaPaletteID,WarriorF,MitchellPaletteID,Hero,AmundsenPaletteID,Bruiser,ZainePaletteID,Sorc)
+SetPaletteSimulacrum(BossSimulacrum1,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPPaletteID,LncGen)
+SetPaletteSimulacrum(BossSimulacrum2,HelgaPPaletteID,WarriorF,MitchellPaletteID,Hero,AmundsenPaletteID,Bruiser,ZainePaletteID,Sorc)
 SetPaletteSimulacrum(BossSimulacrum3,EsmePaletteID,WyvLord,PetePaletteID,Berserker,SofiaPaletteID,SorcF,AmaraPaletteID,WarriorF)
-SetPaletteSimulacrum(BossSimulacrum4,ValdenPaletteID,LncPal,GregoriasPaletteID,Berserker,MasonValkPaletteID,Valk,RoarkPaletteID,Warrior)
-SetPaletteSimulacrum(BossSimulacrum5,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPaletteID,LncGen)
-SetPaletteSimulacrum(BossSimulacrum6,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPaletteID,LncGen)
-SetPaletteSimulacrum(BossSimulacrum7,ParquePaletteID,AxePal,ParquePaletteID,SwdPal,ParquePaletteID,LncPal,BrentsonPaletteID,LncGen)
+SetPaletteSimulacrum(BossSimulacrum4,ValdenPaletteID,LncPal,GregoriasPPaletteID,Berserker,MasonValkPaletteID,Valk,RoarkPPaletteID,Warrior)
+SetPaletteSimulacrum(BossSimulacrum5,VulturePPaletteID,BowGen,NicolePaletteID,SwMastF,EddiePaletteID,Berserker,EduardoPaletteID,Warrior)
+SetPaletteSimulacrum(BossSimulacrum6,MichaelPaletteID,Sniper,EdwardPaletteID,Berserker,BungalasPaletteID,LncGen,LarsonPaletteID,Assass)
+SetPaletteSimulacrum(BossSimulacrum7,FioraPaletteID,HalberdierF,BobertPaletteID,BowPal,DavelarnPaletteID,Deserter,ReynardPaletteID,Hero)
 // I'm commenting the classes out that don't have palettes yet.
 
 ALIGN 4
@@ -924,6 +935,12 @@ ALIGN 4
 HelgaPalette:
 #incbin "Helga.dmp"
 ALIGN 4
+BrentsonPPalette:
+#incbin "BrentsonPromoted.dmp"
+ALIGN 4
+HelgaPPalette:
+#incbin "HelgaPromoted.dmp"
+ALIGN 4
 MitchellPalette:
 #incbin "Mitchell.dmp"
 ALIGN 4
@@ -948,6 +965,9 @@ ALIGN 4
 GregoriasPalette:
 #incbin "Gregorias.dmp"
 ALIGN 4
+GregoriasPPalette:
+#incbin "GregoriasPromoted.dmp"
+ALIGN 4
 SofiaPalette:
 #incbin "Sofia.dmp"
 ALIGN 4
@@ -968,6 +988,12 @@ RoarkPalette:
 ALIGN 4
 VulturePalette:
 #incbin "Vulture.dmp"
+ALIGN 4
+RoarkPPalette:
+#incbin "RoarkPromoted.dmp"
+ALIGN 4
+VulturePPalette:
+#incbin "VulturePromoted.dmp"
 ALIGN 4
 ParquePalette:
 #incbin "Parque.dmp"

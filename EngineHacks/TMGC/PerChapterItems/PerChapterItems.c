@@ -24,10 +24,65 @@ enum text_colors {
     // TEXT_COLOR_TALK_...
 };
 
+extern u8 ConvoySize_Link;
 extern u8 gHitCountRAMAddress;
 extern u8 PerChapterItemsList[];
 int GetBattleUnitHitCount(struct BattleUnit* attacker);
 s8 BattleGenerateHit(struct BattleUnit* attacker, struct BattleUnit* defender);
+
+void RefreshItemsASMC(Proc* proc) {
+	u8 target = gEventSlot[1];
+	
+	int unitID = 1;
+	int maxCount = 62;
+	
+	while(unitID < maxCount) {
+		struct Unit* curUnit = GetUnit(unitID);
+		if(target != 0) {
+			for(int j = 0; j < GetUnitItemCount(curUnit); j++) {
+				u16 curItem = curUnit->items[j];
+				if(GetItemIndex(curItem) == target) {
+					curUnit->items[j] = MakeNewItem(GetItemIndex(curItem));
+				}
+			}			
+		}
+		else {
+			for(int j = 0; j < GetUnitItemCount(curUnit); j++) {
+				u16 curItem = curUnit->items[j];
+				int i = 0;
+				while(PerChapterItemsList[i] != 0) {
+					if(GetItemIndex(curItem) == PerChapterItemsList[i]) {
+						curUnit->items[j] = MakeNewItem(GetItemIndex(curItem));
+					}
+					i++;
+				}
+			}
+		}
+		unitID++;
+	}
+	
+	u16 * convoy = GetConvoyItemArray();
+	if(target != 0) {
+		for(int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
+			if (target == GetItemIndex(*convoy)) {
+				*convoy = MakeNewItem(GetItemIndex(*convoy));
+			}
+			convoy++;
+		}
+	}
+	else {
+		for(int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
+			int j = 0;
+			while(PerChapterItemsList[j] != 0) {
+				if(PerChapterItemsList[j] == GetItemIndex(*convoy)) {
+					*convoy = MakeNewItem(GetItemIndex(*convoy));
+				}
+				j++;
+			}
+			convoy++;
+		}		
+	}
+}
 
 u16 GetItemAfterUse(int item) {
     if (GetItemAttributes(item) & IA_UNBREAKABLE)

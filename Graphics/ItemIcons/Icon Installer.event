@@ -10,6 +10,28 @@ NewItemIcons:
 PUSH 
 // Individual Icons go here
 ALIGN 4
+ItemIconEntry(ArenaSwordIcon)
+#incbin "Arena/ArenaSword.dmp"
+ALIGN 4
+ItemIconEntry(ArenaLanceIcon)
+#incbin "Arena/ArenaLance.dmp"
+ALIGN 4
+ItemIconEntry(ArenaAxeIcon)
+#incbin "Arena/ArenaAxe.dmp"
+ALIGN 4
+ItemIconEntry(ArenaBowIcon)
+#incbin "Arena/ArenaBow.dmp"
+ALIGN 4
+ItemIconEntry(ArenaAnimaIcon)
+#incbin "Arena/ArenaAnima.dmp"
+ALIGN 4
+ItemIconEntry(ArenaLightIcon)
+#incbin "Arena/ArenaLight.dmp"
+ALIGN 4
+ItemIconEntry(ArenaDarkIcon)
+#incbin "Arena/ArenaDark.dmp"
+
+ALIGN 4
 ItemIconEntry(GreatSwallowIcon)
 #incbin "GreatSwallow.dmp"
 ALIGN 4

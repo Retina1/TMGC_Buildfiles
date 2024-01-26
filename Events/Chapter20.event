@@ -407,6 +407,7 @@ LABEL 0x2
 FADI 0x3C
 TILECHANGE 0x5
 DifficultyReinforcements(C20Chamber4,C20Chamber4,C20Chamber4Lunatic)
+SetUnitStatusAll(Dragon*0x100+Dragon, UnitPointer, 0x8805AD8, Any, EnemyArmy, AnyClass, AnyRange, AnyItem)
 CLEAN
 FADU 0x3c
 EndEvent

@@ -28,6 +28,8 @@
 #define SFXKillUnit(unit) "SET_SOMETHING unit; DISA unit"
 #define DisaIfDead(unit) "CHECK_ALIVE unit; BNE unit 0xc 0x0; DISA unit; LABEL unit"
 
+#define RefreshDurabilityItems "SVAL 1 0; ASMC RefreshItemsASMC|1"
+
 #define Location(textid) "BROWNBOXTEXT textid [8,8]"
 #define LocationText(bgid,textid,labelid) "SetBackground(bgid); Location(labelid) ; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
 #define LocationText(bgid,textid,labelid,musicid) "MUSC 0x0; SetBackground(bgid); Location(labelid) ; MUSC musicid; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
@@ -42,9 +44,9 @@
 #define DeathBranchText(char1,char2,deadmus,alivemus,background,bothalive,char1dead,char2dead,bothdead) "CHECK_ALIVE char1; BNE 0x2 0xC 0x0; CHECK_ALIVE char2; BNE 0x3 0xC 0x0; MUSC deadmus; CleanTextNoMap(background,bothdead); GOTO 0x5; LABEL 0x3; MUSC deadmus; CleanTextNoMap(background,char1dead); GOTO 0x5; LABEL 0x2; CHECK_ALIVE char2; BNE 0x4 0xC 0x0; MUSC deadmus; CleanTextNoMap(background,char2dead); GOTO 0x5; LABEL 0x4; MUSC alivemus; CleanTextNoMap(background,bothalive); LABEL 0x5"
 #define PreChoiceToggle "EVBIT_MODIFY 4"
 #define PostChoiceToggle "EVBIT_F 5; EVBIT_F 4; EVBIT_F 3; EVBIT_F 2; EVBIT_F 1; EVBIT_F 0"
-#define GotoPrepScreen "LABEL 0x6500; CALL $591FD8; ASMC ASMCCheckBaseConvo|1; BEQ 0x6501 0xc 0x0; FADU 16; PreChoiceToggle; SystemText(BaseConvoConfirm); PostChoiceToggle; IfNoSelectedGoto(0x6500); LABEL 0x6501; EndEvent"
+#define GotoPrepScreen "RefreshDurabilityItems; LABEL 0x6500; CALL $591FD8; ASMC ASMCCheckBaseConvo|1; BEQ 0x6501 0xc 0x0; FADU 16; PreChoiceToggle; SystemText(BaseConvoConfirm); PostChoiceToggle; IfNoSelectedGoto(0x6500); LABEL 0x6501; EndEvent"
 
-#define GotoPrepScreenNoBaseCheck "ASMC DifficultySetterByOptionBitASMC|1; CALL $591FD8; EndEvent"
+#define GotoPrepScreenNoBaseCheck "RefreshDurabilityItems; ASMC DifficultySetterByOptionBitASMC|1; CALL $591FD8; EndEvent"
 
 #define HoratioMusicChooser "CHECK_EVENTID HoratioMusicFlag; BNE 0x666 0xc 0x0; MUSC S_Ameno; GOTO 0x667; LABEL 0x666; MUSC S_HisWorld; LABEL 0x667"
 

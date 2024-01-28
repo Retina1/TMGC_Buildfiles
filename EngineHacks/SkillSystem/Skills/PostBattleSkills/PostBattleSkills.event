@@ -21,6 +21,7 @@ Lifetaker:
 POIN SkillTester
 WORD LifetakerID
 POIN LifetakerEvent
+ALIGN 4
 #include "Lifetaker/LifetakerEvent.event"
 
 ALIGN 4
@@ -29,6 +30,7 @@ Dullahan:
 POIN SkillTester
 WORD DullahanID
 POIN DullahanEvent
+ALIGN 4
 #include "Dullahan/DullahanEvent.event"
 
 ALIGN 4
@@ -43,6 +45,7 @@ Fury:
 POIN SkillTester
 WORD FuryID
 POIN GaleforceEvent
+ALIGN 4
 #include "Fury/FuryEvent.event"
 
 ALIGN 4
@@ -66,6 +69,7 @@ Despoil:
 POIN SkillTester
 WORD DespoilID
 POIN DespoilEvent
+ALIGN 4
 #include "Despoil/DespoilEvent.event"
 
 ALIGN 4
@@ -75,6 +79,7 @@ POIN SkillTester
 WORD SavageBlowID
 POIN SavageBlowEvent
 POIN GetUnitsInRange
+ALIGN 4
 #include "SavageBlow/SavageBlowEvent.event"
 
 ALIGN 4
@@ -84,6 +89,7 @@ POIN SkillTester
 WORD BreathOfLifeID
 POIN BreathOfLifeEvent
 POIN GetUnitsInRange
+ALIGN 4
 #include "BreathOfLife/BreathOfLifeEvent.event"
 
 ALIGN 4
@@ -92,6 +98,7 @@ Galeforce:
 POIN SkillTester
 WORD GaleforceID
 POIN GaleforceEvent
+ALIGN 4
 #include "Galeforce/GaleforceEvent.event"
 
 ALIGN 4
@@ -113,6 +120,7 @@ ReMove:
 POIN SkillTester
 WORD ReMoveID
 POIN ReMoveEvent
+ALIGN 4
 #include "ReMove/ReMoveEvent.event"
 
 ALIGN 4
@@ -121,6 +129,7 @@ Powerstaff:
 POIN SkillTester
 WORD PowerstaffID
 POIN PowerstaffEvent
+ALIGN 4
 #include "Powerstaff/PowerstaffEvent.event"
 
 #include "Cultured/Cultured.event"

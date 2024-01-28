@@ -33,6 +33,18 @@ dalst
 //fix 55 (flute 73), 72 (oboe 68)
 // 1 - TEST SONG TO MAKE SURE THE INSTALLER WORKS-- DO NOT USE THIS IN YOUR GAME; IT DOESN'T SOUND GOOD
 {
+#include "EarlyMysticMarch.event"
+SongTable(S_EarlyMysticMarch,EarlyMysticMarch,1)
+}
+{
+#include "BeatOfTheTerror.event"
+SongTable(S_BeatOfTheTerror,BeatOfTheTerror,1)
+}
+{
+#include "Ecstasy.event"
+SongTable(S_Ecstasy,Ecstasy,1)
+}
+{
 #include "MrExplorer.event"
 SongTable(S_MrExplorer,MrExplorer,1)
 }

@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song0185_grp, voicegroup000
-	.equ	song0185_pri, 0
-	.equ	song0185_rev, 0
-	.equ	song0185_mvl, 127
-	.equ	song0185_key, 0
-	.equ	song0185_tbs, 1
-	.equ	song0185_exg, 0
-	.equ	song0185_cmp, 1
+	.equ	BeatOfTheTerror_grp, voicegroup000
+	.equ	BeatOfTheTerror_pri, 0
+	.equ	BeatOfTheTerror_rev, 0
+	.equ	BeatOfTheTerror_mvl, 127
+	.equ	BeatOfTheTerror_key, 0
+	.equ	BeatOfTheTerror_tbs, 1
+	.equ	BeatOfTheTerror_exg, 0
+	.equ	BeatOfTheTerror_cmp, 1
 
 	.section .rodata
-	.global	song0185
+	.global	BeatOfTheTerror
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0185_001:
+BeatOfTheTerror_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
- .byte   TEMPO , 102*song0185_tbs/2
+ .byte   KEYSH , BeatOfTheTerror_key+0
+ .byte   TEMPO , 102*BeatOfTheTerror_tbs/2
  .byte   VOICE , 18
- .byte   VOL , 57*song0185_mvl/mxv
+ .byte   VOL , 57*BeatOfTheTerror_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -455,11 +455,11 @@ Label_015704FC:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0185_002:
+BeatOfTheTerror_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , BeatOfTheTerror_key+0
  .byte   VOICE , 28
- .byte   VOL , 89*song0185_mvl/mxv
+ .byte   VOL , 89*BeatOfTheTerror_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N12 ,As1 ,v100
  .byte   W12
@@ -751,11 +751,11 @@ Label_01570693:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0185_003:
+BeatOfTheTerror_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , BeatOfTheTerror_key+0
  .byte   VOICE , 75
- .byte   VOL , 31*song0185_mvl/mxv
+ .byte   VOL , 31*BeatOfTheTerror_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -1277,11 +1277,11 @@ Label_01570919:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0185_004:
+BeatOfTheTerror_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , BeatOfTheTerror_key+0
  .byte   VOICE , 124
- .byte   VOL , 40*song0185_mvl/mxv
+ .byte   VOL , 40*BeatOfTheTerror_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #04 @001   ----------------------------------------
@@ -1542,17 +1542,17 @@ Label_0170F496:
 @******************************************************@
 	.align	2
 
-song0185:
+BeatOfTheTerror:
 	.byte	4	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0185_pri	@ Priority
-	.byte	song0185_rev	@ Reverb.
+	.byte	BeatOfTheTerror_pri	@ Priority
+	.byte	BeatOfTheTerror_rev	@ Reverb.
     
-	.word	song0185_grp
+	.word	BeatOfTheTerror_grp
     
-	.word	song0185_001
-	.word	song0185_002
-	.word	song0185_003
-	.word	song0185_004
+	.word	BeatOfTheTerror_001
+	.word	BeatOfTheTerror_002
+	.word	BeatOfTheTerror_003
+	.word	BeatOfTheTerror_004
 
 	.end

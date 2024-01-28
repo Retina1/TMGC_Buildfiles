@@ -6,8 +6,8 @@
 .equ DullahanID, SkillTester+4
 .equ DullahanEvent, DullahanID+4
 .thumb
-GetEquippedWeapon = 0x08016B58+1
-push	{r4-r7, lr}
+
+push	{lr}
 
 @check if attacked this turn
 ldrb 	r0, [r6,#0x11]	@action taken this turn
@@ -19,15 +19,9 @@ ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
 cmp	r0, r1		@check if same character
 bne	End
 
-mov r7, #0  // rerun flag
-
-SkillStart:
-push {r4, r5, r7}
-
-@check if dead
 ldrb	r0, [r4, #0x13]	@currhp
 cmp	r0, #0
-bne	SkillEnd
+bne	End
 
 @check if not rescuing
 push {r2}
@@ -37,7 +31,7 @@ pop {r2}
 mov	r1, #0x10
 and	r0, r1
 cmp	r0, #0x00
-bne	SkillEnd
+bne	End
 
 @check for skill
 mov	r0, r4
@@ -46,14 +40,14 @@ ldr	r3, SkillTester
 mov	lr, r3
 .short	0xf800
 cmp	r0,#0x00
-beq	SkillEnd
+beq	End
 @check for tension
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
 mov r0,#0xb4 @holy mantle flag
 .short 0xF800
 cmp r0,#1
-beq	SkillEnd
+beq	End
 
 ldrb r0, [r4, #0x12] @maxhp
 strb r0, [r4, #0x13] @currhp
@@ -72,7 +66,6 @@ add	r3, r0
 ldrb	r0, [r4,#0x10]		@load x coordinate of character
 add	r3, r0
 ldr	r1,=#0x30004E4		@and store them for the event engine
-ldr r7, [r1]
 
 str	r3, [r1]
 
@@ -82,22 +75,7 @@ ldr	r0, DullahanEvent	@this event is just "teleport animation on current charact
 mov	r1, #0x01		@0x01 = wait for events
 .short	0xF800
 
-str r7, [r1]
-
-
-SkillEnd:
-pop {r4, r5, r7}
-cmp r7, #0  // swap r4&r5, rerun
-bne End
-mov r7, r4
-mov r4, r5
-mov r5, r7
-mov r7, #1  // rerun
-b SkillStart
-
-
 End:
-pop {r4-r7}
 pop	{r0}
 bx	r0
 .ltorg

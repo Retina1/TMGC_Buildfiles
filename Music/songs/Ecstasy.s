@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song0185_grp, voicegroup000
-	.equ	song0185_pri, 0
-	.equ	song0185_rev, 0
-	.equ	song0185_mvl, 127
-	.equ	song0185_key, 0
-	.equ	song0185_tbs, 1
-	.equ	song0185_exg, 0
-	.equ	song0185_cmp, 1
+	.equ	Ecstasy_grp, voicegroup000
+	.equ	Ecstasy_pri, 0
+	.equ	Ecstasy_rev, 0
+	.equ	Ecstasy_mvl, 127
+	.equ	Ecstasy_key, 0
+	.equ	Ecstasy_tbs, 1
+	.equ	Ecstasy_exg, 0
+	.equ	Ecstasy_cmp, 1
 
 	.section .rodata
-	.global	song0185
+	.global	Ecstasy
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0185_001:
+Ecstasy_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , Ecstasy_key+0
 Label_0158A93E:
- .byte   TEMPO , 170*song0185_tbs/2
+ .byte   TEMPO , 170*Ecstasy_tbs/2
  .byte   VOICE , 18
- .byte   VOL , 36*song0185_mvl/mxv
+ .byte   VOL , 36*Ecstasy_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -279,12 +279,12 @@ Label_0158AA2B:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0185_002:
+Ecstasy_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , Ecstasy_key+0
 Label_0158A386:
  .byte   VOICE , 28
- .byte   VOL , 84*song0185_mvl/mxv
+ .byte   VOL , 84*Ecstasy_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N07 ,En0 ,v100
  .byte   W08
@@ -847,12 +847,12 @@ Label_0158A52D:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0185_003:
+Ecstasy_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , Ecstasy_key+0
 Label_01589E32:
  .byte   VOICE , 38
- .byte   VOL , 40*song0185_mvl/mxv
+ .byte   VOL , 40*Ecstasy_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -1459,12 +1459,12 @@ Label_01589FC5:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0185_004:
+Ecstasy_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , Ecstasy_key+0
 Label_0158A65A:
  .byte   VOICE , 104
- .byte   VOL , 38*song0185_mvl/mxv
+ .byte   VOL , 38*Ecstasy_mvl/mxv
  .byte   PAN , c_v-30
  .byte   N07 ,Bn1 ,v060
  .byte   W08
@@ -2002,12 +2002,12 @@ Label_0158A8A0:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0185_005:
+Ecstasy_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , Ecstasy_key+0
 Label_0158AB06:
  .byte   VOICE , 124
- .byte   VOL , 47*song0185_mvl/mxv
+ .byte   VOL , 47*Ecstasy_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N07 ,Cn1 ,v116
  .byte   N07 ,Fs1 ,v104
@@ -2874,12 +2874,12 @@ Label_0158AEFE:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song0185_006:
+Ecstasy_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , Ecstasy_key+0
 Label_015894AA:
  .byte   VOICE , 30
- .byte   VOL , 18*song0185_mvl/mxv
+ .byte   VOL , 18*Ecstasy_mvl/mxv
  .byte   PAN , c_v+30
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -3141,19 +3141,19 @@ Label_0158959B:
 @******************************************************@
 	.align	2
 
-song0185:
+Ecstasy:
 	.byte	6	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0185_pri	@ Priority
-	.byte	song0185_rev	@ Reverb.
+	.byte	Ecstasy_pri	@ Priority
+	.byte	Ecstasy_rev	@ Reverb.
     
-	.word	song0185_grp
+	.word	Ecstasy_grp
     
-	.word	song0185_001
-	.word	song0185_002
-	.word	song0185_003
-	.word	song0185_004
-	.word	song0185_005
-	.word	song0185_006
+	.word	Ecstasy_001
+	.word	Ecstasy_002
+	.word	Ecstasy_003
+	.word	Ecstasy_004
+	.word	Ecstasy_005
+	.word	Ecstasy_006
 
 	.end

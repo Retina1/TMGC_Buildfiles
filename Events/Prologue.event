@@ -169,6 +169,10 @@ SystemText(ReversePrompt)
 BNE 0x666 0xC 0x1
 ENUT 0xAF
 LABEL 0x666
+SystemText(RNModePrompt)
+IfNoSelectedGoto(0x994)
+ENUT Enable1RNFlag
+LABEL 0x994
 		SystemText(SetEnemyGrowthsPrompt)
 		IfNoSelectedGoto(0x668)
 		ENUT CustomGrowthsFlag

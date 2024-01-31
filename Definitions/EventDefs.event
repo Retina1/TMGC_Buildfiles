@@ -9,7 +9,7 @@
 #define CleanText(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; ClearBackgroundSmooth"
 #define GiveItem(item) "SMOV 0x3 item; GIVEITEMTO 0xFFFF;"
 #define GiveItem(item,character) "SMOV 0x3 item; GIVEITEMTO character;"
-#define Narration(bgid,textid) "SetBackground(bgid); STAL 120; NarrationText(textid); MUSC 0x0; FADI 0x3c"
+#define Narration(bgid,textid) "EVBIT_T 8; SetBackground(bgid); STAL 120; NarrationText(textid); MUSC 0x0; FADI 0x3c"
 #define CamOn "EVBIT_T 9"
 #define CamOff "EVBIT_F 9"
 #define StartGameOver "ASMC 0x800D391" // Game over ASMC 

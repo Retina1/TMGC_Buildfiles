@@ -98,6 +98,7 @@ ORG ConvoChapterEntry+(4*0xFF)
 
 ALIGN 4
 PrologueConversations:
+ConversationEntry(EC0Open0,PrologueColdOpening,BlankCG,Prologue)
 ConversationEntry(EC0Open1,Prologue_Opening,PathCG,Prologue)
 ConversationEntry(EC0RecruitKenneth,PKennethText,PathCG,Prologue,RecruitmentTheme)
 ConversationEntry(EC0BlairKenneth,PKennethText,PathCG,Prologue)

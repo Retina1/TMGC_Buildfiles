@@ -159,6 +159,9 @@ UNIT
 C26Easy:
 UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [16,7] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
 
+//annihilationers
+UNIT Annihilator1 Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT Annihilator2 Sage 0x0 Level(18,Enemy,1) [19,30] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 UNIT Dalst LightM 0x0 Level(20,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Dalst LightM 0x0 Level(20,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 //funny blocks
@@ -204,15 +207,15 @@ UNIT Dalst Hero 0x0 Level(14,Enemy,1) [29,14] 0x0 0x0 0x0 0x0 [Tomahawk] AttackI
 UNIT Dalst Halberdier 0x0 Level(14,Enemy,1) [4,17] 0x0 0x0 0x0 0x0 [BraveLance] AttackInRangeAI
 UNIT Dalst Halberdier 0x0 Level(14,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
 
-//annihilationers
-UNIT Annihilator1 Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
-UNIT Annihilator2 Sage 0x0 Level(18,Enemy,1) [19,30] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [Radiance,Trisagion,Knoggelvi,Starfall] NeverMoveAI
 UNIT
 
 C26Normal:
 UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [16,7] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
 
+//annihilationers
+UNIT Annihilator1 Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT Annihilator2 Sage 0x0 Level(18,Enemy,1) [19,30] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] NeverMoveAI
 //funny blocks
@@ -260,14 +263,15 @@ UNIT Dalst Hero 0x0 Level(14,Enemy,1) [29,14] 0x0 0x0 0x0 0x0 [Tomahawk] AttackI
 UNIT Dalst Halberdier 0x0 Level(14,Enemy,1) [4,17] 0x0 0x0 0x0 0x0 [BraveLance] AttackInRangeAI
 UNIT Dalst Halberdier 0x0 Level(14,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
 
-//annihilationers
-UNIT Annihilator1 Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
-UNIT Annihilator2 Sage 0x0 Level(18,Enemy,1) [19,30] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [Bolting,Resire,Nocturne,Starfall] NeverMoveAI
 UNIT
 
 C26Hard:
 UNIT Olsen AssassF 0x0 Level(18,Enemy,1) [19,25] 0x0 0x0 0x0 0x0 [Shamshir] NoAI
+
+//annihilationers
+UNIT Annihilator1 Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
+UNIT Annihilator2 Sage 0x0 Level(18,Enemy,1) [19,30] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 
 UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [13,19] 0x0 0x0 0x0 0x0 [MorningStar,Scripture] NeverMoveAI
 UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar,Scripture] NeverMoveAI
@@ -318,9 +322,6 @@ UNIT Dalst Hero 0x0 Level(14,Enemy,1) [29,14] 0x0 0x0 0x0 0x0 [Tomahawk] AttackI
 UNIT Dalst Halberdier 0x0 Level(14,Enemy,1) [4,17] 0x0 0x0 0x0 0x0 [BraveLance] AttackInRangeAI
 UNIT Dalst Halberdier 0x0 Level(14,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
 
-//annihilationers
-UNIT Annihilator1 Sage 0x0 Level(18,Enemy,1) [19,19] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
-UNIT Annihilator2 Sage 0x0 Level(18,Enemy,1) [19,30] 0x0 0x0 0x0 0x0 [Annihilation] NeverMoveAI
 UNIT Ciraweiss SageF 0x0 Level(18,Enemy,1) [19,31] 0x0 0x0 0x0 0x0 [Galewind,Purge,Nosferatu,Starfall] NeverMoveAI
 UNIT
 

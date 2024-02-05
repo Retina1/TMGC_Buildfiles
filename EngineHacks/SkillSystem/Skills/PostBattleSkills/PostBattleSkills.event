@@ -25,6 +25,15 @@ ALIGN 4
 #include "Lifetaker/LifetakerEvent.event"
 
 ALIGN 4
+ArdentMarch:
+#incbin "ArdentMarch/ArdentMarch.dmp"
+POIN SkillTester
+WORD ArdentMarchID
+POIN ArdentMarchEvent
+ALIGN 4
+#include "ArdentMarch/ArdentMarch.event"
+
+ALIGN 4
 Dullahan:
 #incbin "Dullahan/Dullahan.dmp"
 POIN SkillTester

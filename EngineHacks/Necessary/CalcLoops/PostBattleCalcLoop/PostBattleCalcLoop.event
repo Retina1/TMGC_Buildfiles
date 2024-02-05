@@ -18,7 +18,7 @@ PostCombatSkills: //I like having savage blow as the first one because it makes 
 //POIN GroupAI
 POIN InitSkillBuffers //Refresh skill buffers so freshly learned post-battle skills can apply
 POIN SavageBlow BreathOfLife Despoil Lifetaker Dullahan Fury PoisonStrike GrislyWound//lifetaker should probably go after any messages because it can mess with the palette a bit
-POIN PostCombatTension PostCombatHeat PostCombatHeatDrain AimPostBattle EarthPowerPostcombat
+POIN PostCombatTension PostCombatHeat PostCombatHeatDrain AimPostBattle ArdentMarch EarthPowerPostcombat
 POIN Canto CantoPlus Galeforce ReMove Powerstaff CulturedPostCombat /*Gridmaster*/ //this order for canto and friends is the only one I tested
 WORD 0 //Terminator
 

@@ -214,6 +214,7 @@ POP
 #define JeffUnmaskFlag 0xa5
 #define HHMDeploymentFlag 0xa4
 #define Enable1RNFlag 0xa3
+#define ArdentMarchFlag 0xa2
 
 //track bargain flags, use base flags when possible to save globals
 //ch4
@@ -243,6 +244,8 @@ POP
 #define PivotScrollFlag BaseFlag5
 #define RepoScrollFlag BaseFlag6
 #define SmiteScrollFlag BaseFlag7
+//ch27
+#define ArdentMarchScrollFlag BaseFlag3
 
 //movement types
 #define LordMovement 0x880B808

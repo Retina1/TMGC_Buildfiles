@@ -4,7 +4,7 @@
 #include "_Common.event"
 ALIGN 4
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prNullifyIfGuardAI prArmorMarchCheck prPushMov prMaxFifteen prBiasedQuiver
+	POIN prAddUnitBaseMov prAddUnitMovBonus (prGetItemMovBonus-1) prItemPassiveMov prRallyMov prSkillCelerity prSkillPoise prNullifyIfGuardAI prSkillArdentMarchMin prSkillArdentMarchMax prPushMov prMaxFifteen prBiasedQuiver
 	#ifdef STAIRS_ASM
 	POIN StairsMoveDebuff-1
 	#endif
@@ -44,6 +44,22 @@ prRallyMov:
 prBiasedQuiver:
 	rIfUnitHasSkill(BiasedQuiverID)
 		rConstant(0)
+		
+prSkillArdentMarchMin:
+	rIfUnitHasSkill(ArdentMarchID)
+		rIfNot(CheckMyFlag)
+			rConstant(1)
+
+prSkillArdentMarchMax:
+	rIfUnitHasSkill(ArdentMarchID)
+		rIf(CheckMyFlag)
+			rConstant(15)
+
+CheckMyFlag:
+  rForConstant(ArdentMarchFlag)
+    // CheckEventId
+    rCallExternal(0x8083da8)
+
 
 ALIGN 4
 prAddEquipMov:

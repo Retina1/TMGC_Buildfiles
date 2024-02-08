@@ -24,6 +24,12 @@ TurnBasedEvents:
 //blade guy hunts you down if both lords have capped sword rank
 //deploy all possible viridians plus clarque for valeria
 TurnEventPlayer(0x0,C27ValeriaCheck,1)
+TurnEventPlayer(0x0,C27FlagReset,1,255)
+TurnEventPlayer(0x7,C27AreaTrapNorth,1,255)
+TurnEventPlayer(0x8,C27AreaTrapEast,1,255)
+TurnEventPlayer(0x9,C27AreaTrapWest,1,255)
+TurnEventPlayer(0xa,C27AreaTrapCenter1,1,255)
+TurnEventPlayer(0xb,C27AreaTrapCenter2,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -43,6 +49,14 @@ MiscBasedEvents:
 //side entrance - infantry from south/buildings, murder the hollace
 //water entrance - fliers throughout city, more hollacing
 //center city - pawns from west/south/hall
+AreaEvent(BaseFlag4,C27AreaTriggerNorth,18,15,22,23)
+AreaEvent(BaseFlag5,C27AreaTriggerEast,26,20,31,34)
+AreaEvent(BaseFlag6,C27AreaTriggerWest,1,10,4,18)
+AreaEvent(BaseFlag6,C27AreaTriggerWest,0,6,10,16)
+AreaEvent(BaseFlag7,C27AreaTriggerCenter1,11,19,17,25)
+AreaEvent(BaseFlag7,C27AreaTriggerCenter1,18,24,25,34)
+AreaEvent(BaseFlag8,C27AreaTriggerCenter2,0,19,10,34)
+AreaEvent(BaseFlag8,C27AreaTriggerCenter2,11,26,17,34)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -172,6 +186,166 @@ UNIT MagElite SageF 0x0 Level(15,Enemy,1) [1,33] 0x0 0x0 0x0 0x0 [Bolting,EarthP
 UNIT Arbordia Baron 0x0 Level(20,Enemy,1) [0,29] 0x0 0x0 0x0 0x0 [Nocturne,MasterLance,RealLastShield] NeverMoveAI
 UNIT
 
+//cavs south
+C27NorthGroup:
+UNIT Dalst AxePal 0x0 Level(12,Enemy,1) [4,34] 0x0 0x0 0x1 REDA4R33 [Tomahawk] NoAI
+UNIT Dalst LncPal 0x0 Level(12,Enemy,1) [5,34] 0x0 0x0 0x1 REDA5R32 [Spear] NoAI
+UNIT Dalst AxePal 0x0 Level(12,Enemy,1) [6,34] 0x0 0x0 0x1 REDA6R33 [GildedAxe] NoAI
+UNIT
+C27NorthGroupB:
+UNIT Dalst SwdPal 0x0 Level(12,Enemy,1) [19,34] 0x0 0x0 0x1 REDA19R32 [BraveSword] NoAI
+UNIT Dalst LncPal 0x0 Level(12,Enemy,1) [20,34] 0x0 0x0 0x1 REDA20R33 [Axebuster,GildedLance] NoAI
+UNIT Dalst SwdPal 0x0 Level(12,Enemy,1) [21,34] 0x0 0x0 0x1 REDA21R33 [Rapier,Kagutsuchi,Shimmersword] NoAI
+UNIT Dalst AxePal 0x0 Level(12,Enemy,1) [22,34] 0x0 0x0 0x1 REDA22R32 [BraveAxe,Hammer] NoAI
+UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [26,34] 0x0 0x0 0x1 REDA26R33 [BraveBow] NoAI
+UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [27,34] 0x0 0x0 0x1 REDA27R32 [GildedBow] NoAI
+UNIT
+//big group north
+C27NorthGroup2:
+UNIT Elite Assassin 0x0 Level(12,Enemy,1) [24,23] 0x0 0x0 0x1 REDA24R24 [GildedSword,GildedBow] NoAI
+UNIT
+C27NorthGroup2B:
+UNIT Elite SwdPal 0x0 Level(12,Enemy,1) [19,0] 0x0 0x0 0x1 REDA19R1 [MasterSword] NoAI
+UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [19,0] 0x0 0x0 0x1 REDA19R2 [GildedBow] NoAI
+UNIT Elite LncPal 0x0 Level(12,Enemy,1) [20,0] 0x0 0x0 0x1 REDA20R1 [MasterLance] NoAI
+UNIT Dalst Valk 0x0 Level(12,Enemy,1) [20,0] 0x0 0x0 0x1 REDA20R2 [Rapier,FlameSword,Silence] NoAI
+UNIT Dalst Valk 0x0 Level(12,Enemy,1) [20,0] 0x0 0x0 0x1 REDA20R3 [Runesword,Silence] NoAI
+UNIT Elite AxePal 0x0 Level(12,Enemy,1) [21,0] 0x0 0x0 0x1 REDA21R1 [MasterAxe] NoAI
+UNIT Dalst BowPal 0x0 Level(12,Enemy,1) [21,0] 0x0 0x0 0x1 REDA21R2 [GildedBow] NoAI
+UNIT
+
+//armors east
+C27EastGroup:
+UNIT Elite SwdGen 0x0 Level(12,Enemy,1) [24,23] 0x0 0x0 0x1 REDA23R24 [Rapier,GildedSword] NoAI
+UNIT Elite BowGen 0x0 Level(12,Enemy,1) [24,23] 0x0 0x0 0x1 REDA24R25 [GildedBow,BarrierBow] NoAI
+UNIT Elite SwdGen 0x0 Level(12,Enemy,1) [24,23] 0x0 0x0 0x1 REDA25R24 [GildedSword,Shimmersword] NoAI
+UNIT
+C27EastGroupB:
+UNIT Dalst LncGen 0x0 Level(12,Enemy,1) [14,34] 0x0 0x0 0x1 REDA14R33 [GildedLance] NoAI
+UNIT Elite AxeGen 0x0 Level(12,Enemy,1) [14,34] 0x0 0x0 0x1 REDA15R32 [GildedAxe,Tomahawk] NoAI
+UNIT Dalst LncGen 0x0 Level(12,Enemy,1) [14,34] 0x0 0x0 0x1 REDA16R33 [BraveLance] NoAI
+UNIT
+//ramparts east
+C27EastGroup2:
+UNIT Elite Sniper 0x0 Level(12,Enemy,1) [23,14] 0x0 0x0 0x1 REDA26R14 [Stormbow] NoAI
+UNIT Elite Sniper 0x0 Level(12,Enemy,1) [23,14] 0x0 0x0 0x1 REDA28R14 [Stormbow] NoAI
+UNIT Dalst Sage 0x0 Level(12,Enemy,1) [23,16] 0x0 0x0 0x1 REDA25R16 [Bolting,Silence] NoAI
+UNIT Dalst Sage 0x0 Level(12,Enemy,1) [23,16] 0x0 0x0 0x1 REDA29R16 [Silence,Sleep] NoAI
+UNIT
+C27EastGroup2B:
+UNIT Elite Sniper 0x0 Level(12,Enemy,1) [29,34] 0x0 0x0 0x1 REDA29R27 [Stormbow] NoAI
+UNIT Elite Sniper 0x0 Level(12,Enemy,1) [31,34] 0x0 0x0 0x1 REDA31R28 [Stormbow] NoAI
+UNIT
+C27EastGroup2C:
+UNIT Dalst LncGen 0x0 Level(12,Enemy,1) [0,19] 0x0 0x0 0x1 REDA1R19 [Spear] NoAI
+UNIT Elite SwdGen 0x0 Level(12,Enemy,1) [0,20] 0x0 0x0 0x1 REDA2R20 [GildedSword,SoulHilt] NoAI
+UNIT Dalst LncGen 0x0 Level(12,Enemy,1) [0,21] 0x0 0x0 0x1 REDA1R21 [Spear] NoAI
+UNIT
+
+//fliers west
+C27WestGroup:
+UNIT Dalst Falco 0x0 Level(12,Enemy,1) [0,16] 0x0 0x0 0x1 REDA1R15 [BraveSword] NoAI
+UNIT Elite WyvLord 0x0 Level(12,Enemy,1) [0,16] 0x0 0x0 0x1 REDA2R16 [GildedAxe,BraveLance] NoAI
+UNIT Dalst Falco 0x0 Level(12,Enemy,1) [0,16] 0x0 0x0 0x1 REDA1R17 [GildedSword] NoAI
+UNIT
+C27WestGroupB:
+UNIT Dalst WyvLord 0x0 Level(12,Enemy,1) [9,34] 0x0 0x0 0x1 REDA9R33 [SilverAxe] NoAI
+UNIT Elite Falco 0x0 Level(12,Enemy,1) [10,34] 0x0 0x0 0x1 REDA10R32 [BraveLance,FlameSword] NoAI
+UNIT Dalst WyvLord 0x0 Level(12,Enemy,1) [11,34] 0x0 0x0 0x1 REDA11R33 [BraveAxe] NoAI
+UNIT
+//artillery west
+C27WestGroup2:
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [12,28] 0x0 0x0 0x1 REDA12R28 [ArchBallista] NeverMoveAI
+UNIT
+C27WestGroup2B:
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [10,19] 0x0 0x0 0x1 REDA10R19 [ArchBallista] NeverMoveAI
+UNIT
+C27WestGroup2C:
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [0,34] 0x0 0x0 0x1 REDA0R34 [ArchBallista] NeverMoveAI
+UNIT
+C27WestGroup2D:
+UNIT Elite WyvLord 0x0 Level(12,Enemy,1) [2,0] 0x0 0x0 0x1 REDA2R3 [GildedAxe,Spear] NoAI
+UNIT Elite WyvLord 0x0 Level(12,Enemy,1) [3,0] 0x0 0x0 0x1 REDA3R2 [GildedLance,Tomahawk] NoAI
+UNIT
+
+//throughout city
+C27Center1Group:
+UNIT MagElite SageF 0x0 Level(12,Enemy,1) [24,23] 0x0 0x0 0x1 REDA23R24 [Galewind,Fimbulvetr,EarthPower] NoAI
+UNIT MagElite SageF 0x0 Level(12,Enemy,1) [24,23] 0x0 0x0 0x1 REDA24R25 [Flare,Calibur,EarthPower] NoAI
+UNIT
+C27Center1GroupB:
+UNIT Dalst BerserkerF 0x0 Level(12,Enemy,1) [8,20] 0x0 0x0 0x1 REDA7R21 [DevilAxe,Swordslayer] GroupTwoAI
+UNIT Elite BerserkerF 0x0 Level(12,Enemy,1) [8,20] 0x0 0x0 0x1 REDA8R22 [Tomahawk,BraveAxe] GroupTwoAI
+UNIT Dalst BerserkerF 0x0 Level(12,Enemy,1) [8,20] 0x0 0x0 0x1 REDA9R21 [Ukonvasara,GildedAxe] GroupTwoAI
+UNIT
+C27Center1GroupC:
+UNIT Dalst LncPal 0x0 Level(12,Enemy,1) [13,34] 0x0 0x0 0x1 REDA13R33 [TrueSaunion] NoAI
+UNIT Dalst AxePal 0x0 Level(12,Enemy,1) [14,34] 0x0 0x0 0x1 REDA14R32 [DangerPick] GroupThreeAI
+UNIT Elite BowPal 0x0 Level(12,Enemy,1) [15,34] 0x0 0x0 0x1 REDA15R33 [BraveBow] GroupThreeAI
+UNIT Dalst AxePal 0x0 Level(12,Enemy,1) [16,34] 0x0 0x0 0x1 REDA16R32 [DangerPick] GroupThreeAI
+UNIT Dalst LncPal 0x0 Level(12,Enemy,1) [17,34] 0x0 0x0 0x1 REDA17R33 [TrueSaunion] NoAI
+UNIT
+C27Center1Group2:
+UNIT Dalst Hero 0x0 Level(13,Enemy,1) [20,31] 0x0 0x0 0x1 REDA19R32 [GildedSword] GroupOneAI
+UNIT Elite Sniper 0x0 Level(13,Enemy,1) [20,31] 0x0 0x0 0x1 REDA20R32 [GildedBow] GroupOneAI
+UNIT Dalst Warrior 0x0 Level(13,Enemy,1) [20,31] 0x0 0x0 0x1 REDA20R33 [GildedAxe] GroupOneAI
+UNIT Dalst Halberdier 0x0 Level(13,Enemy,1) [20,31] 0x0 0x0 0x1 REDA21R32 [GildedLance] GroupOneAI
+UNIT
+C27Center1Group2B:
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [0,19] 0x0 0x0 0x1 REDA1R19 [Aura] NoAI
+UNIT MagElite Sorc 0x0 Level(12,Enemy,1) [0,20] 0x0 0x0 0x1 REDA2R20 [Nocturne,VoidBracers] NoAI
+UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [0,21] 0x0 0x0 0x1 REDA1R21 [Smite] NoAI
+UNIT
+C27Center1Group2C:
+UNIT Simulacrum Wyvern 0x0 Level(14,Enemy,1) [41,23] 0x0 0x0 0x1 REDA37R23 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(15,Enemy,1) [41,24] 0x0 0x0 0x1 REDA36R24 [WyvernBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(14,Enemy,1) [41,25] 0x0 0x0 0x1 REDA37R25 [WyvernBreath] NoAI
+UNIT
+
+//focused near hall
+//traps you in
+C27Center2Group:
+UNIT MagElite Sorc 0x0 Level(14,Enemy,1) [8,20] 0x0 0x0 0x1 REDA10R21 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT MagElite Sorc 0x0 Level(14,Enemy,1) [8,20] 0x0 0x0 0x1 REDA10R22 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT MagElite Sorc 0x0 Level(14,Enemy,1) [8,20] 0x0 0x0 0x1 REDA10R23 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT MagElite Sorc 0x0 Level(14,Enemy,1) [8,20] 0x0 0x0 0x1 REDA10R24 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT MagElite Sorc 0x0 Level(14,Enemy,1) [8,20] 0x0 0x0 0x1 REDA10R25 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT
+C27Center2GroupB:
+UNIT MagElite Sorc 0x0 Level(14,Enemy,1) [20,31] 0x0 0x0 0x1 REDA18R32 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT MagElite Sorc 0x0 Level(14,Enemy,1) [20,31] 0x0 0x0 0x1 REDA18R33 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT MagElite Sorc 0x0 Level(14,Enemy,1) [20,31] 0x0 0x0 0x1 REDA18R34 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT
+C27Center2GroupC:
+UNIT MagElite Bishop 0x0 Level(14,Enemy,1) [10,31] 0x0 0x0 0x1 REDA9R32 [Smite] NoAI
+UNIT MagElite Sage 0x0 Level(14,Enemy,1) [10,31] 0x0 0x0 0x1 REDA10R33 [Galewind] NoAI
+UNIT MagElite Bishop 0x0 Level(14,Enemy,1) [10,31] 0x0 0x0 0x1 REDA11R32 [Radiance] NoAI
+UNIT
+//hell time
+C27Center2Group2:
+UNIT Elite SwMast 0x0 Level(14,Enemy,1) [8,31] 0x0 0x0 0x1 REDA7R33 [BraveSword,GildedSword] GroupSixAI
+UNIT Elite Hero 0x0 Level(14,Enemy,1) [8,31] 0x0 0x0 0x1 REDA8R32 [Tomahawk,BraveSword] GroupSixAI
+UNIT MagElite SwMast 0x0 Level(14,Enemy,1) [8,31] 0x0 0x0 0x1 REDA9R33 [FlameSword] GroupSixAI
+UNIT
+C27Center2Group2B:
+UNIT Elite Warrior 0x0 Level(14,Enemy,1) [0,24] 0x0 0x0 0x1 REDA1R24 [BraveAxe,GildedAxe] GroupFiveAI
+UNIT Elite Sniper 0x0 Level(14,Enemy,1) [0,25] 0x0 0x0 0x1 REDA2R25 [BraveBow,GildedBow] GroupFiveAI
+UNIT
+C27Center2Group2C:
+UNIT Elite Sniper 0x0 Level(14,Enemy,1) [0,33] 0x0 0x0 0x1 REDA2R33 [BraveBow,GildedBow] GroupFiveAI
+UNIT Elite Warrior 0x0 Level(14,Enemy,1) [0,34] 0x0 0x0 0x1 REDA1R34 [BraveAxe,GildedAxe] GroupFiveAI
+UNIT
+C27Center2Group2D:
+UNIT Simulacrum DemonDragon 0x0 Level(15,Enemy,1) [0,19] 0x0 0x0 0x1 REDA1R19 [DemonBreath] NoAI
+UNIT Simulacrum FireDragon 0x0 Level(13,Enemy,1) [0,20] 0x0 0x0 0x1 REDA2R20 [FireBreath] NoAI
+UNIT Simulacrum DemonDragon 0x0 Level(15,Enemy,1) [0,21] 0x0 0x0 0x1 REDA1R21 [DemonBreath] NoAI
+UNIT
+C27Center2Group2E:
+UNIT Simulacrum Wyvern 0x0 Level(15,Enemy,1) [0,29] 0x0 0x0 0x1 REDA5R28 [WyvernBreath] NoAI
+UNIT Simulacrum FireDragon 0x0 Level(13,Enemy,1) [0,29] 0x0 0x0 0x1 REDA4R29 [FireBreath] NoAI
+UNIT Simulacrum Wyvern 0x0 Level(15,Enemy,1) [0,29] 0x0 0x0 0x1 REDA5R30 [WyvernBreath] NoAI
+UNIT
+
 C27ValeriaJoin:
 UNIT Valeria Falco 0x0 Level(16,Ally,0) [12,0] 0x0 0x0 0x1 REDA12R2 [SilverSword,SilverLance] NoAI
 UNIT
@@ -207,6 +381,16 @@ CheckForItem(RealLastShield)
 BEQ 0x2 0xc 0x0
 SetUnitStatus(Arbordia,Item3,0)
 LABEL 0x2
+ENUT 0x7
+ENUT 0x8
+ENUT 0x9
+ENUT 0xa
+ENUT 0xb
+COUNTER_SET 0x1 0x0
+COUNTER_SET 0x2 0x0
+COUNTER_SET 0x3 0x0
+COUNTER_SET 0x4 0x0
+COUNTER_SET 0x5 0x0
 GotoPrepScreen
 ENDA
 
@@ -217,9 +401,203 @@ CleanTextNoMap(HallCG,FillerDialogue)
 MoveToChapter(Chapter28)
 ENDA
 
-#define C27Counter(unit) "CHECK_DEPLOYED unit; BEQ unit 0xc 0x0; COUNTER_ADD 1 1; LABEL unit"
+C27AreaTrapNorth:
+COUNTER_INC 1
+SVAL 0x3 0x1
+COUNTER_CHECK 0x1
+BNE 0x1 0xc 0x3
+Reinforcements(C27NorthGroup)
+Reinforcements(C27NorthGroupB)
+COUNTER_SET 0x2 0x1
+COUNTER_SET 0x3 0x1
+ENUF 0x7
+GOTO 0x2
+LABEL 0x1
+Reinforcements(C27NorthGroup2)
+Reinforcements(C27NorthGroup2B)
+LABEL 0x2
+EndEvent
+C27AreaTrapEast:
+COUNTER_INC 2
+SVAL 0x3 0x1
+COUNTER_CHECK 0x2
+BNE 0x1 0xc 0x3
+Reinforcements(C27EastGroup)
+Reinforcements(C27EastGroupB)
+COUNTER_SET 0x1 0x1
+COUNTER_SET 0x3 0x1
+ENUF 0x8
+GOTO 0x2
+LABEL 0x1
+Reinforcements(C27EastGroup2)
+Reinforcements(C27EastGroup2B)
+Reinforcements(C27EastGroup2C)
+LABEL 0x2
+EndEvent
+C27AreaTrapWest:
+COUNTER_INC 3
+SVAL 0x3 0x1
+COUNTER_CHECK 0x3
+BNE 0x1 0xc 0x3
+Reinforcements(C27WestGroup)
+Reinforcements(C27WestGroupB)
+COUNTER_SET 0x1 0x1
+COUNTER_SET 0x2 0x1
+ENUF 0x9
+GOTO 0x2
+LABEL 0x1
+CAM1 [12,28]
+WARPIN [12,28]
+Reinforcements(C27WestGroup2)
+STAL 0x20
+CAM1 [10,19]
+WARPIN [10,19]
+Reinforcements(C27WestGroup2B)
+STAL 0x20
+CAM1 [0,34]
+WARPIN [0,34]
+Reinforcements(C27WestGroup2C)
+STAL 0x20
+Reinforcements(C27WestGroup2D)
+LABEL 0x2
+EndEvent
+C27AreaTrapCenter1:
+COUNTER_INC 4
+SVAL 0x3 0x1
+COUNTER_CHECK 0x4
+BNE 0x1 0xc 0x3
+Reinforcements(C27Center1Group)
+Reinforcements(C27Center1GroupB)
+Reinforcements(C27Center1GroupC)
+ENUF 0xa
+GOTO 0x2
+LABEL 0x1
+Reinforcements(C27Center1Group2)
+Reinforcements(C27Center1Group2B)
+Reinforcements(C27Center1Group2C)
+LABEL 0x2
+EndEvent
+C27AreaTrapCenter2:
+COUNTER_INC 5
+SVAL 0x3 0x1
+COUNTER_CHECK 0x5
+BNE 0x1 0xc 0x3
+Reinforcements(C27Center2Group)
+Reinforcements(C27Center2GroupB)
+Reinforcements(C27Center2GroupC)
+ENUF 0xb
+GOTO 0x2
+LABEL 0x1
+Reinforcements(C27Center2Group2)
+Reinforcements(C27Center2Group2B)
+Reinforcements(C27Center2Group2C)
+Reinforcements(C27Center2Group2D)
+Reinforcements(C27Center2Group2E)
+LABEL 0x2
+EndEvent
+
+
+C27AreaTriggerNorth:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_EVENTID 0xc
+BNE 0x1 0xc 0x0
+ENUT 0xc
+ENUF 0x7
+CHECK_EVENTID DefeatBossFlag
+BNE 0x2 0xc 0x0
+COUNTER_CHECK 1
+BNE 0x3 0xc 0x0
+Text(C27NorthWarning)//arbordia describing incoming units (first trigger)
+GOTO 0x4
+LABEL 0x3
+Text(C27NorthWarningAlt)//arbordia describing incoming units (not first trigger)
+LABEL 0x4
+GOTO 0x2
+LABEL 0x1
+ENUF BaseFlag4
+LABEL 0x2
+EndEvent
+C27AreaTriggerEast:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_EVENTID 0xc
+BNE 0x1 0xc 0x0
+ENUT 0xc
+ENUF 0x8
+CHECK_EVENTID DefeatBossFlag
+BNE 0x2 0xc 0x0
+COUNTER_CHECK 2
+BNE 0x3 0xc 0x0
+Text(C27EastWarning)//arbordia describing incoming units (first trigger)
+GOTO 0x4
+LABEL 0x3
+Text(C27EastWarningAlt)//arbordia describing incoming units (not first trigger)
+LABEL 0x4
+GOTO 0x2
+LABEL 0x1
+ENUF BaseFlag5
+LABEL 0x2
+EndEvent
+C27AreaTriggerWest:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_EVENTID 0xc
+BNE 0x1 0xc 0x0
+ENUT 0xc
+ENUF 0x9
+COUNTER_CHECK 3
+BNE 0x3 0xc 0x0
+CHECK_EVENTID DefeatBossFlag
+BNE 0x2 0xc 0x0
+Text(C27WestWarning)//arbordia describing incoming units (first trigger)
+GOTO 0x4
+LABEL 0x3
+Text(C27WestWarningAlt)//arbordia describing incoming units (not first trigger)
+LABEL 0x4
+GOTO 0x2
+LABEL 0x1
+ENUF BaseFlag6
+LABEL 0x2
+EndEvent
+C27AreaTriggerCenter1:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_EVENTID 0xc
+BNE 0x1 0xc 0x0
+ENUT 0xc
+ENUF 0xa
+CHECK_EVENTID DefeatBossFlag
+BNE 0x2 0xc 0x0
+Text(C27CenterWarning)//arbordia describing incoming units
+GOTO 0x2
+LABEL 0x1
+ENUF BaseFlag7
+LABEL 0x2
+EndEvent
+C27AreaTriggerCenter2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+CHECK_EVENTID 0xc
+BNE 0x1 0xc 0x0
+ENUT 0xc
+ENUF 0xb
+CHECK_EVENTID DefeatBossFlag
+BNE 0x2 0xc 0x0
+Text(C27Center2Warning)//arbordia describing incoming units
+GOTO 0x2
+LABEL 0x1
+ENUF BaseFlag8
+LABEL 0x2
+EndEvent
+
+C27FlagReset:
+ENUF 0xc
+EndEvent
+
+#define C27Counter(unit) "CHECK_DEPLOYED unit; BEQ unit 0xc 0x0; COUNTER_INC 6 ; LABEL unit"
 C27ValeriaCheck:
-COUNTER_SET 1 0
+COUNTER_SET 6 0
 C27Counter(Freddric)
 C27Counter(Dean)
 C27Counter(Eliza)
@@ -232,7 +610,7 @@ C27Counter(Manfred)
 C27Counter(Wilhelm)
 C27Counter(Argent)
 C27Counter(SecretClarque)
-COUNTER_CHECK 1
+COUNTER_CHECK 6
 SVAL 0x1 0x4
 BNE 0x9 0xc 0x1
 Reinforcements(C27ValeriaJoin)

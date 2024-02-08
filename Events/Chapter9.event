@@ -223,6 +223,8 @@ C9T10Spawns:
 UNIT Pirates Merc 0x0 Level(10,Enemy,1) [18,10] 0x0 0x0 0x1 REDA18R9 [IronSword] NoAI
 UNIT Pirates Soldier 0x0 Level(11,Enemy,1) [18,10] 0x0 0x0 0x1 REDA17R10 [IronLance] NoAI
 UNIT Pirates Pirate 0x0 Level(10,Enemy,1) [18,10] 0x0 0x0 0x1 REDA19R11 [IronAxe] NoAI
+UNIT
+C9T10Spawns2:
 UNIT Pirates PirateF 0x0 Level(12,Enemy,1) [22,11] 0x0 0x0 0x1 REDA21R11 [SteelAxe] NoAI
 UNIT Pirates MercF 0x0 Level(10,Enemy,1) [22,11] 0x0 0x0 0x1 REDA22R10 [SteelSword] NoAI
 UNIT Pirates SoldierF 0x0 Level(9,Enemy,1) [22,11] 0x0 0x0 0x1 REDA23R11 [SteelLance] NoAI
@@ -232,6 +234,7 @@ C9T12Spawns:
 UNIT Pirates MageF 0x0 Level(11,Enemy,1) [3,19] 0x0 0x0 0x1 REDA4R19 [Thunder] NoAI
 UNIT Pirates Pirate 0x0 Level(10,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R18 [IronAxe] NoAI
 UNIT Pirates MageF 0x0 Level(12,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R20 [Fire] NoAI
+C9T12Spawns2:
 UNIT Pirates Archer 0x0 Level(10,Enemy,1) [8,18] 0x0 0x0 0x1 REDA8R17 [SteelBow] NoAI
 UNIT Pirates PirateF 0x0 Level(10,Enemy,1) [8,18] 0x0 0x0 0x1 REDA7R18 [IronAxe] NoAI
 UNIT Pirates Archer 0x0 Level(11,Enemy,1) [8,18] 0x0 0x0 0x1 REDA8R19 [SteelBow] NoAI
@@ -240,6 +243,8 @@ UNIT
 C9T14Spawns:
 UNIT Pirates AxeArm 0x0 Level(10,Enemy,1) [17,17] 0x0 0x0 0x1 REDA18R17 [SilverAxe] NoAI
 UNIT Pirates WarriorF 0x0 Level(1,Enemy,1) [17,17] 0x0 0x0 0x1 REDA16R17 [IronAxe] NoAI
+UNIT
+C9T14Spawns2:
 UNIT Pirates BowArm 0x0 Level(10,Enemy,1) [21,15] 0x0 0x0 0x1 REDA22R15 [SilverBow] NoAI
 UNIT Pirates SniperF 0x0 Level(1,Enemy,1) [21,15] 0x0 0x0 0x1 REDA20R15 [IronBow] NoAI
 UNIT
@@ -248,22 +253,38 @@ C9T16Spawns:
 UNIT Pirates Pirate 0x0 Level(11,Enemy,1) [3,0] 0x0 0x0 0x1 REDA4R0 [SteelAxe] NoAI
 UNIT Pirates Pirate 0x0 Level(11,Enemy,1) [3,0] 0x0 0x0 0x1 REDA3R1 [SteelAxe] NoAI
 UNIT Pirates Pirate 0x0 Level(11,Enemy,1) [3,0] 0x0 0x0 0x1 REDA2R0 [SteelAxe] NoAI
+UNIT
+C9T16Spawns2:
 UNIT Pirates DarkM 0x0 Level(10,Enemy,1) [3,19] 0x0 0x0 0x1 REDA4R19 [Nightfall] NoAI
 UNIT Pirates PirateF 0x0 Level(11,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R18 [KillerAxe] NoAI
 UNIT Pirates MageF 0x0 Level(10,Enemy,1) [3,19] 0x0 0x0 0x1 REDA3R20 [Elfire] NoAI
+UNIT
+C9T16Spawns3:
 UNIT Pirates ArcherF 0x0 Level(11,Enemy,1) [8,18] 0x0 0x0 0x1 REDA8R17 [ShiningBow] NoAI
 UNIT Pirates Pirate 0x0 Level(10,Enemy,1) [8,18] 0x0 0x0 0x1 REDA7R18 [IronAxe] NoAI
 UNIT Pirates ArcherF 0x0 Level(11,Enemy,1) [8,18] 0x0 0x0 0x1 REDA8R19 [KillerBow] NoAI
+UNIT
+C9T16Spawns4:
 UNIT Pirates LncArm 0x0 Level(10,Enemy,1) [17,17] 0x0 0x0 0x1 REDA18R17 [SilverLance] NoAI
 UNIT Pirates HalberdierF 0x0 Level(1,Enemy,1) [17,17] 0x0 0x0 0x1 REDA16R17 [IronLance] NoAI
+UNIT
+C9T16Spawns5:
 UNIT Pirates SwdArm 0x0 Level(10,Enemy,1) [21,15] 0x0 0x0 0x1 REDA22R15 [SilverSword] NoAI
 UNIT Pirates HeroF 0x0 Level(1,Enemy,1) [21,15] 0x0 0x0 0x1 REDA20R15 [IronSword] NoAI
+UNIT
+C9T16Spawns6:
 UNIT Pirates Myrm 0x0 Level(10,Enemy,1) [18,10] 0x0 0x0 0x1 REDA18R9 [SteelSword] NoAI
 UNIT Pirates Myrm 0x0 Level(12,Enemy,1) [18,10] 0x0 0x0 0x1 REDA17R10 [Horseslayer] NoAI
+UNIT
+C9T16Spawns7:
 UNIT Pirates Myrm 0x0 Level(10,Enemy,1) [20,9] 0x0 0x0 0x1 REDA21R9 [SteelSword] NoAI
 UNIT Pirates FighterF 0x0 Level(10,Enemy,1) [20,9] 0x0 0x0 0x1 REDA19R9 [SteelAxe] NoAI
+UNIT
+C9T16Spawns8:
 UNIT Pirates MercF 0x0 Level(10,Enemy,1) [22,11] 0x0 0x0 0x1 REDA22R10 [SteelSword] NoAI
 UNIT Pirates SoldierF 0x0 Level(11,Enemy,1) [22,11] 0x0 0x0 0x1 REDA23R11 [SteelLance] NoAI
+UNIT
+C9T16Spawns9:
 UNIT Pirates SwdPeg 0x0 Level(10,Enemy,1) [9,7] 0x0 0x0 0x1 REDA8R6 [SteelSword] NoAI
 UNIT Pirates LncPeg 0x0 Level(10,Enemy,1) [9,7] 0x0 0x0 0x1 REDA8R8 [IronLance] NoAI
 UNIT Pirates LncPeg 0x0 Level(10,Enemy,1) [9,7] 0x0 0x0 0x1 REDA10R6 [SteelLance] NoAI
@@ -380,6 +401,7 @@ EndEvent
 
 C9Turn10:
 Reinforcements(C9T10Spawns)
+Reinforcements(C9T10Spawns2)
 EndEvent
 
 C9Turn11:
@@ -390,6 +412,7 @@ EndEvent
 
 C9Turn12:
 Reinforcements(C9T12Spawns)
+Reinforcements(C9T12Spawns2)
 EndEvent
 
 C9Turn13:
@@ -400,6 +423,7 @@ EndEvent
 
 C9Turn14:
 Reinforcements(C9T14Spawns)
+Reinforcements(C9T14Spawns2)
 EndEvent
 
 C9Turn15:
@@ -421,6 +445,14 @@ EndEvent
 
 C9Turn16:
 Reinforcements(C9T16Spawns)
+Reinforcements(C9T16Spawns2)
+Reinforcements(C9T16Spawns3)
+Reinforcements(C9T16Spawns4)
+Reinforcements(C9T16Spawns5)
+Reinforcements(C9T16Spawns6)
+Reinforcements(C9T16Spawns7)
+Reinforcements(C9T16Spawns8)
+Reinforcements(C9T16Spawns9)
 EndEvent
 
 

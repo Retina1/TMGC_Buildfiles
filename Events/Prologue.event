@@ -196,6 +196,7 @@ LABEL 0x994
 LABEL 0x668
 SVAL 0x1 0x0
 FADI 0x3c
+EVBIT_MODIFY 0
 CLEAN
 	SetBackground(BlankCG)
 	FADU 0x3c
@@ -222,7 +223,6 @@ CLEAN
 	TEXTEND
 	FADI 0x5
 CLEAN
-EVBIT_MODIFY 0
 LOAD1 0x1 PUnits
 ENUN
 LoadUnitsByDifficulty(PEasy,PNormal,PHard)

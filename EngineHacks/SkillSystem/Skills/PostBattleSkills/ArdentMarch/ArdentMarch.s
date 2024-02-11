@@ -21,7 +21,7 @@ ldr r3, SkillTester
 mov lr, r3
 .short  0xf800
 cmp r0,#0x00
-bne Event
+bne FlagCheck
 
 @check if dead
 ldrb	r0, [r4,#0x13]
@@ -37,6 +37,7 @@ mov	lr, r3
 cmp	r0, #0x00
 beq	End
 @check for flag
+FlagCheck:
 ldr r0,=#0x8083da8 @CheckEventId
 mov r14,r0
 mov r0,#0xa2 @tension flag

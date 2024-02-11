@@ -1050,6 +1050,26 @@ GOTO 0x10
 LABEL 0x1
 LocationText(HallCG, C26End2EthylAlive,ArbordiaMeetingHallLabel,S_Chaos)//ethyl killed by elcorian
 LABEL 0x10
+	CHECK_EVENTID KennethTarquinKillFlag
+	BEQ 0x100 0xc 0x0
+	CHECK_ALIVE Kenneth
+	BEQ 0x100 0xc 0x0
+	CHECK_CLASS Kenneth
+	SVAL 0x1 Baron
+	BEQ 0x100 0xc 0x1
+	UnremoveUnit(Kenneth)
+	MUSC 0x0
+	CleanTextNoMap(HallCG,C26KennethAscendAlt)
+	REMA
+	SetBackground(BlankCG)
+	GiveItem(Voidwake,Kenneth)//prf here
+	AddUnitStatus(Kenneth,MovBonus,1)
+	REMA
+	PROMOTE Kenneth Baron Voidwake
+	FADI 16
+	CLEAN
+	FADU 16
+	LABEL 0x100
 MoveToChapter(Chapter27)
 ENDA
 

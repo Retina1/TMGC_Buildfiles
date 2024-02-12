@@ -254,6 +254,13 @@
 #include "General\Unarmed Installer.event"
 }
 {
+#include "Baron\Sword Installer.event"
+#include "Baron\Lance Installer.event"
+#include "Baron\Axe Installer.event"
+#include "Baron\Handaxe Installer.event"
+#include "Baron\Magic Installer.event"
+}
+{
 #include "ArcherM(Der)\Bow Installer.event"
 #include "ArcherM(Der)\Unarmed Installer.event"
 }
@@ -987,6 +994,17 @@ LightAnim(0x49)
 DarkAnim(0x49)
 StaffAnim(0x49)
 UnarmedAnim(0x4a)
+EndAnim
+
+ALIGN 4
+BaronAnims:
+SwordAnim(0x103)
+LanceAnim(0x104)
+AxeAnim(0x105)
+HandAxeAnim(0x106)
+BowAnim(0x48)
+MagicAnim(0x107)
+StaffAnim(0x107)
 EndAnim
 
 ALIGN 4

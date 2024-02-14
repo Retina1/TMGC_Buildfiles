@@ -49,6 +49,7 @@ ALIGN 4
 RoseShopEvent:
 CHECK_ACTIVEID SecretLaronde
 BNE 0x40 0xc 0x0
+PlayEmotionEffect(Rose,MusicNoteEffect)
 Text(RoseShopIntro)
 REMA
 LABEL 0x500
@@ -59,6 +60,7 @@ BNE 0x10 0xc 0x0
 	BLT 0x1 0xc 0x1
 	SystemText(RoseShopBuy)//systemtext
 	IfNoSelectedGoto(0x3)
+	PlayEmotionEffect(Rose,MoneyEffect)
 	Text(RoseShopBought)
 	REMA
 	SVAL 0x3 6000
@@ -73,6 +75,7 @@ BNE 0x11 0xc 0x1
 	BLT 0x1 0xc 0x1
 	SystemText(RoseShopBuy)//systemtext
 	IfNoSelectedGoto(0x3)
+	PlayEmotionEffect(Rose,MoneyEffect)
 	Text(RoseShopBought)
 	REMA
 	SVAL 0x3 6000
@@ -87,6 +90,7 @@ BNE 0x12 0xc 0x1
 	BLT 0x1 0xc 0x1
 	SystemText(RoseShopBuy)//systemtext
 	IfNoSelectedGoto(0x3)
+	PlayEmotionEffect(Rose,MoneyEffect)
 	Text(RoseShopBought)
 	REMA
 	SVAL 0x3 6000
@@ -101,6 +105,7 @@ BNE 0x13 0xc 0x1
 	BLT 0x1 0xc 0x1
 	SystemText(RoseShopBuy)//systemtext
 	IfNoSelectedGoto(0x3)
+	PlayEmotionEffect(Rose,MoneyEffect)
 	Text(RoseShopBought)
 	REMA
 	SVAL 0x3 2500
@@ -115,6 +120,7 @@ BNE 0x14 0xc 0x1
 	BLT 0x1 0xc 0x1
 	SystemText(RoseShopBuy)//systemtext
 	IfNoSelectedGoto(0x3)
+	PlayEmotionEffect(Rose,MoneyEffect)
 	Text(RoseShopBought)
 	REMA
 	SVAL 0x3 10000
@@ -122,17 +128,21 @@ BNE 0x14 0xc 0x1
 	GiveItem(BlackLotus)
 	GOTO 0x500
 LABEL 0x14
+PlayEmotionEffect(Rose,MusicNoteEffect)
 	Text(RoseShopBye)
 	GOTO 0x2
 LABEL 0x1
+PlayEmotionEffect(Rose,FrustratedEffect)
 	Text(RoseShopBroke)
 	REMA
 	GOTO 0x500
 LABEL 0x3
+PlayEmotionEffect(Rose,DotDotDotEffect)
 	Text(RoseShopDenyBuy)
 	REMA
 	GOTO 0x500
 LABEL 0x40
+PlayEmotionEffect(Rose,SweatEffect)
 	Text(NoStinkyLarondesAllowed)
 LABEL 0x2
 EndEvent

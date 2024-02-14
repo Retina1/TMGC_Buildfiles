@@ -84,10 +84,19 @@ POIN FlowEvent
 ALIGN 4
 UnflowEffect:
 #incbin "Flow/UnflowEffect.dmp"
-POIN FlowEvent
+POIN UnflowEvent
 
 ALIGN 4
 FlowEvent:
+PlayEmotionEffect(UpArrowEffect)
+SOUN 0x10F
+STAL 0x5
+NoFade
+ENDA
+
+ALIGN 4
+UnflowEvent:
+PlayEmotionEffect(DownArrowEffect)
 SOUN 0x10F
 STAL 0x5
 NoFade
@@ -103,6 +112,7 @@ POIN WhirrEvent
 
 ALIGN 4
 WhirrEvent:
+PlayEmotionEffect(BrightIdeaEffect)
 SOUN 0x2f9
 STAL 0x5
 NoFade

@@ -4,6 +4,7 @@ BNE 0x776 0xc 0x0
 
 CHECK_EVENTID HeatFlag3
 BEQ 0x2 0xC 0x0 //if not on, go to label 0x2
+PlayEmotionEffect(SweatEffect)
 ENUF HeatFlag3
 ENUT HeatFlag4 //overheat
 SOUN 0xbc
@@ -13,6 +14,7 @@ GOTO 0x776
 LABEL 0x2
 CHECK_EVENTID HeatFlag2
 BEQ 0x3 0xC 0x0
+PlayEmotionEffect(UpArrowEffect)
 ENUF HeatFlag2
 ENUT HeatFlag3
 SOUN 0x10F
@@ -22,6 +24,7 @@ GOTO 0x776
 LABEL 0x3
 CHECK_EVENTID HeatFlag1
 BEQ 0x4 0xC 0x0
+PlayEmotionEffect(UpArrowEffect)
 ENUF HeatFlag1
 ENUT HeatFlag2
 SOUN 0x10F
@@ -29,6 +32,7 @@ STAL 0x5
 GOTO 0x776
 
 LABEL 0x4
+PlayEmotionEffect(UpArrowEffect)
 ENUT HeatFlag1
 SOUN 0x10F
 STAL 0x5

@@ -1,8 +1,18 @@
 DrainEvent:
+CHECK_EVENTID HeatFlag1
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID HeatFlag2
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID HeatFlag3
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID HeatFlag4
+BEQ 0x1 0xc 0x0
+PlayEmotionEffect(DownArrowEffect)
 ENUF HeatFlag1
 ENUF HeatFlag2
 ENUF HeatFlag3
 ENUF HeatFlag4 //overheat
 STAL 5
+LABEL 0x1
 NoFade
 ENDA

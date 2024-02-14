@@ -451,6 +451,7 @@ TILEREVERSE 0x6
 SetUnitStatusAll(Holanis*0x100+Holanis, State, 0x2, Any, Any, Any, Range(16,12,18,13), Any)
 CAM1 Michael
 FlashCursor(Michael,60)
+PlayEmotionEffect(Michael,AngryEffect)
 Text(Ch19_MichaelIsAngy) //michael's angy that someone flooded his river, and hints at reinforcements
 ENUF 0x24 //here's the fucking flag, finally
 EndEvent

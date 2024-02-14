@@ -22,6 +22,7 @@ WORD EarthPowerID
 
 ALIGN 4
 EarthPowerEvent:
+PlayEmotionEffect(UpArrowEffect)
 SOUN 0xbc
 STAL 5
 NoFade

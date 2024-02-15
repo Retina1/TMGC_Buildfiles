@@ -69,12 +69,14 @@
 	BYTE FreelancerCharacterID 0x23 FreelancerTempCloneID 0x22 FreelancerTurns 0x20 0x00 0x00
 	//r0 has turns to transform, r1 has charID, r2 has cloneID
 	#incbin "TransformCommandAPress.dmp"
+	POIN TransformEvent
 
 	ALIGN 4
 	TransformCountdown:
 	BYTE FreelancerCharacterID 0x23 FreelancerClassID 0x20 FreelancerTempCloneID 0x21 0x00 0x00
 	//r3 has charID, r1 has cloneID, r0 freelancer classID
 	#incbin "TransformCountdown.dmp"
+	POIN UntransformEvent
 
 	ALIGN 4
 	TransformChapterEnd:
@@ -95,6 +97,23 @@
 	BYTE FreelancerClassID 0x22 FreelancerTempCloneID 0x23 FreelancerCharacterID 0x20 TrsfrmStatscrnTextID 0x21 
 	//r3 has charID, r1 has cloneID, r0 freelancer classID
 	#incbin "TransformStatscreenNumber.dmp"*/
+	
+ALIGN 4
+TransformEvent:
+PlayEmotionEffect(Yuyu,MusicNoteEffect)
+SOUN 0xaa
+STAL 0x5
+NoFade
+ENDA
+
+ALIGN 4
+UntransformEvent:
+CAM1 Yuyu
+PlayEmotionEffect(Yuyu,SweatEffect)
+RefreshSMS
+NoFade
+ENDA
+
 #else
 	ERROR "Select FE8!"
 #endif

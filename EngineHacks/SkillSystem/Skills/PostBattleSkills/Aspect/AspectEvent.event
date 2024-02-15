@@ -1,0 +1,10 @@
+AspectEvent:
+CHECK_ALIVE FinalArbordia
+BEQ 0x1 0x0 0xc
+CAM1 0xFFFF
+PlayEmotionEffect(DownArrowEffect)
+BREAKING_SACRED_STONE FinalArbordia
+STAL 0x16
+LABEL 0x1
+NoFade
+ENDA

@@ -102,13 +102,20 @@ str     r0,[r6,#0x3C]
 str     r0,[r6,#0x40]
 str     r0,[r6,#0x44]
 //
+ldr r0,=#0x800D07C    @event engine thingy
+mov lr, r0
+ldr r0, UntransformEvent @this event is just "play sound"
+mov r1, #0x01   @0x01 = wait for events
+.short  0xF800
+
 StartPlayerPhase:
 pop     {r4-r7}
 pop     {r0}        //don't ask me why, vanilla pops more than it pushes on this function???         
 pop     {r0}                 
 bx      r0                   
-
-
+.ltorg
+.align
+UntransformEvent:
 
 
 

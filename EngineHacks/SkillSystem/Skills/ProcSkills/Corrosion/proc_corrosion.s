@@ -32,12 +32,6 @@ cmp r0, #0
 beq End
 @if user has sure shot, check for proc rate
 
-ldrb r0, [r4, #0x15] @skill stat as activation rate
-lsr r0,r0,#1 @/2
-mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1
-bne End
 
 @if we proc, set the offensive skill flag
 ldr     r2,[r6]    
@@ -54,11 +48,9 @@ str     r0,[r6]                @ 0802B43A 6018
 ldrb  r0, CorrosionID
 strb  r0, [r6,#4] 
 
-@subtract user's level from opponent's weapon uses after battle
+@subtract a fuckton from opponent's weapon uses after battle
 
-mov r0,r4
-add r0,#0x08
-ldrb r3,[r0]
+mov r3,#0xff
 mov r0,r5
 add r0,#0x48
 ldrh r1,[r0]

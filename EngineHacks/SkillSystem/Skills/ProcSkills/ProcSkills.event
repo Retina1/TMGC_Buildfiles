@@ -88,7 +88,7 @@ WORD CounterMagicID
 Proc_Miracle:
 #incbin "Miracle/proc_miracle.dmp"
 POIN SkillTester
-WORD MiracleID
+WORD MiracleID AspectSkillID
 
 Proc_Miracullahan:
 #incbin "Miracullahan/proc_miracle.dmp"
@@ -210,7 +210,7 @@ ALIGN 4
 Proc_Corrosion:
 #incbin "Corrosion/proc_corrosion.dmp"
 POIN SkillTester
-WORD CorrosionID
+WORD AspectSkillID
 
 ALIGN 4
 Proc_Glacies:

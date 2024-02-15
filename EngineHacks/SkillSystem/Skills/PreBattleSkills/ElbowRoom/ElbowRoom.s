@@ -31,11 +31,11 @@ bne Defender
 b End
 
 Attacker:
-@set your defense to 50 percent
+@set your defense to 25 percent
 @think of something funny
 mov r1, #0x5c
 ldrsh r0, [r4, r1] @def
-lsr r0,r0,#0x1
+lsr r0,r0,#0x2
 strh r0, [r4,r1]
 b End
 
@@ -44,7 +44,7 @@ Defender:
 @set your attack to 50 percent
 mov r1, #0x5a
 ldrsh r0, [r4, r1] @atk
-lsr r0,r0,#0x1
+lsr r0,r0,#0x2
 strh r0, [r4,r1]
 
 

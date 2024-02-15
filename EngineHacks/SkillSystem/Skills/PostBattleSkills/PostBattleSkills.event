@@ -92,6 +92,15 @@ ALIGN 4
 #include "SavageBlow/SavageBlowEvent.event"
 
 ALIGN 4
+AspectStatHalve:
+#incbin "Aspect/aspect.dmp"
+POIN SkillTester
+WORD AspectSkillID
+POIN AspectEvent
+ALIGN 4
+#include "Aspect/AspectEvent.event"
+
+ALIGN 4
 BreathOfLife:
 #incbin "BreathOfLife/BreathOfLife.dmp"
 POIN SkillTester

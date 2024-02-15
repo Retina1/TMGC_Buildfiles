@@ -153,6 +153,13 @@ ldr     r0,[r6,#0x2C]//St An Lt Dk Wrank
 str     r0,[r5,#0x2C]//St An Lt Dk Wrank
 
 //
+ldr r0,=#0x800D07C    @event engine thingy
+mov lr, r0
+ldr r0, TransformEvent @this event is just "play sound"
+mov r1, #0x01   @0x01 = wait for events
+.short  0xF800
+
+
 ldr     r4,=#0x03004E50//unit in work ram
 ldr     r0,[r4]
 ldrb    r2,[r0,#0x0C]
@@ -162,16 +169,16 @@ mov     r1,#0x01
 bic     r2,r1
 strb    r2,[r0,#0x0C]//unit turn spent
 
-
 ldr     r1,=#0x0203A958
 mov     r0,#0x1                
 strb    r0,[r1,#0x11]      
-//we exec a sfx
-mov     r0,#0xAA//recover status sfx index
-blh 	#0x80D01FC,r3	//play index sfx
+
 //
 mov     r0,#0x17               //we end turn
 End:
 pop     {r4-r7}
 pop     {r1}
 bx      r1
+.ltorg
+.align
+TransformEvent:

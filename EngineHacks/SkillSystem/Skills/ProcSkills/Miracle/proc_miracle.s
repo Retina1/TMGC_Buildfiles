@@ -5,6 +5,7 @@
   .short 0xf800
 .endm
 .equ MiracleID, SkillTester+4
+.equ AspectID, SkillTester+8
 .equ d100Result, 0x802a52c
 @ r0 is attacker, r1 is defender, r2 is current buffer, r3 is battle data
 push {r4-r7,lr}
@@ -43,8 +44,18 @@ mov r0, r5 @defender data
 ldr r1, MiracleID
 .short 0xf800
 cmp r0, #0
+bne MiracleEffect
+
+@or for our aspect
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker data
+ldr r1, AspectID
+.short 0xf800
+cmp r0, #0
 beq End
 
+MiracleEffect:
 @and set damage to currhp-1
 ldrb r0, [r5, #0x13] @currhp
 sub r0, #1

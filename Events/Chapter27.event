@@ -35,6 +35,20 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 //1b, 1c, 1d, 1e, 1f, 20, 21, 22, 23, 24, 25, 26, 27, 28
+CharacterEventBothWays(0x1b,C27RoseOlsenSupport,Rose,Olsen)//B
+CharacterEventBothWays(0x1c,C27KennethHilbertSupport,Kenneth,Hilbert)//A
+CharacterEventBothWays(0x1d,C27NatasiaBechamelSupport,Natasia,Bechamel)//A
+CharacterEventBothWays(0x1e,C27StefanJohanSupport,Stefan,Johan)//A
+CharacterEventBothWays(0x1f,C27DesmondFlynnSupport,Desmond,Flynn)//A
+CharacterEventBothWays(0x20,C27SamJosefSupport,Sam,Josef)//A
+CharacterEventBothWays(0x21,C27PeggyAthenaSupport,Peggy,Athena)//B+
+CharacterEventBothWays(0x22,C27RachaelJeffSupport,Rachael,Jeff)//A
+CharacterEventBothWays(0x23,C27EmileSimoneSupport,Emile,Simone)//B+
+CharacterEventBothWays(0x24,C27ApolloCharleySupport,Apollo,Charley)//B+
+CharacterEventBothWays(0x25,C27AvanToddsworthSupport,Avan,Toddsworth)//B+
+CharacterEventBothWays(0x26,C27JoanTobiasSupport,Joan,Tobias)//B+
+CharacterEventBothWays(0x27,C27CharleyYuyuSupport,Charley,Yuyu)//B
+CharacterEventBothWays(0x28,C27HyperiusLeilaSupport,Hyperius,Leila)//B+
 //rose/olsen that makes rose an assassin
 RoseShopMacro
 END_MAIN
@@ -74,11 +88,11 @@ ENDTRAP
 ALIGN 4
 
 C27Units:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [25,0] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [26,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [39,7] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [27,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [28,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [26,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [28,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
@@ -97,20 +111,20 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [40,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C27UnitsCut:
-UNIT Blair BlairLord 0x0 Level(1,Ally,0) [25,0] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
-UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [39,6] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [26,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [39,7] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [27,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [26,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [28,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [24,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [25,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [27,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [38,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [39,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin Trickster 0x0 Level(3,Ally,0) [40,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [38,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [39,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [40,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [38,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [39,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [40,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C27Easy:
@@ -345,16 +359,122 @@ C27BigIron:
 UNIT BladeGuy SwMast 0x0 Level(20,Enemy,1) [1,2] DropItem 0x0 0x0 0x0 [BigIron] NoAI
 UNIT
 
+C27OpeningZeke:
+UNIT Zeke ZekeLord 0x0 Level(1,Ally,0) [39,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+C27OpeningBlair:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [26,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
 ALIGN 4
+
+C27KennethHilbertSupport:
+Text(FillerDialogue)
+SetSupport(Kenneth,Hilbert,ASupport,1)
+EndEvent
+C27NatasiaBechamelSupport:
+Text(FillerDialogue)
+SetSupport(Natasia,Bechamel,ASupport,1)
+EndEvent
+C27StefanJohanSupport:
+Text(FillerDialogue)
+SetSupport(Stefan,Johan,ASupport,1)
+EndEvent
+C27DesmondFlynnSupport:
+Text(FillerDialogue)
+SetSupport(Desmond,Flynn,ASupport,1)
+EndEvent
+C27SamJosefSupport:
+Text(FillerDialogue)
+SetSupport(Sam,Josef,ASupport,1)
+EndEvent
+C27PeggyAthenaSupport:
+Text(FillerDialogue)
+SetSupport(Peggy,Athena,BPSupport,1)
+EndEvent
+C27RachaelJeffSupport:
+Text(FillerDialogue)
+SetSupport(Rachael,Jeff,ASupport,1)
+EndEvent
+C27EmileSimoneSupport:
+Text(FillerDialogue)
+SetSupport(Emile,Simone,BPSupport,1)
+EndEvent
+C27ApolloCharleySupport:
+Text(FillerDialogue)
+SetSupport(Apollo,Charley,BPSupport,1)
+EndEvent
+C27AvanToddsworthSupport:
+Text(FillerDialogue)
+SetSupport(Avan,Toddsworth,BPSupport,1)
+EndEvent
+C27JoanTobiasSupport:
+Text(FillerDialogue)
+SetSupport(Joan,Tobias,BPSupport,1)
+EndEvent
+C27CharleyYuyuSupport:
+Text(FillerDialogue)
+SetSupport(Charley,Yuyu,BSupport,1)
+EndEvent
+C27HyperiusLeilaSupport:
+Text(FillerDialogue)
+SetSupport(Hyperius,Leila,BPSupport,1)
+EndEvent
+
+C27RoseOlsenSupport:
+EVBIT_MODIFY 3
+SystemText(C27AssassinConfirm)
+IfNoSelectedGoto(0x3)
+Text(FillerDialogue)//promo
+SetBackground(BlankCG)
+SetSupport(Rose,Olsen,BSupport,1)
+PROMOTE Rose AssassF ShiningBow
+FADI 16
+CLEAN
+FADU 16
+GiveItem(ShiningBow,Rose)
+SetUnitStatus(Rose,BowExp,71)
+MUSC 0x0
+GOTO 0x4
+LABEL 0x3
+Text(FillerDialogue)//no promo
+SystemText(C27RoseBowRank)
+GiveItem(ShiningBow,Rose)
+SetUnitStatus(Rose,BowExp,71)
+SetSupport(Rose,Olsen,BSupport,1)
+LABEL 0x4
+EndEvent
+
+
+EndingScene:
+ResetBaseFlags
+MUSC S_Nightfall
+CleanTextNoMap(HallCG,FillerDialogue)
+//valeria talks to fred if he's alive, otherwise clarque if he's alive
+MoveToChapter(Chapter28)
+ENDA
+
 
 BeginningScene:
 ENUT GuideChpt27
-LocationText(MoonCG,FillerDialogue,TowerPeakLabel,0x0)
-MUSC NarrationTheme6
-SetBackground(Map2CG); STAL 120; NarrationText(Ch27_Narration); FADI 0x3c
-CleanTextNoMap(HallCG,FillerDialogue)
 LoadUnitsByDifficulty(C27Easy,C27Normal,C27Hard)
 LoadUnitsByDifficulty2(C27Easy2,C27Normal2,C27Hard2)
+LOAD3 0x0 C27Units
+ENUN
+LocationText(MoonCG,Ch27_Flashback,Flashback10YearLabel,0x0)
+MUSC NarrationTheme6
+SetBackground(Map2CG); STAL 120; NarrationText(Ch27_Narration); FADI 0x3c
+CleanText(PathCG,Ch27_Opening1)
+CAM1 Arbordia
+FlashCursor(Arbordia,60)
+Text(Ch27_Opening2)
+CAM1 Zeke
+FlashCursor(Zeke,60)
+Text(Ch27_Opening3)
+CAM1 Blair
+FlashCursor(Blair,60)
+Text(Ch27_Opening4)
+FADI 0x3c
 LOAD1 0x0 C27Units
 ENUN
 GetUnitStatus(Blair,SwordExp)
@@ -377,19 +497,30 @@ ENUT 0x8
 ENUT 0x9
 ENUT 0xa
 ENUT 0xb
+ENUF TavernI1Flag
+MutualASupport(Blair,Arin,BaseFlag1)//blair/estelle check
+MutualASupport(Blair,Natasia,BaseFlag1,0x121)//blair/estelle check
+MutualASupport(Blair,Avan,BaseFlag1,0x122)//blair/estelle check
+MutualASupport(Blair,Yuyu,BaseFlag1,0x123)//blair/estelle check
+SupportFlagOn(Kenneth,Hilbert,0x1c,BPSupport)
+SupportFlagOn(Natasia,Bechamel,0x1d,BPSupport)
+SupportFlagOn(Stefan,Johan,0x1e,BPSupport)
+SupportFlagOn(Desmond,Flynn,0x1f,BPSupport)
+SupportFlagOn(Sam,Josef,0x20,BPSupport)
+SupportFlagOn(Peggy,Athena,0x21,BSupport)
+SupportFlagOn(Rachael,Jeff,0x22,BPSupport)
+SupportFlagOn(Emile,Simone,0x23,BSupport)
+SupportFlagOn(Apollo,Charley,0x24,BSupport)
+SupportFlagOn(Avan,Toddsworth,0x25,BSupport)
+SupportFlagOn(Joan,Tobias,0x26,BSupport)
+SupportFlagOn(Charley,Yuyu,0x27,CPSupport)
+SupportFlagOn(Hyperius,Leila,0x28,BSupport)
 COUNTER_SET 0x1 0x0
 COUNTER_SET 0x2 0x0
 COUNTER_SET 0x3 0x0
 COUNTER_SET 0x4 0x0
 COUNTER_SET 0x5 0x0
 GotoPrepScreen
-ENDA
-
-EndingScene:
-ResetBaseFlags
-MUSC S_Nightfall
-CleanTextNoMap(HallCG,FillerDialogue)
-MoveToChapter(Chapter28)
 ENDA
 
 C27AreaTrapNorth:

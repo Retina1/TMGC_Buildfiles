@@ -67,7 +67,8 @@ BEQ 0x1 0xc 0x0
 	FADI 0x5
 CLEAN
 LABEL 0x1
-MoveToChapter(HubMap)
+MNTS 0x1
+//MoveToChapter(HubMap)
 ENDA
 
 EndingScene:

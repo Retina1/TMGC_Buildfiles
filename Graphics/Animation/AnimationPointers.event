@@ -712,6 +712,9 @@ ALIGN 4
 AssassFAnims:
 SwordAnim(0x8d)
 BowAnim(0x8e)
+AnimaAnim(0x8e)
+LightAnim(0x8e)
+DarkAnim(0x8e)
 UnarmedAnim(0x90)
 EndAnim
 
@@ -769,6 +772,7 @@ EndAnim
 ALIGN 4
 MageFAnims:
 MagicAnim(0x6c)
+BowAnim(0x6c)
 EndAnim
 
 ALIGN 4
@@ -781,6 +785,7 @@ EndAnim
 ALIGN 4
 SageFAnims:
 MagicAnim(0x6f)
+BowAnim(0x6f)
 StaffAnim(0x70)
 EndAnim
 

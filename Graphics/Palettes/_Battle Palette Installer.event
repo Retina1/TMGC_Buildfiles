@@ -130,6 +130,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define JonasPPaletteID 0x8d
 #define ButchPPaletteID 0x8e
 #define RangerFlynnPaletteID 0x93
+#define AssassinRosePaletteID 0x99
 
 #define TonnaminPaletteID 0x81
 
@@ -309,6 +310,7 @@ setPalette(EstelleUPaletteID,EstelleUPalette)
 setPalette(EstellePPaletteID,EstellePPalette)
 setPalette(RoseUPaletteID,RoseUPalette)
 setPalette(RosePPaletteID,RosePPalette)
+setPalette(AssassinRosePaletteID,AssassinRosePalette)
 setPalette(DirkPaletteID,DirkPalette)
 setPalette(CallumPaletteID,CallumPalette)
 setPalette(ManfredUPaletteID,ManfredUPalette)
@@ -494,7 +496,7 @@ SetPaletteFull(Eliza,ElizaUPaletteID,Cleric,ElizaPPaletteID,BishopF,0x0,0x0)
 SetPaletteFull(Chartreuse,ChartreusePaletteID,BardF,0x0,0x0,0x0,0x0)
 SetPaletteFull(Rift,0x0,Myrm,RiftPaletteID,SwMast,0x0,0x0)
 SetPaletteFull(Estelle,EstelleUPaletteID,BowCavF,EstellePPaletteID,BowPalF,0x0,0x0)
-SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,0x0,0x0)
+SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,AssassinRosePaletteID,AssassF)
 SetPaletteFull(Dirk,0x0,Pirate,DirkPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Callum,0x0,SwdCav,CallumPaletteID,SwdPal,0x0,0x0)
 SetPaletteFull(Manfred,ManfredUPaletteID,DarkM,ManfredPPaletteID,Sorc,0x0,0x0)
@@ -863,6 +865,9 @@ RoseUPalette:
 ALIGN 4
 RosePPalette:
 #incbin "RosePromoted.dmp"
+ALIGN 4
+AssassinRosePalette:
+#incbin "AssassinRose.dmp"
 ALIGN 4
 DirkPalette:
 #incbin "Dirk.dmp"

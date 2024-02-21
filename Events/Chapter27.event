@@ -369,55 +369,55 @@ UNIT
 ALIGN 4
 
 C27KennethHilbertSupport:
-Text(FillerDialogue)
+Text(KennethHilbertASupport)
 SetSupport(Kenneth,Hilbert,ASupport,1)
 EndEvent
 C27NatasiaBechamelSupport:
-Text(FillerDialogue)
+Text(NatasiaBechamelASupport)
 SetSupport(Natasia,Bechamel,ASupport,1)
 EndEvent
 C27StefanJohanSupport:
-Text(FillerDialogue)
+Text(StefanJohanASupport)
 SetSupport(Stefan,Johan,ASupport,1)
 EndEvent
 C27DesmondFlynnSupport:
-Text(FillerDialogue)
+Text(DesmondFlynnASupport)
 SetSupport(Desmond,Flynn,ASupport,1)
 EndEvent
 C27SamJosefSupport:
-Text(FillerDialogue)
+Text(SamJosefASupport)
 SetSupport(Sam,Josef,ASupport,1)
 EndEvent
 C27PeggyAthenaSupport:
-Text(FillerDialogue)
+Text(PeggyAthenaBPSupport)
 SetSupport(Peggy,Athena,BPSupport,1)
 EndEvent
 C27RachaelJeffSupport:
-Text(FillerDialogue)
+Text(RachaelJeffASupport)
 SetSupport(Rachael,Jeff,ASupport,1)
 EndEvent
 C27EmileSimoneSupport:
-Text(FillerDialogue)
+Text(EmileSimoneBPSupport)
 SetSupport(Emile,Simone,BPSupport,1)
 EndEvent
 C27ApolloCharleySupport:
-Text(FillerDialogue)
+Text(ApolloCharleyBPSupport)
 SetSupport(Apollo,Charley,BPSupport,1)
 EndEvent
 C27AvanToddsworthSupport:
-Text(FillerDialogue)
+Text(AvanToddsworthBPSupport)
 SetSupport(Avan,Toddsworth,BPSupport,1)
 EndEvent
 C27JoanTobiasSupport:
-Text(FillerDialogue)
+Text(JoanTobiasBPSupport)
 SetSupport(Joan,Tobias,BPSupport,1)
 EndEvent
 C27CharleyYuyuSupport:
-Text(FillerDialogue)
+Text(CharleyYuyuBSupport)
 SetSupport(Charley,Yuyu,BSupport,1)
 EndEvent
 C27HyperiusLeilaSupport:
-Text(FillerDialogue)
+Text(HyperiusLeilaBPSupport)
 SetSupport(Hyperius,Leila,BPSupport,1)
 EndEvent
 
@@ -425,7 +425,7 @@ C27RoseOlsenSupport:
 EVBIT_MODIFY 3
 SystemText(C27AssassinConfirm)
 IfNoSelectedGoto(0x3)
-Text(FillerDialogue)//promo
+Text(RoseOlsenBSupport)//promo
 SetBackground(BlankCG)
 SetSupport(Rose,Olsen,BSupport,1)
 PROMOTE Rose AssassF ShiningBow
@@ -437,7 +437,7 @@ SetUnitStatus(Rose,BowExp,71)
 MUSC 0x0
 GOTO 0x4
 LABEL 0x3
-Text(FillerDialogue)//no promo
+Text(RoseOlsenBSupportAlt)//no promo
 SystemText(C27RoseBowRank)
 GiveItem(ShiningBow,Rose)
 SetUnitStatus(Rose,BowExp,71)
@@ -449,8 +449,25 @@ EndEvent
 EndingScene:
 ResetBaseFlags
 MUSC S_Nightfall
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(StreetCG,Ch27_Ending)
 //valeria talks to fred if he's alive, otherwise clarque if he's alive
+CHECK_ALIVE Valeria
+BEQ 0x1 0xc 0x0
+	CHECK_ALIVE Freddric
+	BEQ 0x2 0xc 0x0
+	CleanTextNoMap(StreetCG,Ch27_EndingFreddric)
+	REMA
+	SetSupport(Freddric,Valeria,BPSupport,1)
+	SetBackground(BlankCG)
+	GOTO 0x1
+	LABEL 0x2
+	CHECK_ALIVE SecretClarque
+	BEQ 0x1 0xc 0x0
+	CleanTextNoMap(StreetCG,Ch27_EndingClarque)
+	REMA
+	SetSupport(SecretClarque,Valeria,BPSupport,1)
+	SetBackground(BlankCG)
+LABEL 0x1
 MoveToChapter(Chapter28)
 ENDA
 
@@ -737,7 +754,7 @@ SVAL 0x1 0x4
 BNE 0x9 0xc 0x1
 Reinforcements(C27ValeriaJoin)
 MUSC RecruitmentThemeVirid
-Text(FillerDialogue)
+Text(Ch27_ValeriaAppears)
 LABEL 0x9
 EndEvent
 

@@ -80,6 +80,7 @@ POIN Chapter24Conversations
 POIN TheReturnConversations
 POIN TheReturnConversations2
 POIN Chapter25Conversations
+POIN Interlude10Conversations
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -1430,6 +1431,143 @@ ConversationEntry(EC25VillageSouthAlt,C25SouthVillageAlt,VillageCG,Chapter25,Rec
 ConversationEntryTerminator
 
 ALIGN 4
+Interlude10Conversations:
+ConversationEntry(EI10Open,I10Opening,PathCG,Interlude10,S_GentleMadman)
+//christ there's 118 of these
+//houses and brandl
+ConversationEntry(EI10House1,I10House1Text,HouseCG,Interlude10)
+ConversationEntry(EI10House2,I10House2Text,HouseCG,Interlude10)
+ConversationEntry(EI10House3,I10House3Text,HouseCG,Interlude10)
+ConversationEntry(EI10House4,I10House4Text,HouseCG,Interlude10)
+ConversationEntry(EI10Inn,I10InnText,InnCG,Interlude10)
+ConversationEntry(EI10Brandl,I10BrandlTalk,PathCG,Interlude10)
+ConversationEntry(EI10BrandlAlt,I10BrandlTalkHyperiusDead,PathCG,Interlude10)
+ConversationEntry(EI10Door,I10DoorText,HallCG,Interlude10)
+ConversationEntry(EI10Chest,I10ChestText,HallCG,Interlude10,S_WelcomeToLegend)
+//character talks
+ConversationEntry(Name_Arin,I10ArinTalk,PathCG,Interlude10)
+ConversationEntry(EI10ArinAlt,I10ArinTalk,PathCG,Interlude10,LoverConvoSong)
+ConversationEntry(Name_Kenneth,I10KennethTalk,PathCG,Interlude10)
+ConversationEntry(EI10KennethAlt,I10KennethTalkAlt,PathCG,Interlude10)
+ConversationEntry(Name_Natasia,I10NatasiaTalk,PathCG,Interlude10)
+ConversationEntry(EI10NatasiaAlt,I10NatasiaTalkAlt,PathCG,Interlude10,LoverConvoSong)
+ConversationEntry(Name_Stefan,I10StefanTalk,PathCG,Interlude10)
+ConversationEntry(Name_Desmond,I10DesmondTalk,PathCG,Interlude10)
+ConversationEntry(Name_Sam,I10SamTalk,PathCG,Interlude10)
+ConversationEntry(EI10SamAlt,I10SamTalkAlt,PathCG,Interlude10)
+ConversationEntry(Name_Josef,I10JosefTalk,PathCG,Interlude10)
+ConversationEntry(Name_Peggy,I10PeggyTalk,PathCG,Interlude10)
+ConversationEntry(Name_Butch,I10ButchTalk,PathCG,Interlude10)
+ConversationEntry(Name_Rachael,I10RachaelTalk,PathCG,Interlude10)
+ConversationEntry(Name_Cassius,I10CassiusTalk,PathCG,Interlude10)
+ConversationEntry(Name_Jeff,I10JeffTalk,PathCG,Interlude10)
+ConversationEntry(Name_Emile,I10EmileTalk,PathCG,Interlude10)
+ConversationEntry(EI10EmileAlt,I10EmileTalkAlt,PathCG,Interlude10)
+ConversationEntry(Name_Apollo,I10ApolloTalk,PathCG,Interlude10)
+ConversationEntry(Name_Bechamel,I10BechamelTalk,PathCG,Interlude10)
+ConversationEntry(EI10Sveltzalus,I10SveltzalusTalk,PathCG,Interlude10)
+ConversationEntry(Name_Hilbert,I10HilbertTalk,PathCG,Interlude10)
+ConversationEntry(Name_Agnes,I10AgnesTalk,PathCG,Interlude10)//agnes
+ConversationEntry(Name_Flynn,I10FlynnTalk,PathCG,Interlude10)
+ConversationEntry(EI10Addington,I10AddingtonTalk,PathCG,Interlude10)//addington
+ConversationEntry(Name_Mikey,I10MikeyTalk,PathCG,Interlude10)
+ConversationEntry(Name_Carbon,I10CarbonTalk,PathCG,Interlude10)
+ConversationEntry(EI10CarbonAlt,I10CarbonTalkAlt,PathCG,Interlude10)
+ConversationEntry(Name_Gaylord,I10GaylordTalk,PathCG,Interlude10)//gaylord
+ConversationEntry(Name_Athena,I10AthenaTalk,PathCG,Interlude10)
+ConversationEntry(Name_Charley,I10CharleyTalk,PathCG,Interlude10)
+ConversationEntry(Name_Hyperius,I10HyperiusTalk,PathCG,Interlude10)//hyperius
+ConversationEntry(Name_Alexis,I10AlexisTalk,PathCG,Interlude10)
+ConversationEntry(Name_Leila,I10LeilaTalk,PathCG,Interlude10)
+ConversationEntry(Name_Damien,I10DamienTalk,PathCG,Interlude10)
+ConversationEntry(EI10Zacharias,I10ZachariasTalk,PathCG,Interlude10)
+ConversationEntry(Name_Avan,I10AvanTalk,PathCG,Interlude10)
+ConversationEntry(EI10AvanAlt,I10AvanPlatonicTalk,PathCG,Interlude10)
+ConversationEntry(EI10AvanAlt2,I10AvanLoverTalk,PathCG,Interlude10,LoverConvoSong)
+ConversationEntry(EI10Toddsworth,I10ToddsworthTalk,PathCG,Interlude10)
+ConversationEntry(Name_Yuyu,I10YuyuTalk,PathCG,Interlude10)
+ConversationEntry(EI10YuyuAlt,I10YuyuPlatonicTalk,PathCG,Interlude10)
+ConversationEntry(EI10YuyAlt2,I10YuyuLoverTalk,PathCG,Interlude10,LoverConvoSong)
+ConversationEntry(Name_Artemis,I10ArtemisTalk,PathCG,Interlude10)
+ConversationEntry(Name_Hollandaise,EI10Hollandaise,PathCG,Interlude10)
+ConversationEntry(Name_Vladmir,I10VladmirTalk,PathCG,Interlude10)
+ConversationEntry(Name_Horatio,I10HoratioTalk,PathCG,Interlude10,S_Ameno)
+ConversationEntry(EI10HoratioAlt,I10HoratioTalkAlt,PathCG,Interlude10,S_HisWorld)
+ConversationEntry(Name_Q,I10QTalk,PathCG,Interlude10)//Q
+ConversationEntry(Name_Simone,I10SimoneTalk,PathCG,Interlude10)
+ConversationEntry(EI10SimoneAlt,I10SimoneTalkAlt,PathCG,Interlude10)
+ConversationEntry(EI10SimoneAlt2,I10SimoneTalkAlt2,PathCG,Interlude10)
+ConversationEntry(Name_Ptolemy,I10PtolemyTalk,PathCG,Interlude10)
+ConversationEntry(Name_Johan,I10JohanTalk,PathCG,Interlude10)
+ConversationEntry(Name_Clarque,I10ClarqueTalk,PathCG,Interlude10)
+ConversationEntry(Name_Peter,I10PeterTalk,PathCG,Interlude10)
+ConversationEntry(Name_Tonnamin,I10TonnaminTalk,PathCG,Interlude10)
+ConversationEntry(Name_Joan,I10JoanTalk,PathCG,Interlude10)
+ConversationEntry(Name_Sonia,I10SoniaTalk,PathCG,Interlude10)
+ConversationEntry(Name_Tobias,I10TobiasTalk,PathCG,Interlude10)
+ConversationEntry(Name_Laronde,I10LarondeTalk,PathCG,Interlude10)
+ConversationEntry(EI10LarondeAlt,I10LarondeTalkAlt,PathCG,Interlude10)
+ConversationEntry(Name_Freddric,I10FreddricTalk,PathCG,Interlude10)//dean
+ConversationEntry(Name_Dean,I10DeanTalk,PathCG,Interlude10)
+ConversationEntry(Name_Eliza,I10ElizaTalk,PathCG,Interlude10)
+ConversationEntry(Name_Rift,I10RiftTalk,PathCG,Interlude10)
+ConversationEntry(Name_Estelle,I10EstelleTalk,PathCG,Interlude10)
+ConversationEntry(EI10EstelleAlt,I10EstelleTalkAlt,PathCG,Interlude10)
+ConversationEntry(Name_Rose,I10RoseTalk,PathCG,Interlude10)
+ConversationEntry(Name_Dirk,I10DirkTalk,PathCG,Interlude10)
+ConversationEntry(EI10DirkAlt,I10DirkTalkAlt,PathCG,Interlude10)
+ConversationEntry(Name_Callum,I10CallumTalk,PathCG,Interlude10)
+ConversationEntry(Name_Manfred,I10ManfredTalk,PathCG,Interlude10)
+ConversationEntry(Name_Wilhelm,I10WilhelmTalk,PathCG,Interlude10)
+ConversationEntry(Name_Argent,I10ArgentTalk,PathCG,Interlude10)//argent
+ConversationEntry(Name_Ian,I10IanTalk,PathCG,Interlude10)
+ConversationEntry(Name_Kyrie,I10KyrieTalk,PathCG,Interlude10)//kyrie
+//ending prompts
+ConversationEntry(EI10Leave,I10ConfirmLeave,PathCG,Interlude10)
+ConversationEntry(EI10NotYet,I10NotYet,PathCG,Interlude10)
+ConversationEntry(EI10EndConfirm,I10TheTime,PathCG,Interlude10)
+//ending event
+ConversationEntry(EI10End,I10GeneralEnd,HallCG,Interlude10,S_RightRoad)
+//aercolyn knights
+ConversationEntry(EI10EndSJD,I10EndingStefanJohanDesmond,HallCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndSJ,I10EndingStefanJohan,HallCG,Interlude10,S_RightRoad)
+//kenneth natasia A
+ConversationEntry(EI10EndKN,I10EndingKennethNatasia,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndKNAlt,I10EndingKennethNatasiaAlt,VillageCG,Interlude10,S_RightRoad)
+//joan group
+ConversationEntry(EI10EndJSMC,I10EndingJoanSoniaMikeyCarbon,HouseCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndJSM,I10EndingJoanSoniaMikey,HouseCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndJMC,I10EndingJoanMikeyCarbon,HouseCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndJM,I10EndingJoanMikey,HouseCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndJS,I10EndingJoanSonia,HouseCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndJ,I10EndingJoan,HouseCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndS,I10EndingSonia,HouseCG,Interlude10,S_RightRoad)
+//laronde rose
+ConversationEntry(EI10EndRL,I10EndingLarondeRose,SunsetPathCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndL,I10EndingLaronde,SunsetPathCG,Interlude10,S_RightRoad)
+//damien group
+ConversationEntry(EI10EndDZLTKnow,I10EndingDZLTKnow,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndDZLT,I10EndingDZLT,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndDZT,I10EndingDZT,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndDLTKnow,I10EndingDLTKnow,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndDLT,I10EndingDLT,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndZLTKnow,I10EndingZLTKnow,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndDZ,I10EndingDZ,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndDT,I10EndingDT,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndZT,I10EndingZT,VillageCG,Interlude10,S_RightRoad)
+ConversationEntry(EI10EndLTKnow,I10EndingLTKnow,VillageCG,Interlude10,S_RightRoad)
+//clarque fred
+ConversationEntry(EI10EndCF,I10EndingClarqueFreddric,StreetCG,Interlude10,S_RightRoad)
+//blair zeke
+ConversationEntry(EI10EndBZ,I10EndingBlairZekeA,HallCG,Interlude10,S_CircleOfTheMoon)
+//kenneth
+ConversationEntry(EI10EndKenneth,I10EndingKennethLeaves,StreetCG,Interlude10)
+//arin
+ConversationEntry(EI10EndArin,I10EndingArin,HallCG,Interlude10)
+ConversationEntry(EI10EndArin2,I10EndingArinPart2,TitleCG,Interlude10,S_MainTheme)
+ConversationEntryTerminator
+
+ALIGN 4
 BaseConversations:
 ConversationEntry(C1_Base_Convo_Intro_Select,C1_Base_Convo_Intro,PathCG,BaseConvoViewer)
 ConversationEntry(C2_Companions_Select,C2_Companions,OutdoorCastleCG,BaseConvoViewer)
@@ -1466,6 +1604,8 @@ ConversationEntry(C23_Father_Select,C23_Father_Base,EastHolanisCG,BaseConvoViewe
 ConversationEntry(C24_Holy_Land_Select,C24_Holy_Land_Base,LowlandsCG,BaseConvoViewer)
 ConversationEntry(C25_Youth_Select,C25_Youth,TentInsideCG,BaseConvoViewer)
 ConversationEntry(SSCh25,C25_Secret_Seller,PathCG,BaseConvoViewer,S_PascalTheDog)
+ConversationEntry(Girlkissing_Label,C26Girlkissing,StreetCG,BaseConvoViewer)
+ConversationEntry(Girlkissing_Label2,C26GirlkissingPart2,StreetCG,BaseConvoViewer,LoverConvoSong)
 ConversationEntry(SSCh28,C28_Secret_Seller,HallCG,BaseConvoViewer,S_PascalTheDog)
 ConversationEntryTerminator
 

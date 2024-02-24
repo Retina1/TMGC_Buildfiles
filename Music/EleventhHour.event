@@ -554,8 +554,8 @@ Label_015D6130:
 EleventhHour_003:
 //  #03 //000   ----------------------------------------
  BYTE   KEYSH   EleventhHour_key+0
- BYTE   VOICE   82
- BYTE   VOL   86*EleventhHour_mvl/mxv
+ BYTE   VOICE   81
+ BYTE   VOL   126*EleventhHour_mvl/mxv
  BYTE   W96
 //  #03 //001   ----------------------------------------
  BYTE   W96
@@ -851,9 +851,9 @@ Label_015D62F3:
 
 EleventhHour_004:
 //  #04 //000   ----------------------------------------
- BYTE   VOL   119*EleventhHour_mvl/mxv
+ BYTE   VOL   110*EleventhHour_mvl/mxv
  BYTE   KEYSH   EleventhHour_key+0
- BYTE   VOICE   28
+ BYTE   VOICE   100
  BYTE   W96
 //  #04 //001   ----------------------------------------
  BYTE   W96

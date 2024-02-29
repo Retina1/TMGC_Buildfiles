@@ -404,6 +404,14 @@ UNIT Johan LncCav 0x0 Level(8,NPC,0) [16,0] 0x0 0x0 0x1 REDA15R1 [0x0] [0x6,0x3,
 UNIT Ptolemy BowArm 0x0 Level(14,NPC,0) [16,0] 0x0 0x0 0x1 REDA16R1 [BeecurveBow,Beelista,Elixir] [0x6,0x3,0x4,0x0]
 UNIT
 
+C21EndingPtolemy:
+UNIT Ptolemy BowArm 0x0 Level(14,Ally,0) [16,0] 0x0 0x0 0x0 0x0 [BeecurveBow,Beelista,Elixir] [0x6,0x3,0x4,0x0]
+UNIT
+
+C21EndingJohan:
+UNIT Johan LncCav 0x0 Level(8,Ally,0) [16,0] 0x0 0x0 0x0 0x0 [0x0] [0x6,0x3,0x4,0x0]
+UNIT
+
 ALIGN 4
 
 C21EscapeCheck:
@@ -499,21 +507,38 @@ EndingScene:
 ResetBaseFlags
 MUSC S_Nightfall
 CleanTextNoMap(OutdoorCastleCG,C21Ending1)//catharsis, relief
-CHECK_ALIVE Ptolemy
-BEQ 0x400 0xc 0x0
-CHECK_ALIVE Johan
-BEQ 0x401 0xc 0x0
+TurnAllyIfAlive(Ptolemy)
+TurnAllyIfAlive(Johan)
+//whoops a bunch of stuff needs light modification to account for rescuing them off map without recruiting
+CHECK_EVENTID HeatFlag1
+BNE 0x400 0xc 0x0
+CHECK_EVENTID HeatFlag2
+BNE 0x401 0xc 0x0
 CleanTextNoMap(OutdoorCastleCG,C21EndingPJAlive)//johan and ptolemy alive
+	CHECK_ALIVE Ptolemy
+	BNE 0x890 0xc 0x0
+	LOAD1 0x1 C21EndingPtolemy
+	LABEL 0x890
+	CHECK_ALIVE Johan
+	BNE 0x891 0xc 0x0
+	LOAD1 0x1 C21EndingJohan
+	LABEL 0x891
 GOTO 0x500
 LABEL 0x401
 CleanTextNoMap(OutdoorCastleCG,C21EndingPAlive)//ptolemy alive, johan dead
+	CHECK_ALIVE Ptolemy
+	BNE 0x892 0xc 0x0
+	LOAD1 0x1 C21EndingPtolemy
+	LABEL 0x892
 LABEL 0x400
-CHECK_ALIVE Johan
-BEQ 0x500 0xc 0x0
+CHECK_EVENTID HeatFlag2
+BNE 0x500 0xc 0x0
 CleanTextNoMap(OutdoorCastleCG,C21EndingJAlive)//ptolemy dead, johan alive
+	CHECK_ALIVE Johan
+	BNE 0x893 0xc 0x0
+	LOAD1 0x1 C21EndingJohan
+	LABEL 0x893
 LABEL 0x500
-TurnAllyIfAlive(Ptolemy)
-TurnAllyIfAlive(Johan)
 COUNTER_CHECK 0x1 //check counter 1 - number of deaths in slot C
 BNE 0x100 0xc 0x0
 //none dead - bragging rights award

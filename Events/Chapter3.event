@@ -204,6 +204,17 @@ ALIGN 4
 
 BeginningScene:
 ENUT GuideChpt3
+SetBackground(HallCG)
+Location(ArbordiaMeetingHallLabel)
+TEXTSTART
+TEXTSHOW Ch3_ColdOpening
+TEXTEND
+MUSC S_RigorousJustice
+TEXTCONT
+TEXTEND
+MUSC 0x0
+TEXTCONT
+TEXTEND
 LoadUnitsByDifficulty(C3Easy,C3Normal,C3Hard)
 LOAD1 0x0 C3Units
 LOAD1 0x0 C3JosefNPC

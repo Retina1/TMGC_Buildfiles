@@ -245,6 +245,7 @@ beq		TalkEventCheck			@if not enemy, no need for this check
 .endif
 mov		r5,#inventory_slot1
 LoopThroughItems:
+@8,15,18,22,2b,30,da, all should always show icons
 ldrh	r1,[r4,r5]
 cmp		r1,#0
 beq		TalkEventCheck
@@ -267,6 +268,23 @@ mov		r14,r1
 .short	0xF800
 cmp		r0,#crit_warning_cutoff
 bgt		IsCritty
+ldrh	r1,[r4,r5]
+mov 	r0,#0xff
+and		r1,r1,r0
+cmp		r1,#0x8
+beq 	IsEffective
+cmp		r1,#0x15
+beq 	IsEffective
+cmp		r1,#0x18
+beq 	IsEffective
+cmp		r1,#0x22
+beq 	IsEffective
+cmp		r1,#0x2b
+beq 	IsEffective
+cmp		r1,#0x30
+beq 	IsEffective
+cmp		r1,#0xda
+beq 	IsEffective
 NextItem:
 add		r5,#2
 cmp		r5,#inventory_slot1+8

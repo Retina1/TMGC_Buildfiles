@@ -429,6 +429,8 @@ C19South2:
 HouseEvent(Ch19_SouthHouse2,HouseCG)
 
 C19Turn1:
+CAM1 [4,8]
+FlashCursor(1,8,60)
 SystemText(_Ch19SysText)
 EndEvent
 

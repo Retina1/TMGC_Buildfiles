@@ -354,7 +354,7 @@ ALIGN 4
 #include "TMGC/ItemDropIcon/Display Droppable Item.event"
 
 //100 Crit Cap
-#include "ExternalHacks/CritCap/CritCap.event"
+//#include "ExternalHacks/CritCap/CritCap.event"
 
 //group AI
 //#include "TMGC/GroupAI/GroupAI.event"
@@ -496,5 +496,9 @@ POP
 #include "TMGC/DeploymentFlag/DeploymentFlag.lyn.event"
 #include "TMGC/RNMode/Installer.event"
 
+#include "TMGC/PerfectLuck/PerfectLuck.lyn.event"
+#include "TMGC/PerfectLuck/PerfectLuckMenuCommand.event"
+
+#include "TMGC/EndingStrings/DrawSpecialChapter.event"
 //not working yet
 //#include "TMGC/TitleBgmByFlag/TitleBgmByFlag.event"

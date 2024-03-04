@@ -138,7 +138,7 @@ Opistus,NOpistus,DOpistus,UOpistus,0x87,0x6,IsWeapon|IsMagic|Unsellable,OpistusB
 Master Seal,NMasterSeal,DMasterSeal,UPromoItem,0x88,0x9,0x0,0x0,0x0,1,0,0,0,0,0x11,2000,NoRank,MasterSealIcon,0x2d,NoEffect,0,0x0,10,0x0
 Eyedrops,NEyedrops,DEyedrops,UEyedrops,0x89,0x9,0x0,0x0,0x0,1,0,0,0,0,0x11,2500,NoRank,EyedropsIcon,0x2e,NoEffect,0,0x0,0x0,0x0
 Emboldener,NEmboldener,DEmboldener,UEmboldener,0x8a,0x1,IsWeapon|DesmondLocked,0x0,0x0,30,13,95,7,0,0x11,60,NoRank,EmboldenerIcon,0x0,NoEffect,2,0x0,0x0,BloodTideID
-Great Swallow,NGreatSwallow,DGreatSwallow,UMiniBallista,0x8b,0x3,IsWeapon|Indestructible|IsBrave,0x0,SwallowEffectiveness|IsPointer,3,6,180,10,0,0x1f,0,SRank,GreatSwallowIcon,0x0,CannotDoubleEffect,4,0x0,0x0,0x0
+Great Swallow,NGreatSwallow,DGreatSwallow,UMiniBallista,0x8b,0x3,IsWeapon|Indestructible|IsBrave,0x0,SwallowEffectiveness|IsPointer,3,6,180,17,0,0x1f,0,SRank,GreatSwallowIcon,0x0,CannotDoubleEffect,4,0x0,0x0,0x0
 Prototype,NPrototype,DPrototype,0x4be,0x8c,0x4,IsStaff|Unsellable,0x0,0x0,3,0,100,5,0,0xff,21000,SRank,PrototypeIcon,0x37,NoEffect,1,0x0,0x0,0x0
 Dragonpike,NDragonpike,DDragonpike,UDragonpike,0x8d,0x1,IsWeapon|ReverseTriangle,0x0,DragonEffectiveness|IsPointer,20,12,85,13,0,0x11,100,BRank,DragonpikeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Nuiusseon,NNuiusseon,DNuiusseon,UNuiusseon,0x8e,0x1,IsWeapon|Unsellable,NuiusseonBoost|IsPointer,0x0,30,26,110,10,0,0x12,2100,SRank,NuiusseonIcon,0x0,NoEffect,1,0x0,0x0,0x0
@@ -208,7 +208,7 @@ Longinus (josef prf),NLonginus,DLonginus,ULonginus,0xcd,0x1,IsWeapon|IsMagic|Jos
 Flying Spike (rachael prf),NFlyingSpike,DFlyingSpike,UFlyingSpike,0xce,0x1,IsWeapon|RachaelLocked,0x0,0x0,20,12,70,12,255,0x13,90,NoRank,FlyingSpikeIcon,0x0,NoEffect,1,0x0,0x0,0x0
 0xeff Sword (Horatio prf),HoratioSwordName,DHoratioBlade,UHoratioBlade,0xcf,0x0,IsWeapon|Unsellable|HoratioLocked|Indestructible,0x0,0x0,30,16,90,9,20,0x11,0,NoRank,HoratioSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
 0xeff Sword (summoned),HoratioSwordName,DSummonBlade,0x0,0xd0,0x0,IsWeapon|Unsellable|Indestructible,0x0,0x0,30,21,80,9,20,0x11,0,SRank,HoratioSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
-Annihilation,NAnnihilation,DAnnihilation,UAnnihilation,0xd1,0x5,IsWeapon|IsMagic|NegateDef|Indestructible|PassiveBoosts|CannotRepair,0x0,UberEffectiveness|IsPointer,30,99,120,10,255,0xff,0,SRank,StarfallIcon,0x0,NoEffect,1,0x0,0x0,WatchfulID
+Annihilation,NAnnihilation,DAnnihilation,UAnnihilation,0xd1,0x5,IsWeapon|IsMagic|NegateDef|Indestructible|PassiveBoosts|CannotRepair,0x0,UberEffectiveness|IsPointer,30,99,200,10,255,0xff,0,SRank,StarfallIcon,0x0,NoEffect,1,0x0,0x0,WatchfulID
 Arena Sword,NArenaSword,DArena,UArena,0xd2,0x0,IsWeapon,0x0,0x0,15,20,55,0,25,0x11,150,ERank,ArenaSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Arena Lance,NArenaLance,DArena,UArena,0xd3,0x1,IsWeapon,0x0,0x0,15,22,50,0,25,0x11,150,ERank,ArenaLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Arena Axe,NArenaAxe,DArena,UArena,0xd4,0x2,IsWeapon,0x0,0x0,15,23,45,0,25,0x11,150,ERank,ArenaAxeIcon,0x0,NoEffect,1,0x0,0x0,0x0

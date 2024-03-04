@@ -1,0 +1,31 @@
+PUSH
+ORG 0x59cf2c
+POIN PerfectLuckUsability|1
+POP
+
+PUSH
+ORG 0x59cf34
+POIN PerfectLuckEffect|1
+POP
+
+ALIGN 4
+PerfectLuckUsability:
+#incbin "LuckCommandUsability.dmp"
+
+ALIGN 4
+PerfectLuckEffect:
+#incbin "LuckCommandEffect.dmp"
+POIN PerfectLuckEvent
+
+ALIGN 4
+PerfectLuckEvent:
+CHECK_EVENTID 0xa1
+BNE 0x1 0xc 0x0
+ENUT 0xa1
+SystemText(PerfectLuckOn)
+GOTO 0x2
+LABEL 0x1
+ENUF 0xa1
+SystemText(PerfectLuckOff)
+LABEL 0x2
+EndEvent

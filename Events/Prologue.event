@@ -133,6 +133,10 @@ IfNoSelectedGoto(0x999)
 				IfNoSelectedGoto(0x996)
 				ENUT PressTurnModeFlag
 				LABEL 0x996
+				SystemText(PerfectLuckModePrompt)
+				IfNoSelectedGoto(0x993)
+				ENUT 0xa0
+				LABEL 0x993
 				SystemText(DeploymentCutModePrompt)
 				IfNoSelectedGoto(0x995)
 				ENUT HHMDeploymentFlag

@@ -18,6 +18,10 @@
 push 	{ lr}
 add 	sp, #-0x4
 str 	r2, [sp]
+mov 	r0, #0xff
+and 	r0,r0,r1
+cmp		r0,#0x57  @hammerne gets no love sorry
+beq		End
 mov 	r0, r1
 
 _blh GetWeaponType

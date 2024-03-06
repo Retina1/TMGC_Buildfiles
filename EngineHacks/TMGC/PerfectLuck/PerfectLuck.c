@@ -85,8 +85,10 @@ int GetOffensiveStaffAccuracy(struct Unit* actor, struct Unit* target) {
 	}
 	if (allegiance == UA_RED && CheckEventId_(0xa1)){
 		if (result < 100){
-			result = 0;
+			if (result > 4){
+				result = 5;
 			}
+		}
 	}
 
     return result;

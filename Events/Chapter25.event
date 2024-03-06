@@ -21,11 +21,13 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C25BobertWarning1,2)
+TurnEventPlayer(0x0,C25BobertWarning2,9)
 TurnEventPlayer(0xb,C25AreaTrap,1,255)
 TurnEventPlayer(0xd,C25AreaTrap2,1,255)
 TurnEventPlayer(0xf,C25AreaTrap3,1,255)
-TurnEventPlayer(0x0,C25MoveNow,10)
-TurnEventPlayer(0x0,C25MorningComes,13)
+TurnEventPlayer(0x0,C25MoveNow,11)
+TurnEventPlayer(0x0,C25MorningComes,14)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -448,6 +450,22 @@ ENUT 0xf
 GotoPrepScreen
 ENDA
 
+C25BobertWarning1:
+CHECK_ALIVE Bobert
+BEQ 0x1 0xc 0x0
+CAM1 Bobert
+Text(C25Warning1)
+LABEL 0x1
+EndEvent
+
+C25BobertWarning2:
+CHECK_ALIVE Bobert
+BEQ 0x1 0xc 0x0
+CAM1 Bobert
+Text(C25Warning2)
+LABEL 0x1
+EndEvent
+
 C25StefanDesmondSupport:
 Text(StefanDesmondASupport)
 SetSupport(Stefan,Desmond,ASupport,1)
@@ -587,7 +605,10 @@ C25MoveNow:
 Reinforcements(C25BackSpawn)
 EndEvent
 C25MorningComes:
+CHECK_HARD
+BEQ 0x1 0xc 0x0
 Reinforcements(C25MorningSpawn)
+LABEL 0x1
 EndEvent
 
 EndingScene:

@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,EndgameTurn1,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -183,6 +184,7 @@ ENUT GuideChptE
 LocationText(MoonCG,Final_Flashback,TowerPeakLabel,0x0)
 MUSC 0x0
 Narration(Map2CG,Final_Narration)
+WEATHER 0x3
 CleanTextNoMap(MoonCG,Final_Opening)
 LoadUnitsByDifficulty(EndgameEasy,EndgameNormal,EndgameHard)
 SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
@@ -210,6 +212,85 @@ LOAD1 0x0 FinalArbordiaSpawn
 SetUnitStatus(FinalArbordia, State, 0x2)
 Text(FillerDialogue)
 BREAKING_SACRED_STONE FinalArbordia
+Text(FillerDialogue)
+EndEvent
+
+EndgameTurn1:
+CAM1 [9,39]
+MUSC 0x0
+Text(BlairHypeSpeech)
+MUSC S_EarlyMysticMarch
+EndgameQuote(Kenneth,KennethEndgameQuote)
+EndgameQuote(Natasia,NatasiaEndgameQuote)
+EndgameQuote(Stefan,StefanEndgameQuote)
+EndgameQuote(Desmond,DesmondEndgameQuote)
+EndgameQuote(Sam,SamEndgameQuote)
+EndgameQuote(Josef,JosefEndgameQuote)
+EndgameQuote(Peggy,PeggyEndgameQuote)
+EndgameQuote(Butch,ButchEndgameQuote)
+EndgameQuote(Rachael,RachaelEndgameQuote)
+EndgameQuote(Cassius,CassiusEndgameQuote)
+EndgameQuote(Jeff,JeffEndgameQuote)
+EndgameQuote(Emile,EmileEndgameQuote)
+EndgameQuote(Apollo,ApolloEndgameQuote)
+EndgameQuote(Bechamel,BechamelEndgameQuote)
+EndgameQuote(Sveltzalus,SveltzalusEndgameQuote)
+EndgameQuote(Hilbert,HilbertEndgameQuote)
+EndgameQuote(Agnes,AgnesEndgameQuote)
+EndgameQuote(Flynn,FlynnEndgameQuote)
+EndgameQuote(Addington,AddingtonEndgameQuote)
+EndgameQuote(Mikey,MikeyEndgameQuote)
+EndgameQuote(Carbon,CarbonEndgameQuote)
+EndgameQuote(Gaylord,GaylordEndgameQuote)
+EndgameQuote(Athena,AthenaEndgameQuote)
+EndgameQuote(Charley,CharleyEndgameQuote)
+EndgameQuote(Alexis,AlexisEndgameQuote)
+EndgameQuote(Leila,LeilaEndgameQuote)
+EndgameQuote(Damien,DamienEndgameQuote)
+EndgameQuote(Zacharias,ZachariasEndgameQuote)
+EndgameQuote(Avan,AvanEndgameQuote)
+EndgameQuote(Toddsworth,ToddsworthEndgameQuote)
+EndgameQuote(Yuyu,YuyuEndgameQuote)
+EndgameQuote(Artemis,ArtemisEndgameQuote)
+EndgameQuote(Hollandaise,HollandaiseEndgameQuote)
+EndgameQuote(Vladmir,VladmirEndgameQuote)
+EndgameQuote(Horatio,HoratioEndgameQuote)
+EndgameQuote(UnitQ,QEndgameQuote)
+EndgameQuote(Simone,SimoneEndgameQuote)
+EndgameQuote(Ptolemy,PtolemyEndgameQuote)
+EndgameQuote(Johan,JohanEndgameQuote)
+EndgameQuote(SecretClarque,ClarqueEndgameQuote)
+EndgameQuote(Peter,PeterEndgameQuote)
+EndgameQuote(Tonnamin,TonnaminEndgameQuote)
+EndgameQuote(Joan,JoanEndgameQuote)
+EndgameQuote(Sonia,SoniaEndgameQuote)
+EndgameQuote(Tobias,TobiasEndgameQuote)
+EndgameQuote(SecretLaronde,LarondeEndgameQuote)
+EndgameQuote(Freddric,FreddricEndgameQuote)
+EndgameQuote(Dean,DeanEndgameQuote)
+EndgameQuote(Eliza,ElizaEndgameQuote)
+EndgameQuote(Rift,RiftEndgameQuote)
+EndgameQuote(Estelle,EstelleEndgameQuote)
+EndgameQuote(Rose,RoseEndgameQuote)
+EndgameQuote(Dirk,DirkEndgameQuote)
+EndgameQuote(Callum,CallumEndgameQuote)
+EndgameQuote(Manfred,ManfredEndgameQuote)
+EndgameQuote(Wilhelm,WilhelmEndgameQuote)
+EndgameQuote(Argent,ArgentEndgameQuote)
+EndgameQuote(Ian,IanEndgameQuote)
+EndgameQuote(Kyrie,KyrieEndgameQuote)
+EndgameQuote(SecretJonas,JonasEndgameQuote)
+EndgameQuote(Olsen,OlsenEndgameQuote)
+EndgameQuote(Valeria,ValeriaEndgameQuote)
+EndgameQuote(Elcorian,ElcorianEndgameQuote)
+EndgameQuote(Hyperius,HyperiusEndgameQuote)
+EndgameQuote(Zeke,ZekeEndgameQuote)
+EndgameQuote(Arin,ArinEndgameQuote)
+MUSC 0x0
+CAM1 Arbordia2
+Text(FillerDialogue)
+CAM1 [9,39]
+MUSC S_Uncontrollable
 Text(FillerDialogue)
 EndEvent
 

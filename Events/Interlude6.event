@@ -154,7 +154,7 @@ EndEvent
 
 I6HilbertTalk:
 Text(I6HilbertConvo)
-SetUnitStatus(Hilbert,SwordExp,1)
+SetUnitStatus(Hilbert,SwordExp,71)
 SystemText(I6HilbertSwordRank)
 EndEvent
 
@@ -254,7 +254,7 @@ GOTO 0x2
 LABEL 0x1
 Text(I6JosefSpecialConvo)
 SystemText(I6JosefLightRank)
-SetUnitStatus(Josef,LightExp,71)
+SetUnitStatus(Josef,LightExp,181)
 SetSupport(Josef,Hilbert,BSupport,1)
 LABEL 0x2
 EndEvent
@@ -471,23 +471,23 @@ BNE 0x10 0xc 0x0
 Text(I6EmileConvoAnima)
 SystemText(I6EmileAnima)
 SetUnitStatus(Emile,AnimaExp,251)
-GiveItem(Fimbulvetr,Emile)
+GiveItem(Flare,Emile)
 GOTO 0x19
 LABEL 0x10
 SVAL 0x1 0x1
 BNE 0x11 0xc 0x1
 Text(I6EmileConvoLight)
 SystemText(I6EmileLight)
-SetUnitStatus(Emile,LightExp,71)
-GiveItem(Divine,Emile)
+SetUnitStatus(Emile,LightExp,121)
+GiveItem(Banish,Emile)
 GOTO 0x19
 LABEL 0x11
 SVAL 0x1 0x2
 BNE 0x12 0xc 0x1
 Text(I6EmileConvoDark)
 SystemText(I6EmileDark)
-SetUnitStatus(Emile,DarkExp,31)
-GiveItem(Flux,Emile)
+SetUnitStatus(Emile,DarkExp,71)
+GiveItem(Corruption,Emile)
 GOTO 0x19
 LABEL 0x12
 Text(I6EmileConvoStaves)
@@ -505,7 +505,7 @@ GOTO 0x2
 LABEL 0x1
 Text(I6AvanSpecialConvo)
 SystemText(I6AvanAnimaRank)
-SetUnitStatus(Avan,AnimaExp,31)
+SetUnitStatus(Avan,AnimaExp,71)
 SetSupport(Blair,Avan,CPSupport,1)
 LABEL 0x2
 EndEvent

@@ -67,6 +67,7 @@ CharacterEvent(0x26,C24AthenaLarondeTalk,Athena,SecretLaronde,BaseFlag4)
 CharacterEvent(0x26,C24CharleyLarondeTalk,Charley,SecretLaronde,BaseFlag4)
 //final step
 CharacterEvent(0x27,C24BlairLarondeAltRecruitment,Blair,SecretLaronde,0x26)
+RoseShopMacro
 END_MAIN
 
 LocationBasedEvents:
@@ -396,6 +397,7 @@ ENUT GuideChpt24
 LocationText(MoonCG,Ch24_Flashback,Flashback13YearLabel,0x0)
 MUSC NarrationTheme5
 Narration(Map2CG,Ch24_Narration)
+WEATHER 0x1
 MUSC AmbientNight
 CleanText(LowlandsCG,C24_Opening)
 Reinforcements(C24OpeningBlair)
@@ -574,7 +576,7 @@ C24JosefHilbertSupport:
 Text(JosefHilbertBPSupport)
 FADI 60
 VCWF 0x0
-SetUnitStatus(Hilbert,LanceExp,31)
+SetUnitStatus(Hilbert,LanceExp,71)
 VCWF 0x7
 FADU 60
 SystemText(C24HilbertLanceRank)

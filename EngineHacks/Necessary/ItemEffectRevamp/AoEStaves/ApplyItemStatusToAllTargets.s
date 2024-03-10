@@ -62,13 +62,13 @@ _blh Roll1RN
 cmp r0, #0x1
 bne NextTarget
 @check if target already has a status effect
-mov r0, r4
-add r0, #0x30
-ldrb r1,[r0]
-mov r0, #0xF
-and r0, r1
-cmp r0, #0x0
-bne NextTarget
+@mov r0, r4
+@add r0, #0x30
+@ldrb r1,[r0]
+@mov r0, #0xF
+@and r0, r1
+@cmp r0, #0x0
+@bne NextTarget
 
 @apply status effect to target
 ldr r0, [sp]

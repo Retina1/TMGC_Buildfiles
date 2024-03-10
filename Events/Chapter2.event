@@ -84,7 +84,7 @@ UNIT Ygstra BowCav 0x0 Level(2,Enemy,1) [17,0] 0x0 0x0 0x0 0x0 [IronBow] AttackI
 UNIT Ygstra SwdCavF 0x0 Level(2,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [SteelSword] DelayedAI
 UNIT Ygstra AxeCav 0x0 Level(2,Enemy,1) [17,2] DropItem 0x0 0x0 0x0 [Swordreaver] NoAI
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,5] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,IronLance,SkillScroll] NeverMoveAI
+UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] DropItem 0x0 0x0 0x0 [Javelin,SkillScroll,BraveLance] NeverMoveAI
 UNIT
 
 C2Normal:
@@ -107,7 +107,7 @@ UNIT Ygstra LncCav 0x0 Level(2,Enemy,1) [17,2] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT Ygstra AxeCav 0x0 Level(2,Enemy,1) [18,2] DropItem 0x0 0x0 0x0 [Swordreaver] NoAI
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,4] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,6] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,SteelLance,SkillScroll] NeverMoveAI
+UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] DropItem 0x0 0x0 0x0 [Javelin,SkillScroll,BraveLance] NeverMoveAI
 UNIT
 
 C2Hard:
@@ -134,7 +134,7 @@ UNIT Ygstra AxeCav 0x0 Level(2,Enemy,1) [18,2] DropItem 0x0 0x0 0x0 [Swordreaver
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,4] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
 UNIT Ygstra LncWyv 0x0 Level(3,Enemy,1) [11,5] 0x0 0x0 0x0 0x0 [Axereaver] ChaseOnceApproachedAI
 UNIT Ygstra AxeWyv 0x0 Level(4,Enemy,1) [12,6] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnceApproachedAI
-UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [Javelin,SilverLance,SkillScroll] NeverMoveAI
+UNIT Brentson LncArm 0x0 Level(9,Enemy,1) [14,1] DropItem 0x0 0x0 0x0 [Javelin,SkillScroll,BraveLance] NeverMoveAI
 UNIT
 
 C2Allies:
@@ -177,7 +177,7 @@ LABEL 0x22
 DeathBranchText(Kenneth,Natasia,S_Crisis,S_Crisis,OutdoorCastleCG,Ch2_Opening,Ch2_Opening_Dead_Kenneth,Ch2_Opening_Dead_Natasia,Ch2_Opening_Dead_Kenneth_and_Natasia)
 LOAD1 0x0 C2Units
 ENUN
-SetUnitItemDurability(Brentson, 2, QuixoticID)
+SetUnitItemDurability(Brentson, 1, QuixoticID)
 GotoPrepScreen
 ENDA
 

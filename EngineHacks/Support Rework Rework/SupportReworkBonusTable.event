@@ -78,7 +78,7 @@
 			support(CPSupport,0,0,10,0,0,10)//c13
 			support(BSupport,0,0,15,0,0,15)//c18
 			support(BPSupport,0,0,20,0,0,20)//c23
-			support(ASupport,0,0,25,0,0,25)			//lover convo?
+			support(ASupport,0,0,25,0,0,25)
 		entry(Arin,Sveltzalus)
 			support(CSupport,0,0,5,0,0,5)//c12
 			support(CPSupport,0,0,10,0,0,10)//c16 in map
@@ -141,7 +141,7 @@
 			support(CPSupport,0,0,0,0,10,0)//c12
 			support(BSupport,0,0,0,0,15,0)//c19
 			support(BPSupport,0,0,0,0,20,0)//c23 in battle
-			support(ASupport,0,0,0,0,25,0)//c26 in batlte
+			support(ASupport,0,0,0,0,25,0)//c26 in battle
 		entry(Stefan,Carbon)
 			support(CSupport,0,0,0,0,0,5)//c15
 			support(CPSupport,0,0,0,0,5,10)//c18 map
@@ -153,14 +153,14 @@
 			support(CPSupport,0,0,10,0,0,10)
 			support(BSupport,0,1,20,0,0,10)//c21 at base
 			support(BPSupport,0,2,20,0,0,15)//c24
-			support(ASupport,0,3,25,0,0,20)//c27 battle
+			support(ASupport,0,3,25,0,0,20)//c27 battle, some kind of ending?
 	//desmond (arin, stefan)
 		entry(Desmond,Flynn)
 			support(CSupport,0,1,0,0,5,0)//c14
 			support(CPSupport,0,1,5,0,10,0)//c18
 			support(BSupport,0,2,10,0,10,0)//c20 battle
 			support(BPSupport,0,2,15,0,15,0)//c24 battle, desmond gives flynn a horse
-			support(ASupport,0,3,20,0,20,5)//c27 battle
+			support(ASupport,0,3,20,0,20,5)//c27 battle, romantic ending
 		entry(Desmond,Mikey)
 			support(CSupport,0,0,5,0,0,0)//c15 battle
 			support(CPSupport,1,1,5,0,0,0)//c18 battle
@@ -197,7 +197,7 @@
 			support(CPSupport,0,0,0,0,10,0)//c19 in battle
 			support(BSupport,0,0,0,0,15,0)//c24
 			support(BPSupport,0,0,0,0,20,0)//c26 battle
-			support(ASupport,0,0,0,0,30,0)			//lover convo?
+			support(ASupport,0,0,0,0,30,0)			//lover convo
 	//josef (stefan, sam)
 		entry(Josef,Hilbert)
 			support(CSupport,0,1,0,0,0,0)//c13
@@ -255,7 +255,7 @@
 			support(CPSupport,0,0,0,0,15,0)//c22
 			support(BSupport,0,0,10,0,15,0)//c24 battle
 			support(BPSupport,0,0,20,0,20,0)//c26
-			support(ASupport,1,0,25,0,30,0)
+			support(ASupport,1,0,25,0,30,0)		//lover convo
 	//rachael
 		entry(Rachael,Cassius)
 			support(CSupport,0,0,5,5,0,0)//c7
@@ -287,7 +287,7 @@
 			support(CPSupport,1,1,0,0,0,0)//c18 battle
 			support(BSupport,1,1,10,0,0,0)//c21 battle
 			support(BPSupport,1,1,10,10,0,0)//c25 battle
-			support(ASupport,1,1,10,10,10,10)
+			support(ASupport,1,1,10,10,10,10)		//lover convo/ending?
 		entry(Cassius,Athena)
 			support(CSupport,0,0,10,0,0,0)//c16
 			support(CPSupport,0,1,10,0,0,0)//c20
@@ -299,7 +299,7 @@
 			support(CPSupport,0,2,10,0,0,0)//c19
 			support(BSupport,0,2,15,0,0,0)//c21
 			support(BPSupport,0,2,20,0,0,5)//c24 battle
-			support(ASupport,0,3,30,0,0,10)			//lover convo?
+			support(ASupport,0,3,30,0,0,10)			//lover convo
 		entry(Cassius,Hyperius)
 			support(CSupport,1,0,0,0,0,0)//c16 in battle
 			support(CPSupport,1,1,0,0,0,0)//c20 in battle
@@ -350,13 +350,13 @@
 			support(CPSupport,1,0,5,0,0,10)//c17 battle
 			support(BSupport,2,0,15,0,0,10)//c20 battle
 			support(BPSupport,2,0,25,0,0,10)//c23 battle
-			support(ASupport,3,1,25,0,0,10)			//lover convo?
+			support(ASupport,3,1,25,0,0,10)			//lover convo
 		entry(Apollo,Charley)
 			support(CSupport,0,0,10,0,0,0)//c15
 			support(CPSupport,0,0,20,0,0,0)//c20
 			support(BSupport,0,1,20,0,0,0)//c25
 			support(BPSupport,1,1,20,0,0,0)//c27 battle
-			support(ASupport,1,2,30,0,0,0)			//lover convo?
+			support(ASupport,1,2,30,0,0,0)			
 		entry(Apollo,Avan)
 			support(CSupport,0,1,5,0,0,0)//c19 in battle
 			support(CPSupport,0,1,10,0,0,5)//c21 in battle
@@ -496,7 +496,7 @@
 			support(CPSupport,1,0,10,0,0,0)//c17 base
 			support(BSupport,2,0,10,0,0,0)//c19 battle
 			support(BPSupport,2,0,15,0,0,5)//c23 battle
-			support(ASupport,2,0,25,0,0,10)//c25x
+			support(ASupport,2,0,25,0,0,10)//c25x, romantic ending? idk
 		entry(Damien,Tobias)	
 			support(CSupport,1,0,0,0,0,0)
 			support(CPSupport,2,0,0,0,0,0)
@@ -703,7 +703,7 @@
 			support(CPSupport,1,0,5,0,0,10)
 			support(BSupport,1,0,15,0,0,15)//v3 innate
 			support(BPSupport,2,0,20,0,0,20)//v4
-			support(ASupport,3,0,30,0,0,30)//c26 bttle
+			support(ASupport,3,0,30,0,0,30)//c26 bttle, give them a gay ending
 	//wilhelm (manfred)
 	//argent (freddric)
 		entry(Argent,Clarque)

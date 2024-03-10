@@ -808,7 +808,7 @@
 	Chapter(Chapter26)
 		Entry
 			name(Girlkissing_Label)
-			importance(5)
+			importance(4)
 			event(C26GirlkissingEvent)
 			eventID(BaseFlag1)
 		Entry
@@ -926,8 +926,8 @@ GiveItem(Axereaver,Cassius)
 GiveItem(KillerAxe,Rachael)
 SetSupport(Cassius,Rachael,ASupport,1)
 FADI 0x5
-SetUnitStatus(Rachael,AxeExp,71)
-SetUnitStatus(Cassius,LanceExp,71)
+SetUnitStatus(Rachael,AxeExp,121)
+SetUnitStatus(Cassius,LanceExp,121)
 CLEAN
 NoFade
 ENDA

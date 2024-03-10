@@ -28,6 +28,8 @@
 #define SFXKillUnit(unit) "SET_SOMETHING unit; DISA unit"
 #define DisaIfDead(unit) "CHECK_ALIVE unit; BNE unit 0xc 0x0; DISA unit; LABEL unit"
 
+#define EndgameQuote(unit,text) "CHECK_DEPLOYED unit; BEQ unit 0xc 0x0; Text(text); LABEL unit"
+
 #define RefreshDurabilityItems "SVAL 1 0; ASMC RefreshItemsASMC|1"
 
 #define Location(textid) "BROWNBOXTEXT textid [8,8]"

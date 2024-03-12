@@ -27,6 +27,9 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0xa,C28KennethElcorianTalk,Kenneth,EnemyElcorian)
+CharacterEvent(0xb,C28EmileElcorianTalk,Emile,EnemyElcorian)
+CharacterEvent(0xc,C28SimoneElcorianTalk,Simone,EnemyElcorian)
 END_MAIN
 
 LocationBasedEvents:
@@ -172,7 +175,7 @@ UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [11,9] DropItem 0x0 0x0 0x0 [TheCr
 UNIT
 
 C28ElcorianJoin:
-UNIT Elcorian Valk 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI
+UNIT Elcorian Valk 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [TheCreator,Berserk] NoAI
 UNIT
 
 C28DoorsOpenGroup11:
@@ -194,6 +197,19 @@ UNIT Elite SageF 0x0 Level(16,Enemy,1) [22,2] 0x0 0x0 0x1 REDA20R2 [ForceSpike,E
 UNIT Elite SorcF 0x0 Level(16,Enemy,1) [22,3] 0x0 0x0 0x1 REDA21R3 [Nosferatu,VoidBracers] NoAI
 UNIT
 
+C28CutsceneBlairZeke:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [10,16] 0x0 0x0 0x1 REDA10R13 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [12,16] 0x0 0x0 0x1 REDA12R13 [IronBow] NoAI
+UNIT
+
+C28CutsceneElcorian:
+UNIT Bandit Valk 0x0 Level(16,Enemy,1) [11,9] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI
+UNIT
+
+C28CutsceneViridian:
+UNIT Unknown ViridianLord 0x0 Level(15,Enemy,1) [11,11] 0x0 0x0 0x0 0x0 [Soulbow] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -202,7 +218,27 @@ ENUT GuideChpt28
 LocationText(MoonCG,Ch28_Flashback,Flashback10YearLabel,0x0)
 MUSC NarrationTheme6
 SetBackground(Map2CG); STAL 120; NarrationText(Ch28_Narration); FADI 0x3c
-CleanTextNoMap(HallCG,FillerDialogue)
+LOAD1 0x1 C28CutsceneElcorian
+ENUN
+CleanText(HallCG,C28Opening1)
+LOAD1 0x1 C28CutsceneBlairZeke
+ENUN
+MUSC 0x0
+CAM1 Bandit
+FlashCursor(Bandit,60)
+MUSC S_ColdJustice
+Text(C28Opening2)
+MUSC 0x0
+WARPIN [11,11]
+LOAD1 0x1 C28CutsceneViridian
+ENUN
+ENDWARP
+Text(C28Opening3)
+WARPOUT [11,11]
+SilentKillUnit(Unknown)
+ENDWARP
+CleanTextNoMap(HallCG,C28Opening4)
+SilentKillUnit(Bandit)
 LoadUnitsByDifficulty(C28Easy,C28Normal,C28Hard)
 LOAD1 0x1 C28BossGroup
 ENUN
@@ -245,14 +281,32 @@ KillUnitIfPlayerAlive(Callum,DL10)
 KillUnitIfPlayerAlive(Manfred,DL11)
 KillUnitIfPlayerAlive(Wilhelm,DL12)
 KillUnitIfPlayerAlive(Argent,DL13)
+MutualASupport(Cassius,Rachael,BaseFlag2)
+MutualASupport(Apollo,Bechamel,BaseFlag3)
+MutualASupport(Leila,Damien,BaseFlag4)
 COUNTER_SET 0x2 0x0
 LOAD1 0x0 C28Units
 ENUN
 GotoPrepScreen
 ENDA
 
-C28OutOfTime:
+C28KennethElcorianTalk:
+MUSC S_ColdJustice
 Text(FillerDialogue)
+EndEvent
+
+C28SimoneElcorianTalk:
+MUSC S_ColdJustice
+Text(FillerDialogue)
+EndEvent
+
+C28EmileElcorianTalk:
+MUSC S_ColdJustice
+Text(FillerDialogue)
+EndEvent
+
+C28OutOfTime:
+Text(C28TurnLimit)
 StartGameOver
 EndEvent
 
@@ -316,12 +370,37 @@ EndingScene:
 ResetBaseFlags
 MUSC S_Nightfall
 CleanTextNoMap(HallCG,FillerDialogue)
-//make join conditional later
-LOAD1 0x1 C28ElcorianJoin
-TurnAlly(Elcorian)
-REMA
+//elcorian stuff
+	CHECK_EVENTID 0xd
+	BEQ 0x1 0xc 0x0
+		CleanTextNoMap(HallCG,FillerDialogue)//kenneth version of join
+		GOTO 0x4
+	LABEL 0x1
+	CHECK_EVENTID 0xe
+	BEQ 0x2 0xc 0x0
+		CleanTextNoMap(HallCG,FillerDialogue)//emile version of join
+		GOTO 0x4
+	LABEL 0x2
+	CHECK_EVENTID 0xf
+	BEQ 0x3 0xc 0x0
+		CleanTextNoMap(HallCG,FillerDialogue)//simone version of join
+		GOTO 0x4
+	LABEL 0x4
+		LOAD1 0x1 C28ElcorianJoin
+		TurnAlly(Elcorian)
+	LABEL 0x3
+CheckForItem(Soulbow)
+BNE 0x5 0xc 0x0
+CleanTextNoMap(HallCG,FillerDialogue)
 SetBackground(BlankCG)
 GiveItem(Soulbow,Zeke)
+LABEL 0x5
+MUSC 0x0
+CleanTextNoMap(HallCG,FillerDialogue)
+SetBackground(BlankCG)
+STAL 0x20
+SOUN 0xb4
+STAL 0x30
 MoveToChapter(Endgame)
 ENDA
 

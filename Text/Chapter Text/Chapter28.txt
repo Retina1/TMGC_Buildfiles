@@ -1,6 +1,269 @@
 ##_Ch28Objective
 Lay them to rest.[X]
 
+##C28TurnLimit
+[OpenMidLeft][LoadBlair]
+out of time dialogue[N]
+justify this later ig[A][X]
+
+##C28Opening1
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
+This place is[...][N]
+Well, it's huge.[A][N]
+Any idea where Arbordia[N]
+and Elcorian may be?[A][N][OpenMidLeft]
+I've got no clue. But we have[N]
+the perimeter surrounded.[A][N]
+Unless they can warp outside,[N]
+there's nowhere they can run.[A][N]
+[...]And if they do warp away,[N]
+we can prepare for their return.[A][N]
+For now, let's make our way up the[N]
+hall.[A] [...]Be ready for anything.[A][N][OpenMidRight]
+Right behind you.[N]
+All the way.[A][X]
+
+##C28Opening2
+[OpenFarLeft][LoadZeke][OpenLeft][LoadBlair][OpenMidRight][LoadElcorian]
+[...]So, you've arrived.[A][N][X]
+
+##C28Opening3
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ToggleInvert][OpenMidRight][LoadElcorian]
+[...]I believe you may be[N]
+familiar with this one.[A][N]
+Their entire group has proven[N]
+to be very worthy subjects.[A][N]
+Proof of my concept.[A][N]
+But you've proven yourselves[N]
+hardly into my rigor.[A][N]
+[...]In any case, none of this[N]
+matters.[A] My duty is to hold[N]
+you off for Girard.[A][N]
+Every moment you spend here[N]
+brings him further away.[A][N]
+[X]
+
+##C28Opening4
+[OpenMidLeft][LoadZeke][CloseEyes][OpenMidRight][LoadBlair][OpenMidLeft]
+[...]So this is[...] I'm[...][A][N][OpenMidRight]
+You[...] haven't done anything.[N]
+None of this is your fault.[A][N]
+[...]All we can do now is[N]
+bring end to their sorrow.[A][N]
+[...]And to Elcorian.[A][N][OpenMidLeft][OpenEyes]
+[...][X]
+
+##C28ElcorianBattle
+[OpenMidLeft][LoadElcorian]
+I[...] do not regret my choices.[A][N]
+The sins I've committed are all[N]
+in the name of the future.[A][N]
+If you deny this future,[N]
+there can be no parley.[A][N]
+[...]Come, then. Let our[N]
+ideals clash.[A][X]
+
+##C28ElcorianBlairBattle
+[OpenMidLeft][LoadElcorian][CloseEyes]
+[...][A][N][ClearFace][OpenMidRight][LoadBlair]
+[...]This is for everything.[N]
+Your good. Your evil.[A][N]
+Everything you've given.[N]
+Everything you've taken.[A][N]
+This is exactly what you've[N]
+come to deserve, Elcorian.[A][N][ClearFace][OpenMidLeft][LoadElcorian]
+[...]Then prove it to me.[A][N]
+Prove that you have the[N]
+will to forge your path.[A][N]
+[...]To bring an end to mine.[A][X]
+
+##BlairKillsElcorian
+[OpenMidLeft][LoadElcorian]
+[...]You've[...] grown strong[...][A][N][ClearFace][OpenMidRight][LoadBlair]
+[...]I have.[A][CloseEyes] Now begone.[A][N][ClearFace][OpenMidLeft][LoadElcorian]
+Urgh[...] Even so[...][A][N]
+My deeds shall endure[...][A][N][CloseEyes]
+Guide you to[...] salvation[...][A][N][ClearFace][OpenMidRight][LoadBlair]
+[...]Farewell, Elcorian.[A][X]
+
+##KennethWoundsElcorian
+[OpenMidLeft][LoadElcorian]
+[...]Urgh[...] Why aren't[...][N]
+you killing me[...]?[A][N][ClearFace][OpenMidRight][LoadKenneth]
+I simply think you'll[N]
+be a valuable asset.[A][N]
+Perhaps you wished to die[N]
+here instead.[A][N]
+Perhaps you'll wish you[N]
+died here.[A][N]
+[...]But there will be no[N]
+escaping justice.[A][N][ClearFace][OpenMidLeft][LoadElcorian][CloseEyes]
+[...][A][N][ClearFace][OpenMidRight][LoadKenneth]
+[...]Your sorrow will not[N]
+move me.[A] Now, begone.[A][N]
+We still have to clean[N]
+up the rest of your mess.[A][X]
+
+##EmileKillsElcorian
+[OpenMidLeft][LoadElcorian]
+[...]Emile[...][A][N][CloseEyes][ClearFace][OpenMidRight][LoadEmile][CloseEyes]
+[...]Goodbye, Elcorian.[A][X]
+
+##EmileWoundsElcorian
+[OpenMidLeft][LoadElcorian]
+[...]Emile[...][A][N][ClearFace][OpenMidRight][LoadEmile][CloseEyes]
+[...]I[...] I know there's[N]
+little hope for you.[A][N]
+But I still want to try[N]
+and save you.[A][N][ClearFace][OpenMidLeft][LoadElcorian][CloseEyes]
+[...][A][N][ClearFace][OpenMidRight][LoadEmile][CloseEyes]
+[...]I must be off, now.[A][X]
+
+##SimoneWoundsElcorian
+[OpenMidLeft][LoadElcorian]
+[...]I'm[...] alive[...]?[N]
+[...]Why[...]?[A][N][ClearFace][OpenMidRight][LoadSimone]
+Not sure of that myself.[A][N]
+But I'm sure I'll find a[N]
+use for you.[A][N]
+And if not, I'll gladly[N]
+finish what I started.[A][N]
+[...]Never forget that.[A][N][ClearFace][OpenMidLeft][LoadElcorian][CloseEyes]
+[...][A][N][ClearFace][OpenMidRight][LoadSimone]
+[...]You're truly pathetic.[A][X]
+
+##ElcorianKillsBlair
+[OpenMidRight][LoadBlair]
+[...]I have[...] nothing left[...][N]
+to say to you[...][A][N][CloseEyes][ClearFace][OpenMidLeft][LoadElcorian][CloseEyes]
+[...]I[...] tried. This is[N]
+all your doing.[A][X]
+
+##ElcorianKillsZeke
+[OpenMidRight][LoadZeke]
+[...]I[...] You can't[...][N]
+stop our will[...][A][N][CloseEyes][ClearFace][OpenMidLeft][LoadElcorian]
+[...]Goodbye, young prince.[A][N]
+May you find what purpose[N]
+you sought in the next life.[A][X]
+
+##C28GenericDeadlordDeath
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][X]
+
+##C28FreddricKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][LoadFreddric][CloseEyes]
+[...]Please[...] Don't leave[...][N]
+me again[...][A][N]
+[...]I'm[...] sorry.[A][X]
+
+##C28DeanKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadDean][CloseEyes]
+[...]Rest well, kid.[N]
+We'll[...] take it from here.[A][X]
+
+##C28ElizaKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEliza][CloseEyes]
+[...]Thank you for everything,[N]
+Viridian. I'll[...] miss you.[A][X]
+
+##C28RiftKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadRift]
+[...]There will be no mercy[N]
+for those that did this.[A][N]
+I promise you, boss.[A][X]
+
+##C28EstelleKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEstelle][CloseEyes]
+[...]Let this be your deliverance[N]
+unto the next.[A][X]
+
+##C28RoseKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadRose][CloseEyes]
+[...]I'm[...] afraid. But I know[...][N]
+you'll watch over us.[A][X]
+
+##C28DirkKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadDirk][CloseEyes]
+[...]Thank you.[A][X]
+
+##C28CallumKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadCallum]
+[...]It was nice to know you.[A][X]
+
+##C28ManfredKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadManfred][CloseEyes]
+[...]A truly lamentable fate.[N]
+If only things were different.[A][X]
+
+##C28WilhelmKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadWilhelm][CloseEyes]
+[...]Until we meet again, boss.[A][X]
+
+##C28ArgentKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadArgent][CloseEyes]
+[...]I will never stop fighting[N]
+for what you believe in.[A][N]
+Until my last breath.[A][X]
+
+##C28BlairKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadBlair][CloseEyes]
+[...]I'll end this[N]
+for you.[A][X]
+
+##C28ZekeKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadZeke][CloseEyes]
+[...]I[...] I'm sorry for[N]
+all this.[A][X]
+
+##C28ValeriaKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadValeria][CloseEyes]
+[...]You[...] You can rest[N]
+now, my child.[A][X]
+
+##C28ClarqueKillsViridian
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadClarque][CloseEyes]
+[...]This will[...] never[N]
+get any easier.[A][X]
+
+##C28ArgentKillsFreddric
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadArgent][CloseEyes]
+[...]Rest well, Freddric.[A][N]
+I shall carry out your[N]
+will, young one.[A][X]
+
+##C28ValeriaKillsFreddric
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadValeria][CloseEyes]
+[...]This is the only mercy[N]
+I can give you.[A][N]
+[...]Tell Viridian[...] that their[N]
+mother loves them.[A][X]
+
+##C28ClarqueKillsFreddric
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadClarque][CloseEyes]
+[...]I'm sorry for this.[A][N]
+I'll[...] do what I can for[N]
+their memory.[A][X]
+
 ##Ch28_Flashback
 [OpenMidLeft][LoadYoungGirard][OpenMidRight][LoadYoungElcorian][OpenMidLeft]
 You're doing well, Elcorian.[N]
@@ -74,106 +337,3 @@ Of course, Elcorian.[N]
 Now, then. Let us be off.[A][N]
 You still have infinite[N]
 potential within you.[A][X]
-
-##C28GenericDeadlordDeath
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][X]
-
-##C28FreddricKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][LoadFreddric][CloseEyes]
-[...]Please[...] Don't leave[...][N]
-me again[...][A][N]
-[...]I'm[...] sorry.[A][X]
-
-##C28DeanKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadDean][CloseEyes]
-[...]Rest well, kid.[N]
-We'll[...] take it from here.[A][X]
-
-##C28ElizaKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEliza][CloseEyes]
-[...]Thank you for everything,[N]
-Viridian. I'll[...] miss you.[A][X]
-
-##C28RiftKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadRift]
-[...]There will be no mercy[N]
-for those that did this.[A][N]
-I promise you, boss.[A][X]
-
-##C28EstelleKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEstelle][CloseEyes]
-[...]Let this be your deliverance[N]
-unto the next.[A][X]
-
-##C28RoseKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadRose][CloseEyes]
-[...]I'm[...] afraid. But I know[...][N]
-you'll watch over us.[A][X]
-
-##C28DirkKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadDirk][CloseEyes]
-[...]Thank you.[A][X]
-
-##C28CallumKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadCallum]
-[...]It was nice to know you.[A][X]
-
-##C28ManfredKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadManfred][CloseEyes]
-[...]A truly lamentable fate.[N]
-If only things were different.[A][X]
-
-##C28WilhelmKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadWilhelm][CloseEyes]
-[...]Until we meet again, boss.[A][X]
-
-##C28ArgentKillsViridian
-[OpenMidLeft][LoadBlank][ToggleInvert]
-[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadArgent][CloseEyes]
-[...]I will never stop fighting[N]
-for what you believe in.[A][N]
-Until my last breath.[A][X]
-
-##C28ElcorianBattle
-[OpenMidLeft][LoadElcorian]
-I[...] do not regret my choices.[A][N]
-The sins I've committed are all[N]
-in the name of the future.[A][N]
-If you deny this future,[N]
-there can be no parley.[A][N]
-[...]Come, then. Let our[N]
-ideals clash.[A][X]
-
-##C28ElcorianBlairBattle
-[OpenMidLeft][LoadElcorian][CloseEyes]
-[...][A][N][ClearFace][OpenMidRight][LoadBlair]
-[...]This is for everything.[N]
-Your good. Your evil.[A][N]
-Everything you've given.[N]
-Everything you've taken.[A][N]
-This is exactly what you've[N]
-come to deserve, Elcorian.[A][N][ClearFace][OpenMidLeft][LoadElcorian]
-[...]Then prove it to me.[A][N]
-Prove that you have the[N]
-will to forge your path.[A][N]
-[...]To bring an end to mine.[A][X]
-
-##BlairKillsElcorian
-[OpenMidLeft][LoadElcorian]
-[...]You've[...] grown strong[...][A][N][ClearFace][OpenMidRight][LoadBlair]
-[...]I have.[A][CloseEyes] Now begone.[A][N][ClearFace][OpenMidLeft][LoadElcorian]
-Urgh[...] Even so[...][A][N]
-My deeds shall endure[...][A][N][CloseEyes]
-Guide you to[...] salvation[...][A][N][ClearFace][OpenMidRight][LoadBlair]
-[...]Farewell, Elcorian.[A][X]

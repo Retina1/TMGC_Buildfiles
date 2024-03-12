@@ -982,6 +982,16 @@ BNE 0x9 0xc 0x1
 Reinforcements(C27ValeriaJoin)
 MUSC RecruitmentThemeVirid
 Text(Ch27_ValeriaAppears)
+CHECK_DEPLOYED Rachael
+BEQ 0x9 0xc 0x0
+CHECK_DEPLOYED Leila
+BEQ 0x9 0xc 0x0
+CAM1 Rachael
+FlashCursor(Rachael,60)
+Text(C27RachaelReaction)
+CAM1 Leila
+FlashCursor(Leila,60)
+Text(C27LeilaReaction)
 LABEL 0x9
 EndEvent
 

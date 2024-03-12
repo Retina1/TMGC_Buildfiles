@@ -43,6 +43,7 @@ POIN FlowCombat Frenzy // This was moved here because Str/Mag Split conflict, an
 POIN UpWithArch
 POIN AxefaithHit
 POIN StancesASM
+POIN Bane /*haha it's actully headhunter*/
 POIN PreCombatHeat PreCombatTension
 POIN EarthPowerPreBattle
 POIN VoidBracerEffect
@@ -51,7 +52,6 @@ POIN LethalitySkill
 #else
 POIN LethalitySkill NonGBALethalitySkill
 #endif
-POIN Bane /*haha it's actully headhunter*/
 
 #ifdef MODULAR_PRE_BATTLE_SKILLS
 	POIN ModularPreBattleSkill 

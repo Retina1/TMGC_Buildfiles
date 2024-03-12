@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song0185_grp, voicegroup000
-	.equ	song0185_pri, 0
-	.equ	song0185_rev, 0
-	.equ	song0185_mvl, 127
-	.equ	song0185_key, 0
-	.equ	song0185_tbs, 1
-	.equ	song0185_exg, 0
-	.equ	song0185_cmp, 1
+	.equ	ColdJustice_grp, voicegroup000
+	.equ	ColdJustice_pri, 0
+	.equ	ColdJustice_rev, 0
+	.equ	ColdJustice_mvl, 127
+	.equ	ColdJustice_key, 0
+	.equ	ColdJustice_tbs, 1
+	.equ	ColdJustice_exg, 0
+	.equ	ColdJustice_cmp, 1
 
 	.section .rodata
-	.global	song0185
+	.global	ColdJustice
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0185_001:
+ColdJustice_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
-Label_01731632:
- .byte   TEMPO , 78*song0185_tbs/2
+ .byte   KEYSH , ColdJustice_key+0
+Label_0179619E:
+ .byte   TEMPO , 78*ColdJustice_tbs/2
  .byte   VOICE , 1
- .byte   VOL , 28*song0185_mvl/mxv
+ .byte   VOL , 28*ColdJustice_mvl/mxv
  .byte   PAN , c_v-61
  .byte   TIE ,En4 ,v064
  .byte   N96 ,Gn4
@@ -123,17 +123,17 @@ Label_01731632:
  .byte   W96
 @  #01 @018   ----------------------------------------
  .byte   GOTO
-  .word Label_01731632
+  .word Label_0179619E
  .byte   FINE
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0185_002:
+ColdJustice_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
-Label_01731302:
+ .byte   KEYSH , ColdJustice_key+0
+Label_01795E6E:
  .byte   VOICE , 28
- .byte   VOL , 69*song0185_mvl/mxv
+ .byte   VOL , 69*ColdJustice_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,En1 ,v088
  .byte   W12
@@ -152,7 +152,7 @@ Label_01731302:
  .byte   N11
  .byte   W12
 @  #02 @001   ----------------------------------------
-Label_0173131A:
+Label_01795E86:
  .byte   N11 ,En1 ,v088
  .byte   W12
  .byte   N11
@@ -172,12 +172,12 @@ Label_0173131A:
  .byte   PEND 
 @  #02 @002   ----------------------------------------
  .byte   PATT
-  .word Label_0173131A
+  .word Label_01795E86
 @  #02 @003   ----------------------------------------
  .byte   PATT
-  .word Label_0173131A
+  .word Label_01795E86
 @  #02 @004   ----------------------------------------
-Label_01731337:
+Label_01795EA3:
  .byte   N03 ,Cn2 ,v080
  .byte   W12
  .byte   N03
@@ -231,12 +231,12 @@ Label_01731337:
  .byte   W12
 @  #02 @007   ----------------------------------------
  .byte   PATT
-  .word Label_0173131A
+  .word Label_01795E86
 @  #02 @008   ----------------------------------------
  .byte   PATT
-  .word Label_01731337
+  .word Label_01795EA3
 @  #02 @009   ----------------------------------------
-Label_01731376:
+Label_01795EE2:
  .byte   N11 ,An1 ,v088
  .byte   W12
  .byte   N11
@@ -255,7 +255,7 @@ Label_01731376:
  .byte   W12
  .byte   PEND 
 @  #02 @010   ----------------------------------------
-Label_01731389:
+Label_01795EF5:
  .byte   N11 ,Bn1 ,v088
  .byte   W12
  .byte   N11
@@ -275,10 +275,10 @@ Label_01731389:
  .byte   PEND 
 @  #02 @011   ----------------------------------------
  .byte   PATT
-  .word Label_0173131A
+  .word Label_01795E86
 @  #02 @012   ----------------------------------------
  .byte   PATT
-  .word Label_01731376
+  .word Label_01795EE2
 @  #02 @013   ----------------------------------------
  .byte   N11 ,Fn1 ,v088
  .byte   W12
@@ -298,7 +298,7 @@ Label_01731389:
  .byte   W12
 @  #02 @014   ----------------------------------------
  .byte   PATT
-  .word Label_01731389
+  .word Label_01795EF5
 @  #02 @015   ----------------------------------------
  .byte   N03 ,Cn2 ,v080
  .byte   W12
@@ -318,23 +318,23 @@ Label_01731389:
  .byte   W12
 @  #02 @016   ----------------------------------------
  .byte   PATT
-  .word Label_01731389
+  .word Label_01795EF5
 @  #02 @017   ----------------------------------------
  .byte   N44 ,Bn1 ,v088
  .byte   W96
 @  #02 @018   ----------------------------------------
  .byte   GOTO
-  .word Label_01731302
+  .word Label_01795E6E
  .byte   FINE
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0185_003:
+ColdJustice_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
-Label_01730FC2:
+ .byte   KEYSH , ColdJustice_key+0
+Label_01795B2E:
  .byte   VOICE , 18
- .byte   VOL , 41*song0185_mvl/mxv
+ .byte   VOL , 41*ColdJustice_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N72 ,En4 ,v088
  .byte   W78
@@ -482,17 +482,17 @@ Label_01730FC2:
  .byte   W96
 @  #03 @018   ----------------------------------------
  .byte   GOTO
-  .word Label_01730FC2
+  .word Label_01795B2E
  .byte   FINE
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0185_004:
+ColdJustice_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
-Label_0158951A:
- .byte   VOICE , 4
- .byte   VOL , 33*song0185_mvl/mxv
+ .byte   KEYSH , ColdJustice_key+0
+Label_015E1986:
+ .byte   VOICE , 100
+ .byte   VOL , 33*ColdJustice_mvl/mxv
  .byte   PAN , c_v+62
  .byte   N23 ,En1 ,v080
  .byte   N68 ,Bn2 ,v072
@@ -776,17 +776,17 @@ Label_0158951A:
  .byte   W96
 @  #04 @018   ----------------------------------------
  .byte   GOTO
-  .word Label_0158951A
+  .word Label_015E1986
  .byte   FINE
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0185_005:
+ColdJustice_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
-Label_0158971A:
+ .byte   KEYSH , ColdJustice_key+0
+Label_015E1B86:
  .byte   VOICE , 28
- .byte   VOL , 69*song0185_mvl/mxv
+ .byte   VOL , 69*ColdJustice_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,En1 ,v084
  .byte   W24
@@ -815,7 +815,7 @@ Label_0158971A:
  .byte   N11
  .byte   W24
 @  #05 @003   ----------------------------------------
-Label_0158973A:
+Label_015E1BA6:
  .byte   N10 ,En1 ,v084
  .byte   W24
  .byte   N11
@@ -826,7 +826,7 @@ Label_0158973A:
  .byte   W24
  .byte   PEND 
 @  #05 @004   ----------------------------------------
-Label_01589745:
+Label_015E1BB1:
  .byte   N11 ,Cn2 ,v084
  .byte   W24
  .byte   N10
@@ -865,7 +865,7 @@ Label_01589745:
  .byte   W24
 @  #05 @008   ----------------------------------------
  .byte   PATT
-  .word Label_01589745
+  .word Label_015E1BB1
 @  #05 @009   ----------------------------------------
  .byte   N11 ,An1 ,v084
  .byte   W24
@@ -876,7 +876,7 @@ Label_01589745:
  .byte   N11
  .byte   W24
 @  #05 @010   ----------------------------------------
-Label_0158977B:
+Label_015E1BE7:
  .byte   N11 ,Bn1 ,v084
  .byte   W24
  .byte   N11
@@ -888,7 +888,7 @@ Label_0158977B:
  .byte   PEND 
 @  #05 @011   ----------------------------------------
  .byte   PATT
-  .word Label_0158973A
+  .word Label_015E1BA6
 @  #05 @012   ----------------------------------------
  .byte   N11 ,An1 ,v084
  .byte   W24
@@ -909,7 +909,7 @@ Label_0158977B:
  .byte   W24
 @  #05 @014   ----------------------------------------
  .byte   PATT
-  .word Label_0158977B
+  .word Label_015E1BE7
 @  #05 @015   ----------------------------------------
  .byte   N10 ,Cn2 ,v084
  .byte   W24
@@ -933,17 +933,17 @@ Label_0158977B:
  .byte   W96
 @  #05 @018   ----------------------------------------
  .byte   GOTO
-  .word Label_0158971A
+  .word Label_015E1B86
  .byte   FINE
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song0185_006:
+ColdJustice_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
-Label_015897D6:
+ .byte   KEYSH , ColdJustice_key+0
+Label_015E1C42:
  .byte   VOICE , 124
- .byte   VOL , 23*song0185_mvl/mxv
+ .byte   VOL , 23*ColdJustice_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N02 ,Cn1 ,v127
  .byte   N92 ,Fn4
@@ -967,7 +967,7 @@ Label_015897D6:
  .byte   Fn1 ,v108
  .byte   W12
 @  #06 @001   ----------------------------------------
-Label_01589805:
+Label_015E1C71:
  .byte   N02 ,Cn1 ,v120
  .byte   N02 ,Fn1 ,v104
  .byte   W12
@@ -991,7 +991,7 @@ Label_01589805:
  .byte   W12
  .byte   PEND 
 @  #06 @002   ----------------------------------------
-Label_0158982D:
+Label_015E1C99:
  .byte   N03 ,Cn1 ,v116
  .byte   N02 ,Fn1 ,v108
  .byte   W12
@@ -1061,10 +1061,10 @@ Label_0158982D:
  .byte   W12
 @  #06 @005   ----------------------------------------
  .byte   PATT
-  .word Label_01589805
+  .word Label_015E1C71
 @  #06 @006   ----------------------------------------
  .byte   PATT
-  .word Label_0158982D
+  .word Label_015E1C99
 @  #06 @007   ----------------------------------------
  .byte   N02 ,Cn1 ,v120
  .byte   N02 ,Fn1 ,v124
@@ -1136,25 +1136,25 @@ Label_0158982D:
  .byte   W12
 @  #06 @010   ----------------------------------------
  .byte   PATT
-  .word Label_0158982D
+  .word Label_015E1C99
 @  #06 @011   ----------------------------------------
  .byte   PATT
-  .word Label_0158982D
+  .word Label_015E1C99
 @  #06 @012   ----------------------------------------
  .byte   PATT
-  .word Label_0158982D
+  .word Label_015E1C99
 @  #06 @013   ----------------------------------------
  .byte   PATT
-  .word Label_0158982D
+  .word Label_015E1C99
 @  #06 @014   ----------------------------------------
  .byte   PATT
-  .word Label_0158982D
+  .word Label_015E1C99
 @  #06 @015   ----------------------------------------
  .byte   PATT
-  .word Label_0158982D
+  .word Label_015E1C99
 @  #06 @016   ----------------------------------------
  .byte   PATT
-  .word Label_0158982D
+  .word Label_015E1C99
 @  #06 @017   ----------------------------------------
  .byte   N02 ,Cn1 ,v127
  .byte   N92 ,An2
@@ -1173,25 +1173,25 @@ Label_0158982D:
  .byte   W12
 @  #06 @018   ----------------------------------------
  .byte   GOTO
-  .word Label_015897D6
+  .word Label_015E1C42
  .byte   FINE
 
 @******************************************************@
 	.align	2
 
-song0185:
+ColdJustice:
 	.byte	6	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0185_pri	@ Priority
-	.byte	song0185_rev	@ Reverb.
+	.byte	ColdJustice_pri	@ Priority
+	.byte	ColdJustice_rev	@ Reverb.
     
-	.word	song0185_grp
+	.word	ColdJustice_grp
     
-	.word	song0185_001
-	.word	song0185_002
-	.word	song0185_003
-	.word	song0185_004
-	.word	song0185_005
-	.word	song0185_006
+	.word	ColdJustice_001
+	.word	ColdJustice_002
+	.word	ColdJustice_003
+	.word	ColdJustice_004
+	.word	ColdJustice_005
+	.word	ColdJustice_006
 
 	.end

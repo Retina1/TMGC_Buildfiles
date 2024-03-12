@@ -8,8 +8,8 @@
 ALIGN 4
 DeathQuoteTable:
 //ratio
-AlwaysDeathQuote(0xd2,0x0,HoratioWeep)
-//BYTE 0xd2 0x0 0xff 0xff 0x0 0x0 ;SHORT 0x0 ;WORD HoratioSummonDeath|IsPointer
+//AlwaysDeathQuote(0xd2,0x0,HoratioWeep)
+BYTE 0xd2 0x0 0xff 0xff 0x0 0x0 ;SHORT 0x0 ;WORD HoratioSummonDeath|IsPointer
 // Prologue
 ChapterDeathQuote(Davelarn,Prologue,DefeatBossFlag,PDavelarnDeath)
 // Ch1
@@ -199,20 +199,56 @@ ChapterDeathQuote(BladeGuy,Chapter27,0x0,C27BladeGuyDeath)
 	KillerDeathQuote(DL1,Manfred,Chapter28,DefeatBossFlag,C28ManfredKillsViridian)
 	KillerDeathQuote(DL1,Wilhelm,Chapter28,DefeatBossFlag,C28WilhelmKillsViridian)
 	KillerDeathQuote(DL1,Argent,Chapter28,DefeatBossFlag,C28ArgentKillsViridian)
+	KillerDeathQuote(DL1,Blair,Chapter28,DefeatBossFlag,C28BlairKillsViridian)
+	KillerDeathQuote(DL1,Zeke,Chapter28,DefeatBossFlag,C28ZekeKillsViridian)
+	KillerDeathQuote(DL1,SecretClarque,Chapter28,DefeatBossFlag,C28ClarqueKillsViridian)
+	KillerDeathQuote(DL1,Valeria,Chapter28,DefeatBossFlag,C28ValeriaKillsViridian)
+	//versions for blair, zeke, clarque, valeria
 ChapterDeathQuote(DL1,Chapter28,DefeatBossFlag,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL2,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL3,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL4,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL5,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL6,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL7,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL8,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL9,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL10,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL11,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL12,Chapter28,0x0,C28GenericDeadlordDeath)
-ChapterDeathQuote(DL13,Chapter28,0x0,C28GenericDeadlordDeath)
+	KillerDeathQuote(DL2,Argent,Chapter28,0x0,C28ArgentKillsFreddric)
+	KillerDeathQuote(DL2,Valeria,Chapter28,0x0,C28ValeriaKillsFreddric)
+	KillerDeathQuote(DL2,SecretClarque,Chapter28,0x0,C28ClarqueKillsFreddric)
+ChapterDeathQuote(DL2,Chapter28,0x0,C28GenericDeadlordDeath)//fred - version for argent, valeria, clarque
+	KillerDeathQuote(DL3,Eliza,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL3,Dirk,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL3,Zeke,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL3,Chapter28,0x0,C28GenericDeadlordDeath)//dean - versions for eliza, dirk, zeke
+	KillerDeathQuote(DL4,Rose,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL4,Dirk,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL4,Chapter28,0x0,C28GenericDeadlordDeath)//eliza - versions for rose, dirk
+	KillerDeathQuote(DL5,Estelle,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL5,Chapter28,0x0,C28GenericDeadlordDeath)//chartreuse - version for estelle
+	KillerDeathQuote(DL6,Callum,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL6,Estelle,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL6,Chapter28,0x0,C28GenericDeadlordDeath)//rift - versions for callum, estelle
+	KillerDeathQuote(DL7,Rift,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL7,Chapter28,0x0,C28GenericDeadlordDeath)//estelle - version for rift
+	KillerDeathQuote(DL8,Eliza,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL8,Laronde,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL8,Chapter28,0x0,C28GenericDeadlordDeath)//rose - versions for eliza, laronde
+	KillerDeathQuote(DL9,Eliza,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL9,Chapter28,0x0,C28GenericDeadlordDeath)//dirk - version for eliza
+	KillerDeathQuote(DL10,Rift,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL10,Chapter28,0x0,C28GenericDeadlordDeath)//callum - version for rift
+	KillerDeathQuote(DL11,Wilhelm,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL11,Chapter28,0x0,C28GenericDeadlordDeath)//manfred - version for wilhelm
+	KillerDeathQuote(DL12,Alexis,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL12,Leila,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL12,Manfred,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL12,Chapter28,0x0,C28GenericDeadlordDeath)//wilhelm - versions for alexis, leila, manfred
+	KillerDeathQuote(DL13,Hyperius,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL13,Freddric,Chapter28,0x0,FillerDialogue)
+ChapterDeathQuote(DL13,Chapter28,0x0,C28GenericDeadlordDeath)//argent - versions for hyperius, freddric
+
+KillerDeathQuote(Blair,EnemyElcorian,Chapter28,0x65,ElcorianKillsBlair)
+KillerDeathQuote(Zeke,EnemyElcorian,Chapter28,0x65,ElcorianKillsZeke)
 KillerDeathQuote(EnemyElcorian,Blair,Chapter28,0x0,BlairKillsElcorian)
+KillerDeathQuote(EnemyElcorian,Kenneth,Chapter28,0xa,EnemyElcorianDeath)
+KillerDeathQuote(EnemyElcorian,Kenneth,Chapter28,0xd,KennethWoundsElcorian)
+KillerDeathQuote(EnemyElcorian,Emile,Chapter28,0xb,EmileKillsElcorian)
+KillerDeathQuote(EnemyElcorian,Emile,Chapter28,0xe,EmileWoundsElcorian)
+KillerDeathQuote(EnemyElcorian,Simone,Chapter28,0xc,EnemyElcorianDeath)
+KillerDeathQuote(EnemyElcorian,Simone,Chapter28,0xf,SimoneWoundsElcorian)
 ChapterDeathQuote(EnemyElcorian,Chapter28,0x0,EnemyElcorianDeath)
 // endgame
 ChapterDeathQuote(Arbordia2,Endgame,0x4,NotQuiteFinalGirardDeath)
@@ -459,8 +495,6 @@ EndEvent
 
 ALIGN 4
 HoratioSummonDeath:
-MUSC S_HisWorld
 Text(HoratioWeep)
-//ASMC ReturnToMapBGM
-AnnihilateItem(SummonBlade)
+SetUnitStatus(0xd2,State,0x5)
 EndEvent

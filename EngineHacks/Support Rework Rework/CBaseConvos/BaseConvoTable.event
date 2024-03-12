@@ -893,8 +893,50 @@
 			music(S_PascalTheDog)//kelik
 			text(C28_Secret_Seller)
 			eventID(BaseFlag1)
-		//c28
+		Entry
+			bg(HallCG)
+			music(LoverConvoSong)
+			importance(4)
+			text(FillerDialogue)
+			baseSupport(Butch,Peter,ASupport)
+		Entry
+			bg(HallCG)
+			music(LoverConvoSong)
+			importance(4)
+			text(FillerDialogue)
+			baseSupport(Zeke,Cassius,ASupport)
+			eventID(BaseFlag2)//check if paired with rachael
+		Entry
+			bg(HallCG)
+			music(LoverConvoSong)
+			importance(4)
+			text(FillerDialogue)
+			baseSupport(Apollo,Flynn,ASupport)
+			eventID(BaseFlag3)//check if paired with bechamel
+		Entry
+			bg(HallCG)
+			music(LoverConvoSong)
+			importance(4)
+			text(FillerDialogue)
+			baseSupport(Leila,Wilhelm,ASupport)
+			eventID(BaseFlag4)//check if paired with damien
+		Entry
+			bg(HallCG)
+			text(FillerDialogue)
+			baseSupport(Emile,Vladmir,BSupport)
+		Entry
+			bg(HallCG)
+			text(FillerDialogue)
+			baseSupport(Arin,Yuyu,ASupport)
+		Entry
+			bg(HallCG)
+			text(FillerDialogue)
+			baseSupport(Mikey,Joan,ASupport)
 		//endgame
+		//sam/charley
+		//ptolemy/johan
+		//josef/athena
+		//a thing for blair and partner (branching in event)
 	POP
 	}
 #endif // BASE_CONVO_TABLE

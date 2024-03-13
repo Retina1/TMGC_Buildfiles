@@ -542,14 +542,14 @@ SystemText(SellToddChoice)
 IfNoSelectedGoto(0x3)
 Text(C22BountyHunterTalkSellTodd)//moners
 GiveMoney(0x4b0)
-FADI 0x1c
+FADI 16
 ClearSupport(Toddsworth,Avan)
 ClearSupport(Toddsworth,Sveltzalus)
 ClearSupport(Toddsworth,Charley)
 DISA_IF Toddsworth
 DISA Toddsworth
 ENUN
-FADU 0x1c
+FADU 16
 MOVE 60 BountyHunter [0,6]
 ENUN
 DISA_IF BountyHunter

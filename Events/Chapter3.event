@@ -215,7 +215,7 @@ TEXTEND
 MUSC 0x0
 TEXTCONT
 TEXTEND
-FADI 0x3C
+FADI 16
 LoadUnitsByDifficulty(C3Easy,C3Normal,C3Hard)
 LOAD1 0x0 C3Units
 LOAD1 0x0 C3JosefNPC
@@ -308,7 +308,7 @@ ResetBaseFlags
 MUSC VictoryMinor
 CLEAN
 SetBackground(HallCG)
-FADU 0x3c
+FADU 16
 TEXTSTART
 TEXTSHOW Ch3_Ending
 TEXTEND
@@ -318,7 +318,7 @@ TEXTEND
 MUSC S_SMTLevelUp
 TEXTCONT
 TEXTEND
-FADI 0x3c
+FADI 16
 MoveToChapter(Chapter4)
 ENDA
 

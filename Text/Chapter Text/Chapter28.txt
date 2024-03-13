@@ -3,8 +3,9 @@ Lay them to rest.[X]
 
 ##C28TurnLimit
 [OpenMidLeft][LoadBlair]
-out of time dialogue[N]
-justify this later ig[A][X]
+What is this[...] horrible presence?[A][N]
+[...]Are those[...] Ciraweiss? Those tomes[...][N]
+No[...] It can't be[...][A][X]
 
 ##C28Opening1
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadZeke]
@@ -25,7 +26,8 @@ All the way.[A][X]
 
 ##C28Opening2
 [OpenFarLeft][LoadZeke][OpenLeft][LoadBlair][OpenMidRight][LoadElcorian]
-[...]So, you've arrived.[A][N][X]
+[...]So, you've arrived.[N]
+write more later thansk[A][N][X]
 
 ##C28Opening3
 [OpenMidLeft][LoadBlank][ToggleInvert]
@@ -42,7 +44,13 @@ matters.[A] My duty is to hold[N]
 you off for Girard.[A][N]
 Every moment you spend here[N]
 brings him further away.[A][N]
-[X]
+[...]If you turn back, so be it.[N]
+But if you intend to advance[...][A][N]
+I[...] We will hold back nothing.[A][N]
+[...]The first move is yours.[N]
+Make your choice.[A][N]
+Just know that your time is[N]
+slipping away fast.[A][X]
 
 ##C28Opening4
 [OpenMidLeft][LoadZeke][CloseEyes][OpenMidRight][LoadBlair][OpenMidLeft]
@@ -52,7 +60,16 @@ None of this is your fault.[A][N]
 [...]All we can do now is[N]
 bring end to their sorrow.[A][N]
 [...]And to Elcorian.[A][N][OpenMidLeft][OpenEyes]
-[...][X]
+write more later thanks[A][X]
+
+##C28Turn1
+[OpenMidRight][LoadElcorian]
+[...]So, you choose to fight.[N]
+Regrettable, truly.[A][N]
+Treasure what little time[N]
+you have left.[A][N]
+And know that what is about to[N]
+happen to you is your doing.[A][X]
 
 ##C28ElcorianBattle
 [OpenMidLeft][LoadElcorian]
@@ -263,6 +280,124 @@ mother loves them.[A][X]
 [...]I'm sorry for this.[A][N]
 I'll[...] do what I can for[N]
 their memory.[A][X]
+
+##C28ElizaKillsDean
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEliza][CloseEyes]
+[...]I'm[...] I'm sorry,[N]
+Mister Dean.[A][X]
+
+##C28DirkKillsDean
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadDirk][CloseEyes]
+[...]Your family'll miss you.[A][X]
+
+##C28ZekeKillsDean
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadZeke][CloseEyes]
+[...]I remember seeing you.[A][N]
+I'm sorry it had to[N]
+end like this.[A][X]
+
+##C28DirkKillsEliza
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadDirk][CloseEyes]
+[...]E[...]Eliza[...][A][X]
+
+##C28RoseKillsEliza
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadRose][CloseEyes]
+[...]This[...] This isn't fun.[N]
+I'm sorry, Eliza.[A][X]
+
+##C28EstelleKillsChartreuse
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEstelle][CloseEyes]
+[...]My friend. You shall[N]
+never be forgotten.[A][X]
+
+##C28EstelleKillsRift
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEstelle][CloseEyes]
+[...]'Til we meet once[N]
+more, Rift.[A][X]
+
+##C28CallumKillsRift
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadCallum]
+You put up a fight.[N]
+[...]Thanks, bud.[A][X]
+
+##C28RiftKillsEstelle
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadRift][CloseEyes]
+[...]Sorry for everything.[N]
+[...]Thanks for the memories.[A][X]
+
+##C28ElizaKillsRose
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEliza][CloseEyes]
+[...]This[...] isn't fair[...][N]
+[...]Rose[...] I'm sorry[...][A][X]
+
+##C28ElizaKillsDirk
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadEliza][CloseEyes]
+[...]Brother[...] Dirk[...][A][N]
+I'll be[...] there[...][N]
+one day[...][A][X]
+
+##C28LarondeKillsRose
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadLaronde][CloseEyes]
+This is[...] cruel[...][N]
+But it's[...] how it is[...][A][X]
+
+##C28RiftKillsCallum
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadRift]
+I like to think[...] you would[N]
+have enjoyed this duel.[A][X]
+
+##C28WilhelmKillsManfred
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadWilhelm][CloseEyes]
+We'll[...] share that drink[N]
+someday, pal.[A][X]
+
+##C28ManfredKillsWilhelm
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadManfred][CloseEyes]
+[...]You truly deserved[N]
+better than this. Than me.[A][X]
+
+##C28AlexisKillsWilhelm
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadAlexis][CloseEyes]
+[...]Apologies for this, sir.[N]
+Elba Cor[...] thanks you.[A][X]
+
+##C28LeilaKillsWilhelm
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadLeila][CloseEyes]
+[...]Hey. I[...] like to think[N]
+we understood each other.[A][N]
+[...]Goodbye, Wilhelm.[A][X]
+
+##C28HyperiusKillsArgent
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadHyperius][CloseEyes]
+You deserve better than[N]
+this, Hayfords.[A][N]
+I[...] shall bury you in[N]
+Mevion, when this is done.[A][X]
+
+##C28FreddricKillsArgent
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadFreddric][CloseEyes]
+[...]Thanks for believing in us,[N]
+Argent.[A] We'll fight for the[N]
+world you always wanted.[A][X]
 
 ##Ch28_Flashback
 [OpenMidLeft][LoadYoungGirard][OpenMidRight][LoadYoungElcorian][OpenMidLeft]

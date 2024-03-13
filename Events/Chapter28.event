@@ -22,6 +22,9 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,C28DoorOpenSpawner,1,12)
+TurnEventPlayer(0x0,C28Turn1Event,1)
+TurnEventPlayer(0x0,C28Turn4,4)
+TurnEventPlayer(0x0,C28Turn8,8)
 TurnEventPlayer(0x65,C28OutOfTime,13)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
@@ -116,8 +119,8 @@ UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [7,8] 0x0 0x0 0x0 0x0 [Divine
 UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
 UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [DivineBreath] NoAI
-UNIT Simulacrum EarthDragon 0x0 Level(16,Enemy,1) [21,11] 0x0 0x0 0x0 0x0 [EarthBreath] AttackInRangeAI
-UNIT Simulacrum EarthDragon 0x0 Level(16,Enemy,1) [1,7] 0x0 0x0 0x0 0x0 [EarthBreath] AttackInRangeAI
+UNIT Simulacrum EarthDragon 0x0 Level(16,Enemy,1) [21,11] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(16,Enemy,1) [1,7] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
 UNIT Simulacrum FireDragon 0x0 Level(19,Enemy,1) [18,16] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Simulacrum FireDragon 0x0 Level(19,Enemy,1) [4,13] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
 UNIT Simulacrum IceDragon 0x0 Level(18,Enemy,1) [20,20] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
@@ -125,20 +128,20 @@ UNIT Simulacrum IceDragon 0x0 Level(18,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [IceBreat
 UNIT Simulacrum DemonDragon 0x0 Level(17,Enemy,1) [15,18] 0x0 0x0 0x0 0x0 [DemonBreath] AttackInRangeAI
 UNIT Simulacrum DemonDragon 0x0 Level(17,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [DemonBreath] AttackInRangeAI
 //humans
-UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [20,27] 0x0 0x0 0x0 0x0 [GildedSword] GroupOnePaceAI
-UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [21,27] 0x0 0x0 0x0 0x0 [Spear,GildedLance] GroupOnePaceAI
-UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [22,27] 0x0 0x0 0x0 0x0 [BraveSword] GroupOnePaceAI
+UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [20,27] 0x0 0x0 0x0 0x0 [GildedSword] ChaseOnceApproachedAI
+UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [21,27] 0x0 0x0 0x0 0x0 [Spear,GildedLance] ChaseOnceApproachedAI
+UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [22,27] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
 
-UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [GildedSword] GroupFourAI
-UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [FlameSword] GroupFourAI
+UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [GildedSword] AttackInRangeAI
+UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [FlameSword] AttackInRangeAI
 
-UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [18,10] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI
+UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [18,10] 0x0 0x0 0x0 0x0 [GildedAxe] AttackInRangeAI
 UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [GildedBow,Longbow] ChaseOnceApproachedAI
-UNIT Dalst Sage 0x0 Level(15,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Flare,EarthPower] ChaseOnceApproachedAI
+UNIT Dalst Sage 0x0 Level(15,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Flare,EarthPower] AttackInRangeAI
 
 UNIT Dalst AxePal 0x0 Level(15,Enemy,1) [4,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Hammer] ChaseOnceApproachedAI
 UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [GildedLance,Dragonpike] ChaseOnceApproachedAI
-UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [1,12] 0x0 0x0 0x0 0x0 [Greatbow,MasterBow] ChaseOnceApproachedAI
+UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [1,12] 0x0 0x0 0x0 0x0 [Greatbow,MasterBow] AttackInRangeAI
 
 UNIT Elite LncGen 0x0 Level(15,Enemy,1) [14,20] 0x0 0x0 0x0 0x0 [TrueSaunion] GroupFiveAI
 UNIT Elite LncGen 0x0 Level(18,Enemy,1) [16,20] 0x0 0x0 0x0 0x0 [BraveLance] GroupFiveAI
@@ -164,8 +167,8 @@ UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [14,22] DropItem 0x0 0x0 0x0 [GildedAxe,G
 UNIT DL4 BishopF 0x0 Level(9,Enemy,1) [16,22] DropItem 0x0 0x0 0x0 [Radiance,Resire,Smite,SkillScroll] GroupThreeAI
 UNIT DL5 BardF 0x0 Level(17,Enemy,1) [12,1] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
 UNIT DL6 SwMast 0x0 Level(13,Enemy,1) [22,19] DropItem 0x0 0x0 0x0 [FlameSword,GildedSword,SkillScroll] NoAI
-UNIT DL7 BowPalF 0x0 Level(8,Enemy,1) [21,26] DropItem 0x0 0x0 0x0 [GildedBow,Greatbow,SkillScroll] GroupOneAI
-UNIT DL8 SageF 0x0 Level(6,Enemy,1) [4,23] DropItem 0x0 0x0 0x0 [Flare,Galewind,ForceSpike,SkillScroll] GroupFourAI
+UNIT DL7 BowPalF 0x0 Level(8,Enemy,1) [21,26] DropItem 0x0 0x0 0x0 [GildedBow,Greatbow,SkillScroll] AttackInRangeAI
+UNIT DL8 SageF 0x0 Level(6,Enemy,1) [4,23] DropItem 0x0 0x0 0x0 [Flare,Galewind,ForceSpike,SkillScroll] AttackInRangeAI
 UNIT DL9 Berserker 0x0 Level(12,Enemy,1) [15,23] DropItem 0x0 0x0 0x0 [MasterAxe,DangerPick,SkillScroll] GroupThreeAI
 UNIT DL10 SwdPal 0x0 Level(16,Enemy,1) [2,19] DropItem 0x0 0x0 0x0 [GildedSword,Rapier,Lancesnapper,SkillScroll] NoAI
 UNIT DL11 Sorc 0x0 Level(11,Enemy,1) [8,26] DropItem 0x0 0x0 0x0 [Nocturne,Hell,SkillScroll] GroupTwoAI
@@ -187,14 +190,38 @@ UNIT Elite Warrior 0x0 Level(16,Enemy,1) [20,0] 0x0 0x0 0x1 REDA20R1 [MasterAxe]
 UNIT Elite Sniper 0x0 Level(16,Enemy,1) [21,0] 0x0 0x0 0x1 REDA21R2 [MasterBow] NoAI
 UNIT
 C28DoorsOpenGroup21:
-UNIT Elite BishopF 0x0 Level(16,Enemy,1) [0,1] 0x0 0x0 0x1 REDA1R1 [Smite,Scripture] NoAI
-UNIT Elite SwMastF 0x0 Level(16,Enemy,1) [0,2] 0x0 0x0 0x1 REDA2R2 [FlameSword,SoulHilt] NoAI
-UNIT Elite BishopF 0x0 Level(16,Enemy,1) [0,3] 0x0 0x0 0x1 REDA1R3 [Radiance,Scripture] NoAI
+UNIT MagElite BishopF 0x0 Level(16,Enemy,1) [0,1] 0x0 0x0 0x1 REDA1R1 [Smite,Scripture] NoAI
+UNIT MagElite SwMastF 0x0 Level(16,Enemy,1) [0,2] 0x0 0x0 0x1 REDA2R2 [FlameSword,SoulHilt] NoAI
+UNIT MagElite BishopF 0x0 Level(16,Enemy,1) [0,3] 0x0 0x0 0x1 REDA1R3 [Radiance,Scripture] NoAI
 UNIT
 C28DoorsOpenGroup22:
-UNIT Elite SorcF 0x0 Level(16,Enemy,1) [22,1] 0x0 0x0 0x1 REDA21R1 [Nocturne,VoidBracers] NoAI
-UNIT Elite SageF 0x0 Level(16,Enemy,1) [22,2] 0x0 0x0 0x1 REDA20R2 [ForceSpike,EarthPower] NoAI
-UNIT Elite SorcF 0x0 Level(16,Enemy,1) [22,3] 0x0 0x0 0x1 REDA21R3 [Nosferatu,VoidBracers] NoAI
+UNIT MagElite SorcF 0x0 Level(16,Enemy,1) [22,1] 0x0 0x0 0x1 REDA21R1 [Nocturne,VoidBracers] NoAI
+UNIT MagElite SageF 0x0 Level(16,Enemy,1) [22,2] 0x0 0x0 0x1 REDA20R2 [ForceSpike,EarthPower] NoAI
+UNIT MagElite SorcF 0x0 Level(16,Enemy,1) [22,3] 0x0 0x0 0x1 REDA21R3 [Nosferatu,VoidBracers] NoAI
+UNIT
+C28Turn4Spawns:
+UNIT Elite Halberdier 0x0 Level(18,Enemy,1) [0,7] 0x0 0x0 0x1 REDA3R7 [Spear,GildedLance] NoAI
+UNIT
+C28Turn4Spawns2:
+UNIT Elite Warrior 0x0 Level(18,Enemy,1) [22,7] 0x0 0x0 0x1 REDA19R7 [Tomahawk,GildedAxe] NoAI
+UNIT
+C28Turn4Spawns3:
+UNIT Elite Hero 0x0 Level(18,Enemy,1) [0,19] 0x0 0x0 0x1 REDA1R19 [BraveSword] NoAI
+UNIT MagElite Bishop 0x0 Level(18,Enemy,1) [0,20] 0x0 0x0 0x1 REDA2R20 [Smite] NoAI
+UNIT
+C28Turn4Spawns4:
+UNIT Elite Hero 0x0 Level(18,Enemy,1) [22,19] 0x0 0x0 0x1 REDA21R19 [BraveAxe] NoAI
+UNIT MagElite Bishop 0x0 Level(18,Enemy,1) [22,20] 0x0 0x0 0x1 REDA20R20 [Radiance] NoAI
+UNIT
+C28Turn8Spawns:
+UNIT MagElite Sage 0x0 Level(18,Enemy,1) [7,27] 0x0 0x0 0x1 REDA7R25 [Flare] NoAI
+UNIT Elite Warrior 0x0 Level(18,Enemy,1) [7,27] 0x0 0x0 0x1 REDA8R26 [Tomahawk,DangerPick] NoAI
+UNIT MagElite Sage 0x0 Level(18,Enemy,1) [7,27] 0x0 0x0 0x1 REDA9R25 [Sagittae] NoAI
+UNIT
+C28Turn8Spawns2:
+UNIT Elite Falco 0x0 Level(18,Enemy,1) [20,27] 0x0 0x0 0x1 REDA20R26 [BraveLance] NoAI
+UNIT Elite WyvLord 0x0 Level(18,Enemy,1) [21,27] 0x0 0x0 0x1 REDA21R25 [Tomahawk,DangerPick] NoAI
+UNIT Elite Falco 0x0 Level(18,Enemy,1) [22,27] 0x0 0x0 0x1 REDA22R26 [TrueSaunion] NoAI
 UNIT
 
 C28CutsceneBlairZeke:
@@ -210,6 +237,31 @@ C28CutsceneViridian:
 UNIT Unknown ViridianLord 0x0 Level(15,Enemy,1) [11,11] 0x0 0x0 0x0 0x0 [Soulbow] NoAI
 UNIT
 
+C28GameOverCutscene:
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [0,6] 0x0 0x0 0x1 REDA1R6 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [0,7] 0x0 0x0 0x1 REDA2R7 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [0,8] 0x0 0x0 0x1 REDA1R8 [Annihilation] NoAI
+UNIT
+
+C28GameOverCutscene2:
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [0,18] 0x0 0x0 0x1 REDA1R18 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [0,19] 0x0 0x0 0x1 REDA2R19 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [0,20] 0x0 0x0 0x1 REDA2R20 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [0,21] 0x0 0x0 0x1 REDA1R21 [Annihilation] NoAI
+UNIT
+
+C28GameOverCutscene3:
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [22,6] 0x0 0x0 0x1 REDA21R6 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [22,7] 0x0 0x0 0x1 REDA20R7 [Annihilation] NoAI
+UNIT
+
+C28GameOverCutscene4:
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [22,18] 0x0 0x0 0x1 REDA21R18 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [22,19] 0x0 0x0 0x1 REDA20R19 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [22,20] 0x0 0x0 0x1 REDA20R20 [Annihilation] NoAI
+UNIT EthylClone SageF 0x0 Level(15,Enemy,1) [22,21] 0x0 0x0 0x1 REDA21R21 [Annihilation] NoAI
+UNIT
+
 ALIGN 4
 
 BeginningScene:
@@ -217,7 +269,7 @@ ResetViridianConvoy
 ENUT GuideChpt28
 LocationText(MoonCG,Ch28_Flashback,Flashback10YearLabel,0x0)
 MUSC NarrationTheme6
-SetBackground(Map2CG); STAL 120; NarrationText(Ch28_Narration); FADI 0x3c
+SetBackground(Map2CG); STAL 120; NarrationText(Ch28_Narration); FADI 16
 LOAD1 0x1 C28CutsceneElcorian
 ENUN
 CleanText(HallCG,C28Opening1)
@@ -305,8 +357,38 @@ MUSC S_ColdJustice
 Text(FillerDialogue)
 EndEvent
 
+C28Turn1Event:
+MUSC 0x0
+CAM1 EnemyElcorian
+FlashCursor(EnemyElcorian,60)
+Text(C28Turn1)
+EndEvent
+
+C28Turn4:
+Reinforcements(C28Turn4Spawns)
+Reinforcements(C28Turn4Spawns2)
+Reinforcements(C28Turn4Spawns3)
+Reinforcements(C28Turn4Spawns4)
+EndEvent
+C28Turn8:
+Reinforcements(C28Turn8Spawns)
+Reinforcements(C28Turn8Spawns2)
+EndEvent
+
 C28OutOfTime:
+MUSC 0x0
+Reinforcements(C28GameOverCutscene)
+Reinforcements(C28GameOverCutscene2)
+Reinforcements(C28GameOverCutscene3)
+Reinforcements(C28GameOverCutscene4)
+CAM1 Blair
 Text(C28TurnLimit)
+SetBackground(BlankCG)
+STAL 0x40
+SOUN 0x2bd
+STAL 66
+SOUN 0x2c9
+STAL 0x50
 StartGameOver
 EndEvent
 

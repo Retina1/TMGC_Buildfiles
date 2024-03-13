@@ -250,6 +250,15 @@ UNIT Ygstra HeroF 0x0 Level(3,Enemy,1) [0,24] 0x0 0x0 0x1 REDA3R24 [SteelSword] 
 UNIT Ygstra WarriorF 0x0 Level(3,Enemy,1) [0,25] 0x0 0x0 0x1 REDA2R25 [SteelAxe] NoAI
 UNIT
 
+C10FliersDie:
+UNIT Ygstra WyvLord 0x0 Level(13,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R1 [IronLance] NoAI
+UNIT Ygstra Falco 0x0 Level(13,Enemy,1) [13,0] 0x0 0x0 0x1 REDA13R2 [SteelSword] NoAI
+UNIT Ygstra WyvLord 0x0 Level(13,Enemy,1) [14,0] 0x0 0x0 0x1 REDA14R1 [IronLance] NoAI
+UNIT Ygstra Falco 0x0 Level(13,Enemy,1) [15,0] 0x0 0x0 0x1 REDA15R2 [SteelSword] NoAI
+UNIT Ygstra WyvLord 0x0 Level(13,Enemy,1) [16,0] 0x0 0x0 0x1 REDA16R1 [IronLance] NoAI
+UNIT Ygstra Falco 0x0 Level(13,Enemy,1) [17,0] 0x0 0x0 0x1 REDA17R2 [SteelSword] NoAI
+UNIT
+
 C10Cutscene:
 UNIT Blair BlairLord 0x0 Level(1,Ally,0) [15,22] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
 UNIT
@@ -270,13 +279,13 @@ TEXTEND
 MUSC S_SMTLevelUp
 TEXTCONT
 TEXTEND
-FADI 0x3C
+FADI 16
 MUSC NarrationTheme2
 Narration(MapCG,Ch10_Narration)
 WEATHER 0x5
 CAM1 Lazarus
 CLEAN
-FADU 0x3C
+FADU 16
 FlashCursor(Lazarus,60)
 MUSC S_Crisis
 CleanText(BoatCG,Ch10_Opening2)
@@ -322,6 +331,8 @@ MoveToChapter(Chapter11)
 ENDA
 
 C10GameOver:
+Reinforcements(C10FliersDie)
+Reinforcements(C10FliersDie)
 Text(C10GameOverMessage)
 StartGameOver
 ENDA

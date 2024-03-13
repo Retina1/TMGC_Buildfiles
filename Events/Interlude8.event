@@ -106,9 +106,9 @@ Text(SendFreddric)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendFreddricYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Freddric
-FADU 0x10
+FADU 16
 ENUT BaseFlag1
 CALL FlagHell
 GOTO 0x20
@@ -132,9 +132,9 @@ Text(SendDean)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendDeanYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Dean
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -157,9 +157,9 @@ Text(SendEliza)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendElizaYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Eliza
-FADU 0x10
+FADU 16
 ENUT 0x13
 CALL FlagHell
 GOTO 0x20
@@ -183,9 +183,9 @@ Text(SendEstelle)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendEstelleYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Estelle
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -208,9 +208,9 @@ Text(SendRift)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendRiftYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Rift
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -233,9 +233,9 @@ Text(SendRose)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendRoseYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Rose
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -270,9 +270,9 @@ GOTO 0x86
 LABEL 0x85
 Text(SendDirkYesAndEliza)//confirm sending them
 LABEL 0x86
-FADI 0x10
+FADI 16
 REMU Dirk
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -295,9 +295,9 @@ Text(SendCallum)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendCallumYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Callum
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -320,9 +320,9 @@ Text(SendManfred)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendManfredYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Manfred
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -345,9 +345,9 @@ Text(SendWilhelm)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendWilhelmYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Wilhelm
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10
@@ -370,9 +370,9 @@ Text(SendArgent)//confirm sending them
 SystemText(I8SendOff)
 IfNoSelectedGoto(0x10)
 Text(SendArgentYes)//they're gone
-FADI 0x10
+FADI 16
 REMU Argent
-FADU 0x10
+FADU 16
 CALL FlagHell
 GOTO 0x20
 LABEL 0x10

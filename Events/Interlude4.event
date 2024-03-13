@@ -224,9 +224,9 @@ SVAL 0x1 0x1E60
 BGE 0x1 0xc 0x1
 Text(I4BuyingtonBroke)
 ENUF 0xa
-FADI 60
+FADI 16
 CLEAN
-FADU 60
+FADU 16
 GOTO 0x2
 LABEL 0x1
 SystemText(I4BuyingtonPrompt)
@@ -234,17 +234,17 @@ IfNoSelectedGoto(0x3)
 Text(I4BuyingtonBought)
 SVAL 0x3 0x1E60
 TAKEMONEY
-FADI 60
+FADI 16
 Reinforcements(I4VerySpecialUnit)
 CLEAN
-FADU 60
+FADU 16
 GOTO 0x2
 LABEL 0x3
 Text(I4BuyingtonNo)
 ENUF 0xa
-FADI 60
+FADI 16
 CLEAN
-FADU 60
+FADU 16
 LABEL 0x2
 EndEvent
 //MESSAGE Events end at offset CURRENTOFFSET

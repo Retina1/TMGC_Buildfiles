@@ -209,35 +209,35 @@ ChapterDeathQuote(DL1,Chapter28,DefeatBossFlag,C28GenericDeadlordDeath)
 	KillerDeathQuote(DL2,Valeria,Chapter28,0x0,C28ValeriaKillsFreddric)
 	KillerDeathQuote(DL2,SecretClarque,Chapter28,0x0,C28ClarqueKillsFreddric)
 ChapterDeathQuote(DL2,Chapter28,0x0,C28GenericDeadlordDeath)//fred - version for argent, valeria, clarque
-	KillerDeathQuote(DL3,Eliza,Chapter28,0x0,FillerDialogue)
-	KillerDeathQuote(DL3,Dirk,Chapter28,0x0,FillerDialogue)
-	KillerDeathQuote(DL3,Zeke,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL3,Eliza,Chapter28,0x0,C28ElizaKillsDean)
+	KillerDeathQuote(DL3,Dirk,Chapter28,0x0,C28DirkKillsDean)
+	KillerDeathQuote(DL3,Zeke,Chapter28,0x0,C28ZekeKillsDean)
 ChapterDeathQuote(DL3,Chapter28,0x0,C28GenericDeadlordDeath)//dean - versions for eliza, dirk, zeke
-	KillerDeathQuote(DL4,Rose,Chapter28,0x0,FillerDialogue)
-	KillerDeathQuote(DL4,Dirk,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL4,Rose,Chapter28,0x0,C28DirkKillsEliza)
+	KillerDeathQuote(DL4,Dirk,Chapter28,0x0,C28RoseKillsEliza)
 ChapterDeathQuote(DL4,Chapter28,0x0,C28GenericDeadlordDeath)//eliza - versions for rose, dirk
-	KillerDeathQuote(DL5,Estelle,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL5,Estelle,Chapter28,0x0,C28EstelleKillsChartreuse)
 ChapterDeathQuote(DL5,Chapter28,0x0,C28GenericDeadlordDeath)//chartreuse - version for estelle
-	KillerDeathQuote(DL6,Callum,Chapter28,0x0,FillerDialogue)
-	KillerDeathQuote(DL6,Estelle,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL6,Callum,Chapter28,0x0,C28EstelleKillsRift)
+	KillerDeathQuote(DL6,Estelle,Chapter28,0x0,C28CallumKillsRift)
 ChapterDeathQuote(DL6,Chapter28,0x0,C28GenericDeadlordDeath)//rift - versions for callum, estelle
-	KillerDeathQuote(DL7,Rift,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL7,Rift,Chapter28,0x0,C28RiftKillsEstelle)
 ChapterDeathQuote(DL7,Chapter28,0x0,C28GenericDeadlordDeath)//estelle - version for rift
-	KillerDeathQuote(DL8,Eliza,Chapter28,0x0,FillerDialogue)
-	KillerDeathQuote(DL8,Laronde,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL8,Eliza,Chapter28,0x0,C28ElizaKillsRose)
+	KillerDeathQuote(DL8,Laronde,Chapter28,0x0,C28LarondeKillsRose)
 ChapterDeathQuote(DL8,Chapter28,0x0,C28GenericDeadlordDeath)//rose - versions for eliza, laronde
-	KillerDeathQuote(DL9,Eliza,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL9,Eliza,Chapter28,0x0,C28ElizaKillsDirk)
 ChapterDeathQuote(DL9,Chapter28,0x0,C28GenericDeadlordDeath)//dirk - version for eliza
-	KillerDeathQuote(DL10,Rift,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL10,Rift,Chapter28,0x0,C28RiftKillsCallum)
 ChapterDeathQuote(DL10,Chapter28,0x0,C28GenericDeadlordDeath)//callum - version for rift
-	KillerDeathQuote(DL11,Wilhelm,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL11,Wilhelm,Chapter28,0x0,C28WilhelmKillsManfred)
 ChapterDeathQuote(DL11,Chapter28,0x0,C28GenericDeadlordDeath)//manfred - version for wilhelm
-	KillerDeathQuote(DL12,Alexis,Chapter28,0x0,FillerDialogue)
-	KillerDeathQuote(DL12,Leila,Chapter28,0x0,FillerDialogue)
-	KillerDeathQuote(DL12,Manfred,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL12,Alexis,Chapter28,0x0,C28AlexisKillsWilhelm)
+	KillerDeathQuote(DL12,Leila,Chapter28,0x0,C28LeilaKillsWilhelm)
+	KillerDeathQuote(DL12,Manfred,Chapter28,0x0,C28ManfredKillsWilhelm)
 ChapterDeathQuote(DL12,Chapter28,0x0,C28GenericDeadlordDeath)//wilhelm - versions for alexis, leila, manfred
-	KillerDeathQuote(DL13,Hyperius,Chapter28,0x0,FillerDialogue)
-	KillerDeathQuote(DL13,Freddric,Chapter28,0x0,FillerDialogue)
+	KillerDeathQuote(DL13,Hyperius,Chapter28,0x0,C28HyperiusKillsArgent)
+	KillerDeathQuote(DL13,Freddric,Chapter28,0x0,C28FreddricKillsArgent)
 ChapterDeathQuote(DL13,Chapter28,0x0,C28GenericDeadlordDeath)//argent - versions for hyperius, freddric
 
 KillerDeathQuote(Blair,EnemyElcorian,Chapter28,0x65,ElcorianKillsBlair)
@@ -496,5 +496,5 @@ EndEvent
 ALIGN 4
 HoratioSummonDeath:
 Text(HoratioWeep)
-SetUnitStatus(0xd2,State,0x5)
+SetUnitStatus(0xd2,State,0x7)
 EndEvent

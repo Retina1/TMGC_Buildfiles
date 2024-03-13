@@ -215,7 +215,7 @@ REMOVEUNIT Holanis
 REMOVEUNIT Holanis
 ENUN
 CLEAN
-FADU 0xa
+FADU 16
 MUSC 0x0
 EndEvent
 
@@ -230,7 +230,7 @@ LocationText(HallCG,Ch2_Ending2,SeveralDaysLaterLabel)
 REMA
 EVBIT_F 2
 SetBackground(BlankCG)
-FADU 0x3c
+FADU 16
 GiveMoney(0xbb8)
 MoveToChapter(Chapter3)
 ENDA

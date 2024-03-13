@@ -362,7 +362,7 @@ MUSC S_Trisection
 SetBackground(MapCG)
 STAL 120
 NarrationText(Ch14_Narration)
-FADI 0x3c
+FADI 16
 CleanTextNoMap(OutdoorCastleCG,Ch14_Opening2)
 LoadUnitsByDifficulty(C14Easy,C14Normal,C14Hard)
 LOAD1 0x0 C14Units
@@ -387,7 +387,7 @@ TEXTSTART
 TEXTSHOW Ch14_Ending0
 TEXTEND
 MUSC 0x0
-FADI 0x3c
+FADI 16
 CLEE 0
 CLEN 0
 CLEA 0
@@ -395,7 +395,7 @@ LOMA Chapter14Ending
 CAM1 [0,0]
 LOAD1 0x0 C14Briant
 ENUN
-FADU 0x3c
+FADU 16
 Text(Ch14_Ending1)
 LOAD1 0x0 C14EndsceneUnits
 ENUN

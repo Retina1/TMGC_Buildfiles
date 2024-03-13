@@ -364,13 +364,13 @@ MOVE 30 Michael [22,7]
 ENUN
 MUSC S_Chaos
 Text(Ch19_Opening2)
-FADI 0x3C
+FADI 16
 SilentKillUnit(Michael)
 CleanText(LowlandsRiverCG,Ch19_Opening3)
 Reinforcements(C19OpeningCutscene2)
 MUSC S_Crisis
 Text(Ch19_Opening4)
-FADI 0x3C
+FADI 16
 SilentKillUnit(Michael)
 LoadUnitsByDifficulty(C19Easy,C19Normal,C19Hard)
 LOAD1 0x0 C19Units

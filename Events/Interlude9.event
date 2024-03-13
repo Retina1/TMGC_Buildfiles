@@ -145,24 +145,24 @@ Text(I9ReforgeArkhinal)
 REMA
 SetBackground(BlankCG)
 GiveItem(Arkhinal,Blair)
-FADI 60
+FADI 16
 CLEAN
-FADU 60
+FADU 16
 TILECHANGE 0x1
 GOTO 0x2
 LABEL 0x1
 Text(I9WeaponryTalk)//no handle
-FADI 60
+FADI 16
 CLEAN
-FADU 60
+FADU 16
 TILECHANGE 0x1
 GOTO 0x2
 LABEL 0x3
 Text(I9Refusal)//refuse to give up handle
 ENUF 0x21
-FADI 60
+FADI 16
 CLEAN
-FADU 60
+FADU 16
 LABEL 0x2
 EndEvent
 
@@ -220,10 +220,10 @@ CHECK_EVENTID TavernI7Flag
 BEQ 0x1 0xc 0x0
 SetBackground(InnCG)
 Text(I9InnTextAlt)
-FADI 60
+FADI 16
 Reinforcements(TonnaminJoin)
 CLEAN
-FADU 60
+FADU 16
 GOTO 0x2
 LABEL 0x1
 CleanText(InnCG,I9InnText)

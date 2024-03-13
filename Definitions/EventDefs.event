@@ -1,15 +1,15 @@
 #define LoadUnitsByDifficulty(easy,normal,hard) "ASMC DifficultySetterByOptionBitASMC|1; CHECK_TUTORIAL ; BNE 4034 rC r0 ; CHECK_HARD ; BNE 4035 rC r0 ; LOAD1 0x1 normal ; GOTO 4036 ; LABEL 4034 ; LOAD1 0x1 easy ; GOTO 4036 ; LABEL 4035 ; LOAD1 0x1 hard ; LABEL 4036 ; ENUN;"
 #define LoadUnitsByDifficulty2(easy,normal,hard) "CHECK_TUTORIAL ; BNE 4064 rC r0 ; CHECK_HARD ; BNE 4065 rC r0 ; LOAD1 0x1 normal ; GOTO 4066 ; LABEL 4064 ; LOAD1 0x1 easy ; GOTO 4066 ; LABEL 4065 ; LOAD1 0x1 hard ; LABEL 4066 ; ENUN;"
 #define SystemText(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; REMA"
-#define SystemText(bgid,textid) "CenterTutorialTextBox; SetBackground(bgid); TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define SystemText(bgid,textid) "CenterTutorialTextBox; SetBackground(bgid); TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND; FADI 16"
 #define CGText(textid) "CGTEXTSTART; TEXTSHOW textid; TEXTEND"
 #define NarrationText(textid) "SVAL 0xB 0x00B4FFFF; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND;"
 #define EndEvent "EVBIT_T 0x7; ENDA"
-#define CleanTextNoMap(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define CleanTextNoMap(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 16"
 #define CleanText(bgid,textid) "SetBackground(bgid); TEXTSTART; TEXTSHOW textid; TEXTEND; ClearBackgroundSmooth"
 #define GiveItem(item) "SMOV 0x3 item; GIVEITEMTO 0xFFFF;"
 #define GiveItem(item,character) "SMOV 0x3 item; GIVEITEMTO character;"
-#define Narration(bgid,textid) "EVBIT_T 8; SetBackground(bgid); STAL 120; NarrationText(textid); MUSC 0x0; FADI 0x3c"
+#define Narration(bgid,textid) "EVBIT_T 8; SetBackground(bgid); STAL 120; NarrationText(textid); MUSC 0x0; FADI 16"
 #define CamOn "EVBIT_T 9"
 #define CamOff "EVBIT_F 9"
 #define StartGameOver "ASMC 0x800D391" // Game over ASMC 
@@ -33,8 +33,8 @@
 #define RefreshDurabilityItems "SVAL 1 0; ASMC RefreshItemsASMC|1"
 
 #define Location(textid) "BROWNBOXTEXT textid [8,8]"
-#define LocationText(bgid,textid,labelid) "SetBackground(bgid); Location(labelid) ; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
-#define LocationText(bgid,textid,labelid,musicid) "MUSC 0x0; SetBackground(bgid); Location(labelid) ; MUSC musicid; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 0x3C"
+#define LocationText(bgid,textid,labelid) "SetBackground(bgid); Location(labelid) ; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 16"
+#define LocationText(bgid,textid,labelid,musicid) "MUSC 0x0; SetBackground(bgid); Location(labelid) ; MUSC musicid; TEXTSTART; TEXTSHOW textid; TEXTEND; FADI 16"
 
 #define AreaEvent(eventID,EventPointer,corner1x,corner1y,corner2x,corner2y)   "AREA eventID EventPointer [corner1x,corner1y] [corner2x,corner2y]" 
 

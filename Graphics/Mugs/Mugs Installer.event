@@ -444,6 +444,10 @@ ALIGN 4
 RosePromoMug:
 #incbin "dmps/RosePromo.dmp"
 setMugEntry(0x102,RosePromoMug,4,6,4,4)
+ALIGN 4
+RoseAssassinMug:
+#incbin "dmps/RoseAssassin.dmp"
+setMugEntry(0x141,RoseAssassinMug,4,6,4,4)
 
 ALIGN 4
 DirkMug:

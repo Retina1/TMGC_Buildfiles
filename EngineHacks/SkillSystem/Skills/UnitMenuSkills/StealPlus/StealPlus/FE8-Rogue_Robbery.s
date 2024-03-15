@@ -34,6 +34,8 @@ cmp		r6,#0xfa
 beq		RetFalse
 cmp		r6,#0xfb
 beq		RetFalse
+cmp		r6,#0xfc
+beq		RetFalse
 mov		r0,r6
 ldr		r3,=#0x8017548	@get item type
 mov		r14,r3

@@ -344,22 +344,22 @@ ENDA
 
 C28KennethElcorianTalk:
 MUSC S_ColdJustice
-Text(FillerDialogue)
+Text(C28KennethTalksToElcorian)
 EndEvent
 
 C28SimoneElcorianTalk:
 MUSC S_ColdJustice
-Text(FillerDialogue)
+Text(C28SimoneTalksToElcorian)
 EndEvent
 
 C28EmileElcorianTalk:
 MUSC S_ColdJustice
-Text(FillerDialogue)
+Text(C28EmileTalksToElcorian)
 EndEvent
 
 C28Turn1Event:
 MUSC 0x0
-CAM1 EnemyElcorian
+CAM1 [11,12]
 FlashCursor(EnemyElcorian,60)
 Text(C28Turn1)
 EndEvent

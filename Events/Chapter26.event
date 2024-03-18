@@ -167,7 +167,7 @@ UNIT Dalst LightM 0x0 Level(20,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] Ne
 //funny blocks
 UNIT Dalst LncPal 0x0 Level(14,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Spear] DelayedAI
 UNIT Dalst BowPal 0x0 Level(14,Enemy,1) [6,7] 0x0 0x0 0x0 0x0 [SilverBow] DelayedAI
-UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [Rapier] NoAI
+UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [SilverSword] DelayedAI
 UNIT Dalst LncPal 0x0 Level(14,Enemy,1) [6,8] 0x0 0x0 0x0 0x0 [Spear] DelayedAI
 UNIT Dalst AxePal 0x0 Level(14,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [Swordslayer] NoAI
 UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [5,9] 0x0 0x0 0x0 0x0 [Kagutsuchi] NoAI
@@ -221,7 +221,7 @@ UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar] Ne
 //funny blocks
 UNIT Dalst LncPal 0x0 Level(14,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Spear,SilverLance] DelayedAI
 UNIT Dalst BowPal 0x0 Level(14,Enemy,1) [6,7] 0x0 0x0 0x0 0x0 [BraveBow,Longbow] DelayedAI
-UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [Rapier] NoAI
+UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [GildedSword] DelayedAI
 UNIT Dalst LncPal 0x0 Level(14,Enemy,1) [6,8] 0x0 0x0 0x0 0x0 [Spear] DelayedAI
 UNIT Dalst AxePal 0x0 Level(14,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [BraveAxe,Swordslayer] NoAI
 UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [5,9] 0x0 0x0 0x0 0x0 [Kagutsuchi] NoAI
@@ -278,7 +278,7 @@ UNIT Dalst Bishop 0x0 Level(12,Enemy,1) [24,18] 0x0 0x0 0x0 0x0 [MorningStar,Scr
 //funny blocks
 UNIT Dalst LncPal 0x0 Level(14,Enemy,1) [5,7] 0x0 0x0 0x0 0x0 [Spear,GildedLance] DelayedAI
 UNIT Dalst BowPal 0x0 Level(14,Enemy,1) [6,7] 0x0 0x0 0x0 0x0 [BraveBow,Longbow] DelayedAI
-UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [GildedSword,Rapier] NoAI
+UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [4,8] 0x0 0x0 0x0 0x0 [GildedSword,Rapier] DelayedAI
 UNIT Dalst LncPal 0x0 Level(14,Enemy,1) [6,8] 0x0 0x0 0x0 0x0 [Spear,BraveLance] DelayedAI
 UNIT Dalst AxePal 0x0 Level(14,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [GildedAxe,BraveAxe,Swordslayer] NoAI
 UNIT Dalst SwdPal 0x0 Level(14,Enemy,1) [5,9] 0x0 0x0 0x0 0x0 [BraveSword,Kagutsuchi] NoAI
@@ -1040,17 +1040,19 @@ MUSC S_Nightfall
 CleanTextNoMap(StreetCG,C26Ending)//not routed
 //LABEL 0x3
 //skeleton for starfall giver stuff - make sure the player didn't nick it
-CheckForItem(Starfall)
-BNE 0x1 0xc 0x0
 CHECK_EVENTID DefeatBossFlag
 BEQ 0x1 0xc 0x0
+CheckForItem(Starfall)
+BNE 0x3 0xc 0x0
 CleanTextNoMap(PathCG,C26StarfallGet)
 REMA
 GiveItem(Starfall,Blair)
+LABEL 0x3
 LocationText(HallCG, C26End2EthylDead,ArbordiaMeetingHallLabel,S_Chaos)//ethyl dead hall scene
 GOTO 0x10
 LABEL 0x1
 LocationText(HallCG, C26End2EthylAlive,ArbordiaMeetingHallLabel,S_Chaos)//ethyl killed by elcorian
+
 LABEL 0x10
 	CHECK_EVENTID KennethTarquinKillFlag
 	BEQ 0x100 0xc 0x0

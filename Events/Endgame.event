@@ -185,7 +185,8 @@ LocationText(MoonCG,Final_Flashback,TowerPeakLabel,0x0)
 MUSC 0x0
 Narration(Map2CG,Final_Narration)
 WEATHER 0x3
-CleanTextNoMap(MoonCG,Final_Opening)
+//CleanTextNoMap(MoonCG,Final_Opening)
+CleanTextNoMap(MoonCG,FillerDialogue)
 LoadUnitsByDifficulty(EndgameEasy,EndgameNormal,EndgameHard)
 SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
 SetUnitStatusAll(BossSimulacrum1, LuckStat, 0)

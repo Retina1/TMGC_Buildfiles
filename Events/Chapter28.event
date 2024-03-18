@@ -43,7 +43,7 @@ END_MAIN
 
 ALIGN 4
 Ch28SecretShop:
-SHLI IronSword SteelSword SilverSword GildedSword BraveSword MasterSword Lancereaver Lancesnapper KillingEdge Shamshir Armorslayer Zanbato Wyrmslayer Shimmersword Rapier Kagutsuchi LevinSword LightBrand FlameSword Runesword Cutlad IronLance SteelLance SilverLance GildedLance BraveLance MasterLance Javelin Spear Axereaver Axebuster KillerLance Shatterspear Horseslayer Dragonpike DousingLance Nuboko Shockstick IronAxe SteelAxe SilverAxe GildedAxe BraveAxe MasterAxe HandAxe Tomahawk Swordreaver Swordslayer KillerAxe Hammer Halberd Dracoaxe HereticAxe Ukonvasara VoidCleaver DevilAxe Ladymace IronBow SteelBow SilverBow GildedBow BraveBow MasterBow Longbow Greatbow KillerBow Wardbow ShiningBow BarrierBow Fire Thunder Elfire Fimbulvetr Flare Inversion Calibur Trisagion Galewind Cloudburst Sagittae Bolting Lightning Shine Divine Aura Radiance Banish Pierce JavelinRain Smite LuxAurumque Resire Purge Flux Nightfall Fenrir Nocturne Corruption Knoggelvi Freikugel Jormungandr NoxAurumque Nosferatu Hell Heal Mend Recover Physic Fortify Restore Barrier Yoink Rescue Rewarp Warp Again Unlock Hammerne Silence Sleep Berserk Runeward Implant ThiefStaff Arbitrate TorchStaff WrathStaff MainGauche TrueSaunion DangerPick Stormbow ForceSpike MorningStar Voulche Caduceus Courante Unyielding Partisan Stalwart Emboldener Longinus FlyingSpike HighRoller Galerider Hurlbat Frypan Luckbow Passacaglia ShortBow FrontierJustice SorrowsPilgrim BeecurveBow Beelista Awaken Waning Mazandyne Salvation Voidwake Toddhand Phalanotis Nuiusseon Arkhinal Ineubrenos Starfall BookOfOpistus TheSDarkTome Prototype Avalon HoneyCharm AnkleWeight FoggyGlasses MercuryBoots LiveGoose Wardwood ParagonRing KnightRing LegRing IronRune ZoryaShield BigShield RealLastShield Memento AngelWings SoulHilt SoaringShaft SavageGauntlet BiasedQuiver EarthPower Scripture VoidBracers Vulnerary Elixir PureWater ChestKey DoorKey AngelicRobe EnergyRing SpiritDust SecretBook Speedwings GoddessIcon Dracoshield Talisman BodyRing Boots Eyedrops ArmsScroll BlackLotus MasterSeal MiniGem RedGem BlueGem WhiteGem BlackGem RainbowGem
+SHLI IronSword SteelSword SilverSword GildedSword BraveSword MasterSword Lancereaver Lancesnapper KillingEdge Shamshir Armorslayer Zanbato Wyrmslayer Shimmersword Rapier Kagutsuchi LevinSword LightBrand FlameSword Runesword Cutlad IronLance SteelLance SilverLance GildedLance BraveLance MasterLance Javelin Spear Axereaver Axebuster KillerLance Shatterspear Horseslayer Dragonpike DousingLance Nuboko Shockstick IronAxe SteelAxe SilverAxe GildedAxe BraveAxe MasterAxe HandAxe Tomahawk Swordreaver Swordslayer KillerAxe Hammer Halberd Dracoaxe HereticAxe Ukonvasara VoidCleaver DevilAxe Ladymace IronBow SteelBow SilverBow GildedBow BraveBow MasterBow Longbow Greatbow KillerBow Wardbow ShiningBow BarrierBow Fire Thunder Elfire Fimbulvetr Flare Inversion Calibur Trisagion Galewind Cloudburst Sagittae Bolting Lightning Shine Divine Aura Radiance Banish Pierce JavelinRain Smite LuxAurumque Resire Purge Flux Nightfall Fenrir Nocturne Corruption Knoggelvi Freikugel Jormungandr NoxAurumque Nosferatu Hell Heal Mend Recover Physic Fortify Restore Barrier Yoink Rescue Rewarp Warp Again Unlock Hammerne Silence Sleep Berserk Runeward Implant ThiefStaff Arbitrate TorchStaff WrathStaff MainGauche TrueSaunion DangerPick Stormbow ForceSpike MorningStar Voulche Caduceus Courante Unyielding Partisan Stalwart Emboldener Longinus FlyingSpike HighRoller Galerider Hurlbat Frypan Luckbow Passacaglia ShortBow FrontierJustice SorrowsPilgrim BeecurveBow Beelista Awaken Waning Mazandyne Salvation Voidwake Toddhand ArenaSword ArenaLance ArenaAxe ArenaBow ArenaAnima ArenaLight ArenaDark Phalanotis Nuiusseon Arkhinal Ineubrenos Starfall BookOfOpistus TheSDarkTome Prototype Avalon HoneyCharm AnkleWeight FoggyGlasses MercuryBoots LiveGoose Wardwood ParagonRing KnightRing LegRing IronRune ZoryaShield BigShield Memento AngelWings SoulHilt SoaringShaft SavageGauntlet BiasedQuiver EarthPower Scripture VoidBracers Vulnerary Elixir PureWater ChestKey DoorKey AngelicRobe EnergyRing SpiritDust SecretBook Speedwings GoddessIcon Dracoshield Talisman BodyRing Boots Eyedrops ArmsScroll BlackLotus MasterSeal MiniGem RedGem BlueGem WhiteGem BlackGem RainbowGem
 BYTE 0x0 0x0
 
 ALIGN 4
@@ -451,35 +451,43 @@ EndEvent
 EndingScene:
 ResetBaseFlags
 MUSC S_Nightfall
-CleanTextNoMap(HallCG,FillerDialogue)
 //elcorian stuff
 	CHECK_EVENTID 0xd
 	BEQ 0x1 0xc 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//kenneth version of join
+		CleanTextNoMap(HallCG,C28Ending1Alt)
+		CleanTextNoMap(HallCG,C28EndingKenneth)//kenneth version of join
 		GOTO 0x4
 	LABEL 0x1
 	CHECK_EVENTID 0xe
 	BEQ 0x2 0xc 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//emile version of join
+		CleanTextNoMap(HallCG,C28Ending1Alt)
+		CleanTextNoMap(HallCG,C28EndingEmile)//emile version of join
 		GOTO 0x4
 	LABEL 0x2
 	CHECK_EVENTID 0xf
 	BEQ 0x3 0xc 0x0
-		CleanTextNoMap(HallCG,FillerDialogue)//simone version of join
+		CleanTextNoMap(HallCG,C28Ending1Alt)
+		CleanTextNoMap(HallCG,C28EndingSimone)//simone version of join
 		GOTO 0x4
 	LABEL 0x4
 		LOAD1 0x1 C28ElcorianJoin
 		TurnAlly(Elcorian)
+		GOTO 0x5
 	LABEL 0x3
+		CleanTextNoMap(HallCG,C28Ending1)
+	LABEL 0x5
 CheckForItem(Soulbow)
 BNE 0x5 0xc 0x0
-CleanTextNoMap(HallCG,FillerDialogue)
+CleanTextNoMap(HallCG,C28Ending2)
 SetBackground(BlankCG)
 GiveItem(Soulbow,Zeke)
 LABEL 0x5
 MUSC 0x0
-CleanTextNoMap(HallCG,FillerDialogue)
+LocationText(HallCG,C28Ending3,LaterLabel)
 SetBackground(BlankCG)
+CGTEXTSTART
+TEXTSHOW C28Ending4
+TEXTEND
 STAL 0x20
 SOUN 0xb4
 STAL 0x30

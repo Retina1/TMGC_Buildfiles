@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song0185_grp, voicegroup000
-	.equ	song0185_pri, 0
-	.equ	song0185_rev, 0
-	.equ	song0185_mvl, 127
-	.equ	song0185_key, 0
-	.equ	song0185_tbs, 1
-	.equ	song0185_exg, 0
-	.equ	song0185_cmp, 1
+	.equ	DyedInBlood_grp, voicegroup000
+	.equ	DyedInBlood_pri, 0
+	.equ	DyedInBlood_rev, 0
+	.equ	DyedInBlood_mvl, 127
+	.equ	DyedInBlood_key, 0
+	.equ	DyedInBlood_tbs, 1
+	.equ	DyedInBlood_exg, 0
+	.equ	DyedInBlood_cmp, 1
 
 	.section .rodata
-	.global	song0185
+	.global	DyedInBlood
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0185_001:
+DyedInBlood_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
- .byte   TEMPO , 150*song0185_tbs/2
+ .byte   KEYSH , DyedInBlood_key+0
+ .byte   TEMPO , 150*DyedInBlood_tbs/2
  .byte   VOICE , 40
- .byte   VOL , 26*song0185_mvl/mxv
+ .byte   VOL , 26*DyedInBlood_mvl/mxv
  .byte   PAN , c_v+33
  .byte   TIE ,An1 ,v080
  .byte   W96
@@ -292,11 +292,11 @@ Label_0178C0E6:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0185_002:
+DyedInBlood_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 18
- .byte   VOL , 30*song0185_mvl/mxv
+ .byte   VOL , 30*DyedInBlood_mvl/mxv
  .byte   PAN , c_v-27
  .byte   N92 ,En3 ,v096
  .byte   N92 ,Cn4
@@ -565,11 +565,11 @@ Label_0178BD85:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0185_003:
+DyedInBlood_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 2
- .byte   VOL , 36*song0185_mvl/mxv
+ .byte   VOL , 36*DyedInBlood_mvl/mxv
  .byte   PAN , c_v-36
  .byte   TIE ,An3 ,v060
  .byte   W96
@@ -714,11 +714,11 @@ Label_0178C5AB:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0185_004:
+DyedInBlood_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 81
- .byte   VOL , 37*song0185_mvl/mxv
+ .byte   VOL , 37*DyedInBlood_mvl/mxv
  .byte   PAN , c_v+0
  .byte   TIE ,An1 ,v092
  .byte   N92 ,Cn4 ,v080
@@ -1261,11 +1261,11 @@ Label_015D8D3B:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0185_005:
+DyedInBlood_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 40
- .byte   VOL , 36*song0185_mvl/mxv
+ .byte   VOL , 36*DyedInBlood_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N92 ,Cn4 ,v072
  .byte   N92 ,En4
@@ -1947,11 +1947,11 @@ Label_015D926F:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song0185_006:
+DyedInBlood_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 36
- .byte   VOL , 39*song0185_mvl/mxv
+ .byte   VOL , 39*DyedInBlood_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -2623,11 +2623,11 @@ Label_015D954D:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song0185_007:
+DyedInBlood_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 6
- .byte   VOL , 25*song0185_mvl/mxv
+ .byte   VOL , 25*DyedInBlood_mvl/mxv
  .byte   PAN , c_v-50
  .byte   N92 ,En3 ,v080
  .byte   W03
@@ -2800,11 +2800,11 @@ Label_0178C3CD:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song0185_008:
+DyedInBlood_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 18
- .byte   VOL , 30*song0185_mvl/mxv
+ .byte   VOL , 30*DyedInBlood_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -3061,11 +3061,11 @@ Label_015D9638:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song0185_009:
+DyedInBlood_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 124
- .byte   VOL , 42*song0185_mvl/mxv
+ .byte   VOL , 42*DyedInBlood_mvl/mxv
  .byte   PAN , c_v-28
  .byte   N92 ,An1 ,v127
  .byte   W96
@@ -3524,11 +3524,11 @@ Label_015D98A6:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song0185_010:
+DyedInBlood_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 124
- .byte   VOL , 39*song0185_mvl/mxv
+ .byte   VOL , 39*DyedInBlood_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #10 @001   ----------------------------------------
@@ -4202,11 +4202,11 @@ Label_015D9BA3:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song0185_011:
+DyedInBlood_011:
 @  #11 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 28
- .byte   VOL , 33*song0185_mvl/mxv
+ .byte   VOL , 33*DyedInBlood_mvl/mxv
  .byte   PAN , c_v-30
  .byte   W96
 @  #11 @001   ----------------------------------------
@@ -4637,11 +4637,11 @@ Label_015D9D39:
 
 @**************** Track 12 (Midi-Chn.11) ****************@
 
-song0185_012:
+DyedInBlood_012:
 @  #12 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , DyedInBlood_key+0
  .byte   VOICE , 119
- .byte   VOL , 42*song0185_mvl/mxv
+ .byte   VOL , 42*DyedInBlood_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #12 @001   ----------------------------------------
@@ -4777,25 +4777,25 @@ Label_015D9EA0:
 @******************************************************@
 	.align	2
 
-song0185:
+DyedInBlood:
 	.byte	12	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0185_pri	@ Priority
-	.byte	song0185_rev	@ Reverb.
+	.byte	DyedInBlood_pri	@ Priority
+	.byte	DyedInBlood_rev	@ Reverb.
     
-	.word	song0185_grp
+	.word	DyedInBlood_grp
     
-	.word	song0185_001
-	.word	song0185_002
-	.word	song0185_003
-	.word	song0185_004
-	.word	song0185_005
-	.word	song0185_006
-	.word	song0185_007
-	.word	song0185_008
-	.word	song0185_009
-	.word	song0185_010
-	.word	song0185_011
-	.word	song0185_012
+	.word	DyedInBlood_001
+	.word	DyedInBlood_002
+	.word	DyedInBlood_003
+	.word	DyedInBlood_004
+	.word	DyedInBlood_005
+	.word	DyedInBlood_006
+	.word	DyedInBlood_007
+	.word	DyedInBlood_008
+	.word	DyedInBlood_009
+	.word	DyedInBlood_010
+	.word	DyedInBlood_011
+	.word	DyedInBlood_012
 
 	.end

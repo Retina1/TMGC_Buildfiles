@@ -33,6 +33,22 @@ dalst
 //fix 55 (flute 73), 72 (oboe 68)
 // 1 - TEST SONG TO MAKE SURE THE INSTALLER WORKS-- DO NOT USE THIS IN YOUR GAME; IT DOESN'T SOUND GOOD
 {
+#include "DyedInBlood.event"
+SongTable(S_DyedInBlood,DyedInBlood,1)
+}
+{
+#include "SlayAndFall.event"
+SongTable(S_SlayAndFall,SlayAndFall,1)
+}
+{
+#include "ClaretHollows.event"
+SongTable(S_ClaretHollows,ClaretHollows,1)
+}
+{
+#include "ToweringPair.event"
+SongTable(S_ToweringPair,ToweringPair,1)
+}
+{
 #include "StickerbrushAlt.event"
 SongTable(S_StickerbrushSymphonyAlt,StickerbrushSymphonyAlt,1)
 }

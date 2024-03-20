@@ -41,6 +41,16 @@
 #include "Sword/Sword Installer.event"
 }
 {
+#include "CharacterSpecific\Dirk\Axe Installer.event"
+#include "CharacterSpecific\Dirk\Handaxe Installer.event"
+#include "CharacterSpecific\Dirk\Unarmed Installer.event"
+}
+{
+#include "CharacterSpecific\BechamelP\Axe Installer.event"
+#include "CharacterSpecific\BechamelP\Handaxe Installer.event"
+#include "CharacterSpecific\BechamelP\Unarmed Installer.event"
+}
+{
 #include "CharacterSpecific\Laronde\Lance Installer.event"
 #include "CharacterSpecific\Laronde\Unarmed Installer.event"
 }
@@ -512,6 +522,20 @@ ALIGN 4
 LarondeAnims:
 LanceAnim(0xff)
 UnarmedAnim(0x100)
+EndAnim
+
+ALIGN 4
+DirkAnims:
+AxeAnim(0x108)
+HandAxeAnim(0x109)
+UnarmedAnim(0x10a)
+EndAnim
+
+ALIGN 4
+BechamelPAnims:
+AxeAnim(0x10b)
+HandAxeAnim(0x10c)
+UnarmedAnim(0x10d)
 EndAnim
 
 ALIGN 4

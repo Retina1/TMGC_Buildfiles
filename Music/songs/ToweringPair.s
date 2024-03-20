@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song0185_grp, voicegroup000
-	.equ	song0185_pri, 0
-	.equ	song0185_rev, 0
-	.equ	song0185_mvl, 127
-	.equ	song0185_key, 0
-	.equ	song0185_tbs, 1
-	.equ	song0185_exg, 0
-	.equ	song0185_cmp, 1
+	.equ	ToweringPair_grp, voicegroup000
+	.equ	ToweringPair_pri, 0
+	.equ	ToweringPair_rev, 0
+	.equ	ToweringPair_mvl, 127
+	.equ	ToweringPair_key, 0
+	.equ	ToweringPair_tbs, 1
+	.equ	ToweringPair_exg, 0
+	.equ	ToweringPair_cmp, 1
 
 	.section .rodata
-	.global	song0185
+	.global	ToweringPair
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0185_001:
+ToweringPair_001:
 @  #01 @000   ----------------------------------------
- .byte   VOL , 49*song0185_mvl/mxv
- .byte   KEYSH , song0185_key+0
+ .byte   VOL , 49*ToweringPair_mvl/mxv
+ .byte   KEYSH , ToweringPair_key+0
 Label_0158AC94:
- .byte   TEMPO , 68*song0185_tbs/2
+ .byte   TEMPO , 68*ToweringPair_tbs/2
  .byte   VOICE , 30
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -271,12 +271,12 @@ Label_0158AD5A:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0185_002:
+ToweringPair_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ToweringPair_key+0
 Label_0158AB1E:
  .byte   VOICE , 81
- .byte   VOL , 25*song0185_mvl/mxv
+ .byte   VOL , 25*ToweringPair_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N68 ,En4 ,v104
  .byte   N68 ,Gs4
@@ -499,12 +499,12 @@ Label_0158AC2F:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0185_003:
+ToweringPair_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ToweringPair_key+0
 Label_0158A87A:
  .byte   VOICE , 28
- .byte   VOL , 72*song0185_mvl/mxv
+ .byte   VOL , 72*ToweringPair_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #03 @001   ----------------------------------------
@@ -672,12 +672,12 @@ Label_0158A8F6:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0185_004:
+ToweringPair_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ToweringPair_key+0
 Label_0158A936:
  .byte   VOICE , 30
- .byte   VOL , 34*song0185_mvl/mxv
+ .byte   VOL , 34*ToweringPair_mvl/mxv
  .byte   PAN , c_v+20
  .byte   BEND , c_v+1
  .byte   N92 ,Cs0 ,v092
@@ -879,12 +879,12 @@ Label_0158AA27:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0185_005:
+ToweringPair_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ToweringPair_key+0
 Label_0158BE1A:
  .byte   VOICE , 1
- .byte   VOL , 46*song0185_mvl/mxv
+ .byte   VOL , 46*ToweringPair_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N11 ,En4 ,v072
  .byte   W06
@@ -1165,12 +1165,12 @@ Label_0158BE65:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song0185_006:
+ToweringPair_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ToweringPair_key+0
 Label_0158BF2E:
  .byte   VOICE , 28
- .byte   VOL , 36*song0185_mvl/mxv
+ .byte   VOL , 36*ToweringPair_mvl/mxv
  .byte   PAN , c_v-20
  .byte   N92 ,Cs2 ,v072
  .byte   N92 ,Gs2
@@ -1525,12 +1525,12 @@ Label_0158C032:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song0185_007:
+ToweringPair_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ToweringPair_key+0
 Label_0158C362:
  .byte   VOICE , 124
- .byte   VOL , 49*song0185_mvl/mxv
+ .byte   VOL , 49*ToweringPair_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N23 ,Cn1 ,v116
  .byte   N05 ,Fs1 ,v084
@@ -1856,20 +1856,20 @@ Label_0158C4F3:
 @******************************************************@
 	.align	2
 
-song0185:
+ToweringPair:
 	.byte	7	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0185_pri	@ Priority
-	.byte	song0185_rev	@ Reverb.
+	.byte	ToweringPair_pri	@ Priority
+	.byte	ToweringPair_rev	@ Reverb.
     
-	.word	song0185_grp
+	.word	ToweringPair_grp
     
-	.word	song0185_001
-	.word	song0185_002
-	.word	song0185_003
-	.word	song0185_004
-	.word	song0185_005
-	.word	song0185_006
-	.word	song0185_007
+	.word	ToweringPair_001
+	.word	ToweringPair_002
+	.word	ToweringPair_003
+	.word	ToweringPair_004
+	.word	ToweringPair_005
+	.word	ToweringPair_006
+	.word	ToweringPair_007
 
 	.end

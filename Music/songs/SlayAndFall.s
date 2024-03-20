@@ -1,27 +1,27 @@
 	.include "MPlayDef.s"
 
-	.equ	song0185_grp, voicegroup000
-	.equ	song0185_pri, 0
-	.equ	song0185_rev, 0
-	.equ	song0185_mvl, 127
-	.equ	song0185_key, 0
-	.equ	song0185_tbs, 1
-	.equ	song0185_exg, 0
-	.equ	song0185_cmp, 1
+	.equ	SlayAndFall_grp, voicegroup000
+	.equ	SlayAndFall_pri, 0
+	.equ	SlayAndFall_rev, 0
+	.equ	SlayAndFall_mvl, 127
+	.equ	SlayAndFall_key, 0
+	.equ	SlayAndFall_tbs, 1
+	.equ	SlayAndFall_exg, 0
+	.equ	SlayAndFall_cmp, 1
 
 	.section .rodata
-	.global	song0185
+	.global	SlayAndFall
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0185_001:
+SlayAndFall_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
- .byte   TEMPO , 172*song0185_tbs/2
+ .byte   KEYSH , SlayAndFall_key+0
+ .byte   TEMPO , 172*SlayAndFall_tbs/2
  .byte   VOICE , 18
- .byte   VOL , 30*song0185_mvl/mxv
+ .byte   VOL , 30*SlayAndFall_mvl/mxv
  .byte   PAN , c_v-62
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -421,11 +421,11 @@ Label_01589585:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0185_002:
+SlayAndFall_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 124
- .byte   VOL , 27*song0185_mvl/mxv
+ .byte   VOL , 27*SlayAndFall_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N04 ,Cn1 ,v127
  .byte   N04 ,Dn2
@@ -1316,11 +1316,11 @@ Label_01589B0E:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0185_003:
+SlayAndFall_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 30
- .byte   VOL , 40*song0185_mvl/mxv
+ .byte   VOL , 40*SlayAndFall_mvl/mxv
  .byte   PAN , c_v-61
  .byte   N09 ,Bn3 ,v096
  .byte   W12
@@ -1576,11 +1576,11 @@ Label_01730950:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0185_004:
+SlayAndFall_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 28
- .byte   VOL , 30*song0185_mvl/mxv
+ .byte   VOL , 30*SlayAndFall_mvl/mxv
  .byte   PAN , c_v-63
  .byte   N10 ,En3 ,v080
  .byte   N10 ,Gn3 ,v084
@@ -1933,11 +1933,11 @@ Label_01589C6C:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0185_005:
+SlayAndFall_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 38
- .byte   VOL , 39*song0185_mvl/mxv
+ .byte   VOL , 39*SlayAndFall_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N09 ,En0 ,v084
  .byte   W12
@@ -2582,11 +2582,11 @@ Label_01589FD7:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song0185_006:
+SlayAndFall_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 40
- .byte   VOL , 26*song0185_mvl/mxv
+ .byte   VOL , 26*SlayAndFall_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N10 ,En4 ,v080
  .byte   N10 ,Gn4
@@ -3008,11 +3008,11 @@ Label_0158A1A0:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song0185_007:
+SlayAndFall_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 30
- .byte   VOL , 37*song0185_mvl/mxv
+ .byte   VOL , 37*SlayAndFall_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -3591,11 +3591,11 @@ Label_0158A49C:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song0185_008:
+SlayAndFall_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 30
- .byte   VOL , 34*song0185_mvl/mxv
+ .byte   VOL , 34*SlayAndFall_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -4185,11 +4185,11 @@ Label_0158A879:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song0185_009:
+SlayAndFall_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 19
- .byte   VOL , 29*song0185_mvl/mxv
+ .byte   VOL , 29*SlayAndFall_mvl/mxv
  .byte   PAN , c_v+62
  .byte   W96
 @  #09 @001   ----------------------------------------
@@ -4503,11 +4503,11 @@ Label_01730C74:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song0185_010:
+SlayAndFall_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 28
- .byte   VOL , 30*song0185_mvl/mxv
+ .byte   VOL , 30*SlayAndFall_mvl/mxv
  .byte   PAN , c_v+61
  .byte   W96
 @  #10 @001   ----------------------------------------
@@ -4876,11 +4876,11 @@ Label_0158A92E:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song0185_011:
+SlayAndFall_011:
 @  #11 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , SlayAndFall_key+0
  .byte   VOICE , 18
- .byte   VOL , 30*song0185_mvl/mxv
+ .byte   VOL , 30*SlayAndFall_mvl/mxv
  .byte   PAN , c_v+62
  .byte   W96
 @  #11 @001   ----------------------------------------
@@ -5046,24 +5046,24 @@ Label_01730F4D:
 @******************************************************@
 	.align	2
 
-song0185:
+SlayAndFall:
 	.byte	11	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0185_pri	@ Priority
-	.byte	song0185_rev	@ Reverb.
+	.byte	SlayAndFall_pri	@ Priority
+	.byte	SlayAndFall_rev	@ Reverb.
     
-	.word	song0185_grp
+	.word	SlayAndFall_grp
     
-	.word	song0185_001
-	.word	song0185_002
-	.word	song0185_003
-	.word	song0185_004
-	.word	song0185_005
-	.word	song0185_006
-	.word	song0185_007
-	.word	song0185_008
-	.word	song0185_009
-	.word	song0185_010
-	.word	song0185_011
+	.word	SlayAndFall_001
+	.word	SlayAndFall_002
+	.word	SlayAndFall_003
+	.word	SlayAndFall_004
+	.word	SlayAndFall_005
+	.word	SlayAndFall_006
+	.word	SlayAndFall_007
+	.word	SlayAndFall_008
+	.word	SlayAndFall_009
+	.word	SlayAndFall_010
+	.word	SlayAndFall_011
 
 	.end

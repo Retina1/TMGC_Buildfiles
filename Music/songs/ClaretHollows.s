@@ -1,28 +1,28 @@
 	.include "MPlayDef.s"
 
-	.equ	song0185_grp, voicegroup000
-	.equ	song0185_pri, 0
-	.equ	song0185_rev, 0
-	.equ	song0185_mvl, 127
-	.equ	song0185_key, 0
-	.equ	song0185_tbs, 1
-	.equ	song0185_exg, 0
-	.equ	song0185_cmp, 1
+	.equ	ClaretHollows_grp, voicegroup000
+	.equ	ClaretHollows_pri, 0
+	.equ	ClaretHollows_rev, 0
+	.equ	ClaretHollows_mvl, 127
+	.equ	ClaretHollows_key, 0
+	.equ	ClaretHollows_tbs, 1
+	.equ	ClaretHollows_exg, 0
+	.equ	ClaretHollows_cmp, 1
 
 	.section .rodata
-	.global	song0185
+	.global	ClaretHollows
 	.align	2
 
 
 @**************** Track 1 (Midi-Chn.0) ****************@
 
-song0185_001:
+ClaretHollows_001:
 @  #01 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_0179247E:
- .byte   TEMPO , 88*song0185_tbs/2
+ .byte   TEMPO , 88*ClaretHollows_tbs/2
  .byte   VOICE , 36
- .byte   VOL , 42*song0185_mvl/mxv
+ .byte   VOL , 42*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+20
  .byte   W96
 @  #01 @001   ----------------------------------------
@@ -206,12 +206,12 @@ Label_0179247E:
 
 @**************** Track 2 (Midi-Chn.1) ****************@
 
-song0185_002:
+ClaretHollows_002:
 @  #02 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_01792682:
  .byte   VOICE , 1
- .byte   VOL , 52*song0185_mvl/mxv
+ .byte   VOL , 52*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #02 @001   ----------------------------------------
@@ -314,12 +314,12 @@ Label_01792682:
 
 @**************** Track 3 (Midi-Chn.2) ****************@
 
-song0185_003:
+ClaretHollows_003:
 @  #03 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_0179214E:
  .byte   VOICE , 30
- .byte   VOL , 52*song0185_mvl/mxv
+ .byte   VOL , 52*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+20
  .byte   W36
  .byte   N07 ,En1 ,v104
@@ -423,12 +423,12 @@ Label_0179214E:
 
 @**************** Track 4 (Midi-Chn.3) ****************@
 
-song0185_004:
+ClaretHollows_004:
 @  #04 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_015DE4F2:
  .byte   VOICE , 28
- .byte   VOL , 49*song0185_mvl/mxv
+ .byte   VOL , 49*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N88 ,En2 ,v068
  .byte   W02
@@ -1016,12 +1016,12 @@ Label_015DE4F2:
 
 @**************** Track 5 (Midi-Chn.4) ****************@
 
-song0185_005:
+ClaretHollows_005:
 @  #05 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_015DE83A:
  .byte   VOICE , 10
- .byte   VOL , 46*song0185_mvl/mxv
+ .byte   VOL , 46*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+0
  .byte   N23 ,En0 ,v048
  .byte   W12
@@ -1320,12 +1320,12 @@ Label_015DE88A:
 
 @**************** Track 6 (Midi-Chn.5) ****************@
 
-song0185_006:
+ClaretHollows_006:
 @  #06 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_015DE9D2:
  .byte   VOICE , 100
- .byte   VOL , 37*song0185_mvl/mxv
+ .byte   VOL , 37*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #06 @001   ----------------------------------------
@@ -1986,12 +1986,12 @@ Label_015DEA7C:
 
 @**************** Track 7 (Midi-Chn.6) ****************@
 
-song0185_007:
+ClaretHollows_007:
 @  #07 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_015DEE8A:
  .byte   VOICE , 1
- .byte   VOL , 45*song0185_mvl/mxv
+ .byte   VOL , 45*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #07 @001   ----------------------------------------
@@ -2337,12 +2337,12 @@ Label_015DEE8A:
 
 @**************** Track 8 (Midi-Chn.7) ****************@
 
-song0185_008:
+ClaretHollows_008:
 @  #08 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_01791E0E:
  .byte   VOICE , 4
- .byte   VOL , 40*song0185_mvl/mxv
+ .byte   VOL , 40*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+50
  .byte   W96
 @  #08 @001   ----------------------------------------
@@ -2554,12 +2554,12 @@ Label_01791E47:
 
 @**************** Track 9 (Midi-Chn.8) ****************@
 
-song0185_009:
+ClaretHollows_009:
 @  #09 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_0179219A:
  .byte   VOICE , 38
- .byte   VOL , 52*song0185_mvl/mxv
+ .byte   VOL , 52*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+20
  .byte   W96
 @  #09 @001   ----------------------------------------
@@ -2675,12 +2675,12 @@ Label_0179219A:
 
 @**************** Track 10 (Midi-Chn.9) ****************@
 
-song0185_010:
+ClaretHollows_010:
 @  #10 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_015DF06A:
  .byte   VOICE , 124
- .byte   VOL , 52*song0185_mvl/mxv
+ .byte   VOL , 52*ClaretHollows_mvl/mxv
  .byte   N23 ,Ds2 ,v072
  .byte   W12
  .byte   N11 ,As3 ,v076
@@ -2874,12 +2874,12 @@ Label_015DF130:
 
 @**************** Track 11 (Midi-Chn.10) ****************@
 
-song0185_011:
+ClaretHollows_011:
 @  #11 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_015DF196:
  .byte   VOICE , 47
- .byte   VOL , 52*song0185_mvl/mxv
+ .byte   VOL , 52*ClaretHollows_mvl/mxv
  .byte   PAN , c_v-40
  .byte   W96
 @  #11 @001   ----------------------------------------
@@ -3158,12 +3158,12 @@ Label_015DF22E:
 
 @**************** Track 12 (Midi-Chn.11) ****************@
 
-song0185_012:
+ClaretHollows_012:
 @  #12 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_015DF312:
  .byte   VOICE , 104
- .byte   VOL , 37*song0185_mvl/mxv
+ .byte   VOL , 37*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+0
  .byte   W96
 @  #12 @001   ----------------------------------------
@@ -3470,12 +3470,12 @@ Label_015DF34D:
 
 @**************** Track 13 (Midi-Chn.12) ****************@
 
-song0185_013:
+ClaretHollows_013:
 @  #13 @000   ----------------------------------------
- .byte   KEYSH , song0185_key+0
+ .byte   KEYSH , ClaretHollows_key+0
 Label_017921F2:
  .byte   VOICE , 38
- .byte   VOL , 28*song0185_mvl/mxv
+ .byte   VOL , 28*ClaretHollows_mvl/mxv
  .byte   PAN , c_v+53
  .byte   W96
 @  #13 @001   ----------------------------------------
@@ -3590,26 +3590,26 @@ Label_017921F2:
 @******************************************************@
 	.align	2
 
-song0185:
+ClaretHollows:
 	.byte	13	@ NumTrks
 	.byte	0	@ NumBlks
-	.byte	song0185_pri	@ Priority
-	.byte	song0185_rev	@ Reverb.
+	.byte	ClaretHollows_pri	@ Priority
+	.byte	ClaretHollows_rev	@ Reverb.
     
-	.word	song0185_grp
+	.word	ClaretHollows_grp
     
-	.word	song0185_001
-	.word	song0185_002
-	.word	song0185_003
-	.word	song0185_004
-	.word	song0185_005
-	.word	song0185_006
-	.word	song0185_007
-	.word	song0185_008
-	.word	song0185_009
-	.word	song0185_010
-	.word	song0185_011
-	.word	song0185_012
-	.word	song0185_013
+	.word	ClaretHollows_001
+	.word	ClaretHollows_002
+	.word	ClaretHollows_003
+	.word	ClaretHollows_004
+	.word	ClaretHollows_005
+	.word	ClaretHollows_006
+	.word	ClaretHollows_007
+	.word	ClaretHollows_008
+	.word	ClaretHollows_009
+	.word	ClaretHollows_010
+	.word	ClaretHollows_011
+	.word	ClaretHollows_012
+	.word	ClaretHollows_013
 
 	.end

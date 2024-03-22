@@ -93,6 +93,11 @@ KennethPromoMug:
 #incbin "dmps/KennethPromo.dmp"
 setMugEntry(0xf6,KennethPromoMug,2,5,3,3)
 setMugEntryExtend(0xf6, KennethPromoMug,2,5,3,3, 0, 4,0,0)
+ALIGN 4
+KennethBaronMug:
+#incbin "dmps/KennethBaron.dmp"
+setMugEntry(0x142,KennethBaronMug,2,5,3,3)
+setMugEntryExtend(0x142, KennethBaronMug,2,5,3,3, 0, 4,0,0)
 
 ALIGN 4
 NatasiaMug:

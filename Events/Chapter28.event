@@ -33,6 +33,22 @@ CharacterBasedEvents:
 CharacterEvent(0xa,C28KennethElcorianTalk,Kenneth,EnemyElcorian)
 CharacterEvent(0xb,C28EmileElcorianTalk,Emile,EnemyElcorian)
 CharacterEvent(0xc,C28SimoneElcorianTalk,Simone,EnemyElcorian)
+//1a onwards
+CharacterEventBothWays(0x1a,C28ArinSamSupport,Arin,Sam)//A
+CharacterEventBothWays(0x1b,C28StefanCarbonSupport,Stefan,Carbon)//A
+CharacterEventBothWays(0x1c,C28DesmondJohanSupport,Desmond,Johan)//A
+CharacterEventBothWays(0x1d,C28SamBechamelSupport,Sam,Bechamel)//A
+CharacterEventBothWays(0x1e,C28JosefHilbertSupport,Josef,Hilbert)//A
+CharacterEventBothWays(0x1f,C28PeggyApolloSupport,Butch,Cassius)//A
+CharacterEventBothWays(0x20,C28RachaelLeilaSupport,Rachael,Leila)//A
+CharacterEventBothWays(0x21,C28CassiusMikeySupport,Cassius,Mikey)//A
+CharacterEventBothWays(0x22,C28ApolloVladmirSupport,Apollo,Vladmir)//A
+CharacterEventBothWays(0x23,C28HyperiusAlexisSupport,Hyperius,Alexis)//A
+CharacterEventBothWays(0x24,C28LeilaTobiasSupport,Leila,Tobias)//A
+CharacterEventBothWays(0x25,C28ZachariasCallumSupport,Zacharias,Callum)//B+
+CharacterEventBothWays(0x26,C28YuyuHollandaiseSupport,Yuyu,Hollandaise)//B+
+CharacterEventBothWays(0x27,C28ElizaRoseSupport,Eliza,Rose)//A
+CharacterEventBothWays(0x28,C28RiftCallumSupport,Rift,Callum)//A
 END_MAIN
 
 LocationBasedEvents:
@@ -162,6 +178,23 @@ UNIT
 
 C28BossGroup:
 UNIT DL1 ViridianLord 0x0 Level(15,Enemy,1) [11,2] DropItem 0x0 0x0 0x0 [Soulbow,SkillScroll] GroupNineAI
+UNIT DL2 WyvLord 0x0 Level(18,Enemy,1) [10,1] DropItem 0x0 0x0 0x0 [TrueSaunion,SilverLance,SkillScroll] GroupNineAI
+UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [14,22] DropItem 0x0 0x0 0x0 [SilverAxe,SilverBow,SkillScroll] GroupThreeAI
+UNIT DL4 BishopF 0x0 Level(9,Enemy,1) [16,22] DropItem 0x0 0x0 0x0 [Aura,Pierce,Banish,SkillScroll] GroupThreeAI
+UNIT DL5 BardF 0x0 Level(17,Enemy,1) [12,1] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
+UNIT DL6 SwMast 0x0 Level(13,Enemy,1) [22,19] DropItem 0x0 0x0 0x0 [FlameSword,SilverSword,SkillScroll] NoAI
+UNIT DL7 BowPalF 0x0 Level(8,Enemy,1) [21,26] DropItem 0x0 0x0 0x0 [SilverBow,Longbow,SkillScroll] AttackInRangeAI
+UNIT DL8 SageF 0x0 Level(6,Enemy,1) [4,23] DropItem 0x0 0x0 0x0 [Fimbulvetr,Inversion,ForceSpike,SkillScroll] AttackInRangeAI
+UNIT DL9 Berserker 0x0 Level(12,Enemy,1) [15,23] DropItem 0x0 0x0 0x0 [Tomahawk,BraveAxe,SkillScroll] GroupThreeAI
+UNIT DL10 SwdPal 0x0 Level(16,Enemy,1) [2,19] DropItem 0x0 0x0 0x0 [SilverSword,Rapier,Lancereaver,SkillScroll] NoAI
+UNIT DL11 Sorc 0x0 Level(11,Enemy,1) [8,26] DropItem 0x0 0x0 0x0 [Fenrir,Hell,SkillScroll] GroupTwoAI
+UNIT DL12 Halberdier 0x0 Level(13,Enemy,1) [7,25] DropItem 0x0 0x0 0x0 [Spear,HighRoller,SkillScroll] GroupTwoAI
+UNIT DL13 BowGen 0x0 Level(16,Enemy,1) [9,25] DropItem 0x0 0x0 0x0 [BarrierBow,BraveBow,Longbow,SkillScroll] GroupTwoAI
+UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [11,9] DropItem 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI
+UNIT
+
+C28BossGroupLunatic:
+UNIT DL1 ViridianLord 0x0 Level(15,Enemy,1) [11,2] DropItem 0x0 0x0 0x0 [Soulbow,SkillScroll] GroupNineAI
 UNIT DL2 WyvLord 0x0 Level(18,Enemy,1) [10,1] DropItem 0x0 0x0 0x0 [TrueSaunion,GildedLance,SkillScroll] GroupNineAI
 UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [14,22] DropItem 0x0 0x0 0x0 [GildedAxe,GildedBow,SkillScroll] GroupThreeAI
 UNIT DL4 BishopF 0x0 Level(9,Enemy,1) [16,22] DropItem 0x0 0x0 0x0 [Radiance,Resire,Smite,SkillScroll] GroupThreeAI
@@ -215,8 +248,8 @@ UNIT MagElite Bishop 0x0 Level(18,Enemy,1) [22,20] 0x0 0x0 0x1 REDA20R20 [Radian
 UNIT
 C28Turn8Spawns:
 UNIT MagElite Sage 0x0 Level(18,Enemy,1) [7,27] 0x0 0x0 0x1 REDA7R25 [Flare] NoAI
-UNIT Elite Warrior 0x0 Level(18,Enemy,1) [7,27] 0x0 0x0 0x1 REDA8R26 [Tomahawk,DangerPick] NoAI
-UNIT MagElite Sage 0x0 Level(18,Enemy,1) [7,27] 0x0 0x0 0x1 REDA9R25 [Sagittae] NoAI
+UNIT Elite Warrior 0x0 Level(18,Enemy,1) [8,27] 0x0 0x0 0x1 REDA8R26 [Tomahawk,DangerPick] NoAI
+UNIT MagElite Sage 0x0 Level(18,Enemy,1) [9,27] 0x0 0x0 0x1 REDA9R25 [Sagittae] NoAI
 UNIT
 C28Turn8Spawns2:
 UNIT Elite Falco 0x0 Level(18,Enemy,1) [20,27] 0x0 0x0 0x1 REDA20R26 [BraveLance] NoAI
@@ -264,6 +297,67 @@ UNIT
 
 ALIGN 4
 
+C28ArinSamSupport:
+Text(FillerDialogue)
+SetSupport(Arin,Sam,ASupport,1)
+EndEvent
+C28StefanCarbonSupport:
+Text(FillerDialogue)
+SetSupport(Stefan,Carbon,ASupport,1)
+EndEvent
+C28DesmondJohanSupport:
+Text(FillerDialogue)
+SetSupport(Desmond,Johan,ASupport,1)
+EndEvent
+C28SamBechamelSupport:
+Text(FillerDialogue)
+SetSupport(Sam,Bechamel,ASupport,1)
+EndEvent
+C28JosefHilbertSupport:
+Text(FillerDialogue)
+SetSupport(Josef,Hilbert,ASupport,1)
+EndEvent
+C28PeggyApolloSupport:
+Text(FillerDialogue)
+SetSupport(Peggy,Apollo,ASupport,1)
+EndEvent
+C28RachaelLeilaSupport:
+Text(FillerDialogue)
+SetSupport(Rachael,Leila,ASupport,1)
+EndEvent
+C28CassiusMikeySupport:
+Text(FillerDialogue)
+SetSupport(Cassius,Mikey,ASupport,1)
+EndEvent
+C28ApolloVladmirSupport:
+Text(FillerDialogue)
+SetSupport(Apollo,Vladmir,ASupport,1)
+EndEvent
+C28HyperiusAlexisSupport:
+Text(FillerDialogue)
+SetSupport(Hyperius,Alexis,ASupport,1)
+EndEvent
+C28LeilaTobiasSupport:
+Text(FillerDialogue)
+SetSupport(Leila,Tobias,ASupport,1)
+EndEvent
+C28ZachariasCallumSupport:
+Text(FillerDialogue)
+SetSupport(Zacharias,Callum,BPSupport,1)
+EndEvent
+C28YuyuHollandaiseSupport:
+Text(FillerDialogue)
+SetSupport(Yuyu,Hollandaise,BPSupport,1)
+EndEvent
+C28ElizaRoseSupport:
+Text(FillerDialogue)
+SetSupport(Eliza,Rose,ASupport,1)
+EndEvent
+C28RiftCallumSupport:
+Text(FillerDialogue)
+SetSupport(Rift,Callum,ASupport,1)
+EndEvent
+
 BeginningScene:
 ResetViridianConvoy
 ENUT GuideChpt28
@@ -292,8 +386,7 @@ ENDWARP
 CleanTextNoMap(HallCG,C28Opening4)
 SilentKillUnit(Bandit)
 LoadUnitsByDifficulty(C28Easy,C28Normal,C28Hard)
-LOAD1 0x1 C28BossGroup
-ENUN
+LoadUnitsByDifficulty2(C28BossGroup,C28BossGroup,C28BossGroupLunatic)
 SetUnitItemDurability(DL1, 1, InspirationID)
 SetUnitItemDurability(DL2, 2, KillerTacticsID)
 SetUnitItemDurability(DL3, 2, DragonFangID)
@@ -336,6 +429,21 @@ KillUnitIfPlayerAlive(Argent,DL13)
 MutualASupport(Cassius,Rachael,BaseFlag2)
 MutualASupport(Apollo,Bechamel,BaseFlag3)
 MutualASupport(Leila,Damien,BaseFlag4)
+SupportFlagOn(Arin,Sam,0x1a,BPSupport)
+SupportFlagOn(Stefan,Carbon,0x1b,BPSupport)
+SupportFlagOn(Desmond,Johan,0x1c,BPSupport)
+SupportFlagOn(Sam,Bechamel,0x1d,BPSupport)
+SupportFlagOn(Josef,Hilbert,0x1e,BPSupport)
+SupportFlagOn(Butch,Cassius,0x1f,BPSupport)
+SupportFlagOn(Rachael,Leila,0x20,BPSupport)
+SupportFlagOn(Cassius,Mikey,0x21,BPSupport)
+SupportFlagOn(Apollo,Vladmir,0x22,BPSupport)
+SupportFlagOn(Hyperius,Alexis,0x23,BPSupport)
+SupportFlagOn(Leila,Tobias,0x24,BPSupport)
+SupportFlagOn(Zacharias,Callum,0x25,BSupport)
+SupportFlagOn(Yuyu,Hollandaise,0x26,BSupport)
+SupportFlagOn(Eliza,Rose,0x27,BPSupport)
+SupportFlagOn(Rift,Callum,0x28,BPSupport)
 COUNTER_SET 0x2 0x0
 LOAD1 0x0 C28Units
 ENUN

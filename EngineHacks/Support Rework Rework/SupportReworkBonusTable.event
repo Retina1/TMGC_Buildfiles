@@ -78,7 +78,7 @@
 			support(CPSupport,0,0,10,0,0,10)//c13
 			support(BSupport,0,0,15,0,0,15)//c18
 			support(BPSupport,0,0,20,0,0,20)//c23
-			support(ASupport,0,0,25,0,0,25)
+			support(ASupport,0,0,25,0,0,25)//c28 battle
 		entry(Arin,Sveltzalus)
 			support(CSupport,0,0,5,0,0,5)//c12
 			support(CPSupport,0,0,10,0,0,10)//c16 in map
@@ -147,7 +147,7 @@
 			support(CPSupport,0,0,0,0,5,10)//c18 map
 			support(BSupport,0,0,0,5,10,15)//c22
 			support(BPSupport,0,0,5,10,15,20)//c26
-			support(ASupport,0,1,10,15,20,25)
+			support(ASupport,0,1,10,15,20,25)//c28 map
 		entry(Stefan,Johan)
 			support(CSupport,0,0,10,0,0,0)
 			support(CPSupport,0,0,10,0,0,10)
@@ -172,7 +172,7 @@
 			support(CPSupport,1,1,0,0,0,0)
 			support(BSupport,1,2,0,0,0,0)//c21 at base
 			support(BPSupport,2,3,0,0,0,0)//c25x
-			support(ASupport,4,4,0,0,0,0)
+			support(ASupport,4,4,0,0,0,0)//c28 map
 	//sam (arin)
 		entry(Sam,Josef)
 			support(CSupport,0,1,0,0,0,0)//c6
@@ -191,7 +191,7 @@
 			support(CPSupport,1,0,10,0,0,0)//c18
 			support(BSupport,1,0,20,0,0,0)//c22 in battle
 			support(BPSupport,2,0,20,0,0,0)//c25 battle
-			support(ASupport,3,0,25,0,0,0)
+			support(ASupport,3,0,25,0,0,0)//c28 map
 		entry(Sam,Charley)
 			support(CSupport,0,0,0,0,5,0)//c15 in battle
 			support(CPSupport,0,0,0,0,10,0)//c19 in battle
@@ -204,7 +204,7 @@
 			support(CPSupport,0,2,0,0,0,0)//c17 battle
 			support(BSupport,0,3,0,0,0,0)//c18x
 			support(BPSupport,0,4,0,0,0,0)//c24
-			support(ASupport,0,5,0,0,0,0)
+			support(ASupport,0,5,0,0,0,0)//c28 map
 		entry(Josef,Athena)
 			support(CSupport,0,1,0,0,0,0)//c15 in battle
 			support(CPSupport,1,1,0,0,0,0)//c19
@@ -243,7 +243,7 @@
 			support(CPSupport,0,0,0,0,10,0)//c14
 			support(BSupport,0,0,0,0,15,0)//c18
 			support(BPSupport,0,0,0,0,20,0)//c24
-			support(ASupport,0,0,0,0,25,0)
+			support(ASupport,0,0,0,0,25,0)//c28 map
 		entry(Butch,Jeff)
 			support(CSupport,0,0,0,0,5,0)//c9
 			support(CPSupport,0,0,10,0,5,0)//c15
@@ -280,14 +280,14 @@
 			support(CPSupport,1,0,0,0,0,0)//c19 in battle
 			support(BSupport,2,0,0,0,0,0)//c22 in battle
 			support(BPSupport,4,0,0,0,0,0)//c25 in battle
-			support(ASupport,8,0,0,0,0,0)
+			support(ASupport,8,0,0,0,0,0)//c28 battle
 	//cassius (butch, rachael)
 		entry(Cassius,Mikey)
 			support(CSupport,1,0,0,0,0,0)//c14
 			support(CPSupport,1,1,0,0,0,0)//c18 battle
 			support(BSupport,1,1,10,0,0,0)//c21 battle
 			support(BPSupport,1,1,10,10,0,0)//c25 battle
-			support(ASupport,1,1,10,10,10,10)		//lover convo/ending?
+			support(ASupport,1,1,10,10,10,10)//c28 battle		//some kind of ending?
 		entry(Cassius,Athena)
 			support(CSupport,0,0,10,0,0,0)//c16
 			support(CPSupport,0,1,10,0,0,0)//c20
@@ -368,7 +368,7 @@
 			support(CPSupport,0,0,10,0,0,20)//c21
 			support(BSupport,0,0,20,0,0,25)//c24
 			support(BPSupport,0,1,25,0,0,25)//c26 battle
-			support(ASupport,0,2,30,0,0,30)
+			support(ASupport,0,2,30,0,0,30)//c28 battle
 	//bechamel (natasia, sam, apollo)
 		entry(Bechamel,Hollandaise)
 			support(CSupport,1,0,0,0,0,0)//c17 recruitment
@@ -444,7 +444,7 @@
 			support(CPSupport,0,0,10,0,0,10)//z3
 			support(BSupport,0,1,15,0,0,10)//c17 battle
 			support(BPSupport,1,1,15,0,0,15)//c22
-			support(ASupport,1,2,20,0,0,15)
+			support(ASupport,1,2,20,0,0,15)//c28 battle
 		entry(Hyperius,Leila)
 			support(CSupport,1,0,0,0,0,5)//z1
 			support(CPSupport,1,0,10,0,0,5)//c18
@@ -489,7 +489,7 @@
 			support(CPSupport,1,1,0,0,0,10)//c23
 			support(BSupport,1,2,0,0,0,10)//c24
 			support(BPSupport,1,2,10,0,10,20)//c25x
-			support(ASupport,2,3,25,20,20,35)
+			support(ASupport,2,3,25,20,20,35)//c28 battle
 	//damien (leila)
 		entry(Damien,Zacharias)
 			support(CSupport,1,0,0,0,0,0)//base
@@ -515,7 +515,7 @@
 			support(CSupport,1,0,0,0,0,0)
 			support(CPSupport,2,0,0,0,5,0)
 			support(BSupport,2,0,10,0,10,0)//c25
-			support(BPSupport,3,0,15,0,20,0)
+			support(BPSupport,3,0,15,0,20,0)//c28 map
 			support(ASupport,4,0,25,0,20,0)
 	//avan (blair, apollo)
 		entry(Avan,Toddsworth)
@@ -536,7 +536,7 @@
 			support(CSupport,1,0,0,0,0,0)//c18 battle
 			support(CPSupport,1,1,0,0,0,0)//c21
 			support(BSupport,2,1,0,0,0,0)//c26
-			support(BPSupport,3,1,10,0,0,0)
+			support(BPSupport,3,1,10,0,0,0)//c28 battle
 			support(ASupport,4,1,20,0,0,0)
 	//artemis (alexis)
 		entry(Artemis,Hollandaise)
@@ -660,7 +660,7 @@
 			support(CPSupport,0,0,10,0,0,10)//v2 innate
 			support(BSupport,0,0,20,0,0,20)//v4
 			support(BPSupport,0,0,30,0,0,30)
-			support(ASupport,2,0,30,0,0,30)
+			support(ASupport,2,0,30,0,0,30)//c28 battle
 		entry(Eliza,Dirk)
 			support(CSupport,1,1,0,0,0,0)
 			support(CPSupport,2,2,0,0,0,0)
@@ -682,7 +682,7 @@
 			support(CPSupport,0,0,20,0,0,0)//v2 innate
 			support(BSupport,0,0,20,0,10,0)
 			support(BPSupport,0,0,30,0,20,0)
-			support(ASupport,0,0,30,0,30,0)
+			support(ASupport,0,0,30,0,30,0)//c28 battle
 		entry(Rift,Argent)
 			support(BPSupport,1,1,15,0,0,10)//the return
 			support(ASupport,2,2,20,0,0,20)

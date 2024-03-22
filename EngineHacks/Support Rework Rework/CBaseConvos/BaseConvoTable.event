@@ -932,14 +932,72 @@
 			bg(HallCG)
 			text(FillerDialogue)
 			baseSupport(Mikey,Joan,ASupport)
+	Chapter(Endgame)
+		Entry
+			name(UntoTheEnd_Label)
+			importance(1)
+			event(EndgameUntoTheEndEvent)
+			eventID(BaseFlag1)
 		//endgame
 		//sam/charley
 		//ptolemy/johan
 		//josef/athena
+		//charley todd final support
+		//hyperius zeke final support
 		//a thing for blair and partner (branching in event)
 	POP
 	}
 #endif // BASE_CONVO_TABLE
+
+ALIGN 4
+EndgameUntoTheEndEvent:
+SetBackground(MoonCG)
+CHECK_EVENTID GirlkissingFlag
+BEQ 0x1 0xc 0x0
+	MUSC S_CryALive
+	Text(FillerDialogue)//solo exploration of relationship dynamics (interesting concept)
+	GOTO 0x10
+LABEL 0x1
+BranchIfNotSupport(Blair,Arin,ASupport,0x2)
+	MUSC S_CryALive
+	Text(FillerDialogue)//blair/arin
+	GOTO 0x10
+LABEL 0x2
+BranchIfNotSupport(Blair,Natasia,ASupport,0x3)
+CHECK_ALIVE Natasia
+BEQ 0x3 0xc 0x0
+	MUSC S_CryALive
+	Text(FillerDialogue)//blair/natasia
+	GOTO 0x10
+LABEL 0x3
+BranchIfNotSupport(Blair,Avan,ASupport,0x4)
+CHECK_ALIVE Avan
+BEQ 0x4 0xc 0x0
+	MUSC S_CryALive
+	Text(FillerDialogue)//blair/avan
+	GOTO 0x10
+LABEL 0x4
+BranchIfNotSupport(Blair,Yuyu,ASupport,0x5)
+CHECK_ALIVE Yuyu
+BEQ 0x5 0xc 0x0
+	MUSC S_CryALive
+	Text(FillerDialogue)//blair/yuyu
+	GOTO 0x10
+LABEL 0x5
+BranchIfNotSupport(Blair,Estelle,ASupport,0x6)
+CHECK_ALIVE Estelle
+BEQ 0x6 0xc 0x0
+	MUSC S_CryALive
+	Text(FillerDialogue)//blair/estelle
+	GOTO 0x10
+LABEL 0x6
+//if you've talked to nobody, reflect with zeke one last time
+Text(FillerDialogue)
+LABEL 0x10
+FADI 0x5
+CLEAN
+NoFade
+ENDA
 
 ALIGN 4
 C26GirlkissingEvent:

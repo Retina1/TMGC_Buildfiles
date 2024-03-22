@@ -97,6 +97,10 @@
 #include "CharacterSpecific\RoseP\Staff Installer.event"
 }
 {
+#include "CharacterSpecific\ElizaP\Magic Installer.event"
+#include "CharacterSpecific\ElizaP\Staff Installer.event"
+}
+{
 #include "CharacterSpecific\DamienU\Bow Installer.event"
 #include "CharacterSpecific\DamienU\Unarmed Installer.event"
 }
@@ -516,6 +520,12 @@ EndAnim
 ALIGN 4
 HoratioSwordAnims:
 SwordAnim(0x102)
+EndAnim
+
+ALIGN 4
+ElizaPAnims:
+MagicAnim(0x10e)
+StaffAnim(0x10f)
 EndAnim
 
 ALIGN 4

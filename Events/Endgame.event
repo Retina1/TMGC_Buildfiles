@@ -97,11 +97,107 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,40] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 EndgameEasy:
-UNIT Dalst AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [4,21] 0x0 0x0 0x0 0x0 [Nocturne,Hell] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum Sniper 0x0 Level(18,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
+UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [14,21] 0x0 0x0 0x0 0x0 [ForceSpike,Flare] ChaseOnceApproachedAI
+
+UNIT BossSimulacrum1 SwdPal 0x0 Level(20,Enemy,1) [8,32] 0x0 0x0 0x0 0x0 [GildedSword] ChaseOnceApproachedAI//starque
+UNIT BossSimulacrum1 LncPal 0x0 Level(20,Enemy,1) [9,33] 0x0 0x0 0x0 0x0 [GildedLance] ChaseOnceApproachedAI//parque
+UNIT BossSimulacrum1 AxePal 0x0 Level(20,Enemy,1) [10,32] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI//marque
+UNIT BossSimulacrum1 LncGen 0x0 Level(20,Enemy,1) [9,30] 0x0 0x0 0x0 0x0 [Spear,BraveLance] ChaseOnceApproachedAI//brentson
+
+UNIT BossSimulacrum2 WarriorF 0x0 Level(20,Enemy,1) [14,29] 0x0 0x0 0x0 0x0 [SilverAxe,Tomahawk] ChaseOnceApproachedAI//helga
+UNIT BossSimulacrum2 Hero 0x0 Level(20,Enemy,1) [4,29] 0x0 0x0 0x0 0x0 [Tomahawk] ChaseOnceApproachedAI//mitchell
+UNIT BossSimulacrum2 Bruiser 0x0 Level(20,Enemy,1) [16,25] 0x0 0x0 0x0 0x0 [MasterSword] ChaseOnceApproachedAI//amundsen
+UNIT BossSimulacrum2 Sorc 0x0 Level(20,Enemy,1) [2,25] 0x0 0x0 0x0 0x0 [Nocturne] ChaseOnceApproachedAI//zaine
+
+UNIT BossSimulacrum3 WyvLord 0x0 Level(20,Enemy,1) [9,27] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk] ChaseOnceApproachedAI//esme
+UNIT BossSimulacrum3 Berserker 0x0 Level(20,Enemy,1) [17,29] 0x0 0x0 0x0 0x0 [GildedAxe,Tomahawk] ChaseOnceApproachedAI//pete
+UNIT BossSimulacrum3 SorcF 0x0 Level(20,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [Corruption,Nocturne] ChaseOnceApproachedAI//sofia
+UNIT BossSimulacrum3 WarriorF 0x0 Level(20,Enemy,1) [1,29] 0x0 0x0 0x0 0x0 [GildedAxe,Longbow] ChaseOnceApproachedAI//amara
+
+UNIT BossSimulacrum4 Berserker 0x0 Level(20,Enemy,1) [5,22] 0x0 0x0 0x0 0x0 [Hammer,Halberd,Swordslayer,Dracoaxe] ChaseOnceApproachedAI//gregorias
+UNIT BossSimulacrum4 LncPal 0x0 Level(20,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [GildedLance,MasterLance] ChaseOnceApproachedAI//valden
+UNIT BossSimulacrum4 Sage 0x0 Level(20,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [Flare,Silence] ChaseOnceApproachedAI//mason
+UNIT BossSimulacrum4 Warrior 0x0 Level(20,Enemy,1) [13,22] 0x0 0x0 0x0 0x0 [Tomahawk] ChaseOnceApproachedAI//roark
+
+UNIT BossSimulacrum5 BowGen 0x0 Level(20,Enemy,1) [7,17] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI//vulture
+UNIT BossSimulacrum5 SwMastF 0x0 Level(20,Enemy,1) [11,17] 0x0 0x0 0x0 0x0 [LightBrand,GildedSword] ChaseOnceApproachedAI//nicole
+UNIT BossSimulacrum5 Berserker 0x0 Level(20,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [SilverAxe] ChaseOnceApproachedAI//eddie
+UNIT BossSimulacrum5 Warrior 0x0 Level(20,Enemy,1) [9,12] 0x0 0x0 0x0 0x0 [GildedAxe,MasterBow] ChaseOnceApproachedAI//eduardo
+
+UNIT BossSimulacrum6 Sniper 0x0 Level(20,Enemy,1) [8,24] 0x0 0x0 0x0 0x0 [BarrierBow] AttackInRangeAI//michael
+UNIT BossSimulacrum6 Berserker 0x0 Level(20,Enemy,1) [10,13] 0x0 0x0 0x0 0x0 [KillerAxe] AttackInRangeAI//edward
+UNIT BossSimulacrum6 LncGen 0x0 Level(20,Enemy,1) [17,20] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI//bungalas
+UNIT BossSimulacrum6 Assass 0x0 Level(20,Enemy,1) [1,20] 0x0 0x0 0x0 0x0 [GildedBow,GildedSword] AttackInRangeAI//larson
+
+UNIT BossSimulacrum7 HalberdierF 0x0 Level(20,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [TrueSaunion] ChaseOnceApproachedAI//fiora
+UNIT BossSimulacrum7 BowPal 0x0 Level(20,Enemy,1) [12,9] 0x0 0x0 0x0 0x0 [BraveBow,BraveSword,Longbow] ChaseOnceApproachedAI//bobert
+UNIT BossSimulacrum7 Deserter 0x0 Level(20,Enemy,1) [3,7] 0x0 0x0 0x0 0x0 [GildedLance,Spear] ChaseOnceApproachedAI//davelarn
+UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [BraveSword,Tomahawk] ChaseOnceApproachedAI//reynard
+
+UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [BookOfOpistus] AttackInRangeAI
+UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis] AttackInRangeAI //change to liam conditionally (maybe if he came to 22 at all)
+UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
+
+UNIT DLNathaniel Sorc 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [TheSDarkTome] ChaseOnceApproachedAI
+UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal] ChaseOnceApproachedAI
+UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [Nuiusseon] ChaseOnceApproachedAI
+UNIT DLEthyl SageF 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Starfall] ChaseOnceApproachedAI
+
+UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT
 
 EndgameNormal:
-UNIT Dalst AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [4,21] 0x0 0x0 0x0 0x0 [Nocturne,Hell] ChaseOnceApproachedAI
+UNIT EndgameSimulacrum Sniper 0x0 Level(18,Enemy,1) [10,24] 0x0 0x0 0x0 0x0 [GildedBow,Greatbow] AttackInRangeAI
+UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [14,21] 0x0 0x0 0x0 0x0 [ForceSpike,Flare] ChaseOnceApproachedAI
+
+UNIT BossSimulacrum1 SwdPal 0x0 Level(20,Enemy,1) [8,32] 0x0 0x0 0x0 0x0 [GildedSword] ChaseOnceApproachedAI//starque
+UNIT BossSimulacrum1 LncPal 0x0 Level(20,Enemy,1) [9,33] 0x0 0x0 0x0 0x0 [GildedLance] ChaseOnceApproachedAI//parque
+UNIT BossSimulacrum1 AxePal 0x0 Level(20,Enemy,1) [10,32] 0x0 0x0 0x0 0x0 [GildedAxe,Tomahawk] ChaseOnceApproachedAI//marque
+UNIT BossSimulacrum1 LncGen 0x0 Level(20,Enemy,1) [9,30] 0x0 0x0 0x0 0x0 [Spear,BraveLance] ChaseOnceApproachedAI//brentson
+
+UNIT BossSimulacrum2 WarriorF 0x0 Level(20,Enemy,1) [14,29] 0x0 0x0 0x0 0x0 [GildedAxe,Tomahawk] ChaseOnceApproachedAI//helga
+UNIT BossSimulacrum2 Hero 0x0 Level(20,Enemy,1) [4,29] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI//mitchell
+UNIT BossSimulacrum2 Bruiser 0x0 Level(20,Enemy,1) [16,25] 0x0 0x0 0x0 0x0 [MasterSword] ChaseOnceApproachedAI//amundsen
+UNIT BossSimulacrum2 Sorc 0x0 Level(20,Enemy,1) [2,25] 0x0 0x0 0x0 0x0 [Nocturne] ChaseOnceApproachedAI//zaine
+
+UNIT BossSimulacrum3 WyvLord 0x0 Level(20,Enemy,1) [9,27] 0x0 0x0 0x0 0x0 [GildedLance,Tomahawk] ChaseOnceApproachedAI//esme
+UNIT BossSimulacrum3 Berserker 0x0 Level(20,Enemy,1) [17,29] 0x0 0x0 0x0 0x0 [GildedAxe,Tomahawk] ChaseOnceApproachedAI//pete
+UNIT BossSimulacrum3 SorcF 0x0 Level(20,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [Corruption,Nocturne] ChaseOnceApproachedAI//sofia
+UNIT BossSimulacrum3 WarriorF 0x0 Level(20,Enemy,1) [1,29] 0x0 0x0 0x0 0x0 [Tomahawk,Longbow] ChaseOnceApproachedAI//amara, gilded axe on normal
+
+UNIT BossSimulacrum4 Berserker 0x0 Level(20,Enemy,1) [5,22] 0x0 0x0 0x0 0x0 [Hammer,Halberd,Swordslayer,Dracoaxe] ChaseOnceApproachedAI//gregorias
+UNIT BossSimulacrum4 LncPal 0x0 Level(20,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [GildedLance,MasterLance] ChaseOnceApproachedAI//valden
+UNIT BossSimulacrum4 Sage 0x0 Level(20,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [Flare,Sleep] ChaseOnceApproachedAI//mason
+UNIT BossSimulacrum4 Warrior 0x0 Level(20,Enemy,1) [13,22] 0x0 0x0 0x0 0x0 [Tomahawk] ChaseOnceApproachedAI//roark
+
+UNIT BossSimulacrum5 BowGen 0x0 Level(20,Enemy,1) [7,17] 0x0 0x0 0x0 0x0 [ShiningBow,Longbow,KillerBow] ChaseOnceApproachedAI//vulture
+UNIT BossSimulacrum5 SwMastF 0x0 Level(20,Enemy,1) [11,17] 0x0 0x0 0x0 0x0 [FlameSword,GildedSword] ChaseOnceApproachedAI//nicole
+UNIT BossSimulacrum5 Berserker 0x0 Level(20,Enemy,1) [8,13] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI//eddie
+UNIT BossSimulacrum5 Warrior 0x0 Level(20,Enemy,1) [9,12] 0x0 0x0 0x0 0x0 [GildedAxe,MasterBow] ChaseOnceApproachedAI//eduardo
+
+UNIT BossSimulacrum6 Sniper 0x0 Level(20,Enemy,1) [8,24] 0x0 0x0 0x0 0x0 [BarrierBow] AttackInRangeAI//michael
+UNIT BossSimulacrum6 Berserker 0x0 Level(20,Enemy,1) [10,13] 0x0 0x0 0x0 0x0 [KillerAxe] AttackInRangeAI//edward
+UNIT BossSimulacrum6 LncGen 0x0 Level(20,Enemy,1) [17,20] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI//bungalas
+UNIT BossSimulacrum6 Assass 0x0 Level(20,Enemy,1) [1,20] 0x0 0x0 0x0 0x0 [GildedBow,GildedSword] AttackInRangeAI//larson
+
+UNIT BossSimulacrum7 HalberdierF 0x0 Level(20,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [TrueSaunion] ChaseOnceApproachedAI//fiora
+UNIT BossSimulacrum7 BowPal 0x0 Level(20,Enemy,1) [12,9] 0x0 0x0 0x0 0x0 [MasterBow,BraveSword] ChaseOnceApproachedAI//bobert
+UNIT BossSimulacrum7 Deserter 0x0 Level(20,Enemy,1) [3,7] 0x0 0x0 0x0 0x0 [GildedLance,Spear,SoaringShaft] ChaseOnceApproachedAI//davelarn
+UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [BraveSword,Tomahawk,SoulHilt,SavageGauntlet] ChaseOnceApproachedAI//reynard
+
+UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [BookOfOpistus] AttackInRangeAI
+UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis] AttackInRangeAI //change to liam conditionally (maybe if he came to 22 at all)
+UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
+
+UNIT DLNathaniel Sorc 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [TheSDarkTome] ChaseOnceApproachedAI
+UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal] ChaseOnceApproachedAI
+UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [Nuiusseon] ChaseOnceApproachedAI
+UNIT DLEthyl SageF 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Starfall] ChaseOnceApproachedAI
+
+UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT
 
 EndgameHard:
@@ -112,10 +208,10 @@ UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [14,21] 0x0 0x0 0x0 0x0 [Force
 UNIT BossSimulacrum1 SwdPal 0x0 Level(20,Enemy,1) [8,32] 0x0 0x0 0x0 0x0 [GildedSword,Lancesnapper] ChaseOnceApproachedAI//starque
 UNIT BossSimulacrum1 LncPal 0x0 Level(20,Enemy,1) [9,33] 0x0 0x0 0x0 0x0 [GildedLance,Nuboko] ChaseOnceApproachedAI//parque
 UNIT BossSimulacrum1 AxePal 0x0 Level(20,Enemy,1) [10,32] 0x0 0x0 0x0 0x0 [GildedAxe,Tomahawk] ChaseOnceApproachedAI//marque
-UNIT BossSimulacrum1 LncGen 0x0 Level(20,Enemy,1) [9,30] 0x0 0x0 0x0 0x0 [Spear,GildedLance,SoaringShaft] ChaseOnceApproachedAI//brentson
+UNIT BossSimulacrum1 LncGen 0x0 Level(20,Enemy,1) [9,30] 0x0 0x0 0x0 0x0 [Spear,BraveLance,SoaringShaft] ChaseOnceApproachedAI//brentson
 
 UNIT BossSimulacrum2 WarriorF 0x0 Level(20,Enemy,1) [14,29] 0x0 0x0 0x0 0x0 [GildedAxe,Tomahawk] ChaseOnceApproachedAI//helga
-UNIT BossSimulacrum2 Hero 0x0 Level(20,Enemy,1) [4,29] 0x0 0x0 0x0 0x0 [GildedSword,Tomahawk] ChaseOnceApproachedAI//mitchell
+UNIT BossSimulacrum2 Hero 0x0 Level(20,Enemy,1) [4,29] 0x0 0x0 0x0 0x0 [Tomahawk] ChaseOnceApproachedAI//mitchell
 UNIT BossSimulacrum2 Bruiser 0x0 Level(20,Enemy,1) [16,25] 0x0 0x0 0x0 0x0 [MasterSword,SoulHilt] ChaseOnceApproachedAI//amundsen
 UNIT BossSimulacrum2 Sorc 0x0 Level(20,Enemy,1) [2,25] 0x0 0x0 0x0 0x0 [Nocturne,VoidBracers] ChaseOnceApproachedAI//zaine
 

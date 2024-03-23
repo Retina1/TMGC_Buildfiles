@@ -134,7 +134,7 @@ UNIT BossSimulacrum6 Assass 0x0 Level(20,Enemy,1) [1,20] 0x0 0x0 0x0 0x0 [Gilded
 UNIT BossSimulacrum7 HalberdierF 0x0 Level(20,Enemy,1) [6,9] 0x0 0x0 0x0 0x0 [TrueSaunion] ChaseOnceApproachedAI//fiora
 UNIT BossSimulacrum7 BowPal 0x0 Level(20,Enemy,1) [12,9] 0x0 0x0 0x0 0x0 [BraveBow,BraveSword,Longbow] ChaseOnceApproachedAI//bobert
 UNIT BossSimulacrum7 Deserter 0x0 Level(20,Enemy,1) [3,7] 0x0 0x0 0x0 0x0 [GildedLance,Spear] ChaseOnceApproachedAI//davelarn
-UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [BraveSword,Tomahawk] ChaseOnceApproachedAI//reynard
+UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [Tomahawk] ChaseOnceApproachedAI//reynard
 
 UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [BookOfOpistus] AttackInRangeAI
 UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis] AttackInRangeAI //change to liam conditionally (maybe if he came to 22 at all)
@@ -296,6 +296,10 @@ SetUnitStatusAll(DLNathaniel, LuckStat, 0)
 SetUnitStatusAll(DLLazarus, LuckStat, 0)
 SetUnitStatusAll(DLTarquin, LuckStat, 0)
 SetUnitStatusAll(DLEthyl, LuckStat, 0)
+CheckForItem(RealLastShield)
+BEQ 0x2 0xc 0x0
+SetUnitStatus(Arbordia2,Item2,0)
+LABEL 0x2
 LOAD1 0x0 EndgameUnits
 ENUN
 GotoPrepScreen

@@ -496,6 +496,10 @@ ALIGN 4
 PtolemyMug:
 #incbin "dmps/Ptolemy.dmp"
 setMugEntry(0x4b,PtolemyMug,4,5,4,3)
+ALIGN 4
+PtolemyPromoMug:
+#incbin "dmps/PtolemyPromo.dmp"
+setMugEntry(0x143,PtolemyPromoMug,4,5,4,3)
 
 ALIGN 4
 SoniaMug:

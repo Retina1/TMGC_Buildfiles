@@ -122,11 +122,79 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C28Easy:
-UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+//dragons
+UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [7,8] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
+UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
+UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
+UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(16,Enemy,1) [21,11] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(16,Enemy,1) [1,7] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum FireDragon 0x0 Level(19,Enemy,1) [18,16] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Simulacrum FireDragon 0x0 Level(19,Enemy,1) [4,13] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
+UNIT Simulacrum IceDragon 0x0 Level(18,Enemy,1) [20,20] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Simulacrum IceDragon 0x0 Level(18,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Simulacrum DemonDragon 0x0 Level(17,Enemy,1) [15,18] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Simulacrum DemonDragon 0x0 Level(17,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [DemonBreath] AttackInRangeAI
+//humans
+UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [20,27] 0x0 0x0 0x0 0x0 [SilverSword] ChaseOnceApproachedAI
+UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [21,27] 0x0 0x0 0x0 0x0 [Spear] ChaseOnceApproachedAI
+UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [22,27] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
+UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [LightBrand] AttackInRangeAI
+UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [18,10] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI
+UNIT Dalst Sage 0x0 Level(15,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Fimbulvetr] AttackInRangeAI
+UNIT Dalst AxePal 0x0 Level(15,Enemy,1) [4,15] 0x0 0x0 0x0 0x0 [SilverAxe] ChaseOnceApproachedAI
+UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [SilverLance] ChaseOnceApproachedAI
+UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [1,12] 0x0 0x0 0x0 0x0 [Greatbow] AttackInRangeAI
+UNIT Dalst LncGen 0x0 Level(15,Enemy,1) [14,20] 0x0 0x0 0x0 0x0 [Spear] GroupFiveAI
+UNIT Dalst LncGen 0x0 Level(18,Enemy,1) [16,20] 0x0 0x0 0x0 0x0 [BraveLance] GroupFiveAI
+UNIT Dalst LncGen 0x0 Level(18,Enemy,1) [7,23] 0x0 0x0 0x0 0x0 [BraveLance] GroupSixAI
+UNIT Dalst LncGen 0x0 Level(15,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [Spear] GroupSixAI
+UNIT Elite Sniper 0x0 Level(15,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Elite Sniper 0x0 Level(15,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Elite AxePal 0x0 Level(15,Enemy,1) [8,1] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Elite LncPal 0x0 Level(15,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Elite Sage 0x0 Level(16,Enemy,1) [0,27] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
 UNIT
 
 C28Normal:
-UNIT Unknown AxeArm 0x0 Level(15,Enemy,1) [12,23] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+//dragons
+UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [7,8] 0x0 0x0 0x0 0x0 [DivineBreath] NoAI
+UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
+UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
+UNIT Simulacrum DivineDragon 0x0 Level(18,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [DivineBreath] NoAI
+UNIT Simulacrum EarthDragon 0x0 Level(16,Enemy,1) [21,11] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum EarthDragon 0x0 Level(16,Enemy,1) [1,7] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT Simulacrum FireDragon 0x0 Level(19,Enemy,1) [18,16] 0x0 0x0 0x0 0x0 [FireBreath] AttackInRangeAI
+UNIT Simulacrum FireDragon 0x0 Level(19,Enemy,1) [4,13] 0x0 0x0 0x0 0x0 [FireBreath] NeverMoveAI
+UNIT Simulacrum IceDragon 0x0 Level(18,Enemy,1) [20,20] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Simulacrum IceDragon 0x0 Level(18,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [IceBreath] AttackInRangeAI
+UNIT Simulacrum DemonDragon 0x0 Level(17,Enemy,1) [15,18] 0x0 0x0 0x0 0x0 [DemonBreath] NeverMoveAI
+UNIT Simulacrum DemonDragon 0x0 Level(17,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [DemonBreath] AttackInRangeAI
+//humans
+UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [20,27] 0x0 0x0 0x0 0x0 [SilverSword] ChaseOnceApproachedAI
+UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [21,27] 0x0 0x0 0x0 0x0 [Spear] ChaseOnceApproachedAI
+UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [22,27] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
+UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [LightBrand] AttackInRangeAI
+UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [18,10] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI
+UNIT Dalst Sage 0x0 Level(15,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Flare] AttackInRangeAI
+UNIT Dalst AxePal 0x0 Level(15,Enemy,1) [4,15] 0x0 0x0 0x0 0x0 [Halberd,Hammer] ChaseOnceApproachedAI
+UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [Dragonpike] ChaseOnceApproachedAI
+UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [1,12] 0x0 0x0 0x0 0x0 [Greatbow] AttackInRangeAI
+UNIT Elite LncGen 0x0 Level(15,Enemy,1) [14,20] 0x0 0x0 0x0 0x0 [Spear] GroupFiveAI
+UNIT Elite LncGen 0x0 Level(18,Enemy,1) [16,20] 0x0 0x0 0x0 0x0 [BraveLance] GroupFiveAI
+UNIT Elite LncGen 0x0 Level(18,Enemy,1) [7,23] 0x0 0x0 0x0 0x0 [BraveLance] GroupSixAI
+UNIT Elite LncGen 0x0 Level(15,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [Spear] GroupSixAI
+UNIT MagElite Sorc 0x0 Level(15,Enemy,1) [7,6] 0x0 0x0 0x0 0x0 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT MagElite Sorc 0x0 Level(15,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [Nosferatu,VoidBracers] NeverMoveAI
+UNIT Elite Sniper 0x0 Level(15,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Greatbow,Longbow] NeverMoveAI
+UNIT Elite Sniper 0x0 Level(15,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [Greatbow,Longbow] NeverMoveAI
+UNIT Elite AxePal 0x0 Level(15,Enemy,1) [8,1] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Elite LncPal 0x0 Level(15,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
+UNIT Elite Sage 0x0 Level(16,Enemy,1) [0,27] 0x0 0x0 0x0 0x0 [Bolting] NeverMoveAI
 UNIT
 
 C28Hard:
@@ -147,41 +215,33 @@ UNIT Simulacrum DemonDragon 0x0 Level(17,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [DemonB
 UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [20,27] 0x0 0x0 0x0 0x0 [GildedSword] ChaseOnceApproachedAI
 UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [21,27] 0x0 0x0 0x0 0x0 [Spear,GildedLance] ChaseOnceApproachedAI
 UNIT Dalst SwdPal 0x0 Level(15,Enemy,1) [22,27] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
-
 UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [GildedSword] AttackInRangeAI
 UNIT Dalst Valk 0x0 Level(15,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [FlameSword] AttackInRangeAI
-
 UNIT Dalst Warrior 0x0 Level(15,Enemy,1) [18,10] 0x0 0x0 0x0 0x0 [GildedAxe] AttackInRangeAI
 UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [19,11] 0x0 0x0 0x0 0x0 [GildedBow,Longbow] ChaseOnceApproachedAI
 UNIT Dalst Sage 0x0 Level(15,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Flare,EarthPower] AttackInRangeAI
-
 UNIT Dalst AxePal 0x0 Level(15,Enemy,1) [4,15] 0x0 0x0 0x0 0x0 [GildedAxe,Halberd,Hammer] ChaseOnceApproachedAI
 UNIT Dalst LncPal 0x0 Level(15,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [GildedLance,Dragonpike] ChaseOnceApproachedAI
 UNIT Dalst Sniper 0x0 Level(15,Enemy,1) [1,12] 0x0 0x0 0x0 0x0 [Greatbow,MasterBow] AttackInRangeAI
-
 UNIT Elite LncGen 0x0 Level(15,Enemy,1) [14,20] 0x0 0x0 0x0 0x0 [TrueSaunion] GroupFiveAI
 UNIT Elite LncGen 0x0 Level(18,Enemy,1) [16,20] 0x0 0x0 0x0 0x0 [BraveLance] GroupFiveAI
-
 UNIT Elite LncGen 0x0 Level(18,Enemy,1) [7,23] 0x0 0x0 0x0 0x0 [BraveLance] GroupSixAI
 UNIT Elite LncGen 0x0 Level(15,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [TrueSaunion] GroupSixAI
-
 UNIT MagElite Sorc 0x0 Level(15,Enemy,1) [7,6] 0x0 0x0 0x0 0x0 [Nosferatu,Silence,VoidBracers] NeverMoveAI
 UNIT MagElite Sorc 0x0 Level(15,Enemy,1) [15,6] 0x0 0x0 0x0 0x0 [Nosferatu,Silence,VoidBracers] NeverMoveAI
-
 UNIT Elite Sniper 0x0 Level(15,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Greatbow,BiasedQuiver] NeverMoveAI
 UNIT Elite Sniper 0x0 Level(15,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [Greatbow,BiasedQuiver] NeverMoveAI
 UNIT Elite AxePal 0x0 Level(15,Enemy,1) [8,1] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
 UNIT Elite LncPal 0x0 Level(15,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
-
-UNIT Elite Sage 0x0 Level(16,Enemy,1) [1,26] 0x0 0x0 0x0 0x0 [Bolting,EarthPower] NoAI
+UNIT Elite Sage 0x0 Level(16,Enemy,1) [0,27] 0x0 0x0 0x0 0x0 [Bolting,EarthPower] NeverMoveAI
 UNIT
 
 C28BossGroup:
+UNIT DL5 BardF 0x0 Level(17,Enemy,1) [12,1] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
 UNIT DL1 ViridianLord 0x0 Level(15,Enemy,1) [11,2] DropItem 0x0 0x0 0x0 [Soulbow,SkillScroll] GroupNineAI
 UNIT DL2 WyvLord 0x0 Level(18,Enemy,1) [10,1] DropItem 0x0 0x0 0x0 [TrueSaunion,SilverLance,SkillScroll] GroupNineAI
 UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [14,22] DropItem 0x0 0x0 0x0 [SilverAxe,SilverBow,SkillScroll] GroupThreeAI
 UNIT DL4 BishopF 0x0 Level(9,Enemy,1) [16,22] DropItem 0x0 0x0 0x0 [Aura,Pierce,Banish,SkillScroll] GroupThreeAI
-UNIT DL5 BardF 0x0 Level(17,Enemy,1) [12,1] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
 UNIT DL6 SwMast 0x0 Level(13,Enemy,1) [22,19] DropItem 0x0 0x0 0x0 [FlameSword,SilverSword,SkillScroll] NoAI
 UNIT DL7 BowPalF 0x0 Level(8,Enemy,1) [21,26] DropItem 0x0 0x0 0x0 [SilverBow,Longbow,SkillScroll] AttackInRangeAI
 UNIT DL8 SageF 0x0 Level(6,Enemy,1) [4,23] DropItem 0x0 0x0 0x0 [Fimbulvetr,Inversion,ForceSpike,SkillScroll] AttackInRangeAI
@@ -194,11 +254,11 @@ UNIT EnemyElcorian Valk 0x0 Level(16,Enemy,1) [11,9] DropItem 0x0 0x0 0x0 [TheCr
 UNIT
 
 C28BossGroupLunatic:
+UNIT DL5 BardF 0x0 Level(17,Enemy,1) [12,1] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
 UNIT DL1 ViridianLord 0x0 Level(15,Enemy,1) [11,2] DropItem 0x0 0x0 0x0 [Soulbow,SkillScroll] GroupNineAI
 UNIT DL2 WyvLord 0x0 Level(18,Enemy,1) [10,1] DropItem 0x0 0x0 0x0 [TrueSaunion,GildedLance,SkillScroll] GroupNineAI
 UNIT DL3 Warrior 0x0 Level(14,Enemy,1) [14,22] DropItem 0x0 0x0 0x0 [GildedAxe,GildedBow,SkillScroll] GroupThreeAI
 UNIT DL4 BishopF 0x0 Level(9,Enemy,1) [16,22] DropItem 0x0 0x0 0x0 [Radiance,Resire,Smite,SkillScroll] GroupThreeAI
-UNIT DL5 BardF 0x0 Level(17,Enemy,1) [12,1] DropItem 0x0 0x0 0x0 [SkillScroll] NoAI
 UNIT DL6 SwMast 0x0 Level(13,Enemy,1) [22,19] DropItem 0x0 0x0 0x0 [FlameSword,GildedSword,SkillScroll] NoAI
 UNIT DL7 BowPalF 0x0 Level(8,Enemy,1) [21,26] DropItem 0x0 0x0 0x0 [GildedBow,Greatbow,SkillScroll] AttackInRangeAI
 UNIT DL8 SageF 0x0 Level(6,Enemy,1) [4,23] DropItem 0x0 0x0 0x0 [Flare,Galewind,ForceSpike,SkillScroll] AttackInRangeAI
@@ -466,6 +526,11 @@ Text(C28EmileTalksToElcorian)
 EndEvent
 
 C28Turn1Event:
+CAM1 [8,25]
+FlashCursor(8,25,60)
+CAM1 [15,22]
+FlashCursor(15,22,60)
+SystemText(C28SwitchExplanation)
 MUSC 0x0
 CAM1 [11,12]
 FlashCursor(EnemyElcorian,60)

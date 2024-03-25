@@ -226,7 +226,7 @@ mov		r1,#0x80
 lsl		r1,#1			@multiply by 2^1 = 0x100, which is 'promoted'
 tst		r0,r1
 beq		FixedHpGrowth
-add		r6,#19			@ add 2 levels if the unit is promoted (otherwise, without 100+ growths the first level-up will always be empty)
+@add		r6,#19			@ add 2 levels if the unit is promoted (otherwise, without 100+ growths the first level-up will always be empty)
 
 FixedHpGrowth:
 ldr		r0,Get_Hp_Growth

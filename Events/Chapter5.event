@@ -193,6 +193,7 @@ LoadUnitsByDifficulty(C5Easy,C5Normal,C5Hard)
 LOAD1 0x0 C5Units
 MUSC NarrationTheme
 Narration(MapCG,Ch5_Narration)
+RandomRainSetter
 MUSC S_Crisis
 CHECK_ALIVE Peggy
 BNE 0x1 0xC 0x0

@@ -22,6 +22,11 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0x0,EndgameTurn1,1)
+TurnEventPlayer(0x0,EndgameDIE,16,100)
+TurnEventPlayer(0x0,EndgameDIE,21,95)
+TurnEventPlayer(0x0,EndgameDIE,26,90)
+TurnEventPlayer(0x0,EndgameDIE,31,85)
+TurnEventPlayer(0x0,EndgameDIE,36,80)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -256,6 +261,14 @@ FinalArbordiaSpawn:
 UNIT FinalArbordia Liberator 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x1 REDA9R2 [Aspect] NeverMoveAI
 UNIT
 
+EndgameMorningStarGang:
+UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [7,46] 0x0 0x0 0x1 REDA7R46 [MorningStar,Smite,TorchStaff,Scripture] NoAI
+UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [8,46] 0x0 0x0 0x1 REDA8R46 [MorningStar,Smite,TorchStaff,Scripture] NoAI
+UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,46] 0x0 0x0 0x1 REDA9R46 [MorningStar,Smite,TorchStaff,Scripture] NoAI
+UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [10,46] 0x0 0x0 0x1 REDA10R46 [MorningStar,Smite,TorchStaff,Scripture] NoAI
+UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [11,46] 0x0 0x0 0x1 REDA11R46 [MorningStar,Smite,TorchStaff,Scripture] NoAI
+UNIT
+
 //if we wanna make every boss that hasn't already been deadlorded get a palette reference
 //3 arque cavs, brentson LncGen, helga warriorF, mitchell hero, amundsen bruiser, zaine sorc, esme wyvernlord, pete berserker, gregorias berserker, sofia sorcF
 //amara warriorF, valden lancpal, lazarus axegen, roark warrior, vulture bowgen, nicole swmastf, eds berserker x2 and warrior, bungalas lncgen, michael sniper
@@ -404,6 +417,10 @@ SetNewGameFlag(12)
 ENUT EpilogueSaveFlag
 MoveToChapter(AfterTheEnd)
 ENDA
+
+EndgameDIE:
+Reinforcements(EndgameMorningStarGang)
+EndEvent
 
 
 //MESSAGE Events end at offset CURRENTOFFSET

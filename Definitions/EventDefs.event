@@ -27,6 +27,7 @@
 #define SilentKillUnit(unit) "DISA_IF unit; DISA unit"
 #define SFXKillUnit(unit) "SET_SOMETHING unit; DISA unit"
 #define DisaIfDead(unit) "CHECK_ALIVE unit; BNE unit 0xc 0x0; DISA unit; LABEL unit"
+#define RandomRainSetter "RANDOMNUMBER 9; BNE 0x4368 0xc 0x0; WEATHER 0x4; LABEL 0x4368"
 
 #define EndgameQuote(unit,text) "CHECK_DEPLOYED unit; BEQ unit 0xc 0x0; Text(text); LABEL unit"
 

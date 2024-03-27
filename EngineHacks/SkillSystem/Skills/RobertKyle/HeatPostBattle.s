@@ -5,6 +5,7 @@
 .endm
 .equ RoboKyID, SkillTester+4
 .equ HeatEvent, RoboKyID+4
+.equ RoboKyDrainID, HeatEvent+4
 .thumb
 push	{lr}
 
@@ -12,6 +13,22 @@ push	{lr}
 ldrb 	r0, [r6,#0x11]	@action taken this turn
 cmp	r0, #0x2 @attack
 bne	End
+
+@check for drain skill
+mov r0, r5
+ldr r1, RoboKyDrainID
+ldr r3, SkillTester
+mov lr, r3
+.short  0xf800
+cmp r0,#0x00
+bne End
+mov r0, r4
+ldr r1, RoboKyDrainID
+ldr r3, SkillTester
+mov lr, r3
+.short  0xf800
+cmp r0,#0x00
+bne End
 
 CheckDefender:
 @check for skill

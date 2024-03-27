@@ -1,5 +1,5 @@
 
-.include "FE-CLib-master/reference/FE8U-20190316.s"
+.include "reference/FE8U-20190316.s"
 
 @ Functions to be autohooked.
 SET_FUNC MasterSupportCalculation, (0x080285B0+1)

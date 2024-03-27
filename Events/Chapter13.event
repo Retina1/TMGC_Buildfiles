@@ -251,8 +251,12 @@ UNIT
 C13Timed1FinalWave:
 UNIT Ygstra SwdPeg 0x0 Level(13,Enemy,1) [15,5] 0x0 0x0 0x1 REDA16R6 [SteelSword] NoAI
 UNIT Ygstra LncPeg 0x0 Level(13,Enemy,1) [15,5] 0x0 0x0 0x1 REDA14R6 [SteelLance] NoAI
+UNIT
+C13Timed1FinalWave2:
 UNIT Ygstra Merc 0x0 Level(13,Enemy,1) [18,6] 0x0 0x0 0x1 REDA19R5 [Lancereaver] NoAI
 UNIT Ygstra Merc 0x0 Level(13,Enemy,1) [18,6] 0x0 0x0 0x1 REDA21R6 [SteelSword] NoAI
+UNIT
+C13Timed1FinalWave3:
 UNIT Ygstra BowArm 0x0 Level(15,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI
 UNIT Ygstra BowArm 0x0 Level(15,Enemy,1) [10,8] 0x0 0x0 0x0 0x0 [Longbow] ChaseOnceApproachedAI
 UNIT
@@ -260,6 +264,8 @@ UNIT
 C13Timed2FirstWave:
 UNIT Ygstra LncWyv 0x0 Level(13,Enemy,1) [10,20] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
 UNIT Ygstra AxeWyv 0x0 Level(13,Enemy,1) [11,21] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT
+C13Timed2FirstWave2:
 UNIT Ygstra LncCav 0x0 Level(13,Enemy,1) [14,24] 0x0 0x0 0x1 REDA15R23 [SteelLance] NoAI
 UNIT Ygstra LncCavF 0x0 Level(13,Enemy,1) [14,24] 0x0 0x0 0x1 REDA15R25 [Javelin] NoAI
 UNIT
@@ -486,6 +492,8 @@ BNE 0x12 0xc 0x3
 	GOTO 0x20
 LABEL 0x12
 Reinforcements(C13Timed1FinalWave)
+Reinforcements(C13Timed1FinalWave2)
+Reinforcements(C13Timed1FinalWave3)
 LABEL 0x20
 EndEvent
 
@@ -495,6 +503,7 @@ SVAL 0x3 0x1
 COUNTER_CHECK 0x2
 BNE 0x10 0xc 0x3
 	Reinforcements(C13Timed2FirstWave)
+	Reinforcements(C13Timed2FirstWave2)
 	ENUF 0x24
 	GOTO 0x20
 LABEL 0x10

@@ -108,9 +108,12 @@ ENDA
 
 ALIGN 4
 UntransformEvent:
+CHECK_DEPLOYED Yuyu
+BEQ 0x1 0xc 0x0
 CAM1 Yuyu
 PlayEmotionEffect(Yuyu,SweatEffect)
 RefreshSMS
+LABEL 0x1
 NoFade
 ENDA
 

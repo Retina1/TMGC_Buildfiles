@@ -45,26 +45,26 @@ CharacterEventBothWays(0x25,C24NatasiaBechamelSupport,Natasia,Bechamel)
 //probably a bit rude to do immediate viridian supports
 
 CharacterEvent(0x21,C24Pilgrim,Yuyu,BossIneubrenos)
-CharacterEvent(BaseFlag2,C24BlairLarondeTalk,Blair,SecretLaronde)
+CharacterEvent(0x12,C24BlairLarondeTalk,Blair,SecretLaronde)
 CharacterEventBothWays(0x23,C24Dracopope,Vladmir,SecretLaronde)
-CharacterEvent(BaseFlag3,C24RoseLarondeRecruitment,Rose,SecretLaronde)
+CharacterEvent(0x13,C24RoseLarondeRecruitment,Rose,SecretLaronde)
 //viridian step
-CharacterEvent(BaseFlag4,C24FreddricLarondeTalk,Freddric,SecretLaronde)
-CharacterEvent(BaseFlag4,C24DeanLarondeTalk,Dean,SecretLaronde)
-CharacterEvent(BaseFlag4,C24ElizaLarondeTalk,Eliza,SecretLaronde)
-CharacterEvent(BaseFlag4,C24RiftLarondeTalk,Rift,SecretLaronde)
-CharacterEvent(BaseFlag4,C24EstelleLarondeTalk,Estelle,SecretLaronde)
-CharacterEvent(BaseFlag4,C24DirkLarondeTalk,Dirk,SecretLaronde)
-CharacterEvent(BaseFlag4,C24CallumLarondeTalk,Callum,SecretLaronde)
-CharacterEvent(BaseFlag4,C24ManfredLarondeTalk,Manfred,SecretLaronde)
-CharacterEvent(BaseFlag4,C24WilhelmLarondeTalk,Wilhelm,SecretLaronde)
-CharacterEvent(BaseFlag4,C24ArgentLarondeTalk,Argent,SecretLaronde)
+CharacterEvent(0x14,C24FreddricLarondeTalk,Freddric,SecretLaronde)
+CharacterEvent(0x14,C24DeanLarondeTalk,Dean,SecretLaronde)
+CharacterEvent(0x14,C24ElizaLarondeTalk,Eliza,SecretLaronde)
+CharacterEvent(0x14,C24RiftLarondeTalk,Rift,SecretLaronde)
+CharacterEvent(0x14,C24EstelleLarondeTalk,Estelle,SecretLaronde)
+CharacterEvent(0x14,C24DirkLarondeTalk,Dirk,SecretLaronde)
+CharacterEvent(0x14,C24CallumLarondeTalk,Callum,SecretLaronde)
+CharacterEvent(0x14,C24ManfredLarondeTalk,Manfred,SecretLaronde)
+CharacterEvent(0x14,C24WilhelmLarondeTalk,Wilhelm,SecretLaronde)
+CharacterEvent(0x14,C24ArgentLarondeTalk,Argent,SecretLaronde)
 //opistian step
-CharacterEvent(0x26,C24ApolloLarondeTalk,Apollo,SecretLaronde,BaseFlag4)
-CharacterEvent(0x26,C24HilbertLarondeTalk,Hilbert,SecretLaronde,BaseFlag4)
-CharacterEvent(0x26,C24FlynnLarondeTalk,Flynn,SecretLaronde,BaseFlag4)
-CharacterEvent(0x26,C24AthenaLarondeTalk,Athena,SecretLaronde,BaseFlag4)
-CharacterEvent(0x26,C24CharleyLarondeTalk,Charley,SecretLaronde,BaseFlag4)
+CharacterEvent(0x26,C24ApolloLarondeTalk,Apollo,SecretLaronde,0x14)
+CharacterEvent(0x26,C24HilbertLarondeTalk,Hilbert,SecretLaronde,0x14)
+CharacterEvent(0x26,C24FlynnLarondeTalk,Flynn,SecretLaronde,0x14)
+CharacterEvent(0x26,C24AthenaLarondeTalk,Athena,SecretLaronde,0x14)
+CharacterEvent(0x26,C24CharleyLarondeTalk,Charley,SecretLaronde,0x14)
 //final step
 CharacterEvent(0x27,C24BlairLarondeAltRecruitment,Blair,SecretLaronde,0x26)
 RoseShopMacro
@@ -389,7 +389,7 @@ C24LarondeSpawn1:
 UNIT Opistia Wyvern 0x0 Level(10,NPC,0) [24,0] 0x0 0x0 0x1 REDA25R3 [0x0] NoAI
 UNIT
 C24LarondeSpawn2:
-UNIT SecretLaronde Halberdier 0x0 Level(6,NPC,0) [25,3] 0x0 0x0 0x1 REDA25R4 [Spear,Nuboko,Elixir,GoddessIcon] NeverMoveAI
+UNIT SecretLaronde Halberdier 0x0 Level(6,NPC,0) [25,3] 0x0 0x0 0x1 REDA25R4 [Spear,Nuboko,Elixir,GoddessIcon]  [0x03,0x03,0x0,0x0]
 UNIT
 
 C24OpeningBlair:
@@ -647,18 +647,18 @@ MOVE 60 Opistia [24,0]
 ENUN
 SilentKillUnit(Opistia)
 ENUN
-ENUT BaseFlag2 //turn blair talk flag on
+ENUT 0x12 //turn blair talk flag on
 CHECK_ALIVE Vladmir
 BNE 0x1 0xc 0x0
-ENUF BaseFlag2 //unless he's dead
+ENUF 0x12 //unless he's dead
 LABEL 0x1
 CHECK_DEPLOYED Vladmir
 BNE 0x2 0xc 0x0
-ENUF BaseFlag2 //or undeployed
+ENUF 0x12 //or undeployed
 LABEL 0x2
 CHECK_ALIVE Rose
 BEQ 0x3 0xc 0x0
-ENUT BaseFlag4
+ENUT 0x14
 ENUT 0x26
 ENUT 0x27
 LABEL 0x3
@@ -749,52 +749,52 @@ EndEvent
 C24FreddricLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeFreddricTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24DeanLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeDeanTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24ElizaLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeElizaTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24RiftLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeRiftTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24EstelleLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeEstelleTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24DirkLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeDirkTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24CallumLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeCallumTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24ManfredLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeManfredTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24WilhelmLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeWilhelmTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 C24ArgentLarondeTalk:
 MUSC S_CircleOfTheMoon
 Text(C24LarondeArgentTalk)
-ENUT BaseFlag2
+ENUT 0x12
 EndEvent
 
 C24ApolloLarondeTalk:

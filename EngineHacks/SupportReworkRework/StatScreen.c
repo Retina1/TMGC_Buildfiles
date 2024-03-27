@@ -36,13 +36,15 @@ void DrawSupports(void) // Autohook to 0x8087698.
 	x = 1;
 	y = 12;
 	BgMap_ApplyTsa(&Bg2_Origin[y][x],&SupportStatScreenBlueBox,0x2040);
-	
+
+if (!(current->supports[4])){
 	x = 14;
 	y = 12;
 	(textBase+1)->tileIndexOffset = textBase->tileIndexOffset+14;
 	textBase->tileWidth = 14;
 	DrawTextInline(textBase,&Tile_Origin[y][x],3,3,14,&TotalCurrentSupportBonusesText);
 	textBase++;
+	}
 	
 	BonusStruct bonuses;
 	MasterSupportCalculation(current,&bonuses);

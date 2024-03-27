@@ -145,7 +145,7 @@ NegatedSkills: //comment or uncomment skills to your liking, this should come wi
 //Confirmed working and grouped by type for easier adding/removing from the NegatedSkills list
 //please note that I have only tested one or two skills of each group so if there is any issue with any of them please let me know
 FILL 0xFF
-
+/* i don't use nihil anyway so let's trim things down
 NegatedSkillEntry(VantageID)
 NegatedSkillEntry(VantagePlusID)
 NegatedSkillEntry(DesperationID)
@@ -311,7 +311,7 @@ NegatedSkillEntry(EnrageID)
 NegatedSkillEntry(DeadeyeID)
 NegatedSkillEntry(DragonFangID)
 NegatedSkillEntry(FortuneID)
-
+*/
 /*
 //NOT WORKING (or they should not be affected by nihil)
 BYTE ProvokeID//this is kinda it's own thing really (works)

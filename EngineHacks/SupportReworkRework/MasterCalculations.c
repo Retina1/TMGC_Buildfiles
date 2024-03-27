@@ -1,6 +1,6 @@
 
 #include <stddef.h>
-#include "FE-CLib-master/include/gbafe.h"
+#include "include/gbafe.h"
 
 typedef struct BonusStruct BonusStruct;
 typedef struct SupportTableEntry SupportTableEntry;

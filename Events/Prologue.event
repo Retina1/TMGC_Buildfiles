@@ -246,11 +246,11 @@ EndingScene:
 CHECK_ALIVE Kenneth
 BNE 0x1 0xC 0x0
 MUSC VictoryMinor
-Text(PathCG,Prologue_Ending_Dead_Kenneth)
+CleanTextNoMap(PathCG,Prologue_Ending_Dead_Kenneth)
 GOTO 0x2
 LABEL 0x1
 MUSC VictoryTheme
-Text(PathCG,Prologue_Ending)
+CleanTextNoMap(PathCG,Prologue_Ending)
 LABEL 0x2
 MUSC 0x0
 MoveToChapter(Chapter1)

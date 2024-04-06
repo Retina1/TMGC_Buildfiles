@@ -159,10 +159,10 @@ LOAD1 0x0 C1CutsceneUnits
 ENUN
 CHECK_ALIVE Kenneth
 BNE 0x1 0xC 0x0
-CleanText(PathCG,Ch1_Opening_2_Dead_Kenneth)
+CleanTextNoMap(PathCG,Ch1_Opening_2_Dead_Kenneth)
 GOTO 0x2
 LABEL 0x1
-CleanText(PathCG,Ch1_Opening_2)
+CleanTextNoMap(PathCG,Ch1_Opening_2)
 LABEL 0x2
 LOAD1 0x0 C1Units
 GotoPrepScreen

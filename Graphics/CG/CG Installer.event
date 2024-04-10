@@ -11,6 +11,16 @@ SetConvoBackground(YgstraCG,YgstraImage,YgstraTSA,YgstraPalette)
 SetConvoBackground(EastHolanisCG,EastHolanisImage,EastHolanisTSA,EastHolanisPalette)
 SetConvoBackground(MoonCG,MoonImage,MoonTSA,MoonPalette)
 SetConvoBackground(TitleCG,TitleImage,TitleTSA,TitlePalette)
+SetConvoBackground(FinTextCG,FinTextImage,FinTextTSA,FinTextPalette)
+ALIGN 4
+FinTextImage:
+#incbin "FIN.png.dmp"
+ALIGN 4
+FinTextTSA:
+#incbin "FIN.png.tsa.dmp"
+ALIGN 4
+FinTextPalette:
+#incbin "FIN.png.pal.dmp"
 ALIGN 4
 TitleImage:
 #incbin "title.png.dmp"

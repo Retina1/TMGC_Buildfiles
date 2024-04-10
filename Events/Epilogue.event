@@ -42,7 +42,6 @@ CHECK_ALIVE Elcorian
 BEQ 0x1 0xc 0x0
 	MUSC 0x0
 	SetBackground(MoonCG)
-	FADU 16
 	SOUN 0x99
 	STAL 30
 	SOUN 0x98
@@ -67,6 +66,11 @@ BEQ 0x1 0xc 0x0
 	FADI 0x2
 CLEAN
 LABEL 0x1
+STAL 180
+SetBackground(FinTextCG)
+STAL 600
+FADI 0x1
+STAL 120
 MNTS 0x1
 //MoveToChapter(HubMap)
 ENDA

@@ -49,6 +49,7 @@ ldrb  r0, CorrosionID
 strb  r0, [r6,#4] 
 
 @subtract a fuckton from opponent's weapon uses after battle
+@on reverse mode, add one back
 
 mov r3,#0xff
 mov r0,r5
@@ -61,6 +62,17 @@ cmp r0,#0
 bgt DidntHitMinimum
 mov r0,#0
 DidntHitMinimum:
+push {r0-r2}
+ldr r0,=#0x8083da8 @CheckEventId
+mov r14,r0
+mov r0,#0xaf @reverse mode
+.short 0xF800
+mov r5,r0
+pop {r0-r2}
+cmp r5,#0
+beq	ReverseOff
+mov r0,#1
+ReverseOff:
 lsl r0,r0,#8
 lsl r1,r1,#24
 lsr r1,r1,#24

@@ -938,6 +938,33 @@
 			importance(1)
 			event(EndgameUntoTheEndEvent)
 			eventID(BaseFlag1)
+		Entry
+			bg(MoonCG)
+			music(LoverConvoSong)
+			importance(4)
+			text(FillerDialogue)
+			baseSupport(Sam,Charley,ASupport)
+			eventID(BaseFlag2)//check if paired with emile
+		Entry
+			bg(MoonCG)
+			music(LoverConvoSong)
+			importance(4)
+			text(FillerDialogue)
+			baseSupport(Ptolemy,Johan,ASupport)
+		Entry
+			bg(MoonCG)
+			music(LoverConvoSong)
+			importance(4)
+			text(FillerDialogue)
+			baseSupport(Josef,Athena,ASupport)
+		Entry
+			bg(MoonCG)
+			text(FillerDialogue)
+			baseSupport(Charley,Toddsworth,ASupport)
+		Entry
+			bg(MoonCG)
+			text(FillerDialogue)
+			baseSupport(Zeke,Hyperius,ASupport)
 		//endgame
 		//sam/charley
 		//ptolemy/johan

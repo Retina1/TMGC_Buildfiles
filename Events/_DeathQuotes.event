@@ -254,6 +254,7 @@ KillerDeathQuote(EnemyElcorian,Simone,Chapter28,0xf,SimoneWoundsElcorian)
 ChapterDeathQuote(EnemyElcorian,Chapter28,0x0,EnemyElcorianDeath)
 // endgame
 ChapterDeathQuote(Arbordia2,Endgame,0x4,NotQuiteFinalGirardDeath)
+BYTE FinalArbordia 0x0 0xff Endgame DefeatBossFlag 0x0 ;SHORT 0x0 ;WORD FinalGirardDeathEvent|IsPointer
 ChapterDeathQuote(FinalArbordia,Endgame,DefeatBossFlag,FinalGirardDeath)
 // game over quotes (zeke)
 ChapterDeathQuote(Hyperius,ChapterZ1,GameOverFlag,ZekeArcHyperiusDeath)
@@ -477,6 +478,12 @@ PUSH
 ORG $8472C
 POIN DeathQuoteTable
 POP
+
+ALIGN 4
+FinalGirardDeathEvent:
+MUSCSLOW 0x0
+Text(FinalGirardDeath)
+EndEvent
 
 ALIGN 4
 C21DeathCounter:

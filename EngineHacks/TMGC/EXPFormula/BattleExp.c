@@ -2,6 +2,7 @@
 
 #define CA_NO_EXP CA_NEGATE_LETHALITY // idk why its labelled wrong
 
+extern void CheckBattleUnitLevelUp(struct BattleUnit* bu);
 int GetUnitExpLevel(struct Unit* unit);
 int GetUnitRoundExp(struct Unit* actor, struct Unit* target);
 int GetUnitPowerLevel(struct Unit* unit);
@@ -12,7 +13,9 @@ extern bool CanBattleUnitGainLevels(BattleUnit* bu);
 int GetBattleUnitExpGain(struct BattleUnit* actor, struct BattleUnit* target);
 extern bool CheckEventId_(u16 flag); 
 
-extern bool SkillTester(Unit* unit, int skillID);
+extern bool SkillTester(Unit* unit, int skillID);\
+extern u8 gEXPMultRAMAddress;
+extern u8 gEXPDivRAMAddress;
 
 enum PlaySt_chapterStateBits {
     PLAY_FLAG_STATSCREENPAGE0 = (1 << 0),
@@ -28,6 +31,40 @@ enum PlaySt_chapterStateBits {
     PLAY_FLAG_STATSCREENPAGE_MASK = PLAY_FLAG_STATSCREENPAGE0 | PLAY_FLAG_STATSCREENPAGE1,
 };
 
+
+void BattleApplyMiscActionExpGains(void) {
+    if ((gBattleActor.unit.index & 0xC0) != FACTION_BLUE)
+        return;
+
+    if (!CanBattleUnitGainLevels(&gBattleActor))
+        return;
+
+    if (gChapterData.chapterStateBits & PLAY_FLAG_7)
+        return;
+
+	int result = 10;
+	int multiplicativeNumerator = 1;
+if (SkillTester(&gBattleActor.unit, 49))//unit with paragon
+	result = result * 2;	
+if (CheckEventId_(0xB5))
+	{
+		int multiplicativeDenominator = 1;
+	multiplicativeNumerator = gEXPMultRAMAddress;
+	multiplicativeDenominator = gEXPDivRAMAddress;
+	result = 10 * multiplicativeNumerator/multiplicativeDenominator;
+	}
+if(result > 100)
+	result = 100;
+if(result < 1)
+	result = 1;
+if(multiplicativeNumerator == 0)
+	result = 0;
+
+    gBattleActor.expGain = result;
+    gBattleActor.unit.exp += result;
+
+    CheckBattleUnitLevelUp(&gBattleActor);
+}
 
 int GetUnitExpLevel(struct Unit* unit) {
     int result = unit->level;
@@ -117,14 +154,27 @@ if (!gChapterData.unk42_6)
 	result = result * 13/10;
 if (gChapterData.chapterStateBits & PLAY_FLAG_HARD)
 	result = result * 9/10;
-if (CheckEventId_(0xb5))
+ if (SkillTester(&gBattleActor.unit, 49))//unit with paragon
 	result = result * 2;
+
+int multiplicativeNumerator = 1;
+
+if (CheckEventId_(0xB5))
+	{
+	int multiplicativeDenominator = 1;
+	multiplicativeNumerator = gEXPMultRAMAddress;
+	multiplicativeDenominator = gEXPDivRAMAddress;
+	result = result * multiplicativeNumerator/multiplicativeDenominator;
+	}
 
     if (result > 100)
         result = 100;
 
     if (result < 1)
         result = 1;
+	
+	if (multiplicativeNumerator == 0)
+		result = 0;
 
     return result;
 }
@@ -145,12 +195,20 @@ int GetBattleUnitStaffExp(struct BattleUnit* bu) {
 
  if (SkillTester(&gBattleActor.unit, 49))//unit with paragon
 	result = result * 2;
-	
-if (CheckEventId_(0xb5))
-	result = result * 2;
+int multiplicativeNumerator = 1;
+if (CheckEventId_(0xB5))
+	{
+	int multiplicativeDenominator = 1;
+	multiplicativeNumerator = gEXPMultRAMAddress;
+	multiplicativeDenominator = gEXPDivRAMAddress;
+	result = result * multiplicativeNumerator/multiplicativeDenominator;
+	}
 
     if (result > 100)
         result = 100;
+
+	if (multiplicativeNumerator == 0)
+		result = 0;
 
     return result;
 }

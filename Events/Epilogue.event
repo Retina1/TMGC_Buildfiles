@@ -31,16 +31,23 @@ BeginningScene:
 Narration(Map2CG,Epilogue_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
 REMA
-CLEN 0
-CLEE 0
-CLEA 0
-SetBackground(BlankCG)
+CALL DalstResolution
+CALL MevionResolution
+CALL ElbaCorResolution
+CALL PortResolution
+CALL OpistiaResolution
+CALL YgstraResolution
+CALL HolanisResolution
+CALL MercenaryResolution
+CALL AercolynResolution
+//no background before this, make sure last thing is a fade to black
 ASMC 0xB8175 //turncounts
+ASMC 0xB6c95 //characterendings
 MUSC S_OurLight
 ASMC 0xC4879 //credits
+MUSC 0x0
 CHECK_ALIVE Elcorian
 BEQ 0x1 0xc 0x0
-	MUSC 0x0
 	SetBackground(MoonCG)
 	SOUN 0x99
 	STAL 30
@@ -75,9 +82,36 @@ MNTS 0x1
 //MoveToChapter(HubMap)
 ENDA
 
-EndingScene:
-MoveToChapter(HubMap)
-ENDA
+
+DalstResolution:
+EndEvent
+
+MevionResolution:
+EndEvent
+
+ElbaCorResolution:
+EndEvent
+
+PortResolution:
+EndEvent
+
+OpistiaResolution:
+EndEvent
+
+YgstraResolution:
+EndEvent
+
+HolanisResolution:
+EndEvent
+
+MercenaryResolution:
+EndEvent
+
+AercolynResolution:
+EndEvent
+
+
+
 
 
 
@@ -100,5 +134,9 @@ END_MAIN
 TrapData:
 ENDTRAP
 ALIGN 4
+
+EndingScene:
+MoveToChapter(HubMap)
+ENDA
 
 //MESSAGE Events end at offset CURRENTOFFSET

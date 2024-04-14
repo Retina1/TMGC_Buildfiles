@@ -11,6 +11,7 @@
 #include "_DeathQuotes.event"
 #include "_BossMusic.event"
 #include "_ForceDeployer.event"
+#include "_CharacterEndings.event"
 
 #define ResetViridianConvoy "CHECK_EVENTID ConvoyInitializeFlag; BNE 0x1876 0xc 0x0; CALL ConvoyClearEvent; LABEL 0x1876"
 ALIGN 4

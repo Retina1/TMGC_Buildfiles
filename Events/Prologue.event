@@ -115,7 +115,7 @@ ASMC OptionBitSetterASMC|1
 SetBackground(BlankCG)
 SVAL 0x1 0x1
 SystemText(GameModifierPrompt)
-BNE 0x668 0xC 0x1
+IfNoSelectedGoto(0x668)
 CheckNewGameFlag(12)
 BEQ 0x999 0xc 0x0
 SystemText(NewGamePlusPrompt)//add an old school cassius toggle, ANIMUS MODE (flag that causes certain maps (maybe interludes) to give you an animus seal upon stating them)
@@ -153,7 +153,7 @@ IfNoSelectedGoto(0x999)
 				ENUT HHMDeploymentFlag
 				LABEL 0x995
 						SystemText(SetEnemyGrowthsPrompt)
-		IfNoSelectedGoto(0x668)
+		IfNoSelectedGoto(0x999)
 		ENUT CustomGrowthsFlag
 		SystemText(SetMultiplierPrompt)
 		ASMC ValueChooser_OnSelect|1
@@ -171,8 +171,6 @@ IfNoSelectedGoto(0x999)
 		SETVAL 0x3 $030017c7; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
 		LABEL 0x669
 		
-		
-LABEL 0x668
 LABEL 0x999
 ASMC prCallGrowthMenu+1
 SVAL 0x1 0x1
@@ -206,9 +204,9 @@ BNE 0x666 0xC 0x1
 ENUT 0xAF
 LABEL 0x666
 SystemText(RNModePrompt)
-IfNoSelectedGoto(0x994)
+IfNoSelectedGoto(0x668)
 ENUT Enable1RNFlag
-LABEL 0x994
+LABEL 0x668
 SVAL 0x1 0x0
 FADI 16
 EVBIT_MODIFY 0

@@ -25,11 +25,19 @@ UNIT Blair BlairLord 0x0 Level(1,Ally,0) [2,1] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vu
 UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT
 
+imnotcryingyouare:
+UNIT Viridian 0x0 0x0 Level(1,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+
 ALIGN 4
 
 BeginningScene:
 Narration(Map2CG,Epilogue_Narration)
 CleanTextNoMap(HallCG,FillerDialogue)
+SilentKillUnit(0xd2)
+SilentKillUnit(0xd2)
 REMA
 CALL DalstResolution
 CALL MevionResolution
@@ -41,6 +49,7 @@ CALL HolanisResolution
 CALL MercenaryResolution
 CALL AercolynResolution
 //no background before this, make sure last thing is a fade to black
+LOAD1 0x1 imnotcryingyouare
 ASMC 0xB8175 //turncounts
 ASMC 0xB6c95 //characterendings
 MUSC S_OurLight

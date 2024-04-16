@@ -691,7 +691,8 @@ Steal: Unit can steal items.[X]
 
 ## SD_StealPlus
 Mug: Steal unequipped weapons/staves[N]
-if unit's Con >= item's weight.[X]
+if unit's Con >= item's weight.[N]
+Truncates stolen items to 5 uses.[X]
 
 ## SD_Capture
 Capture: Capture an enemy after[N]

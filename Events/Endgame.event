@@ -23,6 +23,9 @@ POIN BeginningScene EndingScene
 TurnBasedEvents:
 TurnEventPlayer(0x0,EndgameTurn1,1)
 TurnEventPlayer(0x0,EndgameSpawner1,4)
+TurnEventPlayer(0x0,EndgameSpawner2,7)
+TurnEventPlayer(0x0,EndgameSpawner3,10)
+TurnEventPlayer(0x0,EndgameSpawner4,13)
 TurnEventPlayer(0x0,EndgameDIE,16,100)
 TurnEventPlayer(0x0,EndgameDIE,21,95)
 TurnEventPlayer(0x0,EndgameDIE,26,90)
@@ -100,6 +103,29 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,40] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,40] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,40] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,40] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+EndgamePhase2Units:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [8,9] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [10,9] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [7,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [11,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [8,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [10,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [6,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin Trickster 0x0 Level(3,Ally,0) [9,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 EndgameEasy:
@@ -263,7 +289,22 @@ UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLas
 UNIT
 
 FinalArbordiaSpawn:
-UNIT FinalArbordia Liberator 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x1 REDA9R2 [Aspect] NeverMoveAI
+UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
+UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [BookOfOpistus] NoAI
+UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
+UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
+UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
+UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [BookOfOpistus] NoAI
+UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
+UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [TheSDarkTome] NeverMoveAI
+UNIT FinalArbordia Liberator 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Aspect] NeverMoveAI
 UNIT
 
 EndgameSpawns1Group1:
@@ -276,6 +317,45 @@ UNIT
 EndgameSpawns1Group3:
 UNIT EndgameSimulacrum Bishop 0x0 Level(18,Enemy,1) [16,29] 0x0 0x0 0x1 REDA16R30 [Aura] NoAI
 UNIT EndgameSimulacrum Hero 0x0 Level(18,Enemy,1) [16,29] 0x0 0x0 0x1 REDA15R29 [SilverAxe] NoAI
+UNIT
+
+EndgameSpawns2Group1:
+UNIT EndgameSimulacrum SwdGen 0x0 Level(18,Enemy,1) [4,17] 0x0 0x0 0x1 REDA5R17 [GildedSword,SoulHilt] NoAI
+UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [4,17] 0x0 0x0 0x1 REDA4R18 [Nosferatu,VoidBracers] NoAI
+UNIT
+EndgameSpawns2Group2:
+UNIT EndgameSimulacrum Warrior 0x0 Level(18,Enemy,1) [14,17] 0x0 0x0 0x1 REDA13R17 [BraveAxe,SilverBow] NoAI
+UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [14,17] 0x0 0x0 0x1 REDA14R18 [ForceSpike] NoAI
+UNIT
+EndgameSpawns2Group3:
+UNIT EndgameSimulacrum Berserker 0x0 Level(18,Enemy,1) [9,22] 0x0 0x0 0x1 REDA9R22 [Arkhinal,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT
+
+EndgameSpawns3Group1:
+UNIT EndgameSimulacrum LncGen 0x0 Level(18,Enemy,1) [3,9] 0x0 0x0 0x1 REDA4R9 [TrueSaunion,SoaringShaft,BigShield] NoAI
+UNIT EndgameSimulacrum Assass 0x0 Level(18,Enemy,1) [3,9] 0x0 0x0 0x1 REDA3R8 [MasterSword,LegRing,LegRing,LegRing] NoAI
+UNIT EndgameSimulacrum Bishop 0x0 Level(18,Enemy,1) [3,9] 0x0 0x0 0x1 REDA3R10 [Smite,Caduceus,Scripture] NoAI
+UNIT
+EndgameSpawns3Group2:
+UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [15,9] 0x0 0x0 0x1 REDA14R9 [Flare,Trisagion,Bolting,EarthPower] NoAI
+UNIT EndgameSimulacrum Halberdier 0x0 Level(18,Enemy,1) [15,9] 0x0 0x0 0x1 REDA15R8 [Nuiusseon,SoaringShaft,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [15,9] 0x0 0x0 0x1 REDA15R10 [Jormungandr,VoidBracers] NoAI
+UNIT
+
+EndgameSpawns4Group1:
+UNIT EndgameSimulacrum SwMast 0x0 Level(18,Enemy,1) [7,3] 0x0 0x0 0x1 REDA6R3 [Phalanotis,SoulHilt,LegRing,LegRing] NoAI
+UNIT EndgameSimulacrum Halberdier 0x0 Level(18,Enemy,1) [7,3] 0x0 0x0 0x1 REDA8R3 [Nuiusseon,SoaringShaft,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum Berserker 0x0 Level(18,Enemy,1) [7,3] 0x0 0x0 0x1 REDA7R4 [Arkhinal,SavageGauntlet,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT
+EndgameSpawns4Group2:
+UNIT EndgameSimulacrum Sage 0x0 Level(18,Enemy,1) [11,3] 0x0 0x0 0x1 REDA10R3 [Starfall,LegRing,LegRing,LegRing] NoAI
+UNIT EndgameSimulacrum Bishop 0x0 Level(18,Enemy,1) [11,3] 0x0 0x0 0x1 REDA12R3 [BookOfOpistus,LegRing,LegRing,LegRing] NoAI
+UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [11,3] 0x0 0x0 0x1 REDA11R4 [TheSDarkTome,LegRing,LegRing,LegRing] NoAI
+UNIT
+EndgameSpawns4Group3:
+UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA8R4 [Phalanotis,Nuiusseon,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA10R4 [Arkhinal,BookOfOpistus,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA9R5 [Starfall,Ineubrenos,TheSDarkTome,ArkhinalHandle] NoAI
 UNIT
 
 EndgameMorningStarGang:
@@ -373,13 +453,49 @@ ENDA
 //maybe clear all enemies, move allies up, and summon spawns?
 EndgamePhase2Begin:
 MUSC 0x0
-CleanText(MoonCG,FillerDialogue)
-LOAD1 0x0 FinalArbordiaSpawn
-SetUnitStatus(FinalArbordia, State, 0x2)
+CleanTextNoMap(MoonCG,FillerDialogue)
+SET_ACTIVE 0
+CLEA 0
+CLEE 0
+CLEN 0
+CLEAN
+LOAD1 0x0 FinalArbordiaSpawn //make more things appear
+LOAD3 0x0 EndgamePhase2Units
+SetUnitStatusAll(EndgameSimulacrum2, LuckStat, 0)
+FADU 16
+CAM1 FinalArbordia
+FlashCursor(FinalArbordia,60)
 Text(FillerDialogue)
 BREAKING_SACRED_STONE FinalArbordia
 Text(FillerDialogue)
+EVBIT_T 4
+EVBIT_T 5
+EVBIT_T 6
+EVBIT_T 7
+SystemText(SavepointAskTextID)
+IfNoSelectedGoto(0x01)
+ASMC 0x080790A4|1
+ASMC 0x080B5D5C|1
+SystemText(SavepointSaveCompleteID)
+LABEL 0x01
+EVBIT_F 4
+EVBIT_F 5
+EVBIT_F 6
+EVBIT_T 7
+MUSC S_AFarAwayPromise
 EndEvent
+
+EndingScene:
+ResetBaseFlags
+MUSC 0x0
+FADI 2
+CleanTextNoMap(MoonCG,FillerDialogue)
+MUSC S_MainTheme
+SystemText(BlankCG,FinalArcEnding)
+SetNewGameFlag(12)
+ENUT EpilogueSaveFlag
+MoveToChapter(AfterTheEnd)
+ENDA
 
 EndgameTurn1:
 CAM1 [9,39]
@@ -460,36 +576,92 @@ MUSC S_Uncontrollable
 Text(EndgameMusicBegins)
 EndEvent
 
-EndingScene:
-ResetBaseFlags
-MUSC 0x0
-FADI 2
-CleanTextNoMap(MoonCG,FillerDialogue)
-MUSC S_MainTheme
-SystemText(BlankCG,FinalArcEnding)
-SetNewGameFlag(12)
-ENUT EpilogueSaveFlag
-MoveToChapter(AfterTheEnd)
-ENDA
-
 EndgameSpawner1:
+CHECK_ALIVE Arbordia2
+BEQ 0x1 0xc 0x0
 CAM1 [2,29]
 WARPIN [2,29]
 Reinforcements(EndgameSpawns1Group1)
-STAL 0x20
-CAM1 [9,29]
-WARPIN [9,29]
-Reinforcements(EndgameSpawns1Group2)
 STAL 0x20
 CAM1 [16,29]
 WARPIN [16,29]
 Reinforcements(EndgameSpawns1Group3)
 STAL 0x20
+CAM1 [9,29]
+WARPIN [9,29]
+Reinforcements(EndgameSpawns1Group2)
+LABEL 0x1
+STAL 0x20
 SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
 EndEvent
 
+EndgameSpawner2:
+CHECK_ALIVE Arbordia2
+BEQ 0x1 0xc 0x0
+CAM1 [4,17]
+WARPIN [4,17]
+Reinforcements(EndgameSpawns2Group1)
+STAL 0x20
+CAM1 [14,17]
+WARPIN [14,17]
+Reinforcements(EndgameSpawns2Group2)
+STAL 0x20
+CHECK_HARD
+BEQ 0x1 0xc 0x0
+CAM1 [9,22]
+WARPIN [9,22]
+Reinforcements(EndgameSpawns2Group3)
+LABEL 0x1
+STAL 0x20
+SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
+EndEvent
+
+EndgameSpawner3:
+CHECK_ALIVE Arbordia2
+BEQ 0x1 0xc 0x0
+CHECK_TUTORIAL
+BNE 0x1 0xc 0x0
+CAM1 [3,9]
+WARPIN [3,9]
+Reinforcements(EndgameSpawns3Group1)
+STAL 0x20
+CAM1 [15,9]
+WARPIN [15,9]
+Reinforcements(EndgameSpawns3Group2)
+STAL 0x20
+SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
+LABEL 0x1
+EndEvent
+
+EndgameSpawner4:
+CHECK_ALIVE Arbordia2
+BEQ 0x1 0xc 0x0
+CHECK_HARD
+BEQ 0x1 0xc 0x0
+CAM1 [7,3]
+WARPIN [7,3]
+Reinforcements(EndgameSpawns4Group1)
+STAL 0x20
+CAM1 [11,3]
+WARPIN [11,3]
+Reinforcements(EndgameSpawns4Group2)
+STAL 0x20
+CAM1 [9,4]
+WARPIN [9,4]
+Reinforcements(EndgameSpawns4Group3)
+STAL 0x20
+SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
+LABEL 0x1
+EndEvent
+
 EndgameDIE:
+CHECK_ALIVE Arbordia2
+BEQ 0x1 0xc 0x0
+CHECK_HARD
+BEQ 0x1 0xc 0x0
 Reinforcements(EndgameMorningStarGang)
+SetUnitStatusAll(EndgameSimulacrum, LuckStat, 0)
+LABEL 0x1
 EndEvent
 
 

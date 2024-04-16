@@ -22,6 +22,7 @@ POP
 #define SoloEnding 1
 #define PairedEnding 2
 #define PairedEndingTableEntry(charID1,charID2,textID) "BYTE PairedEnding charID1 charID2 0; SHORT textID 0"
+#define PairedEndingFlagTableEntry(charID1,charID2,textID,flag) "BYTE PairedEnding charID1 charID2 flag; SHORT textID 0"
 #define SoloEndingTableEntry(charID, textID) "BYTE SoloEnding charID 0 0; SHORT textID 0"
 #define SoloEndingFlagTableEntry(charID, textID, flag) "BYTE SoloEnding charID 0 flag; SHORT textID 0"
 #define EndingTableTerminator "BYTE 0 0 0 0; SHORT 0 0"
@@ -173,62 +174,92 @@ EndingTitleTableTerminator
 ALIGN 4
 NewEndingsTable:
 //use flag endings to do pairs maybe, either that or get snek to help with paired tech
+//boat flag, poly flag
+
+//kenneth/hilbert
 SoloEndingTableEntry(Kenneth,KennethSoloEnding)
+//alts for bechamel
 SoloEndingTableEntry(Natasia,NatasiaSoloEnding)
+//stefan/johan
 SoloEndingTableEntry(Stefan,StefanSoloEnding)
+//desmond/flynn
 SoloEndingTableEntry(Desmond,DesmondSoloEnding)
+//sam/charley
+//sam/emile
+//alts for bechamel if not emile
 SoloEndingTableEntry(Sam,SamSoloEnding)
-SoloEndingTableEntry(Josef,FillerEnding)
-SoloEndingTableEntry(Peggy,FillerEnding)
-SoloEndingTableEntry(Butch,FillerEnding)
-SoloEndingTableEntry(Rachael,FillerEnding)
+//josef/hilbert
+SoloEndingTableEntry(Josef,JosefSoloEnding)
+//peggy/butch
+//alt if she ends on boat through natasia
+SoloEndingTableEntry(Peggy,PeggySoloEnding)
+//butch/peter
+SoloEndingTableEntry(Butch,ButchSoloEnding)
+//jeff/rachael
+SoloEndingTableEntry(Rachael,RachaelSoloEnding)
+//cassius/mikey
 SoloEndingTableEntry(Cassius,CassiusSoloEnding)
-SoloEndingTableEntry(Jeff,FillerEnding)
-SoloEndingTableEntry(Emile,FillerEnding)
-SoloEndingTableEntry(Apollo,FillerEnding)
-SoloEndingTableEntry(Bechamel,FillerEnding)
+//alt for butch maybe?
+SoloEndingTableEntry(Jeff,JeffSoloEnding)
+SoloEndingTableEntry(Emile,EmileSoloEnding)
+//apollo/flynn (boaty alts?)
+//apollo/bechamel (boaty alts?)s
+SoloEndingTableEntry(Apollo,ApolloSoloEnding)
+//hollandaise thing
+SoloEndingTableEntry(Bechamel,BechamelSoloEnding)
 SoloEndingTableEntry(Sveltzalus,SveltzalusSoloEnding)
-SoloEndingTableEntry(Hilbert,FillerEnding)
-SoloEndingTableEntry(Agnes,FillerEnding)
-SoloEndingTableEntry(Flynn,FillerEnding)
+SoloEndingTableEntry(Hilbert,HilbertSoloEnding)
+SoloEndingTableEntry(Agnes,AgnesSoloEnding)
+SoloEndingTableEntry(Flynn,FlynnSoloEnding)
 SoloEndingTableEntry(Addington,AddingtonSoloEnding)
-SoloEndingTableEntry(Mikey,FillerEnding)
-SoloEndingTableEntry(Carbon,FillerEnding)
-SoloEndingTableEntry(Gaylord,FillerEnding)
-SoloEndingTableEntry(Athena,FillerEnding)
+SoloEndingTableEntry(Mikey,MikeySoloEnding)
+SoloEndingTableEntry(Carbon,CarbonSoloEnding)
+SoloEndingTableEntry(Gaylord,GaylordSoloEnding)
+SoloEndingTableEntry(Athena,AthenaSoloEnding)
+//boaty alts
 SoloEndingTableEntry(Charley,FillerEnding)
 SoloEndingTableEntry(Hyperius,FillerEnding)
 SoloEndingTableEntry(Alexis,FillerEnding)
+//leila damien
+//leila wilhelm
+//alts if tobias support
 SoloEndingTableEntry(Leila,FillerEnding)
 SoloEndingTableEntry(Damien,FillerEnding)
 SoloEndingTableEntry(Zacharias,FillerEnding)
 SoloEndingTableEntry(Avan,FillerEnding)
-SoloEndingTableEntry(Toddsworth,FillerEnding)
+//charley/todd
+SoloEndingTableEntry(Toddsworth,ToddsworthSoloEnding)
 SoloEndingTableEntry(Yuyu,FillerEnding)
 SoloEndingTableEntry(Artemis,FillerEnding)
 SoloEndingTableEntry(Hollandaise,FillerEnding)
 SoloEndingTableEntry(Vladmir,FillerEnding)
-SoloEndingTableEntry(Horatio,FillerEnding)
-SoloEndingTableEntry(UnitQ,FillerEnding)
-SoloEndingTableEntry(Simone,FillerEnding)
+SoloEndingFlagTableEntry(Horatio,HoratioSoloEndingAlt,HoratioFlag)//summon alt
+SoloEndingTableEntry(Horatio,HoratioSoloEnding)
+SoloEndingTableEntry(UnitQ,QSoloEnding)
+SoloEndingTableEntry(Simone,SimoneSoloEnding)
+//ptolemy/johan
 SoloEndingTableEntry(Ptolemy,FillerEnding)
 SoloEndingTableEntry(Johan,FillerEnding)
+//alt if nobody's left to reform group?
 SoloEndingTableEntry(SecretClarque,FillerEnding)
 SoloEndingTableEntry(Peter,FillerEnding)
 SoloEndingTableEntry(Tonnamin,FillerEnding)
 SoloEndingTableEntry(Joan,FillerEnding)
 SoloEndingTableEntry(Sonia,FillerEnding)
 SoloEndingTableEntry(Tobias,FillerEnding)
-SoloEndingTableEntry(SecretLaronde,FillerEnding)
+//rose/laronde
+SoloEndingTableEntry(SecretLaronde,LarondeSoloEnding)
 SoloEndingTableEntry(Freddric,FillerEnding)
 SoloEndingTableEntry(Dean,FillerEnding)
+//eliza/dirk
 SoloEndingTableEntry(Eliza,FillerEnding)
-SoloEndingTableEntry(Chartreuse,FillerEnding)
+//rift/callum
 SoloEndingTableEntry(Rift,FillerEnding)
 SoloEndingTableEntry(Estelle,EstelleSoloEnding)
-SoloEndingTableEntry(Rose,FillerEnding)
-SoloEndingTableEntry(Dirk,FillerEnding)
+SoloEndingTableEntry(Rose,RoseSoloEnding)
+SoloEndingTableEntry(Dirk,DirkSoloEnding)
 SoloEndingTableEntry(Callum,FillerEnding)
+//manfred/wilhelm
 SoloEndingTableEntry(Manfred,FillerEnding)
 SoloEndingTableEntry(Wilhelm,FillerEnding)
 SoloEndingTableEntry(Argent,FillerEnding)
@@ -238,8 +269,11 @@ SoloEndingTableEntry(Jonas,JonasSoloEnding)
 SoloEndingTableEntry(Olsen,FillerEnding)
 SoloEndingTableEntry(Valeria,FillerEnding)
 SoloEndingTableEntry(Elcorian,ElcorianSoloEnding)
-SoloEndingTableEntry(Viridian,FillerEnding)
+SoloEndingTableEntry(Chartreuse,ChartreuseEnding)
+SoloEndingTableEntry(Viridian,ViridianEnding)
+//zeke/cassius
 SoloEndingTableEntry(Zeke,ZekeSoloEnding)
 SoloEndingTableEntry(Arin,ArinSoloEnding)
+//blair/lovers
 SoloEndingTableEntry(Blair,BlairSoloEnding)
 EndingTableTerminator

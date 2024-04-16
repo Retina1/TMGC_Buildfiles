@@ -144,9 +144,30 @@ int GetBattleUnitExpGain(struct BattleUnit* actor, struct BattleUnit* target) {
 	if (actor->unit.pClassData->classRelativePower == 9)
 		return 0;
 
-    if (!actor->nonZeroDamage)
-        return 1;
+    if (!actor->nonZeroDamage){
+		result = 1;
+		if (SkillTester(&gBattleActor.unit, 49))//unit with paragon
+			result = result * 2;
+	int multiplicativeNumerator = 1;
 
+	if (CheckEventId_(0xB5))
+		{
+		int multiplicativeDenominator = 1;
+		multiplicativeNumerator = gEXPMultRAMAddress;
+		multiplicativeDenominator = gEXPDivRAMAddress;
+		result = result * multiplicativeNumerator/multiplicativeDenominator;
+		}
+
+    if (result > 100)
+        result = 100;
+
+    if (result < 1)
+        result = 1;
+	
+	if (multiplicativeNumerator == 0)
+		result = 0;
+        return result;
+	}
     result = GetUnitRoundExp(&actor->unit, &target->unit);
     result += GetUnitKillExpBonus(&actor->unit, &target->unit);
 
@@ -185,8 +206,30 @@ int GetBattleUnitStaffExp(struct BattleUnit* bu) {
     if (!CanBattleUnitGainLevels(bu))
         return 0;
 
-    if (gBattleHitArray->attributes & BATTLE_HIT_ATTR_MISS)
-        return 1;
+    if (gBattleHitArray->attributes & BATTLE_HIT_ATTR_MISS){
+		result = 1;
+		if (SkillTester(&gBattleActor.unit, 49))//unit with paragon
+			result = result * 2;
+	int multiplicativeNumerator = 1;
+
+	if (CheckEventId_(0xB5))
+		{
+		int multiplicativeDenominator = 1;
+		multiplicativeNumerator = gEXPMultRAMAddress;
+		multiplicativeDenominator = gEXPDivRAMAddress;
+		result = result * multiplicativeNumerator/multiplicativeDenominator;
+		}
+
+    if (result > 100)
+        result = 100;
+
+    if (result < 1)
+        result = 1;
+	
+	if (multiplicativeNumerator == 0)
+		result = 0;
+        return result;
+	}
 
     result = GetItemCrit(bu->weapon);
 

@@ -44,7 +44,22 @@ add r1, #0x48
 ldrh r1, [r1] 
 ldrh r3, [r0, #0x26] 
 cmp r3, #0 
-bne Handle 
+bne Handle
+push {r0,r2}
+lsl r2,r1,#24
+lsr r2,r2,#24
+cmp r2,#0xbc @see if skill scroll
+beq DontTruncate
+lsr r0,r1,#8
+cmp r0,#5 @see if above 5 uses
+ble DontTruncate
+mov r0,#5
+lsl r0,r0,#8
+lsl r1,r1,#24
+lsr r1,r1,#24
+orr r1,r0,r1
+DontTruncate:
+pop {r0,r2}
 mov r2, r4 
 blh UnitAddItem 
 b Exit 
@@ -67,7 +82,22 @@ pop {r0}
 @r0 unit 
 ldr r1, =Defender 
 add r1, #0x48 
-ldrh r1, [r1] 
+ldrh r1, [r1]
+push {r0,r2}
+lsl r2,r1,#24
+lsr r2,r2,#24
+cmp r2,#0xbc @see if skill scroll
+beq DontTruncate2
+lsr r0,r1,#8
+cmp r0,#5 @see if above 5 uses
+ble DontTruncate2
+mov r0,#5
+lsl r0,r0,#8
+lsl r1,r1,#24
+lsr r1,r1,#24
+orr r1,r0,r1
+DontTruncate2:
+pop {r0,r2}
 mov r2, r4 
 blh HandleNewItemGetFromDrop
 

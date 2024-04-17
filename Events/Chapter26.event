@@ -362,15 +362,15 @@ UNIT
 
 C26Turn2Spawn:
 UNIT Dalst BowPal 0x0 Level(11,Enemy,1) [11,22] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
-UNIT Dalst AxePal 0x0 Level(11,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Dalst AxePal 0x0 Level(11,Enemy,1) [25,23] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+//UNIT Dalst AxePal 0x0 Level(11,Enemy,1) [13,23] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+//UNIT Dalst AxePal 0x0 Level(11,Enemy,1) [25,23] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Dalst BowPal 0x0 Level(11,Enemy,1) [27,22] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
 UNIT
 
 C26Turn3Spawn:
 UNIT Dalst WyvLord 0x0 Level(11,Enemy,1) [15,31] 0x0 0x0 0x0 0x0 [BraveAxe,Ukonvasara] NoAI
-UNIT Dalst Falco 0x0 Level(11,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [BraveSword,SoulHilt] NoAI
-UNIT Dalst Falco 0x0 Level(11,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [BraveLance,SoaringShaft] NoAI
+//UNIT Dalst Falco 0x0 Level(11,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [BraveSword,SoulHilt] NoAI
+//UNIT Dalst Falco 0x0 Level(11,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [BraveLance,SoaringShaft] NoAI
 UNIT Dalst WyvLord 0x0 Level(11,Enemy,1) [23,31] 0x0 0x0 0x0 0x0 [BraveAxe,Hammer,Halberd] NoAI
 UNIT
 C26Turn3Spawn2:
@@ -379,8 +379,8 @@ UNIT Dalst Sorc 0x0 Level(11,Enemy,1) [22,22] 0x0 0x0 0x1 REDA21R22 [Fenrir,Void
 UNIT
 C26Turn3SpawnWeak:
 UNIT Dalst WyvLord 0x0 Level(11,Enemy,1) [15,31] 0x0 0x0 0x0 0x0 [Ukonvasara] NoAI
-UNIT Dalst Falco 0x0 Level(11,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
-UNIT Dalst Falco 0x0 Level(11,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
+//UNIT Dalst Falco 0x0 Level(11,Enemy,1) [17,31] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
+//UNIT Dalst Falco 0x0 Level(11,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
 UNIT Dalst WyvLord 0x0 Level(11,Enemy,1) [23,31] 0x0 0x0 0x0 0x0 [Hammer,Halberd] NoAI
 UNIT
 C26Turn3Spawn2Weak:
@@ -431,7 +431,7 @@ UNIT
 
 C26Turn7Spawn:
 UNIT Dalst Hero 0x0 Level(12,Enemy,1) [5,31] 0x0 0x0 0x1 REDA5R29 [GildedSword] NoAI
-UNIT Dalst Warrior 0x0 Level(12,Enemy,1) [5,31] 0x0 0x0 0x1 REDA5R30 [Tomahawk,Hammer] NoAI
+//UNIT Dalst Warrior 0x0 Level(12,Enemy,1) [5,31] 0x0 0x0 0x1 REDA5R30 [Tomahawk,Hammer] NoAI
 UNIT Dalst Hero 0x0 Level(12,Enemy,1) [6,31] 0x0 0x0 0x1 REDA6R29 [BraveSword,Rapier] NoAI
 UNIT Dalst Warrior 0x0 Level(12,Enemy,1) [6,31] 0x0 0x0 0x1 REDA6R30 [Tomahawk,Halberd] NoAI
 UNIT
@@ -439,7 +439,7 @@ C26Turn7Spawn2:
 UNIT Dalst Sniper 0x0 Level(12,Enemy,1) [28,31] 0x0 0x0 0x1 REDA28R29 [GildedBow] NoAI
 UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [28,31] 0x0 0x0 0x1 REDA28R30 [Nosferatu,Corruption] NoAI
 UNIT Dalst Sniper 0x0 Level(12,Enemy,1) [29,31] 0x0 0x0 0x1 REDA27R30 [BraveBow,Wardbow] NoAI
-UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [29,31] 0x0 0x0 0x1 REDA29R30 [Fenrir,Knoggelvi] NoAI
+//UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [29,31] 0x0 0x0 0x1 REDA29R30 [Fenrir,Knoggelvi] NoAI
 UNIT
 C26Turn7Spawn3:
 UNIT Dalst SwdPal 0x0 Level(12,Enemy,1) [35,8] 0x0 0x0 0x1 REDA33R8 [Rapier] NoAI
@@ -472,10 +472,10 @@ UNIT Annihilator11 Sage 0x0 Level(18,Enemy,1) [0,15] 0x0 0x0 0x1 REDA1R15 [Annih
 UNIT
 C26Turn9Spawn2:
 UNIT Dalst BowGen 0x0 Level(12,Enemy,1) [0,12] 0x0 0x0 0x1 REDA1R12 [GildedBow,Greatbow] NeverMoveAI
-UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [0,13] 0x0 0x0 0x1 REDA2R13 [Nocturne] AttackInRangeAI
+//UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [0,13] 0x0 0x0 0x1 REDA2R13 [Nocturne] AttackInRangeAI
 UNIT Elite WyvLord 0x0 Level(15,Enemy,1) [0,14] 0x0 0x0 0x1 REDA3R14 [BraveAxe,Shatterspear] NoAI
 UNIT Elite WyvLord 0x0 Level(15,Enemy,1) [0,15] 0x0 0x0 0x1 REDA3R15 [BraveLance,DousingLance] NoAI
-UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [0,16] 0x0 0x0 0x1 REDA1R16 [Corruption,Nosferatu] AttackInRangeAI
+//UNIT Dalst Sorc 0x0 Level(12,Enemy,1) [0,16] 0x0 0x0 0x1 REDA1R16 [Corruption,Nosferatu] AttackInRangeAI
 UNIT Dalst BowGen 0x0 Level(12,Enemy,1) [0,17] 0x0 0x0 0x1 REDA2R17 [Wardbow,Greatbow] NeverMoveAI
 UNIT
 

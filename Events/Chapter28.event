@@ -35,11 +35,12 @@ CharacterEvent(0xb,C28EmileElcorianTalk,Emile,EnemyElcorian)
 CharacterEvent(0xc,C28SimoneElcorianTalk,Simone,EnemyElcorian)
 //1a onwards
 CharacterEventBothWays(0x1a,C28ArinSamSupport,Arin,Sam)//A
+CharacterEventBothWays(0x5,C28ButchCassiusSupport,Butch,Cassius)//A
 CharacterEventBothWays(0x1b,C28StefanCarbonSupport,Stefan,Carbon)//A
 CharacterEventBothWays(0x1c,C28DesmondJohanSupport,Desmond,Johan)//A
 CharacterEventBothWays(0x1d,C28SamBechamelSupport,Sam,Bechamel)//A
 CharacterEventBothWays(0x1e,C28JosefHilbertSupport,Josef,Hilbert)//A
-CharacterEventBothWays(0x1f,C28PeggyApolloSupport,Butch,Cassius)//A
+CharacterEventBothWays(0x1f,C28PeggyApolloSupport,Peggy,Apollo)//A
 CharacterEventBothWays(0x20,C28RachaelLeilaSupport,Rachael,Leila)//A
 CharacterEventBothWays(0x21,C28CassiusMikeySupport,Cassius,Mikey)//A
 CharacterEventBothWays(0x22,C28ApolloVladmirSupport,Apollo,Vladmir)//A
@@ -363,6 +364,10 @@ UNIT
 
 ALIGN 4
 
+C28ButchCassiusSupport:
+Text(ButchCassiusASupport)
+SetSupport(Butch,Cassius,ASupport,1)
+EndEvent
 C28ArinSamSupport:
 Text(ArinSamASupport)
 SetSupport(Arin,Sam,ASupport,1)

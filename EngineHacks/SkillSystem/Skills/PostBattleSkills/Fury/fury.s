@@ -34,6 +34,14 @@ ldrb	r1, [r4,#0x0B]	@allegiance byte of the character we are checking
 cmp	r0, r1		@check if same character
 bne	End
 
+@check if already galeforced this turn
+ldr	r0, [r4,#0x0C]	@status bitfield
+mov	r1, #0x04
+lsl	r1, #0x08
+and	r0, r1
+cmp	r0, #0x00
+bne	End
+
 @check for skill
 mov	r0, r4
 ldr	r1, GaleforceID

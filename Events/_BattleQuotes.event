@@ -307,7 +307,7 @@ SpecifiedBattleConvo(Sveltzalus,Arbordia,Chapter27,0x19,C27GirardSveltzalusBattl
 	SpecifiedBattleConvo(Dirk,Arbordia,Chapter27,0x1a,C27GirardDalstianBattle)
 UnspecifiedBattleConvo(Arbordia,Chapter27,0x1,C27GirardBattle)
 UnspecifiedBattleConvo(BladeGuy,Chapter27,TavernI1Flag,C27BladeGuyBattle)
-//c27
+//c28
 //blair, arin, kenneth, desmond, emile, johan, ptolemy, zeke, yuyu, horatio, simone, dalstian, viridian unit, svelt
 //base flags 5 6 7 8 available
 SpecifiedBattleConvo(Blair,EnemyElcorian,Chapter28,0x7,C28ElcorianBlairBattle)
@@ -342,7 +342,86 @@ SpecifiedBattleConvo(Sveltzalus,EnemyElcorian,Chapter28,BaseFlag6,C28ElcorianSve
 	SpecifiedBattleConvo(Valeria,EnemyElcorian,Chapter28,BaseFlag7,C28ElcorianViridiansBattle)
 UnspecifiedBattleConvo(EnemyElcorian,Chapter28,0x1,C28ElcorianBattle)
 //endgame
-UnspecifiedBattleConvo(Arbordia2,Endgame,0x1,FinalGirardBattle)
+//blair, arin, zeke
+SpecifiedBattleConvo(Blair,Arbordia2,Endgame,0x8,FillerDialogue)
+SpecifiedBattleConvo(Zeke,Arbordia2,Endgame,0x9,FillerDialogue)
+SpecifiedBattleConvo(Arin,Arbordia2,Endgame,0xa,FillerDialogue)
+SpecifiedBattleConvo(Kenneth,Arbordia2,Endgame,0xb,FillerDialogue)
+SpecifiedBattleConvo(Emile,Arbordia2,Endgame,0xc,FillerDialogue)
+SpecifiedBattleConvo(Yuyu,Arbordia2,Endgame,0xd,FillerDialogue)
+SpecifiedBattleConvo(Horatio,Arbordia2,Endgame,0xe,FillerDialogue)
+SpecifiedBattleConvo(Simone,Arbordia2,Endgame,0xf,FillerDialogue)
+SpecifiedBattleConvo(Sveltzalus,Arbordia2,Endgame,0x10,FillerDialogue)
+SpecifiedBattleConvo(Elcorian,Arbordia2,Endgame,0x11,FillerDialogue)
+//aercolyn
+	SpecifiedBattleConvo(Desmond,Arbordia2,Endgame,0x12,EndgameGirardBattleAercolyn)
+	SpecifiedBattleConvo(Stefan,Arbordia2,Endgame,0x12,EndgameGirardBattleAercolyn)
+	SpecifiedBattleConvo(Johan,Arbordia2,Endgame,0x12,EndgameGirardBattleAercolyn)
+//dalst	
+	SpecifiedBattleConvo(Natasia,Arbordia2,Endgame,0x13,EndgameGirardBattleDalst)
+	SpecifiedBattleConvo(Sam,Arbordia2,Endgame,0x13,EndgameGirardBattleDalst)
+	SpecifiedBattleConvo(Josef,Arbordia2,Endgame,0x13,EndgameGirardBattleDalst)
+	SpecifiedBattleConvo(Gaylord,Arbordia2,Endgame,0x13,EndgameGirardBattleDalst)
+	SpecifiedBattleConvo(Dirk,Arbordia2,Endgame,0x13,EndgameGirardBattleDalst)
+	SpecifiedBattleConvo(Eliza,Arbordia2,Endgame,0x13,EndgameGirardBattleDalst)
+//mevion	
+	SpecifiedBattleConvo(Peggy,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Butch,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Jeff,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Avan,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Toddsworth,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Peter,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Freddric,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Argent,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Rift,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(Estelle,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+	SpecifiedBattleConvo(SecretClarque,Arbordia2,Endgame,0x14,EndgameGirardBattleMevion)
+//elba cor
+	SpecifiedBattleConvo(Rachael,Arbordia2,Endgame,0x15,EndgameGirardBattleElbaCor)
+	SpecifiedBattleConvo(Cassius,Arbordia2,Endgame,0x15,EndgameGirardBattleElbaCor)
+	SpecifiedBattleConvo(Hyperius,Arbordia2,Endgame,0x15,EndgameGirardBattleElbaCor)
+	SpecifiedBattleConvo(Alexis,Arbordia2,Endgame,0x15,EndgameGirardBattleElbaCor)
+	SpecifiedBattleConvo(Leila,Arbordia2,Endgame,0x15,EndgameGirardBattleElbaCor)
+	SpecifiedBattleConvo(Wilhelm,Arbordia2,Endgame,0x15,EndgameGirardBattleElbaCor)
+//opistia
+	SpecifiedBattleConvo(Apollo,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+	SpecifiedBattleConvo(Hilbert,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+	SpecifiedBattleConvo(Flynn,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+	SpecifiedBattleConvo(Athena,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+	SpecifiedBattleConvo(Charley,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+	SpecifiedBattleConvo(Vladmir,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+	SpecifiedBattleConvo(Manfred,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+	SpecifiedBattleConvo(Rose,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+	SpecifiedBattleConvo(SecretLaronde,Arbordia2,Endgame,0x16,EndgameGirardBattleOpistia)
+//ygstra
+	SpecifiedBattleConvo(Mikey,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+	SpecifiedBattleConvo(Carbon,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+	SpecifiedBattleConvo(Damien,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+	SpecifiedBattleConvo(Zacharias,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+	SpecifiedBattleConvo(Joan,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+	SpecifiedBattleConvo(Sonia,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+	SpecifiedBattleConvo(Tobias,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+	SpecifiedBattleConvo(Callum,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+	SpecifiedBattleConvo(SecretJonas,Arbordia2,Endgame,0x17,EndgameGirardBattleYgstra)
+//holanis
+	SpecifiedBattleConvo(Artemis,Arbordia2,Endgame,0x18,EndgameGirardBattleHolanis)
+	SpecifiedBattleConvo(Dean,Arbordia2,Endgame,0x18,EndgameGirardBattleHolanis)
+	SpecifiedBattleConvo(UnitQ,Arbordia2,Endgame,0x18,EndgameGirardBattleHolanis)
+	SpecifiedBattleConvo(Ptolemy,Arbordia2,Endgame,0x18,EndgameGirardBattleHolanis)
+	SpecifiedBattleConvo(Ian,Arbordia2,Endgame,0x18,EndgameGirardBattleHolanis)
+//wanderer	
+	SpecifiedBattleConvo(Bechamel,Arbordia2,Endgame,0x19,EndgameGirardBattleWanderer)
+	SpecifiedBattleConvo(Hollandaise,Arbordia2,Endgame,0x19,EndgameGirardBattleWanderer)
+	SpecifiedBattleConvo(Viridian,Arbordia2,Endgame,0x19,EndgameGirardBattleWanderer)
+	SpecifiedBattleConvo(Chartreuse,Arbordia2,Endgame,0x19,EndgameGirardBattleWanderer)
+	SpecifiedBattleConvo(Agnes,Arbordia2,Endgame,0x19,EndgameGirardBattleWanderer)
+	SpecifiedBattleConvo(Olsen,Arbordia2,Endgame,0x19,EndgameGirardBattleWanderer)
+	SpecifiedBattleConvo(Valeria,Arbordia2,Endgame,0x19,EndgameGirardBattleWanderer)
+//outsider
+	SpecifiedBattleConvo(Addington,Arbordia2,Endgame,0x1a,EndgameGirardBattleOutsider)
+	SpecifiedBattleConvo(Tonnamin,Arbordia2,Endgame,0x1a,EndgameGirardBattleOutsider)
+	SpecifiedBattleConvo(Kyrie,Arbordia2,Endgame,0x1a,EndgameGirardBattleOutsider)
+UnspecifiedBattleConvo(Arbordia2,Endgame,0x1,EndgameGirardBattle)
 //triattacks?
 SHORT Joan 0x0 0xfe 0x7c JoanTriAttack 0x0 0x0 0x0
 SHORT Sonia 0x0 0xfe 0x7d SoniaTriAttack 0x0 0x0 0x0

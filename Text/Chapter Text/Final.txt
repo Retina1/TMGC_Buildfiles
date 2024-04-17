@@ -228,7 +228,7 @@ time, I call on your might.[A][N]
 We must be ready for anything.[A][N]
 [...]This will be our final battle![A][X]
 
-##FinalGirardBattle
+##EndgameGirardBattle
 [OpenMidLeft][LoadArbordia]
 Why must you get in the way[N]
 of my[...] of Dalst's future?[A][N]
@@ -238,13 +238,104 @@ glorious path before us?[A][N]
 my dreams realized.[A][N]
 And you shall die for nothing.[A][X]
 
-##NotQuiteFinalGirardDeath
+##EndgameGirardBattleAercolyn
+[OpenMidLeft][LoadArbordia]
+You continue to stand with[N]
+your traitorous lordling?[A][N]
+[...]Worry not. Aercolyn shall[N]
+be welcomed back anew.[A][N]
+But first, it must be purged.[A][X]
+
+##EndgameGirardBattleDalst
+[OpenMidLeft][LoadArbordia]
+You continue to stand[N]
+insubordinate?[A][N]
+Towards your homeland?[N]
+For shame, I say.[A][N]
+[...]It's too late for you.[N]
+Far too late.[A][X]
+
+##EndgameGirardBattleMevion
+[OpenMidLeft][LoadArbordia]
+So, you can't stay content[N]
+overthrowing one nation.[A][N]
+Leave it to Mevion to up[N]
+and disturb the peace.[A][N]
+[...]Unfortunately, I shall not[N]
+fall like your king once has.[A][X]
+
+##EndgameGirardBattleElbaCor
+[OpenMidLeft][LoadArbordia]
+Your prince does not grasp[N]
+what I intend to do.[A][N]
+For you to serve him in[N]
+resisting our future[...][A][N]
+So very shortsighted.[A][X]
+
+##EndgameGirardBattleOpistia
+[OpenMidLeft][LoadArbordia]
+Your faith stands in the[N]
+way of our future.[A][N]
+I'm loath to strike you down,[N]
+especially in this place.[A][N]
+But go and be with your god.[A][X]
+
+##EndgameGirardBattleYgstra
+[OpenMidLeft][LoadArbordia]
+If all had gone well, Yg'stra[N]
+would be truly ours now.[A][N]
+Would've been for years.[A][N]
+Alas, our agent was a[...][N]
+grand failure.[A][N]
+But all is not lost.[N]
+Yg'stra shall be ours.[A][X]
+
+##EndgameGirardBattleHolanis
+[OpenMidLeft][LoadArbordia]
+Holanis[...] The land that[N]
+started this all.[A][N]
+Know that you've been a[N]
+tool of much value to us.[A][N]
+And know that your glorious[N]
+restoration is nigh.[A][X]
+
+##EndgameGirardBattleWanderer
+[OpenMidLeft][LoadArbordia]
+Unchained by the world,[N]
+are you not?[A][N]
+[...]You shall disrupt our[N]
+harmony. Fall into place.[A][X]
+
+##EndgameGirardBattleOutsider
+[OpenMidLeft][LoadArbordia]
+[...]Who in the hell are you?[A][N]
+[...]No matter. You stand[N]
+against our future.[A][N]
+You stand against progress.[N]
+You will perish.[A][X]
+
+##EndgameGirardDeath
 [OpenMidLeft][LoadArbordia]
 How[...] How can you keep[N]
 fighting?[A] Do you know[N]
 how much I've sacrificed?[A][N]
 I[...] can't[...] die[...][A][N][CloseEyes]
 I won't[...] die[...][A][X]
+
+##EndgameGirardKillsElcorian
+[OpenMidRight][LoadGirard]
+Girard[...][A][N][CloseEyes][ClearFace][OpenMidLeft][LoadArbordia][CloseEyes]
+You know this won't[N]
+be how it ends.[A][N]
+Why do you fight it?[A][X]
+
+##EndgameElcorianKillsGirard
+[OpenMidLeft][LoadArbordia]
+Elcorian[...] You[...][A][N][CloseEyes][ClearFace][OpenMidRight][LoadElcorian][CloseEyes]
+[...][A][N][ClearFace][OpenMidLeft][LoadArbordia][CloseEyes]
+You know[...] this won't[...][N]
+be how it ends[...][A][N]
+Why do you[...] fight[...]?[A][X]
 
 ##FinalGirardDeath
 [OpenMidLeft][LoadArbordia]
@@ -255,6 +346,74 @@ This world will not[...][N]
 live to see you[...][A][N]
 The cycle will[...][N]
 never end[...][A][X]
+
+##EndgameSimoneKillsNathaniel
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadSimone]
+Hmph. How did you get[N]
+to be here, Nathaniel?[A][N]
+Well, no matter. You're[N]
+dead again. Riddance.[A][X]
+
+##EndgameHoratioKillsNathaniel
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadHoratio]
+And thus the final enemy[N]
+falls.[A] Let the bells[N]
+knell for a glorious eve.[A][X]
+
+##EndgameCallumKillsLazarus
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadCallum]
+I have no clue how the fuck[N]
+you're still alive, Lazarus.[A][N]
+But every time you come back,[N]
+I'll simply kill you again.[A][N][ToggleSmile]
+[...]Deal?[A][X]
+
+##EndgameJonasKillsLazarus
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadJonas]
+You deserved so very much[N]
+worse than this.[A][N]
+But your justice isn't the[N]
+day's most important dealing.[A][X]
+
+##EndgameKennethKillsTarquin
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadKenneth]
+[...]Did you not believe me[N]
+stronger than you, Father?[A][N]
+Did you return thinking what[N]
+I did a mere fluke?[A][N]
+[...]Never doubt me again.[A][X]
+
+##EndgameSimoneKillsEthyl
+[OpenMidLeft][LoadBlank][ToggleInvert]
+[...][A][N][ClearFace][OpenMidRight][ToggleInvert][LoadSimone]
+Hm. Interesting. You've[N]
+now died, what, six times?[A][N]
+And yet you've still made[N]
+not an impact on thie world.[A][N]
+How tragic.[A][X]
+
+##EndgameGirardKillsBlair
+[OpenMidRight][LoadBlair]
+I was[...] so close[...][A][N][CloseEyes][ClearFace][OpenMidLeft][LoadArbordia]
+And close isn't enough.[A][N]
+Let the scourge that is your[N]
+name pass from the world.[A][N][CloseEyes]
+[...]I[...] I win, Sinclair.[A][X]
+
+##EndgameGirardKillsZeke
+[OpenMidRight][LoadZeke]
+You[...] won't[...][A][N][CloseEyes][ClearFace][OpenMidLeft][LoadArbordia]
+What won't I do?[N]
+What haven't I done?[A][N]
+You are a dead man.[A][N]
+Do not ask hypotheticals[N]
+of my future,[A] when you[N]
+are now without one.[A][X]
 
 ##GirardQuotesResponse
 [OpenMidRight][LoadGirard]

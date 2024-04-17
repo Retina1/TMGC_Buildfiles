@@ -18,6 +18,12 @@ POIN SkillTester
 WORD SoulHiltID
 
 ALIGN 4
+BiasedQuiverPointer:
+#incbin "BiasedQuiver/BiasedQuiver.dmp"
+POIN SkillTester
+WORD BiasedQuiverID
+
+ALIGN 4
 BattleVeteran:
 #incbin "BattleVeteran/BattleVeteran.dmp"
 POIN SkillTester

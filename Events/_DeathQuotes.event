@@ -352,7 +352,7 @@ ChapterDeathQuote(Argent,ChapterV5,0x0,V5ArgentDeathAfterViridian)
 //endgame
 ChapterDeathQuote(Blair,Endgame,GameOverFlag,BlairDeathEndgame)
 ChapterDeathQuote(Zeke,Endgame,GameOverFlag,ZekeDeathEndgame)
-ChapterDeathQuote(Arin,Endgame,0x0,ArinDeathEndgame)
+ChapterDeathQuote(Arin,Endgame,ArinDeadFlag,ArinDeathEndgame)
 ChapterDeathQuote(Kenneth,Endgame,0x0,KennethDeathEndgame)
 ChapterDeathQuote(Natasia,Endgame,0x0,NatasiaDeathEndgame)
 ChapterDeathQuote(Stefan,Endgame,0x0,StefanDeathEndgame)
@@ -373,7 +373,7 @@ ChapterDeathQuote(Mikey,Endgame,0x0,MikeyDeathEndgame)
 ChapterDeathQuote(Carbon,Endgame,0x0,CarbonDeathEndgame)
 ChapterDeathQuote(Athena,Endgame,0x0,AthenaDeathEndgame)
 ChapterDeathQuote(Charley,Endgame,0x0,CharleyDeathEndgame)
-ChapterDeathQuote(Hyperius,Endgame,0x0,HyperiusDeathEndgame)
+ChapterDeathQuote(Hyperius,Endgame,HyperiusDeadFlag,HyperiusDeathEndgame)
 ChapterDeathQuote(Alexis,Endgame,0x0,AlexisDeathEndgame)
 ChapterDeathQuote(Leila,Endgame,0x0,LeilaDeathEndgame)
 ChapterDeathQuote(Damien,Endgame,0x0,DamienDeathEndgame)
@@ -494,7 +494,7 @@ POP
 
 ALIGN 4
 FinalGirardDeathEvent:
-MUSCSLOW 0x0
+MUSCSLOW 0x7fff
 Text(FinalGirardDeath)
 EndEvent
 

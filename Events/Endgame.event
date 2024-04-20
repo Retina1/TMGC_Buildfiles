@@ -288,15 +288,59 @@ UNIT DLEthyl SageF 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Starfall,EarthP
 UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT
 
-FinalArbordiaSpawn:
+FinalArbordiaSpawnNormal:
+UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
+UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Flare] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Radiance,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
+UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [GildedLance] NoAI
+UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
+UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [Radiance,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [Flare] NoAI
+UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [GildedLance] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT
+
+FinalArbordiaSpawnHard:
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [BookOfOpistus] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [BookOfOpistus] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
+UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [TheSDarkTome] NeverMoveAI
+UNIT
+
+FinalArbordiaSpawnLunatic:
+//you are now the beast in the situation
+UNIT DragonSimulacrum2 EarthDragon 0x0 Level(20,Enemy,1) [8,3] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+//UNIT DragonSimulacrum2 DivineDragon 0x0 Level(20,Enemy,1) [9,3] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
+UNIT DragonSimulacrum2 EarthDragon 0x0 Level(20,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [EarthBreath] NeverMoveAI
+UNIT DragonSimulacrum2 DemonDragon 0x0 Level(20,Enemy,1) [2,7] 0x0 0x0 0x0 0x0 [DemonBreath] DelayedAI
+UNIT DragonSimulacrum2 DemonDragon 0x0 Level(20,Enemy,1) [16,7] 0x0 0x0 0x0 0x0 [DemonBreath] DelayedAI
+UNIT DragonSimulacrum2 DemonDragon 0x0 Level(20,Enemy,1) [2,11] 0x0 0x0 0x0 0x0 [DemonBreath] DelayedAI
+UNIT DragonSimulacrum2 DemonDragon 0x0 Level(20,Enemy,1) [16,11] 0x0 0x0 0x0 0x0 [DemonBreath] DelayedAI
+UNIT DragonSimulacrum2 DivineDragon 0x0 Level(20,Enemy,1) [8,15] 0x0 0x0 0x0 0x0 [DivineBreath] NoAI
+UNIT DragonSimulacrum2 DivineDragon 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [DivineBreath] NoAI
+UNIT DragonSimulacrum2 DivineDragon 0x0 Level(20,Enemy,1) [10,15] 0x0 0x0 0x0 0x0 [DivineBreath] NoAI
+UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
+UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
+UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
+UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
+UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
+UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
 UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
@@ -304,6 +348,9 @@ UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Ineu
 UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
 UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
 UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [TheSDarkTome] NeverMoveAI
+UNIT
+
+EndgamePhase2Girard:
 UNIT FinalArbordia Liberator 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Aspect] NeverMoveAI
 UNIT
 
@@ -373,6 +420,15 @@ UNIT
 
 EndgameCutsceneGirard:
 UNIT Bandit Baron 0x0 Level(20,Enemy,1) [16,39] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT
+
+EndgameCutsceneBlairZeke2:
+UNIT Blair BlairLord 0x0 Level(1,Ally,0) [8,3] 0x0 0x0 0x0 0x0 [Fire, Awaken, Vulnerary] NoAI
+UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [10,3] 0x0 0x0 0x0 0x0 [IronBow] NoAI
+UNIT
+
+EndgameCutsceneGirard2:
+UNIT Bandit Liberator 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 //if we wanna make every boss that hasn't already been deadlorded get a palette reference
@@ -453,21 +509,34 @@ ENDA
 //maybe clear all enemies, move allies up, and summon spawns?
 EndgamePhase2Begin:
 MUSC 0x0
-CleanTextNoMap(MoonCG,FillerDialogue)
+CleanTextNoMap(MoonCG,FinalGirardPhaseShift1)
 SET_ACTIVE 0
 CLEA 0
 CLEE 0
 CLEN 0
 CLEAN
-LOAD1 0x0 FinalArbordiaSpawn //make more things appear
+LOAD1 0x0 EndgamePhase2Girard
+ENUN
 LOAD3 0x0 EndgamePhase2Units
+ENUN
+RefreshSMS
 SetUnitStatusAll(EndgameSimulacrum2, LuckStat, 0)
 FADU 16
 CAM1 FinalArbordia
 FlashCursor(FinalArbordia,60)
-Text(FillerDialogue)
+EARTHQUAKE_START 1
+Text(FinalGirardPhaseShift2)
+STAL 30
 BREAKING_SACRED_STONE FinalArbordia
-Text(FillerDialogue)
+STAL 20
+FADI 16
+LoadUnitsByDifficulty(FinalArbordiaSpawnNormal,FinalArbordiaSpawnHard,FinalArbordiaSpawnLunatic)
+FADU 16
+STAL 30
+EARTHQUAKE_END
+STAL 20
+Text(FinalGirardPhaseShift3)
+OffAllUnitState(AnyUnit, Cantoing, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
 EVBIT_T 4
 EVBIT_T 5
 EVBIT_T 6
@@ -489,7 +558,20 @@ EndingScene:
 ResetBaseFlags
 MUSC 0x0
 FADI 2
-CleanTextNoMap(MoonCG,FillerDialogue)
+CLEA 0
+CLEE 0
+CLEN 0
+LOAD1 0x0 EndgameCutsceneBlairZeke2
+ENUN
+LOAD1 0x0 EndgameCutsceneGirard2
+ENUN
+CAM1 [9,2]
+FADU 2
+Text(Final_Ending)
+STAL 90
+SFXKillUnit(Bandit)
+STAL 90
+Text(Final_Ending2)
 MUSC S_MainTheme
 SystemText(BlankCG,FinalArcEnding)
 SetNewGameFlag(12)

@@ -31,6 +31,21 @@ mov	lr, r3
 cmp	r0,#0x00
 beq	End
 
+mov 	r3, r5
+ldrb	r0, [r5,#0x12]	@max hp
+mov	r1, #0x05
+swi	#0x06		@r0 max hp/5
+ldrb	r1, [r5,#0x13]	@r1 = current hp
+cmp	r1, #0x00	@checking if the unit is already dead, it was setting the killed enemy's hp to 1 which made other skills not work
+beq	FillBuffer
+sub	r1, r0
+cmp	r1, #0x00
+bgt	NextLoopFirst
+mov	r1, #0x01	@min of 1 hp
+NextLoopFirst:
+strb	r1, [r5,#0x13]
+
+FillBuffer:
 @Check if there are enemies in 2 spaces
 ldr	r0, GetUnitsInRange
 mov	lr, r0
@@ -45,6 +60,10 @@ mov	r6, #0x00	@counter
 cmp	r0, #0x00
 beq	End
 @if not 0 go through the buffer in r1
+
+ldrb	r0, [r3,#0x13]	@r1 = current hp
+cmp	r0, #0x00
+bne	Event @play event if main unit alive
 
 CheckEventLoop:		@check if all units in range are dead (or have 1 hp) and if so do not play sound
 ldrb	r0, [r5,r6]

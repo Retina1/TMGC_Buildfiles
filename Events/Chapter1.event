@@ -31,6 +31,9 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEventBothWays(0xa,C1BlairNatasiaTalkConvo,Blair,Natasia)
+CharacterEventBothWays(0xb,C1ArinNatasiaTalkConvo,Arin,Natasia)
+CharacterEventBothWays(0xc,C1KennethNatasiaTalkConvo,Kenneth,Natasia)
 END_MAIN
 
 LocationBasedEvents:
@@ -243,6 +246,15 @@ LABEL 0x1
 ENUF 0x10
 LABEL 0x2
 EndEvent
+
+C1BlairNatasiaTalkConvo:
+ConvoEvent(Blair_Recruits_Natasia)
+
+C1ArinNatasiaTalkConvo:
+ConvoEvent(Arin_Recruits_Natasia)
+
+C1KennethNatasiaTalkConvo:
+ConvoEvent(Natasia_Verbally_Abuses_Kenneth_Then_Joins_The_Party)
 
 C1WVillage:
 MUSC RecruitmentTheme

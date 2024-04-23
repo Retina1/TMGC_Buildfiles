@@ -265,16 +265,17 @@ Label_0178C0E6:
  BYTE   W48
 //  #01 //054   ----------------------------------------
  BYTE   W24
- BYTE   TIE  An2
+ //BYTE   TIE  An2
  BYTE   TIE  An3
  BYTE   W72
 //  #01 //055   ----------------------------------------
  BYTE   W68
  BYTE   W03
  BYTE   EOT
- BYTE   An2  v069
+ BYTE   EOT
+ //BYTE   An2  v069
  BYTE   W01
- BYTE   TIE  An2
+ //BYTE   TIE  An2
  BYTE   TIE  An3
  BYTE   W24
 //  #01 //056   ----------------------------------------
@@ -283,7 +284,7 @@ Label_0178C0E6:
  BYTE   W23
  BYTE   EOT
  BYTE   EOT
- BYTE   An2  v069
+ //BYTE   An2  v069
  BYTE   W72
  BYTE   W01
 //  #01 //058   ----------------------------------------
@@ -299,7 +300,7 @@ Label_0178C0E6:
 DyedInBlood_002:
 //  #02 //000   ----------------------------------------
  BYTE   KEYSH   DyedInBlood_key+0
- BYTE   VOICE   18
+ BYTE   VOICE   100
  BYTE   VOL   30*DyedInBlood_mvl/mxv
  BYTE   PAN   c_v-27
  BYTE   N92  En3  v096
@@ -721,7 +722,7 @@ Label_0178C5AB:
 DyedInBlood_004:
 //  #04 //000   ----------------------------------------
  BYTE   KEYSH   DyedInBlood_key+0
- BYTE   VOICE   100
+ BYTE   VOICE   18
  BYTE   VOL   37*DyedInBlood_mvl/mxv
  BYTE   PAN   c_v+0
  BYTE   TIE  An1  v092

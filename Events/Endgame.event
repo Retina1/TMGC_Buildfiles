@@ -150,7 +150,7 @@ UNIT BossSimulacrum3 WarriorF 0x0 Level(20,Enemy,1) [1,29] 0x0 0x0 0x0 0x0 [Gild
 
 UNIT BossSimulacrum4 Berserker 0x0 Level(20,Enemy,1) [5,22] 0x0 0x0 0x0 0x0 [Hammer,Halberd,Swordslayer,Dracoaxe] AttackInRangeAI//gregorias
 UNIT BossSimulacrum4 LncPal 0x0 Level(20,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [GildedLance,MasterLance] AttackInRangeAI//valden
-UNIT BossSimulacrum4 Sage 0x0 Level(20,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [Flare,Silence] NeverMoveAI//mason
+UNIT BossSimulacrum4 Sage 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Flare,Silence] NeverMoveAI//mason
 UNIT BossSimulacrum4 Warrior 0x0 Level(20,Enemy,1) [13,22] 0x0 0x0 0x0 0x0 [Tomahawk] ChaseOnceApproachedAI//roark
 
 UNIT BossSimulacrum5 BowGen 0x0 Level(20,Enemy,1) [7,17] 0x0 0x0 0x0 0x0 [Longbow] AttackInRangeAI//vulture
@@ -170,7 +170,7 @@ UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [Tomahawk
 
 UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [BookOfOpistus] NeverMoveAI
 UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis] AttackInRangeAI //change to liam conditionally (maybe if he came to 22 at all)
-UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
+UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
 
 UNIT DLNathaniel Sorc 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [TheSDarkTome] AttackInRangeAI
 UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal] ChaseOnceApproachedAI
@@ -202,7 +202,7 @@ UNIT BossSimulacrum3 WarriorF 0x0 Level(20,Enemy,1) [1,29] 0x0 0x0 0x0 0x0 [Toma
 
 UNIT BossSimulacrum4 Berserker 0x0 Level(20,Enemy,1) [5,22] 0x0 0x0 0x0 0x0 [Hammer,Halberd,Swordslayer,Dracoaxe] AttackInRangeAI//gregorias
 UNIT BossSimulacrum4 LncPal 0x0 Level(20,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [GildedLance,MasterLance] AttackInRangeAI//valden
-UNIT BossSimulacrum4 Sage 0x0 Level(20,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [Flare,Sleep] NoAI//mason
+UNIT BossSimulacrum4 Sage 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Flare,Sleep] NeverMoveAI//mason
 UNIT BossSimulacrum4 Warrior 0x0 Level(20,Enemy,1) [13,22] 0x0 0x0 0x0 0x0 [Tomahawk] ChaseOnceApproachedAI//roark
 
 UNIT BossSimulacrum5 BowGen 0x0 Level(20,Enemy,1) [7,17] 0x0 0x0 0x0 0x0 [ShiningBow,Longbow,KillerBow] AttackInRangeAI//vulture
@@ -222,7 +222,7 @@ UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [BraveSwo
 
 UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [BookOfOpistus] NeverMoveAI
 UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis] AttackInRangeAI //change to liam conditionally (maybe if he came to 22 at all)
-UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
+UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
 
 UNIT DLNathaniel Sorc 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [TheSDarkTome] AttackInRangeAI
 UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal] ChaseOnceApproachedAI
@@ -258,7 +258,7 @@ UNIT BossSimulacrum3 WarriorF 0x0 Level(20,Enemy,1) [1,29] 0x0 0x0 0x0 0x0 [Toma
 
 UNIT BossSimulacrum4 Berserker 0x0 Level(20,Enemy,1) [5,22] 0x0 0x0 0x0 0x0 [Hammer,Halberd,Swordslayer,Dracoaxe] AttackInRangeAI//gregorias
 UNIT BossSimulacrum4 LncPal 0x0 Level(20,Enemy,1) [9,20] 0x0 0x0 0x0 0x0 [GildedLance,MasterLance] AttackInRangeAI//valden
-UNIT BossSimulacrum4 Valk 0x0 Level(20,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [FlameSword,GildedSword,Sleep,SoulHilt] NeverMoveAI//mason
+UNIT BossSimulacrum4 Valk 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [FlameSword,GildedSword,Sleep,SoulHilt] NeverMoveAI//mason
 UNIT BossSimulacrum4 Warrior 0x0 Level(20,Enemy,1) [13,22] 0x0 0x0 0x0 0x0 [Tomahawk] ChaseOnceApproachedAI//roark
 
 UNIT BossSimulacrum5 BowGen 0x0 Level(20,Enemy,1) [7,17] 0x0 0x0 0x0 0x0 [ShiningBow,GildedBow,Longbow,KillerBow] AttackInRangeAI//vulture
@@ -278,7 +278,7 @@ UNIT BossSimulacrum7 Hero 0x0 Level(20,Enemy,1) [15,7] 0x0 0x0 0x0 0x0 [BraveSwo
 
 UNIT EndgameSimulacrum Bishop 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [BookOfOpistus,Scripture] NeverMoveAI
 UNIT EndgameSimulacrum SwdGen 0x0 Level(20,Enemy,1) [9,35] 0x0 0x0 0x0 0x0 [Phalanotis,SoulHilt] AttackInRangeAI //change to liam conditionally (maybe if he came to 22 at all)
-UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [Ineubrenos,BiasedQuiver] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
+UNIT EndgameSimulacrum Sniper 0x0 Level(20,Enemy,1) [9,10] 0x0 0x0 0x0 0x0 [Ineubrenos,BiasedQuiver] NeverMoveAI //if clarque's dead, move down to arques and have ineubrenos on him
 
 UNIT DLNathaniel Sorc 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [TheSDarkTome,VoidBracers] AttackInRangeAI
 UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal,SavageGauntlet] ChaseOnceApproachedAI
@@ -292,7 +292,7 @@ FinalArbordiaSpawnNormal:
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Flare] NoAI
 UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Radiance,Silence] NeverMoveAI
-UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
+UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [GildedLance] NoAI
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
@@ -400,9 +400,9 @@ UNIT EndgameSimulacrum Bishop 0x0 Level(18,Enemy,1) [11,3] 0x0 0x0 0x1 REDA12R3 
 UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [11,3] 0x0 0x0 0x1 REDA11R4 [TheSDarkTome,LegRing,LegRing,LegRing] NoAI
 UNIT
 EndgameSpawns4Group3:
-UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA8R4 [Phalanotis,Nuiusseon,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA8R4 [Phalanotis,TheSDarkTome,ArkhinalHandle,ArkhinalHandle] NoAI
 UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA10R4 [Arkhinal,BookOfOpistus,ArkhinalHandle,ArkhinalHandle] NoAI
-UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA9R5 [Starfall,Ineubrenos,TheSDarkTome,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA9R5 [Starfall,Ineubrenos,Nuiusseon,ArkhinalHandle] NoAI
 UNIT
 
 EndgameMorningStarGang:
@@ -574,6 +574,27 @@ STAL 90
 Text(Final_Ending2)
 MUSC S_MainTheme
 SystemText(BlankCG,FinalArcEnding)
+//stuff to celebrate beating the game
+CHECK_EVENTID NMFlag
+BEQ 0x1 0xc 0x0
+SystemText(BlankCG,NormalModeClearText)
+GOTO 0x10
+LABEL 0x1
+CHECK_EVENTID HMFlag
+BEQ 0x2 0xc 0x0
+SystemText(BlankCG,HardModeClearText)
+GOTO 0x10
+LABEL 0x2
+CHECK_EVENTID 0xee
+BEQ 0x3 0xc 0x0
+CHECK_EVENTID 0xaf
+BEQ 0x3 0xc 0x0
+MUSC S_BetterCallSaul
+CleanTextNoMap(SoulMonkeyCG,TheMonkeyCongratulatesYou)
+GOTO 0x10
+LABEL 0x3
+SystemText(BlankCG,LunaticModeClearText)
+LABEL 0x10
 SetNewGameFlag(12)
 ENUT EpilogueSaveFlag
 MoveToChapter(AfterTheEnd)

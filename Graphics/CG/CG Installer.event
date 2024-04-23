@@ -12,6 +12,7 @@ SetConvoBackground(EastHolanisCG,EastHolanisImage,EastHolanisTSA,EastHolanisPale
 SetConvoBackground(MoonCG,MoonImage,MoonTSA,MoonPalette)
 SetConvoBackground(TitleCG,TitleImage,TitleTSA,TitlePalette)
 SetConvoBackground(FinTextCG,FinTextImage,FinTextTSA,FinTextPalette)
+SetConvoBackground(SoulMonkeyCG,SoulMonkeyImage,SoulMonkeyTSA,SoulMonkeyPalette)
 ALIGN 4
 FinTextImage:
 #incbin "FIN.png.dmp"
@@ -21,6 +22,15 @@ FinTextTSA:
 ALIGN 4
 FinTextPalette:
 #incbin "FIN.png.pal.dmp"
+ALIGN 4
+SoulMonkeyImage:
+#incbin "SoulMonkey.png.dmp"
+ALIGN 4
+SoulMonkeyTSA:
+#incbin "SoulMonkey.png.tsa.dmp"
+ALIGN 4
+SoulMonkeyPalette:
+#incbin "SoulMonkey.png.pal.dmp"
 ALIGN 4
 TitleImage:
 #incbin "title.png.dmp"

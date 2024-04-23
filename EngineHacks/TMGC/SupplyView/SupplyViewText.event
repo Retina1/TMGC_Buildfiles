@@ -1,0 +1,47 @@
+
+#ifdef USE_SUPPLY_VIEW_TEXT
+
+	#ifndef setText 
+		#define setText(textID, offset) "PUSH; ORG (TextTable+4*textID); POIN (offset | 0x80000000); POP" 
+	#endif
+	
+	#define SupplyViewCommand 0x03f3
+	#define SupplyViewCommandHelpText 0x03f4
+	#define SupplyConvoyResponse_View 0x03f5
+	
+	setText(SupplyViewCommand,SupplyViewCommandText)
+	setText(SupplyViewCommandHelpText,SupplyViewCommandHelpTextText)
+	setText(SupplyConvoyResponse_View,SupplyConvoyResponse_ViewText)
+	
+	SupplyViewCommandText:
+	String("View")
+	BYTE 0 //[X]
+	
+	SupplyViewCommandHelpTextText:
+	String("Can freely look into the storage,")
+	BYTE 1 //[N]
+	String("but cannot take anything out due")
+	BYTE 1 //[N]
+	String("to this unit having too many items.")
+	BYTE 0 //[X]
+	
+	SupplyConvoyResponse_ViewText:
+	String("Take a look.")
+	BYTE 0 //[X]
+	
+	ALIGN 4
+	
+#endif //USE_SUPPLY_VIEW_TEXT
+
+/*
+## SupplyViewCommand
+View[X]
+
+## SupplyViewCommandHelpText
+Can freely look into the storage,[N]
+but cannot take anything out due[N]
+to this unit having too many items.[X]
+
+## SupplyConvoyResponse_View
+Take a look.[X]
+*/

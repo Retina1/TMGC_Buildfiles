@@ -32,6 +32,8 @@ bne		Exit			@自分はボスなのでアニメを表示します
 @杖と踊りならアニメオフにする
 mov  r2, #0x50		@WeaponType
 ldrb r2, [r3, r2]	@gBattleActor->WeaponType
+cmp  r2, #0x09		@Items
+beq  Exit
 cmp  r2, #0x04		@Staff
 beq  CanCounterCheck
 cmp  r2, #0xFF		@Dance

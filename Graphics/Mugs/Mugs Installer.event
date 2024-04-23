@@ -44,6 +44,10 @@ baddie3 hooded mage
 #include "Tools/Tool Helpers.txt"
 //(mouthx,mouthy,eyesx,eyesy)
 ALIGN 4
+monkeMug:
+#incbin "dmps/monke.dmp"
+setMugEntry(0x145,monkeMug,6,8,5,4)
+ALIGN 4
 RetinaMug:
 #incbin "dmps/Retina.dmp"
 setMugEntry(0x1fd,RetinaMug,3,6,3,4)
@@ -222,6 +226,10 @@ ALIGN 4
 BechamelMug:
 #incbin "dmps/Bechamel.dmp"
 setMugEntry(0x16,BechamelMug,3,5,3,3)
+ALIGN 4
+BechamelPromoMug:
+#incbin "dmps/BechamelPromo.dmp"
+setMugEntry(0x144,BechamelPromoMug,3,5,3,3)
 
 ALIGN 4
 SveltzalusMug:

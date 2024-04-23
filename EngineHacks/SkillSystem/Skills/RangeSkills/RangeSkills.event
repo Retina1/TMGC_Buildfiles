@@ -35,6 +35,9 @@ ReadyAimBonus:
 ALIGN 4
 CreatorBonus:
 #incbin "Creator/Creator.dmp"
+ALIGN 4
+ConduitBonus:
+#incbin "Conduit/Conduit.dmp"
 
 ALIGN 4
 RangeSkillList:
@@ -42,6 +45,7 @@ RangeSkill(BowRangeUpID, BowRangeBonus|1)
 RangeSkill(ReadyAimID, ReadyAimBonus|1)
 RangeSkill(StaffSavantID, StaffSavantBonus|1)
 RangeSkill(StaffMasteryID, StaffMasteryBonus|1)
+RangeSkill(ConduitID, ConduitBonus|1)
 RangeSkill(SoaringShaftID, SoaringShaftBonus|1)
 RangeSkill(TomeRangeUpID, TomeRangeBonus|1)
 RangeSkill(CreatorSkillID, CreatorBonus|1)

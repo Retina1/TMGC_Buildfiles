@@ -1,0 +1,91 @@
+
+/*
+Supply View
+This assembly makes it so units can always freely look into the Convoy without being locked into their current position/into acting now. This is done by replacing the "Take" supply command with a new "View" supply command if the current unit has a full inventory.
+*/
+
+#include EAstdlib.event
+#include "Extensions/Hack Installation.txt"
+
+#define USE_SUPPLY_VIEW_TEXT
+
+#include "SupplyViewText.event"
+ALIGN 4
+
+SupplyCommandTakeOrViewLink:
+SHORT 0x59F //Take
+SHORT SupplyViewCommand
+ALIGN 4
+
+SupplyCommandStoreCommandHelpTextIDLink:
+SHORT 0x05B6 //SupplyGiveCommandHelpText
+SHORT 0x05B7 //SupplyTakeCommandHelpText
+SHORT SupplyViewCommandHelpText
+ALIGN 4
+
+SupplyCommandConvoyReponseTextIDLink:
+SHORT 0x05A5 //SupplyConvoyResponse_Intro
+SHORT 0x05A6 //SupplyConvoyResponse_Give
+SHORT 0x05A7 //SupplyConvoyResponse_Take
+SHORT SupplyConvoyResponse_View
+ALIGN 4
+
+
+
+//-------------------------------------------
+//WIZARD CHECKPOINT
+//Do not touch anything below unless you know what you're doing
+//-------------------------------------------
+
+
+
+PUSH
+
+//Instead of changing font color for Take, change text to View
+ORG 0x9D694
+SHORT 0x1C30 0x4902 //mov r0, r6; ldr r1, =SupplyCommandTakeOrView
+SHORT 0x468E 0xF800 //mov lr, r1; bl lr+0
+SHORT 0x1C03 0xE001 //mov r3, r0; b (0x9D6A4)
+POIN SupplyCommandTakeOrView
+
+ORG 0x9D6A8
+SHORT 0x2200 //mov r2, #0
+PROTECT 0x9D694 CURRENTOFFSET-1
+
+//HelpText on Give, Take or View (after pressing R)
+ORG 0x9DE1A
+SHORT 0x872F 0xE05C //strh r7, [r5,#0x38]; b (0x9DED8)
+PROTECT 0x9DE1A CURRENTOFFSET-1
+
+//New Helptext on Give, Take, or View (after moving cursor)
+ORG 0x9DEDA
+SHORT 0x1C29 0x4A01 //mov r1, r5; ldr r2, =SupplyCommandStoreCommandHelpText
+SHORT 0x4696 0xF800 //mov lr, r2; bl lr+0
+SHORT 0xE003 //b (0x9DEEC)
+POIN SupplyCommandStoreCommandHelpText
+PROTECT 0x9DEDA CURRENTOFFSET-1
+
+//If player presses A on second command (Take/View), skip checking number of items on unit
+ORG 0x9DD70
+SHORT 0xE003 //b (0x9DD7A)
+PROTECT 0x9DD70 CURRENTOFFSET-1
+
+//Change supply convoy's response based on command selection (or if no command has been selected)
+ORG 0x9D286
+SHORT 0x1C20 0x1C29 //mov r0, r4; mov r1, r5
+SHORT 0x4A02 0x4696 //ldr r2, =SupplyCommandConvoyReponse; mov lr, r2
+SHORT 0xF800 0x1C02 //bl lr+0; mov r2, r0
+SHORT 0xE001 //b (0x9D298)
+POIN SupplyCommandConvoyReponse
+PROTECT 0x9D286 CURRENTOFFSET-1
+
+POP
+
+#include "asm/SupplyCommandTakeOrView.lyn.event"
+ALIGN 4
+
+#include "asm/SupplyCommandStoreCommandHelpText.lyn.event"
+ALIGN 4
+
+#include "asm/SupplyCommandConvoyReponse.lyn.event"
+ALIGN 4

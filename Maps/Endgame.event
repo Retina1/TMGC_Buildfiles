@@ -26,7 +26,7 @@ ALIGN 4
 MapData:
   #incbin "Endgame_data.dmp"
 
-SetChapterData(Endgame, OBJDesert, 0, PALEndgame, TILDesert, MapEndgame, MapData, ANIField, 0, MapChangeEndgame)
+SetChapterData(Endgame, OBJDesert, 0, PALEndgame, TILDesert, MapEndgame, MapData, 0, 0, MapChangeEndgame)
 
 ALIGN 4
 Map_Change_0:

@@ -942,28 +942,28 @@
 			bg(MoonCG)
 			music(LoverConvoSong)
 			importance(4)
-			text(FillerDialogue)
+			text(Final_Sam_Charley_Base)
 			baseSupport(Sam,Charley,ASupport)
 			eventID(BaseFlag2)//check if paired with emile
 		Entry
 			bg(MoonCG)
 			music(LoverConvoSong)
 			importance(4)
-			text(FillerDialogue)
+			text(Final_Ptolemy_Johan_Base)
 			baseSupport(Ptolemy,Johan,ASupport)
 		Entry
 			bg(MoonCG)
 			music(LoverConvoSong)
 			importance(4)
-			text(FillerDialogue)
+			text(Final_Josef_Athena_Base)
 			baseSupport(Josef,Athena,ASupport)
 		Entry
 			bg(MoonCG)
-			text(FillerDialogue)
+			text(Final_Charley_Toddsworth_Base)
 			baseSupport(Charley,Toddsworth,ASupport)
 		Entry
 			bg(MoonCG)
-			text(FillerDialogue)
+			text(Final_Zeke_Hyperius_Base)
 			baseSupport(Zeke,Hyperius,ASupport)
 		//endgame
 		//sam/charley
@@ -987,39 +987,39 @@ BEQ 0x1 0xc 0x0
 LABEL 0x1
 BranchIfNotSupport(Blair,Arin,ASupport,0x2)
 	MUSC S_CryALive
-	Text(FillerDialogue)//blair/arin
+	Text(UntoTheEndArin)//blair/arin
 	GOTO 0x10
 LABEL 0x2
 BranchIfNotSupport(Blair,Natasia,ASupport,0x3)
 CHECK_ALIVE Natasia
 BEQ 0x3 0xc 0x0
 	MUSC S_CryALive
-	Text(FillerDialogue)//blair/natasia
+	Text(UntoTheEndNatasia)//blair/natasia
 	GOTO 0x10
 LABEL 0x3
 BranchIfNotSupport(Blair,Avan,ASupport,0x4)
 CHECK_ALIVE Avan
 BEQ 0x4 0xc 0x0
 	MUSC S_CryALive
-	Text(FillerDialogue)//blair/avan
+	Text(UntoTheEndAvan)//blair/avan
 	GOTO 0x10
 LABEL 0x4
 BranchIfNotSupport(Blair,Yuyu,ASupport,0x5)
 CHECK_ALIVE Yuyu
 BEQ 0x5 0xc 0x0
 	MUSC S_CryALive
-	Text(FillerDialogue)//blair/yuyu
+	Text(UntoTheEndYuyu)//blair/yuyu
 	GOTO 0x10
 LABEL 0x5
 BranchIfNotSupport(Blair,Estelle,ASupport,0x6)
 CHECK_ALIVE Estelle
 BEQ 0x6 0xc 0x0
 	MUSC S_CryALive
-	Text(FillerDialogue)//blair/estelle
+	Text(UntoTheEndEstelle)//blair/estelle
 	GOTO 0x10
 LABEL 0x6
 //if you've talked to nobody, reflect with zeke one last time
-Text(FillerDialogue)
+Text(UntoTheEndZeke)
 LABEL 0x10
 FADI 0x5
 CLEAN

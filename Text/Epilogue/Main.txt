@@ -1,3 +1,13 @@
+#include "A_Dalst.txt"
+#include "B_Mevion.txt"
+#include "C_ElbaCor.txt"
+#include "D_Moneubris.txt"
+#include "E_Opistia.txt"
+#include "F_Ygstra.txt"
+#include "G_Holanis.txt"
+#include "H_Mercenaries.txt"
+#include "I_Aercolyn.txt"
+
 
 ##Epilogue_FinalScene
 [OpenMidLeft][LoadElcorian][CloseEyes][OpenMidRight][LoadBlank][OpenMidLeft]
@@ -19,6 +29,7 @@ away the creator[A][N][MoveMidRight]
 	
 //kionius - mevionese
 	//butch, peter, peggy (if not on boat), jeff (if not rachael supported, better ending with butch support)
+	//estelle, rift if they supported
 	
 //couria - elba corians
 	//zeke
@@ -31,14 +42,15 @@ away the creator[A][N][MoveMidRight]
 		//characters with close relationships will chain each other together
 		//bechamel can bring apollo, hollandaise, sam
 			//apollo can bring flynn if B+ rank
-			//sam brings emile if A rank
+			//sam brings emile or charley if A rank
 		//natasia can bring blair, polycule, peggy
 	//otherwise, bechamel sets off at port alone if no natasia A support
 	//agnes sets off alone if boat not real, otherwise she tags along
 	//charley sets off alone if not committed to a mainland sam, joins boat if possible
-	
+		//todd comes along with A rank
+		
 //opistinia - opistians
-	//vladmir, apollo (if not on boat), flynn (if not on boat), hilbert (if not supported with kenneth), laronde, rose, athena
+	//vladmir, apollo (if not on boat), flynn (if not on boat), hilbert (if not supported with kenneth), laronde, rose, athena, josef (if with athena)
 	
 //ch13 map - ygstrans
 	//damien, zach, tobias, joan, sonia, mikey (if not cassius supported), jonas, leila (if damien or tobias support and no wilhelm support)
@@ -47,11 +59,12 @@ away the creator[A][N][MoveMidRight]
 	//artemis, ptolemy (if not johan supported), dean
 	
 //arbordia interlude map - mercenary group remnants
-	//freddric, rift, callum, dirk (if eliza dead), manfred, wilhelm, argent, clarque, valeria
+	//freddric, rift, callum, manfred, wilhelm, argent, clarque, valeria
+	//41 total if i do unique convos return style (6 solos, 15 duos, 20 trios)
 	
 //aercolyn - aercolyn and final wrap up
 	//stefan, desmond, johan, emile if no sam A rank
-	//the blair freeloaders - carbon, yuyu, estelle
+	//the blair freeloaders - carbon, yuyu, estelle (if not rifting out)
 	//arin
 	
 //unlisted characters currently - sveltzalus, avan, todd, q, horatio, simone, tonnamin, ian, olsen, elcorian

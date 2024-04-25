@@ -96,7 +96,35 @@ PrepsImage:
 PrepsPalette:
 #incbin "PrepsBG.png.pal.dmp"
 
-
+PUSH
+ORG $B6800
+POIN EndingTiles
+ORG $B6EAC
+POIN EndingTextTSA
+ORG $B71A4
+POIN EndingTextTSA
+ORG $B6EB8
+POIN EndingNameSoloTSA
+ORG $B71b0
+POIN EndingNamePairTSA
+ORG $B687C
+POIN EndingTextPalette
+POP
+ALIGN 4
+EndingTiles:
+#incbin "EndingText.png.dmp"
+ALIGN 4
+EndingTextTSA:
+#incbin "EndingText.png.tsa.dmp"
+ALIGN 4
+EndingNameSoloTSA:
+#incbin "EndingSoloName.png.tsa.dmp"
+ALIGN 4
+EndingNamePairTSA:
+#incbin "EndingPairedName.png.tsa.dmp"
+ALIGN 4
+EndingTextPalette:
+#incbin "EndingText.png.pal.dmp"
 
 PUSH
 ORG $A8F34
@@ -109,6 +137,19 @@ POP
 ALIGN 4
 MenuNames:
 #incbin "MenuText.png.dmp"
+
+PUSH
+ORG 0x4d828
+POIN ConvoHistoryImage
+//ORG 0x4d830
+//POIN ConvoHistoryPalette
+POP
+ALIGN 4
+ConvoHistoryImage:
+#incbin "ConvoHistory.png.dmp"
+//ALIGN 4
+//ConvoHistoryPalette:
+//#incbin "ConvoHistory.png.pal.dmp"
 
 PUSH
 ORG 0x43ad4

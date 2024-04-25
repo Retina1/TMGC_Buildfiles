@@ -665,6 +665,7 @@ CheckForItem(Soulbow)
 BNE 0x5 0xc 0x0
 CleanTextNoMap(HallCG,C28Ending2)
 SetBackground(BlankCG)
+SetUnitStatus(Zeke,BowExp,251)
 GiveItem(Soulbow,Zeke)
 LABEL 0x5
 MUSC 0x0

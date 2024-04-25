@@ -558,6 +558,24 @@ EndingScene:
 ResetBaseFlags
 MUSC 0x0
 FADI 2
+CHECK_EVENTID ArinDeadFlag
+BEQ 0x90 0xc 0x0
+CHECK_EVENTID GirlkissingFlag
+BNE 0x90 0xc 0x0
+BranchIfNotSupport(Blair,Arin,ASupport,0x90)
+	STAL 150
+	MUSC S_TheSwan
+	ASMC 0xC4879 //credits
+	STAL 180
+	FADU 2
+	SetBackground(FinTextCG)//swap for sad cg when lumi makes it
+	STAL 600
+	MUSCSLOW 0x7fff
+	FADI 0x1
+	STAL 120
+	MNTS 0x1
+	GOTO 0x91
+LABEL 0x90
 CLEA 0
 CLEE 0
 CLEN 0
@@ -598,6 +616,7 @@ LABEL 0x10
 SetNewGameFlag(12)
 ENUT EpilogueSaveFlag
 MoveToChapter(AfterTheEnd)
+LABEL 0x91
 ENDA
 
 EndgameTurn1:

@@ -1,0 +1,12 @@
+ALIGN 4
+PUSH
+ORG CURRENTOFFSET+$1;DoesSkillHaveMultiplePages:
+POP
+SHORT $B510 $68C8 $8A54 $4905 $468E
+BYTE $0 $F8
+SHORT $5D00 $4904 $4A04 $4696
+BYTE $0 $F8
+SHORT $BC10 $BC02 $4708
+POIN Skill_Getter
+POIN MultipleHelpTextPageList_Skills
+POIN GetMultipleHelpTextEntry

@@ -31,32 +31,6 @@ UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
-EpilogueMevionGuaranteedUnits:
-UNIT Blair 0x0 0x0 Level(1,Ally,0) [2,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueMevionButch:
-UNIT Butch 0x0 0x0 Level(1,Ally,0) [2,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueMevionPeggy:
-UNIT Peggy 0x0 0x0 Level(1,Ally,0) [2,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueMevionPeter:
-UNIT Peter 0x0 0x0 Level(1,Ally,0) [2,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueMevionRiftEstelle:
-UNIT Estelle 0x0 0x0 Level(1,Ally,0) [2,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Rift 0x0 0x0 Level(1,Ally,0) [2,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueMevionJeff:
-UNIT Jeff 0x0 0x0 Level(1,Ally,0) [2,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-
-ALIGN 4
 
 #define BlairArinFlag 0x8
 #define BlairNatasiaFlag 0x9
@@ -115,10 +89,57 @@ ALIGN 4
 
 MevionResolution:
 EpilogueMapSwap(Interlude1,10,12)
+LOAD1 0x0 EpilogueMevionGuaranteedUnits
+EpilogueUnitLoad(Butch,EpilogueMevionButch,0x1)
+EpilogueUnitLoad(Peter,EpilogueMevionPeter,0x2)
+//rift estelle load if their ending happens
+CHECK_EVENTID RiftEstelleFlag
+BEQ 0x3 0xc 0x0
+LOAD1 0x0 EpilogueMevionRiftEstelle
+LABEL 0x3
+//jeff loads if not rachael ending
+EpilogueNoFlagUnitLoad(Jeff,RachaelJeffFlag,EpilogueMevionJeff,0x4)
+//peggy loads if butch ending OR if not peggy ending
+EpilogueFlagUnitLoad(Peggy,PeggyButchFlag,EpilogueMevionPeggy,0x5)
+EpilogueNoFlagUnitLoad(Peggy,NatasiaPeggyFlag,EpilogueMevionPeggy,0x6)
 //loads
 FADU 0x4
 STAL 120
 //text
+CHECK_EVENTID PeggyButchFlag
+BNE 0x14 0xc 0x0
+//runs if peggy/nat AND peggy butch didn't happen
+EpilogueNoFlagUnitText(Peggy,NatasiaPeggyFlag,Epilogue_PeggyMevion,0x14)
+//butch stuff
+CHECK_EVENTID ButchPeterFlag
+BNE 0x10 0xc 0x0
+	CHECK_EVENTID PeggyButchFlag
+	BNE 0x12 0xc 0x0
+	EpilogueUnitText(Butch,Epilogue_ButchMevion,0x13)
+	GOTO 0x11
+	LABEL 0x12
+	FlashCursor(Peggy,30)
+	FlashCursor(Butch,30)
+	Text(Epilogue_ButchPeggyMevion)
+	GOTO 0x11
+LABEL 0x10
+	FlashCursor(Butch,30)
+	FlashCursor(Peter,30)
+	Text(Epilogue_ButchPeterMevion)
+LABEL 0x11
+//jeff
+CHECK_EVENTID RachaelJeffFlag
+BNE 0x22 0xc 0x0
+EpilogueFlagUnitText(Jeff,ButchJeffFlag,Epilogue_JeffButchMevion,0x23)
+EpilogueNoFlagUnitText(Jeff,ButchJeffFlag,Epilogue_JeffMevion,0x22)
+//peter and rift estelle
+EpilogueNoFlagUnitText(Peter,ButchPeterFlag,Epilogue_PeterMevion,0x20)
+CHECK_EVENTID RiftEstelleFlag
+BEQ 0x21 0xc 0x0
+	FlashCursor(Rift,30)
+	FlashCursor(Estelle,30)
+	Text(Epilogue_RiftEstelleMevion)
+LABEL 0x21
 STAL 120
 EndEvent
 
@@ -479,6 +500,32 @@ UNIT Vladmir 0x0 0x0 Level(1,Ally,0) [4,31] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 EpilogueDalstZeke:
 UNIT Zeke 0x0 0x0 Level(1,Ally,0) [2,27] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueMevionGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [9,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMevionButch:
+UNIT Butch 0x0 0x0 Level(1,Ally,0) [11,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMevionPeggy:
+UNIT Peggy 0x0 0x0 Level(1,Ally,0) [12,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMevionPeter:
+UNIT Peter 0x0 0x0 Level(1,Ally,0) [13,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMevionRiftEstelle:
+UNIT Estelle 0x0 0x0 Level(1,Ally,0) [13,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Rift 0x0 0x0 Level(1,Ally,0) [14,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMevionJeff:
+UNIT Jeff 0x0 0x0 Level(1,Ally,0) [11,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4

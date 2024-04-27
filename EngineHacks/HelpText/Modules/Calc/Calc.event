@@ -1,0 +1,34 @@
+
+#include "asm/CalcGetter.lyn.event"
+ALIGN 4
+
+#include "asm/CalcHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "asm/CalcHelpTextLabel.lyn.event"
+ALIGN 4
+
+#include "asm/CalcHelpTextValues.lyn.event"
+ALIGN 4
+
+CalcLooper:
+SHORT 0x4770
+CalcLabelLink:
+SHORT CalcLabel
+ALIGN 4
+
+
+//The order of text ids in CalcDescriptionTextLink and CalcCalculationsLink must match
+
+CalcDescriptionTextLink:
+SHORT 0x055C //Attack
+SHORT 0x055D //Hit
+SHORT 0x055F //Crit
+SHORT 0x0560 //Avoid
+
+CalcCalculationsLink:
+SHORT SS_AttackCalcHelpText
+SHORT SS_HitCalcHelpText
+SHORT SS_CritCalcHelpText
+SHORT SS_AvoidCalcHelpText
+ALIGN 4

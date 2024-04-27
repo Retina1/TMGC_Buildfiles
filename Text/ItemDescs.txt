@@ -2,7 +2,13 @@
 Magic[X]
 
 ##DAspect ^
-A sundering yet merciful will. All will be nothing.[X]
+A sundering yet merciful will.[X]
+
+##DAspect2 ^
+Quarters incoming damage. Reduces targets above[N]
+50% HP to 1 HP, kills targets below 50%.[N]
+Sets weapons to zero durability on hit.[N]
+Halves target non-HP stats after combat.[X]
 
 ##DFiller
 This sure is a description.[X]
@@ -254,11 +260,11 @@ A spell that conjures a wrathful mare. [HorseIcon][X]
 A devastating spell that passes absolute judgement.[X]
 
 ##DHeal ^
-A simple staff for simple wounds.[N]
+A simple staff for healing simple wounds.[N]
 Restores Mag + 10 HP.[X]
 
 ##DMend ^
-A potent staff for severe wounds.[N]
+A potent staff for healing severe wounds.[N]
 Restores Mag + 25 HP.[X]
 
 ##DRecover ^
@@ -285,7 +291,7 @@ Restores HP[N]
 to many allies.[X]
 
 ##DRestore ^
-A soothing staff that restores the soul.[N]
+A soothing staff that restores one's soul.[N]
 Heals status conditions.[X]
 
 ##URestore
@@ -488,6 +494,16 @@ An Opistian spell that directly calls upon Him.[X]
 
 ##DSDark ^
 dPa[DragonIcon],;3,!@$inF32r!Holanis0x+1u2ty-[X]
+
+##DSDark2 ^
+Quadruples and reaves weapon triangle.[N]
+Counts as dark magic at 1 range and[N]
+as a lance at 2 range.[X]
+
+##DSDark3 ^
+Effectiveness uses highest relevant multiplier.[N]
+12x might against [BowIcon], 4x might against [StaffIcon],[N]
+1.5x might against [HorseIcon], .5x might against [SwordIcon].[X]
 
 ##DPrototype ^
 A new staff currently under research by Dalst.[N]

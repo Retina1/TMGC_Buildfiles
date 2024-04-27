@@ -508,6 +508,7 @@ ENDA
 
 //maybe clear all enemies, move allies up, and summon spawns?
 EndgamePhase2Begin:
+EVBIT_MODIFY 3
 MUSC 0x0
 CleanTextNoMap(MoonCG,FinalGirardPhaseShift1)
 SET_ACTIVE 0

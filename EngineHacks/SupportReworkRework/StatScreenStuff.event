@@ -21,7 +21,7 @@ ALIGN 4
 //These first five should not be edited, they're the same as the other statscreen pages
 RText_Page4:
 SP_Name:
-  RMenu(0,SP_Class,0,SP_Support_1,0x18,0x50,0x0,NameDescGetter)
+  RMenu(0,SP_Class,0,SP_Support_1,0x18,0x50,0x0,HelpBoxCurrentCharInfo)
 SP_Class:
   RMenu(SP_Name,SP_Level,0,SP_Support_1,0x6,0x68,0x6E8,ClassDescGetter)
 SP_Level:

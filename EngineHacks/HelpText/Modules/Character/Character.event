@@ -139,7 +139,8 @@ ALIGN 4
 	#include "asmCharDesc/GetAgeDigitCount.lyn.event"
 	ALIGN 4
 
-	#include "asmCharDesc/NewNameDescGetter.lyn.event"
+	//#include "asmCharDesc/NewNameDescGetter.lyn.event"
+	#include "asmCharDesc/NewNameDescGetter_ChangeUnitDesc.lyn.event"
 	ALIGN 4
 
 	#include "asmCharDesc/CharacterHelpTextSpace.lyn.event"

@@ -31,6 +31,29 @@ UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
+EpilogueElbaCorGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [6,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Zeke 0x0 0x0 Level(1,Ally,0) [4,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Hyperius 0x0 0x0 Level(1,Ally,0) [7,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Alexis 0x0 0x0 Level(1,Ally,0) [8,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Cassius 0x0 0x0 Level(1,Ally,0) [4,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Rachael 0x0 0x0 Level(1,Ally,0) [3,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Brandl 0x0 0x0 Level(1,NPC,0) [5,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueElbaCorJeff:
+UNIT Jeff 0x0 0x0 Level(1,Ally,0) [9,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueElbaCorLeila:
+UNIT Leila 0x0 0x0 Level(1,Ally,0) [1,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueElbaCorMikey:
+UNIT Mikey 0x0 0x0 Level(1,Ally,0) [6,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
 
 #define BlairArinFlag 0x8
 #define BlairNatasiaFlag 0x9
@@ -66,16 +89,16 @@ ALIGN 4
 #define LeilaDamienFlag 0x26
 #define LeilaWilhelmFlag 0x27
 #define LeilaTobiasFlag 0x28
-#define PtolemyJohanFlag 0xa6
-#define FreddricArgentFlag 0xa5
-#define ElizaDirkFlag 0xa4
-#define RiftEstelleFlag 0xa3
-#define RiftCallumFlag 0xa2
-#define RoseManfredFlag 0xa1
-#define RoseLarondeFlag 0xa0
-#define ManfredWilhelmFlag 0x9f
-#define BlairSingleFlag 0x9e
-#define JoanSoniaFlag 0x9d
+#define PtolemyJohanFlag 0x9d
+#define FreddricArgentFlag 0x9c
+#define ElizaDirkFlag 0x9b
+#define RiftEstelleFlag 0x9a
+#define RiftCallumFlag 0x99
+#define RoseManfredFlag 0x98
+#define RoseLarondeFlag 0x97
+#define ManfredWilhelmFlag 0x96
+#define BlairSingleFlag 0x95
+#define JoanSoniaFlag 0x94
 
 #define EpilogueSupportFlag(unit1,unit2,flag) "CHECK_ALIVE unit1; BEQ flag 0xc 0x0;CHECK_ALIVE unit2; BEQ flag 0xc 0x0;GetSupportLevel(unit1,unit2); SVAL 0x2 ASupport; BNE flag 0x1 0x2; ENUT flag; LABEL flag"
 #define EpilogueMapSwap(mapid,camx,camy) "FADI 4;CLEE 0;CLEN 0;CLEA 0;LOMA mapid;CAM1 [camx,camy]"
@@ -87,19 +110,91 @@ ALIGN 4
 #define EpilogueFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueNoFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 
+
+ElbaCorResolution:
+EpilogueMapSwap(Interlude5,8,12)
+//loads
+LOAD1 0x0 EpilogueElbaCorGuaranteedUnits
+EpilogueFlagUnitLoad(Jeff,RachaelJeffFlag,EpilogueElbaCorJeff,0x1)
+EpilogueFlagUnitLoad(Mikey,CassiusMikeyFlag,EpilogueElbaCorMikey,0x6)
+CHECK_EVENTID LeilaWilhelmFlag
+BNE 0x2 0xc 0x0
+CHECK_EVENTID LeilaDamienFlag
+BNE 0x2 0xc 0x0
+CHECK_EVENTID LeilaTobiasFlag
+BNE 0x2 0xc 0x0
+EpilogueUnitLoad(Leila,EpilogueElbaCorLeila,0x2)
+LABEL 0x2
+FADU 0x4
+STAL 120
+//text
+CHECK_EVENTID CassiusZekeFlag
+BEQ 0x3 0xc 0x0
+	FlashCursor(Zeke,30)
+	FlashCursor(Cassius,30)
+	Text(Epilogue_ZekeCassiusElbaCor)//zeke cassius
+LABEL 0x3
+CHECK_EVENTID HyperiusDeadFlag
+BEQ 0x60 0xc 0x0
+EpilogueNoFlagUnitText(Zeke,CassiusZekeFlag,Epilogue_ZekeElbaCorAlt,0xa)//zeke solo hype dead
+GOTO 0x61
+LABEL 0x60
+EpilogueNoFlagUnitText(Zeke,CassiusZekeFlag,Epilogue_ZekeElbaCor,0xa1)//zeke solo
+LABEL 0x61
+CHECK_EVENTID HyperiusAlexisFlag
+BEQ 0x4 0xc 0x0
+	FlashCursor(Hyperius,30)
+	FlashCursor(Alexis,30)
+	Text(Epilogue_HyperiusAlexisElbaCor)//hyperius alexis ending
+LABEL 0x4
+EpilogueNoFlagUnitText(Hyperius,HyperiusAlexisFlag,Epilogue_HyperiusElbaCor,0xb)//hyperius solo
+CHECK_EVENTID HyperiusDeadFlag
+BEQ 0x62 0xc 0x0
+EpilogueNoFlagUnitText(Alexis,HyperiusAlexisFlag,Epilogue_AlexisElbaCorAlt,0xc)//alexis solo hype dead
+GOTO 0x63
+LABEL 0x62
+EpilogueNoFlagUnitText(Alexis,HyperiusAlexisFlag,Epilogue_AlexisElbaCor,0xc1)//alexis solo
+LABEL 0x63
+CHECK_EVENTID RachaelCassiusFlag
+BEQ 0x5 0xc 0x0
+	FlashCursor(Rachael,30)
+	FlashCursor(Cassius,30)
+	Text(Epilogue_RachaelCassiusElbaCor)//rachael cassius
+LABEL 0x5
+EpilogueNoFlagUnitText(Rachael,RachaelCassiusFlag,Epilogue_RachaelElbaCor,0xd)//rachael solo
+CHECK_EVENTID CassiusZekeFlag
+BNE 0x33 0xc 0x0
+EpilogueNoFlagUnitText(Cassius,RachaelCassiusFlag,Epilogue_CassiusElbaCor,0xe)//cassius solo
+LABEL 0x33
+EpilogueFlagUnitText(Jeff,RachaelJeffFlag,Epilogue_JeffElbaCor,0xf)//jeff
+EpilogueFlagUnitText(Mikey,CassiusMikeyFlag,Epilogue_MikeyElbaCor,0x16)//mikey cassius
+CHECK_EVENTID LeilaWilhelmFlag
+BNE 0x22 0xc 0x0
+CHECK_EVENTID LeilaDamienFlag
+BNE 0x22 0xc 0x0
+CHECK_EVENTID LeilaTobiasFlag
+BNE 0x22 0xc 0x0
+EpilogueNoFlagUnitText(Leila,RachaelLeilaFlag,Epilogue_LeilaElbaCor,0x17)//leila
+EpilogueFlagUnitText(Leila,RachaelLeilaFlag,Epilogue_LeilaElbaCorAlt,0x18)//leila alt
+LABEL 0x22
+STAL 120
+EndEvent
+
 MevionResolution:
 EpilogueMapSwap(Interlude1,10,12)
 LOAD1 0x0 EpilogueMevionGuaranteedUnits
 EpilogueUnitLoad(Butch,EpilogueMevionButch,0x1)
 EpilogueUnitLoad(Peter,EpilogueMevionPeter,0x2)
 //rift estelle load if their ending happens
+CHECK_EVENTID BlairEstelleFlag
+BNE 0x3 0xc 0x0
 CHECK_EVENTID RiftEstelleFlag
 BEQ 0x3 0xc 0x0
 LOAD1 0x0 EpilogueMevionRiftEstelle
 LABEL 0x3
 //jeff loads if not rachael ending
 EpilogueNoFlagUnitLoad(Jeff,RachaelJeffFlag,EpilogueMevionJeff,0x4)
-//peggy loads if butch ending OR if not peggy ending
+//peggy loads if butch ending OR if not natasia ending
 EpilogueFlagUnitLoad(Peggy,PeggyButchFlag,EpilogueMevionPeggy,0x5)
 EpilogueNoFlagUnitLoad(Peggy,NatasiaPeggyFlag,EpilogueMevionPeggy,0x6)
 //loads
@@ -134,6 +229,8 @@ EpilogueFlagUnitText(Jeff,ButchJeffFlag,Epilogue_JeffButchMevion,0x23)
 EpilogueNoFlagUnitText(Jeff,ButchJeffFlag,Epilogue_JeffMevion,0x22)
 //peter and rift estelle
 EpilogueNoFlagUnitText(Peter,ButchPeterFlag,Epilogue_PeterMevion,0x20)
+CHECK_EVENTID BlairEstelleFlag
+BNE 0x21 0xc 0x0
 CHECK_EVENTID RiftEstelleFlag
 BEQ 0x21 0xc 0x0
 	FlashCursor(Rift,30)
@@ -144,7 +241,9 @@ STAL 120
 EndEvent
 
 DalstResolution:
-EpilogueMapSwap(Chapter27,0,34)
+//no fadi here because of jank with arin/hyperius unkiller
+CLEE 0;CLEN 0;CLEA 0;LOMA Chapter27;CAM1 [0,34]
+//EpilogueMapSwap(Chapter27,0,34)
 LOAD1 0x0 EpilogueDalstGuaranteedUnits
 	CHECK_EVENTID BlairNatasiaFlag
 	BNE 0x102 0xc 0x0
@@ -239,6 +338,7 @@ EVBIT_MODIFY 3
 EVBIT_T 8; SetBackground(Map2CG); STAL 120; NarrationText(Epilogue_Narration)
 //CleanTextNoMap(HallCG,FillerDialogue)
 //REMA
+FADI 4
 SilentKillUnit(0xd2)
 SilentKillUnit(0x7e)
 LOAD1 0x1 imnotcryingyouare
@@ -317,17 +417,6 @@ MNTS 0x1
 //MoveToChapter(HubMap)
 ENDA
 
-
-
-ElbaCorResolution:
-EpilogueMapSwap(Interlude5,8,12)
-//loads
-FADU 0x4
-STAL 120
-//text
-STAL 120
-EndEvent
-
 PortResolution:
 EpilogueMapSwap(Interlude2,20,1)
 //loads
@@ -392,6 +481,14 @@ STAL 120
 EndEvent
 
 SupportFlagSetter:
+CHECK_EVENTID ArinDeadFlag
+BNE ArinDeadFlag 0xc 0x0
+OffAllUnitState(Arin*0x100+Arin, Dead, Dead, 0xff, 0xff, 0xff, 0xff);
+LABEL ArinDeadFlag
+CHECK_EVENTID HyperiusDeadFlag
+BNE HyperiusDeadFlag 0xc 0x0
+OffAllUnitState(Hyperius*0x100+Hyperius, Dead, Dead, 0xff, 0xff, 0xff, 0xff)
+LABEL HyperiusDeadFlag
 CHECK_ALIVE Eliza
 BEQ 0x1 0xc 0x0
 CHECK_ALIVE Dirk

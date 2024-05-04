@@ -982,7 +982,7 @@ SetBackground(MoonCG)
 CHECK_EVENTID GirlkissingFlag
 BEQ 0x1 0xc 0x0
 	MUSC S_CryALive
-	Text(FillerDialogue)//solo exploration of relationship dynamics (interesting concept)
+	Text(UntoTheEndPoly)//solo exploration of relationship dynamics (interesting concept)
 	GOTO 0x10
 LABEL 0x1
 BranchIfNotSupport(Blair,Arin,ASupport,0x2)

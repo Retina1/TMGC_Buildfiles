@@ -31,29 +31,6 @@ UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
-EpilogueElbaCorGuaranteedUnits:
-UNIT Blair 0x0 0x0 Level(1,Ally,0) [6,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Zeke 0x0 0x0 Level(1,Ally,0) [4,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Hyperius 0x0 0x0 Level(1,Ally,0) [7,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Alexis 0x0 0x0 Level(1,Ally,0) [8,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Cassius 0x0 0x0 Level(1,Ally,0) [4,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Rachael 0x0 0x0 Level(1,Ally,0) [3,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Brandl 0x0 0x0 Level(1,NPC,0) [5,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueElbaCorJeff:
-UNIT Jeff 0x0 0x0 Level(1,Ally,0) [9,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueElbaCorLeila:
-UNIT Leila 0x0 0x0 Level(1,Ally,0) [1,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueElbaCorMikey:
-UNIT Mikey 0x0 0x0 Level(1,Ally,0) [6,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-
-ALIGN 4
 
 #define BlairArinFlag 0x8
 #define BlairNatasiaFlag 0x9
@@ -62,42 +39,42 @@ ALIGN 4
 #define BlairEstelleFlag 0xc
 #define BlairCarbonFlag 0xd
 #define ArinSimoneFlag 0xe
-#define KennethHilbertFlag 0xf
-#define NatasiaBechamelFlag 0x10
+#define KennethHilbertFlag 0xf //used
+#define NatasiaBechamelFlag 0x10 //uses
 #define BOATFLAGWOO NatasiaBechamelFlag
-#define NatasiaPeggyFlag 0x11
+#define NatasiaPeggyFlag 0x11 //used
 #define StefanJohanFlag 0x12
 #define DesmondFlynnFlag 0x13
-#define SamEmileFlag 0x14
-#define SamBechamelFlag 0x15
-#define SamCharleyFlag 0x16
+#define SamEmileFlag 0x14 //used
+#define SamBechamelFlag 0x15 //used
+#define SamCharleyFlag 0x16 //used
 #define JosefAthenaFlag 0x17
-#define PeggyButchFlag 0x18
-#define ButchJeffFlag 0x19
-#define ButchPeterFlag 0x1a
-#define RachaelCassiusFlag 0x1b
-#define RachaelJeffFlag 0x1c
-#define RachaelLeilaFlag 0x1d
-#define CassiusMikeyFlag 0x1e
-#define CassiusZekeFlag 0x1f
-#define ApolloBechamelFlag 0x20
+#define PeggyButchFlag 0x18 //used
+#define ButchJeffFlag 0x19 //used
+#define ButchPeterFlag 0x1a //used
+#define RachaelCassiusFlag 0x1b //used
+#define RachaelJeffFlag 0x1c //used
+#define RachaelLeilaFlag 0x1d //used
+#define CassiusMikeyFlag 0x1e //used
+#define CassiusZekeFlag 0x1f //used
+#define ApolloBechamelFlag 0x20 //used
 #define ApolloFlynnFlag 0x21
 #define ApolloVladmirFlag 0x22
-#define BechamelHollandaiseFlag 0x23
-#define CharleyToddsworthFlag 0x24
-#define HyperiusAlexisFlag 0x25
+#define BechamelHollandaiseFlag 0x23 //used
+#define CharleyToddsworthFlag 0x24 //used
+#define HyperiusAlexisFlag 0x25 //used
 #define LeilaDamienFlag 0x26
 #define LeilaWilhelmFlag 0x27
 #define LeilaTobiasFlag 0x28
 #define PtolemyJohanFlag 0x9d
 #define FreddricArgentFlag 0x9c
-#define ElizaDirkFlag 0x9b
-#define RiftEstelleFlag 0x9a
+#define ElizaDirkFlag 0x9b //used
+#define RiftEstelleFlag 0x9a //used
 #define RiftCallumFlag 0x99
 #define RoseManfredFlag 0x98
-#define RoseLarondeFlag 0x97
+#define RoseLarondeFlag 0x97 //used
 #define ManfredWilhelmFlag 0x96
-#define BlairSingleFlag 0x95
+#define BlairSingleFlag 0x95 //used
 #define JoanSoniaFlag 0x94
 
 #define EpilogueSupportFlag(unit1,unit2,flag) "CHECK_ALIVE unit1; BEQ flag 0xc 0x0;CHECK_ALIVE unit2; BEQ flag 0xc 0x0;GetSupportLevel(unit1,unit2); SVAL 0x2 ASupport; BNE flag 0x1 0x2; ENUT flag; LABEL flag"
@@ -110,6 +87,77 @@ ALIGN 4
 #define EpilogueFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueNoFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 
+
+
+PortResolution:
+EpilogueMapSwap(Interlude2,20,1)
+//loads
+LOAD1 0x0 EpiloguePortGuaranteedUnits
+EpilogueUnitLoad(Bechamel,EpiloguePortBechamel,0x1)
+EpilogueUnitLoad(Hollandaise,EpiloguePortHollandaise,0x2)
+EpilogueUnitLoad(Agnes,EpiloguePortAgnes,0x3)
+EpilogueFlagUnitLoad(Apollo,ApolloBechamelFlag,EpiloguePortApollo,0x4)
+EpilogueFlagUnitLoad(Toddsworth,CharleyToddsworthFlag,EpiloguePortToddsworth,0x5)
+CHECK_EVENTID SamEmileFlag
+BNE 0x11 0xc 0x0
+EpilogueFlagUnitLoad(Sam,SamBechamelFlag,EpiloguePortSam,0x12)
+EpilogueFlagUnitLoad(Sam,SamCharleyFlag,EpiloguePortSam,0x13)
+LABEL 0x11
+CHECK_EVENTID BOATFLAGWOO
+BEQ 0x10 0xc 0x0
+EpilogueUnitLoad(Natasia,EpiloguePortNatasia,0x6)
+CHECK_EVENTID PeggyButchFlag
+BEQ 0x10 0xc 0x0
+EpilogueFlagUnitLoad(Peggy,NatasiaPeggyFlag,EpiloguePortPeggy,0x7)
+LABEL 0x10
+FADU 0x4
+STAL 120
+//text
+CHECK_EVENTID BOATFLAGWOO
+BEQ 0x101 0xc 0x0
+	FlashCursor(Natasia,30)
+	FlashCursor(Bechamel,30)
+	CHECK_EVENTID BlairNatasiaFlag
+	BNE 0x65 0xc 0x0
+	Text(Epilogue_BechamelNatasiaPort)//natasia bechamel
+	GOTO 0x66
+		LABEL 0x65
+		CHECK_EVENTID GirlkissingFlag
+		BNE 0x67 0xc 0x0
+		Text(Epilogue_BechamelNatasiaPortAlt)//natasia bechamel, blair kissing natasia
+		GOTO 0x66
+		Text(Epilogue_BechamelNatasiaPortAlt2)//natasia bechamel, blair kissing several girls
+		LABEL 0x67
+	LABEL 0x66
+	CHECK_EVENTID PeggyButchFlag
+		BEQ 0x102 0xc 0x0
+		EpilogueFlagUnitText(Peggy,NatasiaPeggyFlag,Epilogue_PeggyPort,0x71)//peggy natasia
+		LABEL 0x102
+LABEL 0x101
+CHECK_EVENTID ApolloBechamelFlag
+BEQ 0x55 0xc 0x0
+	FlashCursor(Apollo,30)
+	FlashCursor(Bechamel,30)
+	Text(Epilogue_ApolloBechamelPort)//apollo bech
+	GOTO 0x68
+LABEL 0x55
+EpilogueNoFlagUnitText(Bechamel,BOATFLAGWOO,Epilogue_BechamelPort,0x68)//lonely bech
+CHECK_EVENTID SamBechamelFlag
+BEQ 0x51 0xc 0x0
+EpilogueNoFlagUnitText(Sam,SamCharleyFlag,Epilogue_SamPort,0x51)//sam no charley
+CHECK_EVENTID SamCharleyFlag
+BEQ 0x50 0xc 0x0
+	FlashCursor(Sam,30)
+	FlashCursor(Charley,30)
+	Text(Epilogue_SamCharleyPort)//charley sam
+LABEL 0x50
+EpilogueNoFlagUnitText(Charley,SamCharleyFlag,Epilogue_CharleyPort,0x52)//solo charley
+EpilogueFlagUnitText(Toddsworth,CharleyToddsworthFlag,Epilogue_ToddsworthPort,0x53)//charley todd
+EpilogueFlagUnitText(Hollandaise,BechamelHollandaiseFlag,Epilogue_HollandaisePortAlt,0x76)//hollandaise support
+EpilogueNoFlagUnitText(Hollandaise,BechamelHollandaiseFlag,Epilogue_HollandaisePort,0x77)//hollandaise no support
+EpilogueUnitText(Agnes,Epilogue_AgnesPort,0x79)//agnes
+STAL 120
+EndEvent
 
 ElbaCorResolution:
 EpilogueMapSwap(Interlude5,8,12)
@@ -417,14 +465,6 @@ MNTS 0x1
 //MoveToChapter(HubMap)
 ENDA
 
-PortResolution:
-EpilogueMapSwap(Interlude2,20,1)
-//loads
-FADU 0x4
-STAL 120
-//text
-STAL 120
-EndEvent
 
 OpistiaResolution:
 EpilogueMapSwap(Interlude4,5,31)
@@ -623,6 +663,67 @@ UNIT
 ALIGN 4
 EpilogueMevionJeff:
 UNIT Jeff 0x0 0x0 Level(1,Ally,0) [11,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueElbaCorGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [6,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Zeke 0x0 0x0 Level(1,Ally,0) [4,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Hyperius 0x0 0x0 Level(1,Ally,0) [7,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Alexis 0x0 0x0 Level(1,Ally,0) [8,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Cassius 0x0 0x0 Level(1,Ally,0) [4,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Rachael 0x0 0x0 Level(1,Ally,0) [3,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Brandl 0x0 0x0 Level(1,NPC,0) [5,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueElbaCorJeff:
+UNIT Jeff 0x0 0x0 Level(1,Ally,0) [9,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueElbaCorLeila:
+UNIT Leila 0x0 0x0 Level(1,Ally,0) [1,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueElbaCorMikey:
+UNIT Mikey 0x0 0x0 Level(1,Ally,0) [6,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpiloguePortGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [15,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Charley 0x0 0x0 Level(1,Ally,0) [16,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpiloguePortBechamel:
+UNIT Bechamel 0x0 0x0 Level(1,Ally,0) [24,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpiloguePortHollandaise:
+UNIT Hollandaise 0x0 0x0 Level(1,Ally,0) [23,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpiloguePortAgnes:
+UNIT Agnes 0x0 0x0 Level(1,Ally,0) [25,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpiloguePortSam:
+UNIT Sam 0x0 0x0 Level(1,Ally,0) [19,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpiloguePortToddsworth:
+UNIT Toddsworth 0x0 0x0 Level(1,Ally,0) [15,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpiloguePortApollo:
+UNIT Apollo 0x0 0x0 Level(1,Ally,0) [25,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpiloguePortPeggy:
+UNIT Peggy 0x0 0x0 Level(1,Ally,0) [20,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpiloguePortNatasia:
+UNIT Natasia 0x0 0x0 Level(1,Ally,0) [21,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4

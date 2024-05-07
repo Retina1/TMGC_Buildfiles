@@ -117,8 +117,9 @@ int GetUnitExpMultiplier(struct Unit* actor, struct Unit* target) {
 int GetUnitKillExpBonus(struct Unit* actor, struct Unit* target) {
     int result;
 
-    if (target->curHP != 0)
-        return 0;
+    if (target->curHP != 0){
+		if (GetUnitEquippedWeapon(actor) != 6) //wrath staff use gives kill exp
+	return 0;}
 
     result = GetUnitPowerLevel(target);
 

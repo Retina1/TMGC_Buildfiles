@@ -29,6 +29,8 @@
 #define DisaIfDead(unit) "CHECK_ALIVE unit; BNE unit 0xc 0x0; DISA unit; LABEL unit"
 #define RandomRainSetter "RANDOMNUMBER 9; BNE 0x4368 0xc 0x0; WEATHER 0x4; LABEL 0x4368"
 
+#define SetUnitSkills(unit,skillid1,skillid2,skillid3,skillid4) "Write_Byte(skillid1,0x203E884+(unit*0x10)+0x1);Write_Byte(skillid2,0x203E884+(unit*0x10)+0x2);Write_Byte(skillid3,0x203E884+(unit*0x10)+0x3);Write_Byte(skillid4,0x203E884+(unit*0x10)+0x4)"
+
 #define EndgameQuote(unit,text) "CHECK_DEPLOYED unit; BEQ unit 0xc 0x0; Text(text); LABEL unit"
 
 #define RefreshDurabilityItems "SVAL 1 0; ASMC RefreshItemsASMC|1"

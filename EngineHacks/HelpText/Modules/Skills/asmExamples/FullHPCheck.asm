@@ -13,7 +13,7 @@
 		ldrb r1, [r0, #0x12]
 		ldrb r2, [r0, #0x13] @currhp
 		cmp r2, r1
-		bgt End
+		bne End
 			
 			mov		r3, #1
 				

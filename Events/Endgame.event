@@ -450,6 +450,7 @@ UNIT
 ALIGN 4
 
 BeginningScene:
+//SetUnitSkills(SecretLaronde,ShoveID,ReadyAimID,SupplyID,0x0) twas just a macro test
 ResetViridianConvoy
 ENUT GuideChptE
 CHECK_ALIVE Elcorian
@@ -559,11 +560,37 @@ EndingScene:
 ResetBaseFlags
 MUSC 0x0
 FADI 2
+CHECK_ALIVE Arin
+BEQ 0x130 0xc 0x0
+ENUF ArinDeadFlag
+LABEL 0x130
+CHECK_ALIVE Hyperius
+BEQ 0x131 0xc 0x0
+ENUF HyperiusDeadFlag
+LABEL 0x131
+//sad ending if blair has any dead lovers
 CHECK_EVENTID ArinDeadFlag
-BEQ 0x90 0xc 0x0
-CHECK_EVENTID GirlkissingFlag
-BNE 0x90 0xc 0x0
-BranchIfNotSupport(Blair,Arin,ASupport,0x90)
+BEQ 0x402 0xc 0x0
+BranchIfSupport(Blair,Arin,ASupport,0x400)
+LABEL 0x402
+CHECK_ALIVE Natasia
+BNE 0x403 0xc 0x0
+BranchIfSupport(Blair,Natasia,ASupport,0x400)
+LABEL 0x403
+CHECK_ALIVE Avan
+BNE 0x404 0xc 0x0
+BranchIfSupport(Blair,Avan,ASupport,0x400)
+LABEL 0x404
+CHECK_ALIVE Yuyu
+BNE 0x405 0xc 0x0
+BranchIfSupport(Blair,Yuyu,ASupport,0x400)
+LABEL 0x405
+CHECK_ALIVE Estelle
+BNE 0x406 0xc 0x0
+BranchIfSupport(Blair,Estelle,ASupport,0x400)
+LABEL 0x406
+GOTO 0x90
+LABEL 0x400
 	STAL 150
 	MUSC S_TheSwan
 	ASMC 0xC4879 //credits

@@ -1737,10 +1737,11 @@ Label_0161E90C:
  BYTE   N12  Bn1
  BYTE   N12  En2
  BYTE   W12
- BYTE   TIE  Fs1
+ /*BYTE   TIE  Fs1
  BYTE   TIE  As1
  BYTE   TIE  Cs2
- BYTE   TIE  Fs2
+ BYTE   TIE  Fs2*/
+ //fix buggy tieover eventually
  BYTE   W72
 //  #02 //074   ----------------------------------------
  BYTE   W96
@@ -1751,10 +1752,10 @@ Label_0161E90C:
 //  #02 //077   ----------------------------------------
  BYTE   W96
 //  #02 //078   ----------------------------------------
- BYTE   W48
  BYTE   EOT
- BYTE   Fs1  v072
- BYTE   Cs2  v080
+ BYTE   W48
+ //BYTE   Fs1  v072
+ //BYTE   Cs2  v080
  BYTE   GoTo
   POIN2 Label_0161E1BC
 //  #02 //079   ----------------------------------------

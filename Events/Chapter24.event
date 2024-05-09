@@ -615,6 +615,13 @@ MUSC 0x0
 GOTO 0x4
 LABEL 0x3
 Text(DesmondFlynnBPSupportAlt)
+FADI 60
+VCWF 0x0
+SetUnitStatus(Flynn,BowExp,71)
+VCWF 0x7
+FADU 60
+SystemText(C24FlynnBowRank)
+GiveItem(SteelBow,Flynn)
 SetSupport(Desmond,Flynn,BPSupport,1)
 LABEL 0x4
 EndEvent

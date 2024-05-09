@@ -8,12 +8,20 @@ ALIGN 4
 #inctext lyn "SpellFix.elf" "SpellFixHook.elf" //Fix dodge to front glitch (thanks Snakey1)
 
 #ifdef _FE8_
-  #define SpellTable $5d4e60
+  //#define SpellTable $5d4e60
  // #define CSATable $EF2F20 //CHANGE THIS TO A LOCATION WHERE YOU KNOW THERE ARE 0x13EC BYTES OF FREE SPACE
 
+
+ALIGN 16
+  SpellTable:     // Was $5d4e60
+  #incbin "Repointed_Spell_Table.dmp"
+ ALIGN 16
   CSATable:
   #incbin BlankCSATable.dmp
 PUSH
+ORG $5B3F8
+POIN SpellTable
+
   ORG $95d780
   CSAEngine:
   #incbin "CSA System_fe8.dmp" //the custom spell engine. All custom spells point here.

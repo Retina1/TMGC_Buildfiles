@@ -72,6 +72,9 @@ DalstCastlePalette:
 ALIGN 4
 AercolynCastlePalette:
 #incbin "Tilesets/AercolynCastle_pal.dmp"
+ALIGN 4
+MevionCastlePalette:
+#incbin "Tilesets/MevionCastle_pal.dmp"
 
 ALIGN 4
 CastleTiles:
@@ -493,6 +496,7 @@ EventPointerTable(PALYgstraCastle, YgstraCastlePalette)
 EventPointerTable(PALElbaCorCastle, ElbaCorCastlePalette)
 EventPointerTable(PALDalstCastle, DalstCastlePalette)
 EventPointerTable(PALAercolynCastle, AercolynCastlePalette)
+EventPointerTable(PALMevionCastle, MevionCastlePalette)
 EventPointerTable(TILCastle, CastleTiles)
 EventPointerTable(TILGreatRiver, GreatRiverCastleTiles)
 EventPointerTable(ANICastle, CastleAnims)

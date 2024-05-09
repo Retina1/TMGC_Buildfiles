@@ -1,11 +1,29 @@
+//spells with duplicate anims
+//arena anima/trisagion - flamesweep
+//arena light/javelin rain - javelin rain
+//mazandyne/galewind - tornado
+//starfall/avalon - meteor (maybe avalon gets alt color)
+//whitacre tomes use aura/fenrir/thunders
+//knoggelvi/holy brand/voidwake - blue explosion - new for knoggelvi
+//freikugel/corruption/arena dark/waning/voulche - blue explosion
+//force spike/aspect/hopesinger/pierce - light blast
+//nocturne/annihilation - dulam
+//morning star/invert - aura
+//please get a better ballista animation
+//dragons all use same flametongue
+
+//give gespsst its own thing
+
+//new anims - lux, nox, aspect, pierce, waning, voulche
+
 #define NoSpellAnim 0xffff
 #define MapOnlyAnim 0xfffe
 #define HandAxeAnim 0x1
 #define ArrowAnim 0x2
 #define JavelinAnim 0x3
 #define BlueExplosionAnim 0x11
-#define BindingBladeAnim 0x12
-#define FlametongueAnim 0x13
+#define BindingBladeAnim 0x12//unused
+#define FlametongueAnim 0x13//dragon breaths
 #define LightBlastAnim 0x14
 #define PurpleBlastAnim 0x15
 #define FireAnim 0x16
@@ -14,7 +32,7 @@
 #define ThunderAnim 0x19
 #define BoltingAnim 0x1a
 #define FimbulvetrAnim 0x1b
-#define AircaliburAnim 0x1c //kills bgm
+#define AircaliburAnim 0x1c //unused
 #define FluxAnim 0x1d
 #define NosferatuAnim 0x1e
 #define LightningAnim 0x1f
@@ -28,12 +46,12 @@
 #define MendAnim 0x27
 #define RecoverAnim 0x28
 #define PhysicAnim 0x29
-#define FortifyAnim 0x2a //stalls battles
-#define LatonaAnim 0x2b //stalls battles
+#define FortifyAnim 0x2a //unused
+#define LatonaAnim 0x2b //unused
 #define RestoreAnim 0x2c
 #define SilenceAnim 0x2d
 #define SleepAnim 0x2e
-#define HammerneAnim 0x2f //apparently unused?
+#define HammerneAnim 0x2f //apparently unused? i doubt it
 #define BerserkStaffAnim 0x30
 #define BarrierAnim 0x31
 #define TornadoAnim 0x32
@@ -44,11 +62,6 @@
 #define AuraAnim 0x37
 #define StarlightAnim 0x38
 #define ThoronAnim 0x39
-//#define FilaMightAnim 0x3a
-//#define ThorIreAnim 0x3b
-//#define NiniGraceAnim 0x3c
-//#define SetLitanyAnim 0x3d
-//#define StoneAnim 0x3e
 #define DulamAnim 0x3a
 #define ExordiumAnim 0x3b
 #define FlamesweepAnim 0x3c
@@ -56,18 +69,30 @@
 #define JormungandAnim 0x3e
 #define IvaldiAnim 0x3f
 #define MeteorAnim 0x40
-#define GleipnirAnim 0x41
+#define GleipnirAnim 0x41//unused
 #define CrimsonEyeAnim 0x42
 #define EvilEyeAnim 0x43
-#define ShadowshotAnim 0x44
-#define DemonSurgeAnim 0x45
-#define NaglfarAnim 0x46
+#define ShadowshotAnim 0x44//unused
+#define DemonSurgeAnim 0x45//unused
+#define NaglfarAnim 0x46//unused
 #define WretchedBreathAnim 0x47
 #define AwakenAnim 0x48
 #define NewBallistaAnim 0x49
-
-
-
-
-
+#define PurpleMeteorAnim 0x4a //avalon
+#define ExfireAnim 0x4b// hephae
+#define WindAnim 0x4c//mazandyne
+#define FrostbiteAnim 0x4d//cloudburst
+#define DivineBreathAnim 0x4e
+#define EarthBreathAnim 0x4f
+#define DemonBreathAnim 0x50
+#define IceBreathAnim 0x51
+#define WyvernBreathAnim 0x52
+#define DivineSigilAnim 0x53//banish
+#define DarkSigilAnim 0x54//knoggelvi
+#define GodspesntAnim 0x55//morningstar - not working
+#define LuceAnim 0x56//arena light - not working
+#define AureolaAnim 0x57//aspect - not working yet
+#define GespenstAnim 0x58//what do you think - not working yet
+#define MiasmaAnim 0x59//corruption - not working yet
+#define EreshkigalAnim 0x5a//annihilation - not working yet
 

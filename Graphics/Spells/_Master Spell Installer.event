@@ -1,5 +1,6 @@
 #include "CSA System FE8/Master Spell Animation Installer.event"
-
+//old stupid method
+{
 #include "Event/Awaken.event"
 #include "Event/Ballista.event"
 #include "Event/BlueExplosion.event"
@@ -18,5 +19,39 @@
 #include "Event/Starlight.event"
 #include "Event/Thoron.event"
 #include "Event/Tornado.event"
-
+}
+//new less stupid method
+{
+#include "Txt/DarkBreath/DarkBreath.event"
+}
+{
+#include "Txt/DivineBreath/WithoutEffect/DivineBreath.event"
+}
+{
+#include "Txt/EarthBreath/Melee/EarthBreath.event"
+}
+{
+#include "Txt/IceBreath/Melee/IceBreath.event"
+}
+{
+#include "Txt/PoisonBreath/PoisonBreath.event"
+}
+{
+#include "Txt/DarkSigil/DarkSigil.event"
+}
+{
+#include "Txt/DivineSigil/DivineSigil.event"
+}
+{
+#include "Txt/Exfire/Exfire/Exfire.event"
+}
+{
+#include "Txt/PurpleMeteor/Meteor/Meteor.event"
+}
+{
+#include "Txt/Frostbite/Frostbite.event"
+}
+{
+#include "Txt/Wind/Wind.event"
+}
 //currently breaks promotions if all included- figure out later

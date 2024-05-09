@@ -38,11 +38,11 @@ ldrh r3, [r4, r1]
 mov r0,#2
 orr r3,r3,r0
 strh r3, [r4, r1]
-@ add a ton of crit
-mov r1, #0x66
-ldrh r0, [r4, r1]
-add r0, #150
-strh r0, [r4,r1]
+@ do not add a ton of crit
+@mov r1, #0x66
+@ldrh r0, [r4, r1]
+@add r0, #150
+@strh r0, [r4,r1]
 
 End:
 pop {r4-r7, r15}

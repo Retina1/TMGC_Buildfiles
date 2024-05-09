@@ -6,13 +6,10 @@
 .type GetCharDescEntry, %function
 
 		GetCharDescEntry:
+		@whoops this checks rom not ram
 		ldr		r1, =StatScreenStruct
 		ldr		r1, [r1,#0x0C]
 		ldr		r1, [r1]
-		ldrb	r2, [r1,#4] @Char id
-		lsr 	r2,#6
-		cmp		r2,#0 @check if not player, no age or pronouns if so
-		bne		NoEntry
 		ldrb	r1, [r1,#4] @Char id
 		
 		ldr		r0, =CharDescList

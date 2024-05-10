@@ -43,7 +43,7 @@
 				mov		r4, r0
 		
 		AddLine:
-		add		r5, #0x10 @r1 = total number of lines helptext requires divided by 0x10; this adds one line for labels & values
+		add		r5, #0x10 @r1 = total number of lines helptext requires multiplied by 0x10; this adds one line for labels & values
 		add		r6, #0x44
 		strh	r4, [r6]
 		strh	r5, [r6,#2]

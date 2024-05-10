@@ -23,7 +23,6 @@
 		beq		ValuesDrawn
 		
 			mov		r0, r4
-			mov		r1, r5
 			mov		lr, r3
 			.short	0xF800
 		

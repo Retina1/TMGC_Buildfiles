@@ -1,0 +1,262 @@
+
+#define CharDescEntry(charID,age,pronounsTextID) "BYTE charID age; SHORT pronounsTextID; WORD 0"
+#define DynamicCharDescEntry(charID,age,pronounsTextID,routinePointer) "BYTE charID age; SHORT pronounsTextID; POIN routinePointer"
+//trust me it's easier to keep HeAny/SheAny named as is and just change their text
+CharDescList:
+CharDescEntry(Blair,17,SheThey)
+CharDescEntry(Sveltzalus,0,HeAny)
+CharDescEntry(Addington,1,SheAny)
+CharDescEntry(Avan,19,SheThey)
+CharDescEntry(Artemis,31,SheHer)
+CharDescEntry(Hollandaise,29,SheThey)
+CharDescEntry(Vladmir,64,HeHim)
+CharDescEntry(Zacharias,24,HeThey)
+CharDescEntry(Damien,20,HeThey)
+CharDescEntry(Ptolemy,20,HeThey)
+CharDescEntry(Peter,39,HeHim)
+CharDescEntry(Joan,29,SheHer)
+CharDescEntry(Sonia,26,SheThey)
+CharDescEntry(Johan,18,HeHim)
+CharDescEntry(JohanC2,18,HeHim)
+CharDescEntry(Tobias,53,HeHim)
+CharDescEntry(EnemySonia,26,SheThey)
+CharDescEntry(EnemyJoan,29,SheHer)
+CharDescEntry(JohanC2,18,HeHim)
+CharDescEntry(EnemyTobias,53,HeHim)
+CharDescEntry(Viridian,26,TheyThem)
+CharDescEntry(Freddric,24,HeThey)
+CharDescEntry(Dean,43,HeHim)
+CharDescEntry(Rift,23,HeHim)
+CharDescEntry(Estelle,19,SheThey)
+CharDescEntry(Leila,25,SheThey)
+CharDescEntry(SecretLaronde,22,HeHim)
+CharDescEntry(Laronde,22,HeHim)
+CharDescEntry(Dirk,20,HeThey)
+CharDescEntry(Eliza,16,SheThey)
+CharDescEntry(Blair,17,SheThey)
+CharDescEntry(Arin,18,SheThey)
+CharDescEntry(Kenneth,17,HeHim)
+CharDescEntry(Natasia,18,SheHer)
+CharDescEntry(Stefan,16,HeThey)
+CharDescEntry(Desmond,26,HeThey)
+CharDescEntry(Sam,19,SheThey)
+CharDescEntry(Josef,32,HeHim)
+CharDescEntry(Peggy,27,SheThey)
+CharDescEntry(Butch,43,HeHim)
+CharDescEntry(Cassius,19,HeThey)
+CharDescEntry(Rachael,20,SheHer)
+CharDescEntry(Emile,20,HeThey)
+CharDescEntry(Jeff,23,HeThey)
+CharDescEntry(Apollo,22,HeThey)
+CharDescEntry(Bechamel,26,HeHim)
+CharDescEntry(Hilbert,14,HeHim)
+CharDescEntry(Flynn,24,HeThey)
+CharDescEntry(Mikey,18,HeHim)
+CharDescEntry(Carbon,17,HeThey)
+CharDescEntry(Athena,37,SheHer)
+CharDescEntry(Charley,22,TheyThem)
+CharDescEntry(Zeke,17,HeThey)
+CharDescEntry(Hyperius,62,HeHim)
+CharDescEntry(Alexis,16,SheHer)
+CharDescEntry(C7Hyperius,62,HeHim)
+CharDescEntry(C7Alexis,16,SheHer)
+CharDescEntry(Toddsworth,23,HeThey)
+CharDescEntry(Horatio,26,HeThey)
+CharDescEntry(Simone,37,SheHer)
+CharDescEntry(Ian,10,HeHim)
+CharDescEntry(Elcorian,33,HeHim)
+CharDescEntry(FakeElcorian,33,HeHim)
+CharDescEntry(EnemyElcorian,33,HeHim)
+CharDescEntry(Rose,15,SheHer)
+CharDescEntry(Callum,35,HeHim)
+CharDescEntry(Manfred,31,HeHim)
+CharDescEntry(Wilhelm,28,HeHim)
+CharDescEntry(C7Wilhelm,28,HeHim)
+CharDescEntry(Argent,65,SheHer)
+CharDescEntry(Yuyu,20,SheThey)
+CharDescEntry(Chartreuse,20,SheThey)
+CharDescEntry(Agnes,27,SheHer)
+CharDescEntry(Gaylord,23,HeHim)
+CharDescEntry(UnitQ,24,SheThey)
+CharDescEntry(SecretClarque,48,HeHim)
+CharDescEntry(Clarque,48,HeHim)
+CharDescEntry(Tonnamin,39,HeHim)
+CharDescEntry(Kyrie,45,SheThey)
+CharDescEntry(SecretJonas,26,HeHim)
+
+CharDescEntry(Valeria,49,SheHer)
+CharDescEntry(I7Valeria,49,SheHer)
+CharDescEntry(Victor,51,HeHim)
+CharDescEntry(Olsen,30,AnyPronouns)
+//bosses and npcs
+CharDescEntry(Brandl,46,HeHim)
+CharDescEntry(Cid,41,HeHim)
+CharDescEntry(Davelarn,24,HeHim)
+CharDescEntry(Marque,28,HeHim)
+CharDescEntry(Brentson,32,HeHim)
+CharDescEntry(Helga,24,SheHer)
+CharDescEntry(Starque,26,HeHim)
+CharDescEntry(Mitchell,41,HeHim)
+CharDescEntry(Amundsen,36,HeHim)
+CharDescEntry(Zaine,29,HeHim)
+CharDescEntry(Esme,27,SheHer)
+CharDescEntry(Peter,38,HeHim)
+CharDescEntry(Gregorias,35,HeHim)
+CharDescEntry(Sofia,32,SheThey)
+CharDescEntry(Amara,28,SheHer)
+CharDescEntry(Valden,40,HeHim)
+CharDescEntry(Roark,24,HeHim)
+CharDescEntry(Vulture,38,HeHim)
+CharDescEntry(Parque,27,HeHim)
+CharDescEntry(Nicole,25,SheHer)
+CharDescEntry(Edward,27,HeHim)
+CharDescEntry(Eddie,29,HeHim)
+CharDescEntry(Eduardo,30,HeHim)
+CharDescEntry(Bungalas,33,HeThey)
+CharDescEntry(Michael,43,HeHim)
+CharDescEntry(Reynard,28,HeHim)
+CharDescEntry(Nathaniel,39,HeThey)
+CharDescEntry(Larson,31,HeThey)
+CharDescEntry(Fiora,38,SheThey)
+CharDescEntry(BossIneubrenos,0,SheThey)
+CharDescEntry(Mason,29,HeHim)
+CharDescEntry(Bobert,26,HeHim)
+CharDescEntry(Liam,34,HeHim)
+CharDescEntry(Neillstrom,41,HeHim)
+CharDescEntry(Ciraweiss,32,SheHer)
+CharDescEntry(Arbordia,38,HeHim)
+CharDescEntry(Arbordia2,38,HeHim)
+
+//End of list
+WORD 0
+ALIGN 4
+
+OverridePromoGainInfoList:
+/*This is for units with more than 2 tiers of classes; you can keep this list empty if this isn't applicable to your hack
+
+SHORT unitID numberOfOverrides
+BYTE classId1 classId2 classId3 0
+classId1: A class that the unit can promote to
+classId2: If this unit is in this class while looking at info about the first class, do not use this class for mov/con calculations
+classId3: If unit is in the second class, use this class for calculations instead
+Lastly, a zero is used to make each override word aligned
+
+Here's an example:
+BYTE Paladin Recruit_1 Cavalier 0
+If this unit is currently a Recruit_1 when the player views the Paladin page, the unit is treated as if they are a Cavalier for calculating the mov/con gains
+*/
+/*
+SHORT Ross 4
+BYTE Hero Journeyman_1 Fighter 0
+BYTE Warrior Journeyman_1 Fighter 0
+BYTE Berserker Journeyman_1 Pirate 0
+BYTE Journeyman_3 Journeyman_1 Journeyman_2 0
+*/
+//End of the list (do not need to terminate each character after all of their entries)
+WORD 0
+ALIGN 4
+
+
+/*
+#include "asmExamples/CheckForAgeRevelation.lyn.event"
+ALIGN 4
+
+#include "asmExamples/IdentifyAsWoman.lyn.event"
+ALIGN 4
+
+#include "asmExamples/PrologueFiveYearGap.lyn.event"
+ALIGN 4
+*/
+
+
+
+//-------------------------------------------
+//WIZARD CHECKPOINT
+//Do not touch anything below unless you know what you're doing
+//-------------------------------------------
+
+
+
+//---------------------------
+//Age/Pronouns
+//---------------------------
+
+	#include "asmCharDesc/GetCharDescEntry.lyn.event"
+	ALIGN 4
+
+	#include "asmCharDesc/GetAgeDigitCount.lyn.event"
+	ALIGN 4
+
+	//#include "asmCharDesc/NewNameDescGetter.lyn.event"
+	#include "asmCharDesc/NewNameDescGetter_ChangeUnitDesc.lyn.event"
+	ALIGN 4
+
+	#include "asmCharDesc/CharacterHelpTextSpace.lyn.event"
+	ALIGN 4
+
+	#include "asmCharDesc/CharacterHelpTextInfo.lyn.event"
+	ALIGN 4
+
+	CharacterLabelLink:
+	SHORT AgeLabel
+	SHORT PronounLabel
+
+	UnknownAgeLink:
+	SHORT UnknownAge
+
+	HeHimLink:
+	SHORT HeHim
+
+	SheHerLink:
+	SHORT SheHer
+
+	TheyThemLink:
+	SHORT TheyThem
+
+	AnyPronounsLink:
+	SHORT AnyPronouns
+
+	HeTheyLink:
+	SHORT HeThey
+
+	SheTheyLink:
+	SHORT SheThey
+
+	HeAnyLink:
+	SHORT HeAny
+
+	SheAnyLink:
+	SHORT SheAny
+
+	TheyAnyLink:
+	SHORT TheyAny
+	ALIGN 4
+
+
+//---------------------------
+//Promotion Information
+//---------------------------
+
+	#include "asmPromo/PromotionHelpTextSpace.lyn.event"
+	ALIGN 4
+
+	#include "asmPromo/PromotionHelpTextLabels.lyn.event"
+	ALIGN 4
+
+	#include "asmPromo/PromotionHelpTextValues.lyn.event"
+	ALIGN 4
+
+	#include "asmPromo/ShouldPromoGainInfoBeOverridden.lyn.event"
+	ALIGN 4
+
+	PromotionLabelLink:
+	SHORT ClassTextId
+	SHORT MovTextId
+	SHORT ConTextId
+	SHORT HpTextId
+	SHORT PowTextId
+	SHORT SklTextId
+	SHORT SpdTextId
+	SHORT DefTextId
+	SHORT ResTextId
+	ALIGN 4

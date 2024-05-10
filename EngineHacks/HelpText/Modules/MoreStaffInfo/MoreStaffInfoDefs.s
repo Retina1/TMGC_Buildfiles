@@ -16,7 +16,6 @@
 .equ GetItemRangeString2, 0x08016CC8
 .equ GetItemData, 0x080177B0
 .equ GetItemMight, 0x080175DC
-.equ GetItemCrit, 0x08017624
 .equ GetItemWExp, 0x08017798
 .equ GetItemCostPerUse, 0x08017754
 .equ __divsi3, 0x080D18FC

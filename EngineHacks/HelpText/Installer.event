@@ -1,0 +1,246 @@
+
+#include EAstdlib.event
+#include "Extensions/Hack Installation.txt"
+#include "Extensions/ProcDefinitions.txt"
+
+//Overwrites text ids for usage
+//#define USE_HELP_TEXT_TEXT
+
+//Modules (indented submodules cannot install if main module is not installed)
+#define USE_HELP_TEXT_MULTIPLE_PAGES
+#define USE_HELP_TEXT_MORE_STAFF_INFO
+#define USE_HELP_TEXT_WEAPON_RANK
+//#define USE_HELP_TEXT_CALC
+#define USE_HELP_TEXT_CHAR_AND_PROMO
+	//#define LINK_CHAR_DESC_WITH_PROMO
+	//#define KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
+	//#define LINK_CLASS_DESC_WITH_PROMO
+	//#define PROMO_BASES_DIFFERENCE_DISPLAY
+#define USE_HELP_TEXT_SKILL
+#define USE_HELP_TEXT_CAP
+	//#define USE_HELP_TEXT_CAPS_WITH_MODS
+//#define USE_HELP_TEXT_AFFINITY
+#define USE_OVERWRITE_HELP_TEXT_BOX_POSITION
+#define USE_WEAPON_RANK_MOVE_RIGHT_CHECK
+
+//Compatibility Modules
+#define USE_HELP_TEXT_SUPPORT_REWORK_REWORK
+#define USE_HELP_TEXT_CHANGE_UNIT_DESC
+
+//SkillSystem Config settings. If any of these are relevant to your hack, you only need to uncomment/define if Config.event isn't being run at the same time as this.
+//#define USE_STRMAG_SPLIT
+//#define ONLY_SHOW_USED_RANKS
+
+#include "ExtendWeaponDescBox/Installer.event"
+
+
+
+//-------------------------------------------
+//WIZARD CHECKPOINT
+//Do not touch anything below unless you know what you're doing
+//-------------------------------------------
+
+
+
+#define gHelpTextExtraInfoRAM 0x0203E77C //page stored at [offset,#2]
+
+HelpTextExtraInfoRAMLocation:
+WORD gHelpTextExtraInfoRAM
+
+//Undefines submodules if main module not installed
+#ifndef USE_HELP_TEXT_CAP
+	#ifdef USE_HELP_TEXT_CAPS_WITH_MODS
+		#undef USE_HELP_TEXT_CAPS_WITH_MODS
+	#endif
+#endif
+
+#ifndef USE_HELP_TEXT_CHAR_AND_PROMO
+
+	#ifdef LINK_CHAR_DESC_WITH_PROMO
+		#undef LINK_CHAR_DESC_WITH_PROMO
+	#endif
+	
+	#ifdef KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
+		#undef KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
+	#endif
+	
+	#ifdef LINK_CLASS_DESC_WITH_PROMO
+		#undef LINK_CLASS_DESC_WITH_PROMO
+	#endif
+	
+	#ifdef PROMO_BASES_DIFFERENCE_DISPLAY
+		#undef PROMO_BASES_DIFFERENCE_DISPLAY
+	#endif
+
+#endif
+
+//USE_HELP_TEXT_PROMO exists to simplify certain conditionals later on
+#ifdef LINK_CHAR_DESC_WITH_PROMO
+	#define USE_HELP_TEXT_PROMO
+#else
+	#ifdef KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
+		#define USE_HELP_TEXT_PROMO
+	#else
+		#ifdef LINK_CLASS_DESC_WITH_PROMO
+			#define USE_HELP_TEXT_PROMO
+		#endif
+	#endif
+#endif
+
+//Force multipage installation if promotion is used specific modules are being used
+#ifdef USE_HELP_TEXT_PROMO
+	#ifndef USE_HELP_TEXT_MULTIPLE_PAGES
+		#define USE_HELP_TEXT_MULTIPLE_PAGES
+	#endif
+#endif
+
+//Incompatible settings
+#ifdef LINK_CHAR_DESC_WITH_PROMO
+	#ifdef KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
+		ERROR "LINK_CHAR_DESC_WITH_PROMO" and "KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO" cannot be used at the same time
+	#endif
+#endif
+
+#ifdef USE_HELP_TEXT_TEXT
+	#include "HelpTextText.event"
+#endif
+
+/*
+Different types of helptext has been incorporated by using the same spot in the proc when looking at items/save files. For this reason, ids in HelpTextIdTable start at 0xFF01. Things that require a different method of verification are in HelpTextTypeList.
+If you have an item with an id of 0xFF, there shouldn't be any problems if that item is 
+indestructible. If the durability on that item is being tracked, then you will want to change the ids in HelpTextIdTable to an indestructible item (e.g. if 0x80 is indestructible, use 0x8001, 0x8002, etc.).
+*/
+
+#define HTITE(helpTextTypeFirstId,helpTextTypeRange,addAdditionalSpaceRoutine,labelWritingRoutine,numberWritingRoutine) "SHORT helpTextTypeFirstId helpTextTypeFirstId+helpTextTypeRange-1; POIN addAdditionalSpaceRoutine labelWritingRoutine numberWritingRoutine"
+#define HTITE(helpTextTypeFirstId,helpTextTypeRange,addAdditionalSpaceRoutine,writingRoutine) "SHORT helpTextTypeFirstId helpTextTypeFirstId+helpTextTypeRange-1; POIN addAdditionalSpaceRoutine writingRoutine; WORD 0"
+#define HTITE(helpTextTypeFirstId,helpTextTypeRange,addAdditionalSpaceRoutine) "SHORT helpTextTypeFirstId helpTextTypeFirstId+helpTextTypeRange-1; POIN addAdditionalSpaceRoutine; WORD 0 0"
+
+#define HTTLE(identifyTypeRoutine,addAdditionalSpaceRoutine,labelWritingRoutine,numberWritingRoutine) "POIN identifyTypeRoutine addAdditionalSpaceRoutine labelWritingRoutine numberWritingRoutine"
+#define HTTLE(identifyTypeRoutine,addAdditionalSpaceRoutine,writingRoutine) "POIN identifyTypeRoutine addAdditionalSpaceRoutine writingRoutine; WORD 0"
+
+
+HelpTextIdTable:
+
+	//most entries don't need to be in this exact order, but keep entry ids in sequential order
+	
+	//If skill helptext stuff is being used, this needs to be the first entry on HelpTextIdTable
+	#ifdef USE_HELP_TEXT_SKILL
+		SkillHelpTextLink:
+		HTITE(0x001,0x00FF,SkillHelpTextSpace,SkillHelpTextExtraInfo)
+	#endif
+	
+	#ifdef USE_HELP_TEXT_MULTIPLE_PAGES
+		MultiplePageHelpTextLink:
+		HTITE(0x0100,1,DefaultHelpTextSpace)
+	#endif
+	
+	#ifdef USE_HELP_TEXT_WEAPON_RANK
+		RankHelpTextLink:
+		HTITE(0x0101,1,RankHelpTextSpace,RankHelpTextLabels,RankHelpTextValues)
+	#endif
+	
+	#ifdef USE_HELP_TEXT_CALC
+		CalcHelpTextLink:
+		HTITE(0x0102,1,CalcHelpTextSpace,CalcHelpTextLabel,CalcHelpTextValues)
+	#endif
+	
+	#ifdef USE_HELP_TEXT_CHAR_AND_PROMO
+		
+		VanillaCharacterHelpTextLink:
+		HTITE(0x0103,1,DefaultHelpTextSpace)
+		
+		CharacterHelpTextLink:
+		HTITE(0x0104,1,CharacterHelpTextSpace,CharacterHelpTextInfo)
+		
+		#ifdef USE_HELP_TEXT_PROMO
+			PromotionHelpTextLink:
+			HTITE(0x0105,1,PromotionHelpTextSpace,PromotionHelpTextLabels,PromotionHelpTextValues)
+		#endif
+		
+		#ifdef LINK_CLASS_DESC_WITH_PROMO
+			ClassHelpTextLink:
+			HTITE(0x0106,1,DefaultHelpTextSpace)
+		#endif
+		
+	#endif
+	
+	#ifdef USE_HELP_TEXT_CAP
+		CapHelpTextLink:
+		HTITE(0x0107,1,StatCapHelpTextSpace,StatCapHelpTextInfo)
+	#endif
+	
+	#ifdef USE_HELP_TEXT_AFFINITY
+		AffinityHelpTextLink:
+		HTITE(0x0108,1,AffinityHelpTextSpace,AffinityHelpTextInfo)
+	#endif
+//		HTITE(0xFFFD,1,SupportReworkReworkSpace,SupportReworkReworkLabels,SupportReworkReworkValues)
+
+	
+	WORD 0 //end of table
+
+
+HelpTextTypeList:
+
+	#ifdef USE_HELP_TEXT_SUPPORT_REWORK_REWORK
+		HTTLE(SupportReworkReworkCheck,SupportReworkReworkSpace,SupportReworkReworkLabels,SupportReworkReworkValues)
+	#endif
+	
+	HTTLE(SaveFileHelpTextCheck,SaveFileHelpTextSpace,SaveFileHelpTextLabels,SaveFileHelpTextValues)
+	
+	HTTLE(WeaponMagicHelpTextCheck,WeaponMagicHelpTextSpace,WeaponMagicHelpTextLabels,WeaponMagicHelpTextValues)
+	
+	#ifndef USE_HELP_TEXT_MORE_STAFF_INFO
+		HTTLE(StaffHelpTextCheck,OneLineHelpTextSpace,StaffHelpTextInfo)
+	#else
+		HTTLE(StaffHelpTextCheck,MoreStaffHelpTextSpace,MoreStaffHelpTextLabels,MoreStaffHelpTextValues)
+	#endif
+	
+	//end of the list
+	WORD 0
+	POIN DefaultHelpTextSpace
+	WORD 0 0
+
+
+#include "_HelpTextEssentials/HelpTextEssentials.event"
+
+#ifdef USE_HELP_TEXT_MULTIPLE_PAGES
+	#include "Modules/MultipleHelpTextPages/MultipleHelpTextPages.event"
+#endif
+
+#ifdef USE_HELP_TEXT_WEAPON_RANK
+	#include "Modules/WeaponRanks/WeaponRanks.event"
+#endif
+
+#ifdef USE_HELP_TEXT_CALC
+	#include "Modules/Calc/Calc.event"
+#endif
+
+#ifdef USE_HELP_TEXT_CHAR_AND_PROMO
+	#include "Modules/Character/Character.event"
+#endif
+
+#ifdef USE_HELP_TEXT_MORE_STAFF_INFO
+	#include "Modules/MoreStaffInfo/MoreStaffInfo.event"
+#endif
+
+#ifdef USE_HELP_TEXT_SKILL
+	#include "Modules/Skills/Skills.event"
+#endif
+
+#ifdef USE_HELP_TEXT_CAP
+	#include "Modules/Cap/Cap.event"
+#endif
+
+#ifdef USE_HELP_TEXT_AFFINITY
+	#include "Modules/Affinity/Affinity.event"
+#endif
+
+#ifdef USE_OVERWRITE_HELP_TEXT_BOX_POSITION
+	#include "Modules/OverwriteHelpTextBoxPosition/OverwriteHelpTextBoxPosition.event"
+#endif
+
+#ifdef USE_HELP_TEXT_SUPPORT_REWORK_REWORK
+	#include "Modules/SupportReworkRework/SupportReworkRework.lyn.event"
+#endif
+
+#include "StatScreen_HelpBoxIdle/StatScreen_HelpBoxIdle.event"

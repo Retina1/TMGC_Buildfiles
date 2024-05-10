@@ -7,8 +7,10 @@
 
 
 		NextPageOfTextForSkill:
-		ldr		r3, =gSomeTextId
-		ldrb	r3, [r3]
+		push	{r4}
+		ldr		r4, =HelpTextExtraInfoRAMLocation
+		ldr		r4, [r4]
+		ldrb	r3, [r4,#2]
 		ldrb	r2, [r0,#1]
 		cmp		r3, r2
 		blt		GetNextPageNumber
@@ -17,8 +19,11 @@
 			
 		GetNextPageNumber:
 		add		r2, r3, #1
-		ldr		r3, =gSomeTextId
-		strb	r2, [r3]
+		strb	r2, [r4,#2]
+		
+		ldrb	r3, [r0]
+		strh	r3, [r4]
+		
 		cmp		r2, #1
 		beq		FirstPage
 			
@@ -29,13 +34,14 @@
 			@no labels & values unless first page
 			ldr		r3, =MultiplePageHelpTextLink
 			ldrh	r3, [r3]
-			strh	r3, [r1,#2]
+			strh	r3, [r4]
 			b		End
 		
 		FirstPage:
 		mov		r0, #0
 		
 		End:
+		pop		{r4}
 		bx		r14
 		
 		.align

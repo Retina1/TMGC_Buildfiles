@@ -12,13 +12,12 @@
 		SkillHelpTextCheck:
 		push	{r14}
 		
-		@Don't let items be identified as skills
-		lsl		r1, r0, #24
-		lsr		r1, #24
-		cmp		r1, #0
-		bne		NotASkill
+		ldr		r0, =HelpTextExtraInfoRAMLocation
+		ldr		r0, [r0]
+		ldrh	r0, [r0]
+		cmp		r0, #0
+		beq		End
 		
-			lsr		r0, #8
 			blh		FindSkillExtraInfoEntry, r1
 			cmp		r0, #0
 			beq		End

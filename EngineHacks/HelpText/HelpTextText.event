@@ -92,204 +92,219 @@
 
 #endif //USE_HELP_TEXT_CALC
 
-#ifdef USE_HELP_TEXT_CHARACTER
+#ifdef USE_HELP_TEXT_CHAR_AND_PROMO
 
-	#define AgeLabel HelpTextTextId
-	#define PronounLabel HelpTextTextId+1
-	#define UnknownAge HelpTextTextId+2
-	#define HeHim HelpTextTextId+3
-	#define SheHer HelpTextTextId+4
-	#define TheyThem HelpTextTextId+5
-	#define AnyPronouns HelpTextTextId+6
-	#define HeThey HelpTextTextId+7
-	#define SheThey HelpTextTextId+8
-	#define HeAny HelpTextTextId+9
-	#define SheAny HelpTextTextId+10
-	#define TheyAny HelpTextTextId+11
-	#define ClassTextId HelpTextTextId+12
-	#define MovTextId HelpTextTextId+13
-	#define ConTextId HelpTextTextId+14
-	#define HpTextId HelpTextTextId+15
-	#define PowTextId HelpTextTextId+16
-	#define SklTextId HelpTextTextId+17
-	#define SpdTextId HelpTextTextId+18
-	#define DefTextId HelpTextTextId+19
-	#define ResTextId HelpTextTextId+20
-	#define EirkaMasterLordBenefits HelpTextTextId+21
-	#define EphraimMasterLordBenefits HelpTextTextId+22
-	#define FighterBenefits HelpTextTextId+23
-	#define PirateBenefits HelpTextTextId+24
-	#define Journeyman2Benefits HelpTextTextId+25
-	#define HeroBenefits HelpTextTextId+26
-	#define WarriorBenefits HelpTextTextId+27
-	#define BerserkerBenefits HelpTextTextId+28
-	#define Journeyman3Benefits HelpTextTextId+29
+	#ifndef KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
 	
-	#undef HelpTextTextId
-	#define HelpTextTextId AgeLabel+30
+		#define AgeLabel HelpTextTextId
+		#define PronounLabel HelpTextTextId+1
+		#define UnknownAge HelpTextTextId+2
+		#define HeHim HelpTextTextId+3
+		#define SheHer HelpTextTextId+4
+		#define TheyThem HelpTextTextId+5
+		#define AnyPronouns HelpTextTextId+6
+		#define HeThey HelpTextTextId+7
+		#define SheThey HelpTextTextId+8
+		#define HeAny HelpTextTextId+9
+		#define SheAny HelpTextTextId+10
+		#define TheyAny HelpTextTextId+11
+		
+		#undef HelpTextTextId
+		#define HelpTextTextId AgeLabel+12
+		
+		setText(AgeLabel,AgeLabelText)
+		setText(PronounLabel,PronounLabelText)
+		setText(UnknownAge,UnknownAgeText)
+		setText(HeHim,HeHimText)
+		setText(SheHer,SheHerText)
+		setText(TheyThem,TheyThemText)
+		setText(AnyPronouns,AnyPronounsText)
+		setText(HeThey,HeTheyText)
+		setText(SheThey,SheTheyText)
+		setText(HeAny,HeAnyText)
+		setText(SheAny,SheAnyText)
+		setText(TheyAny,TheyAnyText)
+		
+		AgeLabelText:
+		String("Age")
+		BYTE 0 //[X]
+		
+		PronounLabelText:
+		String("Pronouns")
+		BYTE 0 //[X]
+		
+		UnknownAgeText:
+		String("???")
+		BYTE 0 //[X]
+		
+		HeHimText:
+		String("He/Him")
+		BYTE 0 //[X]
+		
+		SheHerText:
+		String("She/Her")
+		BYTE 0 //[X]
+		
+		TheyThemText:
+		String("They/Them")
+		BYTE 0 //[X]
+		
+		AnyPronounsText:
+		String("Any")
+		BYTE 0 //[X]
+		
+		HeTheyText:
+		String("He/They")
+		BYTE 0 //[X]
+		
+		SheTheyText:
+		String("She/They")
+		BYTE 0 //[X]
+		
+		HeAnyText:
+		String("He/Any")
+		BYTE 0 //[X]
+		
+		SheAnyText:
+		String("She/Any")
+		BYTE 0 //[X]
+		
+		TheyAnyText:
+		String("They/Any")
+		BYTE 0 //[X]
+		
+		ALIGN 4
 	
-	setText(AgeLabel,AgeLabelText)
-	setText(PronounLabel,PronounLabelText)
-	setText(UnknownAge,UnknownAgeText)
-	setText(HeHim,HeHimText)
-	setText(SheHer,SheHerText)
-	setText(TheyThem,TheyThemText)
-	setText(AnyPronouns,AnyPronounsText)
-	setText(HeThey,HeTheyText)
-	setText(SheThey,SheTheyText)
-	setText(HeAny,HeAnyText)
-	setText(SheAny,SheAnyText)
-	setText(TheyAny,TheyAnyText)
-	setText(ClassTextId,ClassText)
-	setText(MovTextId,MovText)
-	setText(ConTextId,ConText)
-	setText(HpTextId,HpText)
-	setText(PowTextId,PowText)
-	setText(SklTextId,SklText)
-	setText(SpdTextId,SpdText)
-	setText(DefTextId,DefText)
-	setText(ResTextId,ResText)
-	setText(EirkaMasterLordBenefits,EirkaMasterLordBenefitsText)
-	setText(EphraimMasterLordBenefits,EphraimMasterLordBenefitsText)
-	setText(FighterBenefits,FighterBenefitsText)
-	setText(PirateBenefits,PirateBenefitsText)
-	setText(Journeyman2Benefits,Journeyman2BenefitsText)
-	setText(HeroBenefits,HeroBenefitsText)
-	setText(WarriorBenefits,WarriorBenefitsText)
-	setText(BerserkerBenefits,BerserkerBenefitsText)
-	setText(Journeyman3Benefits,Journeyman3BenefitsText)
+	#endif //KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
 	
-	AgeLabelText:
-	String("Age")
-	BYTE 0 //[X]
+	#ifdef USE_HELP_TEXT_PROMO
 	
-	PronounLabelText:
-	String("Pronouns")
-	BYTE 0 //[X]
-	
-	UnknownAgeText:
-	String("???")
-	BYTE 0 //[X]
-	
-	HeHimText:
-	String("He/Him")
-	BYTE 0 //[X]
-	
-	SheHerText:
-	String("She/Her")
-	BYTE 0 //[X]
-	
-	TheyThemText:
-	String("They/Them")
-	BYTE 0 //[X]
-	
-	AnyPronounsText:
-	String("Any")
-	BYTE 0 //[X]
-	
-	HeTheyText:
-	String("He/They")
-	BYTE 0 //[X]
-	
-	SheTheyText:
-	String("She/They")
-	BYTE 0 //[X]
-	
-	HeAnyText:
-	String("He/Any")
-	BYTE 0 //[X]
-	
-	SheAnyText:
-	String("She/Any")
-	BYTE 0 //[X]
-	
-	TheyAnyText:
-	String("They/Any")
-	BYTE 0 //[X]
-	
-	ClassText:
-	String("Class")
-	BYTE 0 //[X]
-	
-	MovText:
-	String("Mov")
-	BYTE 0 //[X]
-	
-	ConText:
-	String("Con")
-	BYTE 0 //[X]
-	
-	HpText:
-	String("HP")
-	BYTE 0 //[X]
-	
-	PowText:
-	String("S/M")
-	BYTE 0 //[X]
-	
-	SklText:
-	String("Skl")
-	BYTE 0 //[X]
-	
-	SpdText:
-	String("Spd")
-	BYTE 0 //[X]
-	
-	DefText:
-	String("Def")
-	BYTE 0 //[X]
-	
-	ResText:
-	String("Res")
-	BYTE 0 //[X]
-	
-	EirkaMasterLordBenefitsText:
-	String("+70 Sword WEXP, Canto")
-	BYTE 0 //[X]
-	
-	EphraimMasterLordBenefitsText:
-	String("+40 Lance WEXP, Canto")
-	BYTE 0 //[X]
-	
-	FighterBenefitsText:
-	String("+30 Axe WEXP, promotes to")
-	BYTE 1 //[N]
-	String("Hero or Warrior")
-	BYTE 0 //[X]
-	
-	PirateBenefitsText:
-	String("+30 Axe WEXP, water walking,")
-	BYTE 1 //[N]
-	String("promotes to Warrior or Berserker")
-	BYTE 0 //[X]
-	
-	Journeyman2BenefitsText:
-	String("+30 Axe WEXP, promotes to")
-	BYTE 1 //[N]
-	String("Hero or Journeyman (3)")
-	BYTE 0 //[X]
-	
-	HeroBenefitsText:
-	String("C Sword")
-	BYTE 0 //[X]
-	
-	WarriorBenefitsText:
-	String("+40 Axe WEXP, E Bow")
-	BYTE 0 //[X]
-	
-	BerserkerBenefitsText:
-	String("+40 Axe WEXP, Crit Up,")
-	BYTE 1 //[N]
-	String("water and mountain walking")
-	BYTE 0 //[X]
-	
-	Journeyman3BenefitsText:
-	String("+40 Axe WEXP, Crit Up")
-	BYTE 0 //[X]
-	
-	ALIGN 4
+		#define ClassTextId HelpTextTextId
+		#define MovTextId HelpTextTextId+1
+		#define ConTextId HelpTextTextId+2
+		#define HpTextId HelpTextTextId+3
+		#define PowTextId HelpTextTextId+4
+		#define SklTextId HelpTextTextId+5
+		#define SpdTextId HelpTextTextId+6
+		#define DefTextId HelpTextTextId+7
+		#define ResTextId HelpTextTextId+8
+		#define EirikaMasterLordBenefits HelpTextTextId+9
+		#define EphraimMasterLordBenefits HelpTextTextId+10
+		#define FighterBenefits HelpTextTextId+11
+		#define PirateBenefits HelpTextTextId+12
+		#define Journeyman2Benefits HelpTextTextId+13
+		#define HeroBenefits HelpTextTextId+14
+		#define WarriorBenefits HelpTextTextId+15
+		#define BerserkerBenefits HelpTextTextId+16
+		#define Journeyman3Benefits HelpTextTextId+17
+		
+		#undef HelpTextTextId
+		#define HelpTextTextId ClassTextId+18
+		
+		setText(ClassTextId,ClassText)
+		setText(MovTextId,MovText)
+		setText(ConTextId,ConText)
+		setText(HpTextId,HpText)
+		setText(PowTextId,PowText)
+		setText(SklTextId,SklText)
+		setText(SpdTextId,SpdText)
+		setText(DefTextId,DefText)
+		setText(ResTextId,ResText)
+		setText(EirikaMasterLordBenefits,EirikaMasterLordBenefitsText)
+		setText(EphraimMasterLordBenefits,EphraimMasterLordBenefitsText)
+		setText(FighterBenefits,FighterBenefitsText)
+		setText(PirateBenefits,PirateBenefitsText)
+		setText(Journeyman2Benefits,Journeyman2BenefitsText)
+		setText(HeroBenefits,HeroBenefitsText)
+		setText(WarriorBenefits,WarriorBenefitsText)
+		setText(BerserkerBenefits,BerserkerBenefitsText)
+		setText(Journeyman3Benefits,Journeyman3BenefitsText)
+		
+		ClassText:
+		String("Class")
+		BYTE 0 //[X]
+		
+		MovText:
+		String("Mov")
+		BYTE 0 //[X]
+		
+		ConText:
+		String("Con")
+		BYTE 0 //[X]
+		
+		HpText:
+		String("HP")
+		BYTE 0 //[X]
+		
+		PowText:
+		String("S/M")
+		BYTE 0 //[X]
+		
+		SklText:
+		String("Skl")
+		BYTE 0 //[X]
+		
+		SpdText:
+		String("Spd")
+		BYTE 0 //[X]
+		
+		DefText:
+		String("Def")
+		BYTE 0 //[X]
+		
+		ResText:
+		String("Res")
+		BYTE 0 //[X]
+		
+		EirikaMasterLordBenefitsText:
+		String("+70 Sword WEXP, Canto")
+		BYTE 0 //[X]
+		
+		EphraimMasterLordBenefitsText:
+		String("+40 Lance WEXP, Canto")
+		BYTE 0 //[X]
+		
+		FighterBenefitsText:
+		String("+30 Axe WEXP, promotes to")
+		BYTE 1 //[N]
+		String("Hero or Warrior")
+		BYTE 0 //[X]
+		
+		PirateBenefitsText:
+		String("+30 Axe WEXP, water walking,")
+		BYTE 1 //[N]
+		String("promotes to Warrior or Berserker")
+		BYTE 0 //[X]
+		
+		Journeyman2BenefitsText:
+		String("+30 Axe WEXP, promotes to")
+		BYTE 1 //[N]
+		String("Hero or Journeyman (3)")
+		BYTE 0 //[X]
+		
+		HeroBenefitsText:
+		String("C Sword")
+		BYTE 0 //[X]
+		
+		WarriorBenefitsText:
+		String("+40 Axe WEXP, E Bow")
+		BYTE 0 //[X]
+		
+		BerserkerBenefitsText:
+		String("+40 Axe WEXP, Crit Up,")
+		BYTE 1 //[N]
+		String("water and mountain walking")
+		BYTE 0 //[X]
+		
+		Journeyman3BenefitsText:
+		String("+40 Axe WEXP, Crit Up")
+		BYTE 0 //[X]
+		
+		ALIGN 4
+		
+	#endif //USE_HELP_TEXT_PROMO
 
-#endif //USE_HELP_TEXT_CHARACTER
+#endif //USE_HELP_TEXT_CHAR_AND_PROMO
 
 #ifdef USE_HELP_TEXT_SKILL
 
@@ -313,6 +328,88 @@
 	ALIGN 4
 
 #endif //USE_HELP_TEXT_SKILL
+
+#ifdef USE_HELP_TEXT_CAP
+
+	#define UniversalCapLabel HelpTextTextId
+	#define ClassCapLabel HelpTextTextId+1
+	#define CapLabel HelpTextTextId+2
+	#define CapModLabel HelpTextTextId+3
+	
+	#undef HelpTextTextId
+	#define HelpTextTextId UniversalCapLabel+4
+	
+	setText(UniversalCapLabel,UniversalCapLabelText)
+	setText(ClassCapLabel,ClassCapLabelText)
+	setText(CapLabel,CapLabelText)
+	setText(CapModLabel,CapModLabelText)
+	
+	UniversalCapLabelText:
+	String("Universal Cap")
+	BYTE 0 //[X]
+	
+	ClassCapLabelText:
+	String("Class Cap")
+	BYTE 0 //[X]
+	
+	CapLabelText:
+	String("Cap")
+	BYTE 0 //[X]
+
+	CapModLabelText:
+	String("Mod")
+	BYTE 0 //[X]
+	
+	ALIGN 4
+
+#endif //USE_HELP_TEXT_CAP
+
+#ifdef USE_HELP_TEXT_AFFINITY
+
+	#define SupportAtkLabel HelpTextTextId
+	#define SupportDefLabel HelpTextTextId+1
+	#define SupportHitLabel HelpTextTextId+2
+	#define SupportAvdLabel HelpTextTextId+3
+	#define SupportCritLabel HelpTextTextId+4
+	#define SupportDdgLabel HelpTextTextId+5
+	
+	#undef HelpTextTextId
+	#define HelpTextTextId SupportAtkLabel+6
+	
+	setText(SupportAtkLabel,SupportAtkLabelText)
+	setText(SupportDefLabel,SupportDefLabelText)
+	setText(SupportHitLabel,SupportHitLabelText)
+	setText(SupportAvdLabel,SupportAvdLabelText)
+	setText(SupportCritLabel,SupportCritLabelText)
+	setText(SupportDdgLabel,SupportDdgLabelText)
+	
+	SupportAtkLabelText:
+	String("Atk")
+	BYTE 0 //[X]
+	
+	SupportDefLabelText:
+	String("Def")
+	BYTE 0 //[X]
+	
+	SupportHitLabelText:
+	String("Hit")
+	BYTE 0 //[X]
+	
+	SupportAvdLabelText:
+	String("Avd")
+	BYTE 0 //[X]
+	
+	SupportCritLabelText:
+	String("Crit")
+	BYTE 0 //[X]
+	
+	SupportDdgLabelText:
+	String("Ddg")
+	BYTE 0 //[X]
+	
+	ALIGN 4
+
+#endif //USE_HELP_TEXT_AFFINITY
 
 /*
 ## StaffExpLabel
@@ -405,35 +502,35 @@ Def[X]
 ## ResTextId
 Res[X]
 
-## EirkaMasterLordBenefitsTextId
+## EirikaMasterLordBenefits
 +70 Sword WEXP, Canto[X]
 
-## EphraimMasterLordBenefitsTextId
+## EphraimMasterLordBenefits
 +40 Lance WEXP, Canto[X]
 
-## FighterBenefitsTextId
+## FighterBenefits
 +30 Axe WEXP, promotes to[N]
 Hero or Warrior[X]
 
-## PirateBenefitsTextId
+## PirateBenefits
 +30 Axe WEXP, water walking,[N]
 promotes to Warrior or Berserker[X]
 
-## Journeyman2BenefitsTextId
+## Journeyman2Benefits
 +30 Axe WEXP, promotes to[N]
 Hero or Journeyman (3)[X]
 
-## HeroBenefitsTextId
+## HeroBenefits
 C Sword[X]
 
-## WarriorBenefitsTextId
+## WarriorBenefits
 +40 Axe WEXP, E Bow[X]
 
-## BerserkerBenefitsTextId
+## BerserkerBenefits
 +40 Axe WEXP, Crit Up,[N]
 water and mountain walking[X]
 
-## Journeyman3BenefitsTextId
+## Journeyman3Benefits
 +40 Axe WEXP, Crit Up[X]
 
 ## SkillActiveLabel
@@ -441,4 +538,34 @@ Active[X]
 
 ## SkillAmountLabel
 Amount[X]
+
+## UniversalCapLabel
+Universal Cap[X]
+
+## ClassCapLabel
+Class Cap[X]
+
+## CapLabel
+Cap[X]
+
+## CapModLabel
+Mod[X]
+
+## SupportAtkLabel
+Atk[X]
+
+## SupportDefLabel
+Def[X]
+
+## SupportHitLabel
+Hit[X]
+
+## SupportAvdLabel
+Avd[X]
+
+## SupportCritLabel
+Crit[X]
+
+## SupportDdgLabel
+Ddg[X]
 */

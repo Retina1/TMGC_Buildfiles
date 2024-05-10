@@ -5,18 +5,22 @@
 
 
 		CalcGetter:
+		@Store type
+		ldr		r1, =CalcHelpTextLink
+		ldrh	r1, [r1]
+		ldr		r2, =HelpTextExtraInfoRAMLocation
+		ldr		r2, [r2]
+		strh	r1, [r2]
+		
+		@Store description
+		ldr		r1, =CalcDescriptionTextLink
 		ldr		r2, [r0,#0x2C]
 		ldrh	r2, [r2,#0x12]
-		ldr		r3, =CalcHelpTextLink
-		ldrh	r1, [r3]
-		add		r1, r2
-		add		r0, #0x4C
-		strh	r1, [r0,#2]
-		ldr		r3, =CalcDescriptionTextLink
 		lsl		r2, #1
-		add		r3, r2
-		ldrh	r1, [r3]
-		strh	r1, [r0]
+		add		r1, r2
+		ldrh	r1, [r1]
+		mov		r2, #0x4C
+		strh	r1, [r0,r2]
 		bx		r14
 		
 		.align

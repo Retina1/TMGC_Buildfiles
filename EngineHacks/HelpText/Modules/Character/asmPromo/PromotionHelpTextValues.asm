@@ -8,12 +8,13 @@
 
 		PromotionHelpTextValues:
 		push	{r4-r7,r14}
-		add		sp, #-8
+		add		sp, #-4
 		ldr		r1, =gHelpTextStuff
 		str		r1, [sp]
-		ldr		r1, =PromotionHelpTextLink
-		ldrh	r1, [r1]
-		sub		r5, r0, r1
+		ldr		r0, =HelpTextExtraInfoRAMLocation
+		ldr		r0, [r0]
+		ldrb	r0, [r0,#2]
+		sub		r5, r0, #1
 		
 		@Get current char ID
 		ldr		r7, =StatScreenStruct
@@ -55,17 +56,17 @@
 		.short	0xF800
 		mov		r6, #2 @spot in row
 		
-		@Mov and Con first
+		@After displaying the name, most of the other values are just gotten directly from the promo bonus section. However, Mov and Con must be calculated by comparing the new class and old class, so those two will require their own routine
+		
 		ldr		r0, [r7,#4]
 		ldrb	r1, [r5,#4] @new class id
 		ldr		r2, [r7]
 		blh		ShouldPromoGainInfoBeOverridden, r3
-		str		r0, [sp,#4] @class data to use for mov/con calculations
+		mov		r7, r0 @class data to use for mov/con calculations
 		mov		r4, #0
 		
 		@Mov
-		ldr		r1, [sp,#4]
-		ldrb	r1, [r1,#0x12] @current class mov
+		ldrb	r1, [r7,#0x12] @current class mov
 		ldrb	r0, [r5,#0x12] @new class mov
 		sub		r3, r0, r1
 		cmp		r3, #0
@@ -102,9 +103,8 @@
 		add		r6, #1
 		
 		@Con
-		ldr		r1, [sp,#4]
-		ldrb	r1, [r1,#0x11] @current class con
-		ldrb	r0, [r5,#0x11] @new class con
+		ldrb	r1, [r7,#0x11] @current class mov
+		ldrb	r0, [r5,#0x11] @new class mov
 		sub		r3, r0, r1
 		cmp		r3, #0
 		bge		Continue_Con
@@ -140,26 +140,24 @@
 		
 		@Almost ready to enter the loop (doing HP separately to make things easier)
 		add		r6, #1
-		mov		r0, #0x0B @class base hp
+		mov		r0, #0x22
 		mov		r7, #0 @spot in column
 		b		LoadPromoGain
 		
 		SetUpNewValue:
 		@Get value from promo gain section of class data
-		mov		r4, #0
-		mov		r0, #0x0C @class base pow
+		mov		r0, #0x23
 		add		r0, r6
+		mov		r4, #0
 		
 		LoadPromoGain:
-		ldrb	r3, [r5,r0]
-		ldr		r1, [sp,#4]
-		ldrb	r1, [r1,r0]
-		sub		r3, r1
+		ldrsb	r3, [r5,r0]
 		cmp		r3, #0
 		bge		Continue_OtherStat
 		
+			mov		r4, #3
+			neg		r4, r4
 			neg		r3, r3
-			mov		r4, r3
 		
 		Continue_OtherStat:
 		ldr		r0, =Text_InsertNumberOr2Dashes
@@ -177,17 +175,10 @@
 			mov		lr, r0
 			ldr		r0, [sp]
 			mov		r1, #0x28 @spacing
-			cmp		r4, #10
-			blt		Continue_NegativeSignDisplay
-			
-				sub		r1, #2
-			
-			Continue_NegativeSignDisplay:
 			mul		r1, r6
 			add		r1, #0x13
 			mov		r2, #7 @font color
-			mov		r3, #3
-			neg		r3, r3
+			mov		r3, r4
 			.short	0xF800
 		
 		@Done with this value; repeat until the row is filled
@@ -205,7 +196,7 @@
 			cmp		r7, #2
 			blt		SetUpNewValue
 		
-		add		sp, #8
+		add		sp, #4
 		pop		{r4-r7}
 		pop		{r0}
 		bx		r0

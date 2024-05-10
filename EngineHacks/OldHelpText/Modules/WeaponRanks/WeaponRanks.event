@@ -1,0 +1,49 @@
+
+WEXPRankRequirementsTable:
+BYTE 1 //ERankWEXP
+BYTE 31 //DRankWEXP
+BYTE 71 //CRankWEXP
+BYTE 121 //BRankWEXP
+BYTE 181 //ARankWEXP
+BYTE 251 //SRankWEXP
+
+BYTE 255 //For displaying --
+BYTE 0 //Shouldn't be needed as a failsafe, but just in case
+ALIGN 4
+
+PUSH
+
+ORG 0x205B52
+RankDescriptionsTable:
+
+ORG 0x205B5A //moving around the magic rank help text descriptions
+SHORT 0x0568 0x0565 0x0566 0x0567
+
+POP
+
+#include "asm/RankQuantityGetter.lyn.event"
+ALIGN 4
+
+#include "asm/GetRankTypeFromRankNumber.lyn.event"
+ALIGN 4
+
+#include "asm/CheckIfMoreRanks.lyn.event"
+ALIGN 4
+
+#include "asm/NewRankGetter.lyn.event"
+ALIGN 4
+
+#include "asm/RankHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "asm/RankHelpTextLabels.lyn.event"
+ALIGN 4
+
+#include "asm/RankHelpTextValues.lyn.event"
+ALIGN 4
+
+RankCurrentLabelLink:
+SHORT RankCurrentLabel
+RankNextLabelLink:
+SHORT RankNextLabel
+ALIGN 4

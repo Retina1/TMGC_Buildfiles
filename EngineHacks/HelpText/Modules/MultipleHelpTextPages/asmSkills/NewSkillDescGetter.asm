@@ -57,9 +57,9 @@
 			beq		End
 			
 				ldrb	r0, [r0]
-				lsl		r0, #8
-				mov		r1, #0x4E
-				strh	r0, [r4,r1] @store type of helptext
+				ldr		r1, =HelpTextExtraInfoRAMLocation
+				ldr		r1, [r1]
+				strh	r0, [r1]
 		
 		End:
 		pop		{r4-r6}

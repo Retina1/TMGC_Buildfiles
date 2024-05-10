@@ -31,3 +31,6 @@
 .equ GetGameClock, 0x8000D28 
 
 .equ gpKeyState, 0x0858791C
+.equ ItemDescGetter, 0x08088A00|1
+
+.equ gPromotionTable, 0x0895DFA4

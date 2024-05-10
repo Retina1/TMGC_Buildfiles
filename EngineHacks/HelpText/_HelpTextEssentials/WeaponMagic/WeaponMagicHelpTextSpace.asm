@@ -9,7 +9,7 @@
 		WeaponMagicHelpTextSpace:
 		push	{r4-r6,r14}
 		mov		r4, r0
-		mov		r5, r1 @total number of lines helptext requires divided by 0x10
+		mov		r5, r1 @total number of lines helptext requires multiplied by 0x10
 		mov		r6, r2
 		
 		@Confirms width is at a specific minimum

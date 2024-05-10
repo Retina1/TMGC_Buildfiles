@@ -9,8 +9,12 @@
 		mov		r4, r0
 		ldr		r5, =HelpTextIdTable
 		ldrh	r1, [r5]
-		cmp		r1, r0
-		bgt		LoadList
+		
+		ldr		r0, =HelpTextExtraInfoRAMLocation
+		ldr		r0, [r0]
+		ldrh	r0, [r0]
+		cmp		r0, #0
+		beq		LoadList
 			
 			LoopThroughTable:
 			cmp		r1, #0

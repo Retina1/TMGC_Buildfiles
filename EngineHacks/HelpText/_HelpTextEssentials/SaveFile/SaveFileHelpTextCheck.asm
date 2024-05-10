@@ -8,8 +8,7 @@
 
 
 		SaveFileHelpTextCheck:
-		ldr		r1, =SaveFileHelpTextLink
-		ldrh	r1, [r1]
+		ldr		r1, =0x0000FFFE
 		cmp		r0, r1
 		bne		ReturnFalse
 		

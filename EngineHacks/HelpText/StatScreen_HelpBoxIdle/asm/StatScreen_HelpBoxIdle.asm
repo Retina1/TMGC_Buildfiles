@@ -120,10 +120,11 @@
 		cmp		r4, #0
 		beq		End
 		
-			@Whenever cursor moves somewhere else, display first page of help text
-			ldr		r1, =gSomeTextId
+			@Whenever cursor moves somewhere else, reset type and display first page of help text
+			ldr		r1, =HelpTextExtraInfoRAMLocation
+			ldr		r1, [r1]
 			mov		r0, #0
-			strh	r0, [r1]
+			str		r0, [r1]
 		
 		StatScreen_HelpBoxIdle_ChangeHelpText:
 		

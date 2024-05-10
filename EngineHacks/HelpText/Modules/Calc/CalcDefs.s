@@ -10,3 +10,6 @@
 
 .equ String_GetFromIndex, 0x800A240
 .equ Text_InsertString, 0x8004480
+
+.equ gProc_8A00A98, 0x08A00A98
+.equ ProcFind, 0x08002E9C

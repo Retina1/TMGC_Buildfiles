@@ -8,9 +8,10 @@
 
 		CalcHelpTextValues:
 		push	{r14}
-		ldr		r1, =CalcHelpTextLink
-		ldrh	r1, [r1]
-		sub		r0, r1
+		ldr		r0, =gProc_8A00A98
+		blh		ProcFind, r1
+		ldr		r0, [r0,#0x2C]
+		ldrh	r0, [r0,#0x12]
 		ldr		r1, =CalcCalculationsLink
 		lsl		r0, #1
 		add		r1, r0

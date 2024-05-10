@@ -34,7 +34,7 @@
 		beq		GoToGetItemDescStringIndex
 		
 			mov		r1, r5
-			blh		StatScreen_NextPageOfTextForItemDesc, r3
+			blh		NextPageOfTextForItemDesc, r3
 			b		StoreHelpText
 		
 		GoToGetItemDescStringIndex:

@@ -8,7 +8,9 @@
 
 		SkillHelpTextExtraInfo:
 		push	{r14}
-		lsr		r0, #8
+		ldr		r0, =HelpTextExtraInfoRAMLocation
+		ldr		r0, [r0]
+		ldrb	r0, [r0]
 		blh		FindSkillExtraInfoEntry, r1
 		cmp		r0, #0 @failsafe check; shouldn't be true under normal conditions
 		beq		End

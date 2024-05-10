@@ -4,6 +4,7 @@ SkillExtraInfoList:
 //POIN ExtraInfoRoutine
 //POIN LinkForParameters
 //POIN OtherRoutine (Active/Inactive; Amount to calculate/display)
+
 #define ActiveParameterSkill(skillid, routine) "WORD skillid; POIN SkillExtraInfoActive; POIN SkillActiveParameterLink; POIN routine"
 #define AmountParameterSkill(skillid, routine) "WORD skillid; POIN SkillExtraInfoAmount; POIN SkillAmountParameterLink; POIN routine"
 
@@ -86,6 +87,7 @@ ALIGN 4
 #include "asmExamples/TurnSevenCheck.lyn.event"
 ALIGN 4
 
+
 //-------------------------------------------
 //WIZARD CHECKPOINT
 //Do not touch anything below unless you know what you're doing
@@ -104,6 +106,12 @@ SHORT SkillAmountLabel
 SHORT 1
 
 ALIGN 4
+
+//NewSkillDescGetter is installed by MultipleHelpTextPages.event if USE_HELP_TEXT_MULTIPLE_PAGES is defined. Otherwise, this is installed here.
+#ifndef USE_HELP_TEXT_MULTIPLE_PAGES
+	#include "asm/NewSkillDescGetter_SinglePage.lyn.event"
+	ALIGN 4
+#endif
 
 #include "asm/FindSkillExtraInfoEntry.lyn.event"
 ALIGN 4

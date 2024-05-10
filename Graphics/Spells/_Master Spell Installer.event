@@ -2,7 +2,6 @@
 //old stupid method
 {
 #include "Event/Awaken.event"
-#include "Event/Ballista.event"
 #include "Event/BlueExplosion.event"
 #include "Event/Divinestone.event"
 #include "Event/Dulam.event"
@@ -21,6 +20,9 @@
 #include "Event/Tornado.event"
 }
 //new less stupid method
+{
+#include "Txt/Ballista/Ballista.event"
+}
 {
 #include "Txt/DarkBreath/DarkBreath.event"
 }

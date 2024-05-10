@@ -6,7 +6,6 @@
 .type GetCharDescEntry, %function
 
 		GetCharDescEntry:
-		@whoops this checks rom not ram
 		ldr		r1, =StatScreenStruct
 		ldr		r1, [r1,#0x0C]
 		ldr		r1, [r1]

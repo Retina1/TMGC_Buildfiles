@@ -9,13 +9,13 @@
 		SkillHelpTextSpace:
 		push	{r4-r6,r14}
 		mov		r4, r0
-		mov		r5, r1 @total number of lines helptext requires divided by 0x10
+		mov		r5, r1 @total number of lines helptext requires multiplied by 0x10
 		mov		r6, r2
 		
 		@Skills with extra info will need more space than skills without, so see if this skill has extra info
-		mov		r0, #0x4E
-		ldrh	r0, [r6,r0]
-		lsr		r0, #8
+		ldr		r0, =HelpTextExtraInfoRAMLocation
+		ldr		r0, [r0]
+		ldrb	r0, [r0]
 		blh		FindSkillExtraInfoEntry, r1
 		cmp		r0, #0
 		beq		StoreAllottedSpace

@@ -1,22 +1,44 @@
 
+//Text ids do not need [A] to go to the next text id; that functionality is controlled by the lists below
+
 //Note: The press "A" button functionality during stat screen is granted by StatScreen_HelpBoxIdle
 
 //For each "thing" that can have multiple pages of help text, we need a routine/method to verify if we're checking that thing (if items can have multiple pages, how can we prove we're currently checking an item and not something else?) and a routine for seeing if said thing does have multiple pages (if items can have multiple pages, does this particular item have multiple pages?) 
 
 MultiplePagesAllowlist:
 
-	//Keep entry ids in sequential order (refer to HelpTextIdTable in ../HelpTextTypes.event)
+	//Keep entry ids in sequential order (refer to HelpTextIdTable in HelpText.event)
 
-	//POIN LinkInHelpTextIdTable
-	//POIN RoutineToCheckForMultiplePages (WORD 0 for automatic success)
-
+	//POIN linkInHelpTextIdTable
+	//POIN routineToCheckForMultiplePages (WORD 0 for automatic success)
+	
+	#ifdef USE_HELP_TEXT_SKILL
+		POIN SkillHelpTextLink
+		POIN DoesSkillHaveMultiplePages
+	#endif
+	
 	POIN MultiplePageHelpTextLink
 	WORD 0
-
-	#ifdef USE_HELP_TEXT_CHARACTER
+	
+	#ifdef LINK_CHAR_DESC_WITH_PROMO
 		POIN CharacterHelpTextLink
 		POIN DoesCharHaveMultiplePages
-
+		
+		POIN VanillaCharacterHelpTextLink
+		POIN DoesCharHaveMultiplePages
+	#endif
+	
+	#ifdef KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
+		POIN VanillaCharacterHelpTextLink
+		POIN DoesCharHaveMultiplePages
+	#endif
+	
+	#ifdef LINK_CLASS_DESC_WITH_PROMO
+		POIN ClassHelpTextLink
+		POIN DoesCharHaveMultiplePages
+	#endif
+	
+	#ifdef USE_HELP_TEXT_PROMO
 		POIN PromotionHelpTextLink
 		WORD 0
 	#endif
@@ -40,7 +62,9 @@ SHORT DSDark DSDark2 DSDark3
 BYTE 0 //end list with this
 ALIGN 4
 
-#ifdef USE_HELP_TEXT_CHARACTER
+//#ifdef USE_HELP_TEXT_CHAR_AND_PROMO
+#ifdef USE_HELP_TEXT_PROMO
+
 	MultipleHelpTextPageList_Chars:
 	
 	/*
@@ -48,13 +72,10 @@ ALIGN 4
 	SHORT classId textIdOfBenefits
 	SHORT classId2 textIdOfBenefits2
 	...
-	
-	Units on this list must also be on CharDescList in Character.event (or else pressing "A" won't do anything)
-	
 	*/
-	/*
+	
 	BYTE Eirika 1
-	SHORT EirikaMasterLord EirkaMasterLordBenefits
+	SHORT EirikaMasterLord EirikaMasterLordBenefits
 	
 	BYTE Ephraim 1
 	SHORT EphraimMasterLord EphraimMasterLordBenefits
@@ -67,9 +88,37 @@ ALIGN 4
 	SHORT Warrior WarriorBenefits
 	SHORT Berserker BerserkerBenefits
 	SHORT Journeyman_3 Journeyman3Benefits
-	*/
+	
 	BYTE 0 //end list with this
 	ALIGN 4
+	
+	NextPromotionDisplayExclusionList:
+	POIN PromoExcludeLowerClassTier
+	POIN PromoExcludeSameClassTier
+	POIN PromoExcludeDifferentBranchUnlessTier0
+	WORD 0
+	
+	ClassTierListMaster:
+	//arrange from strongest tier to weakest
+	POIN ClassTier2List
+	POIN ClassTier1List
+	//POIN ClassTier0List //not needed for this
+	WORD 0
+	
+	ClassTier0List:
+	BYTE Journeyman_1 Pupil_1 Recruit_1
+	BYTE 0
+	
+	ClassTier1List:
+	BYTE EphraimLord EirikaLord Cavalier Cavalier_F Knight Knight_F Thief Mercenary Mercenary_F Myrmidon Myrmidon_F Archer Archer_F WyvernRider WyvernRider_F Mage Mage_F Shaman Shaman_F Recruit_2 Fighter Brigand Pirate Monk Priest PegasusKnight Cleric Troubadour Soldier Journeyman_2 Pupil_2
+	BYTE 0
+	
+	ClassTier2List:
+	BYTE EphraimMasterLord EirikaMasterLord Paladin Paladin_F General General_F Hero Hero_F Swordmaster Swordmaster_F Assassin Assassin_F Sniper Sniper_F Ranger Ranger_F WyvernLord WyvernLord_F WyvernKnight WyvernKnight_F Sage Sage_F MageKnight MageKnight_F Bishop Bishop_F Druid Druid_F Summoner Summoner_F Rogue GreatKnight GreatKnight_F Journeyman_3 Pupil_3 Recruit_3 Warrior Berserker FalcoKnight Valkyrie
+	BYTE 0
+	
+	ALIGN 4
+	
 #endif
 
 #ifdef USE_HELP_TEXT_SKILL
@@ -77,9 +126,9 @@ ALIGN 4
 	//BYTE skillId numberOfPages
 	//SHORT textId1 textId2 ...
 	
+	
 	BYTE RoboKyID 2
 	SHORT SD_RightfulGod SD_RightfulGod2
-	
 	
 	BYTE 0 //end list with this
 	ALIGN 4
@@ -101,20 +150,13 @@ ALIGN 4
 
 PUSH
 
-ORG 0x89278
-SHORT 0x4903 0x468E //ldr r1, =OverwriteHelpTextBoxPosition; mov lr, r1
-SHORT 0x4641 0x1C2A //mov r1, r8; mov r2, r5
-SHORT 0x1C3B 0xF800 //mov r3, r7; bl lr+0
-SHORT 0xE002 0 //b 0x8928C
-POIN OverwriteHelpTextBoxPosition
-PROTECT 0x89278 CURRENTOFFSET-1
-
 ORG 0x89178
 jumpToHack(StartHelpTextBubble_Extension)
+PROTECT 0x89178 CURRENTOFFSET-1
 
-//shouldn't need this (MSS is already linking to the new routine for each inventory slot), but just in case
 ORG 0x88A00
 jumpToHack(StatScreen_HelpBoxCurrentItem)
+PROTECT 0x88A00 CURRENTOFFSET-1
 
 ORG 0x88D06
 SHORT 0x1C21 //mov r1, r4
@@ -127,24 +169,11 @@ POP
 #include "asm/StartHelpTextBubble_Extension.lyn.event"
 ALIGN 4
 
-#ifdef USE_HELP_TEXT_SKILL
-	#include "asm/CanCurrentHelpTextHaveMultiplePages_Skills.lyn.event"
-	ALIGN 4
-#else
-	#include "asm/CanCurrentHelpTextHaveMultiplePages_NoSkills.lyn.event"
-	ALIGN 4
-#endif
+#include "asm/CanCurrentHelpTextHaveMultiplePages.lyn.event"
+ALIGN 4
 
 #include "asm/GetMultipleHelpTextEntry.lyn.event"
 ALIGN 4
-
-#ifdef USE_HELP_TEXT_CHARACTER
-	#include "asm/OverwriteHelpTextBoxPosition_Chars.lyn.event"
-	ALIGN 4
-#else
-	#include "asm/OverwriteHelpTextBoxPosition_NoChars.lyn.event"
-	ALIGN 4
-#endif
 
 #include "asm/HelpBoxOnOpenHook.lyn.event"
 ALIGN 4
@@ -186,45 +215,76 @@ BYTE 0
 ALIGN 4
 
 
+//---------------------------
 //Items
+//---------------------------
 
-PUSH
+	PUSH
 
-ORG 0x88E94
-POIN HelpTextGetItemDesc
+	ORG 0x88E94
+	POIN HelpTextGetItemDesc
 
-POP
+	POP
 
-#include "asmItems/NextPageOfTextForItemDesc.lyn.event"
-ALIGN 4
-
-#include "asmItems/HelpTextGetItemDesc.lyn.event"
-ALIGN 4
-
-#include "asmItems/StatScreen_NextPageOfTextForItemDesc.lyn.event"
-ALIGN 4
-
-#include "asmItems/StatScreen_HelpBoxCurrentItem.lyn.event"
-ALIGN 4
-
-#include "asmItems/StatScreen_DoesItemHaveMultiplePages.lyn.event"
-ALIGN 4
-
-#ifdef USE_HELP_TEXT_CHARACTER
-
-	#include "asmCharacters/GetMultipleHelpTextCharEntry.lyn.event"
+	#include "asmItems/NextPageOfTextForItemDesc.lyn.event"
 	ALIGN 4
 
-	#include "asmCharacters/HelpBoxCurrentCharInfo.lyn.event"
+	#include "asmItems/HelpTextGetItemDesc.lyn.event"
 	ALIGN 4
 
-	#include "asmCharacters/NextPageOfTextForCharInfo.lyn.event"
+	#include "asmItems/StatScreen_HelpBoxCurrentItem.lyn.event"
 	ALIGN 4
 
-	#include "asmCharacters/DoesCharHaveMultiplePages.lyn.event"
+	#include "asmItems/StatScreen_DoesItemHaveMultiplePages.lyn.event"
 	ALIGN 4
 
-#endif //USE_HELP_TEXT_CHARACTER
+
+//---------------------------
+//Character/Promotion
+//---------------------------
+
+#ifdef USE_HELP_TEXT_PROMO
+	
+	#include "asmCharAndPromo/NextPromotionDisplay.lyn.event"
+	ALIGN 4
+	
+	#include "asmCharAndPromo/PromoExclusions.lyn.event"
+	ALIGN 4
+	
+	#include "asmCharAndPromo/GetMultipleHelpTextCharEntry.lyn.event"
+	ALIGN 4
+
+	#include "asmCharAndPromo/HelpBoxCurrentCharInfo.lyn.event"
+	ALIGN 4
+
+	#include "asmCharAndPromo/NextPageOfTextForCharInfo.lyn.event"
+	ALIGN 4
+
+	#include "asmCharAndPromo/DoesCharHaveMultiplePages.lyn.event"
+	ALIGN 4
+	
+	#ifdef LINK_CLASS_DESC_WITH_PROMO
+	
+		PUSH
+		ORG 0x88C00
+		jumpToHack(HelpBoxCurrentClassInfo)
+		PROTECT 0x88C00 CURRENTOFFSET-1
+		POP
+		
+		#include "asmCharAndPromo/HelpBoxCurrentClassInfo.lyn.event"
+		ALIGN 4
+		
+		#include "asmCharAndPromo/NewClassDescGetter.lyn.event"
+		ALIGN 4
+		
+	#endif //LINK_CLASS_DESC_WITH_PROMO
+
+#endif //USE_HELP_TEXT_CHAR_AND_PROMO
+
+
+//---------------------------
+//Skills
+//---------------------------
 
 #ifdef USE_HELP_TEXT_SKILL
 
@@ -238,3 +298,4 @@ ALIGN 4
 	ALIGN 4
 
 #endif //USE_HELP_TEXT_SKILL
+

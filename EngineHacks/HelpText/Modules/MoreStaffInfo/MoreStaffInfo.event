@@ -1,14 +1,7 @@
 
-#include "asm/MoreStaffHelpTextSpace.lyn.event"
-ALIGN 4
-
-#include "asm/MoreStaffHelpTextLabels.lyn.event"
-ALIGN 4
-
-#include "asm/MoreStaffHelpTextValues.lyn.event"
-ALIGN 4
-
-#include "asm/GetStaffExp_Vanilla.lyn.event"
+MoreStaffHelpTextSpaceRequirements:
+BYTE 1 //number of lines labels & values need
+BYTE 0xB8 //minimum width of helptext box for staves
 ALIGN 4
 
 MoreStaffInfoList:
@@ -16,6 +9,8 @@ MoreStaffInfoList:
 //BYTE labelSpacing valueSpacing
 //POIN valueRoutine
 //POIN displayRoutineForValue
+
+//If the current entry's spacing is greater than the next entry, the next entry will start a new row
 
 //Staff
 SHORT 0x0509
@@ -43,3 +38,16 @@ POIN 0x44A4
 
 //End of the list
 WORD 0
+
+
+#include "asm/MoreStaffHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "asm/MoreStaffHelpTextLabels.lyn.event"
+ALIGN 4
+
+#include "asm/MoreStaffHelpTextValues.lyn.event"
+ALIGN 4
+
+#include "asm/GetStaffExp_Vanilla.lyn.event"
+ALIGN 4

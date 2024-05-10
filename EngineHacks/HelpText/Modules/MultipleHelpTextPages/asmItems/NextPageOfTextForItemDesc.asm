@@ -7,8 +7,10 @@
 
 
 		NextPageOfTextForItemDesc:
-		ldr		r3, =gSomeTextRelatedStuff
-		ldrb	r3, [r3,#0x14]
+		push	{r4}
+		ldr		r4, =HelpTextExtraInfoRAMLocation
+		ldr		r4, [r4]
+		ldrb	r3, [r4,#2]
 		ldrb	r2, [r0,#1]
 		cmp		r3, r2
 		blt		GetNextPageNumber
@@ -17,8 +19,9 @@
 		
 		GetNextPageNumber:
 		add		r2, r3, #1
-		ldr		r3, =gSomeTextRelatedStuff
-		strb	r2, [r3,#0x14]
+		strb	r2, [r4,#2]
+		mov		r3, #0
+		strh	r3, [r4]
 		
 		@remove item stats if not first page
 		cmp		r2, #1
@@ -26,11 +29,12 @@
 		
 			ldr		r3, =MultiplePageHelpTextLink
 			ldrh	r3, [r3]
-			strh	r3, [r1]
+			strh	r3, [r4]
 		
 		GetTextIdForNextPage:
 		lsl		r2, #1
 		ldrh	r0, [r0,r2]
+		pop		{r4}
 		bx		r14
 		
 		.align

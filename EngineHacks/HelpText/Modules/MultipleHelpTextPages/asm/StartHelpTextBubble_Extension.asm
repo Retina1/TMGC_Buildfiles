@@ -7,8 +7,9 @@
 
 
 		StartHelpTextBubble_Extension:
-		ldr		r0, =gSomeTextId
-		strh	r1, [r0] @always start on first page of help text of an item or w/e
+		ldr		r0, =HelpTextExtraInfoRAMLocation
+		ldr		r0, [r0]
+		str		r1, [r0]
 		pop		{r4}
 		pop		{r0}
 		bx		r0

@@ -36,7 +36,15 @@ StatScreen_HelpBoxIdleDirectionHandler:
 
 	//Button: Direction Right
 	WORD 0x10
-	WORD 0
+	#ifdef USE_WEAPON_RANK_MOVE_RIGHT_CHECK
+		#ifdef ONLY_SHOW_USED_RANKS
+			POIN WeaponRankMoveRightCheck
+		#else
+			WORD 0
+		#endif
+	#else
+		WORD 0
+	#endif
 	POIN StatScreen_HelpBoxIdle_GoRight|1
 
 	//Buttons: B, R
@@ -56,3 +64,18 @@ ALIGN 4
 	ALIGN 4
 #endif
 
+#ifdef USE_WEAPON_RANK_MOVE_RIGHT_CHECK
+	#ifdef ONLY_SHOW_USED_RANKS
+	
+		WeaponRankDescLooperPointer:
+		#ifdef USE_HELP_TEXT_WEAPON_RANK
+			POIN CheckIfMoreRanks|1
+		#else
+			POIN WeaponDescLooper|1
+		#endif
+		
+		#include "asm/WeaponRankMoveRightCheck.lyn.event"
+		ALIGN 4
+		
+	#endif
+#endif

@@ -1,0 +1,207 @@
+
+//Universal cap values
+#define LckCap 30
+#define MovCap 15
+
+
+#define totalCapQuantity 11 //First id is 0, so this should be lastCapId+1
+
+	HelpTextCapValueGetterTable:
+	FILL 4*totalCapQuantity
+	
+	
+	#ifdef USE_HELP_TEXT_CAPS_WITH_MODS
+	
+		HelpTextClassCapGetterTable:
+		FILL 4*totalCapQuantity
+
+		HelpTextCapModGetterTable:
+		FILL 4*totalCapQuantity
+		
+	#endif
+	
+	HelpTextCapTextTable:
+	FILL 2*totalCapQuantity
+
+	HelpTextCapTypeTable:
+	FILL totalCapQuantity
+
+	ALIGN 4
+
+
+//"Master list" of stat caps; ids should match slot ids in MSS RText.event
+
+#define UniversalCap(capId,valueGetter,helpTextId) "PUSH; ORG HelpTextCapValueGetterTable+(capId*4); POIN valueGetter; ORG HelpTextCapTextTable+(capId*2); SHORT helpTextId; ORG HelpTextCapTypeTable+capId; BYTE 1; POP"
+#define ClassCap(capId,valueGetter,helpTextId) "PUSH; ORG HelpTextCapValueGetterTable+(capId*4); POIN valueGetter; ORG HelpTextCapTextTable+(capId*2); SHORT helpTextId; ORG HelpTextCapTypeTable+capId; BYTE 2; POP"
+
+#ifndef USE_HELP_TEXT_CAPS_WITH_MODS
+
+	ClassCap(0,LoadHpClassCap,0x0544)
+	ClassCap(1,LoadStrClassCap,0x0546)
+	#ifdef USE_STRMAG_SPLIT
+		ClassCap(2,LoadMagClassCap,0x0547)
+	#else
+		ClassCap(2,LoadStrClassCap,0x0547)
+	#endif
+	ClassCap(3,LoadSklClassCap,0x0548)
+	ClassCap(4,LoadSpdClassCap,0x0549)
+	UniversalCap(5,LoadLckUniCap,0x054A)
+	ClassCap(6,LoadDefClassCap,0x054B)
+	ClassCap(7,LoadResClassCap,0x054C)
+	UniversalCap(8,LoadMovUniCap,0x054D)
+	ClassCap(9,LoadConClassCap,0x054E)
+	ClassCap(10,LoadLvClassCap,0x0542)
+
+#else
+
+	#define ModifiedClassCap(capId,valueGetter,classCapGetter,capModGetter,helpTextId) "PUSH; ORG HelpTextCapValueGetterTable+(capId*4); POIN valueGetter; ORG HelpTextClassCapGetterTable+(capId*4); POIN classCapGetter; ORG HelpTextCapModGetterTable+(capId*4); POIN capModGetter; ORG HelpTextCapTextTable+(capId*2); SHORT helpTextId; ORG HelpTextCapTypeTable+capId; BYTE 3; POP"
+	#define CharacterCapModifiers(char,pow,skl,spd,def,res) "ORG CharModTable+(char*5); BYTE pow; BYTE skl; BYTE spd; BYTE def; BYTE res"
+	
+	ClassCap(0,LoadHpClassCap,0x0544)
+	ModifiedClassCap(1,LoadStrModClassCap,LoadStrClassCap,LoadStrCharMod,0x0546)
+	#ifdef USE_STRMAG_SPLIT
+		ClassCap(2,LoadMagClassCap,0x0547)
+	#else
+		ModifiedClassCap(2,LoadStrModClassCap,LoadStrClassCap,LoadStrCharMod,0x0547)
+	#endif
+	ModifiedClassCap(3,LoadSklModClassCap,LoadSklClassCap,LoadSklCharMod,0x0548)
+	ModifiedClassCap(4,LoadSpdModClassCap,LoadSpdClassCap,LoadSpdCharMod,0x0549)
+	UniversalCap(5,LoadLckUniCap,0x054A)
+	ModifiedClassCap(6,LoadDefModClassCap,LoadDefClassCap,LoadDefCharMod,0x054B)
+	ModifiedClassCap(7,LoadResModClassCap,LoadResClassCap,LoadResCharMod,0x054C)
+	UniversalCap(8,LoadMovUniCap,0x054D)
+	ClassCap(9,LoadConClassCap,0x054E)
+	ClassCap(10,LoadLvClassCap,0x0542)
+	
+	CharModTableLimits:
+	BYTE Franz //final ID on table
+	BYTE 0 //if ID of character isn't on table, use entry of this ID
+	
+	CharModTable:
+	CharacterCapModifiers(0x00,0,0,0,0,0)
+	CharacterCapModifiers(Eirika,-3,3,5,-4,3)
+	CharacterCapModifiers(Seth,2,3,-2,-2,1)
+	CharacterCapModifiers(Gilliam,3,3,-3,4,-4)
+	CharacterCapModifiers(Franz,2,-1,2,0,-1)
+	ALIGN 4
+
+#endif
+
+/*
+This is for cases where the helptext can change depend on the stat that's actually being viewed. 
+- In a non-str/mag split environment, this is used for showing which description appears. 
+- With viewable growths on, the default is for the Hp growth to appear where Mov is normally displayed. This corrects Mov helptext being displayed if Hp growth is displaying.
+
+Side-note for people that may be messing with MSS layouts: If a stat can display as something that isn't a universal cap or a class cap, returning -1 (or any value below 0) during the routine checked by the list will prevent the cap label & value from being displayed
+*/
+
+HelpTextLoadAltStatInfoList:
+//WORD defaultCapId
+//POIN routine
+
+#ifndef USE_STRMAG_SPLIT
+	WORD 1
+	POIN HelpTextStrOrMag
+#endif
+
+WORD 8
+POIN HelpTextMovOrHp
+
+//end of list
+WORD 0 0
+
+
+
+//-------------------------------------------
+//WIZARD CHECKPOINT
+//Do not touch anything below unless you know what you're doing
+//-------------------------------------------
+
+
+
+CapSpaceMinimumTable:
+BYTE 0 //unused
+BYTE 0x68 //universal
+BYTE 0x48 //class
+BYTE 0xB0 //class with modifier
+ALIGN 4
+
+StatCapLooper:
+SHORT 0x4770 //bx r14
+ALIGN 4
+
+#ifdef USE_HELP_TEXT_CAPS_WITH_MODS
+	#include "asm/StatCap_WithMod.lyn.event"
+#else
+	#include "asm/StatCap.lyn.event"
+#endif
+ALIGN 4
+
+#include "asm/HelpTextMovOrHp.lyn.event"
+ALIGN 4
+
+
+//---------------------------
+////Universal Caps
+//---------------------------
+
+	UniversalCapDisplayInfoLink:
+	SHORT UniversalCapLabel //text: Universal Cap
+	SHORT 0x50 //spacing on value of cap
+	ALIGN 4
+	
+	LoadLckUniCap:
+	SHORT 0x2000|LckCap 0x4770 //mov r0, #LckCap; bx r14
+	ALIGN 4
+	
+	LoadMovUniCap:
+	SHORT 0x2000|MovCap 0x4770 //mov r0, #MovCap; bx r14
+	ALIGN 4
+
+
+//---------------------------
+//Class Caps
+//---------------------------
+
+	ClassCapDisplayInfoLink:
+	SHORT ClassCapLabel //text: Class Cap
+	SHORT 0x3C //spacing on value of cap
+	ALIGN 4
+	
+	#include "asm/LoadClassCap.lyn.event"
+	ALIGN 4
+	
+	#ifdef USE_STRMAG_SPLIT
+		#include "asm/LoadMagClassCap.lyn.event"
+	#else
+		#include "asm/HelpTextStrOrMag.lyn.event"
+	#endif
+	ALIGN 4
+
+
+//---------------------------
+//Modified Class Caps
+//---------------------------
+
+#ifdef USE_HELP_TEXT_CAPS_WITH_MODS
+
+	ModifiedClassCapDisplayInfoLink:
+	SHORT CapLabel //text: Cap
+	SHORT 0x22 //spacing on value of cap
+	SHORT ClassCapLabel //text: Class Cap
+	SHORT 0x36 //spacing on label
+	SHORT 0x72 //spacing on value
+	SHORT CapModLabel //text: Mod
+	SHORT 0x86 //spacing on label
+	SHORT 0x9D //spacing on negative sign
+	SHORT 0xA2 //spacing on value
+	ALIGN 4
+	
+	#include "asm/LoadCharMod.lyn.event"
+	ALIGN 4
+	
+	#include "asm/LoadModClassCap.lyn.event"
+	ALIGN 4
+	
+#endif
+

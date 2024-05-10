@@ -1,0 +1,80 @@
+
+PUSH
+
+//Jump to new routines
+ORG 0x891AC
+jumpToHack(HelpTextCheckForAdditionalSpace)
+  
+ORG 0x89F58
+jumpToHack(HelpTextCheckForDrawingLabels)
+  
+ORG 0x89FCC
+jumpToHack(HelpTextCheckForDrawingValues)
+
+ORG 0x89C40
+WeaponMagicHelpTextLabels:
+
+ORG 0x89CD4
+WeaponMagicHelpTextValues:
+//#include "WeaponMagic/WeaponMagicHelpTextValues.event"
+
+#ifndef USE_HELP_TEXT_MORE_STAFF_INFO
+	ORG 0x89D50
+	StaffHelpTextInfo:
+#endif
+
+//Monster Weapon stat display (credit Brendor, circles for buildfile version)
+
+ORG 0x16E20
+BYTE 0x30 0xB5 0x0B 0x28 0x04 0xD0 0x09 0x49 0x80 0x00 0x08 0x18 0x00 0x68 0x06 0xE0 0x80 0x20 0x80 0x00 0x6B 0x30 0x02 0xE0 0x80 0x00 0x68 0x44 0x00 0x68 0xF3 0xF7 0xFF 0xF9 0xC0 0x46
+PROTECT 0x16E20 CURRENTOFFSET-1
+
+ORG 0x1E7FC
+BYTE 0x0C
+PROTECT 0x1E7FC
+
+POP
+
+#include "IdentifyType/CheckTypeOfHelpText.lyn.event"
+ALIGN 4
+
+#include "IdentifyType/HelpTextCheckForAdditionalSpace.lyn.event"
+ALIGN 4
+
+#include "IdentifyType/HelpTextCheckForDrawingLabels.lyn.event"
+ALIGN 4
+
+#include "IdentifyType/HelpTextCheckForDrawingValues.lyn.event"
+ALIGN 4
+
+#include "WeaponMagic/WeaponMagicHelpTextCheck.lyn.event"
+ALIGN 4
+
+#include "WeaponMagic/WeaponMagicHelpTextSpace.lyn.event"
+ALIGN 4
+
+
+#include "Staff/StaffHelpTextCheck.lyn.event"
+ALIGN 4
+
+#include "SaveFile/SaveFileHelpTextCheck.lyn.event"
+ALIGN 4
+
+#include "SaveFile/SaveFileHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "SaveFile/SaveFileHelpTextLabels.lyn.event"
+ALIGN 4
+
+#include "SaveFile/SaveFileHelpTextValues.lyn.event"
+ALIGN 4
+
+
+#include "Misc/OneLineHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "Misc/DefaultHelpTextSpace.lyn.event"
+ALIGN 4
+
+RTextLoopLink: //part of skill descriptions
+POIN RTextLoop|1

@@ -1,0 +1,70 @@
+
+//vanilla stops at 08089D4F
+//this also stops at 08089D4F
+
+WeaponMagicHelpTextValues:
+SHORT 0xB5F0 0x1C05  //push {r4-r7,r14}; mov r5, r0
+SHORT 0x4C13 0x1C21 //ldr r4 (0x0203E7AC); mov r1, r4
+
+//Rank
+BL(0x16D94)
+SHORT 0x2121 //mov r1, #0x21
+SHORT 0x8802 //ldrh r2, [r0]
+SHORT 0x2AFF //cmp r2, #0xFF
+SHORT 0xDD00 //ble (0x89CEA)
+SHORT 0x3906 //sub r1, #6
+BL(SetUp_RankRange)
+
+//Range
+BL(0x16CC8)
+SHORT 0x2143 //mov r1, #0x43 (where to show up on line)
+BL(SetUp_RankRange)
+
+//Weight
+BL(0x1760C)
+SHORT 0x2181 //mov r1, #0x81 (where to show up on line)
+BL(SetUp_WeightHitCrit)
+
+//Might
+BL(0x175DC)
+SHORT 0x2120 //mov r1, #0x20 (where to show up on line)
+BL(SetUp_Might)
+
+//Hit
+BL(0x175F4)
+SHORT 0x2151 //mov r1, #0x51 (where to show up on line)
+BL(SetUp_WeightHitCrit)
+
+//Crit
+BL(0x17624)
+SHORT 0x2181 //mov r1, #0x81 (where to show up on line)
+BL(SetUp_WeightHitCrit)
+
+//End
+SHORT 0xBCF0 0xBC01 //pop {r4-r7}; pop {r0}
+SHORT 0x4700 //bx r0
+
+ALIGN 4
+WORD 0x0203E7AC
+
+SetUp_RankRange:
+SHORT 0xB500 //push {r14}
+SHORT 0x1C03 //mov r3, r0
+SHORT 0x1C20 //mov r0, r4
+SHORT 0x2207 //mov r2, #7
+BL(0x4480)
+SHORT 0xE006 //b (0x08089D40)
+
+SetUp_Might:
+SHORT 0x3408 //add r4, #8
+SetUp_WeightHitCrit:
+SHORT 0xB500 //push {r14}
+SHORT 0x1C03 //mov r3, r0
+SHORT 0x1C20 //mov r0, r4
+SHORT 0x2207 //mov r2, #7
+BL(0x44A4)
+
+//0x08089D40
+SHORT 0x1C28 //mov r0, r5
+SHORT 0xBC02 //pop {r1}
+SHORT 0x4708 //bx r1

@@ -1,0 +1,9 @@
+ALIGN 4
+PUSH
+ORG CURRENTOFFSET+$1;StatScreen_DoesItemHaveMultiplePages:
+POP
+SHORT $B500 $68CB $8A50 $40 $331E $181B $8818 $4903 $4A03 $4696
+BYTE $0 $F8
+SHORT $BC02 $4708 $46C0
+POIN MultipleHelpTextPageList_Items
+POIN GetMultipleHelpTextEntry

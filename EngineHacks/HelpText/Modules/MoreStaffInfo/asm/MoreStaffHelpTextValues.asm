@@ -39,9 +39,18 @@
 			mov		r2, #7 @font color
 			.short	0xF800
 			
-			add		r5, #12
-			b		LoopThroughValueDisplay
-		
+			@Check if new row
+			ldrb	r0, [r5,#3]
+			ldrb	r1, [r5,#0x0F]
+			cmp		r0, r1
+			blt		LoopNextEntry
+			
+				add		r4, #0x08
+				
+				LoopNextEntry:
+				add		r5, #0x0C
+				b		LoopThroughValueDisplay
+				
 		End:
 		pop		{r4-r6}
 		pop		{r0}

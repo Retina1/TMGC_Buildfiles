@@ -29,7 +29,8 @@
   #define RMenu(up,down,left,right,xcoord,ycoord,TID) "POIN up down left right;BYTE xcoord ycoord; SHORT TID; WORD 0 0;"
   #define RMenu(up,down,left,right,xcoord,ycoord,TID,Getter) "POIN up down left right; BYTE xcoord ycoord; SHORT TID; POIN 0 Getter|1"
   #define RMenu(up,down,left,right,xcoord,ycoord,SlotID,Looper,Getter) "POIN up down left right; BYTE xcoord ycoord; SHORT SlotID; POIN Looper|1 Getter|1"
-
+  #define CapRMenu(up,down,left,right,xcoord,ycoord,SlotID) "POIN up down left right; BYTE xcoord ycoord; SHORT SlotID; POIN StatCapLooper|1 StatCapGetter|1"
+ 
   #define NameDescGetter 0x88bd5
   #define ClassDescGetter 0x88c01
   #define ConditionGetter 0x88a2d
@@ -62,8 +63,7 @@ RText_Page1:
   PersonalDataRText:
   RMenu(0,ST_Str,0,0,0x76,0x4,PersonalDataDesc1)
 ST_Name:
-  //RMenu(0,ST_Class,0,ST_Luck,0x18,0x50,0x0,NameDescGetter)
-  RMenu(0,ST_Class,0,ST_Luck,0x18,0x50,0x0,HelpBoxCurrentCharInfo)
+    RMenu(0,ST_Class,0,ST_Luck,0x18,0x50,0x0,NameDescGetter)
 ST_Class:
   RMenu(ST_Name,ST_Level,0,ST_Def,0x6,0x68,0x6E8,ClassDescGetter)
 ST_Level:
@@ -73,24 +73,43 @@ ST_Exp:
 ST_HP:
   RMenu(ST_Level,0,0,ST_Mov,0x6,0x88,0x544)
 
-ST_Str:
-  RMenu(PersonalDataRText,ST_Mag,ST_Name,ST_Con,0x66,0x18,0x546)
-ST_Mag:
-  RMenu(ST_Str,ST_Skl,ST_Name,ST_Aid,0x66,0x28,0x547)
-ST_Skl:
-  RMenu(ST_Mag,ST_Spd,ST_Name,ST_Cond,0x66,0x38,0x548)
-ST_Spd:
-  RMenu(ST_Skl,ST_Luck,ST_Name,ST_Affin,0x66,0x48,0x549)
-ST_Luck:
-  RMenu(ST_Spd,ST_Def,ST_Name,ST_Talk,0x66,0x58,0x54a)
-ST_Def:
-  RMenu(ST_Luck,ST_Res,ST_Class,ST_Skills,0x66,0x68,0x54b)
-ST_Res:
-  RMenu(ST_Def,ST_Mov,ST_Exp,ST_Skill1,0x66,0x78,0x54c)
-ST_Mov:
-  RMenu(ST_Res,ST_Con,ST_Exp,ST_Skill1,0x66,0x88,0x54d)
-ST_Con:
-  RMenu(PersonalDataRText,ST_Aid,ST_Str,0,0xAe,0x18,0x54e)
+  ST_Str:
+    //RMenu(PersonalDataRText,ST_Mag,ST_Name,ST_Con,0x66,0x18,0x546)
+    CapRMenu(PersonalDataRText,ST_Mag,ST_Name,ST_Con,0x66,0x18,1)
+
+  ST_Mag:
+    //RMenu(ST_Str,ST_Skl,ST_Name,ST_Aid,0x66,0x28,0x547)
+    CapRMenu(ST_Str,ST_Skl,ST_Name,ST_Aid,0x66,0x28,2)
+
+  ST_Skl:
+    //RMenu(ST_Mag,ST_Spd,ST_Name,ST_Cond,0x66,0x38,0x548)
+    CapRMenu(ST_Mag,ST_Spd,ST_Name,ST_Cond,0x66,0x38,3)
+
+  ST_Spd:
+    //RMenu(ST_Skl,ST_Luck,ST_Name,ST_Affin,0x66,0x48,0x549)
+    CapRMenu(ST_Skl,ST_Luck,ST_Name,ST_Affin,0x66,0x48,4)
+
+  ST_Luck:
+    //RMenu(ST_Spd,ST_Def,ST_Name,ST_Talk,0x66,0x58,0x54a)
+    CapRMenu(ST_Spd,ST_Def,ST_Name,ST_Talk,0x66,0x58,5)
+
+  ST_Def:
+    //RMenu(ST_Luck,ST_Res,ST_Class,ST_Skills,0x66,0x68,0x54b)
+    CapRMenu(ST_Luck,ST_Res,ST_Class,ST_Skills,0x66,0x68,6)
+
+  ST_Res:
+    //RMenu(ST_Def,ST_Mov,ST_Exp,ST_Skill1,0x66,0x78,0x54c)
+    CapRMenu(ST_Def,ST_Mov,ST_Exp,ST_Skill1,0x66,0x78,7)
+
+  ST_Mov:
+    //RMenu(ST_Res,ST_Con,ST_Exp,ST_Skill1,0x66,0x88,0x54d,MovHPDescGetter)
+    CapRMenu(ST_Res,ST_Con,ST_Exp,ST_Skill1,0x66,0x88,8)
+
+  ST_Con:
+    //RMenu(PersonalDataRText,ST_Aid,ST_Str,0,0xA6,0x18,0x54e)
+    CapRMenu(PersonalDataRText,ST_Aid,ST_Str,0,0xAe,0x18,9)
+//ST_Con:
+  //RMenu(PersonalDataRText,ST_Aid,ST_Str,0,0xAe,0x18,0x54e)
 ST_Aid:
   RMenu(ST_Con,ST_Cond,ST_Mag,0,0xae,0x28,0x54F)
 ST_Cond:

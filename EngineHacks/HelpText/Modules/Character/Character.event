@@ -1,8 +1,9 @@
 
 #define CharDescEntry(charID,age,pronounsTextID) "BYTE charID age; SHORT pronounsTextID; WORD 0"
 #define DynamicCharDescEntry(charID,age,pronounsTextID,routinePointer) "BYTE charID age; SHORT pronounsTextID; POIN routinePointer"
-//trust me it's easier to keep HeAny/SheAny named as is and just change their text
+
 CharDescList:
+#ifndef KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
 CharDescEntry(Blair,17,SheThey)
 CharDescEntry(Sveltzalus,0,HeAny)
 CharDescEntry(Addington,1,SheAny)
@@ -126,36 +127,38 @@ CharDescEntry(Neillstrom,41,HeHim)
 CharDescEntry(Ciraweiss,32,SheHer)
 CharDescEntry(Arbordia,38,HeHim)
 CharDescEntry(Arbordia2,38,HeHim)
+#endif
 
 //End of list
 WORD 0
 ALIGN 4
 
-OverridePromoGainInfoList:
-/*This is for units with more than 2 tiers of classes; you can keep this list empty if this isn't applicable to your hack
+#ifdef USE_HELP_TEXT_PROMO
+	OverridePromoGainInfoList:
+	/*This is for units with more than 2 tiers of classes; you can keep this list empty if this isn't applicable to your hack
 
-SHORT unitID numberOfOverrides
-BYTE classId1 classId2 classId3 0
-classId1: A class that the unit can promote to
-classId2: If this unit is in this class while looking at info about the first class, do not use this class for mov/con calculations
-classId3: If unit is in the second class, use this class for calculations instead
-Lastly, a zero is used to make each override word aligned
+	SHORT unitID numberOfOverrides
+	BYTE classId1 classId2 classId3 0
+	classId1: A class that the unit can promote to
+	classId2: If this unit is in this class while looking at info about the first class, do not use this class for mov/con calculations
+	classId3: If unit is in the second class, use this class for calculations instead
+	Lastly, a zero is used to make each override word aligned
 
-Here's an example:
-BYTE Paladin Recruit_1 Cavalier 0
-If this unit is currently a Recruit_1 when the player views the Paladin page, the unit is treated as if they are a Cavalier for calculating the mov/con gains
-*/
-/*
-SHORT Ross 4
-BYTE Hero Journeyman_1 Fighter 0
-BYTE Warrior Journeyman_1 Fighter 0
-BYTE Berserker Journeyman_1 Pirate 0
-BYTE Journeyman_3 Journeyman_1 Journeyman_2 0
-*/
-//End of the list (do not need to terminate each character after all of their entries)
-WORD 0
-ALIGN 4
+	Here's an example:
+	BYTE Paladin Recruit_1 Cavalier 0
+	If this unit is currently a Recruit_1 when the player views the Paladin page, the unit is treated as if they are a Cavalier for calculating the mov/con gains
+	*/
 
+	SHORT Ross 4
+	BYTE Hero Journeyman_1 Fighter 0
+	BYTE Warrior Journeyman_1 Fighter 0
+	BYTE Berserker Journeyman_1 Pirate 0
+	BYTE Journeyman_3 Journeyman_1 Journeyman_2 0
+
+	//End of the list (do not need to terminate each character after all of their entries)
+	WORD 0
+	ALIGN 4
+#endif
 
 /*
 #include "asmExamples/CheckForAgeRevelation.lyn.event"
@@ -177,86 +180,122 @@ ALIGN 4
 
 
 
+PUSH
+ORG 0x88BD4
+jumpToHack(HelpBoxCurrentCharInfo)
+
+POP
+
+
 //---------------------------
 //Age/Pronouns
 //---------------------------
 
 	#include "asmCharDesc/GetCharDescEntry.lyn.event"
 	ALIGN 4
+	
+	//HelpBoxCurrentCharInfo is installed by MultipleHelpTextPages.event if USE_HELP_TEXT_PROMO is defined. Otherwise, this alternative version is installed here.
+	#ifndef USE_HELP_TEXT_PROMO
+		#include "asmCharDesc/HelpBoxCurrentCharInfo_NoPromo.lyn.event"
+		ALIGN 4
+	#endif
 
-	#include "asmCharDesc/GetAgeDigitCount.lyn.event"
+	#ifdef USE_HELP_TEXT_CHANGE_UNIT_DESC
+		#include "asmCharDesc/NewNameDescGetter_ChangeUnitDesc.lyn.event"
+	#else
+		#include "asmCharDesc/NewNameDescGetter.lyn.event"
+	#endif
 	ALIGN 4
+	
+	#ifdef KEEP_VANILLA_CHAR_AND_LINK_WITH_PROMO
+	
+		CharacterHelpTextSpace:
+		CharacterHelpTextInfo:
+		SHORT 0x2000 0x4770 //mov r0, #0; bx r14
+		ALIGN 4
+	
+	#else
+	
+		#include "asmCharDesc/GetAgeDigitCount.lyn.event"
+		ALIGN 4
 
-	//#include "asmCharDesc/NewNameDescGetter.lyn.event"
-	#include "asmCharDesc/NewNameDescGetter_ChangeUnitDesc.lyn.event"
-	ALIGN 4
+		#include "asmCharDesc/CharacterHelpTextSpace.lyn.event"
+		ALIGN 4
 
-	#include "asmCharDesc/CharacterHelpTextSpace.lyn.event"
-	ALIGN 4
+		#include "asmCharDesc/CharacterHelpTextInfo.lyn.event"
+		ALIGN 4
+		
+		CharacterLabelLink:
+		SHORT AgeLabel
+		SHORT PronounLabel
 
-	#include "asmCharDesc/CharacterHelpTextInfo.lyn.event"
-	ALIGN 4
+		UnknownAgeLink:
+		SHORT UnknownAge
 
-	CharacterLabelLink:
-	SHORT AgeLabel
-	SHORT PronounLabel
+		HeHimLink:
+		SHORT HeHim
 
-	UnknownAgeLink:
-	SHORT UnknownAge
+		SheHerLink:
+		SHORT SheHer
 
-	HeHimLink:
-	SHORT HeHim
+		TheyThemLink:
+		SHORT TheyThem
 
-	SheHerLink:
-	SHORT SheHer
+		AnyPronounsLink:
+		SHORT AnyPronouns
 
-	TheyThemLink:
-	SHORT TheyThem
+		HeTheyLink:
+		SHORT HeThey
 
-	AnyPronounsLink:
-	SHORT AnyPronouns
+		SheTheyLink:
+		SHORT SheThey
 
-	HeTheyLink:
-	SHORT HeThey
+		HeAnyLink:
+		SHORT HeAny
 
-	SheTheyLink:
-	SHORT SheThey
+		SheAnyLink:
+		SHORT SheAny
 
-	HeAnyLink:
-	SHORT HeAny
-
-	SheAnyLink:
-	SHORT SheAny
-
-	TheyAnyLink:
-	SHORT TheyAny
-	ALIGN 4
+		TheyAnyLink:
+		SHORT TheyAny
+		ALIGN 4
+		
+	#endif
 
 
 //---------------------------
 //Promotion Information
 //---------------------------
 
-	#include "asmPromo/PromotionHelpTextSpace.lyn.event"
-	ALIGN 4
+	#ifdef USE_HELP_TEXT_PROMO
+	
+		#include "asmPromo/PromotionHelpTextSpace.lyn.event"
+		ALIGN 4
 
-	#include "asmPromo/PromotionHelpTextLabels.lyn.event"
-	ALIGN 4
+		#include "asmPromo/PromotionHelpTextLabels.lyn.event"
+		ALIGN 4
 
-	#include "asmPromo/PromotionHelpTextValues.lyn.event"
-	ALIGN 4
+		#ifndef PROMO_BASES_DIFFERENCE_DISPLAY
+			#include "asmPromo/PromotionHelpTextValues.lyn.event"
+		#else
+			#include "asmPromo/PromotionHelpTextValues_BasesDifference.lyn.event"
+		#endif
+		ALIGN 4
 
-	#include "asmPromo/ShouldPromoGainInfoBeOverridden.lyn.event"
-	ALIGN 4
+		#include "asmPromo/ShouldPromoGainInfoBeOverridden.lyn.event"
+		ALIGN 4
 
-	PromotionLabelLink:
-	SHORT ClassTextId
-	SHORT MovTextId
-	SHORT ConTextId
-	SHORT HpTextId
-	SHORT PowTextId
-	SHORT SklTextId
-	SHORT SpdTextId
-	SHORT DefTextId
-	SHORT ResTextId
-	ALIGN 4
+		PromotionLabelLink:
+		SHORT ClassTextId
+		SHORT MovTextId
+		SHORT ConTextId
+		SHORT HpTextId
+		SHORT PowTextId
+		SHORT SklTextId
+		SHORT SpdTextId
+		SHORT DefTextId
+		SHORT ResTextId
+		ALIGN 4
+		
+	#endif
+

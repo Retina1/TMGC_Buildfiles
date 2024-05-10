@@ -6,6 +6,9 @@
   .short 0xf800
 .endm
 
+.global SupportReworkReworkCheck
+.type SupportReworkReworkCheck, %function
+
 .global SupportReworkReworkSpace
 .type SupportReworkReworkSpace, %function
 
@@ -17,6 +20,29 @@
 
 
 @-----------------------------------------
+@SupportReworkReworkCheck
+@-----------------------------------------
+
+
+		SupportReworkReworkCheck:
+		ldr		r0, =0x0000FDFF
+		cmp		r0, r1
+		bne		ReturnFalse
+		
+			mov		r0, #1
+			b		End_SupportReworkReworkCheck
+		
+		ReturnFalse:
+		mov		r0, #0
+		
+		End_SupportReworkReworkCheck:
+		bx		r14
+		
+		.align
+		.ltorg
+
+
+@-----------------------------------------
 @SupportReworkReworkSpace
 @-----------------------------------------
 
@@ -25,7 +51,7 @@
 		mov		r0, #0x80 @line width
 		add		r2, #0x44
 		strh	r0, [r2]
-		mov		r1, #0x20 @lines
+		mov		r1, #0x20 @total number of lines helptext requires multiplied by 0x10
 		strh	r1, [r2,#2]
 		bx		r14
 		

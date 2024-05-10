@@ -1,0 +1,32 @@
+
+PUSH
+ORG 0x28534
+AffinityTablePointer:
+POP
+
+AffinityValueDivider:
+BYTE 2 //vanilla divides by 2
+
+ALIGN 4
+
+AffinityStatOrder:
+//SHORT labelTextId labelSpacing affinityStatByte valueSpacing
+
+//If the current entry's spacing is greater than the next entry, the next entry will start a new row
+
+//Row 1
+SHORT SupportAtkLabel 0x00 1 0x1A
+SHORT SupportDefLabel 0x38 2 0x52
+SHORT SupportHitLabel 0x70 3 0x8A
+
+//Row 2
+SHORT SupportAvdLabel 0x00 4 0x1A
+SHORT SupportCritLabel 0x38 5 0x52
+SHORT SupportDdgLabel 0x70 6 0x8A
+
+//the end :)
+WORD 0
+ALIGN 4
+
+#include "asm/AffinityHelpText.lyn.event"
+ALIGN 4

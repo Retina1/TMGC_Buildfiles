@@ -28,11 +28,21 @@
 			mov		lr, r7
 			.short	0xF800
 			
-			add		r5, #12
-			b		LoopThroughLabelDisplay
-		
+			@Check if new row
+			ldrb	r0, [r5,#2]
+			ldrb	r1, [r5,#0x0E]
+			cmp		r0, r1
+			blt		LoopNextEntry
+				
+				add		r4, #8
+				
+				LoopNextEntry:
+				add		r5, #0x0C
+				b		LoopThroughLabelDisplay
+				
 		End:
-		mov		r0, #1
+		ldr		r0, =MoreStaffHelpTextSpaceRequirements
+		ldrb	r0, [r0]
 		pop		{r4-r7}
 		pop		{r1}
 		bx		r1

@@ -26,12 +26,19 @@
 		  @if so, set help text type
 		blh		GetCharDescEntry, r0
 		cmp		r0, #0
-		beq		End
+		beq		VanillaCharacterType
 		
 			ldr		r0, =CharacterHelpTextLink
-			ldrh	r0, [r0]
-			mov		r1, #0x4E
-			strh	r0, [r4,r1]
+			b		StoreHelpTextType
+			
+			VanillaCharacterType:
+			ldr		r0, =VanillaCharacterHelpTextLink
+			
+		StoreHelpTextType:
+		ldrh	r0, [r0]
+		ldr		r1, =HelpTextExtraInfoRAMLocation
+		ldr		r1, [r1]
+		strh	r0, [r1]
 		
 		End:
 		pop		{r4}

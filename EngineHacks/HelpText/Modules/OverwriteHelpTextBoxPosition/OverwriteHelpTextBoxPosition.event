@@ -1,0 +1,23 @@
+
+OverwriteHelpTextBoxPositionYCoord:
+BYTE 0x58
+ALIGN 4
+
+PUSH
+
+ORG 0x89278
+SHORT 0x4903 0x468E //ldr r1, =OverwriteHelpTextBoxPosition; mov lr, r1
+SHORT 0x4641 0x1C2A //mov r1, r8; mov r2, r5
+SHORT 0x1C3B 0xF800 //mov r3, r7; bl lr+0
+SHORT 0xE002 0 //b 0x8928C
+POIN OverwriteHelpTextBoxPosition
+PROTECT 0x89278 CURRENTOFFSET-1
+
+POP
+
+#ifdef USE_HELP_TEXT_CHAR_AND_PROMO
+	#include "asm/OverwriteHelpTextBoxPosition_Chars.lyn.event"
+#else
+	#include "asm/OverwriteHelpTextBoxPosition_NoChars.lyn.event"
+#endif
+ALIGN 4

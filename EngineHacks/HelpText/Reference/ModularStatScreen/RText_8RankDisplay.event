@@ -1,0 +1,26 @@
+
+//If DISPLAY_ALL_8_RANKS is defined, replace WeaponDescGetter with NewRankGetter. Do not use WeaponDescLooper or CheckIfMoreRanks.
+
+ST_WRank1:
+RMenu(0,ST_WRank3,ST_Name3,ST_WRank2,0x68,0x18,0,NewRankGetter)
+
+ST_WRank2:
+RMenu(0,ST_WRank4,ST_WRank1,0,0xA8,0x18,1,NewRankGetter)
+
+ST_WRank3:
+RMenu(ST_WRank1,ST_WRank5,ST_Name3,ST_WRank4,0x68,0x28,2,NewRankGetter)
+
+ST_WRank4:
+RMenu(ST_WRank2,ST_WRank6,ST_WRank3,0,0xA8,0x28,3,NewRankGetter)
+
+ST_WRank5:
+RMenu(ST_WRank3,ST_WRank7,ST_Name3,ST_WRank6,0x68,0x38,4,NewRankGetter)
+
+ST_WRank6:
+RMenu(ST_WRank4,ST_WRank8,ST_WRank5,0,0xA8,0x38,5,NewRankGetter)
+
+ST_WRank7:
+RMenu(ST_WRank5,ST_Name3,ST_Name3,ST_WRank8,0x68,0x48,6,NewRankGetter)
+
+ST_WRank8:
+RMenu(ST_WRank6,ST_Name3,ST_WRank7,0,0xA8,0x48,7,NewRankGetter)

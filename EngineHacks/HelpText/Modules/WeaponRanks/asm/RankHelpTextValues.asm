@@ -10,9 +10,10 @@
 		push	{r4-r7,r14}
 		
 		@Current WEXP
-		ldr		r1, =RankHelpTextLink
-		ldrh	r1, [r1]
-		sub		r1, r0, r1
+		ldr		r0, =gProc_8A00A98
+		blh		ProcFind, r1
+		ldr		r0, [r0,#0x2C]
+		ldrh	r1, [r0,#0x12]
 		ldr		r4, =StatScreenStruct
 		ldr		r4, [r4,#0x0C] @current character
 		mov		r0, r4
@@ -44,7 +45,6 @@
 				ldrb	r2, [r1,#5]
 				cmp		r5, r2
 				bge		NoRankUpAvailable
-			
 
 		CompareToNextRank:
 		add		r0, #1

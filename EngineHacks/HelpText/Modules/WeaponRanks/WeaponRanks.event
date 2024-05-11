@@ -16,22 +16,56 @@ PUSH
 ORG 0x205B52
 RankDescriptionsTable:
 
-ORG 0x205B5A //moving around the magic rank help text descriptions
-SHORT 0x0568 0x0565 0x0566 0x0567
+#ifdef ONLY_SHOW_USED_RANKS
+	ORG 0x205B5A //moving around the magic rank help text descriptions
+	SHORT 0x0568 0x0565 0x0566 0x0567
+#else
+	#ifdef DISPLAY_ALL_8_RANKS
+		ORG 0x205B5A //moving around the magic rank help text descriptions
+		SHORT 0x0568 0x0565 0x0566 0x0567
+	#endif
+#endif
 
 POP
 
-#include "asm/RankQuantityGetter.lyn.event"
-ALIGN 4
+#ifdef DISPLAY_ALL_8_RANKS
 
-#include "asm/GetRankTypeFromRankNumber.lyn.event"
-ALIGN 4
+	#include "asm/NewRankGetter_8RankDisplay.lyn.event"
+	ALIGN 4
+	
+	#include "asm/RankHelpTextValues_8RankDisplay.lyn.event"
+	ALIGN 4
 
-#include "asm/CheckIfMoreRanks.lyn.event"
-ALIGN 4
+#else
 
-#include "asm/NewRankGetter.lyn.event"
-ALIGN 4
+	#ifdef ONLY_SHOW_USED_RANKS
+		
+		#include "asm/GetRankTypeFromRankNumber.lyn.event"
+		ALIGN 4
+		
+		#include "asm/CheckIfMoreRanks.lyn.event"
+		ALIGN 4
+		
+		#include "asm/RankQuantityGetter.lyn.event"
+		ALIGN 4
+		
+		#include "asm/NewRankGetter.lyn.event"
+		ALIGN 4
+		
+		#include "asm/RankHelpTextValues.lyn.event"
+		ALIGN 4
+		
+	#else
+		
+		#include "asm/NewRankGetter_4RankDisplay.lyn.event"
+		ALIGN 4
+		
+		#include "asm/RankHelpTextValues_4RankDisplay.lyn.event"
+		ALIGN 4
+		
+	#endif
+	
+#endif
 
 #include "asm/RankHelpTextSpace.lyn.event"
 ALIGN 4
@@ -39,8 +73,6 @@ ALIGN 4
 #include "asm/RankHelpTextLabels.lyn.event"
 ALIGN 4
 
-#include "asm/RankHelpTextValues.lyn.event"
-ALIGN 4
 
 RankCurrentLabelLink:
 SHORT RankCurrentLabel

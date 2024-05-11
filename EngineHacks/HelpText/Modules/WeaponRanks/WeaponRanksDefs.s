@@ -14,3 +14,8 @@
 .equ StatScreen_HelpBoxGoingLeft, 0x080893B4
 .equ StatScreen_HelpBoxGoingUp, 0x08089354
 .equ StatScreen_HelpBoxGoingRight, 0x080893E4
+
+.equ gProc_8A00A98, 0x08A00A98
+.equ ProcFind, 0x08002E9C
+
+.equ UnitHasMagicRank, 0x08018A58

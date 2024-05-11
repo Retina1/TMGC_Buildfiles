@@ -71,7 +71,7 @@ ST_Level:
 ST_Exp:
   RMenu(ST_Class,ST_HP,ST_Level,ST_Res,0x26,0x78,0x543)
 ST_HP:
-  RMenu(ST_Level,0,0,ST_Mov,0x6,0x88,0x544)
+  CapRMenu(ST_Level,0,0,ST_Mov,0x6,0x88,0)
 
   ST_Str:
     //RMenu(PersonalDataRText,ST_Mag,ST_Name,ST_Con,0x66,0x18,0x546)
@@ -183,8 +183,8 @@ ST_Skill6:
 
   
   ST_Name2: 
-  //RMenu(0,ST_Class2,0,ST_Inventory4,0x18,0x50,0,NameDescGetter)
-  RMenu(0,ST_Class2,0,ST_Inventory4,0x18,0x50,0,HelpBoxCurrentCharInfo)
+  RMenu(0,ST_Class2,0,ST_Inventory4,0x18,0x50,0,NameDescGetter)
+  //RMenu(0,ST_Class2,0,ST_Inventory4,0x18,0x50,0,HelpBoxCurrentCharInfo)
 
   ST_Class2: 
   RMenu(ST_Name2,ST_Level2,0,ST_Atk,0x6,0x68,0x6E8,ClassDescGetter)
@@ -196,7 +196,7 @@ ST_Skill6:
   RMenu(ST_Class2,ST_HP2,ST_Level2,ST_Atk,0x26,0x78,0x543)
 
   ST_HP2: 
-  RMenu(ST_Level2,0,0,ST_Hit,0x6,0x88,0x544)
+   CapRMenu(ST_Level2,0,0,ST_Hit,0x6,0x88,0)
 
 
 
@@ -242,8 +242,8 @@ ST_Skill6:
   RMenu(ST_WRank6,ST_Name3,ST_WRank7,0,0xA8,0x48,7,CheckIfMoreRanks,NewRankGetter)
 
   ST_Name3:
-  //RMenu(0,ST_Class3,0,ST_Supports,0x18,0x50,0,NameDescGetter)
-  RMenu(0,ST_Class3,0,ST_WRank1,0x18,0x50,0,HelpBoxCurrentCharInfo)
+  RMenu(0,ST_Class3,0,ST_WRank1,0x18,0x50,0,NameDescGetter)
+  //RMenu(0,ST_Class3,0,ST_WRank1,0x18,0x50,0,HelpBoxCurrentCharInfo)
 
   ST_Class3:
   RMenu(ST_Name3,ST_Level3,0,ST_WRank1,0x6,0x68,0x6E8,ClassDescGetter)
@@ -255,7 +255,7 @@ ST_Skill6:
   RMenu(ST_Class3,ST_HP3,ST_Level3,ST_WRank1,0x26,0x78,0x543)
 
   ST_HP3:
-  RMenu(ST_Level3,0,0,ST_WRank1,0x6,0x88,0x544)
+  CapRMenu(ST_Level3,0,0,ST_WRank1,0x6,0x88,0)
 
 
 /*  === PAGE 4 ===  */

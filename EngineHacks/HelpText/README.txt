@@ -7,7 +7,7 @@ Important take-aways
 
 - Most of these modules require an edit to MSS. Look at the file included in Reference to see what kind of changes you need. To quickly find out changes, search for the definition (e.g. USE_HELP_TEXT_CALC) in RText.event.
 - Engine hacks/patches that edit the information inside of helptext/Rtext may conflict with this. I have created compatibility modules for the ones that I'm aware of. Please report any such conflicts to me so that I can (attempt to) fix these issues.
-- If you've already installed Vesly's ExtendWeaponDescBox, you can either comment out the installation you already have or comment out its inclusion in this file on line 34 of Installer.event (the main file).
+- If you've already installed Vesly's ExtendWeaponDescBox, you can either comment out the installation you already have or comment out its inclusion in this file on line 37 of Installer.event (the main file).
 - To exclude/include modules, comment/uncomment definitions made on lines 10 and below of Installer.event
 - If you'd like to change the range of text ids that are overwritten, edit the definition on line 6 of HelpTextText.event. If you don't want the text ids to be overwritten at all, comment out line 7 of Installer.event. Keep in mind that nearly every module needs certain text to properly function.
 

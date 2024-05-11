@@ -13,9 +13,9 @@
 		ldrh	r1, [r1,#0x12]
 		ldr		r3, =RankHelpTextLink
 		ldrh	r3, [r3]
-		add		r3, r1
-		add		r0, #0x4C
-		strh	r3, [r0,#2]
+		ldr		r0, =HelpTextExtraInfoRAMLocation
+		ldr		r0, [r0]
+		strh	r3, [r0]
 		
 		ldr		r0, =StatScreenStruct
 		ldr		r0, [r0,#0x0C]

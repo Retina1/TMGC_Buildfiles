@@ -112,9 +112,19 @@
 		b		NextButtonInput
 		
 		StatScreen_HelpBoxIdle_BreakProcLoop:
-		mov		r0, r5
-		blh		BreakProcLoop, r1
-		b		End
+		
+		@do not close if button is held
+		ldr		r0, =gpKeyState
+		ldr		r0, [r0]
+		ldrh	r0, [r0,#8] @button(s) last pressed (if any)
+		mov		r1, #0x81
+		lsl		r1, #1
+		tst		r0, r1
+		beq		End
+		
+			mov		r0, r5
+			blh		BreakProcLoop, r1
+			b		End
 		
 		CheckIfAnyDirection:
 		cmp		r4, #0

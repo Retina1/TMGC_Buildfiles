@@ -25,7 +25,7 @@
 
 
 		SupportReworkReworkCheck:
-		ldr		r0, =0x0000FDFF
+		ldr		r1, =0x0000FFFD
 		cmp		r0, r1
 		bne		ReturnFalse
 		

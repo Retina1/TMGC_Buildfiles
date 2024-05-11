@@ -31,6 +31,9 @@
 //#define USE_STRMAG_SPLIT
 //#define ONLY_SHOW_USED_RANKS
 
+//I didn't see this setting in SkillSystem Config, but this might be relevant. Don't use with ONLY_SHOW_USED_RANKS.
+//#define DISPLAY_ALL_8_RANKS
+
 #include "ExtendWeaponDescBox/Installer.event"
 
 
@@ -101,15 +104,16 @@ WORD gHelpTextExtraInfoRAM
 	#endif
 #endif
 
+#ifdef DISPLAY_ALL_8_RANKS
+	#ifdef ONLY_SHOW_USED_RANKS
+		ERROR "DISPLAY_ALL_8_RANKS" and "ONLY_SHOW_USED_RANKS" cannot be used at the same time
+	#endif
+#endif
+
+//Overwrite text
 #ifdef USE_HELP_TEXT_TEXT
 	#include "HelpTextText.event"
 #endif
-
-/*
-Different types of helptext has been incorporated by using the same spot in the proc when looking at items/save files. For this reason, ids in HelpTextIdTable start at 0xFF01. Things that require a different method of verification are in HelpTextTypeList.
-If you have an item with an id of 0xFF, there shouldn't be any problems if that item is 
-indestructible. If the durability on that item is being tracked, then you will want to change the ids in HelpTextIdTable to an indestructible item (e.g. if 0x80 is indestructible, use 0x8001, 0x8002, etc.).
-*/
 
 #define HTITE(helpTextTypeFirstId,helpTextTypeRange,addAdditionalSpaceRoutine,labelWritingRoutine,numberWritingRoutine) "SHORT helpTextTypeFirstId helpTextTypeFirstId+helpTextTypeRange-1; POIN addAdditionalSpaceRoutine labelWritingRoutine numberWritingRoutine"
 #define HTITE(helpTextTypeFirstId,helpTextTypeRange,addAdditionalSpaceRoutine,writingRoutine) "SHORT helpTextTypeFirstId helpTextTypeFirstId+helpTextTypeRange-1; POIN addAdditionalSpaceRoutine writingRoutine; WORD 0"
@@ -121,9 +125,7 @@ indestructible. If the durability on that item is being tracked, then you will w
 
 HelpTextIdTable:
 
-	//most entries don't need to be in this exact order, but keep entry ids in sequential order
-	
-	//If skill helptext stuff is being used, this needs to be the first entry on HelpTextIdTable
+	//If skill helptext stuff is being used, this needs to be the first entry and needs to use this id range. Besides that, most entries don't need to be in this exact order, but keep entry ids in sequential order.
 	#ifdef USE_HELP_TEXT_SKILL
 		SkillHelpTextLink:
 		HTITE(0x001,0x00FF,SkillHelpTextSpace,SkillHelpTextExtraInfo)
@@ -173,8 +175,6 @@ HelpTextIdTable:
 		AffinityHelpTextLink:
 		HTITE(0x0108,1,AffinityHelpTextSpace,AffinityHelpTextInfo)
 	#endif
-//		HTITE(0xFFFD,1,SupportReworkReworkSpace,SupportReworkReworkLabels,SupportReworkReworkValues)
-
 	
 	WORD 0 //end of table
 
@@ -187,6 +187,7 @@ HelpTextTypeList:
 	
 	HTTLE(SaveFileHelpTextCheck,SaveFileHelpTextSpace,SaveFileHelpTextLabels,SaveFileHelpTextValues)
 	
+	//Weapons & Staves should come after anything added to HelpTextTypeList
 	HTTLE(WeaponMagicHelpTextCheck,WeaponMagicHelpTextSpace,WeaponMagicHelpTextLabels,WeaponMagicHelpTextValues)
 	
 	#ifndef USE_HELP_TEXT_MORE_STAFF_INFO

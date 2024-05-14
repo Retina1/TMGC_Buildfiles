@@ -31,6 +31,37 @@ UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
+EpilogueOpistiaGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [5,32] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Vladmir 0x0 0x0 Level(1,Ally,0) [5,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Athena 0x0 0x0 Level(1,Ally,0) [4,29] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaApollo:
+UNIT Apollo 0x0 0x0 Level(1,Ally,0) [6,34] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaFlynn:
+UNIT Flynn 0x0 0x0 Level(1,Ally,0) [7,33] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaHilbert:
+UNIT Hilbert 0x0 0x0 Level(1,Ally,0) [4,34] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaLaronde:
+UNIT SecretLaronde 0x0 0x0 Level(1,Ally,0) [8,31] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaRose:
+UNIT Rose 0x0 0x0 Level(1,Ally,0) [8,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaJosef:
+UNIT Josef 0x0 0x0 Level(1,Ally,0) [3,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
 
 #define BlairArinFlag 0x8
 #define BlairNatasiaFlag 0x9
@@ -48,7 +79,7 @@ ALIGN 4
 #define SamEmileFlag 0x14 //used
 #define SamBechamelFlag 0x15 //used
 #define SamCharleyFlag 0x16 //used
-#define JosefAthenaFlag 0x17
+#define JosefAthenaFlag 0x17 //used
 #define PeggyButchFlag 0x18 //used
 #define ButchJeffFlag 0x19 //used
 #define ButchPeterFlag 0x1a //used
@@ -87,6 +118,63 @@ ALIGN 4
 #define EpilogueFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueNoFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 
+
+OpistiaResolution:
+EpilogueMapSwap(Interlude4,5,31)
+//loads
+LOAD1 0x0 EpilogueOpistiaGuaranteedUnits
+EpilogueNoFlagUnitLoad(Apollo,ApolloBechamelFlag,EpilogueOpistiaApollo,0x1)
+EpilogueNoFlagUnitLoad(Flynn,DesmondFlynnFlag,EpilogueOpistiaFlynn,0x2)
+EpilogueNoFlagUnitLoad(Hilbert,KennethHilbertFlag,EpilogueOpistiaHilbert,0x3)
+EpilogueUnitLoad(SecretLaronde,EpilogueOpistiaLaronde,0x4)
+EpilogueUnitLoad(Rose,EpilogueOpistiaRose,0x5)
+EpilogueFlagUnitLoad(Josef,JosefAthenaFlag,EpilogueOpistiaJosef,0x7)
+FADU 0x4
+STAL 120
+//text
+EpilogueUnitText(Vladmir,Epilogue_VladmirOpistia,0x11)
+CHECK_EVENTID ApolloBechamelFlag
+BNE 0x2a 0xc 0x0
+	CHECK_EVENTID ApolloFlynnFlag
+	BNE 0x2b 0xc 0x0
+		CHECK_EVENTID ApolloVladmirFlag
+		BEQ 0x2c 0xc 0x0
+			FlashCursor(Apollo,30)
+			FlashCursor(Vladmir,30)
+			Text(Epilogue_ApolloVladmirOpistia)
+			GOTO 0x2a
+		LABEL 0x2c
+		EpilogueUnitText(Apollo,Epilogue_ApolloOpistia,0x2d)
+		GOTO 0x2a
+	LABEL 0x2b
+	FlashCursor(Apollo,30)
+	FlashCursor(Flynn,30)	
+	Text(Epilogue_ApolloFlynnOpistia)
+LABEL 0x2a
+//flynn ending
+CHECK_EVENTID DesmondFlynnFlag
+BNE 0x2e 0xc 0x0
+EpilogueNoFlagUnitText(Flynn,ApolloFlynnFlag,Epilogue_FlynnOpistia,0x2e)
+EpilogueNoFlagUnitText(Hilbert,KennethHilbertFlag,Epilogue_HilbertOpistia,0x2f)
+//athena
+EpilogueNoFlagUnitText(Athena,JosefAthenaFlag,Epilogue_AthenaOpistia,0x30)
+CHECK_EVENTID JosefAthenaFlag
+BEQ 0x31 0xc 0x0
+	FlashCursor(Josef,30)
+	FlashCursor(Athena,30)	
+	Text(Epilogue_JosefAthenaOpistia)
+LABEL 0x31
+//rose laronde
+EpilogueNoFlagUnitText(Rose,RoseLarondeFlag,Epilogue_RoseOpistia,0x32)
+EpilogueNoFlagUnitText(SecretLaronde,RoseLarondeFlag,Epilogue_LarondeOpistia,0x33)
+CHECK_EVENTID JosefAthenaFlag
+BEQ 0x34 0xc 0x0
+	FlashCursor(Rose,30)
+	FlashCursor(SecretLaronde,30)	
+	Text(Epilogue_LarondeRoseOpistia)
+LABEL 0x34
+STAL 120
+EndEvent
 
 
 PortResolution:
@@ -244,7 +332,12 @@ LABEL 0x3
 EpilogueNoFlagUnitLoad(Jeff,RachaelJeffFlag,EpilogueMevionJeff,0x4)
 //peggy loads if butch ending OR if not natasia ending
 EpilogueFlagUnitLoad(Peggy,PeggyButchFlag,EpilogueMevionPeggy,0x5)
-EpilogueNoFlagUnitLoad(Peggy,NatasiaPeggyFlag,EpilogueMevionPeggy,0x6)
+CHECK_EVENTID NatasiaPeggyFlag
+BEQ 0x300 0xc 0x0
+EpilogueNoFlagUnitLoad(Peggy,NatasiaBechamelFlag,EpilogueMevionPeggy,0x6)
+GOTO 0x301
+LABEL 0x300
+EpilogueUnitLoad(Peggy,EpilogueMevionPeggy,0x301)
 //loads
 FADU 0x4
 STAL 120
@@ -252,7 +345,13 @@ STAL 120
 CHECK_EVENTID PeggyButchFlag
 BNE 0x14 0xc 0x0
 //runs if peggy/nat AND peggy butch didn't happen
-EpilogueNoFlagUnitText(Peggy,NatasiaPeggyFlag,Epilogue_PeggyMevion,0x14)
+		CHECK_EVENTID NatasiaPeggyFlag
+		BEQ 0x3001 0xc 0x0
+		EpilogueNoFlagUnitText(Peggy,NatasiaBechamelFlag,Epilogue_PeggyMevion,0x6111)
+		GOTO 0x3011
+		LABEL 0x3001
+		EpilogueUnitText(Peggy,Epilogue_PeggyMevion,0x3011)
+//EpilogueNoFlagUnitText(Peggy,NatasiaPeggyFlag,Epilogue_PeggyMevion,0x14)
 //butch stuff
 CHECK_EVENTID ButchPeterFlag
 BNE 0x10 0xc 0x0
@@ -442,6 +541,8 @@ BEQ 0x1 0xc 0x0
 	TEXTSTART
 	TEXTSHOW Epilogue_FinalScene
 	TEXTEND
+	//no second set of footsteps
+	/*
 	SOUN 0x99
 	STAL 30
 	SOUN 0x98
@@ -451,8 +552,8 @@ BEQ 0x1 0xc 0x0
 	SOUN 0x98
 	STAL 30
 	TEXTCONT
-	TEXTEND
-	FADI 0x2
+	TEXTEND*/
+//	FADI 0x2
 CLEAN //clean up these fades eventually
 LABEL 0x1
 STAL 180
@@ -465,15 +566,6 @@ MNTS 0x1
 //MoveToChapter(HubMap)
 ENDA
 
-
-OpistiaResolution:
-EpilogueMapSwap(Interlude4,5,31)
-//loads
-FADU 0x4
-STAL 120
-//text
-STAL 120
-EndEvent
 
 YgstraResolution:
 EpilogueMapSwap(Chapter13,18,2)

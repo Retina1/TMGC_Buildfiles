@@ -135,6 +135,10 @@ A special axe that doubles the user's strikes.[X]
 
 ##DDevilAxe ^
 A cursed axe that can kill unlucky users.[X]
+##DDevilAxe2 ^
+(31-Luck)% chance of backfire.[N]
+If Luck is 31 or greater, this[N]
+weapon will never backfire.[X]
 
 ##DSwordslayer ^
 Reaves swords, and is effective against them.  [SwordIcon][X]
@@ -301,6 +305,10 @@ status conditions.[X]
 ##DSilence ^
 An arbiter's staff that ensures the last word.[N]
 Seals magic for 5 turns. AI targets staff users.[X]
+##DSilence2 ^
+Silenced units cannot use tomes, staves,[N]
+or magical weapons. These items are forced[N]
+to be unequipped and can thus be stolen.[X]
 
 ##USilence
 Silence a target,[N]
@@ -309,6 +317,10 @@ blocking their magic.[X]
 ##DSleep ^
 A staff with applications in treating insomnia.[N]
 Lulls a target into a deep sleep for 5 turns.[X]
+##DSleep2 ^
+Sleeping units cannot move or act.[N]
+Their weapons are still considered[N]
+equipped, and they can dodge attacks.[X]
 
 ##USleep
 Force a target into[N]
@@ -317,6 +329,11 @@ a harmless slumber.[X]
 ##DBerserk ^
 A staff which releases pent-up frustrations.[N]
 Sends target into a berserk rage for 5 turns.[X]
+##DBerserk2 ^
+Berserked units cannot be controlled, rescued,[N]
+or traded with. At the end of their army's[N]
+turn, they will attack a target in range,[N]
+whether that be a ally or an enemy.[X]
 
 ##UBerserk
 Enrage a target -[N]
@@ -471,6 +488,11 @@ Opens locks.[X]
 ##DAwaken ^
 For Blair. From pain, awakening. Resolve.[X]
 
+##DAwaken2 ^
+When HP is at or below 50%,[N]
+get 1.5x Str, Skl, and Speed.[N]
+This doesn't impact Mag.[X]
+
 ##DLevinSword ^
 A striking magical sword. No WEXP.[X]
 
@@ -549,6 +571,11 @@ forgotten fury.[X]
 ##DPressTurn ^
 Grants an extra turn when exploiting WTA.[X]
 
+##DPressTurn2 ^
+Can only activate once per turn per unit.[N]
+Does not stack with extra turns from[N]
+Powerstaff or Biased Quiver.[X]
+
 ##DArbitrate ^
 A Dalstian staff useful for debate. Silences all[N]
 in range for 3 turns. Doesn't overwrite statuses.[X]
@@ -615,9 +642,17 @@ A purified version of the Nosferatu spell.[X]
 
 ##DLux ^
 Golden light. [OpenQuote]Use[CloseQuote] to summon a light rune.[X]
+##DLightRuneEffect ^
+Light runes prevent any unit from[N]
+moving onto the tile they cover.[N]
+Light runes disappear after 3 turns.[X]
 
 ##DNox ^
 Golden night. [OpenQuote]Use[CloseQuote] to summon a mine trap.[X]
+##DMineEffect ^
+Mines deal 10 damage to any unit that[N]
+moves onto or through the tile they trap.[N]
+Mines do not disappear on their own.[X]
 
 ##DCloudburst ^
 Sleep of open eyes. [OpenQuote]Use[CloseQuote] to rewarp with 2 range.[X]

@@ -20,7 +20,7 @@
 CampIchigaya_001:
 //  #01 //000   ----------------------------------------
  BYTE   KEYSH   CampIchigaya_key+0
- BYTE   TEMPO   116*CampIchigaya_tbs/2
+ BYTE   TEMPO   118*CampIchigaya_tbs/2
  BYTE   VOICE   38
  BYTE   W96
 //  #01 //001   ----------------------------------------
@@ -639,7 +639,7 @@ CampIchigaya_003:
 //  #03 //000   ----------------------------------------
  BYTE   VOL   50*CampIchigaya_mvl/mxv
  BYTE   KEYSH   CampIchigaya_key+0
- BYTE   VOICE   92
+ BYTE   VOICE   81
  BYTE   W24
  BYTE   N12  Cn2  v096
  BYTE   W12
@@ -794,7 +794,7 @@ Label_F646EE:
 CampIchigaya_004:
 //  #04 //000   ----------------------------------------
  BYTE   KEYSH   CampIchigaya_key+0
- BYTE   VOICE   52
+ BYTE   VOICE   106
  BYTE   VOL   23*CampIchigaya_mvl/mxv
  BYTE   TIE  Cn1  v084
  BYTE   TIE  Cn2
@@ -981,7 +981,7 @@ Label_F64413:
 CampIchigaya_005:
 //  #05 //000   ----------------------------------------
  BYTE   KEYSH   CampIchigaya_key+0
- BYTE   VOICE   40
+ BYTE   VOICE   30
  BYTE   W96
 //  #05 //001   ----------------------------------------
  BYTE   W96
@@ -1187,7 +1187,7 @@ Label_F648A1:
 CampIchigaya_006:
 //  #06 //000   ----------------------------------------
  BYTE   KEYSH   CampIchigaya_key+0
- BYTE   VOICE   52
+ BYTE   VOICE   106
  BYTE   W96
 //  #06 //001   ----------------------------------------
  BYTE   W96

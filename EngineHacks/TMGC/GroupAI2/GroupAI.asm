@@ -53,6 +53,14 @@ cmp r1, #0
 beq NotInGroup 
 @r0 is now ram
 
+@prevent if statused
+mov r2, #0x30
+ldrb r3, [r0,r2]
+mov r2, #0x0
+cmp r3,r2
+bne NotInGroup
+
+
 mov r2, #0x41
 ldrb r3, [r0,r2]
 mov r2, #0x1F

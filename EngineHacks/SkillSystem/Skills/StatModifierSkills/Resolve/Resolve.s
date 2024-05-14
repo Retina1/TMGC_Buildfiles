@@ -21,11 +21,11 @@ ldrb r1, [r5, #0x13] @currhp
 cmp r1, r0
 bgt GoBack
 
-ldrb r0,[r5,#0x12]
-ldrb r1,[r5,#0x13]
-lsl r1,r1,#1
-cmp r0,r1
-blt GoBack
+@ldrb r0,[r5,#0x12]
+@ldrb r1,[r5,#0x13]
+@lsl r1,r1,#1
+@cmp r0,r1
+@blt GoBack
 
 
 ldr r0, SkillTester

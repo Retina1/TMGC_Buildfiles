@@ -3,6 +3,7 @@
 	#define callHackNew(offset) "BYTE $01 $4B $9E $46 $00 $F8 $01 $E0; POIN (offset|0x1)"
 #endif 
 // By PhantomSentine. Edited by Vesly 
+// sleep fixed by making enemies not join ai if statused (technically this also impacts force spike and silenced phys but that's an edge case)
 
 PUSH 
 ORG $37748 // HandlePostActionTraps occurs before the hook at $1D308 and sets action to "wait" when standing on a trap right after this code

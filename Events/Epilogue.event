@@ -31,37 +31,6 @@ UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
-EpilogueOpistiaGuaranteedUnits:
-UNIT Blair 0x0 0x0 Level(1,Ally,0) [5,32] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Vladmir 0x0 0x0 Level(1,Ally,0) [5,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Athena 0x0 0x0 Level(1,Ally,0) [4,29] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueOpistiaApollo:
-UNIT Apollo 0x0 0x0 Level(1,Ally,0) [6,34] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueOpistiaFlynn:
-UNIT Flynn 0x0 0x0 Level(1,Ally,0) [7,33] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueOpistiaHilbert:
-UNIT Hilbert 0x0 0x0 Level(1,Ally,0) [4,34] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueOpistiaLaronde:
-UNIT SecretLaronde 0x0 0x0 Level(1,Ally,0) [8,31] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueOpistiaRose:
-UNIT Rose 0x0 0x0 Level(1,Ally,0) [8,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueOpistiaJosef:
-UNIT Josef 0x0 0x0 Level(1,Ally,0) [3,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-
-ALIGN 4
 
 #define BlairArinFlag 0x8
 #define BlairNatasiaFlag 0x9
@@ -117,6 +86,65 @@ ALIGN 4
 #define EpilogueUnitText(unit1,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueNoFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
+
+
+YgstraResolution:
+EpilogueMapSwap(Chapter13,18,2)
+//loads
+LOAD1 0x0 EpilogueYgstraGuaranteedUnits
+EpilogueUnitLoad(Joan,EpilogueYgstraJoan,0x1)
+EpilogueUnitLoad(Sonia,EpilogueYgstraSonia,0x2)
+EpilogueUnitLoad(Tobias,EpilogueYgstraTobias,0x3)
+EpilogueUnitLoad(SecretJonas,EpilogueYgstraJonas,0x4)
+EpilogueNoFlagUnitLoad(Mikey,CassiusMikeyFlag,EpilogueYgstraMikey,0x5)
+EpilogueFlagUnitLoad(Leila,LeilaDamienFlag,EpilogueYgstraLeila,0x6)
+CHECK_EVENTID LeilaWilhelmFlag
+BNE 0x7 0xc 0x0
+EpilogueFlagUnitLoad(Leila,LeilaTobiasFlag,EpilogueYgstraLeila,0x7)
+FADU 0x4
+STAL 120
+//text
+EpilogueNoFlagUnitText(Mikey,CassiusMikeyFlag,Epilogue_MikeyYgstra,0x17)
+EpilogueNoFlagUnitText(Joan,JoanSoniaFlag,Epilogue_JoanYgstra,0x11)//sonia dead
+EpilogueNoFlagUnitText(Sonia,JoanSoniaFlag,Epilogue_SoniaYgstra,0x12)//joan dead
+CHECK_EVENTID JoanSoniaFlag
+BEQ 0x13 0xc 0x0
+			FlashCursor(Joan,30)
+			FlashCursor(Sonia,30)
+			Text(Epilogue_JoanSoniaYgstra)
+LABEL 0x13
+CHECK_EVENTID LeilaDamienFlag
+BEQ 0x15 0xc 0x0
+			FlashCursor(Leila,30)
+			FlashCursor(Damien,30)
+			CHECK_EVENTID LeilaTobiasFlag
+			BEQ 0x31 0xc 0x0
+			Text(Epilogue_LeilaDamienYgstraAlt)//leiladamien ending, toby parentage mentioned
+			GOTO 0x21
+			LABEL 0x31
+			Text(Epilogue_LeilaDamienYgstra)//leiladamien ending
+			GOTO 0x21
+LABEL 0x15
+EpilogueUnitText(Damien,Epilogue_DamienYgstra,0x21)
+
+EpilogueUnitText(Zacharias,Epilogue_ZachariasYgstra,0x14)
+
+CHECK_EVENTID LeilaTobiasFlag
+BEQ 0x1a 0xc 0x0
+	CHECK_EVENTID LeilaWilhelmFlag
+	BNE 0x1b 0xc 0x0
+			FlashCursor(Leila,30)
+			FlashCursor(Tobias,30)
+			Text(Epilogue_LeilaTobiasYgstra)//toby leila
+	GOTO 0x1d
+	LABEL 0x1b
+		EpilogueUnitText(Tobias,Epilogue_TobiasYgstraAlt,0x1e)//toby is happy his daughter's happy
+		GOTO 0x1d
+LABEL 0x1a
+EpilogueUnitText(Tobias,Epilogue_TobiasYgstra,0x1d)//toby solo
+EpilogueUnitText(SecretJonas,Epilogue_JonasYgstra,0x18)
+STAL 120
+EndEvent
 
 
 OpistiaResolution:
@@ -566,16 +594,6 @@ MNTS 0x1
 //MoveToChapter(HubMap)
 ENDA
 
-
-YgstraResolution:
-EpilogueMapSwap(Chapter13,18,2)
-//loads
-FADU 0x4
-STAL 120
-//text
-STAL 120
-EndEvent
-
 HolanisResolution:
 EpilogueMapSwap(Interlude9,12,6)
 //loads
@@ -816,6 +834,74 @@ UNIT
 ALIGN 4
 EpiloguePortNatasia:
 UNIT Natasia 0x0 0x0 Level(1,Ally,0) [21,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueOpistiaGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [5,32] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Vladmir 0x0 0x0 Level(1,Ally,0) [5,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Athena 0x0 0x0 Level(1,Ally,0) [4,29] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaApollo:
+UNIT Apollo 0x0 0x0 Level(1,Ally,0) [6,34] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaFlynn:
+UNIT Flynn 0x0 0x0 Level(1,Ally,0) [7,33] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaHilbert:
+UNIT Hilbert 0x0 0x0 Level(1,Ally,0) [4,34] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaLaronde:
+UNIT SecretLaronde 0x0 0x0 Level(1,Ally,0) [8,31] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaRose:
+UNIT Rose 0x0 0x0 Level(1,Ally,0) [8,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueOpistiaJosef:
+UNIT Josef 0x0 0x0 Level(1,Ally,0) [3,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueYgstraGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [14,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Damien 0x0 0x0 Level(1,Ally,0) [15,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Zacharias 0x0 0x0 Level(1,Ally,0) [16,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueYgstraJoan:
+UNIT Joan 0x0 0x0 Level(1,Ally,0) [18,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueYgstraSonia:
+UNIT Sonia 0x0 0x0 Level(1,Ally,0) [19,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueYgstraTobias:
+UNIT Tobias 0x0 0x0 Level(1,Ally,0) [17,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueYgstraMikey:
+UNIT Mikey 0x0 0x0 Level(1,Ally,0) [17,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueYgstraJonas:
+UNIT SecretJonas 0x0 0x0 Level(1,Ally,0) [15,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
+EpilogueYgstraLeila:
+UNIT Leila 0x0 0x0 Level(1,Ally,0) [16,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4

@@ -36,7 +36,7 @@ TurnEventPlayer(0x0,V5Turn11,11)
 TurnEventPlayer(0x0,V5Turn12,12)
 TurnEventPlayer(0x0,V5Turn14,14)
 TurnEventPlayer(0x0,V5Goodbye,15,50)
-TurnEventPlayer(0x0,V5GoodbyeForReal,19,50)
+TurnEventPlayer(0x0,V5GoodbyeForReal,17,50)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -372,7 +372,7 @@ Reinforcements(V5Death1)
 EndEvent
 V5GoodbyeForReal:
 CHECK_TURNS
-SVAL 0x1 19
+SVAL 0x1 17
 BNE 0x1 0xc 0x1
 CAM1 [27,1]
 FlashCursor(27,1,60)

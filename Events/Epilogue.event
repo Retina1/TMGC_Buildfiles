@@ -31,6 +31,47 @@ UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
+EpilogueHolanisGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [15,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisSveltzalus:
+UNIT Sveltzalus 0x0 0x0 Level(1,Ally,0) [17,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisArtemis:
+UNIT Artemis 0x0 0x0 Level(1,Ally,0) [12,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisQ:
+UNIT UnitQ 0x0 0x0 Level(1,Ally,0) [11,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisHoratio:
+UNIT Horatio 0x0 0x0 Level(1,Ally,0) [16,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisSimone:
+UNIT Simone 0x0 0x0 Level(1,Ally,0) [17,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisDean:
+UNIT Dean 0x0 0x0 Level(1,Ally,0) [20,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisPtolemy:
+UNIT Ptolemy 0x0 0x0 Level(1,Ally,0) [12,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisTonnamin:
+UNIT Tonnamin 0x0 0x0 Level(1,Ally,0) [9,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisIan:
+UNIT Ian 0x0 0x0 Level(1,Ally,0) [17,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+ALIGN 4
 
 #define BlairArinFlag 0x8
 #define BlairNatasiaFlag 0x9
@@ -87,6 +128,34 @@ ALIGN 4
 #define EpilogueFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueNoFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 
+HolanisResolution:
+EpilogueMapSwap(Interlude9,15,8)
+//loads
+LOAD1 0x0 EpilogueHolanisGuaranteedUnits
+EpilogueUnitLoad(Sveltzalus,EpilogueHolanisSveltzalus,0x1)
+EpilogueUnitLoad(Artemis,EpilogueHolanisArtemis,0x2)
+EpilogueUnitLoad(UnitQ,EpilogueHolanisQ,0x3)
+EpilogueUnitLoad(Horatio,EpilogueHolanisHoratio,0x4)
+EpilogueUnitLoad(Simone,EpilogueHolanisSimone,0x5)
+EpilogueUnitLoad(Dean,EpilogueHolanisDean,0x6)
+EpilogueUnitLoad(Tonnamin,EpilogueHolanisTonnamin,0x7)
+EpilogueUnitLoad(Ian,EpilogueHolanisIan,0x8)
+EpilogueNoFlagUnitLoad(Ptolemy,PtolemyJohanFlag,EpilogueHolanisPtolemy,0x9)
+FADU 0x4
+STAL 120
+//text (very simple)
+EpilogueUnitText(Artemis,Epilogue_ArtemisHolanis,0x21)
+EpilogueFlagUnitText(Horatio,HoratioMusicFlag,Epilogue_HoratioHolanisAlt,0x411)//summon
+EpilogueNoFlagUnitText(Horatio,HoratioMusicFlag,Epilogue_HoratioHolanis,0x412)//no summon
+EpilogueUnitText(Simone,Epilogue_SimoneHolanis,0x51)
+EpilogueNoFlagUnitText(Ptolemy,PtolemyJohanFlag,Epilogue_PtolemyHolanis,0x91)
+EpilogueUnitText(Dean,Epilogue_DeanHolanis,0x61)
+EpilogueUnitText(Ian,Epilogue_IanHolanis,0x81)
+EpilogueUnitText(UnitQ,Epilogue_QHolanis,0x31)
+EpilogueUnitText(Tonnamin,Epilogue_TonnaminHolanis,0x71)
+EpilogueUnitText(Sveltzalus,Epilogue_SveltzalusHolanis,0x11)
+STAL 120
+EndEvent
 
 YgstraResolution:
 EpilogueMapSwap(Chapter13,18,2)
@@ -594,14 +663,6 @@ MNTS 0x1
 //MoveToChapter(HubMap)
 ENDA
 
-HolanisResolution:
-EpilogueMapSwap(Interlude9,12,6)
-//loads
-FADU 0x4
-STAL 120
-//text
-STAL 120
-EndEvent
 
 MercenaryResolution:
 EpilogueMapSwap(Interlude7,19,10)

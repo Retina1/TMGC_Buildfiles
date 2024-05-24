@@ -205,7 +205,7 @@ Salvation (apollo prf),NSalvation,DSalvation,USalvation,0xca,0x6,IsWeapon|IsMagi
 Galerider (cassius prf),NGalerider,DGalerider,UGalerider,0xcb,0x2,IsWeapon|CassiusLocked,0x0,0x0,25,11,80,7,30,0x11,88,NoRank,GaleriderIcon,0x0,NoEffect,2,0x0,0x0,OutriderID
 Mazandyne (hilbert prf),NMazandyne,DMazandyne,UMazandyne,0xcc,0x5,IsWeapon|IsMagic|ReverseTriangle|HilbertLocked,0x0,0x0,20,13,90,6,5,0x12,90,NoRank,MazandyneIcon,0x0,NoEffect,2,0x0,0x0,PressTurnID
 Longinus (josef prf),NLonginus,DLonginus,ULonginus,0xcd,0x1,IsWeapon|IsMagic|JosefLocked,0x0,0x0,35,9,85,12,5,0x12,75,NoRank,LonginusIcon,0x0,NoEffect,2,0x0,0x0,0x0
-Flying Spike (rachael prf),NFlyingSpike,DFlyingSpike,UFlyingSpike,0xce,0x1,IsWeapon|RachaelLocked,0x0,0x0,20,12,70,12,255,0x13,90,NoRank,FlyingSpikeIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Flying Spike (rachael prf),NFlyingSpike,DFlyingSpike,UFlyingSpike,0xce,0x1,IsWeapon|RachaelLocked,0x0,0x0,20,12,70,12,0,0x13,90,NoRank,FlyingSpikeIcon,0x0,NoEffect,1,0x0,0x0,0x0
 0xeff Sword (Horatio prf),HoratioSwordName,DHoratioBlade,UHoratioBlade,0xcf,0x0,IsWeapon|Unsellable|HoratioLocked|Indestructible,0x0,0x0,30,16,90,9,20,0x11,0,NoRank,HoratioSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
 0xeff Sword (summoned),HoratioSwordName,DSummonBlade,0x0,0xd0,0x0,IsWeapon|Unsellable|Indestructible,0x0,0x0,30,21,80,9,20,0x11,0,SRank,HoratioSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Annihilation,NAnnihilation,DAnnihilation,UAnnihilation,0xd1,0x5,IsWeapon|IsMagic|NegateDef|Indestructible|PassiveBoosts|CannotRepair,0x0,UberEffectiveness|IsPointer,30,99,200,10,255,0xff,0,SRank,AnnihilationIcon,0x0,NoEffect,1,0x0,0x0,WatchfulID
@@ -232,8 +232,8 @@ Crimson Eye,NCrimsonEye,DCrimsonEye,USlam,0xe5,0x7,IsWeapon|Indestructible|Svelt
 Passacaglia,NPassacaglia,DPassacaglia,UPassacaglia,0xe6,0x3,IsWeapon|SamLocked|Indestructible|Unsellable,0x0,BowpierEffectiveness|IsPointer,40,15,120,6,0,0x12,35000,NoRank,PassacagliaIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Stormbow,NStormbow,DStormbow,UStormbow,0xe7,0x3,IsWeapon|IsBrave,0x0,0x0,16,3,30,30,30,0x45,2500,SRank,StormbowIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Main Gauche,NMainGauche,DMainGauche,UMainGauche,0xe8,0x0,IsWeapon,0x0,0x0,20,0,0,2,0,0x11,1500,SRank,MainGaucheIcon,0x0,NoEffect,1,0x0,0x0,MainGaucheID
-True Saunion,NTrueSaunion,DTrueSaunion,UTrueSaunion,0xe9,0x1,IsWeapon,0x0,0x0,15,18,90,14,0,0x23,2000,SRank,TrueSaunionIcon,0x0,CannotDoubleEffect,1,0x0,0x0,0x0
-Danger Pick,NDangerPick,DDangerPick,UDangerPick,0xea,0x2,IsWeapon,0x0,0x0,66,16,66,6,6,0x11,300,SRank,DangerPickIcon,0x0,NoEffect,1,0x0,0x0,DangerPickID
+True Saunion,NTrueSaunion,DTrueSaunion,UTrueSaunion,0xe9,0x1,IsWeapon,0x0,0x0,15,22,90,15,0,0x23,2000,SRank,TrueSaunionIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Danger Pick,NDangerPick,DDangerPick,UDangerPick,0xea,0x2,IsWeapon,0x0,0x0,66,16,66,6,66,0x11,300,SRank,DangerPickIcon,0x0,NoEffect,1,0x0,0x0,DangerPickID
 Force Spike,NForceSpike,DForceSpike,UForceSpike,0xeb,0x5,IsWeapon|IsMagic,0x0,0x0,10,30,90,25,0,0x12,3000,SRank,ForceSpikeIcon,0x0,0xD,1,0x0,0x16,0x0
 Morning Star,NMorningStar,DMorningStar,UMorningStar,0xec,0x6,IsWeapon|IsMagic,0x0,0x0,8,0,180,3,15,0x20,5000,SRank,MorningStarIcon,0x0,NoEffect,1,0x0,0x0,MorningStarID
 Voulche,NVoulche,DVoulche,UVoulche,0xed,0x7,IsWeapon|IsMagic,0x0,0x0,1,1,1,1,1,0x11,18000,SRank,VoulcheIcon,0x0,NoEffect,1,0x0,0x0,StillnessID

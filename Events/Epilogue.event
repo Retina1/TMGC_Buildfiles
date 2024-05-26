@@ -31,45 +31,38 @@ UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
-EpilogueHolanisGuaranteedUnits:
-UNIT Blair 0x0 0x0 Level(1,Ally,0) [15,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+EpilogueAercolynGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Stefan 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Desmond 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Avan 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 ALIGN 4
-EpilogueHolanisSveltzalus:
-UNIT Sveltzalus 0x0 0x0 Level(1,Ally,0) [17,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+EpilogueAercolynNatasia:
+UNIT Natasia 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 ALIGN 4
-EpilogueHolanisArtemis:
-UNIT Artemis 0x0 0x0 Level(1,Ally,0) [12,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+EpilogueAercolynYuyu:
+UNIT Yuyu 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 ALIGN 4
-EpilogueHolanisQ:
-UNIT UnitQ 0x0 0x0 Level(1,Ally,0) [11,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+EpilogueAercolynEstelle:
+UNIT Estelle 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 ALIGN 4
-EpilogueHolanisHoratio:
-UNIT Horatio 0x0 0x0 Level(1,Ally,0) [16,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+EpilogueAercolynPtolemy:
+UNIT Ptolemy 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 ALIGN 4
-EpilogueHolanisSimone:
-UNIT Simone 0x0 0x0 Level(1,Ally,0) [17,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+EpilogueAercolynToddsworth:
+UNIT Toddsworth 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 ALIGN 4
-EpilogueHolanisDean:
-UNIT Dean 0x0 0x0 Level(1,Ally,0) [20,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+EpilogueAercolynCarbon:
+UNIT Carbon 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
-ALIGN 4
-EpilogueHolanisPtolemy:
-UNIT Ptolemy 0x0 0x0 Level(1,Ally,0) [12,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueHolanisTonnamin:
-UNIT Tonnamin 0x0 0x0 Level(1,Ally,0) [9,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueHolanisIan:
-UNIT Ian 0x0 0x0 Level(1,Ally,0) [17,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
+
 
 ALIGN 4
 
@@ -128,6 +121,62 @@ ALIGN 4
 #define EpilogueFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueNoFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 
+
+AercolynResolution:
+EpilogueMapSwap(Interlude10,17,6)
+//loads
+FADU 0x4
+STAL 120
+//text
+STAL 120
+EndEvent
+
+MercenaryResolution:
+EpilogueMapSwap(Interlude7,19,10)
+//loads
+LOAD1 0x0 EpilogueMercenariesGuaranteedUnits
+EpilogueUnitLoad(Freddric,EpilogueMercenariesFreddric,0x1)
+EpilogueNoFlagUnitLoad(Rift,RiftEstelleFlag,EpilogueMercenariesRift,0x2)
+EpilogueUnitLoad(Callum,EpilogueMercenariesCallum,0x3)
+EpilogueUnitLoad(Manfred,EpilogueMercenariesManfred,0x4)
+EpilogueUnitLoad(Wilhelm,EpilogueMercenariesWilhelm,0x5)
+EpilogueUnitLoad(Argent,EpilogueMercenariesArgent,0x6)
+EpilogueUnitLoad(SecretClarque,EpilogueMercenariesClarque,0x7)
+EpilogueUnitLoad(Valeria,EpilogueMercenariesValeria,0x8)
+EpilogueFlagUnitLoad(Leila,LeilaWilhelmFlag,EpilogueMercenariesLeila,0x9)
+EpilogueUnitLoad(Olsen,EpilogueMercenariesOlsen,0xa)
+EpilogueUnitLoad(Kyrie,EpilogueMercenariesKyrie,0xb)
+FADU 0x4
+STAL 120
+//text
+EpilogueUnitText(Freddric,Epilogue_FreddricMercenaries,0x11)
+EpilogueNoFlagUnitText(Rift,RiftEstelleFlag,Epilogue_RiftMercenaries,0x12)
+EpilogueUnitText(Callum,Epilogue_CallumMercenaries,0x13)
+CHECK_EVENTID LeilaWilhelmFlag
+BEQ 0x400 0xc 0x0
+		FlashCursor(Leila,30)
+		FlashCursor(Wilhelm,30)
+		Text(Epilogue_LeilaWilhelmMercenaries)
+		GOTO 0x402
+LABEL 0x400
+CHECK_EVENTID ManfredWilhelmFlag
+BEQ 0x401 0xc 0x0
+		FlashCursor(Manfred,30)
+		FlashCursor(Wilhelm,30)
+		Text(Epilogue_ManfredWilhelmMercenaries)
+		GOTO 0x402
+LABEL 0x401
+EpilogueUnitText(Manfred,Epilogue_ManfredMercenaries,0x14)
+EpilogueUnitText(Wilhelm,Epilogue_WilhelmMercenaries,0x15)
+LABEL 0x402
+EpilogueUnitText(Argent,Epilogue_ArgentMercenaries,0x16)
+EpilogueUnitText(SecretClarque,Epilogue_ClarqueMercenaries,0x17)
+EpilogueUnitText(Valeria,Epilogue_ValeriaMercenaries,0x18)
+EpilogueUnitText(Olsen,Epilogue_OlsenMercenaries,0x1a)
+EpilogueUnitText(Kyrie,Epilogue_KyrieMercenaries,0x1b)
+STAL 120
+EndEvent
+
 HolanisResolution:
 EpilogueMapSwap(Interlude9,15,8)
 //loads
@@ -145,8 +194,15 @@ FADU 0x4
 STAL 120
 //text (very simple)
 EpilogueUnitText(Artemis,Epilogue_ArtemisHolanis,0x21)
+CHECK_ALIVE Horatio
+BEQ 0x500 0xc 0x0
+HoratioMusicChooser
 EpilogueFlagUnitText(Horatio,HoratioMusicFlag,Epilogue_HoratioHolanisAlt,0x411)//summon
 EpilogueNoFlagUnitText(Horatio,HoratioMusicFlag,Epilogue_HoratioHolanis,0x412)//no summon
+MUSCSLOW 0x7fff
+STAL 30
+MUSCSLOW S_WistfulWild
+LABEL 0x500
 EpilogueUnitText(Simone,Epilogue_SimoneHolanis,0x51)
 EpilogueNoFlagUnitText(Ptolemy,PtolemyJohanFlag,Epilogue_PtolemyHolanis,0x91)
 EpilogueUnitText(Dean,Epilogue_DeanHolanis,0x61)
@@ -650,11 +706,11 @@ BEQ 0x1 0xc 0x0
 	STAL 30
 	TEXTCONT
 	TEXTEND*/
-//	FADI 0x2
+	FADI 0x2
 CLEAN //clean up these fades eventually
 LABEL 0x1
 STAL 180
-FADU 2
+//FADU 2
 SetBackground(FinTextCG)
 STAL 600
 FADI 0x1
@@ -664,23 +720,6 @@ MNTS 0x1
 ENDA
 
 
-MercenaryResolution:
-EpilogueMapSwap(Interlude7,19,10)
-//loads
-FADU 0x4
-STAL 120
-//text
-STAL 120
-EndEvent
-
-AercolynResolution:
-EpilogueMapSwap(Interlude10,17,6)
-//loads
-FADU 0x4
-STAL 120
-//text
-STAL 120
-EndEvent
 
 TrueFinalResolution:
 EpilogueMapSwap(ChapterV4,24,24)
@@ -934,36 +973,122 @@ UNIT Blair 0x0 0x0 Level(1,Ally,0) [14,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Damien 0x0 0x0 Level(1,Ally,0) [15,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Zacharias 0x0 0x0 Level(1,Ally,0) [16,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
-
 ALIGN 4
 EpilogueYgstraJoan:
 UNIT Joan 0x0 0x0 Level(1,Ally,0) [18,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
-
 ALIGN 4
 EpilogueYgstraSonia:
 UNIT Sonia 0x0 0x0 Level(1,Ally,0) [19,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
-
 ALIGN 4
 EpilogueYgstraTobias:
 UNIT Tobias 0x0 0x0 Level(1,Ally,0) [17,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
-
 ALIGN 4
 EpilogueYgstraMikey:
 UNIT Mikey 0x0 0x0 Level(1,Ally,0) [17,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
-
 ALIGN 4
 EpilogueYgstraJonas:
 UNIT SecretJonas 0x0 0x0 Level(1,Ally,0) [15,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
-
 ALIGN 4
 EpilogueYgstraLeila:
 UNIT Leila 0x0 0x0 Level(1,Ally,0) [16,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
+
+ALIGN 4
+EpilogueHolanisGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [15,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisSveltzalus:
+UNIT Sveltzalus 0x0 0x0 Level(1,Ally,0) [17,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisArtemis:
+UNIT Artemis 0x0 0x0 Level(1,Ally,0) [12,9] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisQ:
+UNIT UnitQ 0x0 0x0 Level(1,Ally,0) [11,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisHoratio:
+UNIT Horatio 0x0 0x0 Level(1,Ally,0) [16,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisSimone:
+UNIT Simone 0x0 0x0 Level(1,Ally,0) [17,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisDean:
+UNIT Dean 0x0 0x0 Level(1,Ally,0) [20,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisPtolemy:
+UNIT Ptolemy 0x0 0x0 Level(1,Ally,0) [12,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisTonnamin:
+UNIT Tonnamin 0x0 0x0 Level(1,Ally,0) [9,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueHolanisIan:
+UNIT Ian 0x0 0x0 Level(1,Ally,0) [17,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+
+ALIGN 4
+EpilogueMercenariesGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesFreddric:
+UNIT Freddric 0x0 0x0 Level(1,Ally,0) [15,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesRift:
+UNIT Rift 0x0 0x0 Level(1,Ally,0) [11,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesCallum:
+UNIT Callum 0x0 0x0 Level(1,Ally,0) [12,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesManfred:
+UNIT Manfred 0x0 0x0 Level(1,Ally,0) [11,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesWilhelm:
+UNIT Wilhelm 0x0 0x0 Level(1,Ally,0) [12,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesArgent:
+UNIT Argent 0x0 0x0 Level(1,Ally,0) [14,11] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesClarque:
+UNIT SecretClarque 0x0 0x0 Level(1,Ally,0) [19,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesValeria:
+UNIT Valeria 0x0 0x0 Level(1,Ally,0) [17,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesLeila:
+UNIT Leila 0x0 0x0 Level(1,Ally,0) [12,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesOlsen:
+UNIT Olsen 0x0 0x0 Level(1,Ally,0) [12,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueMercenariesKyrie:
+UNIT Kyrie 0x0 0x0 Level(1,Ally,0) [16,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
 
 ALIGN 4
 TurnBasedEvents:

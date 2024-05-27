@@ -549,7 +549,11 @@ setMugEntry(0xf8,YoungElcorianMug,3,5,3,3)
 ALIGN 4
 AgnesMug:
 #incbin "dmps/Agnes.dmp"
-setMugEntry(0xe7,AgnesMug,4,6,4,4)
+setMugEntry(0xe7,AgnesMug,2,6,3,4)
+ALIGN 4
+AgnesPromoMug:
+#incbin "dmps/AgnesPromo.dmp"
+setMugEntry(0x146,AgnesPromoMug,2,6,3,4)
 ALIGN 4
 GaylordMug:
 #incbin "dmps/Gaylord.dmp"

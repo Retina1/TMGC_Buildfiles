@@ -73,42 +73,42 @@ ALIGN 4
 #define BlairEstelleFlag 0xc
 #define BlairCarbonFlag 0xd
 #define ArinSimoneFlag 0xe
-#define KennethHilbertFlag 0xf //used
-#define NatasiaBechamelFlag 0x10 //uses
+#define KennethHilbertFlag 0xf 
+#define NatasiaBechamelFlag 0x10
 #define BOATFLAGWOO NatasiaBechamelFlag
-#define NatasiaPeggyFlag 0x11 //used
+#define NatasiaPeggyFlag 0x11 
 #define StefanJohanFlag 0x12
 #define DesmondFlynnFlag 0x13
-#define SamEmileFlag 0x14 //used
-#define SamBechamelFlag 0x15 //used
-#define SamCharleyFlag 0x16 //used
-#define JosefAthenaFlag 0x17 //used
-#define PeggyButchFlag 0x18 //used
-#define ButchJeffFlag 0x19 //used
-#define ButchPeterFlag 0x1a //used
-#define RachaelCassiusFlag 0x1b //used
-#define RachaelJeffFlag 0x1c //used
-#define RachaelLeilaFlag 0x1d //used
-#define CassiusMikeyFlag 0x1e //used
-#define CassiusZekeFlag 0x1f //used
-#define ApolloBechamelFlag 0x20 //used
-#define ApolloFlynnFlag 0x21
-#define ApolloVladmirFlag 0x22
-#define BechamelHollandaiseFlag 0x23 //used
-#define CharleyToddsworthFlag 0x24 //used
-#define HyperiusAlexisFlag 0x25 //used
-#define LeilaDamienFlag 0x26
-#define LeilaWilhelmFlag 0x27
-#define LeilaTobiasFlag 0x28
+#define SamEmileFlag 0x14 
+#define SamBechamelFlag 0x15 
+#define SamCharleyFlag 0x16 
+#define JosefAthenaFlag 0x17 
+#define PeggyButchFlag 0x18 
+#define ButchJeffFlag 0x19 
+#define ButchPeterFlag 0x1a 
+#define RachaelCassiusFlag 0x1b 
+#define RachaelJeffFlag 0x1c 
+#define RachaelLeilaFlag 0x1d 
+#define CassiusMikeyFlag 0x1e 
+#define CassiusZekeFlag 0x1f 
+#define ApolloBechamelFlag 0x20 
+#define ApolloFlynnFlag 0x21 
+#define ApolloVladmirFlag 0x22 
+#define BechamelHollandaiseFlag 0x23 
+#define CharleyToddsworthFlag 0x24 
+#define HyperiusAlexisFlag 0x25 
+#define LeilaDamienFlag 0x26 
+#define LeilaWilhelmFlag 0x27 
+#define LeilaTobiasFlag 0x28 
 #define PtolemyJohanFlag 0x9d
 #define FreddricArgentFlag 0x9c
-#define ElizaDirkFlag 0x9b //used
-#define RiftEstelleFlag 0x9a //used
+#define ElizaDirkFlag 0x9b 
+#define RiftEstelleFlag 0x9a 
 #define RiftCallumFlag 0x99
 #define RoseManfredFlag 0x98
-#define RoseLarondeFlag 0x97 //used
+#define RoseLarondeFlag 0x97 
 #define ManfredWilhelmFlag 0x96
-#define BlairSingleFlag 0x95 //used
+#define BlairSingleFlag 0x95 
 #define JoanSoniaFlag 0x94
 
 #define EpilogueSupportFlag(unit1,unit2,flag) "CHECK_ALIVE unit1; BEQ flag 0xc 0x0;CHECK_ALIVE unit2; BEQ flag 0xc 0x0;GetSupportLevel(unit1,unit2); SVAL 0x2 ASupport; BNE flag 0x1 0x2; ENUT flag; LABEL flag"

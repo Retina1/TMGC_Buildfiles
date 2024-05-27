@@ -343,9 +343,21 @@ then run.[X]
 A revered staff of infinite potential.[N]
 Warps an ally to a distant tile.[X]
 
+##DWarp2 ^
+Modifications to staff range from skills[N]
+will affect initial target range, not[N]
+warp range. Warp range is always equal[N]
+to half the warper's Mag (floored at 5).[X]
+
 ##DRescue ^
 An iconic staff of boundless possibility.[N]
 Warps a distant ally to a nearby tile.[X]
+
+##DRescue2 ^
+Priority for the tile the rescued unit[N]
+lands on is Up>Left>Right>Down.[N]
+Target will be placed only on terrain[N]
+the staff user can walk on.[X]
 
 ##DYoink ^
 An easy to use Rescue staff with a short range.[N]
@@ -650,9 +662,9 @@ Light runes disappear after 3 turns.[X]
 ##DNox ^
 Golden night. [OpenQuote]Use[CloseQuote] to summon a mine trap.[X]
 ##DMineEffect ^
-Mines deal 10 damage to any unit that[N]
-moves onto or through the tile they trap.[N]
-Mines do not disappear on their own.[X]
+Mines deal 50 damage and end the turn of[N]
+a unit that moves onto the tile they trap.[N]
+Mines only disappear upon exploding.[X]
 
 ##DCloudburst ^
 Sleep of open eyes. [OpenQuote]Use[CloseQuote] to rewarp with 2 range.[X]

@@ -1,3 +1,11 @@
+//mine damage
+PUSH
+ORG 0x375A4
+BYTE 50
+ORG 0x3758E
+BYTE 50
+POP
+
 //berserk animations
 PUSH
 ORG 0x57bf2

@@ -105,18 +105,8 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
         }
     }
 
-    //Equipped weapon skills
-    //If unit is in combat, use the equipped weapon short
-    if (unit->index == gBattleActor.unit.index && IsBattleReal()) {
-        temp = GetItemData(gBattleActor.weaponBefore & 0xFF)->skill;
-    }
-    else if (unit->index == gBattleTarget.unit.index && IsBattleReal()) {
-        temp = GetItemData(gBattleTarget.weaponBefore & 0xFF)->skill;
-    }
-    //Otherwise, get the equipped weapon via a vanilla function
-    else {
-        temp = GetItemData(GetUnitEquippedWeapon(unit) & 0xFF)->skill;
-    }
+    //Equipped weapon skill
+    temp = GetItemData(GetUnitEquippedWeapon(unit) & 0xFF)->skill;
 
     //Check if equipped weapon skill is valid
     if (IsSkillIDValid(temp)) {
@@ -133,13 +123,14 @@ SkillBuffer* MakeSkillBuffer(Unit* unit, SkillBuffer* buffer) {
 AuraSkillBuffer* MakeAuraSkillBuffer(Unit* unit) {
     SkillBuffer* buffer = &gAttackerSkillBuffer;
     AuraSkillBuffer* auraBuffer = gAuraSkillBuffer;
+	u8 unitIndex = unit->index; //Loading as unsigned to prevent faulty comparisons
     int count = 0;
     int distance = 0;
 
     for (int i = 0; i < 0x100; ++i) {
         Unit* other = gUnitLookup[i];
 
-        if (!IsUnitOnField(other) || unit->index == i) {
+        if (!IsUnitOnField(other) || unitIndex == i) {
             continue;
         }
 
@@ -265,13 +256,14 @@ void InitSkillBuffers() {
 u8* GetUnitsInRange(Unit* unit, int allyOption, int range) {
     const s8(*pAllegianceChecker)(int, int) = ((allyOption & 1) ? AreAllegiancesAllied : AreAllegiancesEqual);
 
+	u8 unitIndex = unit->index; //Loading as unsigned to prevent faulty comparisons
     int count = 0;
     int check = 0;
 
     for (int i = 0; i < 0x100; ++i) {
         Unit* other = gUnitLookup[i];
 
-        if (!IsUnitOnField(other) || unit->index == i) {
+        if (!IsUnitOnField(other) || unitIndex == i) {
             continue;
         }
 

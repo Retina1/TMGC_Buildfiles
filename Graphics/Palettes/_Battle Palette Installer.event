@@ -131,7 +131,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define ButchPPaletteID 0x8e
 #define RangerFlynnPaletteID 0x93
 #define AssassinRosePaletteID 0x99
-
+#define AgnesPPaletteID 0x9a
 #define TonnaminPaletteID 0x81
 
 #define ValeriaPaletteID 0x92
@@ -323,6 +323,7 @@ setPalette(JonasPPaletteID,JonasPPalette)
 //player jonas, laronde is down further
 setPalette(YuyuPaletteID,YuyuPalette)
 setPalette(AgnesPaletteID,AgnesPalette)
+setPalette(AgnesPPaletteID,AgnesPPalette)
 setPalette(GaylordUPaletteID,GaylordUPalette)
 setPalette(GaylordPPaletteID,GaylordPPalette)
 setPalette(KyriePaletteID,KyriePalette)
@@ -508,7 +509,7 @@ SetPaletteFull(SecretJonas,JonasPaletteID,LncWyv,JonasPPaletteID,WyvLord,0x0,0x0
 SetPaletteFull(SecretLaronde,0x0,Soldier,LarondePaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(SecretClarque,0x0,BowCav,ClarquePaletteID,BowPal,0x0,0x0)
 SetPaletteFull(Yuyu,YuyuPaletteID,Freelancer,0x0,0x0,0x0,0x0)
-SetPaletteFull(Agnes,AgnesPaletteID,MercF,AgnesPaletteID,HeroF,0x0,0x0)
+SetPaletteFull(Agnes,AgnesPaletteID,MercF,AgnesPPaletteID,HeroF,0x0,0x0)
 SetPaletteFull(Gaylord,GaylordUPaletteID,Troub,GaylordPPaletteID,Valk,0x0,0x0)
 SetPaletteFull(Kyrie,0x0,MyrmF,KyriePaletteID,SwMastF,0x0,0x0)
 SetPaletteFull(UnitQ,QUPaletteID,SwdCavF,QPPaletteID,SwdPalF,0x0,0x0)
@@ -909,6 +910,9 @@ TonnaminPalette:
 ALIGN 4
 AgnesPalette:
 #incbin "Agnes.dmp"
+ALIGN 4
+AgnesPPalette:
+#incbin "AgnesPromoted.dmp"
 ALIGN 4
 GaylordUPalette:
 #incbin "GaylordUnpromoted.dmp"

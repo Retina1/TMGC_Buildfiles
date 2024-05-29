@@ -215,9 +215,11 @@ CAM1 [10,5]
 FlashCursor(15,6,60)
 FlashCursor(11,9,60)
 SystemText(Z2Note)
+AnimusSealGiver(Zeke)
 EndEvent
 
 EndingScene:
+ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(YgstraCG,Z2Ending)
 MoveToChapter(InterludeZ)

@@ -103,6 +103,8 @@ ORG ConvoChapterEntry+(4*0xFF)
 #define ConversationEntry(titleid,textid,bg,chapterid,bgm) "POIN 0; SHORT textid; BYTE bg chapterid; SHORT titleid bgm;"
 #define ConversationEntryTerminator "POIN 0xFFFFFFFF; SHORT 0xFFFF; BYTE 0xFF 0xFF; SHORT 0xFFFF 0xFFFF"
 
+//epilogue is a fuck
+
 ALIGN 4
 PrologueConversations:
 ConversationEntry(EC0Open0,PrologueColdOpening,BlankCG,Prologue)

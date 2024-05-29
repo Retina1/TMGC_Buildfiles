@@ -51,7 +51,7 @@ if (CheckEventId_(0xB5))
 		int multiplicativeDenominator = 1;
 	multiplicativeNumerator = gEXPMultRAMAddress;
 	multiplicativeDenominator = gEXPDivRAMAddress;
-	result = 10 * multiplicativeNumerator/multiplicativeDenominator;
+	result = result * multiplicativeNumerator/multiplicativeDenominator;
 	}
 if(result > 100)
 	result = 100;

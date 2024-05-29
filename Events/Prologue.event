@@ -152,12 +152,16 @@ IfNoSelectedGoto(0x999)
 				IfNoSelectedGoto(0x995)
 				ENUT HHMDeploymentFlag
 				LABEL 0x995
+				SystemText(AnimusModePrompt)
+				IfNoSelectedGoto(0x992)
+				ENUT AnimusModeFlag
+				LABEL 0x992
 						SystemText(SetEnemyGrowthsPrompt)
 		IfNoSelectedGoto(0x999)
 		ENUT CustomGrowthsFlag
 		SystemText(SetMultiplierPrompt)
 		ASMC ValueChooser_OnSelect|1
-		SETVAL 0x3 $030017c5; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+		SETVAL 0x3 $030017bf; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
 			LABEL 0x667
 			SystemText(SetDivisorPrompt)
 			ASMC ValueChooser_OnSelect|1
@@ -165,10 +169,10 @@ IfNoSelectedGoto(0x999)
 				SystemText(PleaseDoNotDivideByZero)
 				GOTO 0x667
 				LABEL 0x669
-			SETVAL 0x3 $030017c6; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+			SETVAL 0x3 $030017c0; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
 		SystemText(SetAdditivePrompt)
 		ASMC ValueChooser_OnSelect|1
-		SETVAL 0x3 $030017c7; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+		SETVAL 0x3 $030017c1; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
 		LABEL 0x669
 		
 LABEL 0x999
@@ -249,9 +253,11 @@ SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 5, Any, Any, Brigand, Any, 
 SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 6, Any, Any, Bruiser, Any, Any)
 //AltOST(S_FootstepsOfFate,S_FootstepsOfFate,S_FootstepsOfFate)
 SystemText(GameIntroText)
+AnimusSealGiver(Blair)
 EndEvent
 
 EndingScene:
+ResetBaseFlags
 CHECK_ALIVE Kenneth
 BNE 0x1 0xC 0x0
 MUSC VictoryMinor

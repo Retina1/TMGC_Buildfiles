@@ -223,6 +223,7 @@ GetSupportLevel(Zeke,Hyperius) //we want C/0
 BEQ 0x1 0x1 0x0
 ENUT 0xb
 LABEL 0x1
+AnimusSealGiver(Zeke)
 EndEvent
 
 Z3LeilaZachariasSupport:
@@ -307,6 +308,7 @@ LABEL 0x2
 EndEvent
 
 EndingScene:
+ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(PathCG,Z3Ending)
 LocationText(HouseCG,Z3Ending2,TwoYearsAgoLabel,S_Chaos)

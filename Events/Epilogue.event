@@ -31,40 +31,6 @@ UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
-EpilogueAercolynGuaranteedUnits:
-UNIT Blair 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Arin 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Stefan 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Desmond 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Avan 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueAercolynNatasia:
-UNIT Natasia 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueAercolynYuyu:
-UNIT Yuyu 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueAercolynEstelle:
-UNIT Estelle 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueAercolynPtolemy:
-UNIT Ptolemy 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueAercolynToddsworth:
-UNIT Toddsworth 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-ALIGN 4
-EpilogueAercolynCarbon:
-UNIT Carbon 0x0 0x0 Level(1,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT
-
-
-ALIGN 4
 
 #define BlairArinFlag 0x8
 #define BlairNatasiaFlag 0x9
@@ -119,15 +85,69 @@ ALIGN 4
 #define EpilogueNoFlagUnitLoad(unit1,flag,unitgroup,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;LOAD1 0x0 unitgroup;LABEL label"
 #define EpilogueUnitText(unit1,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
+#define EpilogueBlairLoverText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(Blair,30);FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueNoFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 
 
 AercolynResolution:
 EpilogueMapSwap(Interlude10,17,6)
 //loads
+LOAD1 0x0 EpilogueAercolynGuaranteedUnits
+EpilogueFlagUnitLoad(Natasia,BlairNatasiaFlag,EpilogueAercolynNatasia,0x2)
+EpilogueUnitLoad(Yuyu,EpilogueAercolynYuyu,0x3)
+EpilogueNoFlagUnitLoad(Estelle,RiftEstelleFlag,EpilogueAercolynEstelle,0x4)
+EpilogueFlagUnitLoad(Ptolemy,PtolemyJohanFlag,EpilogueAercolynPtolemy,0x5)
+EpilogueFlagUnitLoad(Flynn,DesmondFlynnFlag,EpilogueAercolynFlynn,0x9)
+EpilogueNoFlagUnitLoad(Toddsworth,CharleyToddsworthFlag,EpilogueAercolynToddsworth,0x6)
+EpilogueUnitLoad(Carbon,EpilogueAercolynCarbon,0x7)
+EpilogueUnitLoad(Johan,EpilogueAercolynJohan,0x1)
 FADU 0x4
 STAL 120
 //text
+EpilogueUnitText(Stefan,Epilogue_StefanAercolyn,0x11)
+EpilogueNoFlagUnitText(Desmond,DesmondFlynnFlag,Epilogue_DesmondAercolyn,0x12)
+CHECK_EVENTID DesmondFlynnFlag
+BEQ 0x41 0xc 0x0
+		FlashCursor(Desmond,30)
+		FlashCursor(Flynn,30)
+		Text(Epilogue_DesmondFlynnAercolyn)
+LABEL 0x41
+EpilogueNoFlagUnitText(Johan,PtolemyJohanFlag,Epilogue_JohanAercolyn,0x14)
+CHECK_EVENTID PtolemyJohanFlag
+BEQ 0x15 0xc 0x0
+		FlashCursor(Johan,30)
+		FlashCursor(Ptolemy,30)
+		Text(Epilogue_JohanPtolemyAercolyn)
+LABEL 0x15
+EpilogueNoFlagUnitText(Carbon,BlairCarbonFlag,Epilogue_CarbonAercolyn,0x13)
+EpilogueFlagUnitText(Carbon,BlairCarbonFlag,Epilogue_CarbonAercolynAlt,0x16)
+EpilogueNoFlagUnitText(Toddsworth,CharleyToddsworthFlag,Epilogue_ToddsworthAercolyn,0x14)
+CHECK_EVENTID GirlkissingFlag
+BEQ 0x90 0xc 0x0
+	FlashCursor(Blair,30)
+	FlashCursor(Arin,30)
+	FlashCursor(Natasia,30)
+	FlashCursor(Avan,30)
+	FlashCursor(Yuyu,30)
+	FlashCursor(Estelle,30)
+	CHECK_EVENTID BOATFLAGWOO
+	BEQ 0x91 0xc 0x0
+	Text(Epilogue_MultiAercolynLoverAlt)//boat
+	GOTO 0x92
+	LABEL 0x91
+	Text(Epilogue_MultiAercolynLover)//no boat
+	GOTO 0x92
+LABEL 0x90
+EpilogueNoFlagUnitText(Estelle,BlairEstelleFlag,Epilogue_EstelleAercolyn,0x21)
+EpilogueNoFlagUnitText(Yuyu,BlairYuyuFlag,Epilogue_YuyuAercolyn,0x22)
+EpilogueNoFlagUnitText(Avan,BlairAvanFlag,Epilogue_AvanAercolyn,0x23)
+EpilogueNoFlagUnitText(Arin,BlairArinFlag,Epilogue_ArinAercolyn,0x25)
+EpilogueBlairLoverText(Estelle,BlairEstelleFlag,Epilogue_EstelleAercolynLover,0x31)
+EpilogueBlairLoverText(Yuyu,BlairYuyuFlag,Epilogue_YuyuAercolynLover,0x32)
+EpilogueBlairLoverText(Avan,BlairAvanFlag,Epilogue_AvanAercolynLover,0x33)
+EpilogueBlairLoverText(Natasia,BlairNatasiaFlag,Epilogue_NatasiaAercolynLover,0x34)
+EpilogueBlairLoverText(Arin,BlairArinFlag,Epilogue_ArinAercolynLover,0x35)
+LABEL 0x92
 STAL 120
 EndEvent
 
@@ -670,8 +690,15 @@ BNE 0x999 0xc 0x0
 MUSCSLOW AmbientWindBirds
 CALL TrueFinalResolution
 LABEL 0x999
+
+SetBackground(BlankCG) //special cg???
+CGTEXTSTART
+TEXTSHOW EpilogueFinalEndingText
+TEXTEND
+
 EpilogueMapSwap(AfterTheEnd,0,0)
 CLEAN
+
 //no background before this, make sure last thing is a fade to black
 ASMC 0xB8175 //turncounts
 ASMC 0xB6c95 //characterendings
@@ -1089,6 +1116,46 @@ EpilogueMercenariesKyrie:
 UNIT Kyrie 0x0 0x0 Level(1,Ally,0) [16,10] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
+ALIGN 4
+EpilogueAercolynGuaranteedUnits:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [16,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin 0x0 0x0 Level(1,Ally,0) [17,2] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Stefan 0x0 0x0 Level(1,Ally,0) [12,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Desmond 0x0 0x0 Level(1,Ally,0) [13,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Avan 0x0 0x0 Level(1,Ally,0) [18,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueAercolynNatasia:
+UNIT Natasia 0x0 0x0 Level(1,Ally,0) [17,4] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueAercolynYuyu:
+UNIT Yuyu 0x0 0x0 Level(1,Ally,0) [15,3] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueAercolynEstelle:
+UNIT Estelle 0x0 0x0 Level(1,Ally,0) [16,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueAercolynPtolemy:
+UNIT Ptolemy 0x0 0x0 Level(1,Ally,0) [15,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueAercolynJohan:
+UNIT Johan 0x0 0x0 Level(1,Ally,0) [14,6] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueAercolynToddsworth:
+UNIT Toddsworth 0x0 0x0 Level(1,Ally,0) [19,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueAercolynCarbon:
+UNIT Carbon 0x0 0x0 Level(1,Ally,0) [17,7] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+ALIGN 4
+EpilogueAercolynFlynn:
+UNIT Flynn 0x0 0x0 Level(1,Ally,0) [13,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
 
 ALIGN 4
 TurnBasedEvents:

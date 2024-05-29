@@ -204,9 +204,9 @@ POP
 //$030017c6 div
 //$030017c7 add
 #define gHitCountRAMAddress $030017c4
-#define gMultRAMAddress $030017c5
-#define gDivRAMAddress $030017c6
-#define gAddRAMAddress $030017c7
+#define gMultRAMAddress $030017bf
+#define gDivRAMAddress $030017c0
+#define gAddRAMAddress $030017c1
 
 #define gEXPMultRAMAddress $030017c3
 #define gEXPDivRAMAddress $030017c2
@@ -222,6 +222,9 @@ POP
 #define PerfectLuckAvailableFlag 0xa0
 #define ArinDeadFlag 0x9f
 #define HyperiusDeadFlag 0x9e
+//bunch of flags used by epilogue
+#define AnimusModeFlag 0x93
+#define AnimusSealGivenFlag 0x92
 
 //track bargain flags, use base flags when possible to save globals
 //ch4

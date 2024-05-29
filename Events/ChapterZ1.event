@@ -209,6 +209,7 @@ ENUT 0x21
 ENUT 0x22
 SystemText(ZekeArcPrimer)
 SetSupport(Hyperius,Alexis,CSupport)
+AnimusSealGiver(Zeke)
 EndEvent
 
 CZ1Turn3:
@@ -240,6 +241,7 @@ LABEL 0x2
 EndEvent
 
 EndingScene:
+ResetBaseFlags
 MUSC VictoryTheme
 CleanTextNoMap(EastHolanisCG,Z1Ending)
 MoveToChapter(ChapterZ2)

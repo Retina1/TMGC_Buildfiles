@@ -1,3 +1,32 @@
+##GrowthsSelector
+Select Player Growth Mode[X]
+##ReverseSelector
+Toggle Reverse Mode[X]
+##RNSelector
+Toggle 1 RN Mode[X]
+##FinishedSelector
+Begin Game[X]
+
+##FlowerSelector
+Toggle Early Flower[X]
+##EXPModSelector
+Set Experience Multiplier[X]
+##GrowthModSelector
+Set Enemy Growth Modifier[X]
+##PerfectLuckSelector
+Unlock Perfect Luck Toggle[X]
+##DeploymentCutSelector
+Toggle Deployment Cut Mode[X]
+##AnimusModeSelector
+Toggle Animus Mode[X]
+##PressTurnSelector
+Toggle Press Turn Mode[X]
+##BonusFinishedSelector
+Confirm Bonus Modifiers[X]
+
+##ValuesSetText
+Values successfully set![A][X]
+
 ##PrologueColdOpening
 [OpenMidLeft][LoadBlank][OpenMidRight][LoadBlank][OpenMidLeft]
 [...]What did you need me for?[A][N][OpenMidRight]
@@ -172,6 +201,13 @@ Enable gameplay modifiers?[N]
 Clear data detected.[N]
 Enable bonus content?[N]
 [No][X]
+
+##GrowthModePrompt
+Enable a player growth mode?[N]
+[No][X]
+
+##GrowthModeConfirm
+Growth mode set![A][X]
 
 ##EarlyFlowerPrompt
 Give Blair her hair flower[N]

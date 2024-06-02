@@ -562,6 +562,7 @@ I10Avan:
 			EVBIT_MODIFY 3
 			SystemText(I10LoverNotice)//do i smooch
 			REMA
+			RefreshLordSplitTiles
 			ASMC prCallLoverMenu+1
 			BNE 0x1 0xc 0x0
 			MUSC LoverConvoSong
@@ -598,6 +599,7 @@ I10Yuyu:
 			EVBIT_MODIFY 3
 			SystemText(I10LoverNotice)//do i smooch
 			REMA
+			RefreshLordSplitTiles
 			ASMC prCallLoverMenu+1
 			BNE 0x1 0xc 0x0
 			MUSC LoverConvoSong

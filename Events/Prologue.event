@@ -114,103 +114,169 @@ ENUT 0xcb
 ASMC OptionBitSetterASMC|1
 SetBackground(BlankCG)
 SVAL 0x1 0x1
-SystemText(GameModifierPrompt)
-IfNoSelectedGoto(0x668)
 CheckNewGameFlag(12)
-BEQ 0x999 0xc 0x0
-SystemText(NewGamePlusPrompt)//add an old school cassius toggle, ANIMUS MODE (flag that causes certain maps (maybe interludes) to give you an animus seal upon stating them)
-IfNoSelectedGoto(0x999)
-				ENUT NewGamePlusFlag
+BEQ 0x99b 0xc 0x0
+SystemText(NewGamePlusPrompt)//add an old school cassius toggle
+IfNoSelectedGoto(0x99b)
+		ENUT NewGamePlusFlag
+		LABEL 0x4000
+		RefreshLordSplitTiles
+		ASMC prCallBonusOptionMenu+1
+		BNE 0x4001 0xc 0x0
+		ENUF BlairFlowerFlag
 				SystemText(EarlyFlowerPrompt)
-				IfNoSelectedGoto(0x998)
-				ENUT BlairFlowerFlag
-				LABEL 0x998
-				SystemText(ParagonModePrompt)//not actually paragon just set exp
-				IfNoSelectedGoto(0x997)
-							ENUT ParagonModeFlag
-							SystemText(SetMultiplierPrompt)
+							IfNoSelectedGoto(0x998)
+							ENUT BlairFlowerFlag
+							LABEL 0x998
+							GOTO 0x4000
+		LABEL 0x4001
+		SVAL 0x1 0x1
+		BNE 0x4002 0xc 0x1
+		ENUF ParagonModeFlag
+						SystemText(ParagonModePrompt)//not actually paragon just set exp
+							IfNoSelectedGoto(0x997)
+										ENUT ParagonModeFlag
+										SystemText(SetMultiplierPrompt)
+								ASMC ValueChooser_OnSelect|1
+								SETVAL 0x3 $030017c3; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+									LABEL 0x567
+									SystemText(SetDivisorPrompt)
+									ASMC ValueChooser_OnSelect|1
+										BNE 0x569 0x2 0x0
+										SystemText(PleaseDoNotDivideByZero)
+										GOTO 0x567
+										LABEL 0x569
+									SETVAL 0x3 $030017c2; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+							SystemText(ValuesSetText)
+							LABEL 0x997
+							GOTO 0x4000
+		LABEL 0x4002
+		SVAL 0x1 0x2
+		BNE 0x4003 0xc 0x1
+		ENUF CustomGrowthsFlag
+			SystemText(SetEnemyGrowthsPrompt)
+					IfNoSelectedGoto(0x66a)
+					ENUT CustomGrowthsFlag
+					SystemText(SetMultiplierPrompt)
 					ASMC ValueChooser_OnSelect|1
-					SETVAL 0x3 $030017c3; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
-						LABEL 0x567
+					SETVAL 0x3 $030017bf; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+						LABEL 0x667
 						SystemText(SetDivisorPrompt)
 						ASMC ValueChooser_OnSelect|1
-							BNE 0x569 0x2 0x0
+							BNE 0x669 0x2 0x0
 							SystemText(PleaseDoNotDivideByZero)
-							GOTO 0x567
-							LABEL 0x569
-						SETVAL 0x3 $030017c2; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
-				LABEL 0x997
-				SystemText(PressTurnModePrompt)
-				IfNoSelectedGoto(0x996)
-				ENUT PressTurnModeFlag
-				LABEL 0x996
-				SystemText(PerfectLuckModePrompt)
-				IfNoSelectedGoto(0x993)
-				ENUT 0xa0
-				LABEL 0x993
-				SystemText(DeploymentCutModePrompt)
-				IfNoSelectedGoto(0x995)
-				ENUT HHMDeploymentFlag
-				LABEL 0x995
-				SystemText(AnimusModePrompt)
-				IfNoSelectedGoto(0x992)
-				ENUT AnimusModeFlag
-				LABEL 0x992
-						SystemText(SetEnemyGrowthsPrompt)
-		IfNoSelectedGoto(0x999)
-		ENUT CustomGrowthsFlag
-		SystemText(SetMultiplierPrompt)
-		ASMC ValueChooser_OnSelect|1
-		SETVAL 0x3 $030017bf; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
-			LABEL 0x667
-			SystemText(SetDivisorPrompt)
-			ASMC ValueChooser_OnSelect|1
-				BNE 0x669 0x2 0x0
-				SystemText(PleaseDoNotDivideByZero)
-				GOTO 0x667
-				LABEL 0x669
-			SETVAL 0x3 $030017c0; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
-		SystemText(SetAdditivePrompt)
-		ASMC ValueChooser_OnSelect|1
-		SETVAL 0x3 $030017c1; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
-		LABEL 0x669
-		
-LABEL 0x999
-ASMC prCallGrowthMenu+1
-SVAL 0x1 0x1
-BEQ 0x1 0xC 0x1
-SVAL 0x1 0x2
-BEQ 0x2 0xC 0x1
-SVAL 0x1 0x3
-BEQ 0x4 0xC 0x1
-SVAL 0x1 0x4
-BEQ 0x5 0xC 0x1
-ENUF 0xEC
-ENUF 0xED
-ENUF 0xEE
-ENUF 0xEF
-GOTO 0x3
-LABEL 0x1
-ENUT 0xEF //fixed
-GOTO 0x3
-LABEL 0x2
-ENUT 0xEE //zero
-GOTO 0x3
-LABEL 0x4
-ENUT 0xEC //min
-GOTO 0x3
-LABEL 0x5
-ENUT 0xED //max
-LABEL 0x3
-SVAL 0x1 0x1
-SystemText(ReversePrompt)
-BNE 0x666 0xC 0x1
-ENUT 0xAF
-LABEL 0x666
-SystemText(RNModePrompt)
-IfNoSelectedGoto(0x668)
-ENUT Enable1RNFlag
-LABEL 0x668
+							GOTO 0x667
+							LABEL 0x669
+						SETVAL 0x3 $030017c0; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+					SystemText(SetAdditivePrompt)
+					ASMC ValueChooser_OnSelect|1
+					SETVAL 0x3 $030017c1; SETVAL 0x4 0x2; ASMC EventWriter|1 //find 3 offsets
+					SystemText(ValuesSetText)
+					LABEL 0x66a
+							GOTO 0x4000
+		LABEL 0x4003
+		SVAL 0x1 0x3
+		BNE 0x4004 0xc 0x1 
+		ENUF 0xa0
+						SystemText(PerfectLuckModePrompt)
+							IfNoSelectedGoto(0x993)
+							ENUT 0xa0
+							LABEL 0x993
+							GOTO 0x4000
+		LABEL 0x4004
+		SVAL 0x1 0x4
+		BNE 0x4005 0xc 0x1
+		ENUF HHMDeploymentFlag
+						SystemText(DeploymentCutModePrompt)
+							IfNoSelectedGoto(0x995)
+							ENUT HHMDeploymentFlag
+							LABEL 0x995
+							GOTO 0x4000
+		LABEL 0x4005
+		SVAL 0x1 0x5
+		BNE 0x4006 0xc 0x1 
+		ENUF AnimusModeFlag
+							SystemText(AnimusModePrompt)
+							IfNoSelectedGoto(0x992)
+							ENUT AnimusModeFlag
+							LABEL 0x992	
+							GOTO 0x4000
+		LABEL 0x4006
+		SVAL 0x1 0x6
+		BNE 0x4007 0xc 0x1
+				ENUF PressTurnModeFlag
+						SystemText(PressTurnModePrompt)
+							IfNoSelectedGoto(0x996)
+							ENUT PressTurnModeFlag
+							LABEL 0x996
+							GOTO 0x4000
+		LABEL 0x4007
+		SVAL 0x1 0x7
+		BEQ 0x99b 0xc 0x1 	
+LABEL 0x99b
+SystemText(GameModifierPrompt)
+IfNoSelectedGoto(0x5004)
+		LABEL 0x999
+		RefreshLordSplitTiles
+		ASMC prCallGameOptionMenu+1
+		BNE 0x5001 0xc 0x0	
+			ENUF 0xEC
+			ENUF 0xED
+			ENUF 0xEE
+			ENUF 0xEF
+			SystemText(GrowthModePrompt)
+			IfNoSelectedGoto(0x999)
+			RefreshLordSplitTiles
+			ASMC prCallGrowthMenu+1
+						SVAL 0x1 0x1
+						BEQ 0x1 0xC 0x1
+						SVAL 0x1 0x2
+						BEQ 0x2 0xC 0x1
+						SVAL 0x1 0x3
+						BEQ 0x4 0xC 0x1
+						SVAL 0x1 0x4
+						BEQ 0x5 0xC 0x1
+						ENUF 0xEC
+						ENUF 0xED
+						ENUF 0xEE
+						ENUF 0xEF
+						GOTO 0x3
+						LABEL 0x1
+						ENUT 0xEF //fixed
+						GOTO 0x3
+						LABEL 0x2
+						ENUT 0xEE //zero
+						GOTO 0x3
+						LABEL 0x4
+						ENUT 0xEC //min
+						GOTO 0x3
+						LABEL 0x5
+						ENUT 0xED //max
+						LABEL 0x3
+						SystemText(GrowthModeConfirm)
+						GOTO 0x999
+		LABEL 0x5001
+		SVAL 0x1 0x1
+		BNE 0x5002 0xc 0x1
+				ENUF 0xaf
+			SystemText(ReversePrompt)
+			IfNoSelectedGoto(0x666)
+			ENUT 0xAF
+			LABEL 0x666
+			GOTO 0x999
+		LABEL 0x5002
+		SVAL 0x1 0x2
+		BNE 0x5003 0xc 0x1	
+			ENUF Enable1RNFlag
+			SystemText(RNModePrompt)
+			IfNoSelectedGoto(0x668)
+			ENUT Enable1RNFlag
+			LABEL 0x668
+			GOTO 0x999
+		LABEL 0x5003
+		SVAL 0x1 0x3
+		BEQ 0x5004 0xc 0x1			
+LABEL 0x5004
 SVAL 0x1 0x0
 FADI 16
 EVBIT_MODIFY 0

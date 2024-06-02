@@ -100,6 +100,7 @@ I8FreddricEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendFreddric)//confirm sending them
@@ -126,6 +127,7 @@ I8DeanEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendDean)//confirm sending them
@@ -151,6 +153,7 @@ I8ElizaEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendEliza)//confirm sending them
@@ -177,6 +180,7 @@ I8EstelleEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendEstelle)//confirm sending them
@@ -202,6 +206,7 @@ I8RiftEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendRift)//confirm sending them
@@ -227,6 +232,7 @@ I8RoseEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendRose)//confirm sending them
@@ -252,6 +258,7 @@ I8DirkEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 CHECK_EVENTID 0x13
@@ -289,6 +296,7 @@ I8CallumEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendCallum)//confirm sending them
@@ -314,6 +322,7 @@ I8ManfredEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendManfred)//confirm sending them
@@ -339,6 +348,7 @@ I8WilhelmEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendWilhelm)//confirm sending them
@@ -364,6 +374,7 @@ I8ArgentEvent:
 EVBIT_MODIFY 3
 Text(WhatDoIDo)//generic "what do i do"
 REMA
+RefreshLordSplitTiles
 ASMC prCallViridianMenu+1
 BNE 0x1 0xc 0x0
 Text(SendArgent)//confirm sending them

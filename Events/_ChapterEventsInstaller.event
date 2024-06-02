@@ -54,6 +54,7 @@ PlayEmotionEffect(Rose,MusicNoteEffect)
 Text(RoseShopIntro)
 REMA
 LABEL 0x500
+RefreshLordSplitTiles
 ASMC prCallRoseShopMenu+1
 BNE 0x10 0xc 0x0
 	CHECK_MONEY

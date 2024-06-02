@@ -340,6 +340,7 @@ EndEvent
 I6ToddsworthTalk:
 EVBIT_MODIFY 3
 Text(I6ToddsworthConvo)
+RefreshLordSplitTiles
 ASMC prCallToddsworthMenu+1
 Text(I6ToddsworthConvo2)
 ENUT 0x4
@@ -362,6 +363,7 @@ BNE 0x40 0xc 0x0
 CHECK_ALIVE Leila
 BEQ 0x66 0xc 0x0
 LABEL 0x40
+RefreshLordSplitTiles
 ASMC prCallStefanMenu+1
 BNE 0x10 0xc 0x0
 CHECK_ALIVE Arin
@@ -466,6 +468,7 @@ I6EmileTalk:
 EVBIT_MODIFY 3
 Text(I6EmileConvo)
 REMA
+RefreshLordSplitTiles
 ASMC prCallEmileMenu+1
 BNE 0x10 0xc 0x0
 Text(I6EmileConvoAnima)

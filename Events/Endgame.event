@@ -528,7 +528,6 @@ ENUN
 LOAD3 0x0 EndgamePhase2Units
 ENUN
 RefreshSMS
-SetUnitStatusAll(EndgameSimulacrum2, LuckStat, 0)
 FADU 16
 CAM1 FinalArbordia
 FlashCursor(FinalArbordia,60)
@@ -539,6 +538,7 @@ BREAKING_SACRED_STONE FinalArbordia
 STAL 20
 FADI 16
 LoadUnitsByDifficulty(FinalArbordiaSpawnNormal,FinalArbordiaSpawnHard,FinalArbordiaSpawnLunatic)
+SetUnitStatusAll(EndgameSimulacrum2, LuckStat, 0)
 FADU 16
 STAL 30
 EARTHQUAKE_END

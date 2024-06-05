@@ -218,7 +218,7 @@ Arena Light,NArenaLight,DArena,UArena,0xd7,0x6,IsWeapon|IsMagic,0x0,0x0,15,22,60
 Arena Dark,NArenaDark,DArena,UArena,0xd8,0x7,IsWeapon|IsMagic,0x0,0x0,15,27,45,0,25,0x12,450,ERank,ArenaDarkIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Merc's Flier,NMercFlier,DMercFlier,0x0,0xd9,0x9,Unsellable|Indestructible,0x0,0x0,1,0,0,0,0,0x11,16,NoRank,NoteIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Wardbow,NWardbow,DWardbow,UWardbow,0xda,0x3,IsWeapon,AntimageBoost|IsPointer,MagicEffectiveness|IsPointer,15,14,80,11,0,0x22,200,ARank,WardbowIcon,0x0,NoEffect,1,0x0,0x0,0x0
-Avalon,NAvalon,DAvalon,UAvalon,0xdb,0x5,IsWeapon|IsMagic|Unsellable|Indestructible,AvalonBoost|IsPointer,0x0,30,30,120,18,0,0x13,65000,SRank,AvalonIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Avalon,NAvalon,DAvalon,UAvalon,0xdb,0x5,IsWeapon|IsMagic|Unsellable|Indestructible,AvalonBoost|IsPointer,0x0,30,30,120,18,0,0x13,65000,SRank,AvalonIcon,0x0,NoEffect,1,0x0,0x0,DistantCounterID
 Luckbow,NLuckbow,DLuckbow,ULuckbow,0xdc,0x3,IsWeapon|Unsellable|ViridianLocked,0x0,FlierEffectiveness|IsPointer,40,12,125,6,0,0x22,110,NoRank,LuckbowIcon,0x0,NoEffect,2,0x0,0x0,LuckbowSkillID
 Courante,NCourante,DCourante,UCourante,0xdd,0x0,IsWeapon|LeilaLocked,0x0,0x0,40,12,100,5,20,0x11,90,NoRank,CouranteIcon,0x0,NoEffect,2,0x0,0x0,ChargePlusID
 Fire Emblem,NFireEmblem,DFireEmblem,UFireEmblem,0xde,0x9,Unsellable|Indestructible|NegateFlyingEffectiveness|PassiveBoosts,FireEmblemBoost|IsPointer,OmniProtection|IsPointer,1,0,0,0,0,0x11,0,NoRank,FireEmblemIcon,0x2d,NoEffect,0,0x0,1,AetherID

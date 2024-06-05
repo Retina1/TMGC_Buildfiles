@@ -700,6 +700,10 @@ ALIGN 4
 ArbordiaMug:
 #incbin "dmps/Arbordia.dmp"
 setMugEntry(0x3d,ArbordiaMug,3,5,3,3)
+ALIGN 4
+YoungArbordiaMug:
+#incbin "dmps/YoungArbordia.dmp"
+setMugEntry(0x147,YoungArbordiaMug,3,5,3,3)
 
 ALIGN 4
 LiamMug:

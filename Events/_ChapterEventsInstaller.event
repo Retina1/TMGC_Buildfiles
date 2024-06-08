@@ -306,6 +306,9 @@ ALIGN 4
 {
 #include "Tales/TalesHub.event"
 }
+{
+#include "Tales/Tale1.event"
+}
 
 ALIGN 4
 EscapePointPointerTable(Prologue,BlankEscape)
@@ -332,6 +335,12 @@ EscapePointPointerTable(ChapterV4,BlankEscape)
 EscapePointPointerTable(ChapterV5,BlankEscape)
 EscapePointPointerTable(Chapter22,BlankEscape)
 EscapePointPointerTable(Chapter23,BlankEscape)
+EscapePointPointerTable(Chapter24,BlankEscape)
+EscapePointPointerTable(Chapter25,BlankEscape)
+EscapePointPointerTable(Chapter26,BlankEscape)
+EscapePointPointerTable(Chapter27,BlankEscape)
+EscapePointPointerTable(Chapter28,BlankEscape)
+EscapePointPointerTable(Endgame,BlankEscape)
 
 EscapePointPointerTable(Interlude1,BlankEscape)
 EscapePointPointerTable(Interlude2,BlankEscape)
@@ -343,6 +352,7 @@ EscapePointPointerTable(Interlude7,BlankEscape)
 EscapePointPointerTable(Interlude8,BlankEscape)
 EscapePointPointerTable(Interlude9,BlankEscape)
 EscapePointPointerTable(Interlude10,BlankEscape)
+EscapePointPointerTable(InterludeZ,BlankEscape)
 ALIGN 4
 BlankEscape:
 EscapePointEnd

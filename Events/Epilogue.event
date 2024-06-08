@@ -177,7 +177,7 @@ BEQ 0x400 0xc 0x0
 		FlashCursor(Leila,30)
 		FlashCursor(Wilhelm,30)
 		Text(Epilogue_LeilaWilhelmMercenaries)
-		GOTO 0x402
+		GOTO 0x403
 LABEL 0x400
 CHECK_EVENTID ManfredWilhelmFlag
 BEQ 0x401 0xc 0x0
@@ -186,8 +186,9 @@ BEQ 0x401 0xc 0x0
 		Text(Epilogue_ManfredWilhelmMercenaries)
 		GOTO 0x402
 LABEL 0x401
-EpilogueUnitText(Manfred,Epilogue_ManfredMercenaries,0x14)
 EpilogueUnitText(Wilhelm,Epilogue_WilhelmMercenaries,0x15)
+LABEL 0x403
+EpilogueUnitText(Manfred,Epilogue_ManfredMercenaries,0x14)
 LABEL 0x402
 EpilogueUnitText(Argent,Epilogue_ArgentMercenaries,0x16)
 EpilogueUnitText(SecretClarque,Epilogue_ClarqueMercenaries,0x17)

@@ -9,6 +9,10 @@ EventPointerTable(HubEvents,ThisChapter)
 //give lazarus trial map DTL final boss theme
 //make stat setter and wexp setter macros to go along with skill setters
 
+#define TaleSetUnitStat(unit,mhp,str,mag,skl,spd,luk,def,res) "SetUnitStatus(unit,Exp,0xff);SetUnitStatus(unit,MaxHP,mhp);SetUnitStatus(unit,CurrentHP,mhp);SetUnitStatus(unit,Strength,str);SetUnitStatus(unit,Magic,mag);SetUnitStatus(unit,Skill,skl);SetUnitStatus(unit,Speed,spd);SetUnitStatus(unit,LuckStat,luk);SetUnitStatus(unit,Defence,def);SetUnitStatus(unit,Resistance,res)"
+#define TaleSetUnitWEXP(unit,swd,lnc,axe,bow,stf,ani,lit,drk) "SetUnitStatus(unit,SwordExp,swd);SetUnitStatus(unit,LanceExp,lnc);SetUnitStatus(unit,AxeExp,axe);SetUnitStatus(unit,BowExp,bow);SetUnitStatus(unit,StaffExp,stf);SetUnitStatus(unit,AnimaExp,ani);SetUnitStatus(unit,LightExp,lit);SetUnitStatus(unit,DarkExp,drk)"
+//#define SetUnitSkils(unit,skl1,skl2,skl3,skl4) already in event defs
+
 ALIGN 4
 
 ThisChapter:
@@ -28,6 +32,7 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+CharacterEvent(0x0,Tale1Begin,Addington,Butch)
 END_MAIN
 
 LocationBasedEvents:
@@ -108,6 +113,11 @@ LOAD1 0x1 HubUnits
 CleanTextNoMap(HallCG,FillerDialogue)
 EnableFreeMovement
 ENDA
+
+Tale1Begin:
+DisableFreeMovement
+MoveToChapter(Tale1)
+EndEvent
 
 //disablefreemovement when leaving chapter
 

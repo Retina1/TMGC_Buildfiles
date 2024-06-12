@@ -517,7 +517,7 @@ FADU 0x4
 STAL 120
 //text
 CHECK_EVENTID PeggyButchFlag
-BNE 0x14 0xc 0x0
+BNE 0x3011 0xc 0x0
 //runs if peggy/nat AND peggy butch didn't happen
 		CHECK_EVENTID NatasiaPeggyFlag
 		BEQ 0x3001 0xc 0x0

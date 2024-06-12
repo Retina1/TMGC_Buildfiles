@@ -559,6 +559,10 @@ GaylordMug:
 #incbin "dmps/Gaylord.dmp"
 setMugEntry(0xe8,GaylordMug,3,5,3,3)
 ALIGN 4
+GaylordPromoMug:
+#incbin "dmps/GaylordPromo.dmp"
+setMugEntry(0x148,GaylordPromoMug,3,5,3,3)
+ALIGN 4
 QMug:
 #incbin "dmps/Q.dmp"
 setMugEntry(0xf3,QMug,4,6,4,4)

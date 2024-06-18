@@ -9,6 +9,53 @@ ORG $A3D1AC
 POIN NewEndingsTable
 POP
 
+
+#define BlairArinFlag 0x8
+#define BlairNatasiaFlag 0x9
+#define BlairAvanFlag 0xa
+#define BlairYuyuFlag 0xb
+#define BlairEstelleFlag 0xc
+#define BlairCarbonFlag 0xd
+#define ArinSimoneFlag 0xe
+#define KennethHilbertFlag 0xf 
+#define NatasiaBechamelFlag 0x10
+#define BOATFLAGWOO NatasiaBechamelFlag
+#define NatasiaPeggyFlag 0x11 
+#define StefanJohanFlag 0x12
+#define DesmondFlynnFlag 0x13
+#define SamEmileFlag 0x14 
+#define SamBechamelFlag 0x15 
+#define SamCharleyFlag 0x16 
+#define JosefAthenaFlag 0x17 
+#define PeggyButchFlag 0x18 
+#define ButchJeffFlag 0x19 
+#define ButchPeterFlag 0x1a 
+#define RachaelCassiusFlag 0x1b 
+#define RachaelJeffFlag 0x1c 
+#define RachaelLeilaFlag 0x1d 
+#define CassiusMikeyFlag 0x1e 
+#define CassiusZekeFlag 0x1f 
+#define ApolloBechamelFlag 0x20 
+#define ApolloFlynnFlag 0x21 
+#define ApolloVladmirFlag 0x22 
+#define BechamelHollandaiseFlag 0x23 
+#define CharleyToddsworthFlag 0x24 
+#define HyperiusAlexisFlag 0x25 
+#define LeilaDamienFlag 0x26 
+#define LeilaWilhelmFlag 0x27 
+#define LeilaTobiasFlag 0x28 
+#define PtolemyJohanFlag 0x9d
+#define FreddricArgentFlag 0x9c
+#define ElizaDirkFlag 0x9b 
+#define RiftEstelleFlag 0x9a 
+#define RiftCallumFlag 0x99
+#define RoseManfredFlag 0x98
+#define RoseLarondeFlag 0x97 
+#define ManfredWilhelmFlag 0x96
+#define BlairSingleFlag 0x95 
+#define JoanSoniaFlag 0x94
+
+
 #define RetreatDesignationTrue 2
 #define RetreatDesignationFalse 0
 #define EndingRetreatTableEntry(charID) "BYTE charID RetreatDesignationTrue 0 0"
@@ -29,7 +76,7 @@ POP
 
 NewEndingWithdrawalTable:
 EndingNoRetreatTableEntry(Blair)
-EndingRetreatTableEntry(Arin)
+EndingNoRetreatTableEntry(Arin)
 EndingNoRetreatTableEntry(Kenneth)
 EndingNoRetreatTableEntry(Natasia)
 EndingNoRetreatTableEntry(Stefan)
@@ -55,7 +102,7 @@ EndingNoRetreatTableEntry(Gaylord)
 EndingNoRetreatTableEntry(Athena)
 EndingNoRetreatTableEntry(Charley)
 EndingNoRetreatTableEntry(Zeke)
-EndingRetreatTableEntry(Hyperius)
+EndingNoRetreatTableEntry(Hyperius)
 EndingNoRetreatTableEntry(Alexis)
 EndingNoRetreatTableEntry(Leila)
 EndingNoRetreatTableEntry(Damien)
@@ -179,6 +226,7 @@ NewEndingsTable:
 //kenneth/hilbert
 SoloEndingTableEntry(Kenneth,KennethSoloEnding)
 //alts for bechamel
+SoloEndingFlagTableEntry(Natasia,NatasiaEndingAlt,NatasiaBechamelFlag)
 SoloEndingTableEntry(Natasia,NatasiaSoloEnding)
 //stefan/johan
 SoloEndingTableEntry(Stefan,StefanSoloEnding)
@@ -187,6 +235,7 @@ SoloEndingTableEntry(Desmond,DesmondSoloEnding)
 //sam/charley
 //sam/emile
 //alts for bechamel if not emile
+SoloEndingFlagTableEntry(Sam,SamSoloEnding,SamBechamelFlag)
 SoloEndingTableEntry(Sam,SamSoloEnding)
 //josef/hilbert
 SoloEndingTableEntry(Josef,JosefSoloEnding)
@@ -200,19 +249,24 @@ SoloEndingTableEntry(Rachael,RachaelSoloEnding)
 //cassius/mikey
 SoloEndingTableEntry(Cassius,CassiusSoloEnding)
 //alt for butch maybe?
+SoloEndingFlagTableEntry(Jeff,JeffEndingRachaelAlt,RachaelJeffFlag)
+SoloEndingFlagTableEntry(Jeff,JeffEndingButchAlt,ButchJeffFlag)
 SoloEndingTableEntry(Jeff,JeffSoloEnding)
 SoloEndingTableEntry(Emile,EmileSoloEnding)
 //apollo/flynn (boaty alts?)
 //apollo/bechamel (boaty alts?)s
 SoloEndingTableEntry(Apollo,ApolloSoloEnding)
 //hollandaise thing
+SoloEndingFlagTableEntry(Bechamel,BechamelEndingAlt,NatasiaBechamelFlag)
 SoloEndingTableEntry(Bechamel,BechamelSoloEnding)
 SoloEndingTableEntry(Sveltzalus,SveltzalusSoloEnding)
 SoloEndingTableEntry(Hilbert,HilbertSoloEnding)
 SoloEndingTableEntry(Agnes,AgnesSoloEnding)
 SoloEndingTableEntry(Flynn,FlynnSoloEnding)
 SoloEndingTableEntry(Addington,AddingtonSoloEnding)
+SoloEndingFlagTableEntry(Mikey,MikeyEndingAlt,CassiusMikeyFlag)
 SoloEndingTableEntry(Mikey,MikeySoloEnding)
+SoloEndingFlagTableEntry(Carbon,CarbonEndingAlt,BlairCarbonFlag)
 SoloEndingTableEntry(Carbon,CarbonSoloEnding)
 SoloEndingTableEntry(Gaylord,GaylordSoloEnding)
 SoloEndingTableEntry(Athena,AthenaSoloEnding)
@@ -228,9 +282,12 @@ SoloEndingTableEntry(Damien,DamienSoloEnding)
 SoloEndingTableEntry(Zacharias,ZachariasSoloEnding)
 SoloEndingTableEntry(Avan,AvanSoloEnding)
 //charley/todd
+SoloEndingFlagTableEntry(Toddsworth,ToddsworthEndingAlt,CharleyToddsworthFlag)
 SoloEndingTableEntry(Toddsworth,ToddsworthSoloEnding)
 SoloEndingTableEntry(Yuyu,YuyuSoloEnding)
 SoloEndingTableEntry(Artemis,ArtemisSoloEnding)
+
+SoloEndingFlagTableEntry(Hollandaise,HollandaiseSoloEnding,BechamelHollandaiseFlag)
 SoloEndingTableEntry(Hollandaise,HollandaiseSoloEnding)
 SoloEndingTableEntry(Vladmir,VladmirSoloEnding)
 SoloEndingFlagTableEntry(Horatio,HoratioSoloEndingAlt,HoratioFlag)//summon alt
@@ -247,6 +304,8 @@ SoloEndingTableEntry(Tonnamin,TonnaminSoloEnding)
 //they get a free paired ending, solos are if one dies
 SoloEndingTableEntry(Joan,JoanSoloEnding)
 SoloEndingTableEntry(Sonia,SoniaSoloEnding)
+
+SoloEndingFlagTableEntry(Tobias,TobiasEndingAlt,LeilaTobiasFlag)
 SoloEndingTableEntry(Tobias,TobiasSoloEnding)
 //rose/laronde
 SoloEndingTableEntry(SecretLaronde,LarondeSoloEnding)

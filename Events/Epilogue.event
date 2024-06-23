@@ -76,7 +76,7 @@ BEQ 0x15 0xc 0x0
 LABEL 0x15
 EpilogueNoFlagUnitText(Carbon,BlairCarbonFlag,Epilogue_CarbonAercolyn,0x13)
 EpilogueFlagUnitText(Carbon,BlairCarbonFlag,Epilogue_CarbonAercolynAlt,0x16)
-EpilogueNoFlagUnitText(Toddsworth,CharleyToddsworthFlag,Epilogue_ToddsworthAercolyn,0x14)
+EpilogueNoFlagUnitText(Toddsworth,CharleyToddsworthFlag,Epilogue_ToddsworthAercolyn,0x144)
 CHECK_EVENTID GirlkissingFlag
 BEQ 0x90 0xc 0x0
 	FlashCursor(Blair,30)
@@ -773,7 +773,7 @@ EpilogueSupportFlag(Eliza,Dirk,ElizaDirkFlag)
 EpilogueSupportFlag(Rift,Estelle,RiftEstelleFlag)
 EpilogueSupportFlag(Rift,Callum,RiftCallumFlag)
 EpilogueSupportFlag(Rose,Manfred,RoseManfredFlag)
-EpilogueSupportFlag(Rose,Laronde,RoseLarondeFlag)
+EpilogueSupportFlag(Rose,SecretLaronde,RoseLarondeFlag)
 EpilogueSupportFlag(Manfred,Wilhelm,ManfredWilhelmFlag)
 EpilogueSupportFlag(Joan,Sonia,JoanSoniaFlag)
 CHECK_EVENTID BlairArinFlag

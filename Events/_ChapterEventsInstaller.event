@@ -50,6 +50,8 @@ ALIGN 4
 RoseShopEvent:
 CHECK_ACTIVEID SecretLaronde
 BNE 0x40 0xc 0x0
+CHECK_ACTIVEID 0xd2
+BNE 0x41 0xc 0x0
 PlayEmotionEffect(Rose,MusicNoteEffect)
 Text(RoseShopIntro)
 REMA
@@ -146,6 +148,10 @@ PlayEmotionEffect(Rose,DotDotDotEffect)
 LABEL 0x40
 PlayEmotionEffect(Rose,SweatEffect)
 	Text(NoStinkyLarondesAllowed)
+	GOTO 0x2
+LABEL 0x41
+PlayEmotionEffect(Rose,DotDotDotEffect)
+	Text(NoSwordsAllowed)
 LABEL 0x2
 EndEvent
 

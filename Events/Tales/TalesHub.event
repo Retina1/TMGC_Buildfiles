@@ -33,6 +33,17 @@ ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
 CharacterEvent(0x0,Tale1Begin,Addington,Butch)
+CharacterEvent(0x0,Tale2Begin,Addington,Zeke)
+CharacterEvent(0x0,Tale3Begin,Addington,Vladmir)
+CharacterEvent(0x0,Tale4Begin,Addington,Cid)
+CharacterEvent(0x0,Tale5Begin,Addington,Natasia)
+CharacterEvent(0x0,Tale6Begin,Addington,Kenneth)
+CharacterEvent(0x0,Tale7Begin,Addington,Sonia)
+CharacterEvent(0x0,Tale8Begin,Addington,Viridian)
+CharacterEvent(0x0,Tale9Begin,Addington,Lazarus)
+CharacterEvent(0x0,Tale10Begin,Addington,Simone)
+CharacterEvent(0x0,Tale11Begin,Addington,Blair)
+CharacterEvent(0x0,Tale12Begin,Addington,Sinclair)
 END_MAIN
 
 LocationBasedEvents:
@@ -110,13 +121,124 @@ LOAD1 0x1 HubAccess
 LOAD1 0x1 BonusHubAccess
 LOAD1 0x1 FinalHubAccess
 LOAD1 0x1 HubUnits
-CleanTextNoMap(HallCG,FillerDialogue)
+CHECK_EVENTID TaleHubVisitedFlag
+BNE 0x1 0xc 0x0
+CleanText(HallCG,TaleHubIntro)
+SystemText(TaleHubExplanation)
+ENUT TaleHubVisitedFlag
+GOTO 0x2
+LABEL 0x1
+Text(TaleHubReturnIntro)
+LABEL 0x2
 EnableFreeMovement
-ENDA
+EndEvent
 
 Tale1Begin:
+Text(Tale1LeadIn)
+SystemText(Tale1Selector)
+IfNoSelectedGoto(0x1)
 DisableFreeMovement
 MoveToChapter(Tale1)
+LABEL 0x1
+EndEvent
+
+Tale2Begin:
+Text(FillerDialogue)
+SystemText(Tale2Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale2)
+LABEL 0x1
+EndEvent
+
+Tale3Begin:
+Text(FillerDialogue)
+SystemText(Tale3Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale3)
+LABEL 0x1
+EndEvent
+
+Tale4Begin:
+Text(FillerDialogue)
+SystemText(Tale4Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale4)
+LABEL 0x1
+EndEvent
+
+Tale5Begin:
+Text(FillerDialogue)
+SystemText(Tale5Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale5)
+LABEL 0x1
+EndEvent
+
+Tale6Begin:
+Text(FillerDialogue)
+SystemText(Tale6Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale6)
+LABEL 0x1
+EndEvent
+
+Tale7Begin:
+Text(FillerDialogue)
+SystemText(Tale7Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale7)
+LABEL 0x1
+EndEvent
+
+Tale8Begin:
+Text(FillerDialogue)
+SystemText(Tale8Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale8)
+LABEL 0x1
+EndEvent
+
+Tale9Begin:
+Text(FillerDialogue)
+SystemText(Tale9Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale9)
+LABEL 0x1
+EndEvent
+
+Tale10Begin:
+Text(FillerDialogue)
+SystemText(Tale10Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale10)
+LABEL 0x1
+EndEvent
+
+Tale11Begin:
+Text(FillerDialogue)
+SystemText(Tale11Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale11)
+LABEL 0x1
+EndEvent
+
+Tale12Begin:
+Text(FillerDialogue)
+SystemText(Tale12Selector)
+IfNoSelectedGoto(0x1)
+DisableFreeMovement
+MoveToChapter(Tale12)
+LABEL 0x1
 EndEvent
 
 //disablefreemovement when leaving chapter

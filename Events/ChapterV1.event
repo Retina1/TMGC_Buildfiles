@@ -177,11 +177,11 @@ ENUN
 EVBIT_F 9
 MUSC S_BattleForStormHill
 Text(V1Opening2)
-SystemText(ViridianArcPrimer)
 SetSupport(Viridian,Freddric,BSupport)
 SetSupport(Viridian,Chartreuse,BSupport)
 SetSupport(Dean,Eliza,CPSupport)
-AnimusSealGiver(Viridian)
+SystemText(ViridianArcPrimer)
+AnimusSealGiverViridian
 EndEvent
 
 EndingScene:

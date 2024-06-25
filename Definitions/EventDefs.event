@@ -31,6 +31,8 @@
 #define RandomRainSetter "RANDOMNUMBER 9; BNE 0x4368 0xc 0x0; WEATHER 0x4; LABEL 0x4368"
 
 #define AnimusSealGiver(unitid) "CHECK_EVENTID AnimusModeFlag; BEQ 0x2789 0xc 0x0; CHECK_EVENTID AnimusSealGivenFlag; BNE 0x2789 0xc 0x0; REMA; SetBackground(BlankCG);GiveItem(AnimusSeal,unitid); ENUT AnimusSealGivenFlag;LABEL 0x2789"
+#define AnimusSealGiverZeke "CHECK_EVENTID AnimusModeFlag; BEQ 0x2789 0xc 0x0; CHECK_EVENTID AnimusSealGivenFlag; BNE 0x2789 0xc 0x0; GiveItem(AnimusSeal,Zeke); ENUT AnimusSealGivenFlag;LABEL 0x2789"
+#define AnimusSealGiverViridian "CHECK_EVENTID AnimusModeFlag; BEQ 0x2789 0xc 0x0; CHECK_EVENTID AnimusSealGivenFlag; BNE 0x2789 0xc 0x0; GiveItem(AnimusSeal,Viridian); ENUT AnimusSealGivenFlag;LABEL 0x2789"
 
 #define SetUnitSkills(unit,skillid1,skillid2,skillid3,skillid4) "Write_Byte(skillid1,0x203E884+(unit*0x10)+0x1);Write_Byte(skillid2,0x203E884+(unit*0x10)+0x2);Write_Byte(skillid3,0x203E884+(unit*0x10)+0x3);Write_Byte(skillid4,0x203E884+(unit*0x10)+0x4)"
 

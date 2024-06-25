@@ -527,6 +527,15 @@ LOAD1 0x0 I6Units
 ENUN
 LOAD1 0x0 I6Props
 ENUN
+InterludeSupportFlagOn(Josef,Hilbert,0x9d,CPSupport)
+InterludeSupportFlagOn(Carbon,Blair,0x9c,CPSupport)
+InterludeSupportFlagOn(Yuyu,Blair,0x9b,CSupport)
+InterludeSupportFlagOn(Zeke,Blair,0x9a,CPSupport)
+InterludeSupportFlagOn(Natasia,Blair,0x99,CPSupport)
+InterludeSupportFlagOn(Kenneth,Blair,0x98,CPSupport)
+InterludeSupportFlagOn(Peggy,Natasia,0x97,CPSupport)
+InterludeSupportFlagOn(Avan,Blair,0x96,CSupport)
+InterludeSupportFlagOn(Apollo,Bechamel,0x95,CPSupport)
 GotoPrepScreenNoBaseCheck
 ENDA
 
@@ -539,6 +548,7 @@ EndingScene:
 EVBIT_MODIFY 3
 DisableFreeMovement
 ResetBaseFlags
+ENUF 0x9d;ENUF 0x9c;ENUF 0x9b;ENUF 0x9a;ENUF 0x99;ENUF 0x98;ENUF 0x97;ENUF 0x96;ENUF 0x95
 CHECK_EVENTID 0x4
 BEQ 0x1 0xc 0x0
 CleanTextNoMap(TentInsideCG,I6EndingShutUpTodd)

@@ -30,7 +30,8 @@ POP; #incbin "IconDisplay.dmp"
 POIN IconDisplayList
 
 
-
+#define InterludeIconDisplay(unit,chapter) "BYTE unit 0; SHORT 0; BYTE chapter 0x11 0 0"
+#define InterludeIconDisplay(unit,chapter,flag) "BYTE unit 0; SHORT flag; BYTE chapter 0x11 0 0"
 ALIGN 4
 IconDisplayList:
 //BYTE 0 // Any Unit ID 
@@ -40,6 +41,47 @@ IconDisplayList:
 //BYTE 0xFF // Default ObjTileID 
 //BYTE 0 // padding 
 //BYTE 0 // Padding 
+
+InterludeIconDisplay(Kenneth,Interlude3)
+InterludeIconDisplay(Natasia,Interlude3)
+InterludeIconDisplay(Stefan,Interlude3)
+InterludeIconDisplay(Peggy,Interlude3)
+InterludeIconDisplay(Cassius,Interlude3)
+InterludeIconDisplay(Rachael,Interlude3)
+InterludeIconDisplay(Jeff,Interlude3)
+InterludeIconDisplay(Emile,Interlude3)
+
+InterludeIconDisplay(Arin,Interlude6)
+InterludeIconDisplay(Emile,Interlude6)
+InterludeIconDisplay(Hilbert,Interlude6)
+InterludeIconDisplay(Sveltzalus,Interlude6)
+InterludeIconDisplay(Toddsworth,Interlude6)
+InterludeIconDisplay(Stefan,Interlude6)
+InterludeIconDisplay(Cassius,Interlude6)
+InterludeIconDisplay(Hollandaise,Interlude6)
+InterludeIconDisplay(Sam,Interlude6)
+InterludeIconDisplay(Zacharias,Interlude6)
+InterludeIconDisplay(Damien,Interlude6)
+//conditional
+InterludeIconDisplay(Josef,Interlude6,0x9d)
+InterludeIconDisplay(Carbon,Interlude6,0x9c)
+InterludeIconDisplay(Yuyu,Interlude6,0x9b)
+InterludeIconDisplay(Zeke,Interlude6,0x9a)
+InterludeIconDisplay(Natasia,Interlude6,0x99)
+InterludeIconDisplay(Kenneth,Interlude6,0x98)
+InterludeIconDisplay(Peggy,Interlude6,0x97)
+InterludeIconDisplay(Avan,Interlude6,0x96)
+InterludeIconDisplay(Apollo,Interlude6,0x95)
+
+InterludeIconDisplay(Charley,Interlude10)
+InterludeIconDisplay(Brandl,Interlude10)
+//conditional
+InterludeIconDisplay(Avan,Interlude10,0x9d)
+InterludeIconDisplay(Yuyu,Interlude10,0x9c)
+InterludeIconDisplay(Kenneth,Interlude10,0x9b)
+InterludeIconDisplay(Carbon,Interlude10,0x9a)
+InterludeIconDisplay(Emile,Interlude10,0x99)
+InterludeIconDisplay(Horatio,Interlude10,0x98)
 
 /*BYTE LootDalstRebel 0; SHORT 0; BYTE 0xFF 0x65 0 0 // Unit ID 1 to always display default icon for unit to defend 
 BYTE LootMevion 0; SHORT 0; BYTE 0xFF 0x65 0 0

@@ -234,11 +234,22 @@ SetUnitStatus(Kyrie, ClassPointer, 0x8809ABC)
 Interlude10GlobalFlagOff
 //debug support setter
 //SetSupport(Horatio,Simone,CPSupport,1)
+InterludeSupportFlagOn(Avan,Blair,0x9d,BPSupport)
+InterludeSupportFlagOn(Yuyu,Blair,0x9c,BPSupport)
+InterludeSupportFlagOn(Kenneth,Blair,0x9b,BPSupport)
+InterludeSupportFlagOn(Carbon,Blair,0x9a,BPSupport)
+InterludeSupportFlagOn(Emile,Blair,0x99,BPSupport)
+InterludeSupportFlagOn(Horatio,Simone,0x98,CPSupport)
+CHECK_ALIVE Simone
+BNE 0x600 0xc 0x0
+ENUF 0x98
+LABEL 0x600
 GotoPrepScreenNoBaseCheck
 ENDA
 
 EndingScene:
 Interlude10GlobalFlagOn
+ENUF 0x9d;ENUF 0x9c;ENUF 0x9b;ENUF 0x9a;ENUF 0x99;ENUF 0x98
 EVBIT_MODIFY 3
 DisableFreeMovement
 MUSC S_RightRoad

@@ -41,7 +41,7 @@ IconDisplayList:
 //BYTE 0xFF // Default ObjTileID 
 //BYTE 0 // padding 
 //BYTE 0 // Padding 
-
+/*
 InterludeIconDisplay(Kenneth,Interlude3)
 InterludeIconDisplay(Natasia,Interlude3)
 InterludeIconDisplay(Stefan,Interlude3)
@@ -49,7 +49,6 @@ InterludeIconDisplay(Peggy,Interlude3)
 InterludeIconDisplay(Cassius,Interlude3)
 InterludeIconDisplay(Rachael,Interlude3)
 InterludeIconDisplay(Jeff,Interlude3)
-InterludeIconDisplay(Emile,Interlude3)
 
 InterludeIconDisplay(Arin,Interlude6)
 InterludeIconDisplay(Emile,Interlude6)
@@ -63,6 +62,15 @@ InterludeIconDisplay(Sam,Interlude6)
 InterludeIconDisplay(Zacharias,Interlude6)
 InterludeIconDisplay(Damien,Interlude6)
 //conditional
+InterludeIconDisplay(Josef,Interlude6)
+InterludeIconDisplay(Carbon,Interlude6)
+InterludeIconDisplay(Yuyu,Interlude6)
+InterludeIconDisplay(Zeke,Interlude6)
+InterludeIconDisplay(Natasia,Interlude6)
+InterludeIconDisplay(Kenneth,Interlude6)
+InterludeIconDisplay(Peggy,Interlude6)
+InterludeIconDisplay(Avan,Interlude6)
+InterludeIconDisplay(Apollo,Interlude6)
 InterludeIconDisplay(Josef,Interlude6,0x9d)
 InterludeIconDisplay(Carbon,Interlude6,0x9c)
 InterludeIconDisplay(Yuyu,Interlude6,0x9b)
@@ -76,29 +84,19 @@ InterludeIconDisplay(Apollo,Interlude6,0x95)
 InterludeIconDisplay(Charley,Interlude10)
 InterludeIconDisplay(Brandl,Interlude10)
 //conditional
+InterludeIconDisplay(Avan,Interlude10)
+InterludeIconDisplay(Yuyu,Interlude10)
+InterludeIconDisplay(Kenneth,Interlude10)
+InterludeIconDisplay(Carbon,Interlude10)
+InterludeIconDisplay(Emile,Interlude10)
+InterludeIconDisplay(Horatio,Interlude10)
 InterludeIconDisplay(Avan,Interlude10,0x9d)
 InterludeIconDisplay(Yuyu,Interlude10,0x9c)
 InterludeIconDisplay(Kenneth,Interlude10,0x9b)
 InterludeIconDisplay(Carbon,Interlude10,0x9a)
 InterludeIconDisplay(Emile,Interlude10,0x99)
 InterludeIconDisplay(Horatio,Interlude10,0x98)
-
-/*BYTE LootDalstRebel 0; SHORT 0; BYTE 0xFF 0x65 0 0 // Unit ID 1 to always display default icon for unit to defend 
-BYTE LootMevion 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootYgstra 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootRemnant 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootElbaCor 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootOpistia 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootHolanis 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootLowlands 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootLoile 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootPirates 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootDalst 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootAercolyn 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootBandit 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootSimulacrum 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootDragon 0; SHORT 0; BYTE 0xFF 0x65 0 0
-BYTE LootUnknown 0; SHORT 0; BYTE 0xFF 0x65 0 0*/
+*/
 WORD 0xFFFFFFFF 0xFFFFFFFF // terminator 
 
 

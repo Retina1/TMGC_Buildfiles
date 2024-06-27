@@ -74,18 +74,23 @@ HubAccess:
 //tale 1 cast - butch, peggy, peter, rift, mitchell, maybe arques
 UNIT Butch Hero 0x0 Level(1,NPC,0) [0,6] 0x0 0x0 0x0 0x0 [GildedSword,Hammer] NoAI
 //tale 2 cast - zeke, rachael, cassius, alexis, hyperius, jeff, artemis (since holanian connection for zeke plus alexis support)
+// visit villages within elba cor to petition aid for new government, they only listen to zeke
 UNIT Zeke ZekeLordX 0x0 Level(1,NPC,0) [1,8] 0x0 0x0 0x0 0x0 [Stalwart,Soulbow] NoAI
 //tale 3 cast - vladmir, laronde, athena, manfred, cameo from rose
+// sleep staff wyverns to pacify them, then talk to them to collect data, while dealing with other enemies
 UNIT Vladmir Bishop 0x0 Level(1,NPC,0) [4,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Fortify,GoddessIcon] NoAI
 //tale 4 cast - cid, agnes, esme maybe, leila and or wilhelm cameo somehow?
+// survive until told to escape
 UNIT Cid Berserker 0x0 Level(1,NPC,0) [10,9] 0x0 0x0 0x0 0x0 [Frypan,GildedAxe,Elixir] NoAI
 //tale 5 cast - natasia, bechamel, apollo, flynn, peggy, agnes, hollandaise, charley
+// capture boats while defending their greens
 UNIT Natasia WarriorF 0x0 Level(1,NPC,0) [13,8] 0x0 0x0 0x0 0x0 [KillerAxe,Tomahawk,Longbow] NoAI
 //tale 6 cast - kenneth, stefan, desmond, josef, johan, ptolemy, emile, hilbert, natasia?, gaylord?
 UNIT Kenneth Baron 0x0 Level(1,NPC,0) [14,6] 0x0 0x0 0x0 0x0 [Voidwake,Nosferatu,SilverSword] NoAI
 //tale 7 cast - sonia, joan, tobias, mikey, carbon, jonas, damien, zacharias
 UNIT Sonia HalberdierF 0x0 Level(1,NPC,0) [14,2] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NoAI
 //tale 8 cast - viridian, freddric, chartreuse, dean, clarque and sons, maybe olsen for funnies, dirk/eliza cameo? maybe they're some of the greens?
+// bring waves of greens to safe zones as they spawn
 UNIT Viridian ViridianLord 0x0 Level(1,NPC,0) [13,0] 0x0 0x0 0x0 0x0 [Luckbow,SilverBow,Recover] NoAI
 //tale 9 cast - lazarus, cameos from ygstrans including callum, girard and elcorian chilling in audience
 UNIT Lazarus AxeGen 0x0 Level(1,NPC,0) [0,2] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI

@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,I10Turn1,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -246,6 +247,17 @@ ENUF 0x98
 LABEL 0x600
 GotoPrepScreenNoBaseCheck
 ENDA
+
+I10Turn1:
+AddLightRune(Charley)
+AddLightRune(Brandl)
+AddLightRune(Avan,0x9d)
+AddLightRune(Yuyu,0x9c)
+AddLightRune(Kenneth,0x9b)
+AddLightRune(Carbon,0x9a)
+AddLightRune(Emile,0x99)
+AddLightRune(Horatio,0x98)
+EndEvent
 
 EndingScene:
 Interlude10GlobalFlagOn

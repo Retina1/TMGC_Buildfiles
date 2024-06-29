@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,I3Turn1,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -131,6 +132,18 @@ GOTO 0x1
 LABEL 0x2
 Text(I3NotYet)
 LABEL 0x1
+EndEvent
+
+I3Turn1:
+AddLightRune(Kenneth)
+AddLightRune(Natasia)
+AddLightRune(Stefan)
+AddLightRune(Peggy)
+AddLightRune(Rachael)
+AddLightRune(Cassius)
+AddLightRune(Jeff)
+AddLightRune(Apollo)
+SystemText(I3Note)
 EndEvent
 
 I3ArinTalk:

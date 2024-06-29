@@ -47,7 +47,7 @@ prCallBonusOptionMenu:
 	POIN pBonusOptionMenuDefinition
 
 pBonusOptionMenuDefinition:
-	BYTE 6 1 17 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	BYTE 6 0 17 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
 	WORD 1                  // style (change it if u want)
 	POIN pBonusOptionCommands 	// Command Definitions
 	WORD 0 0 0 0 0 0  
@@ -60,6 +60,7 @@ pBonusOptionCommands:
 	EventMenuCommand(DeploymentCutSelector)
 	EventMenuCommand(AnimusModeSelector)
 	EventMenuCommand(PressTurnSelector)
+	EventMenuCommand(JukeboxSelector)
 	EventMenuCommand(BonusFinishedSelector)
 EventMenuCommandEnd
 

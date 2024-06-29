@@ -21,7 +21,8 @@ dalst
 //macro definitions for setting the song table
 #ifndef SongTableOffset
   #define SongTableOffset  0x224470
-  #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+  //priority might not matter???
+  #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT 1 1; POP"
 #endif
 #define BattleMusicGroup 0
 #define MapMusicGroup 1

@@ -212,6 +212,15 @@ IfNoSelectedGoto(0x99b)
 							GOTO 0x4000
 		LABEL 0x4007
 		SVAL 0x1 0x7
+		BNE 0x4008 0xc 0x1
+				ENUF JukeboxFlag
+						SystemText(JukeboxPrompt)
+							IfNoSelectedGoto(0x555)
+							ENUT JukeboxFlag
+							LABEL 0x555
+							GOTO 0x4000
+		LABEL 0x4008
+		SVAL 0x1 0x8
 		BEQ 0x99b 0xc 0x1 	
 LABEL 0x99b
 SystemText(GameModifierPrompt)
@@ -319,7 +328,7 @@ SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 5, Any, Any, Brigand, Any, 
 SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 6, Any, Any, Bruiser, Any, Any)
 //AltOST(S_FootstepsOfFate,S_FootstepsOfFate,S_FootstepsOfFate)
 SystemText(GameIntroText)
-AnimusSealGiver(Blair)
+CHECK_EVENTID AnimusModeFlag; BEQ 0x2789 0xc 0x0; CHECK_EVENTID AnimusSealGivenFlag; BNE 0x2789 0xc 0x0; GiveItem(AnimusSeal,Blair); ENUT AnimusSealGivenFlag;LABEL 0x2789
 EndEvent
 
 EndingScene:

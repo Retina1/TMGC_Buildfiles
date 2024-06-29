@@ -104,6 +104,8 @@
 	
 	//Macros for checks/actions involving traps
 	#define AddTrap(trapID,x,y) "SVAL 1 trapID; SVAL 0xB (x|(y<<16)); ASMC AddTrapASMC"
+	#define AddLightRune(unitID) "CHECK_DEPLOYED unitID; BEQ unitID 0xc 0x0; SVAL 1 LightRuneTrapID; CHECK_COORDS unitID; SADD 0xC0B; ASMC AddTrapASMC; LABEL unitID"
+	#define AddLightRune(unitID,flagID) "CHECK_DEPLOYED unitID; BEQ unitID 0xc 0x0; CHECK_EVENTID flagID; BEQ unitID 0xc 0x0; SVAL 1 LightRuneTrapID; CHECK_COORDS unitID; SADD 0xC0B; ASMC AddTrapASMC; LABEL unitID"
 	#define RemoveTrapAtCoords(x,y) "SVAL 0xB (x|(y<<16)); ASMC RemoveTrapAtCoordsASMC"
 	#define GetTrapIDAt(x,y) "SVAL 0xB (x|(y<<16)); ASMC GetTrapIDAtASMC"
 	#define GetTrapExt1At(x,y) "SVAL 0xB (x|(y<<16)); ASMC GetTrapExt1AtASMC"

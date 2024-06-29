@@ -305,6 +305,7 @@ a skill when used.[X]
 
 #include "Guide.txt"
 #include "Diary.txt"
+#include "Jukebox.txt"
 
 ##TorchName
  Torch[X]
@@ -598,3 +599,9 @@ be lost. Continue anyway?[X]
 # 0x6e2
 Toggle Perfect Luck[N]
 Mode on or off.[X]
+
+# 0x69e
+ Jukebox[X]
+# 0x6e3
+Change the current[N]
+map music playing.[X]

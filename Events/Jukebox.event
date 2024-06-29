@@ -1,0 +1,724 @@
+PUSH
+ORG 0x59cee4
+POIN JukeboxUsability|1
+POP
+
+PUSH
+ORG 0x59ceec
+POIN JukeboxEffect|1
+POP
+
+ALIGN 4
+JukeboxUsability:
+#incbin "Jukebox/JukeboxUsability.dmp"
+
+ALIGN 4
+JukeboxEffect:
+#incbin "Jukebox/JukeboxEffect.dmp"
+POIN JukeboxEvent
+
+#define NextChoice(choice,label) "SVAL 0x1 choice; BNE label 0xc 0x1"
+#define SongChoice(choice,song) "SVAL 0x1 choice; BNE song 0xc 0x1; SetMapBGM(song); MUSC song; GOTO 9998; LABEL song"
+
+ALIGN 4
+JukeboxEvent:
+SystemText(JukeboxInitializer)
+IfNoSelectedGoto(0x999)
+RefreshLordSplitTiles
+ASMC TopLevelCall+1
+		NextChoice(0,8000)
+			LABEL 8010
+			RefreshLordSplitTiles
+			ASMC Ch110Call+1
+				SongChoice(0,S_TasteOfJustice)
+				SongChoice(1,S_MasterOfWater)
+				SongChoice(2,S_NormalBattle)
+				SongChoice(3,S_DenpaMenPalace)
+				SongChoice(4,S_ShackledWolves)
+				SongChoice(5,S_Metamorphosis)
+				SongChoice(6,S_Expedition)
+			RefreshLordSplitTiles
+			ASMC Ch110Call2+1
+				SongChoice(0,S_SMT4Tokyo)
+				SongChoice(1,S_MrExplorer)
+				SongChoice(2,S_TearsOfResolution)
+				SongChoice(3,S_LastBibleField)
+				SongChoice(4,S_DONTWANNASLEEP)
+				SongChoice(5,S_Stickerbrush)
+				SongChoice(6,S_StickerbrushAlt)
+				GOTO 8010
+		LABEL 8000
+		NextChoice(1,8001)
+			RefreshLordSplitTiles
+			ASMC Ch1114Call+1
+				SongChoice(0,S_DraculaCastle)
+				SongChoice(1,S_SkyTower)
+				SongChoice(2,S_HolyOrders)
+				SongChoice(3,S_SMT4ShinjukuUnderground)
+				SongChoice(4,S_LongRoad)
+				SongChoice(5,S_HallOfDarkness)
+				SongChoice(6,S_FootstepsOfFate)
+				SongChoice(7,S_ForTheCommanders)
+				SongChoice(8,S_EverydayBrawls)
+		LABEL 8001
+		NextChoice(2,8002)
+			LABEL 8030
+			RefreshLordSplitTiles
+			ASMC Ch1520Call+1
+				SongChoice(0,S_GUILT)
+				SongChoice(1,S_BlackTar)
+				SongChoice(2,S_SearchingTheEnemy)
+				SongChoice(3,S_UenoUnderground)
+				SongChoice(4,S_ForestInterlude)
+			RefreshLordSplitTiles
+			ASMC Ch1520Call2+1
+				SongChoice(0,S_IntoTheMind)
+				SongChoice(1,S_Delusional)
+				SongChoice(2,S_MachinaVillage)
+				SongChoice(3,S_RiversInTheDesert)
+				SongChoice(4,S_TheWeightOfLife)
+				GOTO 8030
+		LABEL 8002
+		NextChoice(3,8003)
+			LABEL 8040
+			RefreshLordSplitTiles
+			ASMC Ch2129Call+1
+				SongChoice(0,S_FearFactory)
+				SongChoice(1,S_Liberation)
+				SongChoice(2,S_TremblingEarth)
+				SongChoice(3,S_Ambience)
+				SongChoice(4,S_HoistTheSword)
+			RefreshLordSplitTiles
+			ASMC Ch2129Call2+1
+				SongChoice(0,S_OutOfKindness)
+				SongChoice(1,S_LussariasDestiny)
+				SongChoice(2,S_FeldschlactIII)
+				SongChoice(3,S_Uncontrollable)
+				SongChoice(4,S_AFarAwayPromise)
+				SongChoice(5,S_FE4Victory)
+				GOTO 8040				
+		LABEL 8003
+		NextChoice(4,8004)
+			LABEL 8050
+			RefreshLordSplitTiles
+			ASMC BattleMusCall+1
+				SongChoice(0,S_SMTVBattle)
+				SongChoice(1,S_FE5Battle)
+				SongChoice(2,S_FE6Battle)
+				SongChoice(3,S_CTBattle2)
+				SongChoice(4,S_BattleA1)
+				SongChoice(5,S_TheDevoted)
+				SongChoice(6,S_CrossCounter)
+				SongChoice(7,S_Confidence)
+			RefreshLordSplitTiles
+			ASMC BattleMusCall2+1
+				SongChoice(0,S_FearlessAdversary)
+				SongChoice(1,S_LiveALive)
+				SongChoice(2,S_AmalaBattle)
+				SongChoice(3,S_FightToTheDeath)
+				SongChoice(4,S_Impromptu)
+				SongChoice(5,S_FE5RecoveryB)
+				SongChoice(6,S_StoppableDestiny)
+				SongChoice(7,S_XC3Theme)
+				GOTO 8050			
+		LABEL 8004
+		NextChoice(5,8005)
+			LABEL 8060
+			RefreshLordSplitTiles
+			ASMC BossMusCall+1
+				SongChoice(0,S_SMT4B2)
+				SongChoice(1,S_FaceMyself)
+				SongChoice(2,S_TimeToMakeHistory)
+				SongChoice(3,S_PathsThatWillNeverCross)
+				SongChoice(4,S_Dialga)
+				SongChoice(5,S_SonicBoss)
+				SongChoice(6,S_ClashOfCalamity)
+				SongChoice(7,S_MechanicalRhythm)
+			RefreshLordSplitTiles
+			ASMC BossMusCall2+1
+				SongChoice(0,S_BattleA3)
+				SongChoice(1,S_TheOnlyThingTheyFearIsYou)
+				SongChoice(2,S_GraspFate)
+				SongChoice(3,S_CrimsonRidge)
+				SongChoice(4,S_TheirOwnBrandOfJustice)
+				SongChoice(5,S_SMT4B4)
+				SongChoice(6,S_CallingThatDetestableName)
+				GOTO 8060		
+		LABEL 8005
+		NextChoice(6,8006)
+			LABEL 8070
+			RefreshLordSplitTiles
+			ASMC PrepsMusCall+1
+				SongChoice(0,S_BabaIsYou)
+				SongChoice(1,S_Lounge)
+				SongChoice(2,S_SkyBattle)
+				SongChoice(3,S_Trisection)
+				SongChoice(4,S_Jaws)
+				SongChoice(5,S_UrbanArea)
+			RefreshLordSplitTiles
+			ASMC PrepsMusCall2+1
+				SongChoice(0,S_WhenMotherWasThere)
+				SongChoice(1,S_KKCondor)
+				SongChoice(2,S_FierceAsFire)
+				SongChoice(3,S_RefreshingToilets)
+				SongChoice(4,S_GentleMadman)
+				SongChoice(5,S_ZanzaTheDivine)
+				SongChoice(6,S_UnmarkedGrave)			
+			RefreshLordSplitTiles
+			ASMC PrepsMusCall3+1
+				SongChoice(0,S_GloryToGrann)
+				SongChoice(1,S_DickGumshoe)
+				SongChoice(2,S_SearchingForFriends)
+				SongChoice(3,S_Secret)
+				SongChoice(4,S_KnightsOfRazelia)
+				SongChoice(5,S_ShadowOfTheLowland)			
+			RefreshLordSplitTiles
+			ASMC PrepsMusCall4+1
+				SongChoice(0,S_AWoman)
+				SongChoice(1,S_BlackMarket)
+				SongChoice(2,S_AshuraShop)
+				SongChoice(3,S_SummerLove)
+				SongChoice(4,S_HipShop)
+				SongChoice(5,S_BetterCallSaul)
+				GOTO 8070		
+		LABEL 8006
+		NextChoice(7,8007)
+			LABEL 8080
+			RefreshLordSplitTiles
+			ASMC EventMusCall+1
+				SongChoice(0,S_RightRoad)
+				SongChoice(1,S_MythicQuestBattle)
+				SongChoice(2,S_DestructionBegetsDecay)
+				SongChoice(3,S_LifeWillChange)
+				SongChoice(4,S_ThraciaAdvance)
+				SongChoice(5,S_AugustB)
+			RefreshLordSplitTiles
+			ASMC EventMusCall2+1
+				SongChoice(0,S_Terra)
+				SongChoice(1,S_WhenMotherWasThereAlt)
+				SongChoice(2,S_WistfulWild)
+				SongChoice(3,S_Crisis)
+				SongChoice(4,S_SMTLevelUp)
+				SongChoice(5,S_BattleForStormHill)
+			RefreshLordSplitTiles
+			ASMC EventMusCall3+1
+				SongChoice(0,S_Chaos)
+				SongChoice(1,S_RigorousJustice)
+				SongChoice(2,S_Stratagem)
+				SongChoice(3,S_ColdJustice)
+				SongChoice(4,S_EncountersAndReunions)
+				SongChoice(5,S_TMSQuestBattle)
+			RefreshLordSplitTiles
+			ASMC EventMusCall4+1
+				SongChoice(0,S_CryALive)
+				SongChoice(1,S_Neutral)
+				SongChoice(2,S_CircleOfTheMoon)
+				SongChoice(3,S_Nightfall)
+				SongChoice(4,S_WelcomeToLegend)
+				SongChoice(5,S_FE4Conversation)
+			RefreshLordSplitTiles
+			ASMC EventMusCall5+1
+				SongChoice(0,S_CampIchigaya)
+				SongChoice(1,S_Ameno)
+				SongChoice(2,S_HisWorld)
+				SongChoice(3,S_IAmAllOfMe)
+				SongChoice(4,S_PascalTheDog)
+				SongChoice(5,S_BuddyHolly)
+			RefreshLordSplitTiles
+			ASMC EventMusCall6+1
+				SongChoice(0,S_EarlyMysticMarch)
+				SongChoice(1,S_Unfulfilled)
+				SongChoice(2,S_GameOver)
+				SongChoice(3,S_MainTheme)
+				SongChoice(4,S_OurLight)
+				SongChoice(5,S_MyNameIsJonas)
+				SongChoice(6,S_TheSwan)
+			GOTO 8080
+		LABEL 8007
+		NextChoice(8,8008)
+			LABEL 8090
+			RefreshLordSplitTiles
+			ASMC BonusMusCall+1
+				SongChoice(0,S_RunaAttack)
+				SongChoice(1,S_ModernDayOuroboros)
+				SongChoice(2,S_Ecstasy)
+				SongChoice(3,S_ClaretHollows)
+				SongChoice(4,S_BeatOfTheTerror)
+				SongChoice(5,S_EleventhHour)
+			RefreshLordSplitTiles
+			ASMC BonusMusCall2+1
+				SongChoice(0,S_ToweringPair)
+				SongChoice(1,S_SlayAndFall)
+				SongChoice(2,S_JokingMotive)
+				SongChoice(3,S_ToBecomeGodsEnemy)
+				SongChoice(4,S_ItHasToBeThisWay)
+				SongChoice(5,S_NeonMixtape)
+			RefreshLordSplitTiles
+			ASMC BonusMusCall3+1
+				SongChoice(0,S_NorthernHemispheres)
+				SongChoice(1,S_WaterBattle)
+				SongChoice(2,S_DyedInBlood)
+				SongChoice(3,S_ElfField)
+				SongChoice(4,S_Premonition)
+				SongChoice(5,S_BloodstainedLineage)
+			GOTO 8080				
+		LABEL 8008
+SystemText(JukeboxErrorHandler)
+LABEL 9998
+SystemText(SongSet)
+LABEL 9999
+EndEvent
+
+
+ALIGN 4
+TopLevelCall:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN TopLevelDef
+TopLevelDef:
+	BYTE 6 0 18 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN TopLevelCommands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+TopLevelCommands:
+	EventMenuCommand(JBCh110)
+	EventMenuCommand(JBCh1114)
+	EventMenuCommand(JBCh1520)
+	EventMenuCommand(JBCh2129)
+	EventMenuCommand(JBBattle)
+	EventMenuCommand(JBBoss)
+	EventMenuCommand(JBPreps)
+	EventMenuCommand(JBEvent)
+	EventMenuCommand(JBBonus)
+EventMenuCommandEnd
+
+	
+
+BonusMusCall:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN BonusMusDef
+BonusMusDef:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN BonusMusCommands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+BonusMusCommands:
+	EventMenuCommand(SR_RunaAttack)
+	EventMenuCommand(SR_ModernDayOuroboros)
+	EventMenuCommand(SR_Ecstasy)
+	EventMenuCommand(SR_ClaretHollows)
+	EventMenuCommand(SR_BeatOfTheTerror)
+	EventMenuCommand(SR_EleventhHour)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+BonusMusCall2:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN BonusMusDef2
+BonusMusDef2:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN BonusMusCommands2 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+BonusMusCommands2:
+	EventMenuCommand(SR_ToweringPair)
+	EventMenuCommand(SR_SlayAndFall)
+	EventMenuCommand(SR_JokingMotive)
+	EventMenuCommand(SR_YHVH)
+	EventMenuCommand(SR_ItHasToBeThisWay)
+	EventMenuCommand(SR_NeonMixtape)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+BonusMusCall3:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN BonusMusDef3
+BonusMusDef3:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN BonusMusCommands3 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+BonusMusCommands3:
+	EventMenuCommand(SR_NorthernHemispheres)
+	EventMenuCommand(SR_WaterBattle)
+	EventMenuCommand(SR_DyedInBlood)
+	EventMenuCommand(SR_Elf)
+	EventMenuCommand(SR_Premonition)
+	EventMenuCommand(SR_BloodstainedLineage)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+
+EventMusCall:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN EventMusDef
+EventMusDef:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN EventMusCommands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+EventMusCommands:
+	EventMenuCommand(SR_RightRoad)
+	EventMenuCommand(SR_FFMQBattle)
+	EventMenuCommand(SR_DestructionBegetsDecay)
+	EventMenuCommand(SR_LifeWillChange)
+	EventMenuCommand(SR_ThraciaAdvance)
+	EventMenuCommand(SR_AugustB)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+EventMusCall2:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN EventMusDef2
+EventMusDef2:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN EventMusCommands2 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+EventMusCommands2:
+	EventMenuCommand(SR_Terra)
+	EventMenuCommand(SR_WhenMotherWasThereAlt)
+	EventMenuCommand(SR_WistfulWild)
+	EventMenuCommand(SR_Crisis)
+	EventMenuCommand(SR_SMTLevelUp)
+	EventMenuCommand(SR_BattleForStormHill)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+EventMusCall3:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN EventMusDef3
+EventMusDef3:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN EventMusCommands3 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+EventMusCommands3:
+	EventMenuCommand(SR_Chaos)
+	EventMenuCommand(SR_RigorousJustice)
+	EventMenuCommand(SR_Stratagem)
+	EventMenuCommand(SR_ColdJustice)
+	EventMenuCommand(SR_EncountersReunions)
+	EventMenuCommand(SR_QuestBattle)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+EventMusCall4:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN EventMusDef4
+EventMusDef4:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN EventMusCommands4 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+EventMusCommands4:
+	EventMenuCommand(SR_CryALive)
+	EventMenuCommand(SR_Neutral)
+	EventMenuCommand(SR_CircleOfTheMoon)
+	EventMenuCommand(SR_Nightfall)
+	EventMenuCommand(SR_WelcomeToLegend)
+	EventMenuCommand(SR_Conversation1)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+EventMusCall5:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN EventMusDef5
+EventMusDef5:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN EventMusCommands5 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+EventMusCommands5:
+	EventMenuCommand(SR_CampIchigaya)
+	EventMenuCommand(SR_Ameno)
+	EventMenuCommand(SR_HisWorld)
+	EventMenuCommand(SR_IAmAllOfMe)
+	EventMenuCommand(SR_PascalTheDog)
+	EventMenuCommand(SR_BuddyHolly)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+EventMusCall6:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN EventMusDef6
+EventMusDef6:
+	BYTE 5 1 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN EventMusCommands6 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+EventMusCommands6:
+	EventMenuCommand(SR_EarlyMysticMarch)
+	EventMenuCommand(SR_Unfulfilled)
+	EventMenuCommand(SR_GameOver)
+	EventMenuCommand(SR_MainTheme)
+	EventMenuCommand(SR_OurLight)
+	EventMenuCommand(SR_MyNameIsJonas)
+	EventMenuCommand(SR_TheSwan)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+
+
+PrepsMusCall:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN PrepsMusDef
+PrepsMusDef:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN PrepsMusCommands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+PrepsMusCommands:
+	EventMenuCommand(SR_Baba)
+	EventMenuCommand(SR_Lounge)
+	EventMenuCommand(SR_SkyBattle)
+	EventMenuCommand(SR_Trisection)
+	EventMenuCommand(SR_Jaws)
+	EventMenuCommand(SR_UrbanArea)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+PrepsMusCall2:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN PrepsMusDef2
+PrepsMusDef2:
+	BYTE 5 1 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN PrepsMusCommands2 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+PrepsMusCommands2:
+	EventMenuCommand(SR_WhenMotherWasThere)
+	EventMenuCommand(SR_Condor)
+	EventMenuCommand(SR_FierceAsFire)
+	EventMenuCommand(SR_RefreshingToilets)
+	EventMenuCommand(SR_GentleMadman)
+	EventMenuCommand(SR_ZanzaTheDivine)
+	EventMenuCommand(SR_UnmarkedGrave)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+PrepsMusCall3:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN PrepsMusDef3
+PrepsMusDef3:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN PrepsMusCommands3 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+PrepsMusCommands3:
+	EventMenuCommand(SR_Glory)
+	EventMenuCommand(SR_DickGumshoe)
+	EventMenuCommand(SR_SearchingForFriends)
+	EventMenuCommand(JBPizzer)
+	EventMenuCommand(SR_KnightsOfRazelia)
+	EventMenuCommand(SR_ShadowOfTheLowland)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+PrepsMusCall4:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN PrepsMusDef4
+PrepsMusDef4:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN PrepsMusCommands4 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+PrepsMusCommands4:
+	EventMenuCommand(SR_AWoman)
+	EventMenuCommand(SR_BlackMarket)
+	EventMenuCommand(SR_AshuraShop)
+	EventMenuCommand(SR_SummerLove)
+	EventMenuCommand(SR_HipShop)
+	EventMenuCommand(SR_BetterCallSaul)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+
+BossMusCall:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN BossMusDef
+BossMusDef:
+	BYTE 5 0 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN BossMusCommands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+BossMusCommands:
+	EventMenuCommand(SR_SMT4Boss)
+	EventMenuCommand(SR_FaceMyself)
+	EventMenuCommand(SR_TimeToMakeHistory)
+	EventMenuCommand(SR_Paths)
+	EventMenuCommand(SR_Dialga)
+	EventMenuCommand(SR_SonicBoss)
+	EventMenuCommand(SR_ClashOfCalamity)
+	EventMenuCommand(SR_MechanicalRhythm)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+BossMusCall2:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN BossMusDef2
+BossMusDef2:
+	BYTE 5 1 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN BossMusCommands2 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+BossMusCommands2:
+	EventMenuCommand(SR_BattleA3)
+	EventMenuCommand(SR_TheOnlyThingTheyFearIsYou)
+	EventMenuCommand(SR_GraspFate)
+	EventMenuCommand(SR_CrimsonRidge)
+	EventMenuCommand(SR_TheirOwnBrandOfJustice)
+	EventMenuCommand(SR_SMT4Boss4)
+	EventMenuCommand(SR_CallingThatDetestableName)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+
+BattleMusCall:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN BattleMusDef
+BattleMusDef:
+	BYTE 5 0 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN BattleMusCommands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+BattleMusCommands:
+	EventMenuCommand(SR_SMTVBattle)
+	EventMenuCommand(SR_FE5Battle)
+	EventMenuCommand(SR_FE6Battle)
+	EventMenuCommand(SR_CTBattle2)
+	EventMenuCommand(SR_BattleA1)
+	EventMenuCommand(SR_TheDevoted)
+	EventMenuCommand(SR_CrossCounter)
+	EventMenuCommand(SR_Confidence)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+BattleMusCall2:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN BattleMusDef2
+BattleMusDef2:
+	BYTE 5 0 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN BattleMusCommands2 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+BattleMusCommands2:
+	EventMenuCommand(SR_FearlessAdversary)
+	EventMenuCommand(SR_LiveALive)
+	EventMenuCommand(SR_AmalaBattle)
+	EventMenuCommand(SR_FightToTheDeath)
+	EventMenuCommand(SR_Impromptu)
+	EventMenuCommand(SR_FE5RecoveryB)
+	EventMenuCommand(SR_StoppableDestiny)
+	EventMenuCommand(SR_XC3Theme)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+
+Ch2129Call:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN Ch2129Def
+Ch2129Def:
+	BYTE 5 3 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN Ch2129Commands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+Ch2129Commands:
+	EventMenuCommand(SR_FearFactory)
+	EventMenuCommand(SR_Liberation)
+	EventMenuCommand(SR_TremblingEarth)
+	EventMenuCommand(SR_Ambience)
+	EventMenuCommand(SR_HoistTheSword)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+Ch2129Call2:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN Ch2129Def2
+Ch2129Def2:
+	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN Ch2129Commands2 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+Ch2129Commands2:
+	EventMenuCommand(SR_OutOfKindness)
+	EventMenuCommand(SR_LD)
+	EventMenuCommand(SR_FeldschlactIII)
+	EventMenuCommand(SR_Uncontrollable)
+	EventMenuCommand(SR_AFarAwayPromise)
+	EventMenuCommand(SR_FE4Victory)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+
+Ch1520Call:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN Ch1520Def
+Ch1520Def:
+	BYTE 5 3 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN Ch1520Commands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+Ch1520Commands:
+	EventMenuCommand(SR_GUILT)
+	EventMenuCommand(SR_BlackTar)
+	EventMenuCommand(SR_SearchingTheEnemy)
+	EventMenuCommand(SR_UenoUnderground)
+	EventMenuCommand(SR_Forest)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+Ch1520Call2:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN Ch1520Def2
+Ch1520Def2:
+	BYTE 5 3 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN Ch1520Commands2 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+Ch1520Commands2:
+	EventMenuCommand(SR_IntoTheMind)
+	EventMenuCommand(SR_Delusional)
+	EventMenuCommand(SR_MachinaVillage)
+	EventMenuCommand(SR_RiversInTheDesert)
+	EventMenuCommand(SR_TheWeightOfLife)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+
+
+Ch1114Call:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN Ch1114Def
+Ch1114Def:
+	BYTE 5 0 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN Ch1114Commands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+Ch1114Commands:
+	EventMenuCommand(SR_DraculaCastle)
+	EventMenuCommand(SR_SkyTower)
+	EventMenuCommand(SR_HolyOrders)
+	EventMenuCommand(SR_SMT4Shinjuku)
+	EventMenuCommand(SR_Wastes)
+	EventMenuCommand(SR_HallOfDarkness)
+	EventMenuCommand(SR_Footsteps)
+	EventMenuCommand(SR_ForTheCommanders)
+	EventMenuCommand(SR_EverydayBrawls)
+EventMenuCommandEnd
+
+
+Ch110Call:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN Ch110Def
+Ch110Def:
+	BYTE 5 1 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN Ch110Commands 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+Ch110Commands:
+	EventMenuCommand(SR_TOJ)
+	EventMenuCommand(SR_Water)
+	EventMenuCommand(SR_NormalBattle)
+	EventMenuCommand(SR_Palace)
+	EventMenuCommand(SR_Shackled)
+	EventMenuCommand(SR_Metamorphosis)
+	EventMenuCommand(SR_Expedition)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd
+Ch110Call2:
+	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
+	POIN Ch110Def2
+Ch110Def2:
+	BYTE 5 1 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	WORD 1                  // style (change it if u want)
+	POIN Ch110Commands2 	// Command Definitions
+	WORD 0 0 0 0 0 0  
+Ch110Commands2:
+	EventMenuCommand(SR_SMT4Tokyo)
+	EventMenuCommand(SR_MrExplorer)
+	EventMenuCommand(SR_TOR)
+	EventMenuCommand(SR_LBField)
+	EventMenuCommand(SR_DONTWANNASLEEP)
+	EventMenuCommand(SR_Stick)
+	EventMenuCommand(SR_Stick2)
+	EventMenuCommand(JBNextPage)
+EventMenuCommandEnd

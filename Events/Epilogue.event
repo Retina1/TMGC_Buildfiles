@@ -666,6 +666,7 @@ CHECK_ALIVE Elcorian
 BEQ 0x1 0xc 0x0
 	FADU 2
 	SetBackground(MoonCG)
+	Location(TowerPeakLabel)
 	SOUN 0x99
 	STAL 30
 	SOUN 0x98
@@ -730,9 +731,9 @@ SetSupport(Eliza,Dirk,ASupport)
 LABEL 0x1
 CHECK_ALIVE Rose
 BEQ 0x2 0xc 0x0
-CHECK_ALIVE Laronde
+CHECK_ALIVE SecretLaronde
 BEQ 0x2 0xc 0x0
-SetSupport(Rose,Laronde,ASupport)
+SetSupport(Rose,SecretLaronde,ASupport)
 LABEL 0x2
 EpilogueSupportFlag(Blair,Arin,BlairArinFlag)
 EpilogueSupportFlag(Blair,Natasia,BlairNatasiaFlag)

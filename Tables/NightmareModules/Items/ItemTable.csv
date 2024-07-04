@@ -14,7 +14,7 @@ Brave Sword,NBraveSword,DBraveSword,UBraveSword,0xb,0x0,IsWeapon|IsBrave,0x0,0x0
 Shamshir,NShamshir,DShamshir,UShamshir,0xc,0x0,IsWeapon,0x0,0x0,25,13,100,5,120,0x11,120,BRank,ShamshirIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Killing Edge,NKillingEdge,DKillingEdge,UKillingEdge,0xd,0x0,IsWeapon,0x0,0x0,25,10,90,7,40,0x11,80,CRank,KillingEdgeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Armorslayer,NArmorslayer,DArmorslayer,UArmorslayer,0xe,0x0,IsWeapon,0x0,ArmorEffectiveness|IsPointer,20,10,85,11,0,0x11,60,DRank,ArmorslayerIcon,0x0,NoEffect,1,0x0,0x0,0x0
-Wyrmslayer,NWyrmslayer,DWyrmslayer,UWyrmslayer,0xf,0x0,IsWeapon|ReverseTriangle,0x0,DragonEffectiveness|IsPointer,20,10,90,9,0,0x11,100,BRank,WyrmslayerIcon,0x0,NoEffect,2,0x0,0x0,0x0
+Wyrmslayer,NWyrmslayer,DWyrmslayer,UWyrmslayer,0xf,0x0,IsWeapon|IsMagic,0x0,DragonEffectiveness|IsPointer,20,10,90,9,0,0x11,100,BRank,WyrmslayerIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Light Brand,NLightBrand,DLightBrand,ULightBrand,0x10,0x0,IsWeapon|MagicDamage|IsMagic,0x0,0x0,25,12,85,9,0,0x12,120,BRank,LightBrandIcon,0x21,NoEffect,1,0x0,0x0,0x0
 Runesword,NRunesword,DRunesword,URunesword,0x11,0x0,IsWeapon|MagicDamage|IsMagic,0x0,0x0,20,16,80,11,0,0x12,330,ARank,RuneswordIcon,0x0,NosferatuEffect,1,0x0,0x0,0x0
 Lancereaver,NLancereaver,DReaver,ULancereaver,0x12,0x0,IsWeapon|ReverseTriangle,0x0,0x0,25,10,90,7,0,0x11,35,CRank,LancereaverIcon,0x0,NoEffect,2,0x0,0x0,0x0
@@ -23,7 +23,7 @@ Iron Lance,NIronLance,DIronLance,UIronLance,0x14,0x1,IsWeapon,0x0,0x0,50,9,95,6,
 Axebuster,NAxebuster,DAxebuster,UAxebuster,0x15,0x1,IsWeapon|ReverseTriangle,0x0,AxeEffectiveness|IsPointer,20,12,85,12,0,0x11,100,BRank,AxebusterIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Steel Lance,NSteelLance,DSteelLance,USteelLance,0x16,0x1,IsWeapon,0x0,0x0,40,12,85,10,0,0x11,20,DRank,SteelLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Silver Lance,NSilverLance,DSilverLance,USilverLance,0x17,0x1,IsWeapon,0x0,0x0,25,17,90,8,0,0x11,100,BRank,SilverLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
-Shimmersword,NShimmersword,DShimmersword,UShimmersword,0x18,0x0,IsWeapon,AntimageBoost|IsPointer,DarkEffectiveness|IsPointer,20,9,95,6,0,0x11,144,CRank,ShimmerswordIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Shimmersword,NShimmersword,DShimmersword,UShimmersword,0x18,0x0,IsWeapon,AntimageBoost|IsPointer,DarkEffectiveness|IsPointer,20,9,95,6,40,0x11,144,BRank,ShimmerswordIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Brave Lance,NBraveLance,DBraveLance,UBraveLance,0x19,0x1,IsWeapon|IsBrave,0x0,0x0,30,13,80,15,0,0x11,200,ARank,BraveLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Killer Lance,NKillerLance,DKillerLance,UKillerLance,0x1a,0x1,IsWeapon,0x0,0x0,25,12,85,9,40,0x11,80,CRank,KillerLanceIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Horseslayer,NHorseslayer,DHorseslayer,UHorseslayer,0x1b,0x1,IsWeapon,0x0,HorseEffectiveness|IsPointer,20,11,85,12,0,0x11,60,DRank,HorseslayerIcon,0x0,NoEffect,1,0x0,0x0,0x0
@@ -33,7 +33,7 @@ Axereaver,NAxereaver,DReaver,UAxereaver,0x1e,0x1,IsWeapon|ReverseTriangle,0x0,0x
 Iron Axe,NIronAxe,DIronAxe,UIronAxe,0x1f,0x2,IsWeapon,0x0,0x0,50,10,90,8,0,0x11,8,ERank,IronAxeIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Steel Axe,NSteelAxe,DSteelAxe,USteelAxe,0x20,0x2,IsWeapon,0x0,0x0,40,13,80,12,0,0x11,20,DRank,SteelAxeIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Silver Axe,NSilverAxe,DSilverAxe,USilverAxe,0x21,0x2,IsWeapon,0x0,0x0,25,18,85,10,0,0x11,100,BRank,SilverAxeIcon,0x0,NoEffect,1,0x0,0x0,0x0
-Dousing Lance,NDousingLance,DDousingLance,UDousingLance,0x22,0x1,IsWeapon,AntimageBoost|IsPointer,AnimaEffectiveness|IsPointer,20,10,90,8,0,0x11,144,CRank,DousingLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Dousing Lance,NDousingLance,DDousingLance,UDousingLance,0x22,0x1,IsWeapon,AntimageBoost|IsPointer,AnimaEffectiveness|IsPointer,20,10,90,8,0,0x12,144,CRank,DousingLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Brave Axe,NBraveAxe,DBraveAxe,UBraveAxe,0x23,0x2,IsWeapon|IsBrave,0x0,0x0,30,14,75,16,0,0x11,200,ARank,BraveAxeIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Killer Axe,NKillerAxe,DKillerAxe,UKillerAxe,0x24,0x2,IsWeapon,0x0,0x0,25,13,80,11,40,0x11,80,CRank,KillerAxeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Halberd,NHalberd,DHalberd,UHalberd,0x25,0x2,IsWeapon,0x0,HorseEffectiveness|IsPointer,20,12,80,13,0,0x11,60,DRank,HalberdIcon,0x0,NoEffect,1,0x0,0x0,0x0
@@ -47,7 +47,7 @@ Frypan,NFrypan,DFrypan,UFrypan,0x2c,0x2,IsWeapon|Indestructible,0x0,0x0,50,9,120
 Iron Bow,NIronBow,DIronBow,UIronBow,0x2d,0x3,IsWeapon,0x0,FlierEffectiveness|IsPointer,50,8,95,5,0,0x22,8,ERank,IronBowIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Steel Bow,NSteelBow,DSteelBow,USteelBow,0x2e,0x3,IsWeapon,0x0,FlierEffectiveness|IsPointer,40,12,85,9,0,0x22,20,DRank,SteelBowIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Silver Bow,NSilverBow,DSilverBow,USilverBow,0x2f,0x3,IsWeapon,0x0,FlierEffectiveness|IsPointer,25,17,90,7,0,0x22,100,BRank,SilverBowIcon,0x0,NoEffect,1,0x0,0x0,0x0
-Heretic Axe,NHereticAxe,DHereticAxe,UHereticAxe,0x30,0x2,IsWeapon,AntimageBoost|IsPointer,LightEffectiveness|IsPointer,20,11,85,10,0,0x11,144,CRank,HereticAxeIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Heretic Axe,NHereticAxe,DHereticAxe,UHereticAxe,0x30,0x2,IsWeapon,HereticAxeBoost|IsPointer,LightEffectiveness|IsPointer,20,11,85,10,0,0x11,144,CRank,HereticAxeIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Killer Bow,NKillerBow,DKillerBow,UKillerBow,0x31,0x3,IsWeapon,0x0,FlierEffectiveness|IsPointer,25,12,85,8,40,0x22,80,CRank,KillerBowIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Brave Bow,NBraveBow,DBraveBow,UBraveBow,0x32,0x3,IsWeapon|IsBrave,0x0,FlierEffectiveness|IsPointer,30,13,80,12,0,0x22,200,ARank,BraveBowIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Barrier Bow,NBarrierBow,DBarrierBow,UBarrierBow,0x33,0x3,IsWeapon,0x0,FlierEffectiveness|IsPointer,40,14,120,5,0,0x22,250,ARank,BarrierBowIcon,0x0,NoEffect,1,0x0,0x0,BarrierEffectID
@@ -89,7 +89,7 @@ Torch,NTorchStaff,DTorchStaff,UTorchStaff,0x56,0x4,IsStaff,0x0,0x0,1,0,100,2,100
 Hammerne,NHammerne,DHammerne,UHammerne,0x57,0x4,IsStaff|CannotRepair,0x0,0x0,5,0,100,2,60,0x11,3000,CRank,HammerneIcon,0xd,NoEffect,8,0x0,0x0,0x0
 Unlock,NUnlock,DUnlock,ULockpick,0x58,0x4,IsStaff,0x0,0x0,5,0,100,2,40,0x10,1700,CRank,UnlockIcon,0x40,NoEffect,5,0x0,0x0,0x0
 Barrier,NBarrier,DBarrier,UPureWater,0x59,0x4,IsStaff,0x0,0x0,10,0,100,2,20,0x11,200,DRank,BarrierIcon,0xf,NoEffect,3,0x0,0x0,0x0
-Dracoaxe,NDracoaxe,DDracoaxe,UDracoaxe,0x5a,0x2,IsWeapon|ReverseTriangle,0x0,DragonEffectiveness|IsPointer,20,13,80,14,0,0x11,100,BRank,DracoaxeIcon,0x0,NoEffect,2,0x0,0x0,0x0
+Dracoaxe,NDracoaxe,DDracoaxe,UDracoaxe,0x5a,0x2,IsWeapon,0x0,DragonEffectiveness|IsPointer,20,13,80,14,0,0x12,100,BRank,DracoaxeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Angelic Robe,NRobe,DRobe,URobe,0x5b,0x9,0x0,SeraphRobeBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,SeraphRobeIcon,0x10,NoEffect,0,0x0,0x0,0x0
 Energy Ring,NRing,DRing,URing,0x5c,0x9,0x0,EnergyRingBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,EnergyRingIcon,0x11,NoEffect,0,0x0,0x0,0x0
 Secret Book,NBook,DBook,UBook,0x5d,0x9,0x0,SecretBookBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,SecretBookIcon,0x12,NoEffect,0,0x0,0x0,0x0
@@ -179,11 +179,11 @@ Master Bow,NMasterBow,DMasterBow,UMasterBow,0xb0,0x3,IsWeapon|IsBrave,0x0,FlierE
 Kagutsuchi,NKagutsuchi,DPressTurn,UKagutsuchi,0xb1,0x0,IsWeapon,0x0,0x0,15,8,90,8,0,0x11,400,BRank,KagutsuchiIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
 Nuboko,NNuboko,DPressTurn,UNuboko,0xb2,0x1,IsWeapon,0x0,0x0,15,10,85,9,0,0x11,400,BRank,NubokoIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
 Ukonvasara,NUkonvasara,DPressTurn,UUkonvasara,0xb3,0x2,IsWeapon,0x0,0x0,15,11,80,10,0,0x11,400,BRank,UkonvasaraIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
-Trisagion,NTrisagion,DPressTurn,UTrisagion,0xb4,0x5,IsWeapon|IsMagic,0x0,0x0,15,9,90,6,0,0x12,400,BRank,TrisagionIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
+Trisagion,NTrisagion,DPressTurn,UTrisagion,0xb4,0x5,IsWeapon|IsMagic,0x0,0x0,15,19,90,14,0,0x12,400,BRank,TrisagionIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
 Foggy Glasses (stone slot),NFoggyGlasses,DFoggyGlasses,UGrowthBooster,0xb5,0x9,PassiveBoosts|Indestructible,FoggyGlassesBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,FoggyGlassesIcon,0x0,NoEffect,0,0x0,1,0x0
-Freikugel,NFreikugel,DPressTurn,UFreikugel,0xb6,0x7,IsWeapon|IsMagic,0x0,0x0,15,11,80,8,0,0x12,400,BRank,FreikugelIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
+Freikugel,NFreikugel,DPressTurn,UFreikugel,0xb6,0x7,IsWeapon|IsMagic,0x0,0x0,15,11,80,8,0,0x13,400,BRank,FreikugelIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
 SHORT BOW,NShortBow,DShortBow,UShortBow,0xb7,0x3,IsWeapon|Indestructible|IsBrave|CharleyLocked,0x0,FlierEffectiveness|IsPointer,1,36,150,3,25,0x00,40000,NoRank,ShortBowIcon,0x0,NoEffect,2,0x0,0x0,0x0
-Javelin Rain,NJavRain,DPressTurn,UJavRain,0xb8,0x6,IsWeapon|IsMagic,0x0,0x0,15,6,155,5,0,0x12,400,BRank,JavelinRainIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
+Javelin Rain,NJavRain,DJavelinRain,UJavRain,0xb8,0x6,IsWeapon|IsMagic|IsBrave,0x0,0x0,15,2,155,5,0,0x12,400,BRank,JavelinRainIcon,0x0,NoEffect,1,0x0,0x0,PressTurnID
 Ankle Weight,NAnkleWeight,DAnkleWeight,UGrowthBooster,0xb9,0x9,PassiveBoosts|Indestructible,AnkleWeightBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,AnkleWeightIcon,0x0,NoEffect,0,0x0,1,0x0
 Black Gem,NBlackGem,DBlackGem,UGem,0xba,0x9,Indestructible,0x0,0x0,1,0,0,0,0,0x11,40000,NoRank,BlackGemIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Spirit Dust,NDust,DDust,UDust,0xbb,0x9,0x0,SpiritDustBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,SpiritDustIcon,0x0,NoEffect,0,0x0,0x0,0x0
@@ -226,8 +226,8 @@ Unknown Page,NUnknownPage,DUnknownPage,0x0,0xdf,0x9,Unsellable|Indestructible,0x
 Frontier Justice,NFrontierJustice,DFrontierJustice,UFrontierJustice,0xe0,0x3,IsWeapon|DamienLocked,0x0,FlierEffectiveness|IsPointer,40,12,85,9,0,0x22,40,NoRank,FrontierJusticeIcon,0x0,NoEffect,1,0x0,0x0,FrenzyID
 Soul Hilt,NSoulHilt,DSoulHilt,USoulHilt,0xe1,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,1,0,0,0,0,0x12,15000,NoRank,SoulHiltIcon,0x0,NoEffect,0,0x0,0x0,SoulHiltID
 Cutlad,NCutlad,DCutlad,UCutlad,0xe2,0x0,IsWeapon|IsBrave|ManLocked,0x0,0x0,20,10,110,3,15,0x11,200,NoRank,CutladIcon,0x0,NoEffect,0,0x0,0x0,0x0
-Shockstick,NShockstick,DShockstick,UShockstick,0xe3,0x1,IsWeapon|MagicDamage|IsMagic,0x0,0x0,20,15,85,8,5,0x11,150,BRank,ShockstickIcon,0x0,NoEffect,0,0x0,0x0,0x0
-Void Cleaver,NVoidCleaver,DVoidCleaver,UVoidCleaver,0xe4,0x2,IsWeapon|MagicDamage|IsMagic,0x0,0x0,15,21,80,12,0,0x11,200,BRank,VoidCleaverIcon,0x0,NoEffect,0,0x0,0x0,0x0
+Shockstick,NShockstick,DShockstick,UShockstick,0xe3,0x1,IsWeapon|MagicDamage|IsMagic,0x0,0x0,20,15,85,8,35,0x11,150,BRank,ShockstickIcon,0x0,NoEffect,0,0x0,0x0,0x0
+Void Cleaver,NVoidCleaver,DVoidCleaver,UVoidCleaver,0xe4,0x2,IsWeapon|MagicDamage|IsMagic,0x0,0x0,15,31,80,19,0,0x11,200,BRank,VoidCleaverIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Crimson Eye,NCrimsonEye,DCrimsonEye,USlam,0xe5,0x7,IsWeapon|Indestructible|SveltzalusLocked|IsMagic|Unsellable,0x0,0x0,0,14,95,5,0,0x12,0,NoRank,CrimsonEyeIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Passacaglia,NPassacaglia,DPassacaglia,UPassacaglia,0xe6,0x3,IsWeapon|SamLocked|Indestructible|Unsellable,0x0,BowpierEffectiveness|IsPointer,40,15,120,6,0,0x12,35000,NoRank,PassacagliaIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Stormbow,NStormbow,DStormbow,UStormbow,0xe7,0x3,IsWeapon|IsBrave,0x0,0x0,16,3,30,30,30,0x45,2500,SRank,StormbowIcon,0x0,NoEffect,1,0x0,0x0,0x0

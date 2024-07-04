@@ -1,0 +1,98 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsT2,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Tale2Units Tale2Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+//Village(0x11,T2Village1,5,26)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+
+Tale2Units:
+//tale 2 cast - zeke, rachael, cassius, alexis, hyperius, jeff, artemis
+UNIT Zeke ZekeLordX 0x0 Level(15,Ally,0) [3,11] 0x0 0x0 0x0 0x0 [Stalwart,GildedBow,Wyrmslayer] NoAI
+UNIT Rachael Falco 0x0 Level(17,Ally,0) [2,8] 0x0 0x0 0x0 0x0 [FlyingSpike,Lancereaver] NoAI
+UNIT Leila Falco 0x0 Level(15,Ally,0) [1,10] 0x0 0x0 0x0 0x0 [Courante,LightBrand] NoAI
+UNIT Cassius AxePal 0x0 Level(16,Ally,0) [5,11] 0x0 0x0 0x0 0x0 [Galerider,Tomahawk] NoAI
+UNIT Alexis AxeGen 0x0 Level(14,Ally,0) [4,9] 0x0 0x0 0x0 0x0 [BraveAxe,Axereaver,Elixir] NoAI
+UNIT Hyperius SwdGen 0x0 Level(20,Ally,0) [5,10] 0x0 0x0 0x0 0x0 [Unyielding,Elixir] NoAI
+UNIT Jeff Assass 0x0 Level(12,Ally,0) [3,13] 0x0 0x0 0x0 0x0 [BraveSword,SteelBow] NoAI
+UNIT Artemis AxePalF 0x0 Level(14,Ally,0) [2,12] 0x0 0x0 0x0 0x0 [GildedAxe,Longbow] NoAI
+UNIT
+
+Tale2Enemies:
+//center
+//UNIT PGArgent BowGen 0x0 Level(10,Enemy,0) [9,18] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow,Longbow,BraveLance] NeverMoveAI
+UNIT Bandit Warrior 0x0 Level(15,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [DangerPick] AttackInRangeAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+DISA Addington
+LOAD1 0x1 Tale2Units
+ENUN
+LOAD1 0x1 Tale2Enemies
+ENUN
+TaleSetUnitStat(Zeke,56,27,16,32,27,20,20,13)
+TaleSetUnitWEXP(Zeke,121,251,71,251,0,0,0,0)
+TaleSetUnitStat(Rachael,46,20,20,30,34,10,12,18)
+TaleSetUnitWEXP(Rachael,181,251,0,0,0,0,0,0)
+TaleSetUnitStat(Leila,43,26,26,18,29,4,25,28)
+TaleSetUnitWEXP(Leila,251,71,0,0,0,0,0,0)
+TaleSetUnitStat(Cassius,61,32,5,25,22,16,26,6)
+TaleSetUnitWEXP(Cassius,0,0,251,41,0,0,0,0)
+TaleSetUnitStat(Alexis,53,30,5,30,18,13,30,10)
+TaleSetUnitWEXP(Alexis,121,121,251,0,0,0,0,0)
+TaleSetUnitStat(Hyperius,62,32,6,34,16,17,31,13)
+TaleSetUnitWEXP(Hyperius,251,0,181,181,0,0,0,0)
+TaleSetUnitStat(Jeff,47,23,4,18,35,9,10,2)
+TaleSetUnitWEXP(Jeff,251,0,0,51,0,0,0,0)
+TaleSetUnitStat(Artemis,47,27,11,20,26,17,21,24)
+TaleSetUnitWEXP(Artemis,0,0,251,181,0,0,0,0)
+//SetUnitSkills(Butch,OpportunistID,SolID,0,0)
+ENDA
+
+EndingScene:
+MoveToChapter(HubMap)
+ENDA
+
+//MESSAGE Events end at offset CURRENTOFFSET

@@ -25,7 +25,7 @@
 #define SwordAnim(Animation) "BYTE 0x00 0x01 ; SHORT Animation"
 #define LanceAnim(Animation) "BYTE 0x01 0x01 ; SHORT Animation"
 #define AxeAnim(Animation) "BYTE 0x02 0x01 ; SHORT Animation"
-#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation; BYTE MasterAxe 0x00 ; SHORT Animation; BYTE VoidCleaver 0x00 ; SHORT Animation; BYTE Hurlbat 0x00 ; SHORT Animation"
+#define HandAxeAnim(Animation) "BYTE HandAxe 0x00 ; SHORT Animation ; BYTE Tomahawk 0x00 ; SHORT Animation; BYTE MasterAxe 0x00 ; SHORT Animation; BYTE VoidCleaver 0x00 ; SHORT Animation; BYTE Hurlbat 0x00 ; SHORT Animation; BYTE Dracoaxe 0x00 ; SHORT Animation"
 #define BowAnim(Animation) "BYTE 0x03 0x01 ; SHORT Animation"
 #define StaffAnim(Animation) "BYTE 0x04 0x01 ; SHORT Animation"
 #define AnimaAnim(Animation) "BYTE 0x05 0x01 ; SHORT Animation"

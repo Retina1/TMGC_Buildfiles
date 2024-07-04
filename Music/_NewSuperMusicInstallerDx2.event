@@ -23,6 +23,8 @@ dalst
   #define SongTableOffset  0x224470
   //priority might not matter???
   #define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT 1 1; POP"
+  #define SongTableUnfulfilled(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT 0 0; POP"
+  #define SongTablePrep(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT 0 0; POP"
 #endif
 #define BattleMusicGroup 0
 #define MapMusicGroup 1
@@ -144,6 +146,7 @@ SongTable(S_WistfulWild,WistfulWild,1)
 {
 #include "UnmarkedGrave.event"
 SongTable(S_UnmarkedGrave,UnmarkedGrave,1)
+SongTablePrep(P_Grave,UnmarkedGrave,1)
 }
 {
 #include "IAmAllOfMe.event"
@@ -160,6 +163,7 @@ SongTable(S_HisWorld,HisWorld,1)
 {
 #include "Lounge.event"
 SongTable(S_Lounge,Lounge,1)
+SongTablePrep(P_Lounge,Lounge,0)
 }
 {
 #include "Nightfall.event"
@@ -208,6 +212,7 @@ SongTable(S_CryALive,CryALive,1)
 {
 #include "ZanzaTheDivine.event"
 SongTable(S_ZanzaTheDivine,ZanzaTheDivine,1)
+SongTablePrep(P_Divine,ZanzaTheDivine,1)
 }
 {
 #include "WelcomeToLegend.event"
@@ -236,14 +241,17 @@ SongTable(S_TheWeightOfLife,TheWeightOfLife,1)
 {
 #include "RefreshingToilets.event"
 SongTable(S_RefreshingToilets,RefreshingToilets,1)
+SongTablePrep(P_Toilets,RefreshingToilets,1)
 }
 {
 #include "UrbanArea.event"
 SongTable(S_UrbanArea,UrbanArea,1)
+SongTablePrep(P_Aboveground,UrbanArea,1)
 }
 {
 #include "SkyBattle.event"
 SongTable(S_SkyBattle,SkyBattle,1)
+SongTablePrep(P_SkyBattle,SkyBattle,1)
 }
 {
 #include "BloodstainedLineage.event"
@@ -272,6 +280,7 @@ SongTable(S_LifeWillChange,LifeWillChange,1)
 {
 #include "FierceAsFire.event"
 SongTable(S_FierceAsFire,FierceAsFire,1)
+SongTablePrep(P_Fire,FierceAsFire,1)
 }
 {
 #include "JFAEnding.event"
@@ -300,6 +309,7 @@ SongTable(S_XC3Theme,XC3Theme,0)
 {
 #include "WhenMotherWasThere.event"
 SongTable(S_WhenMotherWasThere,WhenMotherWasThere,1)
+SongTablePrep(P_Mother,WhenMotherWasThere,1)
 }
 {
 #include "WhenMotherWasThereAlt.event"
@@ -368,6 +378,7 @@ SongTable(S_Impromptu,Impromptu,0)
 {
 #include "Jaws.event"
 SongTable(S_Jaws,Jaws,1)
+SongTablePrep(P_ScorchedEarth,Jaws,1)
 }
 {
 #include "PascalTheDog.event"
@@ -388,6 +399,7 @@ SongTable(S_OutOfKindness,OutOfKindness,1)
 {
 #include "GentleMadman.event"
 SongTable(S_GentleMadman,GentleMadman,1)
+SongTablePrep(P_Madman,GentleMadman,1)
 }
 {
 #include "IntoTheMind.event"
@@ -424,6 +436,7 @@ SongTable(S_ThraciaAdvance,ThraciaAdvance,1)
 {
 #include "Trisection.event"
 SongTable(S_Trisection,Trisection,1)
+SongTablePrep(P_Trisection,Trisection,1)
 }
 {
 #include "Stratagem.event"
@@ -589,6 +602,7 @@ SongTable(S_MythicQuestBattle,MythicQuestBattle,1)
 {
 #include "BabaIsYou.event"
 SongTable(S_BabaIsYou,BabaIsYou,1)
+SongTablePrep(P_BabaIsYou,BabaIsYou,0)
 }
 {
 #include "Forest.event"
@@ -602,7 +616,7 @@ SongTable(S_GameOver,GameOverTheme,0)
 
 {
 #include "Unfulfilled.event"
-SongTable(S_Unfulfilled,Unfulfilled,0)
+SongTableUnfulfilled(S_Unfulfilled,Unfulfilled,0)
 }
 
 {
@@ -641,6 +655,7 @@ SongTable(S_Chaos,ChaosTheme,1)
 {
 #include "Condor.event"
 SongTable(S_KKCondor,Condor,1)
+SongTablePrep(P_Condor,Condor,1)
 }
 {
 #include "CampIchigaya.event"

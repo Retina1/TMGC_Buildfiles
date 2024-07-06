@@ -54,12 +54,21 @@ blh     #0x0801829C,r1
 cmp     r0,#0x00
 beq     NextEntry//If 0, character doesnt exist in RAM (hasn't joined maybe?)
 ldr     r0,[r0,#0x04]//Class ptr
+mov 	r1,#0x29
+ldrb    r3,[r0,r1]//ability bit 2
+mov 	r1,#0x1
+and		r3,r1
 ldrb    r0,[r0,#0x04]//Class ID
 ldrb    r1,[r7,#0x07]//Class ID in table
 cmp     r1,#0x00
-beq     ApplyChange//If 0, we only care if character exists, not about their class
+beq     TierCheck//If 0, we only care if character is promoted
 cmp     r0,r1
 bne     NextEntry//Not the class we want
+b		ApplyChange
+
+TierCheck:
+cmp     r3,#0x1
+bne		NextEntry
 
 ApplyChange://All checks successful, we change portrait
 ldrh    r0,[r7,#0x02]

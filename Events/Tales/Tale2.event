@@ -28,11 +28,26 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-//Village(0x11,T2Village1,5,26)
+
+House(0x0,T2Village1,5,3)//3
+LOCA 0x65 [5,2] 0x20
+House(0x0,T2Village2,15,2)//5
+LOCA 0x65 [15,1] 0x20
+House(0x0,T2Village3,22,9)//7
+LOCA 0x65 [22,8] 0x20
+House(0x0,T2Village4,24,14)//9
+LOCA 0x65 [24,13] 0x20
+House(0x0,T2Village5,9,8)//b
+LOCA 0x65 [9,7] 0x20
+House(0x0,T2Village6,25,4)//d
+LOCA 0x65 [25,3] 0x20
 END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+//add thing here to check if any destroyed tilechanges exist
+AFEV 0x9 T2ZekeNeedsToVisit 0x8
+AFEV 0x0 T2CheckForLose 0x0
 END_MAIN
 
 Dunno:
@@ -48,13 +63,13 @@ ALIGN 4
 
 Tale2Units:
 //tale 2 cast - zeke, rachael, cassius, alexis, hyperius, jeff, artemis
-UNIT Zeke ZekeLordX 0x0 Level(15,Ally,0) [3,11] 0x0 0x0 0x0 0x0 [Stalwart,GildedBow,Wyrmslayer] NoAI
-UNIT Rachael Falco 0x0 Level(17,Ally,0) [2,8] 0x0 0x0 0x0 0x0 [FlyingSpike,Lancereaver] NoAI
-UNIT Leila Falco 0x0 Level(15,Ally,0) [1,10] 0x0 0x0 0x0 0x0 [Courante,LightBrand] NoAI
-UNIT Cassius AxePal 0x0 Level(16,Ally,0) [5,11] 0x0 0x0 0x0 0x0 [Galerider,Tomahawk] NoAI
-UNIT Alexis AxeGen 0x0 Level(14,Ally,0) [4,9] 0x0 0x0 0x0 0x0 [BraveAxe,Axereaver,Elixir] NoAI
+UNIT Zeke ZekeLordX 0x0 Level(15,Ally,0) [3,11] 0x0 0x0 0x0 0x0 [Stalwart,GildedBow,Wyrmslayer,Elixir] NoAI
+UNIT Rachael Falco 0x0 Level(17,Ally,0) [2,8] 0x0 0x0 0x0 0x0 [FlyingSpike,Axereaver,Shockstick] NoAI
+UNIT Leila Falco 0x0 Level(15,Ally,0) [1,10] 0x0 0x0 0x0 0x0 [Courante,Lancereaver,LightBrand] NoAI
+UNIT Cassius AxePal 0x0 Level(16,Ally,0) [5,11] 0x0 0x0 0x0 0x0 [Galerider,Swordreaver,Tomahawk] NoAI
+UNIT Alexis AxeGen 0x0 Level(14,Ally,0) [4,9] 0x0 0x0 0x0 0x0 [BraveAxe,Javelin,Rapier,Elixir] NoAI
 UNIT Hyperius SwdGen 0x0 Level(20,Ally,0) [5,10] 0x0 0x0 0x0 0x0 [Unyielding,Elixir] NoAI
-UNIT Jeff Assass 0x0 Level(12,Ally,0) [3,13] 0x0 0x0 0x0 0x0 [BraveSword,SteelBow] NoAI
+UNIT Jeff Assass 0x0 Level(12,Ally,0) [3,13] 0x0 0x0 0x0 0x0 [BraveSword,SteelBow,Heal] NoAI
 UNIT Artemis AxePalF 0x0 Level(14,Ally,0) [2,12] 0x0 0x0 0x0 0x0 [GildedAxe,Longbow] NoAI
 UNIT
 
@@ -62,6 +77,9 @@ Tale2Enemies:
 //center
 //UNIT PGArgent BowGen 0x0 Level(10,Enemy,0) [9,18] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow,Longbow,BraveLance] NeverMoveAI
 UNIT Bandit Warrior 0x0 Level(15,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [DangerPick] AttackInRangeAI
+UNIT Bandit Sniper 0x0 Level(15,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Greatbow,BraveBow] NeverMoveAI
+//village killers
+UNIT Bandit Berserker 0x0 Level(12,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
 UNIT
 
 ALIGN 4
@@ -85,14 +103,82 @@ TaleSetUnitWEXP(Alexis,121,121,251,0,0,0,0,0)
 TaleSetUnitStat(Hyperius,62,32,6,34,16,17,31,13)
 TaleSetUnitWEXP(Hyperius,251,0,181,181,0,0,0,0)
 TaleSetUnitStat(Jeff,47,23,4,18,35,9,10,2)
-TaleSetUnitWEXP(Jeff,251,0,0,51,0,0,0,0)
+TaleSetUnitWEXP(Jeff,251,0,0,51,1,0,0,0)//jeff heals because he's a good boy now
 TaleSetUnitStat(Artemis,47,27,11,20,26,17,21,24)
 TaleSetUnitWEXP(Artemis,0,0,251,181,0,0,0,0)
-//SetUnitSkills(Butch,OpportunistID,SolID,0,0)
+SetUnitSkills(Zeke,DriveSpdID,OpportunistID,RightfulKingID,0)
+SetUnitSkills(Rachael,ChivalryID,SaviorID,0,0)
+SetUnitSkills(Leila,DauntID,AstraID,0,0)
+SetUnitSkills(Cassius,ChargeID,QuixoticID,0,0)
+SetUnitSkills(Alexis,TriangleAdeptID,PushMovID,0,0)
+SetUnitSkills(Hyperius,ResolveID,0,0,0)
+SetUnitSkills(Jeff,QuickRiposteID,CantoPlusID,0,0)
+SetUnitSkills(Artemis,SwapID,InsightID,0,0)
 ENDA
 
 EndingScene:
 MoveToChapter(HubMap)
 ENDA
+
+T2ZekeNeedsToVisit:
+CAM1 Zeke
+Text(FillerDialogue)
+EndEvent
+
+T2CheckForLose:
+TileChangeCheck(0x2)
+BNE 0x1 0xc 0x0
+TileChangeCheck(0x4)
+BNE 0x1 0xc 0x0
+TileChangeCheck(0x6)
+BNE 0x1 0xc 0x0
+TileChangeCheck(0x8)
+BNE 0x1 0xc 0x0
+TileChangeCheck(0xa)
+BNE 0x1 0xc 0x0
+TileChangeCheck(0xc)
+BNE 0x1 0xc 0x0
+GOTO 0x2
+LABEL 0x1
+CALL T2YouLose
+LABEL 0x2
+EndEvent
+T2YouLose:
+Text(FillerDialogue)
+CALL 0x592104
+EndEvent
+
+
+#define ZekeVillage(text,zeketext) "MUSI; SMOV 0x2 VillageCG; CHECK_ACTIVEID Zeke; BNE 0x1 0xC 0x0; SMOV 0x3 text; GOTO 0x2; LABEL 0x1; SMOV 0x3 zeketext; LABEL 0x2; CALL $9EE310; MUNO; CALL $591F40; EVBIT_T 0x7"
+#define ZekeVillageTileChange(tileChange) "CHECK_ACTIVEID Zeke; BEQ 0x10 0xC 0x0; TILECHANGE tileChange; GOTO 0x11; LABEL 0x10; ENUT 0x8; LABEL 0x11"
+T2Village1:
+ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillageTileChange(0x3)
+EndEvent
+
+T2Village2:
+ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillageTileChange(0x5)
+EndEvent
+
+T2Village3:
+ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillageTileChange(0x7)
+EndEvent
+
+T2Village4:
+ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillageTileChange(0x9)
+EndEvent
+
+T2Village5:
+ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillageTileChange(0xb)
+EndEvent
+
+T2Village6:
+ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillageTileChange(0xd)
+EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

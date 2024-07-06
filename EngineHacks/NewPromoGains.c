@@ -1,4 +1,4 @@
-#include "gbafe.h"
+#include "include/gbafe.h"
 
 void ApplyUnitPromotion(Unit* unit, u8 newClassNumber){
 
@@ -75,6 +75,13 @@ void ApplyUnitPromotion(Unit* unit, u8 newClassNumber){
 	}
 	
 for (int i = 0; i < 8; i++){
+	if (CheckEventId_(0x8f)){
+		if (oldClass->baseRanks[i] != 0){
+		if (newClass->baseRanks[i] == 0){
+		unit->ranks[i] = 0;
+		}
+		}
+	}
     if (newClass->baseRanks[i] > oldClass->baseRanks[i]){
         int newRank = (unit->ranks[i] + newClass->baseRanks[i]) - oldClass->baseRanks[i];
 

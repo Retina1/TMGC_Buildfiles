@@ -30,7 +30,7 @@ SHORT For the base portrait ID
 SHORT For the new portrait ID
 SHORT For the Event Flag ID that will trigger the portrait change (0 if you want no flag)
 BYTE  For the character ID who we will check to determine if we change the portrait (0 if you want no character)
-BYTE  For the class ID the character above must be to trigger the portrait change (0 if you don't care about their class)
+BYTE  For the class ID the character above must be to trigger the portrait change (0 if we just want to be promoted)
 */
 //kyrie stuff - figure out how to make tension versions work
 SHORT 0x11c
@@ -85,13 +85,13 @@ SHORT 0x0002
 SHORT 0x0112 //she
 SHORT BlairFlowerFlag
 BYTE  Blair
-BYTE  BlairLordX
+BYTE  0
 // regular promo
 SHORT 0x0002
 SHORT 0x00d4 //she
 SHORT 0x0000
 BYTE  Blair
-BYTE  BlairLordX
+BYTE  0
 // flower t1
 SHORT 0x0002
 SHORT 0x0111 //she
@@ -104,67 +104,67 @@ SHORT 0x013d //the beginning
 SHORT 0x0000
 BYTE  Arin
 BYTE  ArinValk
-//Kenneth
-SHORT 0x0007
-SHORT 0x00f6 //shoulder stuff
-SHORT 0x0000
-BYTE  Kenneth
-BYTE  Sorc
 //baron
 SHORT 0x0007
 SHORT 0x0142 //shoulder stuff
 SHORT 0x0000
 BYTE  Kenneth
 BYTE  Baron
+//Kenneth
+SHORT 0x0007
+SHORT 0x00f6 //shoulder stuff
+SHORT 0x0000
+BYTE  Kenneth
+BYTE  0
 //Natasia
 SHORT 0x0009
 SHORT 0x010b //shoulder stuff
 SHORT 0x0000
 BYTE  Natasia
-BYTE  WarriorF
+BYTE  0
 //Stefan
 SHORT 0x0006
 SHORT 0x0106 //new cape
 SHORT 0x0000
 BYTE  Stefan
-BYTE  SwdPal
+BYTE  0
 //Desmond
 //Sam
 SHORT 0x0005
 SHORT 0x0108 //headband, clothes
 SHORT 0x0000
 BYTE  Sam
-BYTE  SniperF
+BYTE  0
 //Josef
 SHORT 0x000a
 SHORT 0x0107 //cape
 SHORT 0x0000
 BYTE  Josef
-BYTE  LncGen
+BYTE  0
 //Peggy
 SHORT 0x000c
 SHORT 0x010d //gold stuff
 SHORT 0x0000
 BYTE  Peggy
-BYTE  BishopF
+BYTE  0
 //Butch
 SHORT 0x000e
 SHORT 0x0109 //shirt
 SHORT 0x0000
 BYTE  Butch
-BYTE  Hero
+BYTE  0
 //Rachael
 SHORT 0x0010
 SHORT 0x010f //hat
 SHORT 0x0000
 BYTE  Rachael
-BYTE  Falco
+BYTE  0
 //Cassius
 SHORT 0x0003
 SHORT 0x0126 //peak
 SHORT 0x0000
 BYTE  Cassius
-BYTE  AxePal
+BYTE  0
 //Jeff
 SHORT 0x0013
 SHORT 0x013f
@@ -175,175 +175,175 @@ SHORT 0x0013
 SHORT 0x0140
 SHORT JeffUnmaskFlag
 BYTE  Jeff
-BYTE  Assassin
+BYTE  0
 SHORT 0x0013
 SHORT 0x0103
 SHORT 0x0000
 BYTE  Jeff
-BYTE  Assassin
+BYTE  0
 //Apollo
 SHORT 0x0014
 SHORT 0x010a //feather
 SHORT 0x0000
 BYTE  Apollo
-BYTE  Bishop
+BYTE  0
 //Bechamel
 SHORT 0x0016
 SHORT 0x0144 //shoulderpad
 SHORT 0x0000
 BYTE  Bechamel
-BYTE  Berserker
+BYTE  0
 //Hilbert
 SHORT 0x0019
 SHORT 0x0104 //shoulderpad
 SHORT 0x0000
 BYTE  Hilbert
-BYTE  Sage
-//Flynn
-SHORT 0x001a
-SHORT 0x0115 //holy shit a sword
-SHORT 0x0000
-BYTE  Flynn
-BYTE  SwMast
+BYTE  0
 	//holy shit ranger flynn
 	SHORT 0x001a
 	SHORT 0x012b //holy shit a bow
 	SHORT 0x0000
 	BYTE  Flynn
 	BYTE  BowPal
+//Flynn
+SHORT 0x001a
+SHORT 0x0115 //holy shit a sword
+SHORT 0x0000
+BYTE  Flynn
+BYTE  0
 //Mikey
 SHORT 0x001b
 SHORT 0x0114 //banger armor
 SHORT 0x0000
 BYTE  Mikey
-BYTE  Halberdier
+BYTE  0
 //Carbon
 SHORT 0x001c
 SHORT 0x0128 //shoulders all but bare
 SHORT 0x0000
 BYTE  Carbon
-BYTE  BowPal
+BYTE  0
 //Athena
 SHORT 0x001e
 SHORT 0x0129 //shoulder spikes
 SHORT 0x0000
 BYTE  Athena
-BYTE  WyvLord
+BYTE  0
 //Zeke
 SHORT 0x0021
 SHORT 0x0127 //he
 SHORT 0x0000
 BYTE  Zeke
-BYTE  ZekeLordX
+BYTE  0
 //Alexis
 SHORT 0x0023
 SHORT 0x010c //cape
 SHORT 0x0000
 BYTE  Alexis
-BYTE  AxeGen
+BYTE  0
 //Leila
 SHORT 0x004e
 SHORT 0x0116 //armor gaming
 SHORT 0x0000
 BYTE  Leila
-BYTE  Falco
+BYTE  0
 //Damien
 SHORT 0x0024
 SHORT 0x0105 //shoulderpad
 SHORT 0x0000
 BYTE  Damien
-BYTE  Sniper
+BYTE  0
 //Zacharias
 SHORT 0x0025
 SHORT 0x0110 //shoulderpad
 SHORT 0x0000
 BYTE  Zacharias
-BYTE  Warrior
+BYTE  0
 //Avan
 SHORT 0x0026
 SHORT 0x011b //peg armor
 SHORT 0x0000
 BYTE  Avan
-BYTE  ValkF
+BYTE  0
 //Hollandaise
 SHORT 0x002b
 SHORT 0x0117 //shoulderpad
 SHORT 0x0000
 BYTE  Hollandaise
-BYTE  BerserkerF
+BYTE  0
 //Vladmir
 //Horatio
 SHORT 0x0046
 SHORT 0x012a //swords
 SHORT 0x0000
 BYTE  Horatio
-BYTE  RuneMast
+BYTE  0
 //Ptolemy
 SHORT 0x004b
 SHORT 0x0143 //bee
 SHORT 0x0000
 BYTE  Ptolemy
-BYTE  BowWyv
+BYTE  0
 //Johan
 SHORT 0x003f
 SHORT 0x0113 //cape
 SHORT 0x0000
 BYTE  Johan
-BYTE  LncPal
+BYTE  0
 //Ian maybe
 //Dean
 SHORT 0x0017
 SHORT 0x011a //shoulderpad
 SHORT 0x0000
 BYTE  Dean
-BYTE  Warrior
+BYTE  0
 //Eliza
 SHORT 0x001d
 SHORT 0x0101 //necklace
 SHORT 0x0000
 BYTE  Eliza
-BYTE  BishopF
+BYTE  0
 //Estelle
 SHORT 0x002e
 SHORT 0x010e //bandanna, shoulderpad
 SHORT 0x0000
 BYTE  Estelle
-BYTE  BowPalF
-//Rose
-SHORT 0x000f
-SHORT 0x0102 //shoulder things
-SHORT 0x0000
-BYTE  Rose
-BYTE  SageF
+BYTE  0
 //assassin rose
 SHORT 0x000f
 SHORT 0x0141 //the silly
 SHORT 0x0000
 BYTE  Rose
 BYTE  AssassF
+//Rose
+SHORT 0x000f
+SHORT 0x0102 //shoulder things
+SHORT 0x0000
+BYTE  Rose
+BYTE  0
 //Manfred
 SHORT 0x0050
 SHORT 0x0119 //armor gaming
 SHORT 0x0000
 BYTE  Manfred
-BYTE  Sorc
+BYTE  0
 //Wilhelm
 SHORT 0x000d
 SHORT 0x0118 //armor gaming
 SHORT 0x0000
 BYTE  Wilhelm
-BYTE  Halberdier
+BYTE  0
 //Jonas
 //agnes
 SHORT 0x00e7
 SHORT 0x0146 //armor gaming
 SHORT 0x0000
 BYTE  Agnes
-BYTE  HeroF
+BYTE  0
 //Gaylord
 SHORT 0x00e8
 SHORT 0x0148 //armor gaming
 SHORT 0x0000
 BYTE  Gaylord
-BYTE  Valk
+BYTE  0
 WORD 0x0 0x0//Terminator, don't delete this or very bad things will happen

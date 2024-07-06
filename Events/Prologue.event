@@ -196,9 +196,13 @@ IfNoSelectedGoto(0x99b)
 		SVAL 0x1 0x5
 		BNE 0x4006 0xc 0x1 
 		ENUF AnimusModeFlag
+		ENUF KillRanksFlag
 							SystemText(AnimusModePrompt)
 							IfNoSelectedGoto(0x992)
 							ENUT AnimusModeFlag
+							SystemText(AnimusRanksPrompt)
+							IfNoSelectedGoto(0x992)
+							ENUT KillRanksFlag
 							LABEL 0x992	
 							GOTO 0x4000
 		LABEL 0x4006

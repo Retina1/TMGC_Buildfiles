@@ -198,6 +198,10 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define RoarkPPaletteID 0x97
 #define VulturePPaletteID 0x98
 
+#define RiftUPaletteID 0x9b
+#define PeterUPaletteID 0x9c
+#define MitchellUPaletteID 0x9d
+
 //to do: unpromoted pals for promoted units, cheeky text
 setPalette(BlairUPaletteID,BlairUPalette)
 setPalette(BlairPPaletteID,BlairPPalette)
@@ -286,6 +290,7 @@ setPalette(JohanPPaletteID,JohanPPalette)
 	setFunnyText(JohanUPaletteID, 0x6a 0x6f 0x6e 0x61 0x68)
 	setFunnyText(JohanPPaletteID, 0x6a 0x6f 0x6e 0x61 0x68)
 setPalette(PeterPaletteID,PeterPalette)
+setPalette(PeterUPaletteID,PeterUPalette)
 setPalette(SoniaPaletteID,SoniaPalette)
 setPalette(JoanPaletteID,JoanPalette)
 setPalette(TobiasPaletteID,TobiasPalette)
@@ -306,6 +311,7 @@ setPalette(ElizaPPaletteID,ElizaPPalette)
 	setFunnyText(ElizaPPaletteID, 0x64 0x61 0x77 0x6e)
 setPalette(ChartreusePaletteID,ChartreusePalette)
 setPalette(RiftPaletteID,RiftPalette)
+setPalette(RiftUPaletteID,RiftUPalette)
 setPalette(EstelleUPaletteID,EstelleUPalette)
 setPalette(EstellePPaletteID,EstellePPalette)
 setPalette(RoseUPaletteID,RoseUPalette)
@@ -342,6 +348,7 @@ setPalette(HelgaPaletteID,HelgaPalette)
 setPalette(BrentsonPPaletteID,BrentsonPPalette)
 setPalette(HelgaPPaletteID,HelgaPPalette)
 setPalette(MitchellPaletteID,MitchellPalette)
+setPalette(MitchellUPaletteID,MitchellUPalette)
 setPalette(AmundsenPaletteID,AmundsenPalette)
 setPalette(ZainePaletteID,ZainePalette)
 setPalette(EsmePaletteID,EsmePalette)
@@ -484,7 +491,7 @@ SetPaletteFull(Simone,0x0,DarkF,SimonePaletteID,SorcF,0x0,0x0)
 SetPaletteFull(Ptolemy,PtolemyUPaletteID,BowArm,PtolemyPPaletteID,BowWyv,0x0,0x0)
 SetPaletteFull(Johan,JohanUPaletteID,LncCav,JohanPPaletteID,LncPal,0x0,0x0)
 //lnc wyv peter eventually
-SetPaletteFull(Peter,0x0,LncWyv,PeterPaletteID,WyvLord,0x0,0x0)
+SetPaletteFull(Peter,PeterUPaletteID,LncWyv,PeterPaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Sonia,0x0,SoldierF,SoniaPaletteID,HalberdierF,0x0,0x0)
 SetPaletteFull(Joan,0x0,MercF,JoanPaletteID,HeroF,0x0,0x0)
 SetPaletteFull(Tobias,0x0,Fighter,TobiasPaletteID,Warrior,0x0,0x0)
@@ -496,7 +503,7 @@ SetPaletteFull(Freddric,0x0,LncWyv,FreddricPaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Dean,DeanUPaletteID,Fighter,DeanPPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Eliza,ElizaUPaletteID,Cleric,ElizaPPaletteID,BishopF,0x0,0x0)
 SetPaletteFull(Chartreuse,ChartreusePaletteID,BardF,0x0,0x0,0x0,0x0)
-SetPaletteFull(Rift,0x0,Myrm,RiftPaletteID,SwMast,0x0,0x0)
+SetPaletteFull(Rift,RiftUPaletteID,Myrm,RiftPaletteID,SwMast,0x0,0x0)
 SetPaletteFull(Estelle,EstelleUPaletteID,BowCavF,EstellePPaletteID,BowPalF,0x0,0x0)
 SetPaletteFull(Rose,RoseUPaletteID,MageF,RosePPaletteID,SageF,AssassinRosePaletteID,AssassF)
 SetPaletteFull(Dirk,0x0,Pirate,DirkPaletteID,Berserker,0x0,0x0)
@@ -525,9 +532,9 @@ SetPaletteFull(PGParque,MarqueStarquePaletteID,LncCav,0x0,0x0,0x0,0x0)
 SetPaletteFull(Brentson,BrentsonPaletteID,LncArm,0x0,0x0,0x0,0x0)
 SetPaletteFull(Helga,HelgaPaletteID,FighterF,0x0,0x0,0x0,0x0)
 SetPaletteFull(Starque,MarqueStarquePaletteID,SwdCav,0x0,0x0,0x0,0x0)
-SetPaletteFull(Mitchell,0x0,Fighter,MitchellPaletteID,Hero,0x0,0x0)
+SetPaletteFull(Mitchell,0x0,0x0,MitchellPaletteID,Hero,0x0,0x0)
 //fighter mitchell eventually
-SetPaletteFull(PGMitchell,0x0,0x0,MitchellPaletteID,Hero,0x0,0x0)
+SetPaletteFull(PGMitchell,MitchellUPaletteID,Fighter,MitchellPaletteID,Hero,0x0,0x0)
 SetPaletteFull(Amundsen,AmundsenPaletteID,Bruiser,0x0,0x0,0x0,0x0)
 SetPaletteFull(Zaine,0x0,0x0,ZainePaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Esme,0x0,0x0,EsmePaletteID,WyvLord,0x0,0x0)
@@ -821,6 +828,9 @@ ALIGN 4
 PeterPalette:
 #incbin "Peter.dmp"
 ALIGN 4
+PeterUPalette:
+#incbin "PeterUnpromoted.dmp"
+ALIGN 4
 SoniaPalette:
 #incbin "Sonia.dmp"
 ALIGN 4
@@ -862,6 +872,8 @@ ChartreusePalette:
 ALIGN 4
 RiftPalette:
 #incbin "Rift.dmp"
+RiftUPalette:
+#incbin "RiftUnpromoted.dmp"
 ALIGN 4
 EstelleUPalette:
 #incbin "EstelleUnpromoted.dmp"
@@ -960,6 +972,9 @@ HelgaPPalette:
 ALIGN 4
 MitchellPalette:
 #incbin "Mitchell.dmp"
+ALIGN 4
+MitchellUPalette:
+#incbin "MitchellUnpromoted.dmp"
 ALIGN 4
 AmundsenPalette:
 #incbin "Amundsen.dmp"

@@ -201,6 +201,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define RiftUPaletteID 0x9b
 #define PeterUPaletteID 0x9c
 #define MitchellUPaletteID 0x9d
+#define SveltzalusPPaletteID 0x9e
 
 //to do: unpromoted pals for promoted units, cheeky text
 setPalette(BlairUPaletteID,BlairUPalette)
@@ -244,6 +245,7 @@ setPalette(ApolloUPaletteID,ApolloUPalette)
 setPalette(ApolloPPaletteID,ApolloPPalette)
 setPalette(BechamelUPaletteID,BechamelUPalette)
 setPalette(BechamelPPaletteID,BechamelPPalette)
+setPalette(SveltzalusPPaletteID,SveltzalusPPalette)
 //svelt uses class palettes because of course he does
 setPalette(HilbertUPaletteID,HilbertUPalette)
 setPalette(HilbertPPaletteID,HilbertPPalette)
@@ -468,7 +470,7 @@ SetPaletteFull(Emile,0x0,Mage,EmilePaletteID,Sage,0x0,0x0)
 SetPaletteFull(Jeff,JeffUPaletteID,Thief,JeffPPaletteID,Assass,0x0,0x0)
 SetPaletteFull(Apollo,ApolloUPaletteID,LightM,ApolloPPaletteID,Bishop,0x0,0x0)
 SetPaletteFull(Bechamel,BechamelUPaletteID,Pirate,BechamelPPaletteID,Berserker,0x0,0x0)
-SetPaletteFull(Sveltzalus,0x0,Bigle,0x0,Bigerle,0x0,0x0)
+SetPaletteFull(Sveltzalus,0x0,Bigle,SveltzalusPPaletteID,Bigerle,0x0,0x0)
 SetPaletteFull(Hilbert,HilbertUPaletteID,Mage,HilbertPPaletteID,Sage,0x0,0x0)
 SetPaletteFull(Flynn,FlynnUPaletteID,Myrm,FlynnPPaletteID,SwMast,RangerFlynnPaletteID,BowPal)
 SetPaletteFull(Mikey,MikeyUPaletteID,Soldier,MikeyPPaletteID,Halberdier,0x0,0x0)
@@ -710,6 +712,9 @@ BechamelPPalette:
 ALIGN 4
 EmilePalette:
 #incbin "Emile.dmp"
+ALIGN 4
+SveltzalusPPalette:
+#incbin "SveltPromo.dmp"
 ALIGN 4
 HilbertUPalette:
 #incbin "HilbertUnpromoted.dmp"

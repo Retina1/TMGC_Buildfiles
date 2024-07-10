@@ -1,0 +1,218 @@
+/*
+stuff from HGS buildfile
+*/
+
+PUSH
+
+    //removing the unneeded 10-part cg stuff
+    ORG $C45FA
+    BYTE $00 //was 9 for the 10-parter
+    ORG $C4620
+    SHORT $6849 //TSA is now at +0x04 in the struct
+    ORG $C4630
+    SHORT $6880 //palette is now at +0x08 in the struct
+    ORG $C4648
+    BYTE $01 //was 0xA
+    ORG $C410E
+    SHORT $8980 //timer is now at +0x0C
+
+    //replacing CreditCGStruct pointers in the credits script. One each for Eirika/Ephraim mode
+    ORG $206E3C
+    POIN CreditSlide1_Struct
+    POIN CreditSlide1_Struct
+    ORG $206E64
+    POIN CreditSlide1_Struct
+    POIN CreditSlide1_Struct
+    ORG $206E8C
+    POIN CreditSlide1_Struct
+    POIN CreditSlide1_Struct
+    ORG $206EB4
+    POIN CreditSlide1_Struct
+    POIN CreditSlide1_Struct
+    ORG $206EF0
+    POIN CreditSlide1_Struct
+    POIN CreditSlide1_Struct
+    ORG $206F18
+    POIN CreditSlide1_Struct
+    POIN CreditSlide1_Struct
+    ORG $206F40
+    POIN CreditSlide1_Struct
+    POIN CreditSlide1_Struct
+    ORG $206F68
+    POIN CreditSlide1_Struct
+    POIN CreditSlide1_Struct
+
+    //redoing the events cg list too because why not
+    //this list is unused in sacred echoes, but i don't want it pointing to broken data now that the original CGs are freespace
+    ORG $A3CCEC
+    //entry 0 (lyon in the garden)
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+    //entry 1 (dead ismaire)
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+    //entry 2 (knoll and the stone)
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+	
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+	
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+	
+    POIN CreditSlide1_Img
+    POIN CreditSlide1_Pal
+    POIN CreditSlide1_TSA
+
+POP
+
+//these structs are labeled in the order they show in the credits, while the data they point to is labeled by order in the CG table
+ALIGN 4
+CreditSlide1_Struct:
+POIN CreditSlide1_Img
+POIN CreditSlide1_TSA
+POIN CreditSlide1_Pal
+WORD $78
+
+
+//NOTE: these TSAs are in reverse vertical order, 60 bytes (30 4BPP tiles) per row. The two bytes in front of the map are [width-1, height-1]
+ALIGN 4
+CreditSlide1_Img:
+#incbin "CreditsCG1.dmp"
+ALIGN 4
+CreditSlide1_Pal:
+#incbin "CreditsCG1.pal.dmp"
+ALIGN 4
+CreditSlide1_TSA:
+//BYTE $1D $13
+#incbin "CreditsCG1.tsa.dmp"
+
+ALIGN 4
+
+//#define CreditsCG(slot,image,tsa,pal) "ORG 0xa3ccec+12*slot;POIN image;POIN tsa;POIN pal"
+
+PUSH
+//CreditsCG(0x2,CreditsCG2,CreditsCG2TSA,CreditsCG2Pal)
+
+
+
+
+//text scrolling
+#define CreditsText(slot,image,tsa) "ORG 0x206ba0+8*slot;POIN image;POIN tsa"
+ALIGN 4
+CreditsText0:
+#incbin "Text0.dmp"
+ALIGN 4
+CreditsText0TSA:
+#incbin "Text0.tsa.dmp"
+ALIGN 4
+CreditsText1:
+#incbin "Text1.dmp"
+ALIGN 4
+CreditsText1TSA:
+#incbin "Text1.tsa.dmp"
+ALIGN 4
+CreditsText2:
+#incbin "Text2.dmp"
+ALIGN 4
+CreditsText2TSA:
+#incbin "Text2.tsa.dmp"
+ALIGN 4
+CreditsText3:
+#incbin "Text3.dmp"
+ALIGN 4
+CreditsText3TSA:
+#incbin "Text3.tsa.dmp"
+ALIGN 4
+CreditsText4:
+#incbin "Text4.dmp"
+ALIGN 4
+CreditsText4TSA:
+#incbin "Text4.tsa.dmp"
+ALIGN 4
+CreditsText5:
+#incbin "Text5.dmp"
+ALIGN 4
+CreditsText5TSA:
+#incbin "Text5.tsa.dmp"
+ALIGN 4
+CreditsText6:
+#incbin "Text6.dmp"
+ALIGN 4
+CreditsText6TSA:
+#incbin "Text6.tsa.dmp"
+ALIGN 4
+CreditsText7:
+#incbin "Text7.dmp"
+ALIGN 4
+CreditsText7TSA:
+#incbin "Text7.tsa.dmp"
+ALIGN 4
+CreditsText8:
+#incbin "Text8.dmp"
+ALIGN 4
+CreditsText8TSA:
+#incbin "Text8.tsa.dmp"
+ALIGN 4
+CreditsText9:
+#incbin "Text9.dmp"
+ALIGN 4
+CreditsText9TSA:
+#incbin "Text9.tsa.dmp"
+ALIGN 4
+CreditsTextA:
+#incbin "TextA.dmp"
+ALIGN 4
+CreditsTextATSA:
+#incbin "TextA.tsa.dmp"
+ALIGN 4
+CreditsTextB:
+#incbin "TextB.dmp"
+ALIGN 4
+CreditsTextBTSA:
+#incbin "TextB.tsa.dmp"
+ALIGN 4
+CreditsTextC:
+#incbin "TextC.dmp"
+ALIGN 4
+CreditsTextCTSA:
+#incbin "TextC.tsa.dmp"
+
+
+PUSH
+CreditsText(0x0,CreditsText0,CreditsText0TSA)
+CreditsText(0x1,CreditsText1,CreditsText1TSA)
+CreditsText(0x2,CreditsText2,CreditsText2TSA)
+CreditsText(0x3,CreditsText3,CreditsText3TSA)
+CreditsText(0x4,CreditsText4,CreditsText4TSA)
+CreditsText(0x5,CreditsText5,CreditsText5TSA)
+CreditsText(0x6,CreditsText6,CreditsText6TSA)
+CreditsText(0x7,CreditsText7,CreditsText7TSA)
+CreditsText(0x8,CreditsText8,CreditsText8TSA)
+CreditsText(0x9,CreditsText9,CreditsText9TSA)
+CreditsText(0xa,CreditsTextA,CreditsTextATSA)
+CreditsText(0xb,CreditsTextB,CreditsTextBTSA)
+CreditsText(0xc,CreditsTextC,CreditsTextCTSA)
+POP

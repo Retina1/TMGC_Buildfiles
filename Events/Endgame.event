@@ -598,10 +598,11 @@ LABEL 0x406
 GOTO 0x90
 LABEL 0x400
 	STAL 150
+	WEATHER 0x0
 	MUSC S_TheSwan
 	ASMC 0xC4879 //credits
 	STAL 180
-	FADU 2
+	//FADU 2
 	SetBackground(FinTextCG)//swap for sad cg when lumi makes it
 	STAL 600
 	MUSCSLOW 0x7fff

@@ -235,6 +235,10 @@ ALIGN 4
 SveltzalusMug:
 #incbin "dmps/Sveltzalus.dmp"
 setMugEntry(0x18,SveltzalusMug,2,7,2,3)
+ALIGN 4
+SveltzalusPromoMug:
+#incbin "dmps/SveltzalusPromo.dmp"
+setMugEntry(0x149,SveltzalusPromoMug,2,7,2,3)
 
 ALIGN 4
 HilbertMug:

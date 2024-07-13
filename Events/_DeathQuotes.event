@@ -1,5 +1,6 @@
 #define AlwaysDeathQuote(arg000,arg001,arg002) "BYTE arg000 0x0 0xff 0xff; SHORT arg001;SHORT arg002 ;WORD 0x0 "
 #define ChapterDeathQuote(arg000,arg001,arg002,arg003) "BYTE arg000 0x0 0xff arg001; SHORT arg002 ;SHORT arg003 ;WORD 0x0 "
+#define TaleUnitDeathQuote(arg000,arg001,arg003) "BYTE arg000 0x0 0xff arg001; SHORT 0x65 ;SHORT arg003 ;WORD 0x0 "
 #define KillerDeathQuote(arg000,arg001,arg002,arg003,arg004) "BYTE arg000 arg001 0xff arg002; SHORT arg003;SHORT arg004 ;WORD 0x0 "
 #define EndDeathQuote "BYTE 0xff 0xff 0x0 0x0 0x0 0x0 ;SHORT 0x0 ;WORD 0x0 "
 #define DefeatBossFlag 0x2
@@ -10,6 +11,29 @@ DeathQuoteTable:
 //ratio
 //AlwaysDeathQuote(0xd2,0x0,HoratioWeep)
 BYTE 0xd2 0x0 0xff 0xff 0x0 0x0 ;SHORT 0x0 ;WORD HoratioSummonDeath|IsPointer
+//tales
+TaleUnitDeathQuote(Butch,Tale1,FillerDialogue)
+TaleUnitDeathQuote(Peggy,Tale1,FillerDialogue)
+TaleUnitDeathQuote(Rift,Tale1,FillerDialogue)
+TaleUnitDeathQuote(Peter,Tale1,FillerDialogue)
+TaleUnitDeathQuote(PGMitchell,Tale1,FillerDialogue)
+TaleUnitDeathQuote(SecretClarque,Tale1,FillerDialogue)
+TaleUnitDeathQuote(PGMarque,Tale1,FillerDialogue)
+TaleUnitDeathQuote(PGStarque,Tale1,FillerDialogue)
+TaleUnitDeathQuote(PGParque,Tale1,FillerDialogue)
+//2
+TaleUnitDeathQuote(Zeke,Tale2,FillerDialogue)
+TaleUnitDeathQuote(Rachael,Tale2,FillerDialogue)
+TaleUnitDeathQuote(Leila,Tale2,FillerDialogue)
+TaleUnitDeathQuote(Cassius,Tale2,FillerDialogue)
+TaleUnitDeathQuote(Hyperius,Tale2,FillerDialogue)
+TaleUnitDeathQuote(Alexis,Tale2,FillerDialogue)
+TaleUnitDeathQuote(Jeff,Tale2,FillerDialogue)
+TaleUnitDeathQuote(Artemis,Tale2,FillerDialogue)
+//12
+TaleUnitDeathQuote(Sinclair,Tale12,FillerDialogue)
+TaleUnitDeathQuote(PGMichael,Tale12,FillerDialogue)
+TaleUnitDeathQuote(PGNathaniel,Tale12,FillerDialogue)
 // Prologue
 ChapterDeathQuote(Davelarn,Prologue,DefeatBossFlag,PDavelarnDeath)
 // Ch1

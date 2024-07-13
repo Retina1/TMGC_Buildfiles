@@ -229,6 +229,19 @@ POP
 #define JukeboxFlag 0x90
 #define KillRanksFlag 0x8f
 
+#define Tale1DoneFlag 0x101
+#define Tale2DoneFlag 0x102
+#define Tale3DoneFlag 0x103
+#define Tale4DoneFlag 0x104
+#define Tale5DoneFlag 0x105
+#define Tale6DoneFlag 0x106
+#define Tale7DoneFlag 0x107
+#define Tale8DoneFlag 0x108
+#define Tale9DoneFlag 0x109
+#define Tale10DoneFlag 0x10A
+#define Tale11DoneFlag 0x10B
+#define Tale12DoneFlag 0x10C
+
 //track bargain flags, use base flags when possible to save globals
 //ch4
 #define KillingEdgeFlag BaseFlag4
@@ -309,3 +322,5 @@ POP
 #define MapCG 0x34
 #define TitleCG 0xc
 #define SoulMonkeyCG 0x2c
+#define MapWordsCG 0x38
+#define Map2WordsCG 0x39

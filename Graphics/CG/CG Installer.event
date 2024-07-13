@@ -1,8 +1,93 @@
-#define ConvoBackgroundTable $95DD1C
-#define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG ConvoBackgroundTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
-ALIGN 4
-SetConvoBackground(Map2CG,Map2Image,Map2TSA,Map2Palette)
-SetConvoBackground(MapCG,MapImage,MapTSA,MapPalette)
+#include "MoreColors/CGCol.event"
+
+// Repoint bgTable.
+PUSH
+
+  ORG 0xE894
+    POIN bgTable
+  
+  ORG 0xECF4
+    POIN bgTable
+  
+  ORG 0xEDF8
+    POIN bgTable
+  
+  ORG 0x10E44
+    POIN bgTable
+
+POP
+
+#define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG bgTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
+#define SetColorsBackground(Index, ImagePointer, PalettePointer) "PUSH; ORG bgTable + (Index * 0xC); POIN ImagePointer; WORD 0x1; POIN PalettePointer; POP"
+// First 0x36 entries are from the vanilla BGTable
+ALIGN 4; bgTable:
+WORD 0x088D2700 0x088D5D24 0x088D61D8
+WORD 0x088D62D8 0x088D9FF4 0x088DA4A8
+WORD 0x088DA5A8 0x088DD8F4 0x088DDDA8
+WORD 0x088DDEA8 0x088E0E20 0x088E12D4
+WORD 0x088DDEA8 0x088E0E20 0x088E13D4
+WORD 0x088E14D4 0x088E5340 0x088E57F4
+WORD 0x088E14D4 0x088E5340 0x088E58F4
+WORD 0x088E59F4 0x088E81AC 0x088E8660
+WORD 0x088E8760 0x088EB6C8 0x088EBB7C
+WORD 0x088EBC7C 0x088EE960 0x088EEE14
+WORD 0x088EEF14 0x088F0B58 0x088F100C
+WORD 0x088EEF14 0x088F0B58 0x088F110C
+WORD 0x088F120C 0x088F5AF4 0x088F5FA8
+WORD 0x088F120C 0x088F5AF4 0x088F60A8
+WORD 0x088F61A8 0x088F9598 0x088F9A4C
+WORD 0x088F61A8 0x088F9598 0x088F9B4C
+WORD 0x088F9C4C 0x088FB350 0x088FB804
+WORD 0x088F9C4C 0x088FB350 0x088FB904
+WORD 0x088FBA04 0x088FD424 0x088FD8D8
+WORD 0x088FD9D8 0x089018A0 0x08901D54
+WORD 0x088FD9D8 0x089018A0 0x08901E54
+WORD 0x08901F54 0x08904DEC 0x089052A0
+WORD 0x08901F54 0x08904DEC 0x089053A0
+WORD 0x089054A0 0x0890792C 0x08907DE0
+WORD 0x08907EE0 0x08909C64 0x0890A118
+WORD 0x08907EE0 0x08909C64 0x0890A218
+WORD 0x08907EE0 0x08909C64 0x0890A318
+WORD 0x0890A418 0x0890C7D4 0x0890CC88
+WORD 0x0890CD88 0x0890E7E8 0x0890EC9C
+WORD 0x0890ED9C 0x08912060 0x08912514
+WORD 0x0890ED9C 0x08912060 0x08912614
+WORD 0x0890ED9C 0x08912060 0x08912714
+WORD 0x0890ED9C 0x08912060 0x08912814
+WORD 0x08912914 0x08914CB8 0x0891516C
+WORD 0x0891526C 0x089195BC 0x08919A70
+WORD 0x08919B70 0x0891E9D4 0x0891EE88
+WORD 0x0891EF88 0x08922974 0x08922E28
+WORD 0x08922F28 0x089260E8 0x0892659C
+WORD 0x0892669C 0x08929210 0x089296C4
+WORD 0x0892669C 0x08929210 0x089297C4
+WORD 0x089298C4 0x0892D5E4 0x0892DA98
+WORD 0x0892DB98 0x0893226C 0x08932720
+WORD 0x08932820 0x08937134 0x089375E8
+WORD 0x089376E8 0x0893C47C 0x0893C930
+WORD 0x0893CA30 0x0893F1D4 0x0893F688
+WORD 0x0893CA30 0x0893F1D4 0x0893F788
+WORD 0x0893F888 0x08942B38 0x08942FEC
+WORD 0x089430EC 0x08947398 0x0894784C
+WORD 0x0894794C 0x08949F70 0x0894A424
+WORD 0x0894A524 0x0894EEF8 0x0894F3AC
+WORD 0x0894F4AC 0x08953538 0x089539EC
+WORD 0x08953AEC 0x089584A4 0x08958958
+WORD 0x08958A58 0x0895D1A8 0x0895D65C
+WORD 0x0895D75C 0x0895D768 0x0895DC1C
+WORD 0x0 0x0 0x0                                    // Not sure what this is used for.
+WORD 0x0 0x0 0x0                                    // ID used for random BG.
+WORD 0x0 0x0 0x0                                    // 38
+WORD 0x0 0x0 0x0                                    // 39
+WORD 0x0 0x0 0x0                                    // 3a
+WORD 0x0 0x0 0x0                                    // 3b
+WORD 0x0 0x0 0x0                                    // 3c (add more if need be later)
+
+
+SetColorsBackground(Map2CG,Map2Image,Map2Palette)
+SetColorsBackground(MapCG,MapImage,MapPalette)
+SetColorsBackground(Map2WordsCG,Map2WordsImage,Map2WordsPalette)
+SetColorsBackground(MapWordsCG,MapWordsImage,MapWordsPalette)
 SetConvoBackground(BlankCG,BlankImage,BlankTSA,BlankPalette)
 SetConvoBackground(LowlandsCG,LowlandsImage,LowlandsTSA,LowlandsPalette)
 SetConvoBackground(TentInsideCG,TentInsideImage,TentInsideTSA,TentInsidePalette)
@@ -13,6 +98,36 @@ SetConvoBackground(MoonCG,MoonImage,MoonTSA,MoonPalette)
 SetConvoBackground(TitleCG,TitleImage,TitleTSA,TitlePalette)
 SetConvoBackground(FinTextCG,FinTextImage,FinTextTSA,FinTextPalette)
 SetConvoBackground(SoulMonkeyCG,SoulMonkeyImage,SoulMonkeyTSA,SoulMonkeyPalette)
+
+ALIGN 4
+MapImage:
+#incbin "MoreColors/gfx/BG/224WorldMap.dmp"
+ALIGN 4
+MapPalette:
+#incbin "MoreColors/gfx/BG/224WorldMapPal.dmp"
+ALIGN 4
+Map2Image:
+#incbin "MoreColors/gfx/BG/224WorldMap2.dmp"
+ALIGN 4
+Map2Palette:
+#incbin "MoreColors/gfx/BG/224WorldMap2Pal.dmp"
+ALIGN 4
+MapWordsImage:
+#incbin "MoreColors/gfx/BG/224WorldMapNames.dmp"
+ALIGN 4
+MapWordsPalette:
+#incbin "MoreColors/gfx/BG/224WorldMapNamesPal.dmp"
+ALIGN 4
+Map2WordsImage:
+#incbin "MoreColors/gfx/BG/224WorldMapNames2.dmp"
+ALIGN 4
+Map2WordsPalette:
+#incbin "MoreColors/gfx/BG/224WorldMapNames2Pal.dmp"
+
+
+
+
+
 ALIGN 4
 FinTextImage:
 #incbin "FIN.png.dmp"
@@ -58,24 +173,6 @@ EastHolanisTSA:
 ALIGN 4
 EastHolanisPalette:
 #incbin "holanis.png.pal.dmp"
-ALIGN 4
-MapImage:
-#incbin "map for real.png.dmp"
-ALIGN 4
-MapTSA:
-#incbin "map for real.png.tsa.dmp"
-ALIGN 4
-MapPalette:
-#incbin "map for real.png.pal.dmp"
-ALIGN 4
-Map2Image:
-#incbin "postygstra.png.dmp"
-ALIGN 4
-Map2TSA:
-#incbin "postygstra.png.tsa.dmp"
-ALIGN 4
-Map2Palette:
-#incbin "postygstra.png.pal.dmp"
 ALIGN 4
 BlankImage:
 #incbin "blank.png.dmp"

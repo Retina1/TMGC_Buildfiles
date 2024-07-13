@@ -1,0 +1,108 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsT12,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Tale12Units Tale12Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Seize(28,1)//whoops gotta let sinclair seize
+Door(28,7)
+Door(28,10)
+Door(28,13)
+Door(28,16)
+Door(28,19)
+Door(24,23)
+Door(28,23)
+Door(32,23)
+Door(24,27)
+Door(28,27)
+Door(32,27)
+Chest(0,24,21)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+TelliusTorchOff(26,3,4)
+TelliusTorchOff(30,3,4)
+ENDTRAP
+TrapData2:
+ENDTRAP
+
+ALIGN 4
+
+Tale12Units:
+//tale 2 cast - zeke, rachael, cassius, alexis, hyperius, jeff, artemis
+UNIT Sinclair Sage 0x0 Level(12,Ally,0) [16,24] 0x0 0x0 0x0 0x0 [Awaken,Rewarp,Memento,DoorKey] NoAI
+UNIT PGNathaniel Sorc 0x0 Level(4,Ally,0) [15,25] 0x0 0x0 0x0 0x0 [Fenrir,Rescue,Unlock,Elixir] NoAI
+UNIT PGMichael Sniper 0x0 Level(2,Ally,0) [17,25] 0x0 0x0 0x0 0x0 [BarrierBow,DoorKey,DoorKey] NoAI
+UNIT
+
+Tale12Enemies:
+UNIT Dragon DivineDragon 0x0 Level(15,Enemy,1) [28,1] 0x0 0x0 0x0 0x0 [DivineBreath] NeverMoveAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+DISA Addington
+LOAD1 0x1 Tale12Units
+ENUN
+LOAD1 0x1 Tale12Enemies
+ENUN
+TaleSetUnitStat(Sinclair,49,14,32,33,25,16,23,29)
+TaleSetUnitWEXP(Sinclair,81,0,0,0,181,251,31,181)
+TaleSetUnitStat(PGNathaniel,42,10,20,20,20,10,20,20)
+TaleSetUnitWEXP(PGNathaniel,0,0,0,0,121,0,0,151)
+TaleSetUnitStat(PGMichael,45,18,8,26,23,8,15,13)
+TaleSetUnitWEXP(PGMichael,0,0,0,181,0,0,0,0)
+AddUnitStatus(Sinclair,MovBonus,6)
+AddUnitStatus(PGNathaniel,MovBonus,6)
+AddUnitStatus(PGMichael,MovBonus,6)
+CleanText(DungeonCG,Tale12Opening)
+ENDA
+
+EndingScene:
+MUSC S_Chaos
+CleanTextNoMap(DungeonCG,Tale12Ending)
+MUSC 0x0
+SystemText(BlankCG,TaleEnding)
+DISA PGNathaniel
+DISA PGMichael
+DISA Sinclair
+ENUT Tale12DoneFlag
+MoveToChapter(HubMap)
+ENDA
+
+//MESSAGE Events end at offset CURRENTOFFSET

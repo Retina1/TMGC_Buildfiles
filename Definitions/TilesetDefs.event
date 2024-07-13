@@ -1,6 +1,6 @@
-//CURRENT NEXT 0xd4
+//CURRENT NEXT 0xda
 //final usable eb
-//d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb
+//da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb
 //27 total
 //12 maps
 //12 tilechanges
@@ -61,6 +61,7 @@
 #define MapTaleSelect 0x61
 #define MapTale1 0x59
 #define MapTale2 0xd6
+#define MapTale8 0xd8
 #define MapTale12 0x76
 #define Map14Ending 0x62
 
@@ -115,6 +116,7 @@
 #define MapChangeEndgame 0xc3
 #define MapChangeTale1 0x98
 #define MapChangeTale2 0xd7
+#define MapChangeTale8 0xd9
 #define MapChangeTale12 0xd4
 
 #define Events0 0x18

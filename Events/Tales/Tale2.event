@@ -15,7 +15,7 @@ POIN LocationBasedEvents
 POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
-POIN TrapData TrapData
+POIN TrapData TrapData2
 POIN Tale2Units Tale2Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
@@ -47,6 +47,7 @@ MiscBasedEvents:
 CauseGameOverIfLordDies
 //add thing here to check if any destroyed tilechanges exist
 AFEV 0x9 T2ZekeNeedsToVisit 0x8
+AFEV 0x0 T2CheckForWin 0x0
 AFEV 0x0 T2CheckForLose 0x0
 END_MAIN
 
@@ -57,6 +58,8 @@ Tutorial:
 END_MAIN
 
 TrapData:
+ENDTRAP
+TrapData2:
 ENDTRAP
 
 ALIGN 4
@@ -117,12 +120,35 @@ SetUnitSkills(Artemis,SwapID,InsightID,0,0)
 ENDA
 
 EndingScene:
+ENUT Tale2DoneFlag
+MUSC 0x0
+SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)
 ENDA
 
 T2ZekeNeedsToVisit:
 CAM1 Zeke
 Text(FillerDialogue)
+EndEvent
+
+
+T2CheckForWin:
+TileChangeCheck(0x3)
+BEQ 0x1 0xc 0x0
+TileChangeCheck(0x5)
+BEQ 0x1 0xc 0x0
+TileChangeCheck(0x7)
+BEQ 0x1 0xc 0x0
+TileChangeCheck(0x9)
+BEQ 0x1 0xc 0x0
+TileChangeCheck(0xb)
+BEQ 0x1 0xc 0x0
+TileChangeCheck(0xd)
+BEQ 0x1 0xc 0x0
+CAM1 Zeke
+Text(FillerDialogue)//i win
+CALL EndingScene
+LABEL 0x1
 EndEvent
 
 T2CheckForLose:

@@ -1,0 +1,12 @@
+
+POIN Sommie256BG; WORD 0x0; POIN Sommie256Pal       // TSA == 0 indicates 256-colour BGs.
+POIN Sommie224BG; WORD 0x1; POIN Sommie224Pal       // TSA == 1 indicates 224-colour BGs.
+
+ALIGN 4; Sommie256BG:
+#incbin "256Sommie.dmp"
+ALIGN 4; Sommie256Pal:
+#incbin "256SommiePal.dmp"
+ALIGN 4; Sommie224BG:
+#incbin "224Sommie.dmp"
+ALIGN 4; Sommie224Pal:
+#incbin "224SommiePal.dmp"

@@ -434,7 +434,7 @@ ResetViridianConvoy
 ENUT GuideChpt28
 LocationText(MoonCG,Ch28_Flashback,Flashback10YearLabel,0x0)
 MUSC NarrationTheme6
-SetBackground(Map2CG); STAL 120; NarrationText(Ch28_Narration); FADI 16
+SetBackground(Map2CG); STAL 120; NarrationText(Ch28_Narration); FADI 16; CLEAN
 LOAD1 0x1 C28CutsceneElcorian
 ENUN
 CleanText(HallCG,C28Opening1)

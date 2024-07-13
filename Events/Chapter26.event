@@ -921,7 +921,7 @@ BeginningScene:
 ENUT GuideChpt26
 LocationText(MoonCG,Ch26_Flashback,Flashback10YearLabel,0x0)
 MUSC NarrationTheme6
-SetBackground(Map2CG); STAL 120; NarrationText(Ch26_Narration); FADI 16
+SetBackground(Map2CG); STAL 120; NarrationText(Ch26_Narration); FADI 16; CLEAN
 CleanTextNoMap(HallCG,C26Opening1)//they're here
 CleanTextNoMap(PathCG,C26Opening2)//ethyl dialogue
 CleanTextNoMap(HallCG,C26Opening3)//it's time

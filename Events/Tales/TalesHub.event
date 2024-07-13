@@ -28,6 +28,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,TaleHubStart,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -40,7 +41,7 @@ CharacterEvent(0x0,Tale5Begin,Addington,Natasia)
 CharacterEvent(0x0,Tale6Begin,Addington,Kenneth)
 CharacterEvent(0x0,Tale7Begin,Addington,Sonia)
 CharacterEvent(0x0,Tale8Begin,Addington,Viridian)
-CharacterEvent(0x0,Tale9Begin,Addington,Lazarus)
+CharacterEvent(0x0,Tale9Begin,Addington,PGLazarus)
 CharacterEvent(0x0,Tale10Begin,Addington,Simone)
 CharacterEvent(0x0,Tale11Begin,Addington,Blair)
 CharacterEvent(0x0,Tale12Begin,Addington,Sinclair)
@@ -72,7 +73,7 @@ UNIT
 
 HubAccess:
 //tale 1 cast - butch, peggy, peter, rift, mitchell, maybe arques
-UNIT Butch Hero 0x0 Level(1,NPC,0) [0,6] 0x0 0x0 0x0 0x0 [GildedSword,Hammer] NoAI
+UNIT Butch Hero 0x0 Level(1,NPC,0) [2,6] 0x0 0x0 0x0 0x0 [GildedSword,Hammer] NoAI
 //tale 2 cast - zeke, rachael, cassius, alexis, hyperius, jeff, artemis (since holanian connection for zeke plus alexis support)
 // visit villages within elba cor to petition aid for new government, they only listen to zeke
 UNIT Zeke ZekeLordX 0x0 Level(1,NPC,0) [1,8] 0x0 0x0 0x0 0x0 [Stalwart,Soulbow] NoAI
@@ -86,16 +87,16 @@ UNIT Cid Berserker 0x0 Level(1,NPC,0) [10,9] 0x0 0x0 0x0 0x0 [Frypan,GildedAxe,E
 // capture boats while defending their greens
 UNIT Natasia WarriorF 0x0 Level(1,NPC,0) [13,8] 0x0 0x0 0x0 0x0 [KillerAxe,Tomahawk,Longbow] NoAI
 //tale 6 cast - kenneth, stefan, desmond, josef, johan, ptolemy, emile, hilbert, natasia?, gaylord?
-UNIT Kenneth Baron 0x0 Level(1,NPC,0) [14,6] 0x0 0x0 0x0 0x0 [Voidwake,Nosferatu,SilverSword] NoAI
+UNIT Kenneth Baron 0x0 Level(1,NPC,0) [12,6] 0x0 0x0 0x0 0x0 [Voidwake,Nosferatu,SilverSword] NoAI
 //tale 7 cast - sonia, joan, tobias, mikey, carbon, jonas, damien, zacharias
-UNIT Sonia HalberdierF 0x0 Level(1,NPC,0) [14,2] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NoAI
+UNIT Sonia HalberdierF 0x0 Level(1,NPC,0) [13,2] 0x0 0x0 0x0 0x0 [GildedLance,BraveLance,Spear] NoAI
 //tale 8 cast - viridian, freddric, chartreuse, dean, clarque and sons, maybe olsen for funnies, dirk/eliza cameo? maybe they're some of the greens?
 // bring waves of greens to safe zones as they spawn
-UNIT Viridian ViridianLord 0x0 Level(1,NPC,0) [13,0] 0x0 0x0 0x0 0x0 [Luckbow,SilverBow,Recover] NoAI
+UNIT Viridian ViridianLord 0x0 Level(1,NPC,0) [11,1] 0x0 0x0 0x0 0x0 [Luckbow,SilverBow,Recover] NoAI
 //tale 9 cast - lazarus, cameos from ygstrans including callum, girard and elcorian chilling in audience
-UNIT Lazarus AxeGen 0x0 Level(1,NPC,0) [0,2] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
+UNIT PGLazarus AxeGen 0x0 Level(1,NPC,0) [1,2] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
 //tale 10 cast - simone, young arin, svelt (or another surveil) and horatio cameo/boss
-UNIT Simone SorcF 0x0 Level(1,NPC,0) [1,0] 0x0 0x0 0x0 0x0 [Voulche,Fenrir,Sleep] NoAI
+UNIT Simone SorcF 0x0 Level(1,NPC,0) [3,1] 0x0 0x0 0x0 0x0 [Voulche,Fenrir,Sleep] NoAI
 UNIT
 
 BonusHubAccess:
@@ -119,23 +120,63 @@ UNIT
 
 ALIGN 4
 
+#define TaleComplete(unit,flag) "CHECK_EVENTID flag; BNE unit 0xc 0x0; SetUnitStatus(unit, State, 0x2); LABEL unit"
+
 BeginningScene:
 //eventually make disa a conditional
 KillEveryLastOneOfThem
 LOAD1 0x1 HubAccess
+CHECK_EVENTID Tale1DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale2DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale3DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale4DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale5DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale6DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale7DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale8DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale9DoneFlag
+BEQ 0x300 0xc 0x0
+CHECK_EVENTID Tale10DoneFlag
+BEQ 0x300 0xc 0x0
 LOAD1 0x1 BonusHubAccess
+CHECK_EVENTID Tale11DoneFlag
+BEQ 0x300 0xc 0x0
 LOAD1 0x1 FinalHubAccess
+LABEL 0x300
 LOAD1 0x1 HubUnits
+EnableFreeMovement
+EndEvent
+
+TaleHubStart:
+TaleComplete(Butch,Tale1DoneFlag)
+TaleComplete(Zeke,Tale2DoneFlag)
+TaleComplete(Vladmir,Tale3DoneFlag)
+TaleComplete(Cid,Tale4DoneFlag)
+TaleComplete(Natasia,Tale5DoneFlag)
+TaleComplete(Kenneth,Tale6DoneFlag)
+TaleComplete(Sonia,Tale7DoneFlag)
+TaleComplete(Viridian,Tale8DoneFlag)
+TaleComplete(PGLazarus,Tale9DoneFlag)
+TaleComplete(Simone,Tale10DoneFlag)
+TaleComplete(Blair,Tale11DoneFlag)
+TaleComplete(Sinclair,Tale12DoneFlag)
 CHECK_EVENTID TaleHubVisitedFlag
-BNE 0x1 0xc 0x0
-CleanText(HallCG,TaleHubIntro)
+BNE 0x100 0xc 0x0
+Text(TaleHubIntro)
 SystemText(TaleHubExplanation)
 ENUT TaleHubVisitedFlag
-GOTO 0x2
-LABEL 0x1
+GOTO 0x200
+LABEL 0x100
 Text(TaleHubReturnIntro)
-LABEL 0x2
-EnableFreeMovement
+LABEL 0x200
 EndEvent
 
 Tale1Begin:
@@ -148,7 +189,7 @@ LABEL 0x1
 EndEvent
 
 Tale2Begin:
-Text(FillerDialogue)
+Text(Tale2LeadIn)
 SystemText(Tale2Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -229,7 +270,7 @@ LABEL 0x1
 EndEvent
 
 Tale11Begin:
-Text(FillerDialogue)
+Text(Tale11LeadIn)
 SystemText(Tale11Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -238,7 +279,7 @@ LABEL 0x1
 EndEvent
 
 Tale12Begin:
-Text(FillerDialogue)
+Text(Tale12LeadIn)
 SystemText(Tale12Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement

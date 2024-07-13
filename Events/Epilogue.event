@@ -582,8 +582,7 @@ CHECK_EVENTID SamCharleyFlag
 	BNE 0x311 0xc 0x0
 		CHECK_EVENTID SamBechamelFlag
 		BNE 0x225 0xc 0x0
-		FlashCursor(Sam,30)
-		Text(Epilogue_SamDalst)//sam back to barford
+		EpilogueUnitText(Sam,Epilogue_SamDalst,0x888)
 		GOTO 0x225
 LABEL 0x311
 FlashCursor(Sam,30)
@@ -610,6 +609,7 @@ STAL 120
 EndEvent
 
 BeginningScene:
+ENUF 0x84 //boss icon
 EVBIT_MODIFY 3
 EVBIT_T 8; SetBackground(Map2CG); STAL 120; NarrationText(Epilogue_Narration)
 //CleanTextNoMap(HallCG,FillerDialogue)

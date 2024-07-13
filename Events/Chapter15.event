@@ -502,10 +502,11 @@ MUSC S_Crisis
 TEXTCONT
 TEXTEND
 FADI 16
-SetBackground(Map2CG)
+SetBackground(Map2WordsCG)
 STAL 120
 NarrationText(Ch15_Narration)
 FADI 16
+CLEAN
 RandomRainSetter
 MUSC S_Crisis
 CleanText(HallCG,Ch15_Opening2)//elcorian goes to get dudes

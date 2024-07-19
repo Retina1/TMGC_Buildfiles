@@ -88,6 +88,7 @@ BEQ 0x90 0xc 0x0
 	CHECK_EVENTID BOATFLAGWOO
 	BEQ 0x91 0xc 0x0
 	Text(Epilogue_MultiAercolynLoverAlt)//boat
+	ENUT PolyboatFlag
 	GOTO 0x92
 	LABEL 0x91
 	Text(Epilogue_MultiAercolynLover)//no boat
@@ -150,6 +151,7 @@ EpilogueUnitText(SecretClarque,Epilogue_ClarqueMercenaries,0x17)
 EpilogueUnitText(Valeria,Epilogue_ValeriaMercenaries,0x18)
 EpilogueUnitText(Olsen,Epilogue_OlsenMercenaries,0x1a)
 EpilogueUnitText(Kyrie,Epilogue_KyrieMercenaries,0x1b)
+MUSCSLOW 0x7fff
 STAL 120
 EndEvent
 
@@ -177,7 +179,7 @@ EpilogueFlagUnitText(Horatio,HoratioMusicFlag,Epilogue_HoratioHolanisAlt,0x411)/
 EpilogueNoFlagUnitText(Horatio,HoratioMusicFlag,Epilogue_HoratioHolanis,0x412)//no summon
 MUSCSLOW 0x7fff
 STAL 30
-MUSCSLOW S_WistfulWild
+MUSC S_WistfulWild
 LABEL 0x500
 EpilogueUnitText(Simone,Epilogue_SimoneHolanis,0x51)
 EpilogueNoFlagUnitText(Ptolemy,PtolemyJohanFlag,Epilogue_PtolemyHolanis,0x91)
@@ -186,6 +188,7 @@ EpilogueUnitText(Ian,Epilogue_IanHolanis,0x81)
 EpilogueUnitText(UnitQ,Epilogue_QHolanis,0x31)
 EpilogueUnitText(Tonnamin,Epilogue_TonnaminHolanis,0x71)
 EpilogueUnitText(Sveltzalus,Epilogue_SveltzalusHolanis,0x11)
+MUSCSLOW 0x7fff
 STAL 120
 EndEvent
 
@@ -244,6 +247,7 @@ BEQ 0x1a 0xc 0x0
 LABEL 0x1a
 EpilogueUnitText(Tobias,Epilogue_TobiasYgstra,0x1d)//toby solo
 EpilogueUnitText(SecretJonas,Epilogue_JonasYgstra,0x18)
+MUSCSLOW 0x7fff
 STAL 120
 EndEvent
 
@@ -302,6 +306,7 @@ BEQ 0x34 0xc 0x0
 	FlashCursor(SecretLaronde,30)	
 	Text(Epilogue_LarondeRoseOpistia)
 LABEL 0x34
+MUSCSLOW 0x7fff
 STAL 120
 EndEvent
 
@@ -373,6 +378,7 @@ EpilogueFlagUnitText(Toddsworth,CharleyToddsworthFlag,Epilogue_ToddsworthPort,0x
 EpilogueFlagUnitText(Hollandaise,BechamelHollandaiseFlag,Epilogue_HollandaisePortAlt,0x76)//hollandaise support
 EpilogueNoFlagUnitText(Hollandaise,BechamelHollandaiseFlag,Epilogue_HollandaisePort,0x77)//hollandaise no support
 EpilogueUnitText(Agnes,Epilogue_AgnesPort,0x79)//agnes
+MUSCSLOW 0x7fff
 STAL 120
 EndEvent
 
@@ -442,6 +448,7 @@ BNE 0x22 0xc 0x0
 EpilogueNoFlagUnitText(Leila,RachaelLeilaFlag,Epilogue_LeilaElbaCor,0x17)//leila
 EpilogueFlagUnitText(Leila,RachaelLeilaFlag,Epilogue_LeilaElbaCorAlt,0x18)//leila alt
 LABEL 0x22
+MUSCSLOW 0x7fff
 STAL 120
 EndEvent
 
@@ -513,6 +520,7 @@ BEQ 0x21 0xc 0x0
 	FlashCursor(Estelle,30)
 	Text(Epilogue_RiftEstelleMevion)
 LABEL 0x21
+MUSCSLOW 0x7fff
 STAL 120
 EndEvent
 
@@ -605,6 +613,7 @@ EpilogueUnitText(Emile,Epilogue_EmileDalst,0x226)
 		EpilogueUnitText(Dirk,Epilogue_DirkDalst,0x229)
 	LABEL 0x302
 EpilogueUnitText(Addington,Epilogue_AddingtonDalst,0x232)
+MUSCSLOW 0x7fff
 STAL 120
 EndEvent
 
@@ -619,23 +628,23 @@ SilentKillUnit(0xd2)
 SilentKillUnit(0x7e)
 LOAD1 0x1 imnotcryingyouare
 CALL SupportFlagSetter //set flags for all supports that impact paired endings
-MUSCSLOW AmbientBirds
+MUSC AmbientBirds
 CALL DalstResolution
-MUSCSLOW S_SMT4Tokyo
+MUSC S_SMT4Tokyo
 CALL MevionResolution
-MUSCSLOW S_Terra
+MUSC S_Terra
 CALL ElbaCorResolution
-MUSCSLOW AmbientWater
+MUSC AmbientWater
 CALL PortResolution
-MUSCSLOW S_WhenMotherWasThereAlt
+MUSC S_WhenMotherWasThereAlt
 CALL OpistiaResolution
-MUSCSLOW AmbientWindGusts
+MUSC AmbientWindGusts
 CALL YgstraResolution
-MUSCSLOW S_WistfulWild
+MUSC S_WistfulWild
 CALL HolanisResolution
-MUSCSLOW S_WelcomeToLegend
+MUSC S_WelcomeToLegend
 CALL MercenaryResolution
-MUSCSLOW S_CircleOfTheMoon
+MUSC S_CircleOfTheMoon
 CALL AercolynResolution
 CheckNewGameFlag(10)
 BEQ 0x999 0xc 0x0

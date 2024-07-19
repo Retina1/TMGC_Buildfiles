@@ -138,7 +138,7 @@ Armored Blow: +10 Def[N]
 when initiating battle.[X]
 
 ## SD_Vantage
-Vantage: If HP < 50%,[N]
+Vantage: When HP < 50%,[N]
 strike first when attacked.[X]
 
 ## SD_Desperation
@@ -146,7 +146,7 @@ Alacrity: If unit AS is 6 or more greater[N]
 than foe AS, double before counters.[X]
 
 ## SD_Wrath
-Wrath: If HP < 50%, +50 Crit.[X]
+Wrath: When HP < 50%, +50 Crit.[X]
 
 ## SD_Counter
 Counter: Reflect physical damage[N]
@@ -949,8 +949,8 @@ Focused Goal: +2 Atk, +30 Hit[N]
 on Seize and Kill Boss maps.[X]
 
 ## SD_DefiantCrit
-Defiant Crit: When HP is 25%[N]
-or lower, gain +30 Crit.[X]
+Waning: If HP < 50%,[N]
+negate enemy Def/Res/Prt.[X]
 
 ## SD_DefiantStr
 Defiant Str: When HP is 25%[N]

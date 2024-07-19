@@ -320,7 +320,11 @@ POP
 PUSH
 ORG $8D378
 SHORT $E010 //Always branch even if there's fog
+ORG $8E4E9
+BYTE 0xE0
 POP
+
+
 
 //rearrange force deploys
 PUSH

@@ -376,6 +376,10 @@ ALIGN 4
 VladmirMug:
 #incbin "dmps/Vladmir.dmp"
 setMugEntry(0x2c,VladmirMug,3,5,3,3)
+ALIGN 4
+VladmirPromoMug:
+#incbin "dmps/VladmirPromo.dmp"
+setMugEntry(0x14a,VladmirPromoMug,3,5,3,3)
 
 ALIGN 4
 HollandaiseMug:

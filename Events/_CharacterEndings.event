@@ -222,7 +222,18 @@ ALIGN 4
 NewEndingsTable:
 //use flag endings to do pairs maybe, either that or get snek to help with paired tech
 //boat flag, poly flag
-
+SoloEndingFlagTableEntry(Blair,BlairPolyEndingAlt,PolyboatFlag)
+SoloEndingFlagTableEntry(Arin,ArinPolyEndingAlt,PolyboatFlag)
+SoloEndingFlagTableEntry(Natasia,NatasiaPolyEndingAlt,PolyboatFlag)
+SoloEndingFlagTableEntry(Avan,AvanPolyEndingAlt,PolyboatFlag)
+SoloEndingFlagTableEntry(Yuyu,YuyuPolyEndingAlt,PolyboatFlag)
+SoloEndingFlagTableEntry(Estelle,EstellePolyEndingAlt,PolyboatFlag)
+SoloEndingFlagTableEntry(Blair,BlairPolyEnding,GirlkissingFlag)
+SoloEndingFlagTableEntry(Arin,ArinPolyEnding,GirlkissingFlag)
+SoloEndingFlagTableEntry(Natasia,NatasiaPolyEnding,GirlkissingFlag)
+SoloEndingFlagTableEntry(Avan,AvanPolyEnding,GirlkissingFlag)
+SoloEndingFlagTableEntry(Yuyu,YuyuPolyEnding,GirlkissingFlag)
+SoloEndingFlagTableEntry(Estelle,EstellePolyEnding,GirlkissingFlag)
 //kenneth/hilbert
 SoloEndingTableEntry(Kenneth,KennethSoloEnding)
 //alts for bechamel
@@ -235,12 +246,12 @@ SoloEndingTableEntry(Desmond,DesmondSoloEnding)
 //sam/charley
 //sam/emile
 //alts for bechamel if not emile
-SoloEndingFlagTableEntry(Sam,SamSoloEnding,SamBechamelFlag)
+SoloEndingFlagTableEntry(Sam,SamEndingAlt,SamBechamelFlag)
 SoloEndingTableEntry(Sam,SamSoloEnding)
 //josef/hilbert
 SoloEndingTableEntry(Josef,JosefSoloEnding)
 //peggy/butch
-//alt if she ends on boat through natasia
+//alt if she ends on boat through natasia (add a flag for that?)
 SoloEndingTableEntry(Peggy,PeggySoloEnding)
 //butch/peter
 SoloEndingTableEntry(Butch,ButchSoloEnding)
@@ -287,7 +298,7 @@ SoloEndingTableEntry(Toddsworth,ToddsworthSoloEnding)
 SoloEndingTableEntry(Yuyu,YuyuSoloEnding)
 SoloEndingTableEntry(Artemis,ArtemisSoloEnding)
 
-SoloEndingFlagTableEntry(Hollandaise,HollandaiseSoloEnding,BechamelHollandaiseFlag)
+SoloEndingFlagTableEntry(Hollandaise,HollandaiseEndingAlt,BechamelHollandaiseFlag)
 SoloEndingTableEntry(Hollandaise,HollandaiseSoloEnding)
 SoloEndingTableEntry(Vladmir,VladmirSoloEnding)
 SoloEndingFlagTableEntry(Horatio,HoratioSoloEndingAlt,HoratioFlag)//summon alt
@@ -305,7 +316,7 @@ SoloEndingTableEntry(Tonnamin,TonnaminSoloEnding)
 SoloEndingTableEntry(Joan,JoanSoloEnding)
 SoloEndingTableEntry(Sonia,SoniaSoloEnding)
 
-SoloEndingFlagTableEntry(Tobias,TobiasEndingAlt,LeilaTobiasFlag)
+SoloEndingFlagTableEntry(Tobias,TobiasEndingAlt,LeilaTobiasFlag) //make play only if leila has a lover
 SoloEndingTableEntry(Tobias,TobiasSoloEnding)
 //rose/laronde
 SoloEndingTableEntry(SecretLaronde,LarondeSoloEnding)

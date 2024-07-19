@@ -1,0 +1,116 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsT11,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData2
+POIN Tale11Units Tale11Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x65,T11OutOfTime,9)
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Door(23,2)
+Door(23,4)
+Door(23,6)
+Door(23,8)
+Door(23,10)
+Door(23,12)
+Chest(Annihilation,18,7)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatAll(EndingScene)
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+TrapData2:
+ENDTRAP
+
+ALIGN 4
+
+Tale11Units:
+UNIT Blair BlairLordX 0x0 Level(20,Ally,0) [13,13] 0x0 0x0 0x0 0x0 [Hopesinger,Starfall,EarthPower] NoAI //give her resolve and waning effects as skills
+UNIT Arin ArinValk 0x0 Level(20,Ally,0) [13,12] 0x0 0x0 0x0 0x0 [HolyBrand,ThiefStaff,SoulHilt] NoAI
+UNIT Natasia WarriorF 0x0 Level(20,Ally,0) [13,14] 0x0 0x0 0x0 0x0 [KillerAxe,Ladymace,Caduceus] NoAI //give her staff rank
+UNIT Avan ValkF 0x0 Level(20,Ally,0) [12,13] 0x0 0x0 0x0 0x0 [Galewind,Runesword,Prototype,DoorKey] NoAI //give her anima rank
+UNIT Yuyu Freelancer 0x0 Level(20,Ally,0) [14,13] 0x0 0x0 0x0 0x0 [SorrowsPilgrim,DoorKey] NoAI //give her bow rank
+UNIT Estelle BowPalF 0x0 Level(20,Ally,0) [11,12] 0x0 0x0 0x0 0x0 [Ineubrenos,Nuiusseon,BiasedQuiver] NoAI
+UNIT Addington 0x0 0x0 Level(20,Ally,0) [15,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Toddsworth Bard 0x0 Level(20,Ally,0) [12,15] 0x0 0x0 0x0 0x0 [Toddhand,VoidBracers] NoAI
+UNIT Tonnamin AxeGen 0x0 Level(20,Ally,0) [14,11] 0x0 0x0 0x0 0x0 [Hurlbat,DangerPick,SavageGauntlet] NoAI
+UNIT Kyrie KyrieSwordmaster 0x0 Level(20,Ally,0) [12,11] 0x0 0x0 0x0 0x0 [MasterSword,Soothesword] NoAI
+UNIT UnitQ SwdPalF 0x0 Level(20,Ally,0) [11,14] 0x0 0x0 0x0 0x0 [Greatbow,Phalanotis,FlameSword] NoAI
+UNIT Valeria Falco 0x0 Level(20,Ally,0) [15,12] 0x0 0x0 0x0 0x0 [Luckbow,TheCreator,Stalwart] NoAI
+UNIT Sveltzalus Bigerle 0x0 Level(20,Ally,0) [14,15] 0x0 0x0 0x0 0x0 [CrimsonEye,Slam,Voulche] NoAI
+UNIT
+
+Tale11Enemies:
+//stationaries
+UNIT Tale11Generic SageF 0x0 Level(20,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [Waning,Bolting,EarthPower] NeverMoveAI
+UNIT Tale11Generic Sniper 0x0 Level(20,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Ineubrenos,Passacaglia,ArkhinalHandle,BiasedQuiver] NeverMoveAI
+UNIT Tale11Generic HalberdierF 0x0 Level(20,Enemy,1) [3,24] 0x0 0x0 0x0 0x0 [Stalwart,Nuiusseon,TrueSaunion,SoaringShaft] NeverMoveAI
+UNIT Tale11Generic SwdGen 0x0 Level(20,Enemy,1) [20,22] 0x0 0x0 0x0 0x0 [TheCreator,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NeverMoveAI
+
+
+UNIT Tale11Generic SwdPal 0x0 Level(20,Enemy,1) [7,14] 0x0 0x0 0x0 0x0 [Phalanotis,Runesword] NoAI
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+DISA Addington
+LOAD1 0x1 Tale11Units
+ENUN
+LOAD1 0x1 Tale11Enemies
+ENUN
+TaleSetUnitStat(Blair,55,25,36,34,32,30,17,32)
+TaleSetUnitWEXP(Blair,251,0,0,0,181,251,181,181)
+SetUnitSkills(Blair,InspirationID,ResonanceID,ResolveID,DefiantCritID)
+SetSupport(Blair,Arin,ASupport,0)
+SetSupport(Blair,Natasia,ASupport,0)
+SetSupport(Blair,Avan,ASupport,0)
+SetSupport(Blair,Yuyu,ASupport,0)
+SetSupport(Blair,Estelle,ASupport,0)
+ENDA
+
+EndingScene:
+ENUT Tale11DoneFlag
+MUSC 0x0
+SystemText(BlankCG,TaleEnding)
+MoveToChapter(HubMap)
+ENDA
+
+T11OutOfTime:
+Text(FillerDialogue)
+StartGameOver
+EndEvent
+
+//MESSAGE Events end at offset CURRENTOFFSET

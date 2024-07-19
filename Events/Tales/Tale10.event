@@ -1,0 +1,111 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsT10,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData2
+POIN Tale10Units Tale10Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Door(4,6)
+Door(5,6)
+Door(9,6)
+Door(10,6)
+Door(14,6)
+Door(15,6)
+Door(4,9)
+Door(5,9)
+Door(9,9)
+Door(10,9)
+Door(14,9)
+Door(15,9)
+Door(11,19)
+Door(12,19)
+Door(13,19)
+Door(11,20)
+Door(12,20)
+Door(13,20)
+Chest(0x0,6,2)
+Chest(0x0,6,3)
+Chest(0x0,11,2)
+Chest(0x0,11,3)
+Chest(0x0,16,2)
+Chest(0x0,16,3)
+Chest(0x0,3,12)
+Chest(0x0,3,13)
+Chest(0x0,8,12)
+Chest(0x0,8,13)
+Chest(0x0,13,12)
+Chest(0x0,13,13)
+END_MAIN
+
+MiscBasedEvents:
+//DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+TrapData2:
+ENDTRAP
+
+ALIGN 4
+
+Tale10Units:
+UNIT Simone SorcF 0x0 Level(1,Ally,0) [12,7] 0x0 0x0 0x0 0x0 [Nightfall,Hell,Sleep] NoAI
+UNIT
+
+Tale10Enemies:
+//center
+UNIT Nathaniel Sorc 0x0 Level(5,Enemy,0) [9,18] 0x0 0x0 0x0 0x0 [Fenrir,Fortify] NeverMoveAI
+UNIT
+
+ALIGN 4
+//event to make simone rescue arin asap, game over if she's dropped (simone says the fuck am i doing)
+
+BeginningScene:
+DISA Addington
+LOAD1 0x1 Tale10Units
+ENUN
+LOAD1 0x1 Tale10Enemies
+ENUN
+TaleSetUnitStat(Simone,28,3,21,18,15,10,18,20)
+TaleSetUnitWEXP(Simone,0,0,0,0,121,0,0,251)
+SetUnitSkills(Simone,FocusedGoalID,SaviorID,0,0)
+ENDA
+
+EndingScene:
+ENUT Tale10DoneFlag
+MUSC 0x0
+SystemText(BlankCG,TaleEnding)
+MoveToChapter(HubMap)
+ENDA
+
+//MESSAGE Events end at offset CURRENTOFFSET

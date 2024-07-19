@@ -181,6 +181,7 @@ EndEvent
 
 Tale1Begin:
 Text(Tale1LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale1Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -190,6 +191,7 @@ EndEvent
 
 Tale2Begin:
 Text(Tale2LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale2Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -198,7 +200,8 @@ LABEL 0x1
 EndEvent
 
 Tale3Begin:
-Text(FillerDialogue)
+Text(Tale3LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale3Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -207,7 +210,8 @@ LABEL 0x1
 EndEvent
 
 Tale4Begin:
-Text(FillerDialogue)
+Text(Tale4LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale4Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -216,7 +220,8 @@ LABEL 0x1
 EndEvent
 
 Tale5Begin:
-Text(FillerDialogue)
+Text(Tale5LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale5Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -225,7 +230,8 @@ LABEL 0x1
 EndEvent
 
 Tale6Begin:
-Text(FillerDialogue)
+Text(Tale6LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale6Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -234,7 +240,8 @@ LABEL 0x1
 EndEvent
 
 Tale7Begin:
-Text(FillerDialogue)
+Text(Tale7LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale7Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -243,7 +250,8 @@ LABEL 0x1
 EndEvent
 
 Tale8Begin:
-Text(FillerDialogue)
+Text(Tale8LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale8Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -252,7 +260,8 @@ LABEL 0x1
 EndEvent
 
 Tale9Begin:
-Text(FillerDialogue)
+Text(Tale9LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale9Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -261,7 +270,8 @@ LABEL 0x1
 EndEvent
 
 Tale10Begin:
-Text(FillerDialogue)
+Text(Tale10LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale10Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -271,6 +281,7 @@ EndEvent
 
 Tale11Begin:
 Text(Tale11LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale11Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement
@@ -280,6 +291,7 @@ EndEvent
 
 Tale12Begin:
 Text(Tale12LeadIn)
+EVBIT_MODIFY 4
 SystemText(Tale12Selector)
 IfNoSelectedGoto(0x1)
 DisableFreeMovement

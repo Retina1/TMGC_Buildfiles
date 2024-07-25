@@ -1,3 +1,19 @@
+//fuck frelia
+PUSH
+ORG 0x9dec
+BYTE 0x4e
+POP
+
+PUSH
+//Allow chapter intro to play for chapter index 0x38
+ORG 0x1551A
+SHORT 0x46C0
+
+//Change flag that disables chapter intro for chapter index 0x6
+ORG 0x15520
+BYTE 0 //0 = always false
+POP
+
 //mine damage
 PUSH
 ORG 0x375A4

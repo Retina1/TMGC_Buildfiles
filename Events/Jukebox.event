@@ -244,11 +244,12 @@ ASMC TopLevelCall+1
 			RefreshLordSplitTiles
 			ASMC BonusMusCall+1
 				SongChoice(0,S_RunaAttack)
-				SongChoice(1,S_ModernDayOuroboros)
-				SongChoice(2,S_Ecstasy)
-				SongChoice(3,S_ClaretHollows)
-				SongChoice(4,S_BeatOfTheTerror)
-				SongChoice(5,S_EleventhHour)
+				SongChoice(1,S_DaatVengeance)
+				SongChoice(2,S_ModernDayOuroboros)
+				SongChoice(3,S_Ecstasy)
+				SongChoice(4,S_ClaretHollows)
+				SongChoice(5,S_BeatOfTheTerror)
+				SongChoice(6,S_EleventhHour)
 			RefreshLordSplitTiles
 			ASMC BonusMusCall2+1
 				SongChoice(0,S_ToweringPair)
@@ -301,12 +302,13 @@ BonusMusCall:
 	SHORT 0xB510 0x1C04 0x4B10 0x469E 0xF800 0x4A10 0x7850 0x2101 0x4308 0x2102 0x4308 0x2104 0x4308 0x2108 0x4308 0x2110 0x4308 0x7050 0x2000 0x4B0A 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4B09 0x469E 0xF800 0x4809 0x1C21 0x4B07 0x469E 0xF800 0xBC10 0xBC01 0x4700 0xE884 0x0804 0x3080 0x0300 0x3D38 0x0800 0x43A8 0x0800 0xEB68 0x0804 0xEBC8 0x0804
 	POIN BonusMusDef
 BonusMusDef:
-	BYTE 5 2 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	BYTE 5 1 20 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
 	WORD 1                  // style (change it if u want)
 	POIN BonusMusCommands 	// Command Definitions
 	WORD 0 0 0 0 0 0  
 BonusMusCommands:
 	EventMenuCommand(SR_RunaAttack)
+	EventMenuCommand(SR_DaatVengeance)
 	EventMenuCommand(SR_ModernDayOuroboros)
 	EventMenuCommand(SR_Ecstasy)
 	EventMenuCommand(SR_ClaretHollows)

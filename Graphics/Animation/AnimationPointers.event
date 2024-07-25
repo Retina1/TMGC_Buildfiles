@@ -109,6 +109,11 @@
 #include "CharacterSpecific\CarbonU\Unarmed Installer.event"
 }
 {
+#include "CharacterSpecific\CarbonP\Sword Installer.event"
+#include "CharacterSpecific\CarbonP\Bow Installer.event"
+#include "CharacterSpecific\CarbonP\Unarmed Installer.event"
+}
+{
 #include "CharacterSpecific\Rift\Sword Installer.event"
 #include "CharacterSpecific\Rift\Unarmed Installer.event"
 }
@@ -512,9 +517,27 @@
 #include "CharacterSpecific\PeggyU\Staff Installer.event"
 #include "CharacterSpecific\PeggyU\Unarmed Installer.event"
 }
+{
+#include "CharacterSpecific\Emile\Magic Installer.event"
+#include "CharacterSpecific\Emile\Staff Installer.event"
+}
+
+ALIGN 4
+EmileAnims:
+MagicAnim(0x112)
+StaffAnim(0x113)
+EndAnim
+
 ALIGN 4
 LiberationAnims:
 SpecialAnim(0x101,Aspect)
+EndAnim
+
+ALIGN 4
+CarbonPAnims:
+SwordAnim(0x114)
+BowAnim(0x110)
+UnarmedAnim(0x111)
 EndAnim
 
 ALIGN 4

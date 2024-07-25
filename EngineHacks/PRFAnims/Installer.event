@@ -24,10 +24,12 @@ POIN CustomAnimeTable
 
 #define CustomAnimationSet(unit,class,pointer) "BYTE unit; BYTE class; BYTE 0x00; BYTE 0x00; WORD pointer"
 CustomAnimeTable:
+CustomAnimationSet(Emile,Sage,EmileAnims|IsPointer)
 CustomAnimationSet(SecretLaronde,Halberdier,LarondeAnims|IsPointer)
 CustomAnimationSet(Laronde,Halberdier,LarondeAnims|IsPointer)
 CustomAnimationSet(Flynn,BowPal,RangerFlynnAnims|IsPointer)
 CustomAnimationSet(Carbon,BowCav,CarbonUAnims|IsPointer)
+CustomAnimationSet(Carbon,BowPal,CarbonPAnims|IsPointer)
 CustomAnimationSet(Kyrie,SwMastF,KyrieAnims|IsPointer)
 CustomAnimationSet(Peggy,Cleric,PeggyUAnims|IsPointer)
 CustomAnimationSet(Butch,Hero,ButchPAnims|IsPointer)

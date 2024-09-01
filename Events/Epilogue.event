@@ -673,7 +673,8 @@ ASMC 0xC4879 //credits
 MUSC 0x0
 CHECK_ALIVE Elcorian
 BEQ 0x1 0xc 0x0
-	FADU 2
+	FADI 16
+	CLEAN
 	SetBackground(MoonCG)
 	Location(TowerPeakLabel)
 	SOUN 0x99
@@ -687,23 +688,10 @@ BEQ 0x1 0xc 0x0
 	TEXTSTART
 	TEXTSHOW Epilogue_FinalScene
 	TEXTEND
-	//no second set of footsteps
-	/*
-	SOUN 0x99
-	STAL 30
-	SOUN 0x98
-	STAL 30
-	SOUN 0x99
-	STAL 30
-	SOUN 0x98
-	STAL 30
-	TEXTCONT
-	TEXTEND*/
-	FADI 0x2
-CLEAN //clean up these fades eventually
 LABEL 0x1
+FADI 16
 STAL 180
-//FADU 2
+CLEAN
 SetBackground(FinTextCG)
 STAL 600
 FADI 0x1
@@ -798,6 +786,22 @@ CHECK_EVENTID BlairEstelleFlag
 BNE 0x999 0xc 0x0
 ENUT BlairSingleFlag
 LABEL 0x999
+CHECK_EVENTID LeilaTobiasFlag
+BEQ 0x777 0xc 0x0
+CHECK_EVENTID LeilaWilhelmFlag
+BEQ 0x777 0xc 0x0
+ENUT LeilaTobiasSplitFlag
+LABEL 0x777
+CHECK_EVENTID NatasiaPeggyFlag
+BEQ 0x778 0xc 0x0
+CHECK_EVENTID NatasiaBechamelFlag
+BEQ 0x778 0xc 0x0
+ENUT PeggyOnBoatFlag
+LABEL 0x778
+CHECK_EVENTID BlairNatasiaFlag
+BEQ 0x779 0xc 0x0
+ENUT BlairNotWithNatFlag
+LABEL 0x779
 EndEvent
 
 

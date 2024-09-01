@@ -44,6 +44,14 @@ Chest(0,24,21)
 END_MAIN
 
 MiscBasedEvents:
+AreaEvent(0x10,T12AreaTrigger,13,4,13,23)
+AreaEvent(0x11,T12AreaTrigger2,9,4,9,23)
+AreaEvent(0x12,T12AreaTrigger3,7,4,7,23)
+AreaEvent(0x13,T12AreaTrigger4,1,4,1,23)
+AreaEvent(0x14,T12AreaTrigger5,19,4,19,23)
+AreaEvent(0x15,T12AreaTrigger6,21,4,21,23)
+AreaEvent(0x16,T12AreaTrigger7,23,7,33,19)
+AreaEvent(0x17,T12AreaTrigger8,23,1,33,6)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -75,6 +83,31 @@ UNIT
 
 ALIGN 4
 
+T12AreaTrigger:
+Text(Tale12AreaConvo1)
+EndEvent
+T12AreaTrigger2:
+Text(Tale12AreaConvo2)
+EndEvent
+T12AreaTrigger3:
+Text(Tale12AreaConvo3)
+EndEvent
+T12AreaTrigger4:
+Text(Tale12AreaConvo4)
+EndEvent
+T12AreaTrigger5:
+Text(Tale12AreaConvo5)
+EndEvent
+T12AreaTrigger6:
+Text(Tale12AreaConvo6)
+EndEvent
+T12AreaTrigger7:
+Text(Tale12AreaConvo7)
+EndEvent
+T12AreaTrigger8:
+Text(Tale12AreaConvo8)
+EndEvent
+
 BeginningScene:
 DISA Addington
 LOAD1 0x1 Tale12Units
@@ -91,7 +124,7 @@ AddUnitStatus(Sinclair,MovBonus,6)
 AddUnitStatus(PGNathaniel,MovBonus,6)
 AddUnitStatus(PGMichael,MovBonus,6)
 CleanText(DungeonCG,Tale12Opening)
-ENDA
+EndEvent
 
 EndingScene:
 MUSC S_Chaos
@@ -102,6 +135,7 @@ DISA PGNathaniel
 DISA PGMichael
 DISA Sinclair
 ENUT Tale12DoneFlag
+SetNewGameFlag(10)
 MoveToChapter(HubMap)
 ENDA
 

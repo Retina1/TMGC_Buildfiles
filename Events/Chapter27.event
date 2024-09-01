@@ -49,6 +49,7 @@ CharacterEventBothWays(0x25,C27AvanToddsworthSupport,Avan,Toddsworth)//B+
 CharacterEventBothWays(0x26,C27JoanTobiasSupport,Joan,Tobias)//B+
 CharacterEventBothWays(0x27,C27CharleyYuyuSupport,Charley,Yuyu)//B
 CharacterEventBothWays(0x28,C27HyperiusLeilaSupport,Hyperius,Leila)//B+
+CharacterEventBothWays(BaseFlag4,C27HoratioSimoneSupport,Horatio,Simone)//B+
 //rose/olsen that makes rose an assassin
 RoseShopMacro
 END_MAIN
@@ -546,6 +547,19 @@ UNIT
 
 ALIGN 4
 
+C27HoratioSimoneSupport:
+MUSC S_HisWorld
+Text(HoratioSimoneBPSupport)
+SET_ACTIVE 0
+StartBattle
+CriticalHit(0,99)
+EndAttack
+FIG2 Horatio Simone HoratioBlade
+//STAL 30
+Text(HoratioKillsSimone)
+SetSupport(Horatio,Simone,BPSupport,1)
+EndEvent
+
 C27KennethHilbertSupport:
 Text(KennethHilbertASupport)
 SetSupport(Kenneth,Hilbert,ASupport,1)
@@ -712,6 +726,7 @@ SupportFlagOn(Avan,Toddsworth,0x25,BSupport)
 SupportFlagOn(Joan,Tobias,0x26,BSupport)
 SupportFlagOn(Charley,Yuyu,0x27,CPSupport)
 SupportFlagOn(Hyperius,Leila,0x28,BSupport)
+SupportFlagOn(Horatio,Simone,BaseFlag4,BSupport)
 COUNTER_SET 0x1 0x0
 COUNTER_SET 0x2 0x0
 COUNTER_SET 0x3 0x0

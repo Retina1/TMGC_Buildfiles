@@ -21,6 +21,11 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,Tale2Spawn1,4)
+TurnEventPlayer(0x0,Tale2Spawn2,7)
+TurnEventPlayer(0x0,Tale2Spawn3,10)
+TurnEventPlayer(0x0,Tale2Spawn4,13)
+TurnEventPlayer(0x0,Tale2Spawn5,15,100)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -66,47 +71,134 @@ ALIGN 4
 
 Tale2Units:
 //tale 2 cast - zeke, rachael, cassius, alexis, hyperius, jeff, artemis
-UNIT Zeke ZekeLordX 0x0 Level(15,Ally,0) [3,11] 0x0 0x0 0x0 0x0 [Stalwart,GildedBow,Wyrmslayer,Elixir] NoAI
-UNIT Rachael Falco 0x0 Level(17,Ally,0) [2,8] 0x0 0x0 0x0 0x0 [FlyingSpike,Axereaver,Shockstick] NoAI
-UNIT Leila Falco 0x0 Level(15,Ally,0) [1,10] 0x0 0x0 0x0 0x0 [Courante,Lancereaver,LightBrand] NoAI
-UNIT Cassius AxePal 0x0 Level(16,Ally,0) [5,11] 0x0 0x0 0x0 0x0 [Galerider,Swordreaver,Tomahawk] NoAI
-UNIT Alexis AxeGen 0x0 Level(14,Ally,0) [4,9] 0x0 0x0 0x0 0x0 [BraveAxe,Javelin,Rapier,Elixir] NoAI
-UNIT Hyperius SwdGen 0x0 Level(20,Ally,0) [5,10] 0x0 0x0 0x0 0x0 [Unyielding,Elixir] NoAI
-UNIT Jeff Assass 0x0 Level(12,Ally,0) [3,13] 0x0 0x0 0x0 0x0 [BraveSword,SteelBow,Heal] NoAI
-UNIT Artemis AxePalF 0x0 Level(14,Ally,0) [2,12] 0x0 0x0 0x0 0x0 [GildedAxe,Longbow] NoAI
+UNIT Zeke ZekeLordX 0x0 Level(15,Ally,0) [0,11] 0x0 0x0 0x1 REDA4R11 [Stalwart,GildedBow,Wyrmslayer,Elixir] NoAI
+UNIT Rachael Falco 0x0 Level(17,Ally,0) [0,9] 0x0 0x0 0x1 REDA2R8 [FlyingSpike,Axereaver,Shockstick] NoAI
+UNIT Leila Falco 0x0 Level(15,Ally,0) [0,14] 0x0 0x0 0x1 REDA1R10 [Courante,FlameSword,Rapier] NoAI
+UNIT Cassius AxePal 0x0 Level(16,Ally,0) [0,10] 0x0 0x0 0x1 REDA6R11 [Galerider,Swordreaver,Tomahawk] NoAI
+UNIT Alexis AxeGen 0x0 Level(14,Ally,0) [0,10] 0x0 0x0 0x1 REDA4R9 [BraveAxe,HandAxe,SilverSword,Elixir] NoAI
+UNIT Hyperius SwdGen 0x0 Level(20,Ally,0) [0,12] 0x0 0x0 0x1 REDA5R10 [Unyielding,SteelBow,HandAxe,Elixir] NoAI
+UNIT Jeff Assass 0x0 Level(12,Ally,0) [0,13] 0x0 0x0 0x1 REDA5R13 [BraveSword,SteelBow,Recover] NoAI
+UNIT Artemis AxePalF 0x0 Level(14,Ally,0) [0,12] 0x0 0x0 0x1 REDA4R12 [GildedAxe,Longbow] NoAI
 UNIT
 
 Tale2Enemies:
-//center
-//UNIT PGArgent BowGen 0x0 Level(10,Enemy,0) [9,18] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow,Longbow,BraveLance] NeverMoveAI
-UNIT Bandit Warrior 0x0 Level(15,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [DangerPick] AttackInRangeAI
-UNIT Bandit Sniper 0x0 Level(15,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Greatbow,BraveBow] NeverMoveAI
+//funny block
+//UNIT Bandit BowPal 0x0 Level(11,Enemy,1) [27,0] 0x0 0x0 0x0 0x0 [Longbow] DelayedAI
+UNIT Bandit BowPal 0x0 Level(11,Enemy,1) [28,0] 0x0 0x0 0x0 0x0 [GildedBow] DelayedAI
+UNIT Bandit SwdPal 0x0 Level(11,Enemy,1) [27,1] 0x0 0x0 0x0 0x0 [MainGauche] DelayedAI
+UNIT Bandit LncPal 0x0 Level(11,Enemy,1) [28,1] 0x0 0x0 0x0 0x0 [TrueSaunion] DelayedAI
+UNIT Bandit AxePal 0x0 Level(11,Enemy,1) [29,1] 0x0 0x0 0x0 0x0 [BraveAxe] DelayedAI
+UNIT Bandit Valk 0x0 Level(9,Enemy,1) [28,2] 0x0 0x0 0x0 0x0 [Runesword] DelayedAI
+UNIT Bandit SwMast 0x0 Level(20,Enemy,1) [28,4] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
+//other block
+UNIT Bandit Sage 0x0 Level(11,Enemy,1) [28,12] 0x0 0x0 0x0 0x0 [Fimbulvetr] GroupOnePaceAI
+UNIT Bandit Hero 0x0 Level(11,Enemy,1) [27,13] 0x0 0x0 0x0 0x0 [BraveSword] GroupOnePaceAI
+UNIT Bandit Bishop 0x0 Level(20,Enemy,1) [28,13] 0x0 0x0 0x0 0x0 [JavelinRain,Resire] GroupOnePaceAI
+UNIT Bandit Hero 0x0 Level(11,Enemy,1) [29,13] 0x0 0x0 0x0 0x0 [BraveAxe] GroupOnePaceAI
+UNIT Bandit Halberdier 0x0 Level(11,Enemy,1) [28,14] 0x0 0x0 0x0 0x0 [TrueSaunion] GroupOnePaceAI
+//most stuff
+UNIT Bandit Sorc 0x0 Level(11,Enemy,1) [6,14] 0x0 0x0 0x0 0x0 [Jormungandr] NeverMoveAI
+UNIT Bandit Sorc 0x0 Level(11,Enemy,1) [7,5] 0x0 0x0 0x0 0x0 [Fenrir] NeverMoveAI
+UNIT Bandit Halberdier 0x0 Level(11,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
+UNIT Bandit Warrior 0x0 Level(11,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI
+UNIT Bandit Sniper 0x0 Level(11,Enemy,1) [19,10] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow] AttackInRangeAI
+UNIT Bandit WyvLord 0x0 Level(11,Enemy,1) [17,1] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Bandit Hero 0x0 Level(11,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Bandit LncGen 0x0 Level(11,Enemy,1) [20,4] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT Bandit Warrior 0x0 Level(11,Enemy,1) [25,9] 0x0 0x0 0x0 0x0 [Hammer,SilverAxe] AttackInRangeAI
+UNIT Bandit Sage 0x0 Level(11,Enemy,1) [24,1] 0x0 0x0 0x0 0x0 [Trisagion,Calibur] AttackInRangeAI
+UNIT Bandit SwdGen 0x0 Level(11,Enemy,1) [25,5] 0x0 0x0 0x0 0x0 [Rapier] AttackInRangeAI
+UNIT Bandit Warrior 0x0 Level(11,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [DangerPick] AttackInRangeAI
+UNIT Bandit Sniper 0x0 Level(11,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Greatbow,BraveBow] NeverMoveAI
 //village killers
-UNIT Bandit Berserker 0x0 Level(12,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [SilverAxe] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [SilverAxe,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [SilverAxe,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [13,14] 0x0 0x0 0x0 0x0 [Halberd,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [12,8] 0x0 0x0 0x0 0x0 [SilverAxe,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [11,14] 0x0 0x0 0x0 0x0 [SilverAxe,SavageGauntlet] BrigandAI
+UNIT
+
+Tale2Group1:
+UNIT Bandit Falco 0x0 Level(9,Enemy,1) [0,5] 0x0 0x0 0x0 0x0 [Shockstick] NoAI
+UNIT Bandit Hero 0x0 Level(9,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [Swordreaver,Lancereaver] NoAI
+UNIT Bandit Sage 0x0 Level(9,Enemy,1) [12,3] 0x0 0x0 0x0 0x0 [Calibur] NoAI
+UNIT Bandit LncGen 0x0 Level(9,Enemy,1) [14,12] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT
+
+Tale2Group2:
+UNIT Bandit BowPal 0x0 Level(9,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R13 [SilverBow] NoAI
+UNIT Bandit LncPal 0x0 Level(9,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R12 [SilverLance] NoAI
+UNIT Bandit SwdPal 0x0 Level(9,Enemy,1) [1,14] 0x0 0x0 0x1 REDA1R13 [SilverSword] NoAI
+UNIT Bandit SwdPal 0x0 Level(9,Enemy,1) [2,14] 0x0 0x0 0x1 REDA2R13 [Rapier] NoAI
+UNIT Bandit BowPal 0x0 Level(9,Enemy,1) [3,14] 0x0 0x0 0x1 REDA3R13 [SilverBow] NoAI
+UNIT Bandit AxePal 0x0 Level(9,Enemy,1) [3,14] 0x0 0x0 0x1 REDA3R12 [SilverAxe] NoAI
+UNIT
+
+Tale2Group3:
+UNIT Bandit Halberdier 0x0 Level(9,Enemy,1) [19,0] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
+UNIT Bandit Warrior 0x0 Level(9,Enemy,1) [20,0] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Bandit Sniper 0x0 Level(9,Enemy,1) [22,0] 0x0 0x0 0x0 0x0 [BraveBow] NoAI
+UNIT Bandit Hero 0x0 Level(9,Enemy,1) [23,0] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
+UNIT
+
+Tale2Group4:
+UNIT Bandit WyvLord 0x0 Level(9,Enemy,1) [0,0] 0x0 0x0 0x1 REDA0R1 [SilverLance,SoaringShaft] NoAI
+UNIT Bandit WyvLord 0x0 Level(9,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R0 [SilverLance,SoaringShaft] NoAI
+UNIT Bandit Falco 0x0 Level(9,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R1 [BraveSword,SoulHilt] NoAI
+UNIT Bandit Falco 0x0 Level(9,Enemy,1) [0,0] 0x0 0x0 0x1 REDA2R1 [SilverSword,SoulHilt] NoAI
+UNIT Bandit Falco 0x0 Level(9,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R2 [SilverSword,SoulHilt] NoAI
+UNIT
+
+Tale2Group5:
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [27,14] 0x0 0x0 0x1 REDA27R14 [GildedAxe,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [27,14] 0x0 0x0 0x1 REDA27R14 [GildedAxe,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [28,14] 0x0 0x0 0x1 REDA28R14 [GildedAxe,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [28,14] 0x0 0x0 0x1 REDA28R14 [GildedAxe,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [29,14] 0x0 0x0 0x1 REDA29R14 [GildedAxe,SavageGauntlet] BrigandAI
+UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [29,14] 0x0 0x0 0x1 REDA29R14 [GildedAxe,SavageGauntlet] BrigandAI
 UNIT
 
 ALIGN 4
+
+Tale2Spawn1:
+Reinforcements(Tale2Group1)
+EndEvent
+Tale2Spawn2:
+Reinforcements(Tale2Group2)
+EndEvent
+Tale2Spawn3:
+Reinforcements(Tale2Group3)
+EndEvent
+Tale2Spawn4:
+Reinforcements(Tale2Group4)
+Text(Tale2InfinitesComing)//infinites incoming
+EndEvent
+Tale2Spawn5:
+Reinforcements(Tale2Group5)
+EndEvent
 
 BeginningScene:
 DISA Addington
 LOAD1 0x1 Tale2Units
 ENUN
+CLEA 0
 LOAD1 0x1 Tale2Enemies
 ENUN
-TaleSetUnitStat(Zeke,56,27,16,32,27,20,20,13)
+ENUT JeffUnmaskFlag
+TaleSetUnitStat(Zeke,56,27,16,32,27,20,22,13)
 TaleSetUnitWEXP(Zeke,121,251,71,251,0,0,0,0)
-TaleSetUnitStat(Rachael,46,20,20,30,34,10,12,18)
+TaleSetUnitStat(Rachael,46,20,20,30,34,10,14,20)
 TaleSetUnitWEXP(Rachael,181,251,0,0,0,0,0,0)
 TaleSetUnitStat(Leila,43,26,26,18,29,4,25,28)
 TaleSetUnitWEXP(Leila,251,71,0,0,0,0,0,0)
-TaleSetUnitStat(Cassius,61,32,5,25,22,16,26,6)
+TaleSetUnitStat(Cassius,61,32,5,25,22,16,28,6)
 TaleSetUnitWEXP(Cassius,0,0,251,41,0,0,0,0)
-TaleSetUnitStat(Alexis,53,30,5,30,18,13,30,10)
+TaleSetUnitStat(Alexis,53,30,5,30,18,13,36,10)
 TaleSetUnitWEXP(Alexis,121,121,251,0,0,0,0,0)
 TaleSetUnitStat(Hyperius,62,32,6,34,16,17,31,13)
 TaleSetUnitWEXP(Hyperius,251,0,181,181,0,0,0,0)
-TaleSetUnitStat(Jeff,47,23,4,18,35,9,10,2)
-TaleSetUnitWEXP(Jeff,251,0,0,51,1,0,0,0)//jeff heals because he's a good boy now
+TaleSetUnitStat(Jeff,55,23,11,18,35,9,14,2)
+TaleSetUnitWEXP(Jeff,251,0,0,51,121,0,0,0)//jeff heals because he's a good boy now
 TaleSetUnitStat(Artemis,47,27,11,20,26,17,21,24)
 TaleSetUnitWEXP(Artemis,0,0,251,181,0,0,0,0)
 SetUnitSkills(Zeke,DriveSpdID,OpportunistID,RightfulKingID,0)
@@ -117,10 +209,21 @@ SetUnitSkills(Alexis,TriangleAdeptID,PushMovID,0,0)
 SetUnitSkills(Hyperius,ResolveID,0,0,0)
 SetUnitSkills(Jeff,QuickRiposteID,CantoPlusID,0,0)
 SetUnitSkills(Artemis,SwapID,InsightID,0,0)
-ENDA
+CleanTextNoMap(ElbaCorCastleCG,Tale2Opening1)
+MUSC S_Terra
+CleanText(HillCG,Tale2Opening2)
+LOAD1 0x1 Tale2Units
+ENUN
+STAL 30
+//add some movement here? or cam stuff
+MUSC S_Crisis
+CleanText(PathCG,Tale2Opening3)
+EndEvent
 
 EndingScene:
 ENUT Tale2DoneFlag
+MUSC VictoryTheme
+CleanTextNoMap(PathCG,Tale2Ending1)
 MUSC 0x0
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)
@@ -128,7 +231,7 @@ ENDA
 
 T2ZekeNeedsToVisit:
 CAM1 Zeke
-Text(FillerDialogue)
+Text(Tale2WrongVisitor)
 EndEvent
 
 
@@ -146,7 +249,7 @@ BEQ 0x1 0xc 0x0
 TileChangeCheck(0xd)
 BEQ 0x1 0xc 0x0
 CAM1 Zeke
-Text(FillerDialogue)//i win
+Text(Tale2IntoEnding)//i win
 CALL EndingScene
 LABEL 0x1
 EndEvent
@@ -170,7 +273,7 @@ CALL T2YouLose
 LABEL 0x2
 EndEvent
 T2YouLose:
-Text(FillerDialogue)
+Text(Tale2IntoLoss)
 CALL 0x592104
 EndEvent
 
@@ -178,32 +281,32 @@ EndEvent
 #define ZekeVillage(text,zeketext) "MUSI; SMOV 0x2 VillageCG; CHECK_ACTIVEID Zeke; BNE 0x1 0xC 0x0; SMOV 0x3 text; GOTO 0x2; LABEL 0x1; SMOV 0x3 zeketext; LABEL 0x2; CALL $9EE310; MUNO; CALL $591F40; EVBIT_T 0x7"
 #define ZekeVillageTileChange(tileChange) "CHECK_ACTIVEID Zeke; BEQ 0x10 0xC 0x0; TILECHANGE tileChange; GOTO 0x11; LABEL 0x10; ENUT 0x8; LABEL 0x11"
 T2Village1:
-ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillage(Tale2Village1Other,Tale2Village1Zeke)
 ZekeVillageTileChange(0x3)
 EndEvent
 
 T2Village2:
-ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillage(Tale2Village2Other,Tale2Village2Zeke)
 ZekeVillageTileChange(0x5)
 EndEvent
 
 T2Village3:
-ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillage(Tale2Village3Other,Tale2Village3Zeke)
 ZekeVillageTileChange(0x7)
 EndEvent
 
 T2Village4:
-ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillage(Tale2Village4Other,Tale2Village4Zeke)
 ZekeVillageTileChange(0x9)
 EndEvent
 
 T2Village5:
-ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillage(Tale2Village5Other,Tale2Village5Zeke)
 ZekeVillageTileChange(0xb)
 EndEvent
 
 T2Village6:
-ZekeVillage(FillerDialogue,FillerDialogue)
+ZekeVillage(Tale2Village6Other,Tale2Village6Zeke)
 ZekeVillageTileChange(0xd)
 EndEvent
 

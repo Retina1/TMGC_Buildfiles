@@ -160,17 +160,17 @@ mov r1, #0x01   @0x01 = wait for events
 .short  0xF800
 
 
-ldr     r4,=#0x03004E50//unit in work ram
-ldr     r0,[r4]
-ldrb    r2,[r0,#0x0C]
-mov     r1,#0x42
-orr     r2,r1
-mov     r1,#0x01
-bic     r2,r1
-strb    r2,[r0,#0x0C]//unit turn spent
+//ldr     r4,=#0x03004E50//unit in work ram
+//ldr     r0,[r4]
+//ldrb    r2,[r0,#0x0C]
+//mov     r1,#0x42
+//orr     r2,r1
+//mov     r1,#0x01
+//bic     r2,r1
+//strb    r2,[r0,#0x0C]//unit turn spent
 
 ldr     r1,=#0x0203A958
-mov     r0,#0x1                
+mov     r0,#0x17             
 strb    r0,[r1,#0x11]      
 
 //

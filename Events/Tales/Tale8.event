@@ -3,7 +3,7 @@
 
 #include EAstdlib.event
 
-EventPointerTable(EventsT1,ThisChapter)
+EventPointerTable(EventsT8,ThisChapter)
 
 
 ALIGN 4
@@ -16,7 +16,7 @@ POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
 POIN TrapData TrapData2
-POIN Tale1Units Tale1Units
+POIN Tale8Units Tale8Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
@@ -48,40 +48,19 @@ ENDTRAP
 
 ALIGN 4
 
-Tale1Units:
-//tale 1 cast - butch, peggy, peter, rift, mitchell, maybe arques
-UNIT Butch Hero 0x0 Level(3,Ally,0) [3,22] 0x0 0x0 0x0 0x0 [GildedSword,Hammer,Elixir] NoAI
-UNIT Peggy Cleric 0x0 Level(18,Ally,0) [2,23] 0x0 0x0 0x0 0x0 [Caduceus,Physic,Sleep] NoAI
-UNIT Peter LncWyv 0x0 Level(20,Ally,0) [4,23] 0x0 0x0 0x0 0x0 [SilverLance,Horseslayer,Elixir] NoAI
-UNIT Rift Myrm 0x0 Level(14,Ally,0) [3,23] 0x0 0x0 0x0 0x0 [FlameSword,SilverSword,Vulnerary] NoAI
-UNIT PGMitchell Fighter 0x0 Level(18,Ally,0) [3,24] 0x0 0x0 0x0 0x0 [BraveAxe,HandAxe,Vulnerary] NoAI
-UNIT SecretClarque BowPal 0x0 Level(7,Ally,0) [16,22] 0x0 0x0 0x0 0x0 [SilverBow,Rapier,Elixir] NoAI
-UNIT PGMarque AxeCav 0x0 Level(19,Ally,0) [15,23] 0x0 0x0 0x0 0x0 [Swordslayer,Ukonvasara,Elixir] NoAI
-UNIT PGStarque SwdCav 0x0 Level(18,Ally,0) [17,23] 0x0 0x0 0x0 0x0 [Lancesnapper,LightBrand] NoAI
-UNIT PGParque LncCav 0x0 Level(17,Ally,0) [16,24] 0x0 0x0 0x0 0x0 [Axebuster,Spear,Vulnerary] NoAI
+Tale8Units:
+//tale 8 cast - viridian, freddric, chartreuse, dean, clarque and sons, maybe olsen for funnies, dirk/eliza cameo? maybe they're some of the greens?
+// bring waves of greens to safe zones as they spawn
+UNIT Viridian ViridianLord 0x0 Level(1,Ally,0) [16,15] 0x0 0x0 0x0 0x0 [Luckbow,SilverBow,Recover] NoAI
+UNIT Freddric WyvernLord 0x0 Level(1,Ally,0) [14,13] 0x0 0x0 0x0 0x0 [SilverLance,Javelin,Elixir] NoAI
+UNIT Chartreuse BardF 0x0 Level(1,Ally,0) [15,14] 0x0 0x0 0x0 0x0 [SilverLance,Javelin,Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(12,Ally,0) [14,15] 0x0 0x0 0x0 0x0 [SilverAxe,HandAxe,Vulnerary] NoAI
+UNIT SecretClarque BowPal 0x0 Level(7,Ally,0) [16,13] 0x0 0x0 0x0 0x0 [SilverBow,SilverSword,Elixir] NoAI
+UNIT Olsen AssassF 0x0 Level(5,Ally,0) [3,15] 0x0 0x0 0x0 0x0 [Shamshir,Greatbow] NoAI
 UNIT
 
-Tale1Enemies:
-//center
-UNIT PGArgent BowGen 0x0 Level(10,Enemy,0) [9,18] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow,Longbow,BraveLance] NeverMoveAI
-UNIT Mevion LncGen 0x0 Level(1,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
-//left
-UNIT Mevion Merc 0x0 Level(16,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
-UNIT Mevion Sniper 0x0 Level(1,Enemy,1) [1,20] DropItem 0x0 0x0 0x0 [Greatbow,DoorKey] AttackInRangeAI
-UNIT Mevion Soldier 0x0 Level(16,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Mevion Fighter 0x0 Level(16,Enemy,1) [2,20] 0x0 0x0 0x0 0x0 [VoidCleaver] AttackInRangeAI
-UNIT Mevion LightM 0x0 Level(16,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [Resire] NoAI
-UNIT Mevion Archer 0x0 Level(16,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [ShiningBow] NoAI
-UNIT Mevion Merc 0x0 Level(16,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [Wyrmslayer] NoAI
-UNIT Mevion Hero 0x0 Level(1,Enemy,1) [4,15] 0x0 0x0 0x0 0x0 [Swordreaver] NoAI
-//right
-UNIT Mevion Merc 0x0 Level(16,Enemy,1) [16,20] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
-UNIT Mevion Soldier 0x0 Level(16,Enemy,1) [17,21] DropItem 0x0 0x0 0x0 [SilverLance,DoorKey] AttackInRangeAI
-UNIT Mevion Fighter 0x0 Level(16,Enemy,1) [18,20] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
-UNIT Mevion Warrior 0x0 Level(1,Enemy,1) [14,14] 0x0 0x0 0x0 0x0 [Halberd] NoAI
-UNIT Mevion Soldier 0x0 Level(16,Enemy,1) [14,15] 0x0 0x0 0x0 0x0 [Horseslayer] NoAI
-UNIT Mevion Myrm 0x0 Level(16,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
-UNIT Mevion DarkM 0x0 Level(16,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+Tale8Enemies:
+UNIT Mevion DarkM 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
 UNIT
 
 ALIGN 4
@@ -89,21 +68,17 @@ ALIGN 4
 
 BeginningScene:
 DISA Addington
-LOAD1 0x1 Tale1Units
+LOAD1 0x1 Tale8Units
 ENUN
-LOAD1 0x1 Tale1Enemies
+LOAD1 0x1 Tale8Enemies
 ENUN
-TaleSetUnitStat(Butch,43,17,4,22,17,10,14,3)
-TaleSetUnitWEXP(Butch,181,0,71,0,0,0,0,0)
-SetUnitSkills(Butch,OpportunistID,SolID,0,0)
+TaleSetUnitStat(Viridian,35,15,12,19,18,12,11,19)
+TaleSetUnitWEXP(Viridian,0,0,0,121,121,0,0,0)
+SetUnitSkills(Viridian,AcrobatID,0,0,0)
 ENDA
 
 EndingScene:
-DISA PGMitchell
-DISA PGMarque
-DISA PGStarque
-DISA PGParque
-ENUT Tale1DoneFlag
+ENUT Tale8DoneFlag
 MUSC 0x0
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)

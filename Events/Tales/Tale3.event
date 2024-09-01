@@ -21,10 +21,18 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0xb,Tale3AreaSpawn,1,255)
+TurnEventPlayer(0xd,Tale3AreaSpawn2,1,255)
+TurnEventPlayer(0xf,Tale3AreaSpawn3,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+//laronde vlad talk to reset sleep supply
+CharacterEvent(0x20,Tale3Dragon1Talk,Vladmir,Tale3Wyv1,0x10)
+CharacterEvent(0x21,Tale3Dragon2Talk,Vladmir,Tale3Wyv2,0x11)
+CharacterEvent(0x22,Tale3Dragon3Talk,Vladmir,Tale3Wyv3,0x12)
+CharacterEventBothWays(0x0,Tale3SleepSupply,Vladmir,SecretLaronde)
 END_MAIN
 
 LocationBasedEvents:
@@ -33,6 +41,11 @@ END_MAIN
 MiscBasedEvents:
 //DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
+AFEV 0x0 Tale3EepyDragons 0x0
+AFEV 0x0 Tale3EndingCheck 0x22
+AreaEvent(0xa,Tale3AreaTrigger,10,0,14,2)
+AreaEvent(0xc,Tale3AreaTrigger2,3,11,7,15)
+AreaEvent(0xe,Tale3AreaTrigger3,17,15,21,19)
 END_MAIN
 
 Dunno:
@@ -53,12 +66,80 @@ Tale3Units:
 UNIT Vladmir Bishop 0x0 Level(3,Ally,0) [11,9] 0x0 0x0 0x0 0x0 [Aura,Sleep,Physic,GoddessIcon] NoAI
 UNIT SecretLaronde Soldier 0x0 Level(12,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [DousingLance,Shockstick,GoddessIcon] NoAI
 UNIT Rose MageF 0x0 Level(2,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [Elfire,Bolting,GoddessIcon] NoAI //she snuck in whoops
-UNIT Manfred DarkM 0x0 Level(14,Ally,0) [11,11] 0x0 0x0 0x0 0x0 [Nightfall,Hell,PureWater,GoddessIcon] NoAI
-UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [10,10] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,GoddessIcon] NoAI
+UNIT Manfred DarkM 0x0 Level(14,Ally,0) [11,11] 0x0 0x0 0x0 0x0 [Nightfall,Jormungandr,PureWater,GoddessIcon] NoAI
+UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [10,10] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,LegRing,GoddessIcon] NoAI
 UNIT
 
 Tale3Enemies:
-UNIT Dragon Wyvern 0x0 Level(3,Enemy,1) [9,18] 0x0 0x0 0x0 0x0 [WyvernBreath] NoAI
+//sleep dragons - always event checks for each dragon being asleep/awake to allow their talk to progress map, when all have been talked, map win
+//they spawn when you enter their area?
+//wyverns turn green and passive, game over if they die
+UNIT Unknown Brigand 0x0 Level(12,Enemy,1) [1,16] 0x0 0x0 0x0 0x0 [HandAxe] ChaseOnceApproachedAI
+UNIT Unknown Brigand 0x0 Level(12,Enemy,1) [4,20] 0x0 0x0 0x0 0x0 [SteelAxe] ChaseOnceApproachedAI
+UNIT Unknown Brigand 0x0 Level(12,Enemy,1) [21,13] 0x0 0x0 0x0 0x0 [IronAxe] DelayedAI
+UNIT Unknown Brigand 0x0 Level(12,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [Hammer] DelayedAI
+UNIT Unknown Brigand 0x0 Level(12,Enemy,1) [3,12] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Unknown Brigand 0x0 Level(12,Enemy,1) [17,20] 0x0 0x0 0x0 0x0 [DevilAxe] DelayedAI
+UNIT Unknown Brigand 0x0 Level(12,Enemy,1) [1,7] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Unknown Fighter 0x0 Level(12,Enemy,1) [12,18] 0x0 0x0 0x0 0x0 [Hammer] DelayedAI
+UNIT Unknown Mercenary 0x0 Level(15,Enemy,1) [21,1] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Unknown Deserter 0x0 Level(17,Enemy,1) [22,4] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
+UNIT Unknown Hunter 0x0 Level(15,Enemy,1) [16,5] 0x0 0x0 0x0 0x0 [SteelBow] ChaseOnceApproachedAI
+UNIT Unknown DarkM 0x0 Level(13,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Nosferatu] ChaseOnceApproachedAI
+UNIT Unknown Sorc 0x0 Level(2,Enemy,1) [6,3] 0x0 0x0 0x0 0x0 [Nightfall] ChaseOnceApproachedAI
+UNIT Unknown Deserter 0x0 Level(15,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [Javelin,SteelLance] NoAI
+UNIT
+
+//each dragon spawn also includes some baddies
+Tale3Dragon1Spawn:
+UNIT Tale3Wyv1 Wyvern 0x0 Level(1,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R1 [WyvernBreath] NoAI
+UNIT
+Tale3Dragon1Spawn2:
+UNIT Unknown AxeCav 0x0 Level(14,Enemy,1) [23,0] 0x0 0x0 0x1 REDA23R3 [SteelAxe] NoAI
+UNIT Unknown LncCav 0x0 Level(14,Enemy,1) [22,0] 0x0 0x0 0x1 REDA22R2 [SteelLance] NoAI
+UNIT Unknown SwdCav 0x0 Level(15,Enemy,1) [23,0] 0x0 0x0 0x1 REDA23R1 [Shimmersword] NoAI
+UNIT Unknown LncCav 0x0 Level(14,Enemy,1) [22,0] 0x0 0x0 0x1 REDA21R1 [Dragonpike] NoAI
+UNIT Unknown AxeCav 0x0 Level(14,Enemy,1) [23,0] 0x0 0x0 0x1 REDA22R4 [HandAxe] NoAI
+UNIT
+
+Tale3Dragon2Spawn:
+UNIT Tale3Wyv2 Wyvern 0x0 Level(1,Enemy,1) [5,13] 0x0 0x0 0x1 REDA6R13 [WyvernBreath] NoAI
+UNIT
+Tale3Dragon2Spawn2:
+//UNIT Unknown LncPeg 0x0 Level(13,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R1 [SteelLance] NoAI
+UNIT Unknown SwdPeg 0x0 Level(13,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R2 [SilverSword] NoAI
+UNIT Unknown LncPeg 0x0 Level(13,Enemy,1) [0,0] 0x0 0x0 0x1 REDA2R1 [SteelLance] NoAI
+UNIT
+Tale3Dragon2Spawn3:
+//UNIT Unknown LncWyv 0x0 Level(13,Enemy,1) [23,20] 0x0 0x0 0x1 REDA22R19 [SteelLance] NoAI
+UNIT Unknown AxeWyv 0x0 Level(13,Enemy,1) [23,20] 0x0 0x0 0x1 REDA21R19 [SilverAxe] NoAI
+UNIT Unknown LncWyv 0x0 Level(13,Enemy,1) [23,20] 0x0 0x0 0x1 REDA22R18 [SteelLance] NoAI
+UNIT
+
+Tale3Dragon3Spawn:
+UNIT Tale3Wyv3 Wyvern 0x0 Level(1,Enemy,1) [19,17] 0x0 0x0 0x1 REDA19R16 [WyvernBreath] NoAI
+UNIT
+Tale3Dragon3Spawn2:
+UNIT Unknown BowPal 0x0 Level(1,Enemy,1) [0,20] 0x0 0x0 0x1 REDA0R18 [SteelBow] NoAI
+//UNIT Unknown BowPal 0x0 Level(1,Enemy,1) [0,20] 0x0 0x0 0x1 REDA1R19 [Longbow] NoAI
+UNIT Unknown BowPal 0x0 Level(1,Enemy,1) [0,20] 0x0 0x0 0x1 REDA2R20 [Wardbow] NoAI
+UNIT
+Tale3Dragon3Spawn3:
+UNIT Unknown Brigand 0x0 Level(14,Enemy,1) [23,9] 0x0 0x0 0x1 REDA22R9 [SteelAxe] NoAI
+UNIT Unknown Brigand 0x0 Level(14,Enemy,1) [23,10] 0x0 0x0 0x1 REDA21R10 [HandAxe] NoAI
+UNIT Unknown Brigand 0x0 Level(15,Enemy,1) [23,11] 0x0 0x0 0x1 REDA22R11 [Dracoaxe] NoAI
+UNIT
+
+Tale3EndScene1:
+UNIT Vladmir Bishop 0x0 Level(3,Ally,0) [3,0] 0x0 0x0 0x0 0x0 [Aura,Sleep,Physic,GoddessIcon] NoAI
+UNIT SecretLaronde Soldier 0x0 Level(12,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [DousingLance,Shockstick,GoddessIcon] NoAI
+UNIT Rose MageF 0x0 Level(2,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Elfire,Bolting,GoddessIcon] NoAI //she snuck in whoops
+UNIT Manfred DarkM 0x0 Level(14,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [Nightfall,Jormungandr,PureWater,GoddessIcon] NoAI
+UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,LegRing,GoddessIcon] NoAI
+UNIT
+
+Tale3EndScene2:
+UNIT Dragon Wyvern 0x0 Level(2,Enemy,0) [12,0] 0x0 0x0 0x1 REDA4R0 [WyvernBreath] NoAI
 UNIT
 
 ALIGN 4
@@ -71,15 +152,159 @@ LOAD1 0x1 Tale3Enemies
 ENUN
 TaleSetUnitStat(Vladmir,30,6,18,25,16,16,6,25)
 TaleSetUnitWEXP(Vladmir,0,0,0,0,121,0,181,0)
-SetUnitSkills(Vladmir,StaffMasteryID,SolID,0,0)
-ENDA
+SetUnitSkills(Vladmir,StaffSavantID,StaffMasteryID,SolID,0)
+TaleSetUnitStat(SecretLaronde,36,13,13,18,13,16,12,12)
+TaleSetUnitWEXP(SecretLaronde,0,121,0,0,0,0,0,0)
+SetUnitSkills(SecretLaronde,SwapID,SwarpID,SmiteID,PivotID)
+TaleSetUnitStat(Rose,13,0,18,10,9,0,0,0)
+TaleSetUnitWEXP(Rose,0,0,0,0,0,121,0,0)
+SetUnitSkills(Rose,CertainBlowID,DoubleLionID,0,0)
+TaleSetUnitStat(Manfred,40,5,18,15,14,8,16,0)
+TaleSetUnitWEXP(Manfred,0,0,0,0,0,0,0,181)
+SetUnitSkills(Manfred,VantageID,0,0,0)
+TaleSetUnitStat(Athena,38,16,0,15,12,8,16,0)
+TaleSetUnitWEXP(Athena,0,0,121,0,0,0,0,0)
+SetUnitSkills(Athena,IntimidateID,0,0,0)
+ENUT 0xb
+ENUT 0xd
+ENUT 0xf
+CleanText(EastHolanisCG,Tale3Opening)
+//opening dialogue hints at luring near caves with athena
+EndEvent
+
+Tale3AreaSpawn:
+Reinforcements(Tale3Dragon1Spawn)
+Reinforcements(Tale3Dragon1Spawn2)
+Text(Tale3Wyvern1Spawn)//vlad says one spawned
+EndEvent
+Tale3AreaSpawn2:
+Reinforcements(Tale3Dragon2Spawn)
+Reinforcements(Tale3Dragon2Spawn2)
+Reinforcements(Tale3Dragon2Spawn3)
+Text(Tale3Wyvern2Spawn)//vlad says one spawned
+EndEvent
+Tale3AreaSpawn3:
+Reinforcements(Tale3Dragon3Spawn)
+Reinforcements(Tale3Dragon3Spawn2)
+Reinforcements(Tale3Dragon3Spawn3)
+Text(Tale3Wyvern3Spawn)//vlad says one spawned
+EndEvent
 
 EndingScene:
-
+Text(Tale3IntoEnd)
 ENUT Tale3DoneFlag
+MUSC AmbientWindBirds
+FADI 16
+CLEA 0
+CLEE 0
+SetBackground(EastHolanisCG)
+TEXTSTART; TEXTSHOW Tale3Ending1; TEXTEND; REMA
+FADI 16
+CLEAN
+LOAD1 0x1 Tale3EndScene1
+ENUN
+CAM1 [8,0]
+FADU 16
+STAL 40
+LOAD1 0x1 Tale3EndScene2
+ENUN
+Text(Tale3Ending2)//as they leave, another wyvern appears, it's wendell
+STAL 40
+TurnNPC(Dragon)
+STAL 40
+Text(Tale3Ending3)
 MUSC 0x0
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)
 ENDA
+
+Tale3SleepSupply:
+Text(Tale3SleepRefresh)
+AnnihilateItem(Sleep)
+GiveItem(Sleep,Vladmir)
+EndEvent
+
+Tale3Dragon1Talk:
+Text(Tale3Wyvern1Talk)
+TurnNPC(Tale3Wyv1)
+SVAL 0x1 0x20040306
+CHAI Tale3Wyv1
+EndEvent
+Tale3Dragon2Talk:
+Text(FillerDialogue)
+TurnNPC(Tale3Wyv2)
+SVAL 0x1 0x20040306
+CHAI Tale3Wyv2
+EndEvent
+Tale3Dragon3Talk:
+Text(FillerDialogue)
+TurnNPC(Tale3Wyv3)
+SVAL 0x1 0x20040306
+CHAI Tale3Wyv3
+EndEvent
+
+
+
+Tale3EepyDragons:
+GetUnitStatus(Tale3Wyv1,BadStatusType)
+BEQ 0x1 0xc 0x0
+ENUT 0x10
+GOTO 0x2
+LABEL 0x1
+ENUF 0x10
+LABEL 0x2
+GetUnitStatus(Tale3Wyv2,BadStatusType)
+BEQ 0x10 0xc 0x0
+ENUT 0x11
+GOTO 0x20
+LABEL 0x10
+ENUF 0x11
+LABEL 0x20
+GetUnitStatus(Tale3Wyv3,BadStatusType)
+BEQ 0x100 0xc 0x0
+ENUT 0x12
+GOTO 0x200
+LABEL 0x100
+ENUF 0x12
+LABEL 0x200
+EndEvent
+
+Tale3EndingCheck:
+CHECK_EVENTID 0x20
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0x21
+BEQ 0x1 0xc 0x0
+CALL EndingScene
+LABEL 0x1
+EndEvent
+
+Tale3AreaTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0xb
+GOTO 0x2
+LABEL 0x1
+ENUF 0xa
+LABEL 0x2
+EndEvent
+Tale3AreaTrigger2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0xd
+GOTO 0x2
+LABEL 0x1
+ENUF 0xc
+LABEL 0x2
+EndEvent
+Tale3AreaTrigger3:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+ENUF 0xf
+GOTO 0x2
+LABEL 0x1
+ENUF 0xe
+LABEL 0x2
+EndEvent
+
 
 //MESSAGE Events end at offset CURRENTOFFSET

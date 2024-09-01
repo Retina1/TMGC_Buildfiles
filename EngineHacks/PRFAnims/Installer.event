@@ -24,6 +24,8 @@ POIN CustomAnimeTable
 
 #define CustomAnimationSet(unit,class,pointer) "BYTE unit; BYTE class; BYTE 0x00; BYTE 0x00; WORD pointer"
 CustomAnimeTable:
+CustomAnimationSet(Vladmir,Bishop,VladmirAnims|IsPointer)
+CustomAnimationSet(Apollo,Bishop,ApolloPAnims|IsPointer)
 CustomAnimationSet(Emile,Sage,EmileAnims|IsPointer)
 CustomAnimationSet(SecretLaronde,Halberdier,LarondeAnims|IsPointer)
 CustomAnimationSet(Laronde,Halberdier,LarondeAnims|IsPointer)

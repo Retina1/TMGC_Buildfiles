@@ -1,0 +1,82 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsT6,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData2
+POIN Tale6Units Tale6Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+//DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+TrapData2:
+ENDTRAP
+
+ALIGN 4
+
+Tale6Units:
+//tale 8 cast - viridian, freddric, chartreuse, dean, clarque and sons, maybe olsen for funnies, dirk/eliza cameo? maybe they're some of the greens?
+// bring waves of greens to safe zones as they spawn
+UNIT Kenneth Baron 0x0 Level(1,Ally,0) [16,15] 0x0 0x0 0x0 0x0 [Voidwake] NoAI
+UNIT
+
+Tale6Enemies:
+UNIT Dalst DarkM 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT
+
+ALIGN 4
+//give bros a triangle attack
+
+BeginningScene:
+DISA Addington
+LOAD1 0x1 Tale6Units
+ENUN
+LOAD1 0x1 Tale6Enemies
+ENUN
+//TaleSetUnitStat(Viridian,35,15,12,19,18,12,11,19)
+//TaleSetUnitWEXP(Viridian,0,0,0,121,121,0,0,0)
+//SetUnitSkills(Viridian,AcrobatID,0,0,0)
+ENDA
+
+EndingScene:
+ENUT Tale6DoneFlag
+MUSC 0x0
+SystemText(BlankCG,TaleEnding)
+MoveToChapter(HubMap)
+ENDA
+
+//MESSAGE Events end at offset CURRENTOFFSET

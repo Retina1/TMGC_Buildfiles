@@ -1,0 +1,96 @@
+﻿//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(EventsT4,ThisChapter)
+
+
+ALIGN 4
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData2
+POIN Tale4Units Tale4Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+//DefeatBoss(EndingScene)
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+TrapData2:
+ENDTRAP
+
+ALIGN 4
+
+Tale4Units:
+UNIT Cid Berserker 0x0 Level(1,Ally,0) [19,3] 0x0 0x0 0x0 0x0 [Frypan,HandAxe] NoAI
+UNIT Agnes MercF 0x0 Level(8,Ally,0) [18,4] 0x0 0x0 0x0 0x0 [LevinSword,Zanbato,Armorslayer] NoAI
+UNIT CidPirate1 Pirate 0x0 Level(9,Ally,0) [20,4] 0x0 0x0 0x0 0x0 [SilverAxe,Dracoaxe,SecretBook] NoAI
+UNIT CidPirate2 Pirate 0x0 Level(9,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [Hammer,HandAxe,SecretBook] NoAI
+UNIT CidPirate3 Pirate 0x0 Level(9,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Halberd,HandAxe,SecretBook] NoAI
+UNIT CidPirate4 Pirate 0x0 Level(9,Ally,0) [1,13] 0x0 0x0 0x0 0x0 [Swordslayer,SteelAxe,SecretBook] NoAI
+UNIT
+
+Tale4Enemies:
+UNIT Loile DarkM 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT
+
+ALIGN 4
+//give bros a triangle attack
+
+BeginningScene:
+DISA Addington
+LOAD1 0x1 Tale4Units
+ENUN
+LOAD1 0x1 Tale4Enemies
+ENUN
+TaleSetUnitStat(Cid,55,25,1,17,14,10,12,5)
+TaleSetUnitWEXP(Cid,0,0,181,0,0,0,0,0)
+TaleSetUnitStat(Agnes,35,15,15,0,15,15,0,0)
+TaleSetUnitWEXP(Agnes,71,0,0,0,0,0,0,0)
+SetUnitSkills(Agnes,StrongRiposteID,GlaciesID,0,0)
+TaleSetUnitStat(CidPirate1,36,18,0,15,15,5,8,1)
+TaleSetUnitWEXP(CidPirate1,0,0,121,0,0,0,0,0)
+TaleSetUnitStat(CidPirate2,36,18,0,15,15,5,8,1)
+TaleSetUnitWEXP(CidPirate2,0,0,121,0,0,0,0,0)
+TaleSetUnitStat(CidPirate3,36,18,0,15,15,5,8,1)
+TaleSetUnitWEXP(CidPirate3,0,0,121,0,0,0,0,0)
+TaleSetUnitStat(CidPirate4,36,18,0,15,15,5,8,1)
+TaleSetUnitWEXP(CidPirate4,0,0,121,0,0,0,0,0)
+//mention them stealing agnes some books to eat in the intro, maybe they start spread out and getting agnes to them is a big thing
+EndEvent
+
+EndingScene:
+ENUT Tale4DoneFlag
+MUSC 0x0
+SystemText(BlankCG,TaleEnding)
+MoveToChapter(HubMap)
+ENDA
+
+//MESSAGE Events end at offset CURRENTOFFSET

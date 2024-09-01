@@ -72,11 +72,8 @@ UNIT Addington Automaton 0x0 Level(1,Ally,0) [7,8] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 HubAccess:
-//tale 1 cast - butch, peggy, peter, rift, mitchell, maybe arques
-UNIT Butch Hero 0x0 Level(1,NPC,0) [2,6] 0x0 0x0 0x0 0x0 [GildedSword,Hammer] NoAI
-//tale 2 cast - zeke, rachael, cassius, alexis, hyperius, jeff, artemis (since holanian connection for zeke plus alexis support)
-// visit villages within elba cor to petition aid for new government, they only listen to zeke
-UNIT Zeke ZekeLordX 0x0 Level(1,NPC,0) [1,8] 0x0 0x0 0x0 0x0 [Stalwart,Soulbow] NoAI
+UNIT Butch Hero 0x0 Level(1,NPC,0) [2,6] 0x0 0x0 0x0 0x0 [GildedSword,Hammer] NoAI //tale done!
+UNIT Zeke ZekeLordX 0x0 Level(1,NPC,0) [1,8] 0x0 0x0 0x0 0x0 [Stalwart,Soulbow] NoAI //tale done!
 //tale 3 cast - vladmir, laronde, athena, manfred, cameo from rose
 // sleep staff wyverns to pacify them, then talk to them to collect data, while dealing with other enemies
 UNIT Vladmir Bishop 0x0 Level(1,NPC,0) [4,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Fortify,GoddessIcon] NoAI
@@ -106,9 +103,8 @@ UNIT Blair BlairLordX 0x0 Level(1,NPC,0) [7,1] 0x0 0x0 0x0 0x0 [Hopesinger,Wanin
 UNIT
 
 FinalHubAccess:
-//tale 12 cast - sinclair, nathaniel, maybe others (larson? sofia? michael?)
 //at end, have SetNewGameFlag(10) for epilogue secret scene
-UNIT Sinclair Sage 0x0 Level(1,NPC,0) [7,6] 0x0 0x0 0x0 0x0 [Awaken,Rewarp,Memento] NoAI
+UNIT Sinclair Sage 0x0 Level(1,NPC,0) [7,6] 0x0 0x0 0x0 0x0 [Awaken,Rewarp,Memento] NoAI //tale done!
 UNIT
 
 //currently not in any tale concepts
@@ -168,7 +164,7 @@ TaleComplete(PGLazarus,Tale9DoneFlag)
 TaleComplete(Simone,Tale10DoneFlag)
 TaleComplete(Blair,Tale11DoneFlag)
 TaleComplete(Sinclair,Tale12DoneFlag)
-CHECK_EVENTID TaleHubVisitedFlag
+CHECK_EVENTID TaleHubVisitedFlag //0x91
 BNE 0x100 0xc 0x0
 Text(TaleHubIntro)
 SystemText(TaleHubExplanation)

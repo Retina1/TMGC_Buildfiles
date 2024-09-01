@@ -19,6 +19,31 @@ POIN ChangeUnitDesc_Table
 
 ALIGN 4
 ChangeUnitDesc_Table:
+//tales
+UnitDescTable(Desc_ButchPG,Butch,0x0,Tale1,0x0)
+UnitDescTable(Desc_PeggyPG,Peggy,0x0,Tale1,0x0)
+UnitDescTable(Desc_PeterPG,Peter,0x0,Tale1,0x0)
+UnitDescTable(Desc_RiftPG,Rift,0x0,Tale1,0x0)
+UnitDescTable(Desc_ClarquePG,SecretClarque,0x0,Tale1,0x0)
+//2
+UnitDescTable(Desc_ZekePG,Zeke,0x0,Tale2,0x0)
+UnitDescTable(Desc_HyperiusPG,Hyperius,0x0,Tale2,0x0)
+UnitDescTable(Desc_RachaelPG,Rachael,0x0,Tale2,0x0)
+UnitDescTable(Desc_CassiusPG,Cassius,0x0,Tale2,0x0)
+UnitDescTable(Desc_LeilaPG,Leila,0x0,Tale2,0x0)
+UnitDescTable(Desc_AlexisPG,Alexis,0x0,Tale2,0x0)
+UnitDescTable(Desc_JeffPG,Jeff,0x0,Tale2,0x0)
+UnitDescTable(Desc_ArtemisPG,Artemis,0x0,Tale2,0x0)
+//3
+UnitDescTable(Desc_VladmirPG,Vladmir,0x0,Tale3,0x0)
+UnitDescTable(Desc_AthenaPG,Athena,0x0,Tale3,0x0)
+UnitDescTable(Desc_LarondePG,SecretLaronde,0x0,Tale3,0x0)
+UnitDescTable(Desc_RosePG,Rose,0x0,Tale3,0x0)
+UnitDescTable(Desc_ManfredPG,Manfred,0x0,Tale3,0x0)
+//4
+UnitDescTable(Desc_PGCid,Cid,0x0,Tale4,0x0)
+UnitDescTable(Desc_PGAgnes,Agnes,0x0,Tale4,0x0)
+//maingame
 UnitDescTable(Desc_BlairNGP,Blair,0x0,0xff,NewGamePlusFlag)  //new game plus proof
 UnitDescTable(Desc_ZekeNGP,Zeke,0x0,0xff,NewGamePlusFlag)  //new game plus proof
 UnitDescTable(Desc_ViridianNGP,Viridian,0x0,0xff,NewGamePlusFlag)  //new game plus proof
@@ -45,12 +70,6 @@ UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter26,0x0)//svelt is known by 
 UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter27,0x0)//svelt is known by this point
 UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Chapter28,0x0)//svelt is known by this point
 UnitDescTable(Desc_Sveltzalus2,Sveltzalus,0x0,Endgame,0x0)//svelt is known by this point
-//tales
-UnitDescTable(Desc_ButchPG,Butch,0x0,Tale1,0x0)
-UnitDescTable(Desc_PeggyPG,Peggy,0x0,Tale1,0x0)
-UnitDescTable(Desc_PeterPG,Peter,0x0,Tale1,0x0)
-UnitDescTable(Desc_RiftPG,Rift,0x0,Tale1,0x0)
-UnitDescTable(Desc_ClarquePG,SecretClarque,0x0,Tale1,0x0)
 SHORT 0x0; BYTE 0x0 0x0 0x0 0x0; SHORT 0x0  // term
 //@struct ChangeUnitDesc_Table
 //@{

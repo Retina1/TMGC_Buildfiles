@@ -99,12 +99,20 @@ SetSupport(Blair,Natasia,ASupport,0)
 SetSupport(Blair,Avan,ASupport,0)
 SetSupport(Blair,Yuyu,ASupport,0)
 SetSupport(Blair,Estelle,ASupport,0)
+TaleSetUnitStat(Arin,65,27,32,36,35,30,27,36)
+TaleSetUnitWEXP(Arin,251,0,0,0,251,181,0,0)
+SetUnitSkills(Arin,RallyResID,RallyDefID,LiveToServeID,CantoPlusID)
+TaleSetUnitStat(Natasia,78,35,4,33,27,18,20,4)
+TaleSetUnitWEXP(Natasia,0,0,251,121,251,0,0,0)
+SetUnitSkills(Natasia,WrathID,SmiteID,DragonFangID,0)
 ENDA
 
 EndingScene:
 ENUT Tale11DoneFlag
+ENUF TensionFlag; ENUF HeatFlag1; ENUF HeatFlag2; ENUF HeatFlag3; ENUF HeatFlag4
 MUSC 0x0
-SystemText(BlankCG,TaleEnding)
+CenterTutorialTextBox; SetBackground(blirCG); STAL 300; TUTORIALTEXTBOXSTART; TEXTSHOW Tale11Ending; TEXTEND; FADI 16
+//SystemText(blirCG,Tale11Ending)
 MoveToChapter(HubMap)
 ENDA
 

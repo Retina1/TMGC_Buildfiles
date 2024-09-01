@@ -4,8 +4,16 @@
 
 .global GetCharDescEntry
 .type GetCharDescEntry, %function
-
+.set CheckEventID, 0x8083da8
 		GetCharDescEntry:
+		push {r14}
+		push {r3,r4}
+		mov r0,#0x91 @are we in postgame
+		blh CheckEventID,r1
+		pop {r3,r4}
+		cmp r0,#1
+		beq	NoEntry @if so, no woke pronounce
+		
 		ldr		r1, =StatScreenStruct
 		ldr		r1, [r1,#0x0C]
 		ldr		r1, [r1]
@@ -26,8 +34,12 @@
 				
 		NoEntry:
 		mov		r0, #0
-		
+
 		EntryFound:
+		mov	r2,r1
+		pop {r1}
+		mov r14,r1
+		mov r1,r2
 		bx		r14
 		
 		.align

@@ -368,6 +368,16 @@
 #include "BishopM(Eldritch)\Unarmed Installer.event"
 }
 {
+#include "CharacterSpecific\Vladmir\Magic Installer.event"
+#include "CharacterSpecific\Vladmir\Staff Installer.event"
+#include "CharacterSpecific\Vladmir\Unarmed Installer.event"
+}
+{
+#include "CharacterSpecific\ApolloP\Magic Installer.event"
+#include "CharacterSpecific\ApolloP\Staff Installer.event"
+#include "CharacterSpecific\ApolloP\Unarmed Installer.event"
+}
+{
 #include "BishopF(Eldritch)\Magic Installer.event"
 #include "BishopF(Eldritch)\Staff Installer.event"
 #include "BishopF(Eldritch)\Unarmed Installer.event"
@@ -521,6 +531,24 @@
 #include "CharacterSpecific\Emile\Magic Installer.event"
 #include "CharacterSpecific\Emile\Staff Installer.event"
 }
+
+ALIGN 4
+ApolloPAnims:
+AnimaAnim(0x118)
+LightAnim(0x118)
+DarkAnim(0x118)
+StaffAnim(0x119)
+UnarmedAnim(0x11a)
+EndAnim
+
+ALIGN 4
+VladmirAnims:
+AnimaAnim(0x115)
+LightAnim(0x115)
+DarkAnim(0x115)
+StaffAnim(0x116)
+UnarmedAnim(0x117)
+EndAnim
 
 ALIGN 4
 EmileAnims:

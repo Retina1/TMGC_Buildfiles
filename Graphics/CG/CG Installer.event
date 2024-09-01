@@ -19,6 +19,7 @@ POP
 
 #define SetConvoBackground(Index, ImagePointer, TSAPointer, PalettePointer) "PUSH; ORG bgTable + (Index * 0xC); POIN ImagePointer TSAPointer PalettePointer; POP"
 #define SetColorsBackground(Index, ImagePointer, PalettePointer) "PUSH; ORG bgTable + (Index * 0xC); POIN ImagePointer; WORD 0x1; POIN PalettePointer; POP"
+#define Set256ColorsBackground(Index, ImagePointer, PalettePointer) "PUSH; ORG bgTable + (Index * 0xC); POIN ImagePointer; WORD 0x0; POIN PalettePointer; POP"
 // First 0x36 entries are from the vanilla BGTable
 ALIGN 4; bgTable:
 WORD 0x088D2700 0x088D5D24 0x088D61D8
@@ -82,12 +83,23 @@ WORD 0x0 0x0 0x0                                    // 39
 WORD 0x0 0x0 0x0                                    // 3a
 WORD 0x0 0x0 0x0                                    // 3b
 WORD 0x0 0x0 0x0                                    // 3c (add more if need be later)
+WORD 0x0 0x0 0x0                                    // 3d (add more if need be later)
+WORD 0x0 0x0 0x0                                    // 3e (add more if need be later)
+WORD 0x0 0x0 0x0                                    // 3f (add more if need be later)
+WORD 0x0 0x0 0x0                                    // 40 (add more if need be later)
 
-
+//colors
+SetColorsBackground(blirCG,blirImage,blirPalette)
+SetColorsBackground(sadblirCG,sadblirImage,sadblirPalette)
 SetColorsBackground(Map2CG,Map2Image,Map2Palette)
 SetColorsBackground(MapCG,MapImage,MapPalette)
 SetColorsBackground(Map2WordsCG,Map2WordsImage,Map2WordsPalette)
 SetColorsBackground(MapWordsCG,MapWordsImage,MapWordsPalette)
+
+//copies of credits stuff
+SetColorsBackground(CreditsElcorianCG,CreditsCG1Image,CreditsCG1Palette)
+
+//normals
 SetConvoBackground(BlankCG,BlankImage,BlankTSA,BlankPalette)
 SetConvoBackground(LowlandsCG,LowlandsImage,LowlandsTSA,LowlandsPalette)
 SetConvoBackground(TentInsideCG,TentInsideImage,TentInsideTSA,TentInsidePalette)
@@ -123,6 +135,25 @@ Map2WordsImage:
 ALIGN 4
 Map2WordsPalette:
 #incbin "MoreColors/gfx/BG/224WorldMapNames2Pal.dmp"
+ALIGN 4
+blirImage:
+#incbin "MoreColors/gfx/BG/224blir.dmp"
+ALIGN 4
+blirPalette:
+#incbin "MoreColors/gfx/BG/224blirPal.dmp"
+
+ALIGN 4
+sadblirImage:
+#incbin "MoreColors/gfx/BG/224sadblir.dmp"
+ALIGN 4
+sadblirPalette:
+#incbin "MoreColors/gfx/BG/224sadblirPal.dmp"
+ALIGN 4
+CreditsCG1Image:
+#incbin "MoreColors/gfx/BG/224CreditsCG1.dmp"
+ALIGN 4
+CreditsCG1Palette:
+#incbin "MoreColors/gfx/BG/224CreditsCG1Pal.dmp"
 
 
 

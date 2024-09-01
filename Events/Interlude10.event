@@ -242,6 +242,7 @@ InterludeSupportFlagOn(Kenneth,Blair,0x9b,BPSupport)
 InterludeSupportFlagOn(Carbon,Blair,0x9a,BPSupport)
 InterludeSupportFlagOn(Emile,Blair,0x99,BPSupport)
 InterludeSupportFlagOn(Horatio,Simone,0x98,CPSupport)
+InterludeSupportFlagOn(Estelle,Blair,0x97,BSupport)
 CHECK_ALIVE Simone
 BNE 0x600 0xc 0x0
 ENUF 0x98
@@ -258,11 +259,12 @@ AddLightRune(Kenneth,0x9b)
 AddLightRune(Carbon,0x9a)
 AddLightRune(Emile,0x99)
 AddLightRune(Horatio,0x98)
+AddLightRune(Estelle,0x97)
 EndEvent
 
 EndingScene:
 Interlude10GlobalFlagOn
-ENUF 0x9d;ENUF 0x9c;ENUF 0x9b;ENUF 0x9a;ENUF 0x99;ENUF 0x98
+ENUF 0x9d;ENUF 0x9c;ENUF 0x9b;ENUF 0x9a;ENUF 0x99;ENUF 0x98;ENUF 0x97
 EVBIT_MODIFY 3
 DisableFreeMovement
 MUSC S_RightRoad

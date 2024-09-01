@@ -99,7 +99,7 @@ RallyCommandEffect:
 	bl  BXR3
 
 	ldr  r0, =gActionData
-	mov  r1, #1
+	mov  r1, #0x17
 	strb r1, [r0, #0x11]
 
 	mov r0, #0x17

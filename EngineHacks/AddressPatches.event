@@ -1,3 +1,9 @@
+//talk to sleepers
+PUSH
+ORG 0x255DA
+BYTE 0xC0 0x46
+POP
+
 //fuck frelia
 PUSH
 ORG 0x9dec

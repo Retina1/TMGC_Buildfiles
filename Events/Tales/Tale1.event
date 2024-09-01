@@ -83,12 +83,12 @@ ALIGN 4
 Tale1Units:
 //tale 1 cast - butch, peggy, peter, rift, mitchell, maybe arques
 UNIT Butch Hero 0x0 Level(3,Ally,0) [3,22] 0x0 0x0 0x0 0x0 [GildedSword,Hammer,Elixir] NoAI
-UNIT Peggy Cleric 0x0 Level(18,Ally,0) [2,23] 0x0 0x0 0x0 0x0 [Caduceus,Physic,Sleep] NoAI
-UNIT Peter LncWyv 0x0 Level(20,Ally,0) [4,23] 0x0 0x0 0x0 0x0 [SilverLance,Horseslayer,Elixir] NoAI
+UNIT Peggy Cleric 0x0 Level(18,Ally,0) [2,23] 0x0 0x0 0x0 0x0 [Caduceus,Mend,Physic,Sleep] NoAI
+UNIT Peter LncWyv 0x0 Level(20,Ally,0) [4,23] 0x0 0x0 0x0 0x0 [SilverLance,Spear,Elixir] NoAI
 UNIT Rift Myrm 0x0 Level(14,Ally,0) [3,23] 0x0 0x0 0x0 0x0 [FlameSword,SilverSword,Vulnerary] NoAI
 UNIT PGMitchell Fighter 0x0 Level(18,Ally,0) [3,24] 0x0 0x0 0x0 0x0 [BraveAxe,HandAxe,Vulnerary] NoAI
 UNIT SecretClarque BowPal 0x0 Level(7,Ally,0) [16,22] 0x0 0x0 0x0 0x0 [SilverBow,Rapier,Elixir] NoAI
-UNIT PGMarque AxeCav 0x0 Level(19,Ally,0) [15,23] 0x0 0x0 0x0 0x0 [Swordslayer,Ukonvasara,Elixir] NoAI
+UNIT PGMarque AxeCav 0x0 Level(19,Ally,0) [15,23] 0x0 0x0 0x0 0x0 [Swordslayer,Ukonvasara,Hammer,Elixir] NoAI
 UNIT PGStarque SwdCav 0x0 Level(18,Ally,0) [17,23] 0x0 0x0 0x0 0x0 [Lancesnapper,LightBrand] NoAI
 UNIT PGParque LncCav 0x0 Level(17,Ally,0) [16,24] 0x0 0x0 0x0 0x0 [Axebuster,Spear,Vulnerary] NoAI
 UNIT
@@ -97,6 +97,11 @@ Tale1Enemies:
 //center
 UNIT PGArgent BowGen 0x0 Level(10,Enemy,0) [9,18] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow,Longbow,BraveLance] NeverMoveAI
 UNIT Mevion LncGen 0x0 Level(1,Enemy,1) [9,16] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
+UNIT Mevion Sniper 0x0 Level(1,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT Mevion Warrior 0x0 Level(1,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [BraveAxe] AttackInRangeAI
+UNIT Mevion SwdGen 0x0 Level(1,Enemy,1) [9,7] 0x0 0x0 0x0 0x0 [Rapier] AttackInRangeAI
+UNIT Mevion Hero 0x0 Level(1,Enemy,1) [8,12] 0x0 0x0 0x0 0x0 [Swordslayer,GildedAxe] AttackInRangeAI
+UNIT Mevion Hero 0x0 Level(1,Enemy,1) [10,12] 0x0 0x0 0x0 0x0 [Lancesnapper,GildedSword] AttackInRangeAI
 //left
 UNIT Mevion Merc 0x0 Level(16,Enemy,1) [0,20] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
 UNIT Mevion Sniper 0x0 Level(1,Enemy,1) [1,20] DropItem 0x0 0x0 0x0 [Greatbow,DoorKey] AttackInRangeAI
@@ -104,16 +109,38 @@ UNIT Mevion Soldier 0x0 Level(16,Enemy,1) [1,21] 0x0 0x0 0x0 0x0 [SilverLance] A
 UNIT Mevion Fighter 0x0 Level(16,Enemy,1) [2,20] 0x0 0x0 0x0 0x0 [VoidCleaver] AttackInRangeAI
 UNIT Mevion LightM 0x0 Level(16,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [Resire] NoAI
 UNIT Mevion Archer 0x0 Level(16,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [ShiningBow] NoAI
-UNIT Mevion Merc 0x0 Level(16,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [Wyrmslayer] NoAI
-UNIT Mevion Hero 0x0 Level(1,Enemy,1) [4,15] 0x0 0x0 0x0 0x0 [Swordreaver] NoAI
+UNIT Mevion Merc 0x0 Level(16,Enemy,1) [3,14] 0x0 0x0 0x0 0x0 [Wyrmslayer] AttackInRangeAI
+UNIT Mevion Hero 0x0 Level(1,Enemy,1) [4,15] 0x0 0x0 0x0 0x0 [Swordreaver] AttackInRangeAI
+UNIT Mevion SwdGen 0x0 Level(1,Enemy,1) [1,10] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Mevion Halberdier 0x0 Level(1,Enemy,1) [2,10] 0x0 0x0 0x0 0x0 [BraveLance] AttackInRangeAI
+UNIT Mevion DarkM 0x0 Level(16,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [Nosferatu] NoAI
+UNIT Mevion MageF 0x0 Level(16,Enemy,1) [4,10] 0x0 0x0 0x0 0x0 [Trisagion] NoAI
+UNIT Mevion Sniper 0x0 Level(1,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [Longbow] NeverMoveAI
+UNIT Mevion Sniper 0x0 Level(1,Enemy,1) [4,6] DropItem 0x0 0x0 0x0 [Longbow,DoorKey] NeverMoveAI
+UNIT Mevion Merc 0x0 Level(16,Enemy,1) [2,5] 0x0 0x0 0x0 0x0 [MasterSword] AttackInRangeAI
+UNIT Mevion Fighter 0x0 Level(16,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
+UNIT Mevion Soldier 0x0 Level(16,Enemy,1) [4,0] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Mevion MageF 0x0 Level(16,Enemy,1) [5,0] 0x0 0x0 0x0 0x0 [Galewind] NoAI
+UNIT Mevion Hero 0x0 Level(1,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [FlameSword] AttackInRangeAI
 //right
 UNIT Mevion Merc 0x0 Level(16,Enemy,1) [16,20] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
 UNIT Mevion Soldier 0x0 Level(16,Enemy,1) [17,21] DropItem 0x0 0x0 0x0 [SilverLance,DoorKey] AttackInRangeAI
 UNIT Mevion Fighter 0x0 Level(16,Enemy,1) [18,20] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
-UNIT Mevion Warrior 0x0 Level(1,Enemy,1) [14,14] 0x0 0x0 0x0 0x0 [Halberd] NoAI
+UNIT Mevion Warrior 0x0 Level(1,Enemy,1) [14,14] 0x0 0x0 0x0 0x0 [Halberd] AttackInRangeAI
 UNIT Mevion Soldier 0x0 Level(16,Enemy,1) [14,15] 0x0 0x0 0x0 0x0 [Horseslayer] NoAI
 UNIT Mevion Myrm 0x0 Level(16,Enemy,1) [15,14] 0x0 0x0 0x0 0x0 [BraveSword] NoAI
 UNIT Mevion DarkM 0x0 Level(16,Enemy,1) [15,15] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT Mevion AxeGen 0x0 Level(1,Enemy,1) [12,9] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Mevion Bishop 0x0 Level(1,Enemy,1) [18,9] 0x0 0x0 0x0 0x0 [JavelinRain] AttackInRangeAI
+UNIT Mevion AxeCav 0x0 Level(16,Enemy,1) [12,11] 0x0 0x0 0x0 0x0 [VoidCleaver] NoAI
+UNIT Mevion LncCav 0x0 Level(16,Enemy,1) [18,11] 0x0 0x0 0x0 0x0 [Axereaver] NoAI
+UNIT Mevion Sniper 0x0 Level(1,Enemy,1) [14,6] 0x0 0x0 0x0 0x0 [Longbow] NeverMoveAI
+UNIT Mevion Sniper 0x0 Level(1,Enemy,1) [17,6] DropItem 0x0 0x0 0x0 [Longbow,DoorKey] NeverMoveAI
+UNIT Mevion FighterF 0x0 Level(16,Enemy,1) [15,5] 0x0 0x0 0x0 0x0 [MasterAxe] AttackInRangeAI
+UNIT Mevion MercF 0x0 Level(16,Enemy,1) [16,5] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
+UNIT Mevion Fighter 0x0 Level(16,Enemy,1) [14,0] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Mevion LightM 0x0 Level(16,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [Aura] NoAI
+UNIT Mevion Halberdier 0x0 Level(1,Enemy,1) [12,1] 0x0 0x0 0x0 0x0 [Shockstick,Spear] AttackInRangeAI
 UNIT
 
 ALIGN 4
@@ -125,34 +152,47 @@ LOAD1 0x1 Tale1Units
 ENUN
 LOAD1 0x1 Tale1Enemies
 ENUN
-TaleSetUnitStat(Butch,43,17,4,22,17,10,14,3)
+TaleSetUnitStat(Butch,48,18,4,22,18,10,15,3)
 TaleSetUnitWEXP(Butch,181,0,71,0,0,0,0,0)
 TaleSetUnitStat(Peggy,24,11,22,10,20,28,1,9)
 TaleSetUnitWEXP(Peggy,0,0,0,0,251,0,0,0)
-TaleSetUnitStat(Peter,43,18,2,17,14,10,19,2)
+TaleSetUnitStat(Peter,45,19,2,17,14,10,19,2)
 TaleSetUnitWEXP(Peter,0,181,0,0,0,0,0,0)
 TaleSetUnitStat(Rift,33,13,11,20,24,1,9,3)
 TaleSetUnitWEXP(Rift,181,0,0,0,0,0,0,0)
-TaleSetUnitStat(PGMitchell,48,22,3,19,11,8,10,5)
+TaleSetUnitStat(PGMitchell,51,22,3,19,11,8,10,5)
 TaleSetUnitWEXP(PGMitchell,0,0,181,0,0,0,0,0)
-TaleSetUnitStat(SecretClarque,57,17,7,24,17,12,10,10)
+TaleSetUnitStat(SecretClarque,57,18,7,24,18,15,13,13)
 TaleSetUnitWEXP(SecretClarque,181,0,0,181,0,0,0,0)
-TaleSetUnitStat(PGMarque,43,21,3,9,7,8,16,1)
+TaleSetUnitStat(PGMarque,43,21,3,14,8,8,19,1)
 TaleSetUnitWEXP(PGMarque,0,0,181,0,0,0,0,0)
-TaleSetUnitStat(PGStarque,37,12,12,16,18,5,7,11)
+TaleSetUnitStat(PGStarque,37,13,13,17,18,5,9,13)
 TaleSetUnitWEXP(PGStarque,181,0,0,0,0,0,0,0)
-TaleSetUnitStat(PGParque,40,16,10,13,13,26,10,12)
+TaleSetUnitStat(PGParque,40,16,10,15,15,26,13,16)
 TaleSetUnitWEXP(PGParque,0,181,0,0,0,0,0,0)
 TaleSetUnitStat(PGArgent,56,23,8,27,12,15,20,22)
-TaleSetUnitWEXP(PGArgent,0,251,181,251,0,0,0,0)
+TaleSetUnitWEXP(PGArgent,0,181,181,181,0,0,0,0)
 SetUnitSkills(Butch,OpportunistID,SolID,0,0)
 SetUnitSkills(Peggy,SwarpID,CantoID,0,0)
 SetUnitSkills(Peter,HexID,0,0,0)
 SetUnitSkills(Rift,ArcaneBladeID,AstraID,0,0)
 SetUnitSkills(SecretClarque,SureShotID,SaviorID,0,0)
-ENDA
+CleanText(OutdoorCastleCG,Tale1Opening1)//today will be a glorious day
+CAM1 PGArgent
+FlashCursor(PGArgent,60)
+Text(Tale1Opening2)//it won't
+CAM1 SecretClarque
+FlashCursor(SecretClarque,60)
+Text(Tale1Opening3)//it will
+CAM1 Butch
+FlashCursor(Butch,60)
+Text(Tale1Opening4)//it sure will
+EndEvent
 
 EndingScene:
+MUSC S_FE4Conversation
+CleanTextNoMap(HallCG,Tale1Ending1)//butch sparing argent
+CleanTextNoMap(OutdoorCastleCG,Tale1Ending2)//theend
 DISA PGMitchell
 DISA PGMarque
 DISA PGStarque

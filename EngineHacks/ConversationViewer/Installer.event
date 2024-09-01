@@ -95,6 +95,7 @@ POIN SupportConversations3Part2
 POIN DeathQuoteConversations 
 POIN FinalDeathQuoteConversations 
 POIN EscapeQuoteConversations
+POIN CGViewerEvents
 POIN BonusConversations
 POIN 0 
 
@@ -103,6 +104,8 @@ ORG ConvoChapterEntry+(4*0xFF)
 #define ConversationEntry(titleid,textid,bg,chapterid) "POIN 0; SHORT textid; BYTE bg chapterid; SHORT titleid 0;"
 #define ConversationEntry(titleid,textid,bg,chapterid,bgm) "POIN 0; SHORT textid; BYTE bg chapterid; SHORT titleid bgm;"
 #define ConversationEntryTerminator "POIN 0xFFFFFFFF; SHORT 0xFFFF; BYTE 0xFF 0xFF; SHORT 0xFFFF 0xFFFF"
+#define CGViewerEntry(titleid,eventlabel) "POIN eventlabel; SHORT 0x0 ; BYTE 0x0 CGViewerChapter; SHORT titleid 0x0;"
+#define CGViewer(cgid) "EVBIT_MODIFY 3; SetBackground(cgid); STAL 600;FADI 5;SetBackground(BlankCG);EndEvent"//;RefreshLordSplitTiles; EndEvent"
 
 //epilogue is a fuck
 ALIGN 4
@@ -2299,7 +2302,9 @@ ConversationEntry(EYuyuHollandaiseBP,YuyuHollandaiseBPSupport,HallCG,Support3Vie
 ConversationEntry(EArtemisHollandaiseCP,ArtemisHollandaiseCPSupport,EastHolanisCG,Support3Viewer2)
 ConversationEntry(EHoratioSimoneC,C22_Horatio_Simone_Base,EastHolanisCG,Support3Viewer2,S_Ameno)
 ConversationEntry(EHoratioSimoneCP,HoratioSimoneCPSupport,LowlandsCG,Support3Viewer2,S_Ameno)
-ConversationEntry(EHoratioSimoneB,C26_Horatio_Simone_Base,LowlandsCG,Support3Viewer2,S_HisWorld)
+ConversationEntry(EHoratioSimoneB,C26_Horatio_Simone_Base,StreetCG,Support3Viewer2,S_HisWorld)
+ConversationEntry(EHoratioSimoneBP,HoratioSimoneBPSupport,PathCG,Support3Viewer2,S_HisWorld)
+ConversationEntry(EHoratioSimoneHuh,HoratioKillsSimone,PathCG,Support3Viewer2,S_HisWorld)
 ConversationEntry(EFreddricArgentA,FreddricArgentASupport,PathCG,Support3Viewer2)
 ConversationEntry(EElizaDirkA,ElizaDirkASupport,PathCG,Support3Viewer2)
 ConversationEntry(EElizaRoseA,ElizaRoseASupport,HallCG,Support3Viewer2)
@@ -2903,12 +2908,42 @@ TheReturnConversations2:
 //manfred wilhelm
 	ConversationEntry(EMWA,Ch24_ManfredWilhelmArgent,LowlandsCG,TheReturnViewer2,RecruitmentThemeVirid)
 ConversationEntryTerminator
+ALIGN 4
+CGViewerEvents:
+	CGViewerEntry(EMap1Title,EMap1Viewer)
+	CGViewerEntry(EMap1TextTitle,EMap1TextViewer)
+	CGViewerEntry(EMap2Title,EMap2Viewer)
+	CGViewerEntry(EMap2TextTitle,EMap2TextViewer)
+	CGViewerEntry(ECreditsElcorianTitle,ECreditsElcorianViewer)
+	CGViewerEntry(EsadblirTitle,EsadblirViewer)
+	CGViewerEntry(EblirTitle,EblirViewer)
+ConversationEntryTerminator
 
 ALIGN 4 
 HistoryGFX: 
 BYTE $10 $00 $10 $00 $1D $00 $00 $00 $F0 $01 $F0 $01 $E0 $01 $05 $40 $03 $F1 $F0 $01 $C0 $24 $F0 $01 $F0 $01 $00 $00 $66 $00 $03 $55 $11 $00 $03 $44 $00 $03 $67 $00 $03 $60 $00 $03 $40 $40 $40 $03 $00 $66 $66 $66 $66 $11 $00 $51 $56 $12 $12 $64 $66 $15 $11 $22 $76 $67 $00 $03 $60 $13 $21 $20 $03 $40 $50 $12 $20 $1F $06 $00 $3C $74 $00 $00 $41 $00 $76 $60 $06 $62 $77 $46 $62 $62 $00 $07 $34 $31 $63 $07 $56 $51 $63 $39 $07 $66 $10 $57 $E0 $01 $00 $2E $00 $76 $00 $03 $77 $77 $F0 $1B $80 $91 $00 $25 $36 $00 $54 $F0 $01 $F0 $01 $FF $F0 $01 $20 $01 $10 $C4 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $C1 $F0 $01 $D0 $01 $65 $66 $66 $56 $65 $10 $07 $03 $56 $00 $00 $50 $66 $05 $00 $03 $00 $08 $56 $65 $00 $04 $60 $13 $57 $65 $00 $11 $03 $B7 $55 $D4 $10 $20 $03 $2B $50 $00 $1B $00 $10 $12 $65 $56 $EF $10 $29 $00 $09 $03 $B5 $55 $F3 $7F $00 $01 $20 $29 $00 $04 $75 $55 $10 $04 $00 $39 $40 $12 $36 $40 $03 $26 $40 $03 $40 $16 $10 $03 $21 $66 $46 $12 $11 $11 $00 $11 $11 $51 $55 $55 $11 $51 $76 $00 $56 $11 $41 $77 $56 $21 $41 $07 $00 $36 $21 $61 $07 $36 $31 $61 $07 $00 $26 $31 $65 $07 $60 $66 $65 $07 $00 $36 $43 $64 $47 $12 $63 $74 $60 $80 $30 $03 $76 $60 $11 $63 $76 $40 $11 $60 $65 $10 $03 $00 $1E $06 $07 $26 $11 $65 $00 $67 $12 $23 $61 $47 $31 $46 $62 $00 $57 $21 $43 $66 $57 $11 $22 $65 $80 $04 $45 $63 $57 $65 $15 $65 $60 $16 $00 $64 $06 $46 $11 $32 $66 $26 $11 $00 $52 $46 $46 $21 $66 $36 $56 $21 $00 $76 $26 $56 $31 $76 $16 $36 $31 $02 $76 $14 $36 $51 $76 $14 $10 $E9 $34 $00 $51 $06 $60 $12 $13 $64 $26 $51 $00 $16 $62 $34 $61 $16 $62 $56 $62 $04 $16 $62 $36 $62 $14 $00 $03 $15 $63 $20 $26 $56 $00 $E5 $13 $32 $65 $23 $11 $00 $11 $61 $12 $11 $53 $66 $14 $21 $00 $66 $77 $14 $21 $76 $07 $24 $31 $24 $76 $00 $00 $42 $00 $36 $00 $1E $00 $32 $00 $23 $42 $07 $41 $15 $43 $07 $62 $00 $15 $76 $07 $51 $23 $76 $00 $31 $01 $52 $76 $00 $21 $42 $77 $00 $00 $9D $FF $F1 $1D $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F5 $F0 $01 $F0 $01 $F0 $01 $90 $01 $55 $12 $E1 $50 $13 $E6 $DF $F0 $01 $13 $A7 $55 $13 $CC $23 $A7 $20 $2D $13 $F7 $03 $BC $3E $05 $60 $03 $E9 $13 $FA $17 $9B $10 $04 $14 $21 $66 $6A $56 $00 $4C $20 $0B $00 $10 $4F $50 $04 $2F $55 $7E $05 $24 $2B $00 $14 $13 $28 $00 $01 $44 $16 $10 $28 $05 $D6 $10 $03 $04 $39 $14 $00 $63 $11 $00 $62 $10 $65 $77 $D0 $10 $21 $04 $62 $55 $50 $97 $62 $66 $24 $31 $08 $21 $45 $13 $11 $10 $3B $77 $77 $77 $F0 $27 $B2 $20 $68 $14 $7C $00 $38 $66 $56 $21 $64 $0C $63 $24 $11 $63 $90 $1F $98 $76 $37 $42 $00 $15 $65 $57 $21 $21 $64 $67 $34 $18 $65 $76 $07 $40 $1F $90 $01 $36 $51 $45 $00 $26 $56 $11 $42 $56 $67 $55 $66 $0A $67 $00 $77 $77 $83 $90 $55 $10 $DE $60 $20 $31 $21 $14 $1A $76 $13 $56 $65 $77 $98 $00 $5F $07 $70 $81 $17 $20 $D5 $51 $76 $00 $11 $40 $21 $74 $05 $11 $76 $00 $60 $00 $5D $C8 $14 $BF $04 $B7 $60 $31 $04 $C2 $65 $05 $00 $00 $47 $76 $11 $64 $07 $00 $21 $74 $25 $07 $00 $00 $27 $00 $61 $00 $7D $63 $00 $61 $0E $76 $07 $00 $50 $10 $88 $F3 $FD $50 $79 $56 $7F $06 $35 $4F $15 $79 $F0 $01 $F9 $5E $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $B6 $28 $23 $55 $08 $25 $02 $88 $50 $F7 $E9 $58 $43 $66 $F7 $10 $04 $14 $68 $47 $EB $A4 $6B $56 $08 $3B $03 $46 $14 $0B $FF $00 $05 $F2 $D3 $34 $07 $13 $6F $04 $77 $F0 $5F $24 $4D $34 $75 $7F $56 $F3 $2B $10 $3E $04 $60 $20 $23 $F0 $3F $90 $C2 $24 $9D $FE $F0 $1B $00 $9F $00 $5D $10 $93 $00 $5E $F5 $23 $20 $17 $75 $31 $77 $50 $F0 $3F $E3 $A7 $66 $66 $65 $14 $4F $93 $F0 $01 $00 $50 $05 $61 $65 $66 $01 $22 $F0 $1F $FF $30 $DF $00 $D8 $F1 $5D $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $E0 $F0 $01 $F0 $01 $F0 $01 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00
 
-
+ALIGN 4
+EMap1Viewer:
+CGViewer(MapCG)
+ALIGN 4
+EMap1TextViewer:
+CGViewer(MapWordsCG)
+ALIGN 4
+EMap2Viewer:
+CGViewer(Map2CG)
+ALIGN 4
+EMap2TextViewer:
+CGViewer(Map2WordsCG)
+ALIGN 4
+ECreditsElcorianViewer:
+CGViewer(CreditsElcorianCG)
+ALIGN 4
+EsadblirViewer:
+CGViewer(sadblirCG)
+ALIGN 4
+EblirViewer:
+CGViewer(blirCG)
 
 ALIGN 4 
 SomeTestEvent: 

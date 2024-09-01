@@ -603,8 +603,9 @@ LABEL 0x400
 	MUSC S_TheSwan
 	ASMC 0xC4879 //credits
 	STAL 180
-	//FADU 2
-	SetBackground(FinTextCG)//swap for sad cg when lumi makes it
+	FADI 16
+	CLEAN
+	SetBackground(sadblirCG)//swap for sad cg when lumi makes it
 	STAL 600
 	MUSCSLOW 0x7fff
 	FADI 0x1

@@ -8,6 +8,21 @@ POP
 
 ALIGN 4
 BattleQuoteTable: // This is in free space
+//postgame
+//tale 1
+SpecifiedBattleConvo(Butch,PGArgent,Tale1,0x8,Tale1ButchArgentBattle)
+SpecifiedBattleConvo(Peggy,PGArgent,Tale1,0x9,Tale1PeggyArgentBattle)
+SpecifiedBattleConvo(Peter,PGArgent,Tale1,0xa,Tale1PeterArgentBattle)
+SpecifiedBattleConvo(Rift,PGArgent,Tale1,0xb,Tale1RiftArgentBattle)
+SpecifiedBattleConvo(PGMitchell,PGArgent,Tale1,0xc,Tale1MitchellArgentBattle)
+SpecifiedBattleConvo(SecretClarque,PGArgent,Tale1,0xd,Tale1ClarqueArgentBattle)
+SpecifiedBattleConvo(PGMarque,PGArgent,Tale1,0xe,Tale1MarqueArgentBattle)
+SpecifiedBattleConvo(PGStarque,PGArgent,Tale1,0xf,Tale1StarqueArgentBattle)
+SpecifiedBattleConvo(PGParque,PGArgent,Tale1,0x10,Tale1ParqueArgentBattle)
+//tale12
+SpecifiedBattleConvo(Sinclair,Dragon,Tale12,0x21,Tale12SinclairBossQuote)
+SpecifiedBattleConvo(PGNathaniel,Dragon,Tale12,0x22,Tale12NathanielBossQuote)
+SpecifiedBattleConvo(PGMichael,Dragon,Tale12,0x23,Tale12MichaelBossQuote)
 //prologue
 UnspecifiedBattleConvo(Davelarn,Prologue,0x1,PDavelarnBattle)
 UnspecifiedBattleConvo(Blair,Prologue,0x11,PBlairBattle)

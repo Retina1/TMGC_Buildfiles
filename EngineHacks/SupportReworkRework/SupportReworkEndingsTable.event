@@ -1,0 +1,165 @@
+
+#ifndef SUPPORT_REWORK_ENDINGS_TABLE
+	#define SUPPORT_REWORK_ENDINGS_TABLE
+	
+    // Use me for the "type" field.
+	#define ENDING_SOLO 1
+    #define ENDING_PAIRED 2
+	
+    /* The parameters are...
+         type: Whether the ending is solo or paired.
+         pidA: The character ID of the solo ending or one of the characters in a paired ending.
+         pidB: The character ID of the other character in a paired ending.
+         minLevel: Minimum support-rework-rework-defined support level for the conversation to be viewable for paired endings.
+         textID: Text ID to show for this ending.
+         flag: Optional event ID that needs to be enabled for the conversation to be veiwable (default = 0 meaning behavior disabled).
+         usability: Optional usability function (accepts pointer to the entry) that overrides the support level check (default = NULL meaning no extra usability).
+    */
+	
+	// I'm used internally by the macros.
+	#define SRREnding(type,charID1,charID2,minLevel,textID,flag,usability) "BYTE type charID1 charID2 minLevel ; WORD textID flag ; POIN usability"
+	
+	// Use me for a solo ending.
+    #define SoloEnding(charID,textID,flag,usability) "SRREnding(ENDING_SOLO,charID,0,0,textID,flag,usability)"
+    #define SoloEnding(charID,textID,flag) "SRREnding(ENDING_SOLO,charID,0,0,textID,flag,0)"
+	#define SoloEnding(charID,textID) "SRREnding(ENDING_SOLO,charID,0,0,textID,0,0)"
+	// Use me for a paired ending.
+	#define PairedEnding(charID1,charID2,minLevel,textID,flag,usability) "SRREnding(ENDING_PAIRED,charID1,charID2,minLevel,textID,flag,usability)"
+	#define PairedEnding(charID1,charID2,minLevel,textID,flag) "SRREnding(ENDING_PAIRED,charID1,charID2,minLevel,textID,0,0)"
+	#define PairedEnding(charID1,charID2,textID,flag) "SRREnding(ENDING_PAIRED,charID1,charID2,ASupport,textID,flag,0)"
+	#define PairedEnding(charID1,charID2,textID) "SRREnding(ENDING_PAIRED,charID1,charID2,ASupport,textID,0,0)"
+	
+
+	// I'm checked first-to-last for a valid character ending. No character is viewed twice.
+	// An easy way to set me up is to put paired endings first for priority then all solo endings last.
+	// The "flag" and "usability" entries let you do fancy things!
+	ALIGN 4
+	gCharacterEndings:
+		SoloEnding(Blair,BlairPolyEndingAlt,PolyboatFlag)
+		SoloEnding(Arin,ArinPolyEndingAlt,PolyboatFlag)
+		SoloEnding(Natasia,NatasiaPolyEndingAlt,PolyboatFlag)
+		SoloEnding(Avan,AvanPolyEndingAlt,PolyboatFlag)
+		SoloEnding(Yuyu,YuyuPolyEndingAlt,PolyboatFlag)
+		SoloEnding(Estelle,EstellePolyEndingAlt,PolyboatFlag)
+		SoloEnding(Blair,BlairPolyEnding,GirlkissingFlag)
+		SoloEnding(Arin,ArinPolyEnding,GirlkissingFlag)
+		SoloEnding(Natasia,NatasiaPolyEnding,GirlkissingFlag)
+		SoloEnding(Avan,AvanPolyEnding,GirlkissingFlag)
+		SoloEnding(Yuyu,YuyuPolyEnding,GirlkissingFlag)
+		SoloEnding(Estelle,EstellePolyEnding,GirlkissingFlag)
+		PairedEnding(Kenneth,Hilbert,KennethHilbertEnding)
+		SoloEnding(Kenneth,KennethSoloEnding)
+		PairedEnding(Natasia,Bechamel,NatasiaBechamelEnding,BlairNotWithNatFlag)
+		SoloEnding(Natasia,NatasiaEndingAlt,NatasiaBechamelFlag)
+		SoloEnding(Natasia,NatasiaSoloEnding)
+		SoloEnding(Stefan,StefanSoloEnding)
+		SoloEnding(Desmond,DesmondSoloEnding)
+		PairedEnding(Sam,Emile,SamEmileEnding)
+		PairedEnding(Sam,Charley,SamCharleyEnding)
+		SoloEnding(Sam,SamEndingAlt,SamBechamelFlag)
+		SoloEnding(Sam,SamSoloEnding)
+		SoloEnding(Josef,JosefSoloEnding)
+		SoloEnding(Peggy,PeggyEndingBoatAlt,PeggyOnBoatFlag)
+		PairedEnding(Peggy,Butch,PeggyButchEnding)
+		SoloEnding(Peggy,PeggySoloEnding)
+		PairedEnding(Butch,Peter,ButchPeterEnding)
+		SoloEnding(Butch,ButchSoloEnding)
+		PairedEnding(Rachael,Cassius,RachaelCassiusEnding)
+		SoloEnding(Rachael,RachaelSoloEnding)
+		SoloEnding(Cassius,CassiusSoloEnding)
+		SoloEnding(Jeff,JeffEndingRachaelAlt,RachaelJeffFlag)
+		SoloEnding(Jeff,JeffEndingButchAlt,ButchJeffFlag)
+		SoloEnding(Jeff,JeffSoloEnding)
+		SoloEnding(Emile,EmileSoloEnding)
+		PairedEnding(Apollo,Flynn,ApolloFlynnEnding)
+		PairedEnding(Apollo,Bechamel,ApolloBechamelEndingAlt,NatasiaBechamelFlag)
+		PairedEnding(Apollo,Bechamel,ApolloBechamelEnding)
+		PairedEnding(Apollo,Vladmir,ApolloVladmirEnding)
+		SoloEnding(Apollo,ApolloSoloEnding)
+		SoloEnding(Bechamel,BechamelEndingAlt,NatasiaBechamelFlag)
+		SoloEnding(Bechamel,BechamelSoloEnding)
+		SoloEnding(Sveltzalus,SveltzalusSoloEnding)
+		SoloEnding(Hilbert,HilbertSoloEnding)
+		SoloEnding(Agnes,AgnesSoloEnding)
+		PairedEnding(Desmond,Flynn,DesmondFlynnEnding)
+		SoloEnding(Flynn,FlynnSoloEnding)
+		SoloEnding(Addington,AddingtonSoloEnding)
+		SoloEnding(Mikey,MikeyEndingAlt,CassiusMikeyFlag)
+		SoloEnding(Mikey,MikeySoloEnding)
+		SoloEnding(Carbon,CarbonEndingAlt,BlairCarbonFlag)
+		SoloEnding(Carbon,CarbonSoloEnding)
+		SoloEnding(Gaylord,GaylordSoloEnding)
+		SoloEnding(Athena,AthenaSoloEnding)
+		SoloEnding(Charley,CharleySoloEnding)
+		PairedEnding(Hyperius,Alexis,HyperiusAlexisEnding)
+		SoloEnding(Hyperius,HyperiusSoloEnding)
+		SoloEnding(Alexis,AlexisSoloEnding)
+		PairedEnding(Leila,Damien,LeilaDamienEndingAlt,LeilaTobiasFlag)
+		PairedEnding(Leila,Damien,LeilaDamienEnding)
+		PairedEnding(Leila,Wilhelm,LeilaWilhelmEnding)
+		PairedEnding(Leila,Tobias,LeilaTobiasEnding,LeilaTobiasFlag)
+		SoloEnding(Leila,LeilaSoloEnding)
+		SoloEnding(Damien,DamienSoloEnding)
+		SoloEnding(Zacharias,ZachariasSoloEnding)
+		SoloEnding(Avan,AvanSoloEnding)
+		SoloEnding(Toddsworth,ToddsworthEndingAlt,CharleyToddsworthFlag)
+		SoloEnding(Toddsworth,ToddsworthSoloEnding)
+		SoloEnding(Yuyu,YuyuSoloEnding)
+		SoloEnding(Artemis,ArtemisSoloEnding)
+		SoloEnding(Hollandaise,HollandaiseEndingAlt,BechamelHollandaiseFlag)
+		SoloEnding(Hollandaise,HollandaiseSoloEnding)
+		SoloEnding(Vladmir,VladmirSoloEnding)
+		SoloEnding(Horatio,HoratioSoloEndingAlt,HoratioFlag)//summon alt
+		SoloEnding(Horatio,HoratioSoloEnding)
+		SoloEnding(UnitQ,QSoloEnding)
+		SoloEnding(Simone,SimoneSoloEnding)
+		PairedEnding(Ptolemy,Johan,JohanPtolemyEnding)
+		PairedEnding(Stefan,Johan,StefanJohanEnding)
+		SoloEnding(Ptolemy,PtolemySoloEnding)
+		SoloEnding(Johan,JohanSoloEnding)
+		SoloEnding(SecretClarque,ClarqueSoloEnding)
+		SoloEnding(Peter,PeterSoloEnding)
+		SoloEnding(Tonnamin,TonnaminSoloEnding)
+		PairedEnding(Joan,Sonia,JoanSoniaEnding)
+		SoloEnding(Joan,JoanSoloEnding)
+		SoloEnding(Sonia,SoniaSoloEnding)
+		SoloEnding(Tobias,TobiasEndingAlt,LeilaTobiasSplitFlag) //make play only if leila not with damien
+		SoloEnding(Tobias,TobiasSoloEnding)
+		PairedEnding(SecretLaronde,Rose,RoseLarondeEnding)
+		SoloEnding(SecretLaronde,LarondeSoloEnding)
+		PairedEnding(Freddric,Argent,FreddricArgentEnding)
+		SoloEnding(Freddric,FreddricSoloEnding)
+		SoloEnding(Dean,DeanSoloEnding)
+		PairedEnding(Eliza,Dirk,ElizaDirkEnding)
+		SoloEnding(Eliza,ElizaSoloEnding)
+		PairedEnding(Rift,Callum,RiftCallumEnding)
+		SoloEnding(Rift,RiftSoloEnding)
+		SoloEnding(Estelle,EstelleSoloEnding)
+		SoloEnding(Rose,RoseSoloEnding)
+		SoloEnding(Dirk,DirkSoloEnding)
+		SoloEnding(Callum,CallumSoloEnding)
+		PairedEnding(Manfred,Wilhelm,ManfredWilhelmEnding)
+		SoloEnding(Manfred,ManfredSoloEnding)
+		SoloEnding(Wilhelm,WilhelmSoloEnding)
+		SoloEnding(Argent,ArgentSoloEnding)
+		SoloEnding(Ian,IanSoloEnding)
+		SoloEnding(Kyrie,KyrieSoloEnding)
+		SoloEnding(Jonas,JonasSoloEnding)
+		SoloEnding(Olsen,OlsenSoloEnding)
+		SoloEnding(Valeria,ValeriaSoloEnding)
+		SoloEnding(Elcorian,ElcorianSoloEnding)
+		SoloEnding(Chartreuse,ChartreuseEnding)
+		SoloEnding(Viridian,ViridianEnding)
+		PairedEnding(Zeke,Cassius,ZekeCassiusEnding)
+		SoloEnding(Zeke,ZekeSoloEnding)
+		SoloEnding(Arin,ArinSoloEnding)
+		PairedEnding(Blair,Arin,BlairArinEnding)
+		PairedEnding(Blair,Natasia,BlairNatasiaEndingAlt,NatasiaBechamelFlag)
+		PairedEnding(Blair,Natasia,BlairNatasiaEnding)
+		PairedEnding(Blair,Avan,BlairAvanEnding)
+		PairedEnding(Blair,Yuyu,BlairYuyuEnding)
+		PairedEnding(Blair,Estelle,BlairEstelleEnding)
+		SoloEnding(Blair,BlairSoloEnding)
+	WORD 0 0 0 0 // Terminator.
+
+#endif // SUPPORT_REWORK_ENDINGS_TABLE

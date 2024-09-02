@@ -1,4 +1,3 @@
-
 .include "reference/FE8U-20190316.s"
 
 @ Functions to be autohooked.
@@ -16,6 +15,20 @@ SET_FUNC DrawSupports, (0x8087698+1)
 
 SET_FUNC SupportReworkPageSwitch, (0x08088690+1)
 
+SET_FUNC DoesUnitHavePairedEnding, (0x080B6A80+1)
+
+SET_FUNC LoadNextCharacterEnding, (0x080B6AE0+1)
+
+SET_FUNC CharacterEnding_Init, (0x080B696C+1)
+
+SET_FUNC SetupBackgrounds, (0x08001B58+1)
+
+SET_FUNC ResetFaces, (0x08005528+1)
+
+SET_FUNC SetupCharacterEndingGfx, (0x080B67E8+1)
+
+SET_FUNC SetDefaultColorEffects, (0x08001F80+1)
+
 @ Functions to define I didn't find in Clib.
 SET_FUNC GetChapterEvents, (0x080346B0+1)
 
@@ -30,6 +43,10 @@ SET_FUNC RTextDown, (0x08089384+1)
 SET_FUNC RTextLeft, (0x080893B4+1)
 
 SET_FUNC RTextRight, (0x080893E4+1)
+
+SET_FUNC sub_80B6A10, (0x080B6A10+1)
+
+SET_FUNC CheckEventId, (0x08083DA8+1)
 
 @ Data to define I didn't find in Clib.
 SET_DATA gMemorySlot, (0x030004B8)
@@ -53,5 +70,4 @@ SET_DATA TileBufferBase, (0x2003C2C)
 SET_DATA Tile_Origin, (0x02003C94)
 
 SET_FUNC Bg2_Origin, (0x0200472C)
-
 

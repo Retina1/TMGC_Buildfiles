@@ -661,6 +661,16 @@ CGTEXTSTART
 TEXTSHOW EpilogueFinalEndingText
 TEXTEND
 
+CHECK_EVENTID GirlkissingFlag
+BEQ 0x500 0xc 0x0
+//clearing to make pairs not display
+ClearSupport(Blair,Arin)
+ClearSupport(Blair,Natasia)
+ClearSupport(Blair,Avan)
+ClearSupport(Blair,Yuyu)
+ClearSupport(Blair,Estelle)
+LABEL 0x500
+
 EpilogueMapSwap(AfterTheEnd,0,0)
 CLEAN
 

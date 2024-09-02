@@ -21,6 +21,10 @@ SET_DATA gHitCountRAMAddress, 0x030017c4
 
 SET_FUNC SetPidDefeatedFlag,0x08083571
 
+SET_FUNC DoesUnitHavePairedEnding,0x080B6A80
+SET_FUNC LoadNextCharacterEnding,0x080B6AE0
+SET_FUNC sub_80B6A10,0x080B6A10
+
 SET_FUNC GetChapterAllyUnitDataPointer,0x08083348
 SET_FUNC GlobalIRQHandler, 0x80000FC
 SET_FUNC ARM_ClearOAMBuffer, 0x8000304

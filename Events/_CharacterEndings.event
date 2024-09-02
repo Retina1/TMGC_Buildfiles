@@ -3,60 +3,11 @@ ORG $B674C
 POIN NewEndingWithdrawalTable
 ORG $B6728
 POIN NewEndingTitleTable
-ORG $A3D1A8
-POIN NewEndingsTable
-ORG $A3D1AC
-POIN NewEndingsTable
+//ORG $A3D1A8
+//POIN NewEndingsTable
+//ORG $A3D1AC
+//POIN NewEndingsTable
 POP
-
-
-#define BlairArinFlag 0x8
-#define BlairNatasiaFlag 0x9
-#define BlairAvanFlag 0xa
-#define BlairYuyuFlag 0xb
-#define BlairEstelleFlag 0xc
-#define BlairCarbonFlag 0xd
-#define ArinSimoneFlag 0xe
-#define KennethHilbertFlag 0xf 
-#define NatasiaBechamelFlag 0x10
-#define BOATFLAGWOO NatasiaBechamelFlag
-#define NatasiaPeggyFlag 0x11 
-#define StefanJohanFlag 0x12
-#define DesmondFlynnFlag 0x13
-#define SamEmileFlag 0x14 
-#define SamBechamelFlag 0x15 
-#define SamCharleyFlag 0x16 
-#define JosefAthenaFlag 0x17 
-#define PeggyButchFlag 0x18 
-#define ButchJeffFlag 0x19 
-#define ButchPeterFlag 0x1a 
-#define RachaelCassiusFlag 0x1b 
-#define RachaelJeffFlag 0x1c 
-#define RachaelLeilaFlag 0x1d 
-#define CassiusMikeyFlag 0x1e 
-#define CassiusZekeFlag 0x1f 
-#define ApolloBechamelFlag 0x20 
-#define ApolloFlynnFlag 0x21 
-#define ApolloVladmirFlag 0x22 
-#define BechamelHollandaiseFlag 0x23 
-#define CharleyToddsworthFlag 0x24 
-#define HyperiusAlexisFlag 0x25 
-#define LeilaDamienFlag 0x26 
-#define LeilaWilhelmFlag 0x27 
-#define LeilaTobiasFlag 0x28 
-#define PtolemyJohanFlag 0x9d
-#define FreddricArgentFlag 0x9c
-#define ElizaDirkFlag 0x9b 
-#define RiftEstelleFlag 0x9a 
-#define RiftCallumFlag 0x99
-#define RoseManfredFlag 0x98
-#define RoseLarondeFlag 0x97 
-#define ManfredWilhelmFlag 0x96
-#define BlairSingleFlag 0x95 
-#define JoanSoniaFlag 0x94
-#define LeilaTobiasSplitFlag 0x8d
-#define PeggyOnBoatFlag 0x8c
-#define BlairNotWithNatFlag 0x8b
 
 #define RetreatDesignationTrue 2
 #define RetreatDesignationFalse 0
@@ -220,6 +171,7 @@ EndingTitleTableEntry(Valeria,ValeriaEndingTitle)
 EndingTitleTableEntry(Elcorian,ElcorianEndingTitle)
 EndingTitleTableTerminator
 
+/*
 ALIGN 4
 NewEndingsTable:
 //use flag endings to do pairs maybe, either that or get snek to help with paired tech
@@ -350,3 +302,4 @@ SoloEndingTableEntry(Arin,ArinSoloEnding)
 //blair/lovers
 SoloEndingTableEntry(Blair,BlairSoloEnding)
 EndingTableTerminator
+*/

@@ -11,6 +11,7 @@ typedef const struct UnitDefinition UnitDefinition;
 typedef const struct RTextStatName RTextStatName;
 typedef struct RTextProc RTextProc;
 typedef struct StatScreen StatScreen;
+typedef struct SRRCharacterEndingEnt SRRCharacterEndingEnt;
 
 asm(".macro blh to, reg\n\
 		ldr \\reg, =\\to\n\
@@ -125,6 +126,37 @@ struct StatScreen
 	// idk the rest.
 };
 
+// Expansion of CharacterEndingEnt (see decomp src/ending_details.c).
+struct SRRCharacterEndingEnt {
+	u8 type; // Either CHARACTER_ENDING_NONE or CHARACTER_ENDING_SOLO or CHARACTER_ENDING_PAIRED.
+	u8 pidA, pidB; // Character IDs for this condition.
+	u8 minimumLevel; // Minimum support rework rework level between characters to be viewable.
+    int textId; // Text ID to show for the paired ending.
+    int flag; // Optional event flag. If nonzero, the ending is enabled only if the flag is set.
+    bool (*usability)(SRRCharacterEndingEnt*); // Optional custom usability function. If non-null, the minSupportLevel fields are ignored.
+};
+
+// Stolen from the decomp (src/ending_details.c).
+struct CharacterEndingProc {
+    /* 00 */ PROC_HEADER;
+
+    /* 29 */ u8 _pad[0x2E - 0x29];
+    /* 2E */ u16 unk_2e;
+    /* 30 */ struct SRRCharacterEndingEnt* unk_30;
+    /* 34 */ struct SRRCharacterEndingEnt* unk_34;
+    /* 38 */ struct Unit* unitA;
+    /* 3C */ struct Unit* unitB;
+    /* 40 */ u32 unk_40[8]; // flags for characters who have already been shown in an ending
+};
+
+// Also stolen from the decomp.
+enum {
+    CHARACTER_ENDING_NONE   = 0,
+
+    CHARACTER_ENDING_SOLO   = 1,
+    CHARACTER_ENDING_PAIRED = 2,
+};
+
 extern SupportTableEntry SupportBonusTable[0xFF];
 extern u32 gMemorySlot[16]; // 0x030004B8.
 extern const u32 SupportPopupDefinitions;
@@ -146,7 +178,8 @@ extern u16 Bg2_Origin[32][32]; // 0x0200472C.
 extern const void* SupportStatScreenSmallBox;
 extern const void* SupportStatScreenBlueBox;
 extern const char TotalCurrentSupportBonusesText;
-extern u8 SupportReworkShouldUse0xFFBehavior; // Should we treat 0xFF as the first character struct?
+extern const u8 SupportReworkShouldUse0xFFBehavior; // Should we treat 0xFF as the first character struct?
+extern SRRCharacterEndingEnt gCharacterEndings[0xFF];
 
 extern const void** GetChapterEvents(int number); // 0x080346B0.
 extern void StartMapEventEngine(const void* scene, int runKind); // 0x0800D0B0.
@@ -156,6 +189,12 @@ extern void RTextDown(RTextProc* proc); // 0x08089384.
 extern void RTextLeft(RTextProc* proc); // 0x080893B4.
 extern void RTextRight(RTextProc* proc); // 0x080893E4.
 extern Unit* GetUnitStructFromEventParameter(int eventParameter); // 0x800BC50.
+extern Unit* sub_80B6A10(int charID); // 0x080B6A10, duh.
+extern int CheckEventId(int eventID); // 0x08083DA8.
+void SetupBackgrounds(u16 *bgConfig); // 0x08001B58.
+void ResetFaces(void); // 0x08005528.
+void SetupCharacterEndingGfx(void); // 0x080B67E8.
+void SetDefaultColorEffects(void); // 0x08001F80.
 
 void MasterSupportCalculation(Unit* unit, BonusStruct* bonuses);
 static int GetCharacterDistance(Unit* unit1, Unit* unit2);
@@ -207,12 +246,17 @@ void NewBoxType(void);
 void SupportScreenRTextGetter(RTextProc* proc); // Getter and looper defined in the ROM RText structs.
 void SupportScreenRTextLooper(RTextProc* proc);
 
+s8 IsPairedEndingViewable(struct SRRCharacterEndingEnt* pairingEnt, int pidA, int pidB);
+s8 DoesUnitHavePairedEnding(struct SRRCharacterEndingEnt* pairingEnt, struct Unit* unit);
+void LoadNextCharacterEnding(struct CharacterEndingProc* proc);
+
 // In this file, we'll do the stat calculations.
 #include "MemoryManagement.c" // Internal use functions to manage and get support data.
 #include "EventCalls.c" // Functions to be ASMCed via EA macros.
 #include "UnitMenu.c" // "Support" usability, CHARASM stuff, target list, and event effect.
 #include "StatScreen.c" // Drawing stuff for the stat screen.
 #include "Base.c" // Integration with the base conversation system.
+#include "PairedEndings.c" // Support for the ending screen.
 
 void MasterSupportCalculation(Unit* unit, BonusStruct* bonuses) // Called to loop through supports and fill the bonus struct. Autohook to 0x080285B0.
 {

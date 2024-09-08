@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C11Join,1)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -210,7 +211,20 @@ UNIT
 C11Agnes:
 UNIT Agnes MercF 0x0 Level(14,Ally,0) [21,21] 0x0 0x0 0x1 REDA21R20 [Armorslayer,Zanbato,PureWater] NoAI
 UNIT
+C11AgnesAlt:
+UNIT Agnes MercF 0x0 Level(14,Ally,0) [21,21] 0x0 0x0 0x0 0x0 [Armorslayer,Zanbato,PureWater] NoAI
+UNIT
 ALIGN 4
+
+C11Join:
+CHECK_EVENTID AgnesTalk2Flag
+BEQ 0x1 0xc 0x0
+Reinforcements(C11AgnesAlt)
+MUSC RecruitmentTheme
+Text(Ch11_AgnesAlt)
+ENUT 0x14
+LABEL 0x1
+EndEvent
 
 BeginningScene:
 ENUT GuideChpt11
@@ -245,6 +259,7 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
+FADI 16
 CLEE 0
 ResetBaseFlags
 MUSC VictoryTheme

@@ -34,6 +34,8 @@ CharacterEvent(0xf,SellToddToMevion,0x0,BountyHunter)
 CharacterEventBothWays(0x8,C22ClarqueBlairTalk,SecretClarque,Blair)
 CharacterEventBothWays(0x9,C22ClarqueZekeTalk,SecretClarque,Zeke)
 CharacterEvent(0xa,C22PeterBlairRecruit,Blair,Peter)
+CharacterEvent(0xa,C22PeterPeggyRecruit,Peggy,Peter)
+CharacterEvent(0xa,C22PeterClarqueRecruit,Clarque,Peter)
 CharacterEventBothWays(0xb,C22PeterButchRecruit,Butch,Peter)
 //map supports
 CharacterEventBothWays(0x14,C22BlairCarbonSupport,Blair,Carbon)
@@ -382,6 +384,18 @@ EndEvent
 C22PeterBlairRecruit:
 MUSC RecruitmentTheme2
 Text(C22PeterRecruit)
+TurnAlly(Peter)
+EndEvent
+
+C22PeterPeggyRecruit:
+MUSC RecruitmentTheme2
+Text(C22PeterRecruitPeggy)
+TurnAlly(Peter)
+EndEvent
+
+C22PeterClarqueRecruit:
+MUSC RecruitmentTheme2
+Text(C22PeterRecruitClarque)
 TurnAlly(Peter)
 EndEvent
 

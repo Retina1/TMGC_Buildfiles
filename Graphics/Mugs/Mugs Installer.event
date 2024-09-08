@@ -52,15 +52,29 @@ RetinaMug:
 #incbin "dmps/Retina.dmp"
 setMugEntry(0x1fd,RetinaMug,3,6,3,4)
 //fillers to make list show everything
-setMugEntry(0xfb,RetinaMug,3,6,3,4)
-setMugEntry(0xfc,RetinaMug,3,6,3,4)
-setMugEntry(0xfd,RetinaMug,3,6,3,4)
-setMugEntry(0xff,RetinaMug,3,6,3,4)
+
 setMugEntry(0x100,RetinaMug,3,6,3,4)
 ALIGN 4
 InterludeGuyMug:
 #incbin "dmps/Interlude9Guy.dmp"
 setMugEntry(0xf4,InterludeGuyMug,2,5,2,3)
+
+ALIGN 4
+PGGenericPirateMug:
+#incbin "dmps/GenericPirate.dmp"
+setMugEntry(0xfb,PGGenericPirateMug,2,3,2,1)
+ALIGN 4
+PGGenericPirateMug2:
+#incbin "dmps/GenericPirate2.dmp"
+setMugEntry(0xfc,PGGenericPirateMug2,2,3,2,1)
+ALIGN 4
+PGGenericPirateMug3:
+#incbin "dmps/GenericPirate3.dmp"
+setMugEntry(0xfd,PGGenericPirateMug3,2,3,2,1)
+ALIGN 4
+PGGenericPirateMug4:
+#incbin "dmps/GenericPirate4.dmp"
+setMugEntry(0xff,PGGenericPirateMug4,2,3,2,1)
 
 ALIGN 4
 BlairMug:

@@ -21,6 +21,9 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,C8Turn2,2)
+TurnEventPlayer(0x0,C8Turn4,4)
+TurnEventPlayer(0x0,C8Turn6,6)
 TurnEventPlayer(0x0,C8Turn7,7)
 TurnEventPlayer(0x10,C8TorchTrapA,1,255)
 TurnEventPlayer(0x11,C8TorchTrapB,1,255)
@@ -211,6 +214,30 @@ MUSC VictoryTheme
 CleanTextNoMap(VolcanoCG,Ch8_Ending)
 MoveToChapter(Interlude2)
 ENDA
+
+C8Turn2:
+CHECK_ALIVE Cid
+BEQ 0x1 0xc 0x0
+CAM1 Cid
+Text(C8CidComment1)
+LABEL 0x1
+EndEvent
+
+C8Turn4:
+CHECK_ALIVE Cid
+BEQ 0x1 0xc 0x0
+CAM1 Cid
+Text(C8CidComment2)
+LABEL 0x1
+EndEvent
+
+C8Turn6:
+CHECK_ALIVE Cid
+BEQ 0x1 0xc 0x0
+CAM1 Cid
+Text(C8CidComment3)
+LABEL 0x1
+EndEvent
 
 C8Turn7:
 Reinforcements(C8Thief)

@@ -42,6 +42,7 @@ CharacterEvent(0x13,I3JeffTalk,Blair,Jeff)
 CharacterEvent(0x14,I3EmileTalk,Blair,Emile)
 CharacterEvent(0x15,I3ApolloTalk,Blair,Apollo)
 CharacterEvent(0x16,I3BechamelTalk,Blair,Bechamel)
+CharacterEvent(AgnesTalk2Flag,I3AgnesTalk,Blair,Agnes)
 END_MAIN
 
 LocationBasedEvents:
@@ -96,7 +97,9 @@ UNIT
 I3NPC:
 UNIT Cid Berserker 0x0 Level(9,NPC,0) [6,3] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
 UNIT
-
+I3Agnes:
+UNIT Agnes MercF 0x0 Level(14,NPC,0) [4,7] 0x0 0x0 0x0 0x0 [Armorslayer,Zanbato,PureWater] NeverMoveAI
+UNIT
 ALIGN 4
 
 BeginningScene:
@@ -104,6 +107,11 @@ EnableFreeMovement
 LOAD1 0x0 I3Units
 LOAD1 0x0 I3NPC
 ENUN
+CHECK_EVENTID AgnesTalk1Flag
+BEQ 0x1 0xc 0x0
+LOAD1 0x0 I3Agnes
+ENUN
+LABEL 0x1
 MUSC NarrationTheme
 Narration(MapCG,Base3_Narration)
 RandomRainSetter
@@ -144,6 +152,10 @@ AddLightRune(Cassius)
 AddLightRune(Jeff)
 AddLightRune(Apollo)
 SystemText(I3Note)
+EndEvent
+
+I3AgnesTalk:
+Text(I3AgnesConvo)
 EndEvent
 
 I3ArinTalk:

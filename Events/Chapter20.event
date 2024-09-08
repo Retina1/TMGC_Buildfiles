@@ -364,6 +364,7 @@ DifficultyReinforcements(C20Chamber1,C20Chamber1,C20Chamber1Lunatic)
 CLEAN
 FADU 16
 EndEvent
+
 C20Seize2:
 SetBackground(DungeonCG)
 CHECK_ACTIVEID Blair
@@ -379,6 +380,7 @@ DifficultyReinforcements(C20Chamber2,C20Chamber2,C20Chamber2Lunatic)
 CLEAN
 FADU 16
 EndEvent
+
 C20Seize3:
 MUSC S_Chaos
 SetBackground(DungeonCG)
@@ -395,6 +397,7 @@ DifficultyReinforcements(C20Chamber3,C20Chamber3,C20Chamber3Lunatic)
 CLEAN
 FADU 16
 EndEvent
+
 C20Seize4:
 MUSC S_Chaos
 SetBackground(DungeonCG)
@@ -411,7 +414,9 @@ DifficultyReinforcements(C20Chamber4,C20Chamber4,C20Chamber4Lunatic)
 SetUnitStatusAll(Dragon*0x100+Dragon, UnitPointer, 0x8805AD8, Any, EnemyArmy, AnyClass, AnyRange, AnyItem)
 CLEAN
 FADU 16
+SetMapBGM(S_DragonsGateII)
 EndEvent
+
 C20Seize5:
 MUSC S_Chaos
 SetBackground(DungeonCG)

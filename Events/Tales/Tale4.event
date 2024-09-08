@@ -21,6 +21,9 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+//turn 1 tells you survive
+//turn 5ish says you're doing well but a big wave's coming
+//turn 7 has fuckoff spawns and tells you run and turns off objective display (use ENUT 0x66, ENUF 0x66 later)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -42,6 +45,14 @@ Tutorial:
 END_MAIN
 
 TrapData:
+TelliusTorchOff(16,4,8)
+TelliusTorchOff(22,4,8)
+TelliusTorchOff(18,14,8)
+TelliusTorchOff(12,7,8)
+TelliusTorchOff(11,14,8)
+TelliusTorchOff(4,21,8)
+TelliusTorchOff(15,22,8)
+TelliusTorchOn(0,9,4)
 ENDTRAP
 TrapData2:
 ENDTRAP
@@ -58,7 +69,16 @@ UNIT CidPirate4 Pirate 0x0 Level(9,Ally,0) [1,13] 0x0 0x0 0x0 0x0 [Swordslayer,S
 UNIT
 
 Tale4Enemies:
-UNIT Loile DarkM 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+//starting block
+UNIT Loile Brigand 0x0 Level(12,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Loile Merc 0x0 Level(12,Enemy,1) [21,16] 0x0 0x0 0x0 0x0 [Lancereaver,SteelSword] NoAI
+UNIT Loile Brigand 0x0 Level(12,Enemy,1) [21,17] 0x0 0x0 0x0 0x0 [Swordreaver] NoAI
+UNIT Loile Hunter 0x0 Level(12,Enemy,1) [22,15] 0x0 0x0 0x0 0x0 [SteelBow] DelayedAI
+UNIT Loile Sorc 0x0 Level(1,Enemy,1) [22,16] 0x0 0x0 0x0 0x0 [Flux] DelayedAI
+UNIT Loile Hunter 0x0 Level(12,Enemy,1) [22,17] 0x0 0x0 0x0 0x0 [SteelBow] DelayedAI
+UNIT Loile DarkM 0x0 Level(12,Enemy,1) [23,15] 0x0 0x0 0x0 0x0 [Freikugel] AttackInRangeAI
+UNIT Loile Warrior 0x0 Level(1,Enemy,1) [23,16] 0x0 0x0 0x0 0x0 [SteelAxe,SteelBow] AttackInRangeAI
+UNIT Loile DarkM 0x0 Level(12,Enemy,1) [23,17] 0x0 0x0 0x0 0x0 [Freikugel] AttackInRangeAI
 UNIT
 
 ALIGN 4

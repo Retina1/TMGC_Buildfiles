@@ -52,6 +52,8 @@ EpilogueFlagUnitLoad(Natasia,BlairNatasiaFlag,EpilogueAercolynNatasia,0x2)
 EpilogueUnitLoad(Yuyu,EpilogueAercolynYuyu,0x3)
 EpilogueNoFlagUnitLoad(Estelle,RiftEstelleFlag,EpilogueAercolynEstelle,0x4)
 EpilogueFlagUnitLoad(Ptolemy,PtolemyJohanFlag,EpilogueAercolynPtolemy,0x5)
+CHECK_EVENTID ApolloFlynnFlag
+BNE 0x9 0xc 0x0
 EpilogueFlagUnitLoad(Flynn,DesmondFlynnFlag,EpilogueAercolynFlynn,0x9)
 EpilogueNoFlagUnitLoad(Toddsworth,CharleyToddsworthFlag,EpilogueAercolynToddsworth,0x6)
 EpilogueUnitLoad(Carbon,EpilogueAercolynCarbon,0x7)
@@ -60,6 +62,8 @@ FADU 0x4
 STAL 120
 //text
 EpilogueUnitText(Stefan,Epilogue_StefanAercolyn,0x11)
+CHECK_EVENTID ApolloFlynnFlag
+BNE 0x41 0xc 0x0
 EpilogueNoFlagUnitText(Desmond,DesmondFlynnFlag,Epilogue_DesmondAercolyn,0x12)
 CHECK_EVENTID DesmondFlynnFlag
 BEQ 0x41 0xc 0x0
@@ -67,6 +71,8 @@ BEQ 0x41 0xc 0x0
 		FlashCursor(Flynn,30)
 		Text(Epilogue_DesmondFlynnAercolyn)
 LABEL 0x41
+GOTO 0x42
+EpilogueUnitText(Desmond,Epilogue_DesmondAercolyn,0x42)
 EpilogueNoFlagUnitText(Johan,PtolemyJohanFlag,Epilogue_JohanAercolyn,0x14)
 CHECK_EVENTID PtolemyJohanFlag
 BEQ 0x15 0xc 0x0
@@ -504,6 +510,7 @@ LABEL 0x10
 	FlashCursor(Butch,30)
 	FlashCursor(Peter,30)
 	Text(Epilogue_ButchPeterMevion)
+	ClearSupport(Peggy,Butch)
 LABEL 0x11
 //jeff
 CHECK_EVENTID RachaelJeffFlag

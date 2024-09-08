@@ -1,0 +1,18 @@
+#include "Arbitrate.lyn.event"
+
+ALIGN 4
+ArbitrateUsabilityWrapper:
+SHORT 0x1C20
+BL(ArbitrateUsability)
+SHORT 0xBC30 0xBC02 0x4708
+
+ALIGN 4
+ExecArbitrateWrapper:
+SHORT 0x1C30
+BL(ExecArbitrate)
+SHORT 0x46C0
+jumpToHack(0x2FF76)
+
+ALIGN 4
+gArbitrateID:
+WORD Arbitrate

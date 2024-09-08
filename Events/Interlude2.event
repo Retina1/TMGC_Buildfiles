@@ -34,6 +34,7 @@ CharacterEvent(0xe,I2Merchant,Blair,Merchant)
 CharacterEvent(0xf,I2Cit,Blair,Citizen)
 CharacterEvent(0x10,I2Cit2,Blair,Citizen2)
 CharacterEvent(0x0,I2ReadyToEnd,Blair,Cid)
+CharacterEvent(AgnesTalk1Flag,I2Agnes,Blair,Agnes)
 END_MAIN
 
 LocationBasedEvents:
@@ -85,7 +86,8 @@ UNIT Blair BlairLord 0x0 Level(1,Ally,0) [10,15] 0x0 0x0 0x0 0x0 [Fire, Awaken, 
 UNIT
 
 I2NPC:
-UNIT Cid Berserker 0x0 Level(9,NPC,0) [25,1] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
+UNIT Cid Berserker 0x0 Level(9,NPC,0) [24,1] 0x0 0x0 0x0 0x0 [Frypan,Elixir] NeverMoveAI
+UNIT Agnes MercF 0x0 Level(14,NPC,0) [26,0] 0x0 0x0 0x0 0x0 [Armorslayer,Zanbato,PureWater] NeverMoveAI
 UNIT Wilhelm Soldier 0x0 Level(16,NPC,0) [0,9] 0x0 0x0 0x0 0x0 [SteelLance, Javelin, Elixir] NeverMoveAI
 UNIT Manfred DarkM 0x0 Level(18,NPC,0) [0,7] 0x0 0x0 0x0 0x0 [Nightfall,Fenrir,PureWater] NeverMoveAI
 UNIT Charley SniperF 0x0 Level(2,NPC,0) [6,16] 0x0 0x0 0x0 0x0 [SilverBow,Greatbow,Elixir] NeverMoveAI
@@ -142,6 +144,10 @@ LABEL 0x3
 Text(I2SkillDenied)
 ENUF 0xe
 LABEL 0x2
+EndEvent
+
+I2Agnes:
+Text(I2AgnesTalk)
 EndEvent
 
 I2Hyperius:

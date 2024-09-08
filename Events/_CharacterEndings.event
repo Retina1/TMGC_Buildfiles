@@ -3,10 +3,10 @@ ORG $B674C
 POIN NewEndingWithdrawalTable
 ORG $B6728
 POIN NewEndingTitleTable
-//ORG $A3D1A8
-//POIN NewEndingsTable
-//ORG $A3D1AC
-//POIN NewEndingsTable
+ORG $A3D1A8
+POIN gCharacterEndings
+ORG $A3D1AC
+POIN gCharacterEndings
 POP
 
 #define RetreatDesignationTrue 2

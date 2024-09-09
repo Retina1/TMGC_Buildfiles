@@ -51,6 +51,14 @@ ALIGN 4
 RetinaMug:
 #incbin "dmps/Retina.dmp"
 setMugEntry(0x1fd,RetinaMug,3,6,3,4)
+ALIGN 4
+GlodMug:
+#incbin "dmps/Glod.dmp"
+setMugEntry(0x14b,GlodMug,4,5,3,3)
+ALIGN 4
+sinnerMug:
+#incbin "dmps/sinner.dmp"
+setMugEntry(0x14c,sinnerMug,3,6,3,4)
 //fillers to make list show everything
 
 setMugEntry(0x100,RetinaMug,3,6,3,4)

@@ -333,6 +333,8 @@ SetUnitStatusAll(DalstRebel*0x100+DalstRebel, Speed, 6, Any, Any, Bruiser, Any, 
 //AltOST(S_FootstepsOfFate,S_FootstepsOfFate,S_FootstepsOfFate)
 SystemText(GameIntroText)
 CHECK_EVENTID AnimusModeFlag; BEQ 0x2789 0xc 0x0; CHECK_EVENTID AnimusSealGivenFlag; BNE 0x2789 0xc 0x0; GiveItem(AnimusSeal,Blair); ENUT AnimusSealGivenFlag;LABEL 0x2789
+ASMC 0x080790A4|1
+ASMC 0x080B5D5C|1
 EndEvent
 
 EndingScene:

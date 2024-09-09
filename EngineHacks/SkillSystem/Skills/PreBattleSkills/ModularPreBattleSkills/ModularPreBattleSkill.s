@@ -219,7 +219,7 @@ lsr r7, r7, #16		@000000r7
 
 ChooseCap:
 @capping is worthless
-b StoreShort @all we use here are shorts anyways
+b NotCap @all we use here are shorts anyways, if we somehow break the short cap that's kinda awesome
 
 cmp r3, #3 		@was in UnsignedShortList
 bne CheckCap

@@ -42,6 +42,7 @@ Vendor(I1Vendor,13,10)
 House(0x21,I1West,5,14)
 House(0x22,I1East1,19,15)
 House(TavernI1Flag,I1East2,22,15)
+House(0x0,CallInterludeSupply,13,12)
 END_MAIN
 
 ALIGN 4
@@ -51,7 +52,7 @@ BYTE 0x0 0x0
 ALIGN 4
 
 I1Vendor:
-SHLI Fire Thunder Lightning Shine Flux Nightfall Heal Mend Restore Vulnerary PureWater
+SHLI Fire Thunder Lightning Shine Flux Nightfall Heal Mend Vulnerary PureWater
 BYTE 0x0 0x0
 ALIGN 4
 
@@ -141,6 +142,7 @@ I1Open:
 LOAD1 0x0 I1Arin
 ENUN
 Text(IntExplanation)
+SystemText(IntMetaExplanation)
 SET_ACTIVE Blair
 EndEvent
 

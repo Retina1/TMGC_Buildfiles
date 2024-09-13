@@ -30,7 +30,18 @@ SHORT 0x05A7 //SupplyConvoyResponse_Take
 SHORT SupplyConvoyResponse_View
 ALIGN 4
 
+InterludeSupplyASMC:
+#incbin "InterludeSupply.dmp"
 
+ALIGN 4
+
+CallInterludeSupply:
+BYTE 0x40 0x0D 0x0 0x00
+POIN InterludeSupplyASMC+1
+EndEvent
+
+ALIGN 4
+//also eventually add mass check for things like axe handle and unknown page
 
 //-------------------------------------------
 //WIZARD CHECKPOINT

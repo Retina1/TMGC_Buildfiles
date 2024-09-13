@@ -36,6 +36,19 @@ mov r1, #0x5a
 ldrh r0, [r4, r1] @atk
 lsr r0,r0,#0x1
 strh r0, [r4,r1]
+@check if defender also has it
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r5 @attacker data
+ldr r1, WinddiscipleID
+.short 0xf800
+cmp r0, #0
+beq End
+@ both sides have it
+mov r1, #0x5c
+ldrh r0, [r4, r1] @def
+lsr r0,r0,#0x1
+strh r0, [r4,r1]
 b End
 
 @give defender big offensive boost and def/2

@@ -49,10 +49,19 @@ ENDTRAP
 ALIGN 4
 
 Tale5Units:
-//tale 8 cast - viridian, freddric, chartreuse, dean, clarque and sons, maybe olsen for funnies, dirk/eliza cameo? maybe they're some of the greens?
-// bring waves of greens to safe zones as they spawn
+//tale 5 cast - natasia, bechamel, apollo, flynn, peggy, agnes, hollandaise, charley
+// capture boats while defending their greens
 //todd and charley here rolling along
 UNIT Natasia WarriorF 0x0 Level(1,Ally,0) [16,15] 0x0 0x0 0x0 0x0 [KillerAxe] NoAI
+UNIT Bechamel Berserker 0x0 Level(1,Ally,0) [16,16] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Apollo Bishop 0x0 Level(1,Ally,0) [15,15] 0x0 0x0 0x0 0x0 [Salvation] NoAI
+UNIT Flynn SwMast 0x0 Level(1,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Shimmersword] NoAI
+UNIT Peggy BishopF 0x0 Level(1,Ally,0) [14,15] 0x0 0x0 0x0 0x0 [WrathStaff] NoAI
+UNIT Agnes HeroF 0x0 Level(1,Ally,0) [17,15] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Hollandaise BerserkerF 0x0 Level(1,Ally,0) [14,16] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Charley SniperF 0x0 Level(1,Ally,0) [17,16] 0x0 0x0 0x0 0x0 [ShortBow] NoAI
+UNIT Sam SniperF 0x0 Level(1,Ally,0) [15,14] 0x0 0x0 0x0 0x0 [Passacaglia] NoAI
+UNIT Toddsworth Bard 0x0 Level(1,Ally,0) [16,14] 0x0 0x0 0x0 0x0 [Toddhand] NoAI
 UNIT
 
 Tale5Enemies:

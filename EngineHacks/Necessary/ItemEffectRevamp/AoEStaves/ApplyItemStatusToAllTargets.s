@@ -34,17 +34,13 @@ add sp,#-0x4
 ldr r4, =gActionData
 ldrb r0, [r4,#0xC]
 _blh GetUnit
-mov r7, r0
 
-@ldrb r2, [r4,#0x12]
-@lsl r2,r2,#0x1
-@add r2, #0x1E
-@ldrh r2, [r7,r2]
-ldr r2, =BattleStruct
-push {r4}
-mov r4,#0x4A
-ldrh r2, [r2,r4]
-pop {r4}
+mov r7, r0
+ldrb r2, [r4,#0x12]
+lsl r2,r2,#0x1
+add r2, #0x1E
+ldrh r2, [r7,r2]
+
 str r2, [sp]
 
 @call range builder

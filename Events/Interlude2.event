@@ -46,6 +46,7 @@ Armory(I2Armory,12,1)
 Vendor(I2Vendor,8,7)
 Armory(I2Armory2,5,8)
 Vendor(I2Vendor2,10,13)
+House(0x0,CallInterludeSupply,9,9)
 END_MAIN
 
 ALIGN 4
@@ -62,7 +63,7 @@ SHLI Fire Thunder Elfire Lightning Shine Divine Flux Nightfall
 BYTE 0x0 0x0
 ALIGN 4
 I2Vendor2:
-SHLI Heal Mend Restore Barrier Vulnerary Elixir PureWater DoorKey ChestKey
+SHLI Heal Mend Barrier Vulnerary Elixir PureWater DoorKey ChestKey
 BYTE 0x0 0x0
 ALIGN 4
 

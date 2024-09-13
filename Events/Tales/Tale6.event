@@ -49,9 +49,18 @@ ENDTRAP
 ALIGN 4
 
 Tale6Units:
-//tale 8 cast - viridian, freddric, chartreuse, dean, clarque and sons, maybe olsen for funnies, dirk/eliza cameo? maybe they're some of the greens?
-// bring waves of greens to safe zones as they spawn
-UNIT Kenneth Baron 0x0 Level(1,Ally,0) [16,15] 0x0 0x0 0x0 0x0 [Voidwake] NoAI
+//tale 6 cast - kenneth, stefan, desmond, josef, johan, ptolemy, emile, hilbert, natasia?, gaylord?
+UNIT Kenneth Baron 0x0 Level(12,Ally,0) [4,28] 0x0 0x0 0x0 0x0 [Voidwake,Fenrir,Rewarp,RealLastShield] NoAI
+UNIT Desmond LncPal 0x0 Level(12,Ally,0) [4,29] 0x0 0x0 0x0 0x0 [Emboldener] NoAI
+UNIT Stefan SwdPal 0x0 Level(12,Ally,0) [4,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Johan LncPal 0x0 Level(12,Ally,0) [5,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Ptolemy BowWyv 0x0 Level(12,Ally,0) [5,29] 0x0 0x0 0x0 0x0 [BeecurveBow,Beelista] NoAI
+UNIT Josef LncGen 0x0 Level(12,Ally,0) [5,30] 0x0 0x0 0x0 0x0 [Longinus] NoAI
+UNIT Emile Sage 0x0 Level(12,Ally,0) [6,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Hilbert Sage 0x0 Level(12,Ally,0) [6,29] 0x0 0x0 0x0 0x0 [Mazandyne] NoAI
+UNIT Gaylord Valk 0x0 Level(12,Ally,0) [6,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Natasia WarriorF 0x0 Level(12,Ally,0) [7,28] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Sveltzalus Bigerle 0x0 Level(12,Ally,0) [7,29] 0x0 0x0 0x0 0x0 [CrimsonEye,Slam] NoAI
 UNIT
 
 Tale6Enemies:
@@ -67,9 +76,10 @@ LOAD1 0x1 Tale6Units
 ENUN
 LOAD1 0x1 Tale6Enemies
 ENUN
-//TaleSetUnitStat(Viridian,35,15,12,19,18,12,11,19)
-//TaleSetUnitWEXP(Viridian,0,0,0,121,121,0,0,0)
-//SetUnitSkills(Viridian,AcrobatID,0,0,0)
+TaleSetUnitStat(Kenneth,65,14,36,29,27,14,30,32)
+TaleSetUnitWEXP(Kenneth,71,71,71,71,251,181,121,251)
+SetUnitSkills(Kenneth,PragmaticID,ConduitID,0,0)
+AddUnitStatus(Kenneth,MovBonus,1)
 ENDA
 
 EndingScene:

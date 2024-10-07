@@ -64,10 +64,10 @@ ALIGN 4
 Tale3Units:
 //tale 3 cast - vladmir, laronde, athena, manfred, cameo from rose
 UNIT Vladmir Bishop 0x0 Level(3,Ally,0) [11,9] 0x0 0x0 0x0 0x0 [Aura,Sleep,Physic,GoddessIcon] NoAI
-UNIT SecretLaronde Soldier 0x0 Level(12,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [DousingLance,Shockstick,GoddessIcon] NoAI
-UNIT Rose MageF 0x0 Level(2,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [Elfire,Bolting,GoddessIcon] NoAI //she snuck in whoops
-UNIT Manfred DarkM 0x0 Level(14,Ally,0) [11,11] 0x0 0x0 0x0 0x0 [Nightfall,Jormungandr,PureWater,GoddessIcon] NoAI
-UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [10,10] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,LegRing,GoddessIcon] NoAI
+UNIT SecretLaronde Soldier 0x0 Level(12,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [DousingLance,Shockstick,Vulnerary] NoAI
+UNIT Rose MageF 0x0 Level(2,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [Elfire,Bolting,Sagittae,Vulnerary] NoAI //she snuck in whoops
+UNIT Manfred DarkM 0x0 Level(14,Ally,0) [11,11] 0x0 0x0 0x0 0x0 [Nightfall,Jormungandr,PureWater,Vulnerary] NoAI
+UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [10,10] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,LegRing,Vulnerary] NoAI
 UNIT
 
 Tale3Enemies:
@@ -95,7 +95,7 @@ Tale3Dragon1Spawn:
 UNIT Tale3Wyv1 Wyvern 0x0 Level(1,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R1 [WyvernBreath] NoAI
 UNIT
 Tale3Dragon1Spawn2:
-UNIT Unknown AxeCav 0x0 Level(14,Enemy,1) [23,0] 0x0 0x0 0x1 REDA23R3 [SteelAxe] NoAI
+//UNIT Unknown AxeCav 0x0 Level(14,Enemy,1) [23,0] 0x0 0x0 0x1 REDA23R3 [SteelAxe] NoAI
 UNIT Unknown LncCav 0x0 Level(14,Enemy,1) [22,0] 0x0 0x0 0x1 REDA22R2 [SteelLance] NoAI
 UNIT Unknown SwdCav 0x0 Level(15,Enemy,1) [23,0] 0x0 0x0 0x1 REDA23R1 [Shimmersword] NoAI
 UNIT Unknown LncCav 0x0 Level(14,Enemy,1) [22,0] 0x0 0x0 0x1 REDA21R1 [Dragonpike] NoAI
@@ -131,11 +131,11 @@ UNIT Unknown Brigand 0x0 Level(15,Enemy,1) [23,11] 0x0 0x0 0x1 REDA22R11 [Dracoa
 UNIT
 
 Tale3EndScene1:
-UNIT Vladmir Bishop 0x0 Level(3,Ally,0) [3,0] 0x0 0x0 0x0 0x0 [Aura,Sleep,Physic,GoddessIcon] NoAI
-UNIT SecretLaronde Soldier 0x0 Level(12,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [DousingLance,Shockstick,GoddessIcon] NoAI
-UNIT Rose MageF 0x0 Level(2,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Elfire,Bolting,GoddessIcon] NoAI //she snuck in whoops
-UNIT Manfred DarkM 0x0 Level(14,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [Nightfall,Jormungandr,PureWater,GoddessIcon] NoAI
-UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,LegRing,GoddessIcon] NoAI
+UNIT Vladmir Bishop 0x0 Level(3,Ally,0) [3,0] 0x0 0x0 0x0 0x0 [Aura,Sleep,Physic,Vulnerary] NoAI
+UNIT SecretLaronde Soldier 0x0 Level(12,Ally,0) [1,0] 0x0 0x0 0x0 0x0 [DousingLance,Shockstick,Vulnerary] NoAI
+UNIT Rose MageF 0x0 Level(2,Ally,0) [1,1] 0x0 0x0 0x0 0x0 [Elfire,Bolting,Vulnerary] NoAI //she snuck in whoops
+UNIT Manfred DarkM 0x0 Level(14,Ally,0) [2,2] 0x0 0x0 0x0 0x0 [Nightfall,Jormungandr,PureWater,Vulnerary] NoAI
+UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [3,4] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,LegRing,Vulnerary] NoAI
 UNIT
 
 Tale3EndScene2:

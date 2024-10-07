@@ -1,3 +1,9 @@
+//fix possible manakete bg bug
+PUSH
+ORG 0x70b7e
+BYTE 0x0
+POP
+
 //talk to sleepers
 PUSH
 ORG 0x255DA

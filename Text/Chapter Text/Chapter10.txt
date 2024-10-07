@@ -155,7 +155,7 @@ Where[...] did we go wrong[...]?[N]
 Tell me[...] TELL ME![A][N][OpenMidRight]
 [...]Try to rest. Please. It's been a[N]
 trying day for all of us.[A][N][OpenMidLeft][CloseEyes]
-[...][A][N][MoveRight][OpenMidRight][CloseEyes]
+[...][A][N][CloseSpeechSlow][MoveRight][OpenMidRight][CloseEyes]
 [...][A][X]
 
 ##Ch10_Ending2
@@ -178,7 +178,7 @@ I[...] must bow to the darkness.[A][X]
 
 ##Ch10_Sveltzalus_Talk
 [OpenMidLeft][LoadBlair][OpenMidRight][LoadSveltzalus]
-[...][...][N][A][MoveMidRight][MoveLeft][OpenLeft][MoveLeft][MoveRight][OpenMidLeft]
+[...][...][A][N][CloseSpeechSlow][MoveMidRight][MoveLeft][OpenLeft][MoveLeft][MoveRight][OpenMidLeft]
 [...]What exactly[...] are you supposed to be?[N]
 You're just[...] a floating eye![A][N]
 That can't be real[...] This doesn't[N]
@@ -345,6 +345,14 @@ Well[...] done[...][A][N][CloseEyes]
 Guess I won't be[...][N]
 transferring now[...][A][X]
 
+##C10_CidRage
+[OpenMidRight][LoadCid][CloseEyes]
+My beloved Tradewinds[...][A][N][OpenEyes]
+[...]No mercy ta any o' you lot.[N]
+I might be goin' ta hell today,[A][N]
+but I'm takin' as many o' ye wit'[N]
+me as I can muster![A][X]
+
 ##C10_JonasDips
 [OpenMidLeft][LoadJonas]
 Did[...] Did Lazarus just[N]
@@ -353,8 +361,19 @@ coward.[A] Well, if he's out,[N]
 so am I.[A] Here's to Valden[N]
 hopefully doing me better.[A][X]
 
+##C10_JonasDipsAlt
+[OpenMidLeft][LoadJonas]
+[...]Enough of this. I made it[N]
+this far.[A] Not throwing my[N]
+life away like this.[A][N]
+If I'm lucky, Lazarus falls[N]
+in the sea, and life's good.[A][N]
+[...]Valden'll understand.[A][X]
+
 ##C10_LazThreat
 [OpenMidLeft][LoadLazarus]
+Their vessel's sunk, and they[N]
+still think they can run?[A][N]
 That's it. No more waiting[N]
 around.[A] I don't care what[N]
 the rest of you do.[A][N]

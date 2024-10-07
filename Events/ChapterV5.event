@@ -545,7 +545,7 @@ BNE 0x112 0xc 0x0
 ClearSupport(Argent,Freddric)
 DISA Argent
 LABEL 0x112
-TakeItemAll(Luckbow)
+AnnihilateItem(Luckbow)
 EVBIT_MODIFY 3
 MUSC S_MainTheme
 CleanTextNoMap(OutdoorCastleCG,V5_Ending2)//girard's monologue

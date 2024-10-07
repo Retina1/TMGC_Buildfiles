@@ -307,6 +307,17 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
+CHECK_ALIVE Jonas
+BEQ 0x3 0xc 0x0
+CAM1 Jonas
+FlashCursor(Jonas,60)
+Text(C10_JonasDipsAlt)
+MOVE 60 Jonas [0,11]
+ENUN
+DISA_IF Jonas
+DISA Jonas
+ENUT JonasAliveFlag
+LABEL 0x3
 CHECK_ALIVE Cid
 BEQ 0x1 0xc 0x0
 MUSC 0x0
@@ -383,6 +394,13 @@ Text(C10OthersArrive)
 EndEvent
 
 C10LazarusEngages:
+TILECHANGE 0x4
+CHECK_ALIVE Cid
+BEQ 0x2 0xc 0x0
+CAM1 Cid
+FlashCursor(Cid,60)
+Text(C10_CidRage)
+LABEL 0x2
 CHECK_ALIVE Lazarus
 BEQ 0x1 0xc 0x0
 CAM1 Lazarus
@@ -391,6 +409,17 @@ Text(C10_LazThreat)
 SVAL 0x1 0x00040000
 CHAI Lazarus
 LABEL 0x1
+CHECK_ALIVE Jonas
+BEQ 0x3 0xc 0x0
+CAM1 Jonas
+FlashCursor(Jonas,60)
+Text(C10_JonasDipsAlt)
+MOVE 60 Jonas [0,11]
+ENUN
+DISA_IF Jonas
+DISA Jonas
+ENUT JonasAliveFlag
+LABEL 0x3
 EndEvent
 
 JonasRetreats:

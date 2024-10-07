@@ -1,10 +1,11 @@
 
-# Project TMGC
-(working title)
+# The Morrow's Golden Country
 
 ## What is this?
 
-This is an in-development buildfiles hack for Fire Emblem 8 by Retina.
+This is a buildfiles hack for Fire Emblem 8 by Retina.
+
+Check out the FEU page with this link! https://feuniverse.us/t/fe8-fire-emblem-the-morrows-golden-country-complete/16284/90
 
 ## How obtain patch
 

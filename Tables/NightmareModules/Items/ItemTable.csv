@@ -15,8 +15,8 @@ Shamshir,NShamshir,DShamshir,UShamshir,0xc,0x0,IsWeapon,0x0,0x0,25,13,100,5,120,
 Killing Edge,NKillingEdge,DKillingEdge,UKillingEdge,0xd,0x0,IsWeapon,0x0,0x0,25,10,90,7,40,0x11,80,CRank,KillingEdgeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Armorslayer,NArmorslayer,DArmorslayer,UArmorslayer,0xe,0x0,IsWeapon,0x0,ArmorEffectiveness|IsPointer,20,10,85,11,0,0x11,60,DRank,ArmorslayerIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Wyrmslayer,NWyrmslayer,DWyrmslayer,UWyrmslayer,0xf,0x0,IsWeapon|IsMagic,0x0,DragonEffectiveness|IsPointer,20,10,90,9,0,0x11,100,BRank,WyrmslayerIcon,0x0,NoEffect,2,0x0,0x0,0x0
-Light Brand,NLightBrand,DLightBrand,ULightBrand,0x10,0x0,IsWeapon|MagicDamage|IsMagic,0x0,0x0,25,12,85,9,0,0x12,120,BRank,LightBrandIcon,0x21,NoEffect,1,0x0,0x0,0x0
-Runesword,NRunesword,DRunesword,URunesword,0x11,0x0,IsWeapon|MagicDamage|IsMagic,0x0,0x0,20,16,80,11,0,0x12,330,ARank,RuneswordIcon,0x0,NosferatuEffect,1,0x0,0x0,0x0
+Light Brand,NLightBrand,DLightBrand,ULightBrand,0x10,0x0,IsWeapon|MagicDamage|IsMagic,0x0,0x0,25,12,85,9,0,0x12,120,BRank,LightBrandIcon,0x21,NoEffect,0,0x0,0x0,0x0
+Runesword,NRunesword,DRunesword,URunesword,0x11,0x0,IsWeapon|MagicDamage|IsMagic,0x0,0x0,20,16,80,11,0,0x12,330,ARank,RuneswordIcon,0x0,NosferatuEffect,0,0x0,0x0,0x0
 Lancereaver,NLancereaver,DReaver,ULancereaver,0x12,0x0,IsWeapon|ReverseTriangle,0x0,0x0,25,10,90,7,0,0x11,35,CRank,LancereaverIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Zanbato,NZanbato,DZanbato,UZanbato,0x13,0x0,IsWeapon,0x0,HorseEffectiveness|IsPointer,20,9,90,9,0,0x11,60,DRank,ZanbatoIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Iron Lance,NIronLance,DIronLance,UIronLance,0x14,0x1,IsWeapon,0x0,0x0,50,9,95,6,0,0x11,8,ERank,IronLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
@@ -239,7 +239,7 @@ Morning Star,NMorningStar,DMorningStar,UMorningStar,0xec,0x6,IsWeapon|IsMagic,0x
 Voulche,NVoulche,DVoulche,UVoulche,0xed,0x7,IsWeapon|IsMagic,0x0,0x0,1,1,1,1,1,0x11,18000,SRank,VoulcheIcon,0x0,NoEffect,1,0x0,0x0,StillnessID
 High Roller,NHighRoller,DHighRoller,UHighRoller,0xee,0x1,IsWeapon|WilhelmLocked,0x0,0x0,25,0,120,8,10,0x11,200,NoRank,HighRollerIcon,0x0,NoEffect,2,0x0,0x0,HighRollerID
 Hurlbat,NHurlbat,DHurlbat,UHurlbat,0xef,0x2,IsWeapon|TonnaminLocked,0x0,0x0,61,4,83,3,17,0x19,52,NoRank,HurlbatIcon,0x0,NoEffect,2,0x0,0x0,0x0
-Soulbow,NSoulbow,DSoulbow,USoulbow,0xf0,0x3,IsWeapon|Unsellable|Indestructible,0x0,FlierEffectiveness|IsPointer,40,26,150,6,0,0x23,0,SRank,SoulbowIcon,0x0,NoEffect,2,0x0,0x0,LuckbowSkillID
+Soulbow,NSoulbow,DSoulbow,USoulbow,0xf0,0x3,IsWeapon|Unsellable|Indestructible|SoulbowLocked,0x0,FlierEffectiveness|IsPointer,40,26,150,6,0,0x23,0,NoRank,SoulbowIcon,0x0,NoEffect,2,0x0,0x0,LuckbowSkillID
 Sorrow's Pilgrim,NSorrowsPilgrim,DSorrowsPilgrim,USorrowsPilgrim,0xf1,0x3,IsWeapon|YuyuLocked|Indestructible|Unsellable,0x0,FlierEffectiveness|IsPointer,1,12,100,3,20,0x22,5000,NoRank,SorrowsPilgrimIcon,0x0,NoEffect,250,0x0,0x0,CantoPlusID
 Aspect,NAspect,DAspect,0x0,0xf2,0xb,IsWeapon|Indestructible|IsMagic|NegateDef,AspectBoost|IsPointer,0x0,1,99,250,0,250,0xFF,60000,NoRank,AspectIcon,0x0,CannotDoubleEffect,0,0x0,0x0,AspectSkillID
 Soothesword,NSoothesword,DSoothesword,USoothesword,0xf3,0x0,IsWeapon|Indestructible|Unsellable|KyrieLocked,0x0,0x0,1,3,250,4,255,0x11,0,NoRank,SootheswordIcon,0x0,NoEffect,2,0x0,0x0,RoboKyDrainID

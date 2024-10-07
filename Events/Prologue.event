@@ -37,6 +37,7 @@ Door(13,6)
 END_MAIN
 
 MiscBasedEvents:
+AFEV 0x12 PrologueFlag84Off 0x84
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -107,6 +108,9 @@ UNIT Kenneth DarkM 0x0 Level(2,Ally,0) [0,9] 0x0 0x0 0x1 REDA1R5 [Flux, Vulnerar
 UNIT
 
 ALIGN 4
+PrologueFlag84Off:
+ENUF 0x84
+EndEvent
 
 BeginningScene:
 EVBIT_MODIFY 4

@@ -8,6 +8,13 @@
 #include "H_Mercenaries.txt"
 #include "I_Aercolyn.txt"
 
+##EpilogueSecretFinalDialogue
+[OpenMidLeft][LoadBlair][OpenMidRight][LoadArin][OpenMidRight]
+This[...] should be the place.[A][N]
+Assuming that Simone wasn't lying.[N]
+She[...] wouldn't, after all this.[A][N][OpenMidLeft]
+[A][X]
+
 ##EpilogueFinalEndingText
 This... is the future[N]
 we all fought for.[A][N]
@@ -32,7 +39,7 @@ it is our today.[A][X]
 of you, Creator.[A][N]
 [...]Let this blade be lost until[N]
 time's end.[A] Let the truth he[N]
-only knew be lost forever.[A][N][MoveMidRight][OpenMidRight]
+only knew be lost forever.[A][N][CloseSpeechSlow][MoveMidRight][OpenMidRight]
 [...]I was told that as long as[N]
 you were at my side,[A][N]
 I truly deserved to be where[N]
@@ -42,7 +49,7 @@ at my side no longer.[A][N][MoveMidRight]
 [...]The world's all before me,[N]
 and yet I've nothing.[A][N][CloseEyes]
 [...]I[...] could've[...] I should've[...][N]
-been their savior.[A][N][MoveFarFarRight][OpenFarFarRight][LoadBlank]
+been their savior.[A][N][CloseSpeechSlow][MoveFarFarRight][OpenFarFarRight][LoadBlank]
 [...]You truly can[...][N]
 see forever here[...][A][X]
 

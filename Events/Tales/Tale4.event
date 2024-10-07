@@ -24,6 +24,15 @@ TurnBasedEvents:
 //turn 1 tells you survive
 //turn 5ish says you're doing well but a big wave's coming
 //turn 7 has fuckoff spawns and tells you run and turns off objective display (use ENUT 0x66, ENUF 0x66 later)
+TurnEventPlayer(0x0,Tale4Turn3,3)
+TurnEventPlayer(0x0,Tale4Turn4,4)
+TurnEventPlayer(0x0,Tale4Turn5,5)
+TurnEventPlayer(0x0,Tale4Turn6,6)
+TurnEventPlayer(0x0,Tale4Run,7)
+TurnEventPlayer(0x0,Tale4ElbaCor,8)
+TurnEventPlayer(0x0,Tale4ElbaCorMove,11)
+TurnEventPlayer(0x0,Tale4ElbaCorMove2,13)
+TurnEventPlayer(0x0,Tale4GetOut,12,30)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -31,6 +40,12 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Escape(0x8,Tale4EscapeCheck,0,21)
+Escape(0x8,Tale4EscapeCheck,0,22)
+Escape(0x8,Tale4EscapeCheck,0,23)
+Escape(0x8,Tale4EscapeCheck,1,23)
+Escape(0x8,Tale4EscapeCheck,2,23)
+Escape(0x8,Tale4EscapeCheck,3,23)
 END_MAIN
 
 MiscBasedEvents:
@@ -45,9 +60,9 @@ Tutorial:
 END_MAIN
 
 TrapData:
-TelliusTorchOff(16,4,8)
-TelliusTorchOff(22,4,8)
-TelliusTorchOff(18,14,8)
+TelliusTorchOn(16,4,6)
+TelliusTorchOn(22,4,6)
+TelliusTorchOn(18,14,8)
 TelliusTorchOff(12,7,8)
 TelliusTorchOff(11,14,8)
 TelliusTorchOff(4,21,8)
@@ -60,29 +75,255 @@ ENDTRAP
 ALIGN 4
 
 Tale4Units:
-UNIT Cid Berserker 0x0 Level(1,Ally,0) [19,3] 0x0 0x0 0x0 0x0 [Frypan,HandAxe] NoAI
-UNIT Agnes MercF 0x0 Level(8,Ally,0) [18,4] 0x0 0x0 0x0 0x0 [LevinSword,Zanbato,Armorslayer] NoAI
-UNIT CidPirate1 Pirate 0x0 Level(9,Ally,0) [20,4] 0x0 0x0 0x0 0x0 [SilverAxe,Dracoaxe,SecretBook] NoAI
-UNIT CidPirate2 Pirate 0x0 Level(9,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [Hammer,HandAxe,SecretBook] NoAI
-UNIT CidPirate3 Pirate 0x0 Level(9,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Halberd,HandAxe,SecretBook] NoAI
-UNIT CidPirate4 Pirate 0x0 Level(9,Ally,0) [1,13] 0x0 0x0 0x0 0x0 [Swordslayer,SteelAxe,SecretBook] NoAI
+UNIT Cid Berserker 0x0 Level(1,Ally,0) [19,3] 0x0 0x0 0x0 0x0 [Frypan,SilverAxe,HandAxe,Elixir] NoAI
+UNIT Agnes MercF 0x0 Level(8,Ally,0) [18,4] 0x0 0x0 0x0 0x0 [LevinSword,Zanbato,Armorslayer,Vulnerary] NoAI
+UNIT CidPirate1 Pirate 0x0 Level(9,Ally,0) [20,4] 0x0 0x0 0x0 0x0 [SilverAxe,Dracoaxe,Vulnerary,SecretBook] NoAI
+UNIT CidPirate2 Pirate 0x0 Level(9,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [Hammer,HandAxe,Vulnerary,SecretBook] NoAI
+UNIT CidPirate3 Pirate 0x0 Level(9,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Halberd,HandAxe,Vulnerary,SecretBook] NoAI
+UNIT CidPirate4 Pirate 0x0 Level(9,Ally,0) [5,11] 0x0 0x0 0x0 0x0 [Swordslayer,SteelAxe,Vulnerary,SecretBook] NoAI
 UNIT
 
 Tale4Enemies:
-//starting block
-UNIT Loile Brigand 0x0 Level(12,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Loile Merc 0x0 Level(12,Enemy,1) [21,16] 0x0 0x0 0x0 0x0 [Lancereaver,SteelSword] NoAI
-UNIT Loile Brigand 0x0 Level(12,Enemy,1) [21,17] 0x0 0x0 0x0 0x0 [Swordreaver] NoAI
-UNIT Loile Hunter 0x0 Level(12,Enemy,1) [22,15] 0x0 0x0 0x0 0x0 [SteelBow] DelayedAI
-UNIT Loile Sorc 0x0 Level(1,Enemy,1) [22,16] 0x0 0x0 0x0 0x0 [Flux] DelayedAI
-UNIT Loile Hunter 0x0 Level(12,Enemy,1) [22,17] 0x0 0x0 0x0 0x0 [SteelBow] DelayedAI
-UNIT Loile DarkM 0x0 Level(12,Enemy,1) [23,15] 0x0 0x0 0x0 0x0 [Freikugel] AttackInRangeAI
-UNIT Loile Warrior 0x0 Level(1,Enemy,1) [23,16] 0x0 0x0 0x0 0x0 [SteelAxe,SteelBow] AttackInRangeAI
-UNIT Loile DarkM 0x0 Level(12,Enemy,1) [23,17] 0x0 0x0 0x0 0x0 [Freikugel] AttackInRangeAI
+//right block
+UNIT Loile Brigand 0x0 Level(9,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
+UNIT Loile Merc 0x0 Level(9,Enemy,1) [21,16] 0x0 0x0 0x0 0x0 [Lancereaver,SteelSword] NoAI
+UNIT Loile Brigand 0x0 Level(9,Enemy,1) [21,17] 0x0 0x0 0x0 0x0 [Swordreaver] AttackInRangeAI
+UNIT Loile Hunter 0x0 Level(9,Enemy,1) [22,15] 0x0 0x0 0x0 0x0 [SteelBow] DelayedAI
+//UNIT Loile DarkM 0x0 Level(7,Enemy,1) [22,16] 0x0 0x0 0x0 0x0 [Flux] DelayedAI
+UNIT Loile Hunter 0x0 Level(9,Enemy,1) [22,17] 0x0 0x0 0x0 0x0 [SteelBow] DelayedAI
+//UNIT Loile DarkM 0x0 Level(7,Enemy,1) [23,15] 0x0 0x0 0x0 0x0 [Freikugel] AttackInRangeAI
+UNIT Loile Warrior 0x0 Level(1,Enemy,1) [23,16] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+//UNIT Loile DarkM 0x0 Level(7,Enemy,1) [23,17] 0x0 0x0 0x0 0x0 [Freikugel] AttackInRangeAI
+
+//left block
+//UNIT Loile DarkM 0x0 Level(7,Enemy,1) [0,13] 0x0 0x0 0x0 0x0 [Nosferatu] DelayedAI
+//UNIT Loile DarkM 0x0 Level(7,Enemy,1) [0,14] 0x0 0x0 0x0 0x0 [Flux] DelayedAI
+UNIT Loile Bruiser 0x0 Level(9,Enemy,1) [1,12] 0x0 0x0 0x0 0x0 [Lancereaver] DelayedAI
+UNIT Loile Brigand 0x0 Level(9,Enemy,1) [1,13] 0x0 0x0 0x0 0x0 [Swordreaver] DelayedAI
+UNIT Loile Deserter 0x0 Level(9,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [Axereaver] DelayedAI
+UNIT Loile Fighter 0x0 Level(7,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Loile Merc 0x0 Level(7,Enemy,1) [2,13] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+
+//lower gang
+UNIT Loile Bruiser 0x0 Level(9,Enemy,1) [0,21] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Loile Deserter 0x0 Level(9,Enemy,1) [0,22] 0x0 0x0 0x0 0x0 [Javelin] NoAI
+UNIT Loile Brigand 0x0 Level(9,Enemy,1) [0,23] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Loile Hunter 0x0 Level(9,Enemy,1) [1,23] 0x0 0x0 0x0 0x0 [SteelBow] DelayedAI
+//UNIT Loile DarkM 0x0 Level(9,Enemy,1) [2,23] 0x0 0x0 0x0 0x0 [Flux] DelayedAI
+
+//oother
+UNIT Loile Brigand 0x0 Level(8,Enemy,1) [11,6] 0x0 0x0 0x0 0x0 [SteelAxe] DelayedAI
+UNIT Loile Brigand 0x0 Level(8,Enemy,1) [11,13] 0x0 0x0 0x0 0x0 [IronAxe] AttackInRangeAI
+UNIT Loile Bruiser 0x0 Level(8,Enemy,1) [19,7] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Loile Hunter 0x0 Level(8,Enemy,1) [18,8] 0x0 0x0 0x0 0x0 [BraveBow] NoAI
+UNIT Loile Deserter 0x0 Level(8,Enemy,1) [20,8] 0x0 0x0 0x0 0x0 [Axereaver] NoAI
+UNIT Loile Bruiser 0x0 Level(8,Enemy,1) [17,20] 0x0 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT
+
+Tale4Turn3Spawns:
+//east
+UNIT Loile Bruiser 0x0 Level(8,Enemy,1) [23,15] 0x0 0x0 0x1 REDA21R15 [SteelSword] NoAI
+//UNIT Loile DarkM 0x0 Level(8,Enemy,1) [23,16] 0x0 0x0 0x1 REDA20R16 [Nightfall] NoAI
+UNIT Loile Bruiser 0x0 Level(8,Enemy,1) [23,17] 0x0 0x0 0x1 REDA21R17 [SteelSword] NoAI
+UNIT
+
+Tale4Turn4Spawns:
+//east and west
+UNIT Loile Hunter 0x0 Level(8,Enemy,1) [23,15] 0x0 0x0 0x1 REDA21R15 [Wardbow] NoAI
+UNIT Loile Hunter 0x0 Level(8,Enemy,1) [23,17] 0x0 0x0 0x1 REDA21R17 [SteelBow] NoAI
+UNIT
+Tale4Turn4Spawns2:
+//east and west
+UNIT Loile Bruiser 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [SteelSword] NoAI
+UNIT Loile LncCav 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [Axereaver] NoAI
+UNIT Loile DarkM 0x0 Level(8,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [Flux] NoAI
+UNIT Loile AxeCav 0x0 Level(8,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [SteelAxe,HandAxe] NoAI
+UNIT
+
+Tale4Turn5Spawns:
+//south
+UNIT Loile SwdCav 0x0 Level(9,Enemy,1) [0,23] 0x0 0x0 0x1 REDA1R23 [SteelSword] NoAI
+UNIT Loile LncWyv 0x0 Level(8,Enemy,1) [1,23] 0x0 0x0 0x1 REDA1R23 [SteelLance] NoAI
+UNIT Loile AxeWyv 0x0 Level(8,Enemy,1) [2,23] 0x0 0x0 0x1 REDA1R23 [SteelAxe] NoAI
+UNIT
+
+Tale4Turn6Spawns:
+//south and west
+UNIT Loile Hunter 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [SteelBow] NoAI
+UNIT Loile Merc 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [LightBrand] NoAI
+UNIT Loile Sorc 0x0 Level(1,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [Flux] NoAI
+UNIT Loile Deserter 0x0 Level(8,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [SteelLance] NoAI
+UNIT
+Tale4Turn6Spawns2:
+//south and west
+UNIT Loile Hero 0x0 Level(1,Enemy,1) [0,23] 0x0 0x0 0x1 REDA1R23 [SteelSword] NoAI
+UNIT Loile Deserter 0x0 Level(9,Enemy,1) [1,23] 0x0 0x0 0x1 REDA1R23 [SteelLance] NoAI
+UNIT Loile Fighter 0x0 Level(8,Enemy,1) [2,23] 0x0 0x0 0x1 REDA1R23 [SteelAxe] NoAI
+UNIT
+
+Tale4TurnDIESpawns:
+//east and west
+UNIT ElbaCor LncCav 0x0 Level(18,Enemy,1) [23,15] 0x0 0x0 0x1 REDA23R15 [SilverLance] NoAI
+UNIT ElbaCor SwdPal 0x0 Level(4,Enemy,1) [23,16] 0x0 0x0 0x1 REDA23R16 [SilverSword] NoAI
+UNIT ElbaCor LncCav 0x0 Level(18,Enemy,1) [23,17] 0x0 0x0 0x1 REDA23R17 [SilverLance] NoAI
+UNIT
+Tale4TurnDIESpawns2:
+//east and west
+UNIT Loile Warrior 0x0 Level(1,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [SteelAxe] NoAI
+UNIT Loile Warrior 0x0 Level(1,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [SteelAxe] NoAI
+UNIT Loile Warrior 0x0 Level(1,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [SteelAxe] NoAI
+UNIT Loile Warrior 0x0 Level(1,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [SteelAxe] NoAI
+UNIT
+
+Tale4ElbaCorUnits:
+UNIT ElbaCor SwdCav 0x0 Level(12,Enemy,1) [23,15] 0x0 0x0 0x1 REDA21R15 [SteelSword] NoAI
+UNIT ElbaCor LncCav 0x0 Level(12,Enemy,1) [23,16] 0x0 0x0 0x1 REDA21R16 [SteelLance,Javelin] NoAI
+UNIT ElbaCor AxeCav 0x0 Level(12,Enemy,1) [23,17] 0x0 0x0 0x1 REDA21R17 [HereticAxe] NoAI
+UNIT PGLeila SwdPeg 0x0 Level(12,Enemy,1) [23,15] 0x0 0x0 0x1 REDA22R15 [LightBrand,Rapier] NeverMoveAI
+UNIT PGEsme WyvLord 0x0 Level(1,Enemy,1) [23,16] 0x0 0x0 0x1 REDA22R16 [Tomahawk,BraveAxe,IronRune] NeverMoveAI
+UNIT PGWilhelm Soldier 0x0 Level(12,Enemy,1) [23,17] 0x0 0x0 0x1 REDA22R17 [SilverLance,Javelin] NeverMoveAI
+UNIT
+
+Tale4ElbaCorEnding:
+UNIT PGLeila SwdPeg 0x0 Level(12,Enemy,1) [19,16] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT PGEsme WyvLord 0x0 Level(1,Enemy,1) [20,15] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT PGWilhelm Soldier 0x0 Level(12,Enemy,1) [18,17] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 ALIGN 4
 //give bros a triangle attack
+
+Tale4ElbaCor:
+Reinforcements(Tale4ElbaCorUnits)
+CAM1 PGEsme
+FlashCursor(PGEsme,60)
+Text(Tale4ElbaCorSpawnText)
+TaleSetUnitStat(PGLeila,28,14,15,14,16,1,14,14)
+TaleSetUnitStat(PGWilhelm,36,18,2,16,14,5,13,3)
+TaleSetUnitStat(PGEsme,49,24,3,21,15,12,18,6)
+EndEvent
+
+Tale4ElbaCorMove:
+CHECK_ALIVE PGLeila
+BEQ 0x1 0xc 0x0
+SVAL 0x1 0x00040000
+CAM1 PGLeila
+Text(Tale4LeilaMoveText)
+CHAI PGLeila
+LABEL 0x1
+CHECK_ALIVE PGWilhelm
+BEQ 0x2 0xc 0x0
+SVAL 0x1 0x00040000
+CAM1 PGWilhelm
+Text(Tale4WilhelmMoveText)
+CHAI PGWilhelm
+LABEL 0x2
+EndEvent
+
+Tale4ElbaCorMove2:
+CHECK_ALIVE PGEsme
+BEQ 0x3 0xc 0x0
+SVAL 0x1 0x00040000
+CAM1 PGEsme
+Text(Tale4EsmeMoveText)
+CHAI PGEsme
+LABEL 0x3
+EndEvent
+
+Tale4Turn3:
+//right spawns
+Reinforcements(Tale4Turn3Spawns)
+EndEvent
+Tale4Turn4:
+//right and left spawns
+Reinforcements(Tale4Turn4Spawns)
+Reinforcements(Tale4Turn4Spawns2)
+CAM1 Cid
+Text(Tale4Turn4Text)
+EndEvent
+Tale4Turn5:
+//south spawns
+Reinforcements(Tale4Turn5Spawns)
+EndEvent
+Tale4Turn6:
+//south and left spawns
+Reinforcements(Tale4Turn6Spawns)
+Reinforcements(Tale4Turn6Spawns2)
+CAM1 Cid
+Text(Tale4Turn6Text)
+EndEvent
+Tale4GetOut:
+//right and left spawns
+Reinforcements(Tale4TurnDIESpawns)
+Reinforcements(Tale4TurnDIESpawns2)
+EndEvent
+
+Tale4Run:
+CAM1 Cid
+Text(Tale4Turn7Text)
+MUSC 0x0
+ENUT 0x66
+ENUF 0x8
+SetMapBGM(S_DragonsGateII)
+CAM1 [0,23]
+FlashCursor(0,21,15)
+FlashCursor(0,22,15)
+FlashCursor(0,23,15)
+FlashCursor(1,23,15)
+FlashCursor(2,23,15)
+FlashCursor(3,23,15)
+SystemText(Tale4RunText)
+EndEvent
+
+EndingScene:
+MUSC AmbientLava
+CleanTextNoMap(VolcanoCG,Tale4Ending1)
+REMA
+CLEAN
+VCWF 0x0
+CLEA 0
+CLEN 0
+CLEE 0
+LOAD1 0x0 Tale4ElbaCorEnding
+CAM1 PGWilhelm
+FADU 16
+STAL 60
+Text(Tale4Ending2)
+STAL 30
+MOVE 20 PGLeila [23,16]
+MOVE 20 PGWilhelm [23,17]
+ENUN
+SilentKillUnit(PGLeila)
+SilentKillUnit(PGWilhelm)
+ENUN
+STAL 30
+MOVE 20 PGEsme [22,15]
+STAL 30
+MOVE 20 PGEsme [19,15]
+STAL 60
+MOVE 20 PGEsme [19,12]
+STAL 45
+MOVE 20 PGEsme [19,9]
+STAL 120
+MOVE 20 PGEsme [19,8]
+STAL 180
+MOVE 20 PGEsme [19,4]
+STAL 90
+Text(Tale4Ending3)
+STAL 20
+MOVE 20 PGEsme [19,2]
+STAL 60
+ENUT Tale4DoneFlag
+ENUF 0x66
+MUSC 0x0
+DISA Cid
+DISA CidPirate1
+DISA CidPirate2
+DISA CidPirate3
+DISA CidPirate4
+SystemText(BlankCG,TaleEnding)
+MoveToChapter(HubMap)
+ENDA
 
 BeginningScene:
 DISA Addington
@@ -90,27 +331,34 @@ LOAD1 0x1 Tale4Units
 ENUN
 LOAD1 0x1 Tale4Enemies
 ENUN
-TaleSetUnitStat(Cid,55,25,1,17,14,10,12,5)
+TaleSetUnitStat(Cid,58,25,1,19,16,10,16,5)
 TaleSetUnitWEXP(Cid,0,0,181,0,0,0,0,0)
 TaleSetUnitStat(Agnes,35,15,15,0,15,15,0,0)
 TaleSetUnitWEXP(Agnes,71,0,0,0,0,0,0,0)
 SetUnitSkills(Agnes,StrongRiposteID,GlaciesID,0,0)
-TaleSetUnitStat(CidPirate1,36,18,0,15,15,5,8,1)
+TaleSetUnitStat(CidPirate1,39,18,0,15,15,15,9,1)
 TaleSetUnitWEXP(CidPirate1,0,0,121,0,0,0,0,0)
-TaleSetUnitStat(CidPirate2,36,18,0,15,15,5,8,1)
+TaleSetUnitStat(CidPirate2,39,18,0,15,15,15,9,1)
 TaleSetUnitWEXP(CidPirate2,0,0,121,0,0,0,0,0)
-TaleSetUnitStat(CidPirate3,36,18,0,15,15,5,8,1)
+TaleSetUnitStat(CidPirate3,39,18,0,15,15,15,9,1)
 TaleSetUnitWEXP(CidPirate3,0,0,121,0,0,0,0,0)
-TaleSetUnitStat(CidPirate4,36,18,0,15,15,5,8,1)
+TaleSetUnitStat(CidPirate4,39,18,0,15,15,15,9,1)
 TaleSetUnitWEXP(CidPirate4,0,0,121,0,0,0,0,0)
+MUSC AmbientLava
+CleanTextNoMap(VolcanoCG,Tale4Opening1)
+MUSC AmbientWind
+CleanTextNoMap(HillCG,Tale4Opening2)
+MUSC AmbientLava
+CleanTextNoMap(VolcanoCG,Tale4Opening3)
+ENUT 0x8
 //mention them stealing agnes some books to eat in the intro, maybe they start spread out and getting agnes to them is a big thing
 EndEvent
 
-EndingScene:
-ENUT Tale4DoneFlag
-MUSC 0x0
-SystemText(BlankCG,TaleEnding)
-MoveToChapter(HubMap)
-ENDA
+Tale4EscapeCheck:
+CHECK_EVENTID 0x8
+BEQ 0x1 0xc 0x0
+CALL EndingScene
+LABEL 0x1
+EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

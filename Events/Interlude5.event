@@ -33,7 +33,7 @@ CharacterEvent(0x15,I5Argent,Blair,Argent)
 CharacterEvent(0x16,I5ViridFred,Blair,Viridian)
 CharacterEvent(0x16,I5ViridFred,Blair,Freddric)
 CharacterEvent(0x11,I5Merchant,Blair,Merchant)//sell item
-CharacterEvent(0x12,I5Merchant2,Blair,Merchant3)//sell a stat boost
+CharacterEvent(0x12,I5Merchant2,Blair,Merchant2)//sell a stat boost
 END_MAIN
 
 LocationBasedEvents:
@@ -91,7 +91,7 @@ UNIT Argent BowGen 0x0 Level(14,NPC,0) [12,2] 0x0 0x0 0x0 0x0 [BraveBow,DousingL
 UNIT Viridian ViridianLord 0x0 Level(4,NPC,0) [11,12] 0x0 0x0 0x0 0x0 [Luckbow,SilverBow,Mend,Vulnerary] NeverMoveAI
 UNIT Freddric WyvLord 0x0 Level(5,NPC,0) [13,11] 0x0 0x0 0x0 0x0 [SilverLance,Javelin,Elixir] NeverMoveAI
 UNIT Merchant ValkF 0x0 Level(15,NPC,1) [0,34] 0x0 0x0 0x0 0x0 [LiveGoose] NeverMoveAI
-UNIT Merchant3 Bishop 0x0 Level(13,NPC,1) [3,13] 0x0 0x0 0x0 0x0 [PureWater] NeverMoveAI
+UNIT Merchant2 Bishop 0x0 Level(13,NPC,1) [3,13] 0x0 0x0 0x0 0x0 [PureWater] NeverMoveAI
 UNIT ElbaCor MercF 0x0 Level(19,NPC,1) [15,31] 0x0 0x0 0x0 0x0 [GildedSword] NeverMoveAI
 UNIT ElbaCor SageF 0x0 Level(2,NPC,1) [6,30] 0x0 0x0 0x0 0x0 [ForceSpike] NeverMoveAI
 UNIT ElbaCor Falco 0x0 Level(9,NPC,1) [25,1] 0x0 0x0 0x0 0x0 [TrueSaunion] NeverMoveAI

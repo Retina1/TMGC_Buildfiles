@@ -263,12 +263,13 @@ FADI 16
 CLEE 0
 ResetBaseFlags
 MUSC VictoryTheme
-TakeItemAll(ApolloNote)
+AnnihilateItem(ApolloNote)
 LOAD1 0x0 C11EndingNotVlad
 ENUN
 CleanText(HallCG,Ch11_Ending)
 Reinforcements(C11EndingVlad)
 CleanTextNoMap(DesertCG,Ch11_Ending2)
+LocationText(HouseCG,Ch11_Ending2andaHalf,OpistianInnLabel,S_Neutral)
 LocationText(HallCG,Ch11_Ending3,YgstraBarracksLabel,S_Stratagem)
 MoveToChapter(Chapter12)
 ENDA

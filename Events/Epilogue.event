@@ -30,9 +30,14 @@ UNIT Viridian 0x0 0x0 Level(1,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT Chartreuse 0x0 0x0 Level(3,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
+TheLightAtTheEndOfItAll:
+UNIT Blair 0x0 0x0 Level(1,Ally,0) [21,22] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Arin 0x0 0x0 Level(1,Ally,0) [22,21] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
 ALIGN 4
 
-#define EpilogueSupportFlag(unit1,unit2,flag) "CHECK_ALIVE unit1; BEQ flag 0xc 0x0;CHECK_ALIVE unit2; BEQ flag 0xc 0x0;GetSupportLevel(unit1,unit2); SVAL 0x2 ASupport; BNE flag 0x1 0x2; ENUT flag; LABEL flag"
+#define EpilogueSupportFlag(unit1,unit2,flag,flag2) "CHECK_ALIVE unit1; BEQ flag 0xc 0x0;CHECK_ALIVE unit2; BEQ flag 0xc 0x0;GetSupportLevel(unit1,unit2); SVAL 0x2 ASupport; BNE flag 0x1 0x2; ENUT flag; GOTO flag2; LABEL flag; ClearSupport(unit1,unit2); LABEL flag2"
 #define EpilogueMapSwap(mapid,camx,camy) "FADI 4;CLEE 0;CLEN 0;CLEA 0;LOMA mapid;CAM1 [camx,camy]"
 //make sure to fadu 16 after
 #define EpilogueUnitLoad(unit,unitgroup,label) "CHECK_ALIVE unit;BEQ label 0xc 0x0;LOAD1 0x0 unitgroup;LABEL label"
@@ -43,6 +48,27 @@ ALIGN 4
 #define EpilogueBlairLoverText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BEQ label 0xc 0x0;FlashCursor(Blair,30);FlashCursor(unit1,30);Text(textid);LABEL label"
 #define EpilogueNoFlagUnitText(unit1,flag,textid,label) "CHECK_ALIVE unit1;BEQ label 0xc 0x0;CHECK_EVENTID flag; BNE label 0xc 0x0;FlashCursor(unit1,30);Text(textid);LABEL label"
 
+TrueFinalResolution:
+EpilogueMapSwap(ChapterV4,24,24)
+LOAD1 0x0 TheLightAtTheEndOfItAll
+FADU 0x4
+STAL 120
+FlashCursor(Blair,30)
+FlashCursor(Arin,30)
+Text(EpilogueSecretFinalDialogue)
+MOVE 10 Arin [22,20]
+ENUN
+STAL 40
+MOVE 10 Blair [22,21]
+ENUN
+STAL 60
+MOVE 10 Arin [22,19]
+ENUN
+STAL 60
+MOVE 10 Blair [22,20]
+ENUN
+STAL 120
+EndEvent
 
 AercolynResolution:
 EpilogueMapSwap(Interlude10,17,6)
@@ -289,6 +315,7 @@ BNE 0x2a 0xc 0x0
 	FlashCursor(Apollo,30)
 	FlashCursor(Flynn,30)	
 	Text(Epilogue_ApolloFlynnOpistia)
+	ClearSupport(Apollo,Vladmir)
 LABEL 0x2a
 //flynn ending
 CHECK_EVENTID DesmondFlynnFlag
@@ -335,7 +362,7 @@ CHECK_EVENTID BOATFLAGWOO
 BEQ 0x10 0xc 0x0
 EpilogueUnitLoad(Natasia,EpiloguePortNatasia,0x6)
 CHECK_EVENTID PeggyButchFlag
-BEQ 0x10 0xc 0x0
+BNE 0x10 0xc 0x0
 EpilogueFlagUnitLoad(Peggy,NatasiaPeggyFlag,EpiloguePortPeggy,0x7)
 LABEL 0x10
 FADU 0x4
@@ -353,12 +380,14 @@ BEQ 0x101 0xc 0x0
 		CHECK_EVENTID GirlkissingFlag
 		BNE 0x67 0xc 0x0
 		Text(Epilogue_BechamelNatasiaPortAlt)//natasia bechamel, blair kissing natasia
+		ClearSupport(Natasia,Bechamel)
 		GOTO 0x66
 		Text(Epilogue_BechamelNatasiaPortAlt2)//natasia bechamel, blair kissing several girls
+		ClearSupport(Natasia,Bechamel)
 		LABEL 0x67
 	LABEL 0x66
 	CHECK_EVENTID PeggyButchFlag
-		BEQ 0x102 0xc 0x0
+		BNE 0x102 0xc 0x0
 		EpilogueFlagUnitText(Peggy,NatasiaPeggyFlag,Epilogue_PeggyPort,0x71)//peggy natasia
 		LABEL 0x102
 LABEL 0x101
@@ -367,11 +396,14 @@ BEQ 0x55 0xc 0x0
 	FlashCursor(Apollo,30)
 	FlashCursor(Bechamel,30)
 	Text(Epilogue_ApolloBechamelPort)//apollo bech
+	ClearSupport(Apollo,Vladmir)
 	GOTO 0x68
 LABEL 0x55
 EpilogueNoFlagUnitText(Bechamel,BOATFLAGWOO,Epilogue_BechamelPort,0x68)//lonely bech
 CHECK_EVENTID SamBechamelFlag
 BEQ 0x51 0xc 0x0
+CHECK_EVENTID SamEmileFlag
+BNE 0x51 0xc 0x0
 EpilogueNoFlagUnitText(Sam,SamCharleyFlag,Epilogue_SamPort,0x51)//sam no charley
 CHECK_EVENTID SamCharleyFlag
 BEQ 0x50 0xc 0x0
@@ -659,6 +691,8 @@ CHECK_EVENTID BlairArinFlag
 BEQ 0x999 0xc 0x0
 CHECK_EVENTID GirlkissingFlag
 BNE 0x999 0xc 0x0
+CHECK_ALIVE Simone
+BEQ 0x999 0xc 0x0
 MUSCSLOW AmbientWindBirds
 CALL TrueFinalResolution
 LABEL 0x999
@@ -718,16 +752,6 @@ MNTS 0x1
 ENDA
 
 
-
-TrueFinalResolution:
-EpilogueMapSwap(ChapterV4,24,24)
-//loads
-FADU 0x4
-STAL 120
-//text
-STAL 120
-EndEvent
-
 SupportFlagSetter:
 CHECK_EVENTID ArinDeadFlag
 BNE ArinDeadFlag 0xc 0x0
@@ -749,48 +773,54 @@ CHECK_ALIVE SecretLaronde
 BEQ 0x2 0xc 0x0
 SetSupport(Rose,SecretLaronde,ASupport)
 LABEL 0x2
-EpilogueSupportFlag(Blair,Arin,BlairArinFlag)
-EpilogueSupportFlag(Blair,Natasia,BlairNatasiaFlag)
-EpilogueSupportFlag(Blair,Avan,BlairAvanFlag)
-EpilogueSupportFlag(Blair,Yuyu,BlairYuyuFlag)
-EpilogueSupportFlag(Blair,Estelle,BlairEstelleFlag)
-EpilogueSupportFlag(Blair,Carbon,BlairCarbonFlag)
-EpilogueSupportFlag(Arin,Simone,ArinSimoneFlag)
-EpilogueSupportFlag(Kenneth,Hilbert,KennethHilbertFlag)
-EpilogueSupportFlag(Natasia,Bechamel,NatasiaBechamelFlag)
-EpilogueSupportFlag(Natasia,Peggy,NatasiaPeggyFlag)
-EpilogueSupportFlag(Stefan,Johan,StefanJohanFlag)
-EpilogueSupportFlag(Desmond,Flynn,DesmondFlynnFlag)
-EpilogueSupportFlag(Sam,Emile,SamEmileFlag)
-EpilogueSupportFlag(Sam,Bechamel,SamBechamelFlag)
-EpilogueSupportFlag(Sam,Charley,SamCharleyFlag)
-EpilogueSupportFlag(Josef,Athena,JosefAthenaFlag)
-EpilogueSupportFlag(Peggy,Butch,PeggyButchFlag)
-EpilogueSupportFlag(Butch,Jeff,ButchJeffFlag)
-EpilogueSupportFlag(Butch,Peter,ButchPeterFlag)
-EpilogueSupportFlag(Rachael,Cassius,RachaelCassiusFlag)
-EpilogueSupportFlag(Rachael,Jeff,RachaelJeffFlag)
-EpilogueSupportFlag(Rachael,Leila,RachaelLeilaFlag)
-EpilogueSupportFlag(Cassius,Mikey,CassiusMikeyFlag)
-EpilogueSupportFlag(Cassius,Zeke,CassiusZekeFlag)
-EpilogueSupportFlag(Apollo,Bechamel,ApolloBechamelFlag)
-EpilogueSupportFlag(Apollo,Flynn,ApolloFlynnFlag)
-EpilogueSupportFlag(Apollo,Vladmir,ApolloVladmirFlag)
-EpilogueSupportFlag(Bechamel,Hollandaise,BechamelHollandaiseFlag)
-EpilogueSupportFlag(Charley,Toddsworth,CharleyToddsworthFlag)
-EpilogueSupportFlag(Hyperius,Alexis,HyperiusAlexisFlag)
-EpilogueSupportFlag(Leila,Damien,LeilaDamienFlag)
-EpilogueSupportFlag(Leila,Wilhelm,LeilaWilhelmFlag)
-EpilogueSupportFlag(Leila,Tobias,LeilaTobiasFlag)
-EpilogueSupportFlag(Ptolemy,Johan,PtolemyJohanFlag)
-EpilogueSupportFlag(Freddric,Argent,FreddricArgentFlag)
-EpilogueSupportFlag(Eliza,Dirk,ElizaDirkFlag)
-EpilogueSupportFlag(Rift,Estelle,RiftEstelleFlag)
-EpilogueSupportFlag(Rift,Callum,RiftCallumFlag)
-EpilogueSupportFlag(Rose,Manfred,RoseManfredFlag)
-EpilogueSupportFlag(Rose,SecretLaronde,RoseLarondeFlag)
-EpilogueSupportFlag(Manfred,Wilhelm,ManfredWilhelmFlag)
-EpilogueSupportFlag(Joan,Sonia,JoanSoniaFlag)
+CHECK_ALIVE Joan
+BEQ 0x444 0xc 0x0
+CHECK_ALIVE Sonia
+BEQ 0x444 0xc 0x0
+SetSupport(Joan,Sonia,ASupport)
+LABEL 0x444
+EpilogueSupportFlag(Blair,Arin,BlairArinFlag,0x800)
+EpilogueSupportFlag(Blair,Natasia,BlairNatasiaFlag,0x801)
+EpilogueSupportFlag(Blair,Avan,BlairAvanFlag,0x802)
+EpilogueSupportFlag(Blair,Yuyu,BlairYuyuFlag,0x803)
+EpilogueSupportFlag(Blair,Estelle,BlairEstelleFlag,0x804)
+EpilogueSupportFlag(Blair,Carbon,BlairCarbonFlag,0x805)
+EpilogueSupportFlag(Arin,Simone,ArinSimoneFlag,0x806)
+EpilogueSupportFlag(Kenneth,Hilbert,KennethHilbertFlag,0x807)
+EpilogueSupportFlag(Natasia,Bechamel,NatasiaBechamelFlag,0x808)
+EpilogueSupportFlag(Natasia,Peggy,NatasiaPeggyFlag,0x809)
+EpilogueSupportFlag(Stefan,Johan,StefanJohanFlag,0x810)
+EpilogueSupportFlag(Desmond,Flynn,DesmondFlynnFlag,0x811)
+EpilogueSupportFlag(Sam,Emile,SamEmileFlag,0x812)
+EpilogueSupportFlag(Sam,Bechamel,SamBechamelFlag,0x813)
+EpilogueSupportFlag(Sam,Charley,SamCharleyFlag,0x814)
+EpilogueSupportFlag(Josef,Athena,JosefAthenaFlag,0x815)
+EpilogueSupportFlag(Peggy,Butch,PeggyButchFlag,0x816)
+EpilogueSupportFlag(Butch,Jeff,ButchJeffFlag,0x817)
+EpilogueSupportFlag(Butch,Peter,ButchPeterFlag,0x818)
+EpilogueSupportFlag(Rachael,Cassius,RachaelCassiusFlag,0x819)
+EpilogueSupportFlag(Rachael,Jeff,RachaelJeffFlag,0x820)
+EpilogueSupportFlag(Rachael,Leila,RachaelLeilaFlag,0x821)
+EpilogueSupportFlag(Cassius,Mikey,CassiusMikeyFlag,0x822)
+EpilogueSupportFlag(Cassius,Zeke,CassiusZekeFlag,0x823)
+EpilogueSupportFlag(Apollo,Bechamel,ApolloBechamelFlag,0x824)
+EpilogueSupportFlag(Apollo,Flynn,ApolloFlynnFlag,0x825)
+EpilogueSupportFlag(Apollo,Vladmir,ApolloVladmirFlag,0x826)
+EpilogueSupportFlag(Bechamel,Hollandaise,BechamelHollandaiseFlag,0x827)
+EpilogueSupportFlag(Charley,Toddsworth,CharleyToddsworthFlag,0x828)
+EpilogueSupportFlag(Hyperius,Alexis,HyperiusAlexisFlag,0x829)
+EpilogueSupportFlag(Leila,Damien,LeilaDamienFlag,0x830)
+EpilogueSupportFlag(Leila,Wilhelm,LeilaWilhelmFlag,0x831)
+EpilogueSupportFlag(Leila,Tobias,LeilaTobiasFlag,0x832)
+EpilogueSupportFlag(Ptolemy,Johan,PtolemyJohanFlag,0x833)
+EpilogueSupportFlag(Freddric,Argent,FreddricArgentFlag,0x834)
+EpilogueSupportFlag(Eliza,Dirk,ElizaDirkFlag,0x835)
+EpilogueSupportFlag(Rift,Estelle,RiftEstelleFlag,0x836)
+EpilogueSupportFlag(Rift,Callum,RiftCallumFlag,0x837)
+EpilogueSupportFlag(Rose,Manfred,RoseManfredFlag,0x838)
+EpilogueSupportFlag(Rose,SecretLaronde,RoseLarondeFlag,0x839)
+EpilogueSupportFlag(Manfred,Wilhelm,ManfredWilhelmFlag,0x840)
+EpilogueSupportFlag(Joan,Sonia,JoanSoniaFlag,0x841)
 CHECK_EVENTID BlairArinFlag
 BNE 0x999 0xc 0x0
 CHECK_EVENTID BlairNatasiaFlag
@@ -819,6 +849,37 @@ CHECK_EVENTID BlairNatasiaFlag
 BEQ 0x779 0xc 0x0
 ENUT BlairNotWithNatFlag
 LABEL 0x779
+
+CHECK_EVENTID ApolloFlynnFlag
+BEQ 0x555 0xc 0x0
+ENUF DesmondFlynnFlag
+ClearSupport(Desmond,Flynn)
+LABEL 0x555
+
+CHECK_EVENTID PtolemyJohanFlag
+BEQ 0x556 0xc 0x0
+ENUF StefanJohanFlag
+ClearSupport(Stefan,Johan)
+LABEL 0x556
+
+CHECK_EVENTID BlairEstelleFlag
+BEQ 0x558 0xc 0x0
+ENUF RiftEstelleFlag
+ClearSupport(Rift,Estelle)
+LABEL 0x558
+
+CHECK_EVENTID LeilaWilhelmFlag
+BEQ 0x557 0xc 0x0
+ENUF ManfredWilhelmFlag
+ClearSupport(Manfred,Wilhelm)
+LABEL 0x557
+
+CHECK_EVENTID RiftEstelleFlag
+BEQ 0x559 0xc 0x0
+ENUF RiftCallumFlag
+ClearSupport(Rift,Callum)
+LABEL 0x559
+
 EndEvent
 
 
@@ -854,7 +915,7 @@ EpilogueDalstJosef:
 UNIT Josef 0x0 0x0 Level(1,Ally,0) [4,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 EpilogueDalstHilbert:
-UNIT Josef 0x0 0x0 Level(1,Ally,0) [1,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Hilbert 0x0 0x0 Level(1,Ally,0) [1,30] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 EpilogueDalstVladmir:
 UNIT Vladmir 0x0 0x0 Level(1,Ally,0) [4,31] 0x0 0x0 0x0 0x0 [0x0] NoAI

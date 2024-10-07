@@ -333,18 +333,18 @@ ENDA
 EndingScene:
 ResetBaseFlags
 MUSC VictoryTheme
+CHECK_ALIVE Apollo
+BNE 0x2 0xc 0x0
+CleanTextNoMap(BoatCG,Ch9_Ending_Apollo_Dead)
+GOTO 0x3
+LABEL 0x2
 CHECK_EVENTID 0xa
 BEQ 0x1 0xc 0x0
 CleanTextNoMap(BoatCG,Ch9_Ending_Apollo_Unrecruited)
 LOAD1 0x0 C9ApolloEnding
 GOTO 0x3
 LABEL 0x1
-CHECK_ALIVE Apollo
-BEQ 0x2 0xc 0x0
 CleanTextNoMap(BoatCG,Ch9_Ending)
-GOTO 0x3
-LABEL 0x2
-CleanTextNoMap(BoatCG,Ch9_Ending_Apollo_Dead)
 LABEL 0x3
 MoveToChapter(Interlude3)
 ENDA

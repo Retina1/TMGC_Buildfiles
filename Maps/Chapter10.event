@@ -45,11 +45,16 @@ Map_Change_3:
   SHORT $280
 
 ALIGN 4
+Map_Change_4:
+  SHORT $0 $0 $0 $0 $0 $7E8 $7EC $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $76C $76C $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $76C $76C $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $76C $76C $0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $76C $76C $8F0 $0 $0 $0 $0 $0 $0 $0 $0 $0 $76C $76C $76C $8F0 $0 $0 $0 $0 $0 $8F4 $0 $0 $76C $76C $76C $76C $8F0 $0 $0 $0 $0 $76C $76C $76C $76C $76C $76C $76C $76C $0 $0 $0 $0 $76C $76C $76C $76C $76C $76C $76C $76C $0 $0 $0 $0 $76C $76C $76C $76C $76C $76C $76C $76C $0 $0 $0 $8F4 $76C $76C $76C $76C $76C $76C $76C $76C $8F0 $0 $0 $0 $0 $76C $76C $76C $76C $76C $76C $76C $76C $8F0 $0 $0 $0 $76C $76C $76C $76C $76C $76C $76C $76C $76C $0 $0 $0 $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $874 $76C $76C $76C $76C $76C $76C $76C $76C $76C $76C $870
+
+ALIGN 4
 MapChangesData:
   TileMap(0, 21, 1, 5, 2, Map_Change_0)
   TileMap(1, 24, 13, 3, 12, Map_Change_1)
   TileMap(2, 20, 2, 1, 1, Map_Change_2)
   TileMap(3, 15, 7, 1, 1, Map_Change_3)
+  TileMap(4, 10, 12, 12, 18, Map_Change_4)
   TileMapEnd
 
 EventPointerTable(MapChange10, MapChangesData)

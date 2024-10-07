@@ -203,6 +203,8 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define MitchellUPaletteID 0x9d
 #define SveltzalusPPaletteID 0x9e
 #define SinclairPaletteID 0x9f
+#define LarondeUPaletteID 0xa0
+//need - unpromoted laronde
 
 //to do: unpromoted pals for promoted units, cheeky text
 setPalette(BlairUPaletteID,BlairUPalette)
@@ -361,6 +363,7 @@ setPalette(GregoriasPaletteID,GregoriasPalette)
 setPalette(GregoriasPPaletteID,GregoriasPPalette)
 setPalette(SofiaPaletteID,SofiaPalette)
 setPalette(LarondePaletteID,LarondePalette)
+setPalette(LarondeUPaletteID,LarondeUPalette)
 setPalette(AmaraPaletteID,AmaraPalette)
 setPalette(ValdenPaletteID,ValdenPalette)
 setPalette(LazarusPaletteID,LazarusPalette)
@@ -422,6 +425,7 @@ SetPaletteFull(Zeke,ZekeUPaletteID,ZekeLord,ZekePPaletteID,ZekeLordX,0x0,0x0)
 SetPaletteFull(Hyperius,0x0,SwdArm,HyperiusPaletteID,SwdGen,0x0,0x0)
 SetPaletteFull(Alexis,AlexisUPaletteID,AxeArm,AlexisPPaletteID,AxeGen,0x0,0x0)
 SetPaletteFull(Leila,LeilaUPaletteID,SwdPeg,LeilaPPaletteID,Falco,0x0,0x0)
+SetPaletteFull(PGLeila,LeilaUPaletteID,SwdPeg,LeilaPPaletteID,Falco,0x0,0x0)
 SetPaletteFull(Damien,DamienUPaletteID,Archer,DamienPPaletteID,Sniper,0x0,0x0)
 SetPaletteFull(Zacharias,ZachariasUPaletteID,Fighter,ZachariasPPaletteID,Warrior,0x0,0x0)
 SetPaletteFull(Avan,AvanUPaletteID,TroubF,AvanPPaletteID,ValkF,0x0,0x0)
@@ -453,12 +457,13 @@ SetPaletteFull(Dirk,0x0,Pirate,DirkPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Callum,0x0,SwdCav,CallumPaletteID,SwdPal,0x0,0x0)
 SetPaletteFull(Manfred,ManfredUPaletteID,DarkM,ManfredPPaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Wilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x0,0x0)
+SetPaletteFull(PGWilhelm,WilhelmUPaletteID,Soldier,WilhelmPPaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Argent,0x0,BowArm,ArgentPaletteID,BowGen,0x0,0x0)
 SetPaletteFull(PGArgent,0x0,BowArm,ArgentPaletteID,BowGen,0x0,0x0)
 SetPaletteFull(Addington,0x0,Automaton,0x0,0x0,0x0,0x0)
 SetPaletteFull(Tonnamin,0x0,AxeArm,TonnaminPaletteID,AxeGen,0x0,0x0)
 SetPaletteFull(SecretJonas,JonasPaletteID,LncWyv,JonasPPaletteID,WyvLord,0x0,0x0)
-SetPaletteFull(SecretLaronde,0x0,Soldier,LarondePaletteID,Halberdier,0x0,0x0)
+SetPaletteFull(SecretLaronde,LarondeUPaletteID,Soldier,LarondePaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(SecretClarque,0x0,BowCav,ClarquePaletteID,BowPal,0x0,0x0)
 SetPaletteFull(Yuyu,YuyuPaletteID,Freelancer,0x0,0x0,0x0,0x0)
 SetPaletteFull(Agnes,AgnesPaletteID,MercF,AgnesPPaletteID,HeroF,0x0,0x0)
@@ -482,9 +487,15 @@ SetPaletteFull(PGMitchell,MitchellUPaletteID,Fighter,MitchellPaletteID,Hero,0x0,
 SetPaletteFull(Amundsen,AmundsenPaletteID,Bruiser,0x0,0x0,0x0,0x0)
 SetPaletteFull(Zaine,0x0,0x0,ZainePaletteID,Sorc,0x0,0x0)
 SetPaletteFull(Esme,0x0,0x0,EsmePaletteID,WyvLord,0x0,0x0)
+SetPaletteFull(PGEsme,0x0,0x0,EsmePaletteID,WyvLord,0x0,0x0)
 SetPaletteFull(Pete,0x0,0x0,PetePaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Jonas,JonasPaletteID,LncWyv,0x0,0x0,0x0,0x0)
 SetPaletteFull(Gregorias,GregoriasPaletteID,Pirate,0x0,0x0,0x0,0x0)
+SetPaletteFull(Gregarias,0x0,0x0,GregoriasPPaletteID,Berserker,0x0,0x0)
+SetPaletteFull(Gregerias,0x0,0x0,GregoriasPPaletteID,Berserker,0x0,0x0)
+SetPaletteFull(Gregirias,0x0,0x0,GregoriasPPaletteID,Berserker,0x0,0x0)
+SetPaletteFull(Gregurias,0x0,0x0,GregoriasPPaletteID,Berserker,0x0,0x0)
+SetPaletteFull(Gregyrias,0x0,0x0,GregoriasPPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Sofia,0x0,0x0,SofiaPaletteID,SorcF,0x0,0x0)
 SetPaletteFull(Laronde,0x0,0x0,LarondePaletteID,Halberdier,0x0,0x0)
 SetPaletteFull(Amara,0x0,0x0,AmaraPaletteID,WarriorF,0x0,0x0)
@@ -954,6 +965,9 @@ SofiaPalette:
 ALIGN 4
 LarondePalette:
 #incbin "Laronde.dmp"
+ALIGN 4
+LarondeUPalette:
+#incbin "LarondeUnpromoted.dmp"
 ALIGN 4
 AmaraPalette:
 #incbin "Amara.dmp"

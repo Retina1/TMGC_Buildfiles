@@ -64,6 +64,7 @@ BYTE 0x0 0x0
 ALIGN 4
 
 MiscBasedEvents:
+AFEV 0x8 C13AmaraMover ValdenDeadFlag
 AreaEvent(0x21,C13AreaTrigger1,14,17,23,27)
 AreaEvent(0x22,C13AreaTrigger2,0,0,23,6)
 CauseGameOverIfLordDies
@@ -229,7 +230,7 @@ UNIT Valden LncPal 0x0 Level(8,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [GildedLance,Spear
 UNIT
 
 C13Horse:
-UNIT 0xd1 0x1d 0x0 Level(15,NPC,0) [13,2] 0x0 0x0 0x1 REDA13R4 [0x0] NeverMoveAI
+UNIT 0xd1 0x1d 0x0 Level(15,NPC,0) [13,2] 0x0 0x0 0x1 REDA13R4 [0x0] [0x6,0x3,0x4,0x0]
 UNIT
 
 C13Wallbreaker:
@@ -313,6 +314,18 @@ UNIT Brandl Sniper 0x0 Level(6,NPC,0) [20,5] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 ALIGN 4
+
+C13AmaraMover:
+CHECK_ALIVE Amara
+BEQ 0x1 0xc 0x0
+CAM1 Amara
+FlashCursor(Amara,60)
+Text(C13AmaraMoveUp)
+STAL 20
+MOVE_1STEP 12 Amara Up
+LABEL 0x1
+EndEvent
+
 
 BeginningScene:
 ENUT GuideChpt13

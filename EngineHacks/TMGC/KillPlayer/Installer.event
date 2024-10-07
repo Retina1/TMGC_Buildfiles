@@ -1,0 +1,6 @@
+ALIGN 4
+
+#define KillPlayerUnit(unit) "BYTE 0x40 0x0D unit 0x00; POIN UnitMurderFunction+1"
+//also eventually add mass check for things like axe handle and unknown page
+UnitMurderFunction:
+#incbin "ASMC_KillPlayerUnit.dmp"

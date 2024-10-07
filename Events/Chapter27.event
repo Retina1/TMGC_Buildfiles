@@ -548,6 +548,7 @@ UNIT
 ALIGN 4
 
 C27HoratioSimoneSupport:
+EVBIT_MODIFY 3
 MUSC S_HisWorld
 Text(HoratioSimoneBPSupport)
 SET_ACTIVE 0
@@ -557,6 +558,7 @@ EndAttack
 FIG2 Horatio Simone HoratioBlade
 //STAL 30
 Text(HoratioKillsSimone)
+KillPlayerUnit(Simone)
 SetSupport(Horatio,Simone,BPSupport,1)
 EndEvent
 

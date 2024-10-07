@@ -52,20 +52,39 @@ Tale5Units:
 //tale 5 cast - natasia, bechamel, apollo, flynn, peggy, agnes, hollandaise, charley
 // capture boats while defending their greens
 //todd and charley here rolling along
-UNIT Natasia WarriorF 0x0 Level(1,Ally,0) [16,15] 0x0 0x0 0x0 0x0 [KillerAxe] NoAI
-UNIT Bechamel Berserker 0x0 Level(1,Ally,0) [16,16] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Apollo Bishop 0x0 Level(1,Ally,0) [15,15] 0x0 0x0 0x0 0x0 [Salvation] NoAI
-UNIT Flynn SwMast 0x0 Level(1,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Shimmersword] NoAI
-UNIT Peggy BishopF 0x0 Level(1,Ally,0) [14,15] 0x0 0x0 0x0 0x0 [WrathStaff] NoAI
-UNIT Agnes HeroF 0x0 Level(1,Ally,0) [17,15] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Hollandaise BerserkerF 0x0 Level(1,Ally,0) [14,16] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Charley SniperF 0x0 Level(1,Ally,0) [17,16] 0x0 0x0 0x0 0x0 [ShortBow] NoAI
-UNIT Sam SniperF 0x0 Level(1,Ally,0) [15,14] 0x0 0x0 0x0 0x0 [Passacaglia] NoAI
-UNIT Toddsworth Bard 0x0 Level(1,Ally,0) [16,14] 0x0 0x0 0x0 0x0 [Toddhand] NoAI
+UNIT Natasia WarriorF 0x0 Level(8,Ally,0) [21,13] 0x0 0x0 0x0 0x0 [KillerAxe,Tomahawk,MiniBallista] NoAI
+UNIT Bechamel Berserker 0x0 Level(7,Ally,0) [20,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Apollo Bishop 0x0 Level(5,Ally,0) [19,15] 0x0 0x0 0x0 0x0 [Salvation,MorningStar,Physic,Yoink] NoAI
+UNIT Flynn SwMast 0x0 Level(6,Ally,0) [21,15] 0x0 0x0 0x0 0x0 [Shimmersword,FlameSword,Rapier] NoAI
+UNIT Peggy BishopF 0x0 Level(8,Ally,0) [20,16] 0x0 0x0 0x0 0x0 [WrathStaff] NoAI
+UNIT Agnes HeroF 0x0 Level(4,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Hollandaise BerserkerF 0x0 Level(5,Ally,0) [12,17] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Charley SniperF 0x0 Level(16,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [ShortBow] NoAI
+UNIT Sam SniperF 0x0 Level(7,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Passacaglia] NoAI
+UNIT Toddsworth Bard 0x0 Level(18,Ally,0) [14,17] 0x0 0x0 0x0 0x0 [Toddhand] NoAI
 UNIT
 
 Tale5Enemies:
-UNIT Pirates DarkM 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT Pirates Sorc 0x0 Level(10,Enemy,1) [9,15] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT Pirates Sorc 0x0 Level(10,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [Jormungandr] NeverMoveAI
+UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [6,5] 0x0 0x0 0x0 0x0 [SilverAxe] DelayedAI
+UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [DevilAxe] DelayedAI
+UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [7,4] 0x0 0x0 0x0 0x0 [KillerLance] DelayedAI
+UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [8,4] 0x0 0x0 0x0 0x0 [SilverLance] DelayedAI
+UNIT Gregarias Berserker 0x0 Level(15,Enemy,1) [4,10] 0x0 0x0 0x0 0x0 [Hammer] NoAI
+UNIT Gregerias Berserker 0x0 Level(15,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [Halberd] NoAI
+UNIT Gregirias Berserker 0x0 Level(15,Enemy,1) [20,9] 0x0 0x0 0x0 0x0 [Dracoaxe] NoAI
+UNIT Gregurias Berserker 0x0 Level(15,Enemy,1) [32,0] 0x0 0x0 0x0 0x0 [HereticAxe] NoAI
+UNIT Gregyrias Berserker 0x0 Level(15,Enemy,1) [28,16] 0x0 0x0 0x0 0x0 [Swordslayer] NoAI
+//make boss son of gregorias, gregogorias
+UNIT
+
+Tale5Greens:
+UNIT Merchant Sage 0x0 Level(20,NPC,1) [13,2] 0x0 0x0 0x0 0x0 [Yoink,IronRune] NeverMoveAI
+UNIT Merchant ValkF 0x0 Level(20,NPC,1) [2,0] 0x0 0x0 0x0 0x0 [LiveGoose,IronRune] NeverMoveAI
+UNIT Merchant Bishop 0x0 Level(20,NPC,1) [24,3] 0x0 0x0 0x0 0x0 [PureWater,IronRune] NeverMoveAI
+UNIT Merchant SwMast 0x0 Level(20,NPC,1) [30,15] 0x0 0x0 0x0 0x0 [ArmsScroll,IronRune] NeverMoveAI
+UNIT Merchant BowGen 0x0 Level(20,NPC,1) [8,11] 0x0 0x0 0x0 0x0 [TorchStaff,IronRune] NeverMoveAI
 UNIT
 
 ALIGN 4
@@ -77,9 +96,43 @@ LOAD1 0x1 Tale5Units
 ENUN
 LOAD1 0x1 Tale5Enemies
 ENUN
-//TaleSetUnitStat(Viridian,35,15,12,19,18,12,11,19)
-//TaleSetUnitWEXP(Viridian,0,0,0,121,121,0,0,0)
-//SetUnitSkills(Viridian,AcrobatID,0,0,0)
+LOAD1 0x1 Tale5Greens
+ENUN
+TaleSetUnitStat(Gregarias,70,30,1,24,28,10,15,5)
+TaleSetUnitStat(Gregerias,70,30,1,24,28,10,15,5)
+TaleSetUnitStat(Gregirias,70,30,1,24,28,10,15,5)
+TaleSetUnitStat(Gregurias,70,30,1,24,28,10,15,5)
+TaleSetUnitStat(Gregyrias,70,30,1,24,28,10,15,5)
+TaleSetUnitStat(Natasia,59,32,4,24,20,15,12,4)
+TaleSetUnitWEXP(Natasia,0,0,251,121,0,0,0,0)
+SetUnitSkills(Natasia,WrathID,DauntID,0,0)
+TaleSetUnitStat(Bechamel,73,36,3,20,18,12,10,3)
+TaleSetUnitWEXP(Bechamel,0,0,251,0,0,0,0,0)
+SetUnitSkills(Bechamel,HeavyStrikesID,ChargeID,0,0)
+TaleSetUnitStat(Apollo,41,2,30,35,29,28,9,34)
+TaleSetUnitWEXP(Apollo,0,0,0,0,181,0,251,0)
+SetUnitSkills(Apollo,AnathemaID,MiracleID,0,0)
+TaleSetUnitStat(Flynn,48,27,18,34,35,9,12,28)
+TaleSetUnitWEXP(Flynn,251,0,0,0,0,0,0,0)
+SetUnitSkills(Flynn,PushResID,DoubleLionID,0,0)
+TaleSetUnitStat(Peggy,34,15,31,13,34,30,7,12)
+TaleSetUnitWEXP(Peggy,0,0,121,0,251,0,181,0)
+SetUnitSkills(Peggy,SwarpID,WrathID,CantoPlusID,0)
+TaleSetUnitStat(Agnes,61,32,25,20,33,30,3,4)
+TaleSetUnitWEXP(Agnes,181,0,181,0,0,0,0,0)
+SetUnitSkills(Agnes,StrongRiposteID,0,0,0)
+TaleSetUnitStat(Hollandaise,64,30,10,21,30,17,9,9)
+TaleSetUnitWEXP(Hollandaise,0,0,251,121,0,0,0,0)
+SetUnitSkills(Hollandaise,StealPlusID,SavageBlowID,0,0)
+TaleSetUnitStat(Charley,40,23,18,36,28,16,24,28)
+TaleSetUnitWEXP(Charley,0,0,0,251,0,0,0,0)
+SetUnitSkills(Charley,BowRangeUpID,0,0,0)
+TaleSetUnitStat(Sam,42,25,6,36,30,28,8,20)
+TaleSetUnitWEXP(Sam,0,0,0,251,0,0,0,0)
+SetUnitSkills(Sam,ReadyAimID,PassID,0,0)
+TaleSetUnitStat(Toddsworth,24,1,7,10,26,30,20,21)
+TaleSetUnitWEXP(Toddsworth,0,0,0,0,0,0,0,0)
+SetUnitSkills(Toddsworth,BowbreakerID,TomebreakerID,QuickRiposteID,GrislyWoundID)
 ENDA
 
 EndingScene:

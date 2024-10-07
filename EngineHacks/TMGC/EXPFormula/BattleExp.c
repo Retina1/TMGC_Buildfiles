@@ -176,7 +176,8 @@ if (!gChapterData.unk42_6)
 	result = result * 13/10;
 if (gChapterData.chapterStateBits & PLAY_FLAG_HARD)
 	result = result * 9/10;
- if (SkillTester(&gBattleActor.unit, 49))//unit with paragon
+
+ if (SkillTester(&actor->unit, 49))//unit with paragon
 	result = result * 2;
 
 int multiplicativeNumerator = 1;

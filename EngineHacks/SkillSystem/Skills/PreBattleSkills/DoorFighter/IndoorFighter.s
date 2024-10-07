@@ -15,8 +15,8 @@ cmp r0, #0
 beq End
 
 @check for s dark tome because it's weird
-mov	r1,#0x48
-ldrh r0,[r4,r1] @weapon type
+mov	r1,#0x4a
+ldrh r0,[r4,r1] @weapon short
 mov	r1,#0xff
 and r0,r0,r1
 cmp r0,#0x8f

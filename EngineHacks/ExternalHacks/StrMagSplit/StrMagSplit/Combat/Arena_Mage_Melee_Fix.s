@@ -10,11 +10,11 @@ mov		r1,#0x24
 mul		r0,r1
 ldr		r1,ItemTable
 add		r0,r1
-ldr		r0,[r0,#0x8]		@weapon abilities
+ldrb		r0,[r0,#0x7]		@weapon type
 mov		r2,#0x0
-mov		r1,#0x2				@magic
-tst		r0,r1
-beq		IsNotMagic
+mov		r1,#0x4				@staves
+cmp		r0,r1
+ble		IsNotMagic
 mov		r2,#0x1
 IsNotMagic:
 mov 	r0,r2

@@ -139,12 +139,12 @@ PlayEmotionEffect(Rose,MusicNoteEffect)
 LABEL 0x1
 PlayEmotionEffect(Rose,FrustratedEffect)
 	Text(RoseShopBroke)
-	REMA
+	ClearBackgroundSmooth
 	GOTO 0x500
 LABEL 0x3
 PlayEmotionEffect(Rose,DotDotDotEffect)
 	Text(RoseShopDenyBuy)
-	REMA
+	ClearBackgroundSmooth
 	GOTO 0x500
 LABEL 0x40
 PlayEmotionEffect(Rose,SweatEffect)

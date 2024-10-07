@@ -41,12 +41,15 @@ TaleUnitDeathQuote(Tale3Wyv1,Tale3,Tale3WyvernDeath)
 TaleUnitDeathQuote(Tale3Wyv2,Tale3,Tale3WyvernDeath)
 TaleUnitDeathQuote(Tale3Wyv3,Tale3,Tale3WyvernDeath)
 //4
-TaleUnitDeathQuote(Cid,Tale4,FillerDialogue)
-TaleUnitDeathQuote(Agnes,Tale4,FillerDialogue)
-TaleUnitDeathQuote(CidPirate1,Tale4,FillerDialogue)//cid calling them stupid and lamenting death
-TaleUnitDeathQuote(CidPirate2,Tale4,FillerDialogue)//cid calling them stupid and lamenting death
-TaleUnitDeathQuote(CidPirate3,Tale4,FillerDialogue)//cid calling them stupid and lamenting death
-TaleUnitDeathQuote(CidPirate4,Tale4,FillerDialogue)//cid calling them stupid and lamenting death
+TaleUnitDeathQuote(Cid,Tale4,Tale4CidDeath)
+TaleUnitDeathQuote(Agnes,Tale4,Tale4AgnesDeath)
+TaleUnitDeathQuote(CidPirate1,Tale4,Tale4PirateDeath)//cid calling them stupid and lamenting death
+TaleUnitDeathQuote(CidPirate2,Tale4,Tale4PirateDeath)//cid calling them stupid and lamenting death
+TaleUnitDeathQuote(CidPirate3,Tale4,Tale4PirateDeath)//cid calling them stupid and lamenting death
+TaleUnitDeathQuote(CidPirate4,Tale4,Tale4PirateDeath)//cid calling them stupid and lamenting death
+ChapterDeathQuote(PGLeila,Tale4,0x0,Tale4LeilaDeath)
+ChapterDeathQuote(PGWilhelm,Tale4,0x0,Tale4WilhelmDeath)
+ChapterDeathQuote(PGEsme,Tale4,0x0,Tale4EsmeDeath)
 //5
 TaleUnitDeathQuote(Natasia,Tale5,FillerDialogue)
 TaleUnitDeathQuote(Bechamel,Tale5,FillerDialogue)

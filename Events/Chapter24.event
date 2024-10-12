@@ -106,6 +106,14 @@ TelliusTorchOff(19,5,9)
 TelliusTorchOff(9,1,9)
 TelliusTorchOff(11,20,9)
 TelliusTorchOff(29,13,9)
+RedSigil(0,6)
+RedSigil(0,7)
+RedSigil(0,8)
+RedSigil(0,9)
+RedSigil(0,15)
+RedSigil(0,16)
+RedSigil(0,17)
+RedSigil(0,18)
 ENDTRAP
 TrapData2:
 ENDTRAP
@@ -599,7 +607,7 @@ SetSupport(Josef,Hilbert,BPSupport,1)
 EndEvent
 
 C24DesmondFlynnSupport:
-EVBIT_MODIFY 3
+EVBIT_MODIFY 4
 SystemText(C24RangerConfirm)
 IfNoSelectedGoto(0x3)
 Text(DesmondFlynnBPSupport)

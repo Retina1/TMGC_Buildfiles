@@ -617,7 +617,7 @@ SetSupport(Hyperius,Leila,BPSupport,1)
 EndEvent
 
 C27RoseOlsenSupport:
-EVBIT_MODIFY 3
+EVBIT_MODIFY 4
 SystemText(C27AssassinConfirm)
 IfNoSelectedGoto(0x3)
 Text(RoseOlsenBSupport)//promo

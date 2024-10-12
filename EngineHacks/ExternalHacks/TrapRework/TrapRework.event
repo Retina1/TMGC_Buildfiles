@@ -27,10 +27,13 @@
 	#define ArrowTrapID 7
 	#define InstantFireTrapID 8
 	#define PossiblyUnusedTrapID 9
-	#define TorchStaffTrapID 10
-	#define MineTrapID 11
-	#define GorgonEggTrapID 12
-	#define LightRuneTrapID 13
+	#define TorchStaffTrapID 0xa
+	#define MineTrapID 0xb
+	#define GorgonEggTrapID 0xc
+	#define LightRuneTrapID 0xd
+	#define SigilTrapID 0x11
+	#define RedSigilTrapID 0x12
+	#define GreenSigilTrapID 0x13
 	
 	#define LightRuneTrapPaletteWord 0xFFFFB080
 	#define PlayerTrapPaletteWord 0xFFFFC080
@@ -41,6 +44,7 @@
 	
 	#define ExampleMapSpriteTrapID 0x10
 	#define ExampleMapSpriteID 0x66
+	#define SigilTrapMapSprite 0x42
 	
 	
 	#include "TrapRework_Internal.event"
@@ -62,6 +66,9 @@
 	SetTrapEventInit(MineTrapID,$378D6)
 	SetTrapEventInit(GorgonEggTrapID,$378EC)
 	SetTrapEventInit(LightRuneTrapID,0)
+	SetTrapEventInit(SigilTrapID,TrapRework_GenericInitializer)
+	SetTrapEventInit(RedSigilTrapID,TrapRework_GenericInitializer)
+	SetTrapEventInit(GreenSigilTrapID,TrapRework_GenericInitializer)
 	
 	
 	#define SetTrapMapSprite(trapID,mapSpriteID) "PUSH; ORG TrapMapSpriteTable+(trapID-1); BYTE mapSpriteID; POP"
@@ -80,6 +87,9 @@
 	SetTrapMapSprite(MineTrapID,0)
 	SetTrapMapSprite(GorgonEggTrapID,0)
 	SetTrapMapSprite(LightRuneTrapID,0x66) //light rune map sprite
+	SetTrapMapSprite(SigilTrapID,SigilTrapMapSprite)
+	SetTrapMapSprite(RedSigilTrapID,SigilTrapMapSprite)
+	SetTrapMapSprite(GreenSigilTrapID,SigilTrapMapSprite)
 	
 	//Macro for setting unique cases on trap map sprites
 	#define SetTrapMapSpriteFunc(trapID,ptr) "PUSH; ORG (TrapMapSpriteFuncTable+((trapID-1)*4)); POIN ptr; POP"
@@ -90,6 +100,9 @@
 	#define SetTrapMapSpritePalette(trapID,paletteWord) "PUSH; ORG TrapMapSpritePaletteTable+(4*(trapID-1)); WORD paletteWord; POP"
 	
 	SetTrapMapSpritePalette(LightRuneTrapID,LightRuneTrapPaletteWord)
+	SetTrapMapSpritePalette(SigilTrapID,PlayerTrapPaletteWord)
+	SetTrapMapSpritePalette(RedSigilTrapID,EnemyTrapPaletteWord)
+	SetTrapMapSpritePalette(GreenSigilTrapID,NPCTrapPaletteWord)
 	
 	
 
@@ -140,6 +153,10 @@
 	#include "Modules/DragonVeins/DragonVeins.event"
 	#include "Modules/HealTiles/HealTiles.event"
 	#include "Modules/TelliusTorches/TelliusTorches.event"
+	
+	#define BlueSigil(x,y) "MapSpriteTrap(SigilTrapID,x,y)"
+	#define RedSigil(x,y) "MapSpriteTrap(RedSigilTrapID,x,y)"
+	#define GreenSigil(x,y) "MapSpriteTrap(GreenSigilTrapID,x,y)"
 	
 	//This is here to satiate a hardcoded requirement if heal tiles are not installed.
 	#ifndef HEAL_TILES

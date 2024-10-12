@@ -14,7 +14,7 @@ POIN LocationBasedEvents
 POIN MiscBasedEvents
 POIN Dunno Dunno Dunno
 POIN Tutorial
-POIN TrapData TrapData
+POIN TrapData TrapData2
 POIN Z1Units Z1Units
 POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
@@ -52,6 +52,11 @@ Tutorial:
 END_MAIN
 
 TrapData:
+RedSigil(0,0)
+RedSigil(1,0)
+RedSigil(2,0)
+ENDTRAP
+TrapData2:
 ENDTRAP
 
 ALIGN 4

@@ -1,6 +1,6 @@
 INLINE ClassSkillTable,Skill
 None,0x0
-Zeke,0x0
+Zeke,BasicSkillID
 Blair,SupplyID
 ZekeX,CantoID
 BlairX,SupplyID
@@ -8,107 +8,107 @@ Sword Cav.,CantoID
 Lance Cav.,CantoID
 Sword Pal.,CantoID
 Lance Pal.,CantoID
-Sword Armor,0x0
-Lance Armor,0x0
-Sword Gen.,0x0
-Lance Gen.,0x0
+Sword Armor,BasicSkillID
+Lance Armor,BasicSkillID
+Sword Gen.,BasicSkillID
+Lance Gen.,BasicSkillID
 Thief,CunningID
 Thief F,CunningID
-Mercenary,0x0
-Mercenary (F),0x0
-Hero,0x0
-Hero (F),0x0
-Myrmidon,0x0
-Myrmidon (F),0x0
+Mercenary,BasicSkillID
+Mercenary (F),BasicSkillID
+Hero,BasicSkillID
+Hero (F),BasicSkillID
+Myrmidon,BasicSkillID
+Myrmidon (F),BasicSkillID
 Swordmaster,CritUpID
 Swordmaster (F),CritUpID
 Assassin,CunningID
 Assassin (F),CunningID
-Archer,0x0
-Archer (F),0x0
-Sniper,0x0
-Sniper (F),0x0
-unused,0x0
-unused,0x0
+Archer,BasicSkillID
+Archer (F),BasicSkillID
+Sniper,BasicSkillID
+Sniper (F),BasicSkillID
+Horse,CantoID
+Sword,0x0
 Lnc Wyv,CantoID
 Axe Wyv,CantoID
 Wyv Lord,CantoID
 Bow Wyv,CantoID
 Dracopope,CantoID
-unused,0x0
-Mage,0x0
-Mage (F),0x0
-Sage,0x0
-Sage (F),0x0
+Baron,BasicSkillID
+Mage,BasicSkillID
+Mage (F),BasicSkillID
+Sage,BasicSkillID
+Sage (F),BasicSkillID
 Mage Knight,CantoID
 Mage Knight (F),CantoID
-Bishop,0x0
-Bishop (F),0x0
-Dark Mage,0x0
-Dark Mage F,0x0
-Sorc,0x0
-Sorc F,0x0
-Myrmidon (Mag),0x0
-Runeblade,0x0
-Rogue,CunningID
-Gorgon Egg,0x0
+Bishop,BasicSkillID
+Bishop (F),BasicSkillID
+Dark Mage,BasicSkillID
+Dark Mage F,BasicSkillID
+Sorc,BasicSkillID
+Sorc F,BasicSkillID
+Myrmidon (Mag),BasicSkillID
+Runeblade,BasicSkillID
+Mage Knight (F) (special),CunningID
+unused (hardcoding!),0x0
 Trickster,CunningID
-Hunter,0x0
-Deserter,0x0
-Bruiser,0x0
+Hunter,BasicSkillID
+Deserter,BasicSkillID
+Bruiser,BasicSkillID
 Sword Cav. F,CantoID
 Lance Cav. F,CantoID
 Sword Pal. F,CantoID
 Lance Pal. F,CantoID
 Automaton,CantoID
 Virdian,SupplyID
-Fighter,0x0
-Warrior,0x0
-Brigand,0x0
-Pirate,0x0
+Fighter,BasicSkillID
+Warrior,BasicSkillID
+Brigand,BasicSkillID
+Pirate,BasicSkillID
 Berserker,CritUpID
-Light Mage,0x0
-Priest,0x0
+Light Mage,BasicSkillID
+Priest,BasicSkillID
 Bard,PlayID
 Sword Peg.,CantoID
 Lance Peg.,CantoID
 Falcon Knight,CantoID
-Cleric,0x0
+Cleric,BasicSkillID
 Troubadour,CantoID
 Troubadour M,CantoID
 Bard F,PlayID
-Soldier,0x0
-Halberdier,0x0
-Ballista,0x0
+Soldier,BasicSkillID
+Halberdier,BasicSkillID
+Ballista,BasicSkillID
 Phantom,0x0
 Axe Cavalier,CantoID
 Axe Pal.,CantoID
 Bow Cavalier,CantoID
-Axe Armor,0x0
+Axe Armor,BasicSkillID
 Bow Pal.,CantoPlusID
-Axe Gen.,0x0
-Bow Armor,0x0
-Bow Gen.,0x0
-Dismounted Pal.,0x0
-Fighter F,0x0
-Warrior F,0x0
-Pirate F,0x0
+Axe Gen.,BasicSkillID
+Bow Armor,BasicSkillID
+Bow Gen.,BasicSkillID
+Dismounted Pal.,BasicSkillID
+Fighter F,BasicSkillID
+Warrior F,BasicSkillID
+Pirate F,BasicSkillID
 Berserker F,CritUpID
-Mogall,0x0
-Arch Mogall,0x0
-Gorgon,ShadeID
-Gorgon Egg,0x0
-Soldier F,0x0
-Halberdier F,0x0
-Dracozombie,0x0
-Demon King,SummonID
-Archer on Ballista,0x0
-Archer on Iron Ballista,0x0
-Archer on Killer Ballista,0x0
-Ballista,0x0
-Iron Ballista,0x0
-Killer Ballista,0x0
-Civilian,0x0
+Mogall,BasicSkillID
+Arch Mogall,BasicSkillID
+Crate,ShadeID
+unused (hardcoding!),0x0
+Soldier F,BasicSkillID
+Halberdier F,BasicSkillID
+unused (hardcoding!),0x0
+unused (hardcoding!),SummonID
+Divine Dragon,0x0
+Earth Dragon,0x0
+Fire Dragon,0x0
+Ice Dragon,0x0
+Demon Dragon,0x0
+Wyvern,0x0
+Civilian,BasicSkillID
 Civilian (F),0x0
 Civilian,0x0
 Civilian (F),0x0
@@ -118,15 +118,15 @@ Axe Cavalier F,CantoID
 Axe Pal. F,CantoID
 Bow Cavalier F,CantoID
 Bow Pal. F,CantoPlusID
-(empty),0x0
-Fallen Prince,0x0
-Tent,0x0
-Pontifex,0x0
-Dead Peer,0x0
-Cyclops,0x0
-Elder Bael,0x0
-Journeyman (2),0x0
-Pupil (2),CritUpID
+Light rune? don't change,0x0
+Freelancer,BasicSkillID
+copy of zeke lord for IZ,0x0
+torch? don't change,0x0
+torch? don't change,0x0
+Book,0x0
+Liberator,0x0
+Dummy,0x0
+Swordmaster (kyrie),CritUpID
 -0,0x0
 -0,0x0
 -0,0x0

@@ -32,7 +32,13 @@ END_MAIN
 
 MiscBasedEvents:
 //DefeatBoss(EndingScene)
+AFEV 0x3 Tale5EndChecker 0x8
 CauseGameOverIfLordDies
+AreaEvent(0x8,Tale5Seize1,1,2,1,2)
+AreaEvent(0x9,Tale5Seize2,15,1,15,1)
+AreaEvent(0xa,Tale5Seize3,26,0,26,0)
+AreaEvent(0xb,Tale5Seize4,32,10,32,10)
+AreaEvent(0xc,Tale5Seize5,8,15,8,15)
 END_MAIN
 
 Dunno:
@@ -42,6 +48,11 @@ Tutorial:
 END_MAIN
 
 TrapData:
+GreenSigil(1,2)
+GreenSigil(15,1)
+GreenSigil(26,0)
+GreenSigil(32,10)
+GreenSigil(8,15)
 ENDTRAP
 TrapData2:
 ENDTRAP
@@ -53,42 +64,93 @@ Tale5Units:
 // capture boats while defending their greens
 //todd and charley here rolling along
 UNIT Natasia WarriorF 0x0 Level(8,Ally,0) [21,13] 0x0 0x0 0x0 0x0 [KillerAxe,Tomahawk,MiniBallista] NoAI
-UNIT Bechamel Berserker 0x0 Level(7,Ally,0) [20,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT Bechamel Berserker 0x0 Level(7,Ally,0) [20,14] 0x0 0x0 0x0 0x0 [GildedAxe,DangerPick] NoAI
 UNIT Apollo Bishop 0x0 Level(5,Ally,0) [19,15] 0x0 0x0 0x0 0x0 [Salvation,MorningStar,Physic,Yoink] NoAI
 UNIT Flynn SwMast 0x0 Level(6,Ally,0) [21,15] 0x0 0x0 0x0 0x0 [Shimmersword,FlameSword,Rapier] NoAI
-UNIT Peggy BishopF 0x0 Level(8,Ally,0) [20,16] 0x0 0x0 0x0 0x0 [WrathStaff] NoAI
-UNIT Agnes HeroF 0x0 Level(4,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Hollandaise BerserkerF 0x0 Level(5,Ally,0) [12,17] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Charley SniperF 0x0 Level(16,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [ShortBow] NoAI
-UNIT Sam SniperF 0x0 Level(7,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Passacaglia] NoAI
-UNIT Toddsworth Bard 0x0 Level(18,Ally,0) [14,17] 0x0 0x0 0x0 0x0 [Toddhand] NoAI
+UNIT Peggy BishopF 0x0 Level(8,Ally,0) [20,16] 0x0 0x0 0x0 0x0 [VoidCleaver,Caduceus,Physic,Sleep] NoAI
+UNIT Agnes HeroF 0x0 Level(4,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [Rapier,Runesword,SilverAxe] NoAI
+UNIT Hollandaise BerserkerF 0x0 Level(5,Ally,0) [12,17] 0x0 0x0 0x0 0x0 [Ukonvasara,Tomahawk] NoAI
+UNIT Charley SniperF 0x0 Level(16,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [ShortBow,Greatbow,Elixir] NoAI
+UNIT Sam SniperF 0x0 Level(7,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Passacaglia,Longbow,Elixir] NoAI
+UNIT Toddsworth Bard 0x0 Level(18,Ally,0) [14,17] 0x0 0x0 0x0 0x0 [Toddhand,AngelWings] NoAI
 UNIT
 
 Tale5Enemies:
 UNIT Pirates Sorc 0x0 Level(10,Enemy,1) [9,15] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT Pirates Hero 0x0 Level(10,Enemy,1) [7,13] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [32,12] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT Pirates Warrior 0x0 Level(10,Enemy,1) [30,12] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Pirates Halberdier 0x0 Level(10,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
+UNIT Pirates SwdPal 0x0 Level(10,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Pirates LncPal 0x0 Level(10,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT Pirates Sage 0x0 Level(10,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [Fire,EarthPower] AttackInRangeAI
+UNIT Pirates Sage 0x0 Level(10,Enemy,1) [1,2] 0x0 0x0 0x0 0x0 [Fimbulvetr,EarthPower] AttackInRangeAI
+UNIT Pirates Sage 0x0 Level(10,Enemy,1) [16,6] 0x0 0x0 0x0 0x0 [Cloudburst,EarthPower] AttackInRangeAI
+UNIT Pirates Sage 0x0 Level(10,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [Sagittae,EarthPower] NeverMoveAI
 UNIT Pirates Sorc 0x0 Level(10,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [Jormungandr] NeverMoveAI
-UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [6,5] 0x0 0x0 0x0 0x0 [SilverAxe] DelayedAI
-UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [DevilAxe] DelayedAI
-UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [7,4] 0x0 0x0 0x0 0x0 [KillerLance] DelayedAI
-UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [8,4] 0x0 0x0 0x0 0x0 [SilverLance] DelayedAI
+UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [BarrierBow,MasterBow] NeverMoveAI
+UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [15,3] 0x0 0x0 0x0 0x0 [BarrierBow,MasterBow] NeverMoveAI
+UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [6,5] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
+UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [DevilAxe] GroupTwoAI
+UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [7,4] 0x0 0x0 0x0 0x0 [KillerLance] GroupTwoAI
+UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [8,4] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT Pirates BowGen 0x0 Level(10,Enemy,1) [25,2] 0x0 0x0 0x0 0x0 [SilverBow] GroupOneAI
+UNIT Pirates BowGen 0x0 Level(10,Enemy,1) [26,2] 0x0 0x0 0x0 0x0 [BraveBow] GroupOneAI
+UNIT Pirates BowGen 0x0 Level(10,Enemy,1) [26,3] 0x0 0x0 0x0 0x0 [BarrierBow] GroupOneAI
+UNIT Pirates SwMast 0x0 Level(10,Enemy,1) [26,0] 0x0 0x0 0x0 0x0 [Rapier] GroupOnePaceAI
+UNIT Pirates Falco 0x0 Level(10,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [Shockstick,SilverLance] DelayedAI
+UNIT Pirates Falco 0x0 Level(10,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
+UNIT Pirates WyvLord 0x0 Level(10,Enemy,1) [31,18] 0x0 0x0 0x0 0x0 [GildedLance] DelayedAI
+UNIT Pirates WyvLord 0x0 Level(10,Enemy,1) [32,17] 0x0 0x0 0x0 0x0 [SilverAxe] DelayedAI
+UNIT Pirates WyvLord 0x0 Level(10,Enemy,1) [20,1] 0x0 0x0 0x0 0x0 [GildedAxe] DelayedAI
+UNIT Pirates WyvLord 0x0 Level(10,Enemy,1) [22,3] 0x0 0x0 0x0 0x0 [SilverLance] DelayedAI
+UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [24,10] 0x0 0x0 0x0 0x0 [Greatbow] NoAI
+UNIT Pirates Berserker 0x0 Level(10,Enemy,1) [30,1] 0x0 0x0 0x0 0x0 [DevilAxe] NoAI
+UNIT Pirates Berserker 0x0 Level(10,Enemy,1) [31,2] 0x0 0x0 0x0 0x0 [DevilAxe] NoAI
 UNIT Gregarias Berserker 0x0 Level(15,Enemy,1) [4,10] 0x0 0x0 0x0 0x0 [Hammer] NoAI
 UNIT Gregerias Berserker 0x0 Level(15,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [Halberd] NoAI
-UNIT Gregirias Berserker 0x0 Level(15,Enemy,1) [20,9] 0x0 0x0 0x0 0x0 [Dracoaxe] NoAI
+UNIT Gregirias Berserker 0x0 Level(15,Enemy,1) [13,12] 0x0 0x0 0x0 0x0 [Dracoaxe] NeverMoveAI
 UNIT Gregurias Berserker 0x0 Level(15,Enemy,1) [32,0] 0x0 0x0 0x0 0x0 [HereticAxe] NoAI
 UNIT Gregyrias Berserker 0x0 Level(15,Enemy,1) [28,16] 0x0 0x0 0x0 0x0 [Swordslayer] NoAI
 //make boss son of gregorias, gregogorias
 UNIT
 
 Tale5Greens:
-UNIT Merchant Sage 0x0 Level(20,NPC,1) [13,2] 0x0 0x0 0x0 0x0 [Yoink,IronRune] NeverMoveAI
-UNIT Merchant ValkF 0x0 Level(20,NPC,1) [2,0] 0x0 0x0 0x0 0x0 [LiveGoose,IronRune] NeverMoveAI
-UNIT Merchant Bishop 0x0 Level(20,NPC,1) [24,3] 0x0 0x0 0x0 0x0 [PureWater,IronRune] NeverMoveAI
-UNIT Merchant SwMast 0x0 Level(20,NPC,1) [30,15] 0x0 0x0 0x0 0x0 [ArmsScroll,IronRune] NeverMoveAI
-UNIT Merchant BowGen 0x0 Level(20,NPC,1) [8,11] 0x0 0x0 0x0 0x0 [TorchStaff,IronRune] NeverMoveAI
+UNIT Merchant Sage 0x0 Level(20,NPC,1) [16,14] 0x0 0x0 0x0 0x0 [Yoink] NeverMoveAI
+UNIT Merchant ValkF 0x0 Level(20,NPC,1) [15,19] 0x0 0x0 0x0 0x0 [LiveGoose] NeverMoveAI
+UNIT Merchant Bishop 0x0 Level(20,NPC,1) [23,16] 0x0 0x0 0x0 0x0 [PureWater] NeverMoveAI
+UNIT Merchant SwMast 0x0 Level(20,NPC,1) [23,13] 0x0 0x0 0x0 0x0 [ArmsScroll] NeverMoveAI
+UNIT Merchant BowGen 0x0 Level(20,NPC,1) [9,17] 0x0 0x0 0x0 0x0 [TorchStaff] NeverMoveAI
 UNIT
 
 ALIGN 4
-//give bros a triangle attack
+//remove traps as points are seizeds
+
+
+Tale5EndChecker:
+CHECK_EVENTID 0x8
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0x9
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0xa
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0xb
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0xc
+BEQ 0x1 0xc 0x0
+Text(FillerDialogue)
+CALL EndingScene
+LABEL 0x1
+EndEvent
+
+
+EndingScene:
+ENUT Tale5DoneFlag
+MUSC 0x0
+SystemText(BlankCG,TaleEnding)
+MoveToChapter(HubMap)
+ENDA
+
 
 BeginningScene:
 DISA Addington
@@ -135,11 +197,56 @@ TaleSetUnitWEXP(Toddsworth,0,0,0,0,0,0,0,0)
 SetUnitSkills(Toddsworth,BowbreakerID,TomebreakerID,QuickRiposteID,GrislyWoundID)
 ENDA
 
-EndingScene:
-ENUT Tale5DoneFlag
-MUSC 0x0
-SystemText(BlankCG,TaleEnding)
-MoveToChapter(HubMap)
-ENDA
+
+Tale5Seize1:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+Text(Tale5SeizedPoint)
+RemoveTrapAtCoords(1,2)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x8
+LABEL 0x2
+EndEvent
+Tale5Seize2:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+Text(Tale5SeizedPoint)
+RemoveTrapAtCoords(15,1)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x9
+LABEL 0x2
+EndEvent
+Tale5Seize3:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+Text(Tale5SeizedPoint)
+RemoveTrapAtCoords(26,0)
+GOTO 0x2
+LABEL 0x1
+ENUF 0xa
+LABEL 0x2
+EndEvent
+Tale5Seize4:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+Text(Tale5SeizedPoint)
+RemoveTrapAtCoords(32,10)
+GOTO 0x2
+LABEL 0x1
+ENUF 0xb
+LABEL 0x2
+EndEvent
+Tale5Seize5:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+Text(Tale5SeizedPoint)
+RemoveTrapAtCoords(8,15)
+GOTO 0x2
+LABEL 0x1
+ENUF 0xc
+LABEL 0x2
+EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

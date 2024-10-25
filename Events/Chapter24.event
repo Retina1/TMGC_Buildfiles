@@ -685,6 +685,7 @@ EndEvent
 //also make sure he retreats on defeat if green
 
 C24Dracopope:
+SET_ACTIVE 0
 EVBIT_MODIFY 3
 MUSC S_EncountersAndReunions
 SetBackground(LowlandsCG)
@@ -693,6 +694,7 @@ PROMOTE Vladmir Draco GoddessIcon
 FADI 16
 CLEAN
 FADU 16
+MUSC S_Ambience
 EndEvent
 
 //variant if laronde already recruited via dead vlad, turn on dead vlad flag if done
@@ -719,6 +721,7 @@ EndEvent
 
 
 C24Ruins:
+EVBIT_MODIFY 4
 CleanText(LowlandsCG,C24RuinsVisit)
 SystemText(C24SummonIneubrenos)
 IfNoSelectedGoto(0x3)

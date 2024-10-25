@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,Tale5FlierDrip,10,50)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -70,7 +71,7 @@ UNIT Flynn SwMast 0x0 Level(6,Ally,0) [21,15] 0x0 0x0 0x0 0x0 [Shimmersword,Flam
 UNIT Peggy BishopF 0x0 Level(8,Ally,0) [20,16] 0x0 0x0 0x0 0x0 [VoidCleaver,Caduceus,Physic,Sleep] NoAI
 UNIT Agnes HeroF 0x0 Level(4,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [Rapier,Runesword,SilverAxe] NoAI
 UNIT Hollandaise BerserkerF 0x0 Level(5,Ally,0) [12,17] 0x0 0x0 0x0 0x0 [Ukonvasara,Tomahawk] NoAI
-UNIT Charley SniperF 0x0 Level(16,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [ShortBow,Greatbow,Elixir] NoAI
+UNIT Charley SniperF 0x0 Level(16,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [ShortBow,Greatbow,BiasedQuiver] NoAI
 UNIT Sam SniperF 0x0 Level(7,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Passacaglia,Longbow,Elixir] NoAI
 UNIT Toddsworth Bard 0x0 Level(18,Ally,0) [14,17] 0x0 0x0 0x0 0x0 [Toddhand,AngelWings] NoAI
 UNIT
@@ -81,15 +82,19 @@ UNIT Pirates Hero 0x0 Level(10,Enemy,1) [7,13] 0x0 0x0 0x0 0x0 [SilverSword] NoA
 UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [32,12] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
 UNIT Pirates Warrior 0x0 Level(10,Enemy,1) [30,12] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Pirates Halberdier 0x0 Level(10,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
-UNIT Pirates SwdPal 0x0 Level(10,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
-UNIT Pirates LncPal 0x0 Level(10,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Pirates Sage 0x0 Level(10,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [Fire,EarthPower] AttackInRangeAI
-UNIT Pirates Sage 0x0 Level(10,Enemy,1) [1,2] 0x0 0x0 0x0 0x0 [Fimbulvetr,EarthPower] AttackInRangeAI
+UNIT Pirates SwdPal 0x0 Level(10,Enemy,1) [30,6] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Pirates LncPal 0x0 Level(10,Enemy,1) [32,8] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT Pirates Sage 0x0 Level(10,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [Fire,EarthPower] GroupThreeAI
+UNIT Pirates Sage 0x0 Level(10,Enemy,1) [1,2] 0x0 0x0 0x0 0x0 [Fimbulvetr,EarthPower] GroupThreeAI
+UNIT Pirates Warrior 0x0 Level(10,Enemy,1) [1,7] 0x0 0x0 0x0 0x0 [SilverAxe] GroupThreeAI
+UNIT Pirates Warrior 0x0 Level(10,Enemy,1) [2,7] 0x0 0x0 0x0 0x0 [VoidCleaver] GroupThreeAI
 UNIT Pirates Sage 0x0 Level(10,Enemy,1) [16,6] 0x0 0x0 0x0 0x0 [Cloudburst,EarthPower] AttackInRangeAI
 UNIT Pirates Sage 0x0 Level(10,Enemy,1) [13,0] 0x0 0x0 0x0 0x0 [Sagittae,EarthPower] NeverMoveAI
 UNIT Pirates Sorc 0x0 Level(10,Enemy,1) [14,7] 0x0 0x0 0x0 0x0 [Jormungandr] NeverMoveAI
 UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [BarrierBow,MasterBow] NeverMoveAI
 UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [15,3] 0x0 0x0 0x0 0x0 [BarrierBow,MasterBow] NeverMoveAI
+UNIT Pirates Halberdier 0x0 Level(10,Enemy,1) [14,4] 0x0 0x0 0x0 0x0 [BraveLance] GroupFourAI
+UNIT Pirates Halberdier 0x0 Level(10,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Shockstick] GroupFourAI
 UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [6,5] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
 UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [DevilAxe] GroupTwoAI
 UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [7,4] 0x0 0x0 0x0 0x0 [KillerLance] GroupTwoAI
@@ -115,6 +120,15 @@ UNIT Gregyrias Berserker 0x0 Level(15,Enemy,1) [28,16] 0x0 0x0 0x0 0x0 [Swordsla
 //make boss son of gregorias, gregogorias
 UNIT
 
+Tale5FlierSpawn:
+UNIT Pirates WyvLord 0x0 Level(20,Enemy,1) [0,19] 0x0 0x0 0x0 0x0 [MasterAxe] NoAI
+UNIT Pirates WyvLord 0x0 Level(20,Enemy,1) [32,19] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT
+Tale5FlierSpawn2:
+UNIT Pirates WyvLord 0x0 Level(20,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Pirates WyvLord 0x0 Level(20,Enemy,1) [32,0] 0x0 0x0 0x0 0x0 [MasterAxe] NoAI
+UNIT
+
 Tale5Greens:
 UNIT Merchant Sage 0x0 Level(20,NPC,1) [16,14] 0x0 0x0 0x0 0x0 [Yoink] NeverMoveAI
 UNIT Merchant ValkF 0x0 Level(20,NPC,1) [15,19] 0x0 0x0 0x0 0x0 [LiveGoose] NeverMoveAI
@@ -124,8 +138,16 @@ UNIT Merchant BowGen 0x0 Level(20,NPC,1) [9,17] 0x0 0x0 0x0 0x0 [TorchStaff] Nev
 UNIT
 
 ALIGN 4
-//remove traps as points are seizeds
+//remove traps as points are seized
 
+Tale5FlierDrip:
+Reinforcements(Tale5FlierSpawn)
+CHECK_TURNS
+SVAL 0x1 14
+BLE 0x1 0xc 0x1
+Reinforcements(Tale5FlierSpawn2)
+LABEL 0x1
+EndEvent
 
 Tale5EndChecker:
 CHECK_EVENTID 0x8
@@ -146,6 +168,8 @@ EndEvent
 
 EndingScene:
 ENUT Tale5DoneFlag
+MUSC AmbientWater
+CleanTextNoMap(BoatCG,Tale5Ending)
 MUSC 0x0
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)
@@ -195,7 +219,11 @@ SetUnitSkills(Sam,ReadyAimID,PassID,0,0)
 TaleSetUnitStat(Toddsworth,24,1,7,10,26,30,20,21)
 TaleSetUnitWEXP(Toddsworth,0,0,0,0,0,0,0,0)
 SetUnitSkills(Toddsworth,BowbreakerID,TomebreakerID,QuickRiposteID,GrislyWoundID)
-ENDA
+MUSC AmbientWater
+CleanTextNoMap(InnCG,Tale5Opening)
+MUSC S_Crisis
+CleanText(BoatCG,Tale5Opening2)
+EndEvent
 
 
 Tale5Seize1:

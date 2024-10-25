@@ -62,7 +62,7 @@ CharacterEventBothWays(0x24,C26RiftEstelleSupport,Rift,Estelle)//A
 CharacterEventBothWays(0x25,C26RoseManfredSupport,Rose,Manfred)//A
 CharacterEventBothWays(0x26,C26ManfredWilhelmSupport,Manfred,Wilhelm)//A
 CharacterEventBothWays(0x27,C26AlexisWilhelmSupport,Alexis,Wilhelm)//B
-CharacterEventBothWays(0x28,C26ClarqueArgentSupport,Clarque,Argent)//B
+CharacterEventBothWays(0x28,C26ClarqueArgentSupport,SecretClarque,Argent)//B
 
 RoseShopMacro
 END_MAIN
@@ -688,7 +688,7 @@ SetSupport(Alexis,Wilhelm,BSupport,1)
 EndEvent
 C26ClarqueArgentSupport:
 Text(ClarqueArgentBSupport)
-SetSupport(Clarque,Argent,BSupport,1)
+SetSupport(SecretClarque,Argent,BSupport,1)
 EndEvent
 
 C26EndChecker:

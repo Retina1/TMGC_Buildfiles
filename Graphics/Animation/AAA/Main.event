@@ -1,0 +1,28 @@
+// If you don't use two-palette animations, you don't need to install this patch.
+//
+// This patch will allow battle animations to use two palettes instead of one. To enable two palettes,
+// set bit 0 of animstruct +0x8w. This word is empty in vanilla, and probably used as padding.
+// For two-palette battle animations, ensure the battle animation palette is uncompressed.
+// Single-palette battle animations still need to use compressed palettes.
+#include "Extensions/Hack Installation.txt"
+#include "EAstdlib.event"
+// This patch will break the ballista palette for animation 0x9F, archer with ballista.
+// However, you can create individual animentries for each ballista's palette,
+// using uncompressed palettes. Status effects and other palette-colour changes
+// will apply to both the archer and the ballista's palettes, however.
+// Params
+  // Animation data +0x8 word has been repurposed as a bitfield, Animation Bitfield, AB.
+  BA2_AB_UNCOMPPALDATA:       BYTE 0
+  BA2_AB_UNCOMPFRAMEDATA:     BYTE 1
+  BA2_AB_UNCOMPOAMDATA:       BYTE 2
+  BA2_AB_2PALETTES:           BYTE 3
+  
+  // RAM location for decomping palettes of 2-palette animations.
+  // Change this if location is already in use.
+  // No need to worry about it if you're not using 2-palette banims with compressed palettes.
+  ALIGN 4; BA2_2PALETTERAM:
+  WORD 0x300428C
+
+ALIGN 4
+#include "ASM/ASM.event"
+//#include "Anims/AnimInstaller.event"

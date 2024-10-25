@@ -484,6 +484,7 @@ LABEL 0x2
 EndEvent
 
 C13Reunion:
+SET_ACTIVE 0
 MUSC S_EncountersAndReunions
 SetBackground(YgstraCG)
 Text(C13HorseReunion)
@@ -494,6 +495,7 @@ CLEAN
 FADU 16
 GiveItem(Emboldener,Desmond) 
 LearnSkill(Desmond,RepositionID)
+MUSC S_LongRoad
 EndEvent
 
 C13AreaTrigger1:

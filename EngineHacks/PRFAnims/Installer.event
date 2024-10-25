@@ -23,7 +23,11 @@ IndividualAnimation7743_CC:
 POIN CustomAnimeTable
 
 #define CustomAnimationSet(unit,class,pointer) "BYTE unit; BYTE class; BYTE 0x00; BYTE 0x00; WORD pointer"
+#define CustomAnimationSet(unit,class,flag,pointer) "BYTE unit; BYTE class; BYTE flag; BYTE 0x00; WORD pointer"
 CustomAnimeTable:
+//flag users
+CustomAnimationSet(Blair,BlairLord,BlairFlowerFlag,BlairFlowerAnims|IsPointer)
+//no flag
 CustomAnimationSet(Vladmir,Bishop,VladmirAnims|IsPointer)
 CustomAnimationSet(Apollo,Bishop,ApolloPAnims|IsPointer)
 CustomAnimationSet(Emile,Sage,EmileAnims|IsPointer)

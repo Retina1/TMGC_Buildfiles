@@ -28,9 +28,13 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Seize(0x8,Tale6Seize,23,27)
+Seize(0x9,Tale6Seize,16,21)
+Seize(0xa,Tale6Seize,3,5)
 END_MAIN
 
 MiscBasedEvents:
+AFEV 0x3 Tale6EndChecker 0xa
 //DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
@@ -69,6 +73,22 @@ UNIT
 
 ALIGN 4
 //more council simulacra created as a backup measure emerge?
+
+Tale6Seize:
+Text(FillerDialogue)
+EndEvent
+
+Tale6EndChecker:
+CHECK_EVENTID 0x8
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0x9
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0xa
+BEQ 0x1 0xc 0x0
+Text(FillerDialogue)
+CALL EndingScene
+LABEL 0x1
+EndEvent
 
 BeginningScene:
 DISA Addington

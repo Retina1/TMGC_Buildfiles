@@ -193,7 +193,10 @@
 #include "BerserkerF(eCut)\Unarmed Installer.event"
 }
 {
-#include "Blair(L95)\Magic Installer.event"
+#include "Blair(L95)\Flower.event"
+}
+{
+#include "Blair(L95)\NoFlower.event"
 }
 {
 #include "BlairDx(EA)\Sword Installer.event"
@@ -1104,6 +1107,11 @@ EndAnim
 ALIGN 4
 BlairAnims:
 MagicAnim(0x03)
+EndAnim
+
+ALIGN 4
+BlairFlowerAnims:
+MagicAnim(0x11B)
 EndAnim
 
 ALIGN 4

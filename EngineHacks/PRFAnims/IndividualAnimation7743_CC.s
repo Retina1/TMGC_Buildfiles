@@ -1,4 +1,5 @@
 .thumb
+
 @Branching from 0x080CD0E0
 @r0 ccするclass id
 @r1 ok
@@ -13,6 +14,9 @@
   mov lr, \reg
   .short 0xf800
 .endm
+
+.equ CheckEventID, 0x8083da8
+
 @
 @ ccするclass id
 ldrh r0, [r5, #0x0]
@@ -28,11 +32,22 @@ orr  r2,r0           @Class_ID << 8 | Unit->Unit_ID
 @Search the table
 ldr  r1,CustomAnimeTable
 loop_search_table:
+ldrb r0,[r1, #0x2]		 @ check flag
+cmp  r0,#0x0			 @ see if we need to actually confirm flag on
+beq skip_flagcheck
+push {r1-r7} @push n pop a pile of registers to be safe
+blh CheckEventID,r1
+pop {r1-r7}
+cmp r0,#0 @ see if event id in r0 is on
+beq	next_entry @ if flag not on, skip to checking next entry
+
+skip_flagcheck:
 ldrh r0,[r1, #0x0]		 @ read custom animation for class_id<<8 | unitid
 cmp  r0,#0x00        @ term data
 beq  not_found
 cmp  r0,r2           @ check class_id and unit_id
 beq  found
+next_entry:
 add  r1,#0x8         @ next table
 b    loop_search_table
 

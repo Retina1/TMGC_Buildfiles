@@ -1,0 +1,204 @@
+// Some assembly to enable uncompressed
+// and 32 colour palette battle anims.
+
+PUSH
+
+  // During banims, when handling next AIS Frame in dummy frames,
+  // Instead of relying on a terminator prepared at the end of OAMData buffer,
+  // use a terminator in ROM for uncompressed OAMData.
+  ORG 0x5184
+  callHack_r3(BA2_dummyTerminatorHook)
+
+  // During banim scaling, use FrameData, whether compressed or uncompressed.
+  // Also OAMData, whether compressed or uncompressed.
+  // Left AIS.
+  ORG 0x56A1E
+  SHORT 0x2000      // mov r0, #0x0         @ Indicates this is Left AIS.
+  callHack_r1(BA2_bAnimScaleHook)
+  // Right AIS.
+  ORG 0x56A40
+  SHORT 0x5842      // ldr r2, [r0, r1]     @ This makes the next instruction redundant.
+  SHORT 0x2001      // mov r0, #0x1         @ Indicates this is Right AIS.
+  callHack_r1(BA2_bAnimScaleHook)
+
+  // Reference FrameData, whether compressed or uncompressed, when executing command 0xD.
+  ORG 0x592E8
+  callHack_r1(BA2_commandDFrameData)
+  // Use ROM OAMData Terminator when OAMData is uncompressed, when executing command 0xD.
+  ORG 0x59308
+  jumpToHack(BA2_commandDOAMData)
+
+  // Don't move data past OBJ VRAM in RegisterAISSheetGraphics.
+  ORG 0x59958
+  jumpToHack(BA2_registerHalfSizeSheets)
+
+  // During LoadBattleAnimePalette, load FrameData, whether compressed or uncompressed.
+  // Left AIS.
+  ORG 0x59A22
+  SHORT 0x1C20      // mov r0, r4           @ r0 now contains battle anim struct address.
+  ORG 0x59A26
+  SHORT 0x2200      // mov r2, #0x0         @ Indicates this is Left AIS.
+  callHack_r3(BA2_loadFrameData)
+  // Right AIS.
+  ORG 0x59B00
+  SHORT 0x4450      // add r0, r10          @ r0 now contains battle anim struct address.
+  SHORT 0x1C06      // add r6, r0           @ r6 now contains battle anim struct address.
+  SHORT 0x2201      // mov r2, #0x1         @ Indicates this is Right AIS.
+  ORG 0x59B08
+  callHack_r3(BA2_loadFrameData)
+  // During LoadBattleAnimePalette, load palettes whether comp/uncomp 16-col/32-col.
+  // Left AIS.
+  ORG 0x59A3C
+  SHORT 0x46C0
+  ORG 0x59A40
+  SHORT 0x496F 0x2200
+  jumpToHack(BA2_loadPal)
+  ORG 0x59A82           // This would overwrite our second palette to one pointed to in 0x203E19C.
+  SHORT 0x46C0 0x46C0   // This breaks the ballista's colours in ballista anim 0x9F.
+  // Right AIS.
+  ORG 0x59B1E
+  SHORT 0x46C0
+  ORG 0x59B22
+  SHORT 0x4937 0x3104 0x2201
+  jumpToHack(BA2_loadPal)
+  ORG 0x59B64           // This would overwrite our second palette to one pointed to in 0x203E1A0.
+  SHORT 0x46C0 0x46C0   // This breaks the ballista's colours in ballista anim 0x9F.
+  // During LoadBattleAnimePalette, load OAMData, whether compressed or uncompressed.
+  // Left AIS.
+  ORG 0x59ACC
+  SHORT 0x46C0      // nop                  @ Need value in r0, so don't overwrite.
+  SHORT 0x2100      // mov r1, #0x0         @ Indicates this is Left AIS.
+  callHack_r2(BA2_loadOAMData)
+  SHORT 0x46C0      // nop                  @ Handled by hook.
+  // Right AIS.
+  ORG 0x59B6C
+  SHORT 0x1C30      // mov r0, r6           @ Put banimstruct ptr in r0.
+  SHORT 0x2101      // mov r1, #0x1         @ Indicates this is Right AIS.
+  callHack_r2(BA2_loadOAMData)
+  SHORT 0x46C0      // nop                  @ Handled by hook.
+  
+  // When initializing AISes, use FrameData, whether compressed or uncompressed.
+  ORG 0x59E72
+  SHORT 0x46AC      // mov r12, r5          @ r12 now contains roundtype.
+  SHORT 0x2200      // mov r2, #0x0         @ Indicates this is Front Left AIS.
+  SHORT 0x46C0      // nop                  @ Need 4-alignment to hook.
+  jumpToHack(BA2_initFrameData)
+  ORG 0x59EC6
+  SHORT 0x4694      // mov r12, r2          @ r12 now contains roundtype.
+  SHORT 0x2201      // mov r2, #0x1         @ Indicates this is Back Left AIS.
+  SHORT 0x46C0      // nop                  @ Need 4-alignment to hook.
+  jumpToHack(BA2_initFrameData)
+  ORG 0x59FA0
+  SHORT 0x469C      // mov r12, r3          @ r12 now contains roundtype.
+  SHORT 0x2202      // mov r2, #0x2         @ Indicates this is Front Right AIS.
+  jumpToHack(BA2_initFrameData)
+  ORG 0x59FF2
+  SHORT 0x46B4      // mov r12, r6          @ r12 now contains roundtype.
+  SHORT 0x2203      // mov r2, #0x3         @ Indicates this is Back Right AIS.
+  SHORT 0x46C0      // nop                  @ Need 4-alignment to hook.
+  jumpToHack(BA2_initFrameData)
+  // When initializing AISes, use OAMData, whether compressed or uncompressed.
+  ORG 0x59EAC
+  SHORT 0x749F      // strb r7, [r3, #0x12] @ moved this instruction up.
+  SHORT 0x469C      // mov r12, r3          @ r12 now contains pointer to AIS.
+  SHORT 0x2100      // mov r1, #0x0         @ Indicates this is Front Left AIS.
+  SHORT 0x46C0      // nop                  @ Need 4-alignment to hook.
+  jumpToHack(BA2_initOAMData)
+  ORG 0x59F00
+  SHORT 0x749F      // strb r7, [r3, #0x12] @ moved this instruction up.
+  SHORT 0x469C      // mov r12, r3          @ r12 now contains pointer to AIS.
+  SHORT 0x2101      // mov r1, #0x1         @ Indicates this is Back Left AIS.
+  SHORT 0x46C0      // nop                  @ Need 4-alignment to hook.
+  jumpToHack(BA2_initOAMData)
+  ORG 0x59FDA
+  SHORT 0x749D      // strb r5, [r3, #0x12] @ moved this instruction up.
+  SHORT 0x469C      // mov r12, r3          @ r12 now contains pointer to AIS.
+  SHORT 0x2102      // mov r1, #0x2         @ Indicates this is Front Right AIS.
+  jumpToHack(BA2_initOAMData)
+  ORG 0x5A02C
+  SHORT 0x749D      // strb r5, [r3, #0x12] @ moved this instruction up.
+  SHORT 0x469C      // mov r12, r3          @ r12 now contains pointer to AIS.
+  SHORT 0x2103      // mov r1, #0x3         @ Indicates this is Back Right AIS.
+  SHORT 0x46C0      // nop                  @ Need 4-alignment to hook.
+  jumpToHack(BA2_initOAMData)
+  
+  // When switching rounds, use FrameData, whether compressed or uncompressed.
+  ORG 0x5A0E0
+  jumpToHack(BA2_switchFrameData)
+  // When switching rounds, use OAMData, whether compressed or uncompressed.
+  ORG 0x5A130
+  callHack_r2(BA2_switchOAMData)
+  
+  // When loading banims during promotion branch screen, use FrameData, whether compressed or uncompressed.
+  ORG 0x5A646
+  SHORT 0x46C0
+  jumpToHack(BA2_promoBranchFrameData)
+  // When loading banims during promotion branch screen, use OAMData, whether compressed or uncompressed.
+  ORG 0x5A67E
+  SHORT 0x46C0
+  jumpToHack(BA2_promoBranchOAMData)
+  // When loading banims during promotion branch screen, use PalData, whether compressed or uncompressed.
+  ORG 0x5A75A
+  SHORT 0x46C0
+  jumpToHack(BA2_promoBranchPalData)
+  
+  // Use two palettes instead of one, when updating palettes.
+  ORG 0x59A72       // When initially loading palettes.
+  BYTE 0x10
+  ORG 0x59B54
+  BYTE 0x10
+  ORG 0x54C10       // When applying status effect effect.
+  BYTE 0x10
+  ORG 0x54C60
+  BYTE 0x10
+    ORG 0x54C22
+    BYTE 2
+    ORG 0x54C72
+    BYTE 2
+    ORG 0x569E8
+    BYTE 2
+    ORG 0x56A04
+    BYTE 2
+    ORG 0x54DE2     // Stone spell takes effect
+    SHORT 0x4864 0x2117 0x2202 0xF01C 0xFB3E
+    ORG 0x54E0C
+    SHORT 0x4859 0x2119 0x2202 0xF01C 0xFB29
+  ORG 0x5483C       // When turning white by hit. TODO need a new full white palette!
+  BYTE 0x10
+  ORG 0x54858
+  BYTE 0x10
+  ORG 0x5489C       // When turning back after hit.
+  BYTE 0x10
+  ORG 0x548BA
+  BYTE 0x10
+  ORG 0x5A78E       // Promo branch screen.
+  BYTE 0x10
+  ORG 0x5CCC0       // When dance takes effect.
+  BYTE 0x10
+  ORG 0x5CCD6
+  BYTE 0x10
+  
+  // When hit, use 32 white colours instead of 16
+  ORG 0x5484C
+  POIN BA2_WhitePalette
+  ORG 0x54880
+  POIN BA2_WhitePalette
+  
+POP
+
+ALIGN 4; #include "bAnimInitHooks.lyn.event"
+ALIGN 4; #include "decompBAnimHooks.lyn.event"
+ALIGN 4; #include "switchRoundHooks.lyn.event"
+ALIGN 4; #include "commandDHook.lyn.event"
+ALIGN 4; #include "promoBranchHooks.lyn.event"
+ALIGN 4; BA2_registerHalfSizeSheets: #include "registerHalfSizeSheets.lyn.event"
+ALIGN 4; BA2_bAnimScaleHook: #include "bAnimScaleHook.lyn.event"
+ALIGN 4; BA2_dummyTerminatorHook: #include "dummyTerminatorHook.lyn.event"
+
+ALIGN 4; BA2_ROMDummyFrames:
+WORD 0x1 0x0 0x0 0x0
+
+ALIGN 4
+BA2_WhitePalette:
+WORD (-1) (-1) (-1) (-1) (-1) (-1) (-1) (-1)
+WORD (-1) (-1) (-1) (-1) (-1) (-1) (-1) (-1)

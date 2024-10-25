@@ -246,12 +246,18 @@ CHECK_ALIVE Simone
 BNE 0x600 0xc 0x0
 ENUF 0x98
 LABEL 0x600
+SetBackground(BlankCG)
+SystemText(Interlude10Notice)
+FADI 60
 GotoPrepScreenNoBaseCheck
 ENDA
 
 I10Turn1:
 AddLightRune(Charley)
+CHECK_ALIVE Hyperius
+BEQ 0x8000 0xc 0x0
 AddLightRune(Brandl)
+LABEL 0x8000
 AddLightRune(Avan,0x9d)
 AddLightRune(Yuyu,0x9c)
 AddLightRune(Kenneth,0x9b)

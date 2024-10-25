@@ -127,7 +127,7 @@ Iron Rune,NIronRune,DIronRune,0x4dd,0x7c,0x9,Indestructible|NegateCriticals,0x0,
 Rainbow Gem,NRainbowGem,DRainbowGem,UGem,0x7d,0x9,Indestructible,0x0,0x0,1,0,0,0,0,0x11,60000,NoRank,RainbowGemIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Black Lotus,NBlackLotus,DBlackLotus,UBlackLotus,0x7e,0x9,0x0,BlackLotusBoost|IsPointer,0x0,1,0,0,0,0,0x11,10000,NoRank,BlackLotusIcon,0x10,NoEffect,0,0x0,0x0,0x0
 Arms Scroll,ArmsScrollName,ArmsScrollDescription,ArmsScrollUseText,0x7f,0x9,0x0,EmptyBoost|IsPointer,0x0,1,0,0,0,0,0x11,3000,NoRank,ArmsScrollIcon,0x46,NoEffect,0,0x0,0x0,0x0
-Holy Brand,NHolyBrand,DHolyBrand,UHolyBrand,0x80,0x0,IsWeapon|IsMagic|Unsellable|ArinLocked|Indestructible|MagicDamage,HolyBrandBoost|IsPointer,0x0,1,24,95,7,0,0x12,65000,NoRank,HolyBrandIcon,0x42,NoEffect,0,0x0,0x0,0x0
+Holy Brand,NHolyBrand,DHolyBrand,UHolyBrand,0x80,0x0,IsWeapon|IsMagic|Unsellable|ArinLocked|Indestructible|MagicDamage,HolyBrandBoost|IsPointer,0x0,1,24,95,7,0,0x12,65000,NoRank,HolyBrandIcon,0x42,NoEffect,2,0x0,0x0,0x0
 Gilded Sword,NGildedSword,DGildedSword,UGildedSword,0x81,0x0,IsWeapon,0x0,0x0,15,24,95,13,0,0x11,300,ARank,GildedSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Gilded Lance,NGildedLance,DGildedLance,UGildedLance,0x82,0x1,IsWeapon,0x0,0x0,15,25,90,14,0,0x11,300,ARank,GildedLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Gilded Axe,NGildedAxe,DGildedAxe,UGildedAxe,0x83,0x2,IsWeapon,0x0,0x0,15,26,85,15,0,0x11,300,ARank,GildedAxeIcon,0x0,NoEffect,1,0x0,0x0,0x0
@@ -166,7 +166,7 @@ Nox Aurumque,NNox,DNox,UNox,0xa3,0x7,IsWeapon|IsMagic,0x0,0x0,15,15,90,15,5,0x12
 Cloudburst,NCloudburst,DCloudburst,UCloudburst,0xa4,0x5,IsWeapon|IsMagic,0x0,0x0,15,14,95,12,5,0x12,300,BRank,CloudburstIcon,0x42,NoEffect,1,0x0,0x0,0x0
 Partisan,NPartisan,DPartisan,UPartisan,0xa5,0x1,IsWeapon|Unsellable|ZekeLocked,0x0,0x0,50,14,140,8,0,0x11,160,NoRank,PartisanIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Mine Staff,NMine,DMine,UMine,0xa6,0x4,IsStaff,0x0,0x0,5,0,100,2,30,0x15,1000,BRank,MineStaffIcon,0x44,NoEffect,4,0x0,0x0,0x0
-Evil Eye,NEvilEye,DEvilEye,USlam,0xa7,0x7,IsWeapon|Indestructible|SveltzalusLocked|IsMagic|Unsellable,0x0,0x0,0,9,90,5,0,0x12,0,NoRank,EvilEyeIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Evil Eye,NEvilEye,DEvilEye,USlam,0xa7,0x7,IsWeapon|Indestructible|SveltzalusLocked|IsMagic|Unsellable,0x0,0x0,0,9,90,5,0,0x12,0,NoRank,EvilEyeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Slam,NSlam,DSlam,USlam,0xa8,0xb,IsWeapon|Indestructible|SveltzalusLocked|Unsellable,0x0,0x0,0,11,95,2,0,0x11,0,NoRank,SlamIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Beecurve Bow,NBeecurveBow,DBeecurveBow,UBeecurveBow,0xa9,0x3,IsWeapon|PtolemyLocked,0x0,FlierEffectiveness|IsPointer,40,14,95,5,30,0x22,140,NoRank,BeecurveBowIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Wardwood,NWardwood,DWardwood,UGrowthBooster,0xaa,0x9,PassiveBoosts|Indestructible,WardwoodBoost|IsPointer,0x0,1,0,0,0,0,0x11,2000,NoRank,WardwoodIcon,0x0,NoEffect,0,0x0,1,0x0
@@ -205,9 +205,9 @@ Salvation (apollo prf),NSalvation,DSalvation,USalvation,0xca,0x6,IsWeapon|IsMagi
 Galerider (cassius prf),NGalerider,DGalerider,UGalerider,0xcb,0x2,IsWeapon|CassiusLocked,0x0,0x0,25,11,80,7,30,0x11,88,NoRank,GaleriderIcon,0x0,NoEffect,2,0x0,0x0,OutriderID
 Mazandyne (hilbert prf),NMazandyne,DMazandyne,UMazandyne,0xcc,0x5,IsWeapon|IsMagic|ReverseTriangle|HilbertLocked,0x0,0x0,20,13,90,6,5,0x12,90,NoRank,MazandyneIcon,0x0,NoEffect,2,0x0,0x0,PressTurnID
 Longinus (josef prf),NLonginus,DLonginus,ULonginus,0xcd,0x1,IsWeapon|IsMagic|JosefLocked,0x0,0x0,35,9,85,12,5,0x12,75,NoRank,LonginusIcon,0x0,NoEffect,2,0x0,0x0,0x0
-Flying Spike (rachael prf),NFlyingSpike,DFlyingSpike,UFlyingSpike,0xce,0x1,IsWeapon|RachaelLocked,0x0,0x0,20,12,70,12,0,0x13,90,NoRank,FlyingSpikeIcon,0x0,NoEffect,1,0x0,0x0,0x0
-0xeff Sword (Horatio prf),HoratioSwordName,DHoratioBlade,UHoratioBlade,0xcf,0x0,IsWeapon|Unsellable|HoratioLocked|Indestructible,0x0,0x0,30,16,90,9,20,0x11,0,NoRank,HoratioSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
-0xeff Sword (summoned),HoratioSwordName,DSummonBlade,0x0,0xd0,0x0,IsWeapon|Unsellable|Indestructible,0x0,0x0,30,21,80,9,20,0x11,0,SRank,HoratioSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Flying Spike (rachael prf),NFlyingSpike,DFlyingSpike,UFlyingSpike,0xce,0x1,IsWeapon|RachaelLocked,0x0,0x0,20,12,70,12,0,0x13,90,NoRank,FlyingSpikeIcon,0x0,NoEffect,2,0x0,0x0,0x0
+0xeff Sword (Horatio prf),HoratioSwordName,DHoratioBlade,UHoratioBlade,0xcf,0x0,IsWeapon|Unsellable|HoratioLocked|Indestructible,0x0,0x0,30,16,90,9,20,0x11,0,NoRank,HoratioSwordIcon,0x0,NoEffect,2,0x0,0x0,0x0
+0xeff Sword (summoned),HoratioSwordName,DSummonBlade,0x0,0xd0,0x0,IsWeapon|Unsellable|Indestructible,0x0,0x0,30,21,80,9,20,0x11,0,SRank,HoratioSwordIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Annihilation,NAnnihilation,DAnnihilation,UAnnihilation,0xd1,0x5,IsWeapon|IsMagic|NegateDef|Indestructible|PassiveBoosts|CannotRepair,0x0,UberEffectiveness|IsPointer,30,99,200,10,255,0xff,0,SRank,AnnihilationIcon,0x0,NoEffect,1,0x0,0x0,WatchfulID
 Arena Sword,NArenaSword,DArena,UArena,0xd2,0x0,IsWeapon,0x0,0x0,15,20,55,0,25,0x11,450,ERank,ArenaSwordIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Arena Lance,NArenaLance,DArena,UArena,0xd3,0x1,IsWeapon,0x0,0x0,15,22,50,0,25,0x11,450,ERank,ArenaLanceIcon,0x0,NoEffect,1,0x0,0x0,0x0
@@ -223,12 +223,12 @@ Luckbow,NLuckbow,DLuckbow,ULuckbow,0xdc,0x3,IsWeapon|Unsellable|ViridianLocked,0
 Courante,NCourante,DCourante,UCourante,0xdd,0x0,IsWeapon|LeilaLocked,0x0,0x0,40,12,100,5,20,0x11,90,NoRank,CouranteIcon,0x0,NoEffect,2,0x0,0x0,ChargePlusID
 Fire Emblem,NFireEmblem,DFireEmblem,UFireEmblem,0xde,0x9,Unsellable|Indestructible|NegateFlyingEffectiveness|PassiveBoosts,FireEmblemBoost|IsPointer,OmniProtection|IsPointer,1,0,0,0,0,0x11,0,NoRank,FireEmblemIcon,0x2d,NoEffect,0,0x0,1,AetherID
 Unknown Page,NUnknownPage,DUnknownPage,0x0,0xdf,0x9,Unsellable|Indestructible,0x0,0x0,40,12,85,9,0,0x12,0,NoRank,NoteIcon,0x0,NoEffect,0,0x0,0x0,0x0
-Frontier Justice,NFrontierJustice,DFrontierJustice,UFrontierJustice,0xe0,0x3,IsWeapon|DamienLocked,0x0,FlierEffectiveness|IsPointer,40,12,85,9,0,0x22,40,NoRank,FrontierJusticeIcon,0x0,NoEffect,1,0x0,0x0,FrenzyID
+Frontier Justice,NFrontierJustice,DFrontierJustice,UFrontierJustice,0xe0,0x3,IsWeapon|DamienLocked,0x0,FlierEffectiveness|IsPointer,40,12,85,9,0,0x22,40,NoRank,FrontierJusticeIcon,0x0,NoEffect,2,0x0,0x0,FrenzyID
 Soul Hilt,NSoulHilt,DSoulHilt,USoulHilt,0xe1,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,1,0,0,0,0,0x12,15000,NoRank,SoulHiltIcon,0x0,NoEffect,0,0x0,0x0,SoulHiltID
 Cutlad,NCutlad,DCutlad,UCutlad,0xe2,0x0,IsWeapon|IsBrave|ManLocked,0x0,0x0,20,10,110,3,15,0x11,200,NoRank,CutladIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Shockstick,NShockstick,DShockstick,UShockstick,0xe3,0x1,IsWeapon|MagicDamage|IsMagic,0x0,0x0,20,15,85,8,35,0x11,150,BRank,ShockstickIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Void Cleaver,NVoidCleaver,DVoidCleaver,UVoidCleaver,0xe4,0x2,IsWeapon|MagicDamage|IsMagic,0x0,0x0,15,31,80,19,0,0x11,200,BRank,VoidCleaverIcon,0x0,NoEffect,0,0x0,0x0,0x0
-Crimson Eye,NCrimsonEye,DCrimsonEye,USlam,0xe5,0x7,IsWeapon|Indestructible|SveltzalusLocked|IsMagic|Unsellable,0x0,0x0,0,14,95,5,0,0x12,0,NoRank,CrimsonEyeIcon,0x0,NoEffect,1,0x0,0x0,0x0
+Crimson Eye,NCrimsonEye,DCrimsonEye,USlam,0xe5,0x7,IsWeapon|Indestructible|SveltzalusLocked|IsMagic|Unsellable,0x0,0x0,0,14,95,5,0,0x12,0,NoRank,CrimsonEyeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Passacaglia,NPassacaglia,DPassacaglia,UPassacaglia,0xe6,0x3,IsWeapon|SamLocked|Indestructible|Unsellable,0x0,BowpierEffectiveness|IsPointer,40,15,120,6,0,0x12,35000,NoRank,PassacagliaIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Stormbow,NStormbow,DStormbow,UStormbow,0xe7,0x3,IsWeapon|IsBrave,0x0,0x0,16,3,30,30,30,0x45,2500,SRank,StormbowIcon,0x0,NoEffect,1,0x0,0x0,0x0
 Main Gauche,NMainGauche,DMainGauche,UMainGauche,0xe8,0x0,IsWeapon,0x0,0x0,20,0,0,2,0,0x11,1500,SRank,MainGaucheIcon,0x0,NoEffect,1,0x0,0x0,MainGaucheID
@@ -245,12 +245,12 @@ Aspect,NAspect,DAspect,0x0,0xf2,0xb,IsWeapon|Indestructible|IsMagic|NegateDef,As
 Soothesword,NSoothesword,DSoothesword,USoothesword,0xf3,0x0,IsWeapon|Indestructible|Unsellable|KyrieLocked,0x0,0x0,1,3,250,4,255,0x11,0,NoRank,SootheswordIcon,0x0,NoEffect,2,0x0,0x0,RoboKyDrainID
 Memento,NMemento,DMemento,UMemento,0xf4,0x9,Unsellable|Indestructible|PassiveBoosts,MementoBoost|IsPointer,0x0,0,0,0,0,0,0x11,15000,NoRank,MementoIcon,0x0,NoEffect,0,0x0,0x0,0x0
 Big Iron,NBigIron,DBigIron,UBigIron,0xf5,0x0,IsWeapon|Indestructible,BigIronBoost|IsPointer,0x0,30,12,55,15,0,0x11,0,CRank,BigIronIcon,0x0,NoEffect,2,0x0,0x0,0x0
-Scripture,NScripture,DScripture,UScripture,0xf6,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,ScriptureIcon,0x0,NoEffect,1,0x0,0x0,ScriptureID
-Savage Gauntlet,NSavageGauntlet,DSavageGauntlet,USavageGauntlet,0xf7,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,SavageGauntletIcon,0x0,NoEffect,1,0x0,0x0,SavageGauntletID
-Soaring Shaft,NSoaringShaft,DSoaringShaft,USoaringShaft,0xf8,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,SoaringShaftIcon,0x0,NoEffect,1,0x0,0x0,SoaringShaftID
-Biased Quiver,NBiasedQuiver,DBiasedQuiver,UBiasedQuiver,0xf9,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,BiasedQuiverIcon,0x0,NoEffect,1,0x0,0x0,BiasedQuiverID
-Earth Power,NEarthPower,DEarthPower,UEarthPower,0xfa,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,EarthPowerIcon,0x0,NoEffect,1,0x0,0x0,EarthPowerID
-Void Bracers,NVoidBracers,DVoidBracers,UVoidBracers,0xfb,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,VoidBracersIcon,0x0,NoEffect,1,0x0,0x0,VoidBracersID
+Scripture,NScripture,DScripture,UScripture,0xf6,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,ScriptureIcon,0x0,NoEffect,0,0x0,0x0,ScriptureID
+Savage Gauntlet,NSavageGauntlet,DSavageGauntlet,USavageGauntlet,0xf7,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,SavageGauntletIcon,0x0,NoEffect,0,0x0,0x0,SavageGauntletID
+Soaring Shaft,NSoaringShaft,DSoaringShaft,USoaringShaft,0xf8,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,SoaringShaftIcon,0x0,NoEffect,0,0x0,0x0,SoaringShaftID
+Biased Quiver,NBiasedQuiver,DBiasedQuiver,UBiasedQuiver,0xf9,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,BiasedQuiverIcon,0x0,NoEffect,0,0x0,0x0,BiasedQuiverID
+Earth Power,NEarthPower,DEarthPower,UEarthPower,0xfa,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,EarthPowerIcon,0x0,NoEffect,0,0x0,0x0,EarthPowerID
+Void Bracers,NVoidBracers,DVoidBracers,UVoidBracers,0xfb,0x9,PassiveBoosts|Indestructible|CannotRepair,0x0,0x0,0,0,0,0,0,0x11,15000,NoRank,VoidBracersIcon,0x0,NoEffect,0,0x0,0x0,VoidBracersID
 Caduceus,NCaduceus,DCaduceus,UCaduceus,0xfc,0x4,IsWeapon|Indestructible,0x0,0x0,25,6,90,10,0,0x11,15000,SRank,CaduceusIcon,0x0,NoEffect,3,0x0,0x0,CaduceusID
 Voidwake,NVoidwake,DVoidwake,UVoidwake,0xfd,0x7,IsWeapon|Unsellable|KennethLocked|Indestructible|IsBrave|IsMagic,0x0,0x0,0,0,150,18,0,0x13,65000,NoRank,VoidwakeIcon,0x0,NoEffect,2,0x0,0x0,0x0
 Hopesinger,NHopesinger,DHopesinger,UHopesinger,0xfe,0x0,IsWeapon|Unsellable|BlairLocked|Indestructible|IsMagic,0x0,StaffEffectiveness|IsPointer,0,18,120,8,0,0x12,65000,NoRank,HopesingerIcon,0x0,NoEffect,2,0x0,0x0,HopesingerID

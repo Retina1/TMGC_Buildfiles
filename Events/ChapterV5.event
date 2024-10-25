@@ -36,7 +36,7 @@ TurnEventPlayer(0x0,V5Turn11,11)
 TurnEventPlayer(0x0,V5Turn12,12)
 TurnEventPlayer(0x0,V5Turn14,14)
 TurnEventPlayer(0x0,V5Goodbye,15,50)
-TurnEventPlayer(0x0,V5GoodbyeForReal,17,50)
+TurnEventPlayer(0x0,V5GoodbyeForReal,17,200)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -184,15 +184,15 @@ UNIT Holanis Ballistician 0x0 Level(20,Enemy,1) [29,1] DropItem 0x0 0x0 0x0 [Arc
 UNIT
 
 V5Death1:
-UNIT V5Holanis Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R5 [WyvernBreath] NoAI
-UNIT V5Holanis Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R5 [WyvernBreath] NoAI
+UNIT Dragon Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R5 [WyvernBreath] NoAI
+UNIT Dragon Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R5 [WyvernBreath] NoAI
 UNIT
 V5Death2:
 UNIT V5Holanis SageF 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA27R5 [Annihilation] NoAI
 UNIT V5Holanis Sage 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R4 [Annihilation] NoAI
 UNIT V5Holanis Sage 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R4 [Annihilation] NoAI
-UNIT V5Holanis Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R6 [WyvernBreath] NoAI
-UNIT V5Holanis Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R6 [WyvernBreath] NoAI
+UNIT Dragon Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA26R6 [WyvernBreath] NoAI
+UNIT Dragon Wyvern 0x0 Level(20,Enemy,1) [27,1] 0x0 0x0 0x1 REDA28R6 [WyvernBreath] NoAI
 UNIT V5Holanis AxePal 0x0 Level(20,Enemy,1) [25,0] 0x0 0x0 0x1 REDA24R0 [MasterAxe] NoAI
 UNIT V5Holanis LncPal 0x0 Level(20,Enemy,1) [25,0] 0x0 0x0 0x1 REDA25R1 [MasterLance] NoAI
 UNIT

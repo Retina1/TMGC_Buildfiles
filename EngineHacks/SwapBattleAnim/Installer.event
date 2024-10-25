@@ -1,0 +1,82 @@
+PUSH
+ORG 0x4FE14
+jumpToHack(SwapBattleWrapper)
+PROTECT 0x4FE14 currentOffset
+
+ORG 0x59674
+jumpToHack(AnimSwap_MaySwapHook)
+PROTECT 0x59674 currentOffset
+POP
+
+#include "_src/SwapBattleAnim.lyn.event"
+#include "_src/SwapBattleWrapper.lyn.event"
+
+#define AnimSwapEntry(baseAnim, replacementAnim, swapFunc, flagID, options, skillID) "SHORT baseAnim replacementAnim; POIN swapFunc; WORD options|(skillID<<24); SHORT flagID 0;"
+
+//Option bits
+#define FollowUp        0x000004
+#define Retaliation     0x000008
+#define BraveHit        0x000010
+#define PoisonHit       0x000040
+#define BackfireHit     0x000080
+#define HPStealHit      0x000100
+#define HPHalveHit      0x000200
+#define TriangleAtk     0x000400
+#define SilencerBit     0x000800 //Vanilla skill
+#define PetrifyHit      0x002000
+#define SureShotBit     0x004000 //Vanilla skill
+#define GreatShieldBit  0x008000 //Vanilla skill
+#define PierceBit       0x010000 //Vanilla skill
+#define KillHit         0x200000
+
+/*
+    AnimSwapEntry arguments:
+    baseAnim: The animation ID a unit had at the start of the battle.
+    replacementAnim: The animation ID that will be swapped in if all requirements in the entry are met.
+    swapFunc: Pointer to a custom function to set custom conditions and even set a different replacement animation ID.
+    flagID: Event flag ID to be checked. If the flag is not set, the entry will be skipped.
+    options: Set these to swap an animation based on certain attributes/info on the hit (eg. if the attack steals HP, or is a killing blow).
+    skillID: The ID of the proc/activation skill you want to trigger an animation swap.
+
+    If an entry field that is not baseAnim or replacementAnim is 0,
+    that field will be ignored. For example, if you don't want a swap to
+    happen based on a skill activation, set the skillID field to 0.
+*/
+
+/*
+    options bits can be combined by using `|`. For example:
+
+    //Lord to Swordmaster_F on brave follow-up
+    AnimSwapEntry(0x3, 0x17, 0, 0, BraveHit|FollowUp, 0)
+
+    All options bits have to match the current hit attributes/info
+    for an entry's replacement animation to be used.
+
+    If the options field is empty, there will be requirement for all options bits
+    to match the current hit attributes/info.
+*/
+
+ALIGN 4
+gAnimSwapList:
+//blair to flower blair with flag - actually not ideal for this case
+//AnimSwapEntry(3, 0x11B, 0, BlairFlowerFlag, 0, 0)
+
+
+WORD 0 0 0 0 //TERMINATOR
+
+
+//Used to prevent animations that shouldn't be swapped from being swapped
+//Mostly for Demon King and transforming classes
+ALIGN 4
+gAnimExceptionList:
+SHORT 0xC1 //Draco Zombie
+SHORT 0xC2 //Demon King
+SHORT 0xC3 //Demon King
+SHORT 0xC4 //Manakete (Myrrh)
+SHORT 0xC5 //Manakete (Myrrh)
+SHORT 0xC6 //Manakete (Myrrh)
+SHORT 0xC7 //Manakete (Myrrh)
+SHORT 0xC9 //Manakete (Morva)
+
+
+SHORT 0x0000 //TERMINATOR

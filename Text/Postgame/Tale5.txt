@@ -28,6 +28,11 @@ Unsure of what she'll do next.[X]
 ##Desc_ToddsworthPG
 A cocky and promiscuous bard from Mevion.[N]
 Claims to be composing a grand work.[X]
+##Tale5RefreshExplanation
+To complete the map, claim all five[N]
+ships by waiting on the green tiles.[A][N]
+The act of claiming a ship invigorates[N]
+your unit, giving them another turn.[A][X]
 
 ##Tale5Ending
 [OpenFarLeft][LoadBechamel][OpenLeft][LoadNatasia][OpenRight][LoadAgnes][OpenFarRight][LoadApollo][OpenLeft]
@@ -73,7 +78,8 @@ Hey, everyone. Did I miss the party?[A][N]
 Good news. I finally settled on an[N]
 opener for my magnum opus.[A][N]
 [...]Ahem.[A][N]
-[...]What's with these-[X]
+[...]Check it, I'm in the[N]
+house like carp-[X]
 
 
 ##Tale5Opening
@@ -160,6 +166,11 @@ to claim the seas with his brothers.[X]
 [OpenMidLeft][LoadCurrent][ToggleSmile]
 This boat's ours![A][X]
 
+##Tale5SeizedPointFinal
+[OpenMidRight][LoadNatasia][ToggleSmile]
+That's every boat![A][N]
+Away with you, pirates![A][X]
+
 ##Tale5GregBattle
 [OpenMidLeft][LoadGregorias]
 Bwah hah hah! Yer gonna die![N]
@@ -198,10 +209,12 @@ Not gonna take your stuff.[N]
 [OpenMidLeft][LoadGregorias]
 Bwah hah hah! Yer gonna die![N]
 I'm gonna take yer stuff![A][N][ClearFace][OpenMidRight][LoadAgnes]
-[...]Greg? Thought ye were dead.[A][N]
+[...]Greg?[N]
+Thought ye were dead.[A][N]
 Well, if ye escaped judgement,[N]
 and ol' Cid couldn't[...][A][N]
-Well, yer not escapin' judgement.[A][X]
+Well, yer not escapin'[N]
+judgement.[A][X]
 
 ##Tale5GregDeath
 [OpenMidLeft][LoadGregorias]

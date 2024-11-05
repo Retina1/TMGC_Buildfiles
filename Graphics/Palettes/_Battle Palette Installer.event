@@ -204,6 +204,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define SveltzalusPPaletteID 0x9e
 #define SinclairPaletteID 0x9f
 #define LarondeUPaletteID 0xa0
+#define ArinValkPaletteID 0xa1
 //need - unpromoted laronde
 
 //to do: unpromoted pals for promoted units, cheeky text
@@ -212,6 +213,7 @@ setPalette(BlairPPaletteID,BlairPPalette)
 	setFunnyText(BlairUPaletteID, 0x62 0x6c 0x65 0x61 0x72)
 	setFunnyText(BlairPPaletteID, 0x62 0x6c 0x65 0x61 0x72)
 setPalette(ArinPaletteID,ArinPalette)
+setPalette(ArinValkPaletteID,ArinValkPalette)
 //arin valk is handled in class
 setPalette(KennethUPaletteID,KennethUPalette)
 setPalette(KennethPPaletteID,KennethPPalette)
@@ -399,7 +401,7 @@ setPalette(SinclairPaletteID,SinclairPalette)
 
 
 SetPaletteFull(Blair,BlairUPaletteID,BlairLord,BlairPPaletteID,BlairLordX,0x0,0x0)
-SetPaletteFull(Arin,ArinPaletteID,Trickster,0x0,ArinValk,0x0,0x0)
+SetPaletteFull(Arin,ArinPaletteID,Trickster,ArinValkPaletteID,ArinValk,0x0,0x0)
 SetPaletteFull(Kenneth,KennethUPaletteID,DarkM,KennethPPaletteID,Sorc,KennethBPaletteID,Baron)
 SetPaletteFull(Natasia,NatasiaUPaletteID,FighterF,NatasiaPPaletteID,WarriorF,0x0,0x0)
 SetPaletteFull(Stefan,StefanUPaletteID,SwdCav,StefanPPaletteID,SwdPal,0x0,0x0)
@@ -468,7 +470,7 @@ SetPaletteFull(SecretClarque,0x0,BowCav,ClarquePaletteID,BowPal,0x0,0x0)
 SetPaletteFull(Yuyu,YuyuPaletteID,Freelancer,0x0,0x0,0x0,0x0)
 SetPaletteFull(Agnes,AgnesPaletteID,MercF,AgnesPPaletteID,HeroF,0x0,0x0)
 SetPaletteFull(Gaylord,GaylordUPaletteID,Troub,GaylordPPaletteID,Valk,0x0,0x0)
-SetPaletteFull(Kyrie,0x0,MyrmF,KyriePaletteID,SwMastF,0x0,0x0)
+SetPaletteFull(Kyrie,0x0,MyrmF,KyriePaletteID,KyrieSwordmaster,0x0,0x0)
 SetPaletteFull(UnitQ,QUPaletteID,SwdCavF,QPPaletteID,SwdPalF,0x0,0x0)
 SetPaletteFull(Valeria,0x0,LncPeg,ValeriaPaletteID,Falco,0x0,0x0)
 SetPaletteFull(Sinclair,0x0,Mage,SinclairPaletteID,Sage,0x0,0x0)
@@ -583,6 +585,9 @@ BlairPPalette:
 ALIGN 4
 ArinPalette:
 #incbin "ArinTrickster.dmp"
+ALIGN 4
+ArinValkPalette:
+#incbin "ArinValk.dmp"
 ALIGN 4
 NatasiaUPalette:
 #incbin "NatasiaUnpromoted.dmp"

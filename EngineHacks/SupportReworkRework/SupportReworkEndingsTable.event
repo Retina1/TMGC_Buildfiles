@@ -58,7 +58,10 @@
 		PairedEnding(Sam,Charley,SamCharleyEnding)
 		SoloEnding(Sam,SamEndingAlt,SamBechamelFlag)
 		SoloEnding(Sam,SamSoloEnding)
+		PairedEnding(Josef,Athena,JosefAthenaEnding)
 		SoloEnding(Josef,JosefSoloEnding)
+		
+		SoloEnding(Peggy,PeggyButchEnding,PeggyButchFlag) //we can just reuse this text - shows up if peggy/butch happened concurrently with butch/peter
 		SoloEnding(Peggy,PeggyEndingBoatAlt,PeggyOnBoatFlag)
 		SoloEnding(Peggy,PeggySoloEnding)
 		PairedEnding(Butch,Peter,ButchPeterEnding)

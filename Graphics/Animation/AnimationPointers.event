@@ -358,6 +358,7 @@
 #include "SorcF(Biraku)\staff Installer.event"
 }
 {
+#include "SageM(Levin64)\Sword Installer.event"
 #include "SageM(Levin64)\Magic Installer.event"
 #include "SageM(Levin64)\Staff Installer.event"
 }
@@ -869,6 +870,7 @@ EndAnim
 
 ALIGN 4
 SageMAnims:
+SwordAnim(0x11c)
 MagicAnim(0x6d)
 StaffAnim(0x6e)
 EndAnim

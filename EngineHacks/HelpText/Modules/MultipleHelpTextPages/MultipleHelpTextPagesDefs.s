@@ -34,3 +34,6 @@
 .equ ItemDescGetter, 0x08088A00|1
 
 .equ gPromotionTable, 0x0895DFA4
+
+.equ gBattleStats, 0x203A4D4
+.equ gActiveBattleUnit, 0x203A4EC

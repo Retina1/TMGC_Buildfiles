@@ -32,7 +32,7 @@ int GetAutoleveledStatIncrease(int growth, int levelCount)
 	int result = ((((growth + additiveBonus) * levelCount * multiplicativeNumerator/multiplicativeDenominator) + 50) /100);
 	if (result < 0)
 	{
-	result = -result;
+	result = 0;
 	}
 	if (result > 120)
 	{

@@ -196,6 +196,12 @@
   blh      DrawBar, r4
 .endm
 
+.macro draw_fake_bar_at bar_x, bar_y, getter
+  mov r0, r8
+  blh      \getter
+  draw_number_at \bar_x, \bar_y
+.endm
+
 .macro draw_bar_at_with_cap_getter bar_x, bar_y, statgetter, capgetter, offset, bar_id  
   mov r0, r8
   blh      \statgetter
@@ -238,6 +244,10 @@
   draw_bar_at \bar_x, \bar_y, StrGetter, 0x14, 0
 .endm
 
+.macro draw_fake_str_bar_at, bar_x, bar_y
+  draw_fake_bar_at \bar_x, \bar_y, StrGetter
+.endm
+
 .macro draw_mag_bar_at, bar_x, bar_y
   mov r0, r8
   blh     MagGetter
@@ -260,8 +270,18 @@
   blh      DrawBar, r4
 .endm
 
+.macro draw_fake_mag_bar_at, bar_x, bar_y
+  mov r0, r8
+  blh     MagGetter
+  draw_number_at \bar_x, \bar_y
+.endm
+
 .macro draw_skl_bar_at, bar_x, bar_y
   draw_bar_at \bar_x, \bar_y, SklGetter, 0x15, 2
+.endm
+
+.macro draw_fake_skl_bar_at, bar_x, bar_y
+  draw_fake_bar_at \bar_x, \bar_y, SklGetter
 .endm
 
 .macro draw_skl_reduced_bar_at, bar_x, bar_y @for rescuing
@@ -270,6 +290,10 @@
 
 .macro draw_spd_bar_at, bar_x, bar_y
   draw_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 3
+.endm
+
+.macro draw_fake_spd_bar_at, bar_x, bar_y
+  draw_fake_bar_at \bar_x, \bar_y, SpdGetter
 .endm
 
 .macro draw_spd_reduced_bar_at, bar_x, bar_y @for rescuing
@@ -291,12 +315,26 @@
   blh      DrawBar, r4
 .endm
 
+.macro draw_fake_luck_bar_at, bar_x, bar_y
+  mov r0, r8
+  blh      LuckGetter
+  draw_number_at \bar_x, \bar_y
+.endm
+
 .macro draw_def_bar_at, bar_x, bar_y
   draw_bar_at \bar_x, \bar_y, DefGetter, 0x17, 4
 .endm
 
 .macro draw_res_bar_at, bar_x, bar_y
   draw_bar_at \bar_x, \bar_y, ResGetter, 0x18, 5
+.endm
+
+.macro draw_fake_def_bar_at, bar_x, bar_y
+  draw_fake_bar_at \bar_x, \bar_y, DefGetter
+.endm
+
+.macro draw_fake_res_bar_at, bar_x, bar_y
+  draw_fake_bar_at \bar_x, \bar_y, ResGetter
 .endm
 
 .macro draw_growth_at, bar_x, bar_y

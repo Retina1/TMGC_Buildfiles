@@ -33,13 +33,13 @@ END_MAIN
 
 MiscBasedEvents:
 //DefeatBoss(EndingScene)
-AFEV 0x3 Tale5EndChecker 0x8
-CauseGameOverIfLordDies
 AreaEvent(0x8,Tale5Seize1,1,2,1,2)
 AreaEvent(0x9,Tale5Seize2,15,1,15,1)
 AreaEvent(0xa,Tale5Seize3,26,0,26,0)
 AreaEvent(0xb,Tale5Seize4,32,10,32,10)
 AreaEvent(0xc,Tale5Seize5,8,15,8,15)
+AFEV 0x3 Tale5EndChecker 0x8
+CauseGameOverIfLordDies
 END_MAIN
 
 Dunno:
@@ -70,18 +70,18 @@ UNIT Apollo Bishop 0x0 Level(5,Ally,0) [19,15] 0x0 0x0 0x0 0x0 [Salvation,Mornin
 UNIT Flynn SwMast 0x0 Level(6,Ally,0) [21,15] 0x0 0x0 0x0 0x0 [Shimmersword,FlameSword,Rapier] NoAI
 UNIT Peggy BishopF 0x0 Level(8,Ally,0) [20,16] 0x0 0x0 0x0 0x0 [VoidCleaver,Caduceus,Physic,Sleep] NoAI
 UNIT Agnes HeroF 0x0 Level(4,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [Rapier,Runesword,SilverAxe] NoAI
-UNIT Hollandaise BerserkerF 0x0 Level(5,Ally,0) [12,17] 0x0 0x0 0x0 0x0 [Ukonvasara,Tomahawk] NoAI
+UNIT Hollandaise BerserkerF 0x0 Level(5,Ally,0) [12,17] 0x0 0x0 0x0 0x0 [Ukonvasara,Tomahawk,IronRune] NoAI
 UNIT Charley SniperF 0x0 Level(16,Ally,0) [13,16] 0x0 0x0 0x0 0x0 [ShortBow,Greatbow,BiasedQuiver] NoAI
 UNIT Sam SniperF 0x0 Level(7,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Passacaglia,Longbow,Elixir] NoAI
 UNIT Toddsworth Bard 0x0 Level(18,Ally,0) [14,17] 0x0 0x0 0x0 0x0 [Toddhand,AngelWings] NoAI
 UNIT
 
 Tale5Enemies:
-UNIT Pirates Sorc 0x0 Level(10,Enemy,1) [9,15] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
-UNIT Pirates Hero 0x0 Level(10,Enemy,1) [7,13] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
-UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [32,12] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
-UNIT Pirates Warrior 0x0 Level(10,Enemy,1) [30,12] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
-UNIT Pirates Halberdier 0x0 Level(10,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
+UNIT Pirates Sorc 0x0 Level(9,Enemy,1) [9,14] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT Pirates Hero 0x0 Level(9,Enemy,1) [7,13] 0x0 0x0 0x0 0x0 [SilverSword] NoAI
+UNIT Pirates Sniper 0x0 Level(9,Enemy,1) [32,12] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT Pirates Warrior 0x0 Level(9,Enemy,1) [30,12] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Pirates Halberdier 0x0 Level(9,Enemy,1) [8,11] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
 UNIT Pirates SwdPal 0x0 Level(10,Enemy,1) [30,6] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
 UNIT Pirates LncPal 0x0 Level(10,Enemy,1) [32,8] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
 UNIT Pirates Sage 0x0 Level(10,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [Fire,EarthPower] GroupThreeAI
@@ -95,13 +95,13 @@ UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [14,3] 0x0 0x0 0x0 0x0 [BarrierBow,Mas
 UNIT Pirates Sniper 0x0 Level(10,Enemy,1) [15,3] 0x0 0x0 0x0 0x0 [BarrierBow,MasterBow] NeverMoveAI
 UNIT Pirates Halberdier 0x0 Level(10,Enemy,1) [14,4] 0x0 0x0 0x0 0x0 [BraveLance] GroupFourAI
 UNIT Pirates Halberdier 0x0 Level(10,Enemy,1) [15,2] 0x0 0x0 0x0 0x0 [Shockstick] GroupFourAI
-UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [6,5] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
-UNIT Pirates AxeGen 0x0 Level(10,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [DevilAxe] GroupTwoAI
-UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [7,4] 0x0 0x0 0x0 0x0 [KillerLance] GroupTwoAI
-UNIT Pirates LncGen 0x0 Level(10,Enemy,1) [8,4] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
-UNIT Pirates BowGen 0x0 Level(10,Enemy,1) [25,2] 0x0 0x0 0x0 0x0 [SilverBow] GroupOneAI
-UNIT Pirates BowGen 0x0 Level(10,Enemy,1) [26,2] 0x0 0x0 0x0 0x0 [BraveBow] GroupOneAI
-UNIT Pirates BowGen 0x0 Level(10,Enemy,1) [26,3] 0x0 0x0 0x0 0x0 [BarrierBow] GroupOneAI
+UNIT Pirates AxeGen 0x0 Level(9,Enemy,1) [6,5] 0x0 0x0 0x0 0x0 [SilverAxe] GroupTwoAI
+UNIT Pirates AxeGen 0x0 Level(9,Enemy,1) [9,5] 0x0 0x0 0x0 0x0 [DevilAxe] GroupTwoAI
+UNIT Pirates LncGen 0x0 Level(9,Enemy,1) [7,4] 0x0 0x0 0x0 0x0 [KillerLance] GroupTwoAI
+UNIT Pirates LncGen 0x0 Level(9,Enemy,1) [8,4] 0x0 0x0 0x0 0x0 [SilverLance] GroupTwoAI
+UNIT Pirates BowGen 0x0 Level(9,Enemy,1) [25,2] 0x0 0x0 0x0 0x0 [SilverBow] GroupOneAI
+UNIT Pirates BowGen 0x0 Level(9,Enemy,1) [26,2] 0x0 0x0 0x0 0x0 [BraveBow] GroupOneAI
+UNIT Pirates BowGen 0x0 Level(9,Enemy,1) [26,3] 0x0 0x0 0x0 0x0 [BarrierBow] GroupOneAI
 UNIT Pirates SwMast 0x0 Level(10,Enemy,1) [26,0] 0x0 0x0 0x0 0x0 [Rapier] GroupOnePaceAI
 UNIT Pirates Falco 0x0 Level(10,Enemy,1) [1,14] 0x0 0x0 0x0 0x0 [Shockstick,SilverLance] DelayedAI
 UNIT Pirates Falco 0x0 Level(10,Enemy,1) [2,15] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
@@ -160,7 +160,7 @@ CHECK_EVENTID 0xb
 BEQ 0x1 0xc 0x0
 CHECK_EVENTID 0xc
 BEQ 0x1 0xc 0x0
-Text(FillerDialogue)
+Text(Tale5SeizedPointFinal)
 CALL EndingScene
 LABEL 0x1
 EndEvent
@@ -190,9 +190,9 @@ TaleSetUnitStat(Gregirias,70,30,1,24,28,10,15,5)
 TaleSetUnitStat(Gregurias,70,30,1,24,28,10,15,5)
 TaleSetUnitStat(Gregyrias,70,30,1,24,28,10,15,5)
 TaleSetUnitStat(Natasia,59,32,4,24,20,15,12,4)
-TaleSetUnitWEXP(Natasia,0,0,251,121,0,0,0,0)
+TaleSetUnitWEXP(Natasia,0,0,251,121,121,0,0,0)
 SetUnitSkills(Natasia,WrathID,DauntID,0,0)
-TaleSetUnitStat(Bechamel,73,36,3,20,18,12,10,3)
+TaleSetUnitStat(Bechamel,73,36,3,26,18,12,10,3)
 TaleSetUnitWEXP(Bechamel,0,0,251,0,0,0,0,0)
 SetUnitSkills(Bechamel,HeavyStrikesID,ChargeID,0,0)
 TaleSetUnitStat(Apollo,41,2,30,35,29,28,9,34)
@@ -223,14 +223,17 @@ MUSC AmbientWater
 CleanTextNoMap(InnCG,Tale5Opening)
 MUSC S_Crisis
 CleanText(BoatCG,Tale5Opening2)
+SystemText(Tale5RefreshExplanation)
 EndEvent
 
+#define RefreshUnitAt(xcoord,ycoord) "OffAllUnitState(Any, Acted, Any, Any, Any, Range(xcoord,ycoord,xcoord,ycoord), Any)"
 
 Tale5Seize1:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
 Text(Tale5SeizedPoint)
 RemoveTrapAtCoords(1,2)
+RefreshUnitAt(1,2)
 GOTO 0x2
 LABEL 0x1
 ENUF 0x8
@@ -241,6 +244,7 @@ CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
 Text(Tale5SeizedPoint)
 RemoveTrapAtCoords(15,1)
+RefreshUnitAt(15,1)
 GOTO 0x2
 LABEL 0x1
 ENUF 0x9
@@ -251,6 +255,7 @@ CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
 Text(Tale5SeizedPoint)
 RemoveTrapAtCoords(26,0)
+RefreshUnitAt(26,0)
 GOTO 0x2
 LABEL 0x1
 ENUF 0xa
@@ -261,6 +266,7 @@ CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
 Text(Tale5SeizedPoint)
 RemoveTrapAtCoords(32,10)
+RefreshUnitAt(32,10)
 GOTO 0x2
 LABEL 0x1
 ENUF 0xb
@@ -271,6 +277,7 @@ CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
 Text(Tale5SeizedPoint)
 RemoveTrapAtCoords(8,15)
+RefreshUnitAt(8,15)
 GOTO 0x2
 LABEL 0x1
 ENUF 0xc

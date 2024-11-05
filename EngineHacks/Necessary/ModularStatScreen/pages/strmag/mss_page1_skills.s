@@ -6,6 +6,8 @@
 .type MSS_page1, %function
 
 
+.equ GetEventID, 0x8083da8
+
 MSS_page1:
 
 page_start
@@ -124,6 +126,16 @@ b skipliterals
 .ltorg
 
 ShowStats3:
+
+push {r1-r3}
+mov r0,#0x7c
+blh GetEventID,r1
+pop {r1-r3}
+cmp r0,#0x0
+beq DrawBars
+b SkipDrawBars
+
+DrawBars:
 draw_str_bar_at 16, 3
 draw_mag_bar_at 16, 5
 draw_skl_bar_at 16, 7
@@ -131,6 +143,20 @@ draw_spd_bar_at 16, 9
 draw_luck_bar_at 16, 11
 draw_def_bar_at 16, 13
 draw_res_bar_at 16, 15
+b BackOnTrack
+
+SkipDrawBars:
+draw_fake_str_bar_at 19, 3
+draw_fake_mag_bar_at 19, 5
+draw_fake_skl_bar_at 19, 7
+draw_fake_spd_bar_at 19, 9
+draw_fake_luck_bar_at 19, 11
+draw_fake_def_bar_at 19, 13
+draw_fake_res_bar_at 19, 15
+
+
+
+BackOnTrack:
 draw_textID_at 13, 17, 0x4f6 @move
 draw_move_bar_with_getter_at 16, 17
 

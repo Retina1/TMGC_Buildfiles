@@ -47,78 +47,143 @@ MultiplePagesAllowlist:
 	WORD 0 
 
 MultipleHelpTextPageList_Items:
-//BYTE itemId numberOfPages
-//SHORT textId1 textId2 ...
+//SHORT itemId numberOfPages (total number of entries for this item, not the max number of pages the player can view at a time)
+//WORD textId; POIN conditionForThisPageAppearing
+//if page is always viewable, do "WORD textId 0" instead
 
-BYTE TheCreator 2
-SHORT DCreator DCreator2
+SHORT TheCreator 2
+WORD DCreator 0
+WORD DCreator2 0
 
-BYTE MorningStar 2
-SHORT DMorningStar DMorningStar2
+SHORT MorningStar 2
+WORD DMorningStar 0
+WORD DMorningStar2 0
 
-BYTE Warp 2
-SHORT DWarp DWarp2
+SHORT Warp 2
+WORD DWarp 0
+WORD DWarp2 0
 
-BYTE Rescue 2
-SHORT DRescue DRescue2
+SHORT Rescue 2
+WORD DRescue 0
+WORD DRescue2 0
 
-BYTE Yoink 2
-SHORT DYoink DRescue2
+SHORT Yoink 2
+WORD DYoink 0
+WORD DRescue2 0
 
-BYTE Aspect 2
-SHORT DAspect DAspect2
+SHORT Aspect 2
+WORD DAspect 0
+WORD DAspect2 0
 
-BYTE Awaken 2
-SHORT DAwaken DAwaken2
+//also do with other earth power multipages
+//add starfall for endgame
+SHORT Awaken 4
+WORD DAwaken; POIN MultipleTMGC_AwakenNormal
+WORD 0x318; POIN MultipleTMGC_EarthPower
+WORD 0x32B; POIN MultipleTMGC_NoEarthPowerAWF
+WORD DAwaken2 0
 
-BYTE LuxAurumque 2
-SHORT DLux DLightRuneEffect
-BYTE Runeward 2
-SHORT DLightRune DLightRuneEffect
+	SHORT Trisagion 4
+	WORD DPressTurn; POIN MultipleTMGC_NoEarthPower //check for no earth power
+	WORD 0x315; POIN MultipleTMGC_EarthPower
+	WORD DPressTurn2; POIN 0
+	WORD DPressTurn3; POIN 0
 
-BYTE NoxAurumque 2
-SHORT DNox DMineEffect
-BYTE Implant 2
-SHORT DMine DMineEffect
+SHORT Mazandyne 4
+WORD DMazandyne; POIN MultipleTMGC_NoEarthPower //check for no earth power
+WORD 0x317; POIN MultipleTMGC_EarthPower
+WORD DMazandyne2; POIN 0
+WORD DPressTurn3; POIN 0
 
-BYTE Sleep 2
-SHORT DSleep DSleep2
-BYTE Silence 2
-SHORT DSilence DSilence2
-BYTE Arbitrate 2
-SHORT DArbitrate DSilence2
-BYTE Berserk 2
-SHORT DBerserk DBerserk2
+SHORT TheSDarkTome 4
+WORD DSDark; POIN MultipleTMGC_NoEnemy //check for not enemy
+WORD 0x320; POIN MultipleTMGC_NoEarthPowerEndgameEnemy //check for endgame enemy, no ep
+WORD DSDark2; POIN 0
+WORD DSDark3; POIN 0
 
-BYTE DevilAxe 2
-SHORT DDevilAxe DDevilAxe2
+//figure these out sometime please ok thx
+/*
+SHORT Starfall 4
+WORD DStarfall; POIN MultipleTMGC_StarfallNormal
+WORD 0x30e; POIN MultipleTMGC_PlayerEarthPower //check ep player, works
+WORD 0x31e; POIN MultipleTMGC_NoEarthPowerEndgameEnemy //check for endgame enemy, no ep
+WORD 0x32d; POIN MultipleTMGC_EarthPowerEndgameEnemy //check for endgame + ep
+*/
 
-BYTE Kagutsuchi 3
-SHORT DPressTurn DPressTurn2 DPressTurn3
-BYTE Nuboko 3
-SHORT DPressTurn DPressTurn2 DPressTurn3
-BYTE Ukonvasara 3
-SHORT DPressTurn DPressTurn2 DPressTurn3
-BYTE JavelinRain 3
-SHORT DJavelinRain DPressTurn2 DPressTurn3
-BYTE Trisagion 3
-SHORT DPressTurn DPressTurn2 DPressTurn3
-BYTE Freikugel 3
-SHORT DPressTurn DPressTurn2 DPressTurn3
+//Light Rune
+	SHORT LuxAurumque 2
+	WORD DLux 0
+	WORD DLightRuneEffect 0
 
-BYTE Salvation 2
-SHORT DSalvation DSalvation2
+	SHORT Runeward 2
+	WORD DLightRune 0
+	WORD DLightRuneEffect 0
 
-BYTE Mazandyne 3
-SHORT DMazandyne DMazandyne2 DPressTurn3
+//Mine
+	SHORT NoxAurumque 2
+	WORD DNox 0
+	WORD DMineEffect 0
 
-BYTE WrathStaff 2
-SHORT DWrathStaff DWrathStaff2
+	SHORT Implant 2
+	WORD DMine 0
+	WORD DMineEffect 0
 
-BYTE TheSDarkTome 3
-SHORT DSDark DSDark2 DSDark3
+//Status
+	SHORT Sleep 2
+	WORD DSleep 0
+	WORD DSleep2 0
 
-BYTE 0 //end list with this
+	SHORT Silence 2
+	WORD DSilence 0
+	WORD DSilence2 0
+
+	SHORT Arbitrate 2
+	WORD DArbitrate 0
+	WORD DSilence2 0
+
+	SHORT Berserk 2
+	WORD DBerserk 0
+	WORD DBerserk2 0
+
+SHORT DevilAxe 2
+WORD DDevilAxe 0
+WORD DDevilAxe2 0
+
+//Press Turn
+	SHORT Kagutsuchi 3
+	WORD DPressTurn 0
+	WORD DPressTurn2 0
+	WORD DPressTurn3 0
+
+	SHORT Nuboko 3
+	WORD DPressTurn 0
+	WORD DPressTurn2 0
+	WORD DPressTurn3 0
+
+	SHORT Ukonvasara 3
+	WORD DPressTurn 0
+	WORD DPressTurn2 0
+	WORD DPressTurn3 0
+
+	SHORT JavelinRain 3
+	WORD DJavelinRain 0
+	WORD DPressTurn2 0
+	WORD DPressTurn3 0
+
+	SHORT Freikugel 3
+	WORD DPressTurn 0
+	WORD DPressTurn2 0
+	WORD DPressTurn3 0
+
+SHORT Salvation 2
+WORD DSalvation 0
+WORD DSalvation2 0
+
+SHORT WrathStaff 2
+WORD DWrathStaff 0
+WORD DWrathStaff2 0
+
+WORD 0 //end list with this
 ALIGN 4
 
 //#ifdef USE_HELP_TEXT_CHAR_AND_PROMO
@@ -182,14 +247,15 @@ ALIGN 4
 
 #ifdef USE_HELP_TEXT_SKILL
 	MultipleHelpTextPageList_Skills:
-	//BYTE skillId numberOfPages
-	//SHORT textId1 textId2 ...
+	//SHORT skillId numberOfPages (total number of entries for this item, not the max number of pages the player can view at a time)
+	//WORD textId; POIN conditionForThisPageAppearing
+	//if page is always viewable, do "WORD textId 0" instead
 	
+	SHORT RoboKyID 2
+	WORD SD_RightfulGod 0
+	WORD SD_RightfulGod2 0
 	
-	BYTE RoboKyID 2
-	SHORT SD_RightfulGod SD_RightfulGod2
-	
-	BYTE 0 //end list with this
+	WORD 0 //end list with this
 	ALIGN 4
 #endif
 
@@ -295,6 +361,9 @@ ALIGN 4
 	ALIGN 4
 
 	#include "asmItems/StatScreen_DoesItemHaveMultiplePages.lyn.event"
+	ALIGN 4
+	
+	#include "asmItems/MultipleTMGCHelpTextItem.lyn.event"
 	ALIGN 4
 
 

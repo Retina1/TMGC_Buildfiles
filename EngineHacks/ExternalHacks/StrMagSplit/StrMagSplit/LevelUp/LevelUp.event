@@ -8,6 +8,8 @@
 #endif
 PUSH
 
+//a bunch of this probably gets overwritten by C repointings anyway
+
 	//Function that adds promo bonuses to char data
     ORG $2BDFA
 	SHORT 0

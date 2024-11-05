@@ -33,6 +33,10 @@ ORG 0x1E7FC
 BYTE 0x0C
 PROTECT 0x1E7FC
 
+//Reset HelpTextExtraInfoRAMLocation during combat target selection 
+ORG 0x89198
+jumpToHack(StartHelpTextBubble_CombatTargetSelectExtension)
+
 POP
 
 #include "IdentifyType/CheckTypeOfHelpText.lyn.event"
@@ -74,6 +78,9 @@ ALIGN 4
 ALIGN 4
 
 #include "Misc/DefaultHelpTextSpace.lyn.event"
+ALIGN 4
+
+#include "Misc/StartHelpTextBubble_CombatTargetSelectExtension.lyn.event"
 ALIGN 4
 
 RTextLoopLink: //part of skill descriptions

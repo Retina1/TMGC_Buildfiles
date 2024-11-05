@@ -543,6 +543,9 @@ LABEL 0x10
 	FlashCursor(Peter,30)
 	Text(Epilogue_ButchPeterMevion)
 	ClearSupport(Peggy,Butch)
+	CHECK_EVENTID PeggyButchFlag
+	BEQ 0x11 0xc 0x0
+		EpilogueUnitText(Peggy,Epilogue_PeggyMevionAlt,0x3066)
 LABEL 0x11
 //jeff
 CHECK_EVENTID RachaelJeffFlag

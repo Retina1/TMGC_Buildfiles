@@ -176,18 +176,21 @@ Tale3AreaSpawn:
 Reinforcements(Tale3Dragon1Spawn)
 Reinforcements(Tale3Dragon1Spawn2)
 Text(Tale3Wyvern1Spawn)//vlad says one spawned
+AddUnitStatus(Tale3Wyv1,MovBonus,(-2))
 EndEvent
 Tale3AreaSpawn2:
 Reinforcements(Tale3Dragon2Spawn)
 Reinforcements(Tale3Dragon2Spawn2)
 Reinforcements(Tale3Dragon2Spawn3)
 Text(Tale3Wyvern2Spawn)//vlad says one spawned
+AddUnitStatus(Tale3Wyv2,MovBonus,(-2))
 EndEvent
 Tale3AreaSpawn3:
 Reinforcements(Tale3Dragon3Spawn)
 Reinforcements(Tale3Dragon3Spawn2)
 Reinforcements(Tale3Dragon3Spawn3)
 Text(Tale3Wyvern3Spawn)//vlad says one spawned
+AddUnitStatus(Tale3Wyv3,MovBonus,(-2))
 EndEvent
 
 EndingScene:

@@ -55,6 +55,29 @@ UnspecifiedBattleConvo(Gregerias,Tale5,0xe,Tale5GregBattle)
 UnspecifiedBattleConvo(Gregirias,Tale5,0xf,Tale5GregBattle)
 UnspecifiedBattleConvo(Gregurias,Tale5,0x10,Tale5GregBattle)
 UnspecifiedBattleConvo(Gregyrias,Tale5,0x11,Tale5GregBattle)
+//tale6
+SpecifiedBattleConvo(Kenneth,DLTarquin,Tale6,0x10,Tale6TarquinKennethBattle)
+SpecifiedBattleConvo(Kenneth,DLEthyl,Tale6,0x11,Tale6EthylKennethBattle)
+SpecifiedBattleConvo(Desmond,DLTarquin,Tale6,0x12,Tale6TarquinDesmondBattle)
+SpecifiedBattleConvo(Desmond,DLEthyl,Tale6,0x13,Tale6EthylDesmondBattle)
+SpecifiedBattleConvo(Johan,DLTarquin,Tale6,0x14,Tale6TarquinJohanBattle)
+SpecifiedBattleConvo(Johan,DLEthyl,Tale6,0x15,Tale6EthylJohanBattle)
+SpecifiedBattleConvo(Ptolemy,DLTarquin,Tale6,0x16,Tale6TarquinPtolemyBattle)
+SpecifiedBattleConvo(Ptolemy,DLEthyl,Tale6,0x17,Tale6EthylPtolemyBattle)
+SpecifiedBattleConvo(Emile,DLTarquin,Tale6,0x18,Tale6TarquinEmileBattle)
+SpecifiedBattleConvo(Emile,DLEthyl,Tale6,0x19,Tale6EthylEmileBattle)
+SpecifiedBattleConvo(Natasia,DLTarquin,Tale6,0x1a,Tale6TarquinNatasiaBattle)
+SpecifiedBattleConvo(Natasia,DLEthyl,Tale6,0x1b,Tale6EthylNatasiaBattle)
+//tale7
+SpecifiedBattleConvo(Sonia,BigRemnant,Tale7,0x1f,Tale7SoniaBigRemnantBattle)
+SpecifiedBattleConvo(Joan,BigRemnant,Tale7,0x20,Tale7JoanBigRemnantBattle)
+SpecifiedBattleConvo(Tobias,BigRemnant,Tale7,0x21,Tale7TobiasBigRemnantBattle)
+SpecifiedBattleConvo(Mikey,BigRemnant,Tale7,0x22,Tale7MikeyBigRemnantBattle)
+SpecifiedBattleConvo(Carbon,BigRemnant,Tale7,0x23,Tale7CarbonBigRemnantBattle)
+SpecifiedBattleConvo(SecretJonas,BigRemnant,Tale7,0x24,Tale7JonasBigRemnantBattle)
+SpecifiedBattleConvo(Damien,BigRemnant,Tale7,0x25,Tale7DamienBigRemnantBattle)
+SpecifiedBattleConvo(Zacharias,BigRemnant,Tale7,0x26,Tale7ZachariasBigRemnantBattle)
+SpecifiedBattleConvo(Leila,BigRemnant,Tale7,0x27,Tale7LeilaBigRemnantBattle)
 //tale12
 SpecifiedBattleConvo(Sinclair,Dragon,Tale12,0x21,Tale12SinclairBossQuote)
 SpecifiedBattleConvo(PGNathaniel,Dragon,Tale12,0x22,Tale12NathanielBossQuote)
@@ -484,4 +507,7 @@ SHORT Tobias 0x0 0xfe 0x7e TobiasTriAttack 0x0 0x0 0x0
 SHORT Rachael 0x0 0xfe 0x7f RachaelTriAttack 0x0 0x0 0x0
 SHORT Leila 0x0 0xfe 0x80 LeilaTriAttack 0x0 0x0 0x0
 SHORT Valeria 0x0 0xfe 0x81 ValeriaTriAttack 0x0 0x0 0x0
+SHORT PGMarque 0x0 0xfe 0x21 MarqueTriangleAttack 0x0 0x0 0x0
+SHORT PGStarque 0x0 0xfe 0x22 StarqueTriangleAttack 0x0 0x0 0x0
+SHORT PGParque 0x0 0xfe 0x23 ParqueTriangleAttack 0x0 0x0 0x0
 BYTE 0xFF 0xFF 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 

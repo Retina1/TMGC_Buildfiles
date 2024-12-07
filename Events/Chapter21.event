@@ -511,7 +511,13 @@ GotoPrepScreen
 ENDA
 
 EndingScene:
+//hyperius kills nathaniel postmap if he didn't die during map
 ResetBaseFlags
+CHECK_EVENTID DefeatBossFlag
+BNE 0x777 0xc 0x0
+MUSC 0x0
+CleanTextNoMap(HallCG,C21EndingHyperiusMoment)
+LABEL 0x777
 MUSC S_Nightfall
 CleanTextNoMap(OutdoorCastleCG,C21Ending1)//catharsis, relief
 TurnAllyIfAlive(Ptolemy)
@@ -530,6 +536,7 @@ CleanTextNoMap(OutdoorCastleCG,C21EndingPJAlive)//johan and ptolemy alive
 	BNE 0x891 0xc 0x0
 	LOAD1 0x1 C21EndingJohan
 	LABEL 0x891
+SetSupport(Johan,Ptolemy,BSupport,0)
 GOTO 0x500
 LABEL 0x401
 CleanTextNoMap(OutdoorCastleCG,C21EndingPAlive)//ptolemy alive, johan dead

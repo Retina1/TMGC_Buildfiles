@@ -7,6 +7,8 @@
   #endif
 #endif*/
 
+#include "YgstraTriangle/Installer.event"
+
 #define AnimTableEntry(index) "ORG ClassAnimTable - 0x20 + (index * 0x20)"
 #define animSword 0
 #define animLance 1

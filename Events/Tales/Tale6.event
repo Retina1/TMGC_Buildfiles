@@ -34,7 +34,6 @@ Seize(0xa,Tale6Seize,3,5)
 END_MAIN
 
 MiscBasedEvents:
-AFEV 0x3 Tale6EndChecker 0xa
 //DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
@@ -54,62 +53,74 @@ ALIGN 4
 
 Tale6Units:
 //tale 6 cast - kenneth, stefan, desmond, josef, johan, ptolemy, emile, hilbert, natasia?, gaylord?
-UNIT Kenneth Baron 0x0 Level(12,Ally,0) [4,28] 0x0 0x0 0x0 0x0 [Voidwake,Fenrir,Rewarp,RealLastShield] NoAI
-UNIT Desmond LncPal 0x0 Level(18,Ally,0) [2,27] 0x0 0x0 0x0 0x0 [Emboldener,BraveLance,Tomahawk,Elixir] NoAI
-UNIT Stefan SwdPal 0x0 Level(15,Ally,0) [2,28] 0x0 0x0 0x0 0x0 [Rapier,Shimmersword,Spear,Elixir] NoAI
-UNIT Johan LncPal 0x0 Level(15,Ally,0) [3,27] 0x0 0x0 0x0 0x0 [GildedLance,DousingLance,KillerAxe,Elixir] NoAI
-UNIT Ptolemy BowWyv 0x0 Level(13,Ally,0) [5,29] 0x0 0x0 0x0 0x0 [BeecurveBow,Beelista,Physic,Yoink] NoAI
-UNIT Josef LncGen 0x0 Level(16,Ally,0) [6,27] 0x0 0x0 0x0 0x0 [Longinus,GildedLance,Axereaver,Longbow] NoAI
-UNIT Emile Sage 0x0 Level(17,Ally,0) [4,30] 0x0 0x0 0x0 0x0 [Galewind,Yoink,Sleep,Fortify] NoAI
-UNIT Hilbert Sage 0x0 Level(10,Ally,0) [5,27] 0x0 0x0 0x0 0x0 [Mazandyne,Bolting,Nosferatu,Physic] NoAI
-UNIT Gaylord Valk 0x0 Level(11,Ally,0) [3,29] 0x0 0x0 0x0 0x0 [Runesword,Silence,Yoink,Physic] NoAI
-UNIT Natasia WarriorF 0x0 Level(13,Ally,0) [6,28] 0x0 0x0 0x0 0x0 [Tomahawk,KillerAxe,Greatbow] NoAI
-UNIT Sveltzalus Bigerle 0x0 Level(7,Ally,0) [4,26] 0x0 0x0 0x0 0x0 [CrimsonEye,Slam,Nocturne,Voulche] NoAI
+UNIT Kenneth Baron 0x0 Level(12,Ally,0) [4,27] 0x0 0x0 0x0 0x0 [Voidwake,Fenrir,Rewarp,Foundation] NoAI
+UNIT Desmond LncPal 0x0 Level(18,Ally,0) [1,26] 0x0 0x0 0x0 0x0 [Emboldener,BraveLance,Tomahawk,SoaringShaft] NoAI
+UNIT Stefan SwdPal 0x0 Level(15,Ally,0) [1,27] 0x0 0x0 0x0 0x0 [Rapier,Shimmersword,Spear,Elixir] NoAI
+UNIT Johan LncPal 0x0 Level(15,Ally,0) [2,26] 0x0 0x0 0x0 0x0 [GildedLance,DousingLance,KillerAxe,Elixir] NoAI
+UNIT Ptolemy BowWyv 0x0 Level(13,Ally,0) [5,28] 0x0 0x0 0x0 0x0 [BeecurveBow,Beelista,Physic,Yoink] NoAI
+UNIT Josef LncGen 0x0 Level(16,Ally,0) [7,26] 0x0 0x0 0x0 0x0 [Longinus,GildedLance,Axereaver,Longbow] NoAI
+UNIT Emile Sage 0x0 Level(17,Ally,0) [6,29] 0x0 0x0 0x0 0x0 [Galewind,Yoink,Sleep,Prototype] NoAI
+UNIT Hilbert Sage 0x0 Level(10,Ally,0) [6,26] 0x0 0x0 0x0 0x0 [Mazandyne,Bolting,Nosferatu,Physic] NoAI
+UNIT Gaylord Valk 0x0 Level(11,Ally,0) [3,28] 0x0 0x0 0x0 0x0 [Runesword,Silence,Yoink,Again] NoAI
+UNIT Natasia WarriorF 0x0 Level(13,Ally,0) [7,27] 0x0 0x0 0x0 0x0 [Tomahawk,KillerAxe,Greatbow,BiasedQuiver] NoAI
+UNIT Sveltzalus Bigerle 0x0 Level(7,Ally,0) [4,25] 0x0 0x0 0x0 0x0 [CrimsonEye,Slam,Nocturne,Voulche] NoAI
 UNIT
 
 Tale6Enemies:
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [10,1] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [10,2] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [11,2] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Dalst Valk 0x0 Level(18,Enemy,1) [9,1] 0x0 0x0 0x0 0x0 [Caduceus] GroupThreeAI
+UNIT Dalst ValkF 0x0 Level(18,Enemy,1) [10,1] 0x0 0x0 0x0 0x0 [Runesword] GroupThreeAI
+UNIT Dalst ValkF 0x0 Level(18,Enemy,1) [10,2] 0x0 0x0 0x0 0x0 [FlameSword] GroupThreeAI
+UNIT Dalst Valk 0x0 Level(18,Enemy,1) [11,2] 0x0 0x0 0x0 0x0 [Lancesnapper,Wyrmslayer,Zanbato,Armorslayer] GroupThreeAI
 
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [7,6] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [9,6] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [7,6] 0x0 0x0 0x0 0x0 [BraveLance] AttackInRangeAI
+UNIT Dalst Valk 0x0 Level(18,Enemy,1) [8,6] 0x0 0x0 0x0 0x0 [Runesword] ChaseOnceApproachedAI
+UNIT Dalst SwdPal 0x0 Level(18,Enemy,1) [9,6] 0x0 0x0 0x0 0x0 [MainGauche] AttackInRangeAI
+UNIT Dalst AxePal 0x0 Level(18,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [DangerPick] AttackInRangeAI
 
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [1,11] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Dalst LncGen 0x0 Level(18,Enemy,1) [0,11] 0x0 0x0 0x0 0x0 [Spear,BraveLance,TrueSaunion] NeverMoveAI
+UNIT Dalst LncGen 0x0 Level(18,Enemy,1) [1,11] 0x0 0x0 0x0 0x0 [Spear,BraveLance,TrueSaunion] NeverMoveAI
 
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [4,17] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [5,17] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [1,20] 0x0 0x0 0x0 0x0 [Horseslayer] NoAI
+UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [2,21] 0x0 0x0 0x0 0x0 [Shatterspear] NoAI
 
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [8,22] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [10,22] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [9,24] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Dalst Sorc 0x0 Level(18,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [Fenrir] GroupFourAI
+UNIT Dalst Sniper 0x0 Level(18,Enemy,1) [5,16] 0x0 0x0 0x0 0x0 [Wardbow] GroupFourAI
+UNIT Dalst Halberdier 0x0 Level(18,Enemy,1) [4,17] 0x0 0x0 0x0 0x0 [Spear] GroupFourAI
+UNIT Dalst Warrior 0x0 Level(18,Enemy,1) [5,17] 0x0 0x0 0x0 0x0 [Swordslayer] GroupFourAI
 
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [21,29] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [22,29] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [22,31] 0x0 0x0 0x0 0x0 [MasterLance] NoAI
+UNIT Dalst Bishop 0x0 Level(18,Enemy,1) [8,22] 0x0 0x0 0x0 0x0 [Smite,MorningStar] NoAI
+UNIT Dalst Bishop 0x0 Level(18,Enemy,1) [10,22] 0x0 0x0 0x0 0x0 [Resire,Radiance] NoAI
+UNIT Dalst Warrior 0x0 Level(18,Enemy,1) [9,23] 0x0 0x0 0x0 0x0 [SilverAxe,BraveAxe] NoAI
+UNIT Dalst Warrior 0x0 Level(18,Enemy,1) [9,24] 0x0 0x0 0x0 0x0 [VoidCleaver,KillerAxe] NoAI
 
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [27,5] 0x0 0x0 0x0 0x0 [MasterLance,AngelWings] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [27,6] 0x0 0x0 0x0 0x0 [MasterLance,AngelWings] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [27,7] 0x0 0x0 0x0 0x0 [MasterLance,AngelWings] NoAI
-UNIT Dalst LncPal 0x0 Level(18,Enemy,1) [27,8] 0x0 0x0 0x0 0x0 [MasterLance,AngelWings] NoAI
+UNIT Dalst Hero 0x0 Level(18,Enemy,1) [21,29] 0x0 0x0 0x0 0x0 [MasterSword] GroupFiveAI
+UNIT Dalst Sniper 0x0 Level(18,Enemy,1) [22,29] 0x0 0x0 0x0 0x0 [GildedBow] GroupFiveAI
+UNIT Dalst SwMast 0x0 Level(20,Enemy,1) [20,30] 0x0 0x0 0x0 0x0 [FlameSword] GroupFiveAI
+UNIT Dalst Hero 0x0 Level(18,Enemy,1) [21,31] 0x0 0x0 0x0 0x0 [GildedAxe] GroupFiveAI
+UNIT Dalst Sage 0x0 Level(18,Enemy,1) [22,31] 0x0 0x0 0x0 0x0 [Flare] GroupFiveAI
 
-UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [1,5] 0x0 0x0 0x0 0x0 [ArchBallista,BiasedQuiver] NeverMoveAI
-UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [ArchBallista,BiasedQuiver] NeverMoveAI
-UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [18,18] 0x0 0x0 0x0 0x0 [ArchBallista,BiasedQuiver] NeverMoveAI
-UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [24,24] 0x0 0x0 0x0 0x0 [ArchBallista,BiasedQuiver] NeverMoveAI
-UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [21,6] 0x0 0x0 0x0 0x0 [ArchBallista,BiasedQuiver] NeverMoveAI
-UNIT Dalst Sage 0x0 Level(20,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [Sleep,Sleep,Sleep,Sleep] NoAI
-UNIT Dalst Sage 0x0 Level(20,Enemy,1) [18,13] 0x0 0x0 0x0 0x0 [Sleep,Sleep,Sleep,Sleep] NoAI
+UNIT Dalst Sage 0x0 Level(18,Enemy,1) [27,5] 0x0 0x0 0x0 0x0 [Flare,AngelWings] DelayedAI
+UNIT Dalst Hero 0x0 Level(18,Enemy,1) [27,6] 0x0 0x0 0x0 0x0 [GildedSword,Halberd,AngelWings] DelayedAI
+UNIT Dalst Halberdier 0x0 Level(18,Enemy,1) [27,7] 0x0 0x0 0x0 0x0 [Spear,Horseslayer,AngelWings] DelayedAI
+UNIT Dalst Sniper 0x0 Level(18,Enemy,1) [27,8] 0x0 0x0 0x0 0x0 [Wardbow,GildedBow,BiasedQuiver,AngelWings] DelayedAI
 
+UNIT Dalst Falco 0x0 Level(18,Enemy,1) [9,13] 0x0 0x0 0x0 0x0 [Shockstick] ChaseOnceApproachedAI
+UNIT Dalst Falco 0x0 Level(18,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [Runesword] ChaseOnceApproachedAI
+UNIT Dalst WyvLord 0x0 Level(18,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Dalst WyvLord 0x0 Level(18,Enemy,1) [25,15] 0x0 0x0 0x0 0x0 [BraveLance] ChaseOnceApproachedAI
+UNIT Dalst WyvLord 0x0 Level(18,Enemy,1) [20,22] 0x0 0x0 0x0 0x0 [GildedLance] ChaseOnceApproachedAI
+UNIT Dalst Falco 0x0 Level(18,Enemy,1) [21,23] 0x0 0x0 0x0 0x0 [FlameSword] ChaseOnceApproachedAI
+
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [1,5] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [5,5] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [18,18] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [24,24] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Ballistician 0x0 Level(20,Enemy,1) [21,6] 0x0 0x0 0x0 0x0 [ArchBallista] NeverMoveAI
+UNIT Dalst Sage 0x0 Level(20,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [Bolting,Silence,Silence] NoAI
+UNIT Dalst Sage 0x0 Level(20,Enemy,1) [18,13] 0x0 0x0 0x0 0x0 [Bolting,Sleep,Sleep] NoAI
+UNIT
+
+Tale6Bosses:
 UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [16,8] 0x0 0x0 0x0 0x0 [MasterLance] GroupOnePaceAI
 UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [18,8] 0x0 0x0 0x0 0x0 [MasterAxe] GroupOnePaceAI
 UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [17,9] 0x0 0x0 0x0 0x0 [GildedAxe,GildedLance] GroupOnePaceAI
@@ -124,19 +135,24 @@ ALIGN 4
 //more council simulacra created as a backup measure emerge?
 
 Tale6Seize:
-Text(FillerDialogue)
-EndEvent
-
-Tale6EndChecker:
-CHECK_EVENTID 0x8
-BEQ 0x1 0xc 0x0
-CHECK_EVENTID 0x9
-BEQ 0x1 0xc 0x0
-CHECK_EVENTID 0xa
-BEQ 0x1 0xc 0x0
-Text(FillerDialogue)
-CALL EndingScene
+CHECK_EVENTID 0xb
+BNE 0x1 0xc 0x0
+Text(Tale6FirstSeize)//first one
+ENUT 0xb
+GOTO 0x4
 LABEL 0x1
+CHECK_EVENTID 0xc
+BNE 0x2 0xc 0x0
+Text(Tale6SecondSeize)//second one
+ENUT 0xc
+GOTO 0x4
+LABEL 0x2
+CHECK_EVENTID 0xd
+BNE 0x4 0xc 0x0
+Text(Tale6ThirdSeize)//third one
+CALL EndingScene
+ENUT 0xd
+LABEL 0x4
 EndEvent
 
 BeginningScene:
@@ -145,46 +161,49 @@ LOAD1 0x1 Tale6Units
 ENUN
 LOAD1 0x1 Tale6Enemies
 ENUN
-TaleSetUnitStat(Kenneth,65,14,36,30,28,15,32,32)
+LOAD1 0x1 Tale6Bosses
+ENUN
+TaleSetUnitStat(Kenneth,65,14,36,30,28,18,32,32)
 TaleSetUnitWEXP(Kenneth,71,71,71,71,251,181,121,251)
 SetUnitSkills(Kenneth,PragmaticID,ConduitID,0,0)
 AddUnitStatus(Kenneth,MovBonus,1)
-TaleSetUnitStat(Desmond,62,30,10,29,23,10,27,15)
+TaleSetUnitStat(Desmond,62,30,10,29,23,13,27,15)
 TaleSetUnitWEXP(Desmond,0,251,251,0,0,0,0,0)
 SetUnitSkills(Desmond,SaviorID,LancefaireID,InspirationID,0)
-TaleSetUnitStat(Stefan,54,28,14,28,30,14,20,20)
+TaleSetUnitStat(Stefan,54,28,14,28,30,17,20,20)
 TaleSetUnitWEXP(Stefan,251,181,0,0,0,0,0,0)
 SetUnitSkills(Stefan,KnightAspirantID,SolID,LunaID,VengeanceID)
-TaleSetUnitStat(Johan,70,31,12,32,30,9,28,28)
+TaleSetUnitStat(Johan,70,31,12,32,30,12,28,28)
 TaleSetUnitWEXP(Johan,0,251,121,0,0,0,0,0)
 SetUnitSkills(Johan,WrathID,ResolveID,0,0)
 TaleSetUnitStat(Ptolemy,47,25,24,36,30,30,17,30)
 TaleSetUnitWEXP(Ptolemy,0,0,0,251,121,0,0,0)
 SetUnitSkills(Ptolemy,StaffSavantID,CharismaID,0,0)
-TaleSetUnitStat(Josef,78,35,4,33,10,12,35,10)
+TaleSetUnitStat(Josef,78,35,4,33,10,15,35,10)
 TaleSetUnitWEXP(Josef,181,251,0,181,0,0,0,0)
 SetUnitSkills(Josef,PuissanceID,PressTurnID,ReadyAimID,0)
-TaleSetUnitStat(Emile,37,5,35,35,17,18,9,27)
+TaleSetUnitStat(Emile,37,5,35,35,17,21,9,27)
 TaleSetUnitWEXP(Emile,0,0,0,0,251,251,0,0)
 SetUnitSkills(Emile,InsightID,StaffMasteryID,0,0)
-TaleSetUnitStat(Hilbert,53,8,29,19,31,20,28,27)
+TaleSetUnitStat(Hilbert,53,8,29,19,31,23,28,27)
 TaleSetUnitWEXP(Hilbert,121,121,0,0,121,251,0,121)
 SetUnitSkills(Hilbert,MiracleID,AstraID,0,0)
 TaleSetUnitStat(Gaylord,80,18,18,18,18,30,18,18)
 TaleSetUnitWEXP(Gaylord,181,0,0,0,251,0,0,0)
 SetUnitSkills(Gaylord,MiracleID,RallyLukID,RallyDefID,RallyResID)
-TaleSetUnitStat(Natasia,74,35,6,26,25,15,14,3)
+TaleSetUnitStat(Natasia,74,35,6,26,25,18,14,3)
 TaleSetUnitWEXP(Natasia,0,0,251,181,121,0,0,0)
 SetUnitSkills(Natasia,WrathID,DragonFangID,0,0)
 TaleSetUnitStat(Sveltzalus,38,21,28,32,34,30,16,24)
 TaleSetUnitWEXP(Sveltzalus,0,0,0,0,0,0,0,251)
 SetUnitSkills(Sveltzalus,CantoPlusID,PushMovID,PushConID,0)
-
+CleanTextNoMap(PathCG,Tale6Opening)
 EndEvent
 
 EndingScene:
 ENUT Tale6DoneFlag
-MUSC 0x0
+MUSC AmbientWind
+CleanTextNoMap(PathCG,Tale6Ending)
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)
 ENDA

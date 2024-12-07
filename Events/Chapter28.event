@@ -334,6 +334,10 @@ C28CutsceneElcorian:
 UNIT Bandit Valk 0x0 Level(16,Enemy,1) [11,9] 0x0 0x0 0x0 0x0 [TheCreator,Berserk,Prototype] NoAI
 UNIT
 
+C28EmileLateJoin:
+UNIT Emile Sage 0x0 Level(17,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [Galewind,Bolting,Warp,Physic] NoAI
+UNIT
+
 C28CutsceneViridian:
 UNIT Unknown ViridianLord 0x0 Level(15,Enemy,1) [11,11] 0x0 0x0 0x0 0x0 [Soulbow] NoAI
 UNIT
@@ -438,7 +442,31 @@ MUSC NarrationTheme6
 SetBackground(Map2CG); STAL 120; NarrationText(Ch28_Narration); FADI 16; CLEAN
 LOAD1 0x1 C28CutsceneElcorian
 ENUN
+CHECK_EXISTS Emile
+BNE 0x242 0xc 0x0
+CHECK_EVENTID GreenEmileDeadFlag
+BEQ 0x240 0xc 0x0
+LABEL 0x242
 CleanText(HallCG,C28Opening1)
+GOTO 0x241
+LABEL 0x240
+LOAD1 0x1 C28EmileLateJoin
+SetUnitStatus(Emile,MaxHP,40)
+SetUnitStatus(Emile,CurrentHP,40)
+SetUnitStatus(Emile,Strength,4)
+SetUnitStatus(Emile,Magic,28)
+SetUnitStatus(Emile,Skill,28)
+SetUnitStatus(Emile,Speed,16)
+SetUnitStatus(Emile,LuckStat,21)
+SetUnitStatus(Emile,Defence,10)
+SetUnitStatus(Emile,Resistance,21)
+SetUnitStatus(Emile,StaffExp,251)
+SetUnitStatus(Emile,AnimaExp,251)
+SetUnitStatus(Emile,LightExp,251)
+SetUnitStatus(Emile,DarkExp,251)
+SetUnitSkills(Emile,InsightID,StaffMasteryID,LunaID,0x0)
+CleanText(HallCG,C28Opening1Alt)
+LABEL 0x241
 LOAD1 0x1 C28CutsceneBlairZeke
 ENUN
 MUSC 0x0

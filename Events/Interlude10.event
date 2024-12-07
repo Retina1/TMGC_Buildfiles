@@ -315,14 +315,14 @@ BEQ 0x9 0xc 0x0
 		CHECK_ALIVE Mikey
 		BEQ 0xc 0xc 0x0
 			CHECK_ALIVE Carbon
-			BEQ 0xd 0xc 0x0
+			BEQ 0xddd 0xc 0x0
 			CleanTextNoMap(HouseCG,I10EndingJoanSoniaMikeyCarbon)//all alive
 			REMA
 			SetSupport(Joan,Sonia,ASupport,1)
 			SetSupport(Joan,Mikey,BPSupport,1)
 			SetSupport(Mikey,Carbon,ASupport,1)
 			GOTO 0xa
-			LABEL 0xd
+			LABEL 0xddd
 			CleanTextNoMap(HouseCG,I10EndingJoanSoniaMikey)//all but carbon alive
 			REMA
 			SetSupport(Joan,Sonia,ASupport,1)

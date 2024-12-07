@@ -47,23 +47,34 @@ void RefreshItemsASMC(Proc* proc) {
 			}			
 		}
 		else {
-			for(int j = 0; j < GetUnitItemCount(curUnit); j++) {
-				u16 curItem = curUnit->items[j];
-				int i = 0;
-				while(PerChapterItemsList[i] != 0) {
-					if(GetItemIndex(curItem) == PerChapterItemsList[i]) {
-						curUnit->items[j] = MakeNewItem(GetItemIndex(curItem));
+			if (!CheckEventId_(0x78)){
+				for(int j = 0; j < GetUnitItemCount(curUnit); j++) {
+					u16 curItem = curUnit->items[j];
+					int i = 0;
+					while(PerChapterItemsList[i] != 0) {
+						if(GetItemIndex(curItem) == PerChapterItemsList[i]) {
+							curUnit->items[j] = MakeNewItem(GetItemIndex(curItem));
+							}
+						i++;
+						}
 					}
-					i++;
+				}
+			else {
+				for(int j = 0; j < GetUnitItemCount(curUnit); j++) {
+					u16 curItem = curUnit->items[j];
+						if (GetItemType(curItem) != 0x9){
+							curUnit->items[j] = MakeNewItem(GetItemIndex(curItem));
+						}
+					}
 				}
 			}
-		}
+		
 		unitID++;
 	}
 	
 	u16 * convoy = GetConvoyItemArray();
-	if(target != 0) {
-		for(int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
+	if (target != 0) {
+		for (int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
 			if (target == GetItemIndex(*convoy)) {
 				*convoy = MakeNewItem(GetItemIndex(*convoy));
 			}
@@ -91,17 +102,27 @@ u16 GetItemAfterUse(int item) {
     item -= (1 << 8); // lose one use
 	
 	int i = 0;
-	while(PerChapterItemsList[i] != 0) {
-		if(GetItemIndex(item) == PerChapterItemsList[i]) {
-			    if (item < (1 << 8))
-				{
-					item = GetItemIndex(item);
-				}
-			return item;
+	if (!CheckEventId_(0x78)){
+		while(PerChapterItemsList[i] != 0) {
+			if(GetItemIndex(item) == PerChapterItemsList[i]) {
+					if (item < (1 << 8))
+					{
+						item = GetItemIndex(item);
+					}
+				return item;
+			}
+			i++;
 		}
-		i++;
 	}
-	
+	else {
+		if (GetItemType(item) != 0x9){
+			if (item < (1 << 8))
+						{
+							item = GetItemIndex(item);
+						}
+					return item;
+		}
+	}
     if (item < (1 << 8))
         return 0; // return no item if uses < 0
 
@@ -153,14 +174,20 @@ void DrawItemStatScreenLine(struct TextHandle* text, int item, int nameColor, u1
     DrawSpecialUiChar(mapOut + 12, color, 0x16); // draw the UI slash
 	
 	color = (nameColor != TEXT_COLOR_SYSTEM_GRAY) ? TEXT_COLOR_SYSTEM_BLUE : TEXT_COLOR_SYSTEM_GRAY;
-
-	int i = 0;
-	while(PerChapterItemsList[i] != 0) {
-		if (GetItemIndex(item) == PerChapterItemsList[i]) {
+	if  (!CheckEventId_(0x78)){
+		int i = 0;
+		while(PerChapterItemsList[i] != 0) {
+			if (GetItemIndex(item) == PerChapterItemsList[i]) {
+				color = (nameColor != TEXT_COLOR_SYSTEM_GRAY) ? TEXT_COLOR_SYSTEM_GOLD : TEXT_COLOR_SYSTEM_GRAY;
+			}
+			i++;
+		}
+	}
+	else {
+		if (GetItemType(item) != 0x9){
 			color = (nameColor != TEXT_COLOR_SYSTEM_GRAY) ? TEXT_COLOR_SYSTEM_GOLD : TEXT_COLOR_SYSTEM_GRAY;
 		}
-		i++;
-	}
+	}	
 	
     DrawUiNumberOrDoubleDashes(mapOut + 11, color, GetItemUses(item));
     DrawUiNumberOrDoubleDashes(mapOut + 14, color, GetItemMaxUses(item));
@@ -177,13 +204,19 @@ void DrawItemMenuLine(struct TextHandle* text, int item, s8 isUsable, u16* mapOu
     Text_Display(text, mapOut + 2);
 	
 	int color = TEXT_COLOR_SYSTEM_BLUE;
-
-	int i = 0;
-	while(PerChapterItemsList[i] != 0) {
-		if (GetItemIndex(item) == PerChapterItemsList[i]) {
+	if  (!CheckEventId_(0x78)){
+		int i = 0;
+		while(PerChapterItemsList[i] != 0) {
+			if (GetItemIndex(item) == PerChapterItemsList[i]) {
+				color = TEXT_COLOR_SYSTEM_GOLD;
+			}
+			i++;
+		}
+	}
+	else {
+		if (GetItemType(item) != 0x9){
 			color = TEXT_COLOR_SYSTEM_GOLD;
 		}
-		i++;
 	}
 
     DrawUiNumberOrDoubleDashes(mapOut + 11, isUsable ? color : TEXT_COLOR_SYSTEM_GRAY, GetItemUses(item));
@@ -199,12 +232,19 @@ void DrawItemMenuLineLong(struct TextHandle* text, int item, s8 isUsable, u16* m
 	
 	int color = TEXT_COLOR_SYSTEM_BLUE;
 
-	int i = 0;
-	while(PerChapterItemsList[i] != 0) {
-		if (GetItemIndex(item) == PerChapterItemsList[i]) {
+	if  (!CheckEventId_(0x78)){
+		int i = 0;
+		while(PerChapterItemsList[i] != 0) {
+			if (GetItemIndex(item) == PerChapterItemsList[i]) {
+				color = TEXT_COLOR_SYSTEM_GOLD;
+			}
+			i++;
+		}
+	}
+	else {
+		if (GetItemType(item) != 0x9){
 			color = TEXT_COLOR_SYSTEM_GOLD;
 		}
-		i++;
 	}
 
     DrawUiNumberOrDoubleDashes(mapOut + 10, isUsable ? color : TEXT_COLOR_SYSTEM_GRAY, GetItemUses(item));

@@ -685,7 +685,7 @@ EndEvent
 //also make sure he retreats on defeat if green
 
 C24Dracopope:
-SET_ACTIVE 0
+SET_ACTIVE Vladmir
 EVBIT_MODIFY 3
 MUSC S_EncountersAndReunions
 SetBackground(LowlandsCG)
@@ -704,6 +704,7 @@ Text(C24RoseRecruitsLaronde)
 TurnAlly(SecretLaronde)
 SetSupport(Rose,SecretLaronde,BSupport,1)
 ENUT 0x27
+ENUT 0x12
 EndEvent
 
 C24BlairLarondeTalk:

@@ -39,7 +39,7 @@ And now[...] The truth will be[N]
 lost forever[...][A][X]
 
 ##C16_ArtemisSpeaks
-[OpenMidLeft][LoadArtemis]
+[OpenMidLeft][LoadArtemisLeft]
 [...]Why are we doing this?[N]
 We're destroying history here.[A][N]
 I suppose if the enemy's a big[N]
@@ -51,7 +51,7 @@ perhaps I'll hear them out.[A][N][CloseEyes]
 my duty.[A][X]
 
 ##C16_ArtemisZekeTalk
-[OpenMidLeft][LoadArtemis][OpenMidRight][LoadZeke]
+[OpenMidLeft][LoadArtemisLeft][OpenMidRight][LoadZeke]
 Pardon me![A][N][OpenMidLeft]
 [...]Aren't you the enemy?[A][N][OpenMidRight]
 [...]Apologies. You looked[N]
@@ -76,7 +76,7 @@ Can it be?[A][N]
 Perhaps my fate's turning around.[A][X]
 
 ##C16_ArtemisBlairTalk
-[OpenMidLeft][LoadArtemis][OpenMidRight][LoadBlair]
+[OpenMidLeft][LoadArtemisLeft][OpenMidRight][LoadBlair]
 Excuse me, miss![N]
 Are you alright?[A][N][OpenMidLeft]
 [...]I'm your enemy. Why are[N]
@@ -354,7 +354,8 @@ Perhaps from your point of view.[N]
 But me? This is my big break.[A][N]
 I finish this job, and Holanis'll[N]
 pay a king's ransom.[A][N]
-It's a shame to have to kill you.[N]
+It's a shame to have[N]
+to kill you.[A][N]
 Truly. I liked you.[A][N]
 But, hey. At least it'll be easy.[A][X]
 
@@ -376,7 +377,7 @@ And now[...] it all[...][N]
 was for naught[...][A][X]
 
 ##C16CassiusKillsArtemis
-[OpenMidLeft][LoadArtemis]
+[OpenMidLeft][LoadArtemisLeft]
 [...]And so I fall[...][A][N][CloseEyes][ClearFace][OpenMidRight][LoadCassius]
 [...]You say somethin'?[A][N]
 You seemed powerful.[A][N]

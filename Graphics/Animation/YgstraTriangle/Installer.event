@@ -1,0 +1,47 @@
+//joan is handaxe gen
+//sonia is lnc gen
+//tobias is axe gen
+
+PUSH
+
+//standing
+ORG 0xE5BC4
+#incbin "Sonia/Stand.dmp"
+ORG 0xE5f98
+#incbin "Tobias/Stand.dmp"
+ORG 0xE58A4
+#incbin "Joan/AltStand.dmp"
+
+//hit prep
+ORG 0xE6cc4
+#incbin "Sonia/HitPrep.dmp"
+ORG 0xE7400
+#incbin "Tobias/HitPrep.dmp"
+ORG 0xE678C
+#incbin "Joan/AltHitPrep.dmp"
+
+// editing which classes
+ORG 0x74fd8
+BYTE HalberdierF
+ORG 0x75044
+BYTE HalberdierF
+ORG 0x74fe0
+BYTE Warrior
+ORG 0x7504c
+BYTE Warrior
+ORG 0x74fb4
+BYTE HeroF
+ORG 0x74fba
+BYTE HalberdierF
+// unpromoted classes - might not need to touch?
+ORG 0x74fc8
+BYTE HeroF
+ORG 0x75034
+BYTE HeroF
+ORG 0x74fd0
+BYTE HeroF
+ORG 0x7503c
+BYTE HeroF
+
+POP
+

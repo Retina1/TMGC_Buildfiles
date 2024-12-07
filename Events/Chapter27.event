@@ -560,6 +560,18 @@ FIG2 Horatio Simone HoratioBlade
 Text(HoratioKillsSimone)
 KillPlayerUnit(Simone)
 SetSupport(Horatio,Simone,BPSupport,1)
+//enable ardent march if horatio has it and it isn't on
+	SVAL 1 ArdentMarchID
+	SVAL 2 Horatio
+	ASMC (ASMC_HasSkill|1)
+BNE 0x3 0xc 0x0
+CHECK_EVENTID ArdentMarchFlag
+BNE 0x3 0xc 0x0
+PlayEmotionEffect(Horatio,AngryEffect)
+SOUN 0x87
+STAL 0x32
+ENUT ArdentMarchFlag
+LABEL 0x3
 EndEvent
 
 C27KennethHilbertSupport:

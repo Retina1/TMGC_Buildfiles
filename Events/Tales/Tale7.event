@@ -31,7 +31,7 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
-//DefeatBoss(EndingScene)
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -50,19 +50,66 @@ ALIGN 4
 
 Tale7Units:
 //tale 7 cast - sonia, joan, tobias, mikey, carbon, jonas, damien, zacharias
-UNIT Sonia HalberdierF 0x0 Level(1,Ally,0) [32,13] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
-UNIT Joan HeroF 0x0 Level(1,Ally,0) [31,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Tobias Warrior 0x0 Level(1,Ally,0) [30,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Mikey Halberdier 0x0 Level(1,Ally,0) [29,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Carbon BowPal 0x0 Level(1,Ally,0) [28,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT SecretJonas WyvLord 0x0 Level(1,Ally,0) [27,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Damien Sniper 0x0 Level(1,Ally,0) [26,13] 0x0 0x0 0x0 0x0 [FrontierJustice] NoAI
-UNIT Leila Falco 0x0 Level(1,Ally,0) [25,13] 0x0 0x0 0x0 0x0 [Courante] NoAI
-UNIT Zacharias Warrior 0x0 Level(1,Ally,0) [24,13] 0x0 0x0 0x0 0x0 [0x0] NoAI
+//idea - irons only (mercy time)
+UNIT Sonia HalberdierF 0x0 Level(16,Ally,0) [9,12] 0x0 0x0 0x0 0x0 [IronLance,Javelin,Elixir] NoAI
+UNIT Joan HeroF 0x0 Level(15,Ally,0) [8,12] 0x0 0x0 0x0 0x0 [IronSword,HandAxe,Elixir] NoAI
+UNIT Tobias Warrior 0x0 Level(19,Ally,0) [10,12] 0x0 0x0 0x0 0x0 [IronAxe,IronBow,Elixir] NoAI
+UNIT Mikey Halberdier 0x0 Level(11,Ally,0) [7,12] 0x0 0x0 0x0 0x0 [IronLance,Elixir] NoAI
+UNIT Carbon BowPal 0x0 Level(12,Ally,0) [7,13] 0x0 0x0 0x0 0x0 [IronBow,IronSword] NoAI
+UNIT SecretJonas WyvLord 0x0 Level(20,Ally,0) [11,12] 0x0 0x0 0x0 0x0 [IronLance,Javelin,IronAxe] NoAI
+UNIT Damien Sniper 0x0 Level(15,Ally,0) [10,13] 0x0 0x0 0x0 0x0 [IronBow,Elixir] NoAI
+UNIT Leila Falco 0x0 Level(16,Ally,0) [11,13] 0x0 0x0 0x0 0x0 [IronSword,IronLance] NoAI
+UNIT Zacharias Warrior 0x0 Level(17,Ally,0) [9,13] 0x0 0x0 0x0 0x0 [IronAxe,HandAxe,IronBow] NoAI
 UNIT
 
 Tale7Enemies:
-UNIT Remnant DarkM 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT Remnant Sorc 0x0 Level(12,Enemy,1) [29,5] 0x0 0x0 0x0 0x0 [Nosferatu] AttackInRangeAI
+UNIT Remnant Halberdier 0x0 Level(12,Enemy,1) [26,0] 0x0 0x0 0x0 0x0 [BraveLance] AttackInRangeAI
+UNIT Remnant Hero 0x0 Level(12,Enemy,1) [17,4] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Remnant Sniper 0x0 Level(12,Enemy,1) [11,1] 0x0 0x0 0x0 0x0 [SilverBow] AttackInRangeAI
+UNIT Remnant Warrior 0x0 Level(12,Enemy,1) [2,6] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Remnant Hero 0x0 Level(12,Enemy,1) [3,7] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Remnant LncGen 0x0 Level(12,Enemy,1) [4,6] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Remnant Halberdier 0x0 Level(12,Enemy,1) [4,12] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT Remnant Sniper 0x0 Level(12,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [SilverBow] NoAI
+UNIT Remnant Hero 0x0 Level(12,Enemy,1) [3,11] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT Remnant Sage 0x0 Level(12,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [Fimbulvetr] NoAI
+UNIT Remnant Halberdier 0x0 Level(12,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Spear] NeverMoveAI
+UNIT Remnant Hero 0x0 Level(12,Enemy,1) [14,11] 0x0 0x0 0x0 0x0 [BraveAxe] NoAI
+UNIT Remnant Falco 0x0 Level(12,Enemy,1) [16,0] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
+UNIT Remnant Falco 0x0 Level(12,Enemy,1) [20,0] 0x0 0x0 0x0 0x0 [Shockstick] NoAI
+UNIT Remnant Sorc 0x0 Level(12,Enemy,1) [13,2] 0x0 0x0 0x0 0x0 [Fenrir] NoAI
+UNIT Remnant Sorc 0x0 Level(12,Enemy,1) [13,6] 0x0 0x0 0x0 0x0 [Nosferatu] NeverMoveAI
+UNIT Remnant SwdGen 0x0 Level(12,Enemy,1) [23,3] 0x0 0x0 0x0 0x0 [Lancesnapper,Rapier] GroupOneAI
+UNIT Remnant AxeGen 0x0 Level(12,Enemy,1) [23,5] 0x0 0x0 0x0 0x0 [Swordslayer,DevilAxe] GroupOneAI
+UNIT Remnant BowGen 0x0 Level(12,Enemy,1) [24,4] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow] GroupOneAI
+UNIT Remnant LncGen 0x0 Level(12,Enemy,1) [25,5] 0x0 0x0 0x0 0x0 [Axebuster,GildedLance] GroupOneAI
+UNIT Remnant LncGen 0x0 Level(12,Enemy,1) [28,13] 0x0 0x0 0x0 0x0 [BraveLance] GroupThreeAI
+UNIT Remnant Halberdier 0x0 Level(12,Enemy,1) [29,13] 0x0 0x0 0x0 0x0 [GildedLance] GroupThreeAI
+UNIT Remnant Sniper 0x0 Level(12,Enemy,1) [30,13] 0x0 0x0 0x0 0x0 [BraveBow] GroupThreeAI
+UNIT Remnant SwdPal 0x0 Level(12,Enemy,1) [31,13] 0x0 0x0 0x0 0x0 [BraveSword] GroupThreeAI
+UNIT Remnant Sniper 0x0 Level(12,Enemy,1) [27,8] 0x0 0x0 0x0 0x0 [Longbow,GildedBow] GroupFourAI
+UNIT Remnant Warrior 0x0 Level(12,Enemy,1) [26,9] 0x0 0x0 0x0 0x0 [DevilAxe] GroupFourAI
+UNIT Remnant Sage 0x0 Level(12,Enemy,1) [33,5] 0x0 0x0 0x0 0x0 [Galewind] GroupFiveAI
+UNIT Remnant Sage 0x0 Level(12,Enemy,1) [32,6] 0x0 0x0 0x0 0x0 [Fimbulvetr] GroupFiveAI
+UNIT Remnant Sage 0x0 Level(12,Enemy,1) [33,7] 0x0 0x0 0x0 0x0 [Calibur,ForceSpike] GroupFiveAI
+UNIT Remnant Hero 0x0 Level(12,Enemy,1) [30,0] 0x0 0x0 0x0 0x0 [BraveAxe] GroupSixAI
+UNIT Remnant Hero 0x0 Level(12,Enemy,1) [32,1] 0x0 0x0 0x0 0x0 [Tomahawk] GroupSixAI
+UNIT Remnant BowPal 0x0 Level(12,Enemy,1) [1,0] 0x0 0x0 0x0 0x0 [GildedBow] NoAI
+UNIT Remnant LncPal 0x0 Level(12,Enemy,1) [3,0] 0x0 0x0 0x0 0x0 [GildedLance] NoAI
+UNIT Remnant SwdPal 0x0 Level(12,Enemy,1) [2,1] 0x0 0x0 0x0 0x0 [GildedSword,Runesword] NoAI
+UNIT Remnant AxePal 0x0 Level(12,Enemy,1) [4,1] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
+UNIT Remnant Warrior 0x0 Level(12,Enemy,1) [18,11] 0x0 0x0 0x0 0x0 [Swordreaver] GroupTwoAI
+UNIT Remnant Hero 0x0 Level(12,Enemy,1) [19,10] 0x0 0x0 0x0 0x0 [BraveSword] GroupTwoAI
+UNIT Remnant Sage 0x0 Level(12,Enemy,1) [20,10] 0x0 0x0 0x0 0x0 [Galewind] GroupTwoAI
+UNIT Remnant Sorc 0x0 Level(12,Enemy,1) [20,12] 0x0 0x0 0x0 0x0 [Jormungandr] NeverMoveAI
+UNIT BigRemnant Sorc 0x0 Level(16,Enemy,1) [34,12] 0x0 0x0 0x0 0x0 [Freikugel,Hell] NeverMoveAI
+UNIT BigRemnant Halberdier 0x0 Level(16,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [Spear,BraveLance] NeverMoveAI
+UNIT BigRemnant Sage 0x0 Level(16,Enemy,1) [18,0] 0x0 0x0 0x0 0x0 [Bolting,Galewind] NeverMoveAI
+UNIT BigRemnant WyvLord 0x0 Level(16,Enemy,1) [32,0] 0x0 0x0 0x0 0x0 [Tomahawk,GildedLance] AttackInRangeAI
+UNIT BigRemnant SwMast 0x0 Level(16,Enemy,1) [21,5] 0x0 0x0 0x0 0x0 [BraveSword,FlameSword] AttackInRangeAI
+UNIT BigRemnant Hero 0x0 Level(16,Enemy,1) [8,7] 0x0 0x0 0x0 0x0 [Wyrmslayer,Lancesnapper] AttackInRangeAI
+UNIT BigRemnant AxePal 0x0 Level(16,Enemy,1) [35,6] 0x0 0x0 0x0 0x0 [BraveAxe] AttackInRangeAI
 UNIT
 
 ALIGN 4
@@ -74,14 +121,40 @@ LOAD1 0x1 Tale7Units
 ENUN
 LOAD1 0x1 Tale7Enemies
 ENUN
-//TaleSetUnitStat(Viridian,35,15,12,19,18,12,11,19)
-//TaleSetUnitWEXP(Viridian,0,0,0,121,121,0,0,0)
-//SetUnitSkills(Viridian,AcrobatID,0,0,0)
+TaleSetUnitStat(Sonia,61,32,22,36,32,30,25,23)
+TaleSetUnitWEXP(Sonia,0,251,0,0,0,0,0,0)
+SetUnitSkills(Sonia,TriangleAttackID,0,0,0)
+TaleSetUnitStat(Joan,66,32,16,34,32,23,23,21)
+TaleSetUnitWEXP(Joan,251,0,251,0,0,0,0,0)
+SetUnitSkills(Joan,TriangleAttackID,0,0,0)
+TaleSetUnitStat(Tobias,80,36,14,29,24,20,22,16)
+TaleSetUnitWEXP(Tobias,0,0,251,121,0,0,0,0)
+SetUnitSkills(Tobias,TriangleAttackID,0,0,0)
+TaleSetUnitStat(Mikey,64,33,8,31,28,10,25,14)
+TaleSetUnitWEXP(Mikey,0,251,0,0,0,0,0,0)
+SetUnitSkills(Mikey,LunaID,0,0,0)
+TaleSetUnitStat(Carbon,54,28,19,35,33,30,20,20)
+TaleSetUnitWEXP(Carbon,121,0,0,251,0,0,0,0)
+SetUnitSkills(Carbon,PerfectionistID,0,0,0)
+TaleSetUnitStat(SecretJonas,73,32,6,30,27,23,31,21)
+TaleSetUnitWEXP(SecretJonas,0,251,251,0,0,0,0,0)
+SetUnitSkills(SecretJonas,0,0,0,0)
+TaleSetUnitStat(Damien,62,31,10,36,30,17,16,12)
+TaleSetUnitWEXP(Damien,0,0,0,251,0,0,0,0)
+SetUnitSkills(Damien,LungeID,BowfaireID,0,0)
+TaleSetUnitStat(Zacharias,71,35,13,31,26,15,26,17)
+TaleSetUnitWEXP(Zacharias,0,0,251,181,0,0,0,0)
+SetUnitSkills(Zacharias,PursuitID,SwordbreakerID,0,0)
+TaleSetUnitStat(Leila,46,28,27,20,28,9,26,31)
+TaleSetUnitWEXP(Leila,251,121,0,0,0,0,0,0)
+SetUnitSkills(Leila,DauntID,0,0,0)
+CleanText(YgstraCG,Tale7Opening)
 ENDA
 
 EndingScene:
 ENUT Tale7DoneFlag
-MUSC 0x0
+MUSC S_Nightfall
+CleanTextNoMap(YgstraCG,Tale7Ending)
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)
 ENDA

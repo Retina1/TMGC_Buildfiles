@@ -178,6 +178,10 @@ ALIGN 4
 DesmondMug:
 #incbin "dmps/Desmond.dmp"
 setMugEntry(0x8,DesmondMug,3,5,3,3)
+ALIGN 4
+DesmondPromoMug:
+#incbin "dmps/DesmondPromo.dmp"
+setMugEntry(0x14e,DesmondPromoMug,2,5,3,3)
 
 ALIGN 4
 JosefMug:
@@ -393,6 +397,10 @@ ALIGN 4
 ArtemisMug:
 #incbin "dmps/Artemis.dmp"
 setMugEntry(0x2a,ArtemisMug,3,5,3,3)
+ALIGN 4
+ArtemisFlipMug:
+#incbin "dmps/ArtemisFlip.dmp"
+setMugEntry(0x14d,ArtemisFlipMug,3,5,3,3)
 
 ALIGN 4
 VladmirMug:
@@ -552,8 +560,8 @@ setMugEntry(0x43,JoanMug,4,6,4,4)
 ALIGN 4
 TobiasMug:
 #incbin "dmps/Tobias.dmp"
-setMugEntry(0x51,TobiasMug,4,4,4,2)
-setMugEntryExtend(0x51, TobiasMug,4,4,4,2, 0, 4,0,0)
+setMugEntry(0x51,TobiasMug,3,4,3,2)
+//setMugEntryExtend(0x51, TobiasMug,4,4,4,2, 0, 4,0,0)
 
 ALIGN 4
 IanMug:

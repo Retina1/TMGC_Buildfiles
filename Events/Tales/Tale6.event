@@ -163,6 +163,7 @@ LOAD1 0x1 Tale6Enemies
 ENUN
 LOAD1 0x1 Tale6Bosses
 ENUN
+ENUT PtolemyCrownFlag
 TaleSetUnitStat(Kenneth,65,14,36,30,28,18,32,32)
 TaleSetUnitWEXP(Kenneth,71,71,71,71,251,181,121,251)
 SetUnitSkills(Kenneth,PragmaticID,ConduitID,0,0)
@@ -180,7 +181,7 @@ TaleSetUnitStat(Ptolemy,47,25,24,36,30,30,17,30)
 TaleSetUnitWEXP(Ptolemy,0,0,0,251,121,0,0,0)
 SetUnitSkills(Ptolemy,StaffSavantID,CharismaID,0,0)
 TaleSetUnitStat(Josef,78,35,4,33,10,15,35,10)
-TaleSetUnitWEXP(Josef,181,251,0,181,0,0,0,0)
+TaleSetUnitWEXP(Josef,181,251,0,181,0,0,251,0)
 SetUnitSkills(Josef,PuissanceID,PressTurnID,ReadyAimID,0)
 TaleSetUnitStat(Emile,37,5,35,35,17,21,9,27)
 TaleSetUnitWEXP(Emile,0,0,0,0,251,251,0,0)

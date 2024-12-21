@@ -564,7 +564,7 @@ SetSupport(Horatio,Simone,BPSupport,1)
 	SVAL 1 ArdentMarchID
 	SVAL 2 Horatio
 	ASMC (ASMC_HasSkill|1)
-BNE 0x3 0xc 0x0
+BEQ 0x3 0xc 0x0
 CHECK_EVENTID ArdentMarchFlag
 BNE 0x3 0xc 0x0
 PlayEmotionEffect(Horatio,AngryEffect)

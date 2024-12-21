@@ -82,16 +82,26 @@ void RefreshItemsASMC(Proc* proc) {
 		}
 	}
 	else {
-		for(int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
-			int j = 0;
-			while(PerChapterItemsList[j] != 0) {
-				if(PerChapterItemsList[j] == GetItemIndex(*convoy)) {
-					*convoy = MakeNewItem(GetItemIndex(*convoy));
+		if (!CheckEventId_(0x78)){
+			for(int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
+				int j = 0;
+				while(PerChapterItemsList[j] != 0) {
+					if(PerChapterItemsList[j] == GetItemIndex(*convoy)) {
+						*convoy = MakeNewItem(GetItemIndex(*convoy));
+					}
+					j++;
 				}
-				j++;
-			}
-			convoy++;
-		}		
+				convoy++;
+			}		
+		}
+		else {
+			for(int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
+				if (GetItemType(GetItemIndex(*convoy)) != 0x9){
+						*convoy = MakeNewItem(GetItemIndex(*convoy));
+				}
+				convoy++;
+			}	
+		}
 	}
 }
 

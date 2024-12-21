@@ -668,24 +668,34 @@ MUSC S_NotFarEnough
 //elcorian stuff
 	CHECK_EVENTID 0xd
 	BEQ 0x1 0xc 0x0
+	CHECK_ALIVE Kenneth
+	BEQ 0x6 0xc 0x0
 		CleanTextNoMap(HallCG,C28Ending1Alt)
 		CleanTextNoMap(HallCG,C28EndingKenneth)//kenneth version of join
 		GOTO 0x4
 	LABEL 0x1
 	CHECK_EVENTID 0xe
 	BEQ 0x2 0xc 0x0
+	CHECK_ALIVE Emile
+	BEQ 0x6 0xc 0x0
 		CleanTextNoMap(HallCG,C28Ending1Alt)
 		CleanTextNoMap(HallCG,C28EndingEmile)//emile version of join
 		GOTO 0x4
 	LABEL 0x2
 	CHECK_EVENTID 0xf
 	BEQ 0x3 0xc 0x0
+	CHECK_ALIVE Simone
+	BEQ 0x6 0xc 0x0
 		CleanTextNoMap(HallCG,C28Ending1Alt)
 		CleanTextNoMap(HallCG,C28EndingSimone)//simone version of join
 		GOTO 0x4
 	LABEL 0x4
 		LOAD1 0x1 C28ElcorianJoin
 		TurnAlly(Elcorian)
+		GOTO 0x5
+	LABEL 0x6
+		CleanTextNoMap(HallCG,C28Ending1Alt)
+		CleanTextNoMap(HallCG,C28EndingDeadRecruiter)
 		GOTO 0x5
 	LABEL 0x3
 		CleanTextNoMap(HallCG,C28Ending1)

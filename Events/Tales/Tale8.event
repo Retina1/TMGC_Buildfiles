@@ -25,6 +25,8 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+//universal talk convo where the other unit says "wait who're you" and olsen just says "quiet, you're disrupting my groove" and doesn't elaborate
+//eliza petting beryl event (maybe different event based on who visits ruins)
 END_MAIN
 
 LocationBasedEvents:
@@ -60,7 +62,35 @@ UNIT Olsen AssassF 0x0 Level(5,Ally,0) [3,15] 0x0 0x0 0x0 0x0 [Shamshir,Greatbow
 UNIT
 
 Tale8Enemies:
-UNIT Mevion DarkM 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+UNIT Bandit DarkM 0x0 Level(15,Enemy,1) [9,0] 0x0 0x0 0x0 0x0 [Jormungandr] NeverMoveAI
+UNIT Mevion Archer 0x0 Level(15,Enemy,1) [7,5] 0x0 0x0 0x0 0x0 [Longbow] NoAI
+UNIT Mevion Fighter 0x0 Level(15,Enemy,1) [8,8] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Mevion Merc 0x0 Level(15,Enemy,1) [12,6] 0x0 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Bandit Deserter 0x0 Level(15,Enemy,1) [1,5] 0x0 0x0 0x0 0x0 [Javelin,SilverLance] GroupOneAI
+UNIT Bandit Hunter 0x0 Level(15,Enemy,1) [2,6] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
+UNIT Bandit Deserter 0x0 Level(15,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [Axereaver] GroupOneAI
+UNIT Mevion Warrior 0x0 Level(1,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Bandit DarkM 0x0 Level(15,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [Nosferatu] NoAI
+UNIT Mevion AxeWyv 0x0 Level(15,Enemy,1) [15,1] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
+UNIT Mevion LncWyv 0x0 Level(15,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Mevion Merc 0x0 Level(15,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [Rapier] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [4,10] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [11,2] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT
+
+Tale8Greens:
+UNIT Citizen CitizenM 0x0 Level(11,Ally,0) [2,2] 0x0 0x0 0x1 REDA2R3 [0x0] NoAI
+UNIT Citizen2 CitizenM 0x0 Level(8,Ally,0) [2,2] 0x0 0x0 0x1 REDA2R3 [0x0] NoAI
+UNIT Citizen3 CitizenF 0x0 Level(13,Ally,0) [2,2] 0x0 0x0 0x1 REDA2R3 [0x0] NoAI
+UNIT Dirk CitizenM 0x0 Level(18,Ally,0) [2,2] 0x0 0x0 0x1 REDA2R3 [0x0] NoAI
+UNIT Eliza CitizenF 0x0 Level(7,Ally,0) [2,2] 0x0 0x0 0x1 REDA2R3 [0x0] NoAI
 UNIT
 
 ALIGN 4
@@ -72,9 +102,26 @@ LOAD1 0x1 Tale8Units
 ENUN
 LOAD1 0x1 Tale8Enemies
 ENUN
-TaleSetUnitStat(Viridian,35,15,12,19,18,12,11,19)
+LOAD1 0x1 Tale8Greens
+ENUN
+TaleSetUnitStat(Viridian,35,15,12,19,19,12,11,19)
 TaleSetUnitWEXP(Viridian,0,0,0,121,121,0,0,0)
 SetUnitSkills(Viridian,AcrobatID,0,0,0)
+TaleSetUnitStat(Freddric,46,20,1,20,20,14,17,5)
+TaleSetUnitWEXP(Freddric,0,121,81,0,0,0,0,0)
+SetUnitSkills(Freddric,RenewalID,0,0,0)
+TaleSetUnitStat(Chartreuse,19,3,30,18,30,30,4,10)
+TaleSetUnitWEXP(Chartreuse,0,0,0,0,0,0,0,0)
+SetUnitSkills(Chartreuse,CharmID,0,0,0)
+TaleSetUnitStat(Dean,43,20,1,17,13,10,14,1)
+TaleSetUnitWEXP(Dean,0,0,181,0,0,0,0,0)
+SetUnitSkills(Dean,FamilyManID,0,0,0)
+TaleSetUnitStat(SecretClarque,50,18,12,18,18,12,12,12)
+TaleSetUnitWEXP(SecretClarque,181,0,0,181,0,0,0,0)
+SetUnitSkills(SecretClarque,SureShotID,0,0,0)
+TaleSetUnitStat(Olsen,49,21,17,30,29,25,15,14)
+TaleSetUnitWEXP(Olsen,181,0,0,181,0,0,0,0)
+SetUnitSkills(Olsen,AssassinateID,0,0,0)
 ENDA
 
 EndingScene:

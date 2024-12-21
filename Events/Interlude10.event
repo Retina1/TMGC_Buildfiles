@@ -647,7 +647,19 @@ I10Yuyu:
 			ENUF 0x27
 			GOTO 0x2
 		LABEL 0x3 //no B+ rank
-		Text(I10YuyuTalk)//girls don't smooch		
+		Text(I10YuyuTalk)//girls don't smooch	
+		GetSupportLevel(Blair,Arin)
+		SVAL 0x2 0x4		
+		BNE 0x2 0x2 0x1
+		GetSupportLevel(Blair,Yuyu)
+		SVAL 0x2 0x3		
+		BNE 0x2 0x2 0x1
+		GetSupportLevel(Arin,Yuyu)
+		SVAL 0x2 0x2		
+		BNE 0x2 0x2 0x1
+		SystemText(I10YuyuNotice)
+		IfNoSelectedGoto(0x2)
+		ENUT TriadFlag
 	LABEL 0x2
 	EndEvent
 

@@ -243,6 +243,7 @@ ConversationEntry(EEICarbonAlt,Epilogue_CarbonAercolynAlt,HallCG,AfterTheEnd,S_C
 ConversationEntry(EEIToddsworth,Epilogue_ToddsworthAercolyn,HallCG,AfterTheEnd,S_CircleOfTheMoon)
 ConversationEntry(EEIEstelle,Epilogue_EstelleAercolyn,HallCG,AfterTheEnd,S_CircleOfTheMoon)
 ConversationEntry(EEIYuyu,Epilogue_YuyuAercolyn,HallCG,AfterTheEnd,S_CircleOfTheMoon)
+ConversationEntry(EEIYuyuAlt,Epilogue_YuyuAercolynAlt,HallCG,AfterTheEnd,S_CircleOfTheMoon)
 ConversationEntry(EEIAvan,Epilogue_AvanAercolyn,HallCG,AfterTheEnd,S_CircleOfTheMoon)
 ConversationEntry(EEIArin,Epilogue_ArinAercolyn,HallCG,AfterTheEnd,S_CircleOfTheMoon)
 ConversationEntry(EEILArin,Epilogue_ArinAercolynLover,HallCG,AfterTheEnd,S_CircleOfTheMoon)
@@ -1806,6 +1807,7 @@ ConversationEntry(EC28End1Alt,C28Ending1Alt,HallCG,Chapter28,S_NotFarEnough)
 ConversationEntry(EC28EndKenneth,C28EndingKenneth,HallCG,Chapter28,S_NotFarEnough)
 ConversationEntry(EC28EndEmile,C28EndingEmile,HallCG,Chapter28,S_NotFarEnough)
 ConversationEntry(EC28EndSimone,C28EndingSimone,HallCG,Chapter28,S_NotFarEnough)
+ConversationEntry(EC28EndDead,C28EndingDeadRecruiter,HallCG,Chapter28,S_NotFarEnough)
 ConversationEntry(EC28End2,C28Ending2,HallCG,Chapter28,S_NotFarEnough)
 ConversationEntry(EC28End3,C28Ending3,HallCG,Chapter28)
 ConversationEntryTerminator
@@ -2935,6 +2937,7 @@ CGViewerEvents:
 	CGViewerEntry(EMap2Title,EMap2Viewer)
 	CGViewerEntry(EMap2TextTitle,EMap2TextViewer)
 	CGViewerEntry(ECreditsElcorianTitle,ECreditsElcorianViewer)
+	CGViewerEntry(ECreditsBlairinTitle,ECreditsBlairinViewer)
 	CGViewerEntry(EsadblirTitle,EsadblirViewer)
 	CGViewerEntry(EblirTitle,EblirViewer)
 ConversationEntryTerminator
@@ -2958,6 +2961,9 @@ CGViewer(Map2WordsCG)
 ALIGN 4
 ECreditsElcorianViewer:
 CGViewer(CreditsElcorianCG)
+ALIGN 4
+ECreditsBlairinViewer:
+CGViewer(CreditsBlairinCG)
 ALIGN 4
 EsadblirViewer:
 CGViewer(sadblirCG)

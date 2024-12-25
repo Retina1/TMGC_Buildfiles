@@ -1,4 +1,38 @@
 //fred wyvern named beryl (mister president a second beryl has hit the tmgc rom)
+##Tale8ViridianRuins
+[OpenMidRight][LoadViridian]
+ruins scene[A][X]
+##Tale8FreddricRuins
+[OpenMidRight][LoadFreddric]
+ruins scene[A][X]
+##Tale8DeanRuins
+[OpenMidRight][LoadDean]
+ruins scene[A][X]
+##Tale8ChartreuseRuins
+[OpenMidRight][LoadChartreuse]
+ruins scene[A][X]
+##Tale8ClarqueRuins
+[OpenMidRight][LoadClarque]
+ruins scene[A][X]
+##Tale8OlsenRuins
+[OpenMidRight][LoadOlsen]
+ruins scene[A][X]
+
+##Tale8Opening
+[OpenRight][LoadViridian][OpenFarRight][LoadFreddric]
+text[A][N][OpenMidLeft][LoadClarque]
+text[A][X]
+
+##Tale8Ending
+[OpenRight][LoadViridian][OpenFarRight][LoadFreddric][OpenMidLeft][LoadClarque]
+text[A][X]
+##Tale8Ending2
+[OpenRight][LoadViridian][OpenFarRight][LoadFreddric][OpenMidLeft][LoadClarque]
+blender explode[A][X]
+##Tale8Ending3
+[OpenRight][LoadViridian][OpenFarRight][LoadFreddric][OpenMidLeft][LoadClarque]
+sad[A][X]
+
 ##Desc_ViridianPG
 A young mercenary looking to[N]
 make their mark on Ulmaron.[X]
@@ -24,6 +58,12 @@ captive by banditry.[X]
 A young Dalstian man, held[N]
 captive by banditry.[X]
 
+##Tale8Wincon
+To win, get all five civilians[N]
+to the lower right island safely.[A][N]
+Any of their deaths will result[N]
+in a failure. Get out quick.[A][X]
+
 ##Tale8ViridianDeath
 [OpenMidRight][LoadViridian]
 Clarque[...] Fred[...] I'm[...][N]
@@ -41,7 +81,7 @@ Something easy[...][A][CloseEyes][X]
 [OpenMidRight][LoadChartreuse]
 Vir[...]idian[...][A][CloseEyes][X]
 ##Tale8ClarqueDeath
-[OpenMidRight][LoadClarque]
+[OpenMidRight][LoadClarque][ToggleSmile]
 Viridian[...] You'll[...] be[N]
 fine[...] on your own[...][A][CloseEyes][X]
 ##Tale8OlsenDeath
@@ -56,3 +96,8 @@ I'm[...][A][CloseEyes][X]
 [OpenMidRight][LoadDirk]
 Eliza[...] I thought[...][N]
 we'd be[...] free[...][A][CloseEyes][X]
+##Tale8CitizenDeath
+[OpenMidRight][LoadViridian]
+No! This[...] This wasn't[N]
+supposed to happen[...][A][N][CloseEyes]
+I've[...] failed you.[A][X]

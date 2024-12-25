@@ -451,7 +451,15 @@ C7Mid1:
 HouseEvent(Ch7_Mid1House,HouseCG)
 
 C7Mid2:
-HouseEvent(Ch7_Mid2House,House2CG)
+MUSI; SMOV 2 House2CG
+CHECK_ACTIVEID Emile
+BEQ 0x1 0xc 0x0
+SMOV 3 Ch7_Mid2House;
+GOTO 0x2
+LABEL 0x1
+SMOV 3 Ch7_Mid2HouseEmile;
+LABEL 0x2
+CALL $9EE310; MUNO; EVBIT_T 0x7; ENDA
 
 C7South:
 HouseEvent(Ch7_SouthHouse,HouseCG)

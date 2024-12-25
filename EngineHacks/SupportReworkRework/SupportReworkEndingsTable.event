@@ -35,6 +35,7 @@
 	// The "flag" and "usability" entries let you do fancy things!
 	ALIGN 4
 	gCharacterEndings:
+		SoloEnding(Yuyu,YuyuEndingAlt,TriadFlag)
 		SoloEnding(Blair,BlairPolyEndingAlt,PolyboatFlag)
 		SoloEnding(Arin,ArinPolyEndingAlt,PolyboatFlag)
 		SoloEnding(Natasia,NatasiaPolyEndingAlt,PolyboatFlag)
@@ -157,7 +158,6 @@
 		PairedEnding(Zeke,Cassius,ZekeCassiusEnding)
 		SoloEnding(Zeke,ZekeSoloEnding)
 		SoloEnding(Arin,ArinSoloEnding)
-		SoloEnding(Yuyu,YuyuEndingAlt,TriadFlag)
 		PairedEnding(Blair,Arin,BlairArinEndingAlt,TriadFlag)
 		PairedEnding(Blair,Arin,BlairArinEnding)
 		PairedEnding(Blair,Natasia,BlairNatasiaEndingAlt,NatasiaBechamelFlag)

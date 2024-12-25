@@ -137,7 +137,7 @@ EpilogueBlairLoverText(Estelle,BlairEstelleFlag,Epilogue_EstelleAercolynLover,0x
 EpilogueBlairLoverText(Yuyu,BlairYuyuFlag,Epilogue_YuyuAercolynLover,0x32)
 EpilogueBlairLoverText(Avan,BlairAvanFlag,Epilogue_AvanAercolynLover,0x33)
 EpilogueBlairLoverText(Natasia,BlairNatasiaFlag,Epilogue_NatasiaAercolynLover,0x34)
-EpilogueFlagUnitText(Yuyu,TriadFlag,Epilogue_YuyuAercolynAlt,0x22)
+EpilogueFlagUnitText(Yuyu,TriadFlag,Epilogue_YuyuAercolynAlt,0x222)
 EpilogueBlairLoverText(Arin,BlairArinFlag,Epilogue_ArinAercolynLover,0x35)
 LABEL 0x92
 STAL 120
@@ -889,7 +889,7 @@ LABEL 0x559
 
 GetSupportLevel(Arin,Yuyu)
 SVAL 0x2 0x4		
-BNE 0x888 0x2 0x1
+BEQ 0x888 0x2 0x1
 ENUF TriadFlag
 LABEL 0x888
 EndEvent

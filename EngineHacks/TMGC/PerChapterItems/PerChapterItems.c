@@ -74,7 +74,7 @@ void RefreshItemsASMC(Proc* proc) {
 	
 	u16 * convoy = GetConvoyItemArray();
 	if (target != 0) {
-		for (int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
+		for (int i = 0; (i < 150) || ((i < ConvoySize_Link) && (*convoy)); i++) {
 			if (target == GetItemIndex(*convoy)) {
 				*convoy = MakeNewItem(GetItemIndex(*convoy));
 			}
@@ -83,7 +83,7 @@ void RefreshItemsASMC(Proc* proc) {
 	}
 	else {
 		if (!CheckEventId_(0x78)){
-			for(int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
+			for(int i = 0; (i < 150) || ((i < ConvoySize_Link) && (*convoy)); i++) {
 				int j = 0;
 				while(PerChapterItemsList[j] != 0) {
 					if(PerChapterItemsList[j] == GetItemIndex(*convoy)) {
@@ -95,7 +95,7 @@ void RefreshItemsASMC(Proc* proc) {
 			}		
 		}
 		else {
-			for(int i = 0; (i < ConvoySize_Link) && (*convoy); i++) {
+			for(int i = 0; (i < 150) || ((i < ConvoySize_Link) && (*convoy)); i++) {
 				if (GetItemType(GetItemIndex(*convoy)) != 0x9){
 						*convoy = MakeNewItem(GetItemIndex(*convoy));
 				}
@@ -203,33 +203,6 @@ void DrawItemStatScreenLine(struct TextHandle* text, int item, int nameColor, u1
     DrawUiNumberOrDoubleDashes(mapOut + 14, color, GetItemMaxUses(item));
 
     Text_Display(text, mapOut + 2);
-
-    DrawIcon(mapOut, GetItemIconId(item), 0x4000);
-}
-
-void DrawItemMenuLine(struct TextHandle* text, int item, s8 isUsable, u16* mapOut) {
-    Text_SetParameters(text, 0, (isUsable ? TEXT_COLOR_SYSTEM_WHITE : TEXT_COLOR_SYSTEM_GRAY));
-    Text_DrawString(text, GetItemName(item));
-
-    Text_Display(text, mapOut + 2);
-	
-	int color = TEXT_COLOR_SYSTEM_BLUE;
-	if  (!CheckEventId_(0x78)){
-		int i = 0;
-		while(PerChapterItemsList[i] != 0) {
-			if (GetItemIndex(item) == PerChapterItemsList[i]) {
-				color = TEXT_COLOR_SYSTEM_GOLD;
-			}
-			i++;
-		}
-	}
-	else {
-		if (GetItemType(item) != 0x9){
-			color = TEXT_COLOR_SYSTEM_GOLD;
-		}
-	}
-
-    DrawUiNumberOrDoubleDashes(mapOut + 11, isUsable ? color : TEXT_COLOR_SYSTEM_GRAY, GetItemUses(item));
 
     DrawIcon(mapOut, GetItemIconId(item), 0x4000);
 }

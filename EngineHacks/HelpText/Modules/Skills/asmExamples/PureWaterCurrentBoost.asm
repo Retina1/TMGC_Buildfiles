@@ -8,7 +8,7 @@
 
 		PureWaterCurrentBoost:
 		mov r1, #0x31
-		ldrsh r0, [r0, r1] @barrier/torch byte
+		ldrb r0, [r0, r1] @barrier/torch byte
 		lsr r0,r0,#0x4
 		bx		r14
 		

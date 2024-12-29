@@ -20,15 +20,6 @@ int GetAutoleveledStatIncrease(int growth, int levelCount)
 	multiplicativeDenominator = gDivRAMAddress;
 	additiveBonus = gAddRAMAddress;
 	}
-	if (CheckEventId_(0xAD))
-	{
-	multiplicativeNumerator = 3;
-	multiplicativeDenominator = 2;
-	}
-	if (CheckEventId_(0xAC))
-	{
-	additiveBonus = 30;
-	}
 	int result = ((((growth + additiveBonus) * levelCount * multiplicativeNumerator/multiplicativeDenominator) + 50) /100);
 	if (result < 0)
 	{

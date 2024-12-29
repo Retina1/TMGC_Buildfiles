@@ -247,11 +247,15 @@ IfNoSelectedGoto(0x99b)
 		SVAL 0x1 0x4
 		BNE 0x6005 0xc 0x1
 				ENUF AllRefreshingFlag
+				ENUF BalancedRepairFlag
 						SystemText(AllRefreshingPrompt)
 							IfNoSelectedGoto(0x556)
 							ENUT AllRefreshingFlag
-							LABEL 0x556
-							GOTO 0x6000
+							SystemText(BalancedRefreshingPrompt)
+								IfNoSelectedGoto(0x556)
+								ENUT BalancedRepairFlag
+								LABEL 0x556
+								GOTO 0x6000
 		LABEL 0x6005
 		SVAL 0x1 0x5
 		BNE 0x99b 0xc 0x1 

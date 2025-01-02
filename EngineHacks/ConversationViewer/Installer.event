@@ -2939,6 +2939,7 @@ CGViewerEvents:
 	CGViewerEntry(EMap2TextTitle,EMap2TextViewer)
 	CGViewerEntry(ECreditsElcorianTitle,ECreditsElcorianViewer)
 	CGViewerEntry(ECreditsBlairinTitle,ECreditsBlairinViewer)
+	CGViewerEntry(ECreditsLazarusTitle,ECreditsLazarusViewer)
 	CGViewerEntry(EsadblirTitle,EsadblirViewer)
 	CGViewerEntry(EblirTitle,EblirViewer)
 ConversationEntryTerminator
@@ -2965,6 +2966,9 @@ CGViewer(CreditsElcorianCG)
 ALIGN 4
 ECreditsBlairinViewer:
 CGViewer(CreditsBlairinCG)
+ALIGN 4
+ECreditsLazarusViewer:
+CGViewer(CreditsLazarusCG)
 ALIGN 4
 EsadblirViewer:
 CGViewer(sadblirCG)

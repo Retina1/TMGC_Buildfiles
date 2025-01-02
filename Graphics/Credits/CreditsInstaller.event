@@ -24,8 +24,8 @@ PUSH
     POIN CreditSlide2_Struct
     POIN CreditSlide2_Struct
     ORG $206E8C
-    POIN CreditSlide1_Struct
-    POIN CreditSlide1_Struct
+    POIN CreditSlide3_Struct
+    POIN CreditSlide3_Struct
     ORG $206EB4
     POIN CreditSlide1_Struct
     POIN CreditSlide1_Struct
@@ -54,9 +54,9 @@ PUSH
     POIN CreditSlide2_Pal
     POIN CreditSlide2_TSA
     //entry 2 (knoll and the stone)
-    POIN CreditSlide1_Img
-    POIN CreditSlide1_Pal
-    POIN CreditSlide1_TSA
+    POIN CreditSlide3_Img
+    POIN CreditSlide3_Pal
+    POIN CreditSlide3_TSA
 	
     POIN CreditSlide1_Img
     POIN CreditSlide1_Pal
@@ -101,6 +101,12 @@ POIN CreditSlide2_Img
 POIN CreditSlide2_TSA
 POIN CreditSlide2_Pal
 WORD $78
+ALIGN 4
+CreditSlide3_Struct:
+POIN CreditSlide3_Img
+POIN CreditSlide3_TSA
+POIN CreditSlide3_Pal
+WORD $78
 
 
 //NOTE: these TSAs are in reverse vertical order, 60 bytes (30 4BPP tiles) per row. The two bytes in front of the map are [width-1, height-1]
@@ -124,6 +130,16 @@ ALIGN 4
 CreditSlide2_TSA:
 //BYTE $1D $13
 #incbin "CreditsCG2.tsa.dmp"
+ALIGN 4
+CreditSlide3_Img:
+#incbin "CreditsCG3.dmp"
+ALIGN 4
+CreditSlide3_Pal:
+#incbin "CreditsCG3.pal.dmp"
+ALIGN 4
+CreditSlide3_TSA:
+//BYTE $1D $13
+#incbin "CreditsCG3.tsa.dmp"
 
 ALIGN 4
 

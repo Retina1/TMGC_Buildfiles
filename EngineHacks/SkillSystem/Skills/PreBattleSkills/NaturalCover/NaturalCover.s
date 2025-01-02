@@ -16,13 +16,13 @@ cmp r0, #0
 beq End
 
 mov r1, #0x31
-ldrsh r2, [r4, r1] @barrier/torch byte
+ldrh r2, [r4, r1] @barrier/torch byte
 lsr r2,r2,#0x4
 cmp r2,#0
 ble End
 
 mov r1, #0x5e
-ldrsh r0, [r4, r1] @as
+ldrh r0, [r4, r1] @as
 add r0, r2
 strh r0, [r4,r1]
 

@@ -28,6 +28,11 @@ strb r1, [r2] // zero it back out
 b HandleDrop
 
 GetMaxDurability:
+mov r3,r0
+lsl r3,r3,#24
+lsr r3,r3,#24
+cmp r3,#0xbc
+beq HandleDrop
 ldr r1,DroppedItemDurabilityOption
 cmp r1,#1
 beq DoNotKeepDurability

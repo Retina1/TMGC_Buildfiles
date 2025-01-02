@@ -453,7 +453,7 @@ HouseEvent(Ch7_Mid1House,HouseCG)
 C7Mid2:
 MUSI; SMOV 2 House2CG
 CHECK_ACTIVEID Emile
-BEQ 0x1 0xc 0x0
+BNE 0x1 0xc 0x0
 SMOV 3 Ch7_Mid2House;
 GOTO 0x2
 LABEL 0x1

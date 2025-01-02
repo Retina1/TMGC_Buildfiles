@@ -99,6 +99,7 @@ SetColorsBackground(MapWordsCG,MapWordsImage,MapWordsPalette)
 //copies of credits stuff
 SetColorsBackground(CreditsElcorianCG,CreditsCG1Image,CreditsCG1Palette)
 SetColorsBackground(CreditsBlairinCG,CreditsCG2Image,CreditsCG2Palette)
+SetColorsBackground(CreditsLazarusCG,CreditsCG3Image,CreditsCG3Palette)
 
 //normals
 SetConvoBackground(BlankCG,BlankImage,BlankTSA,BlankPalette)
@@ -161,6 +162,12 @@ CreditsCG2Image:
 ALIGN 4
 CreditsCG2Palette:
 #incbin "MoreColors/gfx/BG/224CreditsCG2Pal.dmp"
+ALIGN 4
+CreditsCG3Image:
+#incbin "MoreColors/gfx/BG/224CreditsCG3.dmp"
+ALIGN 4
+CreditsCG3Palette:
+#incbin "MoreColors/gfx/BG/224CreditsCG3Pal.dmp"
 
 
 

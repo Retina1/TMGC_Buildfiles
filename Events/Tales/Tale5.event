@@ -38,7 +38,7 @@ AreaEvent(0x9,Tale5Seize2,15,1,15,1)
 AreaEvent(0xa,Tale5Seize3,26,0,26,0)
 AreaEvent(0xb,Tale5Seize4,32,10,32,10)
 AreaEvent(0xc,Tale5Seize5,8,15,8,15)
-AFEV 0x3 Tale5EndChecker 0x8
+AFEV 0x0 Tale5EndChecker 0x8
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -160,6 +160,7 @@ CHECK_EVENTID 0xb
 BEQ 0x1 0xc 0x0
 CHECK_EVENTID 0xc
 BEQ 0x1 0xc 0x0
+ENUT 0x3
 Text(Tale5SeizedPointFinal)
 CALL EndingScene
 LABEL 0x1
@@ -226,7 +227,7 @@ CleanText(BoatCG,Tale5Opening2)
 SystemText(Tale5RefreshExplanation)
 EndEvent
 
-#define RefreshUnitAt(xcoord,ycoord) "OffAllUnitState(Any, Acted, Any, Any, Any, Range(xcoord,ycoord,xcoord,ycoord), Any)"
+#define RefreshUnitAt(xcoord,ycoord) "OffAllUnitState(Any, Acted, Any, Any, Any, Range(xcoord,ycoord,xcoord,ycoord), Any); OffAllUnitState(AnyUnit, Cantoing, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)"
 
 Tale5Seize1:
 CHECK_ALLEGIANCE 0xFFFF

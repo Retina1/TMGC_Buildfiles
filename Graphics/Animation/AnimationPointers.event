@@ -101,6 +101,7 @@
 {
 #include "CharacterSpecific\ElizaP\Magic Installer.event"
 #include "CharacterSpecific\ElizaP\Staff Installer.event"
+#include "CharacterSpecific\ElizaP\Unarmed Installer.event"
 }
 {
 #include "CharacterSpecific\DamienU\Bow Installer.event"
@@ -369,9 +370,9 @@
 #include "SageF(Levin64)\Staff Installer.event"
 }
 {
-#include "BishopM(Eldritch)\Magic Installer.event"
-#include "BishopM(Eldritch)\Staff Installer.event"
-#include "BishopM(Eldritch)\Unarmed Installer.event"
+#include "BishopM(Levin64)\Magic Installer.event"
+#include "BishopM(Levin64)\Staff Installer.event"
+#include "BishopM(Levin64)\Unarmed Installer.event"
 }
 {
 #include "CharacterSpecific\Vladmir\Magic Installer.event"
@@ -588,8 +589,11 @@ EndAnim
 
 ALIGN 4
 ElizaPAnims:
-MagicAnim(0x10e)
+AnimaAnim(0x10e)
+LightAnim(0x10e)
+DarkAnim(0x10e)
 StaffAnim(0x10f)
+UnarmedAnim(0x11d)
 EndAnim
 
 ALIGN 4

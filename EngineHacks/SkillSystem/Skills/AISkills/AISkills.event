@@ -4,6 +4,12 @@ PUSH
 ORG $3DF78
 jumpToHack(Provoke)
 
+//fix to make provoke 100% consistent
+PUSH
+ORG 0x3DF40
+SHORT 0x2132 0xE018
+POP
+
 //LungeAI
 ORG $3A094
 jumpToHack(LungeAI)

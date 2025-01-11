@@ -76,11 +76,11 @@ ALIGN 4
 
 Tale4Units:
 UNIT Cid Berserker 0x0 Level(1,Ally,0) [19,3] 0x0 0x0 0x0 0x0 [Frypan,SilverAxe,HandAxe,Elixir] NoAI
-UNIT Agnes MercF 0x0 Level(8,Ally,0) [18,4] 0x0 0x0 0x0 0x0 [LevinSword,Zanbato,Armorslayer,Vulnerary] NoAI
-UNIT CidPirate1 Pirate 0x0 Level(9,Ally,0) [20,4] 0x0 0x0 0x0 0x0 [SilverAxe,Dracoaxe,Vulnerary,SecretBook] NoAI
-UNIT CidPirate2 Pirate 0x0 Level(9,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [Hammer,HandAxe,Vulnerary,SecretBook] NoAI
-UNIT CidPirate3 Pirate 0x0 Level(9,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Halberd,HandAxe,Vulnerary,SecretBook] NoAI
-UNIT CidPirate4 Pirate 0x0 Level(9,Ally,0) [5,11] 0x0 0x0 0x0 0x0 [Swordslayer,SteelAxe,Vulnerary,SecretBook] NoAI
+UNIT Agnes MercF 0x0 Level(8,Ally,0) [18,4] 0x0 0x0 0x0 0x0 [LevinSword,Zanbato,Armorslayer,Elixir] NoAI
+UNIT CidPirate1 Pirate 0x0 Level(9,Ally,0) [20,4] 0x0 0x0 0x0 0x0 [SilverAxe,Dracoaxe,Elixir,SecretBook] NoAI
+UNIT CidPirate2 Pirate 0x0 Level(9,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [SilverAxe,HandAxe,Elixir,SecretBook] NoAI
+UNIT CidPirate3 Pirate 0x0 Level(9,Ally,0) [15,16] 0x0 0x0 0x0 0x0 [Halberd,HandAxe,Elixir,SecretBook] NoAI
+UNIT CidPirate4 Pirate 0x0 Level(9,Ally,0) [5,11] 0x0 0x0 0x0 0x0 [Swordslayer,SteelAxe,Elixir,SecretBook] NoAI
 UNIT
 
 Tale4Enemies:
@@ -135,28 +135,28 @@ UNIT
 Tale4Turn4Spawns2:
 //east and west
 UNIT Loile Bruiser 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [SteelSword] NoAI
-UNIT Loile LncCav 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [Axereaver] NoAI
-UNIT Loile DarkM 0x0 Level(8,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [Flux] NoAI
+//UNIT Loile LncCav 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [Axereaver] NoAI
+//UNIT Loile DarkM 0x0 Level(8,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [Flux] NoAI
 UNIT Loile AxeCav 0x0 Level(8,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [SteelAxe,HandAxe] NoAI
 UNIT
 
 Tale4Turn5Spawns:
 //south
 UNIT Loile SwdCav 0x0 Level(9,Enemy,1) [0,23] 0x0 0x0 0x1 REDA1R23 [SteelSword] NoAI
-UNIT Loile LncWyv 0x0 Level(8,Enemy,1) [1,23] 0x0 0x0 0x1 REDA1R23 [SteelLance] NoAI
+//UNIT Loile LncWyv 0x0 Level(8,Enemy,1) [1,23] 0x0 0x0 0x1 REDA1R23 [SteelLance] NoAI
 UNIT Loile AxeWyv 0x0 Level(8,Enemy,1) [2,23] 0x0 0x0 0x1 REDA1R23 [SteelAxe] NoAI
 UNIT
 
 Tale4Turn6Spawns:
 //south and west
 UNIT Loile Hunter 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [SteelBow] NoAI
-UNIT Loile Merc 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [LightBrand] NoAI
+//UNIT Loile Merc 0x0 Level(8,Enemy,1) [0,13] 0x0 0x0 0x1 REDA0R13 [LightBrand] NoAI
 UNIT Loile Sorc 0x0 Level(1,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [Flux] NoAI
-UNIT Loile Deserter 0x0 Level(8,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [SteelLance] NoAI
+//UNIT Loile Deserter 0x0 Level(8,Enemy,1) [0,14] 0x0 0x0 0x1 REDA0R14 [SteelLance] NoAI
 UNIT
 Tale4Turn6Spawns2:
 //south and west
-UNIT Loile Hero 0x0 Level(1,Enemy,1) [0,23] 0x0 0x0 0x1 REDA1R23 [SteelSword] NoAI
+//UNIT Loile Hero 0x0 Level(1,Enemy,1) [0,23] 0x0 0x0 0x1 REDA1R23 [SteelSword] NoAI
 UNIT Loile Deserter 0x0 Level(9,Enemy,1) [1,23] 0x0 0x0 0x1 REDA1R23 [SteelLance] NoAI
 UNIT Loile Fighter 0x0 Level(8,Enemy,1) [2,23] 0x0 0x0 0x1 REDA1R23 [SteelAxe] NoAI
 UNIT
@@ -177,7 +177,7 @@ UNIT
 
 Tale4ElbaCorUnits:
 UNIT ElbaCor SwdCav 0x0 Level(12,Enemy,1) [23,15] 0x0 0x0 0x1 REDA21R15 [SteelSword] NoAI
-UNIT ElbaCor LncCav 0x0 Level(12,Enemy,1) [23,16] 0x0 0x0 0x1 REDA21R16 [SteelLance,Javelin] NoAI
+//UNIT ElbaCor LncCav 0x0 Level(12,Enemy,1) [23,16] 0x0 0x0 0x1 REDA21R16 [SteelLance,Javelin] NoAI
 UNIT ElbaCor AxeCav 0x0 Level(12,Enemy,1) [23,17] 0x0 0x0 0x1 REDA21R17 [HereticAxe] NoAI
 UNIT PGLeila SwdPeg 0x0 Level(12,Enemy,1) [23,15] 0x0 0x0 0x1 REDA22R15 [LightBrand,Rapier] NeverMoveAI
 UNIT PGEsme WyvLord 0x0 Level(1,Enemy,1) [23,16] 0x0 0x0 0x1 REDA22R16 [Tomahawk,BraveAxe,IronRune] NeverMoveAI

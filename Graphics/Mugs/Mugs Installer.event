@@ -702,7 +702,11 @@ setMugEntry(0x3a,GregoriasMug,3,5,3,3)
 ALIGN 4
 JonasMug:
 #incbin "dmps/Jonas.dmp"
-setMugEntry(0x3b,JonasMug,2,5,3,3)
+setMugEntry(0x3b,JonasMug,2,5,2,3)
+ALIGN 4
+JonasPromoMug:
+#incbin "dmps/JonasPromo.dmp"
+setMugEntry(0x150,JonasPromoMug,2,5,2,3)
 
 ALIGN 4
 SofiaMug:

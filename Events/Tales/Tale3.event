@@ -64,10 +64,10 @@ ALIGN 4
 Tale3Units:
 //tale 3 cast - vladmir, laronde, athena, manfred, cameo from rose
 UNIT Vladmir Bishop 0x0 Level(3,Ally,0) [11,9] 0x0 0x0 0x0 0x0 [Aura,Sleep,Physic,GoddessIcon] NoAI
-UNIT SecretLaronde Soldier 0x0 Level(12,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [DousingLance,Shockstick,Vulnerary] NoAI
-UNIT Rose MageF 0x0 Level(2,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [Elfire,Bolting,Sagittae,Vulnerary] NoAI //she snuck in whoops
-UNIT Manfred DarkM 0x0 Level(14,Ally,0) [11,11] 0x0 0x0 0x0 0x0 [Nightfall,Jormungandr,PureWater,Vulnerary] NoAI
-UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [10,10] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,LegRing,Vulnerary] NoAI
+UNIT SecretLaronde Soldier 0x0 Level(12,Ally,0) [12,10] 0x0 0x0 0x0 0x0 [DousingLance,Shockstick,Elixir] NoAI
+UNIT Rose MageF 0x0 Level(2,Ally,0) [13,10] 0x0 0x0 0x0 0x0 [Elfire,Bolting,Sagittae,Elixir] NoAI //she snuck in whoops
+UNIT Manfred DarkM 0x0 Level(14,Ally,0) [11,11] 0x0 0x0 0x0 0x0 [Nightfall,Jormungandr,PureWater,Elixir] NoAI
+UNIT Athena AxeWyv 0x0 Level(10,Ally,0) [10,10] 0x0 0x0 0x0 0x0 [HereticAxe,HandAxe,LegRing,Elixir] NoAI
 UNIT
 
 Tale3Enemies:
@@ -92,7 +92,7 @@ UNIT
 
 //each dragon spawn also includes some baddies
 Tale3Dragon1Spawn:
-UNIT Tale3Wyv1 Wyvern 0x0 Level(1,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R1 [WyvernBreath] NoAI
+UNIT Tale3Wyv1 Wyvern 0x0 Level(1,Enemy,1) [12,0] 0x0 0x0 0x1 REDA12R0 [WyvernBreath] NoAI
 UNIT
 Tale3Dragon1Spawn2:
 //UNIT Unknown AxeCav 0x0 Level(14,Enemy,1) [23,0] 0x0 0x0 0x1 REDA23R3 [SteelAxe] NoAI
@@ -103,11 +103,11 @@ UNIT Unknown AxeCav 0x0 Level(14,Enemy,1) [23,0] 0x0 0x0 0x1 REDA22R4 [HandAxe] 
 UNIT
 
 Tale3Dragon2Spawn:
-UNIT Tale3Wyv2 Wyvern 0x0 Level(1,Enemy,1) [5,13] 0x0 0x0 0x1 REDA6R13 [WyvernBreath] NoAI
+UNIT Tale3Wyv2 Wyvern 0x0 Level(1,Enemy,1) [5,13] 0x0 0x0 0x1 REDA5R13 [WyvernBreath] NoAI
 UNIT
 Tale3Dragon2Spawn2:
 //UNIT Unknown LncPeg 0x0 Level(13,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R1 [SteelLance] NoAI
-UNIT Unknown SwdPeg 0x0 Level(13,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R2 [SilverSword] NoAI
+UNIT Unknown SwdPeg 0x0 Level(13,Enemy,1) [0,0] 0x0 0x0 0x1 REDA1R2 [SteelSword] NoAI
 UNIT Unknown LncPeg 0x0 Level(13,Enemy,1) [0,0] 0x0 0x0 0x1 REDA2R1 [SteelLance] NoAI
 UNIT
 Tale3Dragon2Spawn3:
@@ -117,7 +117,7 @@ UNIT Unknown LncWyv 0x0 Level(13,Enemy,1) [23,20] 0x0 0x0 0x1 REDA22R18 [SteelLa
 UNIT
 
 Tale3Dragon3Spawn:
-UNIT Tale3Wyv3 Wyvern 0x0 Level(1,Enemy,1) [19,17] 0x0 0x0 0x1 REDA19R16 [WyvernBreath] NoAI
+UNIT Tale3Wyv3 Wyvern 0x0 Level(1,Enemy,1) [19,17] 0x0 0x0 0x1 REDA19R17 [WyvernBreath] NoAI
 UNIT
 Tale3Dragon3Spawn2:
 UNIT Unknown BowPal 0x0 Level(1,Enemy,1) [0,20] 0x0 0x0 0x1 REDA0R18 [SteelBow] NoAI
@@ -177,6 +177,10 @@ Reinforcements(Tale3Dragon1Spawn)
 Reinforcements(Tale3Dragon1Spawn2)
 Text(Tale3Wyvern1Spawn)//vlad says one spawned
 AddUnitStatus(Tale3Wyv1,MovBonus,(-2))
+AddUnitStatus(Tale3Wyv1,Defence,5)
+AddUnitStatus(Tale3Wyv1,Resistance,5)
+AddUnitStatus(Tale3Wyv1,MaxHP,15)
+AddUnitStatus(Tale3Wyv1,CurrentHP,15)
 EndEvent
 Tale3AreaSpawn2:
 Reinforcements(Tale3Dragon2Spawn)
@@ -184,6 +188,10 @@ Reinforcements(Tale3Dragon2Spawn2)
 Reinforcements(Tale3Dragon2Spawn3)
 Text(Tale3Wyvern2Spawn)//vlad says one spawned
 AddUnitStatus(Tale3Wyv2,MovBonus,(-2))
+AddUnitStatus(Tale3Wyv2,Defence,5)
+AddUnitStatus(Tale3Wyv2,Resistance,5)
+AddUnitStatus(Tale3Wyv2,MaxHP,15)
+AddUnitStatus(Tale3Wyv2,CurrentHP,15)
 EndEvent
 Tale3AreaSpawn3:
 Reinforcements(Tale3Dragon3Spawn)
@@ -191,6 +199,10 @@ Reinforcements(Tale3Dragon3Spawn2)
 Reinforcements(Tale3Dragon3Spawn3)
 Text(Tale3Wyvern3Spawn)//vlad says one spawned
 AddUnitStatus(Tale3Wyv3,MovBonus,(-2))
+AddUnitStatus(Tale3Wyv3,Defence,5)
+AddUnitStatus(Tale3Wyv3,Resistance,5)
+AddUnitStatus(Tale3Wyv3,MaxHP,15)
+AddUnitStatus(Tale3Wyv3,CurrentHP,15)
 EndEvent
 
 EndingScene:
@@ -234,13 +246,13 @@ SVAL 0x1 0x20040306
 CHAI Tale3Wyv1
 EndEvent
 Tale3Dragon2Talk:
-Text(FillerDialogue)
+Text(Tale3Wyvern2Talk)
 TurnNPC(Tale3Wyv2)
 SVAL 0x1 0x20040306
 CHAI Tale3Wyv2
 EndEvent
 Tale3Dragon3Talk:
-Text(FillerDialogue)
+Text(Tale3Wyvern3Talk)
 TurnNPC(Tale3Wyv3)
 SVAL 0x1 0x20040306
 CHAI Tale3Wyv3

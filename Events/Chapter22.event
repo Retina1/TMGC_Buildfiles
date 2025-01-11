@@ -21,11 +21,11 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(0x0,C22LastSpawn,5)
-TurnEventPlayer(0x0,C22HunterSpawn,4)//add spawns here
-TurnEventPlayer(0x0,C22LiamSpawn,3)
-TurnEventPlayer(0x0,C22ClarqueSpawn,2)//add a spawn here
 TurnEventPlayer(0x0,C22PeterNotice,1)
+TurnEventPlayer(0x0,C22ClarqueSpawn,2)//add a spawn here
+TurnEventPlayer(0x0,C22LiamSpawn,3)
+TurnEventPlayer(0x0,C22HunterSpawn,4)//add spawns here
+TurnEventPlayer(0x0,C22LastSpawn,5)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 

@@ -50,6 +50,7 @@ CharacterEventBothWays(0x25,C28ZachariasCallumSupport,Zacharias,Callum)//B+
 CharacterEventBothWays(0x26,C28YuyuHollandaiseSupport,Yuyu,Hollandaise)//B+
 CharacterEventBothWays(0x27,C28ElizaRoseSupport,Eliza,Rose)//A
 CharacterEventBothWays(0x28,C28RiftCallumSupport,Rift,Callum)//A
+CharacterEventBothWays(0x9,C28EmileDirkSupport,Emile,Dirk)//A
 RoseShopMacro
 END_MAIN
 
@@ -77,8 +78,8 @@ AFEV 0x4 C28EndChecker DefeatBossFlag
 CauseGameOverIfLordDies
 AreaEvent(0x8,C28LeftSwitch,8,23,8,26)
 AreaEvent(0x8,C28LeftSwitch,7,24,9,25)
-AreaEvent(0x9,C28RightSwitch,15,20,15,23)
-AreaEvent(0x9,C28RightSwitch,14,21,16,22)
+AreaEvent(Tale1DoneFlag,C28RightSwitch,15,20,15,23)
+AreaEvent(Tale1DoneFlag,C28RightSwitch,14,21,16,22)
 END_MAIN
 
 Dunno:
@@ -369,6 +370,17 @@ UNIT
 
 ALIGN 4
 
+C28EmileDirkSupport:
+CHECK_ALIVE Eliza
+BEQ 0x1 0xc 0x0
+Text(EmileDirkASupport) //alive
+GOTO 0x2
+LABEL 0x1
+Text(EmileDirkASupportAlt) //dead
+LABEL 0x2
+SetSupport(Emile,Dirk,ASupport,1)
+EndEvent
+
 C28ButchCassiusSupport:
 Text(ButchCassiusASupport)
 SetSupport(Butch,Cassius,ASupport,1)
@@ -545,6 +557,7 @@ SupportFlagOn(Zacharias,Callum,0x25,BSupport)
 SupportFlagOn(Yuyu,Hollandaise,0x26,BSupport)
 SupportFlagOn(Eliza,Rose,0x27,BPSupport)
 SupportFlagOn(Rift,Callum,0x28,BPSupport)
+SupportFlagOn(Emile,Dirk,0x9,BPSupport)
 COUNTER_SET 0x2 0x0
 LOAD1 0x0 C28Units
 ENUN
@@ -609,7 +622,7 @@ EndEvent
 C28DoorOpenSpawner:
 CHECK_EVENTID 0x8
 BEQ 0x1 0xc 0x0
-CHECK_EVENTID 0x9
+CHECK_EVENTID Tale1DoneFlag
 BEQ 0x1 0xc 0x0
 	COUNTER_INC 0x2
 	SVAL 0x3 0x1
@@ -664,6 +677,7 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
+ENUF Tale1DoneFlag
 MUSC S_NotFarEnough
 //elcorian stuff
 	CHECK_EVENTID 0xd
@@ -726,7 +740,7 @@ BNE 0x1 0xC 0x0
 	SOUN 0xB1
 	TILECHANGE 0x4
 	STAL 15
-	CHECK_EVENTID 0x9
+	CHECK_EVENTID Tale1DoneFlag
 	BEQ 0x2 0xc 0x0
 		CAM1 [0,0]
 		SOUN 0xB1
@@ -760,7 +774,7 @@ BNE 0x1 0xC 0x0
 		STAL 15
 		GOTO 0x2
 LABEL 0x1
-ENUF 0x9
+ENUF Tale1DoneFlag
 LABEL 0x2
 EndEvent
 //MESSAGE Events end at offset CURRENTOFFSET

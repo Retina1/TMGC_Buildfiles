@@ -162,6 +162,7 @@ TaleComplete(PGLazarus,Tale9DoneFlag)
 TaleComplete(Simone,Tale10DoneFlag)
 TaleComplete(Blair,Tale11DoneFlag)
 TaleComplete(Sinclair,Tale12DoneFlag)
+EVBIT_MODIFY 4
 CHECK_EVENTID TaleHubVisitedFlag //0x91
 BNE 0x100 0xc 0x0
 Text(TaleHubIntro)

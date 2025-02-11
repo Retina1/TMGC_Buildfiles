@@ -25,7 +25,7 @@ TurnBasedEvents:
 //deploy all possible viridians plus clarque for valeria
 TurnEventPlayer(0x0,C27ValeriaCheck,1)
 TurnEventPlayer(0x0,C27FlagReset,1,255)
-TurnEventPlayer(0x7,C27AreaTrapNorth,1,255)
+TurnEventPlayer(Tale1DoneFlag,C27AreaTrapNorth,1,255)
 TurnEventPlayer(0x8,C27AreaTrapEast,1,255)
 TurnEventPlayer(0x9,C27AreaTrapWest,1,255)
 TurnEventPlayer(0xa,C27AreaTrapCenter1,1,255)
@@ -50,6 +50,7 @@ CharacterEventBothWays(0x26,C27JoanTobiasSupport,Joan,Tobias)//B+
 CharacterEventBothWays(0x27,C27CharleyYuyuSupport,Charley,Yuyu)//B
 CharacterEventBothWays(0x28,C27HyperiusLeilaSupport,Hyperius,Leila)//B+
 CharacterEventBothWays(TavernI2Flag,C27HoratioSimoneSupport,Horatio,Simone)//B+
+CharacterEventBothWays(0x7,C27EmileDirkSupport,Emile,Dirk)//B+
 //rose/olsen that makes rose an assassin
 RoseShopMacro
 END_MAIN
@@ -547,6 +548,17 @@ UNIT
 
 ALIGN 4
 
+C27EmileDirkSupport:
+CHECK_ALIVE Eliza
+BEQ 0x1 0xc 0x0
+Text(EmileDirkBPSupport) //alive
+GOTO 0x2
+LABEL 0x1
+Text(EmileDirkBPSupportAlt) //dead
+LABEL 0x2
+SetSupport(Emile,Dirk,BPSupport,1)
+EndEvent
+
 C27HoratioSimoneSupport:
 EVBIT_MODIFY 3
 MUSC S_HisWorld
@@ -655,6 +667,7 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
+ENUF Tale1DoneFlag
 MUSC S_Nightfall
 CleanTextNoMap(StreetCG,Ch27_Ending)
 //valeria talks to fred if he's alive, otherwise clarque if he's alive
@@ -717,7 +730,7 @@ CheckForItem(RealLastShield)
 BEQ 0x2 0xc 0x0
 SetUnitStatus(Arbordia,Item3,0)
 LABEL 0x2
-ENUT 0x7
+ENUT Tale1DoneFlag
 ENUT 0x8
 ENUT 0x9
 ENUT 0xa
@@ -742,6 +755,7 @@ SupportFlagOn(Joan,Tobias,0x26,BSupport)
 SupportFlagOn(Charley,Yuyu,0x27,CPSupport)
 SupportFlagOn(Hyperius,Leila,0x28,BSupport)
 SupportFlagOn(Horatio,Simone,TavernI2Flag,BSupport)
+SupportFlagOn(Emile,Dirk,0x7,BSupport)
 COUNTER_SET 0x1 0x0
 COUNTER_SET 0x2 0x0
 COUNTER_SET 0x3 0x0
@@ -759,7 +773,7 @@ Reinforcements(C27NorthGroup)
 Reinforcements(C27NorthGroupB)
 COUNTER_SET 0x2 0x1
 COUNTER_SET 0x3 0x1
-ENUF 0x7
+ENUF Tale1DoneFlag
 GOTO 0x2
 LABEL 0x1
 CHECK_HARD
@@ -900,7 +914,7 @@ BNE 0x1 0xC 0x0
 CHECK_EVENTID 0xc
 BNE 0x1 0xc 0x0
 ENUT 0xc
-ENUF 0x7
+ENUF Tale1DoneFlag
 CHECK_EVENTID DefeatBossFlag
 BNE 0x2 0xc 0x0
 COUNTER_CHECK 1

@@ -381,6 +381,7 @@ BNE 0x1 0xc 0x0
 //best reward
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Best)
 REMA
+EVBIT_F 2
 SetBackground(BlankCG)
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
@@ -393,6 +394,7 @@ BNE 0x2 0xc 0x0
 //good reward
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Good)
 REMA
+EVBIT_F 2
 SetBackground(BlankCG)
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
@@ -404,6 +406,7 @@ BNE 0x3 0xc 0x0
 //eh reward
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Eh)
 REMA
+EVBIT_F 2
 SetBackground(BlankCG)
 GiveMoney(0x1f4)
 GiveItem(SecretBook,Blair)
@@ -414,6 +417,7 @@ BNE 0x4 0xc 0x0
 //bad reward
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_Bad)
 REMA
+EVBIT_F 2
 SetBackground(BlankCG)
 GiveMoney(0x1f4)
 GOTO 0x6
@@ -423,6 +427,7 @@ BNE 0x5 0xc 0x0
 //you sure tried
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_YouTried)
 REMA
+EVBIT_F 2
 SetBackground(BlankCG)
 GiveMoney(0x5)
 GOTO 0x6
@@ -430,6 +435,7 @@ LABEL 0x5
 //how the fuck did you do this poorly
 CleanTextNoMap(OutdoorCastleCG,Ch16_Reward_HowDidYouDoThisBad)
 REMA
+EVBIT_F 2
 SetBackground(BlankCG)
 GiveMoney(0x1)
 LABEL 0x6

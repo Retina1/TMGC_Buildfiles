@@ -47,13 +47,14 @@ prCallBonusOptionMenu:
 	POIN pBonusOptionMenuDefinition
 
 pBonusOptionMenuDefinition:
-	BYTE 6 2 17 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
+	BYTE 6 1 17 0           // Geomerty, order: X, Y, Width, Height (Height doesn't matter)
 	WORD 1                  // style (change it if u want)
 	POIN pBonusOptionCommands 	// Command Definitions
 	WORD 0 0 0 0 0 0  
 	
 pBonusOptionCommands:
 	EventMenuCommand(FlowerSelector)
+	EventMenuCommand(CYLSelector)
 	EventMenuCommand(EXPModSelector)
 	EventMenuCommand(GrowthModSelector)
 	EventMenuCommand(PerfectLuckSelector)

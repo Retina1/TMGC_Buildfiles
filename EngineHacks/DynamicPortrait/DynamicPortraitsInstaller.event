@@ -32,6 +32,24 @@ SHORT For the Event Flag ID that will trigger the portrait change (0 if you want
 BYTE  For the character ID who we will check to determine if we change the portrait (0 if you want no character)
 BYTE  For the class ID the character above must be to trigger the portrait change (0 if we just want to be promoted)
 */
+//cyl
+SHORT 0x12
+SHORT 0x153
+SHORT CYLViridianFlag
+BYTE Viridian
+BYTE 0
+//pg viridian
+SHORT 0x12
+SHORT 0x152
+SHORT TaleHubVisitedFlag
+BYTE Viridian
+BYTE 0
+//callum
+SHORT 0x28
+SHORT 0x151
+SHORT GuideChpt20
+BYTE Callum
+BYTE 0
 //kyrie stuff - figure out how to make tension versions work
 SHORT 0x11c
 SHORT 0x11d

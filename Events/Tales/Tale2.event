@@ -71,10 +71,10 @@ ALIGN 4
 
 Tale2Units:
 //tale 2 cast - zeke, rachael, cassius, alexis, hyperius, jeff, artemis
-UNIT Zeke ZekeLordX 0x0 Level(15,Ally,0) [0,11] 0x0 0x0 0x1 REDA4R11 [Stalwart,GildedBow,Wyrmslayer,Elixir] NoAI
+UNIT Zeke ZekeLordX 0x0 Level(15,Ally,0) [0,11] 0x0 0x0 0x1 REDA4R11 [Stalwart,Wyrmslayer,Greatbow,Elixir] NoAI
 UNIT Rachael Falco 0x0 Level(17,Ally,0) [0,9] 0x0 0x0 0x1 REDA2R8 [FlyingSpike,Axereaver,Shockstick] NoAI
 UNIT Leila Falco 0x0 Level(15,Ally,0) [0,14] 0x0 0x0 0x1 REDA1R10 [Courante,FlameSword,Rapier] NoAI
-UNIT Cassius AxePal 0x0 Level(16,Ally,0) [0,10] 0x0 0x0 0x1 REDA6R11 [Galerider,Swordreaver,Tomahawk] NoAI
+UNIT Cassius AxePal 0x0 Level(16,Ally,0) [0,10] 0x0 0x0 0x1 REDA6R11 [Galerider,Swordreaver,Tomahawk,Longbow] NoAI
 UNIT Alexis AxeGen 0x0 Level(14,Ally,0) [0,10] 0x0 0x0 0x1 REDA4R9 [BraveAxe,HandAxe,SilverSword,Elixir] NoAI
 UNIT Hyperius SwdGen 0x0 Level(20,Ally,0) [0,12] 0x0 0x0 0x1 REDA5R10 [Unyielding,SteelBow,HandAxe,Elixir] NoAI
 UNIT Jeff Assass 0x0 Level(12,Ally,0) [0,13] 0x0 0x0 0x1 REDA5R13 [BraveSword,SteelBow,Recover,Physic] NoAI
@@ -83,33 +83,33 @@ UNIT
 
 Tale2Enemies:
 //funny block
-//UNIT Bandit BowPal 0x0 Level(11,Enemy,1) [27,0] 0x0 0x0 0x0 0x0 [Longbow] DelayedAI
-UNIT Bandit BowPal 0x0 Level(11,Enemy,1) [28,0] 0x0 0x0 0x0 0x0 [GildedBow] DelayedAI
-UNIT Bandit SwdPal 0x0 Level(11,Enemy,1) [27,1] 0x0 0x0 0x0 0x0 [Rapier] DelayedAI
-UNIT Bandit LncPal 0x0 Level(11,Enemy,1) [28,1] 0x0 0x0 0x0 0x0 [TrueSaunion] DelayedAI
-UNIT Bandit AxePal 0x0 Level(11,Enemy,1) [29,1] 0x0 0x0 0x0 0x0 [BraveAxe] DelayedAI
-UNIT Bandit Valk 0x0 Level(9,Enemy,1) [28,2] 0x0 0x0 0x0 0x0 [LightBrand] DelayedAI
-UNIT Bandit SwMast 0x0 Level(20,Enemy,1) [28,4] 0x0 0x0 0x0 0x0 [BraveSword] DelayedAI
+//UNIT Bandit BowPal 0x0 Level(10,Enemy,1) [27,0] 0x0 0x0 0x0 0x0 [Longbow] DelayedAI
+UNIT Bandit BowPal 0x0 Level(10,Enemy,1) [28,0] 0x0 0x0 0x0 0x0 [GildedBow] ChaseOnceApproachedAI
+UNIT Bandit SwdPal 0x0 Level(10,Enemy,1) [27,1] 0x0 0x0 0x0 0x0 [Rapier] ChaseOnceApproachedAI
+UNIT Bandit LncPal 0x0 Level(10,Enemy,1) [28,1] 0x0 0x0 0x0 0x0 [TrueSaunion] ChaseOnceApproachedAI
+UNIT Bandit AxePal 0x0 Level(10,Enemy,1) [29,1] 0x0 0x0 0x0 0x0 [BraveAxe] ChaseOnceApproachedAI
+UNIT Bandit Valk 0x0 Level(9,Enemy,1) [28,2] 0x0 0x0 0x0 0x0 [LightBrand] ChaseOnceApproachedAI
+UNIT Bandit SwMast 0x0 Level(20,Enemy,1) [28,4] 0x0 0x0 0x0 0x0 [BraveSword] ChaseOnceApproachedAI
 //other block
-UNIT Bandit Sage 0x0 Level(11,Enemy,1) [28,12] 0x0 0x0 0x0 0x0 [Fimbulvetr] GroupOnePaceAI
-UNIT Bandit Hero 0x0 Level(11,Enemy,1) [27,13] 0x0 0x0 0x0 0x0 [BraveSword] GroupOnePaceAI
-UNIT Bandit Bishop 0x0 Level(20,Enemy,1) [28,13] 0x0 0x0 0x0 0x0 [JavelinRain,Resire] GroupOnePaceAI
-UNIT Bandit Hero 0x0 Level(11,Enemy,1) [29,13] 0x0 0x0 0x0 0x0 [BraveAxe] GroupOnePaceAI
-UNIT Bandit Halberdier 0x0 Level(11,Enemy,1) [28,14] 0x0 0x0 0x0 0x0 [TrueSaunion] GroupOnePaceAI
+UNIT Bandit Sage 0x0 Level(10,Enemy,1) [28,12] 0x0 0x0 0x0 0x0 [Fimbulvetr] GroupOnePaceAI
+UNIT Bandit Hero 0x0 Level(10,Enemy,1) [27,13] 0x0 0x0 0x0 0x0 [BraveSword] GroupOnePaceAI
+UNIT Bandit Bishop 0x0 Level(20,Enemy,1) [28,13] 0x0 0x0 0x0 0x0 [Resire] GroupOnePaceAI
+UNIT Bandit Hero 0x0 Level(10,Enemy,1) [29,13] 0x0 0x0 0x0 0x0 [BraveAxe] GroupOnePaceAI
+UNIT Bandit Halberdier 0x0 Level(10,Enemy,1) [28,14] 0x0 0x0 0x0 0x0 [Spear] GroupOnePaceAI
 //most stuff
-UNIT Bandit Sorc 0x0 Level(11,Enemy,1) [6,14] 0x0 0x0 0x0 0x0 [Jormungandr] NeverMoveAI
-UNIT Bandit Sorc 0x0 Level(11,Enemy,1) [7,5] 0x0 0x0 0x0 0x0 [Fenrir] NeverMoveAI
-UNIT Bandit Halberdier 0x0 Level(11,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
-UNIT Bandit Warrior 0x0 Level(11,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI
-UNIT Bandit Sniper 0x0 Level(11,Enemy,1) [19,10] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow] AttackInRangeAI
-UNIT Bandit WyvLord 0x0 Level(11,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
-UNIT Bandit Hero 0x0 Level(11,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
-UNIT Bandit LncGen 0x0 Level(11,Enemy,1) [20,4] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
-UNIT Bandit Warrior 0x0 Level(11,Enemy,1) [25,9] 0x0 0x0 0x0 0x0 [Hammer,SilverAxe] AttackInRangeAI
-UNIT Bandit Sage 0x0 Level(11,Enemy,1) [24,1] 0x0 0x0 0x0 0x0 [Trisagion,Calibur] AttackInRangeAI
-UNIT Bandit SwdGen 0x0 Level(11,Enemy,1) [25,5] 0x0 0x0 0x0 0x0 [Rapier] AttackInRangeAI
-UNIT Bandit Warrior 0x0 Level(11,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [DangerPick] AttackInRangeAI
-UNIT Bandit Sniper 0x0 Level(11,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Greatbow,BraveBow] NeverMoveAI
+UNIT Bandit Sorc 0x0 Level(10,Enemy,1) [6,14] 0x0 0x0 0x0 0x0 [Jormungandr] NeverMoveAI
+UNIT Bandit Sorc 0x0 Level(10,Enemy,1) [7,5] 0x0 0x0 0x0 0x0 [Fenrir] NeverMoveAI
+UNIT Bandit Halberdier 0x0 Level(10,Enemy,1) [13,4] 0x0 0x0 0x0 0x0 [Spear] AttackInRangeAI
+UNIT Bandit Warrior 0x0 Level(10,Enemy,1) [17,8] 0x0 0x0 0x0 0x0 [GildedAxe] ChaseOnceApproachedAI
+UNIT Bandit Sniper 0x0 Level(10,Enemy,1) [19,10] 0x0 0x0 0x0 0x0 [BarrierBow,BraveBow] AttackInRangeAI
+UNIT Bandit WyvLord 0x0 Level(10,Enemy,1) [18,1] 0x0 0x0 0x0 0x0 [SilverAxe] AttackInRangeAI
+UNIT Bandit Hero 0x0 Level(10,Enemy,1) [19,2] 0x0 0x0 0x0 0x0 [SilverSword] AttackInRangeAI
+UNIT Bandit LncGen 0x0 Level(10,Enemy,1) [20,4] 0x0 0x0 0x0 0x0 [SilverLance] AttackInRangeAI
+UNIT Bandit Warrior 0x0 Level(10,Enemy,1) [25,9] 0x0 0x0 0x0 0x0 [Hammer,SilverAxe] AttackInRangeAI
+UNIT Bandit Sage 0x0 Level(10,Enemy,1) [24,1] 0x0 0x0 0x0 0x0 [Trisagion,Calibur] AttackInRangeAI
+UNIT Bandit SwdGen 0x0 Level(10,Enemy,1) [25,5] 0x0 0x0 0x0 0x0 [Rapier] AttackInRangeAI
+UNIT Bandit Warrior 0x0 Level(10,Enemy,1) [9,9] 0x0 0x0 0x0 0x0 [DangerPick] AttackInRangeAI
+UNIT Bandit Sniper 0x0 Level(10,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Greatbow,BraveBow] NeverMoveAI
 //village killers
 UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [2,2] 0x0 0x0 0x0 0x0 [SilverAxe,SavageGauntlet] BrigandAI
 UNIT Bandit Berserker 0x0 Level(9,Enemy,1) [11,0] 0x0 0x0 0x0 0x0 [SilverAxe,SavageGauntlet] BrigandAI
@@ -197,7 +197,7 @@ TaleSetUnitStat(Alexis,53,30,5,30,18,13,36,10)
 TaleSetUnitWEXP(Alexis,121,121,251,0,0,0,0,0)
 TaleSetUnitStat(Hyperius,62,32,6,34,16,17,31,13)
 TaleSetUnitWEXP(Hyperius,251,0,181,181,0,0,0,0)
-TaleSetUnitStat(Jeff,55,23,11,18,35,9,14,2)
+TaleSetUnitStat(Jeff,55,23,20,18,35,9,14,2)
 TaleSetUnitWEXP(Jeff,251,0,0,51,121,0,0,0)//jeff heals because he's a good boy now
 TaleSetUnitStat(Artemis,47,27,11,20,26,17,21,24)
 TaleSetUnitWEXP(Artemis,0,0,251,181,0,0,0,0)

@@ -50,6 +50,7 @@ CharacterEventBothWays(0x23,C25PeterDeanSupport,Peter,Dean)
 CharacterEventBothWays(0x24,C25ZachariasCallumSupport,Zacharias,Callum)
 CharacterEventBothWays(0x25,C25HyperiusArgentSupport,Hyperius,Argent)
 CharacterEventBothWays(0x26,C25PeggyDirkSupport,Peggy,Dirk)
+CharacterEventBothWays(0x10,C25PeggyDirkSupport,Emile,Dirk)
 CharacterEventBothWays(0x27,C25BlairEstelleSupport,Blair,Estelle)
 CharacterEvent(0x28,C25Passacaglia,Sam,Bobert)
 CharacterEventBothWays(ArinOriginFlag,C25ArinSimoneEvent,Arin,Simone)
@@ -411,6 +412,17 @@ UNIT
 
 ALIGN 4
 
+C25EmileDirkSupport:
+CHECK_ALIVE Eliza
+BEQ 0x1 0xc 0x0
+Text(EmileDirkBSupport) //alive
+GOTO 0x2
+LABEL 0x1
+Text(EmileDirkBSupportAlt) //dead
+LABEL 0x2
+SetSupport(Emile,Dirk,BSupport,1)
+EndEvent
+
 BeginningScene:
 LoadUnitsByDifficulty(C25Easy,C25Normal,C25Hard)
 ENUT GuideChpt25
@@ -615,6 +627,7 @@ EndEvent
 
 EndingScene:
 ResetBaseFlags
+ENUF Tale1DoneFlag
 CLEN 0
 CLEE 0
 CLEA 0

@@ -21,6 +21,12 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x0,Tale8OlsenSpawn,2)
+TurnEventPlayer(0x0,Tale8Turn5,5)
+TurnEventPlayer(0x0,Tale8Turn6,6)
+TurnEventPlayer(0x0,Tale8Turn7,7)
+TurnEventPlayer(0x7,Tale8Turn9,9)
+TurnEventPlayer(0x0,Tale8Turn12On,12,20)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -35,6 +41,7 @@ END_MAIN
 
 MiscBasedEvents:
 //DefeatBoss(EndingScene)
+AreaEvent(0x0,Tale8SafeZone,15,14,17,16)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -56,10 +63,13 @@ Tale8Units:
 // bring waves of greens to safe zones as they spawn
 UNIT Viridian ViridianLord 0x0 Level(1,Ally,0) [16,15] 0x0 0x0 0x0 0x0 [Luckbow,SilverBow,Recover] NoAI
 UNIT Freddric WyvernLord 0x0 Level(1,Ally,0) [14,13] 0x0 0x0 0x0 0x0 [SilverLance,Javelin,Elixir] NoAI
-UNIT Chartreuse BardF 0x0 Level(1,Ally,0) [15,14] 0x0 0x0 0x0 0x0 [SilverLance,Javelin,Elixir] NoAI
-UNIT Dean Fighter 0x0 Level(12,Ally,0) [14,15] 0x0 0x0 0x0 0x0 [SilverAxe,HandAxe,Vulnerary] NoAI
+UNIT Chartreuse BardF 0x0 Level(1,Ally,0) [15,14] 0x0 0x0 0x0 0x0 [LegRing,Elixir] NoAI
+UNIT Dean Fighter 0x0 Level(12,Ally,0) [14,15] 0x0 0x0 0x0 0x0 [SilverAxe,HandAxe,Elixir] NoAI
 UNIT SecretClarque BowPal 0x0 Level(7,Ally,0) [16,13] 0x0 0x0 0x0 0x0 [SilverBow,SilverSword,Elixir] NoAI
-UNIT Olsen AssassF 0x0 Level(5,Ally,0) [3,15] 0x0 0x0 0x0 0x0 [Shamshir,Greatbow] NoAI
+UNIT
+
+Tale8Olsen:
+UNIT Olsen AssassF 0x0 Level(5,Ally,0) [3,15] 0x0 0x0 0x1 REDA3R15 [Shamshir,Greatbow] NoAI
 UNIT
 
 Tale8Enemies:
@@ -71,19 +81,19 @@ UNIT Bandit Deserter 0x0 Level(15,Enemy,1) [1,5] 0x0 0x0 0x0 0x0 [Javelin,Silver
 UNIT Bandit Hunter 0x0 Level(15,Enemy,1) [2,6] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
 UNIT Bandit Deserter 0x0 Level(15,Enemy,1) [3,5] 0x0 0x0 0x0 0x0 [Axereaver] GroupOneAI
 UNIT Mevion Warrior 0x0 Level(1,Enemy,1) [10,14] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Bandit DarkM 0x0 Level(15,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [Nosferatu] NoAI
-UNIT Mevion AxeWyv 0x0 Level(15,Enemy,1) [15,1] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
-UNIT Mevion LncWyv 0x0 Level(15,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Bandit DarkM 0x0 Level(15,Enemy,1) [12,13] 0x0 0x0 0x0 0x0 [Nosferatu] ChaseOnceApproachedAI
+UNIT Mevion AxeWyv 0x0 Level(15,Enemy,1) [15,1] 0x0 0x0 0x0 0x0 [SteelAxe] AttackInRangeAI
+UNIT Mevion LncWyv 0x0 Level(15,Enemy,1) [16,2] 0x0 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
 UNIT Mevion Merc 0x0 Level(15,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [Rapier] NoAI
 UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [14,8] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [HandAxe] AttackInRangeAI
+UNIT Bandit Merc 0x0 Level(15,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [SteelSword] GroupTwoAI
+UNIT Bandit Merc 0x0 Level(15,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [Lancereaver] GroupTwoAI
+UNIT Bandit Hunter 0x0 Level(15,Enemy,1) [6,1] 0x0 0x0 0x0 0x0 [SteelBow] NoAI
+UNIT Bandit Deserter 0x0 Level(15,Enemy,1) [5,2] 0x0 0x0 0x0 0x0 [Axereaver] GroupTwoAI
 UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [4,10] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
-UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [11,2] 0x0 0x0 0x0 0x0 [HandAxe] NoAI
+UNIT Bandit DarkM 0x0 Level(15,Enemy,1) [10,3] 0x0 0x0 0x0 0x0 [Nightfall] AttackInRangeAI
+UNIT Bandit DarkM 0x0 Level(15,Enemy,1) [11,2] 0x0 0x0 0x0 0x0 [Freikugel] ChaseOnceApproachedAI
 UNIT
 
 Tale8Greens:
@@ -94,8 +104,115 @@ UNIT Dirk CitizenM 0x0 Level(18,Ally,0) [2,2] 0x0 0x0 0x1 REDA2R3 [0x0] NoAI
 UNIT Eliza CitizenF 0x0 Level(7,Ally,0) [2,2] 0x0 0x0 0x1 REDA2R3 [0x0] NoAI
 UNIT
 
+Tale8Turn5Spawn:
+UNIT Bandit LncPeg 0x0 Level(15,Enemy,1) [11,11] 0x0 0x0 0x0 0x0 [Javelin] NoAI
+UNIT Bandit LncPeg 0x0 Level(15,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT
+
+Tale8Turn6Spawn:
+UNIT Bandit Merc 0x0 Level(15,Enemy,1) [17,0] 0x0 0x0 0x1 REDA16R0 [Lancereaver] NoAI
+UNIT Bandit Merc 0x0 Level(15,Enemy,1) [17,0] 0x0 0x0 0x1 REDA17R1 [Rapier] NoAI
+UNIT Bandit Hero 0x0 Level(15,Enemy,1) [17,0] 0x0 0x0 0x1 REDA16R1 [SteelSword] NoAI
+UNIT
+
+Tale8Turn7Spawn:
+UNIT Bandit Mage 0x0 Level(15,Enemy,1) [0,1] 0x0 0x0 0x0 0x0 [Thunder] NoAI
+UNIT Bandit Brigand 0x0 Level(15,Enemy,1) [0,3] 0x0 0x0 0x0 0x0 [Hammer] NoAI
+UNIT Bandit Deserter 0x0 Level(15,Enemy,1) [4,2] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
+UNIT Bandit Bruiser 0x0 Level(15,Enemy,1) [3,3] 0x0 0x0 0x0 0x0 [LevinSword] NoAI
+UNIT
+
+Tale8Turn12OnSpawn:
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [2,2] 0x0 0x0 0x1 REDA2R2 [HandAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [2,2] 0x0 0x0 0x1 REDA2R2 [SilverAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [2,2] 0x0 0x0 0x1 REDA2R2 [KillerAxe] NoAI
+UNIT Bandit Brigand 0x0 Level(18,Enemy,1) [2,2] 0x0 0x0 0x1 REDA2R2 [DevilAxe] NoAI
+UNIT
+
 ALIGN 4
 //give bros a triangle attack
+
+Tale8SafeZone:
+CHECK_ACTIVEID Dirk
+BEQ 0x1 0xc 0x0
+Text(Tale8DirkSaved) //dirk out
+SilentKillUnit(Dirk)
+ENUT 0x20
+GOTO 0x10
+LABEL 0x1
+CHECK_ACTIVEID Eliza
+BEQ 0x2 0xc 0x0
+Text(Tale8ElizaSaved) //eliza out
+SilentKillUnit(Eliza)
+ENUT 0x21
+GOTO 0x10
+LABEL 0x2
+CHECK_ACTIVEID Citizen
+BEQ 0x3 0xc 0x0
+Text(Tale8GenericSaved) //generic out
+SilentKillUnit(Citizen)
+ENUT 0x22
+GOTO 0x10
+LABEL 0x3
+CHECK_ACTIVEID Citizen2
+BEQ 0x4 0xc 0x0
+Text(Tale8GenericSaved) //generic out
+SilentKillUnit(Citizen2)
+ENUT 0x23
+GOTO 0x10
+LABEL 0x4
+CHECK_ACTIVEID Citizen3
+BEQ 0x10 0xc 0x0
+Text(Tale8GenericSaved) //generic out
+SilentKillUnit(Citizen3)
+ENUT 0x24
+LABEL 0x10
+CHECK_EVENTID 0x20
+BEQ 0x20 0xc 0x0
+CHECK_EVENTID 0x21
+BEQ 0x20 0xc 0x0
+CHECK_EVENTID 0x22
+BEQ 0x20 0xc 0x0
+CHECK_EVENTID 0x23
+BEQ 0x20 0xc 0x0
+CHECK_EVENTID 0x24
+BEQ 0x20 0xc 0x0
+Text(Tale8AllSaved) //preending
+CALL EndingScene
+LABEL 0x20
+EndEvent
+
+Tale8OlsenSpawn:
+Reinforcements(Tale8Olsen)
+TaleSetUnitStat(Olsen,49,21,17,30,29,25,15,14)
+TaleSetUnitWEXP(Olsen,181,0,0,181,0,0,0,0)
+SetUnitSkills(Olsen,AssassinateID,0,0,0)
+EndEvent
+
+Tale8Turn5:
+Reinforcements(Tale8Turn5Spawn)
+EndEvent
+
+Tale8Turn6:
+Reinforcements(Tale8Turn6Spawn)
+EndEvent
+
+Tale8Turn7:
+Reinforcements(Tale8Turn7Spawn)
+Text(Tale8WarningDialogue) //warning - get to ruins
+EndEvent
+
+Tale8Turn9:
+ENUT 0x7
+Text(Tale8ForcedOut) //forced out
+LOAD1 0x1 Tale8Greens
+ENUN
+SystemText(Tale8Wincon)
+EndEvent
+
+Tale8Turn12On:
+Reinforcements(Tale8Turn12OnSpawn)
+EndEvent
 
 Tale8Ruins:
 CHECK_ACTIVEID Viridian
@@ -149,9 +266,6 @@ SetUnitSkills(Dean,FamilyManID,0,0,0)
 TaleSetUnitStat(SecretClarque,50,18,12,18,18,12,12,12)
 TaleSetUnitWEXP(SecretClarque,181,0,0,181,0,0,0,0)
 SetUnitSkills(SecretClarque,SureShotID,0,0,0)
-TaleSetUnitStat(Olsen,49,21,17,30,29,25,15,14)
-TaleSetUnitWEXP(Olsen,181,0,0,181,0,0,0,0)
-SetUnitSkills(Olsen,AssassinateID,0,0,0)
 CleanText(JungleCG,Tale8Opening)
 EndEvent
 
@@ -160,8 +274,10 @@ ENUT Tale8DoneFlag
 MUSC 0x0
 CleanTextNoMap(JungleCG,Tale8Ending)
 CleanTextNoMap(OuterRuinCG,Tale8Ending2)
-MUSC S_WelcomeToLegend
+MUSC AmbientWindGusts
 CleanTextNoMap(JungleCG,Tale8Ending3)
+MUSC S_WelcomeToLegend
+CleanTextNoMap(PathCG,Tale8Ending4)//into flashback
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)
 ENDA

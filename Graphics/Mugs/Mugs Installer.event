@@ -414,12 +414,11 @@ setMugEntry(0x14a,VladmirPromoMug,3,5,3,3)
 ALIGN 4
 HollandaiseMug:
 #incbin "dmps/Hollandaise.dmp"
-setMugEntry(0x2b,HollandaiseMug,3,5,3,3)
-
+setMugEntry(0x2b,HollandaiseMug,2,5,3,3)
 ALIGN 4
 HollandaisePromoMug:
 #incbin "dmps/HollandaisePromo.dmp"
-setMugEntry(0x117,HollandaisePromoMug,3,5,3,3)
+setMugEntry(0x117,HollandaisePromoMug,2,5,3,3)
 
 ALIGN 4
 HoratioMug:
@@ -443,7 +442,16 @@ setMugEntry(0xcd,TotallyNotSimoneMug,2,5,3,3)
 ALIGN 4
 ViridianMug:
 #incbin "dmps/Viridian.dmp"
-setMugEntry(0x12,ViridianMug,4,5,4,3)
+setMugEntry(0x12,ViridianMug,2,5,3,3)
+ALIGN 4
+ViridianYoungMug:
+#incbin "dmps/ViridianYoung.dmp"
+setMugEntry(0x152,ViridianYoungMug,2,5,3,3)
+ALIGN 4
+//CHANGE ONCE RELEASED
+ViridianCYLMug:
+#incbin "dmps/ViridianCYL.dmp"
+setMugEntry(0x153,ViridianCYLMug,2,5,3,3)
 
 ALIGN 4
 FreddricMug:
@@ -462,11 +470,11 @@ setMugEntry(0x11a,DeanPromoMug,3,5,3,3)
 ALIGN 4
 ElizaMug:
 #incbin "dmps/Eliza.dmp"
-setMugEntry(0x1d,ElizaMug,3,6,3,4)
+setMugEntry(0x1d,ElizaMug,2,6,3,4)
 ALIGN 4
 ElizaPromoMug:
 #incbin "dmps/ElizaPromo.dmp"
-setMugEntry(0x101,ElizaPromoMug,3,6,3,4)
+setMugEntry(0x101,ElizaPromoMug,2,6,3,4)
 
 ALIGN 4
 ChartreuseMug:
@@ -485,30 +493,34 @@ setMugEntry(0x10e,EstellePromoMug,4,5,4,3)
 ALIGN 4
 RiftMug:
 #incbin "dmps/Rift.dmp"
-setMugEntry(0x2d,RiftMug,3,5,3,3)
+setMugEntry(0x2d,RiftMug,2,5,3,3)
 
 ALIGN 4
 RoseMug:
 #incbin "dmps/Rose.dmp"
-setMugEntry(0xf,RoseMug,4,6,4,4)
+setMugEntry(0xf,RoseMug,2,6,3,4)
 ALIGN 4
 RosePromoMug:
 #incbin "dmps/RosePromo.dmp"
-setMugEntry(0x102,RosePromoMug,4,6,4,4)
+setMugEntry(0x102,RosePromoMug,2,6,3,4)
 ALIGN 4
 RoseAssassinMug:
 #incbin "dmps/RoseAssassin.dmp"
-setMugEntry(0x141,RoseAssassinMug,4,6,4,4)
+setMugEntry(0x141,RoseAssassinMug,2,6,3,4)
 
 ALIGN 4
 DirkMug:
 #incbin "dmps/Dirk.dmp"
-setMugEntry(0x27,DirkMug,3,5,3,3)
+setMugEntry(0x27,DirkMug,2,5,3,3)
 
 ALIGN 4
 CallumMug:
 #incbin "dmps/Callum.dmp"
-setMugEntry(0x28,CallumMug,3,5,3,3)
+setMugEntry(0x28,CallumMug,2,5,3,3)
+ALIGN 4
+CallumBeatUpMug:
+#incbin "dmps/CallumBeatUp.dmp"
+setMugEntry(0x151,CallumBeatUpMug,2,5,3,3)
 
 ALIGN 4
 WilhelmMug:
@@ -522,7 +534,7 @@ setMugEntry(0x0118,WilhelmPromoMug,3,6,3,4)
 ALIGN 4
 ArgentMug:
 #incbin "dmps/Argent.dmp"
-setMugEntry(0x2f,ArgentMug,3,5,3,3)
+setMugEntry(0x2f,ArgentMug,2,5,2,3)
 
 ALIGN 4
 ManfredMug:
@@ -617,7 +629,7 @@ setMugEntry(0xe1,ValeriaMug,4,5,4,3)
 ALIGN 4
 VictorMug:
 #incbin "dmps/Victor.dmp"
-setMugEntry(0xe9,VictorMug,3,5,3,3)
+setMugEntry(0xe9,VictorMug,2,5,3,3)
 
 
 
@@ -716,7 +728,7 @@ setMugEntry(0x35,SofiaMug,2,6,2,4)
 ALIGN 4
 LarondeMug:
 #incbin "dmps/Laronde.dmp"
-setMugEntry(0x4a,LarondeMug,3,5,3,3)
+setMugEntry(0x4a,LarondeMug,2,5,3,3)
 
 ALIGN 4
 AmaraMug:

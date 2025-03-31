@@ -85,6 +85,7 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [22,17] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C11Easy:
+UNIT Bandit Thief 0x0 Level(15,Enemy,1) [0,21] DropItem 0x0 0x0 0x0 [SilverSword,Freikugel] LootingThiefAI
 UNIT Bandit Fighter 0x0 Level(12,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Bandit LncWyv 0x0 Level(12,Enemy,1) [24,3] 0x0 0x0 0x0 0x0 [IronLance] NoAI
 UNIT Bandit ArcherF 0x0 Level(12,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [SteelBow] GroupOnePaceAI
@@ -117,6 +118,7 @@ UNIT Sofia SorcF 0x0 Level(2,Enemy,1) [6,1] DropItem 0x0 0x0 0x0 [Corruption,Spe
 UNIT
 
 C11Normal:
+UNIT Bandit Thief 0x0 Level(15,Enemy,1) [0,21] DropItem 0x0 0x0 0x0 [SilverSword,Freikugel] LootingThiefAI
 UNIT Bandit Fighter 0x0 Level(12,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [IronAxe] NoAI
 UNIT Unknown Mage 0x0 Level(12,Enemy,1) [17,11] 0x0 0x0 0x0 0x0 [Thunder] NoAI
 UNIT Bandit LncWyv 0x0 Level(12,Enemy,1) [24,3] 0x0 0x0 0x0 0x0 [SteelLance] NoAI
@@ -152,6 +154,7 @@ UNIT Sofia SorcF 0x0 Level(2,Enemy,1) [6,1] DropItem 0x0 0x0 0x0 [Corruption,Spe
 UNIT
 
 C11Hard:
+UNIT Bandit Thief 0x0 Level(15,Enemy,1) [0,21] DropItem 0x0 0x0 0x0 [SilverSword,Freikugel] LootingThiefAI
 UNIT Unknown MageF 0x0 Level(12,Enemy,1) [8,18] 0x0 0x0 0x0 0x0 [Fire] NoAI
 UNIT Unknown Mage 0x0 Level(12,Enemy,1) [17,11] 0x0 0x0 0x0 0x0 [Thunder] NoAI
 UNIT Bandit AxeWyv 0x0 Level(12,Enemy,1) [23,2] 0x0 0x0 0x0 0x0 [SteelAxe] NoAI
@@ -323,5 +326,14 @@ LABEL 0x1
 ENUF 0x14
 LABEL 0x2
 EndEvent
+
+ALIGN 4
+EscapePointPointerTable(Chapter11,C11Escape)
+
+ALIGN 4
+C11Escape:
+EscapePoint(0,2, MoveLeft)
+EscapePoint(0,3, MoveLeft)
+EscapePointEnd
 
 //MESSAGE Events end at offset CURRENTOFFSET

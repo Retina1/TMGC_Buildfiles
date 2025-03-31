@@ -21,6 +21,9 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+//each round end has dialogue introducing the next combatant
+TurnEventPlayer(0x0,RoundEndWrapper,1,255)
+TurnEventEnemy(0x0,RoundEndWrapper,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -31,7 +34,13 @@ LocationBasedEvents:
 END_MAIN
 
 MiscBasedEvents:
-//DefeatBoss(EndingScene)
+//each start has a round number called out
+//change music with later rounds
+//use misc events to check each combatant's flag
+//upon combatant defeat, warp back to room, fully heal, get chance to use a save look at foe and level up, fight when ready
+//maybe use range event for standing at exit
+AreaEvent(0x0,RoundStarter,5,15,6,17)
+DefeatBoss(EndingScene)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -51,32 +60,369 @@ ALIGN 4
 Tale9Units:
 //tale 8 cast - viridian, freddric, chartreuse, dean, clarque and sons, maybe olsen for funnies, dirk/eliza cameo? maybe they're some of the greens?
 // bring waves of greens to safe zones as they spawn
-UNIT PGLazarus AxeGen 0x0 Level(1,Ally,0) [16,15] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
+UNIT PGLazarus AxeGen 0x0 Level(1,Ally,0) [2,15] 0x0 0x0 0x0 0x0 [SteelAxe,HandAxe,Elixir] NoAI
 UNIT
 
-Tale9Enemies:
-UNIT Ygstra DarkM 0x0 Level(16,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Freikugel] NoAI
+Tale9Audience:
+//generics are just citizens? ygstra id is too important
+//maybe we use extra ids here
+UNIT Arbordia Sage 0x0 Level(16,Enemy,1) [1,3] 0x0 0x0 0x0 0x0 [Avalon] NeverMoveAI
+UNIT EnemyElcorian Troub 0x0 Level(16,Enemy,1) [0,1] 0x0 0x0 0x0 0x0 [TheCreator,Foundation] NeverMoveAI
+UNIT Brandl Sniper 0x0 Level(4,Enemy,1) [22,3] 0x0 0x0 0x0 0x0 [Longbow] NeverMoveAI
+UNIT Hyperius SwdGen 0x0 Level(6,Enemy,1) [23,3] 0x0 0x0 0x0 0x0 [Unyielding] NeverMoveAI
+UNIT Vladmir Bishop 0x0 Level(10,Enemy,1) [2,1] 0x0 0x0 0x0 0x0 [BookOfOpistus] NeverMoveAI
+UNIT Citizen CitizenF 0x0 Level(12,Enemy,1) [21,0] 0x0 0x0 0x0 0x0 [Elixir] NeverMoveAI
+UNIT Citizen CitizenM 0x0 Level(13,Enemy,1) [1,6] 0x0 0x0 0x0 0x0 [PureWater] NeverMoveAI
+UNIT Citizen CitizenM 0x0 Level(11,Enemy,1) [0,8] 0x0 0x0 0x0 0x0 [Vulnerary] NeverMoveAI
+UNIT Citizen Merc 0x0 Level(17,Enemy,1) [22,6] 0x0 0x0 0x0 0x0 [IronSword] NeverMoveAI
+UNIT Citizen Fighter 0x0 Level(15,Enemy,1) [23,7] 0x0 0x0 0x0 0x0 [HandAxe] NeverMoveAI
+UNIT Citizen Archer 0x0 Level(13,Enemy,1) [22,9] 0x0 0x0 0x0 0x0 [SteelBow] NeverMoveAI
+UNIT Citizen SoldierF 0x0 Level(11,Enemy,1) [23,8] 0x0 0x0 0x0 0x0 [BraveLance] NeverMoveAI
+UNIT Citizen MageF 0x0 Level(9,Enemy,1) [0,9] 0x0 0x0 0x0 0x0 [Calibur] NeverMoveAI
+UNIT Citizen LncGen 0x0 Level(4,Enemy,1) [1,9] 0x0 0x0 0x0 0x0 [SteelLance] NeverMoveAI
+UNIT Citizen SwdGen 0x0 Level(8,Enemy,1) [10,15] 0x0 0x0 0x0 0x0 [GildedSword] NeverMoveAI
+UNIT Citizen SwdGen 0x0 Level(9,Enemy,1) [13,15] 0x0 0x0 0x0 0x0 [GildedSword] NeverMoveAI
+UNIT
+
+Tale9Enemy1:
+UNIT Ygstra Soldier 0x0 Level(10,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [SilverLance] NoAI
+UNIT
+Tale9Enemy2:
+UNIT Ygstra SwdCav 0x0 Level(12,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [LightBrand] NoAI
+UNIT
+Tale9Enemy3:
+UNIT Ygstra LightM 0x0 Level(15,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [Resire] NoAI
+UNIT
+Tale9Enemy4:
+UNIT Amara FighterF 0x0 Level(16,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [Hammer,HandAxe] NoAI
+UNIT
+Tale9Enemy5:
+UNIT Brentson LncArm 0x0 Level(18,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [BraveLance] NoAI
+UNIT
+Tale9Enemy6:
+UNIT Helga FighterF 0x0 Level(20,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [Tomahawk] NoAI
+UNIT
+Tale9Enemy7:
+UNIT Zaine Sorc 0x0 Level(1,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [Nightfall,Freikugel] NoAI
+UNIT
+Tale9Enemy8:
+UNIT Vulture BowArm 0x0 Level(20,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [ShiningBow,Longbow,KillerBow] NoAI
+UNIT
+Tale9Enemy9:
+UNIT Tobias Warrior 0x0 Level(7,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [SilverAxe,IronBow] NoAI
+UNIT
+Tale9Enemy10:
+UNIT Reynard Hero 0x0 Level(4,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [BraveSword,Tomahawk] NoAI
+UNIT
+Tale9Enemy11:
+UNIT Callum SwdPal 0x0 Level(5,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [GildedSword,Shatterspear] NoAI
+UNIT
+Tale9Enemy12:
+UNIT Valden LncPal 0x0 Level(8,Enemy,1) [21,15] 0x0 0x0 0x0 0x0 [GildedLance,Spear] NoAI
 UNIT
 
 ALIGN 4
-//give bros a triangle attack
 
 BeginningScene:
 DISA Addington
 LOAD1 0x1 Tale9Units
 ENUN
-LOAD1 0x1 Tale9Enemies
+LOAD1 0x1 Tale9Audience
 ENUN
-//TaleSetUnitStat(PGLazarus,35,15,12,19,18,12,11,19)
-//TaleSetUnitWEXP(PGLazarus,0,0,0,121,121,0,0,0)
-//SetUnitSkills(PGLazarus,AcrobatID,0,0,0)
-ENDA
+LOAD1 0x1 Tale9Enemy1
+ENUN
+TaleSetUnitStat(PGLazarus,36,15,0,14,8,5,15,3)
+TaleSetUnitWEXP(PGLazarus,0,0,181,0,0,0,0,0)
+TaleSetUnitStat(Ygstra,44,17,0,10,8,1,8,1)
+CleanText(HallCG,LazarusTaleBegin)
+SystemText(LazarusExplanation)
+EndEvent
 
 EndingScene:
 ENUT Tale9DoneFlag
 MUSC 0x0
+Text(LazarusRound12End)
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)
 ENDA
+
+#define LazarusPositionReset(load,foe) "FADI 16; SET_ACTIVE PGLazarus; MOVE 0xFFFF PGLazarus [2,15];LOAD1 0x1 load; ENUN; MOVE 0xFFFF foe [21,15]; ENUN; CAM1 PGLazarus; SVAL 0x1 99; SET_HP PGLazarus; SET_CURSOR [2,15]; OffAllUnitState(PGLazarus, Acted, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem); OffAllUnitState(PGLazarus, Cantoing, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem); FADU 16"
+#define BeginLazarusRound(opponent) "FADI 16; MOVE 0xFFFF PGLazarus [10,10]; ENUN; MOVE 0xFFFF opponent [13,7]; ENUN; CAM1 [12,8]; SET_CURSOR [10,10]; FADU 16"
+#define RoundStarterCall(flag,foe,text) "CHECK_EVENTID flag; BNE flag 0xc 0x0; BeginLazarusRound(foe); Text(text); GOTO 0x600; LABEL flag"
+#define RoundEnd(deathflag,flag,event) "CHECK_EVENTID deathflag; BEQ flag 0xc 0x0; CHECK_EVENTID flag; BNE flag 0xc 0x0; CALL event; ENUT flag; GOTO 0x50; LABEL flag"
+
+RoundStarter:
+SET_ACTIVE PGLazarus
+OffAllUnitState(PGLazarus, Acted, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
+OffAllUnitState(PGLazarus, Cantoing, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
+CHECK_EVENTID 0x8
+BEQ 0x1 0xc 0x0
+CALL LazarusStatsUp
+LABEL 0x1
+RoundStarterCall(0x8,Ygstra,LazarusRound1Begin)
+RoundStarterCall(0xa,Ygstra,LazarusRound2Begin)
+RoundStarterCall(0xc,Ygstra,LazarusRound3Begin)
+RoundStarterCall(0xe,Amara,LazarusRound4Begin)
+RoundStarterCall(0x10,Brentson,LazarusRound5Begin)
+RoundStarterCall(0x12,Helga,LazarusRound6Begin)
+RoundStarterCall(0x14,Zaine,LazarusRound7Begin)
+RoundStarterCall(0x16,Vulture,LazarusRound8Begin)
+RoundStarterCall(0x18,Tobias,LazarusRound9Begin)
+RoundStarterCall(0x1a,Reynard,LazarusRound10Begin)
+RoundStarterCall(0x1c,Callum,LazarusRound11Begin)
+BeginLazarusRound(Valden)
+Text(LazarusRound12Begin)
+//valden gets the first turn loser
+OnAllUnitState(PGLazarus, Acted, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
+LABEL 0x600
+EndEvent
+
+RoundEndWrapper:
+RoundEnd(0x8,0x9,Round1End)
+RoundEnd(0xa,0xb,Round2End)
+RoundEnd(0xc,0xd,Round3End)
+RoundEnd(0xe,0xf,Round4End)
+RoundEnd(0x10,0x11,Round5End)
+RoundEnd(0x12,0x13,Round6End)
+RoundEnd(0x14,0x15,Round7End)
+RoundEnd(0x16,0x17,Round8End)
+RoundEnd(0x18,0x19,Round9End)
+RoundEnd(0x1a,0x1b,Round10End)
+RoundEnd(0x1c,0x1d,Round11End)
+LABEL 0x50
+EndEvent
+
+Round1End:
+Text(LazarusRound1End)
+LazarusPositionReset(Tale9Enemy2,Ygstra)
+TaleSetUnitStat(Ygstra,38,12,9,16,12,1,8,7)
+EndEvent
+Round2End:
+Text(LazarusRound2End)
+LazarusPositionReset(Tale9Enemy3,Ygstra)
+TaleSetUnitStat(Ygstra,31,0,18,16,18,1,4,18)
+EndEvent
+Round3End:
+Text(LazarusRound3End)
+LazarusPositionReset(Tale9Enemy4,Amara)
+TaleSetUnitStat(Amara,54,17,0,16,14,8,8,3)
+EndEvent
+Round4End:
+Text(LazarusRound4End)
+LazarusPositionReset(Tale9Enemy5,Brentson)
+TaleSetUnitStat(Brentson,64,22,0,13,10,7,18,0)
+EndEvent
+Round5End:
+Text(LazarusRound5End)
+LazarusPositionReset(Tale9Enemy6,Helga)
+TaleSetUnitStat(Helga,57,23,0,17,14,5,8,5)
+EndEvent
+Round6End:
+Text(LazarusRound6End)
+LazarusPositionReset(Tale9Enemy7,Zaine)
+TaleSetUnitStat(Zaine,45,0,21,16,14,16,10,10)
+EndEvent
+Round7End:
+Text(LazarusRound7End)
+LazarusPositionReset(Tale9Enemy8,Vulture)
+TaleSetUnitStat(Vulture,58,20,15,21,16,3,15,16)
+EndEvent
+Round8End:
+Text(LazarusRound8End)
+LazarusPositionReset(Tale9Enemy9,Tobias)
+TaleSetUnitStat(Tobias,70,26,0,16,15,13,15,12)
+TaleSetUnitWEXP(Tobias,0,0,181,71,0,0,0,0)
+EndEvent
+Round9End:
+Text(LazarusRound9End)
+LazarusPositionReset(Tale9Enemy10,Reynard)
+TaleSetUnitStat(Reynard,59,23,0,26,21,10,12,6)
+EndEvent
+Round10End:
+Text(LazarusRound10End)
+LazarusPositionReset(Tale9Enemy11,Callum)
+TaleSetUnitStat(Callum,75,25,0,25,23,13,16,13)
+EndEvent
+Round11End:
+Text(LazarusRound11End)
+LazarusPositionReset(Tale9Enemy12,Valden)
+TaleSetUnitStat(Valden,99,31,0,32,30,25,28,28)
+EndEvent
+
+#define LazarusCapStat(statName,statCap,label) "GetUnitStatus(PGLazarus, statName); SVAL 0x1 statCap; BGE label 0x1 0xc; SetUnitStatus(PGLazarus,statName,statCap); LABEL label"
+
+LazarusStatsUp:
+EVBIT_MODIFY 4
+COUNTER_SET 1 0
+AddUnitStatus(PGLazarus, Level, 1)
+LABEL 0x999
+COUNTER_ADD 1 1
+RefreshLordSplitTiles
+ASMC prCallLazarusMenu+1
+BNE 0x10 0xc 0x0
+	AddUnitStatus(PGLazarus, MaxHP, 3)
+	AddUnitStatus(PGLazarus, CurrentHP, 3)
+	SystemText(LazarusHPUp)
+	RANDOMNUMBER 3
+	BGT 0x101 0xc 0x0
+	AddUnitStatus(PGLazarus, Defence, 2)
+	SystemText(LazarusDefUp)
+	LABEL 0x101
+	RANDOMNUMBER 3
+	BGT 0x102 0xc 0x0
+	AddUnitStatus(PGLazarus, Resistance, 2)
+	SystemText(LazarusResUp)
+	LABEL 0x102
+	GOTO 0x17
+LABEL 0x10
+SVAL 0x1 0x1
+BNE 0x11 0xc 0x1
+	AddUnitStatus(PGLazarus, Strength, 2)
+	SystemText(LazarusStrUp)
+	RANDOMNUMBER 3
+	BGT 0x111 0xc 0x0
+	AddUnitStatus(PGLazarus, Magic, 6)
+	SystemText(LazarusMagUp)
+	LABEL 0x111
+	RANDOMNUMBER 3
+	BGT 0x112 0xc 0x0
+	AddUnitStatus(PGLazarus, Skill, 3)
+	SystemText(LazarusSklUp)
+	LABEL 0x112
+	GOTO 0x17
+LABEL 0x11
+SVAL 0x1 0x2
+BNE 0x12 0xc 0x1
+	AddUnitStatus(PGLazarus, Skill, 3)
+	SystemText(LazarusSklUp)
+	RANDOMNUMBER 3
+	BGT 0x121 0xc 0x0
+	AddUnitStatus(PGLazarus, MaxHP, 3)
+	AddUnitStatus(PGLazarus, CurrentHP, 3)
+	SystemText(LazarusHPUp)
+	LABEL 0x121
+	RANDOMNUMBER 3
+	BGT 0x122 0xc 0x0
+	AddUnitStatus(PGLazarus, Magic, 6)
+	SystemText(LazarusMagUp)
+	LABEL 0x122
+	GOTO 0x17
+LABEL 0x12
+SVAL 0x1 0x3
+BNE 0x13 0xc 0x1
+	AddUnitStatus(PGLazarus, Speed, 1)
+	SystemText(LazarusSpdUp)
+	RANDOMNUMBER 3
+	BGT 0x131 0xc 0x0
+	AddUnitStatus(PGLazarus, Speed, 1)
+	SystemText(LazarusSpdUp)
+	LABEL 0x131
+	RANDOMNUMBER 3
+	BGT 0x132 0xc 0x0
+	AddUnitStatus(PGLazarus, Speed, 1)
+	SystemText(LazarusSpdUp)
+	LABEL 0x132
+	GOTO 0x17
+LABEL 0x13
+SVAL 0x1 0x4
+BNE 0x14 0xc 0x1
+	AddUnitStatus(PGLazarus, LuckStat, 1)
+	SystemText(LazarusLckUp)
+	RANDOMNUMBER 2
+	BGT 0x141 0xc 0x0
+	AddUnitStatus(PGLazarus, Strength, 2)
+	SystemText(LazarusStrUp)
+	LABEL 0x141
+	RANDOMNUMBER 2
+	BGT 0x142 0xc 0x0
+	AddUnitStatus(PGLazarus, Speed, 1)
+	SystemText(LazarusSpdUp)
+	LABEL 0x142
+	RANDOMNUMBER 2
+	BGT 0x143 0xc 0x0
+	AddUnitStatus(PGLazarus, Defence, 2)
+	SystemText(LazarusDefUp)
+	LABEL 0x143
+	GOTO 0x17
+LABEL 0x14
+SVAL 0x1 0x5
+BNE 0x15 0xc 0x1
+	AddUnitStatus(PGLazarus, Defence, 1)
+	SystemText(LazarusDefUp)
+	RANDOMNUMBER 3
+	BGT 0x153 0xc 0x0
+	AddUnitStatus(PGLazarus, Defence, 1)
+	SystemText(LazarusDefUp)
+	LABEL 0x153
+	RANDOMNUMBER 3
+	BGT 0x151 0xc 0x0
+	AddUnitStatus(PGLazarus, Strength, 2)
+	SystemText(LazarusStrUp)
+	LABEL 0x151
+	RANDOMNUMBER 3
+	BGT 0x152 0xc 0x0
+	AddUnitStatus(PGLazarus, MaxHP, 3)
+	AddUnitStatus(PGLazarus, CurrentHP, 3)
+	SystemText(LazarusHPUp)
+	LABEL 0x152
+	GOTO 0x17
+LABEL 0x15
+SVAL 0x1 0x6
+BNE 0x16 0xc 0x1
+	LABEL 0x161
+	AddUnitStatus(PGLazarus, Resistance, 2)
+	SystemText(LazarusResUp)
+	RANDOMNUMBER 1
+	BEQ 0x161 0xc 0x0
+	RANDOMNUMBER 2
+	BEQ 0x162 0xc 0x0
+	AddUnitStatus(PGLazarus, LuckStat, 3)
+	SystemText(LazarusLckUp)
+	LABEL 0x162
+LABEL 0x16
+SVAL 0x1 0x7
+BNE 0x17 0xc 0x1
+	RANDOMNUMBER 4
+	SVAL 0x1 0x0
+	BNE 0x171 0xc 0x1
+	GiveItem(Hammer,PGLazarus)
+	GiveItem(Halberd,PGLazarus)
+	GOTO 0x17
+	LABEL 0x171
+	SVAL 0x1 0x1
+	BNE 0x172 0xc 0x1
+	GiveItem(Tomahawk,PGLazarus)
+	GOTO 0x17
+	LABEL 0x172
+	SVAL 0x1 0x2
+	BNE 0x173 0xc 0x1
+	GiveItem(DevilAxe,PGLazarus)
+	GOTO 0x17
+	LABEL 0x173
+	SVAL 0x1 0x3
+	BNE 0x174 0xc 0x1
+	GiveItem(VoidCleaver,PGLazarus)
+	GiveItem(HereticAxe,PGLazarus)
+	GOTO 0x17
+	LABEL 0x174
+	SVAL 0x1 0x4
+	BNE 0x175 0xc 0x1
+	GiveItem(Swordreaver,PGLazarus)
+	GOTO 0x17
+	LABEL 0x175
+LABEL 0x17
+COUNTER_CHECK 1
+SVAL 0x1 0x3
+BNE 0x999 0xc 0x1
+LazarusCapStat(MaxHP,80,0x4000)
+LazarusCapStat(CurrentHP,80,0x4001)
+LazarusCapStat(Strength,36,0x4002)
+LazarusCapStat(Magic,24,0x4003)
+LazarusCapStat(Skill,35,0x4004)
+LazarusCapStat(Speed,26,0x4005)
+LazarusCapStat(LuckStat,30,0x4006)
+LazarusCapStat(Defence,36,0x4007)
+LazarusCapStat(Resistance,25,0x4008)
+EndEvent
 
 //MESSAGE Events end at offset CURRENTOFFSET

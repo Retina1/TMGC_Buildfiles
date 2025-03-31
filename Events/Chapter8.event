@@ -114,6 +114,7 @@ UNIT Loile Fighter 0x0 Level(8,Enemy,1) [2,3] 0x0 0x0 0x0 0x0 [IronAxe] ChaseOnc
 UNIT Esme WyvLord 0x0 Level(2,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Javelin,IronAxe] NeverMoveAI
 UNIT Loile Thief 0x0 Level(10,Enemy,1) [16,16] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] LootingThiefAI
 UNIT Loile Thief 0x0 Level(10,Enemy,1) [16,21] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] LootingThiefAI
+UNIT Loile Thief 0x0 Level(10,Enemy,1) [8,15] DropItem 0x0 0x0 0x0 [IronSword,Unlock] LootingThiefAI
 UNIT
 
 C8Normal:
@@ -140,6 +141,7 @@ UNIT Loile LncCav 0x0 Level(10,Enemy,1) [6,3] 0x0 0x0 0x0 0x0 [IronLance] Attack
 UNIT Esme WyvLord 0x0 Level(2,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Javelin,SteelAxe] NeverMoveAI
 UNIT Loile Thief 0x0 Level(10,Enemy,1) [16,16] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] LootingThiefAI
 UNIT Loile Thief 0x0 Level(10,Enemy,1) [16,21] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] LootingThiefAI
+UNIT Loile Thief 0x0 Level(10,Enemy,1) [8,15] DropItem 0x0 0x0 0x0 [IronSword,Unlock] LootingThiefAI
 UNIT
 
 C8Hard:
@@ -169,6 +171,7 @@ UNIT Loile LncCav 0x0 Level(10,Enemy,1) [6,3] 0x0 0x0 0x0 0x0 [IronLance] Attack
 UNIT Esme WyvLord 0x0 Level(2,Enemy,1) [3,2] 0x0 0x0 0x0 0x0 [Javelin,SilverAxe] NeverMoveAI
 UNIT Loile Thief 0x0 Level(10,Enemy,1) [16,16] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] LootingThiefAI
 UNIT Loile Thief 0x0 Level(10,Enemy,1) [16,21] DropItem 0x0 0x0 0x0 [IronSword,ChestKey] LootingThiefAI
+UNIT Loile Thief 0x0 Level(10,Enemy,1) [8,15] DropItem 0x0 0x0 0x0 [IronSword,Unlock] LootingThiefAI
 UNIT
 
 C8Ally:
@@ -271,6 +274,9 @@ C8Escape:
 EscapePoint(8,11, NoMove)
 EscapePoint(16,16, NoMove)
 EscapePoint(16,21, NoMove)
+EscapePoint(0,18, MoveLeft)
+EscapePoint(0,19, MoveLeft)
+EscapePoint(0,20, MoveLeft)
 EscapePointEnd
 
 //MESSAGE Events end at offset CURRENTOFFSET

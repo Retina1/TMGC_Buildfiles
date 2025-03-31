@@ -27,14 +27,14 @@ PUSH
     POIN CreditSlide3_Struct
     POIN CreditSlide3_Struct
     ORG $206EB4
-    POIN CreditSlide1_Struct
-    POIN CreditSlide1_Struct
+    POIN CreditSlide4_Struct
+    POIN CreditSlide4_Struct
     ORG $206EF0
-    POIN CreditSlide1_Struct
-    POIN CreditSlide1_Struct
+    POIN CreditSlide5_Struct
+    POIN CreditSlide5_Struct
     ORG $206F18
-    POIN CreditSlide1_Struct
-    POIN CreditSlide1_Struct
+    POIN CreditSlide6_Struct
+    POIN CreditSlide6_Struct
     ORG $206F40
     POIN CreditSlide1_Struct
     POIN CreditSlide1_Struct
@@ -58,17 +58,17 @@ PUSH
     POIN CreditSlide3_Pal
     POIN CreditSlide3_TSA
 	
-    POIN CreditSlide1_Img
-    POIN CreditSlide1_Pal
-    POIN CreditSlide1_TSA
+    POIN CreditSlide4_Img
+    POIN CreditSlide4_Pal
+    POIN CreditSlide4_TSA
 
-    POIN CreditSlide1_Img
-    POIN CreditSlide1_Pal
-    POIN CreditSlide1_TSA
+    POIN CreditSlide5_Img
+    POIN CreditSlide5_Pal
+    POIN CreditSlide5_TSA
 
-    POIN CreditSlide1_Img
-    POIN CreditSlide1_Pal
-    POIN CreditSlide1_TSA
+    POIN CreditSlide6_Img
+    POIN CreditSlide6_Pal
+    POIN CreditSlide6_TSA
 
     POIN CreditSlide1_Img
     POIN CreditSlide1_Pal
@@ -107,6 +107,25 @@ POIN CreditSlide3_Img
 POIN CreditSlide3_TSA
 POIN CreditSlide3_Pal
 WORD $78
+ALIGN 4
+CreditSlide4_Struct:
+POIN CreditSlide4_Img
+POIN CreditSlide4_TSA
+POIN CreditSlide4_Pal
+WORD $78
+ALIGN 4
+CreditSlide5_Struct:
+POIN CreditSlide5_Img
+POIN CreditSlide5_TSA
+POIN CreditSlide5_Pal
+WORD $78
+ALIGN 4
+CreditSlide6_Struct:
+POIN CreditSlide6_Img
+POIN CreditSlide6_TSA
+POIN CreditSlide6_Pal
+WORD $78
+
 
 
 //NOTE: these TSAs are in reverse vertical order, 60 bytes (30 4BPP tiles) per row. The two bytes in front of the map are [width-1, height-1]
@@ -140,6 +159,36 @@ ALIGN 4
 CreditSlide3_TSA:
 //BYTE $1D $13
 #incbin "CreditsCG3.tsa.dmp"
+ALIGN 4
+CreditSlide4_Img:
+#incbin "CreditsCG4.dmp"
+ALIGN 4
+CreditSlide4_Pal:
+#incbin "CreditsCG4.pal.dmp"
+ALIGN 4
+CreditSlide4_TSA:
+//BYTE $1D $13
+#incbin "CreditsCG4.tsa.dmp"
+ALIGN 4
+CreditSlide5_Img:
+#incbin "CreditsCG5.dmp"
+ALIGN 4
+CreditSlide5_Pal:
+#incbin "CreditsCG5.pal.dmp"
+ALIGN 4
+CreditSlide5_TSA:
+//BYTE $1D $13
+#incbin "CreditsCG5.tsa.dmp"
+ALIGN 4
+CreditSlide6_Img:
+#incbin "CreditsCG6.dmp"
+ALIGN 4
+CreditSlide6_Pal:
+#incbin "CreditsCG6.pal.dmp"
+ALIGN 4
+CreditSlide6_TSA:
+//BYTE $1D $13
+#incbin "CreditsCG6.tsa.dmp"
 
 ALIGN 4
 

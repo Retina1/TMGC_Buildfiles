@@ -323,11 +323,11 @@ setMugEntry(0x20,CharleyMug,3,5,3,3)
 ALIGN 4
 ZekeMug:
 #incbin "dmps/Zeke.dmp"
-setMugEntry(0x21,ZekeMug,4,6,4,4)
+setMugEntry(0x21,ZekeMug,2,5,3,3)
 ALIGN 4
 ZekePromoMug:
 #incbin "dmps/ZekePromo.dmp"
-setMugEntry(0x127,ZekePromoMug,3,5,3,3)
+setMugEntry(0x127,ZekePromoMug,2,5,2,3)
 
 ALIGN 4
 HyperiusMug:
@@ -479,7 +479,7 @@ setMugEntry(0x101,ElizaPromoMug,2,6,3,4)
 ALIGN 4
 ChartreuseMug:
 #incbin "dmps/Chartreuse.dmp"
-setMugEntry(0x1f,ChartreuseMug,3,5,3,3)
+setMugEntry(0x1f,ChartreuseMug,2,6,3,4)
 
 ALIGN 4
 EstelleMug:
@@ -494,6 +494,10 @@ ALIGN 4
 RiftMug:
 #incbin "dmps/Rift.dmp"
 setMugEntry(0x2d,RiftMug,2,5,3,3)
+ALIGN 4
+RiftYoungMug:
+#incbin "dmps/RiftYoung.dmp"
+setMugEntry(0x154,RiftYoungMug,2,6,3,4)
 
 ALIGN 4
 RoseMug:
@@ -566,7 +570,7 @@ setMugEntry(0x14f,PtolemyPromoMugAlt,2,5,3,3)
 ALIGN 4
 SoniaMug:
 #incbin "dmps/Sonia.dmp"
-setMugEntry(0x48,SoniaMug,4,5,4,3)
+setMugEntry(0x48,SoniaMug,2,5,3,3)
 
 ALIGN 4
 JoanMug:

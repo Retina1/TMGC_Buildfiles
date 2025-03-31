@@ -126,6 +126,8 @@ BEQ 0x90 0xc 0x0
 	Text(Epilogue_MultiAercolynLover)//no boat
 	GOTO 0x92
 LABEL 0x90
+CHECK_EVENTID RiftEstelleFlag
+BNE 0x21 0xc 0x0
 EpilogueNoFlagUnitText(Estelle,BlairEstelleFlag,Epilogue_EstelleAercolyn,0x21)
 CHECK_EVENTID TriadFlag
 BNE 0x888 0xc 0x0
@@ -786,6 +788,7 @@ CHECK_ALIVE Sonia
 BEQ 0x444 0xc 0x0
 SetSupport(Joan,Sonia,ASupport)
 LABEL 0x444
+EpilogueSupportFlag(Emile,Dirk,EmileDirkFlag,0x7ff)
 EpilogueSupportFlag(Blair,Arin,BlairArinFlag,0x800)
 EpilogueSupportFlag(Blair,Natasia,BlairNatasiaFlag,0x801)
 EpilogueSupportFlag(Blair,Avan,BlairAvanFlag,0x802)
@@ -863,14 +866,24 @@ ENUF DesmondFlynnFlag
 ClearSupport(Desmond,Flynn)
 LABEL 0x555
 
+CHECK_EVENTID SamEmileFlag
+BEQ 0x5555 0xc 0x0
+ENUF EmileDirkFlag
+ClearSupport(Emile,Dirk)
+ClearSupport(Dirk,Eliza)
+LABEL 0x5555
+
 CHECK_EVENTID PtolemyJohanFlag
 BEQ 0x556 0xc 0x0
 ENUF StefanJohanFlag
 ClearSupport(Stefan,Johan)
 LABEL 0x556
 
+CHECK_EVENTID GirlkissingFlag
+BNE 0x5588 0xc 0x0
 CHECK_EVENTID BlairEstelleFlag
 BEQ 0x558 0xc 0x0
+LABEL 0x5588
 ENUF RiftEstelleFlag
 ClearSupport(Rift,Estelle)
 LABEL 0x558

@@ -112,7 +112,7 @@ UNIT
 Tale8Turn6Spawn:
 UNIT Bandit Merc 0x0 Level(15,Enemy,1) [17,0] 0x0 0x0 0x1 REDA16R0 [Lancereaver] NoAI
 UNIT Bandit Merc 0x0 Level(15,Enemy,1) [17,0] 0x0 0x0 0x1 REDA17R1 [Rapier] NoAI
-UNIT Bandit Hero 0x0 Level(15,Enemy,1) [17,0] 0x0 0x0 0x1 REDA16R1 [SteelSword] NoAI
+UNIT Bandit Hero 0x0 Level(3,Enemy,1) [17,0] 0x0 0x0 0x1 REDA16R1 [SteelSword] NoAI
 UNIT
 
 Tale8Turn7Spawn:
@@ -133,6 +133,7 @@ ALIGN 4
 //give bros a triangle attack
 
 Tale8SafeZone:
+SET_ACTIVE 0xFFFF
 CHECK_ACTIVEID Dirk
 BEQ 0x1 0xc 0x0
 Text(Tale8DirkSaved) //dirk out
@@ -215,6 +216,7 @@ Reinforcements(Tale8Turn12OnSpawn)
 EndEvent
 
 Tale8Ruins:
+SET_ACTIVE 0xFFFF
 CHECK_ACTIVEID Viridian
 BEQ 0x1 0xc 0x0
 Text(OuterRuinCG,Tale8ViridianRuins)
@@ -255,7 +257,7 @@ TaleSetUnitStat(Viridian,35,15,12,19,19,12,11,19)
 TaleSetUnitWEXP(Viridian,0,0,0,121,121,0,0,0)
 SetUnitSkills(Viridian,AcrobatID,PassID,0,0)
 TaleSetUnitStat(Freddric,46,20,1,20,20,14,17,5)
-TaleSetUnitWEXP(Freddric,0,121,81,0,0,0,0,0)
+TaleSetUnitWEXP(Freddric,0,121,71,0,0,0,0,0)
 SetUnitSkills(Freddric,RenewalID,0,0,0)
 TaleSetUnitStat(Chartreuse,19,3,30,18,30,30,4,10)
 TaleSetUnitWEXP(Chartreuse,0,0,0,0,0,0,0,0)

@@ -27,6 +27,28 @@ POP
 #define SoloEndingFlagTableEntry(charID, textID, flag) "BYTE SoloEnding charID 0 flag; SHORT textID 0"
 #define EndingTableTerminator "BYTE 0 0 0 0; SHORT 0 0"
 
+//ending text speed change
+//credit to catball
+PUSH
+ORG $b72c4
+ALIGN 4
+SHORT $4778 $46C0
+WORD $E59FC000 $E12FFF1C
+POIN EndingBattleInitText
+POP
+ALIGN 4
+PUSH
+ORG CURRENTOFFSET+$1;EndingBattleInitText:
+POP
+SHORT $B5F8 $46CE $4647 $4C21 $B580 $4D21 $6484 $6 $F000 $F853 $6430 $F000 $F850 $2100 $63F0 $4B1D $6CB0 $F000 $F849 $4B1C $2100 $6CB0 $F000 $F844 $4B1A $4699 $4B1A $4698 $4D1A $4F1B $20 $F000 $F83E $29 $20 $3408 $F000 $F838 $3580 $42BC $D1F4 $4B16 $2001 $F000 $F82F $6B32 $68D3 $75B $D50D $6813 $7918 $4B12 $F000 $F826 $6470 $2800 $D005 $BCC0 $46B9 $46B0 $BCF8 $BC01 $4700 $6AF3 $6858 $4B0C $F000 $F818 $6470 $E7F2
+BYTE $A0 $27 $0 $2 $95 $C $3 $8 $55 $3E $0 $8 $61 $3E $0 $8 $C9 $3D $0 $8 $71 $3E $0 $8 $2C $2E $2 $2 $C8 $27 $0 $2 $AD $1F $0 $8 $69 $67 $B $8 $41 $A2 $0 $8
+SHORT $4718 $4728 $4740 $4748
+
+
+
+
+ALIGN 4
+
 NewEndingWithdrawalTable:
 EndingNoRetreatTableEntry(Blair)
 EndingNoRetreatTableEntry(Arin)

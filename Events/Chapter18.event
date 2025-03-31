@@ -113,6 +113,7 @@ UNIT Arin Trickster 0x0 Level(3,Ally,0) [4,1] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 C18Easy:
+UNIT Lowlands Thief 0x0 Level(20,Enemy,1) [9,7] DropItem 0x0 0x0 0x0 [SilverSword,Wyrmslayer] LootingThiefAI
 UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Lowlands Hero 0x0 Level(2,Enemy,1) [28,3] 0x0 0x0 0x0 0x0 [SteelAxe] GroupSixAI
 UNIT Holanis Mage 0x0 Level(19,Enemy,1) [29,16] 0x0 0x0 0x0 0x0 [Elfire] GroupSevenAI
@@ -157,6 +158,7 @@ UNIT Bungalas LncGen 0x0 Level(10,Enemy,1) [33,1] DropItem 0x0 0x0 0x0 [Javelin,
 UNIT
 
 C18Normal:
+UNIT Lowlands Thief 0x0 Level(20,Enemy,1) [9,7] DropItem 0x0 0x0 0x0 [SilverSword,Wyrmslayer] LootingThiefAI
 UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Lowlands Hero 0x0 Level(2,Enemy,1) [28,3] 0x0 0x0 0x0 0x0 [SteelAxe] GroupSixAI
 UNIT Holanis Mage 0x0 Level(19,Enemy,1) [29,16] 0x0 0x0 0x0 0x0 [Elfire] GroupSevenAI
@@ -205,6 +207,7 @@ UNIT Bungalas LncGen 0x0 Level(10,Enemy,1) [33,1] DropItem 0x0 0x0 0x0 [Spear,Ey
 UNIT
 
 C18Hard:
+UNIT Lowlands Thief 0x0 Level(20,Enemy,1) [9,7] DropItem 0x0 0x0 0x0 [SilverSword,Wyrmslayer] LootingThiefAI
 UNIT Lowlands Brigand 0x0 Level(19,Enemy,1) [6,6] 0x0 0x0 0x0 0x0 [SilverAxe] NoAI
 UNIT Lowlands Hero 0x0 Level(2,Enemy,1) [28,3] 0x0 0x0 0x0 0x0 [SilverAxe] GroupSixAI
 UNIT Holanis Sage 0x0 Level(1,Enemy,1) [29,16] 0x0 0x0 0x0 0x0 [Elfire] GroupSevenAI
@@ -452,5 +455,19 @@ Text(Ch18_AllAlight)
 CALL EndingScene
 LABEL 0x1
 EndEvent
+
+ALIGN 4
+EscapePointPointerTable(Chapter18,C18Escape)
+
+ALIGN 4
+C18Escape:
+EscapePoint(34,0, MoveRight)
+EscapePoint(34,1, MoveRight)
+EscapePoint(34,2, MoveRight)
+EscapePoint(34,3, MoveRight)
+EscapePoint(34,4, MoveRight)
+EscapePoint(34,5, MoveRight)
+EscapePoint(34,6, MoveRight)
+EscapePointEnd
 
 //MESSAGE Events end at offset CURRENTOFFSET

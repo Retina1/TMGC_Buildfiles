@@ -205,6 +205,7 @@ FILL 0xFF * 0x07 // Allocate 0xFF entries for the CharClassTable.
 #define SinclairPaletteID 0x9f
 #define LarondeUPaletteID 0xa0
 #define ArinValkPaletteID 0xa1
+#define AmaraUPaletteID 0xa2
 //need - unpromoted laronde
 
 //to do: unpromoted pals for promoted units, cheeky text
@@ -367,6 +368,7 @@ setPalette(SofiaPaletteID,SofiaPalette)
 setPalette(LarondePaletteID,LarondePalette)
 setPalette(LarondeUPaletteID,LarondeUPalette)
 setPalette(AmaraPaletteID,AmaraPalette)
+setPalette(AmaraUPaletteID,AmaraUPalette)
 setPalette(ValdenPaletteID,ValdenPalette)
 setPalette(LazarusPaletteID,LazarusPalette)
 setPalette(RoarkPaletteID,RoarkPalette)
@@ -500,9 +502,10 @@ SetPaletteFull(Gregurias,0x0,0x0,GregoriasPPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Gregyrias,0x0,0x0,GregoriasPPaletteID,Berserker,0x0,0x0)
 SetPaletteFull(Sofia,0x0,0x0,SofiaPaletteID,SorcF,0x0,0x0)
 SetPaletteFull(Laronde,0x0,0x0,LarondePaletteID,Halberdier,0x0,0x0)
-SetPaletteFull(Amara,0x0,0x0,AmaraPaletteID,WarriorF,0x0,0x0)
+SetPaletteFull(Amara,AmaraUPaletteID,FighterF,AmaraPaletteID,WarriorF,0x0,0x0)
 SetPaletteFull(Valden,0x0,0x0,ValdenPaletteID,LncPal,0x0,0x0)
 SetPaletteFull(Lazarus,0x0,0x0,LazarusPaletteID,AxeGen,0x0,0x0)
+SetPaletteFull(PGLazarus,0x0,0x0,LazarusPaletteID,AxeGen,0x0,0x0)
 SetPaletteFull(Briant,0x0,0x0,BriantPaletteID,Baron,0x0,0x0)
 SetPaletteFull(Roark,RoarkPaletteID,Fighter,0x0,0x0,0x0,0x0)
 SetPaletteFull(Vulture,VulturePaletteID,BowArm,0x0,0x0,0x0,0x0)
@@ -976,6 +979,9 @@ LarondeUPalette:
 ALIGN 4
 AmaraPalette:
 #incbin "Amara.dmp"
+ALIGN 4
+AmaraUPalette:
+#incbin "AmaraUnpromoted.dmp"
 ALIGN 4
 ValdenPalette:
 #incbin "Valden.dmp"

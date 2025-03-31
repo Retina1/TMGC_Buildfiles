@@ -2278,6 +2278,12 @@ ConversationEntry(EEmileVladmirB,C28_Emile_Vladmir_Base,HallCG,Support3Viewer)
 ConversationEntry(EEmileSimoneCP,EmileSimoneCPSupport,EastHolanisCG,Support3Viewer)
 ConversationEntry(EEmileSimoneB,C25_Emile_Simone_Base,PathCG,Support3Viewer)
 ConversationEntry(EEmileSimoneBP,EmileSimoneBPSupport,PathCG,Support3Viewer)
+ConversationEntry(EEmileDirkB,EmileDirkBSupport,PathCG,Support3Viewer)
+ConversationEntry(EEmileDirkBAlt,EmileDirkBSupportAlt,PathCG,Support3Viewer)
+ConversationEntry(EEmileDirkBP,EmileDirkBPSupport,PathCG,Support3Viewer)
+ConversationEntry(EEmileDirkBPAlt,EmileDirkBPSupportAlt,PathCG,Support3Viewer)
+ConversationEntry(EEmileDirkA,EmileDirkASupport,HallCG,Support3Viewer)
+ConversationEntry(EEmileDirkAAlt,EmileDirkASupportAlt,HallCG,Support3Viewer)
 ConversationEntry(EApolloBechamelBP,ApolloBechamelBPSupport,EastHolanisCG,Support3Viewer)
 ConversationEntry(EApolloBechamelA,C26_Apollo_Bechamel_Base,StreetCG,Support3Viewer,LoverConvoSong)
 ConversationEntry(EApolloFlynnBP,ApolloFlynnBPSupport,EastHolanisCG,Support3Viewer)
@@ -2940,6 +2946,9 @@ CGViewerEvents:
 	CGViewerEntry(ECreditsElcorianTitle,ECreditsElcorianViewer)
 	CGViewerEntry(ECreditsBlairinTitle,ECreditsBlairinViewer)
 	CGViewerEntry(ECreditsLazarusTitle,ECreditsLazarusViewer)
+	CGViewerEntry(ECreditsViridianTitle,ECreditsViridianViewer)
+	CGViewerEntry(ECreditsZekeTitle,ECreditsZekeViewer)
+	CGViewerEntry(ECreditsFreddricTitle,ECreditsFreddricViewer)
 	CGViewerEntry(EsadblirTitle,EsadblirViewer)
 	CGViewerEntry(EblirTitle,EblirViewer)
 ConversationEntryTerminator
@@ -2969,6 +2978,15 @@ CGViewer(CreditsBlairinCG)
 ALIGN 4
 ECreditsLazarusViewer:
 CGViewer(CreditsLazarusCG)
+ALIGN 4
+ECreditsViridianViewer:
+CGViewer(CreditsViridianCG)
+ALIGN 4
+ECreditsFreddricViewer:
+CGViewer(CreditsFreddricCG)
+ALIGN 4
+ECreditsZekeViewer:
+CGViewer(CreditsZekeCG)
 ALIGN 4
 EsadblirViewer:
 CGViewer(sadblirCG)

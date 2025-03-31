@@ -4,11 +4,19 @@
 #include "_Common.event"
 
 pAidModifiers: // Aid
-	POIN prAddUnitFinalConstitution prSubstractOne prAdjustAidIfMounted
+	POIN prAddUnitFinalConstitution prSubstractOne prAdjustAidIfMounted prZeroAidCivM prZeroAidCivF
 	#ifdef DEBUFFS_MIN_ZERO
 	POIN prMinZero
 	#endif
 WORD 0
+
+prZeroAidCivM:
+	rIfUnitIsClass(CitizenM)
+		rConstant(0)
+prZeroAidCivF:
+	rIfUnitIsClass(CitizenF)
+		rConstant(0)
+		
 
 prAddUnitFinalConstitution:
 	rAdd(rCallExternal(prConGetter))

@@ -25,6 +25,10 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
+//make automatic on door open
+//make arin autojoin when waiting outside her door, she has to rewarp out of her room
+//svelt and ratio join later
+//cap arin luck
 END_MAIN
 
 LocationBasedEvents:
@@ -62,6 +66,7 @@ END_MAIN
 
 MiscBasedEvents:
 //DefeatBoss(EndingScene)
+AreaEvent(0x8,Tale10DoorTrigger,14,8,15,8)
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -80,8 +85,21 @@ ALIGN 4
 
 // tiny arin playable? no stats, holy brand blipping? simone says it's a dream to get her to act more composed
 Tale10Units:
-UNIT Simone SorcF 0x0 Level(1,Ally,0) [12,7] 0x0 0x0 0x0 0x0 [Nightfall,Hell,Sleep] NoAI
+UNIT Simone SorcF 0x0 Level(1,Ally,0) [14,7] 0x0 0x0 0x0 0x0 [Nightfall,Hell,Sleep] NoAI
 UNIT
+
+Tale10Arin:
+UNIT Arin 0x6e 0x0 Level(1,Enemy,0) [15,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
+UNIT
+
+Tale10Svelt:
+UNIT Sveltzalus Bigle 0x0 Level(1,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [EvilEye,Slam] NoAI
+UNIT
+
+Tale10Horatio:
+UNIT Horatio Rune 0x0 Level(1,Ally,0) [2,15] 0x0 0x0 0x0 0x0 [LevinSword] NoAI
+UNIT
+
 
 // stealth - things too strong for simone
 // green nuit bigles/ horatio cameo? betray him after helping?
@@ -100,10 +118,42 @@ LOAD1 0x1 Tale10Units
 ENUN
 LOAD1 0x1 Tale10Enemies
 ENUN
+LOAD1 0x1 Tale10Arin
+ENUN
+LOAD1 0x1 Tale10Svelt
+ENUN
+LOAD1 0x1 Tale10Horatio
+ENUN
 TaleSetUnitStat(Simone,28,3,21,18,15,10,18,20)
 TaleSetUnitWEXP(Simone,0,0,0,0,121,0,0,251)
 SetUnitSkills(Simone,FocusedGoalID,SaviorID,0,0)
+TaleSetUnitStat(Arin,13,1,4,3,2,30,1,3)
+TaleSetUnitWEXP(Arin,71,0,0,0,1,0,0,0)
+SetUnitSkills(Arin,ShadeID,0,0,0)
 ENDA
+
+Tale10ArinRecruitment:
+MUSC S_Chaos
+Text(FillerDialogue)
+TurnAlly(Arin)
+GiveItem(HolyBrand,Arin)
+SystemText(FillerDialogue) //get her out
+EndEvent
+
+Tale10DoorTrigger:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
+MUSC S_Chaos
+Text(FillerDialogue)
+TurnAlly(Arin)
+GiveItem(HolyBrand,Arin)
+SystemText(FillerDialogue) //get her out
+OffAllUnitState(Arin, HideInLinkArena, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x8
+LABEL 0x2
+EndEvent
 
 EndingScene:
 ENUT Tale10DoneFlag

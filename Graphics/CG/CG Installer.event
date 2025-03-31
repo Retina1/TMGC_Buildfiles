@@ -87,6 +87,10 @@ WORD 0x0 0x0 0x0                                    // 3d (add more if need be l
 WORD 0x0 0x0 0x0                                    // 3e (add more if need be later)
 WORD 0x0 0x0 0x0                                    // 3f (add more if need be later)
 WORD 0x0 0x0 0x0                                    // 40 (add more if need be later)
+WORD 0x0 0x0 0x0                                    // 41 (add more if need be later)
+WORD 0x0 0x0 0x0                                    // 42 (add more if need be later)
+WORD 0x0 0x0 0x0                                    // 43 (add more if need be later)
+WORD 0x0 0x0 0x0                                    // 44 (add more if need be later)
 
 //colors
 SetColorsBackground(blirCG,blirImage,blirPalette)
@@ -100,6 +104,9 @@ SetColorsBackground(MapWordsCG,MapWordsImage,MapWordsPalette)
 SetColorsBackground(CreditsElcorianCG,CreditsCG1Image,CreditsCG1Palette)
 SetColorsBackground(CreditsBlairinCG,CreditsCG2Image,CreditsCG2Palette)
 SetColorsBackground(CreditsLazarusCG,CreditsCG3Image,CreditsCG3Palette)
+SetColorsBackground(CreditsViridianCG,CreditsCG4Image,CreditsCG4Palette)
+SetColorsBackground(CreditsZekeCG,CreditsCG5Image,CreditsCG5Palette)
+SetColorsBackground(CreditsFreddricCG,CreditsCG6Image,CreditsCG6Palette)
 
 //normals
 SetConvoBackground(BlankCG,BlankImage,BlankTSA,BlankPalette)
@@ -168,6 +175,24 @@ CreditsCG3Image:
 ALIGN 4
 CreditsCG3Palette:
 #incbin "MoreColors/gfx/BG/224CreditsCG3Pal.dmp"
+ALIGN 4
+CreditsCG4Image:
+#incbin "MoreColors/gfx/BG/224CreditsCG4.dmp"
+ALIGN 4
+CreditsCG4Palette:
+#incbin "MoreColors/gfx/BG/224CreditsCG4Pal.dmp"
+ALIGN 4
+CreditsCG5Image:
+#incbin "MoreColors/gfx/BG/224CreditsCG5.dmp"
+ALIGN 4
+CreditsCG5Palette:
+#incbin "MoreColors/gfx/BG/224CreditsCG5Pal.dmp"
+ALIGN 4
+CreditsCG6Image:
+#incbin "MoreColors/gfx/BG/224CreditsCG6.dmp"
+ALIGN 4
+CreditsCG6Palette:
+#incbin "MoreColors/gfx/BG/224CreditsCG6Pal.dmp"
 
 
 

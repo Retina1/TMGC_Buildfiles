@@ -30,6 +30,7 @@ TurnEventPlayer(0x0,C14ThiefSpawn2,9)
 TurnEventPlayer(0x0,C14Turn10,10)
 TurnEventPlayer(0x0,C14ThiefSpawn3,12)
 TurnEventPlayer(0x23,C14ThroneReinforcements,1,255)
+TurnEventPlayer(0x27,C14AxeHandleCheck,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -63,7 +64,7 @@ Chest(Implant,21,12)
 Chest(SpiritDust,22,12)
 Chest(Fenrir,20,19)
 Chest(FlameSword,19,20)
-Door(0x26,13,6)
+Door(13,6)
 SecretShop(Ch14SecretShop,5,24) 
 END_MAIN
 
@@ -77,7 +78,7 @@ MiscBasedEvents:
 AreaEvent(0x21,C14ThroneTrap,2,2,2,2)
 AreaEvent(0x22,C14AreaTrigger,7,0,19,6)
 CauseGameOverIfLordDies
-AFEV 0x25 TheHandle 0x26
+AreaEvent(0x26,TheHandle,13,6,13,6)
 END_MAIN
 
 Dunno:
@@ -438,7 +439,7 @@ TEXTEND
 Reinforcements(C14Charley)
 TEXTCONT
 TEXTEND
-CLEAN
+//CLEAN
 EndEvent
 
 C14Turn4:
@@ -512,8 +513,28 @@ LABEL 0x2
 EndEvent
 
 TheHandle:
+CHECK_ALLEGIANCE 0xFFFF
+BNE 0x1 0xC 0x0
 SystemText(ObtainTheHandle)
 GiveItem(ArkhinalHandle)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x26
+LABEL 0x2
+EndEvent
+
+C14AxeHandleCheck:
+TileChangeCheck(0xB)
+BEQ 0x1 0xc 0x0
+CHECK_EVENTID 0x26
+BNE 0x1 0xc 0x0
+CAM1 [13,6]
+FlashCursor(13,6,60)
+SystemText(HandlePulse)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x27
+LABEL 0x2
 EndEvent
 
 C14BlairCharleyTalkConvo:

@@ -21,6 +21,7 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0x11,HoratioSpawn,1,255)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -32,6 +33,9 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Escape(11,32)
+Escape(12,32)
+Escape(13,32)
 Door(4,6)
 Door(5,6)
 Door(9,6)
@@ -66,7 +70,16 @@ END_MAIN
 
 MiscBasedEvents:
 //DefeatBoss(EndingScene)
+//area event where horatio is taken away after a unit passes a threshold
+//something to force sveltzalus out first
 AreaEvent(0x8,Tale10DoorTrigger,14,8,15,8)
+AreaEvent(0xa,Tale10ArinOutTrigger,0,7,17,8)
+AreaEvent(0xa,Tale10ArinOutTrigger,0,9,1,14)
+AreaEvent(0xa,Tale10ArinOutTrigger,0,15,17,16)
+AreaEvent(0xb,Tale10HoratioTrap,7,18,17,32)
+AFEV 0x0 ArinDropChecker 0x9
+AFEV 0x0 WhyDidYouDoThat 0x10
+AFEV 0x0 WhyDidYouDoThatNathan 0x20
 CauseGameOverIfLordDies
 END_MAIN
 
@@ -77,6 +90,9 @@ Tutorial:
 END_MAIN
 
 TrapData:
+RedSigil(11,32)
+RedSigil(12,32)
+RedSigil(13,32)
 ENDTRAP
 TrapData2:
 ENDTRAP
@@ -85,7 +101,7 @@ ALIGN 4
 
 // tiny arin playable? no stats, holy brand blipping? simone says it's a dream to get her to act more composed
 Tale10Units:
-UNIT Simone SorcF 0x0 Level(1,Ally,0) [14,7] 0x0 0x0 0x0 0x0 [Nightfall,Hell,Sleep] NoAI
+UNIT Simone SorcF 0x0 Level(1,Ally,0) [17,7] 0x0 0x0 0x1 REDA14R7 [Nightfall,Hell,Sleep] NoAI
 UNIT
 
 Tale10Arin:
@@ -93,70 +109,169 @@ UNIT Arin 0x6e 0x0 Level(1,Enemy,0) [15,12] 0x0 0x0 0x0 0x0 [0x0] NoAI
 UNIT
 
 Tale10Svelt:
-UNIT Sveltzalus Bigle 0x0 Level(1,Ally,0) [0,0] 0x0 0x0 0x0 0x0 [EvilEye,Slam] NoAI
+UNIT Sveltzalus Bigle 0x0 Level(1,Ally,0) [17,0] 0x0 0x0 0x1 REDA1R0 [EvilEye,Slam] NoAI
 UNIT
 
 Tale10Horatio:
-UNIT Horatio Rune 0x0 Level(1,Ally,0) [2,15] 0x0 0x0 0x0 0x0 [LevinSword] NoAI
+UNIT Horatio Rune 0x0 Level(1,Ally,0) [17,7] 0x0 0x0 0x1 REDA13R7 [LevinSword] NoAI
 UNIT
 
 
 // stealth - things too strong for simone
 // green nuit bigles/ horatio cameo? betray him after helping?
+// no real combat maybe?
 Tale10Enemies:
 //center
-UNIT Nathaniel Sorc 0x0 Level(5,Enemy,0) [9,18] 0x0 0x0 0x0 0x0 [Fenrir,Fortify] NeverMoveAI
+UNIT Holanis Sorc 0x0 Level(1,Enemy,1) [1,22] 0x0 0x0 0x0 0x0 [Nosferatu] DoNothing
+UNIT Holanis Sorc 0x0 Level(1,Enemy,1) [1,7] 0x0 0x0 0x0 0x0 [Freikugel] DoNothing
+UNIT Holanis LncGen 0x0 Level(1,Enemy,1) [2,30] 0x0 0x0 0x0 0x0 [TrueSaunion] DoNothing
+UNIT Holanis Sage 0x0 Level(1,Enemy,1) [8,22] 0x0 0x0 0x0 0x0 [Cloudburst] DoNothing
+UNIT Holanis Sniper 0x0 Level(1,Enemy,1) [12,15] 0x0 0x0 0x0 0x0 [BarrierBow] DoNothing
+UNIT Nathaniel Sorc 0x0 Level(5,Enemy,1) [12,29] 0x0 0x0 0x0 0x0 [Fenrir,Fortify] DoNothing
 UNIT
 
 ALIGN 4
 //event to make simone rescue arin asap, game over if she's dropped (simone says the fuck am i doing)
 //horatio miniboss - simone doesn't kill him, makes him stand down
+//once arin escapes, she walks to simone and simone force rescues
+//a turn later, horatio spawns
+//when passing a certain threshold, simone makes svelt spawn
 
 BeginningScene:
 DISA Addington
-LOAD1 0x1 Tale10Units
-ENUN
 LOAD1 0x1 Tale10Enemies
 ENUN
 LOAD1 0x1 Tale10Arin
 ENUN
-LOAD1 0x1 Tale10Svelt
-ENUN
-LOAD1 0x1 Tale10Horatio
-ENUN
-TaleSetUnitStat(Simone,28,3,21,18,15,10,18,20)
-TaleSetUnitWEXP(Simone,0,0,0,0,121,0,0,251)
-SetUnitSkills(Simone,FocusedGoalID,SaviorID,0,0)
+TaleSetUnitStat(Nathaniel,77,10,30,20,21,24,24,28)
 TaleSetUnitStat(Arin,13,1,4,3,2,30,1,3)
 TaleSetUnitWEXP(Arin,71,0,0,0,1,0,0,0)
 SetUnitSkills(Arin,ShadeID,0,0,0)
-ENDA
-
-Tale10ArinRecruitment:
 MUSC S_Chaos
-Text(FillerDialogue)
-TurnAlly(Arin)
-GiveItem(HolyBrand,Arin)
-SystemText(FillerDialogue) //get her out
+CleanText(HallCG,Tale10_Opening)
+MUSC S_EleventhHour
+LOAD1 0x1 Tale10Units
+ENUN
+Text(Tale10_Opening2)
+TaleSetUnitStat(Simone,28,3,21,18,15,10,18,20)
+TaleSetUnitWEXP(Simone,0,0,0,0,121,0,0,251)
+SetUnitSkills(Simone,FocusedGoalID,SaviorID,0,0)
 EndEvent
+
 
 Tale10DoorTrigger:
 CHECK_ALLEGIANCE 0xFFFF
 BNE 0x1 0xC 0x0
 MUSC S_Chaos
-Text(FillerDialogue)
+Text(Tale10_ArinRecruitment)
 TurnAlly(Arin)
-GiveItem(HolyBrand,Arin)
-SystemText(FillerDialogue) //get her out
 OffAllUnitState(Arin, HideInLinkArena, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
+GiveItem(HolyBrand,Arin)
+MUSC S_EleventhHour
+SystemText(Tale10_SystemText1) //get her out
 GOTO 0x2
 LABEL 0x1
 ENUF 0x8
 LABEL 0x2
 EndEvent
 
+Tale10ArinOutTrigger:
+CHECK_ACTIVEID Arin
+BEQ 0x1 0xc 0x0
+SET_ACTIVE 0
+MUSC S_Chaos
+Text(Tale10_ArinOut)
+FADI 60
+VCWF 0x0
+SetUnitStatus(Simone,Rescuing,2)
+SetUnitStatus(Arin,Rescuing,1)
+OnAllUnitState(Arin, Hide, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
+OnAllUnitState(Arin, Rescued, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
+OnAllUnitState(Simone, RescuingUnit, AnyState, PlayerArmy, AnyClass, AnyRange, AnyItem)
+VCWF 0x3
+FADU 60
+MUSC S_EleventhHour
+SystemText(Tale10_SystemText2) //do not drop her
+Reinforcements(Tale10Svelt)
+VCWF 0x0
+FADI 60
+TaleSetUnitStat(Sveltzalus,19,5,2,9,12,15,6,4)
+TaleSetUnitWEXP(Sveltzalus,0,0,0,0,0,0,0,31)
+SetUnitSkills(Sveltzalus,0,0,0,0)
+FADU 60
+VCWF 0x3
+ENUT 0x9
+GOTO 0x2
+LABEL 0x1
+ENUF 0xa
+LABEL 0x2
+EndEvent
+
+WhyDidYouDoThat:
+Text(Tale10AlarmRaised)
+StartGameOver
+EndEvent
+WhyDidYouDoThatNathan:
+Text(Tale10AlarmRaisedNathan)
+StartGameOver
+EndEvent
+
+Tale10HoratioTrap:
+CHECK_ACTIVEID Simone
+BEQ 0x1 0xc 0x0
+SET_ACTIVE 0
+MUSC S_Chaos
+Text(Tale10_SimoneTattle)
+GOTO 0x10
+LABEL 0x1
+CHECK_ACTIVEID Horatio
+BEQ 0x2 0xc 0x0
+SET_ACTIVE 0
+MUSC S_Chaos
+Text(Tale10_HoratioCaught)
+LABEL 0x10
+FADI 16
+SilentKillUnit(Horatio)
+SilentKillUnit(Nathaniel)
+FADU 16
+SetMapBGM(S_Chaos)
+Text(Tale10_SimoneWantsToTakeAWalk)
+LABEL 0x2
+ENUF 0xb
+LABEL 0x100
+EndEvent
+
+ArinDropChecker:
+GetUnitStatus(Simone, Rescuing)
+BNE 0x1 0xc 0x0
+Text(Tale10_ArinDrop) //the fuck
+StartGameOver
+LABEL 0x1
+EndEvent
+
+HoratioSpawn:
+CHECK_EXISTS Horatio
+BNE 0x1 0xc 0x0
+CHECK_EVENTID 0x9
+BEQ 0x1 0xc 0x0
+Reinforcements(Tale10Horatio)
+FADI 60
+VCWF 0x0
+TaleSetUnitStat(Horatio,24,9,9,14,13,8,6,9)
+TaleSetUnitWEXP(Horatio,71,0,0,0,0,0,0,31)
+SetUnitSkills(Horatio,0,0,0,0)
+VCWF 0x3
+FADU 60
+Text(Tale10_HoratioJoins)
+GOTO 0x2
+LABEL 0x1
+ENUF 0x11
+LABEL 0x2
+EndEvent
+
 EndingScene:
 ENUT Tale10DoneFlag
+CleanTextNoMap(EastHolanisCG,Tale10Ending)
 MUSC 0x0
 SystemText(BlankCG,TaleEnding)
 MoveToChapter(HubMap)

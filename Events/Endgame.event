@@ -179,7 +179,7 @@ UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal] Ch
 UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [Nuiusseon] ChaseOnceApproachedAI
 UNIT DLEthyl SageF 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Starfall] AttackInRangeAI
 
-UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
+UNIT Arbordia2 EnemyBaron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT
 
 EndgameNormal:
@@ -233,7 +233,7 @@ UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal] Ch
 UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [Nuiusseon] ChaseOnceApproachedAI
 UNIT DLEthyl SageF 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Starfall] AttackInRangeAI
 
-UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
+UNIT Arbordia2 EnemyBaron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT
 
 EndgameHard:
@@ -293,40 +293,40 @@ UNIT DLLazarus AxeGen 0x0 Level(20,Enemy,1) [9,22] 0x0 0x0 0x0 0x0 [Arkhinal,Sav
 UNIT DLTarquin WyvLord 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [Nuiusseon,SoaringShaft] ChaseOnceApproachedAI
 UNIT DLEthyl SageF 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Starfall,EarthPower] AttackInRangeAI
 
-UNIT Arbordia2 Baron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
+UNIT Arbordia2 EnemyBaron 0x0 Level(20,Enemy,1) [9,2] 0x0 0x0 0x0 0x0 [Avalon,RealLastShield] NeverMoveAI
 UNIT
 
 FinalArbordiaSpawnNormal:
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Flare] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Radiance,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [Radiance,Silence] NeverMoveAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [GildedLance] NoAI
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [GildedSword] NoAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [GildedAxe] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [Radiance,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [Radiance,Silence] NeverMoveAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [Flare] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [GildedLance] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
 UNIT
 
 FinalArbordiaSpawnHard:
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [TheSDarkTome] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Greatbow] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [TheSDarkTome] NeverMoveAI
 UNIT
 
 FinalArbordiaSpawnLunatic:
@@ -343,19 +343,19 @@ UNIT DragonSimulacrum2 DivineDragon 0x0 Level(20,Enemy,1) [9,16] 0x0 0x0 0x0 0x0
 UNIT DragonSimulacrum2 DivineDragon 0x0 Level(20,Enemy,1) [10,15] 0x0 0x0 0x0 0x0 [DivineBreath] NoAI
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [3,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [2,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [3,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [4,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [3,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
 UNIT EndgameSimulacrum2 Hero 0x0 Level(20,Enemy,1) [15,8] 0x0 0x0 0x0 0x0 [Phalanotis] NoAI
 UNIT EndgameSimulacrum2 Warrior 0x0 Level(20,Enemy,1) [14,9] 0x0 0x0 0x0 0x0 [Arkhinal] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [15,9] 0x0 0x0 0x0 0x0 [BookOfOpistus,Silence] NeverMoveAI
 UNIT EndgameSimulacrum2 Sage 0x0 Level(20,Enemy,1) [16,9] 0x0 0x0 0x0 0x0 [Starfall] NoAI
 UNIT EndgameSimulacrum2 Halberdier 0x0 Level(20,Enemy,1) [15,10] 0x0 0x0 0x0 0x0 [Nuiusseon] NoAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
-UNIT EndgameSimulacrum2 Baron 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [TheSDarkTome] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [7,3] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [11,3] 0x0 0x0 0x0 0x0 [Ineubrenos] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [8,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [10,5] 0x0 0x0 0x0 0x0 [Starfall] NeverMoveAI
+UNIT EndgameSimulacrum2 EnemyBaron 0x0 Level(20,Enemy,1) [9,4] 0x0 0x0 0x0 0x0 [TheSDarkTome] NeverMoveAI
 UNIT
 
 EndgamePhase2Girard:
@@ -408,9 +408,9 @@ UNIT EndgameSimulacrum Bishop 0x0 Level(18,Enemy,1) [11,3] 0x0 0x0 0x1 REDA12R3 
 UNIT EndgameSimulacrum Sorc 0x0 Level(18,Enemy,1) [11,3] 0x0 0x0 0x1 REDA11R4 [TheSDarkTome,LegRing,LegRing,LegRing] NoAI
 UNIT
 EndgameSpawns4Group3:
-UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA8R4 [Phalanotis,TheSDarkTome,ArkhinalHandle,ArkhinalHandle] NoAI
-UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA10R4 [Arkhinal,BookOfOpistus,ArkhinalHandle,ArkhinalHandle] NoAI
-UNIT EndgameSimulacrum Baron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA9R5 [Starfall,Ineubrenos,Nuiusseon,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum EnemyBaron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA8R4 [Phalanotis,TheSDarkTome,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum EnemyBaron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA10R4 [Arkhinal,BookOfOpistus,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT EndgameSimulacrum EnemyBaron 0x0 Level(18,Enemy,1) [9,4] 0x0 0x0 0x1 REDA9R5 [Starfall,Ineubrenos,Nuiusseon,ArkhinalHandle] NoAI
 UNIT
 
 EndgameMorningStarGang:
@@ -427,7 +427,7 @@ UNIT Zeke ZekeLord 0x0 Level(3,Ally,0) [10,40] 0x0 0x0 0x0 0x0 [IronBow] NoAI
 UNIT
 
 EndgameCutsceneGirard:
-UNIT Bandit Baron 0x0 Level(20,Enemy,1) [16,39] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
+UNIT Bandit EnemyBaron 0x0 Level(20,Enemy,1) [16,39] 0x0 0x0 0x0 0x0 [0x0] NeverMoveAI
 UNIT
 
 EndgameCutsceneBlairZeke2:

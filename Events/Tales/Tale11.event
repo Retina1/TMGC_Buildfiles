@@ -59,14 +59,14 @@ ALIGN 4
 Tale11Units:
 UNIT Blair BlairLordX 0x0 Level(20,Ally,0) [13,13] 0x0 0x0 0x0 0x0 [Hopesinger,Starfall,EarthPower] NoAI //give her resolve and waning effects as skills
 UNIT Arin ArinValk 0x0 Level(20,Ally,0) [13,12] 0x0 0x0 0x0 0x0 [HolyBrand,ThiefStaff,SoulHilt] NoAI
-UNIT Natasia WarriorF 0x0 Level(20,Ally,0) [13,14] 0x0 0x0 0x0 0x0 [KillerAxe,Ladymace,Caduceus] NoAI //give her staff rank
+UNIT Natasia WarriorF 0x0 Level(20,Ally,0) [13,14] 0x0 0x0 0x0 0x0 [Caduceus,BraveBow,Fortify,Yoink] NoAI //give her staff rank
 UNIT Avan ValkF 0x0 Level(20,Ally,0) [12,13] 0x0 0x0 0x0 0x0 [Galewind,Runesword,Prototype,DoorKey] NoAI //give her anima rank
-UNIT Yuyu Freelancer 0x0 Level(20,Ally,0) [14,13] 0x0 0x0 0x0 0x0 [SorrowsPilgrim,DoorKey] NoAI //give her bow rank
+UNIT Yuyu Freelancer 0x0 Level(20,Ally,0) [14,13] 0x0 0x0 0x0 0x0 [SorrowsPilgrim,ShiningBow,Greatbow,DoorKey] NoAI //give her bow rank
 UNIT Estelle BowPalF 0x0 Level(20,Ally,0) [11,12] 0x0 0x0 0x0 0x0 [Ineubrenos,Nuiusseon,BiasedQuiver] NoAI
 UNIT Addington 0x0 0x0 Level(20,Ally,0) [15,14] 0x0 0x0 0x0 0x0 [0x0] NoAI
-UNIT Toddsworth Bard 0x0 Level(20,Ally,0) [12,15] 0x0 0x0 0x0 0x0 [Toddhand,VoidBracers] NoAI
+UNIT Toddsworth Bard 0x0 Level(20,Ally,0) [12,15] 0x0 0x0 0x0 0x0 [Toddhand,VoidBracers,LegRing] NoAI
 UNIT Tonnamin AxeGen 0x0 Level(20,Ally,0) [14,11] 0x0 0x0 0x0 0x0 [Hurlbat,DangerPick,SavageGauntlet] NoAI
-UNIT Kyrie KyrieSwordmaster 0x0 Level(20,Ally,0) [12,11] 0x0 0x0 0x0 0x0 [MasterSword,Soothesword] NoAI
+UNIT Kyrie KyrieSwordmaster 0x0 Level(20,Ally,0) [12,11] 0x0 0x0 0x0 0x0 [Rapier,MasterSword,Soothesword] NoAI
 UNIT UnitQ SwdPalF 0x0 Level(20,Ally,0) [11,14] 0x0 0x0 0x0 0x0 [Greatbow,Phalanotis,FlameSword] NoAI
 UNIT Valeria Falco 0x0 Level(20,Ally,0) [15,12] 0x0 0x0 0x0 0x0 [Soulbow,TheCreator,Stalwart] NoAI
 UNIT Sveltzalus Bigerle 0x0 Level(20,Ally,0) [14,15] 0x0 0x0 0x0 0x0 [CrimsonEye,Slam,Voulche] NoAI
@@ -75,12 +75,68 @@ UNIT
 Tale11Enemies:
 //stationaries
 UNIT Tale11Generic SageF 0x0 Level(20,Enemy,1) [1,1] 0x0 0x0 0x0 0x0 [Waning,Bolting,EarthPower] NeverMoveAI
+UNIT Tale11Generic SwdPal 0x0 Level(20,Enemy,1) [0,0] 0x0 0x0 0x0 0x0 [Phalanotis,ArkhinalHandle] GroupOneAI
+UNIT Tale11Generic LncPal 0x0 Level(20,Enemy,1) [1,0] 0x0 0x0 0x0 0x0 [Nuiusseon,ArkhinalHandle] GroupOneAI
+UNIT Tale11Generic AxePal 0x0 Level(20,Enemy,1) [2,0] 0x0 0x0 0x0 0x0 [Arkhinal,SavageGauntlet] GroupOneAI
+
+UNIT Tale11Generic SwdPal 0x0 Level(20,Enemy,1) [22,1] 0x0 0x0 0x0 0x0 [Phalanotis,ArkhinalHandle] GroupTwoAI
+UNIT Tale11Generic AxePal 0x0 Level(20,Enemy,1) [23,1] 0x0 0x0 0x0 0x0 [Arkhinal,SavageGauntlet] GroupTwoAI
+UNIT Tale11Generic LncPal 0x0 Level(20,Enemy,1) [24,1] 0x0 0x0 0x0 0x0 [Nuiusseon,ArkhinalHandle] GroupTwoAI
+
+UNIT Tale11Generic Hero 0x0 Level(20,Enemy,1) [18,21] 0x0 0x0 0x0 0x0 [Unyielding,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] GroupThreeAI
+UNIT Tale11Generic SwMast 0x0 Level(20,Enemy,1) [18,22] 0x0 0x0 0x0 0x0 [GildedSword,ArkhinalHandle] GroupThreeAI
+UNIT Tale11Generic SwMast 0x0 Level(20,Enemy,1) [19,21] 0x0 0x0 0x0 0x0 [Rapier,ArkhinalHandle] GroupThreeAI
+UNIT Tale11Generic Falco 0x0 Level(20,Enemy,1) [20,26] 0x0 0x0 0x0 0x0 [FlyingSpike,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] GroupThreeAI
+UNIT Tale11Generic WyvLord 0x0 Level(20,Enemy,1) [26,26] 0x0 0x0 0x0 0x0 [DevilAxe,Memento,Memento,Memento] GroupThreeAI
+
+UNIT Tale11Generic Bishop 0x0 Level(20,Enemy,1) [21,13] 0x0 0x0 0x0 0x0 [Resire,Scripture,Memento,Memento] NoAI
+UNIT Tale11Generic Berserker 0x0 Level(20,Enemy,1) [20,14] 0x0 0x0 0x0 0x0 [DevilAxe,Memento,Memento,Memento] NoAI
+UNIT Tale11Generic Berserker 0x0 Level(20,Enemy,1) [20,15] 0x0 0x0 0x0 0x0 [Tomahawk,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT Tale11Generic Bishop 0x0 Level(20,Enemy,1) [21,16] 0x0 0x0 0x0 0x0 [Smite,Scripture,Memento,Memento] NoAI
+
+UNIT Tale11Generic Halberdier 0x0 Level(20,Enemy,1) [12,5] 0x0 0x0 0x0 0x0 [MasterLance,ArkhinalHandle] NoAI
+UNIT Tale11Generic Halberdier 0x0 Level(20,Enemy,1) [13,6] 0x0 0x0 0x0 0x0 [GildedLance,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT Tale11Generic Halberdier 0x0 Level(20,Enemy,1) [14,5] 0x0 0x0 0x0 0x0 [Spear,Axebuster,ArkhinalHandle] NoAI
+
+UNIT Tale11Generic AxeGen 0x0 Level(20,Enemy,1) [2,5] 0x0 0x0 0x0 0x0 [Hurlbat,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] AttackInRangeAI
+
+UNIT Tale11Generic Hero 0x0 Level(20,Enemy,1) [13,22] 0x0 0x0 0x0 0x0 [BigIron,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] AttackInRangeAI
+UNIT Tale11Generic SwdGen 0x0 Level(20,Enemy,1) [0,23] 0x0 0x0 0x0 0x0 [BigIron,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT Tale11Generic Falco 0x0 Level(20,Enemy,1) [0,26] 0x0 0x0 0x0 0x0 [Unyielding,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] AttackInRangeAI
+
+
+UNIT Tale11Generic BowGen 0x0 Level(20,Enemy,1) [13,1] 0x0 0x0 0x0 0x0 [BarrierBow,Passacaglia,ArkhinalHandle,BiasedQuiver] GroupTwoPaceAI
+UNIT Tale11Generic BowGen 0x0 Level(20,Enemy,1) [14,1] 0x0 0x0 0x0 0x0 [BarrierBow,Wardbow,ArkhinalHandle,BiasedQuiver] GroupTwoPaceAI
+UNIT Tale11Generic BowGen 0x0 Level(20,Enemy,1) [15,1] 0x0 0x0 0x0 0x0 [BarrierBow,ShiningBow,ArkhinalHandle,BiasedQuiver] GroupTwoPaceAI
+UNIT Tale11Generic BowGen 0x0 Level(20,Enemy,1) [16,1] 0x0 0x0 0x0 0x0 [BarrierBow,GildedBow,ArkhinalHandle,BiasedQuiver] GroupTwoPaceAI
+
+UNIT Tale11Generic Sniper 0x0 Level(20,Enemy,1) [21,4] 0x0 0x0 0x0 0x0 [Greatbow,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NoAI
 UNIT Tale11Generic Sniper 0x0 Level(20,Enemy,1) [21,7] 0x0 0x0 0x0 0x0 [Ineubrenos,Passacaglia,ArkhinalHandle,BiasedQuiver] NeverMoveAI
+UNIT Tale11Generic Sniper 0x0 Level(20,Enemy,1) [21,10] 0x0 0x0 0x0 0x0 [Greatbow,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT Tale11Generic Sniper 0x0 Level(20,Enemy,1) [25,4] 0x0 0x0 0x0 0x0 [Greatbow,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT Tale11Generic Sniper 0x0 Level(20,Enemy,1) [25,7] 0x0 0x0 0x0 0x0 [Ineubrenos,Passacaglia,ArkhinalHandle,BiasedQuiver] NeverMoveAI
+UNIT Tale11Generic Sniper 0x0 Level(20,Enemy,1) [25,10] 0x0 0x0 0x0 0x0 [Greatbow,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NoAI
+
 UNIT Tale11Generic HalberdierF 0x0 Level(20,Enemy,1) [3,24] 0x0 0x0 0x0 0x0 [Stalwart,Nuiusseon,TrueSaunion,SoaringShaft] NeverMoveAI
 UNIT Tale11Generic SwdGen 0x0 Level(20,Enemy,1) [20,22] 0x0 0x0 0x0 0x0 [TheCreator,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NeverMoveAI
+UNIT Tale11Generic Bishop 0x0 Level(20,Enemy,1) [19,5] 0x0 0x0 0x0 0x0 [BookOfOpistus,Purge,MorningStar,Scripture] NeverMoveAI
+UNIT Tale11Generic Bishop 0x0 Level(20,Enemy,1) [7,21] 0x0 0x0 0x0 0x0 [BookOfOpistus,Purge,MorningStar,Scripture] NeverMoveAI
+UNIT Tale11Generic ZekeLordX 0x0 Level(20,Enemy,1) [23,7] 0x0 0x0 0x0 0x0 [ArenaLance,SoaringShaft,ArkhinalHandle,ArkhinalHandle] NoAI
+UNIT Tale11Generic BlairLordX 0x0 Level(20,Enemy,1) [24,14] 0x0 0x0 0x0 0x0 [ArenaAnima,EarthPower,Memento,Memento] AttackInRangeAI
+UNIT Tale11Generic ViridianLord 0x0 Level(20,Enemy,1) [3,6] 0x0 0x0 0x0 0x0 [ArenaBow,BiasedQuiver,ArkhinalHandle,ArkhinalHandle] AttackInRangeAI
+UNIT
 
-
+Tale11Enemies2:
 UNIT Tale11Generic SwdPal 0x0 Level(20,Enemy,1) [7,14] 0x0 0x0 0x0 0x0 [Phalanotis,Runesword] NoAI
+UNIT Tale11Generic Warrior 0x0 Level(20,Enemy,1) [1,16] 0x0 0x0 0x0 0x0 [GildedAxe,Wardbow] NoAI
+UNIT Tale11Generic SwMast 0x0 Level(20,Enemy,1) [6,17] 0x0 0x0 0x0 0x0 [MasterSword,Rapier] NoAI
+UNIT Tale11Generic Sorc 0x0 Level(20,Enemy,1) [2,12] 0x0 0x0 0x0 0x0 [TheSDarkTome,VoidBracers] NoAI
+UNIT Tale11Generic Sniper 0x0 Level(20,Enemy,1) [4,10] 0x0 0x0 0x0 0x0 [GildedBow] NoAI
+UNIT Tale11Generic Sage 0x0 Level(20,Enemy,1) [5,13] 0x0 0x0 0x0 0x0 [Galewind,EarthPower] NoAI
+UNIT Tale11Generic Ballistician 0x0 Level(20,Enemy,1) [24,21] 0x0 0x0 0x0 0x0 [ArchBallista,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NeverMoveAI
+UNIT Tale11Generic Ballistician 0x0 Level(20,Enemy,1) [25,25] 0x0 0x0 0x0 0x0 [ArchBallista,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NeverMoveAI
+UNIT Tale11Generic Ballistician 0x0 Level(20,Enemy,1) [15,26] 0x0 0x0 0x0 0x0 [ArchBallista,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NeverMoveAI
+UNIT Tale11Generic Ballistician 0x0 Level(20,Enemy,1) [7,26] 0x0 0x0 0x0 0x0 [ArchBallista,ArkhinalHandle,ArkhinalHandle,ArkhinalHandle] NeverMoveAI
 UNIT
 
 ALIGN 4
@@ -90,6 +146,8 @@ DISA Addington
 LOAD1 0x1 Tale11Units
 ENUN
 LOAD1 0x1 Tale11Enemies
+ENUN
+LOAD1 0x1 Tale11Enemies2
 ENUN
 TaleSetUnitStat(Blair,55,25,36,34,32,30,17,32)
 TaleSetUnitWEXP(Blair,251,0,0,0,181,251,181,181)
@@ -101,11 +159,42 @@ SetSupport(Blair,Yuyu,ASupport,0)
 SetSupport(Blair,Estelle,ASupport,0)
 TaleSetUnitStat(Arin,65,27,32,36,35,30,27,36)
 TaleSetUnitWEXP(Arin,251,0,0,0,251,181,0,0)
-SetUnitSkills(Arin,RallyResID,RallyDefID,LiveToServeID,CantoPlusID)
+SetUnitSkills(Arin,RallyResID,RallyDefID,LiveToServeID,ProtectiveID)
 TaleSetUnitStat(Natasia,78,35,4,33,27,18,20,4)
-TaleSetUnitWEXP(Natasia,0,0,251,121,251,0,0,0)
+TaleSetUnitWEXP(Natasia,0,0,251,181,251,0,0,0)
 SetUnitSkills(Natasia,WrathID,DragonFangID,0,0)
-ENDA
+TaleSetUnitStat(Avan,48,23,33,29,29,20,25,30)
+TaleSetUnitWEXP(Avan,181,0,0,0,251,251,0,0)
+SetUnitSkills(Avan,LiveToServeID,FlowStateID,AstraID,0)
+TaleSetUnitStat(Yuyu,50,20,30,20,30,30,20,30)
+TaleSetUnitWEXP(Yuyu,0,0,0,251,0,0,0,0)
+SetUnitSkills(Yuyu,DoubleLionID,VengeanceID,0,0)
+TaleSetUnitStat(Estelle,54,28,20,36,36,27,16,33)
+TaleSetUnitWEXP(Estelle,0,251,0,251,0,0,0,0)
+SetUnitSkills(Estelle,PushMovID,PushResID,PushConID,RenewalID)
+TaleSetUnitStat(Addington,80,10,10,10,10,30,30,30)
+TaleSetUnitWEXP(Addington,0,0,0,0,0,0,0,0)
+SetUnitSkills(Addington,0,0,0,0)
+TaleSetUnitStat(Toddsworth,40,12,24,12,27,30,27,32)
+TaleSetUnitWEXP(Toddsworth,0,0,0,0,0,0,0,0)
+SetUnitSkills(Toddsworth,BowbreakerID,TomebreakerID,QuickRiposteID,GrislyWoundID)
+TaleSetUnitStat(Tonnamin,80,36,14,35,20,24,36,16)
+TaleSetUnitWEXP(Tonnamin,181,181,251,0,0,0,0,0)
+SetUnitSkills(Tonnamin,PressTurnID,AdeptID,0,0)
+TaleSetUnitStat(Kyrie,58,29,25,36,36,30,20,32)
+TaleSetUnitWEXP(Kyrie,251,0,0,0,0,0,0,0)
+SetUnitSkills(Kyrie,WardingBlowID,ArcaneBladeID,0,0)
+TaleSetUnitStat(UnitQ,70,28,25,35,33,30,25,31)
+TaleSetUnitWEXP(UnitQ,251,0,0,181,0,0,0,0)
+SetUnitSkills(UnitQ,LightWeightID,NullifyID,0,0)
+TaleSetUnitStat(Valeria,64,27,25,33,34,30,22,29)
+TaleSetUnitWEXP(Valeria,251,251,0,0,0,0,0,0)
+SetUnitSkills(Valeria,InspirationID,LuckySevenID,KillerTacticsID,0)
+TaleSetUnitStat(Sveltzalus,43,28,29,34,35,30,21,24)
+TaleSetUnitWEXP(Sveltzalus,0,0,0,0,0,0,0,251)
+SetUnitSkills(Sveltzalus,DesperationID,CantoPlusID,LethalityID,0)
+SystemText(Tale11Opening)
+EndEvent
 
 EndingScene:
 ENUT Tale11DoneFlag
@@ -117,7 +206,7 @@ MoveToChapter(HubMap)
 ENDA
 
 T11OutOfTime:
-Text(FillerDialogue)
+Text(Tale11OutOfTime)
 StartGameOver
 EndEvent
 

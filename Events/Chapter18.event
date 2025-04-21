@@ -145,6 +145,8 @@ UNIT Lowlands Warrior 0x0 Level(3,Enemy,1) [21,7] DropItem 0x0 0x0 0x0 [HandAxe,
 UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [3,15] 0x0 0x0 0x0 0x0 [SteelLance] GroupOneAI
 UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [Axereaver] GroupOneAI
 UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [1,17] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
+UNIT
+C18Easy2:
 UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [10,17] 0x0 0x0 0x0 0x0 [SteelBow] GroupTwoAI
 UNIT Holanis Bishop 0x0 Level(1,Enemy,1) [11,16] 0x0 0x0 0x0 0x0 [Shine,RedGem] GroupTwoAI
 UNIT Holanis LncCav 0x0 Level(20,Enemy,1) [12,17] 0x0 0x0 0x0 0x0 [SteelLance] GroupTwoAI
@@ -194,6 +196,8 @@ UNIT Lowlands Warrior 0x0 Level(3,Enemy,1) [21,7] DropItem 0x0 0x0 0x0 [HandAxe,
 UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [3,15] 0x0 0x0 0x0 0x0 [SteelLance] GroupOneAI
 UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [Axereaver] GroupOneAI
 UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [1,17] 0x0 0x0 0x0 0x0 [Longbow] GroupOneAI
+UNIT
+C18Normal2:
 UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [10,17] 0x0 0x0 0x0 0x0 [SteelBow] GroupTwoAI
 UNIT Holanis Bishop 0x0 Level(1,Enemy,1) [11,16] 0x0 0x0 0x0 0x0 [Shine,RedGem] GroupTwoAI
 UNIT Holanis LncCav 0x0 Level(20,Enemy,1) [12,17] 0x0 0x0 0x0 0x0 [SteelLance] GroupTwoAI
@@ -243,6 +247,8 @@ UNIT Lowlands Warrior 0x0 Level(3,Enemy,1) [21,7] DropItem 0x0 0x0 0x0 [HandAxe,
 UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [3,15] 0x0 0x0 0x0 0x0 [SilverLance] GroupOneAI
 UNIT Lowlands Deserter 0x0 Level(19,Enemy,1) [4,16] 0x0 0x0 0x0 0x0 [Axebuster] GroupOneAI
 UNIT Holanis BowPal 0x0 Level(2,Enemy,1) [1,17] 0x0 0x0 0x0 0x0 [SteelBow] GroupOneAI
+UNIT
+C18Hard2:
 UNIT Holanis BowCav 0x0 Level(20,Enemy,1) [10,17] 0x0 0x0 0x0 0x0 [KillerBow] GroupTwoAI
 UNIT Holanis Bishop 0x0 Level(1,Enemy,1) [11,16] 0x0 0x0 0x0 0x0 [Shine,RedGem] GroupTwoAI
 UNIT Holanis LncCav 0x0 Level(20,Enemy,1) [12,17] 0x0 0x0 0x0 0x0 [Horseslayer] GroupTwoAI
@@ -353,6 +359,7 @@ MUSC S_Crisis
 Text(Ch18_Opening2)
 CleanTextNoMap(LowlandsCG,Ch18_Opening3)
 LoadUnitsByDifficulty(C18Easy,C18Normal,C18Hard)
+LoadUnitsByDifficulty2(C18Easy2,C18Normal2,C18Hard2)
 LOAD1 0x0 C18Units
 ENUN
 SupportFlagOn(Stefan,Carbon,0x12,CSupport)

@@ -52,6 +52,10 @@ RetinaMug:
 #incbin "dmps/Retina.dmp"
 setMugEntry(0x1fd,RetinaMug,3,6,3,4)
 ALIGN 4
+BobbyMug:
+#incbin "dmps/Bobby.dmp"
+setMugEntry(0x155,BobbyMug,3,5,3,3)
+ALIGN 4
 GlodMug:
 #incbin "dmps/Glod.dmp"
 setMugEntry(0x14b,GlodMug,4,5,3,3)

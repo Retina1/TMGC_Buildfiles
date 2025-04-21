@@ -86,7 +86,6 @@ POIN Chapter27Conversations
 POIN Chapter28Conversations
 POIN EndgameConversations
 POIN EpilogueConversations
-//epilogue here - might need to be split in two
 POIN BaseConversations
 POIN SupportConversations1
 POIN SupportConversations2
@@ -96,6 +95,19 @@ POIN DeathQuoteConversations
 POIN FinalDeathQuoteConversations 
 POIN EscapeQuoteConversations
 POIN CGViewerEvents
+POIN PostgameHubConversations
+POIN Postgame1Conversations
+POIN Postgame2Conversations
+POIN Postgame3Conversations
+POIN Postgame4Conversations
+POIN Postgame5Conversations
+POIN Postgame6Conversations
+POIN Postgame7Conversations
+POIN Postgame8Conversations
+POIN Postgame9Conversations
+POIN Postgame10Conversations
+POIN Postgame11Conversations
+POIN Postgame12Conversations
 POIN BonusConversations
 POIN 0 
 
@@ -105,7 +117,340 @@ ORG ConvoChapterEntry+(4*0xFF)
 #define ConversationEntry(titleid,textid,bg,chapterid,bgm) "POIN 0; SHORT textid; BYTE bg chapterid; SHORT titleid bgm;"
 #define ConversationEntryTerminator "POIN 0xFFFFFFFF; SHORT 0xFFFF; BYTE 0xFF 0xFF; SHORT 0xFFFF 0xFFFF"
 #define CGViewerEntry(titleid,eventlabel) "POIN eventlabel; SHORT 0x0 ; BYTE 0x0 CGViewerChapter; SHORT titleid 0x0;"
+#define GirardyViewerEntry(titleid,eventlabel) "POIN eventlabel; SHORT 0x0 ; BYTE 0x0 BonusViewer; SHORT titleid 0x0;"
 #define CGViewer(cgid) "EVBIT_MODIFY 3; SetBackground(cgid); STAL 600;FADI 5;SetBackground(BlankCG);EndEvent"//;RefreshLordSplitTiles; EndEvent"
+
+ALIGN 4
+PostgameHubConversations:
+ConversationEntry(EPG0Intro,TaleHubIntro,HallCG,HubMap)
+ConversationEntry(EPG0Intro2,TaleHubReturnIntro,HallCG,HubMap)
+ConversationEntry(_Tale1,Tale1LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale2,Tale2LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale3,Tale3LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale4,Tale4LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale5,Tale5LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale6,Tale6LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale7,Tale7LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale8,Tale8LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale9,Tale9LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale10,Tale10LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale11,Tale11LeadIn,HallCG,HubMap)
+ConversationEntry(_Tale12,Tale12LeadIn,HallCG,HubMap)
+ConversationEntryTerminator
+ALIGN 4
+Postgame1Conversations:
+ConversationEntry(EPG1Open1,Tale1Opening1,OutdoorCastleCG,Tale1)
+ConversationEntry(EPG1Open2,Tale1Opening2,HallCG,Tale1)
+ConversationEntry(EPG1Open3,Tale1Opening3,OutdoorCastleCG,Tale1)
+ConversationEntry(EPG1Open4,Tale1Opening4,OutdoorCastleCG,Tale1)
+ConversationEntry(EPG1ArgentButch,Tale1ButchArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentPeggy,Tale1PeggyArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentPeter,Tale1PeterArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentRift,Tale1RiftArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentMitchell,Tale1MitchellArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentClarque,Tale1ClarqueArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentMarque,Tale1MarqueArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentStarque,Tale1StarqueArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentParque,Tale1ParqueArgentBattle,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EPG1ArgentDefeat,Tale1ArgentDeath,HallCG,Tale1,S_DyedInBlood)
+ConversationEntry(EButchDeath,Tale1ButchDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(EPeggyDeath,Tale1PeggyDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(EPeterDeath,Tale1PeterDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(ERiftDeath,Tale1RiftDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(EC5BossDie,Tale1MitchellDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(EClarqueDeath,Tale1ClarqueDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(EC1BossDie,Tale1MarqueDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(EC4BossDie,Tale1StarqueDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(EZ3BossDie,Tale1ParqueDeath,OutdoorCastleCG,Tale1)
+ConversationEntry(EPG1End1,Tale1Ending1,HallCG,Tale1,S_FE4Conversation)
+ConversationEntry(EPG1End2,Tale1Ending2,OutdoorCastleCG,Tale1,S_FE4Conversation)
+ConversationEntryTerminator
+ALIGN 4
+Postgame2Conversations:
+ConversationEntry(EPG2Open1,Tale2Opening1,HouseCG,Tale2)
+ConversationEntry(EPG2Open1,Tale2Opening2,HillCG,Tale2)
+ConversationEntry(EPG2Open1,Tale2Opening3,PathCG,Tale2)
+ConversationEntry(EPG2Wrong,Tale2WrongVisitor,PathCG,Tale2)
+ConversationEntry(EPG2Spawns,Tale2InfinitesComing,PathCG,Tale2)
+ConversationEntry(EPG2Village1NotZeke,Tale2Village1Other,VillageCG,Tale2)
+ConversationEntry(EPG2Village1Zeke,Tale2Village1Zeke,VillageCG,Tale2)
+ConversationEntry(EPG2Village2NotZeke,Tale2Village2Other,VillageCG,Tale2)
+ConversationEntry(EPG2Village2Zeke,Tale2Village2Zeke,VillageCG,Tale2)
+ConversationEntry(EPG2Village3NotZeke,Tale2Village3Other,VillageCG,Tale2)
+ConversationEntry(EPG2Village3Zeke,Tale2Village3Zeke,VillageCG,Tale2)
+ConversationEntry(EPG2Village4NotZeke,Tale2Village4Other,VillageCG,Tale2)
+ConversationEntry(EPG2Village4Zeke,Tale2Village4Zeke,VillageCG,Tale2)
+ConversationEntry(EPG2Village5NotZeke,Tale2Village5Other,VillageCG,Tale2)
+ConversationEntry(EPG2Village5Zeke,Tale2Village5Zeke,VillageCG,Tale2)
+ConversationEntry(EPG2Village6NotZeke,Tale2Village6Other,VillageCG,Tale2)
+ConversationEntry(EPG2Village6Zeke,Tale2Village6Zeke,VillageCG,Tale2)
+ConversationEntry(EZekeDeath,Tale2ZekeDeath,PathCG,Tale2)
+ConversationEntry(ERachaelDeath,Tale2RachaelDeath,PathCG,Tale2)
+ConversationEntry(ELeilaDeath,Tale2LeilaDeath,PathCG,Tale2)
+ConversationEntry(ECassiusDeath,Tale2CassiusDeath,PathCG,Tale2)
+ConversationEntry(EHyperiusDeath,Tale2HyperiusDeath,PathCG,Tale2)
+ConversationEntry(EAlexisDeath,Tale2AlexisDeath,PathCG,Tale2)
+ConversationEntry(EJeffDeath,Tale2JeffDeath,PathCG,Tale2)
+ConversationEntry(EArtemisDeath,Tale2ArtemisDeath,PathCG,Tale2)
+ConversationEntry(EPG2Lose,Tale2IntoLoss,PathCG,Tale2)
+ConversationEntry(EPG2Win,Tale2IntoEnding,PathCG,Tale2)
+ConversationEntry(EPG2End1,Tale2Ending1,PathCG,Tale2,VictoryTheme)
+ConversationEntryTerminator
+ALIGN 4
+Postgame3Conversations:
+ConversationEntry(EPG3Open,Tale3Opening,EastHolanisCG,Tale3)
+ConversationEntry(EPG3SleepRefresh,Tale3SleepRefresh,EastHolanisCG,Tale3)
+ConversationEntry(EPG3Spawn1,Tale3Wyvern1Spawn,EastHolanisCG,Tale3)
+ConversationEntry(EPG3Talk1,Tale3Wyvern1Talk,EastHolanisCG,Tale3)
+ConversationEntry(EPG3Spawn2,Tale3Wyvern2Spawn,EastHolanisCG,Tale3)
+ConversationEntry(EPG3Talk2,Tale3Wyvern2Talk,EastHolanisCG,Tale3)
+ConversationEntry(EPG3Spawn3,Tale3Wyvern3Spawn,EastHolanisCG,Tale3)
+ConversationEntry(EPG3Talk3,Tale3Wyvern3Talk,EastHolanisCG,Tale3)
+ConversationEntry(EVladmirDeath,Tale3VladmirDeath,EastHolanisCG,Tale3)
+ConversationEntry(ELarondeDeath,Tale3LarondeDeath,EastHolanisCG,Tale3)
+ConversationEntry(ERoseDeath,Tale3RoseDeath,EastHolanisCG,Tale3)
+ConversationEntry(EManfredDeath,Tale3ManfredDeath,EastHolanisCG,Tale3)
+ConversationEntry(EAthenaDeath,Tale3AthenaDeath,EastHolanisCG,Tale3)
+ConversationEntry(EPG3WyvernDie,Tale3WyvernDeath,EastHolanisCG,Tale3)
+ConversationEntry(EPG3Win,Tale3IntoEnd,EastHolanisCG,Tale3)
+ConversationEntry(EPG3End1,Tale3Ending1,EastHolanisCG,Tale3,AmbientWindBirds)
+ConversationEntry(EPG3End2,Tale3Ending2,EastHolanisCG,Tale3,AmbientWindBirds)
+ConversationEntry(EPG3End3,Tale3Ending3,EastHolanisCG,Tale3,AmbientWindBirds)
+ConversationEntryTerminator
+ALIGN 4
+Postgame4Conversations:
+ConversationEntry(EPG4Open1,Tale4Opening1,VolcanoCG,Tale4,AmbientLava)
+ConversationEntry(EPG4Open2,Tale4Opening2,HillCG,Tale4,AmbientWind)
+ConversationEntry(EPG4Open3,Tale4Opening3,VolcanoCG,Tale4,AmbientLava)
+ConversationEntry(EPG4Turn4,Tale4Turn4Text,VolcanoCG,Tale4)
+ConversationEntry(EPG4Turn6,Tale4Turn6Text,VolcanoCG,Tale4)
+ConversationEntry(EPG4Turn7,Tale4Turn7Text,VolcanoCG,Tale4)
+ConversationEntry(EPG4ECSpawn,Tale4ElbaCorSpawnText,VolcanoCG,Tale4)
+ConversationEntry(EPG4LeilaMove,Tale4LeilaMoveText,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4LeilaFight,Tale4LeilaBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4LeilaCid,Tale4LeilaCidBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4LeilaAgnes,Tale4LeilaAgnesBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4LeilaDie,Tale4LeilaDeath,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4WilhelmMove,Tale4WilhelmMoveText,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4WilhelmFight,Tale4WilhelmBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4WilhelmCid,Tale4WilhelmCidBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4WilhelmAgnes,Tale4WilhelmAgnesBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4WilhelmDie,Tale4WilhelmDeath,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4EsmeMove,Tale4EsmeMoveText,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4EsmeFight,Tale4EsmeBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4EsmeCid,Tale4EsmeCidBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4EsmeAgnes,Tale4EsmeAgnesBattle,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EPG4EsmeDie,Tale4EsmeDeath,VolcanoCG,Tale4,S_DyedInBlood)
+ConversationEntry(EAgnesDeath,Tale4AgnesDeath,VolcanoCG,Tale4)
+ConversationEntry(EC10CidDie,Tale4CidDeath,VolcanoCG,Tale4)
+ConversationEntry(EPG4PirateDie,Tale4PirateDeath,VolcanoCG,Tale4)
+ConversationEntry(EPG4CidEscape,CidEscape,VolcanoCG,Tale4)
+ConversationEntry(EPG4PirateEscape,GenericPirateEscape,VolcanoCG,Tale4)
+ConversationEntry(EPG4End1,Tale4Ending1,VolcanoCG,Tale4,AmbientLava)
+ConversationEntry(EPG4End2,Tale4Ending2,VolcanoCG,Tale4,AmbientLava)
+ConversationEntry(EPG4End3,Tale4Ending3,VolcanoCG,Tale4,AmbientLava)
+ConversationEntryTerminator
+ALIGN 4
+Postgame5Conversations:
+ConversationEntry(EPG5Open1,Tale5Opening,InnCG,Tale5,AmbientWater)
+ConversationEntry(EPG5Open2,Tale5Opening2,BoatCG,Tale5,S_Crisis)
+ConversationEntry(EPG5GregFight,Tale5GregBattle,BoatCG,Tale5,S_DyedInBlood)
+ConversationEntry(EPG5GregNatasia,Tale5GregNatasiaBattle,BoatCG,Tale5,S_DyedInBlood)
+ConversationEntry(EPG5GregBechamel,Tale5GregBechamelBattle,BoatCG,Tale5,S_DyedInBlood)
+ConversationEntry(EPG5GregToddsworth,Tale5GregToddsworthBattle,BoatCG,Tale5,S_DyedInBlood)
+ConversationEntry(EPG5GregAgnes,Tale5GregAgnesBattle,BoatCG,Tale5,S_DyedInBlood)
+ConversationEntry(EPG5GregDeath,Tale5GregDeath,BoatCG,Tale5,S_DyedInBlood)
+ConversationEntry(ENatasiaDeath,Tale5NatasiaDeath,BoatCG,Tale5)
+ConversationEntry(EBechamelDeath,Tale5BechamelDeath,BoatCG,Tale5)
+ConversationEntry(ESamDeath,Tale5SamDeath,BoatCG,Tale5)
+ConversationEntry(ECharleyDeath,Tale5CharleyDeath,BoatCG,Tale5)
+ConversationEntry(EToddsworthDeath,Tale5ToddsworthDeath,BoatCG,Tale5)
+ConversationEntry(EHollandaiseDeath,Tale5HollandaiseDeath,BoatCG,Tale5)
+ConversationEntry(EAgnesDeath,Tale5AgnesDeath,BoatCG,Tale5)
+ConversationEntry(EPeggyDeath,Tale5PeggyDeath,BoatCG,Tale5)
+ConversationEntry(EApolloDeath,Tale5ApolloDeath,BoatCG,Tale5)
+ConversationEntry(EFlynnDeath,Tale5FlynnDeath,BoatCG,Tale5)
+ConversationEntry(EPG5MerchantDeath,Tale5MerchantDeath,BoatCG,Tale5)
+ConversationEntry(EPG5Seize,Tale5SeizedPoint,BoatCG,Tale5)
+ConversationEntry(EPG5SeizeAll,Tale5SeizedPointFinal,BoatCG,Tale5)
+ConversationEntry(EPG5End,Tale5Ending,BoatCG,Tale5,AmbientWater)
+ConversationEntryTerminator
+ALIGN 4
+Postgame6Conversations:
+ConversationEntry(EPG6Open,Tale6Opening,PathCG,Tale6)
+ConversationEntry(EPG6TarquinKenneth,Tale6TarquinKennethBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6TarquinDesmond,Tale6TarquinDesmondBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6TarquinJohan,Tale6TarquinJohanBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6TarquinPtolemy,Tale6TarquinPtolemyBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6TarquinEmile,Tale6TarquinEmileBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6TarquinNatasia,Tale6TarquinNatasiaBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6EthylKenneth,Tale6EthylKennethBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6EthylDesmond,Tale6EthylDesmondBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6EthylJohan,Tale6EthylJohanBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6EthylPtolemy,Tale6EthylPtolemyBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6EthylEmile,Tale6EthylEmileBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EPG6EthylNatasia,Tale6EthylNatasiaBattle,PathCG,Tale6,S_DaatVengeance)
+ConversationEntry(EKennethDeath,Tale6KennethDeath,PathCG,Tale6)
+ConversationEntry(ENatasiaDeath,Tale6NatasiaDeath,PathCG,Tale6)
+ConversationEntry(EStefanDeath,Tale6StefanDeath,PathCG,Tale6)
+ConversationEntry(EDesmondDeath,Tale6DesmondDeath,PathCG,Tale6)
+ConversationEntry(EJohanDeath,Tale6JohanDeath,PathCG,Tale6)
+ConversationEntry(EPtolemyDeath,Tale6PtolemyDeath,PathCG,Tale6)
+ConversationEntry(EHilbertDeath,Tale6HilbertDeath,PathCG,Tale6)
+ConversationEntry(EEmileDeath,Tale6EmileDeath,PathCG,Tale6)
+ConversationEntry(EJosefDeath,Tale6JosefDeath,PathCG,Tale6)
+ConversationEntry(EGaylordDeath,Tale6GaylordDeath,PathCG,Tale6)
+ConversationEntry(EPG6Seize1,Tale6FirstSeize,PathCG,Tale6)
+ConversationEntry(EPG6Seize2,Tale6SecondSeize,PathCG,Tale6)
+ConversationEntry(EPG6Seize3,Tale6ThirdSeize,PathCG,Tale6)
+ConversationEntry(EPG6End,Tale6Ending,PathCG,Tale6,AmbientWind)
+ConversationEntryTerminator
+ALIGN 4
+Postgame7Conversations:
+ConversationEntry(EPG7Open,Tale7Opening,YgstraCG,Tale7)
+ConversationEntry(EPG7RemnantSonia,Tale7SoniaBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(EPG7RemnantJoan,Tale7JoanBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(EPG7RemnantTobias,Tale7TobiasBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(EPG7RemnantDamien,Tale7DamienBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(EPG7RemnantZacharias,Tale7ZachariasBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(EPG7RemnantMikey,Tale7MikeyBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(EPG7RemnantCarbon,Tale7CarbonBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(EPG7RemnantLeila,Tale7LeilaBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(EPG7RemnantJonas,Tale7JonasBigRemnantBattle,YgstraCG,Tale7,S_DyedInBlood)
+ConversationEntry(ESoniaDeath,Tale7SoniaDeath,YgstraCG,Tale7)
+ConversationEntry(EJoanDeath,Tale7JoanDeath,YgstraCG,Tale7)
+ConversationEntry(ETobiasDeath,Tale7TobiasDeath,YgstraCG,Tale7)
+ConversationEntry(EDamienDeath,Tale7DamienDeath,YgstraCG,Tale7)
+ConversationEntry(EZachariasDeath,Tale7ZachariasDeath,YgstraCG,Tale7)
+ConversationEntry(EMikeyDeath,Tale7MikeyDeath,YgstraCG,Tale7)
+ConversationEntry(ECarbonDeath,Tale7CarbonDeath,YgstraCG,Tale7)
+ConversationEntry(ELeilaDeath,Tale7LeilaDeath,YgstraCG,Tale7)
+ConversationEntry(EJonasDeath,Tale7JonasDeath,YgstraCG,Tale7)
+ConversationEntry(EPG7End,Tale7Ending,YgstraCG,Tale7,S_Nightfall)
+ConversationEntryTerminator
+ALIGN 4
+Postgame8Conversations:
+ConversationEntry(EPG8Open,Tale8Opening,JungleCG,Tale8)
+ConversationEntry(EPG8Warning,Tale8WarningDialogue,JungleCG,Tale8)
+ConversationEntry(EPG8ForceOut,Tale8ForcedOut,JungleCG,Tale8)
+ConversationEntry(EPG8ViridianRuins,Tale8ViridianRuins,OuterRuinCG,Tale8)
+ConversationEntry(EPG8FreddricRuins,Tale8FreddricRuins,OuterRuinCG,Tale8)
+ConversationEntry(EPG8ChartreuseRuins,Tale8ChartreuseRuins,OuterRuinCG,Tale8)
+ConversationEntry(EPG8DeanRuins,Tale8DeanRuins,OuterRuinCG,Tale8)
+ConversationEntry(EPG8ClarqueRuins,Tale8ClarqueRuins,OuterRuinCG,Tale8)
+ConversationEntry(EPG8OlsenRuins,Tale8OlsenRuins,OuterRuinCG,Tale8)
+ConversationEntry(EViridianDeath,Tale8ViridianDeath,JungleCG,Tale8)
+ConversationEntry(EFreddricDeath,Tale8FreddricDeath,JungleCG,Tale8)
+ConversationEntry(EChartreuseDeath,Tale8ChartreuseDeath,JungleCG,Tale8)
+ConversationEntry(EDeanDeath,Tale8DeanDeath,JungleCG,Tale8)
+ConversationEntry(EClarqueDeath,Tale8ClarqueDeath,JungleCG,Tale8)
+ConversationEntry(EOlsenDeath,Tale8OlsenDeath,JungleCG,Tale8)
+ConversationEntry(EElizaDeath,Tale8ElizaDeath,JungleCG,Tale8)
+ConversationEntry(EDirkDeath,Tale8DirkDeath,JungleCG,Tale8)
+ConversationEntry(EPG8GenericDeath,Tale8CitizenDeath,JungleCG,Tale8)
+ConversationEntry(EPG8GenericSave,Tale8GenericSaved,JungleCG,Tale8)
+ConversationEntry(EPG8ElizaSave,Tale8ElizaSaved,JungleCG,Tale8)
+ConversationEntry(EPG8DirkSave,Tale8DirkSaved,JungleCG,Tale8)
+ConversationEntry(EPG8AllSave,Tale8AllSaved,JungleCG,Tale8)
+ConversationEntry(EPG8End1,Tale8Ending,JungleCG,Tale8)
+ConversationEntry(EPG8End2,Tale8Ending2,OuterRuinCG,Tale8)
+ConversationEntry(EPG8End3,Tale8Ending3,JungleCG,Tale8,AmbientWindGusts)
+ConversationEntry(EPG8End4,Tale8Ending4,PathCG,Tale8,S_WelcomeToLegend)
+ConversationEntryTerminator
+ALIGN 4
+Postgame9Conversations:
+ConversationEntry(EPG9Open,LazarusTaleBegin,HallCG,Tale9)
+ConversationEntry(EPG9Lose,LazarusLoseQuote,HallCG,Tale9)
+ConversationEntry(EPG9Round1,LazarusRound1Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round1Win,LazarusWinQuote1,HallCG,Tale9)
+ConversationEntry(EPG9Round1End,LazarusRound1End,HallCG,Tale9)
+ConversationEntry(EPG9Round2,LazarusRound2Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round2Win,LazarusWinQuote2,HallCG,Tale9)
+ConversationEntry(EPG9Round2End,LazarusRound2End,HallCG,Tale9)
+ConversationEntry(EPG9Round3,LazarusRound3Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round3Win,LazarusWinQuote3,HallCG,Tale9)
+ConversationEntry(EPG9Round3End,LazarusRound3End,HallCG,Tale9)
+ConversationEntry(EPG9Round4,LazarusRound4Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round4Win,LazarusWinQuote4,HallCG,Tale9)
+ConversationEntry(EPG9Round4End,LazarusRound4End,HallCG,Tale9)
+ConversationEntry(EPG9Round5,LazarusRound5Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round5Win,LazarusWinQuote5,HallCG,Tale9)
+ConversationEntry(EPG9Round5End,LazarusRound5End,HallCG,Tale9)
+ConversationEntry(EPG9Round6,LazarusRound6Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round6Win,LazarusWinQuote6,HallCG,Tale9)
+ConversationEntry(EPG9Round6End,LazarusRound6End,HallCG,Tale9)
+ConversationEntry(EPG9Round7,LazarusRound7Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round7Win,LazarusWinQuote7,HallCG,Tale9)
+ConversationEntry(EPG9Round7End,LazarusRound7End,HallCG,Tale9)
+ConversationEntry(EPG9Round8,LazarusRound8Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round8Win,LazarusWinQuote8,HallCG,Tale9)
+ConversationEntry(EPG9Round8End,LazarusRound8End,HallCG,Tale9)
+ConversationEntry(EPG9Round9,LazarusRound9Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round9Win,LazarusWinQuote9,HallCG,Tale9)
+ConversationEntry(EPG9Round9End,LazarusRound9End,HallCG,Tale9)
+ConversationEntry(EPG9Round10,LazarusRound10Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round10Win,LazarusWinQuote10,HallCG,Tale9)
+ConversationEntry(EPG9Round10End,LazarusRound10End,HallCG,Tale9)
+ConversationEntry(EPG9Round11,LazarusRound11Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round11Win,LazarusWinQuote11,HallCG,Tale9)
+ConversationEntry(EPG9Round11End,LazarusRound11End,HallCG,Tale9)
+ConversationEntry(EPG9Round12,LazarusRound12Begin,HallCG,Tale9)
+ConversationEntry(EPG9Round12Win,LazarusWinQuote12,HallCG,Tale9)
+ConversationEntry(EPG9Round12Lose,LazarusValdenLoseQuote,HallCG,Tale9)
+ConversationEntry(EPG9Round12End,LazarusRound12End,HallCG,Tale9)
+ConversationEntryTerminator
+ALIGN 4
+Postgame10Conversations:
+ConversationEntry(EPG10Open1,Tale10_Opening,HallCG,Tale10,S_Chaos)
+ConversationEntry(EPG10Open2,Tale10_Opening2,HallCG,Tale10,S_EleventhHour)
+ConversationEntry(EPG10Arin1,Tale10_ArinRecruitment,HallCG,Tale10,S_Chaos)
+ConversationEntry(EPG10Arin2,Tale10_ArinOut,HallCG,Tale10,S_Chaos)
+ConversationEntry(EPG10Horatio,Tale10_HoratioJoins,HallCG,Tale10)
+ConversationEntry(EPG10HoratioCatch1,Tale10_SimoneTattle,HallCG,Tale10,S_Chaos)
+ConversationEntry(EPG10HoratioCatch2,Tale10_HoratioCaught,HallCG,Tale10,S_Chaos)
+ConversationEntry(EPG10SimoneLeave,Tale10_SimoneWantsToTakeAWalk,HallCG,Tale10,S_Chaos)
+ConversationEntry(ESimoneDeath,Tale10SimoneDeath,HallCG,Tale10)
+ConversationEntry(EHoratioDeath,Tale10HoratioDeath,HallCG,Tale10)
+ConversationEntry(EPG10Fail1,Tale10_ArinDrop,HallCG,Tale10)
+ConversationEntry(EPG10Fail2,Tale10AlarmRaised,HallCG,Tale10)
+ConversationEntry(EPG10Fail3,Tale10AlarmRaisedNathan,HallCG,Tale10)
+ConversationEntry(EPG10End,Tale10Ending,EastHolanisCG,Tale10,S_Chaos)
+ConversationEntryTerminator
+ALIGN 4
+Postgame11Conversations:
+ConversationEntry(EBlairDeath,Tale11BlairDeath,HallCG,Tale11)
+ConversationEntry(EArinDeathPG,Tale11ArinDeath,HallCG,Tale11)
+ConversationEntry(ENatasiaDeath,Tale11NatasiaDeath,HallCG,Tale11)
+ConversationEntry(EAvanDeath,Tale11AvanDeath,HallCG,Tale11)
+ConversationEntry(EYuyuDeath,Tale11YuyuDeath,HallCG,Tale11)
+ConversationEntry(EEstelleDeath,Tale11EstelleDeath,HallCG,Tale11)
+ConversationEntry(EAddingtonDeath,Tale11AddingtonDeath,HallCG,Tale11)
+ConversationEntry(EToddsworthDeath,Tale11ToddsworthDeath,HallCG,Tale11)
+ConversationEntry(EQDeath,Tale11QDeath,HallCG,Tale11)
+ConversationEntry(EValeriaDeath,Tale11ValeriaDeath,HallCG,Tale11)
+ConversationEntry(ETonnaminDeath,Tale11TonnaminDeath,HallCG,Tale11)
+ConversationEntry(EKyrieDeath,Tale11KyrieDeath,HallCG,Tale11)
+ConversationEntry(EPG11OutOfTime,Tale11OutOfTime,HallCG,Tale11)
+ConversationEntryTerminator
+ALIGN 4
+Postgame12Conversations:
+ConversationEntry(EPG12Open,Tale12Opening,DungeonCG,Tale12)
+ConversationEntry(EPG12Scene1,Tale12AreaConvo1,DungeonCG,Tale12)
+ConversationEntry(EPG12Scene2,Tale12AreaConvo2,DungeonCG,Tale12)
+ConversationEntry(EPG12Scene3,Tale12AreaConvo3,DungeonCG,Tale12)
+ConversationEntry(EPG12Scene4,Tale12AreaConvo4,DungeonCG,Tale12)
+ConversationEntry(EPG12Scene5,Tale12AreaConvo5,DungeonCG,Tale12)
+ConversationEntry(EPG12Scene6,Tale12AreaConvo6,DungeonCG,Tale12)
+ConversationEntry(EPG12Scene7,Tale12AreaConvo7,DungeonCG,Tale12)
+ConversationEntry(EPG12Scene8,Tale12AreaConvo8,DungeonCG,Tale12)
+ConversationEntry(EPG12SinclairBattle,Tale12SinclairBossQuote,DungeonCG,Tale12)
+ConversationEntry(EPG12NathanielBattle,Tale12NathanielBossQuote,DungeonCG,Tale12)
+ConversationEntry(EPG12MichaelBattle,Tale12MichaelBossQuote,DungeonCG,Tale12)
+ConversationEntry(EPG12SinclairDeath,Tale12SinclairDeath,DungeonCG,Tale12)
+ConversationEntry(EC21BossDie,Tale12NathanielDeath,DungeonCG,Tale12)
+ConversationEntry(EC19BossDie,Tale12MichaelDeath,DungeonCG,Tale12)
+ConversationEntry(EPG12End,Tale12Ending,DungeonCG,Tale12)
+ConversationEntryTerminator
 
 
 ALIGN 4
@@ -123,6 +468,8 @@ ConversationEntry(EBonusPart6,BonusConvoPart6,HouseCG,BonusViewer)
 ConversationEntry(EBonusPart7,BonusConvoPart7,HouseCG,BonusViewer)
 ConversationEntry(EBonusPart8,BonusConvoPart8,HouseCG,BonusViewer)
 ConversationEntry(EBonusGlod,BonusGlod,HouseCG,BonusViewer)
+ConversationEntry(EBonusBobby,BonusBobby,HouseCG,BonusViewer)
+GirardyViewerEntry(EGirardyWantBoingBoing,GirardyWantBoingBoing)
 ConversationEntryTerminator
 
 //epilogue is a fuck
@@ -255,6 +602,7 @@ ConversationEntry(EEILPoly,Epilogue_MultiAercolynLover,HallCG,AfterTheEnd,S_Circ
 ConversationEntry(EEILPolyAlt,Epilogue_MultiAercolynLoverAlt,HallCG,AfterTheEnd,S_CircleOfTheMoon)
 //elcorian
 ConversationEntry(EEElcorian,Epilogue_FinalScene,MoonCG,AfterTheEnd)
+ConversationEntry(EETrueEnd,EpilogueSecretFinalDialogue,EastHolanisCG,AfterTheEnd,AmbientWindBirds)
 ConversationEntryTerminator
 
 ALIGN 4
@@ -2957,6 +3305,10 @@ ALIGN 4
 HistoryGFX: 
 BYTE $10 $00 $10 $00 $1D $00 $00 $00 $F0 $01 $F0 $01 $E0 $01 $05 $40 $03 $F1 $F0 $01 $C0 $24 $F0 $01 $F0 $01 $00 $00 $66 $00 $03 $55 $11 $00 $03 $44 $00 $03 $67 $00 $03 $60 $00 $03 $40 $40 $40 $03 $00 $66 $66 $66 $66 $11 $00 $51 $56 $12 $12 $64 $66 $15 $11 $22 $76 $67 $00 $03 $60 $13 $21 $20 $03 $40 $50 $12 $20 $1F $06 $00 $3C $74 $00 $00 $41 $00 $76 $60 $06 $62 $77 $46 $62 $62 $00 $07 $34 $31 $63 $07 $56 $51 $63 $39 $07 $66 $10 $57 $E0 $01 $00 $2E $00 $76 $00 $03 $77 $77 $F0 $1B $80 $91 $00 $25 $36 $00 $54 $F0 $01 $F0 $01 $FF $F0 $01 $20 $01 $10 $C4 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $C1 $F0 $01 $D0 $01 $65 $66 $66 $56 $65 $10 $07 $03 $56 $00 $00 $50 $66 $05 $00 $03 $00 $08 $56 $65 $00 $04 $60 $13 $57 $65 $00 $11 $03 $B7 $55 $D4 $10 $20 $03 $2B $50 $00 $1B $00 $10 $12 $65 $56 $EF $10 $29 $00 $09 $03 $B5 $55 $F3 $7F $00 $01 $20 $29 $00 $04 $75 $55 $10 $04 $00 $39 $40 $12 $36 $40 $03 $26 $40 $03 $40 $16 $10 $03 $21 $66 $46 $12 $11 $11 $00 $11 $11 $51 $55 $55 $11 $51 $76 $00 $56 $11 $41 $77 $56 $21 $41 $07 $00 $36 $21 $61 $07 $36 $31 $61 $07 $00 $26 $31 $65 $07 $60 $66 $65 $07 $00 $36 $43 $64 $47 $12 $63 $74 $60 $80 $30 $03 $76 $60 $11 $63 $76 $40 $11 $60 $65 $10 $03 $00 $1E $06 $07 $26 $11 $65 $00 $67 $12 $23 $61 $47 $31 $46 $62 $00 $57 $21 $43 $66 $57 $11 $22 $65 $80 $04 $45 $63 $57 $65 $15 $65 $60 $16 $00 $64 $06 $46 $11 $32 $66 $26 $11 $00 $52 $46 $46 $21 $66 $36 $56 $21 $00 $76 $26 $56 $31 $76 $16 $36 $31 $02 $76 $14 $36 $51 $76 $14 $10 $E9 $34 $00 $51 $06 $60 $12 $13 $64 $26 $51 $00 $16 $62 $34 $61 $16 $62 $56 $62 $04 $16 $62 $36 $62 $14 $00 $03 $15 $63 $20 $26 $56 $00 $E5 $13 $32 $65 $23 $11 $00 $11 $61 $12 $11 $53 $66 $14 $21 $00 $66 $77 $14 $21 $76 $07 $24 $31 $24 $76 $00 $00 $42 $00 $36 $00 $1E $00 $32 $00 $23 $42 $07 $41 $15 $43 $07 $62 $00 $15 $76 $07 $51 $23 $76 $00 $31 $01 $52 $76 $00 $21 $42 $77 $00 $00 $9D $FF $F1 $1D $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F5 $F0 $01 $F0 $01 $F0 $01 $90 $01 $55 $12 $E1 $50 $13 $E6 $DF $F0 $01 $13 $A7 $55 $13 $CC $23 $A7 $20 $2D $13 $F7 $03 $BC $3E $05 $60 $03 $E9 $13 $FA $17 $9B $10 $04 $14 $21 $66 $6A $56 $00 $4C $20 $0B $00 $10 $4F $50 $04 $2F $55 $7E $05 $24 $2B $00 $14 $13 $28 $00 $01 $44 $16 $10 $28 $05 $D6 $10 $03 $04 $39 $14 $00 $63 $11 $00 $62 $10 $65 $77 $D0 $10 $21 $04 $62 $55 $50 $97 $62 $66 $24 $31 $08 $21 $45 $13 $11 $10 $3B $77 $77 $77 $F0 $27 $B2 $20 $68 $14 $7C $00 $38 $66 $56 $21 $64 $0C $63 $24 $11 $63 $90 $1F $98 $76 $37 $42 $00 $15 $65 $57 $21 $21 $64 $67 $34 $18 $65 $76 $07 $40 $1F $90 $01 $36 $51 $45 $00 $26 $56 $11 $42 $56 $67 $55 $66 $0A $67 $00 $77 $77 $83 $90 $55 $10 $DE $60 $20 $31 $21 $14 $1A $76 $13 $56 $65 $77 $98 $00 $5F $07 $70 $81 $17 $20 $D5 $51 $76 $00 $11 $40 $21 $74 $05 $11 $76 $00 $60 $00 $5D $C8 $14 $BF $04 $B7 $60 $31 $04 $C2 $65 $05 $00 $00 $47 $76 $11 $64 $07 $00 $21 $74 $25 $07 $00 $00 $27 $00 $61 $00 $7D $63 $00 $61 $0E $76 $07 $00 $50 $10 $88 $F3 $FD $50 $79 $56 $7F $06 $35 $4F $15 $79 $F0 $01 $F9 $5E $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $B6 $28 $23 $55 $08 $25 $02 $88 $50 $F7 $E9 $58 $43 $66 $F7 $10 $04 $14 $68 $47 $EB $A4 $6B $56 $08 $3B $03 $46 $14 $0B $FF $00 $05 $F2 $D3 $34 $07 $13 $6F $04 $77 $F0 $5F $24 $4D $34 $75 $7F $56 $F3 $2B $10 $3E $04 $60 $20 $23 $F0 $3F $90 $C2 $24 $9D $FE $F0 $1B $00 $9F $00 $5D $10 $93 $00 $5E $F5 $23 $20 $17 $75 $31 $77 $50 $F0 $3F $E3 $A7 $66 $66 $65 $14 $4F $93 $F0 $01 $00 $50 $05 $61 $65 $66 $01 $22 $F0 $1F $FF $30 $DF $00 $D8 $F1 $5D $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $FF $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $F0 $01 $E0 $F0 $01 $F0 $01 $F0 $01 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00
 
+ALIGN 4
+GirardyWantBoingBoing:
+ASMC CreateFacepettingScreen
+EndEvent
 ALIGN 4
 EMap1Viewer:
 CGViewer(MapCG)

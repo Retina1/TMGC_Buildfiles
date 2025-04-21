@@ -14,10 +14,12 @@
 		mov r1, #0x7
 		swi 6
 		cmp	r1, #0x0
-		bne	End
+		bne	NotOn
 		
 			mov		r3, #1
-				
+			b End
+			NotOn:
+			mov		r3, #0
 		End:
 		mov		r0, r3
 		bx		r14

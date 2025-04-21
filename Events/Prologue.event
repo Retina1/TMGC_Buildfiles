@@ -333,6 +333,13 @@ IfNoSelectedGoto(0x5004)
 		SVAL 0x1 0x3
 		BEQ 0x5004 0xc 0x1			
 LABEL 0x5004
+CheckNewGameFlag(12)
+BEQ 0x33b 0xc 0x0
+SystemText(EnterPostgamePrompt)
+			IfNoSelectedGoto(0x33b)
+			MoveToChapter(HubMap)
+			GOTO 0x33c
+LABEL 0x33b
 SVAL 0x1 0x0
 FADI 16
 EVBIT_MODIFY 0
@@ -378,6 +385,7 @@ SystemText(GameIntroText)
 CHECK_EVENTID AnimusModeFlag; BEQ 0x2789 0xc 0x0; CHECK_EVENTID AnimusSealGivenFlag; BNE 0x2789 0xc 0x0; GiveItem(AnimusSeal,Blair); ENUT AnimusSealGivenFlag;LABEL 0x2789
 ASMC 0x080790A4|1
 ASMC 0x080B5D5C|1
+LABEL 0x33c
 EndEvent
 
 EndingScene:

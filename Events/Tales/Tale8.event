@@ -26,7 +26,7 @@ TurnEventPlayer(0x0,Tale8Turn5,5)
 TurnEventPlayer(0x0,Tale8Turn6,6)
 TurnEventPlayer(0x0,Tale8Turn7,7)
 TurnEventPlayer(0x7,Tale8Turn9,9)
-TurnEventPlayer(0x0,Tale8Turn12On,12,20)
+TurnEventPlayer(0x0,Tale8Turn11On,11,20)
 END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
@@ -211,7 +211,7 @@ ENUN
 SystemText(Tale8Wincon)
 EndEvent
 
-Tale8Turn12On:
+Tale8Turn11On:
 Reinforcements(Tale8Turn12OnSpawn)
 EndEvent
 

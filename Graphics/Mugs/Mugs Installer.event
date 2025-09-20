@@ -113,6 +113,10 @@ ALIGN 4
 ArinPromoMug:
 #incbin "dmps/ArinPromo.dmp"
 setMugEntry(0x13d,ArinPromoMug,3,5,3,3)
+ALIGN 4
+BabbyArinMug:
+#incbin "dmps/BabbyArin.dmp"
+setMugEntry(0x156,BabbyArinMug,3,7,3,5)
 
 ALIGN 4
 KennethMug:
@@ -460,7 +464,7 @@ setMugEntry(0x153,ViridianCYLMug,2,5,3,3)
 ALIGN 4
 FreddricMug:
 #incbin "dmps/Freddric.dmp"
-setMugEntry(0x15,FreddricMug,3,5,3,3)
+setMugEntry(0x15,FreddricMug,4,5,4,3)
 
 ALIGN 4
 DeanMug:

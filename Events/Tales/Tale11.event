@@ -193,7 +193,9 @@ SetUnitSkills(Valeria,InspirationID,LuckySevenID,KillerTacticsID,0)
 TaleSetUnitStat(Sveltzalus,43,28,29,34,35,30,21,24)
 TaleSetUnitWEXP(Sveltzalus,0,0,0,0,0,0,0,251)
 SetUnitSkills(Sveltzalus,DesperationID,CantoPlusID,LethalityID,0)
+SetBackground(BlankCG)
 SystemText(Tale11Opening)
+CLEAN
 EndEvent
 
 EndingScene:

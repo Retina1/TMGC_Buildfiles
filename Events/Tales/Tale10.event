@@ -33,9 +33,9 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Escape(11,32)
-Escape(12,32)
-Escape(13,32)
+Escape(0x18,T10EscapeCheck,11,32)
+Escape(0x18,T10EscapeCheck,12,32)
+Escape(0x18,T10EscapeCheck,13,32)
 Door(4,6)
 Door(5,6)
 Door(9,6)
@@ -137,6 +137,13 @@ ALIGN 4
 //a turn later, horatio spawns
 //when passing a certain threshold, simone makes svelt spawn
 
+T10EscapeCheck:
+CHECK_EVENTID 0x18
+BEQ 0x1 0xc 0x0
+CALL EndingScene
+LABEL 0x1
+EndEvent
+
 BeginningScene:
 DISA Addington
 LOAD1 0x1 Tale10Enemies
@@ -156,6 +163,7 @@ Text(Tale10_Opening2)
 TaleSetUnitStat(Simone,28,3,21,18,15,10,18,20)
 TaleSetUnitWEXP(Simone,0,0,0,0,121,0,0,251)
 SetUnitSkills(Simone,FocusedGoalID,SaviorID,0,0)
+ENUT 0x18
 EndEvent
 
 
@@ -201,6 +209,7 @@ SetUnitSkills(Sveltzalus,0,0,0,0)
 FADU 60
 VCWF 0x3
 ENUT 0x9
+ENUF 0x18
 GOTO 0x2
 LABEL 0x1
 ENUF 0xa
@@ -217,6 +226,8 @@ StartGameOver
 EndEvent
 
 Tale10HoratioTrap:
+CHECK_EVENTID 0x18
+BNE 0x2 0xc 0x0
 CHECK_ACTIVEID Simone
 BEQ 0x1 0xc 0x0
 SET_ACTIVE 0
@@ -236,12 +247,15 @@ SilentKillUnit(Nathaniel)
 FADU 16
 SetMapBGM(S_Chaos)
 Text(Tale10_SimoneWantsToTakeAWalk)
+GOTO 0x100
 LABEL 0x2
 ENUF 0xb
 LABEL 0x100
 EndEvent
 
 ArinDropChecker:
+CHECK_DEPLOYED Simone
+BEQ 0x1 0xc 0x0
 GetUnitStatus(Simone, Rescuing)
 BNE 0x1 0xc 0x0
 Text(Tale10_ArinDrop) //the fuck

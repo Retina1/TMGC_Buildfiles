@@ -32,6 +32,12 @@ SHORT For the Event Flag ID that will trigger the portrait change (0 if you want
 BYTE  For the character ID who we will check to determine if we change the portrait (0 if you want no character)
 BYTE  For the class ID the character above must be to trigger the portrait change (0 if we just want to be promoted)
 */
+//pgarin
+SHORT 0x0004
+SHORT 0x0156 //the beginning
+SHORT 0x0000
+BYTE  Arin
+BYTE  0x6e
 //pglaz
 SHORT 0xB
 SHORT 0xf8

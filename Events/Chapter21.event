@@ -512,7 +512,6 @@ ENDA
 
 EndingScene:
 //hyperius kills nathaniel postmap if he didn't die during map
-ResetBaseFlags
 CHECK_EVENTID DefeatBossFlag
 BNE 0x777 0xc 0x0
 MUSC 0x0
@@ -645,6 +644,7 @@ CleanTextNoMap(HallCG,C21Ending4Alt)//arin discovers some of it on her own
 LABEL 0x202
 MUSC S_NotFarEnough
 CleanTextNoMap(OutdoorCastleCG,C21Ending5)//end of chapter, going forward
+ResetBaseFlags
 MoveToChapter(Chapter22)
 ENDA
 
